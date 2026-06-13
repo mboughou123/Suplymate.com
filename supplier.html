@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Suplymate — Profil fournisseur</title>
+<meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--petrol:#0D3349;--petrol-mid:#1A4A6B;--petrol-dark:#081E2D;
+--or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;--or-deep:#A07810;
+--ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+--vert:#0D7A4E;--vert-pale:#EAF7F1;
+--rouge:#C0392B;--rouge-pale:#FDEDEC;
+--font:'Inter',system-ui,sans-serif;
+}
+body{font-family:var(--font);background:#F0F4F8;color:var(--petrol-dark);font-size:14px;margin:0}
+
+/* TOPBAR */
+.topbar{background:var(--petrol-dark);padding:0 24px;height:56px;display:flex;align-items:center;gap:14px;border-bottom:1px solid rgba(212,160,23,0.15);position:sticky;top:0;z-index:50}
+.topbar-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+.topbar-logo-img{width:26px;height:26px;border-radius:8px;display:block;object-fit:contain;flex-shrink:0}
+.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:17px}
+.logo-text .s{color:#fff}.logo-text .m{color:var(--or)}
+.topbar-search{flex:1;max-width:460px;display:flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(212,160,23,0.15);border-radius:7px;overflow:hidden}
+.topbar-search input{flex:1;background:transparent;border:none;outline:none;padding:9px 12px;color:#fff;font-size:13px;font-family:var(--font)}
+.topbar-search input::placeholder{color:rgba(255,255,255,0.3)}
+.topbar-search-btn{padding:0 14px;height:38px;background:var(--or);border:none;color:var(--petrol-dark);font-size:12.5px;font-weight:500;cursor:pointer;font-family:var(--font)}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.4);margin-left:8px}
+.breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none}
+.breadcrumb a:hover{color:rgba(255,255,255,0.7)}
+.breadcrumb span{color:rgba(255,255,255,0.6)}
+.topbar-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn-ghost{padding:6px 13px;border:1px solid rgba(212,160,23,0.3);border-radius:6px;color:rgba(255,255,255,0.8);background:transparent;font-size:12px;cursor:pointer;font-family:var(--font)}
+.btn-or{padding:6px 14px;border:none;border-radius:6px;background:var(--or);color:var(--petrol-dark);font-size:12px;font-weight:500;cursor:pointer;font-family:var(--font)}
+
+/* LAYOUT */
+.page{max-width:1180px;margin:0 auto;padding:24px 20px;display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start}
+
+/* LEFT COLUMN */
+.left{display:flex;flex-direction:column;gap:16px}
+
+/* HERO CARD */
+.hero-card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:14px;overflow:hidden}
+.hero-banner{height:120px;background:linear-gradient(135deg,var(--petrol-dark) 0%,var(--petrol-mid) 100%);position:relative}
+.hero-banner-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(212,160,23,0.05) 0px,rgba(212,160,23,0.05) 1px,transparent 1px,transparent 12px);pointer-events:none}
+.hero-body{padding:0 24px 22px;position:relative}
+.hero-logo-wrap{position:relative;top:-28px;margin-bottom:-10px;display:flex;align-items:flex-end;gap:16px}
+.hero-logo{width:72px;height:72px;border-radius:14px;background:#E3EEF7;color:#0D3349;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:24px;border:3px solid var(--blanc);box-shadow:0 2px 8px rgba(0,0,0,0.1);flex-shrink:0}
+.hero-badges{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:6px}
+.hbadge{font-size:10.5px;font-weight:500;padding:3px 10px;border-radius:100px}
+.hbadge.verifie{background:var(--vert-pale);color:var(--vert)}
+.hbadge.premium{background:var(--or-pale);color:var(--or-deep)}
+.hbadge.cert{background:#EEF2F6;color:var(--ardoise)}
+.hero-name{font-size:22px;font-weight:600;color:var(--petrol-dark);margin-bottom:4px}
+.hero-location{font-size:13px;color:var(--acier);margin-bottom:12px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap}
+.meta-item{display:flex;flex-direction:column;gap:2px}
+.meta-label{font-size:10.5px;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px}
+.meta-val{font-size:13px;font-weight:500;color:var(--petrol-dark)}
+.hero-actions-bar{display:flex;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid #EEF2F6}
+.btn-primary{padding:10px 22px;background:var(--petrol);color:#fff;border:none;border-radius:8px;font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;transition:background 0.15s}
+.btn-primary:hover{background:var(--petrol-mid)}
+.btn-rfq{padding:10px 22px;background:var(--or);color:var(--petrol-dark);border:none;border-radius:8px;font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;transition:background 0.15s}
+.btn-rfq:hover{background:var(--or-light)}
+.btn-secondary{padding:10px 18px;background:transparent;color:var(--petrol);border:1px solid #DDE5EE;border-radius:8px;font-family:var(--font);font-size:13px;cursor:pointer;transition:all 0.15s}
+.btn-secondary:hover{background:var(--brume)}
+
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:2px solid #EEF2F6;background:var(--blanc);border-radius:12px 12px 0 0;overflow:hidden;margin-bottom:0}
+.tab{padding:12px 20px;font-size:13px;font-weight:500;color:var(--acier);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;white-space:nowrap}
+.tab:hover{color:var(--petrol)}
+.tab.active{color:var(--petrol-dark);border-bottom-color:var(--or);font-weight:600}
+
+/* SECTIONS */
+.card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:12px;overflow:hidden}
+.card-header{padding:16px 20px 12px;border-bottom:1px solid #EEF2F6;display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:14px;font-weight:600;color:var(--petrol-dark)}
+.card-body{padding:18px 20px}
+
+/* PRODUCTS */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.product-card{border:1px solid #E2EAF0;border-radius:10px;overflow:hidden;cursor:pointer;transition:all 0.15s}
+.product-card:hover{border-color:var(--petrol);box-shadow:0 4px 12px rgba(13,51,73,0.08)}
+.product-img{height:80px;background:linear-gradient(135deg,var(--brume),#DDE5EE);display:flex;align-items:center;justify-content:center;font-size:28px}
+.product-info{padding:10px 12px}
+.product-name{font-size:12.5px;font-weight:500;color:var(--petrol-dark);margin-bottom:3px}
+.product-spec{font-size:11px;color:var(--acier)}
+.product-price{font-size:12.5px;font-weight:600;color:var(--or-deep);margin-top:5px}
+
+/* CERTIFS */
+.certifs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.certif-card{border:1px solid #E2EAF0;border-radius:10px;padding:14px 12px;text-align:center;cursor:pointer;transition:all 0.15s}
+.certif-card:hover{border-color:var(--or);background:var(--or-pale)}
+.certif-icon{font-size:24px;margin-bottom:6px}
+.certif-name{font-size:11.5px;font-weight:600;color:var(--petrol-dark)}
+.certif-date{font-size:10.5px;color:var(--acier);margin-top:2px}
+
+/* AVIS */
+.rating-overview{display:flex;gap:24px;align-items:center;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #EEF2F6}
+.rating-big{text-align:center;flex-shrink:0}
+.rating-num{font-size:42px;font-weight:600;color:var(--petrol-dark);line-height:1;letter-spacing:-1px}
+.rating-stars{color:var(--or);font-size:18px;margin:4px 0}
+.rating-count{font-size:12px;color:var(--acier)}
+.rating-bars{flex:1}
+.rating-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.rating-bar-label{font-size:12px;color:var(--ardoise);width:36px;flex-shrink:0}
+.rating-bar-bg{flex:1;height:7px;background:#EEF2F6;border-radius:100px;overflow:hidden}
+.rating-bar-fill{height:100%;background:var(--or);border-radius:100px}
+.rating-bar-pct{font-size:11.5px;color:var(--acier);width:28px;text-align:right}
+.avis-list{display:flex;flex-direction:column;gap:16px}
+.avis-item{padding-bottom:16px;border-bottom:1px solid #F0F4F8}
+.avis-item:last-child{border-bottom:none;padding-bottom:0}
+.avis-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avis-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;flex-shrink:0}
+.avis-name{font-size:13px;font-weight:500;color:var(--petrol-dark)}
+.avis-country{font-size:11.5px;color:var(--acier)}
+.avis-stars{color:var(--or);font-size:12px;margin-left:auto}
+.avis-date{font-size:11px;color:var(--acier)}
+.avis-text{font-size:13px;color:var(--ardoise);line-height:1.7}
+.avis-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.avis-tag{background:var(--brume);color:var(--ardoise);font-size:10.5px;padding:2px 9px;border-radius:100px}
+
+/* CAPACITES */
+.capacites-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cap-item{background:var(--brume);border-radius:8px;padding:14px 16px}
+.cap-label{font-size:11px;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px}
+.cap-val{font-size:14px;font-weight:600;color:var(--petrol-dark)}
+.cap-sub{font-size:11.5px;color:var(--ardoise);margin-top:2px}
+
+/* RIGHT COLUMN — STICKY CTA */
+.right{display:flex;flex-direction:column;gap:14px;position:sticky;top:72px}
+.cta-card{background:var(--blanc);border:1.5px solid var(--or);border-radius:14px;overflow:hidden}
+.cta-card-header{background:var(--or);padding:14px 18px;text-align:center}
+.cta-card-title{font-size:13px;font-weight:600;color:var(--petrol-dark)}
+.cta-card-sub{font-size:11.5px;color:rgba(8,30,45,0.65);margin-top:2px}
+.cta-card-body{padding:18px}
+.prix-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #EEF2F6}
+.prix-label{font-size:12px;color:var(--ardoise)}
+.prix-val{font-size:18px;font-weight:600;color:var(--petrol-dark)}
+.prix-unit{font-size:11px;color:var(--acier);font-weight:400}
+.moq-row{background:var(--brume);border-radius:8px;padding:10px 12px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.moq-label{font-size:12px;color:var(--ardoise)}
+.moq-val{font-size:13px;font-weight:600;color:var(--petrol-dark)}
+.cta-btns{display:flex;flex-direction:column;gap:8px}
+.cta-btn-main{padding:12px;background:var(--petrol);color:#fff;border:none;border-radius:8px;font-family:var(--font);font-size:13.5px;font-weight:500;cursor:pointer;width:100%}
+.cta-btn-main:hover{background:var(--petrol-mid)}
+.cta-btn-rfq{padding:11px;background:var(--or);color:var(--petrol-dark);border:none;border-radius:8px;font-family:var(--font);font-size:13.5px;font-weight:500;cursor:pointer;width:100%}
+.cta-btn-rfq:hover{background:var(--or-light)}
+.cta-btn-save{padding:10px;background:transparent;color:var(--petrol);border:1px solid #DDE5EE;border-radius:8px;font-family:var(--font);font-size:13px;cursor:pointer;width:100%}
+.cta-infos{margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.cta-info-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ardoise)}
+.cta-info-row span:first-child{font-size:15px}
+
+/* FOURNISSEUR CARD RAPIDE */
+.quick-card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:12px;padding:16px}
+.quick-title{font-size:12px;font-weight:600;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+.quick-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #F0F4F8;font-size:12.5px}
+.quick-row:last-child{border-bottom:none}
+.quick-row-label{color:var(--acier)}
+.quick-row-val{font-weight:500;color:var(--petrol-dark);text-align:right}
+
+.verified-banner{background:var(--vert-pale);border:1px solid rgba(13,122,78,0.2);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.verified-banner-icon{font-size:20px;flex-shrink:0}
+.verified-banner-text{font-size:12px;color:var(--vert);font-weight:500}
+.verified-banner-sub{font-size:11px;color:rgba(13,122,78,0.7);margin-top:1px}
+</style>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="apple-touch-icon" href="assets/favicon-180.png"/>
+<meta name="theme-color" content="#0D3349"/>
+<script src="assets/auth.js"></script>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a class="topbar-logo" href="index.html">
+    <img class="topbar-logo-img" src="assets/logo-suplymate.png" width="26" height="26" alt="Suplymate"/>
+    <div class="logo-text"><span class="s">Suply</span><span class="m">mate</span></div>
+  </a>
+  <div class="topbar-search">
+    <input type="text" value="Profilés acier HEA HEB" placeholder="Rechercher..."/>
+    <button class="topbar-search-btn">🔍</button>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">Accueil</a> › <a href="search.html">Métallurgie</a> › <a href="search.html">Turquie</a> › <span>TurboSteel Group</span>
+  </div>
+  <div class="topbar-actions">
+    <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="btn-ghost">Connexion</button>
+    <button onclick="window.location.href='pricing.html'" class="btn-or">Commencer gratuitement</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <!-- HERO CARD -->
+    <div class="hero-card">
+      <div class="hero-banner"><div class="hero-banner-pattern"></div></div>
+      <div class="hero-body">
+        <div class="hero-logo-wrap">
+          <div class="hero-logo">TG</div>
+          <div class="hero-badges">
+            <span class="hbadge verifie">✔ Vérifié par Suplymate</span>
+            <span class="hbadge premium">⭐ Fournisseur Premium</span>
+            <span class="hbadge cert">ISO 9001</span>
+            <span class="hbadge cert">CE</span>
+            <span class="hbadge cert">EN 10025</span>
+          </div>
+        </div>
+        <div class="hero-name">TurboSteel Group</div>
+        <div class="hero-location">📍 Istanbul, Turquie · Membre depuis janvier 2021</div>
+        <div class="hero-meta">
+          <div class="meta-item"><div class="meta-label">Note globale</div><div class="meta-val">⭐ 4.9 / 5 (127 avis)</div></div>
+          <div class="meta-item"><div class="meta-label">Pays d'export</div><div class="meta-val">34 pays</div></div>
+          <div class="meta-item"><div class="meta-label">Capacité annuelle</div><div class="meta-val">120 000 tonnes</div></div>
+          <div class="meta-item"><div class="meta-label">Délai de réponse</div><div class="meta-val">< 24 heures</div></div>
+          <div class="meta-item"><div class="meta-label">Taux de satisfaction</div><div class="meta-val">97%</div></div>
+        </div>
+        <div class="hero-actions-bar">
+          <button class="btn-primary">💬 Envoyer un message</button>
+          <button class="btn-rfq">📋 Demander un devis RFQ</button>
+          <button class="btn-secondary">♡ Sauvegarder</button>
+          <button class="btn-secondary">🔗 Partager</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="card" style="padding:0">
+      <div class="tabs" style="padding:0 20px">
+        <div class="tab active">Présentation</div>
+        <div class="tab">Produits (48)</div>
+        <div class="tab">Certifications</div>
+        <div class="tab">Avis (127)</div>
+        <div class="tab">Capacités</div>
+        <div class="tab">Contact</div>
+      </div>
+    </div>
+
+    <!-- PRESENTATION -->
+    <div class="card">
+      <div class="card-header"><div class="card-title">À propos de TurboSteel Group</div></div>
+      <div class="card-body">
+        <p style="font-size:13.5px;color:var(--ardoise);line-height:1.8;margin-bottom:16px">TurboSteel Group est un fabricant et exportateur turc de premier plan spécialisé dans les produits en acier structural. Fondé en 2003 à Istanbul, le groupe dispose de deux usines de production modernes avec une capacité annuelle de 120 000 tonnes.</p>
+        <p style="font-size:13.5px;color:var(--ardoise);line-height:1.8;margin-bottom:16px">Nous exportons vers 34 pays, principalement vers l'Afrique du Nord, le Moyen-Orient et l'Europe de l'Est. Notre équipe commerciale parle français, arabe, anglais et turc pour un accompagnement personnalisé de nos clients.</p>
+        <p style="font-size:13.5px;color:var(--ardoise);line-height:1.8">Spécialisés dans les profilés HEA, HEB, IPE, UPN, les tôles laminées à chaud et à froid, et les ronds à béton, nous proposons des solutions sur mesure avec livraison CIF port de Casablanca disponible.</p>
+      </div>
+    </div>
+
+    <!-- PRODUITS -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Produits phares</div>
+        <span style="font-size:12px;color:var(--or-deep);cursor:pointer;font-weight:500">Voir les 48 produits →</span>
+      </div>
+      <div class="card-body">
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img">🔩</div>
+            <div class="product-info">
+              <div class="product-name">Profilés HEA 100-600</div>
+              <div class="product-spec">Acier S235/S355 · EN 10025</div>
+              <div class="product-price">$680 / tonne FOB</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">⚙️</div>
+            <div class="product-info">
+              <div class="product-name">Profilés HEB 100-600</div>
+              <div class="product-spec">Acier S275/S355 · EN 10025</div>
+              <div class="product-price">$695 / tonne FOB</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🏗️</div>
+            <div class="product-info">
+              <div class="product-name">Poutrelles IPE 80-600</div>
+              <div class="product-spec">Acier S235/S355 · EN 10034</div>
+              <div class="product-price">$660 / tonne FOB</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">📦</div>
+            <div class="product-info">
+              <div class="product-name">Tôles laminées à chaud</div>
+              <div class="product-spec">2mm à 150mm · S235 à S690</div>
+              <div class="product-price">$720 / tonne FOB</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">🔧</div>
+            <div class="product-info">
+              <div class="product-name">Ronds à béton HA</div>
+              <div class="product-spec">Ø 6mm à 50mm · BS4449</div>
+              <div class="product-price">$580 / tonne FOB</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">⬛</div>
+            <div class="product-info">
+              <div class="product-name">Tubes carrés & rectangulaires</div>
+              <div class="product-spec">20x20 à 400x400 · EN 10219</div>
+              <div class="product-price">$740 / tonne FOB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="card">
+      <div class="card-header"><div class="card-title">Certifications & normes</div></div>
+      <div class="card-body">
+        <div class="certifs-grid">
+          <div class="certif-card">
+            <div class="certif-icon">🏆</div>
+            <div class="certif-name">ISO 9001:2015</div>
+            <div class="certif-date">Valide jusqu'à 2026</div>
+          </div>
+          <div class="certif-card">
+            <div class="certif-icon">🇪🇺</div>
+            <div class="certif-name">Marquage CE</div>
+            <div class="certif-date">Valide jusqu'à 2027</div>
+          </div>
+          <div class="certif-card">
+            <div class="certif-icon">📋</div>
+            <div class="certif-name">EN 10025</div>
+            <div class="certif-date">Aciers structuraux</div>
+          </div>
+          <div class="certif-card">
+            <div class="certif-icon">🛡️</div>
+            <div class="certif-name">ISO 14001</div>
+            <div class="certif-date">Environnemental</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVIS -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Avis clients</div>
+        <span style="font-size:12px;color:var(--or-deep);cursor:pointer;font-weight:500">Voir les 127 avis →</span>
+      </div>
+      <div class="card-body">
+        <div class="rating-overview">
+          <div class="rating-big">
+            <div class="rating-num">4.9</div>
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-count">127 avis vérifiés</div>
+          </div>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><div class="rating-bar-label">5 ★</div><div class="rating-bar-bg"><div class="rating-bar-fill" style="width:88%"></div></div><div class="rating-bar-pct">88%</div></div>
+            <div class="rating-bar-row"><div class="rating-bar-label">4 ★</div><div class="rating-bar-bg"><div class="rating-bar-fill" style="width:9%"></div></div><div class="rating-bar-pct">9%</div></div>
+            <div class="rating-bar-row"><div class="rating-bar-label">3 ★</div><div class="rating-bar-bg"><div class="rating-bar-fill" style="width:2%"></div></div><div class="rating-bar-pct">2%</div></div>
+            <div class="rating-bar-row"><div class="rating-bar-label">2 ★</div><div class="rating-bar-bg"><div class="rating-bar-fill" style="width:1%"></div></div><div class="rating-bar-pct">1%</div></div>
+            <div class="rating-bar-row"><div class="rating-bar-label">1 ★</div><div class="rating-bar-bg"><div class="rating-bar-fill" style="width:0%"></div></div><div class="rating-bar-pct">0%</div></div>
+          </div>
+        </div>
+        <div class="avis-list">
+          <div class="avis-item">
+            <div class="avis-header">
+              <div class="avis-avatar" style="background:#E3EEF7;color:#0D3349">KA</div>
+              <div><div class="avis-name">Karim Alaoui</div><div class="avis-country">🇲🇦 Maroc · CasaSteel</div></div>
+              <div class="avis-stars">★★★★★</div>
+              <div class="avis-date">Mars 2026</div>
+            </div>
+            <div class="avis-text">Excellent fournisseur. Qualité conforme aux certifications, délais respectés à la semaine. Économie de 32% par rapport à notre fournisseur local habituel. Communication en français irréprochable.</div>
+            <div class="avis-tags"><span class="avis-tag">Qualité ✔</span><span class="avis-tag">Délais ✔</span><span class="avis-tag">Communication ✔</span><span class="avis-tag">Prix ✔</span></div>
+          </div>
+          <div class="avis-item">
+            <div class="avis-header">
+              <div class="avis-avatar" style="background:#EAF3DE;color:#27500A">SA</div>
+              <div><div class="avis-name">Sara Amrani</div><div class="avis-country">🇲🇦 Maroc · Buildex Construction</div></div>
+              <div class="avis-stars">★★★★★</div>
+              <div class="avis-date">Fév. 2026</div>
+            </div>
+            <div class="avis-text">Deuxième commande consécutive. Toujours aussi réactifs et professionnels. Les profilés HEA 200 sont conformes aux spécifications du projet. Livraison CIF Casablanca sans problème.</div>
+            <div class="avis-tags"><span class="avis-tag">Qualité ✔</span><span class="avis-tag">Livraison CIF ✔</span><span class="avis-tag">Réactivité ✔</span></div>
+          </div>
+          <div class="avis-item">
+            <div class="avis-header">
+              <div class="avis-avatar" style="background:#FBF3DC;color:#A07810">YB</div>
+              <div><div class="avis-name">Youssef Benali</div><div class="avis-country">🇲🇦 Maroc · MecaPlus</div></div>
+              <div class="avis-stars">★★★★☆</div>
+              <div class="avis-date">Jan. 2026</div>
+            </div>
+            <div class="avis-text">Très bon fournisseur dans l'ensemble. Léger retard de 3 jours sur la livraison mais ils ont prévenu à l'avance. Qualité conforme. Je recommande pour les grosses commandes.</div>
+            <div class="avis-tags"><span class="avis-tag">Qualité ✔</span><span class="avis-tag">Communication ✔</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAPACITES -->
+    <div class="card">
+      <div class="card-header"><div class="card-title">Capacités de production</div></div>
+      <div class="card-body">
+        <div class="capacites-grid">
+          <div class="cap-item"><div class="cap-label">Capacité annuelle</div><div class="cap-val">120 000 tonnes</div><div class="cap-sub">Profilés et produits plats</div></div>
+          <div class="cap-item"><div class="cap-label">Usines</div><div class="cap-val">2 sites</div><div class="cap-sub">Istanbul & Izmit</div></div>
+          <div class="cap-item"><div class="cap-label">Effectif</div><div class="cap-val">850 employés</div><div class="cap-sub">dont 120 ingénieurs</div></div>
+          <div class="cap-item"><div class="cap-label">Stock disponible</div><div class="cap-val">12 000 tonnes</div><div class="cap-sub">Expédition sous 5 jours</div></div>
+          <div class="cap-item"><div class="cap-label">Commande min.</div><div class="cap-val">5 tonnes</div><div class="cap-sub">Par référence produit</div></div>
+          <div class="cap-item"><div class="cap-label">Délai de production</div><div class="cap-val">2-3 semaines</div><div class="cap-sub">Sur commande spéciale</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT — STICKY -->
+  <div class="right">
+
+    <!-- VERIFIED BANNER -->
+    <div class="verified-banner">
+      <div class="verified-banner-icon">🛡️</div>
+      <div>
+        <div class="verified-banner-text">Fournisseur vérifié par Suplymate</div>
+        <div class="verified-banner-sub">Documents, certifications et identité vérifiés</div>
+      </div>
+    </div>
+
+    <!-- CTA CARD -->
+    <div class="cta-card">
+      <div class="cta-card-header">
+        <div class="cta-card-title">Obtenir un devis</div>
+        <div class="cta-card-sub">Réponse garantie sous 24h</div>
+      </div>
+      <div class="cta-card-body">
+        <div class="prix-row">
+          <div>
+            <div class="prix-label">Prix indicatif</div>
+            <div style="font-size:11px;color:var(--acier)">Profilés HEA/HEB</div>
+          </div>
+          <div style="text-align:right">
+            <div class="prix-val">$680 <span class="prix-unit">/ tonne FOB</span></div>
+            <div style="font-size:11px;color:var(--vert)">↓ -4% ce mois</div>
+          </div>
+        </div>
+        <div class="moq-row">
+          <div class="moq-label">Commande minimum (MOQ)</div>
+          <div class="moq-val">5 tonnes</div>
+        </div>
+        <div class="cta-btns">
+          <button class="cta-btn-rfq">📋 Demander un devis RFQ</button>
+          <button class="cta-btn-main">💬 Envoyer un message</button>
+          <button class="cta-btn-save">♡ Sauvegarder ce fournisseur</button>
+        </div>
+        <div class="cta-infos">
+          <div class="cta-info-row"><span>🚢</span><span>Livraison CIF Casablanca disponible</span></div>
+          <div class="cta-info-row"><span>💳</span><span>Paiement LC / TT accepté</span></div>
+          <div class="cta-info-row"><span>🌍</span><span>Parle français & arabe</span></div>
+          <div class="cta-info-row"><span>⚡</span><span>Répond sous 24h en moyenne</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFOS RAPIDES -->
+    <div class="quick-card">
+      <div class="quick-title">Informations clés</div>
+      <div class="quick-row"><span class="quick-row-label">Pays</span><span class="quick-row-val">🇹🇷 Turquie</span></div>
+      <div class="quick-row"><span class="quick-row-label">Ville</span><span class="quick-row-val">Istanbul</span></div>
+      <div class="quick-row"><span class="quick-row-label">Fondée en</span><span class="quick-row-val">2003</span></div>
+      <div class="quick-row"><span class="quick-row-label">Type</span><span class="quick-row-val">Fabricant & Exportateur</span></div>
+      <div class="quick-row"><span class="quick-row-label">Incoterms</span><span class="quick-row-val">FOB, CIF, DAP, DDP</span></div>
+      <div class="quick-row"><span class="quick-row-label">Devises</span><span class="quick-row-val">USD, EUR, TRY</span></div>
+      <div class="quick-row"><span class="quick-row-label">Langues</span><span class="quick-row-val">FR · AR · EN · TR</span></div>
+      <div class="quick-row"><span class="quick-row-label">Membre depuis</span><span class="quick-row-val">Janv. 2021</span></div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

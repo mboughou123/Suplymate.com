@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String       @id @default(cuid())
+  name         String
+  email        String       @unique
+  passwordHash String
+  company      String?
+  createdAt    DateTime     @default(now())
+  priceAlerts  PriceAlert[]
+}
+
+model Supplier {
+  id               String   @id
+  name             String
+  industry         String
+  location         String
+  products         String
+  deliveryRegions  String
+  moq              String
+  reliabilityScore Int
+}
+
+model Product {
+  id               String   @id
+  name             String
+  category         String
+  priceMin         Float
+  priceMax         Float
+  currency         String
+  bestDeliveryDays Int
+  supplierCount    Int
+  unit             String
+}
+
+model Material {
+  id             String  @id
+  name           String
+  symbol         String
+  currentPrice   Float
+  unit           String
+  currency       String
+  dailyChange    Float
+  monthlyChange  Float
+  yearlyChange   Float
+  signal         String
+  history        String
+}
+
+model PriceAlert {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  materialId  String
+  targetPrice Float
+  notifyType  String
+  createdAt   DateTime @default(now())
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Suplymate — Tarifs</title>
+<meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--petrol:#0D3349;--petrol-mid:#1A4A6B;--petrol-dark:#081E2D;
+--or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;--or-deep:#A07810;
+--ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+--vert:#0D7A4E;--vert-pale:#EAF7F1;
+--font:'Inter',system-ui,sans-serif;
+--font-titre:'Playfair Display',Georgia,serif;
+}
+body{font-family:var(--font);background:var(--blanc);color:var(--petrol-dark);font-size:14px;margin:0}
+
+/* TOPBAR */
+.topbar{background:var(--petrol-dark);padding:0 5%;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(212,160,23,0.15);position:sticky;top:0;z-index:50}
+.topbar-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.topbar-logo-img{width:28px;height:28px;border-radius:8px;display:block;object-fit:contain;flex-shrink:0}
+.logo-text{font-family:var(--font-titre);font-weight:700;font-size:20px}
+.logo-text .s{color:#fff}.logo-text .m{color:var(--or)}
+.topbar-nav{display:flex;gap:4px}
+.topbar-nav a{color:rgba(255,255,255,0.55);font-size:13px;padding:6px 12px;border-radius:6px;text-decoration:none;transition:all 0.15s}
+.topbar-nav a:hover,.topbar-nav a.active{color:#fff;background:rgba(255,255,255,0.07)}
+.topbar-nav a.active{color:var(--or-light)}
+.topbar-actions{display:flex;gap:8px}
+.btn-ghost{padding:7px 14px;border:1px solid rgba(212,160,23,0.3);border-radius:7px;color:rgba(255,255,255,0.8);background:transparent;font-size:12.5px;cursor:pointer;font-family:var(--font)}
+.btn-or{padding:7px 16px;border:none;border-radius:7px;background:var(--or);color:var(--petrol-dark);font-size:12.5px;font-weight:500;cursor:pointer;font-family:var(--font)}
+
+/* HERO SECTION */
+.hero{background:var(--petrol-dark);padding:60px 5% 0;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,160,23,0.08) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(212,160,23,0.12);border:1px solid rgba(212,160,23,0.25);color:var(--or-light);font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:5px 16px;border-radius:100px;margin-bottom:24px}
+.hero h1{font-family:var(--font-titre);font-weight:700;font-size:46px;line-height:1.1;color:var(--blanc);letter-spacing:-1px;margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--or-light)}
+.hero-sub{color:rgba(255,255,255,0.55);font-size:16px;max-width:520px;margin:0 auto 36px;line-height:1.75;font-weight:300}
+
+/* TOGGLE */
+.toggle-wrap{display:inline-flex;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px;margin-bottom:0;gap:0}
+.toggle-btn{padding:8px 24px;border-radius:100px;border:none;background:transparent;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font);transition:all 0.2s;display:flex;align-items:center;gap:7px}
+.toggle-btn.active{background:var(--blanc);color:var(--petrol-dark)}
+.save-badge{background:var(--vert);color:#fff;font-size:10px;font-weight:600;padding:2px 8px;border-radius:100px}
+
+/* PLANS SECTION */
+.plans-section{padding:0 5% 80px;background:var(--petrol-dark)}
+.plans-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;padding-top:32px;align-items:end}
+
+/* PLAN CARDS */
+.plan-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;overflow:hidden;transition:all 0.2s;position:relative}
+.plan-card:hover{border-color:rgba(255,255,255,0.2);transform:translateY(-3px)}
+.plan-card.popular{background:var(--blanc);border:2px solid var(--or);transform:translateY(-12px)}
+.plan-card.popular:hover{transform:translateY(-15px)}
+.popular-label{background:var(--or);color:var(--petrol-dark);text-align:center;padding:7px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+
+.plan-body{padding:24px 22px}
+.plan-name{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.plan-card:not(.popular) .plan-name{color:rgba(255,255,255,0.5)}
+.plan-card.popular .plan-name{color:var(--or-deep)}
+.plan-desc{font-size:12.5px;line-height:1.6;margin-bottom:20px}
+.plan-card:not(.popular) .plan-desc{color:rgba(255,255,255,0.4)}
+.plan-card.popular .plan-desc{color:var(--ardoise)}
+
+.plan-price{margin-bottom:20px}
+.plan-amount{font-size:38px;font-weight:600;letter-spacing:-1px;line-height:1}
+.plan-card:not(.popular) .plan-amount{color:var(--blanc)}
+.plan-card.popular .plan-amount{color:var(--petrol-dark)}
+.plan-period{font-size:13px;font-weight:400}
+.plan-card:not(.popular) .plan-period{color:rgba(255,255,255,0.35)}
+.plan-card.popular .plan-period{color:var(--acier)}
+.plan-billed{font-size:11.5px;margin-top:4px}
+.plan-card:not(.popular) .plan-billed{color:rgba(255,255,255,0.3)}
+.plan-card.popular .plan-billed{color:var(--acier)}
+
+.plan-btn{display:block;width:100%;padding:11px;border-radius:8px;font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;text-align:center;border:none;transition:all 0.15s;margin-bottom:22px}
+.plan-card:not(.popular) .plan-btn{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.15)}
+.plan-card:not(.popular) .plan-btn:hover{background:rgba(255,255,255,0.14);color:#fff}
+.plan-card.popular .plan-btn{background:var(--petrol);color:#fff}
+.plan-card.popular .plan-btn:hover{background:var(--petrol-mid)}
+
+.plan-features{display:flex;flex-direction:column;gap:9px}
+.feature-row{display:flex;align-items:flex-start;gap:9px;font-size:12.5px}
+.feature-row .check{flex-shrink:0;font-size:14px}
+.feature-row .cross{flex-shrink:0;font-size:14px;opacity:0.25}
+.plan-card:not(.popular) .feature-row span:last-child{color:rgba(255,255,255,0.55)}
+.plan-card.popular .feature-row span:last-child{color:var(--ardoise)}
+.feature-divider{height:1px;margin:8px 0}
+.plan-card:not(.popular) .feature-divider{background:rgba(255,255,255,0.07)}
+.plan-card.popular .feature-divider{background:#EEF2F6}
+
+/* WHO SECTION */
+.who-section{padding:72px 5%;background:var(--brume)}
+.who-inner{max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--or-deep);margin-bottom:10px}
+h2{font-family:var(--font-titre);font-weight:700;font-size:34px;letter-spacing:-0.8px;color:var(--petrol-dark);line-height:1.15;margin-bottom:12px}
+.section-sub{color:var(--ardoise);font-size:15px;max-width:480px;line-height:1.75;margin-bottom:44px;font-weight:300}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.who-card{background:var(--blanc);border:1px solid #DDE5EE;border-radius:14px;padding:24px}
+.who-icon{font-size:28px;margin-bottom:14px}
+.who-title{font-size:14.5px;font-weight:600;color:var(--petrol-dark);margin-bottom:8px}
+.who-desc{font-size:13px;color:var(--ardoise);line-height:1.7}
+.who-plan{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:11.5px;font-weight:500;color:var(--or-deep);background:var(--or-pale);padding:3px 10px;border-radius:100px}
+
+/* COMPARE TABLE */
+.compare-section{padding:72px 5%;background:var(--blanc)}
+.compare-inner{max-width:1100px;margin:0 auto}
+.compare-table{width:100%;border-collapse:collapse;margin-top:0}
+.compare-table th{padding:14px 16px;font-size:12px;font-weight:600;text-align:center;border-bottom:2px solid #EEF2F6;color:var(--ardoise)}
+.compare-table th:first-child{text-align:left;color:var(--acier);font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+.compare-table th.highlight{color:var(--petrol-dark);background:var(--or-pale);border-bottom-color:var(--or)}
+.compare-table td{padding:12px 16px;font-size:13px;text-align:center;border-bottom:1px solid #F0F4F8;color:var(--ardoise)}
+.compare-table td:first-child{text-align:left;color:var(--petrol-dark);font-weight:500;font-size:13.5px}
+.compare-table td.highlight{background:rgba(212,160,23,0.04)}
+.compare-table tr:hover td{background:var(--brume)}
+.compare-table tr:hover td.highlight{background:rgba(212,160,23,0.07)}
+.cat-row td{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--acier);padding:16px 16px 6px;background:transparent!important;border-bottom:none}
+.oui{color:var(--vert);font-size:16px}
+.non{color:#DDE5EE;font-size:15px}
+.val{font-weight:500;color:var(--petrol-dark)}
+
+/* FAQ */
+.faq-section{padding:72px 5%;background:var(--brume)}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:0}
+.faq-item{background:var(--blanc);border:1px solid #DDE5EE;border-radius:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-size:14px;font-weight:500;color:var(--petrol-dark);cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.faq-q:hover{background:var(--brume)}
+.faq-icon{color:var(--or);font-size:18px;flex-shrink:0}
+.faq-a{padding:0 20px 16px;font-size:13.5px;color:var(--ardoise);line-height:1.75}
+
+/* TRUST SECTION */
+.trust-section{padding:56px 5%;background:var(--blanc);text-align:center}
+.trust-inner{max-width:900px;margin:0 auto}
+.trust-logos{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;margin-top:32px;margin-bottom:48px}
+.trust-logo{background:var(--brume);border-radius:8px;padding:10px 20px;font-size:12.5px;font-weight:600;color:var(--acier)}
+
+/* CTA FINAL */
+.cta-final{background:var(--petrol-dark);padding:72px 5%;text-align:center}
+.cta-final-inner{max-width:640px;margin:0 auto}
+.cta-final h2{font-family:var(--font-titre);font-size:38px;color:var(--blanc);letter-spacing:-0.8px;margin-bottom:14px}
+.cta-final p{color:rgba(255,255,255,0.5);font-size:15px;line-height:1.75;margin-bottom:32px;font-weight:300}
+.cta-btns{display:flex;gap:12px;justify-content:center}
+.cta-btn-main{padding:14px 32px;background:var(--or);color:var(--petrol-dark);border:none;border-radius:9px;font-family:var(--font);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.cta-btn-main:hover{background:var(--or-light);transform:translateY(-1px)}
+.cta-btn-ghost{padding:14px 28px;background:transparent;color:rgba(255,255,255,0.75);border:1.5px solid rgba(255,255,255,0.2);border-radius:9px;font-family:var(--font);font-size:14px;cursor:pointer;transition:all 0.2s}
+.cta-btn-ghost:hover{border-color:rgba(255,255,255,0.45);color:#fff}
+.cta-guarantee{margin-top:20px;font-size:12.5px;color:rgba(255,255,255,0.3)}
+
+/* FOOTER */
+footer{background:#040E18;padding:22px 5%;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{font-family:var(--font-titre);font-size:18px;font-weight:700}
+.footer-logo .s{color:rgba(255,255,255,0.5)}.footer-logo .m{color:var(--or)}
+.footer-links{display:flex;gap:18px;list-style:none}
+.footer-links a{font-size:12px;color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-copy{font-size:11.5px;color:rgba(255,255,255,0.2)}
+</style>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="apple-touch-icon" href="assets/favicon-180.png"/>
+<meta name="theme-color" content="#0D3349"/>
+<script src="assets/auth.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="topbar">
+  <a class="topbar-logo" href="index.html">
+    <img class="topbar-logo-img" src="assets/logo-suplymate.png" width="28" height="28" alt="Suplymate"/>
+    <div class="logo-text"><span class="s">Suply</span><span class="m">mate</span></div>
+  </a>
+  <nav class="topbar-nav">
+    <a href="search.html">Fournisseurs</a>
+    <a href="index.html#categories">Catégories</a>
+    <a href="index.html#markets">Marchés</a>
+    <a href="pricing.html" class="active">Tarifs</a>
+    <a href="index.html#about">À propos</a>
+  </nav>
+  <div class="topbar-actions">
+    <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="btn-ghost">Connexion</button>
+    <button onclick="window.location.href='pricing.html'" class="btn-or">Commencer gratuitement</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">💎 Tarifs simples & transparents</div>
+  <h1>Le bon plan pour<br/><em>chaque entreprise</em></h1>
+  <p class="hero-sub">Pas de frais cachés, pas de surprise. Choisissez le plan qui correspond à vos besoins de sourcing et commencez à économiser dès aujourd'hui.</p>
+  <div class="toggle-wrap">
+    <button class="toggle-btn active">Mensuel</button>
+    <button class="toggle-btn">Annuel <span class="save-badge">-20%</span></button>
+  </div>
+</div>
+
+<!-- PLANS -->
+<div class="plans-section">
+  <div class="plans-grid">
+
+    <!-- GRATUIT -->
+    <div class="plan-card">
+      <div class="plan-body">
+        <div class="plan-name">Gratuit</div>
+        <div class="plan-desc">Pour découvrir Suplymate et explorer les fournisseurs mondiaux.</div>
+        <div class="plan-price">
+          <div class="plan-amount">0€ <span class="plan-period">/ mois</span></div>
+          <div class="plan-billed">Toujours gratuit</div>
+        </div>
+        <button onclick="window.location.href='pricing.html'" class="plan-btn">Commencer gratuitement</button>
+        <div class="plan-features">
+          <div class="feature-row"><span class="check">✔</span><span>Recherche de fournisseurs</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>5 demandes RFQ / mois</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>10 fournisseurs sauvegardés</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Accès aux profils publics</span></div>
+          <div class="feature-divider"></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Comparateur de prix</span></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Messagerie directe</span></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Estimateur douanier</span></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Support prioritaire</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRO — POPULAIRE -->
+    <div class="plan-card popular">
+      <div class="popular-label">⭐ Le plus populaire</div>
+      <div class="plan-body">
+        <div class="plan-name">Pro</div>
+        <div class="plan-desc">Pour les PME qui sourcent régulièrement à l'international.</div>
+        <div class="plan-price">
+          <div class="plan-amount">49€ <span class="plan-period">/ mois</span></div>
+          <div class="plan-billed">Facturé 470€/an · Économisez 118€</div>
+        </div>
+        <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="plan-btn">Démarrer l'essai gratuit 14j</button>
+        <div class="plan-features">
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Tout du plan Gratuit</span></div>
+          <div class="feature-divider"></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>RFQ illimitées</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Fournisseurs illimités</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Comparateur de prix</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Messagerie directe</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Estimateur douanier</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Suivi des prix</span></div>
+          <div class="feature-row"><span class="check" style="color:var(--vert)">✔</span><span>Support prioritaire (24h)</span></div>
+          <div class="feature-divider"></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Accès API</span></div>
+          <div class="feature-row"><span class="cross">✗</span><span>Multi-utilisateurs</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENTREPRISE -->
+    <div class="plan-card">
+      <div class="plan-body">
+        <div class="plan-name">Entreprise</div>
+        <div class="plan-desc">Pour les grandes sociétés avec des équipes achats structurées.</div>
+        <div class="plan-price">
+          <div class="plan-amount">199€ <span class="plan-period">/ mois</span></div>
+          <div class="plan-billed">Facturé 1 910€/an · Économisez 478€</div>
+        </div>
+        <button onclick="window.location.href='supplier.html'" class="plan-btn">Contacter les ventes</button>
+        <div class="plan-features">
+          <div class="feature-row"><span class="check">✔</span><span>Tout du plan Pro</span></div>
+          <div class="feature-divider"></div>
+          <div class="feature-row"><span class="check">✔</span><span>Accès API complet</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Multi-utilisateurs (5)</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Intégrations ERP</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Rapports analytiques</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Manager dédié</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Support 4h garanti</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Formation équipe incluse</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUR MESURE -->
+    <div class="plan-card">
+      <div class="plan-body">
+        <div class="plan-name">Sur mesure</div>
+        <div class="plan-desc">Pour les groupes industriels et fédérations professionnelles.</div>
+        <div class="plan-price">
+          <div class="plan-amount" style="font-size:28px">Sur devis</div>
+          <div class="plan-billed">Contrat annuel personnalisé</div>
+        </div>
+        <button onclick="window.location.href='supplier.html'" class="plan-btn">Parler à un expert</button>
+        <div class="plan-features">
+          <div class="feature-row"><span class="check">✔</span><span>Tout du plan Entreprise</span></div>
+          <div class="feature-divider"></div>
+          <div class="feature-row"><span class="check">✔</span><span>Utilisateurs illimités</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>White label disponible</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Données exclusives secteur</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>SLA personnalisé</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Onboarding sur site</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Support 1h garanti</span></div>
+          <div class="feature-row"><span class="check">✔</span><span>Rapports personnalisés</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHO IS IT FOR -->
+<div class="who-section">
+  <div class="who-inner">
+    <p class="section-eyebrow">Pour qui ?</p>
+    <h2>Un plan adapté à chaque profil</h2>
+    <p class="section-sub">Que vous soyez une PME en croissance ou un grand groupe industriel, Suplymate s'adapte à votre organisation.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">🏗️</div>
+        <div class="who-title">PME industrielle</div>
+        <div class="who-desc">Vous cherchez des fournisseurs internationaux pour vos projets BTP, métallurgie ou mécanique. Vous voulez comparer les prix et gagner du temps sur les appels d'offres.</div>
+        <div class="who-plan">✔ Plan Pro recommandé</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🏢</div>
+        <div class="who-title">Grande entreprise</div>
+        <div class="who-desc">Vous avez une équipe achats structurée, des processus ERP, et des volumes importants. Vous avez besoin d'API, de rapports et d'un manager dédié.</div>
+        <div class="who-plan">✔ Plan Entreprise recommandé</div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🔍</div>
+        <div class="who-title">Découverte</div>
+        <div class="who-desc">Vous voulez explorer la plateforme avant de vous engager. Testez gratuitement la recherche, les profils fournisseurs et les premières demandes de devis.</div>
+        <div class="who-plan">✔ Plan Gratuit pour commencer</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE TABLE -->
+<div class="compare-section">
+  <div class="compare-inner">
+    <p class="section-eyebrow">Comparaison détaillée</p>
+    <h2>Toutes les fonctionnalités,<br/>côte à côte</h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="text-align:left;width:35%">Fonctionnalité</th>
+          <th>Gratuit</th>
+          <th class="highlight">Pro</th>
+          <th>Entreprise</th>
+          <th>Sur mesure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cat-row"><td colspan="5">Recherche & Découverte</td></tr>
+        <tr><td>Recherche fournisseurs</td><td><span class="oui">✔</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Filtres avancés</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Profils fournisseurs complets</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Comparateur de prix</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Suivi des prix en temps réel</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+
+        <tr class="cat-row"><td colspan="5">Demandes & Communication</td></tr>
+        <tr><td>Demandes RFQ</td><td><span class="val">5/mois</span></td><td class="highlight"><span class="val">Illimité</span></td><td><span class="val">Illimité</span></td><td><span class="val">Illimité</span></td></tr>
+        <tr><td>Fournisseurs sauvegardés</td><td><span class="val">10</span></td><td class="highlight"><span class="val">Illimité</span></td><td><span class="val">Illimité</span></td><td><span class="val">Illimité</span></td></tr>
+        <tr><td>Messagerie directe</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Messagerie multilingue</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+
+        <tr class="cat-row"><td colspan="5">Outils & Analytics</td></tr>
+        <tr><td>Estimateur coûts douaniers</td><td><span class="non">✕</span></td><td class="highlight"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Rapports & Analytics</td><td><span class="non">✕</span></td><td class="highlight"><span class="non">✕</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Accès API</td><td><span class="non">✕</span></td><td class="highlight"><span class="non">✕</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Intégrations ERP</td><td><span class="non">✕</span></td><td class="highlight"><span class="non">✕</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+
+        <tr class="cat-row"><td colspan="5">Équipe & Support</td></tr>
+        <tr><td>Utilisateurs</td><td><span class="val">1</span></td><td class="highlight"><span class="val">1</span></td><td><span class="val">5</span></td><td><span class="val">Illimité</span></td></tr>
+        <tr><td>Support</td><td><span class="val">Email</span></td><td class="highlight"><span class="val">Prioritaire 24h</span></td><td><span class="val">Dédié 4h</span></td><td><span class="val">Dédié 1h</span></td></tr>
+        <tr><td>Onboarding personnalisé</td><td><span class="non">✕</span></td><td class="highlight"><span class="non">✕</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>White label</td><td><span class="non">✕</span></td><td class="highlight"><span class="non">✕</span></td><td><span class="non">✕</span></td><td><span class="oui">✔</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="faq-inner">
+    <p class="section-eyebrow" style="text-align:center">Questions fréquentes</p>
+    <h2 style="text-align:center;margin-bottom:36px">Tout ce que vous devez savoir</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Puis-je changer de plan à tout moment ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Oui, vous pouvez passer à un plan supérieur ou inférieur à n'importe quel moment. Le changement prend effet immédiatement et la facturation est au prorata du temps restant.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Y a-t-il un engagement minimum ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Aucun engagement pour les plans mensuels. Pour le plan annuel, l'abonnement est facturé en une fois mais vous bénéficiez de 20% de réduction. Vous pouvez annuler avant le renouvellement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quels moyens de paiement acceptez-vous ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Nous acceptons les cartes bancaires (Visa, Mastercard), les virements bancaires, et pour le Maroc : CMI, CIH Bank. D'autres moyens locaux sont en cours d'intégration selon les pays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">L'essai gratuit de 14 jours nécessite-t-il une carte bancaire ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Non, aucune carte bancaire n'est requise pour démarrer l'essai gratuit de 14 jours du plan Pro. Vous entrez vos informations de paiement seulement si vous choisissez de continuer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Les fournisseurs peuvent-ils aussi s'abonner ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Oui, les fournisseurs ont leurs propres plans : listing standard à 29€/mois et listing premium à 99€/mois. Le premium offre une visibilité prioritaire dans les résultats et un badge vérifié.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">La plateforme est-elle disponible en arabe ? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Oui, Suplymate est disponible en français, arabe et anglais dès le lancement. D'autres langues (chinois, turc, espagnol) sont en cours de déploiement pour la Phase 2.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div class="trust-section">
+  <div class="trust-inner">
+    <p class="section-eyebrow" style="margin-bottom:8px">Ils nous font confiance</p>
+    <h2 style="font-size:28px;margin-bottom:6px">Plus de 3 200 entreprises actives</h2>
+    <p style="color:var(--acier);font-size:14px">à travers le Maroc, la Tunisie, l'Afrique francophone et la région MENA</p>
+    <div class="trust-logos">
+      <div class="trust-logo">CasaSteel 🇲🇦</div>
+      <div class="trust-logo">Buildex Construction 🇲🇦</div>
+      <div class="trust-logo">MecaPlus 🇲🇦</div>
+      <div class="trust-logo">TunisIndustrie 🇹🇳</div>
+      <div class="trust-logo">AfrikaSteel 🇸🇳</div>
+      <div class="trust-logo">SaharaBTP 🇲🇦</div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
+      <div style="text-align:center"><div style="font-family:var(--font-titre);font-size:32px;font-weight:700;color:var(--petrol-dark);letter-spacing:-1px">34%</div><div style="font-size:13px;color:var(--acier);margin-top:4px">d'économies moyennes vs sourcing local</div></div>
+      <div style="text-align:center"><div style="font-family:var(--font-titre);font-size:32px;font-weight:700;color:var(--petrol-dark);letter-spacing:-1px">24h</div><div style="font-size:13px;color:var(--acier);margin-top:4px">délai de réponse moyen fournisseur</div></div>
+      <div style="text-align:center"><div style="font-family:var(--font-titre);font-size:32px;font-weight:700;color:var(--petrol-dark);letter-spacing:-1px">97%</div><div style="font-size:13px;color:var(--acier);margin-top:4px">taux de satisfaction client</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="cta-final-inner">
+    <h2>Prêt à sourcer<br/>à l'international ?</h2>
+    <p>Rejoignez 3 200+ entreprises industrielles qui trouvent leurs fournisseurs sur Suplymate. Commencez gratuitement, sans carte bancaire, sans engagement.</p>
+    <div class="cta-btns">
+      <button onclick="window.location.href='pricing.html'" class="cta-btn-main">Commencer gratuitement →</button>
+      <button onclick="window.location.href='supplier.html'" class="cta-btn-ghost">Parler à un expert</button>
+    </div>
+    <div class="cta-guarantee">🔒 Sans carte bancaire · Annulation à tout moment · Support en français & arabe</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span class="s">Suply</span><span class="m">mate</span></div>
+  <ul class="footer-links">
+    <li><a href="index.html#about">À propos</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="search.html">Fournisseurs</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Confidentialité</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Suplymate. Tous droits réservés.</div>
+</footer>
+
+</body>
+</html>

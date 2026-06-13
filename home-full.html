@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Suplymate</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--petrol:#0D3349;--petrol-mid:#1A4A6B;--petrol-light:#1A5276;--petrol-dark:#081E2D;
+--or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;--or-deep:#A07810;
+--ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+--font-titre:'Playfair Display',Georgia,serif;
+--font-corps:'Inter',system-ui,sans-serif;
+--r:8px;--r-lg:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-corps);background:var(--blanc);color:var(--petrol);font-size:15px;line-height:1.6;overflow-x:hidden}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(8,30,45,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,160,23,0.15);padding:0 5%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-brand-logo{width:34px;height:34px;border-radius:9px;overflow:hidden;flex-shrink:0;display:block;object-fit:contain}
+.nav-logo-text{font-family:var(--font-titre);font-weight:700;font-size:22px;letter-spacing:-0.3px}
+.nav-logo-text .suply{color:var(--blanc)}
+.nav-logo-text .mate{color:var(--or)}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13.5px;transition:color 0.2s}
+.nav-links a:hover{color:var(--or-light)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.btn-ghost{padding:7px 16px;border:1px solid rgba(212,160,23,0.3);border-radius:var(--r);color:rgba(255,255,255,0.75);background:transparent;font-family:var(--font-corps);font-size:13px;cursor:pointer;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--or);color:var(--or-light)}
+.btn-or{padding:8px 20px;border:none;border-radius:var(--r);background:var(--or);color:var(--petrol-dark);font-family:var(--font-corps);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.btn-or:hover{background:var(--or-light)}
+
+.hero{position:relative;min-height:620px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--petrol-dark)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,30,45,0.95) 0%,rgba(8,30,45,0.82) 50%,rgba(8,30,45,0.25) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 5% 0;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.hero-left{padding-bottom:56px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,160,23,0.12);border:1px solid rgba(212,160,23,0.3);color:var(--or-light);font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:26px}
+.badge-dot{width:6px;height:6px;background:var(--or);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+h1{font-family:var(--font-titre);font-weight:700;font-size:52px;line-height:1.06;color:var(--blanc);letter-spacing:-1px;margin-bottom:22px}
+h1 em{font-style:italic;color:var(--or-light)}
+.hero-sub{color:rgba(255,255,255,0.65);font-size:16px;line-height:1.8;max-width:460px;margin-bottom:36px;font-weight:300}
+.hero-ctas{display:flex;gap:12px;margin-bottom:44px}
+.btn-lg-or{padding:14px 30px;border:none;border-radius:var(--r);background:var(--or);color:var(--petrol-dark);font-family:var(--font-corps);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.btn-lg-or:hover{background:var(--or-light);transform:translateY(-1px)}
+.btn-lg-ghost{padding:14px 28px;border:1.5px solid rgba(255,255,255,0.3);border-radius:var(--r);background:rgba(255,255,255,0.05);backdrop-filter:blur(8px);color:rgba(255,255,255,0.85);font-family:var(--font-corps);font-size:14px;cursor:pointer;transition:all 0.2s}
+.btn-lg-ghost:hover{border-color:rgba(212,160,23,0.5);color:var(--blanc)}
+.hero-drapeaux{display:flex;align-items:center;gap:16px;border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}
+.drapeau-label{font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.drapeaux{display:flex;gap:8px}
+.drapeau{width:32px;height:22px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1)}
+
+.hero-panel{background:rgba(8,30,45,0.65);backdrop-filter:blur(20px);border:1px solid rgba(212,160,23,0.2);border-bottom:none;border-radius:var(--r-lg) var(--r-lg) 0 0;padding:26px}
+.panel-label{font-size:11px;color:rgba(212,160,23,0.7);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;font-weight:500}
+.barre-recherche{background:rgba(255,255,255,0.08);border:1px solid rgba(212,160,23,0.2);border-radius:var(--r);padding:11px 14px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.barre-recherche input{flex:1;background:transparent;border:none;outline:none;color:var(--blanc);font-size:14px;font-family:var(--font-corps)}
+.barre-recherche input::placeholder{color:rgba(255,255,255,0.3)}
+.filtres{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.filtre-select{background:rgba(255,255,255,0.07);border:1px solid rgba(212,160,23,0.15);border-radius:var(--r);padding:9px 12px;color:rgba(255,255,255,0.65);font-size:13px;font-family:var(--font-corps);appearance:none;cursor:pointer}
+.btn-rechercher{width:100%;padding:12px;border:none;border-radius:var(--r);background:var(--or);color:var(--petrol-dark);font-family:var(--font-corps);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:14px;transition:background 0.2s}
+.btn-rechercher:hover{background:var(--or-light)}
+.tags-rapides{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:rgba(255,255,255,0.05);border:1px solid rgba(212,160,23,0.15);color:rgba(255,255,255,0.5);font-size:11.5px;padding:4px 11px;border-radius:100px;cursor:pointer;transition:all 0.2s}
+.tag:hover{background:rgba(212,160,23,0.12);color:var(--or-light);border-color:rgba(212,160,23,0.35)}
+
+.stats-barre{background:var(--or);padding:20px 5%}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat{position:relative;padding:4px 0}
+.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:rgba(8,30,45,0.15)}
+.stat-num{font-family:var(--font-titre);font-weight:700;font-size:26px;color:var(--petrol-dark);display:block;letter-spacing:-0.5px}
+.stat-label{font-size:11px;color:rgba(8,30,45,0.55);text-transform:uppercase;letter-spacing:0.5px}
+
+section{padding:80px 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--or-deep);margin-bottom:12px}
+h2{font-family:var(--font-titre);font-weight:700;font-size:36px;letter-spacing:-0.8px;color:var(--petrol-dark);line-height:1.15;margin-bottom:14px}
+.sous-titre{color:var(--ardoise);font-size:15.5px;max-width:500px;line-height:1.8;margin-bottom:46px;font-weight:300}
+
+.etapes-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.etapes-grille::before{content:'';position:absolute;top:26px;left:8%;right:8%;height:1px;background:repeating-linear-gradient(90deg,var(--or) 0,var(--or) 5px,transparent 5px,transparent 12px)}
+.etape-carte{background:var(--blanc);border:1px solid #DDE5EE;border-radius:var(--r-lg);padding:26px 20px}
+.etape-num{width:38px;height:38px;background:var(--petrol);color:var(--blanc);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-titre);font-weight:700;font-size:16px;margin-bottom:16px;position:relative;z-index:1}
+.etape-titre{font-weight:500;font-size:14.5px;color:var(--petrol-dark);margin-bottom:7px}
+.etape-desc{font-size:13px;color:var(--ardoise);line-height:1.65}
+
+.section-pays{background:var(--brume)}
+.pays-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.pays-carte{background:var(--blanc);border:1px solid #DDE5EE;border-radius:var(--r-lg);padding:18px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:13px}
+.pays-carte:hover{border-color:var(--or);box-shadow:0 4px 14px rgba(212,160,23,0.12);transform:translateY(-2px)}
+.drap{font-size:24px;flex-shrink:0}
+.pays-nom{font-weight:500;font-size:13.5px;color:var(--petrol-dark)}
+.pays-nb{font-size:11.5px;color:var(--acier)}
+.pays-badge{font-size:10px;background:var(--or-pale);color:var(--or-deep);font-weight:500;padding:2px 8px;border-radius:100px;display:inline-block;margin-top:3px}
+
+.cats-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.cat-carte{background:var(--blanc);border:1px solid #DDE5EE;border-radius:var(--r-lg);padding:22px;cursor:pointer;transition:all 0.2s;display:flex;gap:15px;align-items:flex-start}
+.cat-carte:hover{border-color:var(--petrol);box-shadow:0 6px 18px rgba(13,51,73,0.08);transform:translateY(-2px)}
+.cat-icone{width:42px;height:42px;background:var(--brume);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:19px}
+.cat-nom{font-weight:500;font-size:14px;color:var(--petrol-dark);margin-bottom:4px}
+.cat-nb{font-size:12px;color:var(--acier)}
+
+.fourn-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fourn-carte{background:var(--blanc);border:1px solid #DDE5EE;border-radius:var(--r-lg);overflow:hidden;transition:all 0.2s;cursor:pointer}
+.fourn-carte:hover{box-shadow:0 8px 26px rgba(13,51,73,0.1);transform:translateY(-2px)}
+.fc-head{padding:16px 16px 13px;border-bottom:1px solid #EEF2F6;display:flex;align-items:center;gap:12px}
+.fc-logo{width:44px;height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:var(--font-titre);font-weight:700;font-size:16px;flex-shrink:0}
+.fc-nom{font-weight:500;font-size:14px;color:var(--petrol-dark)}
+.fc-loc{font-size:11.5px;color:var(--acier);margin-top:2px}
+.verifie{display:inline-flex;align-items:center;gap:3px;background:#EAF7F1;color:#157A4A;font-size:10px;font-weight:500;padding:2px 8px;border-radius:100px;margin-top:3px}
+.fc-corps{padding:13px 16px}
+.fc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:11px}
+.fc-tag{background:var(--brume);color:var(--petrol);font-size:11px;padding:3px 9px;border-radius:100px}
+.fc-meta{display:flex;justify-content:space-between;align-items:center}
+.fc-moq{font-size:12px;color:var(--ardoise)}
+.fc-moq strong{color:var(--petrol-dark);font-weight:500}
+.fc-etoiles{color:var(--or);font-size:12px}
+.fc-note{font-size:11px;color:var(--acier);margin-left:3px}
+.fc-btn{display:block;width:calc(100% - 32px);margin:0 16px 15px;padding:9px;background:var(--petrol);color:var(--blanc);border:none;border-radius:var(--r);font-family:var(--font-corps);font-size:12.5px;font-weight:500;text-align:center;cursor:pointer;transition:background 0.2s}
+.fc-btn:hover{background:var(--petrol-mid)}
+
+.section-compare{background:var(--petrol-dark);padding:80px 5%}
+.section-compare h2{color:var(--blanc)}
+.section-compare .sous-titre{color:rgba(255,255,255,0.45)}
+.table-compare{width:100%;border-collapse:collapse;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(212,160,23,0.1)}
+.table-compare th{padding:13px 15px;font-size:12px;font-weight:500;text-align:center;background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.6)}
+.table-compare th:first-child{text-align:left;color:rgba(255,255,255,0.35);font-size:10.5px;letter-spacing:0.5px}
+.table-compare th.nous{background:rgba(212,160,23,0.12);color:var(--or-light)}
+.table-compare td{padding:12px 15px;font-size:13px;text-align:center;border-top:1px solid rgba(255,255,255,0.04);color:rgba(255,255,255,0.5)}
+.table-compare td:first-child{text-align:left;color:rgba(255,255,255,0.75);font-size:13.5px}
+.table-compare td.nous{background:rgba(212,160,23,0.05);color:var(--or-light);font-weight:500}
+.oui{color:#4DE896;font-size:16px}
+.non{color:rgba(255,255,255,0.18);font-size:15px}
+.partiel{font-size:11px;color:rgba(255,255,255,0.35);font-style:italic}
+
+.testi-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testi-carte{background:var(--blanc);border:1px solid #DDE5EE;border-radius:var(--r-lg);padding:24px}
+.testi-etoiles{color:var(--or);font-size:14px;margin-bottom:14px}
+.testi-texte{font-size:13.5px;color:var(--ardoise);line-height:1.8;margin-bottom:18px;font-style:italic}
+.testi-auteur{display:flex;align-items:center;gap:11px}
+.testi-avatar{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:13px;flex-shrink:0}
+.testi-nom{font-size:13px;font-weight:500;color:var(--petrol-dark)}
+.testi-role{font-size:11.5px;color:var(--acier)}
+
+.section-cta{background:var(--petrol);padding:80px 5%}
+.cta-inner{max-width:1200px;margin:0 auto;border:1px solid rgba(212,160,23,0.2);border-radius:20px;padding:52px;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;overflow:hidden}
+.cta-inner::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:rgba(212,160,23,0.06);border-radius:50%}
+.cta-texte h2{color:var(--blanc);margin-bottom:10px;font-size:32px}
+.cta-texte p{color:rgba(255,255,255,0.5);font-size:15px;max-width:420px;line-height:1.75;font-weight:300}
+.cta-actions{display:flex;gap:11px;flex-shrink:0;position:relative;z-index:1}
+
+footer{background:var(--petrol-dark);border-top:1px solid rgba(212,160,23,0.1);padding:26px 5%}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo-text{font-family:var(--font-titre);font-size:19px;font-weight:700}
+.footer-logo-text .suply{color:rgba(255,255,255,0.6)}
+.footer-logo-text .mate{color:var(--or)}
+.footer-liens{display:flex;gap:20px;list-style:none}
+.footer-liens a{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none}
+.footer-liens a:hover{color:rgba(212,160,23,0.7)}
+.footer-copy{font-size:11.5px;color:rgba(255,255,255,0.2)}
+</style>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="apple-touch-icon" href="assets/favicon-180.png"/>
+<meta name="theme-color" content="#0D3349"/>
+<script src="assets/auth.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img class="nav-brand-logo" src="assets/logo-suplymate.png" width="34" height="34" alt="Suplymate"/>
+      <span class="nav-logo-text">
+        <span class="suply">Suply</span><span class="mate">mate</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="search.html">Fournisseurs</a></li>
+      <li><a href="index.html#categories">Catégories</a></li>
+      <li><a href="index.html#markets">Marchés</a></li>
+      <li><a href="pricing.html">Tarifs</a></li>
+      <li><a href="index.html#about">À propos</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="btn-ghost">Connexion</button>
+      <button onclick="window.location.href='pricing.html'" class="btn-or">Commencer gratuitement</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <img class="hero-img" src="assets/hero-handshake.png" alt="Fournisseur et acheteur industriel"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="badge-dot"></span>Sourcing Industriel International</div>
+      <h1>Sourcez mieux.<br/><em>Grandissez plus vite.</em></h1>
+      <p class="hero-sub">La plateforme B2B qui connecte les entreprises industrielles du Maroc et d'Afrique avec des fournisseurs vérifiés dans le monde entier — Chine, Turquie, Allemagne, Italie et bien plus.</p>
+      <div class="hero-ctas">
+        <button onclick="window.location.href='pricing.html'" class="btn-lg-or">Commencer gratuitement →</button>
+        <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="btn-lg-ghost">Voir la démo</button>
+      </div>
+      <div class="hero-drapeaux">
+        <span class="drapeau-label">Fournisseurs de</span>
+        <div class="drapeaux">
+          <span class="drapeau">🇨🇳</span>
+          <span class="drapeau">🇹🇷</span>
+          <span class="drapeau">🇩🇪</span>
+          <span class="drapeau">🇮🇹</span>
+          <span class="drapeau">🇪🇸</span>
+          <span class="drapeau">🇺🇸</span>
+          <span class="drapeau">🇮🇳</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <p class="panel-label">Trouver des fournisseurs</p>
+      <div class="barre-recherche">
+        <span style="color:rgba(212,160,23,0.6);font-size:16px">🔍</span>
+        <input type="text" placeholder="Profilés acier, aluminium, vannes industrielles..."/>
+      </div>
+      <div class="filtres">
+        <select class="filtre-select">
+          <option>Tous les pays</option>
+          <option>🇨🇳 Chine</option>
+          <option>🇹🇷 Turquie</option>
+          <option>🇩🇪 Allemagne</option>
+          <option>🇮🇹 Italie</option>
+        </select>
+        <select class="filtre-select">
+          <option>Tous les secteurs</option>
+          <option>Métallurgie</option>
+          <option>Construction</option>
+          <option>Mécanique</option>
+        </select>
+      </div>
+      <button onclick="window.location.href='search.html'" class="btn-rechercher">Rechercher des fournisseurs</button>
+      <div class="tags-rapides">
+        <span class="tag">Poutrelles acier</span>
+        <span class="tag">Profilés aluminium</span>
+        <span class="tag">Tubes & raccords</span>
+        <span class="tag">Vannes</span>
+        <span class="tag">Tôles</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-barre">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num">12 400+</span><span class="stat-label">Fournisseurs vérifiés</span></div>
+    <div class="stat"><span class="stat-num">47</span><span class="stat-label">Pays sources</span></div>
+    <div class="stat"><span class="stat-num">180+</span><span class="stat-label">Catégories produits</span></div>
+    <div class="stat"><span class="stat-num">3 200+</span><span class="stat-label">Acheteurs actifs</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <p class="eyebrow">Comment ça fonctionne</p>
+    <h2>De la recherche à la livraison,<br/>simplifié.</h2>
+    <p class="sous-titre">Quatre étapes pour sourcer à l'international en toute confiance — sans agents, sans friction.</p>
+    <div class="etapes-grille">
+      <div class="etape-carte"><div class="etape-num">1</div><div class="etape-titre">Recherche intelligente</div><div class="etape-desc">Recherchez par produit, pays, MOQ, certification ou budget. Résultats en quelques secondes.</div></div>
+      <div class="etape-carte"><div class="etape-num">2</div><div class="etape-titre">Comparez les offres</div><div class="etape-desc">Prix, qualité, délais, avis — tout côte à côte pour décider en confiance.</div></div>
+      <div class="etape-carte"><div class="etape-num">3</div><div class="etape-titre">Contactez & négociez</div><div class="etape-desc">Messagerie multilingue intégrée pour négocier directement avec les fournisseurs.</div></div>
+      <div class="etape-carte"><div class="etape-num">4</div><div class="etape-titre">Commandez en sécurité</div><div class="etape-desc">Paiement sécurisé, contrats standardisés et suivi de commande en temps réel.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pays">
+  <div class="section-inner">
+    <p class="eyebrow">Marchés sources</p>
+    <h2>Accédez aux meilleurs marchés<br/>industriels mondiaux</h2>
+    <p class="sous-titre">Des fournisseurs vérifiés dans les hubs industriels les plus compétitifs, accessibles en quelques clics.</p>
+    <div class="pays-grille">
+      <div class="pays-carte"><span class="drap">🇨🇳</span><div><div class="pays-nom">Chine</div><div class="pays-nb">5 240 fournisseurs</div><span class="pays-badge">Le plus populaire</span></div></div>
+      <div class="pays-carte"><span class="drap">🇹🇷</span><div><div class="pays-nom">Turquie</div><div class="pays-nb">1 830 fournisseurs</div><span class="pays-badge">Top acier</span></div></div>
+      <div class="pays-carte"><span class="drap">🇩🇪</span><div><div class="pays-nom">Allemagne</div><div class="pays-nb">980 fournisseurs</div><span class="pays-badge">Qualité premium</span></div></div>
+      <div class="pays-carte"><span class="drap">🇮🇹</span><div><div class="pays-nom">Italie</div><div class="pays-nb">760 fournisseurs</div></div></div>
+      <div class="pays-carte"><span class="drap">🇪🇸</span><div><div class="pays-nom">Espagne</div><div class="pays-nb">540 fournisseurs</div></div></div>
+      <div class="pays-carte"><span class="drap">🇮🇳</span><div><div class="pays-nom">Inde</div><div class="pays-nb">920 fournisseurs</div></div></div>
+      <div class="pays-carte"><span class="drap">🇺🇸</span><div><div class="pays-nom">États-Unis</div><div class="pays-nb">480 fournisseurs</div></div></div>
+      <div class="pays-carte"><span class="drap">🇰🇷</span><div><div class="pays-nom">Corée du Sud</div><div class="pays-nb">310 fournisseurs</div><span class="pays-badge">Nouveau</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <p class="eyebrow">Catégories produits</p>
+    <h2>Tous vos besoins industriels,<br/>couverts.</h2>
+    <p class="sous-titre">Des matières premières aux équipements spécialisés, notre catalogue couvre tous les secteurs industriels.</p>
+    <div class="cats-grille">
+      <div class="cat-carte"><div class="cat-icone">🏗️</div><div><div class="cat-nom">Construction & BTP</div><div class="cat-nb">2 340 produits</div></div></div>
+      <div class="cat-carte"><div class="cat-icone">⚙️</div><div><div class="cat-nom">Métallurgie & Acier</div><div class="cat-nb">1 890 produits</div></div></div>
+      <div class="cat-carte"><div class="cat-icone">🔩</div><div><div class="cat-nom">Mécanique industrielle</div><div class="cat-nb">1 450 produits</div></div></div>
+      <div class="cat-carte"><div class="cat-icone">⚡</div><div><div class="cat-nom">Électrotechnique</div><div class="cat-nb">890 produits</div></div></div>
+      <div class="cat-carte"><div class="cat-icone">🛢️</div><div><div class="cat-nom">Tuyauterie & fluides</div><div class="cat-nb">670 produits</div></div></div>
+      <div class="cat-carte"><div class="cat-icone">🧱</div><div><div class="cat-nom">Matières premières</div><div class="cat-nb">530 produits</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--brume)">
+  <div class="section-inner">
+    <p class="eyebrow">Fournisseurs en vedette</p>
+    <h2>Vérifiés. Notés. Fiables.</h2>
+    <p class="sous-titre">Chaque fournisseur passe un processus de vérification documentaire avant d'être référencé.</p>
+    <div class="fourn-grille">
+      <div class="fourn-carte">
+        <div class="fc-head"><div class="fc-logo" style="background:#E3EEF7;color:#0D3349">TG</div><div><div class="fc-nom">TurboSteel Group</div><div class="fc-loc">📍 Istanbul, Turquie</div><span class="verifie">✔ Vérifié</span></div></div>
+        <div class="fc-corps"><div class="fc-tags"><span class="fc-tag">Profilés HEA/HEB</span><span class="fc-tag">Tôles acier</span><span class="fc-tag">Ronds à béton</span></div><div class="fc-meta"><div class="fc-moq">MOQ : <strong>5 tonnes</strong></div><div><span class="fc-etoiles">★★★★★</span><span class="fc-note">4.9</span></div></div></div>
+        <button onclick="window.location.href='supplier.html'" class="fc-btn">Contacter le fournisseur</button>
+      </div>
+      <div class="fourn-carte">
+        <div class="fc-head"><div class="fc-logo" style="background:#FBF3DC;color:#A07810">ZM</div><div><div class="fc-nom">Zhejiang Metals Co.</div><div class="fc-loc">📍 Wenzhou, Chine</div><span class="verifie">✔ Vérifié</span></div></div>
+        <div class="fc-corps"><div class="fc-tags"><span class="fc-tag">Inox 304/316</span><span class="fc-tag">Aluminium</span><span class="fc-tag">Cuivre</span></div><div class="fc-meta"><div class="fc-moq">MOQ : <strong>500 kg</strong></div><div><span class="fc-etoiles">★★★★☆</span><span class="fc-note">4.6</span></div></div></div>
+        <button onclick="window.location.href='supplier.html'" class="fc-btn">Contacter le fournisseur</button>
+      </div>
+      <div class="fourn-carte">
+        <div class="fc-head"><div class="fc-logo" style="background:#EAF3DE;color:#27500A">BW</div><div><div class="fc-nom">Baustahl Werke GmbH</div><div class="fc-loc">📍 Dortmund, Allemagne</div><span class="verifie">✔ Vérifié</span></div></div>
+        <div class="fc-corps"><div class="fc-tags"><span class="fc-tag">Acier de structure</span><span class="fc-tag">Poutrelles IPE</span><span class="fc-tag">Tubes carrés</span></div><div class="fc-meta"><div class="fc-moq">MOQ : <strong>10 tonnes</strong></div><div><span class="fc-etoiles">★★★★★</span><span class="fc-note">5.0</span></div></div></div>
+        <button onclick="window.location.href='supplier.html'" class="fc-btn">Contacter le fournisseur</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-compare">
+  <div class="section-inner">
+    <p class="eyebrow" style="color:rgba(212,160,23,0.6)">Pourquoi Suplymate</p>
+    <h2>Conçu pour les marchés<br/>que les autres ignorent.</h2>
+    <p class="sous-titre">Contrairement aux géants généralistes, nous sommes pensés pour les acheteurs industriels au Maroc, en Afrique et dans la région MENA.</p>
+    <table class="table-compare">
+      <thead><tr><th>Fonctionnalité</th><th class="nous">Suplymate ✦</th><th>Alibaba</th><th>Made-in-China</th><th>ThomasNet</th></tr></thead>
+      <tbody>
+        <tr><td>Fournisseurs vérifiés</td><td class="nous"><span class="oui">✔</span></td><td><span class="partiel">Partiel</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Interface arabe & français</td><td class="nous"><span class="oui">✔</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td></tr>
+        <tr><td>Focus Maroc / MENA</td><td class="nous"><span class="oui">✔</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td></tr>
+        <tr><td>Comparateur de prix</td><td class="nous"><span class="oui">✔</span></td><td><span class="oui">✔</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td></tr>
+        <tr><td>Abordable pour les PME</td><td class="nous"><span class="oui">✔</span></td><td><span class="partiel">Partiel</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td></tr>
+        <tr><td>Focus industriel</td><td class="nous"><span class="oui">✔</span></td><td><span class="non">✕</span></td><td><span class="oui">✔</span></td><td><span class="oui">✔</span></td></tr>
+        <tr><td>Estimateur coûts douaniers</td><td class="nous"><span class="oui">✔</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td><td><span class="non">✕</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <p class="eyebrow">Témoignages</p>
+    <h2>La confiance des industriels<br/>à travers la région</h2>
+    <p class="sous-titre">Des résultats concrets d'entreprises qui ont sourcé à l'international pour la première fois.</p>
+    <div class="testi-grille">
+      <div class="testi-carte"><div class="testi-etoiles">★★★★★</div><p class="testi-texte">«&nbsp;Nous avons économisé 34% sur notre commande d'acier en sourcant directement depuis la Turquie. Suplymate a rendu le processus simple — nous n'aurions jamais pu le faire seuls.&nbsp;»</p><div class="testi-auteur"><div class="testi-avatar" style="background:#E3EEF7;color:#0D3349">KA</div><div><div class="testi-nom">Karim Alaoui</div><div class="testi-role">Responsable achats, CasaSteel — Casablanca</div></div></div></div>
+      <div class="testi-carte"><div class="testi-etoiles">★★★★★</div><p class="testi-texte">«&nbsp;Trouver des fournisseurs chinois vérifiés prenait des semaines. Avec Suplymate, j'ai trouvé trois fabricants qualifiés en une après-midi et reçu des devis le lendemain.&nbsp;»</p><div class="testi-auteur"><div class="testi-avatar" style="background:#EAF3DE;color:#27500A">SA</div><div><div class="testi-nom">Sara Amrani</div><div class="testi-role">Directrice, Buildex Construction — Tanger</div></div></div></div>
+      <div class="testi-carte"><div class="testi-etoiles">★★★★☆</div><p class="testi-texte">«&nbsp;L'estimateur de coûts douaniers seul nous a évité une erreur très coûteuse. C'est exactement ce dont le secteur industriel marocain avait besoin.&nbsp;»</p><div class="testi-auteur"><div class="testi-avatar" style="background:#FBF3DC;color:#A07810">YB</div><div><div class="testi-nom">Youssef Benali</div><div class="testi-role">PDG, MecaPlus — Fès</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-cta">
+  <div class="cta-inner">
+    <div class="cta-texte">
+      <h2>Prêt à sourcer à l'international ?</h2>
+      <p>Rejoignez 3 200+ entreprises industrielles du Maroc, de Tunisie et d'Afrique qui trouvent leurs fournisseurs sur Suplymate. Gratuit pour commencer, sans carte bancaire.</p>
+    </div>
+    <div class="cta-actions">
+      <button class="btn-lg-or">Créer un compte gratuit →</button>
+      <button class="btn-lg-ghost">Nous contacter</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="20" fill="#0D3349"/>
+        <polygon points="50,12 80,28 80,44 50,28 20,44 20,28" fill="#D4A017"/>
+        <polygon points="20,44 50,28 80,44 80,56 50,72 20,56" fill="#FFFFFF" opacity="0.9"/>
+        <polygon points="20,56 50,72 80,56 80,72 50,88 20,72" fill="#1A5276"/>
+      </svg>
+      <div class="footer-logo-text"><span class="suply">Suply</span><span class="mate">mate</span></div>
+    </div>
+    <ul class="footer-liens">
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="search.html">Fournisseurs</a></li>
+      <li><a href="pricing.html">Tarifs</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Confidentialité</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Suplymate. Tous droits réservés.</div>
+  </div>
+</footer>
+
+</body>
+</html>

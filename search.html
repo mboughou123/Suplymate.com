@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Suplymate — Rechercher des fournisseurs</title>
+<meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--petrol:#0D3349;--petrol-mid:#1A4A6B;--petrol-dark:#081E2D;
+--or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;--or-deep:#A07810;
+--ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+--vert:#0D7A4E;--vert-pale:#EAF7F1;
+--font:'Inter',system-ui,sans-serif;
+--sidebar:240px;
+}
+body{font-family:var(--font);background:#F0F4F8;color:var(--petrol-dark);font-size:14px;margin:0}
+
+/* TOPBAR */
+.topbar{background:var(--petrol-dark);padding:0 24px;height:58px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(212,160,23,0.15);position:sticky;top:0;z-index:50}
+.topbar-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+.topbar-logo-img{width:28px;height:28px;border-radius:8px;display:block;object-fit:contain;flex-shrink:0}
+.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:18px}
+.logo-text .s{color:#fff}.logo-text .m{color:var(--or)}
+.search-bar{flex:1;max-width:580px;display:flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(212,160,23,0.2);border-radius:8px;overflow:hidden}
+.search-bar input{flex:1;background:transparent;border:none;outline:none;padding:10px 14px;color:#fff;font-size:13.5px;font-family:var(--font)}
+.search-bar input::placeholder{color:rgba(255,255,255,0.35)}
+.search-bar-btn{padding:0 16px;height:40px;background:var(--or);border:none;color:var(--petrol-dark);font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font);white-space:nowrap}
+.search-bar-btn:hover{background:var(--or-light)}
+.topbar-nav{display:flex;gap:4px;margin-left:8px}
+.topbar-nav a{color:rgba(255,255,255,0.55);font-size:12.5px;padding:6px 10px;border-radius:6px;text-decoration:none;transition:all 0.15s}
+.topbar-nav a:hover{color:#fff;background:rgba(255,255,255,0.06)}
+.topbar-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn-connexion{padding:7px 14px;border:1px solid rgba(212,160,23,0.3);border-radius:7px;color:rgba(255,255,255,0.8);background:transparent;font-size:12.5px;cursor:pointer;font-family:var(--font)}
+.btn-start{padding:7px 14px;border:none;border-radius:7px;background:var(--or);color:var(--petrol-dark);font-size:12.5px;font-weight:500;cursor:pointer;font-family:var(--font)}
+
+/* LAYOUT */
+.page{display:flex;min-height:calc(100vh - 58px)}
+
+/* SIDEBAR FILTRES */
+.filtres-sidebar{width:var(--sidebar);background:var(--blanc);border-right:1px solid #E2EAF0;padding:20px 0;flex-shrink:0;position:sticky;top:58px;height:calc(100vh - 58px);overflow-y:auto}
+.filtres-header{padding:0 18px 14px;border-bottom:1px solid #EEF2F6;display:flex;align-items:center;justify-content:space-between}
+.filtres-title{font-size:13px;font-weight:600;color:var(--petrol-dark)}
+.filtres-reset{font-size:11.5px;color:var(--or-deep);cursor:pointer}
+.filtre-section{padding:14px 18px;border-bottom:1px solid #EEF2F6}
+.filtre-section-titre{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--acier);margin-bottom:10px}
+.filtre-option{display:flex;align-items:center;justify-content:space-between;padding:5px 0;cursor:pointer}
+.filtre-option label{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ardoise);cursor:pointer}
+.filtre-option input[type=checkbox]{accent-color:var(--petrol);width:14px;height:14px}
+.filtre-count{font-size:11px;color:var(--acier);background:var(--brume);padding:1px 7px;border-radius:100px}
+.filtre-option.actif label{color:var(--petrol-dark);font-weight:500}
+.range-input{width:100%;accent-color:var(--or);margin:6px 0}
+.range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--acier)}
+.badge-pays{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:6px;cursor:pointer;transition:all 0.15s;margin-bottom:4px}
+.badge-pays:hover{background:var(--brume)}
+.badge-pays.actif{background:rgba(13,51,73,0.08)}
+.badge-pays .flag{font-size:16px}
+.badge-pays .nom{font-size:12.5px;color:var(--ardoise)}
+.badge-pays.actif .nom{color:var(--petrol-dark);font-weight:500}
+.badge-pays .nb{margin-left:auto;font-size:11px;color:var(--acier)}
+
+/* RESULTS AREA */
+.results-area{flex:1;padding:20px 24px;overflow-y:auto}
+.results-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.results-count{font-size:13.5px;color:var(--ardoise)}
+.results-count strong{color:var(--petrol-dark);font-weight:600}
+.results-controls{display:flex;align-items:center;gap:10px}
+.tri-select{background:var(--blanc);border:1px solid #DDE5EE;border-radius:7px;padding:7px 12px;font-size:12.5px;color:var(--petrol-dark);font-family:var(--font);cursor:pointer}
+.vue-btns{display:flex;border:1px solid #DDE5EE;border-radius:7px;overflow:hidden}
+.vue-btn{padding:7px 10px;background:var(--blanc);border:none;cursor:pointer;font-size:13px;color:var(--acier);transition:all 0.15s}
+.vue-btn.active{background:var(--petrol);color:#fff}
+
+/* ACTIVE FILTERS TAGS */
+.active-filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.filter-tag{display:flex;align-items:center;gap:5px;background:rgba(13,51,73,0.08);border:1px solid rgba(13,51,73,0.15);color:var(--petrol);font-size:11.5px;padding:4px 10px;border-radius:100px}
+.filter-tag-x{cursor:pointer;opacity:0.5;font-size:13px;line-height:1}
+.filter-tag-x:hover{opacity:1}
+
+/* SUPPLIER CARDS */
+.cards-grid{display:flex;flex-direction:column;gap:14px}
+.supplier-card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:12px;overflow:hidden;transition:all 0.2s;display:grid;grid-template-columns:auto 1fr auto;gap:0}
+.supplier-card:hover{box-shadow:0 4px 20px rgba(13,51,73,0.1);border-color:#C8D8E8;transform:translateY(-1px)}
+.supplier-card.featured{border-color:var(--or);border-width:1.5px}
+
+/* LEFT — Logo + infos */
+.sc-left{padding:20px 16px 20px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;min-width:100px;border-right:1px solid #EEF2F6}
+.sc-logo{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:18px}
+.sc-rating{display:flex;flex-direction:column;align-items:center;gap:2px}
+.sc-stars{color:var(--or);font-size:13px}
+.sc-rating-num{font-size:11px;color:var(--acier)}
+.sc-reviews{font-size:10.5px;color:var(--acier)}
+
+/* MIDDLE — Détails */
+.sc-mid{padding:16px 18px}
+.sc-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.sc-name{font-size:15px;font-weight:600;color:var(--petrol-dark)}
+.sc-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.sc-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:100px}
+.sc-badge.verifie{background:var(--vert-pale);color:var(--vert)}
+.sc-badge.premium{background:var(--or-pale);color:var(--or-deep)}
+.sc-badge.certifie{background:#EEF2F6;color:var(--ardoise)}
+.sc-location{font-size:12.5px;color:var(--acier);margin-bottom:10px}
+.sc-desc{font-size:12.5px;color:var(--ardoise);line-height:1.65;margin-bottom:12px;max-width:520px}
+.sc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.sc-tag{background:var(--brume);color:var(--petrol);font-size:11px;padding:3px 10px;border-radius:100px}
+.sc-specs{display:flex;gap:20px;flex-wrap:wrap}
+.sc-spec{display:flex;flex-direction:column;gap:2px}
+.sc-spec-label{font-size:10.5px;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px}
+.sc-spec-val{font-size:12.5px;font-weight:500;color:var(--petrol-dark)}
+
+/* RIGHT — Actions */
+.sc-right{padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;min-width:150px;border-left:1px solid #EEF2F6}
+.sc-prix{text-align:right;margin-bottom:12px}
+.sc-prix-label{font-size:10.5px;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px}
+.sc-prix-val{font-size:17px;font-weight:600;color:var(--petrol-dark);letter-spacing:-0.3px}
+.sc-prix-unit{font-size:11px;color:var(--acier)}
+.sc-actions{display:flex;flex-direction:column;gap:7px;width:100%}
+.btn-contact{padding:9px 14px;background:var(--petrol);color:#fff;border:none;border-radius:7px;font-family:var(--font);font-size:12.5px;font-weight:500;cursor:pointer;width:100%;transition:background 0.15s}
+.btn-contact:hover{background:var(--petrol-mid)}
+.btn-save{padding:8px 14px;background:transparent;color:var(--petrol);border:1px solid #DDE5EE;border-radius:7px;font-family:var(--font);font-size:12.5px;cursor:pointer;width:100%;transition:all 0.15s}
+.btn-save:hover{border-color:var(--petrol);background:var(--brume)}
+.sc-delai{font-size:11px;color:var(--acier);text-align:center;margin-top:4px}
+
+/* FEATURED LABEL */
+.featured-label{background:var(--or);color:var(--petrol-dark);font-size:10px;font-weight:600;padding:3px 10px;letter-spacing:0.5px;text-transform:uppercase}
+
+/* PAGINATION */
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:24px}
+.page-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:7px;border:1px solid #DDE5EE;background:var(--blanc);font-size:13px;color:var(--ardoise);cursor:pointer;transition:all 0.15s}
+.page-btn:hover{border-color:var(--petrol);color:var(--petrol)}
+.page-btn.active{background:var(--petrol);color:#fff;border-color:var(--petrol)}
+.page-btn.dots{border:none;background:transparent;cursor:default}
+</style>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="apple-touch-icon" href="assets/favicon-180.png"/>
+<meta name="theme-color" content="#0D3349"/>
+<script src="assets/auth.js"></script>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a class="topbar-logo" href="index.html">
+    <img class="topbar-logo-img" src="assets/logo-suplymate.png" width="28" height="28" alt="Suplymate"/>
+    <div class="logo-text"><span class="s">Suply</span><span class="m">mate</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" value="Profilés acier HEA HEB" placeholder="Produit, catégorie, fournisseur..."/>
+    <button class="search-bar-btn">🔍 Rechercher</button>
+  </div>
+  <nav class="topbar-nav">
+    <a href="index.html#categories">Catégories</a>
+    <a href="index.html#markets">Marchés</a>
+    <a href="pricing.html">Tarifs</a>
+  </nav>
+  <div class="topbar-actions">
+    <button onclick="SuplymateAuth.goToLogin('dashboard.html')" class="btn-connexion">Connexion</button>
+    <button onclick="window.location.href='pricing.html'" class="btn-start">Commencer gratuitement</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- FILTRES SIDEBAR -->
+  <aside class="filtres-sidebar">
+    <div class="filtres-header">
+      <div class="filtres-title">Filtres</div>
+      <span class="filtres-reset">Réinitialiser</span>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Pays source</div>
+      <div class="badge-pays actif"><span class="flag">🇹🇷</span><span class="nom">Turquie</span><span class="nb">1 830</span></div>
+      <div class="badge-pays actif"><span class="flag">🇨🇳</span><span class="nom">Chine</span><span class="nb">5 240</span></div>
+      <div class="badge-pays"><span class="flag">🇩🇪</span><span class="nom">Allemagne</span><span class="nb">980</span></div>
+      <div class="badge-pays"><span class="flag">🇮🇹</span><span class="nom">Italie</span><span class="nb">760</span></div>
+      <div class="badge-pays"><span class="flag">🇮🇳</span><span class="nom">Inde</span><span class="nb">920</span></div>
+      <div class="badge-pays"><span class="flag">🇪🇸</span><span class="nom">Espagne</span><span class="nb">540</span></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Catégorie</div>
+      <div class="filtre-option actif"><label><input type="checkbox" checked/> Métallurgie & Acier</label><span class="filtre-count">342</span></div>
+      <div class="filtre-option"><label><input type="checkbox"/> Construction & BTP</label><span class="filtre-count">218</span></div>
+      <div class="filtre-option"><label><input type="checkbox"/> Mécanique industrielle</label><span class="filtre-count">156</span></div>
+      <div class="filtre-option"><label><input type="checkbox"/> Tuyauterie</label><span class="filtre-count">89</span></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">MOQ (minimum)</div>
+      <input type="range" class="range-input" min="0" max="100" value="5"/>
+      <div class="range-labels"><span>0 tonne</span><span>5 t</span><span>100 t</span></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Prix ($/tonne)</div>
+      <input type="range" class="range-input" min="0" max="2000" value="800"/>
+      <div class="range-labels"><span>$0</span><span>$800</span><span>$2000</span></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Certifications</div>
+      <div class="filtre-option"><label><input type="checkbox"/> ISO 9001</label><span class="filtre-count">421</span></div>
+      <div class="filtre-option actif"><label><input type="checkbox" checked/> CE</label><span class="filtre-count">289</span></div>
+      <div class="filtre-option"><label><input type="checkbox"/> EN 10025</label><span class="filtre-count">134</span></div>
+      <div class="filtre-option"><label><input type="checkbox"/> ASTM</label><span class="filtre-count">98</span></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Délai de livraison</div>
+      <div class="filtre-option"><label><input type="checkbox"/> Moins de 2 semaines</label></div>
+      <div class="filtre-option actif"><label><input type="checkbox" checked/> 2 à 4 semaines</label></div>
+      <div class="filtre-option"><label><input type="checkbox"/> 4 à 8 semaines</label></div>
+    </div>
+
+    <div class="filtre-section">
+      <div class="filtre-section-titre">Statut</div>
+      <div class="filtre-option actif"><label><input type="checkbox" checked/> Vérifié uniquement</label></div>
+      <div class="filtre-option"><label><input type="checkbox"/> Premium uniquement</label></div>
+    </div>
+  </aside>
+
+  <!-- RESULTS -->
+  <div class="results-area">
+
+    <!-- BARRE RESULTATS -->
+    <div class="results-bar">
+      <div class="results-count"><strong>847 fournisseurs</strong> trouvés pour "Profilés acier HEA HEB"</div>
+      <div class="results-controls">
+        <select class="tri-select">
+          <option>Trier par : Pertinence</option>
+          <option>Prix croissant</option>
+          <option>Mieux notés</option>
+          <option>Délai livraison</option>
+        </select>
+        <div class="vue-btns">
+          <button class="vue-btn active">☰</button>
+          <button class="vue-btn">⊞</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTRES ACTIFS -->
+    <div class="active-filters">
+      <span class="filter-tag">🇹🇷 Turquie <span class="filter-tag-x">×</span></span>
+      <span class="filter-tag">🇨🇳 Chine <span class="filter-tag-x">×</span></span>
+      <span class="filter-tag">Métallurgie & Acier <span class="filter-tag-x">×</span></span>
+      <span class="filter-tag">Certification CE <span class="filter-tag-x">×</span></span>
+      <span class="filter-tag">2-4 semaines <span class="filter-tag-x">×</span></span>
+      <span class="filter-tag">Vérifié <span class="filter-tag-x">×</span></span>
+    </div>
+
+    <!-- SUPPLIER CARDS -->
+    <div class="cards-grid">
+
+      <!-- FEATURED -->
+      <div class="supplier-card featured">
+        <div style="grid-column:1/-1"><div class="featured-label">⭐ Fournisseur sponsorisé</div></div>
+        <div class="sc-left">
+          <div class="sc-logo" style="background:#E3EEF7;color:#0D3349">TG</div>
+          <div class="sc-rating">
+            <div class="sc-stars">★★★★★</div>
+            <div class="sc-rating-num">4.9 / 5</div>
+            <div class="sc-reviews">127 avis</div>
+          </div>
+        </div>
+        <div class="sc-mid">
+          <div class="sc-top">
+            <div>
+              <div class="sc-name"><a href="supplier.html" style="color:inherit;text-decoration:none">TurboSteel Group</a></div>
+              <div class="sc-badges">
+                <span class="sc-badge verifie">✔ Vérifié</span>
+                <span class="sc-badge premium">⭐ Premium</span>
+                <span class="sc-badge certifie">ISO 9001</span>
+                <span class="sc-badge certifie">CE</span>
+                <span class="sc-badge certifie">EN 10025</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-location">📍 Istanbul, Turquie · Membre depuis 2021 · Exporte vers 34 pays</div>
+          <div class="sc-desc">Fabricant et exportateur de profilés acier structural (HEA, HEB, IPE, UPN), tôles laminées et ronds à béton. Capacité de production : 120 000 tonnes/an. Livraison CIF Casablanca disponible.</div>
+          <div class="sc-tags">
+            <span class="sc-tag">Profilés HEA/HEB</span>
+            <span class="sc-tag">Tôles laminées</span>
+            <span class="sc-tag">Poutrelles IPE</span>
+            <span class="sc-tag">Ronds à béton</span>
+            <span class="sc-tag">Tubes carrés</span>
+          </div>
+          <div class="sc-specs">
+            <div class="sc-spec"><div class="sc-spec-label">MOQ</div><div class="sc-spec-val">5 tonnes</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Délai livraison</div><div class="sc-spec-val">2-3 semaines</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Incoterm</div><div class="sc-spec-val">FOB / CIF</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Paiement</div><div class="sc-spec-val">LC / TT</div></div>
+          </div>
+        </div>
+        <div class="sc-right">
+          <div class="sc-prix">
+            <div class="sc-prix-label">Prix indicatif</div>
+            <div class="sc-prix-val">$680</div>
+            <div class="sc-prix-unit">par tonne FOB</div>
+          </div>
+          <div class="sc-actions">
+            <button onclick="window.location.href='supplier.html'" class="btn-contact">Contacter</button>
+            <button class="btn-save">♡ Sauvegarder</button>
+            <div class="sc-delai">Répond sous 24h</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="supplier-card">
+        <div class="sc-left">
+          <div class="sc-logo" style="background:#EAF3DE;color:#27500A">BW</div>
+          <div class="sc-rating">
+            <div class="sc-stars">★★★★★</div>
+            <div class="sc-rating-num">5.0 / 5</div>
+            <div class="sc-reviews">84 avis</div>
+          </div>
+        </div>
+        <div class="sc-mid">
+          <div class="sc-top">
+            <div>
+              <div class="sc-name">Baustahl Werke GmbH</div>
+              <div class="sc-badges">
+                <span class="sc-badge verifie">✔ Vérifié</span>
+                <span class="sc-badge certifie">ISO 9001</span>
+                <span class="sc-badge certifie">CE</span>
+                <span class="sc-badge certifie">EN 10025</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-location">📍 Dortmund, Allemagne · Membre depuis 2020 · Exporte vers 58 pays</div>
+          <div class="sc-desc">Fabricant allemand spécialisé en acier de structure haute résistance. Qualité premium certifiée, traçabilité complète des matériaux. Idéal pour projets exigeants BTP et génie civil.</div>
+          <div class="sc-tags">
+            <span class="sc-tag">HEA 100-600</span>
+            <span class="sc-tag">HEB 100-600</span>
+            <span class="sc-tag">Acier S275/S355</span>
+            <span class="sc-tag">Sections creuses</span>
+          </div>
+          <div class="sc-specs">
+            <div class="sc-spec"><div class="sc-spec-label">MOQ</div><div class="sc-spec-val">10 tonnes</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Délai livraison</div><div class="sc-spec-val">3-4 semaines</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Incoterm</div><div class="sc-spec-val">DAP / DDP</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Paiement</div><div class="sc-spec-val">TT 30 jours</div></div>
+          </div>
+        </div>
+        <div class="sc-right">
+          <div class="sc-prix">
+            <div class="sc-prix-label">Prix indicatif</div>
+            <div class="sc-prix-val">$920</div>
+            <div class="sc-prix-unit">par tonne DAP</div>
+          </div>
+          <div class="sc-actions">
+            <button onclick="window.location.href='supplier.html'" class="btn-contact">Contacter</button>
+            <button class="btn-save">♡ Sauvegarder</button>
+            <div class="sc-delai">Répond sous 48h</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="supplier-card">
+        <div class="sc-left">
+          <div class="sc-logo" style="background:#FBF3DC;color:#A07810">SC</div>
+          <div class="sc-rating">
+            <div class="sc-stars">★★★★☆</div>
+            <div class="sc-rating-num">4.7 / 5</div>
+            <div class="sc-reviews">203 avis</div>
+          </div>
+        </div>
+        <div class="sc-mid">
+          <div class="sc-top">
+            <div>
+              <div class="sc-name">SinoConstruct Steel Co.</div>
+              <div class="sc-badges">
+                <span class="sc-badge verifie">✔ Vérifié</span>
+                <span class="sc-badge certifie">ISO 9001</span>
+                <span class="sc-badge certifie">ASTM</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-location">📍 Tianjin, Chine · Membre depuis 2019 · Exporte vers 70+ pays</div>
+          <div class="sc-desc">Grand fabricant chinois de profilés structuraux et aciers laminés à chaud. Prix compétitifs, grande capacité, délais flexibles. Référence pour projets d'infrastructure en Afrique et MENA.</div>
+          <div class="sc-tags">
+            <span class="sc-tag">HEA/HEB/IPE</span>
+            <span class="sc-tag">Cornières acier</span>
+            <span class="sc-tag">Rails</span>
+            <span class="sc-tag">Palplanches</span>
+            <span class="sc-tag">Acier S235</span>
+          </div>
+          <div class="sc-specs">
+            <div class="sc-spec"><div class="sc-spec-label">MOQ</div><div class="sc-spec-val">25 tonnes</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Délai livraison</div><div class="sc-spec-val">3-5 semaines</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Incoterm</div><div class="sc-spec-val">FOB / CFR</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Paiement</div><div class="sc-spec-val">LC / TT 30%</div></div>
+          </div>
+        </div>
+        <div class="sc-right">
+          <div class="sc-prix">
+            <div class="sc-prix-label">Prix indicatif</div>
+            <div class="sc-prix-val">$540</div>
+            <div class="sc-prix-unit">par tonne FOB</div>
+          </div>
+          <div class="sc-actions">
+            <button onclick="window.location.href='supplier.html'" class="btn-contact">Contacter</button>
+            <button class="btn-save">♡ Sauvegarder</button>
+            <div class="sc-delai">Répond sous 12h</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="supplier-card">
+        <div class="sc-left">
+          <div class="sc-logo" style="background:#F0EBF8;color:#5B2D8E">AS</div>
+          <div class="sc-rating">
+            <div class="sc-stars">★★★★☆</div>
+            <div class="sc-rating-num">4.5 / 5</div>
+            <div class="sc-reviews">61 avis</div>
+          </div>
+        </div>
+        <div class="sc-mid">
+          <div class="sc-top">
+            <div>
+              <div class="sc-name">Anatolia Steel Export</div>
+              <div class="sc-badges">
+                <span class="sc-badge verifie">✔ Vérifié</span>
+                <span class="sc-badge certifie">CE</span>
+                <span class="sc-badge certifie">EN 10025</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-location">📍 Izmir, Turquie · Membre depuis 2022 · Exporte vers 22 pays</div>
+          <div class="sc-desc">Exportateur turc de profilés acier et produits plats. Spécialisé dans les petites et moyennes commandes avec service personnalisé. Français et arabe disponibles.</div>
+          <div class="sc-tags">
+            <span class="sc-tag">HEA 100-400</span>
+            <span class="sc-tag">Tôles 2-20mm</span>
+            <span class="sc-tag">UPN / UPE</span>
+            <span class="sc-tag">Plats acier</span>
+          </div>
+          <div class="sc-specs">
+            <div class="sc-spec"><div class="sc-spec-label">MOQ</div><div class="sc-spec-val">3 tonnes</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Délai livraison</div><div class="sc-spec-val">2 semaines</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Incoterm</div><div class="sc-spec-val">FOB / CIF</div></div>
+            <div class="sc-spec"><div class="sc-spec-label">Paiement</div><div class="sc-spec-val">TT / Western</div></div>
+          </div>
+        </div>
+        <div class="sc-right">
+          <div class="sc-prix">
+            <div class="sc-prix-label">Prix indicatif</div>
+            <div class="sc-prix-val">$710</div>
+            <div class="sc-prix-unit">par tonne CIF</div>
+          </div>
+          <div class="sc-actions">
+            <button onclick="window.location.href='supplier.html'" class="btn-contact">Contacter</button>
+            <button class="btn-save">♡ Sauvegarder</button>
+            <div class="sc-delai">Répond sous 6h</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <div class="page-btn">←</div>
+      <div class="page-btn active">1</div>
+      <div class="page-btn">2</div>
+      <div class="page-btn">3</div>
+      <div class="page-btn dots">···</div>
+      <div class="page-btn">42</div>
+      <div class="page-btn">→</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

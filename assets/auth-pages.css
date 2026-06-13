@@ -1,0 +1,78 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --petrol:#0D3349;--petrol-dark:#081E2D;
+  --or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;
+  --ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+  --rouge:#C0392B;--rouge-pale:#FDEDEC;
+  --vert:#0D7A4E;--vert-pale:#EAF7F1;
+  --font-titre:'Playfair Display',Georgia,serif;
+  --font-corps:'Inter',system-ui,sans-serif;
+  --r:8px;--r-lg:14px;
+}
+body{
+  font-family:var(--font-corps);min-height:100vh;
+  background:linear-gradient(145deg,var(--petrol-dark) 0%,var(--petrol) 55%,#1A5276 100%);
+  color:var(--petrol-dark);display:flex;flex-direction:column;
+}
+nav{padding:0 5%;border-bottom:1px solid rgba(212,160,23,0.12)}
+.nav-inner{max-width:1100px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-titre);font-weight:700;font-size:22px;color:var(--blanc);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo img{width:34px;height:34px;border-radius:9px;object-fit:contain}
+.nav-back{color:rgba(255,255,255,0.65);font-size:13.5px;text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--or-light)}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 20px}
+.auth-card{
+  width:100%;max-width:420px;background:var(--blanc);border-radius:var(--r-lg);
+  border:1px solid rgba(212,160,23,0.2);box-shadow:0 24px 64px rgba(8,30,45,0.35);
+  padding:40px 36px 36px;
+}
+.auth-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--or-pale);color:#A07810;font-size:10.5px;font-weight:600;
+  letter-spacing:1.2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:18px;
+}
+h1{font-family:var(--font-titre);font-size:28px;font-weight:700;color:var(--petrol-dark);margin-bottom:8px;letter-spacing:-0.3px}
+.auth-sub{font-size:14px;color:var(--ardoise);margin-bottom:28px;line-height:1.6}
+.field{margin-bottom:18px}
+.field-tight{margin-bottom:8px}
+.field label{display:block;font-size:12.5px;font-weight:500;color:var(--petrol);margin-bottom:6px}
+.field input{
+  width:100%;padding:11px 14px;border:1px solid #DDE5EE;border-radius:var(--r);
+  font-family:var(--font-corps);font-size:14px;color:var(--petrol-dark);transition:border-color .2s;
+}
+.field input:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px rgba(212,160,23,0.15)}
+.forgot-link{
+  display:inline-block;margin-top:8px;font-size:12.5px;color:var(--petrol-mid,#1A4A6B);
+  text-decoration:none;font-weight:500;
+}
+.forgot-link:hover{color:var(--or-deep,#A07810);text-decoration:underline}
+.btn-submit{
+  width:100%;padding:13px;border:none;border-radius:var(--r);margin-top:8px;
+  background:var(--or);color:var(--petrol-dark);font-family:var(--font-corps);
+  font-size:14px;font-weight:600;cursor:pointer;transition:background .2s,transform .15s;
+}
+.btn-submit:hover{background:var(--or-light)}
+.btn-submit:active{transform:translateY(1px)}
+.demo-hint{
+  margin-top:22px;padding:14px 16px;background:var(--brume);border-radius:var(--r);
+  font-size:12.5px;color:var(--ardoise);line-height:1.55;
+}
+.demo-hint strong{color:var(--petrol-dark);font-weight:600}
+.demo-hint code{font-family:ui-monospace,monospace;font-size:12px;background:rgba(13,51,73,0.06);padding:2px 6px;border-radius:4px}
+.form-error{
+  display:none;margin-bottom:14px;padding:10px 12px;background:var(--rouge-pale);
+  color:var(--rouge);font-size:13px;border-radius:var(--r);border:1px solid rgba(192,57,43,0.2);
+}
+.form-error.visible{display:block}
+.form-success{
+  display:none;margin-bottom:14px;padding:10px 12px;background:var(--vert-pale);
+  color:var(--vert);font-size:13px;border-radius:var(--r);border:1px solid rgba(13,122,78,0.2);
+}
+.form-success.visible{display:block}
+.auth-switch{
+  margin-top:24px;padding-top:20px;border-top:1px solid #EEF2F6;
+  text-align:center;font-size:13.5px;color:var(--ardoise);
+}
+.auth-switch a{color:var(--petrol);font-weight:600;text-decoration:none}
+.auth-switch a:hover{color:var(--or-deep,#A07810);text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid rgba(232,184,48,0.55);outline-offset:3px}

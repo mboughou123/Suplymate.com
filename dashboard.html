@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Suplymate — Dashboard acheteur</title>
+<meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--petrol:#0D3349;--petrol-mid:#1A4A6B;--petrol-light:#1E5580;--petrol-dark:#081E2D;
+--or:#D4A017;--or-light:#E8B830;--or-pale:#FBF3DC;
+--ardoise:#3A5870;--acier:#7A9BB5;--brume:#EEF3F7;--blanc:#FFFFFF;
+--vert:#0D7A4E;--vert-pale:#EAF7F1;
+--rouge:#C0392B;--rouge-pale:#FDEDEC;
+--orange:#E67E22;--orange-pale:#FEF5EC;
+--sidebar:220px;
+--font:'Inter',system-ui,sans-serif;
+}
+body{font-family:var(--font);background:#F0F4F8;color:var(--petrol-dark);font-size:14px;display:flex;min-height:100vh;overflow-x:hidden}
+
+/* SIDEBAR */
+.sidebar{width:var(--sidebar);background:var(--petrol-dark);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:50}
+.sidebar-logo{padding:20px 18px 16px;border-bottom:1px solid rgba(212,160,23,0.12);display:flex;align-items:center;gap:9px}
+.sidebar-logo img{width:30px;height:30px;border-radius:8px;object-fit:contain;flex-shrink:0;display:block}
+.sidebar-logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:17px}
+.sidebar-logo-text .s{color:#fff}
+.sidebar-logo-text .m{color:var(--or)}
+.sidebar-nav{padding:14px 0;flex:1;overflow-y:auto}
+.nav-section{padding:0 12px;margin-bottom:6px}
+.nav-section-label{font-size:9.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:8px 8px 4px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s;margin-bottom:2px;font-size:13px}
+.nav-item:hover{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85)}
+.nav-item.active{background:rgba(212,160,23,0.15);color:var(--or-light)}
+.nav-item .ico{font-size:15px;width:18px;text-align:center;flex-shrink:0}
+.nav-badge{margin-left:auto;background:var(--or);color:var(--petrol-dark);font-size:10px;font-weight:600;padding:1px 7px;border-radius:100px}
+.sidebar-user{padding:14px 16px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:10px}
+.user-avatar{width:34px;height:34px;border-radius:50%;background:rgba(212,160,23,0.2);display:flex;align-items:center;justify-content:center;color:var(--or);font-weight:600;font-size:13px;flex-shrink:0}
+.user-name{font-size:12.5px;color:rgba(255,255,255,0.75);font-weight:500}
+.user-plan{font-size:10.5px;color:rgba(255,255,255,0.35)}
+
+/* MAIN */
+.main{margin-left:var(--sidebar);flex:1;display:flex;flex-direction:column;min-height:100vh}
+
+/* TOPBAR */
+.topbar{background:var(--blanc);border-bottom:1px solid #E2EAF0;padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40}
+.topbar-left{display:flex;flex-direction:column}
+.topbar-title{font-size:15px;font-weight:600;color:var(--petrol-dark)}
+.topbar-sub{font-size:11.5px;color:var(--acier)}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.topbar-search{display:flex;align-items:center;gap:8px;background:var(--brume);border:1px solid #DDE5EE;border-radius:8px;padding:7px 12px;width:220px}
+.topbar-search input{background:transparent;border:none;outline:none;font-size:13px;color:var(--petrol-dark);font-family:var(--font);width:100%}
+.topbar-search input::placeholder{color:var(--acier)}
+.topbar-icon{width:36px;height:36px;border-radius:8px;background:var(--brume);border:1px solid #DDE5EE;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;position:relative}
+.notif-dot{position:absolute;top:6px;right:7px;width:7px;height:7px;background:var(--or);border-radius:50%;border:2px solid var(--blanc)}
+.btn-rfq{padding:8px 16px;background:var(--or);color:var(--petrol-dark);border:none;border-radius:8px;font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-rfq:hover{background:var(--or-light)}
+
+/* CONTENT */
+.content{padding:24px 28px;flex:1}
+
+/* KPI CARDS */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.kpi-card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:12px;padding:18px 20px;position:relative;overflow:hidden}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.kpi-card.or::before{background:var(--or)}
+.kpi-card.vert::before{background:var(--vert)}
+.kpi-card.bleu::before{background:var(--petrol)}
+.kpi-card.orange::before{background:var(--orange)}
+.kpi-label{font-size:11.5px;color:var(--acier);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.kpi-val{font-size:26px;font-weight:600;color:var(--petrol-dark);letter-spacing:-0.5px;margin-bottom:4px}
+.kpi-change{font-size:11.5px;display:flex;align-items:center;gap:4px}
+.kpi-change.up{color:var(--vert)}
+.kpi-change.down{color:var(--rouge)}
+.kpi-change.neutral{color:var(--acier)}
+.kpi-icon{position:absolute;top:16px;right:16px;font-size:20px;opacity:0.15}
+
+/* TWO COL GRID */
+.two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:24px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px}
+
+/* CARDS */
+.card{background:var(--blanc);border:1px solid #E2EAF0;border-radius:12px;overflow:hidden}
+.card-header{padding:16px 20px 12px;border-bottom:1px solid #EEF2F6;display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:13.5px;font-weight:600;color:var(--petrol-dark)}
+.card-action{font-size:12px;color:var(--or-deep, #A07810);cursor:pointer;font-weight:500}
+.card-action:hover{text-decoration:underline}
+.card-body{padding:16px 20px}
+
+/* RECENT RFQs */
+.rfq-list{display:flex;flex-direction:column;gap:0}
+.rfq-item{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid #F0F4F8}
+.rfq-item:last-child{border-bottom:none}
+.rfq-product{font-size:13px;font-weight:500;color:var(--petrol-dark)}
+.rfq-supplier{font-size:11.5px;color:var(--acier);margin-top:2px}
+.rfq-date{font-size:11.5px;color:var(--acier)}
+.rfq-responses{font-size:12px;font-weight:500;color:var(--petrol)}
+.badge{font-size:10.5px;font-weight:500;padding:3px 10px;border-radius:100px}
+.badge.vert{background:var(--vert-pale);color:var(--vert)}
+.badge.orange{background:var(--orange-pale);color:var(--orange)}
+.badge.acier{background:var(--brume);color:var(--ardoise)}
+.badge.or{background:var(--or-pale);color:#A07810}
+
+/* FOURNISSEURS SAUVEGARDÉS */
+.fourn-list{display:flex;flex-direction:column;gap:0}
+.fourn-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #F0F4F8}
+.fourn-item:last-child{border-bottom:none}
+.fourn-logo{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+.fourn-name{font-size:13px;font-weight:500;color:var(--petrol-dark)}
+.fourn-country{font-size:11px;color:var(--acier)}
+.fourn-cat{font-size:11px;color:var(--ardoise);margin-left:auto}
+.fourn-stars{color:var(--or);font-size:11px}
+
+/* PRIX TRACKER */
+.prix-list{display:flex;flex-direction:column;gap:10px}
+.prix-item{background:var(--brume);border-radius:8px;padding:12px 14px}
+.prix-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.prix-product{font-size:12.5px;font-weight:500;color:var(--petrol-dark)}
+.prix-change{font-size:11.5px;font-weight:500}
+.prix-change.up{color:var(--vert)}
+.prix-change.down{color:var(--rouge)}
+.prix-bar-bg{height:5px;background:#DDE5EE;border-radius:100px;overflow:hidden}
+.prix-bar{height:100%;border-radius:100px;background:var(--or)}
+.prix-range{display:flex;justify-content:space-between;margin-top:4px}
+.prix-range span{font-size:10.5px;color:var(--acier)}
+
+/* ACTIVITÉ RÉCENTE */
+.activite-list{display:flex;flex-direction:column;gap:0}
+.activite-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #F0F4F8}
+.activite-item:last-child{border-bottom:none}
+.activite-dot{width:8px;height:8px;border-radius:50%;margin-top:4px;flex-shrink:0}
+.activite-text{font-size:12.5px;color:var(--ardoise);line-height:1.5}
+.activite-text strong{color:var(--petrol-dark);font-weight:500}
+.activite-time{font-size:11px;color:var(--acier);margin-top:2px}
+
+/* STATS SOURCING */
+.stat-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F0F4F8}
+.stat-row:last-child{border-bottom:none}
+.stat-flag{font-size:18px;flex-shrink:0}
+.stat-country{font-size:13px;font-weight:500;color:var(--petrol-dark);flex:1}
+.stat-bar-wrap{flex:2;height:6px;background:#EEF2F6;border-radius:100px;overflow:hidden}
+.stat-bar-fill{height:100%;border-radius:100px;background:var(--petrol)}
+.stat-pct{font-size:12px;color:var(--acier);width:32px;text-align:right}
+</style>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="apple-touch-icon" href="assets/favicon-180.png"/>
+<meta name="theme-color" content="#0D3349"/>
+<script src="assets/auth.js"></script>
+<script>SuplymateAuth.requireAuth();</script>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/logo-suplymate.png" width="30" height="30" alt="Suplymate"/>
+    <div class="sidebar-logo-text"><span class="s">Suply</span><span class="m">mate</span></div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-label">Principal</div>
+      <div class="nav-item active" onclick="window.location.href='dashboard.html'"><span class="ico">🏠</span> Tableau de bord</div>
+      <div class="nav-item" onclick="window.location.href='search.html'"><span class="ico">🔍</span> Rechercher <span class="nav-badge">Nouveau</span></div>
+      <div class="nav-item"><span class="ico">📋</span> Mes demandes RFQ <span class="nav-badge">3</span></div>
+      <div class="nav-item"><span class="ico">❤️</span> Fournisseurs sauvegardés</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Commandes</div>
+      <div class="nav-item"><span class="ico">📦</span> Commandes en cours</div>
+      <div class="nav-item"><span class="ico">🚢</span> Suivi livraisons</div>
+      <div class="nav-item"><span class="ico">📄</span> Factures & documents</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Outils</div>
+      <div class="nav-item"><span class="ico">📊</span> Comparateur de prix</div>
+      <div class="nav-item"><span class="ico">🧮</span> Estimateur douanier</div>
+      <div class="nav-item"><span class="ico">💬</span> Messages <span class="nav-badge">5</span></div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Compte</div>
+      <div class="nav-item"><span class="ico">⚙️</span> Paramètres</div>
+      <div class="nav-item"><span class="ico">💎</span> Mon abonnement</div>
+      <div class="nav-item" onclick="SuplymateAuth.logout()"><span class="ico">🚪</span> Déconnexion</div>
+    </div>
+  </nav>
+
+  <div class="sidebar-user">
+    <div class="user-avatar">KA</div>
+    <div>
+      <div class="user-name">Karim Alaoui</div>
+      <div class="user-plan">Plan Pro · CasaSteel</div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-title">Tableau de bord</div>
+      <div class="topbar-sub">Mercredi 6 mai 2026 — Bonjour, Karim 👋</div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-search">
+        <span style="color:var(--acier);font-size:14px">🔍</span>
+        <input type="text" placeholder="Rechercher un fournisseur..."/>
+      </div>
+      <div class="topbar-icon">🔔<span class="notif-dot"></span></div>
+      <div class="topbar-icon">🌐</div>
+      <button class="btn-rfq" onclick="window.location.href='search.html'">+ Nouvelle demande RFQ</button>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- KPI -->
+    <div class="kpi-grid">
+      <div class="kpi-card or">
+        <div class="kpi-icon">📋</div>
+        <div class="kpi-label">Demandes RFQ actives</div>
+        <div class="kpi-val">12</div>
+        <div class="kpi-change up">↑ +3 cette semaine</div>
+      </div>
+      <div class="kpi-card vert">
+        <div class="kpi-icon">✅</div>
+        <div class="kpi-label">Devis reçus</div>
+        <div class="kpi-val">47</div>
+        <div class="kpi-change up">↑ +12 ce mois</div>
+      </div>
+      <div class="kpi-card bleu">
+        <div class="kpi-icon">❤️</div>
+        <div class="kpi-label">Fournisseurs sauvegardés</div>
+        <div class="kpi-val">28</div>
+        <div class="kpi-change neutral">→ 8 pays différents</div>
+      </div>
+      <div class="kpi-card orange">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-label">Économies estimées</div>
+        <div class="kpi-val">34%</div>
+        <div class="kpi-change up">↑ vs fournisseurs locaux</div>
+      </div>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="two-col">
+
+      <!-- RFQ RECENTES -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Demandes de devis récentes</div>
+          <span class="card-action">Voir tout →</span>
+        </div>
+        <div class="card-body" style="padding:0 20px">
+          <div class="rfq-list">
+            <div class="rfq-item">
+              <div><div class="rfq-product">Profilés HEA 200 — 20 tonnes</div><div class="rfq-supplier">Turquie, Allemagne · Acier</div></div>
+              <div class="rfq-date">Aujourd'hui</div>
+              <div class="rfq-responses">5 réponses</div>
+              <span class="badge vert">Actif</span>
+            </div>
+            <div class="rfq-item">
+              <div><div class="rfq-product">Tôles inox 304 — 500 kg</div><div class="rfq-supplier">Chine · Métallurgie</div></div>
+              <div class="rfq-date">Hier</div>
+              <div class="rfq-responses">3 réponses</div>
+              <span class="badge or">En attente</span>
+            </div>
+            <div class="rfq-item">
+              <div><div class="rfq-product">Câbles électriques BT — lot</div><div class="rfq-supplier">Inde, Espagne · Électrotechnique</div></div>
+              <div class="rfq-date">03 mai</div>
+              <div class="rfq-responses">8 réponses</div>
+              <span class="badge vert">Actif</span>
+            </div>
+            <div class="rfq-item">
+              <div><div class="rfq-product">Vannes industrielles DN100</div><div class="rfq-supplier">Chine · Tuyauterie</div></div>
+              <div class="rfq-date">01 mai</div>
+              <div class="rfq-responses">2 réponses</div>
+              <span class="badge acier">Fermé</span>
+            </div>
+            <div class="rfq-item">
+              <div><div class="rfq-product">Tubes carrés 40x40x3</div><div class="rfq-supplier">Turquie · Construction</div></div>
+              <div class="rfq-date">28 avr.</div>
+              <div class="rfq-responses">6 réponses</div>
+              <span class="badge acier">Fermé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITE + PRIX -->
+      <div style="display:flex;flex-direction:column;gap:16px">
+
+        <!-- PRIX TRACKER -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Suivi des prix</div>
+            <span class="card-action">Configurer →</span>
+          </div>
+          <div class="card-body" style="padding:12px 20px">
+            <div class="prix-list">
+              <div class="prix-item">
+                <div class="prix-top">
+                  <div class="prix-product">Acier HEA 200 (tonne)</div>
+                  <div class="prix-change up">↓ -4.2% · $680</div>
+                </div>
+                <div class="prix-bar-bg"><div class="prix-bar" style="width:62%"></div></div>
+                <div class="prix-range"><span>$620</span><span>$780</span></div>
+              </div>
+              <div class="prix-item">
+                <div class="prix-top">
+                  <div class="prix-product">Inox 304 (kg)</div>
+                  <div class="prix-change down">↑ +2.1% · $3.40</div>
+                </div>
+                <div class="prix-bar-bg"><div class="prix-bar" style="width:48%"></div></div>
+                <div class="prix-range"><span>$2.80</span><span>$4.20</span></div>
+              </div>
+              <div class="prix-item">
+                <div class="prix-top">
+                  <div class="prix-product">Aluminium 6061 (kg)</div>
+                  <div class="prix-change up">↓ -1.8% · $2.95</div>
+                </div>
+                <div class="prix-bar-bg"><div class="prix-bar" style="width:35%"></div></div>
+                <div class="prix-range"><span>$2.50</span><span>$3.80</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVITE -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Activité récente</div>
+          </div>
+          <div class="card-body" style="padding:8px 20px">
+            <div class="activite-list">
+              <div class="activite-item">
+                <div class="activite-dot" style="background:var(--vert)"></div>
+                <div><div class="activite-text"><strong>TurboSteel Group</strong> a répondu à votre RFQ profilés HEA</div><div class="activite-time">Il y a 2 heures</div></div>
+              </div>
+              <div class="activite-item">
+                <div class="activite-dot" style="background:var(--or)"></div>
+                <div><div class="activite-text">Nouveau fournisseur <strong>Zhejiang Metals</strong> sauvegardé</div><div class="activite-time">Hier 14:30</div></div>
+              </div>
+              <div class="activite-item">
+                <div class="activite-dot" style="background:var(--petrol)"></div>
+                <div><div class="activite-text">Estimation douanière calculée pour <strong>20t acier Turquie</strong></div><div class="activite-time">Hier 10:15</div></div>
+              </div>
+              <div class="activite-item">
+                <div class="activite-dot" style="background:var(--vert)"></div>
+                <div><div class="activite-text"><strong>3 nouveaux devis</strong> reçus pour câbles électriques BT</div><div class="activite-time">03 mai</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="three-col">
+
+      <!-- FOURNISSEURS SAUVEGARDÉS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Fournisseurs sauvegardés</div>
+          <span class="card-action">Voir tout →</span>
+        </div>
+        <div class="card-body" style="padding:6px 20px">
+          <div class="fourn-list">
+            <div class="fourn-item">
+              <div class="fourn-logo" style="background:#E3EEF7;color:#0D3349">TG</div>
+              <div><div class="fourn-name">TurboSteel Group</div><div class="fourn-country">🇹🇷 Turquie</div></div>
+              <div style="margin-left:auto;text-align:right"><div class="fourn-stars">★★★★★</div><div class="fourn-cat">Acier</div></div>
+            </div>
+            <div class="fourn-item">
+              <div class="fourn-logo" style="background:#FBF3DC;color:#A07810">ZM</div>
+              <div><div class="fourn-name">Zhejiang Metals</div><div class="fourn-country">🇨🇳 Chine</div></div>
+              <div style="margin-left:auto;text-align:right"><div class="fourn-stars">★★★★☆</div><div class="fourn-cat">Inox</div></div>
+            </div>
+            <div class="fourn-item">
+              <div class="fourn-logo" style="background:#EAF3DE;color:#27500A">BW</div>
+              <div><div class="fourn-name">Baustahl Werke</div><div class="fourn-country">🇩🇪 Allemagne</div></div>
+              <div style="margin-left:auto;text-align:right"><div class="fourn-stars">★★★★★</div><div class="fourn-cat">Structure</div></div>
+            </div>
+            <div class="fourn-item">
+              <div class="fourn-logo" style="background:#F5E6F5;color:#6B1F8A">IS</div>
+              <div><div class="fourn-name">IndoSteel Corp</div><div class="fourn-country">🇮🇳 Inde</div></div>
+              <div style="margin-left:auto;text-align:right"><div class="fourn-stars">★★★★☆</div><div class="fourn-cat">Câbles</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOURCING PAR PAYS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Sourcing par pays</div>
+          <span class="card-action">Détails →</span>
+        </div>
+        <div class="card-body" style="padding:12px 20px">
+          <div>
+            <div class="stat-row">
+              <div class="stat-flag">🇹🇷</div>
+              <div class="stat-country">Turquie</div>
+              <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:72%"></div></div>
+              <div class="stat-pct">72%</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-flag">🇨🇳</div>
+              <div class="stat-country">Chine</div>
+              <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:55%"></div></div>
+              <div class="stat-pct">55%</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-flag">🇩🇪</div>
+              <div class="stat-country">Allemagne</div>
+              <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:30%"></div></div>
+              <div class="stat-pct">30%</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-flag">🇮🇳</div>
+              <div class="stat-country">Inde</div>
+              <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:18%"></div></div>
+              <div class="stat-pct">18%</div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-flag">🇪🇸</div>
+              <div class="stat-country">Espagne</div>
+              <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:10%"></div></div>
+              <div class="stat-pct">10%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABONNEMENT + ACTIONS RAPIDES -->
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Mon abonnement</div>
+          </div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+              <div style="background:var(--or-pale);color:#A07810;font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px">Plan Pro</div>
+              <div style="font-size:11.5px;color:var(--acier)">Renouvellement 1 juin 2026</div>
+            </div>
+            <div style="margin-bottom:10px">
+              <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+                <div style="font-size:12px;color:var(--ardoise)">RFQ utilisés ce mois</div>
+                <div style="font-size:12px;font-weight:500;color:var(--petrol-dark)">12 / ∞</div>
+              </div>
+              <div style="display:flex;justify-content:space-between">
+                <div style="font-size:12px;color:var(--ardoise)">Fournisseurs sauvegardés</div>
+                <div style="font-size:12px;font-weight:500;color:var(--petrol-dark)">28 / ∞</div>
+              </div>
+            </div>
+            <button style="width:100%;padding:8px;background:var(--petrol);color:#fff;border:none;border-radius:7px;font-family:var(--font);font-size:12.5px;font-weight:500;cursor:pointer">Gérer l'abonnement</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><div class="card-title">Actions rapides</div></div>
+          <div class="card-body" style="display:flex;flex-direction:column;gap:8px">
+            <button style="width:100%;padding:9px 12px;background:var(--or);color:var(--petrol-dark);border:none;border-radius:7px;font-family:var(--font);font-size:12.5px;font-weight:500;cursor:pointer;text-align:left">+ Nouvelle demande RFQ</button>
+            <button style="width:100%;padding:9px 12px;background:var(--brume);color:var(--petrol);border:1px solid #DDE5EE;border-radius:7px;font-family:var(--font);font-size:12.5px;cursor:pointer;text-align:left">🔍 Chercher un fournisseur</button>
+            <button style="width:100%;padding:9px 12px;background:var(--brume);color:var(--petrol);border:1px solid #DDE5EE;border-radius:7px;font-family:var(--font);font-size:12.5px;cursor:pointer;text-align:left">🧮 Calculer les frais douaniers</button>
+            <button style="width:100%;padding:9px 12px;background:var(--brume);color:var(--petrol);border:1px solid #DDE5EE;border-radius:7px;font-family:var(--font);font-size:12.5px;cursor:pointer;text-align:left">💬 Mes messages (5)</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>SuplymateAuth.applyUserToDashboard();</script>
+</body>
+</html>
