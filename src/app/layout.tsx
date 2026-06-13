@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import NavbarGate from "@/components/NavbarGate";
 import FooterGate from "@/components/FooterGate";
 import Providers from "@/components/Providers";
 import "./globals.css";
@@ -35,7 +35,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col font-sans">
         <Providers>
-          <Navbar />
+          <NavbarGate />
           <main className="flex-1">{children}</main>
           <FooterGate />
         </Providers>

@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Footer from "./Footer";
 
-const HIDE_FOOTER = ["/ai-assistant"];
+const HIDE_FOOTER = ["/ai-assistant", "/dashboard"];
 
 export default function FooterGate() {
   const pathname = usePathname();

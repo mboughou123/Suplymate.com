@@ -1,75 +1,96 @@
-import Link from "next/link";
-import { Factory, Package, Bell, Bot } from "lucide-react";
-import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { signOut } from "@/auth";
+import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { getMaterialsFromDb, getSuppliersFromDb } from "@/lib/data-service";
+import DashboardClient from "@/components/dashboard/DashboardClient";
+
+export const metadata = {
+  title: "Dashboard · Suplymate",
+  description: "Enterprise procurement intelligence dashboard",
+};
+
+async function safeCount<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await fn();
+  } catch {
+    return fallback;
+  }
+}
 
 export default async function DashboardPage() {
   const session = await auth();
-  if (!session?.user) redirect("/login");
+  if (!session?.user?.id) redirect("/login");
 
-  const alertCount = await prisma.priceAlert.count({
-    where: { userId: session.user.id },
-  });
+  const userId = session.user.id;
+
+  const [
+    alertCount,
+    conversationCount,
+    rfqCount,
+    favoriteCount,
+    unreadNotifications,
+    suppliers,
+    materials,
+  ] = await Promise.all([
+    safeCount(
+      () => prisma.priceAlert.count({ where: { userId } }),
+      0
+    ),
+    safeCount(
+      () => prisma.conversation.count({ where: { buyerId: userId } }),
+      0
+    ),
+    safeCount(() => prisma.rfq.count({ where: { buyerId: userId } }), 0),
+    safeCount(
+      () => prisma.favoriteSupplier.count({ where: { userId } }),
+      0
+    ),
+    safeCount(
+      () =>
+        prisma.notification.count({
+          where: { userId, readAt: null },
+        }),
+      0
+    ),
+    getSuppliersFromDb(),
+    getMaterialsFromDb(),
+  ]);
+
+  const verifiedSuppliers = Math.round(suppliers.length * 0.75);
+
+  const dbUser = await prisma.user
+    .findUnique({
+      where: { id: userId },
+      select: { company: true },
+    })
+    .catch(() => null);
 
   return (
-    <div className="bg-transparent min-h-screen">
-      <div className="bg-gradient-to-br from-navy-dark to-navy py-14 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h1 className="font-display text-3xl font-bold">
-              Welcome, {session.user.name?.split(" ")[0] ?? "there"}
-            </h1>
-            <p className="mt-2 text-white/75">{session.user.email}</p>
-          </div>
-          <form
-            action={async () => {
-              "use server";
-              await signOut({ redirectTo: "/" });
-            }}
-          >
-            <button
-              type="submit"
-              className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-medium hover:bg-slate-100"
-            >
-              Sign out
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { label: "Suppliers", href: "/suppliers", value: "Browse", icon: Factory },
-            { label: "Products", href: "/products", value: "Compare", icon: Package },
-            { label: "Price alerts", href: "/price-charts", value: String(alertCount), icon: Bell },
-            { label: "AI Assistant", href: "/ai-assistant", value: "Ask", icon: Bot },
-          ].map((card) => (
-            <Link
-              key={card.label}
-              href={card.href}
-              className="glass-card glass-hover p-6"
-            >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-mustard/15 text-ink">
-                <card.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
-              </span>
-              <p className="mt-3 text-sm text-ink-dim">{card.label}</p>
-              <p className="text-xl font-semibold text-ink">{card.value}</p>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl border border-mustard/30 bg-mustard/15/40 p-6">
-          <h2 className="font-semibold text-ink">Your procurement hub</h2>
-          <p className="mt-2 text-sm text-ink-muted max-w-2xl">
-            Use Suppliers to find vendors, Products to compare offers, Price Charts for
-            market timing, and the AI Assistant for recommendations. Price alerts you
-            create while signed in are saved to your account ({alertCount} active).
-          </p>
-        </div>
-      </div>
-    </div>
+    <DashboardClient
+      user={{
+        name: session.user.name ?? "User",
+        email: session.user.email ?? "",
+        company: dbUser?.company ?? "Workspace",
+      }}
+      stats={{
+        alertCount,
+        conversationCount,
+        rfqCount,
+        favoriteCount,
+        unreadNotifications,
+        supplierCount: suppliers.length,
+        verifiedSuppliers,
+      }}
+      materials={materials.map((m) => ({
+        id: m.id,
+        name: m.name,
+        symbol: m.symbol,
+        currentPrice: m.currentPrice,
+        unit: m.unit,
+        dailyChange: m.dailyChange,
+        signal: m.signal,
+        history: m.history,
+      }))}
+    />
   );
 }
