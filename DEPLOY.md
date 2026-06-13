@@ -22,11 +22,16 @@ This app is Next.js (App Router) + Prisma + Auth.js. Production uses **Postgres*
 
    | Name             | Value                                                        |
    | ---------------- | ------------------------------------------------------------ |
-   | `DATABASE_URL`   | your Neon connection string                                  |
+   | `DATABASE_URL`   | Neon **pooled** connection string (`-pooler` in the host)    |
+   | `DIRECT_URL`     | Neon **direct** connection string (for migrations)           |
    | `AUTH_SECRET`    | run `openssl rand -base64 32` and paste the output           |
    | `AUTH_TRUST_HOST`| `true`                                                       |
    | `NEXTAUTH_URL`   | `https://suplymate.com`                                      |
    | `OPENAI_API_KEY` | (optional) your OpenAI key for live AI responses             |
+
+   > **Important:** On Vercel you must use Neon's **pooled** URL for
+   > `DATABASE_URL` (hostname contains `-pooler`). Use the direct URL only for
+   > `DIRECT_URL`. Without the pooler URL, login and registration will fail.
 
 4. Click **Deploy**. Wait for the build to finish.
 

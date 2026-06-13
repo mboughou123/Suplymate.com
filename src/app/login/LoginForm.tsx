@@ -28,6 +28,18 @@ export default function LoginForm() {
 
     setLoading(false);
     if (result?.error) {
+      try {
+        const health = await fetch("/api/health");
+        const data = await health.json();
+        if (!data.ok) {
+          setError(
+            "Database connection failed on the server. An admin must set the Neon pooled DATABASE_URL on Vercel."
+          );
+          return;
+        }
+      } catch {
+        /* fall through to generic message */
+      }
       setError("Invalid email or password.");
       return;
     }
