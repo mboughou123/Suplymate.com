@@ -45,6 +45,17 @@ const config: Config = {
           light: "#E3C176",
           pale: "#F4EAD2",
         },
+        gold: {
+          DEFAULT: "#D4AF37",
+          light: "#E8C96A",
+          pale: "#F8F0D8",
+          glow: "#F0D060",
+        },
+        ai: {
+          glow: "#60A5FA",
+          pulse: "#3B82F6",
+          mist: "#EFF6FF",
+        },
         slate: {
           brand: "#A4B0C8",
           muted: "#6E7C97",
@@ -68,6 +79,9 @@ const config: Config = {
           "0 0 0 1px rgba(2,132,199,0.25), 0 16px 40px rgba(15,23,42,0.12)",
         focus: "0 0 0 3px rgba(2,132,199,0.30)",
         glow: "0 6px 20px rgba(2,132,199,0.25)",
+        gold: "0 4px 24px rgba(212,175,55,0.25)",
+        "ai-glow": "0 0 40px rgba(96,165,250,0.15), 0 8px 32px rgba(15,23,42,0.08)",
+        glass: "0 1px 2px rgba(15,23,42,0.04), 0 8px 32px rgba(15,23,42,0.06)",
       },
       transitionTimingFunction: {
         cinema: "cubic-bezier(0.16, 1, 0.3, 1)",
@@ -101,6 +115,18 @@ const config: Config = {
         shimmer: {
           "100%": { transform: "translateX(100%)" },
         },
+        "ai-pulse": {
+          "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.05)" },
+        },
+        "grid-drift": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(40px)" },
+        },
+        "orb-float": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-8px) rotate(3deg)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s cubic-bezier(0.16,1,0.3,1) both",
@@ -109,6 +135,9 @@ const config: Config = {
         float: "float 6s ease-in-out infinite",
         marquee: "marquee 28s linear infinite",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "ai-pulse": "ai-pulse 3s ease-in-out infinite",
+        "grid-drift": "grid-drift 20s linear infinite",
+        "orb-float": "orb-float 6s ease-in-out infinite",
       },
     },
   },

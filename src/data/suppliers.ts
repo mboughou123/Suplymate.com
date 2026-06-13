@@ -15,6 +15,14 @@ export type Supplier = {
   deliveryRegions: string[];
   moq: string;
   reliabilityScore: number;
+  // Optional rich marketplace fields (filled deterministically when absent)
+  logoUrl?: string;
+  imageUrl?: string;
+  rating?: number;
+  reviewCount?: number;
+  verified?: boolean;
+  yearsInBusiness?: number;
+  employees?: string;
 };
 
 export const industries: Industry[] = [

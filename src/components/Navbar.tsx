@@ -12,6 +12,7 @@ import {
   ChevronDown,
   Menu,
   X,
+  MessageSquare,
   type LucideIcon,
 } from "lucide-react";
 
@@ -75,7 +76,28 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileCat, setMobileCat] = useState<string | null>(null);
+  const [unread, setUnread] = useState(0);
   const navRef = useRef<HTMLElement>(null);
+
+  // Poll unread notification count for logged-in users
+  useEffect(() => {
+    if (status !== "authenticated") {
+      setUnread(0);
+      return;
+    }
+    let active = true;
+    const fetchUnread = () =>
+      fetch("/api/notifications")
+        .then((r) => (r.ok ? r.json() : { unread: 0 }))
+        .then((d) => active && setUnread(d.unread ?? 0))
+        .catch(() => {});
+    fetchUnread();
+    const t = setInterval(fetchUnread, 30000);
+    return () => {
+      active = false;
+      clearInterval(t);
+    };
+  }, [status]);
 
   // Close menus on route change
   useEffect(() => {
@@ -205,6 +227,18 @@ export default function Navbar() {
           ) : session?.user ? (
             <>
               <Link
+                href="/messages"
+                aria-label="Messages"
+                className="relative hidden rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white sm:inline-flex"
+              >
+                <MessageSquare className="h-5 w-5" aria-hidden />
+                {unread > 0 && (
+                  <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-cyan-glow px-1 text-[10px] font-bold text-navy-dark">
+                    {unread > 9 ? "9+" : unread}
+                  </span>
+                )}
+              </Link>
+              <Link
                 href="/dashboard"
                 className="hidden rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-cyan-glow hover:bg-white/15 sm:inline-block"
               >
@@ -286,6 +320,21 @@ export default function Navbar() {
           <div className="mt-3 border-t border-white/10 pt-3">
             {session?.user ? (
               <>
+                <Link
+                  href="/messages"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-cyan-glow"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    <MessageSquare className="h-4 w-4" aria-hidden />
+                    Messages
+                  </span>
+                  {unread > 0 && (
+                    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-cyan-glow px-1.5 text-[11px] font-bold text-navy-dark">
+                      {unread > 9 ? "9+" : unread}
+                    </span>
+                  )}
+                </Link>
                 <Link
                   href="/dashboard"
                   onClick={() => setMobileOpen(false)}

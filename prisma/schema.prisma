@@ -8,13 +8,17 @@ datasource db {
 }
 
 model User {
-  id           String       @id @default(cuid())
-  name         String
-  email        String       @unique
-  passwordHash String
-  company      String?
-  createdAt    DateTime     @default(now())
-  priceAlerts  PriceAlert[]
+  id            String             @id @default(cuid())
+  name          String
+  email         String             @unique
+  passwordHash  String
+  company       String?
+  createdAt     DateTime           @default(now())
+  priceAlerts   PriceAlert[]
+  conversations Conversation[]
+  rfqs          Rfq[]
+  notifications Notification[]
+  favorites     FavoriteSupplier[]
 }
 
 model Supplier {
@@ -62,4 +66,96 @@ model PriceAlert {
   targetPrice Float
   notifyType  String
   createdAt   DateTime @default(now())
+}
+
+// ----- Supplier communication system -----
+
+model Conversation {
+  id            String    @id @default(cuid())
+  buyerId       String
+  buyer         User      @relation(fields: [buyerId], references: [id], onDelete: Cascade)
+  supplierId    String
+  supplierName  String
+  // inquiry | negotiation | sample_sent | order_in_progress | completed
+  status        String    @default("inquiry")
+  lastMessageAt DateTime  @default(now())
+  createdAt     DateTime  @default(now())
+  messages      Message[]
+  rfqs          Rfq[]
+
+  @@index([buyerId])
+  @@index([supplierId])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  // buyer | supplier | system
+  senderType     String
+  body           String
+  translatedBody String?
+  language       String?
+  riskFlag       String? // e.g. "off_platform_payment"
+  readAt         DateTime?
+  createdAt      DateTime     @default(now())
+  attachments    Attachment[]
+
+  @@index([conversationId])
+}
+
+model Attachment {
+  id        String  @id @default(cuid())
+  messageId String
+  message   Message @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  fileName  String
+  // image | pdf | spec | doc | other
+  fileType  String
+  url       String
+  sizeBytes Int     @default(0)
+}
+
+model Rfq {
+  id             String        @id @default(cuid())
+  conversationId String?
+  conversation   Conversation? @relation(fields: [conversationId], references: [id], onDelete: SetNull)
+  buyerId        String
+  buyer          User          @relation(fields: [buyerId], references: [id], onDelete: Cascade)
+  productName    String
+  quantity       String
+  destination    String?
+  targetPrice    String?
+  deadline       String?
+  details        String?
+  status         String        @default("open")
+  createdAt      DateTime      @default(now())
+
+  @@index([buyerId])
+}
+
+model Notification {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // message | rfq | system
+  type      String
+  title     String
+  body      String?
+  link      String?
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}
+
+model FavoriteSupplier {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  supplierId   String
+  supplierName String
+  createdAt    DateTime @default(now())
+
+  @@unique([userId, supplierId])
+  @@index([userId])
 }

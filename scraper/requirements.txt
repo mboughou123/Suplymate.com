@@ -1,0 +1,17 @@
+# Core
+SQLAlchemy>=2.0,<2.1
+psycopg[binary]>=3.1,<3.3        # PostgreSQL driver (Neon / local)
+python-dotenv>=1.0
+
+# HTTP + parsing
+httpx>=0.27,<0.28
+beautifulsoup4>=4.12
+lxml>=5.0
+
+# Dynamic / JS-rendered pages (optional; only needed for some adapters)
+playwright>=1.44
+
+# API
+fastapi>=0.115,<0.116
+uvicorn[standard]>=0.30
+pydantic>=2.8,<3

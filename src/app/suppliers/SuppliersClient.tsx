@@ -42,7 +42,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         found · loaded from database
       </p>
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
         {filtered.map((supplier) => (
           <div key={supplier.id} id={supplier.id}>
             <SupplierCard supplier={supplier} />

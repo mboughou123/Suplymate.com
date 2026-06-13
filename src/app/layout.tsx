@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import FooterGate from "@/components/FooterGate";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
@@ -37,7 +37,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <FooterGate />
         </Providers>
       </body>
     </html>
