@@ -10,7 +10,6 @@ import {
   Users,
   Building2,
   Award,
-  Globe,
 } from "lucide-react";
 import type { Supplier } from "@/data/suppliers";
 import { toDisplaySupplier } from "@/lib/supplier-display";
@@ -168,24 +167,12 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
 
         {/* Actions */}
         <div className="mt-auto flex gap-2 pt-1">
-          {s.website ? (
-            <a
-              href={s.website}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="btn-secondary inline-flex flex-1 items-center justify-center gap-1.5"
-            >
-              <Globe className="h-4 w-4" aria-hidden />
-              Website
-            </a>
-          ) : (
-            <Link
-              href={`/suppliers#${s.id}`}
-              className="btn-secondary flex-1 justify-center"
-            >
-              View details
-            </Link>
-          )}
+          <Link
+            href={`/supplier/${s.id}`}
+            className="btn-secondary flex-1 justify-center"
+          >
+            View profile
+          </Link>
           <ContactSupplierButton
             supplierId={s.id}
             supplierName={s.name}
