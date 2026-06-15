@@ -6,6 +6,24 @@ export type Industry =
   | "Plastics & Packaging"
   | "Agriculture & Agrofood";
 
+// Primary directory categories (match the verified supplier database search).
+export type SupplierCategory =
+  | "Steel & Metals"
+  | "Cables & Electrical"
+  | "Tubes & Pipes"
+  | "Packaging"
+  | "Construction"
+  | "Industrial Parts";
+
+export const supplierCategories: SupplierCategory[] = [
+  "Steel & Metals",
+  "Cables & Electrical",
+  "Tubes & Pipes",
+  "Packaging",
+  "Construction",
+  "Industrial Parts",
+];
+
 export type Supplier = {
   id: string;
   name: string;
@@ -23,6 +41,21 @@ export type Supplier = {
   verified?: boolean;
   yearsInBusiness?: number;
   employees?: string;
+  // Verified global supplier directory fields (from Outscraper / public data)
+  category?: SupplierCategory;
+  country?: string;
+  city?: string;
+  website?: string;
+  phone?: string;
+  email?: string;
+  googleRating?: number;
+  googleReviews?: number;
+  description?: string;
+  address?: string;
+  openingHours?: string;
+  sourceUrl?: string;
+  score?: number;
+  lastUpdated?: string;
 };
 
 export const industries: Industry[] = [

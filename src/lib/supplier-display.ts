@@ -11,9 +11,17 @@ export type DisplaySupplier = {
   id: string;
   name: string;
   industry: string;
+  categoryLabel: string;
   location: string;
   country: string;
+  city: string;
   flag: string;
+  website?: string;
+  phone?: string;
+  email?: string;
+  description?: string;
+  sourceUrl?: string;
+  score: number;
   logoText: string;
   logoGradient: string;
   bannerGradient: string;
@@ -77,6 +85,12 @@ const FLAGS: Record<string, string> = {
   turkey: "🇹🇷",
   "united kingdom": "🇬🇧",
   uk: "🇬🇧",
+  mexico: "🇲🇽",
+  brazil: "🇧🇷",
+  "south korea": "🇰🇷",
+  "saudi arabia": "🇸🇦",
+  poland: "🇵🇱",
+  vietnam: "🇻🇳",
 };
 
 const EMPLOYEE_BUCKETS = ["10+", "50+", "100+", "200+", "500+"];
@@ -128,11 +142,13 @@ function priceFor(seed: number, industry: string): string {
 
 export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
-  const country = countryOf(s.location);
+  const country = s.country ?? countryOf(s.location);
+  const city = s.city ?? s.location.split(",")[0].trim();
   const rating =
+    s.googleRating ??
     s.rating ??
     Math.min(5, Math.max(3.8, Math.round((s.reliabilityScore / 20) * 10) / 10));
-  const reviewCount = s.reviewCount ?? seeded(seed, 18, 1240);
+  const reviewCount = s.googleReviews ?? s.reviewCount ?? seeded(seed, 18, 1240);
   const verified = s.verified ?? s.reliabilityScore >= 85;
   const yearsInBusiness = s.yearsInBusiness ?? seeded(seed >> 2, 5, 30);
   const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
@@ -149,9 +165,17 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     id: s.id,
     name: s.name,
     industry: s.industry,
+    categoryLabel: s.category ?? s.industry,
     location: s.location,
     country,
+    city,
     flag: flagFor(country),
+    website: s.website,
+    phone: s.phone,
+    email: s.email,
+    description: s.description,
+    sourceUrl: s.sourceUrl,
+    score: s.score ?? s.reliabilityScore,
     logoText: initials(s.name),
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
     bannerGradient: BANNER_GRADIENTS[seed % BANNER_GRADIENTS.length],

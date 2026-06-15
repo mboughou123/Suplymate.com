@@ -10,7 +10,11 @@
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
-    "db:setup": "prisma db push && tsx prisma/seed.ts"
+    "db:setup": "prisma db push && tsx prisma/seed.ts",
+    "suppliers:fetch": "tsx scripts/outscraper/fetch.ts",
+    "suppliers:import": "tsx scripts/import-suppliers.ts --source=sample",
+    "suppliers:import:outscraper": "tsx scripts/import-suppliers.ts --source=outscraper",
+    "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=sample --reset"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

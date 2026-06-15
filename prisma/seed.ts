@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { suppliers } from "../src/data/suppliers";
+import { verifiedSuppliers } from "../src/data/verified-suppliers";
 import { products } from "../src/data/products";
 import { materials } from "../src/data/materials";
 import { hash } from "bcryptjs";
@@ -12,16 +12,30 @@ async function main() {
   await prisma.product.deleteMany();
   await prisma.material.deleteMany();
 
-  for (const s of suppliers) {
+  for (const s of verifiedSuppliers) {
     await prisma.supplier.create({
       data: {
         id: s.id,
         name: s.name,
         industry: s.industry,
+        category: s.category ?? null,
         location: s.location,
+        country: s.country ?? null,
+        city: s.city ?? null,
+        website: s.website ?? null,
+        phone: s.phone ?? null,
+        email: s.email ?? null,
+        googleRating: s.googleRating ?? null,
+        googleReviews: s.googleReviews ?? null,
+        description: s.description ?? null,
         products: JSON.stringify(s.products),
         deliveryRegions: JSON.stringify(s.deliveryRegions),
         moq: s.moq,
+        verified: Boolean(s.verified),
+        address: s.address ?? null,
+        openingHours: s.openingHours ?? null,
+        sourceUrl: s.sourceUrl ?? null,
+        score: s.score ?? null,
         reliabilityScore: s.reliabilityScore,
       },
     });

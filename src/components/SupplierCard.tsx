@@ -9,6 +9,8 @@ import {
   Package,
   Users,
   Building2,
+  Award,
+  Globe,
 } from "lucide-react";
 import type { Supplier } from "@/data/suppliers";
 import { toDisplaySupplier } from "@/lib/supplier-display";
@@ -98,7 +100,14 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           {/* Tags */}
           <div className="mt-2.5 flex flex-wrap gap-1.5 text-[11px]">
             <span className="rounded-md bg-cyan/10 px-2 py-0.5 font-semibold text-cyan">
-              {s.industry}
+              {s.categoryLabel}
+            </span>
+            <span
+              className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-amber-800"
+              title="Suplymate supplier score"
+            >
+              <Award className="h-3 w-3" aria-hidden />
+              {s.score}/100
             </span>
             <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
               <Building2 className="h-3 w-3" aria-hidden />
@@ -159,12 +168,24 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
 
         {/* Actions */}
         <div className="mt-auto flex gap-2 pt-1">
-          <Link
-            href={`/suppliers#${s.id}`}
-            className="btn-secondary flex-1 justify-center"
-          >
-            View details
-          </Link>
+          {s.website ? (
+            <a
+              href={s.website}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="btn-secondary inline-flex flex-1 items-center justify-center gap-1.5"
+            >
+              <Globe className="h-4 w-4" aria-hidden />
+              Website
+            </a>
+          ) : (
+            <Link
+              href={`/suppliers#${s.id}`}
+              className="btn-secondary flex-1 justify-center"
+            >
+              View details
+            </Link>
+          )}
           <ContactSupplierButton
             supplierId={s.id}
             supplierName={s.name}
@@ -172,6 +193,16 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
             className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
           />
         </div>
+        {s.sourceUrl && (
+          <a
+            href={s.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-center text-[10px] text-ink-dim hover:text-cyan"
+          >
+            Source: public business listing
+          </a>
+        )}
       </div>
     </article>
   );

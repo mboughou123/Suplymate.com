@@ -26,11 +26,30 @@ model Supplier {
   id               String   @id
   name             String
   industry         String
+  category         String?
   location         String
+  country          String?
+  city             String?
+  website          String?
+  phone            String?
+  email            String?
+  googleRating     Float?
+  googleReviews    Int?
+  description      String?
   products         String
   deliveryRegions  String
   moq              String
+  verified         Boolean  @default(false)
+  address          String?
+  openingHours     String?
+  sourceUrl        String?
+  score            Int?
   reliabilityScore Int
+  lastUpdated      DateTime @default(now()) @updatedAt
+
+  @@index([category])
+  @@index([country])
+  @@index([score])
 }
 
 model Product {
