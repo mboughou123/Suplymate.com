@@ -13,9 +13,10 @@ import AiFloatingInput from "./AiFloatingInput";
 type Props = {
   onResponse: (response: FakeAiResponse, source?: string) => void;
   onModeChange: (mode: "demo" | "openai") => void;
+  onReady?: (send: (text: string) => void) => void;
 };
 
-export default function AiChatPanel({ onResponse, onModeChange }: Props) {
+export default function AiChatPanel({ onResponse, onModeChange, onReady }: Props) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -77,6 +78,10 @@ export default function AiChatPanel({ onResponse, onModeChange }: Props) {
     },
     [loading, onResponse, onModeChange]
   );
+
+  useEffect(() => {
+    onReady?.(send);
+  }, [onReady, send]);
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">

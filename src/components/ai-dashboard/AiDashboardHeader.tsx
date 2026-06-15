@@ -57,9 +57,21 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
       </div>
 
       <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-        <span className="hidden items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700 sm:inline-flex">
-          <span className="h-1.5 w-1.5 animate-ai-pulse rounded-full bg-emerald-500" />
-          AI Active
+        <span
+          className={`hidden items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold sm:inline-flex ${
+            aiMode === "openai"
+              ? "border-emerald-200 bg-emerald-50 text-emerald-700"
+              : "border-slate-200 bg-slate-50 text-ink-dim"
+          }`}
+        >
+          <span
+            className={`h-1.5 w-1.5 rounded-full ${
+              aiMode === "openai"
+                ? "animate-ai-pulse bg-emerald-500"
+                : "bg-slate-400"
+            }`}
+          />
+          {aiMode === "openai" ? "AI Active" : "Demo mode"}
         </span>
 
         <div className="relative hidden md:block">

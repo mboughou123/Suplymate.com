@@ -1,6 +1,8 @@
 // AI writing assistant for the messaging system. Uses OpenAI when
-// OPENAI_API_KEY is set; otherwise returns high-quality templates so the
-// feature works out of the box (demo mode).
+// OPENAI_API_KEY is set; otherwise returns high-quality templates (demo mode).
+// See src/lib/openai.ts for env setup (.env.local locally, Vercel env in production).
+
+import { chatCompletion, isOpenAiConfigured } from "@/lib/openai";
 
 export type ComposeMode =
   | "message"
@@ -125,8 +127,7 @@ export async function compose(
   mode: ComposeMode,
   payload: ComposePayload
 ): Promise<{ text: string; source: "openai" | "demo" }> {
-  const apiKey = process.env.OPENAI_API_KEY?.trim();
-  if (!apiKey) {
+  if (!isOpenAiConfigured()) {
     return { text: fallback(mode, payload), source: "demo" };
   }
 
@@ -138,26 +139,14 @@ export async function compose(
         : JSON.stringify(payload);
 
   try {
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: PROMPTS[mode] },
-          { role: "user", content: userContent },
-        ],
-        temperature: 0.5,
-        max_tokens: 600,
-      }),
+    const content = await chatCompletion({
+      messages: [
+        { role: "system", content: PROMPTS[mode] },
+        { role: "user", content: userContent },
+      ],
+      temperature: 0.5,
+      max_tokens: 600,
     });
-    if (!res.ok) throw new Error(`OpenAI ${res.status}`);
-    const data = await res.json();
-    const content = data.choices?.[0]?.message?.content?.trim();
-    if (!content) throw new Error("Empty response");
     return { text: content, source: "openai" };
   } catch {
     return { text: fallback(mode, payload), source: "demo" };

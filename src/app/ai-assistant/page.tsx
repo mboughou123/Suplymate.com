@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import AiProcurementDashboard from "@/components/ai-dashboard/AiProcurementDashboard";
 
 export const metadata = {
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function AiAssistantPage() {
-  return <AiProcurementDashboard />;
+  return (
+    <Suspense fallback={null}>
+      <AiProcurementDashboard />
+    </Suspense>
+  );
 }

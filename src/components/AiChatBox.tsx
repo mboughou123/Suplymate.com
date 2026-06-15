@@ -44,6 +44,15 @@ export default function AiChatBox() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
+  useEffect(() => {
+    fetch("/api/ai/status")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.configured) setAiMode("openai");
+      })
+      .catch(() => {});
+  }, []);
+
   const send = async (text: string) => {
     const trimmed = text.trim();
     if (!trimmed || loading) return;
@@ -95,8 +104,8 @@ export default function AiChatBox() {
         <h2 className="font-semibold text-ink">Procurement chat</h2>
         <p className="text-xs text-ink-dim">
           {aiMode === "openai"
-            ? "Powered by OpenAI — add OPENAI_API_KEY in .env"
-            : "Demo AI — set OPENAI_API_KEY for live responses"}
+            ? "Powered by OpenAI (gpt-4o-mini)"
+            : "Demo mode — set OPENAI_API_KEY in .env.local for live AI"}
         </p>
       </div>
 
