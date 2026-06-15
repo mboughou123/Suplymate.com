@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { verifiedSuppliers } from "../src/data/verified-suppliers";
+import { outscraperSuppliers } from "../src/data/outscraper-suppliers";
 import { products } from "../src/data/products";
 import { materials } from "../src/data/materials";
 import { hash } from "bcryptjs";
@@ -12,7 +13,10 @@ async function main() {
   await prisma.product.deleteMany();
   await prisma.material.deleteMany();
 
-  for (const s of verifiedSuppliers) {
+  const seedSuppliers =
+    outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers;
+
+  for (const s of seedSuppliers) {
     await prisma.supplier.create({
       data: {
         id: s.id,
@@ -25,6 +29,7 @@ async function main() {
         website: s.website ?? null,
         phone: s.phone ?? null,
         email: s.email ?? null,
+        imageUrl: s.imageUrl ?? null,
         googleRating: s.googleRating ?? null,
         googleReviews: s.googleReviews ?? null,
         description: s.description ?? null,

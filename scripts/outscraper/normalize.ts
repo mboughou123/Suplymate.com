@@ -15,6 +15,7 @@ export type SupplierRecord = {
   website: string | null;
   phone: string | null;
   email: string | null;
+  imageUrl: string | null;
   googleRating: number | null;
   googleReviews: number | null;
   description: string | null;
@@ -57,6 +58,40 @@ function slugify(s: string): string {
     .slice(0, 60);
 }
 
+// Outscraper returns long-form country names (e.g. "United States of America").
+// Map common ones to the canonical names used by the directory filters/flags.
+const COUNTRY_BY_CODE: Record<string, string> = {
+  US: "United States",
+  DE: "Germany",
+  CN: "China",
+  TR: "Turkey",
+  AE: "United Arab Emirates",
+  IN: "India",
+  IT: "Italy",
+  MA: "Morocco",
+  MX: "Mexico",
+  ES: "Spain",
+  FR: "France",
+  GB: "United Kingdom",
+  NL: "Netherlands",
+  PL: "Poland",
+  VN: "Vietnam",
+  BR: "Brazil",
+  KR: "South Korea",
+  SA: "Saudi Arabia",
+};
+
+function normalizeCountry(name: string | null, code: string | null): string | null {
+  if (code && COUNTRY_BY_CODE[code.toUpperCase()]) {
+    return COUNTRY_BY_CODE[code.toUpperCase()];
+  }
+  if (!name) return null;
+  return name
+    .replace(/\s+of\s+America$/i, "")
+    .replace(/^The\s+/i, "")
+    .trim();
+}
+
 function regionFor(country: string | null): string[] {
   const c = (country ?? "").toLowerCase();
   if (/(usa|united states|mexico|canada)/.test(c)) return ["North America", "EU"];
@@ -93,7 +128,7 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
   const name = str(place.name);
   if (!name) return null;
 
-  const country = str(place.country);
+  const country = normalizeCountry(str(place.country), str(place.country_code));
   const city = str(place.city) ?? str(place.borough);
   const website = str(place.site) ?? str(place.website);
   const rating = num(place.rating);
@@ -112,6 +147,7 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
     website,
     phone: str(place.phone) ?? str(place.phone_1),
     email: str(place.email_1) ?? str(place.email),
+    imageUrl: str(place.photo) ?? str(place.street_view),
     googleRating: rating,
     googleReviews: reviews,
     description:

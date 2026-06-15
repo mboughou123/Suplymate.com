@@ -42,9 +42,12 @@ async function fetchQuery(
     const body = await res.text().catch(() => "");
     throw new Error(`Outscraper ${res.status}: ${body.slice(0, 200)}`);
   }
-  const json = (await res.json()) as { data?: RawPlace[][] };
-  // Sync response: data is an array (one entry per query) of place arrays.
-  return json.data?.[0] ?? [];
+  const json = (await res.json()) as { data?: unknown };
+  const data = (json.data ?? []) as unknown[];
+  // v3 returns array-of-arrays for multi-query requests, but a flat array of
+  // place objects for a single query. Handle both.
+  if (Array.isArray(data[0])) return data[0] as RawPlace[];
+  return data as RawPlace[];
 }
 
 async function main() {

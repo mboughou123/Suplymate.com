@@ -12,9 +12,10 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:setup": "prisma db push && tsx prisma/seed.ts",
     "suppliers:fetch": "tsx scripts/outscraper/fetch.ts",
-    "suppliers:import": "tsx scripts/import-suppliers.ts --source=sample",
-    "suppliers:import:outscraper": "tsx scripts/import-suppliers.ts --source=outscraper",
-    "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=sample --reset"
+    "suppliers:build": "tsx scripts/outscraper/build-dataset.ts",
+    "suppliers:import": "tsx scripts/import-suppliers.ts --source=real",
+    "suppliers:import:sample": "tsx scripts/import-suppliers.ts --source=sample",
+    "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=real --reset"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

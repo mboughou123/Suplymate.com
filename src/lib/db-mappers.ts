@@ -13,6 +13,7 @@ type DbSupplier = {
   website?: string | null;
   phone?: string | null;
   email?: string | null;
+  imageUrl?: string | null;
   googleRating?: number | null;
   googleReviews?: number | null;
   description?: string | null;
@@ -56,6 +57,7 @@ export function mapSupplier(row: DbSupplier): Supplier {
     website: row.website ?? undefined,
     phone: row.phone ?? undefined,
     email: row.email ?? undefined,
+    imageUrl: row.imageUrl ?? undefined,
     googleRating: rating,
     googleReviews: reviews,
     rating,

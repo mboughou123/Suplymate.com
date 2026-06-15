@@ -10,6 +10,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { PrismaClient } from "@prisma/client";
 import { verifiedSuppliers } from "../src/data/verified-suppliers";
+import { outscraperSuppliers } from "../src/data/outscraper-suppliers";
 import { normalizeCache } from "./outscraper/normalize";
 
 const prisma = new PrismaClient();
@@ -26,6 +27,7 @@ type ImportRecord = {
   website?: string | null;
   phone?: string | null;
   email?: string | null;
+  imageUrl?: string | null;
   googleRating?: number | null;
   googleReviews?: number | null;
   description?: string | null;
@@ -46,6 +48,10 @@ function arg(name: string, fallback: string): string {
 }
 
 function loadRecords(source: string): ImportRecord[] {
+  if (source === "real") {
+    // Committed dataset built from the Outscraper cache (real public data).
+    return outscraperSuppliers as unknown as ImportRecord[];
+  }
   if (source === "outscraper") {
     if (!existsSync(CACHE_FILE)) {
       console.error(
@@ -78,6 +84,7 @@ function toData(r: ImportRecord) {
     website: r.website ?? null,
     phone: r.phone ?? null,
     email: r.email ?? null,
+    imageUrl: r.imageUrl ?? null,
     googleRating: r.googleRating ?? null,
     googleReviews: r.googleReviews ?? null,
     description: r.description ?? null,
@@ -94,7 +101,8 @@ function toData(r: ImportRecord) {
 }
 
 async function main() {
-  const source = arg("source", "sample");
+  // Default to the real Outscraper dataset when it's present.
+  const source = arg("source", outscraperSuppliers.length > 0 ? "real" : "sample");
   const reset = process.argv.includes("--reset");
 
   const records = loadRecords(source);

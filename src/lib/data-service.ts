@@ -3,18 +3,24 @@ import { mapSupplier, mapProduct, mapMaterial } from "@/lib/db-mappers";
 import { products as staticProducts } from "@/data/products";
 import { materials as staticMaterials } from "@/data/materials";
 import { verifiedSuppliers } from "@/data/verified-suppliers";
+import { outscraperSuppliers } from "@/data/outscraper-suppliers";
+
+// Prefer the real Outscraper dataset (public Google Maps data); fall back to the
+// generated directory only if it's somehow empty.
+const directoryFallback =
+  outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers;
 
 export async function getSuppliersFromDb() {
   try {
     const rows = await prisma.supplier.findMany({
       orderBy: [{ score: "desc" }, { name: "asc" }],
     });
-    // Fall back to the generated verified directory if the DB hasn't been
-    // imported yet (or only has the legacy seed rows).
-    if (rows.length < 50) return verifiedSuppliers;
+    // Fall back to the verified directory if the DB hasn't been imported yet
+    // (or only has the legacy seed rows).
+    if (rows.length < 50) return directoryFallback;
     return rows.map(mapSupplier);
   } catch {
-    return verifiedSuppliers;
+    return directoryFallback;
   }
 }
 
