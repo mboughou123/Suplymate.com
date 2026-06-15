@@ -12,6 +12,8 @@ type Props = {
   supplierName: string;
   className?: string;
   label?: string;
+  /** Optional product context for the inquiry (e.g. from a product page). */
+  productName?: string;
 };
 
 export default function ContactSupplierButton({
@@ -19,6 +21,7 @@ export default function ContactSupplierButton({
   supplierName,
   className = "",
   label = "Contact",
+  productName,
 }: Props) {
   const { status } = useSession();
   const router = useRouter();
@@ -38,7 +41,7 @@ export default function ContactSupplierButton({
       const res = await fetch("/api/conversations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ supplierId, supplierName }),
+        body: JSON.stringify({ supplierId, supplierName, productName }),
       });
       if (res.status === 401) {
         router.push(`/login?callbackUrl=/suppliers`);

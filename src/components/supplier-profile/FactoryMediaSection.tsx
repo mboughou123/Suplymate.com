@@ -30,6 +30,19 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
         icon={<Images className="h-5 w-5" />}
       />
 
+      {media.length === 0 && (
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
+          <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan">
+            <Images className="h-7 w-7" aria-hidden />
+          </span>
+          <p className="mt-3 text-sm font-semibold text-ink">Media coming soon</p>
+          <p className="mt-1 max-w-sm text-xs text-ink-muted">
+            This supplier hasn&apos;t uploaded factory photos or videos yet. Request media
+            directly when you contact them.
+          </p>
+        </div>
+      )}
+
       <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {media.map((m, i) => (
           <motion.button

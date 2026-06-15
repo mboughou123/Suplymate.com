@@ -6,6 +6,8 @@ export type ProductCategory =
   | "Construction"
   | "Industrial Parts";
 
+export type ProductStatus = "pending" | "approved" | "rejected";
+
 export type Product = {
   id: string;
   name: string;
@@ -16,6 +18,23 @@ export type Product = {
   bestDeliveryDays: number;
   supplierCount: number;
   unit: string;
+  // Rich marketplace fields (optional; derived deterministically when absent).
+  supplierId?: string;
+  images?: string[];
+  videos?: string[];
+  /** Supplier base (wholesale) price before commission. */
+  basePrice?: number;
+  commissionRate?: number;
+  moq?: string;
+  shippingTime?: string;
+  description?: string;
+  specifications?: Record<string, string>;
+  customizationOptions?: string[];
+  rating?: number;
+  reviewCount?: number;
+  sourceUrl?: string;
+  /** Moderation state for scraped/imported products. */
+  status?: ProductStatus;
 };
 
 export const productCategories: ProductCategory[] = [
@@ -131,4 +150,8 @@ export const products: Product[] = [
 
 export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
+}
+
+export function getProductsByCategory(category: ProductCategory): Product[] {
+  return products.filter((p) => p.category === category);
 }
