@@ -12,6 +12,8 @@ import Hero from "@/components/Hero";
 import FeatureCard from "@/components/FeatureCard";
 import SocialProof from "@/components/SocialProof";
 import SupplierShowcaseSection from "@/components/SupplierShowcaseSection";
+import ProductShowcaseSection from "@/components/ProductShowcaseSection";
+import TrustAiSection from "@/components/TrustAiSection";
 import Reveal from "@/components/Reveal";
 
 const features = [
@@ -119,9 +121,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SocialProof />
-
       <SupplierShowcaseSection />
+
+      <ProductShowcaseSection />
+
+      <TrustAiSection />
+
+      <SocialProof />
 
       <section className="py-20">
         <div className="container-page">
