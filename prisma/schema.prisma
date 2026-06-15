@@ -65,6 +65,36 @@ model Product {
   unit             String
 }
 
+model ScrapedProduct {
+  id                   String   @id
+  supplierId           String
+  supplierName         String
+  supplierLogo         String?
+  name                 String
+  category             String
+  images               String   @default("[]")
+  videos               String   @default("[]")
+  basePrice            Float?
+  commissionRate       Float?
+  currency             String   @default("USD")
+  moq                  String?
+  shippingTime         String?
+  description          String?
+  specifications       String   @default("{}")
+  customizationOptions String   @default("[]")
+  certifications       String   @default("[]")
+  rating               Float?
+  reviewCount          Int?
+  sourceUrl            String
+  verifiedSupplier     Boolean  @default(false)
+  status               String   @default("pending")
+  scrapedAt            DateTime @default(now())
+  updatedAt            DateTime @default(now()) @updatedAt
+
+  @@index([status])
+  @@index([category])
+}
+
 model Material {
   id             String  @id
   name           String

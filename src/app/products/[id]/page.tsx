@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BadgeCheck, Star, ChevronRight, Layers, Wrench, Tag } from "lucide-react";
-import { getProductById, products } from "@/data/products";
+import { products } from "@/data/products";
+import { getProductByIdAsync } from "@/lib/data-service";
 import { getProductDetail } from "@/lib/product-detail";
 import {
   getComparisonByProductId,
@@ -26,7 +27,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const product = getProductById(id);
+  const product = await getProductByIdAsync(id);
   if (!product) return { title: "Product not found · Suplymate" };
   const detail = getProductDetail(product);
   return {
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { id } = await params;
-  const product = getProductById(id);
+  const product = await getProductByIdAsync(id);
   if (!product) notFound();
 
   const detail = getProductDetail(product);

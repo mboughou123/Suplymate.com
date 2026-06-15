@@ -1,7 +1,11 @@
 import { prisma } from "@/lib/prisma";
 import { mapSupplier, mapProduct, mapMaterial } from "@/lib/db-mappers";
-import { products as staticProducts } from "@/data/products";
+import { products as staticProducts, type Product } from "@/data/products";
 import { materials as staticMaterials } from "@/data/materials";
+import {
+  listApprovedScrapedProducts,
+  scrapedToProduct,
+} from "@/lib/scraped-products-store";
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
@@ -60,7 +64,7 @@ export async function getSupplierBySlug(slug: string): Promise<Supplier | null> 
   return getSupplierById(slug);
 }
 
-export async function getProductsFromDb() {
+async function getBaseProducts(): Promise<Product[]> {
   try {
     const rows = await prisma.product.findMany({ orderBy: { name: "asc" } });
     if (rows.length === 0) return staticProducts;
@@ -68,6 +72,38 @@ export async function getProductsFromDb() {
   } catch {
     return staticProducts;
   }
+}
+
+// Public catalogue = base products + ADMIN-APPROVED scraped products.
+// Pending/rejected scraped products are never returned here.
+export async function getProductsFromDb(): Promise<Product[]> {
+  const base = await getBaseProducts();
+  try {
+    const approved = await listApprovedScrapedProducts();
+    const ids = new Set(base.map((p) => p.id));
+    const extra = approved.map(scrapedToProduct).filter((p) => !ids.has(p.id));
+    return [...base, ...extra];
+  } catch {
+    return base;
+  }
+}
+
+// Resolve a single catalogue product by id for the detail page: base products
+// first, then approved scraped products. Returns null for unknown/unapproved.
+export async function getProductByIdAsync(id: string): Promise<Product | null> {
+  const slug = (id ?? "").trim();
+  if (!slug) return null;
+  const base = await getBaseProducts();
+  const hit = base.find((p) => p.id === slug);
+  if (hit) return hit;
+  try {
+    const approved = await listApprovedScrapedProducts();
+    const sp = approved.find((p) => p.id === slug);
+    if (sp) return scrapedToProduct(sp);
+  } catch {
+    // ignore
+  }
+  return null;
 }
 
 export async function getMaterialsFromDb() {

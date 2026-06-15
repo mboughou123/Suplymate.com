@@ -15,7 +15,10 @@
     "suppliers:build": "tsx scripts/outscraper/build-dataset.ts",
     "suppliers:import": "tsx scripts/import-suppliers.ts --source=real",
     "suppliers:import:sample": "tsx scripts/import-suppliers.ts --source=sample",
-    "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=real --reset"
+    "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=real --reset",
+    "products:scrape": "tsx scripts/product-scraper/scrape.ts",
+    "products:import": "tsx scripts/import-products.ts --source=cache",
+    "products:import:sample": "tsx scripts/import-products.ts --source=sample"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -23,6 +26,7 @@
   "dependencies": {
     "@prisma/client": "^6.1.0",
     "bcryptjs": "^2.4.3",
+    "cheerio": "^1.2.0",
     "framer-motion": "^12.40.0",
     "lucide-react": "^0.469.0",
     "next": "^15.1.0",

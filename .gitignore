@@ -30,6 +30,9 @@
 # outscraper raw data cache (regenerate via npm run suppliers:fetch)
 /scripts/outscraper/cache/
 
+# product scraper cache (regenerate via npm run products:scrape)
+/scripts/product-scraper/cache/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
