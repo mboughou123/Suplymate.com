@@ -1,0 +1,21 @@
+{
+  "supplierName": "MetalWorks China",
+  "logo": "https://suplymate.com/logos/metalworks.png",
+  "bannerImage": "https://suplymate.com/banners/metalworks.jpg",
+  "category": "Steel & Metals",
+  "country": "China",
+  "currency": "USD",
+  "moq": "5 tons",
+  "description": "Leading steel manufacturer and exporter serving B2B buyers worldwide.",
+  "website": "https://example.com/metalworks-china",
+  "products": [
+    {
+      "name": "Steel Beam",
+      "image": "https://suplymate.com/products/steelbeam.jpg",
+      "price": 120,
+      "category": "Steel & Metals",
+      "moq": "5 tons",
+      "description": "Structural steel beam for construction and industrial framing."
+    }
+  ]
+}
