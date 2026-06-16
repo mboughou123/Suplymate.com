@@ -65,6 +65,7 @@ export type GalleryImage = {
   gradient: string;
   icon: IconKey;
   isVideo: boolean;
+  url?: string;
 };
 
 export type PriceTier = {
@@ -256,6 +257,7 @@ export type ProductCardData = {
   category: ProductCategory;
   icon: IconKey;
   gradient: string;
+  imageUrl?: string;
   supplierId: string;
   supplierName: string;
   verified: boolean;
@@ -283,6 +285,7 @@ export function getProductCardData(product: Product): ProductCardData {
     category: product.category,
     icon: ICONS_BY_CATEGORY[product.category],
     gradient: GALLERY_GRADIENTS[seed % GALLERY_GRADIENTS.length],
+    imageUrl: product.images?.[0],
     supplierId: sd.id,
     supplierName: sd.name,
     verified: sd.verified,
@@ -338,13 +341,46 @@ export function getProductDetail(product: Product): ProductDetail {
 
   /* --- gallery --- */
   const galleryLabels = ["Main view", "Detail", "Application", "Packaging", "Factory video"];
-  const gallery: GalleryImage[] = galleryLabels.map((label, i) => ({
-    id: `${product.id}-img-${i}`,
-    label,
-    gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
-    icon,
-    isVideo: i === galleryLabels.length - 1,
-  }));
+  const hasVideos = (product.videos?.length ?? 0) > 0;
+  let gallery: GalleryImage[];
+
+  if (product.images?.length) {
+    gallery = product.images.map((url, i) => ({
+      id: `${product.id}-img-${i}`,
+      label: galleryLabels[i] ?? `Image ${i + 1}`,
+      gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
+      icon,
+      url,
+      isVideo: false,
+    }));
+    while (gallery.length < 2) {
+      const i = gallery.length;
+      gallery.push({
+        id: `${product.id}-placeholder-${i}`,
+        label: galleryLabels[i] ?? `View ${i + 1}`,
+        gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
+        icon,
+        isVideo: false,
+      });
+    }
+    if (hasVideos) {
+      gallery.push({
+        id: `${product.id}-video-0`,
+        label: "Factory video",
+        gradient: GALLERY_GRADIENTS[(seed + gallery.length) % GALLERY_GRADIENTS.length],
+        icon,
+        isVideo: true,
+      });
+    }
+  } else {
+    gallery = galleryLabels.map((label, i) => ({
+      id: `${product.id}-img-${i}`,
+      label,
+      gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
+      icon,
+      isVideo: hasVideos && i === galleryLabels.length - 1,
+    }));
+  }
 
   /* --- moq / lead time / rating --- */
   const moq = product.moq ?? `${intBetween(rng, 1, 50) * (unit === "ton" ? 1 : 10)} ${unit}s`;

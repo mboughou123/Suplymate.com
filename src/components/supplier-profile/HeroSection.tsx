@@ -34,6 +34,14 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
     <section className="relative overflow-hidden">
       {/* Dark glass banner */}
       <div className="relative h-56 sm:h-64" style={{ backgroundImage: base.bannerGradient }}>
+        {base.imageUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={base.imageUrl}
+            alt={`${base.name} facility`}
+            className="absolute inset-0 h-full w-full object-cover opacity-60"
+          />
+        )}
         <div className="absolute inset-0 ai-grid-bg opacity-30" />
         <div
           className="absolute -right-16 -top-16 h-72 w-72 rounded-full opacity-40 blur-3xl"
@@ -63,7 +71,12 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl text-2xl font-extrabold text-white shadow-cardHover ring-4 ring-white"
                   style={{ backgroundImage: base.logoGradient }}
                 >
-                  {base.logoText}
+                  {base.logoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={base.logoUrl} alt={base.name} className="h-full w-full object-cover" />
+                  ) : (
+                    base.logoText
+                  )}
                 </div>
 
                 <div className="min-w-0 flex-1">
