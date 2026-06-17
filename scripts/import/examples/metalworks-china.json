@@ -1,7 +1,7 @@
 {
   "supplierName": "MetalWorks China",
-  "logo": "https://suplymate.com/logos/metalworks.png",
-  "bannerImage": "https://suplymate.com/banners/metalworks.jpg",
+  "logo": "/logos/metalworks.png",
+  "bannerImage": "/banners/metalworks.jpg",
   "category": "Steel & Metals",
   "country": "China",
   "currency": "USD",
@@ -11,7 +11,7 @@
   "products": [
     {
       "name": "Steel Beam",
-      "image": "https://suplymate.com/products/steelbeam.jpg",
+      "image": "/products/steelbeam.jpg",
       "price": 120,
       "category": "Steel & Metals",
       "moq": "5 tons",

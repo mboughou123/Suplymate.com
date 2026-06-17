@@ -1,0 +1,29 @@
+[
+  {
+    "id": "bundle-metalworks-china-steel-beam",
+    "supplierId": "metalworks-china",
+    "supplierName": "MetalWorks China",
+    "supplierLogo": "/logos/metalworks.png",
+    "name": "Steel Beam",
+    "category": "Steel & Metals",
+    "images": [
+      "/products/steelbeam.jpg"
+    ],
+    "videos": [],
+    "basePrice": 120,
+    "commissionRate": null,
+    "currency": "USD",
+    "moq": "5 tons",
+    "shippingTime": null,
+    "description": "Structural steel beam for construction and industrial framing.",
+    "specifications": {},
+    "customizationOptions": [],
+    "certifications": [],
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://example.com/metalworks-china",
+    "verifiedSupplier": true,
+    "status": "approved",
+    "scrapedAt": "2026-06-16T06:11:05.610Z"
+  }
+]

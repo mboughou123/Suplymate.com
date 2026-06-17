@@ -1,0 +1,25 @@
+[
+  {
+    "id": "metalworks-china",
+    "name": "MetalWorks China",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "China",
+    "country": "China",
+    "website": "https://example.com/metalworks-china",
+    "logoUrl": "/logos/metalworks.png",
+    "imageUrl": "/banners/metalworks.jpg",
+    "description": "Leading steel manufacturer and exporter serving B2B buyers worldwide.",
+    "products": [
+      "Steel Beam"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "5 tons",
+    "verified": true,
+    "reliabilityScore": 88
+  }
+]
