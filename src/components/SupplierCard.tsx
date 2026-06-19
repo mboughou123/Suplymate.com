@@ -15,6 +15,12 @@ import type { Supplier } from "@/data/suppliers";
 import { toDisplaySupplier } from "@/lib/supplier-display";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import SupplierLogo from "@/components/SupplierLogo";
+import {
+  getSupplierFallbackImage,
+  GENERIC_SUPPLIER_PLACEHOLDER,
+} from "@/lib/image-fallback";
 
 type SupplierCardProps = {
   supplier: Supplier;
@@ -45,17 +51,17 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
     <article className="glass-card glass-hover flex flex-col overflow-hidden p-0">
       {/* Banner + logo + company image */}
       <div
-        className="relative h-24"
+        className="relative h-24 overflow-hidden"
         style={{ backgroundImage: s.bannerGradient }}
       >
-        {s.imageUrl && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={s.imageUrl}
-            alt={`${s.name} facility`}
-            className="absolute inset-0 h-full w-full object-cover opacity-60"
-          />
-        )}
+        <ImageWithFallback
+          src={s.imageUrl}
+          fallbackSrc={getSupplierFallbackImage(supplier.category ?? supplier.industry, s.name)}
+          placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
+          alt={`${s.name} facility`}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         {s.verified && (
           <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
@@ -67,17 +73,13 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           supplierName={s.name}
           className="absolute left-[5.5rem] top-3"
         />
-        <div
-          className="absolute -bottom-7 left-5 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl text-xl font-extrabold text-white shadow-cardHover ring-4 ring-white"
-          style={{ backgroundImage: s.logoGradient }}
-        >
-          {s.logoUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={s.logoUrl} alt={s.name} className="h-full w-full object-cover" />
-          ) : (
-            s.logoText
-          )}
-        </div>
+        <SupplierLogo
+          logoUrl={s.logoUrl}
+          initials={s.logoText}
+          gradient={s.logoGradient}
+          name={s.name}
+          className="absolute -bottom-7 left-5 h-16 w-16 rounded-2xl text-xl font-extrabold shadow-cardHover ring-4 ring-white"
+        />
       </div>
 
       <div className="flex flex-1 flex-col gap-4 px-5 pb-5 pt-9">

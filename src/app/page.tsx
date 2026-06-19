@@ -11,8 +11,8 @@ import {
 import Hero from "@/components/Hero";
 import FeatureCard from "@/components/FeatureCard";
 import SocialProof from "@/components/SocialProof";
-import SupplierShowcaseSection from "@/components/SupplierShowcaseSection";
-import ProductShowcaseSection from "@/components/ProductShowcaseSection";
+import HomepageSupplierSection from "@/components/HomepageSupplierSection";
+import HomepageProductSection from "@/components/HomepageProductSection";
 import TrustAiSection from "@/components/TrustAiSection";
 import Reveal from "@/components/Reveal";
 
@@ -121,9 +121,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SupplierShowcaseSection />
+      <HomepageSupplierSection />
 
-      <ProductShowcaseSection />
+      <HomepageProductSection />
 
       <TrustAiSection />
 

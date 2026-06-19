@@ -5,15 +5,20 @@ import Image from "next/image";
 import {
   Search,
   Sparkles,
-  Factory,
   Package,
   BadgeCheck,
   TrendingDown,
   ShieldCheck,
   Bot,
+  Star,
 } from "lucide-react";
 import HeroCard from "@/components/HeroCard";
 import TrustBadge from "@/components/TrustBadge";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import {
+  getProductFallbackImage,
+  getSupplierFallbackImage,
+} from "@/lib/image-fallback";
 
 export default function Hero() {
   return (
@@ -63,9 +68,9 @@ export default function Hero() {
               className="mx-auto mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-ink-muted lg:mx-0"
               style={{ animationDelay: "160ms" }}
             >
-              Find verified suppliers, compare products, track market prices, and
-              source smarter with AI-powered procurement tools and real human
-              expertise.
+              Suplymate connects business owners with verified suppliers, smart
+              product sourcing, and AI-powered procurement support — so you can
+              compare offers, track market prices, and buy with confidence.
             </p>
 
             <div
@@ -116,31 +121,62 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Floating supplier card — top left */}
-              <HeroCard
-                className="absolute -left-4 top-8 w-56 sm:-left-8"
-                icon={Factory}
-                iconGradient="from-navy to-cyan"
-                title="Atlas Steel Co."
-                subtitle="Metal supplier · Verified"
-                floatDelay={0}
-                trailing={
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+              {/* Floating supplier card with photo — top left */}
+              <div
+                className="absolute -left-4 top-6 w-60 animate-float rounded-2xl border border-white/70 bg-white/95 p-3 shadow-cardHover ring-1 ring-black/5 backdrop-blur sm:-left-8"
+                style={{ animationDelay: "0s" }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl">
+                    <ImageWithFallback
+                      src="/banners/metalworks.jpg"
+                      fallbackSrc={getSupplierFallbackImage("Metal", "Atlas Steel Co.")}
+                      alt="Atlas Steel Co. facility"
+                      loading="eager"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-ink">
+                      Atlas Steel Co.
+                    </p>
+                    <p className="flex items-center gap-1 text-[11px] text-ink-muted">
+                      <Star className="h-3 w-3 fill-mustard text-mustard" aria-hidden />
+                      4.9 · Metal supplier
+                    </p>
+                  </div>
+                  <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
                     <BadgeCheck className="h-3 w-3" aria-hidden />
-                    94
                   </span>
-                }
-              />
+                </div>
+              </div>
 
-              {/* Floating price card — bottom right */}
-              <HeroCard
-                className="absolute -right-3 bottom-10 w-52 sm:-right-6"
-                icon={TrendingDown}
-                iconGradient="from-emerald to-teal"
-                title="Steel · −8.2%"
-                subtitle="Good time to buy"
-                floatDelay={1.4}
-              />
+              {/* Floating product card with photo — bottom right */}
+              <div
+                className="absolute -right-3 bottom-8 w-56 animate-float rounded-2xl border border-white/70 bg-white/95 p-3 shadow-cardHover ring-1 ring-black/5 backdrop-blur sm:-right-6"
+                style={{ animationDelay: "1.4s" }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl">
+                    <ImageWithFallback
+                      src="/products/steelbeam.jpg"
+                      fallbackSrc={getProductFallbackImage("Steel Coil", "Steel & Metals")}
+                      alt="Hot-rolled steel coil"
+                      loading="eager"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-ink">
+                      Steel Coil (S235)
+                    </p>
+                    <p className="text-[11px] font-bold text-cyan">From $522 / ton</p>
+                  </div>
+                  <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                    <TrendingDown className="h-3 w-3" aria-hidden />
+                  </span>
+                </div>
+              </div>
 
               {/* Floating AI card — bottom left */}
               <HeroCard

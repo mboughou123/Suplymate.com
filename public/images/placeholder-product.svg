@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Suplymate">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D3349"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <circle cx="640" cy="120" r="180" fill="#ffffff" fill-opacity="0.06"/>
+  <circle cx="140" cy="500" r="150" fill="#ffffff" fill-opacity="0.05"/>
+  <g transform="translate(400 270) scale(7) translate(-12 -12)" fill="none" stroke="#ffffff" stroke-opacity="0.92" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></g>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#ffffff" fill-opacity="0.96">Suplymate</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" letter-spacing="3" fill="#ffffff" fill-opacity="0.6">SUPLYMATE</text>
+</svg>

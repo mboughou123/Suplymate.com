@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { BadgeCheck, Star, MapPin, Truck, ArrowRight } from "lucide-react";
 import type { Product } from "@/data/products";
 import { getProductCardData } from "@/lib/product-detail";
-import { PRODUCT_ICONS } from "@/components/product/productIcons";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { getProductFallbackImage } from "@/lib/image-fallback";
 
 type ProductCardProps = {
   product: Product;
@@ -16,9 +16,6 @@ type ProductCardProps = {
 export default function ProductCard({ product }: ProductCardProps) {
   const reduceMotion = useReducedMotion();
   const d = getProductCardData(product);
-  const Icon = PRODUCT_ICONS[d.icon];
-  const [imgFailed, setImgFailed] = useState(false);
-  const showImage = d.imageUrl && !imgFailed;
 
   return (
     <motion.article
@@ -32,21 +29,13 @@ export default function ProductCard({ product }: ProductCardProps) {
           className="relative flex h-44 items-center justify-center overflow-hidden"
           style={{ backgroundImage: d.gradient }}
         >
-          {showImage && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={d.imageUrl}
-              alt={d.name}
-              className="absolute inset-0 h-full w-full object-cover"
-              onError={() => setImgFailed(true)}
-            />
-          )}
-          {!showImage && (
-            <>
-              <div className="absolute inset-0 ai-grid-bg opacity-30" />
-              <Icon className="relative h-14 w-14 text-white/90" strokeWidth={1.5} aria-hidden />
-            </>
-          )}
+          <ImageWithFallback
+            src={d.imageUrl}
+            fallbackSrc={getProductFallbackImage(d.name, d.category)}
+            alt={d.name}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-105"
+          />
           {d.verified && (
             <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
               <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
