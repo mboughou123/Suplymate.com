@@ -56,6 +56,23 @@ export type Supplier = {
   sourceUrl?: string;
   score?: number;
   lastUpdated?: string;
+  // ----- Supplier import & scraping system (optional, additive) -----
+  /** Company / factory gallery image URLs collected via import/scrape. */
+  supplierImages?: string[];
+  /** Certification badge / certificate image URLs. */
+  certificationImages?: string[];
+  /** Structured certification details (name/type/links). */
+  certificationsDetailed?: {
+    name: string;
+    type?: string | null;
+    imageUrl?: string | null;
+    certificateUrl?: string | null;
+    sourceUrl?: string | null;
+  }[];
+  /** Moderation state: pending | verified | rejected | needs_info. */
+  verificationStatus?: "pending" | "verified" | "rejected" | "needs_info";
+  /** 0–100 data-completeness trust score. */
+  trustScore?: number;
 };
 
 export const industries: Industry[] = [

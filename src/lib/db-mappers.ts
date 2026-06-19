@@ -28,7 +28,23 @@ type DbSupplier = {
   score?: number | null;
   reliabilityScore: number;
   lastUpdated?: Date | string | null;
+  // Optional columns added by the supplier import/scraping system.
+  images?: string | null;
+  certificationImages?: string | null;
+  certifications?: string | null;
+  verificationStatus?: string | null;
+  trustScore?: number | null;
 };
+
+function safeJsonArray<T>(value: string | null | undefined): T[] {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? (parsed as T[]) : [];
+  } catch {
+    return [];
+  }
+}
 
 type DbMaterial = {
   id: string;
@@ -78,6 +94,14 @@ export function mapSupplier(row: DbSupplier): Supplier {
       row.lastUpdated instanceof Date
         ? row.lastUpdated.toISOString()
         : row.lastUpdated ?? undefined,
+    supplierImages: safeJsonArray<string>(row.images),
+    certificationImages: safeJsonArray<string>(row.certificationImages),
+    certificationsDetailed: safeJsonArray<
+      NonNullable<Supplier["certificationsDetailed"]>[number]
+    >(row.certifications),
+    verificationStatus:
+      (row.verificationStatus as Supplier["verificationStatus"]) ?? undefined,
+    trustScore: row.trustScore ?? undefined,
   };
 }
 

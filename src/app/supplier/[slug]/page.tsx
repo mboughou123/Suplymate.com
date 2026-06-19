@@ -9,6 +9,8 @@ import HeroSection from "@/components/supplier-profile/HeroSection";
 import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
 import CompanyProfileSection from "@/components/supplier-profile/CompanyProfileSection";
 import CertificationsSection from "@/components/supplier-profile/CertificationsSection";
+import CertificationGallery from "@/components/supplier-profile/CertificationGallery";
+import VerificationBadge from "@/components/VerificationBadge";
 import FactoryMediaSection from "@/components/supplier-profile/FactoryMediaSection";
 import ProductsSection from "@/components/supplier-profile/ProductsSection";
 import ReviewsSection from "@/components/supplier-profile/ReviewsSection";
@@ -73,6 +75,14 @@ export default async function SupplierProfilePage({
   const { base, trust } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
+  // Real certification/media collected via import or the website scraper. Shown
+  // alongside the generated profile content only when present.
+  const realCertImages = supplier.certificationImages ?? [];
+  const realCertDetails = supplier.certificationsDetailed ?? [];
+  const realSupplierImages = supplier.supplierImages ?? [];
+  const hasRealMedia =
+    realCertImages.length > 0 || realCertDetails.length > 0 || realSupplierImages.length > 0;
+
   // schema.org structured data (Organization / LocalBusiness + AggregateRating)
   const jsonLd = {
     "@context": "https://schema.org",
@@ -128,6 +138,9 @@ export default async function SupplierProfilePage({
         </Link>
         <ChevronRight className="h-3.5 w-3.5" aria-hidden />
         <span className="font-medium text-ink-muted">{base.name}</span>
+        {supplier.verificationStatus && (
+          <VerificationBadge status={supplier.verificationStatus} size="sm" className="ml-2" />
+        )}
       </nav>
 
       <HeroSection profile={profile} />
@@ -137,6 +150,56 @@ export default async function SupplierProfilePage({
           <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
           <CertificationsSection profile={profile} />
+          {hasRealMedia && (
+            <section className="py-6">
+              <h2 className="font-display text-lg font-bold text-ink">
+                Information collected from the supplier
+              </h2>
+              <p className="mt-1 text-sm text-ink-muted">
+                Certifications and company media{" "}
+                {supplier.sourceUrl
+                  ? "collected from the supplier's public website"
+                  : "provided during supplier import"}
+                . These are claims made by the supplier.
+              </p>
+              {(realCertImages.length > 0 || realCertDetails.length > 0) && (
+                <p className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                  Certification displayed on the supplier&rsquo;s website. Not independently
+                  verified by Suplymate.
+                </p>
+              )}
+              <div className="mt-4">
+                <CertificationGallery
+                  images={realCertImages}
+                  certifications={realCertDetails}
+                />
+              </div>
+              {realSupplierImages.length > 0 && (
+                <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+                  {realSupplierImages.slice(0, 12).map((src, i) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      key={`${src}-${i}`}
+                      src={src}
+                      alt={`${base.name} media ${i + 1}`}
+                      loading="lazy"
+                      className="h-28 w-full rounded-xl border border-slate-200 object-cover"
+                    />
+                  ))}
+                </div>
+              )}
+              {supplier.sourceUrl && (
+                <a
+                  href={supplier.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-cyan hover:underline"
+                >
+                  View original source
+                </a>
+              )}
+            </section>
+          )}
           <FactoryMediaSection profile={profile} />
           <ProductsSection profile={profile} />
           <ReviewsSection profile={profile} />
