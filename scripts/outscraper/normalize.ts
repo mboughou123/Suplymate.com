@@ -16,6 +16,8 @@ export type SupplierRecord = {
   phone: string | null;
   email: string | null;
   imageUrl: string | null;
+  logoUrl: string | null;
+  images: string[];
   googleRating: number | null;
   googleReviews: number | null;
   description: string | null;
@@ -136,6 +138,37 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
   const fullAddress = str(place.full_address) ?? str(place.address);
   const location = [city, country].filter(Boolean).join(", ") || (fullAddress ?? "—");
 
+  // Outscraper Google Maps places expose several image fields:
+  //   photo        – primary business photo (best for the card banner / hero)
+  //   street_view  – street-view fallback when no business photo exists
+  //   logo         – brand/profile logo (square avatar)
+  //   photos_sample/photos – sometimes an array of additional photos
+  // Keep them all: a primary image for `imageUrl`, the brand mark for `logoUrl`,
+  // and a deduped gallery (`images`) of every distinct photo we can find.
+  const photo = str(place.photo);
+  const streetView = str(place.street_view);
+  const logo = str(place.logo);
+  const primaryImage = photo ?? streetView;
+
+  const extraPhotos: string[] = [];
+  for (const arrField of [place.photos_sample, place.photos]) {
+    if (Array.isArray(arrField)) {
+      for (const item of arrField) {
+        const url =
+          typeof item === "string"
+            ? str(item)
+            : item && typeof item === "object"
+              ? str((item as Record<string, unknown>).photo_url) ??
+                str((item as Record<string, unknown>).photo)
+              : null;
+        if (url) extraPhotos.push(url);
+      }
+    }
+  }
+  const images = Array.from(
+    new Set([primaryImage, ...extraPhotos, streetView].filter((u): u is string => Boolean(u)))
+  );
+
   const record: SupplierRecord = {
     id: slugify(`${name}-${city ?? country ?? ""}`),
     name,
@@ -147,7 +180,9 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
     website,
     phone: str(place.phone) ?? str(place.phone_1),
     email: str(place.email_1) ?? str(place.email),
-    imageUrl: str(place.photo) ?? str(place.street_view),
+    imageUrl: primaryImage,
+    logoUrl: logo,
+    images,
     googleRating: rating,
     googleReviews: reviews,
     description:
@@ -207,6 +242,12 @@ export function normalizeCache(entries: CacheEntry[]): {
     }
   }
 
-  const records = Array.from(seen.values()).sort((a, b) => b.score - a.score);
+  // Rank image-bearing suppliers first (empty cards look untrustworthy), then
+  // by Suplymate score. `hasImage` is also folded into the score itself.
+  const hasImage = (r: SupplierRecord) =>
+    r.imageUrl || (r.images && r.images.length > 0) ? 1 : 0;
+  const records = Array.from(seen.values()).sort(
+    (a, b) => hasImage(b) - hasImage(a) || b.score - a.score
+  );
   return { records, stats: { found, rejected, deduped } };
 }

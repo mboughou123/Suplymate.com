@@ -10,6 +10,24 @@ import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
 
+// A supplier "has an image" if it carries a primary photo or any gallery image.
+// Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
+// lead the directory.
+function supplierHasImage(s: Supplier): boolean {
+  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
+}
+
+// Public directory ordering: image-bearing first, then by Suplymate score
+// (falling back to reliabilityScore), then alphabetically. Used so the server
+// and the client agree on ordering.
+export function compareForDirectory(a: Supplier, b: Supplier): number {
+  const img = Number(supplierHasImage(b)) - Number(supplierHasImage(a));
+  if (img) return img;
+  const score = (b.score ?? b.reliabilityScore ?? 0) - (a.score ?? a.reliabilityScore ?? 0);
+  if (score) return score;
+  return a.name.localeCompare(b.name);
+}
+
 // Prefer the real Outscraper dataset (public Google Maps data); fall back to the
 // generated directory only if it's somehow empty.
 const directoryFallback =
@@ -53,11 +71,14 @@ export async function getSuppliersFromDb() {
     });
     // Fall back to the verified directory if the DB hasn't been imported yet
     // (or only has the legacy seed rows).
-    if (rows.length < 50) return directoryFallback;
+    if (rows.length < 50) return [...directoryFallback].sort(compareForDirectory);
     // Never surface pending/rejected/needs_info imports on public surfaces.
-    return rows.map(mapSupplier).filter(isPubliclyVisible);
+    return rows
+      .map(mapSupplier)
+      .filter(isPubliclyVisible)
+      .sort(compareForDirectory);
   } catch {
-    return directoryFallback;
+    return [...directoryFallback].sort(compareForDirectory);
   }
 }
 

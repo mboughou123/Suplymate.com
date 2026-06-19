@@ -19,7 +19,17 @@ export type RankableSupplier = {
   googleRating?: number | null;
   googleReviews?: number | null;
   products?: string[] | null;
+  imageUrl?: string | null;
+  logoUrl?: string | null;
+  images?: string[] | null;
 };
+
+// A supplier "has an image" if it carries a primary photo or any gallery image.
+// Empty-image cards look untrustworthy, so this is both a scoring signal and the
+// primary sort tiebreaker used across the pipeline and the public directory.
+export function hasSupplierImage(s: RankableSupplier): boolean {
+  return Boolean(s.imageUrl) || Boolean(s.images && s.images.length > 0);
+}
 
 const KNOWN_CATEGORIES = new Set([
   "Steel & Metals",
@@ -82,6 +92,10 @@ export function scoreSupplier(s: RankableSupplier): number {
   const filled = fields.filter(Boolean).length;
   const completenessBonus = (filled / fields.length) * 3;
 
+  // Has-image bonus: photos make a profile look credible, so image-bearing
+  // suppliers rank above otherwise-identical ones with empty cards.
+  const imageBonus = hasSupplierImage(s) ? 6 : 0;
+
   const total =
     ratingScore +
     reviewScore +
@@ -89,7 +103,8 @@ export function scoreSupplier(s: RankableSupplier): number {
     websiteBonus +
     categoryMatchBonus +
     countryRelevance +
-    completenessBonus;
+    completenessBonus +
+    imageBonus;
 
   return Math.round(Math.max(0, Math.min(100, total)));
 }

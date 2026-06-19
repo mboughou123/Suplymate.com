@@ -1,251 +1,10 @@
 // AUTO-GENERATED from public Outscraper (Google Maps) data.
 // Regenerate: npm run suppliers:fetch && npx tsx scripts/outscraper/build-dataset.ts
-// Generated 2026-06-15 · 306 suppliers
+// Generated 2026-06-19 · 332 suppliers
 import type { Supplier } from "./suppliers";
 
 export const outscraperSuppliers: Supplier[] =
 [
-  {
-    "id": "landefeld-druckluft-und-hydraulik-kassel",
-    "name": "Landefeld Druckluft und Hydraulik",
-    "industry": "Industrial Equipment",
-    "category": "Industrial Parts",
-    "location": "Kassel, Germany",
-    "country": "Germany",
-    "city": "Kassel",
-    "website": "https://www.landefeld.de/",
-    "phone": "+49 561 958859",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHafBJTAMOAwC7-FrOiUW7gSixq_2JgfhFL5trUwAX8HsnQwdOBHomSnkzfdp33qEjm2UB4BVMPuVy96nfQ_aDn_dXUk0E5biEUokCStrOod-nUQtYOng6UiT_RMXYIopm4KqE=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 1046,
-    "rating": 4.9,
-    "reviewCount": 1046,
-    "verified": true,
-    "description": "Industrial Parts supplier in Kassel, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
-    "deliveryRegions": [
-      "EU",
-      "MENA"
-    ],
-    "moq": "10 units",
-    "address": "Konrad-Zuse-Straße 1, 34123 Kassel-Waldau, Germany",
-    "openingHours": "Friday: 7AM-6PM · Monday: 7AM-9PM · Saturday: Closed · Sunday: 12-3PM · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
-    "sourceUrl": "https://www.google.com/maps/place/Landefeld+Druckluft+und+Hydraulik/@51.279689,9.523923,14z/data=!4m8!1m2!2m1!1sLandefeld+Druckluft+und+Hydraulik!3m4!1s0x47bb476df0cb5229:0x53f38c6fd4ff565d!8m2!3d51.279689!4d9.523923",
-    "score": 99,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "onlinepack-kartons-kartonagen-pulheim",
-    "name": "Onlinepack Kartons & Kartonagen",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Pulheim, Germany",
-    "country": "Germany",
-    "city": "Pulheim",
-    "website": "https://www.onlinepack.de/",
-    "phone": "+49 2234 99390",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH02SpLYj21TJ_MSgD1Jbr-QZbcEH66BXUV5kVlF2VYtMiHmgSrmvkj-ZLNqQUisKG7jutHEoAAWy8Wn0ovEoRQDqYXjw3o5js_m3ryPFyRini4ujwzsdveoXZk4XClz0Wx4UrH=w800-h500-k-no",
-    "googleRating": 4.8,
-    "googleReviews": 1015,
-    "rating": 4.8,
-    "reviewCount": 1015,
-    "verified": true,
-    "description": "Packaging supplier in Pulheim, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "EU",
-      "MENA"
-    ],
-    "moq": "2,000 units",
-    "address": "Donatusstraße 161, 50259 Pulheim-Brauweiler, Germany",
-    "openingHours": "Friday: 7AM-12PM,2-5:30PM · Monday: 7AM-1PM,1:45-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-1PM,1:45-5:30PM · Tuesday: 7AM-1PM,1:45-5:30PM · Wednesday: 7AM-1PM,1:45-5:30PM",
-    "sourceUrl": "https://www.google.com/maps/place/Onlinepack+Kartons+%26+Kartonagen/@50.966022099999996,6.81502,14z/data=!4m8!1m2!2m1!1sOnlinepack+Kartons+%26+Kartonagen!3m4!1s0x47bf3af9a645953b:0xd9ea80403670c45c!8m2!3d50.966022099999996!4d6.81502",
-    "score": 98,
-    "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "duboxx-packaging-llc-ae",
-    "name": "Duboxx Packaging LLC",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "AE, United Arab Emirates",
-    "country": "United Arab Emirates",
-    "city": "AE",
-    "website": "https://www.duboxx.ae/",
-    "phone": "+971 4 546 8455",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNAxIkIfOu4dw1OTyCZS59rN-KD5pBgKlVJwNWit4GpOeTd0jggePy8keWO3cWrdBniZ61KL2PP5CY73YzHahWDCcEnPBLP9Sh0CLTqwJkVvV1BjD3Y5VQbIguyCfnr8fXScOt=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 690,
-    "rating": 4.9,
-    "reviewCount": 690,
-    "verified": true,
-    "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "MENA",
-      "Asia"
-    ],
-    "moq": "2,000 units",
-    "address": "Warehouse No 5, Gate No 80, Plot 363-364 - Al Qouz Ind.first - Dubai - United Arab Emirates",
-    "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
-    "sourceUrl": "https://www.google.com/maps/place/Duboxx+Packaging+LLC/@25.135248299999997,55.2363498,14z/data=!4m8!1m2!2m1!1sDuboxx+Packaging+LLC!3m4!1s0x3e5f695fde45be35:0x73cc0eeb7ff6fec9!8m2!3d25.135248299999997!4d55.2363498",
-    "score": 98,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "international-packaging-agra",
-    "name": "International Packaging",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Agra, India",
-    "country": "India",
-    "city": "Agra",
-    "website": "https://intpacks.com/",
-    "phone": "+91 93594 61950",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtrfU4sZSpYQmn59QaWixaQd_13gBPVqjbJn4GQojB4EBEA9fd7P3Cq0L2jW3Vh9gb1ey_dJhcykhMeA6KsFlFgX18BpMxyO-NCS3fqLRne4VJOpRuJ7_z5z7Gq93ON-g7s-qW=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 838,
-    "rating": 4.9,
-    "reviewCount": 838,
-    "verified": true,
-    "description": "Packaging supplier in Agra, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "Asia",
-      "EU",
-      "Africa"
-    ],
-    "moq": "2,000 units",
-    "address": "Shoe Market, Shop No 8, Block No S4, opp. Shrivrindavan Tower, Sanjay Place, Agra, Uttar Pradesh 282002, India",
-    "openingHours": "Friday: 10AM-8PM · Monday: 10AM-8PM · Saturday: 10AM-8PM · Sunday: Closed · Thursday: 10AM-8PM · Tuesday: 10AM-8PM · Wednesday: 10AM-8PM",
-    "sourceUrl": "https://www.google.com/maps/place/International+Packaging/@27.1984891,78.00659809999999,14z/data=!4m8!1m2!2m1!1sInternational+Packaging!3m4!1s0x39747747b7f54389:0x1aa78deb191bacd2!8m2!3d27.1984891!4d78.00659809999999",
-    "score": 98,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "steeloncall-online-steel-market-place-visakhapatnam",
-    "name": "Steeloncall - Online Steel Market Place",
-    "industry": "Metal",
-    "category": "Steel & Metals",
-    "location": "Visakhapatnam, India",
-    "country": "India",
-    "city": "Visakhapatnam",
-    "website": "https://steeloncall.com/",
-    "phone": "+91 80 6221 2000",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3936o-il43R0BtIVgWYJjlixjTSIZylg4fh_XIGhq5bl53jLsNem9NucndRVz5-Y1kmsCQfOqWB5SB4L8FYqxgK9Wm8jRwQK5PGo1mQrMGz5jehFYv_3piN2QqJXcu4B7HLzQgbFzCkKV=w800-h500-k-no",
-    "googleRating": 4.7,
-    "googleReviews": 1153,
-    "rating": 4.7,
-    "reviewCount": 1153,
-    "verified": true,
-    "description": "Steel & Metals supplier in Visakhapatnam, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
-    "deliveryRegions": [
-      "Asia",
-      "EU",
-      "Africa"
-    ],
-    "moq": "5 tons",
-    "address": "4th Floor, Navaratna Trade Centre, 15/1, NTR Rd, beside Hotel Meghalaya, CBM Compound, Ram Nagar, Visakhapatnam, Andhra Pradesh 530003, India",
-    "openingHours": "Friday: 9:30AM-9PM · Monday: 9:30AM-9PM · Saturday: 9:30AM-9PM · Sunday: Closed · Thursday: 9:30AM-9PM · Tuesday: 9:30AM-9PM · Wednesday: 9:30AM-9PM",
-    "sourceUrl": "https://www.google.com/maps/place/Steeloncall+-+Online+Steel+Market+Place/@17.7247222,83.30937449999999,14z/data=!4m8!1m2!2m1!1sSteeloncall+-+Online+Steel+Market+Place!3m4!1s0x3a39433e870fbb0f:0xc300de7e51be9838!8m2!3d17.7247222!4d83.30937449999999",
-    "score": 97,
-    "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "ips-karton-eu-gmbh-co-kg-spremberg",
-    "name": "IPS Karton.eu GmbH & Co. KG",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Spremberg, Germany",
-    "country": "Germany",
-    "city": "Spremberg",
-    "website": "https://www.karton.eu/",
-    "phone": "+49 3563 348030",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC2c22rqO8l3whOmuD7htSfNNKdoMU8qFnUwf-9SZ0BZbXcoQMLPs6gqAX7d8GdjarbkMBWsODd9WPzJeVpqBT4e0yjDs5XMXB5_xZ9viay_xONizyE4qQaNn11UGsBCp9LaCv=w800-h500-k-no",
-    "googleRating": 4.7,
-    "googleReviews": 2016,
-    "rating": 4.7,
-    "reviewCount": 2016,
-    "verified": true,
-    "description": "Packaging supplier in Spremberg, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "EU",
-      "MENA"
-    ],
-    "moq": "2,000 units",
-    "address": "Tuchmacherallee 6, 03130 Spremberg, Germany",
-    "openingHours": "Friday: 8AM-12PM,12:30-5PM · Monday: 8AM-12PM,12:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12PM,12:30-5PM · Tuesday: 8AM-12PM,12:30-5PM · Wednesday: 8AM-12PM,12:30-5PM",
-    "sourceUrl": "https://www.google.com/maps/place/IPS+Karton.eu+GmbH+%26+Co.+KG/@51.574981099999995,14.4115261,14z/data=!4m8!1m2!2m1!1sIPS+Karton.eu+GmbH+%26+Co.+KG!3m4!1s0x47086f480305dc45:0x869f13425a3685f2!8m2!3d51.574981099999995!4d14.4115261",
-    "score": 97,
-    "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "square-solutions-pune",
-    "name": "Square Solutions",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Pune, India",
-    "country": "India",
-    "city": "Pune",
-    "website": "http://www.squaresolutions.store/",
-    "phone": "+91 88066 55880",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEltm45oHIfizH9aXMDtlPJy1GNMGsIJo7zD_RLGrKiLT3LCer2hXGqFKmcbA8I-RvC-ug9MZM22iAgu58sfWrsi1Z3ZK-DAnHK9f5ClzbRptiTyUrDwhFfQBkd0GbwpS3E3sY=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 674,
-    "rating": 4.9,
-    "reviewCount": 674,
-    "verified": true,
-    "description": "Packaging supplier in Pune, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "Asia",
-      "EU",
-      "Africa"
-    ],
-    "moq": "2,000 units",
-    "address": "Lane no.4C , Sanjay Park, Airport Road,Pune 411014, Pune, Maharashtra 411032, India",
-    "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: 10AM-7PM · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
-    "sourceUrl": "https://www.google.com/maps/place/Square+Solutions/@18.571495,73.9050754,14z/data=!4m8!1m2!2m1!1sSquare+Solutions!3m4!1s0x3bc2c167a50c3859:0xe81fe8e59eb886ec!8m2!3d18.571495!4d73.9050754",
-    "score": 97,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
   {
     "id": "all-metal-india-pvt-ltd-pune",
     "name": "ALL METAL INDIA PVT. LTD",
@@ -256,6 +15,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Pune",
     "website": "http://allmetalindia.in/",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGe4FB1KEoUkEXe2bH0-Be16nU3IdB9TT-M2DZ-T9Rv4e_B38K7Dyo0vzBbC08RA1j6U2DsiuNCSeeRx8LEcQ211Jw8WWJEmn-DEWaEfr_2MzehtpvE8SuMoP0Wh_BdPI3okrQkTQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-YB4Ns-krFv4/AAAAAAAAAAI/AAAAAAAAAAA/n5aOD_BKC98/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGe4FB1KEoUkEXe2bH0-Be16nU3IdB9TT-M2DZ-T9Rv4e_B38K7Dyo0vzBbC08RA1j6U2DsiuNCSeeRx8LEcQ211Jw8WWJEmn-DEWaEfr_2MzehtpvE8SuMoP0Wh_BdPI3okrQkTQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGe4FB1KEoUkEXe2bH0-Be16nU3IdB9TT-M2DZ-T9Rv4e_B38K7Dyo0vzBbC08RA1j6U2DsiuNCSeeRx8LEcQ211Jw8WWJEmn-DEWaEfr_2MzehtpvE8SuMoP0Wh_BdPI3okrQkTQ=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 349,
     "rating": 5,
@@ -276,147 +40,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ami Mansion, 94 B/2, Pune-11, opp. Swaminarayan Mandir, near K E M HOSPITAL, Rasta Peth, Pune, Maharashtra 411011, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-12:30PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/ALL+METAL+INDIA+PVT.+LTD/@18.5176101,73.8671193,14z/data=!4m8!1m2!2m1!1sALL+METAL+INDIA+PVT.+LTD!3m4!1s0x3bc2c042ea91281f:0xcd67ca7ea8852acd!8m2!3d18.5176101!4d73.8671193",
-    "score": 96,
+    "score": 100,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "foliflex-wires-cables-delhi",
-    "name": "Foliflex Wires & Cables",
-    "industry": "Electrotechnical & Cabling",
-    "category": "Cables & Electrical",
-    "location": "Delhi, India",
-    "country": "India",
-    "city": "Delhi",
-    "website": "https://foliflexcables.in/",
-    "phone": "+91 98735 92580",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHlLUwPh1oHAM3TOy_VHZdGTlLTPNsUTGXb7sPW3Sr7TrQywVnYUqBqhz7s3JH86ymarWVWzg2GwqCwNbUDfGLIQ4KfQiCggfOkd6wSQUNfycA-qhxL8dqEkdqWlskvLt7_viWdQ=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 468,
-    "rating": 4.9,
-    "reviewCount": 468,
-    "verified": true,
-    "description": "Cables & Electrical supplier in Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
-    "deliveryRegions": [
-      "Asia",
-      "EU",
-      "Africa"
-    ],
-    "moq": "500 m",
-    "address": "A-9/2, near Metro Station Dilshad Garden, Jhilmil Industrial Area, Vivek Vihar, Delhi, 110095, India",
-    "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
-    "sourceUrl": "https://www.google.com/maps/place/Foliflex+Wires+%26+Cables/@28.6750659,77.32007159999999,14z/data=!4m8!1m2!2m1!1sFoliflex+Wires+%26+Cables!3m4!1s0x390cfb7f99e665cf:0x2c3a7fa574634361!8m2!3d28.6750659!4d77.32007159999999",
-    "score": 96,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "cablesshop-barcelona",
-    "name": "CablesShop",
-    "industry": "Electrotechnical & Cabling",
-    "category": "Cables & Electrical",
-    "location": "Barcelona, Spain",
-    "country": "Spain",
-    "city": "Barcelona",
-    "website": "https://www.tiendacables.com/",
-    "phone": "+34 930 07 89 80",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqun7lkvBxgjfYvpkYC2hIyIatavNA1Y5J6VlLr_EziuofmNs2RwP17UDwLmnwZJ9kqEea410Fa6SrYom8o-Lxige9ryFiKcVgbQ51E060SzrR4veKGOt0lJ_Fb6c-He5aIsPP=w800-h500-k-no",
-    "googleRating": 4.6,
-    "googleReviews": 797,
-    "rating": 4.6,
-    "reviewCount": 797,
-    "verified": true,
-    "description": "Cables & Electrical supplier in Barcelona, Spain.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
-    "deliveryRegions": [
-      "EU",
-      "MENA"
-    ],
-    "moq": "500 m",
-    "address": "Carrer de Sepúlveda, 166, Local TiendaCables, Eixample, 08011 Barcelona, Spain",
-    "openingHours": "Friday: 9:30AM-2PM,4-7:30PM · Monday: 9:30AM-2PM,4-7:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-2PM,4-7:30PM · Tuesday: 9:30AM-2PM,4-7:30PM · Wednesday: 9:30AM-2PM,4-7:30PM",
-    "sourceUrl": "https://www.google.com/maps/place/CablesShop/@41.3824174,2.1621102,14z/data=!4m8!1m2!2m1!1sCablesShop!3m4!1s0x12a4a28a577f1e07:0xb02543a71cfc1a35!8m2!3d41.3824174!4d2.1621102",
-    "score": 96,
-    "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "packman-packaging-private-limited-greater-noida",
-    "name": "PACKMAN PACKAGING PRIVATE LIMITED",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Greater Noida, India",
-    "country": "India",
-    "city": "Greater Noida",
-    "website": "https://www.packman.co.in/",
-    "phone": "+91 85120 14000",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbPtPWurSgtlqmJ9cBpAt53usSMTXJxxngbkTfsE8tSKHdDExqvaD6rBj7Iwvk_C0wp2xq4U6aqkLLR-FAvuira15jNd8MwRaQOoUdqZkkVAR4zioA68OvuTtYl76mPn-OHMpk=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 464,
-    "rating": 4.9,
-    "reviewCount": 464,
-    "verified": true,
-    "description": "Packaging supplier in Greater Noida, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "Asia",
-      "EU",
-      "Africa"
-    ],
-    "moq": "2,000 units",
-    "address": "293, Surajpur - Kasna Rd, Ecotech extension 1, Greater Noida, Uttar Pradesh 201315, India",
-    "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: Closed · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
-    "sourceUrl": "https://www.google.com/maps/place/PACKMAN+PACKAGING+PRIVATE+LIMITED/@28.4420139,77.5496801,14z/data=!4m8!1m2!2m1!1sPACKMAN+PACKAGING+PRIVATE+LIMITED!3m4!1s0x390cc06e083d4469:0xd09df3c38e245fd3!8m2!3d28.4420139!4d77.5496801",
-    "score": 96,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "gm-tecnoedil-rome",
-    "name": "GM Tecnoedil",
-    "industry": "Construction & BTP",
-    "category": "Construction",
-    "location": "Rome, Italy",
-    "country": "Italy",
-    "city": "Rome",
-    "website": "https://www.gmtecnoedil.it/",
-    "phone": "+39 331 376 8409",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExgOXqfpfb065ZRDFXk2mQz-7FTcz3QrFnARsOY8G-dkiyDXPyIO3mft3qTLmq76G0_-0G7fy6iieGtxc7q0aHwU623BwTwykWopvb9eyGmoKTSTNRRfnong_5wktdxAkfS2RTcg=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 411,
-    "rating": 4.9,
-    "reviewCount": 411,
-    "verified": true,
-    "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
-    "deliveryRegions": [
-      "EU",
-      "MENA"
-    ],
-    "moq": "1 pallet",
-    "address": "Via Raffaele Garofalo, 137, 00173 Roma RM, Italy",
-    "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-4PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
-    "sourceUrl": "https://www.google.com/maps/place/GM+Tecnoedil/@41.843098,12.598953499999999,14z/data=!4m8!1m2!2m1!1sGM+Tecnoedil!3m4!1s0x1325881624446f97:0xe9f297baa2caa9a1!8m2!3d41.843098!4d12.598953499999999",
-    "score": 96,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sarfraz-steel-india-panvel",
@@ -429,6 +55,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.sarfrazsteelindia.com/",
     "phone": "+91 80828 21432",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkdMU4ZMPLae_MeH140Eh_LXOz1fQ-vM0U9iWfazCFkxOznY9z4xGCisQX9gECWr9zFjzuodynlpYMOzpfHK7ox4LYj9LcfTuwuJcCdwduvNybkYrf1fig2s3bEmHQWbOQ_P1B_i7P-S0=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-gBAVpc5ifIE/AAAAAAAAAAI/AAAAAAAAAAA/OasLJE8d1Rs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkdMU4ZMPLae_MeH140Eh_LXOz1fQ-vM0U9iWfazCFkxOznY9z4xGCisQX9gECWr9zFjzuodynlpYMOzpfHK7ox4LYj9LcfTuwuJcCdwduvNybkYrf1fig2s3bEmHQWbOQ_P1B_i7P-S0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkdMU4ZMPLae_MeH140Eh_LXOz1fQ-vM0U9iWfazCFkxOznY9z4xGCisQX9gECWr9zFjzuodynlpYMOzpfHK7ox4LYj9LcfTuwuJcCdwduvNybkYrf1fig2s3bEmHQWbOQ_P1B_i7P-S0=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 220,
     "rating": 5,
@@ -449,9 +80,88 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Office no. 101, B Wing, Swaroop Chs, Plot no.16, Sector 5E, Kalamboli, Panvel, Maharashtra 410218, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Sarfraz+Steel+India/@19.032894799999998,73.1035984,14z/data=!4m8!1m2!2m1!1sSarfraz+Steel+India!3m4!1s0x3be7c3eb2d770641:0xdda24519551ef0f7!8m2!3d19.032894799999998!4d73.1035984",
-    "score": 95,
+    "score": 100,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "steeloncall-online-steel-market-place-visakhapatnam",
+    "name": "Steeloncall - Online Steel Market Place",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "Visakhapatnam, India",
+    "country": "India",
+    "city": "Visakhapatnam",
+    "website": "https://steeloncall.com/",
+    "phone": "+91 80 6221 2000",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3936o-il43R0BtIVgWYJjlixjTSIZylg4fh_XIGhq5bl53jLsNem9NucndRVz5-Y1kmsCQfOqWB5SB4L8FYqxgK9Wm8jRwQK5PGo1mQrMGz5jehFYv_3piN2QqJXcu4B7HLzQgbFzCkKV=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-NcQs1ClmNiw/AAAAAAAAAAI/AAAAAAAAAAA/c8vEnW7br0g/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3936o-il43R0BtIVgWYJjlixjTSIZylg4fh_XIGhq5bl53jLsNem9NucndRVz5-Y1kmsCQfOqWB5SB4L8FYqxgK9Wm8jRwQK5PGo1mQrMGz5jehFYv_3piN2QqJXcu4B7HLzQgbFzCkKV=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3936o-il43R0BtIVgWYJjlixjTSIZylg4fh_XIGhq5bl53jLsNem9NucndRVz5-Y1kmsCQfOqWB5SB4L8FYqxgK9Wm8jRwQK5PGo1mQrMGz5jehFYv_3piN2QqJXcu4B7HLzQgbFzCkKV=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 1153,
+    "rating": 4.7,
+    "reviewCount": 1153,
+    "verified": true,
+    "description": "Steel & Metals supplier in Visakhapatnam, India.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "5 tons",
+    "address": "4th Floor, Navaratna Trade Centre, 15/1, NTR Rd, beside Hotel Meghalaya, CBM Compound, Ram Nagar, Visakhapatnam, Andhra Pradesh 530003, India",
+    "openingHours": "Friday: 9:30AM-9PM · Monday: 9:30AM-9PM · Saturday: 9:30AM-9PM · Sunday: Closed · Thursday: 9:30AM-9PM · Tuesday: 9:30AM-9PM · Wednesday: 9:30AM-9PM",
+    "sourceUrl": "https://www.google.com/maps/place/Steeloncall+-+Online+Steel+Market+Place/@17.7247222,83.30937449999999,14z/data=!4m8!1m2!2m1!1sSteeloncall+-+Online+Steel+Market+Place!3m4!1s0x3a39433e870fbb0f:0xc300de7e51be9838!8m2!3d17.7247222!4d83.30937449999999",
+    "score": 100,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "tractor-supply-co-jonesborough",
+    "name": "Tractor Supply Co.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "location": "Jonesborough, United States",
+    "country": "United States",
+    "city": "Jonesborough",
+    "website": "https://www.tractorsupply.com/tsc/store_Jonesborough-TN-37659_1613",
+    "phone": "+1 423-753-3232",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMRq6ubB-A86rnsKnSnfBdYXZl-CgranegSnClxvKvmvzs-rVre5IqrHhnj1oY0-BUW2BfN0-PPjBBJHro8CNQQ3zjTq4RPRo4rn7erNoeHAzh33CikgAzxrpDCaMyfzLJyohmiYzNEL0=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-VcnjHLhvC4k/AAAAAAAAAAI/AAAAAAAAAAA/2QaIcUGIFe0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMRq6ubB-A86rnsKnSnfBdYXZl-CgranegSnClxvKvmvzs-rVre5IqrHhnj1oY0-BUW2BfN0-PPjBBJHro8CNQQ3zjTq4RPRo4rn7erNoeHAzh33CikgAzxrpDCaMyfzLJyohmiYzNEL0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMRq6ubB-A86rnsKnSnfBdYXZl-CgranegSnClxvKvmvzs-rVre5IqrHhnj1oY0-BUW2BfN0-PPjBBJHro8CNQQ3zjTq4RPRo4rn7erNoeHAzh33CikgAzxrpDCaMyfzLJyohmiYzNEL0=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.6,
+    "googleReviews": 450,
+    "rating": 4.6,
+    "reviewCount": 450,
+    "verified": true,
+    "description": "Chain with a wide variety of agricultural & livestock supplies, plus tools, workwear & boots.",
+    "products": [
+      "Power cables",
+      "Control panels",
+      "Copper wiring"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "500 m",
+    "address": "507 Boones Creek Rd, Jonesborough, TN 37659",
+    "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-7PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
+    "sourceUrl": "https://www.google.com/maps/place/Tractor+Supply+Co./@36.3014124,-82.4684218,14z/data=!4m8!1m2!2m1!1sTractor+Supply+Co.!3m4!1s0x885a63e42492c57b:0x2917123e9cacb49d!8m2!3d36.3014124!4d-82.4684218",
+    "score": 100,
+    "reliabilityScore": 92,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sam-s-club-johnson-city",
@@ -464,6 +174,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.samsclub.com/club/8222-johnson-city-tn",
     "phone": "+1 423-282-2303",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_tffiIE8X9ZnaU8lq8JJdo7tfz4q58i0vPnV7dRUdG3bmkKjgBiZESWnq996wwaz9iq6xr8xo5aKiL3AsduTR_M0dfCv3QHyfngzAOG-GoOr7pYErbskfQpgN7eC9L_VazhoYpw=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-ghJoZp0-dRc/AAAAAAAAAAI/AAAAAAAAAAA/z2qNbU5XS0Q/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_tffiIE8X9ZnaU8lq8JJdo7tfz4q58i0vPnV7dRUdG3bmkKjgBiZESWnq996wwaz9iq6xr8xo5aKiL3AsduTR_M0dfCv3QHyfngzAOG-GoOr7pYErbskfQpgN7eC9L_VazhoYpw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_tffiIE8X9ZnaU8lq8JJdo7tfz4q58i0vPnV7dRUdG3bmkKjgBiZESWnq996wwaz9iq6xr8xo5aKiL3AsduTR_M0dfCv3QHyfngzAOG-GoOr7pYErbskfQpgN7eC9L_VazhoYpw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 2056,
     "rating": 4.4,
@@ -483,9 +198,442 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3060 Franklin Terrace, Johnson City, TN 37604",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-8PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Sam%27s+Club/@36.355296599999996,-82.40004619999999,14z/data=!4m8!1m2!2m1!1sSam%27s+Club!3m4!1s0x885a62bbb0f4089b:0x1841da72f579613a!8m2!3d36.355296599999996!4d-82.40004619999999",
-    "score": 95,
+    "score": 100,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "cables-house-wires-and-cables-trading-llc-ae",
+    "name": "CABLES HOUSE WIRES AND CABLES TRADING LLC",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "website": "https://cableshouse-me.com/",
+    "phone": "+971 4 294 8868",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoBTiQyN2yfJ5yHnEuBHBuqpq1l_dGmc_Ii5Trx1H9Yz0L9ZOtYPYpc_s_kCEb7qTKw4BMFW8c4_aW-_GPRs71_TUXta_zu5SKL2O-4KXL7OCiw3b3Q5J39QKockrdqc7jaWxJ=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-71HTBgluMOQ/AAAAAAAAAAI/AAAAAAAAAAA/ZhHZxdcIySM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoBTiQyN2yfJ5yHnEuBHBuqpq1l_dGmc_Ii5Trx1H9Yz0L9ZOtYPYpc_s_kCEb7qTKw4BMFW8c4_aW-_GPRs71_TUXta_zu5SKL2O-4KXL7OCiw3b3Q5J39QKockrdqc7jaWxJ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoBTiQyN2yfJ5yHnEuBHBuqpq1l_dGmc_Ii5Trx1H9Yz0L9ZOtYPYpc_s_kCEb7qTKw4BMFW8c4_aW-_GPRs71_TUXta_zu5SKL2O-4KXL7OCiw3b3Q5J39QKockrdqc7jaWxJ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.8,
+    "googleReviews": 260,
+    "rating": 4.8,
+    "reviewCount": 260,
+    "verified": true,
+    "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
+    "products": [
+      "Power cables",
+      "Control panels",
+      "Copper wiring"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "500 m",
+    "address": "78F5+FH - Naif - Deira - Dubai - United Arab Emirates",
+    "openingHours": "Friday: 9AM-9:30PM · Monday: 9AM-9:30PM · Saturday: 9AM-9:30PM · Sunday: Closed · Thursday: 9AM-9:30PM · Tuesday: 9AM-9:30PM · Wednesday: 9AM-9:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/CABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC/@25.273774,55.3089873,14z/data=!4m8!1m2!2m1!1sCABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC!3m4!1s0x3e5f4374c3db6d71:0x9f7bb824a57920b3!8m2!3d25.273774!4d55.3089873",
+    "score": 100,
+    "reliabilityScore": 96,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "foliflex-wires-cables-delhi",
+    "name": "Foliflex Wires & Cables",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "location": "Delhi, India",
+    "country": "India",
+    "city": "Delhi",
+    "website": "https://foliflexcables.in/",
+    "phone": "+91 98735 92580",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHlLUwPh1oHAM3TOy_VHZdGTlLTPNsUTGXb7sPW3Sr7TrQywVnYUqBqhz7s3JH86ymarWVWzg2GwqCwNbUDfGLIQ4KfQiCggfOkd6wSQUNfycA-qhxL8dqEkdqWlskvLt7_viWdQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-xF7zjGS6DzQ/AAAAAAAAAAI/AAAAAAAAAAA/l7ooJXMPRoM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHlLUwPh1oHAM3TOy_VHZdGTlLTPNsUTGXb7sPW3Sr7TrQywVnYUqBqhz7s3JH86ymarWVWzg2GwqCwNbUDfGLIQ4KfQiCggfOkd6wSQUNfycA-qhxL8dqEkdqWlskvLt7_viWdQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHlLUwPh1oHAM3TOy_VHZdGTlLTPNsUTGXb7sPW3Sr7TrQywVnYUqBqhz7s3JH86ymarWVWzg2GwqCwNbUDfGLIQ4KfQiCggfOkd6wSQUNfycA-qhxL8dqEkdqWlskvLt7_viWdQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 468,
+    "rating": 4.9,
+    "reviewCount": 468,
+    "verified": true,
+    "description": "Cables & Electrical supplier in Delhi, India.",
+    "products": [
+      "Power cables",
+      "Control panels",
+      "Copper wiring"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "500 m",
+    "address": "A-9/2, near Metro Station Dilshad Garden, Jhilmil Industrial Area, Vivek Vihar, Delhi, 110095, India",
+    "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
+    "sourceUrl": "https://www.google.com/maps/place/Foliflex+Wires+%26+Cables/@28.6750659,77.32007159999999,14z/data=!4m8!1m2!2m1!1sFoliflex+Wires+%26+Cables!3m4!1s0x390cfb7f99e665cf:0x2c3a7fa574634361!8m2!3d28.6750659!4d77.32007159999999",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "cablesshop-barcelona",
+    "name": "CablesShop",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "location": "Barcelona, Spain",
+    "country": "Spain",
+    "city": "Barcelona",
+    "website": "https://www.tiendacables.com/",
+    "phone": "+34 930 07 89 80",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqun7lkvBxgjfYvpkYC2hIyIatavNA1Y5J6VlLr_EziuofmNs2RwP17UDwLmnwZJ9kqEea410Fa6SrYom8o-Lxige9ryFiKcVgbQ51E060SzrR4veKGOt0lJ_Fb6c-He5aIsPP=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-IrdfpuYD1eA/AAAAAAAAAAI/AAAAAAAAAAA/NMkFGT0YRGI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqun7lkvBxgjfYvpkYC2hIyIatavNA1Y5J6VlLr_EziuofmNs2RwP17UDwLmnwZJ9kqEea410Fa6SrYom8o-Lxige9ryFiKcVgbQ51E060SzrR4veKGOt0lJ_Fb6c-He5aIsPP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqun7lkvBxgjfYvpkYC2hIyIatavNA1Y5J6VlLr_EziuofmNs2RwP17UDwLmnwZJ9kqEea410Fa6SrYom8o-Lxige9ryFiKcVgbQ51E060SzrR4veKGOt0lJ_Fb6c-He5aIsPP=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.6,
+    "googleReviews": 797,
+    "rating": 4.6,
+    "reviewCount": 797,
+    "verified": true,
+    "description": "Cables & Electrical supplier in Barcelona, Spain.",
+    "products": [
+      "Power cables",
+      "Control panels",
+      "Copper wiring"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "500 m",
+    "address": "Carrer de Sepúlveda, 166, Local TiendaCables, Eixample, 08011 Barcelona, Spain",
+    "openingHours": "Friday: 9:30AM-2PM,4-7:30PM · Monday: 9:30AM-2PM,4-7:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-2PM,4-7:30PM · Tuesday: 9:30AM-2PM,4-7:30PM · Wednesday: 9:30AM-2PM,4-7:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/CablesShop/@41.3824174,2.1621102,14z/data=!4m8!1m2!2m1!1sCablesShop!3m4!1s0x12a4a28a577f1e07:0xb02543a71cfc1a35!8m2!3d41.3824174!4d2.1621102",
+    "score": 100,
+    "reliabilityScore": 92,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "ips-karton-eu-gmbh-co-kg-spremberg",
+    "name": "IPS Karton.eu GmbH & Co. KG",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Spremberg, Germany",
+    "country": "Germany",
+    "city": "Spremberg",
+    "website": "https://www.karton.eu/",
+    "phone": "+49 3563 348030",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC2c22rqO8l3whOmuD7htSfNNKdoMU8qFnUwf-9SZ0BZbXcoQMLPs6gqAX7d8GdjarbkMBWsODd9WPzJeVpqBT4e0yjDs5XMXB5_xZ9viay_xONizyE4qQaNn11UGsBCp9LaCv=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-6x_Je9hwF6Q/AAAAAAAAAAI/AAAAAAAAAAA/fGHl9QVoJ4E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC2c22rqO8l3whOmuD7htSfNNKdoMU8qFnUwf-9SZ0BZbXcoQMLPs6gqAX7d8GdjarbkMBWsODd9WPzJeVpqBT4e0yjDs5XMXB5_xZ9viay_xONizyE4qQaNn11UGsBCp9LaCv=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC2c22rqO8l3whOmuD7htSfNNKdoMU8qFnUwf-9SZ0BZbXcoQMLPs6gqAX7d8GdjarbkMBWsODd9WPzJeVpqBT4e0yjDs5XMXB5_xZ9viay_xONizyE4qQaNn11UGsBCp9LaCv=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 2016,
+    "rating": 4.7,
+    "reviewCount": 2016,
+    "verified": true,
+    "description": "Packaging supplier in Spremberg, Germany.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "2,000 units",
+    "address": "Tuchmacherallee 6, 03130 Spremberg, Germany",
+    "openingHours": "Friday: 8AM-12PM,12:30-5PM · Monday: 8AM-12PM,12:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12PM,12:30-5PM · Tuesday: 8AM-12PM,12:30-5PM · Wednesday: 8AM-12PM,12:30-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/IPS+Karton.eu+GmbH+%26+Co.+KG/@51.574981099999995,14.4115261,14z/data=!4m8!1m2!2m1!1sIPS+Karton.eu+GmbH+%26+Co.+KG!3m4!1s0x47086f480305dc45:0x869f13425a3685f2!8m2!3d51.574981099999995!4d14.4115261",
+    "score": 100,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "onlinepack-kartons-kartonagen-pulheim",
+    "name": "Onlinepack Kartons & Kartonagen",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Pulheim, Germany",
+    "country": "Germany",
+    "city": "Pulheim",
+    "website": "https://www.onlinepack.de/",
+    "phone": "+49 2234 99390",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH02SpLYj21TJ_MSgD1Jbr-QZbcEH66BXUV5kVlF2VYtMiHmgSrmvkj-ZLNqQUisKG7jutHEoAAWy8Wn0ovEoRQDqYXjw3o5js_m3ryPFyRini4ujwzsdveoXZk4XClz0Wx4UrH=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-mNACnW2kIS0/AAAAAAAAAAI/AAAAAAAAAAA/BmlAoBrAlkk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH02SpLYj21TJ_MSgD1Jbr-QZbcEH66BXUV5kVlF2VYtMiHmgSrmvkj-ZLNqQUisKG7jutHEoAAWy8Wn0ovEoRQDqYXjw3o5js_m3ryPFyRini4ujwzsdveoXZk4XClz0Wx4UrH=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH02SpLYj21TJ_MSgD1Jbr-QZbcEH66BXUV5kVlF2VYtMiHmgSrmvkj-ZLNqQUisKG7jutHEoAAWy8Wn0ovEoRQDqYXjw3o5js_m3ryPFyRini4ujwzsdveoXZk4XClz0Wx4UrH=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.8,
+    "googleReviews": 1015,
+    "rating": 4.8,
+    "reviewCount": 1015,
+    "verified": true,
+    "description": "Packaging supplier in Pulheim, Germany.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "2,000 units",
+    "address": "Donatusstraße 161, 50259 Pulheim-Brauweiler, Germany",
+    "openingHours": "Friday: 7AM-12PM,2-5:30PM · Monday: 7AM-1PM,1:45-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-1PM,1:45-5:30PM · Tuesday: 7AM-1PM,1:45-5:30PM · Wednesday: 7AM-1PM,1:45-5:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/Onlinepack+Kartons+%26+Kartonagen/@50.966022099999996,6.81502,14z/data=!4m8!1m2!2m1!1sOnlinepack+Kartons+%26+Kartonagen!3m4!1s0x47bf3af9a645953b:0xd9ea80403670c45c!8m2!3d50.966022099999996!4d6.81502",
+    "score": 100,
+    "reliabilityScore": 96,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "duboxx-packaging-llc-ae",
+    "name": "Duboxx Packaging LLC",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "website": "https://www.duboxx.ae/",
+    "phone": "+971 4 546 8455",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNAxIkIfOu4dw1OTyCZS59rN-KD5pBgKlVJwNWit4GpOeTd0jggePy8keWO3cWrdBniZ61KL2PP5CY73YzHahWDCcEnPBLP9Sh0CLTqwJkVvV1BjD3Y5VQbIguyCfnr8fXScOt=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-BjO36pdgmOs/AAAAAAAAAAI/AAAAAAAAAAA/f6oEPLM_Cw8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNAxIkIfOu4dw1OTyCZS59rN-KD5pBgKlVJwNWit4GpOeTd0jggePy8keWO3cWrdBniZ61KL2PP5CY73YzHahWDCcEnPBLP9Sh0CLTqwJkVvV1BjD3Y5VQbIguyCfnr8fXScOt=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNAxIkIfOu4dw1OTyCZS59rN-KD5pBgKlVJwNWit4GpOeTd0jggePy8keWO3cWrdBniZ61KL2PP5CY73YzHahWDCcEnPBLP9Sh0CLTqwJkVvV1BjD3Y5VQbIguyCfnr8fXScOt=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 690,
+    "rating": 4.9,
+    "reviewCount": 690,
+    "verified": true,
+    "description": "Packaging supplier in AE, United Arab Emirates.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "2,000 units",
+    "address": "Warehouse No 5, Gate No 80, Plot 363-364 - Al Qouz Ind.first - Dubai - United Arab Emirates",
+    "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
+    "sourceUrl": "https://www.google.com/maps/place/Duboxx+Packaging+LLC/@25.135248299999997,55.2363498,14z/data=!4m8!1m2!2m1!1sDuboxx+Packaging+LLC!3m4!1s0x3e5f695fde45be35:0x73cc0eeb7ff6fec9!8m2!3d25.135248299999997!4d55.2363498",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "shabouk-printing-and-packaging-ae",
+    "name": "Shabouk Printing And Packaging",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "website": "https://shabouk.ae/",
+    "phone": "+971 56 398 0456",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkxMbuiLd4x7BjFBGJ_uY9IHQMKGHKEaa4AQ6f8CEcQPPFn3wLdnAPCciQoAOe-WCKtcSSg7QiL-Tba6eVMvH2U5Xdthov_9wUkv2b4PrdHKSJvd8EiIlC9w9iIJyBxVF7ELpVBw=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-yM2EuxjSYIY/AAAAAAAAAAI/AAAAAAAAAAA/QjFsLPcAhn0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkxMbuiLd4x7BjFBGJ_uY9IHQMKGHKEaa4AQ6f8CEcQPPFn3wLdnAPCciQoAOe-WCKtcSSg7QiL-Tba6eVMvH2U5Xdthov_9wUkv2b4PrdHKSJvd8EiIlC9w9iIJyBxVF7ELpVBw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkxMbuiLd4x7BjFBGJ_uY9IHQMKGHKEaa4AQ6f8CEcQPPFn3wLdnAPCciQoAOe-WCKtcSSg7QiL-Tba6eVMvH2U5Xdthov_9wUkv2b4PrdHKSJvd8EiIlC9w9iIJyBxVF7ELpVBw=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 232,
+    "rating": 4.9,
+    "reviewCount": 232,
+    "verified": true,
+    "description": "Packaging supplier in AE, United Arab Emirates.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "2,000 units",
+    "address": "25.376298050531396 - 55.489411309857275 Beirut St - industrial area 1 - Ajman - United Arab Emirates",
+    "openingHours": "Friday: Closed · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
+    "sourceUrl": "https://www.google.com/maps/place/Shabouk+Printing+And+Packaging/@25.376856699999998,55.4882613,14z/data=!4m8!1m2!2m1!1sShabouk+Printing+And+Packaging!3m4!1s0x3e5f58791f68cc21:0xd7a75c9be3ffbd7!8m2!3d25.376856699999998!4d55.4882613",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "international-packaging-agra",
+    "name": "International Packaging",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Agra, India",
+    "country": "India",
+    "city": "Agra",
+    "website": "https://intpacks.com/",
+    "phone": "+91 93594 61950",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtrfU4sZSpYQmn59QaWixaQd_13gBPVqjbJn4GQojB4EBEA9fd7P3Cq0L2jW3Vh9gb1ey_dJhcykhMeA6KsFlFgX18BpMxyO-NCS3fqLRne4VJOpRuJ7_z5z7Gq93ON-g7s-qW=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-E5eEiXZeRDI/AAAAAAAAAAI/AAAAAAAAAAA/fBYgtumwpQ0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtrfU4sZSpYQmn59QaWixaQd_13gBPVqjbJn4GQojB4EBEA9fd7P3Cq0L2jW3Vh9gb1ey_dJhcykhMeA6KsFlFgX18BpMxyO-NCS3fqLRne4VJOpRuJ7_z5z7Gq93ON-g7s-qW=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtrfU4sZSpYQmn59QaWixaQd_13gBPVqjbJn4GQojB4EBEA9fd7P3Cq0L2jW3Vh9gb1ey_dJhcykhMeA6KsFlFgX18BpMxyO-NCS3fqLRne4VJOpRuJ7_z5z7Gq93ON-g7s-qW=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 838,
+    "rating": 4.9,
+    "reviewCount": 838,
+    "verified": true,
+    "description": "Packaging supplier in Agra, India.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "2,000 units",
+    "address": "Shoe Market, Shop No 8, Block No S4, opp. Shrivrindavan Tower, Sanjay Place, Agra, Uttar Pradesh 282002, India",
+    "openingHours": "Friday: 10AM-8PM · Monday: 10AM-8PM · Saturday: 10AM-8PM · Sunday: Closed · Thursday: 10AM-8PM · Tuesday: 10AM-8PM · Wednesday: 10AM-8PM",
+    "sourceUrl": "https://www.google.com/maps/place/International+Packaging/@27.1984891,78.00659809999999,14z/data=!4m8!1m2!2m1!1sInternational+Packaging!3m4!1s0x39747747b7f54389:0x1aa78deb191bacd2!8m2!3d27.1984891!4d78.00659809999999",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "packman-packaging-private-limited-greater-noida",
+    "name": "PACKMAN PACKAGING PRIVATE LIMITED",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Greater Noida, India",
+    "country": "India",
+    "city": "Greater Noida",
+    "website": "https://www.packman.co.in/",
+    "phone": "+91 85120 14000",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbPtPWurSgtlqmJ9cBpAt53usSMTXJxxngbkTfsE8tSKHdDExqvaD6rBj7Iwvk_C0wp2xq4U6aqkLLR-FAvuira15jNd8MwRaQOoUdqZkkVAR4zioA68OvuTtYl76mPn-OHMpk=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-XMUB_tir8fU/AAAAAAAAAAI/AAAAAAAAAAA/suDnAtHmymQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbPtPWurSgtlqmJ9cBpAt53usSMTXJxxngbkTfsE8tSKHdDExqvaD6rBj7Iwvk_C0wp2xq4U6aqkLLR-FAvuira15jNd8MwRaQOoUdqZkkVAR4zioA68OvuTtYl76mPn-OHMpk=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbPtPWurSgtlqmJ9cBpAt53usSMTXJxxngbkTfsE8tSKHdDExqvaD6rBj7Iwvk_C0wp2xq4U6aqkLLR-FAvuira15jNd8MwRaQOoUdqZkkVAR4zioA68OvuTtYl76mPn-OHMpk=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 464,
+    "rating": 4.9,
+    "reviewCount": 464,
+    "verified": true,
+    "description": "Packaging supplier in Greater Noida, India.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "2,000 units",
+    "address": "293, Surajpur - Kasna Rd, Ecotech extension 1, Greater Noida, Uttar Pradesh 201315, India",
+    "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: Closed · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
+    "sourceUrl": "https://www.google.com/maps/place/PACKMAN+PACKAGING+PRIVATE+LIMITED/@28.4420139,77.5496801,14z/data=!4m8!1m2!2m1!1sPACKMAN+PACKAGING+PRIVATE+LIMITED!3m4!1s0x390cc06e083d4469:0xd09df3c38e245fd3!8m2!3d28.4420139!4d77.5496801",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "michaels-oklahoma-city",
+    "name": "Michaels",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Oklahoma City, United States",
+    "country": "United States",
+    "city": "Oklahoma City",
+    "website": "https://locations.michaels.com/OK/Oklahoma%2520City/1104/%3Futm_source%3DGoogle%26utm_medium%3DMaps%26utm_campaign%3DGoogle%2BPlaces",
+    "phone": "+1 405-942-8920",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEB7gPo1-Rnteq974qb6Q0tTG8xnIHB823LGIVFumLcBw_BB-hoQ7OpErUeuDuTXAxlXM3Bl6bEs2AODHLRTuxvou8vPBYbEy0h1Lxmq9jvnzWojKb6aRvu0izAuGYEWM1andfO3Q=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-7t8YmHAAJvk/AAAAAAAAAAI/AAAAAAAAAAA/98NQ6x43dbc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEB7gPo1-Rnteq974qb6Q0tTG8xnIHB823LGIVFumLcBw_BB-hoQ7OpErUeuDuTXAxlXM3Bl6bEs2AODHLRTuxvou8vPBYbEy0h1Lxmq9jvnzWojKb6aRvu0izAuGYEWM1andfO3Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEB7gPo1-Rnteq974qb6Q0tTG8xnIHB823LGIVFumLcBw_BB-hoQ7OpErUeuDuTXAxlXM3Bl6bEs2AODHLRTuxvou8vPBYbEy0h1Lxmq9jvnzWojKb6aRvu0izAuGYEWM1andfO3Q=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.3,
+    "googleReviews": 1812,
+    "rating": 4.3,
+    "reviewCount": 1812,
+    "verified": true,
+    "description": "Chain retailer carrying art & hobby supplies plus home decor (most offer classes & custom framing).",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "2,000 units",
+    "address": "Mayfair Village Shopping Center, 5012 N May Ave, Oklahoma City, OK 73112",
+    "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: 10AM-7PM · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
+    "sourceUrl": "https://www.google.com/maps/place/Michaels/@35.5210124,-97.5645883,14z/data=!4m8!1m2!2m1!1sMichaels!3m4!1s0x87b21a619c70790b:0xf709c46a9f64f2fc!8m2!3d35.5210124!4d-97.5645883",
+    "score": 100,
+    "reliabilityScore": 86,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "square-solutions-pune",
+    "name": "Square Solutions",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Pune, India",
+    "country": "India",
+    "city": "Pune",
+    "website": "http://www.squaresolutions.store/",
+    "phone": "+91 88066 55880",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEltm45oHIfizH9aXMDtlPJy1GNMGsIJo7zD_RLGrKiLT3LCer2hXGqFKmcbA8I-RvC-ug9MZM22iAgu58sfWrsi1Z3ZK-DAnHK9f5ClzbRptiTyUrDwhFfQBkd0GbwpS3E3sY=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-Aytlcu6w2DI/AAAAAAAAAAI/AAAAAAAAAAA/YHBF4d5VOaM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEltm45oHIfizH9aXMDtlPJy1GNMGsIJo7zD_RLGrKiLT3LCer2hXGqFKmcbA8I-RvC-ug9MZM22iAgu58sfWrsi1Z3ZK-DAnHK9f5ClzbRptiTyUrDwhFfQBkd0GbwpS3E3sY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEltm45oHIfizH9aXMDtlPJy1GNMGsIJo7zD_RLGrKiLT3LCer2hXGqFKmcbA8I-RvC-ug9MZM22iAgu58sfWrsi1Z3ZK-DAnHK9f5ClzbRptiTyUrDwhFfQBkd0GbwpS3E3sY=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 674,
+    "rating": 4.9,
+    "reviewCount": 674,
+    "verified": true,
+    "description": "Packaging supplier in Pune, India.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "2,000 units",
+    "address": "Lane no.4C , Sanjay Park, Airport Road,Pune 411014, Pune, Maharashtra 411032, India",
+    "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: 10AM-7PM · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
+    "sourceUrl": "https://www.google.com/maps/place/Square+Solutions/@18.571495,73.9050754,14z/data=!4m8!1m2!2m1!1sSquare+Solutions!3m4!1s0x3bc2c167a50c3859:0xe81fe8e59eb886ec!8m2!3d18.571495!4d73.9050754",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "parul-packaging-box-manufacturer-in-surat-valthan-surat",
@@ -498,6 +646,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.parulpackaging.com/",
     "phone": "+91 78638 59919",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8CWEZzqgD_0saaGEmCYXzt7y23xi4Wgp9PyIbC9WQqFOyrS2xJ_94ybuIhQihrSJK5zb8uAidhqtcNQy0ZNDtAfAog411TtREhywArCYSTaeSxmwa_pXmD211hLDmqFeAFRndy-2SgBM=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-w9PdmX8U7hE/AAAAAAAAAAI/AAAAAAAAAAA/lI1p81N0d2E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8CWEZzqgD_0saaGEmCYXzt7y23xi4Wgp9PyIbC9WQqFOyrS2xJ_94ybuIhQihrSJK5zb8uAidhqtcNQy0ZNDtAfAog411TtREhywArCYSTaeSxmwa_pXmD211hLDmqFeAFRndy-2SgBM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8CWEZzqgD_0saaGEmCYXzt7y23xi4Wgp9PyIbC9WQqFOyrS2xJ_94ybuIhQihrSJK5zb8uAidhqtcNQy0ZNDtAfAog411TtREhywArCYSTaeSxmwa_pXmD211hLDmqFeAFRndy-2SgBM=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 577,
     "rating": 4.6,
@@ -518,9 +671,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Gokul campus, Kosmada patiya Puna, nehar road, Valthan, Surat, Gujarat 395013, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Parul+Packaging+%7C+box+manufacturer+in+surat/@21.2131516,72.93335979999999,14z/data=!4m8!1m2!2m1!1sParul+Packaging+%7C+box+manufacturer+in+surat!3m4!1s0x3be045891cdef90f:0xff0929a6aef28e12!8m2!3d21.2131516!4d72.93335979999999",
-    "score": 95,
+    "score": 100,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packly-campochiaro",
@@ -533,6 +686,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.pack.ly/",
     "phone": "+39 0874 775000",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwe-blsasWr7gvKlVO3kekqsxR7s_86lyxazQK1v49pXp6Zm-VPE5g8rej9glBqv1Q2_tJR5cBEB2-Q5r9kTmi5n7x6lsJ3j-bALdO5ocgeaPOpqmyQaneo2o4pRULvm9312fy=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-15-CLrzqEzg/AAAAAAAAAAI/AAAAAAAAAAA/i04kmrBG4bM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwe-blsasWr7gvKlVO3kekqsxR7s_86lyxazQK1v49pXp6Zm-VPE5g8rej9glBqv1Q2_tJR5cBEB2-Q5r9kTmi5n7x6lsJ3j-bALdO5ocgeaPOpqmyQaneo2o4pRULvm9312fy=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwe-blsasWr7gvKlVO3kekqsxR7s_86lyxazQK1v49pXp6Zm-VPE5g8rej9glBqv1Q2_tJR5cBEB2-Q5r9kTmi5n7x6lsJ3j-bALdO5ocgeaPOpqmyQaneo2o4pRULvm9312fy=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 390,
     "rating": 4.8,
@@ -552,145 +710,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Bretella 2 Via Amerigo Vespucci, 86020 Campochiaro CB, Italy",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Packly/@41.4677101,14.5225817,14z/data=!4m8!1m2!2m1!1sPackly!3m4!1s0x133a6e2a4177682b:0x43fe82843a025c27!8m2!3d41.4677101!4d14.5225817",
-    "score": 95,
+    "score": 100,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "tractor-supply-co-jonesborough",
-    "name": "Tractor Supply Co.",
-    "industry": "Electrotechnical & Cabling",
-    "category": "Cables & Electrical",
-    "location": "Jonesborough, United States",
-    "country": "United States",
-    "city": "Jonesborough",
-    "website": "https://www.tractorsupply.com/tsc/store_Jonesborough-TN-37659_1613",
-    "phone": "+1 423-753-3232",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMRq6ubB-A86rnsKnSnfBdYXZl-CgranegSnClxvKvmvzs-rVre5IqrHhnj1oY0-BUW2BfN0-PPjBBJHro8CNQQ3zjTq4RPRo4rn7erNoeHAzh33CikgAzxrpDCaMyfzLJyohmiYzNEL0=w800-h500-k-no",
-    "googleRating": 4.6,
-    "googleReviews": 450,
-    "rating": 4.6,
-    "reviewCount": 450,
-    "verified": true,
-    "description": "Chain with a wide variety of agricultural & livestock supplies, plus tools, workwear & boots.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
-    "deliveryRegions": [
-      "North America",
-      "EU"
-    ],
-    "moq": "500 m",
-    "address": "507 Boones Creek Rd, Jonesborough, TN 37659",
-    "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-7PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
-    "sourceUrl": "https://www.google.com/maps/place/Tractor+Supply+Co./@36.3014124,-82.4684218,14z/data=!4m8!1m2!2m1!1sTractor+Supply+Co.!3m4!1s0x885a63e42492c57b:0x2917123e9cacb49d!8m2!3d36.3014124!4d-82.4684218",
-    "score": 94,
-    "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "cables-house-wires-and-cables-trading-llc-ae",
-    "name": "CABLES HOUSE WIRES AND CABLES TRADING LLC",
-    "industry": "Electrotechnical & Cabling",
-    "category": "Cables & Electrical",
-    "location": "AE, United Arab Emirates",
-    "country": "United Arab Emirates",
-    "city": "AE",
-    "website": "https://cableshouse-me.com/",
-    "phone": "+971 4 294 8868",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoBTiQyN2yfJ5yHnEuBHBuqpq1l_dGmc_Ii5Trx1H9Yz0L9ZOtYPYpc_s_kCEb7qTKw4BMFW8c4_aW-_GPRs71_TUXta_zu5SKL2O-4KXL7OCiw3b3Q5J39QKockrdqc7jaWxJ=w800-h500-k-no",
-    "googleRating": 4.8,
-    "googleReviews": 260,
-    "rating": 4.8,
-    "reviewCount": 260,
-    "verified": true,
-    "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
-    "deliveryRegions": [
-      "MENA",
-      "Asia"
-    ],
-    "moq": "500 m",
-    "address": "78F5+FH - Naif - Deira - Dubai - United Arab Emirates",
-    "openingHours": "Friday: 9AM-9:30PM · Monday: 9AM-9:30PM · Saturday: 9AM-9:30PM · Sunday: Closed · Thursday: 9AM-9:30PM · Tuesday: 9AM-9:30PM · Wednesday: 9AM-9:30PM",
-    "sourceUrl": "https://www.google.com/maps/place/CABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC/@25.273774,55.3089873,14z/data=!4m8!1m2!2m1!1sCABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC!3m4!1s0x3e5f4374c3db6d71:0x9f7bb824a57920b3!8m2!3d25.273774!4d55.3089873",
-    "score": 94,
-    "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "shabouk-printing-and-packaging-ae",
-    "name": "Shabouk Printing And Packaging",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "AE, United Arab Emirates",
-    "country": "United Arab Emirates",
-    "city": "AE",
-    "website": "https://shabouk.ae/",
-    "phone": "+971 56 398 0456",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkxMbuiLd4x7BjFBGJ_uY9IHQMKGHKEaa4AQ6f8CEcQPPFn3wLdnAPCciQoAOe-WCKtcSSg7QiL-Tba6eVMvH2U5Xdthov_9wUkv2b4PrdHKSJvd8EiIlC9w9iIJyBxVF7ELpVBw=w800-h500-k-no",
-    "googleRating": 4.9,
-    "googleReviews": 232,
-    "rating": 4.9,
-    "reviewCount": 232,
-    "verified": true,
-    "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "MENA",
-      "Asia"
-    ],
-    "moq": "2,000 units",
-    "address": "25.376298050531396 - 55.489411309857275 Beirut St - industrial area 1 - Ajman - United Arab Emirates",
-    "openingHours": "Friday: Closed · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
-    "sourceUrl": "https://www.google.com/maps/place/Shabouk+Printing+And+Packaging/@25.376856699999998,55.4882613,14z/data=!4m8!1m2!2m1!1sShabouk+Printing+And+Packaging!3m4!1s0x3e5f58791f68cc21:0xd7a75c9be3ffbd7!8m2!3d25.376856699999998!4d55.4882613",
-    "score": 94,
-    "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
-  },
-  {
-    "id": "michaels-oklahoma-city",
-    "name": "Michaels",
-    "industry": "Plastics & Packaging",
-    "category": "Packaging",
-    "location": "Oklahoma City, United States",
-    "country": "United States",
-    "city": "Oklahoma City",
-    "website": "https://locations.michaels.com/OK/Oklahoma%2520City/1104/%3Futm_source%3DGoogle%26utm_medium%3DMaps%26utm_campaign%3DGoogle%2BPlaces",
-    "phone": "+1 405-942-8920",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEB7gPo1-Rnteq974qb6Q0tTG8xnIHB823LGIVFumLcBw_BB-hoQ7OpErUeuDuTXAxlXM3Bl6bEs2AODHLRTuxvou8vPBYbEy0h1Lxmq9jvnzWojKb6aRvu0izAuGYEWM1andfO3Q=w800-h500-k-no",
-    "googleRating": 4.3,
-    "googleReviews": 1812,
-    "rating": 4.3,
-    "reviewCount": 1812,
-    "verified": true,
-    "description": "Chain retailer carrying art & hobby supplies plus home decor (most offer classes & custom framing).",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
-    "deliveryRegions": [
-      "North America",
-      "EU"
-    ],
-    "moq": "2,000 units",
-    "address": "Mayfair Village Shopping Center, 5012 N May Ave, Oklahoma City, OK 73112",
-    "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: 10AM-7PM · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
-    "sourceUrl": "https://www.google.com/maps/place/Michaels/@35.5210124,-97.5645883,14z/data=!4m8!1m2!2m1!1sMichaels!3m4!1s0x87b21a619c70790b:0xf709c46a9f64f2fc!8m2!3d35.5210124!4d-97.5645883",
-    "score": 94,
-    "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tecnomat-rome",
@@ -703,6 +725,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.tecnomat.it/it/n/roma/%3Futm_campaign%3DROMA_PRENESTINA_negozio_GMB%26utm_content%3Dsito_web%26utm_medium%3Dgoogle_my_business%26utm_source%3Dgoogle%26utm_term%3Dsito_web_ROMA_PRENESTINA_GMB",
     "phone": "+39 02 8390 5463",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrAm-jZhDxID-4dPmhvKPBkH5pstoI2HdWDvJege2MbC292tYSdp-cRshvdUkXPDnQZ-fofpgHTbCR1-XNOcM_lZP15bvDh-a8fcZWXekf6a8ljYjiJ4MHuVyb42zF9bYrnj3TSg=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-UlosYEr9XrU/AAAAAAAAAAI/AAAAAAAAAAA/sF6OU-xRsuM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrAm-jZhDxID-4dPmhvKPBkH5pstoI2HdWDvJege2MbC292tYSdp-cRshvdUkXPDnQZ-fofpgHTbCR1-XNOcM_lZP15bvDh-a8fcZWXekf6a8ljYjiJ4MHuVyb42zF9bYrnj3TSg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrAm-jZhDxID-4dPmhvKPBkH5pstoI2HdWDvJege2MbC292tYSdp-cRshvdUkXPDnQZ-fofpgHTbCR1-XNOcM_lZP15bvDh-a8fcZWXekf6a8ljYjiJ4MHuVyb42zF9bYrnj3TSg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 15449,
     "rating": 4.3,
@@ -722,9 +749,87 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Largo Carlo Guzzi, 8, 00155 Roma RM, Italy",
     "openingHours": "Friday: 7AM-8:30PM · Monday: 7AM-8:30PM · Saturday: 7AM-8:30PM · Sunday: 8:30AM-8:30PM · Thursday: 7AM-8:30PM · Tuesday: 7AM-8:30PM · Wednesday: 7AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tecnomat/@41.883873699999995,12.610069,14z/data=!4m8!1m2!2m1!1sTecnomat!3m4!1s0x132f62cff8c0ff57:0x98f4cf89787897bd!8m2!3d41.883873699999995!4d12.610069",
-    "score": 94,
+    "score": 100,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "gm-tecnoedil-rome",
+    "name": "GM Tecnoedil",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Rome, Italy",
+    "country": "Italy",
+    "city": "Rome",
+    "website": "https://www.gmtecnoedil.it/",
+    "phone": "+39 331 376 8409",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExgOXqfpfb065ZRDFXk2mQz-7FTcz3QrFnARsOY8G-dkiyDXPyIO3mft3qTLmq76G0_-0G7fy6iieGtxc7q0aHwU623BwTwykWopvb9eyGmoKTSTNRRfnong_5wktdxAkfS2RTcg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-3l39aky-wko/AAAAAAAAAAI/AAAAAAAAAAA/HwGKmtz8LZo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExgOXqfpfb065ZRDFXk2mQz-7FTcz3QrFnARsOY8G-dkiyDXPyIO3mft3qTLmq76G0_-0G7fy6iieGtxc7q0aHwU623BwTwykWopvb9eyGmoKTSTNRRfnong_5wktdxAkfS2RTcg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExgOXqfpfb065ZRDFXk2mQz-7FTcz3QrFnARsOY8G-dkiyDXPyIO3mft3qTLmq76G0_-0G7fy6iieGtxc7q0aHwU623BwTwykWopvb9eyGmoKTSTNRRfnong_5wktdxAkfS2RTcg=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 411,
+    "rating": 4.9,
+    "reviewCount": 411,
+    "verified": true,
+    "description": "Construction supplier in Rome, Italy.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "1 pallet",
+    "address": "Via Raffaele Garofalo, 137, 00173 Roma RM, Italy",
+    "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-4PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
+    "sourceUrl": "https://www.google.com/maps/place/GM+Tecnoedil/@41.843098,12.598953499999999,14z/data=!4m8!1m2!2m1!1sGM+Tecnoedil!3m4!1s0x1325881624446f97:0xe9f297baa2caa9a1!8m2!3d41.843098!4d12.598953499999999",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "landefeld-druckluft-und-hydraulik-kassel",
+    "name": "Landefeld Druckluft und Hydraulik",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "Kassel, Germany",
+    "country": "Germany",
+    "city": "Kassel",
+    "website": "https://www.landefeld.de/",
+    "phone": "+49 561 958859",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHafBJTAMOAwC7-FrOiUW7gSixq_2JgfhFL5trUwAX8HsnQwdOBHomSnkzfdp33qEjm2UB4BVMPuVy96nfQ_aDn_dXUk0E5biEUokCStrOod-nUQtYOng6UiT_RMXYIopm4KqE=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/---017AX3dlc/AAAAAAAAAAI/AAAAAAAAAAA/AXJpK5ayXGw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHafBJTAMOAwC7-FrOiUW7gSixq_2JgfhFL5trUwAX8HsnQwdOBHomSnkzfdp33qEjm2UB4BVMPuVy96nfQ_aDn_dXUk0E5biEUokCStrOod-nUQtYOng6UiT_RMXYIopm4KqE=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHafBJTAMOAwC7-FrOiUW7gSixq_2JgfhFL5trUwAX8HsnQwdOBHomSnkzfdp33qEjm2UB4BVMPuVy96nfQ_aDn_dXUk0E5biEUokCStrOod-nUQtYOng6UiT_RMXYIopm4KqE=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 1046,
+    "rating": 4.9,
+    "reviewCount": 1046,
+    "verified": true,
+    "description": "Industrial Parts supplier in Kassel, Germany.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "10 units",
+    "address": "Konrad-Zuse-Straße 1, 34123 Kassel-Waldau, Germany",
+    "openingHours": "Friday: 7AM-6PM · Monday: 7AM-9PM · Saturday: Closed · Sunday: 12-3PM · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
+    "sourceUrl": "https://www.google.com/maps/place/Landefeld+Druckluft+und+Hydraulik/@51.279689,9.523923,14z/data=!4m8!1m2!2m1!1sLandefeld+Druckluft+und+Hydraulik!3m4!1s0x47bb476df0cb5229:0x53f38c6fd4ff565d!8m2!3d51.279689!4d9.523923",
+    "score": 100,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "olive-cables-india-pvt-ltd-new-delhi-delhi",
@@ -737,6 +842,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.olivecables.com/",
     "phone": "+91 1800 103 2680",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGME-TZKz57Y2e-ZAXLs4PxkuBekCiQhNb1RmWU-2gjpiflwVkTzA_17YvafgQTorgvz7sZZRaWuMXo8m4jsKt1G6SwvYIoUFk1P_RNqcgEKo6Y1kjwXC-erMrlx08BTrvAkm_s=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-U2pH5jbvLd4/AAAAAAAAAAI/AAAAAAAAAAA/BbNiVoxPmto/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGME-TZKz57Y2e-ZAXLs4PxkuBekCiQhNb1RmWU-2gjpiflwVkTzA_17YvafgQTorgvz7sZZRaWuMXo8m4jsKt1G6SwvYIoUFk1P_RNqcgEKo6Y1kjwXC-erMrlx08BTrvAkm_s=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGME-TZKz57Y2e-ZAXLs4PxkuBekCiQhNb1RmWU-2gjpiflwVkTzA_17YvafgQTorgvz7sZZRaWuMXo8m4jsKt1G6SwvYIoUFk1P_RNqcgEKo6Y1kjwXC-erMrlx08BTrvAkm_s=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 204,
     "rating": 4.8,
@@ -757,9 +867,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "SANSAR COMPOUND, Olive Cables (India) Pvt. Ltd, 519/1/16, Grand Trunk Rd, Block R, Dilshad Garden, New Delhi, Delhi, 110095, India",
     "openingHours": "Friday: 10:30AM-7PM · Monday: 10:30AM-7PM · Saturday: 10:30AM-7PM · Sunday: 10:30AM-7PM · Thursday: 10:30AM-7PM · Tuesday: Closed · Wednesday: 10:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Olive+Cables+%28India%29+Pvt.+Ltd/@28.676368699999998,77.30334289999999,14z/data=!4m8!1m2!2m1!1sOlive+Cables+%28India%29+Pvt.+Ltd!3m4!1s0x390cfb1772bf5c89:0xe68df19278948e6b!8m2!3d28.676368699999998!4d77.30334289999999",
-    "score": 93,
+    "score": 99,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "steel-pipe-supply-co-inc-new-century",
@@ -772,6 +882,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://steelandpipe.com/",
     "phone": "+1 913-768-4333",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_YSIdnzUU_T65BcGKkmIPnjdbR5Kn9sdjGrYGPv6jjHisWm4RuimFuqmBYdaq9ywFebczDIZoOZOH_iP2p2UwaKGi_aOC-TVsQWDWPAU8NPl_siGUE8Xg0nzor8T_lMy8XD5qmwGAAyyj=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-Xrcb0T8jxqc/AAAAAAAAAAI/AAAAAAAAAAA/Cf0TpJCJBQ8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_YSIdnzUU_T65BcGKkmIPnjdbR5Kn9sdjGrYGPv6jjHisWm4RuimFuqmBYdaq9ywFebczDIZoOZOH_iP2p2UwaKGi_aOC-TVsQWDWPAU8NPl_siGUE8Xg0nzor8T_lMy8XD5qmwGAAyyj=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_YSIdnzUU_T65BcGKkmIPnjdbR5Kn9sdjGrYGPv6jjHisWm4RuimFuqmBYdaq9ywFebczDIZoOZOH_iP2p2UwaKGi_aOC-TVsQWDWPAU8NPl_siGUE8Xg0nzor8T_lMy8XD5qmwGAAyyj=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 372,
     "rating": 4.6,
@@ -791,9 +906,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "401 New Century Pkwy, New Century, KS 66031",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Closed · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Steel+%26+Pipe+Supply+Co+Inc/@38.8249999,-94.9003888,14z/data=!4m8!1m2!2m1!1sSteel+%26+Pipe+Supply+Co+Inc!3m4!1s0x87c0a349fa793a81:0x47b9a520aea48c9c!8m2!3d38.8249999!4d-94.9003888",
-    "score": 93,
+    "score": 99,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mypack-gunstig-kartons-kaufen-bad-breisig",
@@ -806,6 +921,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.mypack.de/",
     "phone": "+49 2642 9987086",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4xMKSKnsN4lG_GJ3TEmiaaZEAeQTVn0ZVYnd5noRnV8azc5CzL0nP6elGPP2xfIvCJntgP8F-JbQDDaOe-72SZFxmunUH6o6D41Qe88RtbEjoMQaTiUTa8zfaRmel0-hI7KJM=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-RpH4dOk3Uk0/AAAAAAAAAAI/AAAAAAAAAAA/FNqyQ2y5xjo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4xMKSKnsN4lG_GJ3TEmiaaZEAeQTVn0ZVYnd5noRnV8azc5CzL0nP6elGPP2xfIvCJntgP8F-JbQDDaOe-72SZFxmunUH6o6D41Qe88RtbEjoMQaTiUTa8zfaRmel0-hI7KJM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4xMKSKnsN4lG_GJ3TEmiaaZEAeQTVn0ZVYnd5noRnV8azc5CzL0nP6elGPP2xfIvCJntgP8F-JbQDDaOe-72SZFxmunUH6o6D41Qe88RtbEjoMQaTiUTa8zfaRmel0-hI7KJM=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 148,
     "rating": 4.9,
@@ -825,9 +945,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Goldene Meile Glasfabrik 4, 53498 Bad Breisig-Glasfabrik, Germany",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: 8AM-4PM · Sunday: 8AM-4PM · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/MyPack+-+G%C3%BCnstig+Kartons+kaufen/@50.5324415,7.2732287,14z/data=!4m8!1m2!2m1!1sMyPack+-+G%C3%BCnstig+Kartons+kaufen!3m4!1s0x47bef6d32d7b5211:0xf9b881b000585ffd!8m2!3d50.5324415!4d7.2732287",
-    "score": 93,
+    "score": 99,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tupackaging-alaquas",
@@ -840,6 +960,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://tupackaging.es/",
     "phone": "+34 647 84 36 08",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQ_eKaT2dXtXVLN4MSM2bMAXL_AO9ofH2vm-0iISH3SvBWjnWbLp-oLmddHOoZY-bW29ocjJmF-GQOwgao5-2Cw5hzJtPdhIMZSgzgKLrynPjH2n7uty35tgzrUNB07g5y9rs=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-VGb5AlAtDRA/AAAAAAAAAAI/AAAAAAAAAAA/IeuiIxqOU4E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQ_eKaT2dXtXVLN4MSM2bMAXL_AO9ofH2vm-0iISH3SvBWjnWbLp-oLmddHOoZY-bW29ocjJmF-GQOwgao5-2Cw5hzJtPdhIMZSgzgKLrynPjH2n7uty35tgzrUNB07g5y9rs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQ_eKaT2dXtXVLN4MSM2bMAXL_AO9ofH2vm-0iISH3SvBWjnWbLp-oLmddHOoZY-bW29ocjJmF-GQOwgao5-2Cw5hzJtPdhIMZSgzgKLrynPjH2n7uty35tgzrUNB07g5y9rs=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 103,
     "rating": 5,
@@ -859,9 +984,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer dels Fusters, 22, 46970 Alaquàs, Valencia, Spain",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-2PM,5-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-2PM,5-7PM · Tuesday: 8AM-2PM,5-7PM · Wednesday: 8AM-2PM,5-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Tupackaging/@39.4483003,-0.4750057,14z/data=!4m8!1m2!2m1!1sTupackaging!3m4!1s0xd6051d78b5f788b:0xc76802e707e3bf9b!8m2!3d39.4483003!4d-0.4750057",
-    "score": 93,
+    "score": 99,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "materiales-cano-s-l-la-hoya",
@@ -874,6 +999,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.materialescano.com/",
     "phone": "+34 965 45 79 77",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNbNQSMnB9yWCfbxcZdK9yLE3X7Hg1E1bqwH_8dqDEnTYH4gS71z3PXwVtaQxY74z80rv-SU83LuBdw0zuB9BG5W-hkOqO7h-PMTJA4VZOA-ZJ84LUWsWJm6y-WnDF3Gn9UILb=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-Q06b6sVl58k/AAAAAAAAAAI/AAAAAAAAAAA/R2-HJxldJRc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNbNQSMnB9yWCfbxcZdK9yLE3X7Hg1E1bqwH_8dqDEnTYH4gS71z3PXwVtaQxY74z80rv-SU83LuBdw0zuB9BG5W-hkOqO7h-PMTJA4VZOA-ZJ84LUWsWJm6y-WnDF3Gn9UILb=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNbNQSMnB9yWCfbxcZdK9yLE3X7Hg1E1bqwH_8dqDEnTYH4gS71z3PXwVtaQxY74z80rv-SU83LuBdw0zuB9BG5W-hkOqO7h-PMTJA4VZOA-ZJ84LUWsWJm6y-WnDF3Gn9UILb=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 341,
     "rating": 4.6,
@@ -893,9 +1023,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Partida de La Hoya 1, 23A, 03294 La Hoya, Alicante, Spain",
     "openingHours": "Friday: 7:30AM-1:30PM,3-7PM · Monday: 7:30AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,3-7PM · Tuesday: 7:30AM-1:30PM,3-7PM · Wednesday: 7:30AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+Cano%2C+S.L./@38.218343399999995,-0.6842142,14z/data=!4m8!1m2!2m1!1sMateriales+Cano%2C+S.L.!3m4!1s0xd63b695fa5785f9:0x5a3d7baae012b6e7!8m2!3d38.218343399999995!4d-0.6842142",
-    "score": 93,
+    "score": 99,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "shree-ji-steel-private-limited-kolkata",
@@ -908,6 +1038,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://shreejisteelcorp.com/",
     "phone": "+91 70444 59444",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG54ptlRI6OZTOVCC6xyCq_pNmSoD6_E289EtW5jIYOOanQrKgckYjLZHW5RmVabD_rLlZxqUocTs2BMSUp75dFFBKvUEgTS5xx39ZjQxMj_JEnVS9rv46ikFYrxctUANrbNvO9=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-h6EB0fAcNCc/AAAAAAAAAAI/AAAAAAAAAAA/YefdsYjQQBU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG54ptlRI6OZTOVCC6xyCq_pNmSoD6_E289EtW5jIYOOanQrKgckYjLZHW5RmVabD_rLlZxqUocTs2BMSUp75dFFBKvUEgTS5xx39ZjQxMj_JEnVS9rv46ikFYrxctUANrbNvO9=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG54ptlRI6OZTOVCC6xyCq_pNmSoD6_E289EtW5jIYOOanQrKgckYjLZHW5RmVabD_rLlZxqUocTs2BMSUp75dFFBKvUEgTS5xx39ZjQxMj_JEnVS9rv46ikFYrxctUANrbNvO9=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 152,
     "rating": 4.7,
@@ -928,9 +1063,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "EP & GP, J-1, Salt Lake Bypass, above idlyGo Xpress, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091, India",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: 9:30AM-5PM · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Shree+Ji+Steel+Private+Limited/@22.5718052,88.43604719999999,14z/data=!4m8!1m2!2m1!1sShree+Ji+Steel+Private+Limited!3m4!1s0x3a02779404fff905:0xe7d561543d64b8b7!8m2!3d22.5718052!4d88.43604719999999",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "gaming-fetch-al-khobar",
@@ -943,6 +1078,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://thegamingfetch.com/ar/",
     "phone": "+966 55 810 7074",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx6G0RxV3A2AvkD2pbpESjBv_FmVhhWNgyDYZf9jMoDRR3nn0531A_Eb-Q1cyIp4JytVi_GLJhPr7sF7jYBn0L7TF7SdTenmQ3ixzu5ePTqt-9o_OOAoIrP_Bxoq4LpNJEms-GIw=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-RuHap0meIEM/AAAAAAAAAAI/AAAAAAAAAAA/NxAjjxSxeAk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx6G0RxV3A2AvkD2pbpESjBv_FmVhhWNgyDYZf9jMoDRR3nn0531A_Eb-Q1cyIp4JytVi_GLJhPr7sF7jYBn0L7TF7SdTenmQ3ixzu5ePTqt-9o_OOAoIrP_Bxoq4LpNJEms-GIw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx6G0RxV3A2AvkD2pbpESjBv_FmVhhWNgyDYZf9jMoDRR3nn0531A_Eb-Q1cyIp4JytVi_GLJhPr7sF7jYBn0L7TF7SdTenmQ3ixzu5ePTqt-9o_OOAoIrP_Bxoq4LpNJEms-GIw=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 289,
     "rating": 5,
@@ -962,9 +1102,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "76J5+RRR, Al Khobar Al Shamalia, Al Khobar 34429, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 9AM-1PM,4-9PM · Saturday: 9AM-1PM,4-9PM · Sunday: 9AM-1PM,4-9PM · Thursday: 9AM-1PM,4-9PM · Tuesday: 9AM-1PM,4-9PM · Wednesday: 9AM-1PM,4-9PM",
     "sourceUrl": "https://www.google.com/maps/place/%D9%82%D9%8A%D9%85%D9%86%D9%82+%D9%81%D9%8A%D8%AA%D8%B4+-+Gaming+fetch/@26.2819774,50.2089862,14z/data=!4m8!1m2!2m1!1s%D9%82%D9%8A%D9%85%D9%86%D9%82+%D9%81%D9%8A%D8%AA%D8%B4+-+Gaming+fetch!3m4!1s0x3e49e9a0e94889a1:0x6843a4eddbbdbdbf!8m2!3d26.2819774!4d50.2089862",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tractor-supply-co-johnson-city",
@@ -977,6 +1117,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.tractorsupply.com/tsc/store_Johnsoncity-TN-37601_520",
     "phone": "+1 423-854-9057",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE600BNxApZu9tsbs93WCKFAXzeqqUTkzhiu7VN-R5huCbYJA8bsFWz_NzRjU5-NFVM28ujA2QqCl0RbmWSn3IeSLeJw3WWS8tokGNl9dPsKBK7FQeND5mwGrOFelbLibhiEwW4=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-spzEqqrqeKw/AAAAAAAAAAI/AAAAAAAAAAA/GSd0tSjSaCA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE600BNxApZu9tsbs93WCKFAXzeqqUTkzhiu7VN-R5huCbYJA8bsFWz_NzRjU5-NFVM28ujA2QqCl0RbmWSn3IeSLeJw3WWS8tokGNl9dPsKBK7FQeND5mwGrOFelbLibhiEwW4=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE600BNxApZu9tsbs93WCKFAXzeqqUTkzhiu7VN-R5huCbYJA8bsFWz_NzRjU5-NFVM28ujA2QqCl0RbmWSn3IeSLeJw3WWS8tokGNl9dPsKBK7FQeND5mwGrOFelbLibhiEwW4=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 450,
     "rating": 4.4,
@@ -996,9 +1141,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "4534 Bristol Hwy, Johnson City, TN 37601",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-7PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Tractor+Supply+Co./@36.4025636,-82.34580299999999,14z/data=!4m8!1m2!2m1!1sTractor+Supply+Co.!3m4!1s0x885a87a970ac24e1:0x49eeaa20412a4124!8m2!3d36.4025636!4d-82.34580299999999",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "idea-star-packing-materials-company-llc-ae",
@@ -1011,6 +1156,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ideastarpackingmaterials.com/",
     "phone": "+971 55 972 5112",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHW9OuEPOwXA6ALXhJhrzeUEquTe7zoSWI1Rgl2UbX7bcb4izPLkRr5JNl6y2YIbMlLtiJg69cY-e4tfryUexTBoFV-2NWTr091QrV7o7J1a0UP1dbHwRoWEFfGvpHRWNBs1wOA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-H4e1JeZ1waI/AAAAAAAAAAI/AAAAAAAAAAA/d065esO5RSo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHW9OuEPOwXA6ALXhJhrzeUEquTe7zoSWI1Rgl2UbX7bcb4izPLkRr5JNl6y2YIbMlLtiJg69cY-e4tfryUexTBoFV-2NWTr091QrV7o7J1a0UP1dbHwRoWEFfGvpHRWNBs1wOA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHW9OuEPOwXA6ALXhJhrzeUEquTe7zoSWI1Rgl2UbX7bcb4izPLkRr5JNl6y2YIbMlLtiJg69cY-e4tfryUexTBoFV-2NWTr091QrV7o7J1a0UP1dbHwRoWEFfGvpHRWNBs1wOA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 129,
     "rating": 4.8,
@@ -1030,9 +1180,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Post Box number: 115299 - 26th St - Al Qouz Ind.fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 7:30AM-5PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Idea+Star+Packing+Materials+Company+LLC/@25.1109041,55.233090399999995,14z/data=!4m8!1m2!2m1!1sIdea+Star+Packing+Materials+Company+LLC!3m4!1s0x3e5f69511b3aa643:0x17b5ca6de11f5331!8m2!3d25.1109041!4d55.233090399999995",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "galaxy-plast-llc-ae",
@@ -1045,6 +1195,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://galaxyplast.com/",
     "phone": "+971 4 320 2762",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFBzYSC0P9GdxaIwK7wTo5DXOYfjkBb5q-ufjEcWzqD3wWGQKj1B7haaZb95zAO6E_NWozodti7dK5IUcpuEtgqduJRaY8a_dlKVIJ4GCJhAyldPoqcan6XvYxNIUgbn7Q2bcc=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-VHW33-FC7sI/AAAAAAAAAAI/AAAAAAAAAAA/ZBceiaKK17U/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFBzYSC0P9GdxaIwK7wTo5DXOYfjkBb5q-ufjEcWzqD3wWGQKj1B7haaZb95zAO6E_NWozodti7dK5IUcpuEtgqduJRaY8a_dlKVIJ4GCJhAyldPoqcan6XvYxNIUgbn7Q2bcc=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFBzYSC0P9GdxaIwK7wTo5DXOYfjkBb5q-ufjEcWzqD3wWGQKj1B7haaZb95zAO6E_NWozodti7dK5IUcpuEtgqduJRaY8a_dlKVIJ4GCJhAyldPoqcan6XvYxNIUgbn7Q2bcc=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 113,
     "rating": 4.8,
@@ -1064,9 +1219,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "81 11A Street - Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-6PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Galaxy+Plast+LLC/@25.1827938,55.3616629,14z/data=!4m8!1m2!2m1!1sGalaxy+Plast+LLC!3m4!1s0x3e5f67008db2c0f1:0x64649386ac4ddf84!8m2!3d25.1827938!4d55.3616629",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ak-packaging-mira-bhayandar",
@@ -1079,6 +1234,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://akpackaging.odoo.com/",
     "phone": "+91 76662 06325",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMc02IiSRRQgDclt5kYa31jwTtgri1pyHNrzyrKH8SYkmP8gzzJor0aOHeiVoN0ErOi_VUsk-_brdJTJRD_t1IT5NBMAlSi5BLYKfaeFsmOsIo0b2xEp0JjzWj0OSEQ0RsRuppYwiYVKPp=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-09gFGlGrTY0/AAAAAAAAAAI/AAAAAAAAAAA/Uef4hHip3us/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMc02IiSRRQgDclt5kYa31jwTtgri1pyHNrzyrKH8SYkmP8gzzJor0aOHeiVoN0ErOi_VUsk-_brdJTJRD_t1IT5NBMAlSi5BLYKfaeFsmOsIo0b2xEp0JjzWj0OSEQ0RsRuppYwiYVKPp=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMc02IiSRRQgDclt5kYa31jwTtgri1pyHNrzyrKH8SYkmP8gzzJor0aOHeiVoN0ErOi_VUsk-_brdJTJRD_t1IT5NBMAlSi5BLYKfaeFsmOsIo0b2xEp0JjzWj0OSEQ0RsRuppYwiYVKPp=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 86,
     "rating": 5,
@@ -1099,9 +1259,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "G, 3, Phatak Rd, behind HDFC Bank, Bhayandar, Vikas Industrial Estate, Bhayandar (E, Mira Bhayandar, Maharashtra 401105, India",
     "openingHours": "Friday: 9:30AM-8:30PM · Monday: 9:30AM-8:30PM · Saturday: 9:30AM-8:30PM · Sunday: 10:15AM-4:15PM · Thursday: 9:30AM-8:30PM · Tuesday: 9:30AM-8:30PM · Wednesday: 9:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ak+Packaging/@19.2995303,72.854233,14z/data=!4m8!1m2!2m1!1sAk+Packaging!3m4!1s0x3be7b13e80f0b375:0x15a849f48584911e!8m2!3d19.2995303!4d72.854233",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bropack-emballage-maroc-casablanca",
@@ -1114,6 +1274,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.bropack.net/",
     "phone": "+212 6 41 41 00 42",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE919XIR3n9xCjI_mf1G6-JJ9k_cxXJ-LxzKFdBZNkmJRQrR6Vnx_YJANKTa-TF9lYg51AszOMUY42_UOQnBYX_cfMhs4L_xPweKL70U8OlE3DRldUZrHpQfBFTuXmpF4b5cf0t_f_xeAU1=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-s3pb7hb5n-Y/AAAAAAAAAAI/AAAAAAAAAAA/JX4tl_AOMR8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE919XIR3n9xCjI_mf1G6-JJ9k_cxXJ-LxzKFdBZNkmJRQrR6Vnx_YJANKTa-TF9lYg51AszOMUY42_UOQnBYX_cfMhs4L_xPweKL70U8OlE3DRldUZrHpQfBFTuXmpF4b5cf0t_f_xeAU1=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE919XIR3n9xCjI_mf1G6-JJ9k_cxXJ-LxzKFdBZNkmJRQrR6Vnx_YJANKTa-TF9lYg51AszOMUY42_UOQnBYX_cfMhs4L_xPweKL70U8OlE3DRldUZrHpQfBFTuXmpF4b5cf0t_f_xeAU1=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 93,
     "rating": 4.9,
@@ -1133,9 +1298,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "42 RUE IMAM HARAMAIN, Casablanca 20400, Morocco",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BROPACK+Emballage+Maroc/@33.5769829,-7.6427081999999995,14z/data=!4m8!1m2!2m1!1sBROPACK+Emballage+Maroc!3m4!1s0xda7cd8e13e6c943:0x1746c3ba260663a0!8m2!3d33.5769829!4d-7.6427081999999995",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "boxpack-zaragoza",
@@ -1148,6 +1313,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.boxpack.es/",
     "phone": "+34 976 50 08 48",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJsk30XYClhwDukXIP-2I0p67WVo940Av_YZfDg8hQpAFPVqoO59uDMryQefL2_HB6WVgsBcg2fq3R_z7Ppvqr71uoPd39si71q2UAI5xqWPRgQ3-C95yZQDTK7ApzL4VZJzIf=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-6P45UzeZFN0/AAAAAAAAAAI/AAAAAAAAAAA/1doYVQO0yG4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJsk30XYClhwDukXIP-2I0p67WVo940Av_YZfDg8hQpAFPVqoO59uDMryQefL2_HB6WVgsBcg2fq3R_z7Ppvqr71uoPd39si71q2UAI5xqWPRgQ3-C95yZQDTK7ApzL4VZJzIf=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJsk30XYClhwDukXIP-2I0p67WVo940Av_YZfDg8hQpAFPVqoO59uDMryQefL2_HB6WVgsBcg2fq3R_z7Ppvqr71uoPd39si71q2UAI5xqWPRgQ3-C95yZQDTK7ApzL4VZJzIf=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 77,
     "rating": 5,
@@ -1167,9 +1337,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Polígono San Valero, nave 44, Carr. de Castellón, km. 4,8, 50013 Zaragoza, Spain",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Boxpack/@41.615266399999996,-0.8416634,14z/data=!4m8!1m2!2m1!1sBoxpack!3m4!1s0xd593c8ffc787a19:0xe300e2299d081f6e!8m2!3d41.615266399999996!4d-0.8416634",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "dani-trading-building-materials-supplier-llc-ae",
@@ -1182,6 +1352,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.danitrading.ae/",
     "phone": "+971 4 283 7373",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjQYjYMNFE1BxoiSmYnpw2GoPbxjjI2ys-_7oK83nf0QxlNy05ylK15pkiliTpJfg9_uW-W93CjI2NFw0udSBWaJIbTzkGPERCUb5BCgXZoSehkBAZ-BY3FWdv9dL_W8XBWYxr=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-8vygEcCDSUw/AAAAAAAAAAI/AAAAAAAAAAA/8ZlnHUVgLk4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjQYjYMNFE1BxoiSmYnpw2GoPbxjjI2ys-_7oK83nf0QxlNy05ylK15pkiliTpJfg9_uW-W93CjI2NFw0udSBWaJIbTzkGPERCUb5BCgXZoSehkBAZ-BY3FWdv9dL_W8XBWYxr=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjQYjYMNFE1BxoiSmYnpw2GoPbxjjI2ys-_7oK83nf0QxlNy05ylK15pkiliTpJfg9_uW-W93CjI2NFw0udSBWaJIbTzkGPERCUb5BCgXZoSehkBAZ-BY3FWdv9dL_W8XBWYxr=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 227,
     "rating": 4.6,
@@ -1201,9 +1376,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Warehouse # 8 Doha St - opposite Zulekha Hospital - Al Qusais Ind. First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-8PM · Monday: 7AM-8PM · Saturday: 7AM-8PM · Sunday: 7AM-6PM · Thursday: 7AM-8PM · Tuesday: 7AM-8PM · Wednesday: 7AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Dani+Trading+Building+Materials+Supplier+LLC/@25.2934646,55.3872261,14z/data=!4m8!1m2!2m1!1sDani+Trading+Building+Materials+Supplier+LLC!3m4!1s0x3e5f5c16b0ed1cc5:0x15d5f77ef37b9f11!8m2!3d25.2934646!4d55.3872261",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "construction-world-de-mexico-tijuana",
@@ -1216,6 +1391,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.cwmexico.com/",
     "phone": "+52 664 973 5170",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWrC7-8qWS6yTITdFv4DymDf6Qtk6qjleH10gEGKY70ILCePOG95DYauqmAvJof6gOZVXWbRP9vZJhtwQrExdn1MmSFsb5Jwb5lBE8bxaWGTX_f1TglWn-oIdWIBBkG1CHFOY=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-HnVJVozXfS8/AAAAAAAAAAI/AAAAAAAAAAA/rWwzP0WQHqs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWrC7-8qWS6yTITdFv4DymDf6Qtk6qjleH10gEGKY70ILCePOG95DYauqmAvJof6gOZVXWbRP9vZJhtwQrExdn1MmSFsb5Jwb5lBE8bxaWGTX_f1TglWn-oIdWIBBkG1CHFOY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWrC7-8qWS6yTITdFv4DymDf6Qtk6qjleH10gEGKY70ILCePOG95DYauqmAvJof6gOZVXWbRP9vZJhtwQrExdn1MmSFsb5Jwb5lBE8bxaWGTX_f1TglWn-oIdWIBBkG1CHFOY=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 194,
     "rating": 4.7,
@@ -1235,9 +1415,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Blvd. Manuel Jesus Clouthier 3980, Murua Oriente, 22465 Tijuana, B.C., Mexico",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/CONSTRUCTION+WORLD+DE+M%C3%89XICO/@32.5171792,-116.9262392,14z/data=!4m8!1m2!2m1!1sCONSTRUCTION+WORLD+DE+M%C3%89XICO!3m4!1s0x80d938ed097dd131:0xe1c503426d18dff6!8m2!3d32.5171792!4d-116.9262392",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bigmat-macosol-malaga",
@@ -1250,6 +1430,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://macosol.es/",
     "phone": "+34 952 17 68 19",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG7j0OPPiujJrQabeBA_bM2NugIzPwI_vSQLRkWTg5iMPVUPNEH4C0hiGpjdHEhMySC1zZFMzNmgC22Dc7TvvBAh37fDZlo6KnpTtDL6yn9zVqEbAwFqYHidbqXm3eJPf7kTRrP=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-ovfMbdmVfsA/AAAAAAAAAAI/AAAAAAAAAAA/SvB9lSLFDyg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG7j0OPPiujJrQabeBA_bM2NugIzPwI_vSQLRkWTg5iMPVUPNEH4C0hiGpjdHEhMySC1zZFMzNmgC22Dc7TvvBAh37fDZlo6KnpTtDL6yn9zVqEbAwFqYHidbqXm3eJPf7kTRrP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG7j0OPPiujJrQabeBA_bM2NugIzPwI_vSQLRkWTg5iMPVUPNEH4C0hiGpjdHEhMySC1zZFMzNmgC22Dc7TvvBAh37fDZlo6KnpTtDL6yn9zVqEbAwFqYHidbqXm3eJPf7kTRrP=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 175,
     "rating": 4.7,
@@ -1269,9 +1454,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C. Concepción Arenal, 15, Churriana, 29004 Málaga, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3-7PM · Monday: 8AM-1:30PM,3-7PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-1:30PM,3-7PM · Tuesday: 8AM-1:30PM,3-7PM · Wednesday: 8AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/BigMat+Macosol/@36.692832599999996,-4.4805557,14z/data=!4m8!1m2!2m1!1sBigMat+Macosol!3m4!1s0xd72fa01f9aedceb:0x84d6189c3ab5b96f!8m2!3d36.692832599999996!4d-4.4805557",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "creative-industrial-plant-equipment-spare-parts-trading-ae",
@@ -1284,6 +1469,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.creativeautomation.ae/",
     "phone": "+971 6 748 1720",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsvLMMwyH1qIs4CWvozg83-quuPSV9aRdu0zqxFlXqGohWTbehlEET4VJNswYe-uGLGZ2TEfKJUaNu9hYTIJVZ_fxF0EvyAc_7DVb_kJfDAWxPG7it9aKvYrh8wNOGQTFW3Q1p=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-ZiMzA5MmHNQ/AAAAAAAAAAI/AAAAAAAAAAA/CWUqi2zqgcU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsvLMMwyH1qIs4CWvozg83-quuPSV9aRdu0zqxFlXqGohWTbehlEET4VJNswYe-uGLGZ2TEfKJUaNu9hYTIJVZ_fxF0EvyAc_7DVb_kJfDAWxPG7it9aKvYrh8wNOGQTFW3Q1p=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsvLMMwyH1qIs4CWvozg83-quuPSV9aRdu0zqxFlXqGohWTbehlEET4VJNswYe-uGLGZ2TEfKJUaNu9hYTIJVZ_fxF0EvyAc_7DVb_kJfDAWxPG7it9aKvYrh8wNOGQTFW3Q1p=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 86,
     "rating": 4.9,
@@ -1303,9 +1493,88 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ajman Industrial 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: Closed · Saturday: 8AM-5:30PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Creative+Industrial+Plant+Equipment+%26+Spare+Parts+Trading/@25.3787271,55.473192999999995,14z/data=!4m8!1m2!2m1!1sCreative+Industrial+Plant+Equipment+%26+Spare+Parts+Trading!3m4!1s0x3e5f586262514a75:0xad2f4c874ed15b28!8m2!3d25.3787271!4d55.473192999999995",
-    "score": 92,
+    "score": 98,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "allied-steel-ny-new-york",
+    "name": "Allied Steel NY",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "New York, United States",
+    "country": "United States",
+    "city": "New York",
+    "website": "http://www.alliedsteelny.com/",
+    "phone": "+1 212-709-8123",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQRAruo_HBGSSL5A70pqfdpmLEY5SwFTs0pF4F_vnUVPXxpZTxVzUBgZGHjfUAapjZ5QUEG5pSd_xYfG93dUA5wRQYzYK_xfQmdk2a14ry3XhOMyD31__sPUOdV875Eu4YOJHhyQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Rk-amVN0m2c/AAAAAAAAAAI/AAAAAAAAAAA/kV_HSsSeKOU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQRAruo_HBGSSL5A70pqfdpmLEY5SwFTs0pF4F_vnUVPXxpZTxVzUBgZGHjfUAapjZ5QUEG5pSd_xYfG93dUA5wRQYzYK_xfQmdk2a14ry3XhOMyD31__sPUOdV875Eu4YOJHhyQ=w800-h500-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=bE6-u5_i-5CDxZnUCpGf2Q&cb_client=search.gws-prod.gps&w=1600&h=1000&yaw=38.91442&pitch=0&thumbfov=100"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 86,
+    "rating": 4.9,
+    "reviewCount": 86,
+    "verified": true,
+    "description": "Steel & Metals supplier in New York, United States.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "5 tons",
+    "address": "30 Wall St 8th floor, New York, NY 10005",
+    "openingHours": "Friday: 7:30AM-4:30PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/Allied+Steel+NY/@40.7070885,-74.0100839,14z/data=!4m8!1m2!2m1!1sAllied+Steel+NY!3m4!1s0x89c25a170297bff3:0x673aaaf089e937e3!8m2!3d40.7070885!4d-74.0100839",
+    "score": 98,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "mapsons-india-pvt-ltd-manufacturer-of-ss-pipe-fittings-tank-",
+    "name": "MAPSONS INDIA PVT. LTD: MANUFACTURER OF SS PIPE FITTINGS, TANK FITTINGS, SS FABRICATION, CUSTOMIZE VMC CNC COMPONENTS",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "Pune, Pimpri-Chinchwad, India",
+    "country": "India",
+    "city": "Pune, Pimpri-Chinchwad",
+    "website": "http://mapsonsindia.com/",
+    "phone": "+91 99223 95944",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2cMkJcm9r_IRF1JkhU-_McRvXZhAuUVclidqCTFySXaNajshj2YpW5RvgIO9YahYA23516gdl_EfFxI1jtE6f8G7VhiZ2YM8eFxYlEFx3Dhs4GDFJ2NUHUqo8-qAXI5VV8mcfhy5E2BU=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-vrb-17qW83M/AAAAAAAAAAI/AAAAAAAAAAA/l1yDklGu6kk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2cMkJcm9r_IRF1JkhU-_McRvXZhAuUVclidqCTFySXaNajshj2YpW5RvgIO9YahYA23516gdl_EfFxI1jtE6f8G7VhiZ2YM8eFxYlEFx3Dhs4GDFJ2NUHUqo8-qAXI5VV8mcfhy5E2BU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2cMkJcm9r_IRF1JkhU-_McRvXZhAuUVclidqCTFySXaNajshj2YpW5RvgIO9YahYA23516gdl_EfFxI1jtE6f8G7VhiZ2YM8eFxYlEFx3Dhs4GDFJ2NUHUqo8-qAXI5VV8mcfhy5E2BU=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 110,
+    "rating": 4.9,
+    "reviewCount": 110,
+    "verified": true,
+    "description": "Industrial Parts supplier in Pune, Pimpri-Chinchwad, India.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "10 units",
+    "address": "Plot No. J, 288, S Block, MIDC, Bhosari, Pune, Maharashtra 411026, India",
+    "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
+    "sourceUrl": "https://www.google.com/maps/place/MAPSONS+INDIA+PVT.+LTD%3A+MANUFACTURER+OF+SS+PIPE+FITTINGS%2C+TANK+FITTINGS%2C+SS+FABRICATION%2C+CUSTOMIZE+VMC+CNC+COMPONENTS/@18.6356801,73.8387558,14z/data=!4m8!1m2!2m1!1sMAPSONS+INDIA+PVT.+LTD%3A+MANUFACTURER+OF+SS+PIPE+FITTINGS%2C+TANK+FITTINGS%2C+SS+FABRICATION%2C+CUSTOMIZE+VMC+CNC+COMPONENTS!3m4!1s0x3bc2b9ca657158f1:0x487d613a83dba557!8m2!3d18.6356801!4d73.8387558",
+    "score": 98,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "anchor-electronics-santa-clara",
@@ -1318,6 +1587,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.anchor-electronics.com/",
     "phone": "+1 408-727-3693",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQ0E2UfaJMMGUxN01OkUZ0rHCzAnFtx7P1zZgQOcu9BuxUf92DK_rK2UHBxqeoq1QUkxk-hShME_X9CgnLtsg3eF50fcRxiodrIbSWznfxNZWCrTWzQRpeJ2Mfs00SrFz5Rb3W=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-Mn47cisdVPQ/AAAAAAAAAAI/AAAAAAAAAAA/D-EJQ_-BfKI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQ0E2UfaJMMGUxN01OkUZ0rHCzAnFtx7P1zZgQOcu9BuxUf92DK_rK2UHBxqeoq1QUkxk-hShME_X9CgnLtsg3eF50fcRxiodrIbSWznfxNZWCrTWzQRpeJ2Mfs00SrFz5Rb3W=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQ0E2UfaJMMGUxN01OkUZ0rHCzAnFtx7P1zZgQOcu9BuxUf92DK_rK2UHBxqeoq1QUkxk-hShME_X9CgnLtsg3eF50fcRxiodrIbSWznfxNZWCrTWzQRpeJ2Mfs00SrFz5Rb3W=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 104,
     "rating": 4.8,
@@ -1337,9 +1611,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2040 Walsh Ave, Santa Clara, CA 95050",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Anchor+Electronics/@37.3692662,-121.9606766,14z/data=!4m8!1m2!2m1!1sAnchor+Electronics!3m4!1s0x808fca25ba26dfd5:0xc0ca43e28395709a!8m2!3d37.3692662!4d-121.9606766",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ducab-dubai-cable-company-pvt-ltd-ae",
@@ -1352,6 +1626,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ducab.com/",
     "phone": "+971 4 815 8888",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFb7sOskGGwfJ2d894RFTdIEkskthTyrtYclNLi9k6ox1FVGHhSptFdK1muYGTK5316dJmBV-SmXpyfEQMEfuwVn3qRn6Sbeb_J3ygkElAGgqUD6Qm45lkGxmXlB7UdMNkAID_r=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-xkSfdn7E2mM/AAAAAAAAAAI/AAAAAAAAAAA/Mh4Kmj0MrFU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFb7sOskGGwfJ2d894RFTdIEkskthTyrtYclNLi9k6ox1FVGHhSptFdK1muYGTK5316dJmBV-SmXpyfEQMEfuwVn3qRn6Sbeb_J3ygkElAGgqUD6Qm45lkGxmXlB7UdMNkAID_r=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFb7sOskGGwfJ2d894RFTdIEkskthTyrtYclNLi9k6ox1FVGHhSptFdK1muYGTK5316dJmBV-SmXpyfEQMEfuwVn3qRn6Sbeb_J3ygkElAGgqUD6Qm45lkGxmXlB7UdMNkAID_r=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 156,
     "rating": 4.6,
@@ -1371,9 +1650,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Al Hesah Street - Hessyan First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-12PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/DUCAB+%28Dubai+Cable+Company+Pvt+Ltd%29/@24.963912099999998,55.0236702,14z/data=!4m8!1m2!2m1!1sDUCAB+%28Dubai+Cable+Company+Pvt+Ltd%29!3m4!1s0x3e5f0f3191c6d017:0x776d5fa1b46389ff!8m2!3d24.963912099999998!4d55.0236702",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "jk-wires-cables-delhi",
@@ -1386,6 +1665,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.youtube.com/%40jkwirescables",
     "phone": "+91 78385 62071",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFToG3aPXw1n_mvDnUNM3Oiy9davO4AeZKt6_aZYGLZwJF5rlSzTdO1VDXqT1uiKeTmljCbUx7bPReABIZbDXiZDF1N94gz4cR6yc0-jMFefMUOs22IEPCySHPFzvgW7vmhjs3uyg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-IMV8i6SvCfk/AAAAAAAAAAI/AAAAAAAAAAA/xGt7lBXhirs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFToG3aPXw1n_mvDnUNM3Oiy9davO4AeZKt6_aZYGLZwJF5rlSzTdO1VDXqT1uiKeTmljCbUx7bPReABIZbDXiZDF1N94gz4cR6yc0-jMFefMUOs22IEPCySHPFzvgW7vmhjs3uyg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFToG3aPXw1n_mvDnUNM3Oiy9davO4AeZKt6_aZYGLZwJF5rlSzTdO1VDXqT1uiKeTmljCbUx7bPReABIZbDXiZDF1N94gz4cR6yc0-jMFefMUOs22IEPCySHPFzvgW7vmhjs3uyg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 75,
     "rating": 4.9,
@@ -1406,9 +1690,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1/536- D-15, Grand Trunk Rd, FRIENDS COLONY, Industrial Area, Jhilmil Colony, Delhi, 110095, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/JK+WIRES+%26+CABLES/@28.6740835,77.3046952,14z/data=!4m8!1m2!2m1!1sJK+WIRES+%26+CABLES!3m4!1s0x390cfb358bb69d27:0x84f9a5a05bda0f60!8m2!3d28.6740835!4d77.3046952",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tubewell-steel-engg-co-mumbai",
@@ -1421,6 +1705,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://mahadevdairypharmafitting.com/pipe-and-tubes/",
     "phone": "+91 89289 15906",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpfodXpIKSJ7nccYlcyX2L8OcfBNc4v8zfT2qZyFS6-kMWzT6MsmRnnVXAaeG41PIaXVOw26xBFL0puAOYN6LXV5DgGEcY7rjvWKnO0eAvld9N7qSR9L4yg1qwSgN81AvW5sb7IQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-7tkdxKeJcoE/AAAAAAAAAAI/AAAAAAAAAAA/pPIGUD8djMY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpfodXpIKSJ7nccYlcyX2L8OcfBNc4v8zfT2qZyFS6-kMWzT6MsmRnnVXAaeG41PIaXVOw26xBFL0puAOYN6LXV5DgGEcY7rjvWKnO0eAvld9N7qSR9L4yg1qwSgN81AvW5sb7IQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpfodXpIKSJ7nccYlcyX2L8OcfBNc4v8zfT2qZyFS6-kMWzT6MsmRnnVXAaeG41PIaXVOw26xBFL0puAOYN6LXV5DgGEcY7rjvWKnO0eAvld9N7qSR9L4yg1qwSgN81AvW5sb7IQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 61,
     "rating": 4.9,
@@ -1441,9 +1730,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "110/112, Habib Building, Central Plaza Cinema, Plot No, Jagannath Shankarsheth Marg, Charni Road, Opera House, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Tubewell+Steel+%26+Engg.Co./@18.9535391,72.81653279999999,14z/data=!4m8!1m2!2m1!1sTubewell+Steel+%26+Engg.Co.!3m4!1s0x3be7ce114f2b1e83:0xe2f6cd57f91c05ac!8m2!3d18.9535391!4d72.81653279999999",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packaging-supply-depot-hauppauge",
@@ -1456,6 +1745,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.packagingsupplydepot.com/",
     "phone": "+1 631-524-5444",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFl89RTBETRfA8qkQuonpLbLQoaS42uiSO52s3JCAVBkak5X22U3J1TYRFZSWnnKOWestbdzlHTqQLBztDoOV73AMuMIXS1L-m1F22jPfyTs0iOubX7IKXwtiZYAqoL5BTSOfPW=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-jKhnZPVeSlg/AAAAAAAAAAI/AAAAAAAAAAA/HXmvn8laXYo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFl89RTBETRfA8qkQuonpLbLQoaS42uiSO52s3JCAVBkak5X22U3J1TYRFZSWnnKOWestbdzlHTqQLBztDoOV73AMuMIXS1L-m1F22jPfyTs0iOubX7IKXwtiZYAqoL5BTSOfPW=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFl89RTBETRfA8qkQuonpLbLQoaS42uiSO52s3JCAVBkak5X22U3J1TYRFZSWnnKOWestbdzlHTqQLBztDoOV73AMuMIXS1L-m1F22jPfyTs0iOubX7IKXwtiZYAqoL5BTSOfPW=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 88,
     "rating": 4.8,
@@ -1475,9 +1769,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "400 Oser Ave #1400, Hauppauge, NY 11788",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Supply+Depot/@40.8191005,-73.2660473,14z/data=!4m8!1m2!2m1!1sPackaging+Supply+Depot!3m4!1s0x89e830255f881241:0xfe93acac22851a0e!8m2!3d40.8191005!4d-73.2660473",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "enpack-gmbh-gro-handler-fur-einweg-verpackungsmaterial-umwel",
@@ -1490,6 +1784,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://enpack.de/",
     "phone": "+49 2065 6867839",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-JhcL0aeeK0MMlnnFoyPXQG6z6auqco4eRlqudHphzlfUwFe3TcM1PfQPsaf6oIXEKxIgU7JJfdKc9GDiS_1Zv86WBdDBTljnSi2lntaBQERd5gV_XIJ_0P0RCEAxUT14QuBHTA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-Q7zAkTJeMkw/AAAAAAAAAAI/AAAAAAAAAAA/ng-QshkjE7I/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-JhcL0aeeK0MMlnnFoyPXQG6z6auqco4eRlqudHphzlfUwFe3TcM1PfQPsaf6oIXEKxIgU7JJfdKc9GDiS_1Zv86WBdDBTljnSi2lntaBQERd5gV_XIJ_0P0RCEAxUT14QuBHTA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE-JhcL0aeeK0MMlnnFoyPXQG6z6auqco4eRlqudHphzlfUwFe3TcM1PfQPsaf6oIXEKxIgU7JJfdKc9GDiS_1Zv86WBdDBTljnSi2lntaBQERd5gV_XIJ_0P0RCEAxUT14QuBHTA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 74,
     "rating": 4.9,
@@ -1509,9 +1808,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Dieselstraße 4, 47228 Rheinhausen, Germany",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Enpack+GmbH+%7C+Gro%C3%9Fh%C3%A4ndler+f%C3%BCr+Einweg+Verpackungsmaterial+%7C+Umweltfreundliche+take-away+Verpackungen/@51.4170837,6.7028965,14z/data=!4m8!1m2!2m1!1sEnpack+GmbH+%7C+Gro%C3%9Fh%C3%A4ndler+f%C3%BCr+Einweg+Verpackungsmaterial+%7C+Umweltfreundliche+take-away+Verpackungen!3m4!1s0x47b8bf4ce9ca3c1b:0x6821dd98c8dca38e!8m2!3d51.4170837!4d6.7028965",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "nature-packaging-pvt-ltd-new-delhi",
@@ -1524,6 +1823,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.naturepackaging.in/",
     "phone": "+91 99111 34448",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGueHGHNWYSQEz7ZohbQb11JBdROm-4sG_4uK5q_aADmWeEzEjiojbew0gMxhvBYTxa3we8lnJjgMU0ZI17ALwWZ7miKXdr4u0oIflTVHY1G9G4epUvgBnXUREYTUuCRH2pMfTVs8pXgE-p=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-BCpC3NoHjQ4/AAAAAAAAAAI/AAAAAAAAAAA/DNGY7XxBIhk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGueHGHNWYSQEz7ZohbQb11JBdROm-4sG_4uK5q_aADmWeEzEjiojbew0gMxhvBYTxa3we8lnJjgMU0ZI17ALwWZ7miKXdr4u0oIflTVHY1G9G4epUvgBnXUREYTUuCRH2pMfTVs8pXgE-p=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGueHGHNWYSQEz7ZohbQb11JBdROm-4sG_4uK5q_aADmWeEzEjiojbew0gMxhvBYTxa3we8lnJjgMU0ZI17ALwWZ7miKXdr4u0oIflTVHY1G9G4epUvgBnXUREYTUuCRH2pMfTVs8pXgE-p=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 91,
     "rating": 4.8,
@@ -1544,9 +1848,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C-79 India, C Block Rd, Pocket C, Okhla Phase I, Okhla Industrial Estate, New Delhi, Delhi 110020, India",
     "openingHours": "Friday: 9AM-9:08PM · Monday: 9AM-9:08PM · Saturday: 9AM-9:08PM · Sunday: Closed · Thursday: 9AM-9:08PM · Tuesday: 9AM-9:08PM · Wednesday: 9AM-9:08PM",
     "sourceUrl": "https://www.google.com/maps/place/Nature+Packaging+Pvt.Ltd./@28.5261449,77.2814339,14z/data=!4m8!1m2!2m1!1sNature+Packaging+Pvt.Ltd.!3m4!1s0x390ce15208135363:0xd716dab89da35e46!8m2!3d28.5261449!4d77.2814339",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "paras-packaging-packaging-material-wholesale-supplier-ahmeda",
@@ -1559,6 +1863,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://sites.google.com/view/paraspackaging/home",
     "phone": "+91 98256 17175",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyd8S3jTXXQdQiO4LStUi71Qmek7iuy9qZ_mameskH1w99duqmRp302ROO6rTNXbYlr7pworqeuIcCMMQTT9CmzzdlWoYtCdCSH3Rcrev2xmJQPdi1PfQnTm75ps29ZlqjR2B1=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-IYdQD715u78/AAAAAAAAAAI/AAAAAAAAAAA/jM_OyQYy_-c/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyd8S3jTXXQdQiO4LStUi71Qmek7iuy9qZ_mameskH1w99duqmRp302ROO6rTNXbYlr7pworqeuIcCMMQTT9CmzzdlWoYtCdCSH3Rcrev2xmJQPdi1PfQnTm75ps29ZlqjR2B1=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyd8S3jTXXQdQiO4LStUi71Qmek7iuy9qZ_mameskH1w99duqmRp302ROO6rTNXbYlr7pworqeuIcCMMQTT9CmzzdlWoYtCdCSH3Rcrev2xmJQPdi1PfQnTm75ps29ZlqjR2B1=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 67,
     "rating": 4.9,
@@ -1579,9 +1888,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "OPP: chachar dairy, Madarasi Mandir Rd, Khokhra, Ahmedabad, Gujarat 380008, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-12:30PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/PARAS+PACKAGING+%28Packaging+Material+Wholesale+Supplier%29/@23.0020722,72.6158779,14z/data=!4m8!1m2!2m1!1sPARAS+PACKAGING+%28Packaging+Material+Wholesale+Supplier%29!3m4!1s0x395e86754818a611:0x1eeaf9ab490ae0ff!8m2!3d23.0020722!4d72.6158779",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "source-build-building-materials-salt-lake-city",
@@ -1594,6 +1903,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://sourcebuild.com/%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dgmb",
     "phone": "+1 801-998-2063",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6-raLYqQbOPJHwPx_BjMKZU8bcW0bxaVwj6ElAUCQQzLOwX4BHor0DgVLyKkppYEhnnf4d_QsFNXOAjfhBN7qp5akrYyTdo2A1C8ItoTTfTkz_c3A1ekM3qvUjgSFwh76y_AItomkVdvI=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-kLU7u2W-IbA/AAAAAAAAAAI/AAAAAAAAAAA/gxi7GcXsYo8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6-raLYqQbOPJHwPx_BjMKZU8bcW0bxaVwj6ElAUCQQzLOwX4BHor0DgVLyKkppYEhnnf4d_QsFNXOAjfhBN7qp5akrYyTdo2A1C8ItoTTfTkz_c3A1ekM3qvUjgSFwh76y_AItomkVdvI=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6-raLYqQbOPJHwPx_BjMKZU8bcW0bxaVwj6ElAUCQQzLOwX4BHor0DgVLyKkppYEhnnf4d_QsFNXOAjfhBN7qp5akrYyTdo2A1C8ItoTTfTkz_c3A1ekM3qvUjgSFwh76y_AItomkVdvI=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 104,
     "rating": 4.8,
@@ -1613,9 +1927,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "801 Layton Ave, Salt Lake City, UT 84104",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Source+Build+Building+Materials/@40.7299819,-111.9142888,14z/data=!4m8!1m2!2m1!1sSource+Build+Building+Materials!3m4!1s0x48cc8f59d6ed85c9:0xf10c99b1d74fd5e8!8m2!3d40.7299819!4d-111.9142888",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "imperial-middle-east-building-material-trading-llc-fosroc-si",
@@ -1628,6 +1942,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ime-ae.com/",
     "phone": "+971 2 644 2611",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0kXnVJCKkcSwbPMtDnRWjljjHxQH7upANffkSF6ps6tK0OOjjHWjtJHRpl-DKLrlAE6shvWLgGVUyVcUXOgSvTBL2fsq6IPgH5vwrxmVWwdxLvsZPTJ5LfhEdIjFa07CcYgxa=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-IGgKO762H5c/AAAAAAAAAAI/AAAAAAAAAAA/Y-gPxxpIBoM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0kXnVJCKkcSwbPMtDnRWjljjHxQH7upANffkSF6ps6tK0OOjjHWjtJHRpl-DKLrlAE6shvWLgGVUyVcUXOgSvTBL2fsq6IPgH5vwrxmVWwdxLvsZPTJ5LfhEdIjFa07CcYgxa=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0kXnVJCKkcSwbPMtDnRWjljjHxQH7upANffkSF6ps6tK0OOjjHWjtJHRpl-DKLrlAE6shvWLgGVUyVcUXOgSvTBL2fsq6IPgH5vwrxmVWwdxLvsZPTJ5LfhEdIjFa07CcYgxa=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 128,
     "rating": 4.7,
@@ -1647,9 +1966,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "M45 ICAD P. BOX 109785 ABUDHABI - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: 8AM-7PM · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Imperial+Middle+East+Building+Material+Trading+LLC+%28Fosroc+%2C+Sika+%2C+Henkel+%2C+Laticrete%2C+Weber+%2C+Mapei+%2C+Fischer%29/@24.349904,54.481826,14z/data=!4m8!1m2!2m1!1sImperial+Middle+East+Building+Material+Trading+LLC+%28Fosroc+%2C+Sika+%2C+Henkel+%2C+Laticrete%2C+Weber+%2C+Mapei+%2C+Fischer%29!3m4!1s0x3e5e40f58678b8ed:0x99537568742e2144!8m2!3d24.349904!4d54.481826",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-rahmania-building-and-construction-materials-trading-llc-",
@@ -1662,6 +1981,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://alrahmaniadubai.ae/",
     "phone": "+971 50 760 5161",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnIPnYXIUn55qqVfocEG29tTodHl6NL6oNoIPP2xx1miN8q400IXN0v1cUJpxAj-oU2iRikZDjCRdxMYfD5xwgNldzScaEvsALJSVXiAYhBRElJYj64FLwS1BRM9NZn0JmbvhHcA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-TLEo67k0ATk/AAAAAAAAAAI/AAAAAAAAAAA/FlorHSi4rOg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnIPnYXIUn55qqVfocEG29tTodHl6NL6oNoIPP2xx1miN8q400IXN0v1cUJpxAj-oU2iRikZDjCRdxMYfD5xwgNldzScaEvsALJSVXiAYhBRElJYj64FLwS1BRM9NZn0JmbvhHcA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnIPnYXIUn55qqVfocEG29tTodHl6NL6oNoIPP2xx1miN8q400IXN0v1cUJpxAj-oU2iRikZDjCRdxMYfD5xwgNldzScaEvsALJSVXiAYhBRElJYj64FLwS1BRM9NZn0JmbvhHcA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 60,
     "rating": 4.9,
@@ -1681,9 +2005,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Street # 13B Al Ittihad Rd - Al Khabaisi - Deira - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM,2-7:30PM · Monday: 7:30AM-7:30PM · Saturday: 7:30AM-7:30PM · Sunday: 8AM-5:30PM · Thursday: 7:30AM-7:30PM · Tuesday: 7:30AM-7:30PM · Wednesday: 7:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Rahmania+Building+and+Construction+Materials+Trading+LLC/@25.2649011,55.3350995,14z/data=!4m8!1m2!2m1!1sAl+Rahmania+Building+and+Construction+Materials+Trading+LLC!3m4!1s0x3e5f5d4fd89600e3:0x966ae98866ce6cfd!8m2!3d25.2649011!4d55.3350995",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "okzeela-star-building-materials-trading-llc-ae",
@@ -1696,6 +2020,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://okzeela.com/",
     "phone": "+971 54 449 0096",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4dIyYP0GeEN3_dK11fItTSQpRumDkeMDmucfYw991038a6OZR4hx6AOTpl85bL9aAgDeAS5CQLovJIIpBxbrrnFUPcNiRcRa_rVqoDWhvNllynaU7ZEnJeTakg8w_gihJj8I0=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-pIrV2nfbaHU/AAAAAAAAAAI/AAAAAAAAAAA/FldHf1_TGOA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4dIyYP0GeEN3_dK11fItTSQpRumDkeMDmucfYw991038a6OZR4hx6AOTpl85bL9aAgDeAS5CQLovJIIpBxbrrnFUPcNiRcRa_rVqoDWhvNllynaU7ZEnJeTakg8w_gihJj8I0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4dIyYP0GeEN3_dK11fItTSQpRumDkeMDmucfYw991038a6OZR4hx6AOTpl85bL9aAgDeAS5CQLovJIIpBxbrrnFUPcNiRcRa_rVqoDWhvNllynaU7ZEnJeTakg8w_gihJj8I0=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 63,
     "rating": 4.9,
@@ -1715,9 +2044,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "building materials mall - shop no 33 - Warsan Third - Warsan 3 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 11AM-9PM · Thursday: 7AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/OKZEELA+STAR+BUILDING+MATERIALS+TRADING+LLC/@25.162225499999998,55.462291799999996,14z/data=!4m8!1m2!2m1!1sOKZEELA+STAR+BUILDING+MATERIALS+TRADING+LLC!3m4!1s0x3e5f4391294a7201:0x41ea57253d9dc545!8m2!3d25.162225499999998!4d55.462291799999996",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "planet-eco-building-materials-dip-dubai-ae",
@@ -1730,6 +2059,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.planeteco.com/",
     "phone": "+971 4 885 5818",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsvqP3GaY3aFooolcSD68SsSKh5RPJk-zqnYX_lXEoiW_fTLYuNcF4BfV6qGSZ3AgTDXQYH5RZQNG6QagDJBfaN4RiyhbLW-DavN0wLz301Aa4gYHjw6Tyv2zkVhVJK9dVe0D0BcIjCdYY=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-ONLy14ziwa0/AAAAAAAAAAI/AAAAAAAAAAA/BzAUou4SJxQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsvqP3GaY3aFooolcSD68SsSKh5RPJk-zqnYX_lXEoiW_fTLYuNcF4BfV6qGSZ3AgTDXQYH5RZQNG6QagDJBfaN4RiyhbLW-DavN0wLz301Aa4gYHjw6Tyv2zkVhVJK9dVe0D0BcIjCdYY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEsvqP3GaY3aFooolcSD68SsSKh5RPJk-zqnYX_lXEoiW_fTLYuNcF4BfV6qGSZ3AgTDXQYH5RZQNG6QagDJBfaN4RiyhbLW-DavN0wLz301Aa4gYHjw6Tyv2zkVhVJK9dVe0D0BcIjCdYY=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 104,
     "rating": 4.8,
@@ -1749,9 +2083,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Warehouse# 73, Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12:30PM,2:30-7:30PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-6PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Planet+Eco+Building+Materials%2C+DIP%2C+Dubai/@24.9701295,55.1696482,14z/data=!4m8!1m2!2m1!1sPlanet+Eco+Building+Materials%2C+DIP%2C+Dubai!3m4!1s0x3e5f7394a6205049:0x6b5196424cf05b99!8m2!3d24.9701295!4d55.1696482",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "builders9-hyderabad",
@@ -1764,6 +2098,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.builders9.com/",
     "phone": "+91 73967 77235",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQFdPB9YMReQ68RM91_PYZCQJkzP6PaYuUiIvCkOg3oapu2tpvCvQg_dBDnm1F87JkcQVSH5ZvIE8Q5yYu9qe4WhFekjh1paYyRVSMx6hRtiR7BCOvqy3ceyHmtTi9vRUMiEwGgg=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-zjgnPYbPcXA/AAAAAAAAAAI/AAAAAAAAAAA/lqk31A3X1ko/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQFdPB9YMReQ68RM91_PYZCQJkzP6PaYuUiIvCkOg3oapu2tpvCvQg_dBDnm1F87JkcQVSH5ZvIE8Q5yYu9qe4WhFekjh1paYyRVSMx6hRtiR7BCOvqy3ceyHmtTi9vRUMiEwGgg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQFdPB9YMReQ68RM91_PYZCQJkzP6PaYuUiIvCkOg3oapu2tpvCvQg_dBDnm1F87JkcQVSH5ZvIE8Q5yYu9qe4WhFekjh1paYyRVSMx6hRtiR7BCOvqy3ceyHmtTi9vRUMiEwGgg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 89,
     "rating": 4.8,
@@ -1784,9 +2123,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8-6-47, 3rd Floor, Zeenath Manzil Piller No - 141, Behind Pai Electricals, beside Kailash Dabha, Attapur, Telangana 500048, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Builders9/@17.3644583,78.4291537,14z/data=!4m8!1m2!2m1!1sBuilders9!3m4!1s0x3bcb974057122f0d:0xaf0888b479327a77!8m2!3d17.3644583!4d78.4291537",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "caballus-industrie-casablanca",
@@ -1799,6 +2138,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://caballusindustrie.com/",
     "phone": "+212 6 61 30 67 65",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmB9FwxV-iI-2KuToJ7hxse7pH3zSOd3210QWYTCnWxNDO4OoO-v75QTtLHwEwPpQyAlHoE1JnTKqiyJxNcI-ZaXJB-txKnnhi1qWw_4gCI7p8VCiCTutqDUUDDxcTDiohjq8qUjPpINDJ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-BB9VBmPFurI/AAAAAAAAAAI/AAAAAAAAAAA/m7mQoDVxPsA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmB9FwxV-iI-2KuToJ7hxse7pH3zSOd3210QWYTCnWxNDO4OoO-v75QTtLHwEwPpQyAlHoE1JnTKqiyJxNcI-ZaXJB-txKnnhi1qWw_4gCI7p8VCiCTutqDUUDDxcTDiohjq8qUjPpINDJ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGmB9FwxV-iI-2KuToJ7hxse7pH3zSOd3210QWYTCnWxNDO4OoO-v75QTtLHwEwPpQyAlHoE1JnTKqiyJxNcI-ZaXJB-txKnnhi1qWw_4gCI7p8VCiCTutqDUUDDxcTDiohjq8qUjPpINDJ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 61,
     "rating": 4.9,
@@ -1818,9 +2162,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Mag A66, Lot Al wouroud, A66, Casablanca 20190, Morocco",
     "openingHours": "Friday: 8:30AM-1:30PM,2:30-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: 10AM-6PM · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Caballus+Industrie/@33.5177121,-7.64642,14z/data=!4m8!1m2!2m1!1sCaballus+Industrie!3m4!1s0xda62d198cf2bbe7:0x38e4f3e74b6218e3!8m2!3d33.5177121!4d-7.64642",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tokuzo-taito-city",
@@ -1833,6 +2177,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://tokuzoknives.com/pages/tokuzo-kappabashi",
     "phone": "+81 3-5830-3903",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcWwwAvZD16b46hu3TjrdQhtRyl86tupA1JgjRfkxu9611CpvPAQCm1yZTMjC5WiCspPjY5qivzBM0AWm45ln7A9eQSfuG6yaoH-A6Vw5dLsiElQM8HvOF5MBjKiNjcrdORZK4=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-VQU-8xKVVbo/AAAAAAAAAAI/AAAAAAAAAAA/dkkXPQ6bTaQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcWwwAvZD16b46hu3TjrdQhtRyl86tupA1JgjRfkxu9611CpvPAQCm1yZTMjC5WiCspPjY5qivzBM0AWm45ln7A9eQSfuG6yaoH-A6Vw5dLsiElQM8HvOF5MBjKiNjcrdORZK4=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcWwwAvZD16b46hu3TjrdQhtRyl86tupA1JgjRfkxu9611CpvPAQCm1yZTMjC5WiCspPjY5qivzBM0AWm45ln7A9eQSfuG6yaoH-A6Vw5dLsiElQM8HvOF5MBjKiNjcrdORZK4=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 317,
     "rating": 4.9,
@@ -1853,9 +2202,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1 Chome-5-16 Nishiasakusa, Taito City, Tokyo 111-0035, Japan",
     "openingHours": "Friday: 10AM-5:30PM · Monday: 10AM-5:30PM · Saturday: 10AM-5:30PM · Sunday: 10AM-5:30PM · Thursday: 10AM-5:30PM · Tuesday: 10AM-5:30PM · Wednesday: 10AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tokuzo/@35.7120071,139.788545,14z/data=!4m8!1m2!2m1!1sTokuzo!3m4!1s0x60188fd8f10c51bb:0x98b36ca7c2d03b6c!8m2!3d35.7120071!4d139.788545",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "materiales-cano-la-marina-partida-de-la-marina-elche",
@@ -1868,6 +2217,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.materialescano.com/",
     "phone": "+34 965 41 90 77",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIT7aJly24lJRXe0yRfL3Vxo9NQnvijKNVonnpAeBAiFdKdEwnzWQa91YO_07WKKnDtycAKDAusIErJa9kGuRYLEapor4IGb_Gm4O7y4a9qznJq4FWayVT3CKJ863RUbBnzr2oGg=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-YQ38ye8nLFo/AAAAAAAAAAI/AAAAAAAAAAA/DN12xPtIDo8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIT7aJly24lJRXe0yRfL3Vxo9NQnvijKNVonnpAeBAiFdKdEwnzWQa91YO_07WKKnDtycAKDAusIErJa9kGuRYLEapor4IGb_Gm4O7y4a9qznJq4FWayVT3CKJ863RUbBnzr2oGg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIT7aJly24lJRXe0yRfL3Vxo9NQnvijKNVonnpAeBAiFdKdEwnzWQa91YO_07WKKnDtycAKDAusIErJa9kGuRYLEapor4IGb_Gm4O7y4a9qznJq4FWayVT3CKJ863RUbBnzr2oGg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 145,
     "rating": 4.6,
@@ -1887,9 +2241,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Partida de La Marina Pol.1 Nº161, 03194 Partida de La Marina (Elche), Alicante, Spain",
     "openingHours": "Friday: 7:30AM-1PM,3-7PM · Monday: 7:30AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,3-7PM · Tuesday: 7:30AM-1:30PM,3-7PM · Wednesday: 7:30AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+Cano+-+La+Marina/@38.143212999999996,-0.660103,14z/data=!4m8!1m2!2m1!1sMateriales+Cano+-+La+Marina!3m4!1s0xd63adf4e2ac8b63:0x7347ef0851dfff3e!8m2!3d38.143212999999996!4d-0.660103",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cosentino-city-madrid-madrid",
@@ -1902,6 +2256,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.cosentino.com/es/profesional/cosentino-city/madrid/%3Futm_source%3DG%26utm_medium%3DLocal%26utm_campaign%3DGoogle-Local",
     "phone": "+34 913 95 97 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgCB4_zoA7cI49J7YEtvM2l2OYN9ONlmmhUQcCMDfC64dwOYF_84HcaH5PPZppUkwmXk2KYyv8DY4V66Tg8ntZeBz_k1IQHgx2bCZGsbV488RPwCEdHpu9L3jNvmpsWqVDIxiYrQaahLOD=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-e_6ONAfphrs/AAAAAAAAAAI/AAAAAAAAAAA/vC6xF9rTyJ4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgCB4_zoA7cI49J7YEtvM2l2OYN9ONlmmhUQcCMDfC64dwOYF_84HcaH5PPZppUkwmXk2KYyv8DY4V66Tg8ntZeBz_k1IQHgx2bCZGsbV488RPwCEdHpu9L3jNvmpsWqVDIxiYrQaahLOD=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgCB4_zoA7cI49J7YEtvM2l2OYN9ONlmmhUQcCMDfC64dwOYF_84HcaH5PPZppUkwmXk2KYyv8DY4V66Tg8ntZeBz_k1IQHgx2bCZGsbV488RPwCEdHpu9L3jNvmpsWqVDIxiYrQaahLOD=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 253,
     "rating": 4.5,
@@ -1921,9 +2280,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "P.º de la Castellana, 116, Chamartín, 28046 Madrid, Spain",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-2PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Cosentino+City+Madrid/@40.4480346,-3.6902996999999997,14z/data=!4m8!1m2!2m1!1sCosentino+City+Madrid!3m4!1s0xd4228e489bf9925:0xcc669fdfe6a35bd6!8m2!3d40.4480346!4d-3.6902996999999997",
-    "score": 91,
+    "score": 97,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "virwadia-steels-ss-sheet-ss-pipe-ss-rod-304-316-jindal-chenn",
@@ -1936,6 +2295,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://virwadiasteels.com/",
     "phone": "+91 95433 34811",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxKhlel6ONoZy6UP0M8qTbmu7J3t4q5d_o0DLjc8LTK9NU7C7XSfLwtuNEtHHSECBOSnJDepIIojoJqzThCCXRlK6-Sb4wNX0w-8RNxTS0bM_attGcTl3xHlgO_IRCGcwCzuHR=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-f_inCFsmfe4/AAAAAAAAAAI/AAAAAAAAAAA/X2z_j6No_9c/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxKhlel6ONoZy6UP0M8qTbmu7J3t4q5d_o0DLjc8LTK9NU7C7XSfLwtuNEtHHSECBOSnJDepIIojoJqzThCCXRlK6-Sb4wNX0w-8RNxTS0bM_attGcTl3xHlgO_IRCGcwCzuHR=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxKhlel6ONoZy6UP0M8qTbmu7J3t4q5d_o0DLjc8LTK9NU7C7XSfLwtuNEtHHSECBOSnJDepIIojoJqzThCCXRlK6-Sb4wNX0w-8RNxTS0bM_attGcTl3xHlgO_IRCGcwCzuHR=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 58,
     "rating": 4.9,
@@ -1956,9 +2320,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "178/232, Linghi Chetty Street, Mannadi, George Town, Chennai, Tamil Nadu 600001, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/VIRWADIA+STEELS+-+SS+Sheet%2C+SS+Pipe%2C+SS+Rod+304%2C+316+Jindal/@13.0940339,80.2896878,14z/data=!4m8!1m2!2m1!1sVIRWADIA+STEELS+-+SS+Sheet%2C+SS+Pipe%2C+SS+Rod+304%2C+316+Jindal!3m4!1s0x3a526f4f968b552b:0xade93a7f63079864!8m2!3d13.0940339!4d80.2896878",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "rekha-bright-steels-private-limited-mumbai",
@@ -1971,6 +2335,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.rekhabrightsteels.com/",
     "phone": "+91 98198 91559",
     "imageUrl": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH4aenPfhq4z5I4CMBRlzoES6PyIeSiBSAVVCF3F0u_P2WBNIALMuEyMYW-x946TGbxYsK7E1_YhCEj_EHrIkpbm7Zmpno_wHm7fcX52BLYG62lWZ_cPfjATony9GnX28e5W0hq6pb0MNQTET2nZOQGxxo1-DkwvxHDpCFtD_TuPhqcNjkh9mAdPB4jsd1n_0Pj6g=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-2JCkx2PQj_I/AAAAAAAAAAI/AAAAAAAAAAA/VmtK8v3sbhk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH4aenPfhq4z5I4CMBRlzoES6PyIeSiBSAVVCF3F0u_P2WBNIALMuEyMYW-x946TGbxYsK7E1_YhCEj_EHrIkpbm7Zmpno_wHm7fcX52BLYG62lWZ_cPfjATony9GnX28e5W0hq6pb0MNQTET2nZOQGxxo1-DkwvxHDpCFtD_TuPhqcNjkh9mAdPB4jsd1n_0Pj6g=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH4aenPfhq4z5I4CMBRlzoES6PyIeSiBSAVVCF3F0u_P2WBNIALMuEyMYW-x946TGbxYsK7E1_YhCEj_EHrIkpbm7Zmpno_wHm7fcX52BLYG62lWZ_cPfjATony9GnX28e5W0hq6pb0MNQTET2nZOQGxxo1-DkwvxHDpCFtD_TuPhqcNjkh9mAdPB4jsd1n_0Pj6g=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 34,
     "rating": 5,
@@ -1991,9 +2360,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C, Mahavir Darshan Saidham Complex, 4, Khemraj Srikrishna Das Marg, Khetwadi, Khambata Lane, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Rekha+Bright+Steels+Private+Limited/@18.9598236,72.8234422,14z/data=!4m8!1m2!2m1!1sRekha+Bright+Steels+Private+Limited!3m4!1s0x3be7ce143d4c9641:0x102f4d9ee5edd583!8m2!3d18.9598236!4d72.8234422",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "alzamil-stores-al-khobar",
@@ -2006,6 +2375,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.alzamilstores.com/",
     "phone": "+966 13 864 1919",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlWHnmbNGq0DrMMhXhpvGsuRk9fmwAEaD112_8r3AJLcbda0J-n7k4WiwbOp80grZxV6CSu755TLIqTXz8EhuAqj-Okks1obBFjbkGAanLezxka53A1Fo0DJ5Bm7ctXiqNxDlz=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-6_f5f0GcUr4/AAAAAAAAAAI/AAAAAAAAAAA/jjgDbgRc5aE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlWHnmbNGq0DrMMhXhpvGsuRk9fmwAEaD112_8r3AJLcbda0J-n7k4WiwbOp80grZxV6CSu755TLIqTXz8EhuAqj-Okks1obBFjbkGAanLezxka53A1Fo0DJ5Bm7ctXiqNxDlz=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlWHnmbNGq0DrMMhXhpvGsuRk9fmwAEaD112_8r3AJLcbda0J-n7k4WiwbOp80grZxV6CSu755TLIqTXz8EhuAqj-Okks1obBFjbkGAanLezxka53A1Fo0DJ5Bm7ctXiqNxDlz=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 2706,
     "rating": 4.3,
@@ -2025,9 +2399,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3rd Street, Al Khobar Al Shamalia, Al Khobar 34429, Saudi Arabia",
     "openingHours": "Friday: 4-10PM · Monday: 8AM-12PM,4-10PM · Saturday: 8AM-12PM,4-10PM · Sunday: 8AM-12PM,4-10PM · Thursday: 8AM-12PM,4-10PM · Tuesday: 8AM-12PM,4-10PM · Wednesday: 8AM-12PM,4-10PM",
     "sourceUrl": "https://www.google.com/maps/place/ALZAMIL+STORES/@26.2834616,50.218291,14z/data=!4m8!1m2!2m1!1sALZAMIL+STORES!3m4!1s0x3e49e82e67aeb50f:0x54eabec42efb1a7c!8m2!3d26.2834616!4d50.218291",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-walaja-trading-llc-electrical-accessories-suppliers-in-du",
@@ -2040,6 +2414,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.walaja.com/",
     "phone": "+971 54 759 7000",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcBrbbN3XOOCQ_Pk6VCKHSmhjsqdB1kskhYSV66sp-cSO52IGREdxK15U8Gx9rAbQGUpanZRqE6v34YitXxCiiSdJYuruRt42WdpXzX76JiiZK5NTY0UDj-f1EA3tO2WR3tIaAcnqmBWw=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-VZrvwBxKPKg/AAAAAAAAAAI/AAAAAAAAAAA/mT5pLzxOOe4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcBrbbN3XOOCQ_Pk6VCKHSmhjsqdB1kskhYSV66sp-cSO52IGREdxK15U8Gx9rAbQGUpanZRqE6v34YitXxCiiSdJYuruRt42WdpXzX76JiiZK5NTY0UDj-f1EA3tO2WR3tIaAcnqmBWw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcBrbbN3XOOCQ_Pk6VCKHSmhjsqdB1kskhYSV66sp-cSO52IGREdxK15U8Gx9rAbQGUpanZRqE6v34YitXxCiiSdJYuruRt42WdpXzX76JiiZK5NTY0UDj-f1EA3tO2WR3tIaAcnqmBWw=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 40,
     "rating": 5,
@@ -2059,9 +2438,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Shop 5 - 37D St - Naif - Deira - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-9PM · Monday: 7AM-9PM · Saturday: 7AM-9PM · Sunday: Closed · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Walaja+Trading+LLC+-+Electrical+Accessories+Suppliers+in+Dubai+UAE+%7C+Cables+%26+Wires+%7C+Switches+%26+Sockets+%7C+LED+Lights/@25.273364899999997,55.312726299999994,14z/data=!4m8!1m2!2m1!1sAl+Walaja+Trading+LLC+-+Electrical+Accessories+Suppliers+in+Dubai+UAE+%7C+Cables+%26+Wires+%7C+Switches+%26+Sockets+%7C+LED+Lights!3m4!1s0x3e5f5f8dc38184d3:0xe8596bafa6351443!8m2!3d25.273364899999997!4d55.312726299999994",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cimco-trading-company-ae",
@@ -2074,6 +2453,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.cimcotrading.com/",
     "phone": "+971 6 567 3013",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZvTVRnNgN4JoG6DwXnsN9aH0Lz-FA-2iAivxByULuE7S-onOELaFsm5izmcbvpvajzBrjHRKLec-J3SXRmYYXy0Y0jTIb7i0Cs0N0RclEEkiUHgFco18seboQTwd-RDvOMLac=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-NiEHsSOrzOk/AAAAAAAAAAI/AAAAAAAAAAA/CWXR2Xh3jeU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZvTVRnNgN4JoG6DwXnsN9aH0Lz-FA-2iAivxByULuE7S-onOELaFsm5izmcbvpvajzBrjHRKLec-J3SXRmYYXy0Y0jTIb7i0Cs0N0RclEEkiUHgFco18seboQTwd-RDvOMLac=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZvTVRnNgN4JoG6DwXnsN9aH0Lz-FA-2iAivxByULuE7S-onOELaFsm5izmcbvpvajzBrjHRKLec-J3SXRmYYXy0Y0jTIb7i0Cs0N0RclEEkiUHgFco18seboQTwd-RDvOMLac=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 34,
     "rating": 5,
@@ -2093,9 +2477,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "University City Road S120, #104, Shoes4Us Building, Al Ghubaiba - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CIMCO+Trading+Company/@25.342214,55.407824,14z/data=!4m8!1m2!2m1!1sCIMCO+Trading+Company!3m4!1s0x3e5f59638d07ab63:0xbe9a3dea5da806aa!8m2!3d25.342214!4d55.407824",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "electrical-panel-and-cable-tray-manufacturer-apeco-india-far",
@@ -2108,6 +2492,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.apecoindia.com/",
     "phone": "+91 99113 68386",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJ5uEj2AVYY6kk0QAHhqlCA5S1l2BGpukhr4WsJptbyZ9M9C13-CPG0Qi1ry-WQU3NfnyfjW3zFqoLJ1xwL2aSXkminCop5zYBkf6NVNcdokWTg75SrR_Fz6OM1MwS-ZR6LFOpkbdW9t-l=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-2snY68PfZuU/AAAAAAAAAAI/AAAAAAAAAAA/bWYIl4gTeOQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJ5uEj2AVYY6kk0QAHhqlCA5S1l2BGpukhr4WsJptbyZ9M9C13-CPG0Qi1ry-WQU3NfnyfjW3zFqoLJ1xwL2aSXkminCop5zYBkf6NVNcdokWTg75SrR_Fz6OM1MwS-ZR6LFOpkbdW9t-l=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJ5uEj2AVYY6kk0QAHhqlCA5S1l2BGpukhr4WsJptbyZ9M9C13-CPG0Qi1ry-WQU3NfnyfjW3zFqoLJ1xwL2aSXkminCop5zYBkf6NVNcdokWTg75SrR_Fz6OM1MwS-ZR6LFOpkbdW9t-l=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 70,
     "rating": 4.8,
@@ -2128,9 +2517,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Nangla Enclave Part 2, Ghazipur, Sector 51, Faridabad, Kheri Gujran, Haryana 121004, India",
     "openingHours": "Friday: 8:30AM-8PM · Monday: 8:30AM-8PM · Saturday: 8:30AM-8PM · Sunday: Closed · Thursday: 8:30AM-8PM · Tuesday: 8:30AM-8PM · Wednesday: 8:30AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Electrical+panel+and+Cable+Tray+Manufacturer+-+Apeco+India/@28.3560989,77.2630101,14z/data=!4m8!1m2!2m1!1sElectrical+panel+and+Cable+Tray+Manufacturer+-+Apeco+India!3m4!1s0x390cdeca41623e99:0xc9167d6d6b8f3350!8m2!3d28.3560989!4d77.2630101",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "iberica-del-cable-y-elevacion-jj-s-l-humanes-de-madrid",
@@ -2143,6 +2532,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://ibericadelcable.com/",
     "phone": "+34 918 33 51 15",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFq8kQ3gWBKCfJ0Uaa-Qjp_2_OJe8JsA3alhL0JooXEF2Obb4fu-oW-uv2gFyFKv5Av2DOCj1gpEzJh4X2R2RMX-RDS2mw8J-2rf7bPdLdevYJCcfS3sOd45FlK-yYrStGuBBiuypCAmMZ=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-TfaAn27YXpc/AAAAAAAAAAI/AAAAAAAAAAA/Nyv3Z7cGSeo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFq8kQ3gWBKCfJ0Uaa-Qjp_2_OJe8JsA3alhL0JooXEF2Obb4fu-oW-uv2gFyFKv5Av2DOCj1gpEzJh4X2R2RMX-RDS2mw8J-2rf7bPdLdevYJCcfS3sOd45FlK-yYrStGuBBiuypCAmMZ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFq8kQ3gWBKCfJ0Uaa-Qjp_2_OJe8JsA3alhL0JooXEF2Obb4fu-oW-uv2gFyFKv5Av2DOCj1gpEzJh4X2R2RMX-RDS2mw8J-2rf7bPdLdevYJCcfS3sOd45FlK-yYrStGuBBiuypCAmMZ=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 32,
     "rating": 5,
@@ -2162,9 +2556,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C. de Atenas, 16, 28970 Humanes de Madrid, Madrid, Spain",
     "openingHours": "Friday: 8:30AM-2:30PM · Monday: 8:30AM-2PM,3-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-2PM,3-6PM · Tuesday: 8:30AM-2PM,3-6PM · Wednesday: 8:30AM-2PM,3-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ib%C3%A9rica+del+Cable+y+Elevaci%C3%B3n+JJ%2C+S.L./@40.27173,-3.81173,14z/data=!4m8!1m2!2m1!1sIb%C3%A9rica+del+Cable+y+Elevaci%C3%B3n+JJ%2C+S.L.!3m4!1s0xd418b43620d4fd9:0x5bbdb93df5f2946c!8m2!3d40.27173!4d-3.81173",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ispat-alloys-tube-industries-mumbai",
@@ -2177,6 +2571,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ispatalloy.com/",
     "phone": "+91 22 2384 0198",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENPW6s9Cl_mmo8vnF3JkIafRH2PdtYztEsf8sLvcGUv2fUhZrTHJu0HFUf5zLiL_Qn9UK6ET9aiyAsRKc-WkhZlemlbvA98uSHV-CXMfQ_8OCk4GSwGM9FQ-a6YKcA3VRVFEEZ=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-jG1TxPIN3KM/AAAAAAAAAAI/AAAAAAAAAAA/bl_NGcryY5c/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENPW6s9Cl_mmo8vnF3JkIafRH2PdtYztEsf8sLvcGUv2fUhZrTHJu0HFUf5zLiL_Qn9UK6ET9aiyAsRKc-WkhZlemlbvA98uSHV-CXMfQ_8OCk4GSwGM9FQ-a6YKcA3VRVFEEZ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENPW6s9Cl_mmo8vnF3JkIafRH2PdtYztEsf8sLvcGUv2fUhZrTHJu0HFUf5zLiL_Qn9UK6ET9aiyAsRKc-WkhZlemlbvA98uSHV-CXMfQ_8OCk4GSwGM9FQ-a6YKcA3VRVFEEZ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 62,
     "rating": 4.8,
@@ -2197,9 +2596,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "33/35, Damodar Bhavan, 1st Parsiwada Lane, V P Road, Circle, near C.P.Tank, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-8:30PM · Monday: 10AM-8:30PM · Saturday: 10AM-8:30PM · Sunday: Closed · Thursday: 10AM-8:30PM · Tuesday: 10AM-8:30PM · Wednesday: 10AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ispat+Alloys+%26+Tube+Industries/@18.955876099999998,72.8247128,14z/data=!4m8!1m2!2m1!1sIspat+Alloys+%26+Tube+Industries!3m4!1s0x3be7ce1706e111a3:0x1ea8743bfd2a8429!8m2!3d18.955876099999998!4d72.8247128",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tubacero-s-a-de-c-v-monterrey",
@@ -2212,6 +2611,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.tubacero.com.mx/",
     "phone": "+52 81 8305 5500",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb2MRI5-WMcUQCECCiRhJ5go1kTNxmfnSU7y9_4KNMqxUogMCsoSDgBFBgbRFxKE5651EYHDhJwHOB2Zcec8dS9j4xf96M6f5xoIQP-PyE9ToP_9P3TdI2w-wzur4pYpkVsnQx=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-EobuHZPnvOQ/AAAAAAAAAAI/AAAAAAAAAAA/vcgCHjl6F44/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb2MRI5-WMcUQCECCiRhJ5go1kTNxmfnSU7y9_4KNMqxUogMCsoSDgBFBgbRFxKE5651EYHDhJwHOB2Zcec8dS9j4xf96M6f5xoIQP-PyE9ToP_9P3TdI2w-wzur4pYpkVsnQx=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb2MRI5-WMcUQCECCiRhJ5go1kTNxmfnSU7y9_4KNMqxUogMCsoSDgBFBgbRFxKE5651EYHDhJwHOB2Zcec8dS9j4xf96M6f5xoIQP-PyE9ToP_9P3TdI2w-wzur4pYpkVsnQx=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 148,
     "rating": 4.5,
@@ -2231,9 +2635,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Vicente Guerrero 3729, Del Nte., 64500 Monterrey, N.L., Mexico",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tubacero+S.A.+de+C.V./@25.713891999999998,-100.30832769999999,14z/data=!4m8!1m2!2m1!1sTubacero+S.A.+de+C.V.!3m4!1s0x866295a904a57789:0xe6808214fcefc578!8m2!3d25.713891999999998!4d-100.30832769999999",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "pipes-mexico-sa-de-c-v-monterrey",
@@ -2246,6 +2650,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.tuberiasdemexico.com/%3Futm_source%3Dgmb_link",
     "phone": "+52 81 8355 4930",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm1LeCrpRI5MvvIj5IaGyNPmwFJrUqSkZZYbzlemQjMThqinAutqhnwkPVEttBfmSD0XGVvN3vZc58HBHZYJ4LglmDKkgpxlsg3ATrYv-YttQRpxKq6_aiTW-sTFSdzFCWpicu=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-24eXOYndciE/AAAAAAAAAAI/AAAAAAAAAAA/ZvrRD4bYB9o/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm1LeCrpRI5MvvIj5IaGyNPmwFJrUqSkZZYbzlemQjMThqinAutqhnwkPVEttBfmSD0XGVvN3vZc58HBHZYJ4LglmDKkgpxlsg3ATrYv-YttQRpxKq6_aiTW-sTFSdzFCWpicu=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm1LeCrpRI5MvvIj5IaGyNPmwFJrUqSkZZYbzlemQjMThqinAutqhnwkPVEttBfmSD0XGVvN3vZc58HBHZYJ4LglmDKkgpxlsg3ATrYv-YttQRpxKq6_aiTW-sTFSdzFCWpicu=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 147,
     "rating": 4.5,
@@ -2265,9 +2674,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. Francisco I. Madero 1958 Ote, Obrera, 64010 Monterrey, N.L., Mexico",
     "openingHours": "Friday: 8AM-5:45PM · Monday: 8AM-5:45PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-5:45PM · Tuesday: 8AM-5:45PM · Wednesday: 8AM-5:45PM",
     "sourceUrl": "https://www.google.com/maps/place/Pipes+Mexico+SA+de+C.V./@25.6818469,-100.29581309999999,14z/data=!4m8!1m2!2m1!1sPipes+Mexico+SA+de+C.V.!3m4!1s0x8662957c9b80dfa9:0x4260b78ce1b1011c!8m2!3d25.6818469!4d-100.29581309999999",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "grupo-mexicana-de-tubos-torreon",
@@ -2280,6 +2689,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://mexicanadetubos.com.mx/",
     "phone": "+52 871 750 8050",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfYIV-IJrtfdOtFWGL1zT6oCCb_5JjClz8GLEKbNn2KBUbv9I043Sq4-ar5SRWQqE2eHlgcNPTmHpjSaNdbjjPMlQychvR3fhUV36eA-qvnjxtZKctFgS1XrNjD96pSdfUh4nx=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-H9JSZHDia48/AAAAAAAAAAI/AAAAAAAAAAA/pgdfsP1Cf5k/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfYIV-IJrtfdOtFWGL1zT6oCCb_5JjClz8GLEKbNn2KBUbv9I043Sq4-ar5SRWQqE2eHlgcNPTmHpjSaNdbjjPMlQychvR3fhUV36eA-qvnjxtZKctFgS1XrNjD96pSdfUh4nx=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfYIV-IJrtfdOtFWGL1zT6oCCb_5JjClz8GLEKbNn2KBUbv9I043Sq4-ar5SRWQqE2eHlgcNPTmHpjSaNdbjjPMlQychvR3fhUV36eA-qvnjxtZKctFgS1XrNjD96pSdfUh4nx=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 106,
     "rating": 4.6,
@@ -2299,9 +2713,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Km. 5.5, Periférico Raúl López Sánchez s/n, Ejido Ignacio Allende, 27400 Torreón, Coah., Mexico",
     "openingHours": "Friday: 8:30AM-7PM · Monday: 8:30AM-7PM · Saturday: 8:30AM-2PM · Sunday: Closed · Thursday: 8:30AM-7PM · Tuesday: 8:30AM-7PM · Wednesday: 8:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/GRUPO+MEXICANA+DE+TUBOS/@25.5769967,-103.3926237,14z/data=!4m8!1m2!2m1!1sGRUPO+MEXICANA+DE+TUBOS!3m4!1s0x868fdaefd5cc6c1d:0xf31ebb43b51af511!8m2!3d25.5769967!4d-103.3926237",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "alfam-packing-and-packaging-materials-trading-llc-ae",
@@ -2314,6 +2728,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://alfampack.ae/",
     "phone": "+971 50 846 5450",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH5diRmk3uItQC35VL00sRBo2NuEWbCWVvRdKNvMes4acyJ5wL3Mb3wPylQd_6zkwGsmooS97TTsz-yTpuSdeLLdEygR0Kpo6Zz7OmNKG_95-TDZIwV73uDXYKsyZou71UwWYhMIg=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-tqXK_QnSxe0/AAAAAAAAAAI/AAAAAAAAAAA/-80pw63BVtA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH5diRmk3uItQC35VL00sRBo2NuEWbCWVvRdKNvMes4acyJ5wL3Mb3wPylQd_6zkwGsmooS97TTsz-yTpuSdeLLdEygR0Kpo6Zz7OmNKG_95-TDZIwV73uDXYKsyZou71UwWYhMIg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH5diRmk3uItQC35VL00sRBo2NuEWbCWVvRdKNvMes4acyJ5wL3Mb3wPylQd_6zkwGsmooS97TTsz-yTpuSdeLLdEygR0Kpo6Zz7OmNKG_95-TDZIwV73uDXYKsyZou71UwWYhMIg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 57,
     "rating": 4.9,
@@ -2333,9 +2752,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "461 sheik zayed road - 1 - Al Qouz First - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Alfam+Packing+And+Packaging+Materials+Trading+LLC/@25.1709987,55.2421448,14z/data=!4m8!1m2!2m1!1sAlfam+Packing+And+Packaging+Materials+Trading+LLC!3m4!1s0x3e5f43c693c6f9e9:0x1865474df843c128!8m2!3d25.1709987!4d55.2421448",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "albustan-co-packing-llc-ae",
@@ -2348,6 +2767,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://albustanpacking.com/",
     "phone": "+971 56 548 4112",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtKVQ75QSkLG5nLatAMUwkuluBFVZm69JFdERPy3meJAizEV6IFM0c7on1Pd5v0NvuVntKsl1eoUBUdXBCohTJyFuvHhxLrx92SaRnuupYteWr9SnRMB7-9BhGBl_p1VifDOAa=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-GAcSViBUuzw/AAAAAAAAAAI/AAAAAAAAAAA/AnKWDX3NZn8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtKVQ75QSkLG5nLatAMUwkuluBFVZm69JFdERPy3meJAizEV6IFM0c7on1Pd5v0NvuVntKsl1eoUBUdXBCohTJyFuvHhxLrx92SaRnuupYteWr9SnRMB7-9BhGBl_p1VifDOAa=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtKVQ75QSkLG5nLatAMUwkuluBFVZm69JFdERPy3meJAizEV6IFM0c7on1Pd5v0NvuVntKsl1eoUBUdXBCohTJyFuvHhxLrx92SaRnuupYteWr9SnRMB7-9BhGBl_p1VifDOAa=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 42,
     "rating": 5,
@@ -2367,9 +2791,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-7PM · Monday: 7AM-7PM · Saturday: 7AM-7PM · Sunday: Closed · Thursday: 7AM-7PM · Tuesday: 7AM-7PM · Wednesday: 7AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Albustan+Co+Packing+LLC/@24.9895767,55.156473399999996,14z/data=!4m8!1m2!2m1!1sAlbustan+Co+Packing+LLC!3m4!1s0x3e5f736d62ef9255:0xf109ff5f9638136e!8m2!3d24.9895767!4d55.156473399999996",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bms-packaging-ciudad-juarez",
@@ -2382,6 +2806,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.bmsmx.com/",
     "phone": "+52 656 446 3994",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_0DDw0LNEc8SimceiHH6BmIla36rUH9j5xTKQrVsa00glr8sN2Oxa_YSpJV__pLUURaOc_4ZuhFWgPVw4sfuQB3OBLNKIzYcPFkMOYixDqg02Dy5I3OQsccdNXifKKqEvcWE_nQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-2YZX_7w69io/AAAAAAAAAAI/AAAAAAAAAAA/nQebz-xmyrc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_0DDw0LNEc8SimceiHH6BmIla36rUH9j5xTKQrVsa00glr8sN2Oxa_YSpJV__pLUURaOc_4ZuhFWgPVw4sfuQB3OBLNKIzYcPFkMOYixDqg02Dy5I3OQsccdNXifKKqEvcWE_nQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_0DDw0LNEc8SimceiHH6BmIla36rUH9j5xTKQrVsa00glr8sN2Oxa_YSpJV__pLUURaOc_4ZuhFWgPVw4sfuQB3OBLNKIzYcPFkMOYixDqg02Dy5I3OQsccdNXifKKqEvcWE_nQ=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 41,
     "rating": 5,
@@ -2401,9 +2830,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Mexico, C. Don Pedro Meneses Hoyos 6470-int B4, Partido Iglesias, 32528 Juárez, Chih., Mexico",
     "openingHours": "Friday: 7:30AM-4:30PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/BMS+-+Packaging/@31.6895079,-106.4332122,14z/data=!4m8!1m2!2m1!1sBMS+-+Packaging!3m4!1s0x86e75966c7d70209:0xc6d0d8aec5976eb9!8m2!3d31.6895079!4d-106.4332122",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "boada-cementos-y-ladrillos-sa-barcelona",
@@ -2416,6 +2845,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://boadacementos.com/",
     "phone": "+34 934 23 26 23",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFd5K8l-kxHVpgMYme_t7uC2uvKVzxQqQPny_LDhM8F0_jl6evrknSJNplVAUknV7toTMry1Lc_hgB4ka9qnURz2_c5tSC905e8C_mfFbVE1uyTrXCsb2lILtVROHDICqqxPX3W=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-2sGD6iQJUfU/AAAAAAAAAAI/AAAAAAAAAAA/6GwwT_8cssI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFd5K8l-kxHVpgMYme_t7uC2uvKVzxQqQPny_LDhM8F0_jl6evrknSJNplVAUknV7toTMry1Lc_hgB4ka9qnURz2_c5tSC905e8C_mfFbVE1uyTrXCsb2lILtVROHDICqqxPX3W=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFd5K8l-kxHVpgMYme_t7uC2uvKVzxQqQPny_LDhM8F0_jl6evrknSJNplVAUknV7toTMry1Lc_hgB4ka9qnURz2_c5tSC905e8C_mfFbVE1uyTrXCsb2lILtVROHDICqqxPX3W=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 118,
     "rating": 4.6,
@@ -2435,9 +2869,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer de Rocafort, 78, Local, Eixample, 08015 Barcelona, Spain",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Boada+cementos+y+ladrillos+SA/@41.3793329,2.1536769,14z/data=!4m8!1m2!2m1!1sBoada+cementos+y+ladrillos+SA!3m4!1s0x12a4a27d178b3e71:0x41bbbf280f1d4b85!8m2!3d41.3793329!4d2.1536769",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "industrial-electric-supply-brooklyn",
@@ -2450,6 +2884,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://industrialelectricbk.com/",
     "phone": "+1 718-386-7010",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaYSTen6vrNJq7UQkOyMOms32uyQ0_Fuos9b29OaD0v5Xdk2Ddj2OE3Le5IQOYWEZknLAuZ8ULxZoNBBkk81R0FbyNGBkg03foRv2KYkpSh2N-qFakB-1xh0mb9Nz9C-mN9IeN=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-ryeYTJvVyuY/AAAAAAAAAAI/AAAAAAAAAAA/lfnEBGWvFf4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaYSTen6vrNJq7UQkOyMOms32uyQ0_Fuos9b29OaD0v5Xdk2Ddj2OE3Le5IQOYWEZknLAuZ8ULxZoNBBkk81R0FbyNGBkg03foRv2KYkpSh2N-qFakB-1xh0mb9Nz9C-mN9IeN=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaYSTen6vrNJq7UQkOyMOms32uyQ0_Fuos9b29OaD0v5Xdk2Ddj2OE3Le5IQOYWEZknLAuZ8ULxZoNBBkk81R0FbyNGBkg03foRv2KYkpSh2N-qFakB-1xh0mb9Nz9C-mN9IeN=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 125,
     "rating": 4.6,
@@ -2469,9 +2908,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "259 Johnson Ave, Brooklyn, NY 11206",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: 7AM-12PM · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Electric+Supply/@40.7072122,-73.939137,14z/data=!4m8!1m2!2m1!1sIndustrial+Electric+Supply!3m4!1s0x89c25bfe535d4e17:0xf7325a382f214d9b!8m2!3d40.7072122!4d-73.939137",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "matrix-heavy-equipment-spare-parts-ae",
@@ -2484,6 +2923,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://matrixspares.com/",
     "phone": "+971 2 553 5522",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2Ca_jnHh2BBjvDDsz6A0_JXWzcdynDQ0eflyOt475YLHOdtd0obgb1-figChn5W8j348_eX0oCD0aHJZO1y-H91g-kyfpiTHO7uQIXfYImJ549_DuVfHnQu5m-_0ftfjUaG1mwsuhPy8t=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-pni_BfFEPzc/AAAAAAAAAAI/AAAAAAAAAAA/lyDoij-J6S8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2Ca_jnHh2BBjvDDsz6A0_JXWzcdynDQ0eflyOt475YLHOdtd0obgb1-figChn5W8j348_eX0oCD0aHJZO1y-H91g-kyfpiTHO7uQIXfYImJ549_DuVfHnQu5m-_0ftfjUaG1mwsuhPy8t=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2Ca_jnHh2BBjvDDsz6A0_JXWzcdynDQ0eflyOt475YLHOdtd0obgb1-figChn5W8j348_eX0oCD0aHJZO1y-H91g-kyfpiTHO7uQIXfYImJ549_DuVfHnQu5m-_0ftfjUaG1mwsuhPy8t=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 63,
     "rating": 4.8,
@@ -2503,9 +2947,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Musaffah Industrial area Sector M11,Shop 4 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: 8AM-7PM · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/MATRIX+Heavy+Equipment+spare+parts/@24.361846399999997,54.5021694,14z/data=!4m8!1m2!2m1!1sMATRIX+Heavy+Equipment+spare+parts!3m4!1s0x3e5e40da8779d6f3:0xb894f195f2d7d3df!8m2!3d24.361846399999997!4d54.5021694",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-nihal-industrial-equip-tr-llc-ae",
@@ -2518,6 +2962,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.alnihal.com/",
     "phone": "+971 6 534 4434",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3MXdl0DPW4nFjgV4WRxLY7RRkw5CJaecFoTCfZ2Lrm0N7sz56Ycz5R5iG3UDojLJcLfo4L9-viH413UnoRoi6-gF6kVlpoXFINfv6iGOHWFwcGTCO80QAej4wqHi2hjgLAiYF=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-prGopTynTTw/AAAAAAAAAAI/AAAAAAAAAAA/PZABObPXw2I/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3MXdl0DPW4nFjgV4WRxLY7RRkw5CJaecFoTCfZ2Lrm0N7sz56Ycz5R5iG3UDojLJcLfo4L9-viH413UnoRoi6-gF6kVlpoXFINfv6iGOHWFwcGTCO80QAej4wqHi2hjgLAiYF=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3MXdl0DPW4nFjgV4WRxLY7RRkw5CJaecFoTCfZ2Lrm0N7sz56Ycz5R5iG3UDojLJcLfo4L9-viH413UnoRoi6-gF6kVlpoXFINfv6iGOHWFwcGTCO80QAej4wqHi2hjgLAiYF=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 60,
     "rating": 4.8,
@@ -2537,9 +2986,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "238 First Industrial St - Industrial Areas - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-6PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+NIHAL+INDUSTRIAL+EQUIP.+TR.+LLC/@25.319287199999998,55.4004458,14z/data=!4m8!1m2!2m1!1sAL+NIHAL+INDUSTRIAL+EQUIP.+TR.+LLC!3m4!1s0x3e5f5bb9597241e7:0xc6953db924dccb5c!8m2!3d25.319287199999998!4d55.4004458",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "acbm-tech-new-york",
@@ -2552,6 +3001,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.acbmtech.com/",
     "phone": "+1 212-431-3200",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwyjsSpA0Zphjp-s6YY-ifFS8zOoKt2p8ZpjobivPCIFFCWUhO5KWREpczLZnJuftTZL5KkOBb5BxlUxovc9S7F1Iy4oHL7Ud7ywIq8CNbVHqpbGznC2-OqOE47cQ5NMlbsrMmmw=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-YtuoePslfvM/AAAAAAAAAAI/AAAAAAAAAAA/lku8FjpVNXo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwyjsSpA0Zphjp-s6YY-ifFS8zOoKt2p8ZpjobivPCIFFCWUhO5KWREpczLZnJuftTZL5KkOBb5BxlUxovc9S7F1Iy4oHL7Ud7ywIq8CNbVHqpbGznC2-OqOE47cQ5NMlbsrMmmw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwyjsSpA0Zphjp-s6YY-ifFS8zOoKt2p8ZpjobivPCIFFCWUhO5KWREpczLZnJuftTZL5KkOBb5BxlUxovc9S7F1Iy4oHL7Ud7ywIq8CNbVHqpbGznC2-OqOE47cQ5NMlbsrMmmw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 73,
     "rating": 4.8,
@@ -2571,9 +3025,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "184 Bowery, New York, NY 10012",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/ACBM+TECH/@40.7208079,-73.99418949999999,14z/data=!4m8!1m2!2m1!1sACBM+TECH!3m4!1s0x89c2598622c78cb1:0x7e9f5ee101de9f08!8m2!3d40.7208079!4d-73.99418949999999",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "murakami-manufacturing-mexico-sa-de-cv-morelos",
@@ -2586,6 +3040,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.murakami-mx.com/",
     "phone": "+52 492 478 2700",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyRFhkhA7zwCOueKmPn62ysyiJttlnO_4k4CL51j1wXPjUGppGU78Ny-mrMiiAeKowjUbfJhUIrO5j0dgih-UfuieXGPGEnGuQ5Cx9zsVyF1_pHhr5YfaccOon_pWGd96S9I1_NGgK4iU=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-fR-4ZbaslIk/AAAAAAAAAAI/AAAAAAAAAAA/FxNUEcGkwoM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyRFhkhA7zwCOueKmPn62ysyiJttlnO_4k4CL51j1wXPjUGppGU78Ny-mrMiiAeKowjUbfJhUIrO5j0dgih-UfuieXGPGEnGuQ5Cx9zsVyF1_pHhr5YfaccOon_pWGd96S9I1_NGgK4iU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyRFhkhA7zwCOueKmPn62ysyiJttlnO_4k4CL51j1wXPjUGppGU78Ny-mrMiiAeKowjUbfJhUIrO5j0dgih-UfuieXGPGEnGuQ5Cx9zsVyF1_pHhr5YfaccOon_pWGd96S9I1_NGgK4iU=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 147,
     "rating": 4.5,
@@ -2605,9 +3064,49 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Boulevard Paseo de la Plata # 1123, Parque Industrial SUMAR I, 98100 Morelos, Zac., Mexico",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Closed · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Murakami+Manufacturing+M%C3%A9xico+SA.+de+CV./@22.895412399999998,-102.6705703,14z/data=!4m8!1m2!2m1!1sMurakami+Manufacturing+M%C3%A9xico+SA.+de+CV.!3m4!1s0x8683ace07d25c027:0x3e5a7d97736bdc8d!8m2!3d22.895412399999998!4d-102.6705703",
-    "score": 90,
+    "score": 96,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "buildmaadi-bengaluru",
+    "name": "buildmaadi",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Bengaluru, India",
+    "country": "India",
+    "city": "Bengaluru",
+    "website": "https://www.buildmaadi.com/",
+    "phone": "+91 97410 04466",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOQoGHjuFkt-VXHagUIWlFEk3WGVQ7vVGqXhVkNc-rMjQZZspANb_G5ULf6afR6GBqLvrRQPOHjcHE50qieEJ9i5Pg45UWKvMFxFEMYEa7_MFq_PSpuLL6B2ve8xMDw72urMH0=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-GTqQeFbnxe4/AAAAAAAAAAI/AAAAAAAAAAA/htpynItQwgA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOQoGHjuFkt-VXHagUIWlFEk3WGVQ7vVGqXhVkNc-rMjQZZspANb_G5ULf6afR6GBqLvrRQPOHjcHE50qieEJ9i5Pg45UWKvMFxFEMYEa7_MFq_PSpuLL6B2ve8xMDw72urMH0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOQoGHjuFkt-VXHagUIWlFEk3WGVQ7vVGqXhVkNc-rMjQZZspANb_G5ULf6afR6GBqLvrRQPOHjcHE50qieEJ9i5Pg45UWKvMFxFEMYEa7_MFq_PSpuLL6B2ve8xMDw72urMH0=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 97,
+    "rating": 4.7,
+    "reviewCount": 97,
+    "verified": true,
+    "description": "Construction supplier in Bengaluru, India.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "Asia",
+      "EU",
+      "Africa"
+    ],
+    "moq": "1 pallet",
+    "address": "2nd Floor, Vasanthalakshmi Towers, 20/7, Kanakapura Main Rd, near JP Nagar Metro Station, Sarakki Gate, 1st Phase, J. P. Nagar, Bengaluru, Karnataka 560078, India",
+    "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-2PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
+    "sourceUrl": "https://www.google.com/maps/place/buildmaadi/@12.9088944,77.573154,14z/data=!4m8!1m2!2m1!1sbuildmaadi!3m4!1s0x3bae1502777d40c5:0xf74ac977a6a12fa!8m2!3d12.9088944!4d77.573154",
+    "score": 96,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "steel-vyapar-vinayak-steel-industries-www-steelvyapar-com-st",
@@ -2620,6 +3119,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.steelvyapar.com/",
     "phone": "+91 98240 83462",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWqrBDp9efUnY3QFy1_9TGZrUBupgbpdGOEJI1btTXCtmDNT3s91VISqJlHntKQRVro5aaFofYKDZ6Y0uGBdL4n_i7nj553aRESw_-DZXOwjV5KZgb32UCCbcBLJZW3tnpQMMINA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-lVXiodsxK4A/AAAAAAAAAAI/AAAAAAAAAAA/A6gp5meS02U/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWqrBDp9efUnY3QFy1_9TGZrUBupgbpdGOEJI1btTXCtmDNT3s91VISqJlHntKQRVro5aaFofYKDZ6Y0uGBdL4n_i7nj553aRESw_-DZXOwjV5KZgb32UCCbcBLJZW3tnpQMMINA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWqrBDp9efUnY3QFy1_9TGZrUBupgbpdGOEJI1btTXCtmDNT3s91VISqJlHntKQRVro5aaFofYKDZ6Y0uGBdL4n_i7nj553aRESw_-DZXOwjV5KZgb32UCCbcBLJZW3tnpQMMINA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 38,
     "rating": 4.9,
@@ -2640,9 +3144,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "B / h, super bread, C11 sardar industrial estate Road no 1, Ajwa Rd, Vadodara, Gujarat 390019, India",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: 8:30AM-6:30PM · Sunday: 9:30-11:30AM · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Steel+Vyapar+-+Vinayak+Steel+Industries+-+www.steelvyapar.com+-+Steel+Supplier+-+Gujarat+%7C/@22.313684499999997,73.23460589999999,14z/data=!4m8!1m2!2m1!1sSteel+Vyapar+-+Vinayak+Steel+Industries+-+www.steelvyapar.com+-+Steel+Supplier+-+Gujarat+%7C!3m4!1s0x395fcfaf260f66d5:0xee5572493ef9402e!8m2!3d22.313684499999997!4d73.23460589999999",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "salem-stainless-steel-suppliers-private-limited-chennai",
@@ -2655,6 +3159,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ssssgroup.com/",
     "phone": "+91 98842 30736",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_e37fZL5LBYSxeABTYOl3FWJ56NqDdPK4T8EdtUVAG0Xr-jsu8E6Q1oeo7fyX3ACMAe9DM4T1ltuX4ZiYmIdsGv0qwDG-qnBMdv2rKlslYy7zgbwtbffZ_R7sSkUY57-gJINB=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-sZuQRV1D6Oo/AAAAAAAAAAI/AAAAAAAAAAA/cqGWXPkDgNw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_e37fZL5LBYSxeABTYOl3FWJ56NqDdPK4T8EdtUVAG0Xr-jsu8E6Q1oeo7fyX3ACMAe9DM4T1ltuX4ZiYmIdsGv0qwDG-qnBMdv2rKlslYy7zgbwtbffZ_R7sSkUY57-gJINB=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_e37fZL5LBYSxeABTYOl3FWJ56NqDdPK4T8EdtUVAG0Xr-jsu8E6Q1oeo7fyX3ACMAe9DM4T1ltuX4ZiYmIdsGv0qwDG-qnBMdv2rKlslYy7zgbwtbffZ_R7sSkUY57-gJINB=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 81,
     "rating": 4.6,
@@ -2675,9 +3184,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "33, Lawyer Chinnathambi Street, Kondithope, George Town, Chennai, Tamil Nadu 600001, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED/@13.100890699999999,80.2773404,14z/data=!4m8!1m2!2m1!1sSALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED!3m4!1s0x3a526f5f15267a09:0x4786ca4fe3329de9!8m2!3d13.100890699999999!4d80.2773404",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "steel-pipe-supply-tampa",
@@ -2690,6 +3199,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.steelandpipesupply.com/",
     "phone": "+1 813-241-2511",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEv1Vx9cP9XSThV6WHtScBmDsI1mGL3tVCuEZszk8bpWj7i8KA3hY98Dq4xqPGpKrwbS3FQxffSLM87lOaZAcI4-y8RMqWWWlhwH17HQqSxctKYbqqpZf9ef_6bFakqI9SJG_6Nmg=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-U1jbqazFrxg/AAAAAAAAAAI/AAAAAAAAAAA/a2tS7JiGIbE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEv1Vx9cP9XSThV6WHtScBmDsI1mGL3tVCuEZszk8bpWj7i8KA3hY98Dq4xqPGpKrwbS3FQxffSLM87lOaZAcI4-y8RMqWWWlhwH17HQqSxctKYbqqpZf9ef_6bFakqI9SJG_6Nmg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEv1Vx9cP9XSThV6WHtScBmDsI1mGL3tVCuEZszk8bpWj7i8KA3hY98Dq4xqPGpKrwbS3FQxffSLM87lOaZAcI4-y8RMqWWWlhwH17HQqSxctKYbqqpZf9ef_6bFakqI9SJG_6Nmg=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 24,
     "rating": 5,
@@ -2709,9 +3223,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3417 E 7th Ave, Tampa, FL 33605",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Steel+%26+Pipe+Supply/@27.9599416,-82.42140839999999,14z/data=!4m8!1m2!2m1!1sSteel+%26+Pipe+Supply!3m4!1s0x88c2c5a2bc9f8ed7:0xb1288319b23992da!8m2!3d27.9599416!4d-82.42140839999999",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-gharbia-pipe-company-llc-ae",
@@ -2724,6 +3238,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://algharbiapipe.com/",
     "phone": "+971 2 448 9544",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFDsoKeRxlb8rqMBnX6kCpYzQqMCVK5uie97clOQDsu1CxrYQIEubaINQAeKGrK3_SBFUVdr3ksZ-Ew-Hs5joes0SBrO3LMmvbKNuf5H5nT4bIoFazgZYh5nbgG3htKVenpQSGeJidTWSk0=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-0lIDdThcRe8/AAAAAAAAAAI/AAAAAAAAAAA/S7ZyPNDEUTM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFDsoKeRxlb8rqMBnX6kCpYzQqMCVK5uie97clOQDsu1CxrYQIEubaINQAeKGrK3_SBFUVdr3ksZ-Ew-Hs5joes0SBrO3LMmvbKNuf5H5nT4bIoFazgZYh5nbgG3htKVenpQSGeJidTWSk0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFDsoKeRxlb8rqMBnX6kCpYzQqMCVK5uie97clOQDsu1CxrYQIEubaINQAeKGrK3_SBFUVdr3ksZ-Ew-Hs5joes0SBrO3LMmvbKNuf5H5nT4bIoFazgZYh5nbgG3htKVenpQSGeJidTWSk0=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 48,
     "rating": 4.8,
@@ -2743,9 +3262,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "KIZAD - A8 - 351 Al Intifa’ St - Al Taweelah - Khalifa Industrial Zone - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: Closed · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Gharbia+Pipe+Company+LLC/@24.711569299999997,54.7314521,14z/data=!4m8!1m2!2m1!1sAl+Gharbia+Pipe+Company+LLC!3m4!1s0x3e5e558f90cb50a7:0xefe5db24481331fb!8m2!3d24.711569299999997!4d54.7314521",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "aj-steel-icad2-ae",
@@ -2758,6 +3277,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://ajsteel.com/",
     "phone": "+971 2 550 1131",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKu_1vQ0CtmmHYlAp0ba9e4QgxSaEeu4Lg-_NmO9TA5P5DlaI41BWA8xzltMbvjjQESiqwDacgHvAoBr6tRrk-GRULuAthXMT1LQ4UNqeVSOG3Xbl03mboh2v1y3PTrCCIk2h1=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-3aUmwHTQAos/AAAAAAAAAAI/AAAAAAAAAAA/5NDM42Do_rQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKu_1vQ0CtmmHYlAp0ba9e4QgxSaEeu4Lg-_NmO9TA5P5DlaI41BWA8xzltMbvjjQESiqwDacgHvAoBr6tRrk-GRULuAthXMT1LQ4UNqeVSOG3Xbl03mboh2v1y3PTrCCIk2h1=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGKu_1vQ0CtmmHYlAp0ba9e4QgxSaEeu4Lg-_NmO9TA5P5DlaI41BWA8xzltMbvjjQESiqwDacgHvAoBr6tRrk-GRULuAthXMT1LQ4UNqeVSOG3Xbl03mboh2v1y3PTrCCIk2h1=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 77,
     "rating": 4.6,
@@ -2777,9 +3301,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "93323, ICAD II, Musaffah - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: 8:30AM-6:30PM · Sunday: 8:30AM-6:30PM · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AJ+STEEL+-+ICAD2/@24.283545,54.470335999999996,14z/data=!4m8!1m2!2m1!1sAJ+STEEL+-+ICAD2!3m4!1s0x3e5e3fac47ddcbf5:0x6fed2c7f0adaac76!8m2!3d24.283545!4d54.470335999999996",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "aj-steel-ae",
@@ -2792,6 +3316,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ajsteel.com/",
     "phone": "+971 2 550 1131",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgecA5PK9Yr-DY1CCixX4IdZ-79ABQM-lnB7x-6Ld8LgdbKyOHOYgan-bRIBvs4MgjyCaK9poot__QDX7kmV-7Gcl9HX0R8AXUvz8CYaEnqWCsys9G4UVwnOMWpiGzsC38IgES=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-fzoxkwvPgsA/AAAAAAAAAAI/AAAAAAAAAAA/5jeVBJfc9OM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgecA5PK9Yr-DY1CCixX4IdZ-79ABQM-lnB7x-6Ld8LgdbKyOHOYgan-bRIBvs4MgjyCaK9poot__QDX7kmV-7Gcl9HX0R8AXUvz8CYaEnqWCsys9G4UVwnOMWpiGzsC38IgES=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgecA5PK9Yr-DY1CCixX4IdZ-79ABQM-lnB7x-6Ld8LgdbKyOHOYgan-bRIBvs4MgjyCaK9poot__QDX7kmV-7Gcl9HX0R8AXUvz8CYaEnqWCsys9G4UVwnOMWpiGzsC38IgES=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 45,
     "rating": 4.8,
@@ -2811,9 +3340,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No. 33C2,34C2 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-5PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/AJ+STEEL/@24.326355,54.491495699999994,14z/data=!4m8!1m2!2m1!1sAJ+STEEL!3m4!1s0x3e5e3f6280da7447:0x29c8436c3a6249c4!8m2!3d24.326355!4d54.491495699999994",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "m-metal-tubes-india-pvt-ltd-mumbai",
@@ -2826,6 +3355,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.metaltubesindia.com/",
     "phone": "+91 76666 66661",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL3ZH7Lf9fDS9KrOala68ahfjqy0zdYh5ABY5VsYy3wR21VJVzyxXndqdEw6MEKrH_1dEyW-41wEKsEEesvNrF9kZgFM9_zqzpAqI97PlcMh5yEqvBxEY7kU-2qb61lSWO1-fWtk40A10F=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-vfTgG_W9ftY/AAAAAAAAAAI/AAAAAAAAAAA/vYQm05ecJ-k/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL3ZH7Lf9fDS9KrOala68ahfjqy0zdYh5ABY5VsYy3wR21VJVzyxXndqdEw6MEKrH_1dEyW-41wEKsEEesvNrF9kZgFM9_zqzpAqI97PlcMh5yEqvBxEY7kU-2qb61lSWO1-fWtk40A10F=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL3ZH7Lf9fDS9KrOala68ahfjqy0zdYh5ABY5VsYy3wR21VJVzyxXndqdEw6MEKrH_1dEyW-41wEKsEEesvNrF9kZgFM9_zqzpAqI97PlcMh5yEqvBxEY7kU-2qb61lSWO1-fWtk40A10F=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 26,
     "rating": 5,
@@ -2846,9 +3380,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Shop No. 8, Bhiwandiwala Building, Khetwadi 8th Ln, Pathe Bapurao Marg, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/M+Metal+Tubes+India+Pvt+Ltd/@18.959297499999998,72.82296529999999,14z/data=!4m8!1m2!2m1!1sM+Metal+Tubes+India+Pvt+Ltd!3m4!1s0x3be7cfc3c48d0309:0x19f4378c35b4fdf4!8m2!3d18.959297499999998!4d72.82296529999999",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "swastico-pipe-and-tube-pvt-ltd-kurali",
@@ -2861,6 +3395,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.swasticopipe.com/",
     "phone": "+91 99749 63732",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkVfpjxe5OFf1IOoNCbZ50KoCxA-DKW17igEmiGr95WESDTNqq1bVHPsRwfZo9grdQp1acdVkoJTNBXAnAv5EmU1Q75Ov108D4qcJw_a_Fgxa1XOomsqL4Mo29RswqVVzMrri9HFYNdAE=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-NZJEM1uLdDE/AAAAAAAAAAI/AAAAAAAAAAA/AxYtSEd3oHk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkVfpjxe5OFf1IOoNCbZ50KoCxA-DKW17igEmiGr95WESDTNqq1bVHPsRwfZo9grdQp1acdVkoJTNBXAnAv5EmU1Q75Ov108D4qcJw_a_Fgxa1XOomsqL4Mo29RswqVVzMrri9HFYNdAE=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkVfpjxe5OFf1IOoNCbZ50KoCxA-DKW17igEmiGr95WESDTNqq1bVHPsRwfZo9grdQp1acdVkoJTNBXAnAv5EmU1Q75Ov108D4qcJw_a_Fgxa1XOomsqL4Mo29RswqVVzMrri9HFYNdAE=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 25,
     "rating": 5,
@@ -2881,9 +3420,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Block/Survey No 71,72,73, 105, At, Tal Karjan, Kurali, Gujarat 391210, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Swastico+Pipe+And+Tube+Pvt.Ltd/@22.033177199999997,73.2014255,14z/data=!4m8!1m2!2m1!1sSwastico+Pipe+And+Tube+Pvt.Ltd!3m4!1s0x395fe9031dde302f:0x4e7266a221ed4521!8m2!3d22.033177199999997!4d73.2014255",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hankyu-umeda-main-store-osaka",
@@ -2896,6 +3435,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.hankyu-dept.co.jp/honten/%3Futm_source%3Dhqhtgooglemap%26utm_medium%3Dstoremedia%26utm_campaign%3Dinformation",
     "phone": "+81 6-6361-1381",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYHe0oJrhyaFmCepWdkZYPMPE52qqR23muNLPFBzY2r89E6COWh3WveeUZgp7mBbYk9V4g4OTuFUsIzqCc4ewo5S8-nV-k8v9Zte2LL9_os95-A3CA9kTAUorG2z25x1r2eI4H=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-TW_LMzl_RYo/AAAAAAAAAAI/AAAAAAAAAAA/DxJ2dxVU9RU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYHe0oJrhyaFmCepWdkZYPMPE52qqR23muNLPFBzY2r89E6COWh3WveeUZgp7mBbYk9V4g4OTuFUsIzqCc4ewo5S8-nV-k8v9Zte2LL9_os95-A3CA9kTAUorG2z25x1r2eI4H=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYHe0oJrhyaFmCepWdkZYPMPE52qqR23muNLPFBzY2r89E6COWh3WveeUZgp7mBbYk9V4g4OTuFUsIzqCc4ewo5S8-nV-k8v9Zte2LL9_os95-A3CA9kTAUorG2z25x1r2eI4H=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 37129,
     "rating": 4.2,
@@ -2916,9 +3460,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8-7 Kakudacho, Kita Ward, Osaka, 530-8350, Japan",
     "openingHours": "Friday: 10AM-8PM · Monday: 10AM-8PM · Saturday: 10AM-8PM · Sunday: 10AM-8PM · Thursday: 10AM-8PM · Tuesday: 10AM-8PM · Wednesday: 10AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Hankyu+Umeda+Main+Store/@34.7028186,135.4985323,14z/data=!4m8!1m2!2m1!1sHankyu+Umeda+Main+Store!3m4!1s0x6000e692589cb9eb:0xbc9b6d5116f447ad!8m2!3d34.7028186!4d135.4985323",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packaging-warehouse-weingarten",
@@ -2931,6 +3475,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.packaging-warehouse.com/",
     "phone": "+49 751 9514400",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFfOJfVSFTByJhlqNpl8F02MVX8nxOLZSKX5VG8f1Iguk-NM239qL5LOc7w1bueAr_XgUeMgal1xU4v059cajCzQxHW0AmOZMCF87YMMyzCZ2u4QFLYg3YoozyhFQ5u0e3SVpwfFA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-k_Ts6E-PMHI/AAAAAAAAAAI/AAAAAAAAAAA/4qN_Z3g8CTg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFfOJfVSFTByJhlqNpl8F02MVX8nxOLZSKX5VG8f1Iguk-NM239qL5LOc7w1bueAr_XgUeMgal1xU4v059cajCzQxHW0AmOZMCF87YMMyzCZ2u4QFLYg3YoozyhFQ5u0e3SVpwfFA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFfOJfVSFTByJhlqNpl8F02MVX8nxOLZSKX5VG8f1Iguk-NM239qL5LOc7w1bueAr_XgUeMgal1xU4v059cajCzQxHW0AmOZMCF87YMMyzCZ2u4QFLYg3YoozyhFQ5u0e3SVpwfFA=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 24,
     "rating": 5,
@@ -2950,9 +3499,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ravensburger Str. 30, 88250 Weingarten, Germany",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/packaging+warehouse/@47.80079,9.63142,14z/data=!4m8!1m2!2m1!1spackaging+warehouse!3m4!1s0x479baf7fea8b652b:0x1c135e06a912da55!8m2!3d47.80079!4d9.63142",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bmpack-gastronomiebedarf-verpackungsspezialist-berlin",
@@ -2965,6 +3514,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.bmpack.de/",
     "phone": "+49 30 220119300",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaJpAWbzIZTbYYtVtXMBzviTqwaMCVmiq1h1AWWcvn3-lw5dAkVz3Wmv4P8zAzgCYnlukBaVCVXJIOht5EodJlaGsW3HTjY9iNyFt4OaFAF32fAXam8Ni0S_0R1HcGnKs_Tqg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-i0WnrFw9u9s/AAAAAAAAAAI/AAAAAAAAAAA/c12qa3ryVro/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaJpAWbzIZTbYYtVtXMBzviTqwaMCVmiq1h1AWWcvn3-lw5dAkVz3Wmv4P8zAzgCYnlukBaVCVXJIOht5EodJlaGsW3HTjY9iNyFt4OaFAF32fAXam8Ni0S_0R1HcGnKs_Tqg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaJpAWbzIZTbYYtVtXMBzviTqwaMCVmiq1h1AWWcvn3-lw5dAkVz3Wmv4P8zAzgCYnlukBaVCVXJIOht5EodJlaGsW3HTjY9iNyFt4OaFAF32fAXam8Ni0S_0R1HcGnKs_Tqg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 47,
     "rating": 4.8,
@@ -2984,9 +3538,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Lahnstraße 33 B, 12055 Berlin, Germany",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-4PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BMPack+-+Gastronomiebedarf+%26+Verpackungsspezialist/@52.4678806,13.449325499999999,14z/data=!4m8!1m2!2m1!1sBMPack+-+Gastronomiebedarf+%26+Verpackungsspezialist!3m4!1s0x47a84f1f733a4ac3:0xc8711fc5676600b4!8m2!3d52.4678806!4d13.449325499999999",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "superior-pack-customised-packaging-manufacturer-ae",
@@ -2999,6 +3553,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.superiorpackuae.com/",
     "phone": "+971 56 421 9630",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5OIcCZTakEjinADIBFlM1x6XQrU1I7ouLlS4htKhr-lx6Vu_KJ13ysVpC5VSrgdD6IqfjZxZJBBsfQMFFaP6XysmI0rn9qRxC4eOxOFPkc5EqQUntfb4N447ctqV626MZSWJV=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-mPlKTeQ2I3g/AAAAAAAAAAI/AAAAAAAAAAA/9VxKypSxJBQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5OIcCZTakEjinADIBFlM1x6XQrU1I7ouLlS4htKhr-lx6Vu_KJ13ysVpC5VSrgdD6IqfjZxZJBBsfQMFFaP6XysmI0rn9qRxC4eOxOFPkc5EqQUntfb4N447ctqV626MZSWJV=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5OIcCZTakEjinADIBFlM1x6XQrU1I7ouLlS4htKhr-lx6Vu_KJ13ysVpC5VSrgdD6IqfjZxZJBBsfQMFFaP6XysmI0rn9qRxC4eOxOFPkc5EqQUntfb4N447ctqV626MZSWJV=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 47,
     "rating": 4.8,
@@ -3018,9 +3577,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Deira - 24 Al Wuheida Street, Deira, Office M4, Royal House Building - Hor Al Anz East - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-4PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Superior+Pack+Customised+Packaging+Manufacturer/@25.282589899999998,55.353266899999994,14z/data=!4m8!1m2!2m1!1sSuperior+Pack+Customised+Packaging+Manufacturer!3m4!1s0x3ef5f742ee27e389:0x301e79929309ba84!8m2!3d25.282589899999998!4d55.353266899999994",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "zerah-packing-materials-trading-llc-ae",
@@ -3033,6 +3592,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.zerahpack.com/",
     "phone": "+971 58 256 0772",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE1NEt4DY5szmKXnLjiwC-U2KVPd8QzNNyEZ7QZ_KjHmLJFLPWmjcx7IrBuXT994Lk0X7auqt1wxSyAaKSi7gA2tJ4EBa50cbdmtpjLSAd5D-mgK_gsyt0-4Vv0EiV4WfArzpA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-C-C4VWgQcCI/AAAAAAAAAAI/AAAAAAAAAAA/u0SVQcmhFdE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE1NEt4DY5szmKXnLjiwC-U2KVPd8QzNNyEZ7QZ_KjHmLJFLPWmjcx7IrBuXT994Lk0X7auqt1wxSyAaKSi7gA2tJ4EBa50cbdmtpjLSAd5D-mgK_gsyt0-4Vv0EiV4WfArzpA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE1NEt4DY5szmKXnLjiwC-U2KVPd8QzNNyEZ7QZ_KjHmLJFLPWmjcx7IrBuXT994Lk0X7auqt1wxSyAaKSi7gA2tJ4EBa50cbdmtpjLSAd5D-mgK_gsyt0-4Vv0EiV4WfArzpA=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 24,
     "rating": 5,
@@ -3052,9 +3616,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "https://maps.app.goo.gl/Ca6KhzRKRJPUF2MTA - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-6:30PM · Monday: 7AM-6:30PM · Saturday: 7AM-6:30PM · Sunday: 7-10:30AM · Thursday: 7AM-6:30PM · Tuesday: 7AM-6:30PM · Wednesday: 7AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Zerah+Packing+Materials+Trading+LLC/@25.117414699999998,55.236239299999994,14z/data=!4m8!1m2!2m1!1sZerah+Packing+Materials+Trading+LLC!3m4!1s0x3e5f6969f17c6e8d:0x553b1fae095743ab!8m2!3d25.117414699999998!4d55.236239299999994",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bony-packaging-ae",
@@ -3067,6 +3631,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.bonypackaging.com/%3Futm_source%3DGoogle%2BMy%2BBusiness%26utm_medium%3Dgmb%26utm_id%3DMyBusinessPage",
     "phone": "+971 56 556 9172",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkG0C17nfFknoDpkky3e0YMPkvbItGK-V--D6PUfK8NXvheDpvRHy1wjZUC4OBq9RbhYsLSOZL6dt3LH8-VOUp6BoJLS9y4Mx_OdErXdnAY8twWzFe_XsvM602OsmMnJZLpmDZT4TIQpP3=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-N9q1ytj-WWM/AAAAAAAAAAI/AAAAAAAAAAA/AiRmVHO4vxI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkG0C17nfFknoDpkky3e0YMPkvbItGK-V--D6PUfK8NXvheDpvRHy1wjZUC4OBq9RbhYsLSOZL6dt3LH8-VOUp6BoJLS9y4Mx_OdErXdnAY8twWzFe_XsvM602OsmMnJZLpmDZT4TIQpP3=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkG0C17nfFknoDpkky3e0YMPkvbItGK-V--D6PUfK8NXvheDpvRHy1wjZUC4OBq9RbhYsLSOZL6dt3LH8-VOUp6BoJLS9y4Mx_OdErXdnAY8twWzFe_XsvM602OsmMnJZLpmDZT4TIQpP3=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 32,
     "rating": 4.9,
@@ -3086,9 +3655,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Obaid Essa Ahmed Warehouse, Shed no: B10 Near Double cola signal, Industrial area no:4 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Bony+Packaging/@25.3352117,55.4116551,14z/data=!4m8!1m2!2m1!1sBony+Packaging!3m4!1s0x3e5f5944008c23bf:0x2f953deda964d5af!8m2!3d25.3352117!4d55.4116551",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "n-g-packaging-pvt-ltd-sonipat",
@@ -3101,6 +3670,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ngpackaging.in/",
     "phone": "+91 130 654 1788",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKSwrQsYKGoK6fc84aj25ZPPKdMFtJVd6TSuvW7xf4Io_2EZyt78GwbuQ0AUrvX3TLfVlw8RDVLRViuiTO4kTrr_0MgWdGgErsPdJXyV-ZGjLjSXoPW2rEjoU8nD756KM9VZGg=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-5S0QbuNtHbc/AAAAAAAAAAI/AAAAAAAAAAA/r5mxtm9XjXo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKSwrQsYKGoK6fc84aj25ZPPKdMFtJVd6TSuvW7xf4Io_2EZyt78GwbuQ0AUrvX3TLfVlw8RDVLRViuiTO4kTrr_0MgWdGgErsPdJXyV-ZGjLjSXoPW2rEjoU8nD756KM9VZGg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFKSwrQsYKGoK6fc84aj25ZPPKdMFtJVd6TSuvW7xf4Io_2EZyt78GwbuQ0AUrvX3TLfVlw8RDVLRViuiTO4kTrr_0MgWdGgErsPdJXyV-ZGjLjSXoPW2rEjoU8nD756KM9VZGg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 55,
     "rating": 4.7,
@@ -3120,9 +3694,9 @@ export const outscraperSuppliers: Supplier[] =
     "moq": "2,000 units",
     "address": "1788, HSIIDC, Rai, Industrial Estate, Sonipat, Haryana 131029, India",
     "sourceUrl": "https://www.google.com/maps/place/N.G.+PACKAGING+PVT.+LTD/@28.9300033,77.0913781,14z/data=!4m8!1m2!2m1!1sN.G.+PACKAGING+PVT.+LTD!3m4!1s0x390dac282ed23873:0xce7794472a83302b!8m2!3d28.9300033!4d77.0913781",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packco-brand-packaging-platja-de-la-pobla-de-farnals",
@@ -3135,6 +3709,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.packco.eu/",
     "phone": "+34 961 46 15 37",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwYRwoQ8qtTwp4lzIs-06koRJK165KjDKwxbtdOSp9O9sGVVuKOTNqWcFzM2_FbTPgpwYeVMOVytGOZQIREFRBcamBCbopCvFSMosCuLT769t9UEfTvpxrd8BtePRQdepewpxF=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-HDbUnxtshQE/AAAAAAAAAAI/AAAAAAAAAAA/Mn5Sy8W9tug/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwYRwoQ8qtTwp4lzIs-06koRJK165KjDKwxbtdOSp9O9sGVVuKOTNqWcFzM2_FbTPgpwYeVMOVytGOZQIREFRBcamBCbopCvFSMosCuLT769t9UEfTvpxrd8BtePRQdepewpxF=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwYRwoQ8qtTwp4lzIs-06koRJK165KjDKwxbtdOSp9O9sGVVuKOTNqWcFzM2_FbTPgpwYeVMOVytGOZQIREFRBcamBCbopCvFSMosCuLT769t9UEfTvpxrd8BtePRQdepewpxF=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 39,
     "rating": 4.9,
@@ -3154,9 +3733,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer Cantarrana, 1, 46137 Platja de la Pobla de Farnals, Valencia, Spain",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PackCo+%7C+Brand+%26+Packaging/@39.5615903,-0.28901869999999996,14z/data=!4m8!1m2!2m1!1sPackCo+%7C+Brand+%26+Packaging!3m4!1s0xd6048921db49f61:0xe9592e6ff7b869fb!8m2!3d39.5615903!4d-0.28901869999999996",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "woodline-general-trading-l-l-c-s-p-c-building-materials-supp",
@@ -3169,6 +3748,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://woodlineuae.com/",
     "phone": "+971 54 464 0803",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCcfJkAearbqmb6cxUyWP9iPM7_ecGuAC1xhICDAh1o3h8mFA9StYumN6PL7iX3UOBOI_crnR-b7QFiwNt2AODpdWv1fWTRyUgo8PEPPtxdR-w6N9vp3audFDLUhp2HSxntzKNcw5SDGma=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-H5UltoNmAOc/AAAAAAAAAAI/AAAAAAAAAAA/vJW4jLbYHNU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCcfJkAearbqmb6cxUyWP9iPM7_ecGuAC1xhICDAh1o3h8mFA9StYumN6PL7iX3UOBOI_crnR-b7QFiwNt2AODpdWv1fWTRyUgo8PEPPtxdR-w6N9vp3audFDLUhp2HSxntzKNcw5SDGma=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCcfJkAearbqmb6cxUyWP9iPM7_ecGuAC1xhICDAh1o3h8mFA9StYumN6PL7iX3UOBOI_crnR-b7QFiwNt2AODpdWv1fWTRyUgo8PEPPtxdR-w6N9vp3audFDLUhp2HSxntzKNcw5SDGma=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 26,
     "rating": 5,
@@ -3188,9 +3772,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "PLOT 150 Az Zad 6 St - Musaffah - MW4 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7AM-6:30PM · Monday: 7AM-6:30PM · Saturday: 7AM-6:30PM · Sunday: Closed · Thursday: 7AM-6:30PM · Tuesday: 7AM-6:30PM · Wednesday: 7AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Woodline+General+Trading+L.L.C+S.P.C+%7C+Building+Materials+Supplier+in+Abu+Dhabi%2C+UAE/@24.347438999999998,54.4652598,14z/data=!4m8!1m2!2m1!1sWoodline+General+Trading+L.L.C+S.P.C+%7C+Building+Materials+Supplier+in+Abu+Dhabi%2C+UAE!3m4!1s0x3e5e41b7b98289c7:0x613494cbe9de4d2f!8m2!3d24.347438999999998!4d54.4652598",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "gratis-building-construction-materials-trading-llc-ae",
@@ -3203,6 +3787,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://gratis.ae/",
     "phone": "+971 50 485 2200",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVqAJenPDmT60I7wDSvHeIcytQKn3xFtotjp2Fn2xO5lj--VuWRFwBFaBoPDYstcDUsQdMrH-6ckdmvx3co99ovHduhnSce7ebZhJMon5vV0gZuRgK987ntCFk7YtdpAZ0R_s-vuR-YVw8=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-OVbFDuJ6yc0/AAAAAAAAAAI/AAAAAAAAAAA/6K0KZnYOlNw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVqAJenPDmT60I7wDSvHeIcytQKn3xFtotjp2Fn2xO5lj--VuWRFwBFaBoPDYstcDUsQdMrH-6ckdmvx3co99ovHduhnSce7ebZhJMon5vV0gZuRgK987ntCFk7YtdpAZ0R_s-vuR-YVw8=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVqAJenPDmT60I7wDSvHeIcytQKn3xFtotjp2Fn2xO5lj--VuWRFwBFaBoPDYstcDUsQdMrH-6ckdmvx3co99ovHduhnSce7ebZhJMon5vV0gZuRgK987ntCFk7YtdpAZ0R_s-vuR-YVw8=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 40,
     "rating": 4.9,
@@ -3222,9 +3811,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "near al khail mall - Al Qouz Fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 6AM-9PM · Monday: 6AM-9PM · Saturday: 6AM-9PM · Sunday: 6AM-12:30PM · Thursday: 6AM-9PM · Tuesday: 6AM-9PM · Wednesday: 6AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Gratis+Building+%26+Construction+Materials+Trading+LLC/@25.1543869,55.2593964,14z/data=!4m8!1m2!2m1!1sGratis+Building+%26+Construction+Materials+Trading+LLC!3m4!1s0x3e5f697918c75379:0x68a44dbcac7168d5!8m2!3d25.1543869!4d55.2593964",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "zoom-building-materials-trading-construction-materials-suppl",
@@ -3237,6 +3826,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.zoombmt.com/",
     "phone": "+971 2 551 3663",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI2aiYxE4l4uR5kFYX7oeL4UBhj6NaRGIwovqOcvFhlIpujCKjv96NIDtom7x_Q4RuQJPF50zm7mkXYeZHXxxc67nx5LNH9HMrm5JMxqZSMw0JVKA8hU68EeDhVECFiDAFTZ535w=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-v4-KltC6hS8/AAAAAAAAAAI/AAAAAAAAAAA/pfDtqtroPII/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI2aiYxE4l4uR5kFYX7oeL4UBhj6NaRGIwovqOcvFhlIpujCKjv96NIDtom7x_Q4RuQJPF50zm7mkXYeZHXxxc67nx5LNH9HMrm5JMxqZSMw0JVKA8hU68EeDhVECFiDAFTZ535w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI2aiYxE4l4uR5kFYX7oeL4UBhj6NaRGIwovqOcvFhlIpujCKjv96NIDtom7x_Q4RuQJPF50zm7mkXYeZHXxxc67nx5LNH9HMrm5JMxqZSMw0JVKA8hU68EeDhVECFiDAFTZ535w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 93,
     "rating": 4.5,
@@ -3256,9 +3850,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "شارع ١٦ - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-1PM,2-6PM · Monday: 8AM-1PM,2-6PM · Saturday: 8AM-1PM,2-6PM · Sunday: Closed · Thursday: 8AM-1PM,2-6PM · Tuesday: 8AM-1PM,2-6PM · Wednesday: 8AM-1PM,2-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Zoom+Building+Materials+Trading+%7C+Construction+Materials+Supplier+in+Abu+Dhabi%2C+UAE/@24.347362999999998,54.497939499999994,14z/data=!4m8!1m2!2m1!1sZoom+Building+Materials+Trading+%7C+Construction+Materials+Supplier+in+Abu+Dhabi%2C+UAE!3m4!1s0x3e5e409510971f71:0xb68ab2a41fdd57ba!8m2!3d24.347362999999998!4d54.497939499999994",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "istika-building-materials-private-limited-hyderabad",
@@ -3271,6 +3865,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.istika.in/",
     "phone": "+91 63025 18466",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFeO85NGTwu78iucn4YVSmAY8KGbAJtYz0i-qoW0iDwHwnY50GfipBAeARVLqxX9LkoKS30z9_DpRuV_3L2LoogmSNdiQGY9SoQgHX1zpcMoKevhsvApoZaACIJYBFh2wtJ06jz1Q=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Mx4Cw5gsjt4/AAAAAAAAAAI/AAAAAAAAAAA/oiM0Nlx3C94/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFeO85NGTwu78iucn4YVSmAY8KGbAJtYz0i-qoW0iDwHwnY50GfipBAeARVLqxX9LkoKS30z9_DpRuV_3L2LoogmSNdiQGY9SoQgHX1zpcMoKevhsvApoZaACIJYBFh2wtJ06jz1Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFeO85NGTwu78iucn4YVSmAY8KGbAJtYz0i-qoW0iDwHwnY50GfipBAeARVLqxX9LkoKS30z9_DpRuV_3L2LoogmSNdiQGY9SoQgHX1zpcMoKevhsvApoZaACIJYBFh2wtJ06jz1Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 32,
     "rating": 4.9,
@@ -3291,9 +3890,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Flat No : 402, IV th Floor, Vision Ultima, Sy.No : 103/1 105 & 106, DLF Rd, opposite to Dog park, Jayabheri Enclave, Gachibowli, Hyderabad, Telangana 500032, India",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: 9:30AM-6:30PM · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Istika+Building+Materials+Private+Limited/@17.4483689,78.3622255,14z/data=!4m8!1m2!2m1!1sIstika+Building+Materials+Private+Limited!3m4!1s0x3bcb932ddbfc94af:0x5309002f8b50e7fd!8m2!3d17.4483689!4d78.3622255",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bigmat-edilnovelli-s-r-l-rome",
@@ -3306,6 +3905,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://edilnovelli.bigmat.it/",
     "phone": "+39 06 501 4015",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIBrEoWG5SmMWhD5AxG2fKD5CnQSPEHfLp2iLs31rpr5PnBMnDYEa6yFbezNGYK409RhYJ1XsWeGSzLCLk5C7nbUKOw9h08szJRWqCE6p_r4-u6ulhXRx_yxKCRPdiC6xexHMy=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-IVHXmStEpEw/AAAAAAAAAAI/AAAAAAAAAAA/66PG2jhWIis/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIBrEoWG5SmMWhD5AxG2fKD5CnQSPEHfLp2iLs31rpr5PnBMnDYEa6yFbezNGYK409RhYJ1XsWeGSzLCLk5C7nbUKOw9h08szJRWqCE6p_r4-u6ulhXRx_yxKCRPdiC6xexHMy=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIBrEoWG5SmMWhD5AxG2fKD5CnQSPEHfLp2iLs31rpr5PnBMnDYEa6yFbezNGYK409RhYJ1XsWeGSzLCLk5C7nbUKOw9h08szJRWqCE6p_r4-u6ulhXRx_yxKCRPdiC6xexHMy=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 140,
     "rating": 4.4,
@@ -3325,9 +3929,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Ardeatina, 810, 00178 Roma RM, Italy",
     "openingHours": "Friday: 6:30AM-5PM · Monday: 6:30AM-5PM · Saturday: 6:30AM-1PM · Sunday: Closed · Thursday: 6:30AM-5PM · Tuesday: 6:30AM-5PM · Wednesday: 6:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BigMat+Edilnovelli+S.r.l./@41.8078676,12.5310179,14z/data=!4m8!1m2!2m1!1sBigMat+Edilnovelli+S.r.l.!3m4!1s0x13258961c455c6bf:0xde64fda30e8cf53a!8m2!3d41.8078676!4d12.5310179",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "materiales-de-construccion-estepona-s-l-estepona",
@@ -3340,6 +3944,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://materialesestepona.es/",
     "phone": "+34 952 80 80 68",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZgmbeXwY6aVjkiFHECMKvTfM_ahja64X2pMcvFAZV6EMV5SKxI9yg9s71pt_KFCUBZuh1GUF8JWYS15v8qmBnQX0NF-ugkbR_yw-MoGUaTJnSmZW0fl2zkWvg7te58TwtSALX=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-5p9yelHYGko/AAAAAAAAAAI/AAAAAAAAAAA/D1LBS3dwxzE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZgmbeXwY6aVjkiFHECMKvTfM_ahja64X2pMcvFAZV6EMV5SKxI9yg9s71pt_KFCUBZuh1GUF8JWYS15v8qmBnQX0NF-ugkbR_yw-MoGUaTJnSmZW0fl2zkWvg7te58TwtSALX=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZgmbeXwY6aVjkiFHECMKvTfM_ahja64X2pMcvFAZV6EMV5SKxI9yg9s71pt_KFCUBZuh1GUF8JWYS15v8qmBnQX0NF-ugkbR_yw-MoGUaTJnSmZW0fl2zkWvg7te58TwtSALX=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 72,
     "rating": 4.7,
@@ -3359,9 +3968,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C. Monterroso, 132, 29680 Estepona, Málaga, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3:30-6:30PM · Monday: 8AM-1:30PM,3:30-6:30PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-1:30PM,3:30-6:30PM · Tuesday: 8AM-1:30PM,3:30-6:30PM · Wednesday: 8AM-1:30PM,3:30-6",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+de+Construccion+Estepona+S.+L./@36.432594699999996,-5.164532599999999,14z/data=!4m8!1m2!2m1!1sMateriales+de+Construccion+Estepona+S.+L.!3m4!1s0xd0cd6bb6bf960f5:0xddba096ea6504490!8m2!3d36.432594699999996!4d-5.164532599999999",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "industrial-parts-company-llc-garfield",
@@ -3374,6 +3983,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://rymap.org/business/industrial-parts-company-llc-n2bn75",
     "phone": "+1 973-340-0550",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHtIA0FgS1fqiDdfzW9f_RcUNDXRW36KFZHBMfnZkMMf06JvQiDJHyyxX6uDNjzSFCkC3hSmcQBI5PBmE00WohknNrxY-0z8AwYqcMsaslnpc_cLu7J5Rjv_HZOONo524Hmfpc=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-vTf7m38NFYA/AAAAAAAAAAI/AAAAAAAAAAA/6I2iC0r1Kus/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHtIA0FgS1fqiDdfzW9f_RcUNDXRW36KFZHBMfnZkMMf06JvQiDJHyyxX6uDNjzSFCkC3hSmcQBI5PBmE00WohknNrxY-0z8AwYqcMsaslnpc_cLu7J5Rjv_HZOONo524Hmfpc=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHtIA0FgS1fqiDdfzW9f_RcUNDXRW36KFZHBMfnZkMMf06JvQiDJHyyxX6uDNjzSFCkC3hSmcQBI5PBmE00WohknNrxY-0z8AwYqcMsaslnpc_cLu7J5Rjv_HZOONo524Hmfpc=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 24,
     "rating": 5,
@@ -3393,9 +4007,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "163 Belmont Ave #1, Garfield, NJ 07026",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Parts+Company+LLC/@40.8765048,-74.1049587,14z/data=!4m8!1m2!2m1!1sIndustrial+Parts+Company+LLC!3m4!1s0x89c2f943dd4da58f:0xbfac30778d5ae995!8m2!3d40.8765048!4d-74.1049587",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mak-heavy-equipment-machineary-spare-parts-trading-ae",
@@ -3408,6 +4022,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://makemirates.com/",
     "phone": "+971 56 341 9000",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGm-cO8vRdJ1vLI2R1I2_H2UpikLORhIFORGhhzWeLeAvDMb1ZOFpDuxA-k_EqzzGCGTP3mc09sNKMvLCCNza_wPLu0LOtPPMufltildPISeMckGMxhTEkHoBcM8ARPXHZonZ4p=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-GasgN4Qkjd0/AAAAAAAAAAI/AAAAAAAAAAA/lmCxlInBLNw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGm-cO8vRdJ1vLI2R1I2_H2UpikLORhIFORGhhzWeLeAvDMb1ZOFpDuxA-k_EqzzGCGTP3mc09sNKMvLCCNza_wPLu0LOtPPMufltildPISeMckGMxhTEkHoBcM8ARPXHZonZ4p=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGm-cO8vRdJ1vLI2R1I2_H2UpikLORhIFORGhhzWeLeAvDMb1ZOFpDuxA-k_EqzzGCGTP3mc09sNKMvLCCNza_wPLu0LOtPPMufltildPISeMckGMxhTEkHoBcM8ARPXHZonZ4p=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 45,
     "rating": 4.8,
@@ -3427,9 +4046,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Industrial Area 3 Caterpillar Street Before Madinah Hyper market - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: 9AM-5PM · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MAK+HEAVY+EQUIPMENT+MACHINEARY+SPARE+PARTS+TRADING/@25.307776999999998,55.404163,14z/data=!4m8!1m2!2m1!1sMAK+HEAVY+EQUIPMENT+MACHINEARY+SPARE+PARTS+TRADING!3m4!1s0x3e5f5c032002b925:0xbae63e3cc7d986d2!8m2!3d25.307776999999998!4d55.404163",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hirschmann-automotive-mexico-s-de-r-l-de-c-v-san-miguel-de-a",
@@ -3442,6 +4061,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.hirschmann-automotive.com/en",
     "phone": "+52 415 150 3600",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoKa-nLw27TuFVXMiD0q962APSwH6Y-lNyTJSHUCYi9Jwqip-tklkaHJaMgSvVGT-uITCidkTDGZjknIDr1B_acBJxm8WN6yCSdrCm70pEgs6Gdo0jbm61GAJzIU_987UFQg=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-8eykLf6a0wg/AAAAAAAAAAI/AAAAAAAAAAA/ujjLqWGK5rk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoKa-nLw27TuFVXMiD0q962APSwH6Y-lNyTJSHUCYi9Jwqip-tklkaHJaMgSvVGT-uITCidkTDGZjknIDr1B_acBJxm8WN6yCSdrCm70pEgs6Gdo0jbm61GAJzIU_987UFQg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoKa-nLw27TuFVXMiD0q962APSwH6Y-lNyTJSHUCYi9Jwqip-tklkaHJaMgSvVGT-uITCidkTDGZjknIDr1B_acBJxm8WN6yCSdrCm70pEgs6Gdo0jbm61GAJzIU_987UFQg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 82,
     "rating": 4.6,
@@ -3461,9 +4085,126 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Boulevard los Picachos # 7 Poligono Empresarial San Miguel Industrial, 37888 San Miguel de Allende, Gto., Mexico",
     "openingHours": "Friday: 8AM-2PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Hirschmann+Automotive+Mexico+S.+de+R.L.+de+C.V./@20.8934745,-100.619461,14z/data=!4m8!1m2!2m1!1sHirschmann+Automotive+Mexico+S.+de+R.L.+de+C.V.!3m4!1s0x85d4accd30cd633f:0x983869811692b72a!8m2!3d20.8934745!4d-100.619461",
-    "score": 89,
+    "score": 95,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "ds-steel-srl-vendita-acciai-speciali-tagliati-a-misura-setti",
+    "name": "DS Steel srl - Vendita Acciai Speciali tagliati a misura",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "Settimo Milanese, Italy",
+    "country": "Italy",
+    "city": "Settimo Milanese",
+    "website": "http://www.ds-steel.it/",
+    "phone": "+39 02 2506 2852",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERgN9vf14ax5CN5dSqpkJJv1U79DHlO3rvpb1cGXYmWECKpegVc1d59F-gVWAOyscwiY3uqEJTunQIGJ2xBgL5syWGawprIKVrAAH0fPHiS5keaCVi1_58mz7F50Y17FvvEoN8MA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-occOz3H023s/AAAAAAAAAAI/AAAAAAAAAAA/tgY7W6b-TrM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERgN9vf14ax5CN5dSqpkJJv1U79DHlO3rvpb1cGXYmWECKpegVc1d59F-gVWAOyscwiY3uqEJTunQIGJ2xBgL5syWGawprIKVrAAH0fPHiS5keaCVi1_58mz7F50Y17FvvEoN8MA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERgN9vf14ax5CN5dSqpkJJv1U79DHlO3rvpb1cGXYmWECKpegVc1d59F-gVWAOyscwiY3uqEJTunQIGJ2xBgL5syWGawprIKVrAAH0fPHiS5keaCVi1_58mz7F50Y17FvvEoN8MA=w1600-h1000-k-no"
+    ],
+    "googleRating": 5,
+    "googleReviews": 25,
+    "rating": 5,
+    "reviewCount": 25,
+    "verified": true,
+    "description": "Steel & Metals supplier in Settimo Milanese, Italy.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "5 tons",
+    "address": "Via Luigi Galvani, 21/D, 20019 Settimo Milanese MI, Italy",
+    "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/DS+Steel+srl+-+Vendita+Acciai+Speciali+tagliati+a+misura/@45.4721346,9.0722287,14z/data=!4m8!1m2!2m1!1sDS+Steel+srl+-+Vendita+Acciai+Speciali+tagliati+a+misura!3m4!1s0x4786eb3437385c7b:0xf4f07902e5f7f7be!8m2!3d45.4721346!4d9.0722287",
+    "score": 95,
+    "reliabilityScore": 100,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "carlisle-construction-materials-gmbh-werk-whs-waltershausen",
+    "name": "CARLISLE Construction Materials GmbH - WERK WHS",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Waltershausen, Germany",
+    "country": "Germany",
+    "city": "Waltershausen",
+    "website": "https://www.ccm-europe.com/",
+    "phone": "+49 40 7889330",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpqkGjKLvrebMFCHrZ2Bap56e8QHBruiyttvlzk9jnv01TqAb5-wGKXBsqtGA-OzacRm2OyCjFEy_jMotBub9HtkOZcgrY2l4sUnopTr50ubTLm7CrC6vMftv0bret2mbKlX1F=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-S9XrjfB4L9Q/AAAAAAAAAAI/AAAAAAAAAAA/wiU3u0mCKPg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpqkGjKLvrebMFCHrZ2Bap56e8QHBruiyttvlzk9jnv01TqAb5-wGKXBsqtGA-OzacRm2OyCjFEy_jMotBub9HtkOZcgrY2l4sUnopTr50ubTLm7CrC6vMftv0bret2mbKlX1F=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpqkGjKLvrebMFCHrZ2Bap56e8QHBruiyttvlzk9jnv01TqAb5-wGKXBsqtGA-OzacRm2OyCjFEy_jMotBub9HtkOZcgrY2l4sUnopTr50ubTLm7CrC6vMftv0bret2mbKlX1F=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 67,
+    "rating": 4.7,
+    "reviewCount": 67,
+    "verified": true,
+    "description": "Construction supplier in Waltershausen, Germany.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "1 pallet",
+    "address": "Gothaer Str. 44, 99880 Waltershausen, Germany",
+    "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
+    "sourceUrl": "https://www.google.com/maps/place/CARLISLE+Construction+Materials+GmbH+-+WERK+WHS/@50.899171499999994,10.5747825,14z/data=!4m8!1m2!2m1!1sCARLISLE+Construction+Materials+GmbH+-+WERK+WHS!3m4!1s0x47a48172ba1df279:0xe040047f35c37d6c!8m2!3d50.899171499999994!4d10.5747825",
+    "score": 95,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "capital-baustoffe-gmbh-berlin",
+    "name": "Capital Baustoffe GmbH",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Berlin, Germany",
+    "country": "Germany",
+    "city": "Berlin",
+    "website": "http://capital-baustoffe.de/",
+    "phone": "+49 30 60034770",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0Yuw_ELSPJLaXs237VZ6SiirIpiIX0ZFy79jniMKWIO_IuH-wnYW50PjneC961bulp8BOvL-Q3ctA4IEEvPuPSiwSumS2UNPfkTuk-fxdeie25be16DV1WOcYhITSIfmIpIUh=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-7SfKHBLZvPQ/AAAAAAAAAAI/AAAAAAAAAAA/_FCJdmQZj-M/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0Yuw_ELSPJLaXs237VZ6SiirIpiIX0ZFy79jniMKWIO_IuH-wnYW50PjneC961bulp8BOvL-Q3ctA4IEEvPuPSiwSumS2UNPfkTuk-fxdeie25be16DV1WOcYhITSIfmIpIUh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0Yuw_ELSPJLaXs237VZ6SiirIpiIX0ZFy79jniMKWIO_IuH-wnYW50PjneC961bulp8BOvL-Q3ctA4IEEvPuPSiwSumS2UNPfkTuk-fxdeie25be16DV1WOcYhITSIfmIpIUh=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.4,
+    "googleReviews": 138,
+    "rating": 4.4,
+    "reviewCount": 138,
+    "verified": true,
+    "description": "Construction supplier in Berlin, Germany.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "1 pallet",
+    "address": "Bergholzstraße 4, 12099 Berlin, Germany",
+    "openingHours": "Friday: 5:30AM-8PM · Monday: 5:30AM-8PM · Saturday: 7AM-4PM · Sunday: Closed · Thursday: 5:30AM-8PM · Tuesday: 5:30AM-8PM · Wednesday: 5:30AM-8PM",
+    "sourceUrl": "https://www.google.com/maps/place/Capital+Baustoffe+GmbH/@52.457813099999996,13.4226266,14z/data=!4m8!1m2!2m1!1sCapital+Baustoffe+GmbH!3m4!1s0x47a84f4a826b4641:0xadbdcc5f704d62cf!8m2!3d52.457813099999996!4d13.4226266",
+    "score": 95,
+    "reliabilityScore": 88,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "salem-stainless-steel-suppliers-private-limited-mumbai",
@@ -3476,6 +4217,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.fouressgroup.in/",
     "phone": "+91 98400 86688",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzptxeLjutKJChUyZNKUE9g3KLIsh82nubc6-wzXNEiNSowxSgrM_0SZsIld-AktsVXB_bu1fCYFt2jFFdsZEL-OJVh-NIT_FblGI2NBBOnOu7y2tIi8wQix4EA93oQHwFwOB8=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-Qy2hc2HcrpQ/AAAAAAAAAAI/AAAAAAAAAAA/2zQSnN6mMVY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzptxeLjutKJChUyZNKUE9g3KLIsh82nubc6-wzXNEiNSowxSgrM_0SZsIld-AktsVXB_bu1fCYFt2jFFdsZEL-OJVh-NIT_FblGI2NBBOnOu7y2tIi8wQix4EA93oQHwFwOB8=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzptxeLjutKJChUyZNKUE9g3KLIsh82nubc6-wzXNEiNSowxSgrM_0SZsIld-AktsVXB_bu1fCYFt2jFFdsZEL-OJVh-NIT_FblGI2NBBOnOu7y2tIi8wQix4EA93oQHwFwOB8=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 20,
     "rating": 5,
@@ -3496,9 +4242,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Tower 48/52, Cosmos Sunshine, Flat No. 402, 3rd Panjrapole Lane, near CP Tank, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED/@18.9554299,72.828497,14z/data=!4m8!1m2!2m1!1sSALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED!3m4!1s0x3be7ce3d5d1cee81:0x7baa9cbe93e8c697!8m2!3d18.9554299!4d72.828497",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hochfrequenzkabel-el-spec-gmbh-geretsried",
@@ -3511,6 +4257,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.elspecgroup.de/",
     "phone": "+49 8171 43570",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0wPA8KKRw98uip3dGQxW5lkQi9JrK0fshVQvVTVEYLUVSyov0Og-BUaa4--By3xZ8viu-WdASPzONfXQIDyoaOlWyr7_cqLRCNasqxxKoYIgcToe-xSJoyClOuHN12T0FiY7TYA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-rJiRM2CP2gs/AAAAAAAAAAI/AAAAAAAAAAA/W06HJhyGZ2E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0wPA8KKRw98uip3dGQxW5lkQi9JrK0fshVQvVTVEYLUVSyov0Og-BUaa4--By3xZ8viu-WdASPzONfXQIDyoaOlWyr7_cqLRCNasqxxKoYIgcToe-xSJoyClOuHN12T0FiY7TYA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0wPA8KKRw98uip3dGQxW5lkQi9JrK0fshVQvVTVEYLUVSyov0Og-BUaa4--By3xZ8viu-WdASPzONfXQIDyoaOlWyr7_cqLRCNasqxxKoYIgcToe-xSJoyClOuHN12T0FiY7TYA=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 21,
     "rating": 5,
@@ -3530,9 +4281,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Lauterbachstraße 23c, 82538 Geretsried-Gelting, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Hochfrequenzkabel+el-spec+GmbH/@47.8860526,11.431733699999999,14z/data=!4m8!1m2!2m1!1sHochfrequenzkabel+el-spec+GmbH!3m4!1s0x479dc6b604596715:0x82f134910b7a4637!8m2!3d47.8860526!4d11.431733699999999",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cable-tech-middle-east-africa-llc-ae",
@@ -3545,6 +4296,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://cabletechmea.com/",
     "phone": "+971 4 885 2895",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIHFk6jh0JtpSls4zdM0ZXtKuJGLeGrk1NiVDBfBd0rL1D_WwtMcLB0moK5uxYJFdinTpTd3BfQhAWjbLIvIu0T2hwAPoY-l0M9sD9uvELcSzIZZNYPgbKxAWILZ09tQblJuQz=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-xQQGEwyorYQ/AAAAAAAAAAI/AAAAAAAAAAA/6xrdtatVC9w/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIHFk6jh0JtpSls4zdM0ZXtKuJGLeGrk1NiVDBfBd0rL1D_WwtMcLB0moK5uxYJFdinTpTd3BfQhAWjbLIvIu0T2hwAPoY-l0M9sD9uvELcSzIZZNYPgbKxAWILZ09tQblJuQz=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIHFk6jh0JtpSls4zdM0ZXtKuJGLeGrk1NiVDBfBd0rL1D_WwtMcLB0moK5uxYJFdinTpTd3BfQhAWjbLIvIu0T2hwAPoY-l0M9sD9uvELcSzIZZNYPgbKxAWILZ09tQblJuQz=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 31,
     "rating": 4.8,
@@ -3564,9 +4320,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Dubai Investment Park Warehouse No. 7 – Plot No. 598-1212, Dubai, 36154 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: Closed · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Cable+Tech+Middle+East+%26+Africa+LLC/@24.986587999999998,55.167593,14z/data=!4m8!1m2!2m1!1sCable+Tech+Middle+East+%26+Africa+LLC!3m4!1s0x3e5f7293d1628395:0x67022d8e0036b43a!8m2!3d24.986587999999998!4d55.167593",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "electric-way-ae",
@@ -3579,6 +4335,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.electricway.com/",
     "phone": "+971 4 817 0777",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsOF8ey4wnQ-hgcS8Iwwm2Jficyy1Z_eFfaApdUaA1JwPJejfC2z0FKrdwrwZXlPSmnKlLYqYATd5xy3u5rJhhlSPKLHUOWj6gK2mVfhVS8RpXbjQaWPffZWNLCfx9ekuT7UBxAlhjYFDF=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-GZCh22eN9s0/AAAAAAAAAAI/AAAAAAAAAAA/wbnjOwGRNBA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsOF8ey4wnQ-hgcS8Iwwm2Jficyy1Z_eFfaApdUaA1JwPJejfC2z0FKrdwrwZXlPSmnKlLYqYATd5xy3u5rJhhlSPKLHUOWj6gK2mVfhVS8RpXbjQaWPffZWNLCfx9ekuT7UBxAlhjYFDF=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsOF8ey4wnQ-hgcS8Iwwm2Jficyy1Z_eFfaApdUaA1JwPJejfC2z0FKrdwrwZXlPSmnKlLYqYATd5xy3u5rJhhlSPKLHUOWj6gK2mVfhVS8RpXbjQaWPffZWNLCfx9ekuT7UBxAlhjYFDF=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 83,
     "rating": 4.5,
@@ -3598,9 +4359,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Electric Way Technopark, Jebel Ali Tel : +971 4 8170777 Beside Pacific Controls - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-2PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Electric+Way/@24.939891,55.0531722,14z/data=!4m8!1m2!2m1!1sElectric+Way!3m4!1s0x3e5f0dd7400ea559:0x9e0c6b71a7a2dbbc!8m2!3d24.939891!4d55.0531722",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cabelec-s-l-es",
@@ -3613,6 +4374,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.cabelecelectronica.com/",
     "phone": "+34 944 53 18 05",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEs38TkCBF49htQGUFMvAlEwLEbBia0anfnbwRhwfKhjf41HyWX_uKeCXGZMMrrJXp1oZNE-YiyowRM06ZMJiI-PELOrTPSBga98GaUh0_b6oUexIXxdZ8bFnkVSPgFZv9Epdi80w=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-wtuTtSwb0uQ/AAAAAAAAAAI/AAAAAAAAAAA/bS4BG7EydaM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEs38TkCBF49htQGUFMvAlEwLEbBia0anfnbwRhwfKhjf41HyWX_uKeCXGZMMrrJXp1oZNE-YiyowRM06ZMJiI-PELOrTPSBga98GaUh0_b6oUexIXxdZ8bFnkVSPgFZv9Epdi80w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEs38TkCBF49htQGUFMvAlEwLEbBia0anfnbwRhwfKhjf41HyWX_uKeCXGZMMrrJXp1oZNE-YiyowRM06ZMJiI-PELOrTPSBga98GaUh0_b6oUexIXxdZ8bFnkVSPgFZv9Epdi80w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 28,
     "rating": 4.8,
@@ -3632,9 +4398,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Polígono Industrial Sangroniz Iberre 3, módulos, 15-17, 48150, Bizkaia, Spain",
     "openingHours": "Friday: 8AM-2PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Cabelec+S.L./@43.297457699999995,-2.9371264999999998,14z/data=!4m8!1m2!2m1!1sCabelec+S.L.!3m4!1s0xd4e45534fb3b25d:0x8ac7aff71f4fd9ca!8m2!3d43.297457699999995!4d-2.9371264999999998",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tube-tec-gmbh-nistertal",
@@ -3647,6 +4413,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.tube-tec.de/",
     "phone": "+49 2661 95910",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGW6qfFUcDJv-h-Aa_K_d8KVyoB2VvUMxp1r9mqXjvfW5BXYZfHmyMhuCgk335j5Ma05We99aONXf_f67Opby1eH2UdSNHYXGFMKCw1e8P90VEE7oJ3Lw0Y2IpQ3SKyRBoKOqbD=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-vVGpflSJfkU/AAAAAAAAAAI/AAAAAAAAAAA/PRthByngpws/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGW6qfFUcDJv-h-Aa_K_d8KVyoB2VvUMxp1r9mqXjvfW5BXYZfHmyMhuCgk335j5Ma05We99aONXf_f67Opby1eH2UdSNHYXGFMKCw1e8P90VEE7oJ3Lw0Y2IpQ3SKyRBoKOqbD=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGW6qfFUcDJv-h-Aa_K_d8KVyoB2VvUMxp1r9mqXjvfW5BXYZfHmyMhuCgk335j5Ma05We99aONXf_f67Opby1eH2UdSNHYXGFMKCw1e8P90VEE7oJ3Lw0Y2IpQ3SKyRBoKOqbD=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 38,
     "rating": 4.8,
@@ -3666,9 +4437,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Hirtscheider Str. 13-15, 57647 Nistertal-Büdingen, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/TUBE-TEC+GmbH/@50.631862,7.896179,14z/data=!4m8!1m2!2m1!1sTUBE-TEC+GmbH!3m4!1s0x47bc271288ded16b:0xe4f9c03a360c6a77!8m2!3d50.631862!4d7.896179",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "union-pipes-industry-ae",
@@ -3681,6 +4452,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.upi.ae/",
     "phone": "+971 2 550 0102",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxCMhPh1PrlHoLaqy2TNMwGAJ5qalV6AAO-jOz28qPmyecbwHcDPyrhzyHqKydUJ15_XFqMBK27oB9hVic-EZvoblo0D3N2CM--B5MkBahgJcDWqtrif--cEda7khj4ELWf9I=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-PsI8GHjEroU/AAAAAAAAAAI/AAAAAAAAAAA/7kTJGs40sp8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxCMhPh1PrlHoLaqy2TNMwGAJ5qalV6AAO-jOz28qPmyecbwHcDPyrhzyHqKydUJ15_XFqMBK27oB9hVic-EZvoblo0D3N2CM--B5MkBahgJcDWqtrif--cEda7khj4ELWf9I=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxCMhPh1PrlHoLaqy2TNMwGAJ5qalV6AAO-jOz28qPmyecbwHcDPyrhzyHqKydUJ15_XFqMBK27oB9hVic-EZvoblo0D3N2CM--B5MkBahgJcDWqtrif--cEda7khj4ELWf9I=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 39,
     "rating": 4.8,
@@ -3700,9 +4476,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Industrial Area - ICAD 1 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-1PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Union+Pipes+Industry/@24.32164,54.5076141,14z/data=!4m8!1m2!2m1!1sUnion+Pipes+Industry!3m4!1s0x3e5e3f44d28a16dd:0x71d28579172dfdd3!8m2!3d24.32164!4d54.5076141",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "neeka-tubes-mumbai",
@@ -3715,6 +4491,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.neekatubes.com/",
     "phone": "+91 77000 67892",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyieJQL64SZcWoXaPvgG6bNNuraqoAn8II84YaziUvQYn0mlKeD7gRyjNdjn3G4OzbwNnzUMIacCB-xbXIVYdXs4EHvEoH8UxhQDzSGiIk-ovYri53yT6FboWTHqpRrodpwmB4xQ=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-FCvOcv3l4cQ/AAAAAAAAAAI/AAAAAAAAAAA/soZUR4iJ_Vg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyieJQL64SZcWoXaPvgG6bNNuraqoAn8II84YaziUvQYn0mlKeD7gRyjNdjn3G4OzbwNnzUMIacCB-xbXIVYdXs4EHvEoH8UxhQDzSGiIk-ovYri53yT6FboWTHqpRrodpwmB4xQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyieJQL64SZcWoXaPvgG6bNNuraqoAn8II84YaziUvQYn0mlKeD7gRyjNdjn3G4OzbwNnzUMIacCB-xbXIVYdXs4EHvEoH8UxhQDzSGiIk-ovYri53yT6FboWTHqpRrodpwmB4xQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 31,
     "rating": 4.8,
@@ -3735,9 +4516,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Moti Mansion, 9, Khetwadi 5th Ln, Bori Chawl, Khetwadi, Grant Road, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: 10AM-7PM · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Neeka+Tubes/@18.958754499999998,72.8241529,14z/data=!4m8!1m2!2m1!1sNeeka+Tubes!3m4!1s0x3be7cf08c71784e7:0x4094399bd77e112d!8m2!3d18.958754499999998!4d72.8241529",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "supreme-steel-engg-co-pipe-fittings-manufacturer-in-mumbai-i",
@@ -3750,6 +4531,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.supremesteel.in/",
     "phone": "+91 98204 42355",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxUfO9jvTsZ1rWwRDUnb_hydymdHyQGDqC_6VMEHBa8KM6xHiUMiMPirh_VQMsb4NfopcDoeua-PdGJ1JDIqq7N6kkR2Xk_Sy0eaqkCWwqBsoXm4BK20FowNpP5X4J32YEvVumSg=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-kW_jIwyrvN0/AAAAAAAAAAI/AAAAAAAAAAA/UQcSX6LUpe8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxUfO9jvTsZ1rWwRDUnb_hydymdHyQGDqC_6VMEHBa8KM6xHiUMiMPirh_VQMsb4NfopcDoeua-PdGJ1JDIqq7N6kkR2Xk_Sy0eaqkCWwqBsoXm4BK20FowNpP5X4J32YEvVumSg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxUfO9jvTsZ1rWwRDUnb_hydymdHyQGDqC_6VMEHBa8KM6xHiUMiMPirh_VQMsb4NfopcDoeua-PdGJ1JDIqq7N6kkR2Xk_Sy0eaqkCWwqBsoXm4BK20FowNpP5X4J32YEvVumSg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 36,
     "rating": 4.8,
@@ -3770,9 +4556,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1st floor office no 10, Tabela Building, 57, Bhandari St, Cawasji Patel Tank, Kamathipura, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/SUPREME+STEEL+%26+ENGG+CO+Pipe+Fittings+Manufacturer+In+Mumbai+India%2C+Pipe+Manufacturer%2C/@18.9589341,72.8281721,14z/data=!4m8!1m2!2m1!1sSUPREME+STEEL+%26+ENGG+CO+Pipe+Fittings+Manufacturer+In+Mumbai+India%2C+Pipe+Manufacturer%2C!3m4!1s0x3be7ce3df47054b9:0x4f49207a8445c979!8m2!3d18.9589341!4d72.8281721",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ideas-packaging-machinery-packaging-machines-manufacturer-in",
@@ -3785,6 +4571,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://ideaspackaging.com/",
     "phone": "+971 55 332 3655",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFMWzuOtdfJnfxxQqcLfzDVuTdiZYxx49C15534Do8U10Vr4wDhwaAoJzrLKwu89dmcRWVRuHyOeAaWKKvwWb2fjxFhdkRUzLPtSOQUOUqSJCBXWYz_7Y2E--f4rEUgMs1AAbe8TVXPBvw=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-IzZiUkQwtSY/AAAAAAAAAAI/AAAAAAAAAAA/o6xne11fsKM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFMWzuOtdfJnfxxQqcLfzDVuTdiZYxx49C15534Do8U10Vr4wDhwaAoJzrLKwu89dmcRWVRuHyOeAaWKKvwWb2fjxFhdkRUzLPtSOQUOUqSJCBXWYz_7Y2E--f4rEUgMs1AAbe8TVXPBvw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFMWzuOtdfJnfxxQqcLfzDVuTdiZYxx49C15534Do8U10Vr4wDhwaAoJzrLKwu89dmcRWVRuHyOeAaWKKvwWb2fjxFhdkRUzLPtSOQUOUqSJCBXWYz_7Y2E--f4rEUgMs1AAbe8TVXPBvw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 30,
     "rating": 4.8,
@@ -3804,9 +4595,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Warehouse # 6, 25th Street - Doha St - Al Qusais - Industrial Area-1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 10AM-5PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ideas+Packaging+Machinery+%7C+Packaging+Machines+Manufacturer+in+Dubai+%7C+Experts+in+Filling%2C+Capping%2C+Labeling+Machines+UAE/@25.2940298,55.3878986,14z/data=!4m8!1m2!2m1!1sIdeas+Packaging+Machinery+%7C+Packaging+Machines+Manufacturer+in+Dubai+%7C+Experts+in+Filling%2C+Capping%2C+Labeling+Machines+UAE!3m4!1s0x4dd74286280c626f:0xbdf5c1e8c3c576d1!8m2!3d25.2940298!4d55.3878986",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-areen-packaging-mat-ind-llc-al-areen-household-trading-ll",
@@ -3819,6 +4610,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.areenpack.com/",
     "phone": "+971 6 559 7666",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9_i_c6QRrjKaYvHr1COp6TliWZ3GjdcB8HM1hD5u4Ty_rEdTENl1HeHzj-Ie37KxdealeucCqzqpUlLYMgfvFgCwJEa2x1r0nnjWRxn2VMmEaB5-VQS2HwHgouCig8Y4jlZzb=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-WXzbYwtCx7A/AAAAAAAAAAI/AAAAAAAAAAA/9nNUgwMUJmQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9_i_c6QRrjKaYvHr1COp6TliWZ3GjdcB8HM1hD5u4Ty_rEdTENl1HeHzj-Ie37KxdealeucCqzqpUlLYMgfvFgCwJEa2x1r0nnjWRxn2VMmEaB5-VQS2HwHgouCig8Y4jlZzb=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9_i_c6QRrjKaYvHr1COp6TliWZ3GjdcB8HM1hD5u4Ty_rEdTENl1HeHzj-Ie37KxdealeucCqzqpUlLYMgfvFgCwJEa2x1r0nnjWRxn2VMmEaB5-VQS2HwHgouCig8Y4jlZzb=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 38,
     "rating": 4.7,
@@ -3838,9 +4634,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Emirates industrial city Block B - Shed# 1 to 8 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-7:30PM · Monday: 7:30AM-7:30PM · Saturday: 7:30AM-7:30PM · Sunday: Closed · Thursday: 7:30AM-7:30PM · Tuesday: 7:30AM-7:30PM · Wednesday: 7:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Areen+Packaging+Mat.+Ind.+LLC+%2F+Al+Areen+Household+Trading+LLC/@25.3326168,55.638915999999995,14z/data=!4m8!1m2!2m1!1sAl+Areen+Packaging+Mat.+Ind.+LLC+%2F+Al+Areen+Household+Trading+LLC!3m4!1s0x3ef5f23361feac69:0xcca57d6f4a44e6a!8m2!3d25.3326168!4d55.638915999999995",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "total-packaging-solutions-thirumudivakkam-irandankattalai",
@@ -3853,6 +4649,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.totalpackagingsolutions.in/",
     "phone": "+91 98840 32706",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhO1V2GF6vzMpSbpuGmyDmenOZr1BCsmgoV9gHufhrh9BqS-Y4iHw9z4QVwDhnDchKf1Bnz_qgn4DX8mb2933xUGMRBZ35X-HUc9mb6m1LQ_8q1iIWuR0YCAW8VknCqhsnfB7Q=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-JXqQdfCTvSE/AAAAAAAAAAI/AAAAAAAAAAA/WY4PlWEv9HE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhO1V2GF6vzMpSbpuGmyDmenOZr1BCsmgoV9gHufhrh9BqS-Y4iHw9z4QVwDhnDchKf1Bnz_qgn4DX8mb2933xUGMRBZ35X-HUc9mb6m1LQ_8q1iIWuR0YCAW8VknCqhsnfB7Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGhO1V2GF6vzMpSbpuGmyDmenOZr1BCsmgoV9gHufhrh9BqS-Y4iHw9z4QVwDhnDchKf1Bnz_qgn4DX8mb2933xUGMRBZ35X-HUc9mb6m1LQ_8q1iIWuR0YCAW8VknCqhsnfB7Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 43,
     "rating": 4.7,
@@ -3873,9 +4674,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "SF-80, Kundrathur Main Road, Thirumudivakkam, Irandankattalai, Tamil Nadu 600132, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Total+Packaging+Solutions/@12.9717749,80.1045779,14z/data=!4m8!1m2!2m1!1sTotal+Packaging+Solutions!3m4!1s0x3a528aa766274251:0x1d0a197254cb9e43!8m2!3d12.9717749!4d80.1045779",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hobby-lobby-oklahoma-city",
@@ -3888,6 +4689,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.hobbylobby.com/stores/search/719%3Fy_source%3D1_MTA3NzE2NDMwMS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%253D%253D",
     "phone": "+1 405-842-8977",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXlPGbm5onrMdjAF2QrIZz-2rTxHKYXfcKSCE5z4HTp7BC0tVKtnuxJP7ECDFioMH8k-yEfXzxpE0ek-fMciP__dNP_AYPje_8kf-tsr0kuRWN9lJZ46yNJ5jVGX_SrW7iR017glmgot07=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-L5yRTP3eK_8/AAAAAAAAAAI/AAAAAAAAAAA/Afi1Ddv-xi8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXlPGbm5onrMdjAF2QrIZz-2rTxHKYXfcKSCE5z4HTp7BC0tVKtnuxJP7ECDFioMH8k-yEfXzxpE0ek-fMciP__dNP_AYPje_8kf-tsr0kuRWN9lJZ46yNJ5jVGX_SrW7iR017glmgot07=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXlPGbm5onrMdjAF2QrIZz-2rTxHKYXfcKSCE5z4HTp7BC0tVKtnuxJP7ECDFioMH8k-yEfXzxpE0ek-fMciP__dNP_AYPje_8kf-tsr0kuRWN9lJZ46yNJ5jVGX_SrW7iR017glmgot07=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 87,
     "rating": 4.5,
@@ -3907,9 +4713,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2848 NW 63rd St, Oklahoma City, OK 73116",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Hobby+Lobby/@35.5350499,-97.5645036,14z/data=!4m8!1m2!2m1!1sHobby+Lobby!3m4!1s0x87b21b5efbaa5187:0x4eafbd9c357470c4!8m2!3d35.5350499!4d-97.5645036",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "lic-packaging-verolanuova",
@@ -3922,6 +4728,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.licpackaging.com/",
     "phone": "+39 030 936 4011",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhy4GkgGZbjzqWyOU6RWl5IpaAPgKS1UL5jzrvacxiGpbeiLT0wuVxwtDwDhwaGHsux-hjsu6NX3VxlLktQgtkdQcGQtjNR5CIcnQk-6eLzZJex6tFJSQ0qLn2xfSzuNpGFoACFQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-r4q7PZo75NQ/AAAAAAAAAAI/AAAAAAAAAAA/3ejkRZcF8HI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhy4GkgGZbjzqWyOU6RWl5IpaAPgKS1UL5jzrvacxiGpbeiLT0wuVxwtDwDhwaGHsux-hjsu6NX3VxlLktQgtkdQcGQtjNR5CIcnQk-6eLzZJex6tFJSQ0qLn2xfSzuNpGFoACFQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhy4GkgGZbjzqWyOU6RWl5IpaAPgKS1UL5jzrvacxiGpbeiLT0wuVxwtDwDhwaGHsux-hjsu6NX3VxlLktQgtkdQcGQtjNR5CIcnQk-6eLzZJex6tFJSQ0qLn2xfSzuNpGFoACFQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 32,
     "rating": 4.8,
@@ -3941,9 +4752,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Località Breda libera 13, 25028 Verolanuova BS, Italy",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Lic+Packaging/@45.3527312,10.0916336,14z/data=!4m8!1m2!2m1!1sLic+Packaging!3m4!1s0x47810fd804181167:0x2d0cf2c9d3c86f8a!8m2!3d45.3527312!4d10.0916336",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sofipak-rabat",
@@ -3956,6 +4767,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.sofipak.com/",
     "phone": "+212 6 66 94 84 99",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFy1SQmyJY9oEEdCO1EWjVIcXXqVyqGBWuc4BFiKPo1nT_tuXL7JjgW7-4k79mBydwhQrpyXHFgQEnq_f0joG68FKDokjQjjhosnP7BK-gPK5QqFIduWm4JHaMsUnw6RrXw-T6J=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-1Jq7LCzT4XE/AAAAAAAAAAI/AAAAAAAAAAA/5ADU_exbzQI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFy1SQmyJY9oEEdCO1EWjVIcXXqVyqGBWuc4BFiKPo1nT_tuXL7JjgW7-4k79mBydwhQrpyXHFgQEnq_f0joG68FKDokjQjjhosnP7BK-gPK5QqFIduWm4JHaMsUnw6RrXw-T6J=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFy1SQmyJY9oEEdCO1EWjVIcXXqVyqGBWuc4BFiKPo1nT_tuXL7JjgW7-4k79mBydwhQrpyXHFgQEnq_f0joG68FKDokjQjjhosnP7BK-gPK5QqFIduWm4JHaMsUnw6RrXw-T6J=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 29,
     "rating": 4.9,
@@ -3975,9 +4791,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Numéro 140, Extension 3, Rabat 10210, Morocco",
     "openingHours": "Friday: 10AM-1:30PM,4-7:30PM · Monday: 10AM-1:30PM,3:30-7:30PM · Saturday: 10AM-1:30PM,3:30-7:30PM · Sunday: Closed · Thursday: 10AM-1:30PM,3:30-7:30PM · Tuesday: 10AM-1:30PM,3:30-7:30PM · Wednesday: ",
     "sourceUrl": "https://www.google.com/maps/place/Sofipak/@33.9729549,-6.8178573,14z/data=!4m8!1m2!2m1!1sSofipak!3m4!1s0xda76bec6c5e0eed:0x3ee115175e949e7c!8m2!3d33.9729549!4d-6.8178573",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "innovapack-packaging-barcelona-odena",
@@ -3990,6 +4806,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.innovapack.net/",
     "phone": "+34 938 06 76 90",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEhe9kmdmK4eneDy3PrAhk-so13GRn7OUYCh7ekfjH0PS-O3YbyybsE0I1Y5I-mNofGfPQ37KQ8inerMwwFyPd-waaz2jRw1DKlBXONiwPIDeGxb3P8TTmgqR18qhi38iMfGmkITMBVzAx=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-rxssVmdLRFs/AAAAAAAAAAI/AAAAAAAAAAA/zOs092pgHAo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEhe9kmdmK4eneDy3PrAhk-so13GRn7OUYCh7ekfjH0PS-O3YbyybsE0I1Y5I-mNofGfPQ37KQ8inerMwwFyPd-waaz2jRw1DKlBXONiwPIDeGxb3P8TTmgqR18qhi38iMfGmkITMBVzAx=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEhe9kmdmK4eneDy3PrAhk-so13GRn7OUYCh7ekfjH0PS-O3YbyybsE0I1Y5I-mNofGfPQ37KQ8inerMwwFyPd-waaz2jRw1DKlBXONiwPIDeGxb3P8TTmgqR18qhi38iMfGmkITMBVzAx=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 46,
     "rating": 4.7,
@@ -4009,9 +4830,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Pol. Ind, Carrer de Cal Llacuna, 20-24, 08711 Òdena, Barcelona, Spain",
     "openingHours": "Friday: 6AM-10PM · Monday: 6AM-10PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-10PM · Tuesday: 6AM-10PM · Wednesday: 6AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/Innovapack+Packaging+Barcelona/@41.5775558,1.6587139,14z/data=!4m8!1m2!2m1!1sInnovapack+Packaging+Barcelona!3m4!1s0x12a469d4f51b9067:0x85fd340fdfdb1fde!8m2!3d41.5775558!4d1.6587139",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "eurobox-packaging-y-envases-metalicos-benasau",
@@ -4024,6 +4845,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.euroboxenvases.com/",
     "phone": "+34 966 54 49 07",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv7eNFlpcQ5QrBrECWM-55VRLrqKv4IN2ULNmS-ZeyO4oUK8nTu9VdroOWM40OsF87sjmkA8D1VKFRqqc2yHyU83WdwMuISuZR0SJZW7kkeRAozIgpXqEPstHd3lBMj8fqsvDv=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-5lv5al1An5w/AAAAAAAAAAI/AAAAAAAAAAA/vCDFvN0rtBc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv7eNFlpcQ5QrBrECWM-55VRLrqKv4IN2ULNmS-ZeyO4oUK8nTu9VdroOWM40OsF87sjmkA8D1VKFRqqc2yHyU83WdwMuISuZR0SJZW7kkeRAozIgpXqEPstHd3lBMj8fqsvDv=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv7eNFlpcQ5QrBrECWM-55VRLrqKv4IN2ULNmS-ZeyO4oUK8nTu9VdroOWM40OsF87sjmkA8D1VKFRqqc2yHyU83WdwMuISuZR0SJZW7kkeRAozIgpXqEPstHd3lBMj8fqsvDv=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 20,
     "rating": 5,
@@ -4043,9 +4869,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. Benidorm, 20, 03814 Benasau, Alicante, Spain",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Eurobox+-+Packaging+y+Envases+Met%C3%A1licos/@38.688231699999996,-0.34325249999999996,14z/data=!4m8!1m2!2m1!1sEurobox+-+Packaging+y+Envases+Met%C3%A1licos!3m4!1s0xd618a517b87cc81:0x9d43b252354b23b0!8m2!3d38.688231699999996!4d-0.34325249999999996",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-zehra-building-material-llc-dubai-br-ae",
@@ -4058,6 +4884,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://al-zehra.com/",
     "phone": "+971 52 803 9227",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMnlSYB0KIfDm1vmKwKoeSR-svXijOZMO10id-zJk2KJy8A_ptThEcbEORe3FJCkNSSipDG7Mpb24Jeh93HaQJ6wvJ2qgijcWBE_mZgCeelKX0fYEPF2OCJjhTwiKtQB_mnfo=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-OGYcjL7AEKY/AAAAAAAAAAI/AAAAAAAAAAA/SnL8XvJ3ieM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMnlSYB0KIfDm1vmKwKoeSR-svXijOZMO10id-zJk2KJy8A_ptThEcbEORe3FJCkNSSipDG7Mpb24Jeh93HaQJ6wvJ2qgijcWBE_mZgCeelKX0fYEPF2OCJjhTwiKtQB_mnfo=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMnlSYB0KIfDm1vmKwKoeSR-svXijOZMO10id-zJk2KJy8A_ptThEcbEORe3FJCkNSSipDG7Mpb24Jeh93HaQJ6wvJ2qgijcWBE_mZgCeelKX0fYEPF2OCJjhTwiKtQB_mnfo=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 40,
     "rating": 4.7,
@@ -4077,9 +4908,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Persia N08 - Shop 09 - 08 Cluster G - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-10PM · Monday: 7AM-10PM · Saturday: 7AM-10PM · Sunday: 7AM-10PM · Thursday: 7AM-10PM · Tuesday: 7AM-10PM · Wednesday: 7AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+ZEHRA+BUILDING+MATERIAL+LLC+DUBAI+%28BR%29/@25.1590314,55.407125799999996,14z/data=!4m8!1m2!2m1!1sAL+ZEHRA+BUILDING+MATERIAL+LLC+DUBAI+%28BR%29!3m4!1s0x3e5f61d67ec39873:0x7ab94cdaa69d9d99!8m2!3d25.1590314!4d55.407125799999996",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-sughra-building-material-trading-llc-ae",
@@ -4092,6 +4923,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.asbmuae.net/",
     "phone": "+971 6 543 1115",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAES_q30lq-NiLR4c8f88BWdGq03vC_P3WkJFca-d7K_VUEAXj4A349j-qZn-q7zCJ9ujiGK8VzaUG6jOAXXclblsRJ5ofLWvq5oCHPFWoiQKt4Jgt1qQvaapoxO7pyrtSUaYEGe=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-s2YIve_bs5U/AAAAAAAAAAI/AAAAAAAAAAA/kK9lg8pN_SE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAES_q30lq-NiLR4c8f88BWdGq03vC_P3WkJFca-d7K_VUEAXj4A349j-qZn-q7zCJ9ujiGK8VzaUG6jOAXXclblsRJ5ofLWvq5oCHPFWoiQKt4Jgt1qQvaapoxO7pyrtSUaYEGe=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAES_q30lq-NiLR4c8f88BWdGq03vC_P3WkJFca-d7K_VUEAXj4A349j-qZn-q7zCJ9ujiGK8VzaUG6jOAXXclblsRJ5ofLWvq5oCHPFWoiQKt4Jgt1qQvaapoxO7pyrtSUaYEGe=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 29,
     "rating": 4.8,
@@ -4111,9 +4947,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Maleha St - opposite Sahara Glass & Frames - Industrial Area 2 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7:30-11AM,3:30-6:30PM · Monday: 7:30AM-1PM,3:30-8PM · Saturday: 7:30AM-1PM,3:30-8PM · Sunday: 7:30AM-1PM · Thursday: 7:30AM-1PM,3:30-8PM · Tuesday: 7:30AM-1PM,3:30-8PM · Wednesday: 7:30AM-1PM,",
     "sourceUrl": "https://www.google.com/maps/place/Al+Sughra+Building+Material+Trading+LLC/@25.318128299999998,55.408709599999995,14z/data=!4m8!1m2!2m1!1sAl+Sughra+Building+Material+Trading+LLC!3m4!1s0x3e5f599d3ad4a601:0x964e15d1a0bcc34c!8m2!3d25.318128299999998!4d55.408709599999995",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "build-makaan-gurugram",
@@ -4126,6 +4962,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://buildmakaan.in/",
     "phone": "+91 99114 62077",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMUQ84VH3FJXrfngjBHzoxxyB760i4UNEqZ-hrt92e2XefHn8XxHHt4LUKVVebkP7Wd1XQWZq2eHf_VSOxduWK3kNTTky4zDsUxsv3A2VllnZLRkf-4LQabCPxjNUg-zaWUlhi=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-O51zQzX4L6A/AAAAAAAAAAI/AAAAAAAAAAA/Ac4p7NHW_Ek/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMUQ84VH3FJXrfngjBHzoxxyB760i4UNEqZ-hrt92e2XefHn8XxHHt4LUKVVebkP7Wd1XQWZq2eHf_VSOxduWK3kNTTky4zDsUxsv3A2VllnZLRkf-4LQabCPxjNUg-zaWUlhi=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMUQ84VH3FJXrfngjBHzoxxyB760i4UNEqZ-hrt92e2XefHn8XxHHt4LUKVVebkP7Wd1XQWZq2eHf_VSOxduWK3kNTTky4zDsUxsv3A2VllnZLRkf-4LQabCPxjNUg-zaWUlhi=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 39,
     "rating": 4.7,
@@ -4146,9 +4987,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "shop 12, Jail Rd, sector 67, Civil Lines, Gurugram, Haryana 122001, India",
     "openingHours": "Friday: 6AM-12AM · Monday: 6AM-12AM · Saturday: 6AM-12AM · Sunday: 6AM-12AM · Thursday: 6AM-12AM · Tuesday: 6AM-12AM · Wednesday: 6AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/Build+Makaan/@28.4571297,77.0282601,14z/data=!4m8!1m2!2m1!1sBuild+Makaan!3m4!1s0x390d235e142f69d3:0xb2332419b4e1b7d4!8m2!3d28.4571297!4d77.0282601",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "punto-prefedil-rome",
@@ -4161,6 +5002,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.puntoprefedil.it/",
     "phone": "+39 06 228 1740",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbGv8D86qnthcp5EbqjQwr29uSomi5cTHkebaVVcDrKSqpXWLDcnAXtzv57rKefG_aKdWVkrX6wOcYK7Hm94LutBSOsFIHRBXz45AUeSDAACQUJ-ZNHqoaEMDcgkmMd8ASKtSp7A=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-5Xz7I1QIe54/AAAAAAAAAAI/AAAAAAAAAAA/n4vDr0H2oL4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbGv8D86qnthcp5EbqjQwr29uSomi5cTHkebaVVcDrKSqpXWLDcnAXtzv57rKefG_aKdWVkrX6wOcYK7Hm94LutBSOsFIHRBXz45AUeSDAACQUJ-ZNHqoaEMDcgkmMd8ASKtSp7A=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbGv8D86qnthcp5EbqjQwr29uSomi5cTHkebaVVcDrKSqpXWLDcnAXtzv57rKefG_aKdWVkrX6wOcYK7Hm94LutBSOsFIHRBXz45AUeSDAACQUJ-ZNHqoaEMDcgkmMd8ASKtSp7A=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 44,
     "rating": 4.7,
@@ -4180,9 +5026,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Prenestina, 956, 00155 Roma RM, Italy",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Punto+Prefedil/@41.8932669,12.604985399999999,14z/data=!4m8!1m2!2m1!1sPunto+Prefedil!3m4!1s0x132f62d8b7a8e839:0x5544576b972d9801!8m2!3d41.8932669!4d12.604985399999999",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ferramenta-pelli-elettricita-casalinghi-idraulica-centro-chi",
@@ -4195,6 +5041,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ferramentapelli.com/",
     "phone": "+39 06 474 2482",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELdwqmawN2kgNJytQmGR7sc2n6MmJEjBB74mCL-mJijEG5Yu-qX9Zwx6sz3Elqy66aXq4ymhessfndfOeqhKuY3yu4I_Lou0DN-KUCVO4iBIqUW9fzUadKsK_0tDRHyNkwfkdKxA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-emfF4f7GNC8/AAAAAAAAAAI/AAAAAAAAAAA/HpgKSMaY1jE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELdwqmawN2kgNJytQmGR7sc2n6MmJEjBB74mCL-mJijEG5Yu-qX9Zwx6sz3Elqy66aXq4ymhessfndfOeqhKuY3yu4I_Lou0DN-KUCVO4iBIqUW9fzUadKsK_0tDRHyNkwfkdKxA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELdwqmawN2kgNJytQmGR7sc2n6MmJEjBB74mCL-mJijEG5Yu-qX9Zwx6sz3Elqy66aXq4ymhessfndfOeqhKuY3yu4I_Lou0DN-KUCVO4iBIqUW9fzUadKsK_0tDRHyNkwfkdKxA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 54,
     "rating": 4.6,
@@ -4214,9 +5065,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via del Boccaccio, 7, 00187 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 8AM-1PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ferramenta+PELLI%2C+Elettricit%C3%A0%2C+Casalinghi%2C+Idraulica%2C+Centro+chiavi%2C+Tintometro/@41.902783299999996,12.4869939,14z/data=!4m8!1m2!2m1!1sFerramenta+PELLI%2C+Elettricit%C3%A0%2C+Casalinghi%2C+Idraulica%2C+Centro+chiavi%2C+Tintometro!3m4!1s0x132f61ab80c10771:0x2adf250b38f63b0e!8m2!3d41.902783299999996!4d12.4869939",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "benedettini-ceramiche-rome",
@@ -4229,6 +5080,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.benedettiniceramiche.com/",
     "phone": "+39 06 2076 1528",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFETNuM8EWZrEDzTa3Uw3DumG6y2GsHbSCmvYbMz36HIvDomlD6axPk_Heij2YNmLX_yqbMUUErbgcQz3a_QUvm5qqOXVGTeDGZSGUQtToXh_Od7ciWX8v3p5Amqxo1x3PRTCtn=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-9qbztEsw-0E/AAAAAAAAAAI/AAAAAAAAAAA/Rukjp-uhSXY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFETNuM8EWZrEDzTa3Uw3DumG6y2GsHbSCmvYbMz36HIvDomlD6axPk_Heij2YNmLX_yqbMUUErbgcQz3a_QUvm5qqOXVGTeDGZSGUQtToXh_Od7ciWX8v3p5Amqxo1x3PRTCtn=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFETNuM8EWZrEDzTa3Uw3DumG6y2GsHbSCmvYbMz36HIvDomlD6axPk_Heij2YNmLX_yqbMUUErbgcQz3a_QUvm5qqOXVGTeDGZSGUQtToXh_Od7ciWX8v3p5Amqxo1x3PRTCtn=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 99,
     "rating": 4.4,
@@ -4248,9 +5104,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Casilina, 1777, 00132 Roma RM, Italy",
     "openingHours": "Friday: 7AM-12PM,2-6:30PM · Monday: 7AM-12PM,2-6:30PM · Saturday: 7AM-1PM · Sunday: Closed · Thursday: 7AM-12PM,2-6:30PM · Tuesday: 7AM-12PM,2-6:30PM · Wednesday: 7AM-12PM,2-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Benedettini+Ceramiche/@41.8643165,12.6711022,14z/data=!4m8!1m2!2m1!1sBenedettini+Ceramiche!3m4!1s0x132f7d99c091aceb:0xf53ee007baeaea40!8m2!3d41.8643165!4d12.6711022",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mitra-sa-de-cv-miguel-hidalgo-mexico-city",
@@ -4263,6 +5119,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.mitramex.com/",
     "phone": "+52 55 7097 1025",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL0RbGMlXJaQQ1SAgxM47QdiupvsSLhBfePlj2dLA-wkthQoyf9vDNPD6Lk3GPcIPpFnb_CCXQrh3bwLg-TN871bAX3csC0z5eYPjdGXk8wmrQ8oQCKnX05tAtx1prkfN_XPdJ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-W-ldvTJ-YP0/AAAAAAAAAAI/AAAAAAAAAAA/ODjz4eo-WLA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL0RbGMlXJaQQ1SAgxM47QdiupvsSLhBfePlj2dLA-wkthQoyf9vDNPD6Lk3GPcIPpFnb_CCXQrh3bwLg-TN871bAX3csC0z5eYPjdGXk8wmrQ8oQCKnX05tAtx1prkfN_XPdJ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL0RbGMlXJaQQ1SAgxM47QdiupvsSLhBfePlj2dLA-wkthQoyf9vDNPD6Lk3GPcIPpFnb_CCXQrh3bwLg-TN871bAX3csC0z5eYPjdGXk8wmrQ8oQCKnX05tAtx1prkfN_XPdJ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 56,
     "rating": 4.6,
@@ -4282,9 +5143,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Calz. Gral. Mariano Escobedo 710-Piso 8, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-7PM · Saturday: 8AM-2PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/MITRA+SA+de+CV/@19.4265306,-99.1788953,14z/data=!4m8!1m2!2m1!1sMITRA+SA+de+CV!3m4!1s0x85d200c48d619d7d:0x1607f1c64c525ea9!8m2!3d19.4265306!4d-99.1788953",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "aim-british-building-supplies-marbella",
@@ -4297,6 +5158,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.abbs.es/",
     "phone": "+34 952 83 51 72",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLTiEkkCOoC20-bElU8Z2ir-UZjQKXKeb0hKeznv6tI0P57UOF6MPrb2TmqBAfwySA5cZm3RVUmT-3EuFuOueqouBk-j5XsbsOZ1xt2vJKBFbsGnMjqtrtHMcju53T6xAOHSLCd7vt5Rbr=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-aZolGBN_RPA/AAAAAAAAAAI/AAAAAAAAAAA/ymPHnlSyhh0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLTiEkkCOoC20-bElU8Z2ir-UZjQKXKeb0hKeznv6tI0P57UOF6MPrb2TmqBAfwySA5cZm3RVUmT-3EuFuOueqouBk-j5XsbsOZ1xt2vJKBFbsGnMjqtrtHMcju53T6xAOHSLCd7vt5Rbr=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLTiEkkCOoC20-bElU8Z2ir-UZjQKXKeb0hKeznv6tI0P57UOF6MPrb2TmqBAfwySA5cZm3RVUmT-3EuFuOueqouBk-j5XsbsOZ1xt2vJKBFbsGnMjqtrtHMcju53T6xAOHSLCd7vt5Rbr=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 57,
     "rating": 4.6,
@@ -4316,9 +5182,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. Francisco Zarco, nave 25, 29604 Marbella, Málaga, Spain",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Aim+British+Building+Supplies/@36.49525,-4.765791,14z/data=!4m8!1m2!2m1!1sAim+British+Building+Supplies!3m4!1s0xd73206103ee054b:0xf61bfc2da16e80b!8m2!3d36.49525!4d-4.765791",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-saif-al-malaki-heavy-equipments-spare-parts-llc-ae",
@@ -4331,6 +5197,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.alsaifhep.com/",
     "phone": "+971 55 499 6103",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRnbYDGyVjAeKpCO4cbuwN0MTc7-rM3xh7ftxIw0dqCoUcYgND631Qbx_qhAmljdSmvnPnqeqhr3WBSG8OUADuD8QcTB3E0X_S-vVZgYXqXk9WvRf1Ul61ubs6M9gXOiFEsaAsOHuzsTLG=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-K0ekqc5fieI/AAAAAAAAAAI/AAAAAAAAAAA/TffZNxYISFk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRnbYDGyVjAeKpCO4cbuwN0MTc7-rM3xh7ftxIw0dqCoUcYgND631Qbx_qhAmljdSmvnPnqeqhr3WBSG8OUADuD8QcTB3E0X_S-vVZgYXqXk9WvRf1Ul61ubs6M9gXOiFEsaAsOHuzsTLG=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRnbYDGyVjAeKpCO4cbuwN0MTc7-rM3xh7ftxIw0dqCoUcYgND631Qbx_qhAmljdSmvnPnqeqhr3WBSG8OUADuD8QcTB3E0X_S-vVZgYXqXk9WvRf1Ul61ubs6M9gXOiFEsaAsOHuzsTLG=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 24,
     "rating": 4.9,
@@ -4350,9 +5221,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Caterpillar road - Second Industrial St - Industrial Area 3 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+SAIF+AL+MALAKI+HEAVY+EQUIPMENTS+SPARE+PARTS+LLC/@25.3092409,55.405458599999996,14z/data=!4m8!1m2!2m1!1sAL+SAIF+AL+MALAKI+HEAVY+EQUIPMENTS+SPARE+PARTS+LLC!3m4!1s0x3e5f5f4c7f2692d3:0xf923f4faa94713c0!8m2!3d25.3092409!4d55.405458599999996",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "vuteq-industries-mexico-villa-de-reyes",
@@ -4365,6 +5236,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.vuteq.co.jp/eng/",
     "phone": "+52 444 144 0700",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAER6ChHWFUhJTABM1skk0JvJnbZ8TgOCQM3B15WxhhgGBlVo7Zc6cmYxMTJivY1tzSOcHMX_nvteryLsKfdfNseA256NzwoQwiT9JH1VScEmL-6-dY4rQ_IjzmMjqEdabmKl5mh=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-y0qGxbwS37w/AAAAAAAAAAI/AAAAAAAAAAA/Ys577QOAHNE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAER6ChHWFUhJTABM1skk0JvJnbZ8TgOCQM3B15WxhhgGBlVo7Zc6cmYxMTJivY1tzSOcHMX_nvteryLsKfdfNseA256NzwoQwiT9JH1VScEmL-6-dY4rQ_IjzmMjqEdabmKl5mh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAER6ChHWFUhJTABM1skk0JvJnbZ8TgOCQM3B15WxhhgGBlVo7Zc6cmYxMTJivY1tzSOcHMX_nvteryLsKfdfNseA256NzwoQwiT9JH1VScEmL-6-dY4rQ_IjzmMjqEdabmKl5mh=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 77,
     "rating": 4.5,
@@ -4384,9 +5260,87 @@ export const outscraperSuppliers: Supplier[] =
     "address": "calle bangalore 303, Parque Industrial Logistik, 79525 Villa de Reyes, S.L.P., Mexico",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/VUTEQ+Industries+Mexico/@21.982360999999997,-100.861379,14z/data=!4m8!1m2!2m1!1sVUTEQ+Industries+Mexico!3m4!1s0x842abbdb67ffc6a1:0x41620cc832ea2c98!8m2!3d21.982360999999997!4d-100.861379",
-    "score": 88,
+    "score": 94,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "mazlum-celik-boru-mazlum-steel-pipes-mazlum-boru-tr",
+    "name": "MAZLUM ÇELİK BORU - MAZLUM STEEL PIPES - MAZLUM BORU",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "location": "TR, Turkey",
+    "country": "Turkey",
+    "city": "TR",
+    "website": "http://www.mazlumboru.com.tr/",
+    "phone": "+90 322 346 00 74",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQWceh1eR84od8o2rqi1VSk7sKsDCDf2_GuG2nvWEZ3Fy8NYkvXdoclSCvd9WUnyEAoiqAklPML_3fqLupZGlfuMGjwXAIldgEdbxZ3M_fJuj0wOPLTAXwKuKje5dXuaE56IxY=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-Cg-NE9YAN3I/AAAAAAAAAAI/AAAAAAAAAAA/fKFafKFZdGk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQWceh1eR84od8o2rqi1VSk7sKsDCDf2_GuG2nvWEZ3Fy8NYkvXdoclSCvd9WUnyEAoiqAklPML_3fqLupZGlfuMGjwXAIldgEdbxZ3M_fJuj0wOPLTAXwKuKje5dXuaE56IxY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQWceh1eR84od8o2rqi1VSk7sKsDCDf2_GuG2nvWEZ3Fy8NYkvXdoclSCvd9WUnyEAoiqAklPML_3fqLupZGlfuMGjwXAIldgEdbxZ3M_fJuj0wOPLTAXwKuKje5dXuaE56IxY=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.6,
+    "googleReviews": 65,
+    "rating": 4.6,
+    "reviewCount": 65,
+    "verified": true,
+    "description": "Tubes & Pipes supplier in TR, Turkey.",
+    "products": [
+      "Steel pipes",
+      "Welded tubes",
+      "Pipe fittings"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "2 tons",
+    "address": "Adana Hacı Sabancı Organize Sanayi Bölgesi İstiklal Cd. No:10, 01350 Sarıçam/Adana, Türkiye",
+    "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
+    "sourceUrl": "https://www.google.com/maps/place/MAZLUM+%C3%87EL%C4%B0K+BORU+-+MAZLUM+STEEL+PIPES+-+MAZLUM+BORU/@36.9778326,35.617132,14z/data=!4m8!1m2!2m1!1sMAZLUM+%C3%87EL%C4%B0K+BORU+-+MAZLUM+STEEL+PIPES+-+MAZLUM+BORU!3m4!1s0x1528bef3300e0ffd:0xd087dd555f29ec33!8m2!3d36.9778326!4d35.617132",
+    "score": 94,
+    "reliabilityScore": 92,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "global-parts-poligono-de",
+    "name": "Global Parts",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "POLIGONO DE, Spain",
+    "country": "Spain",
+    "city": "POLIGONO DE",
+    "website": "https://www.globalpartsiberica.com/",
+    "phone": "+34 916 75 71 52",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkanCiHgkIjMpYjMWQ3tnFXkDHMSvQWN61oHPCxyBtwmKuaQLYkVRhojPPFh8GEv1BM9tyG0cr0q2aRrIO4nqX-sulDUoTdtT1KxhHpLCZ5-x4KfLr9hg57Rx6OMZK4hu-GUkiroR6B0QQ=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-OYr4IrhhF7E/AAAAAAAAAAI/AAAAAAAAAAA/7ZXOzX9GRLs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkanCiHgkIjMpYjMWQ3tnFXkDHMSvQWN61oHPCxyBtwmKuaQLYkVRhojPPFh8GEv1BM9tyG0cr0q2aRrIO4nqX-sulDUoTdtT1KxhHpLCZ5-x4KfLr9hg57Rx6OMZK4hu-GUkiroR6B0QQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkanCiHgkIjMpYjMWQ3tnFXkDHMSvQWN61oHPCxyBtwmKuaQLYkVRhojPPFh8GEv1BM9tyG0cr0q2aRrIO4nqX-sulDUoTdtT1KxhHpLCZ5-x4KfLr9hg57Rx6OMZK4hu-GUkiroR6B0QQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.5,
+    "googleReviews": 69,
+    "rating": 4.5,
+    "reviewCount": 69,
+    "verified": true,
+    "description": "Industrial Parts supplier in POLIGONO DE, Spain.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "10 units",
+    "address": "C. de Júpiter, 4, NAVE 2, 28830 POLIGONO DE, Madrid, Spain",
+    "openingHours": "Friday: 8:30AM-1:45PM,3:15-7PM · Monday: 8:30AM-1:45PM,3:15-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-1:45PM,3:15-7PM · Tuesday: 8:30AM-1:45PM,3:15-7PM · Wednesday: 8:30AM-1:45PM,3:15",
+    "sourceUrl": "https://www.google.com/maps/place/Global+Parts/@40.45019,-3.49078,14z/data=!4m8!1m2!2m1!1sGlobal+Parts!3m4!1s0xd42372ffce64f1d:0x55639b8e66bc0fc6!8m2!3d40.45019!4d-3.49078",
+    "score": 94,
+    "reliabilityScore": 90,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ferrite-structural-steels-pvt-ltd-panvel",
@@ -4399,6 +5353,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ferrite.in/",
     "phone": "+91 88283 35168",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm1d8T7nl2hr05drD4TaOLsGsRU9mKoFktVE5elQSrzrBI15XDd4XumZIud6XM3ihPhw1YIh6CmgYujZUb_SJVJ47xO7ZP9yIBPNyi3WYoKrcZdbdmYJqJqiQELl6Kx6Bs5ohJdw=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Vt2xGYzlzpc/AAAAAAAAAAI/AAAAAAAAAAA/MGjMTIXaVEQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm1d8T7nl2hr05drD4TaOLsGsRU9mKoFktVE5elQSrzrBI15XDd4XumZIud6XM3ihPhw1YIh6CmgYujZUb_SJVJ47xO7ZP9yIBPNyi3WYoKrcZdbdmYJqJqiQELl6Kx6Bs5ohJdw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm1d8T7nl2hr05drD4TaOLsGsRU9mKoFktVE5elQSrzrBI15XDd4XumZIud6XM3ihPhw1YIh6CmgYujZUb_SJVJ47xO7ZP9yIBPNyi3WYoKrcZdbdmYJqJqiQELl6Kx6Bs5ohJdw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 67,
     "rating": 4.4,
@@ -4419,9 +5378,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "plot 18 kwc Bima ware housing complex Raighad, Kalamboli, Panvel, Maharashtra 410218, India",
     "openingHours": "Friday: 8:30AM-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: Closed · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ferrite+Structural+Steels+Pvt+Ltd/@19.0283095,73.10973129999999,14z/data=!4m8!1m2!2m1!1sFerrite+Structural+Steels+Pvt+Ltd!3m4!1s0x3be7e9c7bdd3f85d:0x62e194ff73009362!8m2!3d19.0283095!4d73.10973129999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "almas-steel-alloys-private-limited-pimpri-chinchwad",
@@ -4434,6 +5393,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.almasindia.net/",
     "phone": "+91 70300 52530",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFT_LXkLsshA6peC98jOyLXXDKcSns5_U1NooAWINuqMwMCpEa7E7zsqGgAVkz37km8EQs7uxhbZeMXqX_R_H0V6wWzpnAN2h3GQkl6ljXiUKZuw_-LAKJM4YSidmQvDnhhobed=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-lOM70zSMt_Q/AAAAAAAAAAI/AAAAAAAAAAA/5ZS-Y7bb8t0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFT_LXkLsshA6peC98jOyLXXDKcSns5_U1NooAWINuqMwMCpEa7E7zsqGgAVkz37km8EQs7uxhbZeMXqX_R_H0V6wWzpnAN2h3GQkl6ljXiUKZuw_-LAKJM4YSidmQvDnhhobed=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFT_LXkLsshA6peC98jOyLXXDKcSns5_U1NooAWINuqMwMCpEa7E7zsqGgAVkz37km8EQs7uxhbZeMXqX_R_H0V6wWzpnAN2h3GQkl6ljXiUKZuw_-LAKJM4YSidmQvDnhhobed=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 32,
     "rating": 4.7,
@@ -4454,9 +5418,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Balaji Nagar, MIDC, Bhosari, Pimpri-Chinchwad, Maharashtra 411026, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: 9AM-7PM · Thursday: Closed · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Almas+Steel+%26+Alloys+Private+Limited/@18.636234299999998,73.8296058,14z/data=!4m8!1m2!2m1!1sAlmas+Steel+%26+Alloys+Private+Limited!3m4!1s0x3bc2b86e04d42edb:0x3e65322e7f0d4101!8m2!3d18.636234299999998!4d73.8296058",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "etk-kablo-sanayi-ve-ticaret-a-s-tr",
@@ -4469,6 +5433,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.etkkablo.com/",
     "phone": "+90 216 311 10 34",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyn_FeHyBTq3dAtDIwL3KnYauON0Dyqqn3MFF6HGiTSzuXk6KF3_wRTzEPQquRDbh633uc3MzvkrFlCURxA2zj2dO5Q2Qr9GwYnZGOBJpq3XhBJXEmhz609Z4hwI3DQSBv2J5zZA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-zz-dp6K0tVI/AAAAAAAAAAI/AAAAAAAAAAA/s1ayhMyg_Jo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyn_FeHyBTq3dAtDIwL3KnYauON0Dyqqn3MFF6HGiTSzuXk6KF3_wRTzEPQquRDbh633uc3MzvkrFlCURxA2zj2dO5Q2Qr9GwYnZGOBJpq3XhBJXEmhz609Z4hwI3DQSBv2J5zZA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyn_FeHyBTq3dAtDIwL3KnYauON0Dyqqn3MFF6HGiTSzuXk6KF3_wRTzEPQquRDbh633uc3MzvkrFlCURxA2zj2dO5Q2Qr9GwYnZGOBJpq3XhBJXEmhz609Z4hwI3DQSBv2J5zZA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 46,
     "rating": 4.5,
@@ -4488,9 +5457,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Osmangazi, Müstesna Sk. No.: 37, 34887 Sancaktepe/İstanbul, Türkiye",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/ETK+Kablo+Sanayi+ve+Ticaret+A.+%C5%9E./@40.980548399999996,29.2464251,14z/data=!4m8!1m2!2m1!1sETK+Kablo+Sanayi+ve+Ticaret+A.+%C5%9E.!3m4!1s0x14cad03c80555555:0xfc72908a0dd28e5d!8m2!3d40.980548399999996!4d29.2464251",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sarv-wires-and-cables-private-limited-wholesale-electrical-m",
@@ -4503,6 +5472,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.swacpl.com/",
     "phone": "+91 95298 95932",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcfyRuYXcUb7w4Ich3fttH2MDykT8dQfmbeGMRa7qWZuL9TSwx_BWClKjIGKs2vZPedv_UID8qbSm8aEBGEZ7Xf5BboNVBUW3qWgioickBHLkPeMynBvWwbzQUUjA_aXxv7NEi=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-rwukEwoWuno/AAAAAAAAAAI/AAAAAAAAAAA/8UGtWsutx64/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcfyRuYXcUb7w4Ich3fttH2MDykT8dQfmbeGMRa7qWZuL9TSwx_BWClKjIGKs2vZPedv_UID8qbSm8aEBGEZ7Xf5BboNVBUW3qWgioickBHLkPeMynBvWwbzQUUjA_aXxv7NEi=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcfyRuYXcUb7w4Ich3fttH2MDykT8dQfmbeGMRa7qWZuL9TSwx_BWClKjIGKs2vZPedv_UID8qbSm8aEBGEZ7Xf5BboNVBUW3qWgioickBHLkPeMynBvWwbzQUUjA_aXxv7NEi=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 25,
     "rating": 4.8,
@@ -4523,9 +5497,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Opp. Pasodya Vithoba Mandir, 437, near Tiranga Hotel, Budhwar Peth, Pune, Maharashtra 411002, India",
     "openingHours": "Friday: 10:15AM-8PM · Monday: 10:15AM-8PM · Saturday: 10:15AM-8PM · Sunday: Closed · Thursday: 10:15AM-8PM · Tuesday: 10:15AM-8PM · Wednesday: 10:15AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Sarv+Wires+and+Cables+Private+Limited.+%7C+Wholesale+Electrical+Market+in+Pune%2C+India/@18.5169128,73.8582168,14z/data=!4m8!1m2!2m1!1sSarv+Wires+and+Cables+Private+Limited.+%7C+Wholesale+Electrical+Market+in+Pune%2C+India!3m4!1s0x3bc2c06f50000075:0x184785220f6b756f!8m2!3d18.5169128!4d73.8582168",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "italian-cable-company-spa-bolgare",
@@ -4538,6 +5512,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.icc.it/",
     "phone": "+39 035 449 3011",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_zosM5Yf0mHiH93jkR_TG-RRkkO6DxtxR9i2z5BrRh20CTuRo6R6g6IF4ZWHwKtUZ3OgcGjrtENwl93AnDPTk6GGGDTf9tQppesydQ6HDY2atGhaL3PXkQTz0FxzNYZ7ypm-n=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-U6vBZToZ3_c/AAAAAAAAAAI/AAAAAAAAAAA/lTTeAPuP2ws/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_zosM5Yf0mHiH93jkR_TG-RRkkO6DxtxR9i2z5BrRh20CTuRo6R6g6IF4ZWHwKtUZ3OgcGjrtENwl93AnDPTk6GGGDTf9tQppesydQ6HDY2atGhaL3PXkQTz0FxzNYZ7ypm-n=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_zosM5Yf0mHiH93jkR_TG-RRkkO6DxtxR9i2z5BrRh20CTuRo6R6g6IF4ZWHwKtUZ3OgcGjrtENwl93AnDPTk6GGGDTf9tQppesydQ6HDY2atGhaL3PXkQTz0FxzNYZ7ypm-n=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 95,
     "rating": 4.3,
@@ -4557,9 +5536,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Francesca, 8, 24060 Bolgare BG, Italy",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Italian+Cable+Company+Spa/@45.628668399999995,9.807339299999999,14z/data=!4m8!1m2!2m1!1sItalian+Cable+Company+Spa!3m4!1s0x47814354177d011d:0xc1a7758fff594831!8m2!3d45.628668399999995!4d9.807339299999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "us-wholesale-pipe-tube-inc-holiday",
@@ -4572,6 +5551,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.usw.com/",
     "phone": "+1 727-945-9060",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFknUDGU6rIKkBiYNRRozNXsICiPXQBtH9MrlNRJ3MFZ7IC5ny2hfCdXmuF4zGhC71TJNHN8TG58symy8EAhdDErWMk-r69dScq02m8ToB7HalTTWssCCVmpmZbUk570zB3Qzra=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-wY6ya4SeHyk/AAAAAAAAAAI/AAAAAAAAAAA/nBUgUPji7kQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFknUDGU6rIKkBiYNRRozNXsICiPXQBtH9MrlNRJ3MFZ7IC5ny2hfCdXmuF4zGhC71TJNHN8TG58symy8EAhdDErWMk-r69dScq02m8ToB7HalTTWssCCVmpmZbUk570zB3Qzra=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFknUDGU6rIKkBiYNRRozNXsICiPXQBtH9MrlNRJ3MFZ7IC5ny2hfCdXmuF4zGhC71TJNHN8TG58symy8EAhdDErWMk-r69dScq02m8ToB7HalTTWssCCVmpmZbUk570zB3Qzra=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 61,
     "rating": 4.5,
@@ -4591,9 +5575,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3351 Grand Blvd, Holiday, FL 34690",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/US+Wholesale+Pipe+%26+Tube+Inc/@28.2083251,-82.72434609999999,14z/data=!4m8!1m2!2m1!1sUS+Wholesale+Pipe+%26+Tube+Inc!3m4!1s0x88c291fa7df6e1dd:0x9ffc82245c76265e!8m2!3d28.2083251!4d-82.72434609999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "u-s-pipe-bessemer",
@@ -4606,6 +5590,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.uspipe.com/",
     "phone": "+1 866-347-7473",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsIegqPWvC1hb043OHlcutmEE6n-AdZ_SNybmZVWrySBwcobt48Qnjnnj9z_DmfDsl6uym41tt0-tnOaKQ0NfGEZi2cswMLp47FPattqFK09LYkaNT2wKOENVHO1VxN5gygrTTWA=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-GZ4xUUl1e-Q/AAAAAAAAAAI/AAAAAAAAAAA/uVRGxwCO_Xk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsIegqPWvC1hb043OHlcutmEE6n-AdZ_SNybmZVWrySBwcobt48Qnjnnj9z_DmfDsl6uym41tt0-tnOaKQ0NfGEZi2cswMLp47FPattqFK09LYkaNT2wKOENVHO1VxN5gygrTTWA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsIegqPWvC1hb043OHlcutmEE6n-AdZ_SNybmZVWrySBwcobt48Qnjnnj9z_DmfDsl6uym41tt0-tnOaKQ0NfGEZi2cswMLp47FPattqFK09LYkaNT2wKOENVHO1VxN5gygrTTWA=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 229,
     "rating": 4,
@@ -4625,9 +5614,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2101 18th Ave N, Bessemer, AL 35020",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/U.S.+Pipe/@33.4141882,-86.9715114,14z/data=!4m8!1m2!2m1!1sU.S.+Pipe!3m4!1s0x8888e1a83a8e2fb9:0x35b4cd823ce03db4!8m2!3d33.4141882!4d-86.9715114",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "esta-rohr-gmbh-siegen",
@@ -4640,6 +5629,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.esta-rohr.de/",
     "phone": "+49 271 69090",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGiIaGuW2MjdRyIbOuJHJB919tgwReUOhve-8aax3hqH-Lhu_LUPdBTYCETz3JkTgRL9F3v5vWbkwbVOE3uD5SKjEbWgYXsG-vSrRJZs6hVdlY_Ik50sjAYIbII1Zl7s7pr8D9D=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-UlrNyjnT8mY/AAAAAAAAAAI/AAAAAAAAAAA/r31M9abrbaU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGiIaGuW2MjdRyIbOuJHJB919tgwReUOhve-8aax3hqH-Lhu_LUPdBTYCETz3JkTgRL9F3v5vWbkwbVOE3uD5SKjEbWgYXsG-vSrRJZs6hVdlY_Ik50sjAYIbII1Zl7s7pr8D9D=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGiIaGuW2MjdRyIbOuJHJB919tgwReUOhve-8aax3hqH-Lhu_LUPdBTYCETz3JkTgRL9F3v5vWbkwbVOE3uD5SKjEbWgYXsG-vSrRJZs6hVdlY_Ik50sjAYIbII1Zl7s7pr8D9D=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 22,
     "rating": 4.8,
@@ -4659,9 +5653,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Eisenhüttenstraße 11-17, 57074 Siegen-Kaan-Marienborn, Germany",
     "openingHours": "Friday: 8AM-3:30PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Esta+Rohr+GmbH/@50.8708701,8.053519699999999,14z/data=!4m8!1m2!2m1!1sEsta+Rohr+GmbH!3m4!1s0x47bc1b652d5c46db:0x5e5d6ab4750c2d63!8m2!3d50.8708701!4d8.053519699999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hdm-spirally-welded-steel-pipe-inc-tr",
@@ -4674,6 +5668,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.hdm.com.tr/",
     "phone": "+90 324 232 17 94",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJge155FJKmuMdEfFMtDrDPy5_APZvfbB0UARh95TMgz6PnSSvJ_BolIXS7u9HfMSxk6hINL2bYQV3J5xMvUquCWevvSq6OAyj6artoCaWMMMhITX_QQsNdBhPgngQcHWmjDoL6w=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-Hhxgaj5c7QU/AAAAAAAAAAI/AAAAAAAAAAA/yp8xjela2CE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJge155FJKmuMdEfFMtDrDPy5_APZvfbB0UARh95TMgz6PnSSvJ_BolIXS7u9HfMSxk6hINL2bYQV3J5xMvUquCWevvSq6OAyj6artoCaWMMMhITX_QQsNdBhPgngQcHWmjDoL6w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbg16UfalF8yIMgF5ZSEJqF4GUMX50rEozyRGiBiZRfqiOtgnMi0cqIHDjLcd03L-enW4CwwETOs1gDn5tnd8DN4pSByKzb4QBx_YbaCmn758VY0H2eo-Z5xNfFsQ4MOohI2E=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 36,
     "rating": 4.6,
@@ -4693,9 +5692,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Karaduvar SB, D-3 Cd (Mersin Serbest Bölgesi), 33040 Akdeniz/Mersin, Türkiye",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: 8AM-8PM · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/HDM+Spirally+Welded+Steel+Pipe+Inc./@36.815193,34.664394,14z/data=!4m8!1m2!2m1!1sHDM+Spirally+Welded+Steel+Pipe+Inc.!3m4!1s0x1527f217c4562073:0x9205671384a22598!8m2!3d36.815193!4d34.664394",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "dubai-pipes-factory-co-llc-ae",
@@ -4708,6 +5707,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://dubaipipes.com/",
     "phone": "+971 4 885 1333",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLk_XO__L-TVxWDQxex9T02pEmRMWa5VSRJkPMVJjTF97hNSpggBTXzEcl2xrb0K0YHe5O_ZNYBm0U2629mcEflGrQQIVGrUNbgPkVVFvdHlzDA0uAiwKFqG47284Iq486voX2XkOL_sox=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-53LZP5_V2KQ/AAAAAAAAAAI/AAAAAAAAAAA/ac2wASR2Hww/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLk_XO__L-TVxWDQxex9T02pEmRMWa5VSRJkPMVJjTF97hNSpggBTXzEcl2xrb0K0YHe5O_ZNYBm0U2629mcEflGrQQIVGrUNbgPkVVFvdHlzDA0uAiwKFqG47284Iq486voX2XkOL_sox=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFLk_XO__L-TVxWDQxex9T02pEmRMWa5VSRJkPMVJjTF97hNSpggBTXzEcl2xrb0K0YHe5O_ZNYBm0U2629mcEflGrQQIVGrUNbgPkVVFvdHlzDA0uAiwKFqG47284Iq486voX2XkOL_sox=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 49,
     "rating": 4.5,
@@ -4727,9 +5731,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Dubai Investment Park First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM · Monday: 7:30AM-3:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-3:30PM · Tuesday: 7:30AM-3:30PM · Wednesday: 7:30AM-3:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Dubai+Pipes+Factory+Co+LLC/@24.974279199999998,55.1559702,14z/data=!4m8!1m2!2m1!1sDubai+Pipes+Factory+Co+LLC!3m4!1s0x3e5f428cdf52c4cd:0xd8580cc5c81b0f80!8m2!3d24.974279199999998!4d55.1559702",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "jss-pipes-and-fittings-trading-llc-ae",
@@ -4742,6 +5746,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.jsspipes.com/",
     "phone": "+971 4 805 3900",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELggwcptooseQSh85nFtIWVmTEDX1wHHqlHlZA8icPMqa_g6cnJvsac3jFwpMRP-FU2q5gWj8GcOGJC8NPA67EnW6_NIabhdT9VXB1euQXPeJwHSFzPBkRngr_fDAjHMrSvc68=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-FHC0XoPa_rY/AAAAAAAAAAI/AAAAAAAAAAA/04jLRiSFu5U/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELggwcptooseQSh85nFtIWVmTEDX1wHHqlHlZA8icPMqa_g6cnJvsac3jFwpMRP-FU2q5gWj8GcOGJC8NPA67EnW6_NIabhdT9VXB1euQXPeJwHSFzPBkRngr_fDAjHMrSvc68=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELggwcptooseQSh85nFtIWVmTEDX1wHHqlHlZA8icPMqa_g6cnJvsac3jFwpMRP-FU2q5gWj8GcOGJC8NPA67EnW6_NIabhdT9VXB1euQXPeJwHSFzPBkRngr_fDAjHMrSvc68=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 64,
     "rating": 4.4,
@@ -4761,9 +5770,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No: 597-595, Dubai Investment Park - 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/JSS+Pipes+And+Fittings+Trading+LLC/@24.9827306,55.189225699999994,14z/data=!4m8!1m2!2m1!1sJSS+Pipes+And+Fittings+Trading+LLC!3m4!1s0x3e5f725c70ca1211:0x5e5c48dbedac01e1!8m2!3d24.9827306!4d55.189225699999994",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "delta-pipe-tube-ae",
@@ -4776,6 +5785,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.deltapipe.net/",
     "phone": "+971 4 332 7496",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF11hRn0ZNFBIQtaYknRvwHsKTLzd9_Pxd-KMYkHwMqKIUSkTop2CV4SK2Y5FWvYBKJ62krz7Lhe2wTfX7z9IF_0M_j-xp_MNBjm8vqIA2V_ZFvZcDq4FJWUFQXxvvCjcefhVbJ=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-HoMhtz9ze4o/AAAAAAAAAAI/AAAAAAAAAAA/846eaZX5Lyw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF11hRn0ZNFBIQtaYknRvwHsKTLzd9_Pxd-KMYkHwMqKIUSkTop2CV4SK2Y5FWvYBKJ62krz7Lhe2wTfX7z9IF_0M_j-xp_MNBjm8vqIA2V_ZFvZcDq4FJWUFQXxvvCjcefhVbJ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF11hRn0ZNFBIQtaYknRvwHsKTLzd9_Pxd-KMYkHwMqKIUSkTop2CV4SK2Y5FWvYBKJ62krz7Lhe2wTfX7z9IF_0M_j-xp_MNBjm8vqIA2V_ZFvZcDq4FJWUFQXxvvCjcefhVbJ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 20,
     "rating": 4.9,
@@ -4795,9 +5809,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Sheikh Zayed Rd - Al Qouz Third - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Delta+Pipe+%26+Tube/@25.162435,55.234209899999996,14z/data=!4m8!1m2!2m1!1sDelta+Pipe+%26+Tube!3m4!1s0x3e5f698daab35a6d:0xb03136c9b48d6c09!8m2!3d25.162435!4d55.234209899999996",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "arrow-pipes-fittings-fzco-ae",
@@ -4810,6 +5824,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.arrowpipes.com/",
     "phone": "+971 4 883 2300",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmn4NQs80iVB038gHzFCvVRBnGOG2VoxwyMnu1t8j0BedXP4XeI_7hA-WPBgjfD-9RJZcVoj7JMtbNxoQ7TZ-tuMC_6zNlQfGOmX1WZKJPGwb-NSEqiDa1DfxkVER4opHp40X9e-6X8-4j=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-av2g60Z85zk/AAAAAAAAAAI/AAAAAAAAAAA/vmhIh0NZ58E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmn4NQs80iVB038gHzFCvVRBnGOG2VoxwyMnu1t8j0BedXP4XeI_7hA-WPBgjfD-9RJZcVoj7JMtbNxoQ7TZ-tuMC_6zNlQfGOmX1WZKJPGwb-NSEqiDa1DfxkVER4opHp40X9e-6X8-4j=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmn4NQs80iVB038gHzFCvVRBnGOG2VoxwyMnu1t8j0BedXP4XeI_7hA-WPBgjfD-9RJZcVoj7JMtbNxoQ7TZ-tuMC_6zNlQfGOmX1WZKJPGwb-NSEqiDa1DfxkVER4opHp40X9e-6X8-4j=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 46,
     "rating": 4.5,
@@ -4829,9 +5848,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "13th St - Mina Jebel Ali - Jebel Ali Freezone - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-5PM · Monday: 8AM-6PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Arrow+Pipes+%26+Fittings+FZCO/@24.962234,55.068341999999994,14z/data=!4m8!1m2!2m1!1sArrow+Pipes+%26+Fittings+FZCO!3m4!1s0x3e5f0dec59428929:0xe123944050c17939!8m2!3d24.962234!4d55.068341999999994",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "shaw-emirates-pipes-manufacturing-llc-the-shaw-group-ae",
@@ -4844,6 +5863,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://theshawgrp.com/",
     "phone": "+971 2 815 5622",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFx-JljCvS_YziySuugTSk4hoBytc5GtFlFfdzLJQ8_NgH4qhlY4utEo-cEyd9Ow-YicHQHAGcFSylSaQ_5Y7a7iYTh12gJufHVnIVtDrHVZhLZIbEGhGYaz1zq374gMsHvifs=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-uqrB7sTNHUQ/AAAAAAAAAAI/AAAAAAAAAAA/zmg1a24VSOc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFx-JljCvS_YziySuugTSk4hoBytc5GtFlFfdzLJQ8_NgH4qhlY4utEo-cEyd9Ow-YicHQHAGcFSylSaQ_5Y7a7iYTh12gJufHVnIVtDrHVZhLZIbEGhGYaz1zq374gMsHvifs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFx-JljCvS_YziySuugTSk4hoBytc5GtFlFfdzLJQ8_NgH4qhlY4utEo-cEyd9Ow-YicHQHAGcFSylSaQ_5Y7a7iYTh12gJufHVnIVtDrHVZhLZIbEGhGYaz1zq374gMsHvifs=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 46,
     "rating": 4.6,
@@ -4863,9 +5887,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "29WR7 - ICAD III - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 6:30AM-5PM · Monday: 6:30AM-5PM · Saturday: Closed · Sunday: 6:30AM-3:20PM · Thursday: 6:30AM-5PM · Tuesday: 6:30AM-5PM · Wednesday: 6:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Shaw+Emirates+Pipes+Manufacturing+LLC+%28The+Shaw+Group%29/@24.2794799,54.444774599999995,14z/data=!4m8!1m2!2m1!1sShaw+Emirates+Pipes+Manufacturing+LLC+%28The+Shaw+Group%29!3m4!1s0x3e5e3fd1fe29b63b:0x66bb6ead09d23e9b!8m2!3d24.2794799!4d54.444774599999995",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "apex-tubes-private-limited-new-delhi-delhi",
@@ -4878,6 +5902,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.apextube.com/",
     "phone": "+91 98110 33877",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9et-PV_onUCENZdZU1rOHmQFEkS43_yHPdt42gbTGzudNpkqZYnSXXEZOI8XHtAVFTgDh0MK14ej96RotzqO7NFYuMmD6q0qHBrF7wMYIkiJ4_dXkUsxhs7jagNHYXi2vaMQA=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-fU1pTUJF2Lc/AAAAAAAAAAI/AAAAAAAAAAA/ekHHPknzoeQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9et-PV_onUCENZdZU1rOHmQFEkS43_yHPdt42gbTGzudNpkqZYnSXXEZOI8XHtAVFTgDh0MK14ej96RotzqO7NFYuMmD6q0qHBrF7wMYIkiJ4_dXkUsxhs7jagNHYXi2vaMQA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9et-PV_onUCENZdZU1rOHmQFEkS43_yHPdt42gbTGzudNpkqZYnSXXEZOI8XHtAVFTgDh0MK14ej96RotzqO7NFYuMmD6q0qHBrF7wMYIkiJ4_dXkUsxhs7jagNHYXi2vaMQA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 23,
     "rating": 4.8,
@@ -4898,9 +5927,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1/6 - B, Ground Floor, Asaf Ali Rd, New Delhi, Delhi 110006, India",
     "openingHours": "Friday: 10AM-6:30PM · Monday: 10AM-6:30PM · Saturday: 10AM-5:30PM · Sunday: Closed · Thursday: 10AM-6:30PM · Tuesday: 10AM-6:30PM · Wednesday: 10AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Apex+Tubes+Private+Limited/@28.645520899999998,77.2250251,14z/data=!4m8!1m2!2m1!1sApex+Tubes+Private+Limited!3m4!1s0x390cfd3dcc34a68d:0x7dfdb7a3d3e6d3c5!8m2!3d28.645520899999998!4d77.2250251",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "abn-pipe-systems-medina-del-campo",
@@ -4913,6 +5942,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.abnpipesystems.com/",
     "phone": "+34 983 02 05 10",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCm5KyPB6iqKLXI46o9jMsLf-N46ISA98WN_IR_1I77HEd-CQ6e-1HuHk8UQxGPTUTM2rl5-9bYZS_ukV0f3h9K1d72ltbPfIuAqQES96cX4XS8uULjOXIaFrIi_0X8RueX5re=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-8WUnBjhKH4I/AAAAAAAAAAI/AAAAAAAAAAA/D41gllzNMVc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCm5KyPB6iqKLXI46o9jMsLf-N46ISA98WN_IR_1I77HEd-CQ6e-1HuHk8UQxGPTUTM2rl5-9bYZS_ukV0f3h9K1d72ltbPfIuAqQES96cX4XS8uULjOXIaFrIi_0X8RueX5re=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCm5KyPB6iqKLXI46o9jMsLf-N46ISA98WN_IR_1I77HEd-CQ6e-1HuHk8UQxGPTUTM2rl5-9bYZS_ukV0f3h9K1d72ltbPfIuAqQES96cX4XS8uULjOXIaFrIi_0X8RueX5re=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 103,
     "rating": 4.3,
@@ -4932,9 +5966,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Parque Empresarial Medina On, Autovía A-6, km 152, 47400 Medina del Campo, Valladolid, Spain",
     "openingHours": "Friday: 7AM-9PM · Monday: 7AM-9PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/ABN+Pipe+Systems/@41.2565953,-4.8738268,14z/data=!4m8!1m2!2m1!1sABN+Pipe+Systems!3m4!1s0xd47502c56295199:0x58f646e9145f5ef6!8m2!3d41.2565953!4d-4.8738268",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "custom-boxes-mart-custom-boxes-wholesale-usa-packaging-manuf",
@@ -4947,6 +5981,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://customboxesmart.com/",
     "phone": "+1 332-288-1360",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGPRmQpNfn0uKgHz318lyo5OWeB9TonEIseGWaaoBL5UraxkPoJSfeOgO1m_cDZ5X42EYj5K6gfvGIF9OLnhO7V13rBN6wO583-SuBZArEQz065lnKnM5YleLFnofj2lWwTVFsxm7vL7Q=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-aBNQ03h3EFo/AAAAAAAAAAI/AAAAAAAAAAA/6jFvrr4INrE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGPRmQpNfn0uKgHz318lyo5OWeB9TonEIseGWaaoBL5UraxkPoJSfeOgO1m_cDZ5X42EYj5K6gfvGIF9OLnhO7V13rBN6wO583-SuBZArEQz065lnKnM5YleLFnofj2lWwTVFsxm7vL7Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGPRmQpNfn0uKgHz318lyo5OWeB9TonEIseGWaaoBL5UraxkPoJSfeOgO1m_cDZ5X42EYj5K6gfvGIF9OLnhO7V13rBN6wO583-SuBZArEQz065lnKnM5YleLFnofj2lWwTVFsxm7vL7Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 20,
     "rating": 4.9,
@@ -4966,9 +6005,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1531 Herzel Blvd, West Babylon, NY 11704",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Custom+Boxes+Mart+-+Custom+Boxes+Wholesale+USA+-+Packaging+Manufacturer+in+USA+-+CBD+Boxes+in+USA/@40.722939499999995,-73.3612677,14z/data=!4m8!1m2!2m1!1sCustom+Boxes+Mart+-+Custom+Boxes+Wholesale+USA+-+Packaging+Manufacturer+in+USA+-+CBD+Boxes+in+USA!3m4!1s0x89e82d698eeae85d:0xdb85ed528a8aab2c!8m2!3d40.722939499999995!4d-73.3612677",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "prime-packaging-corporation-brooklyn",
@@ -4981,6 +6020,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://primepackaging.com/",
     "phone": "+1 718-417-1116",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHySp3euijrldBgx3gtIkfkn_V2oeZXKR_5r8TDMjjih8FsyECC0RA66cmKXyKZKROGfaY7KVcfotaeoovXZbJtlYdNP1EdG2bsihjL_V6Efkr0lFXAizoAy1Opjj428XdR73wxIQ=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-mxVNSkb2Xi8/AAAAAAAAAAI/AAAAAAAAAAA/rVJ_NH81e_0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHySp3euijrldBgx3gtIkfkn_V2oeZXKR_5r8TDMjjih8FsyECC0RA66cmKXyKZKROGfaY7KVcfotaeoovXZbJtlYdNP1EdG2bsihjL_V6Efkr0lFXAizoAy1Opjj428XdR73wxIQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHySp3euijrldBgx3gtIkfkn_V2oeZXKR_5r8TDMjjih8FsyECC0RA66cmKXyKZKROGfaY7KVcfotaeoovXZbJtlYdNP1EdG2bsihjL_V6Efkr0lFXAizoAy1Opjj428XdR73wxIQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 91,
     "rating": 4.3,
@@ -5000,9 +6044,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1290 Metropolitan Ave, Brooklyn, NY 11237",
     "openingHours": "Friday: 9AM-1PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Prime+Packaging+Corporation/@40.7131767,-73.9256668,14z/data=!4m8!1m2!2m1!1sPrime+Packaging+Corporation!3m4!1s0x89c25eaf6cae4ded:0xf6baf09061707adc!8m2!3d40.7131767!4d-73.9256668",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "huhtamaki-foodservice-germany-sales-gmbh-co-kg-alf",
@@ -5015,6 +6059,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.huhtamaki.com/de/foodservice-germany/",
     "phone": "+49 6542 8020",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3MOWyAempDeztB_wB9bJ2s0ADxkRwFLXq7iD7nNjzlPFt4TdRhTDdIbHNzTnN3ZpHCMCl8ZABF8zPaKiB0jAUPaMIJ83b8iZ--4WuqtZONABSeQlN35SBoWQEFSsuOMch3OyR=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-57aqx-7b1-8/AAAAAAAAAAI/AAAAAAAAAAA/JaLsYW9UxOE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3MOWyAempDeztB_wB9bJ2s0ADxkRwFLXq7iD7nNjzlPFt4TdRhTDdIbHNzTnN3ZpHCMCl8ZABF8zPaKiB0jAUPaMIJ83b8iZ--4WuqtZONABSeQlN35SBoWQEFSsuOMch3OyR=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3MOWyAempDeztB_wB9bJ2s0ADxkRwFLXq7iD7nNjzlPFt4TdRhTDdIbHNzTnN3ZpHCMCl8ZABF8zPaKiB0jAUPaMIJ83b8iZ--4WuqtZONABSeQlN35SBoWQEFSsuOMch3OyR=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 29,
     "rating": 4.7,
@@ -5034,9 +6083,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Bad-Bertricher-Straße 6, 56859 Alf-Fabrik, Germany",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Huhtamaki+Foodservice+Germany+Sales+GmbH+%26+Co.+KG/@50.05827,7.103949999999999,14z/data=!4m8!1m2!2m1!1sHuhtamaki+Foodservice+Germany+Sales+GmbH+%26+Co.+KG!3m4!1s0x47be39f1d199b1d1:0xc25e4527ec75c093!8m2!3d50.05827!4d7.103949999999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "dipack-corporation-packaging-machinery-supplier-delhi-ncr-de",
@@ -5049,6 +6098,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.dipack.in/",
     "phone": "+91 93559 91635",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDAaRsJXtvaTLhOxjyghhq3AvsyUVhjmS30XbdjZUphlx9Mi0rRPerNA7gNfpU8rTY3T9hQjViL1OUBItYgbxy9hhH7pC95EEVhItw843nMXN_fFJfzp2_G1dcdgQQOh2dfQes=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-xtq0z8xLORs/AAAAAAAAAAI/AAAAAAAAAAA/yWGJbc1oNK0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDAaRsJXtvaTLhOxjyghhq3AvsyUVhjmS30XbdjZUphlx9Mi0rRPerNA7gNfpU8rTY3T9hQjViL1OUBItYgbxy9hhH7pC95EEVhItw843nMXN_fFJfzp2_G1dcdgQQOh2dfQes=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDAaRsJXtvaTLhOxjyghhq3AvsyUVhjmS30XbdjZUphlx9Mi0rRPerNA7gNfpU8rTY3T9hQjViL1OUBItYgbxy9hhH7pC95EEVhItw843nMXN_fFJfzp2_G1dcdgQQOh2dfQes=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 29,
     "rating": 4.7,
@@ -5069,9 +6123,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C-53, R Block, Plot No, near Jain Mandir, Dilshad Garden, Delhi, 110095, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Dipack+Corporation+%7C+Packaging+Machinery+Supplier+Delhi+NCR/@28.6769948,77.3088483,14z/data=!4m8!1m2!2m1!1sDipack+Corporation+%7C+Packaging+Machinery+Supplier+Delhi+NCR!3m4!1s0x390cfb03e6d854a9:0x9126ba2948508c55!8m2!3d28.6769948!4d77.3088483",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "youpack-casablanca",
@@ -5084,6 +6138,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://youpack.ma/",
     "phone": "+212 6 60 95 56 65",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiYRkW_qJRhcixeAh3kRdtH1y8lC2P6F1RaDG8YUNkR_o7xmZJprRhsycUiuLumvAa1nTn5Ifc7sXST1DOyI1cl8sGgTRsfLBlzxtPJyw2TuQ-e53edRfw4Hxo2El2jOBiAmL9=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-o--YJIsv8TU/AAAAAAAAAAI/AAAAAAAAAAA/iim90QuOtPk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiYRkW_qJRhcixeAh3kRdtH1y8lC2P6F1RaDG8YUNkR_o7xmZJprRhsycUiuLumvAa1nTn5Ifc7sXST1DOyI1cl8sGgTRsfLBlzxtPJyw2TuQ-e53edRfw4Hxo2El2jOBiAmL9=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiYRkW_qJRhcixeAh3kRdtH1y8lC2P6F1RaDG8YUNkR_o7xmZJprRhsycUiuLumvAa1nTn5Ifc7sXST1DOyI1cl8sGgTRsfLBlzxtPJyw2TuQ-e53edRfw4Hxo2El2jOBiAmL9=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 28,
     "rating": 4.7,
@@ -5103,9 +6162,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8 Rue du Gabon, Casablanca 20250, Morocco",
     "openingHours": "Friday: 9:30AM-1:30PM,3-6:30PM · Monday: 9:30AM-1:30PM,2:30-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-1:30PM,2:30-6:30PM · Tuesday: 9:30AM-1:30PM,2:30-6:30PM · Wednesday: 9:30AM-1:",
     "sourceUrl": "https://www.google.com/maps/place/Youpack/@33.5927929,-7.6348619,14z/data=!4m8!1m2!2m1!1sYoupack!3m4!1s0xda7d347aaa922f3:0x5b91a15dbc4ea97b!8m2!3d33.5927929!4d-7.6348619",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "font-embalatges-fabrica-de-palets-es",
@@ -5118,6 +6177,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://fontpackaging.com/",
     "phone": "+34 938 99 53 11",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGj973hTsMGLKA19yLTOC66niFO4_dYO0V-bRjkJhhge8PWR3Hep4Fx4Pqa8dJ5i2ApwHb9L2fel2L3VKs4FECtIGr9nJTNSvRA_jP6UwgqEbItx1Qmfl3qAqb4xl848yyNEucb=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-zJALHr7-Vwo/AAAAAAAAAAI/AAAAAAAAAAA/FFnK-FSUGII/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGj973hTsMGLKA19yLTOC66niFO4_dYO0V-bRjkJhhge8PWR3Hep4Fx4Pqa8dJ5i2ApwHb9L2fel2L3VKs4FECtIGr9nJTNSvRA_jP6UwgqEbItx1Qmfl3qAqb4xl848yyNEucb=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGj973hTsMGLKA19yLTOC66niFO4_dYO0V-bRjkJhhge8PWR3Hep4Fx4Pqa8dJ5i2ApwHb9L2fel2L3VKs4FECtIGr9nJTNSvRA_jP6UwgqEbItx1Qmfl3qAqb4xl848yyNEucb=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 37,
     "rating": 4.6,
@@ -5137,9 +6201,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ctra, BP-2151, Km 13, 8, 08775, Barcelona, Spain",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/FONT+EMBALATGES%2C+FABRICA+DE+PALETS/@41.440865099999996,1.7295352,14z/data=!4m8!1m2!2m1!1sFONT+EMBALATGES%2C+FABRICA+DE+PALETS!3m4!1s0x12a464b7360ccf8d:0xca2675a0464aec1c!8m2!3d41.440865099999996!4d1.7295352",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "srs-building-products-salt-lake-city",
@@ -5152,6 +6216,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.srsdistribution.com/en/markets/our-brands/RLSAL/",
     "phone": "+1 801-478-0167",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFj9CB8klGwZEDSKGG0DvizpJndGR_lxpkQmIIjhJSEOXbKyTRB6KYrLeea6CHppcnp_fvxkzL2xvEEXPLmWDqgXKjeI7_NHA9l6lgYNP22A4D4i1HhzFu6weogDlWsj6FfZtHIw=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-Hm1TzWIyHic/AAAAAAAAAAI/AAAAAAAAAAA/6fsma9nAZFk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFj9CB8klGwZEDSKGG0DvizpJndGR_lxpkQmIIjhJSEOXbKyTRB6KYrLeea6CHppcnp_fvxkzL2xvEEXPLmWDqgXKjeI7_NHA9l6lgYNP22A4D4i1HhzFu6weogDlWsj6FfZtHIw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFj9CB8klGwZEDSKGG0DvizpJndGR_lxpkQmIIjhJSEOXbKyTRB6KYrLeea6CHppcnp_fvxkzL2xvEEXPLmWDqgXKjeI7_NHA9l6lgYNP22A4D4i1HhzFu6weogDlWsj6FfZtHIw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 52,
     "rating": 4.5,
@@ -5171,9 +6240,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "955 W 2100 S Expy, Salt Lake City, UT 84119",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/SRS+Building+Products/@40.725579499999995,-111.91888139999999,14z/data=!4m8!1m2!2m1!1sSRS+Building+Products!3m4!1s0x87528b32506e7915:0xba336c274d418e1b!8m2!3d40.725579499999995!4d-111.91888139999999",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "safinat-al-salam-building-materials-trading-ae",
@@ -5186,6 +6255,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.safinathtrading.com/",
     "phone": "+971 50 650 8079",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYYRpwMC5PiAU-7EPGWb8hrxOT0hSf0w41-YlTl4teaQAtlWkDci9yFoNPgTSnOxyJxLoYVIMQqZSsha-b2XhQCunm0VLEz6eAhFcwS7Z26ciSr7xg8bhyX97TUjywmPxfXjUXSPlWmoD9=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-algpbwP6Peo/AAAAAAAAAAI/AAAAAAAAAAA/Okquy3n5-qI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYYRpwMC5PiAU-7EPGWb8hrxOT0hSf0w41-YlTl4teaQAtlWkDci9yFoNPgTSnOxyJxLoYVIMQqZSsha-b2XhQCunm0VLEz6eAhFcwS7Z26ciSr7xg8bhyX97TUjywmPxfXjUXSPlWmoD9=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYYRpwMC5PiAU-7EPGWb8hrxOT0hSf0w41-YlTl4teaQAtlWkDci9yFoNPgTSnOxyJxLoYVIMQqZSsha-b2XhQCunm0VLEz6eAhFcwS7Z26ciSr7xg8bhyX97TUjywmPxfXjUXSPlWmoD9=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 36,
     "rating": 4.6,
@@ -5205,9 +6279,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Shop-1 - near Hadi Express Exchange Sonapur - Muhaisanah Second - Muhaisanah 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 6:30AM-12AM · Monday: 6AM-11PM · Saturday: 6:30AM-12AM · Sunday: 7AM-11PM · Thursday: 6:30AM-12AM · Tuesday: 6AM-11PM · Wednesday: 6:30AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/Safinat+Al+Salam+Building+Materials+Trading/@25.259743699999998,55.4231391,14z/data=!4m8!1m2!2m1!1sSafinat+Al+Salam+Building+Materials+Trading!3m4!1s0xa2fb9078e9786e23:0x84e0adcdd4c58514!8m2!3d25.259743699999998!4d55.4231391",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "modern-building-materials-trading-ae",
@@ -5220,6 +6294,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.mbmgulf.ae/%2520%2520--%2520%2520https://mbmgulfuae.com",
     "phone": "+971 2 555 2788",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGybqP_NSV4kaUAWyHCkx_TEqFY-i1gP0dYWtviW1isJ9ypnsD_5CaSvcp4CycbjZpOIbLViLktdexo__OwBL9vfjWXlCjs3bas3Nckq8Niann4AY7kLTY7tWOjaZFTIaeBYaY=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-D49pswFWDKE/AAAAAAAAAAI/AAAAAAAAAAA/2laooEPdQl8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGybqP_NSV4kaUAWyHCkx_TEqFY-i1gP0dYWtviW1isJ9ypnsD_5CaSvcp4CycbjZpOIbLViLktdexo__OwBL9vfjWXlCjs3bas3Nckq8Niann4AY7kLTY7tWOjaZFTIaeBYaY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGybqP_NSV4kaUAWyHCkx_TEqFY-i1gP0dYWtviW1isJ9ypnsD_5CaSvcp4CycbjZpOIbLViLktdexo__OwBL9vfjWXlCjs3bas3Nckq8Niann4AY7kLTY7tWOjaZFTIaeBYaY=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 45,
     "rating": 4.6,
@@ -5239,9 +6318,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "M-15,Musaffah Industrial Area - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM · Monday: 7:30AM-5:30PM · Saturday: 7:30AM-5:30PM · Sunday: Closed · Thursday: 7:30AM-5:30PM · Tuesday: 7:30AM-5:30PM · Wednesday: 7:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Modern+Building+Materials+Trading/@24.3787351,54.485322399999994,14z/data=!4m8!1m2!2m1!1sModern+Building+Materials+Trading!3m4!1s0x3e5e410f1aafe27d:0x4d8e81d8ffb5d699!8m2!3d24.3787351!4d54.485322399999994",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "buildline-building-materials-trading-llc-ae",
@@ -5254,6 +6333,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.buildlineuae.com/",
     "phone": "+971 52 692 1089",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcqdygPfNnJo3OlVlLepKQ4f3lqXSGckJUfE9bI1-9xhQM0YL1xnKbxh9sXETRnVYfqKfEYQySWngdVL_NqeYKzcoymVsSLSFunFb-77B9F27YnY8R0KGaf1H12Cqgu8VBx0Gv=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-dJrNMwcMkUM/AAAAAAAAAAI/AAAAAAAAAAA/n9fTePpO3jA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcqdygPfNnJo3OlVlLepKQ4f3lqXSGckJUfE9bI1-9xhQM0YL1xnKbxh9sXETRnVYfqKfEYQySWngdVL_NqeYKzcoymVsSLSFunFb-77B9F27YnY8R0KGaf1H12Cqgu8VBx0Gv=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcqdygPfNnJo3OlVlLepKQ4f3lqXSGckJUfE9bI1-9xhQM0YL1xnKbxh9sXETRnVYfqKfEYQySWngdVL_NqeYKzcoymVsSLSFunFb-77B9F27YnY8R0KGaf1H12Cqgu8VBx0Gv=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 47,
     "rating": 4.5,
@@ -5273,9 +6357,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "AL JURF - Al Jamia St - Al Jerf 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 6AM-8PM · Monday: 6AM-8:30PM · Saturday: 6AM-8:30PM · Sunday: 6AM-10PM · Thursday: 6AM-8:30PM · Tuesday: 6AM-8:30PM · Wednesday: 6AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Buildline+Building+Materials+Trading+LLC/@25.4324995,55.5364819,14z/data=!4m8!1m2!2m1!1sBuildline+Building+Materials+Trading+LLC!3m4!1s0x3e5f58765c06d95b:0xa51510ff93752315!8m2!3d25.4324995!4d55.5364819",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "qcon-general-trading-llc-al-quoz-4-dubai-head-office-ae",
@@ -5288,6 +6372,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.qconinternational.com/",
     "phone": "+971 4 334 8881",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAcZazBerB8muD1FJtTZva6otUp8aYe-9MydMyeNfhnlWAP7-Oie5uUd8CiLTEjvbEgjHo9dBtFjfr96v0iEW0q_A2fGeiZnigDc5UNjrfKTHmaRphrjLGOBkUnl59BIt2whov=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-9mjWXnICViY/AAAAAAAAAAI/AAAAAAAAAAA/eAjiXQKieNg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAcZazBerB8muD1FJtTZva6otUp8aYe-9MydMyeNfhnlWAP7-Oie5uUd8CiLTEjvbEgjHo9dBtFjfr96v0iEW0q_A2fGeiZnigDc5UNjrfKTHmaRphrjLGOBkUnl59BIt2whov=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAcZazBerB8muD1FJtTZva6otUp8aYe-9MydMyeNfhnlWAP7-Oie5uUd8CiLTEjvbEgjHo9dBtFjfr96v0iEW0q_A2fGeiZnigDc5UNjrfKTHmaRphrjLGOBkUnl59BIt2whov=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 85,
     "rating": 4.4,
@@ -5307,9 +6396,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Warehouse - 27 & 28 318th Rd - next to Al Ahli Driving Centre - Al Qouz Ind.fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-7PM · Monday: 7:30AM-7PM · Saturday: 7:30AM-7PM · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/QCON+General+Trading+LLC+-+AL+QUOZ+4%2C+DUBAI+HEAD+OFFICE/@25.122536999999998,55.2271724,14z/data=!4m8!1m2!2m1!1sQCON+General+Trading+LLC+-+AL+QUOZ+4%2C+DUBAI+HEAD+OFFICE!3m4!1s0x3e5f696012f9b20f:0x6508fdeb07939d13!8m2!3d25.122536999999998!4d55.2271724",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "bait-al-tatawor-company-for-steel-trading-and-manufacturing-",
@@ -5322,6 +6411,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.baitaltatawor.com/",
     "phone": "+966 50 510 0189",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUqEzgcVZetG4hbqxjSSEvZqpBg4Mj8YPhDW_JUm18ojzd3Ho0I4KUEH9VWw49rtCGkeht0RR4QuP9Sytav5jeP7vGhfX48-uDLFjsqEeRhS9s-mO-YsRZnMaEn0_-6wcJzDIUiA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-9UUxfabTNxY/AAAAAAAAAAI/AAAAAAAAAAA/u2t7kNvqxOc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUqEzgcVZetG4hbqxjSSEvZqpBg4Mj8YPhDW_JUm18ojzd3Ho0I4KUEH9VWw49rtCGkeht0RR4QuP9Sytav5jeP7vGhfX48-uDLFjsqEeRhS9s-mO-YsRZnMaEn0_-6wcJzDIUiA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUqEzgcVZetG4hbqxjSSEvZqpBg4Mj8YPhDW_JUm18ojzd3Ho0I4KUEH9VWw49rtCGkeht0RR4QuP9Sytav5jeP7vGhfX48-uDLFjsqEeRhS9s-mO-YsRZnMaEn0_-6wcJzDIUiA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 84,
     "rating": 4.8,
@@ -5341,9 +6435,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ibn Al-Ameed Street, An Noor, Riyadh 11323, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7:30AM-4:30PM · Saturday: 7:30AM-4:30PM · Sunday: 7:30AM-4:30PM · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Bait+Al-Tatawor+Company+for+Steel+Trading+and+Manufacturing/@24.6497413,46.8117096,14z/data=!4m8!1m2!2m1!1sBait+Al-Tatawor+Company+for+Steel+Trading+and+Manufacturing!3m4!1s0x3e2f07e59a747181:0x9c076116fc16e748!8m2!3d24.6497413!4d46.8117096",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "edil-cimini-company-srl-rome",
@@ -5356,6 +6450,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.edilcimini.it/",
     "phone": "+39 06 7984 8840",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaISZ9oPHUwZIjPNUP9szUK6Q6iE1XWZ_bzxtqpDZM2uo5O3Hecr1pCdsjdizWsmXMeRr3wRCzlaffgZ5IzO7NCCIXubZuZEWFJHByTdIv6ustUuUJz3ueNdpndW6MMI6fUQUk=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-qxpTPv5sxYY/AAAAAAAAAAI/AAAAAAAAAAA/FBMbW4hwy90/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaISZ9oPHUwZIjPNUP9szUK6Q6iE1XWZ_bzxtqpDZM2uo5O3Hecr1pCdsjdizWsmXMeRr3wRCzlaffgZ5IzO7NCCIXubZuZEWFJHByTdIv6ustUuUJz3ueNdpndW6MMI6fUQUk=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaISZ9oPHUwZIjPNUP9szUK6Q6iE1XWZ_bzxtqpDZM2uo5O3Hecr1pCdsjdizWsmXMeRr3wRCzlaffgZ5IzO7NCCIXubZuZEWFJHByTdIv6ustUuUJz3ueNdpndW6MMI6fUQUk=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 66,
     "rating": 4.4,
@@ -5375,9 +6474,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via dei Sette Metri, 42a, 00118 Roma RM, Italy",
     "openingHours": "Friday: 7AM-6PM · Monday: 7AM-6PM · Saturday: 7AM-1PM · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Edil+Cimini+Company+SRL/@41.816402,12.607552,14z/data=!4m8!1m2!2m1!1sEdil+Cimini+Company+SRL!3m4!1s0x13258862850bfbbf:0xd94a4cc48103e905!8m2!3d41.816402!4d12.607552",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "jt-construction-supply-farmers-branch",
@@ -5390,6 +6489,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://vinylflooring.carrd.co/",
     "phone": "+1 817-300-3577",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoynfIdI3lkf9Oh_GPhv1PnAsgYXaCBFfMUdrIUEZOax90udFBcZQ4aSq_t71M3viuj3-sAxozAYZWpPwzoBjVyAiLG3J07rcvBldjIVxEChmcXrCUQA5jEzFFc05Y67PONRI1gObJwoy9=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-iZpTKSR5qMg/AAAAAAAAAAI/AAAAAAAAAAA/232IydtvAws/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoynfIdI3lkf9Oh_GPhv1PnAsgYXaCBFfMUdrIUEZOax90udFBcZQ4aSq_t71M3viuj3-sAxozAYZWpPwzoBjVyAiLG3J07rcvBldjIVxEChmcXrCUQA5jEzFFc05Y67PONRI1gObJwoy9=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEoynfIdI3lkf9Oh_GPhv1PnAsgYXaCBFfMUdrIUEZOax90udFBcZQ4aSq_t71M3viuj3-sAxozAYZWpPwzoBjVyAiLG3J07rcvBldjIVxEChmcXrCUQA5jEzFFc05Y67PONRI1gObJwoy9=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 21,
     "rating": 4.8,
@@ -5409,9 +6513,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "11410 Mathis Ave, Farmers Branch, TX 75234",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/JT+Construction+Supply/@32.8973558,-96.9117777,14z/data=!4m8!1m2!2m1!1sJT+Construction+Supply!3m4!1s0x864c2707d7a83937:0xdb61e126c0e5cbab!8m2!3d32.8973558!4d-96.9117777",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "century-industrial-supply-brooklyn",
@@ -5424,6 +6528,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://centuryindustrialsupply.com/",
     "phone": "+1 718-729-7491",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdkcB5f7Rtq3XAaoP5DPMeSMLeN5bu318j_YbkB04ikMVK2qjzINGaK3zn7_m31yNztSZSWx6ctxknF7GLb_-JOKTbS3P_E3G4MUDzcTKKLil2Nf2oPUNuvbQEJFKfjg-pNTOV=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-4jkiIC-UxWI/AAAAAAAAAAI/AAAAAAAAAAA/bZ3GgQzYhy4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdkcB5f7Rtq3XAaoP5DPMeSMLeN5bu318j_YbkB04ikMVK2qjzINGaK3zn7_m31yNztSZSWx6ctxknF7GLb_-JOKTbS3P_E3G4MUDzcTKKLil2Nf2oPUNuvbQEJFKfjg-pNTOV=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdkcB5f7Rtq3XAaoP5DPMeSMLeN5bu318j_YbkB04ikMVK2qjzINGaK3zn7_m31yNztSZSWx6ctxknF7GLb_-JOKTbS3P_E3G4MUDzcTKKLil2Nf2oPUNuvbQEJFKfjg-pNTOV=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 23,
     "rating": 4.8,
@@ -5443,9 +6552,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "126 Scott Ave, Brooklyn, NY 11237",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Century+Industrial+Supply/@40.711600399999995,-73.9233488,14z/data=!4m8!1m2!2m1!1sCentury+Industrial+Supply!3m4!1s0x89c2592a215caa53:0xabc3c585ca3b760a!8m2!3d40.711600399999995!4d-73.9233488",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "rukn-al-burhan-heavy-equipment-spare-parts-trading-suppliers",
@@ -5458,6 +6567,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://alburhanspares.com/",
     "phone": "+971 56 669 0325",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz54-A8oz1AOHL5oQcnue0bGQJanvta9vls62t3RCLSaYrdLsSoBO13n55h6w6uxrDvW4GIF_sPGY1x4Pvk_apy1rpde_VFEMT61F4lsV4eNTKg8mCEkI_uzIB5goP43AGD4zS=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-Zv0MOQH_nQw/AAAAAAAAAAI/AAAAAAAAAAA/-ei-M4FEhU4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz54-A8oz1AOHL5oQcnue0bGQJanvta9vls62t3RCLSaYrdLsSoBO13n55h6w6uxrDvW4GIF_sPGY1x4Pvk_apy1rpde_VFEMT61F4lsV4eNTKg8mCEkI_uzIB5goP43AGD4zS=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz54-A8oz1AOHL5oQcnue0bGQJanvta9vls62t3RCLSaYrdLsSoBO13n55h6w6uxrDvW4GIF_sPGY1x4Pvk_apy1rpde_VFEMT61F4lsV4eNTKg8mCEkI_uzIB5goP43AGD4zS=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 36,
     "rating": 4.7,
@@ -5477,9 +6591,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Caterpillar - Road - Industrial Area 3 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Rukn+Al+Burhan+-+Heavy+Equipment+Spare+Parts+Trading+Suppliers+in+UAE/@25.3066107,55.4029877,14z/data=!4m8!1m2!2m1!1sRukn+Al+Burhan+-+Heavy+Equipment+Spare+Parts+Trading+Suppliers+in+UAE!3m4!1s0x3e5f5f85445c703d:0x7382f075442683fa!8m2!3d25.3066107!4d55.4029877",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sourcehub-heavy-equipment-and-machinery-spare-parts-trading-",
@@ -5492,6 +6606,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.sourcehubme.com/",
     "phone": "+971 50 619 8373",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFI5q7Jju7h_Sm-FPicVUMPSYiZKyVVb3PokF3OnyUZMgBDNmIbSAzy8ohR1cVw-wD5RVlAePsCcRV_ISxJuHbMGmDAnBdvrvQQsQLMADtqkfz-VEZonSht1g5MMv6XYnLUl3hsVGZOb301=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-gBtMaNpIOjQ/AAAAAAAAAAI/AAAAAAAAAAA/BtqwfOfJ3b4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFI5q7Jju7h_Sm-FPicVUMPSYiZKyVVb3PokF3OnyUZMgBDNmIbSAzy8ohR1cVw-wD5RVlAePsCcRV_ISxJuHbMGmDAnBdvrvQQsQLMADtqkfz-VEZonSht1g5MMv6XYnLUl3hsVGZOb301=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFI5q7Jju7h_Sm-FPicVUMPSYiZKyVVb3PokF3OnyUZMgBDNmIbSAzy8ohR1cVw-wD5RVlAePsCcRV_ISxJuHbMGmDAnBdvrvQQsQLMADtqkfz-VEZonSht1g5MMv6XYnLUl3hsVGZOb301=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 26,
     "rating": 4.8,
@@ -5511,9 +6630,126 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Bayan Business Center - Dubai Investment Park First - Green Community Village - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-12:30PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/SourceHub+Heavy+Equipment+and+Machinery+Spare+Parts+Trading+Co.+LLC/@24.9978314,55.1726831,14z/data=!4m8!1m2!2m1!1sSourceHub+Heavy+Equipment+and+Machinery+Spare+Parts+Trading+Co.+LLC!3m4!1s0x3e5f73ba0f28dec5:0xc7882b52b758a63f!8m2!3d24.9978314!4d55.1726831",
-    "score": 87,
+    "score": 93,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "batifer-sa-production-de-tubes-soudes-et-profiles-metallurgi",
+    "name": "BATIFER SA : Production de tubes soudés et profilés métallurgiques. Découpe laser de tubes.",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "location": "Mohammedia, Morocco",
+    "country": "Morocco",
+    "city": "Mohammedia",
+    "website": "https://batifer.ma/",
+    "phone": "+212 5 23 31 56 47",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFEB4UoCpXD6MBoFqIdTsDl4jQoIXIt_xMNio-C36-tPXKayTOUcDLOBLkkRoFPmi3MFOdC9WujUuuDgZ3rtjGEsKjIejBUe_b9VJRs3M1sljgqBJRYo52A77QIGTulu2AzaHnYpQ=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-g_TSMITIOkc/AAAAAAAAAAI/AAAAAAAAAAA/m619492Ul88/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFEB4UoCpXD6MBoFqIdTsDl4jQoIXIt_xMNio-C36-tPXKayTOUcDLOBLkkRoFPmi3MFOdC9WujUuuDgZ3rtjGEsKjIejBUe_b9VJRs3M1sljgqBJRYo52A77QIGTulu2AzaHnYpQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFEB4UoCpXD6MBoFqIdTsDl4jQoIXIt_xMNio-C36-tPXKayTOUcDLOBLkkRoFPmi3MFOdC9WujUuuDgZ3rtjGEsKjIejBUe_b9VJRs3M1sljgqBJRYo52A77QIGTulu2AzaHnYpQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 26,
+    "rating": 4.7,
+    "reviewCount": 26,
+    "verified": true,
+    "description": "Tubes & Pipes supplier in Mohammedia, Morocco.",
+    "products": [
+      "Steel pipes",
+      "Welded tubes",
+      "Pipe fittings"
+    ],
+    "deliveryRegions": [
+      "North Africa",
+      "EU"
+    ],
+    "moq": "2 tons",
+    "address": "111, zone industrielle Lotissement ElMasbahia, Mohammedia 20800, Morocco",
+    "openingHours": "Friday: 8:30AM-12:30PM,1:30-6PM · Monday: 8:30AM-12:30PM,1:30-6PM · Saturday: 8:30AM-12:30PM · Sunday: Closed · Thursday: 8:30AM-12:30PM,1:30-6PM · Tuesday: 8:30AM-12:30PM,1:30-6PM · Wednesday: 8:30AM",
+    "sourceUrl": "https://www.google.com/maps/place/BATIFER+SA+%3A+Production+de+tubes+soud%C3%A9s+et+profil%C3%A9s+m%C3%A9tallurgiques.+D%C3%A9coupe+laser+de+tubes./@33.6715356,-7.415113,14z/data=!4m8!1m2!2m1!1sBATIFER+SA+%3A+Production+de+tubes+soud%C3%A9s+et+profil%C3%A9s+m%C3%A9tallurgiques.+D%C3%A9coupe+laser+de+tubes.!3m4!1s0xda7b672e2f8fbc7:0x2b0f685f4776c473!8m2!3d33.6715356!4d-7.415113",
+    "score": 93,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "packaging-source-inc-custom-retail-packaging-printed-boxes-f",
+    "name": "Packaging Source, Inc. - Custom Retail Packaging, Printed Boxes, Folding Cartons, & POP Displays Dallas, TX",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Frisco, United States",
+    "country": "United States",
+    "city": "Frisco",
+    "website": "http://www.packagingsourceinc.com/",
+    "phone": "+1 214-808-7664",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtkJGBE2wKl7uM-9PdOnlbHPKT6uWR31-OrK9bQq3QRcC4fUY1pkIljxA-e_h79m0u-GKT8bfiUhlL0g74GcoQM_CxDQHmJvTQHjgEsmRzhfuDFtDoQhfC-xY_hC3lq5KnXOs=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-qBRuveuXWSM/AAAAAAAAAAI/AAAAAAAAAAA/uzrIc8NEH2g/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtkJGBE2wKl7uM-9PdOnlbHPKT6uWR31-OrK9bQq3QRcC4fUY1pkIljxA-e_h79m0u-GKT8bfiUhlL0g74GcoQM_CxDQHmJvTQHjgEsmRzhfuDFtDoQhfC-xY_hC3lq5KnXOs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtkJGBE2wKl7uM-9PdOnlbHPKT6uWR31-OrK9bQq3QRcC4fUY1pkIljxA-e_h79m0u-GKT8bfiUhlL0g74GcoQM_CxDQHmJvTQHjgEsmRzhfuDFtDoQhfC-xY_hC3lq5KnXOs=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 36,
+    "rating": 4.7,
+    "reviewCount": 36,
+    "verified": true,
+    "description": "Packaging company offering specialty products, such as displays, shipping boxes, and labels.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "2,000 units",
+    "address": "2601 Network Blvd Suite 440, Frisco, TX 75034",
+    "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
+    "sourceUrl": "https://www.google.com/maps/place/Packaging+Source%2C+Inc.+-+Custom+Retail+Packaging%2C+Printed+Boxes%2C+Folding+Cartons%2C+%26+POP+Displays+Dallas%2C+TX/@33.1017717,-96.8273069,14z/data=!4m8!1m2!2m1!1sPackaging+Source%2C+Inc.+-+Custom+Retail+Packaging%2C+Printed+Boxes%2C+Folding+Cartons%2C+%26+POP+Displays+Dallas%2C+TX!3m4!1s0x864c3b801bb1e977:0x648af815bf118440!8m2!3d33.1017717!4d-96.8273069",
+    "score": 93,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "lendy-electric-equipment-supply-corp-new-york",
+    "name": "Lendy Electric Equipment & Supply Corp.",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "New York, United States",
+    "country": "United States",
+    "city": "New York",
+    "website": "https://www.lendyelectric.com/",
+    "phone": "+1 212-431-3698",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGNdTae0KoPHw_2ndpEcwmzILB78KiKYwM-REY0qYAXnLxV0AkAxa8O2qTXDkrfMKSaqe-W0zuqttU1lgGkwk1XFoEne9xnSdf9HHjIsNB4hCDAH0tuAE7v5QvSkWVDyBhq4rchXo60HwWYfxpxfl14GoSIE_iIVPRq7eXsx1W1XOWE0Dz98nNZHDSJPrqeCYZcVSM=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-lu80o1G31cA/AAAAAAAAAAI/AAAAAAAAAAA/rJ1eOa3v9qs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGNdTae0KoPHw_2ndpEcwmzILB78KiKYwM-REY0qYAXnLxV0AkAxa8O2qTXDkrfMKSaqe-W0zuqttU1lgGkwk1XFoEne9xnSdf9HHjIsNB4hCDAH0tuAE7v5QvSkWVDyBhq4rchXo60HwWYfxpxfl14GoSIE_iIVPRq7eXsx1W1XOWE0Dz98nNZHDSJPrqeCYZcVSM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGNdTae0KoPHw_2ndpEcwmzILB78KiKYwM-REY0qYAXnLxV0AkAxa8O2qTXDkrfMKSaqe-W0zuqttU1lgGkwk1XFoEne9xnSdf9HHjIsNB4hCDAH0tuAE7v5QvSkWVDyBhq4rchXo60HwWYfxpxfl14GoSIE_iIVPRq7eXsx1W1XOWE0Dz98nNZHDSJPrqeCYZcVSM=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.2,
+    "googleReviews": 126,
+    "rating": 4.2,
+    "reviewCount": 126,
+    "verified": true,
+    "description": "Supplier of hardware, lighting fixtures, tools & equipment for contractors & home design hobbyists.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "1 pallet",
+    "address": "176 Grand St, New York, NY 10013",
+    "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8:30AM-5PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/Lendy+Electric+Equipment+%26+Supply+Corp./@40.719663,-73.997675,14z/data=!4m8!1m2!2m1!1sLendy+Electric+Equipment+%26+Supply+Corp.!3m4!1s0x89c25989ad56f57b:0x73e477759382aa86!8m2!3d40.719663!4d-73.997675",
+    "score": 93,
+    "reliabilityScore": 84,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ferrite-structural-steels-private-limited-mumbai",
@@ -5526,6 +6762,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.ferrite.in/",
     "phone": "+91 88283 35168",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdr-8pJh_GUXOy_V0wMiN2lxtAT9dlXutMqQ0Uq2eCZDccfphazIGIU_nra6XlaM1FNmL4p7RbkU9ihVWE6bg1EsF1WJI7FjGvEZMPDQ9Lb4hABojeq7ZMcl8zPNf5r_F3zs8H=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-bman18cWac4/AAAAAAAAAAI/AAAAAAAAAAA/ntiQficOLwU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdr-8pJh_GUXOy_V0wMiN2lxtAT9dlXutMqQ0Uq2eCZDccfphazIGIU_nra6XlaM1FNmL4p7RbkU9ihVWE6bg1EsF1WJI7FjGvEZMPDQ9Lb4hABojeq7ZMcl8zPNf5r_F3zs8H=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdr-8pJh_GUXOy_V0wMiN2lxtAT9dlXutMqQ0Uq2eCZDccfphazIGIU_nra6XlaM1FNmL4p7RbkU9ihVWE6bg1EsF1WJI7FjGvEZMPDQ9Lb4hABojeq7ZMcl8zPNf5r_F3zs8H=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 21,
     "rating": 4.7,
@@ -5546,9 +6787,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "803, Excel Plaza, 90 Feet Rd, Pant Nagar, Ghatkopar East, Mumbai, Maharashtra 400075, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/FERRITE+STRUCTURAL+STEELS+PRIVATE+LIMITED/@19.0827627,72.91296059999999,14z/data=!4m8!1m2!2m1!1sFERRITE+STRUCTURAL+STEELS+PRIVATE+LIMITED!3m4!1s0x3be7c63228390683:0x2506e2db4710f800!8m2!3d19.0827627!4d72.91296059999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "suman-steels-india-llp-vasai-virar",
@@ -5561,6 +6802,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://sumansteels.com/",
     "phone": "+91 97024 48596",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgo1TOsZWB8YKnYqM23XHwh8D0vKr4g3K15JERKkzuJHvB0saot5V141ZAlsLB_9ECtlrYJbfqs1hc3Dp1qfhJ-mBwAlqAqZqCvsf5BvPIIhbxOLnSj17a6dkBoIu_cv3AJnPx=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-4YdWjhCcg4U/AAAAAAAAAAI/AAAAAAAAAAA/5YZJ7IoN0Yg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgo1TOsZWB8YKnYqM23XHwh8D0vKr4g3K15JERKkzuJHvB0saot5V141ZAlsLB_9ECtlrYJbfqs1hc3Dp1qfhJ-mBwAlqAqZqCvsf5BvPIIhbxOLnSj17a6dkBoIu_cv3AJnPx=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgo1TOsZWB8YKnYqM23XHwh8D0vKr4g3K15JERKkzuJHvB0saot5V141ZAlsLB_9ECtlrYJbfqs1hc3Dp1qfhJ-mBwAlqAqZqCvsf5BvPIIhbxOLnSj17a6dkBoIu_cv3AJnPx=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 31,
     "rating": 4.6,
@@ -5581,9 +6827,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2,3,4 Richa Trade Centre, Sativali Rd, opposite NEXA & Mahindra Showroom, Vasai East, Maharashtra 401208, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SUMAN+STEELS+INDIA+LLP/@19.4063624,72.86476019999999,14z/data=!4m8!1m2!2m1!1sSUMAN+STEELS+INDIA+LLP!3m4!1s0x3be7a9472d144b27:0xffc49cc6e00edfa!8m2!3d19.4063624!4d72.86476019999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "virwadia-metal-and-alloys-chennai",
@@ -5596,6 +6842,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.virwadiametal.com/",
     "phone": "+91 90042 08680",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcqFuWUKkX6G_A8qR6ShIj1BgiAgpHx2LTNq-UtbwwY7GTBMsfruASpPNOCjmXI2Hk3vKNEaw7kNVOVke2KgRG0l1VPBnKpM7h2TWN3AgaHF-M27QvX38LFTUHrDO1YjmDY285fQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-mChOw9whb2Y/AAAAAAAAAAI/AAAAAAAAAAA/bzhqrrBp1z4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcqFuWUKkX6G_A8qR6ShIj1BgiAgpHx2LTNq-UtbwwY7GTBMsfruASpPNOCjmXI2Hk3vKNEaw7kNVOVke2KgRG0l1VPBnKpM7h2TWN3AgaHF-M27QvX38LFTUHrDO1YjmDY285fQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcqFuWUKkX6G_A8qR6ShIj1BgiAgpHx2LTNq-UtbwwY7GTBMsfruASpPNOCjmXI2Hk3vKNEaw7kNVOVke2KgRG0l1VPBnKpM7h2TWN3AgaHF-M27QvX38LFTUHrDO1YjmDY285fQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 21,
     "rating": 4.7,
@@ -5616,9 +6867,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Mugappair Rd, Mannurpet, Padi, Chennai, Tamil Nadu 600050, India",
     "openingHours": "Friday: 10:30AM-6:30PM · Monday: 10:30AM-6:30PM · Saturday: 10:30AM-6:30PM · Sunday: Closed · Thursday: 10:30AM-6:30PM · Tuesday: 10:30AM-6:30PM · Wednesday: 10:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/VIRWADIA+METAL+AND+ALLOYS/@13.0977809,80.1765453,14z/data=!4m8!1m2!2m1!1sVIRWADIA+METAL+AND+ALLOYS!3m4!1s0x3a5263618e58bd0b:0x6eab89e07ee267b1!8m2!3d13.0977809!4d80.1765453",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "universal-industrial-steel-usine-berrechid",
@@ -5631,6 +6882,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.uisteel.com/",
     "phone": "+212 5 22 32 85 04",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFg6ceDIVIedW6RWoFSFG11WNhoii4YZ__UCyqUMoPA5EBWLP2lSwrpJWzbimvHXXAlhuzH8DFQOlTdnc-jiujx20fxYgilPyopxxdSAub7BNrnmExHpz8b7MTV0NUXb6DgkM_TQw=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-DkyJHoYvAnM/AAAAAAAAAAI/AAAAAAAAAAA/fXefAJsM8Lg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFg6ceDIVIedW6RWoFSFG11WNhoii4YZ__UCyqUMoPA5EBWLP2lSwrpJWzbimvHXXAlhuzH8DFQOlTdnc-jiujx20fxYgilPyopxxdSAub7BNrnmExHpz8b7MTV0NUXb6DgkM_TQw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFg6ceDIVIedW6RWoFSFG11WNhoii4YZ__UCyqUMoPA5EBWLP2lSwrpJWzbimvHXXAlhuzH8DFQOlTdnc-jiujx20fxYgilPyopxxdSAub7BNrnmExHpz8b7MTV0NUXb6DgkM_TQw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 38,
     "rating": 4.5,
@@ -5650,9 +6906,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Route de Settat, C.R. Sidi Mekki, Berrechid, Morocco",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Universal+Industrial+Steel+-+Usine/@33.2172894,-7.6099765999999995,14z/data=!4m8!1m2!2m1!1sUniversal+Industrial+Steel+-+Usine!3m4!1s0xda63d4d3b905633:0xec2a3747d1f0b4d4!8m2!3d33.2172894!4d-7.6099765999999995",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "lynxeo-deutschland-gmbh-nuremberg",
@@ -5665,6 +6921,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.lynxeogroup.com/",
     "phone": "+49 911 52070",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuDskgTDBp4n0vLkIbatukqWGWETYONIJgGwGnNaq8Sm380NBmRvBFWtzU7cOY2nkrUOwoCOKgfN67P_gH-FdAuwjl1H_SzpcYeKf2p9wNg2pDz4CbRBT_ora9kGuhgw8qyq8D=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-knYExONoug4/AAAAAAAAAAI/AAAAAAAAAAA/yyPtfbv3Qhw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuDskgTDBp4n0vLkIbatukqWGWETYONIJgGwGnNaq8Sm380NBmRvBFWtzU7cOY2nkrUOwoCOKgfN67P_gH-FdAuwjl1H_SzpcYeKf2p9wNg2pDz4CbRBT_ora9kGuhgw8qyq8D=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuDskgTDBp4n0vLkIbatukqWGWETYONIJgGwGnNaq8Sm380NBmRvBFWtzU7cOY2nkrUOwoCOKgfN67P_gH-FdAuwjl1H_SzpcYeKf2p9wNg2pDz4CbRBT_ora9kGuhgw8qyq8D=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 63,
     "rating": 4.3,
@@ -5684,9 +6945,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Sieboldstraße 10, 90411 Nürnberg, Germany",
     "openingHours": "Friday: 7AM-1PM · Monday: 7AM-1PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-1PM · Tuesday: 7AM-1PM · Wednesday: 7AM-1PM",
     "sourceUrl": "https://www.google.com/maps/place/Lynxeo+Deutschland+GmbH/@49.478474,11.118702899999999,14z/data=!4m8!1m2!2m1!1sLynxeo+Deutschland+GmbH!3m4!1s0x479f57fe99c38241:0xe8b7ef60342eafec!8m2!3d49.478474!4d11.118702899999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "trans-light-electricals-llc-ae",
@@ -5699,6 +6960,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://translight.me/",
     "phone": "+971 4 339 9627",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOTunjIdOKBK_LimMiYzAUC9yX3uLMG75cXQ2qVBzHzBeMPmKUmUm3PdzOP9PS3G6LY6-ZtLVbemyMcl9oAce56fN6TnJSS9_wIe5ir9WU9vmX1iPp50mzXED_YkYiE91jW4KYxCzeFdyG=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-2tpInSCSqPA/AAAAAAAAAAI/AAAAAAAAAAA/HnBp8apJ4NI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOTunjIdOKBK_LimMiYzAUC9yX3uLMG75cXQ2qVBzHzBeMPmKUmUm3PdzOP9PS3G6LY6-ZtLVbemyMcl9oAce56fN6TnJSS9_wIe5ir9WU9vmX1iPp50mzXED_YkYiE91jW4KYxCzeFdyG=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOTunjIdOKBK_LimMiYzAUC9yX3uLMG75cXQ2qVBzHzBeMPmKUmUm3PdzOP9PS3G6LY6-ZtLVbemyMcl9oAce56fN6TnJSS9_wIe5ir9WU9vmX1iPp50mzXED_YkYiE91jW4KYxCzeFdyG=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 38,
     "rating": 4.5,
@@ -5718,9 +6984,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/TRANS+LIGHT+ELECTRICALS+LLC/@25.1741304,55.3505755,14z/data=!4m8!1m2!2m1!1sTRANS+LIGHT+ELECTRICALS+LLC!3m4!1s0x3e5e41a93b279b0f:0x869aa19d1f4702dd!8m2!3d25.1741304!4d55.3505755",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tegh-cables-india-pvt-ltd-polycab-cables-wires-distributor-m",
@@ -5733,6 +6999,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://teghindia.com/",
     "phone": "+91 99200 33388",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYkpxXW-n7tnlqbVKKrpqYZkBl5lSvvBFLAIl3SJgEY2rjCm12w7AD2Fp1mAeEcXrGY7i263pcaW8zsAM6ScKwkpvv25YkTL9g7WixXhAI_GFFOTaElcKnhRS-OgAMYOWAb3Sa=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-_5U1joP7ZZk/AAAAAAAAAAI/AAAAAAAAAAA/9yVoSR5X9y0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYkpxXW-n7tnlqbVKKrpqYZkBl5lSvvBFLAIl3SJgEY2rjCm12w7AD2Fp1mAeEcXrGY7i263pcaW8zsAM6ScKwkpvv25YkTL9g7WixXhAI_GFFOTaElcKnhRS-OgAMYOWAb3Sa=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYkpxXW-n7tnlqbVKKrpqYZkBl5lSvvBFLAIl3SJgEY2rjCm12w7AD2Fp1mAeEcXrGY7i263pcaW8zsAM6ScKwkpvv25YkTL9g7WixXhAI_GFFOTaElcKnhRS-OgAMYOWAb3Sa=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 20,
     "rating": 4.7,
@@ -5753,9 +7024,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "HARE KRISHAN BHAVAN, 201/202, opp. DRAGON FLY HOTEL, near SOLITAIRE PARK, Dr. Charatsingh Colony, S B Singh Colony, J B Nagar, Andheri East, Mumbai, Maharashtra 400093, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-5PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Tegh+Cables+India+Pvt+Ltd+-+Polycab+Cables+%26+Wires+Distributor+%7C+Mumbai+%7C+Pune+%7C+Gujarat+%7C+Hyderabad/@19.1119469,72.8627295,14z/data=!4m8!1m2!2m1!1sTegh+Cables+India+Pvt+Ltd+-+Polycab+Cables+%26+Wires+Distributor+%7C+Mumbai+%7C+Pune+%7C+Gujarat+%7C+Hyderabad!3m4!1s0x3be7c83767368965:0x14fb8a77f22e0af7!8m2!3d19.1119469!4d72.8627295",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cci-cable-service-s-r-l-manufacturing-plant-ferentino",
@@ -5768,6 +7039,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://ek-group.com/ek-factory/",
     "phone": "+39 0775 271494",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAET4WHiZTWi-M8C9xAROOBXROfxKDCuNaIVYtHca4jaH7PrxdVOXzfvgsmTgVxwj1EG9McXQhmiBkeLuRfEf4jGMTzvzFDmOpvTcXDGBFg7FgWbKR74sCxBnMCPHV0-OckchycQptxalyrP=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Gi8QlozU2lA/AAAAAAAAAAI/AAAAAAAAAAA/8cR75RHmE04/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAET4WHiZTWi-M8C9xAROOBXROfxKDCuNaIVYtHca4jaH7PrxdVOXzfvgsmTgVxwj1EG9McXQhmiBkeLuRfEf4jGMTzvzFDmOpvTcXDGBFg7FgWbKR74sCxBnMCPHV0-OckchycQptxalyrP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAET4WHiZTWi-M8C9xAROOBXROfxKDCuNaIVYtHca4jaH7PrxdVOXzfvgsmTgVxwj1EG9McXQhmiBkeLuRfEf4jGMTzvzFDmOpvTcXDGBFg7FgWbKR74sCxBnMCPHV0-OckchycQptxalyrP=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 20,
     "rating": 4.7,
@@ -5787,9 +7063,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Casilina, KM. 78/600, 03013 Ferentino FR, Italy",
     "openingHours": "Friday: 8AM-12:30PM,2-5PM · Monday: 8AM-12:30PM,2-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,2-5PM · Tuesday: 8AM-12:30PM,2-5PM · Wednesday: 8AM-12:30PM,2-5PM",
     "sourceUrl": "https://www.google.com/maps/place/CCI+Cable+Service+S.r.l.+-+MANUFACTURING+PLANT/@41.6689989,13.2964457,14z/data=!4m8!1m2!2m1!1sCCI+Cable+Service+S.r.l.+-+MANUFACTURING+PLANT!3m4!1s0x13255c0932570381:0x82070f8847cb5102!8m2!3d41.6689989!4d13.2964457",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "acome-maroc-tangier",
@@ -5802,6 +7078,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.acome.com/",
     "phone": "+212 5 31 06 38 41",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF9EkLTeuTKVl61nv3qvO48lbPflgOG3CO_o0ZFZYKRe1aaJYE9buza3Gx_ONV4ypLvNx4TtjQUqCPQT4yIJXM0Q24ofqoo7ueHZOfp5TqZhFBYwPNfvrcZJ3UkLEaJqlOXkLEXag=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-V2emfyjVkEs/AAAAAAAAAAI/AAAAAAAAAAA/HyQf7imyK6I/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF9EkLTeuTKVl61nv3qvO48lbPflgOG3CO_o0ZFZYKRe1aaJYE9buza3Gx_ONV4ypLvNx4TtjQUqCPQT4yIJXM0Q24ofqoo7ueHZOfp5TqZhFBYwPNfvrcZJ3UkLEaJqlOXkLEXag=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF9EkLTeuTKVl61nv3qvO48lbPflgOG3CO_o0ZFZYKRe1aaJYE9buza3Gx_ONV4ypLvNx4TtjQUqCPQT4yIJXM0Q24ofqoo7ueHZOfp5TqZhFBYwPNfvrcZJ3UkLEaJqlOXkLEXag=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 30,
     "rating": 4.6,
@@ -5821,9 +7102,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Tangier, Morocco",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/ACOME+MAROC/@35.7137899,-5.9214066999999995,14z/data=!4m8!1m2!2m1!1sACOME+MAROC!3m4!1s0xd0b88ed14f4b33b:0x82fc22b2cb3c98a9!8m2!3d35.7137899!4d-5.9214066999999995",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "helukabel-mexico-s-de-r-l-de-c-v-santiago-de-queretaro",
@@ -5836,6 +7117,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://helukabelmexico.com/",
     "phone": "+52 442 209 6400",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSUkiF5sAEmk4aiZZVdGl-Toa8HcZf4qJaF6uH6et-7Tse9BkXBjkAlTNmWk7qq-nI7AnildVzTMQ43yRfRRpY5Ivkvb7R2ZXKH_tLjbcVk01LI-Aubx01VoJkrecEGJH6u0jbkA=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Iuwco_vmSYY/AAAAAAAAAAI/AAAAAAAAAAA/zMAzF9Dszzg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSUkiF5sAEmk4aiZZVdGl-Toa8HcZf4qJaF6uH6et-7Tse9BkXBjkAlTNmWk7qq-nI7AnildVzTMQ43yRfRRpY5Ivkvb7R2ZXKH_tLjbcVk01LI-Aubx01VoJkrecEGJH6u0jbkA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSUkiF5sAEmk4aiZZVdGl-Toa8HcZf4qJaF6uH6et-7Tse9BkXBjkAlTNmWk7qq-nI7AnildVzTMQ43yRfRRpY5Ivkvb7R2ZXKH_tLjbcVk01LI-Aubx01VoJkrecEGJH6u0jbkA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 24,
     "rating": 4.7,
@@ -5855,9 +7141,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Conin, Carretera Federal 57 México – Querétaro Lateral Norte Km 201 + 100 El Marqués, Querétaro C.P. 76240 México Business Park, 76240 Santiago de Querétaro, Qro., Mexico",
     "openingHours": "Friday: 8AM-2PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/HELUKABEL+MEXICO+S.+DE+R.L.+DE+C.V./@20.570857999999998,-100.30848689999999,14z/data=!4m8!1m2!2m1!1sHELUKABEL+MEXICO+S.+DE+R.L.+DE+C.V.!3m4!1s0x85d34321d0981173:0xe08181a0166e4019!8m2!3d20.570857999999998!4d-100.30848689999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "brugg-german-pipe-nordhausen",
@@ -5870,6 +7156,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.bruggpipes.com/",
     "phone": "+49 3631 462670",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAtipEqBXEeM6X58s01ywYbEY3TsM8pVdeKfjf7AIUNLeXj9f_Ye3q_nREFPaCIm7NJd0chz1E-rmQC3GqWIG4Lfx_S8TKfka1ZHk5i3tDwX7M748JJAqpKkZ4bsES5pW0F3vi_A=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-HOyUfll_C9o/AAAAAAAAAAI/AAAAAAAAAAA/bSJvDPJW688/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAtipEqBXEeM6X58s01ywYbEY3TsM8pVdeKfjf7AIUNLeXj9f_Ye3q_nREFPaCIm7NJd0chz1E-rmQC3GqWIG4Lfx_S8TKfka1ZHk5i3tDwX7M748JJAqpKkZ4bsES5pW0F3vi_A=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAtipEqBXEeM6X58s01ywYbEY3TsM8pVdeKfjf7AIUNLeXj9f_Ye3q_nREFPaCIm7NJd0chz1E-rmQC3GqWIG4Lfx_S8TKfka1ZHk5i3tDwX7M748JJAqpKkZ4bsES5pW0F3vi_A=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 59,
     "rating": 4.4,
@@ -5889,9 +7180,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Darrweg 43, 99734 Nordhausen, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BRUGG+German+Pipe/@51.4851678,10.797160199999999,14z/data=!4m8!1m2!2m1!1sBRUGG+German+Pipe!3m4!1s0x47a4ff8165819145:0xae40a620de189613!8m2!3d51.4851678!4d10.797160199999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-khaleel-building-material-trading-ae",
@@ -5904,6 +7195,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://alkhaleelbmt.com/",
     "phone": "+971 6 552 3150",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz-uDaqOmxYUtIAbxrwpRI43v32723A6KRaCjjf1SyvHXuCvGnyINEhg1ZDE0aek6Cv-4NZQMvdFezT8GO3nH8dBTxsRdnErWALFZI4qvE3ox5D1J4XqQ6Ko-nNKloDA4a7-ze5A=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-dWZyfw1NTBY/AAAAAAAAAAI/AAAAAAAAAAA/CiREXIxJaU4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz-uDaqOmxYUtIAbxrwpRI43v32723A6KRaCjjf1SyvHXuCvGnyINEhg1ZDE0aek6Cv-4NZQMvdFezT8GO3nH8dBTxsRdnErWALFZI4qvE3ox5D1J4XqQ6Ko-nNKloDA4a7-ze5A=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEz-uDaqOmxYUtIAbxrwpRI43v32723A6KRaCjjf1SyvHXuCvGnyINEhg1ZDE0aek6Cv-4NZQMvdFezT8GO3nH8dBTxsRdnErWALFZI4qvE3ox5D1J4XqQ6Ko-nNKloDA4a7-ze5A=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 25,
     "rating": 4.6,
@@ -5923,9 +7219,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "7 St - Industrial Area 7 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-12PM,1:30-7PM · Monday: 8:30AM-7PM · Saturday: 8:30AM-7PM · Sunday: Closed · Thursday: 8:30AM-7PM · Tuesday: 8:30AM-7PM · Wednesday: 8:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Khaleel+building+material+trading/@25.3111967,55.379829799999996,14z/data=!4m8!1m2!2m1!1sAl+Khaleel+building+material+trading!3m4!1s0x3e5f5c78524d6867:0x5d401755ada6f011!8m2!3d25.3111967!4d55.379829799999996",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "golden-harbour-llc-ae",
@@ -5938,6 +7234,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.goldenharbour.com/",
     "phone": "+971 4 347 2152",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVcBj6Xt9ynDITpW2d-wdKHkiNv444SbYqcZ29B76J9GFIANa4xU59bV94zKCArSaSIKBn2duYURKTkvch_Pv7TUM4dK5soSxWH6AnXLUG38YJ33eIdM5FsVS8aB5EAvs4G8z5UA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-631zwSPe1DU/AAAAAAAAAAI/AAAAAAAAAAA/fhKOydmxyqU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVcBj6Xt9ynDITpW2d-wdKHkiNv444SbYqcZ29B76J9GFIANa4xU59bV94zKCArSaSIKBn2duYURKTkvch_Pv7TUM4dK5soSxWH6AnXLUG38YJ33eIdM5FsVS8aB5EAvs4G8z5UA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVcBj6Xt9ynDITpW2d-wdKHkiNv444SbYqcZ29B76J9GFIANa4xU59bV94zKCArSaSIKBn2duYURKTkvch_Pv7TUM4dK5soSxWH6AnXLUG38YJ33eIdM5FsVS8aB5EAvs4G8z5UA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 56,
     "rating": 4.3,
@@ -5957,9 +7258,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "AL QUOZ INDUSTRIAL AREA #4, Street No 23 - شارع ٤ - behind Emirates Glass - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-4PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Golden+Harbour+LLC/@25.1166187,55.225161199999995,14z/data=!4m8!1m2!2m1!1sGolden+Harbour+LLC!3m4!1s0x140dc5480f149847:0x845b4e89f74123d0!8m2!3d25.1166187!4d55.225161199999995",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ms-pipe-ms-seamless-pipe-suppliers-mumbai-aakar-pipe-tubes-m",
@@ -5972,6 +7273,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.msseamlesspipe.com/",
     "phone": "+91 97696 98686",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGoLn9fZJK05Mn1sFbKOOxQ6zRAdTsaxcSb_L-aq2rPNdWsm9BIjD-RmuozjirU1FXDCGea6X8mDIv8FFvEPoWe4SMJsvie_Zy6fy3C5XJttlPM2TdiBTGQ1QfV5P2DYATZHU8vw=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-Yv1zO8EFfjw/AAAAAAAAAAI/AAAAAAAAAAA/1cxznevvWdQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGoLn9fZJK05Mn1sFbKOOxQ6zRAdTsaxcSb_L-aq2rPNdWsm9BIjD-RmuozjirU1FXDCGea6X8mDIv8FFvEPoWe4SMJsvie_Zy6fy3C5XJttlPM2TdiBTGQ1QfV5P2DYATZHU8vw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGoLn9fZJK05Mn1sFbKOOxQ6zRAdTsaxcSb_L-aq2rPNdWsm9BIjD-RmuozjirU1FXDCGea6X8mDIv8FFvEPoWe4SMJsvie_Zy6fy3C5XJttlPM2TdiBTGQ1QfV5P2DYATZHU8vw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 25,
     "rating": 4.7,
@@ -5992,9 +7298,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Shop, B, P.T, Plot No. 217, Kolsa St, Bundar, Byculla, Mumbai, Maharashtra 400010, India",
     "openingHours": "Friday: 9AM-10PM · Monday: 9AM-10PM · Saturday: 9AM-10PM · Sunday: 9AM-10PM · Thursday: 9AM-10PM · Tuesday: 9AM-10PM · Wednesday: 9AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/Ms+pipe+MS+SEAMLESS+PIPE+suppliers+mumbai+AAKAR+PIPE+%26+TUBES+msl+pipe+suppliers/@18.977727299999998,72.8470438,14z/data=!4m8!1m2!2m1!1sMs+pipe+MS+SEAMLESS+PIPE+suppliers+mumbai+AAKAR+PIPE+%26+TUBES+msl+pipe+suppliers!3m4!1s0x3be7cf9d68f44d61:0x526ac01be8010073!8m2!3d18.977727299999998!4d72.8470438",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "divine-tubes-private-limited-chhatral",
@@ -6007,6 +7313,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.divinetubes.com/",
     "phone": "+91 96010 45888",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDfXYsz0cRkkidQQFeBJWCeCbTe7yZ9-3CTAQ2OwPCbzDhDQ1WfU5Bxf05NrOiviq1L3JU8l41jMqVu-aC78gR-LRd8rQgthq53iNFBiJyV1cgtWWdpG_9DnTXD1CehShwz2kl4SX5wNME=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-Ny9QpdaXDv0/AAAAAAAAAAI/AAAAAAAAAAA/7gygWHU0-Rk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDfXYsz0cRkkidQQFeBJWCeCbTe7yZ9-3CTAQ2OwPCbzDhDQ1WfU5Bxf05NrOiviq1L3JU8l41jMqVu-aC78gR-LRd8rQgthq53iNFBiJyV1cgtWWdpG_9DnTXD1CehShwz2kl4SX5wNME=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDfXYsz0cRkkidQQFeBJWCeCbTe7yZ9-3CTAQ2OwPCbzDhDQ1WfU5Bxf05NrOiviq1L3JU8l41jMqVu-aC78gR-LRd8rQgthq53iNFBiJyV1cgtWWdpG_9DnTXD1CehShwz2kl4SX5wNME=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 49,
     "rating": 4.4,
@@ -6027,9 +7338,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "D.C, Ind. Estate, 414, Phase I, G.I, nr. Axis Bank, Chhatral, Gujarat 382729, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Divine+Tubes+Private+Limited/@23.2854763,72.4466802,14z/data=!4m8!1m2!2m1!1sDivine+Tubes+Private+Limited!3m4!1s0x395c248b0c712e47:0xe16297b4a9730c29!8m2!3d23.2854763!4d72.4466802",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "krah-mexico-silao",
@@ -6042,6 +7353,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://krahmexico.com/",
     "phone": "+52 472 791 0242",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKxc5bc6wQVuhhnSNEjgXuhoz7iSWBivY7ZrxgeintFYigVYywFsJ71DLjmWB4ZMbFkKeUtmmmqI1_qZrME7YJyOQqyCYsOtNFGIcFiiUkSajwYpySVSpq00grd3bexYP5plY=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-KQncwUdED8k/AAAAAAAAAAI/AAAAAAAAAAA/-SjcZOQP9cs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKxc5bc6wQVuhhnSNEjgXuhoz7iSWBivY7ZrxgeintFYigVYywFsJ71DLjmWB4ZMbFkKeUtmmmqI1_qZrME7YJyOQqyCYsOtNFGIcFiiUkSajwYpySVSpq00grd3bexYP5plY=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKxc5bc6wQVuhhnSNEjgXuhoz7iSWBivY7ZrxgeintFYigVYywFsJ71DLjmWB4ZMbFkKeUtmmmqI1_qZrME7YJyOQqyCYsOtNFGIcFiiUkSajwYpySVSpq00grd3bexYP5plY=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 66,
     "rating": 4.3,
@@ -6061,9 +7377,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. de los industriales, Col. Villa de las flores, 36270 Silao de la Victoria, Gto., Mexico",
     "openingHours": "Friday: 12-6AM,9AM-12AM · Monday: 9AM-12AM · Saturday: 12-6AM · Sunday: Closed · Thursday: 12-6AM,9AM-12AM · Tuesday: 12-6AM,9AM-12AM · Wednesday: 12-6AM,9AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/KRAH+M%C3%A9xico/@20.894399999999997,-101.391409,14z/data=!4m8!1m2!2m1!1sKRAH+M%C3%A9xico!3m4!1s0x842b83290ab493b7:0x7b4ab650071024cc!8m2!3d20.894399999999997!4d-101.391409",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "feniks-ambalaj-tr",
@@ -6076,6 +7392,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://feniksambalaj.com.tr/",
     "phone": "+90 216 593 27 82",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELEr8LfSMwgJgK2WmPliB0hFJxbXZtOeSLjFtJ3TD4jQgCy2iRQgipSA4GfgJgqviH0Q1TxgjtqY6vTbH72j7c9R5Qs9kH20p40SPgWp_TXrnfqUkf_H4VggxRPKpoqPOoL2IlZg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-A5YsonoKn6I/AAAAAAAAAAI/AAAAAAAAAAA/eBUYyg5LUG4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELEr8LfSMwgJgK2WmPliB0hFJxbXZtOeSLjFtJ3TD4jQgCy2iRQgipSA4GfgJgqviH0Q1TxgjtqY6vTbH72j7c9R5Qs9kH20p40SPgWp_TXrnfqUkf_H4VggxRPKpoqPOoL2IlZg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELEr8LfSMwgJgK2WmPliB0hFJxbXZtOeSLjFtJ3TD4jQgCy2iRQgipSA4GfgJgqviH0Q1TxgjtqY6vTbH72j7c9R5Qs9kH20p40SPgWp_TXrnfqUkf_H4VggxRPKpoqPOoL2IlZg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 23,
     "rating": 4.7,
@@ -6095,9 +7416,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Zühtüpaşa, Rüştiye Sk. No: 8/3, 34724 Kadıköy/İstanbul, Türkiye",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Feniks+Ambalaj/@40.9829104,29.0394953,14z/data=!4m8!1m2!2m1!1sFeniks+Ambalaj!3m4!1s0x14cab9c212dae5ab:0xdcb6aa98ef1e66d1!8m2!3d40.9829104!4d29.0394953",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "dexopack-packaging-llc-leading-packaging-company-packaging-s",
@@ -6110,6 +7431,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.dexopack.com/",
     "phone": "+971 56 500 4309",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdBKtPUAUCZDsHgefolfUtkXbr0r4yDVNH0580_feRM189avwXS5MCCKLgKHPSNVZTsu6WE_oRMPAiRbgXXh_A8zqVpj6PYW6RFWKrnG04EgAuWpIEnJPR3586UJqKLchVdDRW6jB5d5sP=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-NTuhtoXZm2w/AAAAAAAAAAI/AAAAAAAAAAA/35a8JRDaGGo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdBKtPUAUCZDsHgefolfUtkXbr0r4yDVNH0580_feRM189avwXS5MCCKLgKHPSNVZTsu6WE_oRMPAiRbgXXh_A8zqVpj6PYW6RFWKrnG04EgAuWpIEnJPR3586UJqKLchVdDRW6jB5d5sP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdBKtPUAUCZDsHgefolfUtkXbr0r4yDVNH0580_feRM189avwXS5MCCKLgKHPSNVZTsu6WE_oRMPAiRbgXXh_A8zqVpj6PYW6RFWKrnG04EgAuWpIEnJPR3586UJqKLchVdDRW6jB5d5sP=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 23,
     "rating": 4.7,
@@ -6129,9 +7455,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "DIRC Warehouse Complex WH#E1 - Dubai Investment Park-2 - مجمع دبي للإستثمار - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Dexopack+Packaging+LLC+-+Leading+Packaging+Company+%26+Packaging+Supply+Store/@24.9661677,55.1940349,14z/data=!4m8!1m2!2m1!1sDexopack+Packaging+LLC+-+Leading+Packaging+Company+%26+Packaging+Supply+Store!3m4!1s0x3e5f73c8d84939df:0xca8c8b95dd9684ec!8m2!3d24.9661677!4d55.1940349",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "innovation-line-ind-l-l-c-lashing-packaging-company-in-uae-a",
@@ -6144,6 +7470,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.innovationlineintl.com/",
     "phone": "+971 52 796 2242",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFpCEUTOC9qNJabPqE8Hc7wvS7VwRcOFEzDUEtkrfsHf7hEiiDEHDmtUXpOJrBlcuUO5DPbPrIK89RqulQz53VyQTD91R3DY0kq5bfv6x1OqbmF2G93elxJpKfbElxiA_7wVj2dUg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-6Hu6Rniei3Y/AAAAAAAAAAI/AAAAAAAAAAA/lrQLI-kS5Vs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFpCEUTOC9qNJabPqE8Hc7wvS7VwRcOFEzDUEtkrfsHf7hEiiDEHDmtUXpOJrBlcuUO5DPbPrIK89RqulQz53VyQTD91R3DY0kq5bfv6x1OqbmF2G93elxJpKfbElxiA_7wVj2dUg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFpCEUTOC9qNJabPqE8Hc7wvS7VwRcOFEzDUEtkrfsHf7hEiiDEHDmtUXpOJrBlcuUO5DPbPrIK89RqulQz53VyQTD91R3DY0kq5bfv6x1OqbmF2G93elxJpKfbElxiA_7wVj2dUg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 22,
     "rating": 4.7,
@@ -6163,9 +7494,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No : 6230-1 - Emirates Industrial City - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Innovation+Line+Ind+L.+L.+C+%7C+Lashing+%26+Packaging+company+in+UAE/@25.3472559,55.6193203,14z/data=!4m8!1m2!2m1!1sInnovation+Line+Ind+L.+L.+C+%7C+Lashing+%26+Packaging+company+in+UAE!3m4!1s0x3ef5f35837b1081d:0x1e37a55916ebb23e!8m2!3d25.3472559!4d55.6193203",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "city-pack-enpi-group-ae",
@@ -6178,6 +7509,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.citypack.ae/",
     "phone": "+971 6 535 5442",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhLcCOKn0u1xRS48IM2tw0FMJyz-oh_VAwp4JlMWu-YAVED2f760NLHbQVF2wdnOCx9dDYpwIXkKxsm5ZppAkpL96gaKmENr8hLsWUG4yCc01yyB-G_PoPXjk_2u4D1FW4fYw=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-pLgni7MEjkg/AAAAAAAAAAI/AAAAAAAAAAA/YDGJut0dnHE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhLcCOKn0u1xRS48IM2tw0FMJyz-oh_VAwp4JlMWu-YAVED2f760NLHbQVF2wdnOCx9dDYpwIXkKxsm5ZppAkpL96gaKmENr8hLsWUG4yCc01yyB-G_PoPXjk_2u4D1FW4fYw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfMrudWoqecFZ16KikbLtnPzp_KDkdwy1DVyTvJmiBNbWCumA7XcUC0JdMJOpYy86JeBl5op_hfPJ4Nt1jmGOgntCy0WMbK7PptW_NmbvccujsTILubuhsng3KfgAYb23X3Ga8=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 33,
     "rating": 4.6,
@@ -6197,9 +7533,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Street No.12 - Industrial Area 15 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-5:30PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CITY+PACK+%7C+ENPI+Group/@25.292181199999998,55.4362382,14z/data=!4m8!1m2!2m1!1sCITY+PACK+%7C+ENPI+Group!3m4!1s0x3e5f5eec23175621:0x850d83d3b0406442!8m2!3d25.292181199999998!4d55.4362382",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hinojosa-packaging-arzano-arzano",
@@ -6212,6 +7548,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://hinojosagroup.com/it/",
     "phone": "+39 081 585 7111",
     "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7cv07_Aq_hM9UiFguhGgvg&cb_client=search.gws-prod.gps&w=800&h=500&yaw=330.63098&pitch=0&thumbfov=100",
+    "logoUrl": "https://lh5.googleusercontent.com/-oG-_py6_VFs/AAAAAAAAAAI/AAAAAAAAAAA/YRuafo9aqSY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7cv07_Aq_hM9UiFguhGgvg&cb_client=search.gws-prod.gps&w=800&h=500&yaw=330.63098&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRl7RRWORYJcC9_b63jy6Oxy7mPCLShPfIY5UWIbLWWkfA_Zt_2A5s3CwOH_kT-WajnErtPOJNSZXlkSygnSaI9nI1OGlzCDSbRYBKt3VPKnIWBeFZ7BW4rwGs819RwYVpgL1py03na6I=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 46,
     "rating": 4.4,
@@ -6231,9 +7572,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Sette Re, 84, 80022 Arzano NA, Italy",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Hinojosa+Packaging+Arzano/@40.918498299999996,14.273344999999999,14z/data=!4m8!1m2!2m1!1sHinojosa+Packaging+Arzano!3m4!1s0x133b077011ebf9ff:0x547bf14998868509!8m2!3d40.918498299999996!4d14.273344999999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "casapacking-sarl-casablanca",
@@ -6246,6 +7587,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.casapacking.com/",
     "phone": "+212 5 22 44 44 23",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnh3WVLcn8U9wHEz3shOdyG79do-DmCM7wNJ7O05U_IfuJlX6jTrmbUX_nczIT9BT_hovXeH-wRf5NZOeu2_kS6AFuDOUTKaGL7pf4SW8zTSgl6umgHvOu2xvEXJ1DeyMSuP0=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-ItQ5SSGRf28/AAAAAAAAAAI/AAAAAAAAAAA/TqdiiNuBTAM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnh3WVLcn8U9wHEz3shOdyG79do-DmCM7wNJ7O05U_IfuJlX6jTrmbUX_nczIT9BT_hovXeH-wRf5NZOeu2_kS6AFuDOUTKaGL7pf4SW8zTSgl6umgHvOu2xvEXJ1DeyMSuP0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnh3WVLcn8U9wHEz3shOdyG79do-DmCM7wNJ7O05U_IfuJlX6jTrmbUX_nczIT9BT_hovXeH-wRf5NZOeu2_kS6AFuDOUTKaGL7pf4SW8zTSgl6umgHvOu2xvEXJ1DeyMSuP0=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 68,
     "rating": 4.3,
@@ -6265,9 +7611,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "100 Bd Abdellah Ben Yacine, Casablanca 20100, Morocco",
     "openingHours": "Friday: 8AM-12PM,2:30-6PM · Monday: 8AM-12PM,2-6PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 8AM-12PM,2-6PM · Tuesday: 8AM-12PM,2-6PM · Wednesday: 8AM-12PM,2-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CASAPACKING+Sarl/@33.5901643,-7.599341,14z/data=!4m8!1m2!2m1!1sCASAPACKING+Sarl!3m4!1s0xda7cd6924489765:0x9329e523c594305c!8m2!3d33.5901643!4d-7.599341",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "global-packaging-solution-s-a-de-c-v-tijuana",
@@ -6280,6 +7626,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.globsoln.com/",
     "phone": "+52 664 607 4835",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHe0sIdiWC9LK2REsgciSp2S7G8_kjmStuLBbVSG6Co7tnuGuN7ZVwiGbXDpidzrFIMcrkDG1kCx-ULdBG9v4YbLMwlma7NkbI4MiVcFapl_YeDnrpyyvI1FNNHi4VVz0L3qFHM=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-tWHjS4Yo9Pc/AAAAAAAAAAI/AAAAAAAAAAA/cvOp0XFOHIs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHe0sIdiWC9LK2REsgciSp2S7G8_kjmStuLBbVSG6Co7tnuGuN7ZVwiGbXDpidzrFIMcrkDG1kCx-ULdBG9v4YbLMwlma7NkbI4MiVcFapl_YeDnrpyyvI1FNNHi4VVz0L3qFHM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHe0sIdiWC9LK2REsgciSp2S7G8_kjmStuLBbVSG6Co7tnuGuN7ZVwiGbXDpidzrFIMcrkDG1kCx-ULdBG9v4YbLMwlma7NkbI4MiVcFapl_YeDnrpyyvI1FNNHi4VVz0L3qFHM=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 56,
     "rating": 4.3,
@@ -6299,9 +7650,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "C. 7 Nte. 108, Cd Industrial, 22444 Tijuana, B.C., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Global+Packaging+Solution+S.A.+de+C.V./@32.540180299999996,-116.91943619999999,14z/data=!4m8!1m2!2m1!1sGlobal+Packaging+Solution+S.A.+de+C.V.!3m4!1s0x80d947fec4336ad9:0x18debfba2f7620f6!8m2!3d32.540180299999996!4d-116.91943619999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packaging-color-manufacturing-sant-just-desvern",
@@ -6314,6 +7665,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.pcmgrupo.com/",
     "phone": "+34 934 70 13 54",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpbJh6npUgEHfjyOB5sVn0TWS2cuorYwL98PPqDiIlJjthKWpIrdSDsquXs8E9Y2XBwfLn_aeS01U9CUwItDMQxEL-3qn9ty_BnT7itpJMmwtMxLePoF9Iv3vRcq0xaL_rbw8P=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-argL8ddqdbU/AAAAAAAAAAI/AAAAAAAAAAA/WOUdPIs19jI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpbJh6npUgEHfjyOB5sVn0TWS2cuorYwL98PPqDiIlJjthKWpIrdSDsquXs8E9Y2XBwfLn_aeS01U9CUwItDMQxEL-3qn9ty_BnT7itpJMmwtMxLePoF9Iv3vRcq0xaL_rbw8P=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpbJh6npUgEHfjyOB5sVn0TWS2cuorYwL98PPqDiIlJjthKWpIrdSDsquXs8E9Y2XBwfLn_aeS01U9CUwItDMQxEL-3qn9ty_BnT7itpJMmwtMxLePoF9Iv3vRcq0xaL_rbw8P=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 40,
     "rating": 4.5,
@@ -6333,9 +7689,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer de Joan Ramon Jiménez, 6, 08960 Sant Just Desvern, Barcelona, Spain",
     "openingHours": "Friday: 6AM-6PM · Monday: 6AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-6PM · Tuesday: 6AM-6PM · Wednesday: 6AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Color+Manufacturing/@41.3840055,2.0663289,14z/data=!4m8!1m2!2m1!1sPackaging+Color+Manufacturing!3m4!1s0x12a49a2a81f354fd:0x79b6b14d6b189a4!8m2!3d41.3840055!4d2.0663289",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "industrial-supply-company-salt-lake-city",
@@ -6348,6 +7704,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.indsupply.com/",
     "phone": "+1 800-288-3838",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8h1Y8mE7cMIhIzX0a4jYvHzOe5wsajbaRMW9F7lSwgnw0a0JN_Xab3FX8iRuvNo7IwdJLzXS15zVCTv6Sj50srTR0ROXSZKhds1Sp-g7Q6A2A0GmaZMGusIPyAEe2MoKzaQFg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-x6rFDrhM8dk/AAAAAAAAAAI/AAAAAAAAAAA/ZBjP3eUTzCg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8h1Y8mE7cMIhIzX0a4jYvHzOe5wsajbaRMW9F7lSwgnw0a0JN_Xab3FX8iRuvNo7IwdJLzXS15zVCTv6Sj50srTR0ROXSZKhds1Sp-g7Q6A2A0GmaZMGusIPyAEe2MoKzaQFg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8h1Y8mE7cMIhIzX0a4jYvHzOe5wsajbaRMW9F7lSwgnw0a0JN_Xab3FX8iRuvNo7IwdJLzXS15zVCTv6Sj50srTR0ROXSZKhds1Sp-g7Q6A2A0GmaZMGusIPyAEe2MoKzaQFg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 74,
     "rating": 4.3,
@@ -6367,9 +7728,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "1635 S 300 W, Salt Lake City, UT 84115",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Supply+Company/@40.734122899999996,-111.89921799999999,14z/data=!4m8!1m2!2m1!1sIndustrial+Supply+Company!3m4!1s0x8752f52b7d10a443:0xc36f262f6d23d032!8m2!3d40.734122899999996!4d-111.89921799999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "uae-enterprises-building-material-trading-llc-ae",
@@ -6382,6 +7743,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.uaeenterprises.com/",
     "phone": "+971 4 285 7036",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaExQi81QkLv_i8juq6Qxh39gxfBvL8OwaLDDm4CYNfjnin7M0-qtBzVLKAFjXaivjHe5UeGJq3Ezrcz2hrB7Khct4Drn3OqGhmr8Rmab7xuVFl9h9p2PFHEx4IIPAuaPiqGw_=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-AZhVqL1pbOM/AAAAAAAAAAI/AAAAAAAAAAA/b9mc-mXjvns/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaExQi81QkLv_i8juq6Qxh39gxfBvL8OwaLDDm4CYNfjnin7M0-qtBzVLKAFjXaivjHe5UeGJq3Ezrcz2hrB7Khct4Drn3OqGhmr8Rmab7xuVFl9h9p2PFHEx4IIPAuaPiqGw_=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGaExQi81QkLv_i8juq6Qxh39gxfBvL8OwaLDDm4CYNfjnin7M0-qtBzVLKAFjXaivjHe5UeGJq3Ezrcz2hrB7Khct4Drn3OqGhmr8Rmab7xuVFl9h9p2PFHEx4IIPAuaPiqGw_=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 39,
     "rating": 4.5,
@@ -6401,9 +7767,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "X4XC+H77 - Jabal Ali Industrial First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-5:30PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/UAE+ENTERPRISES+BUILDING+MATERIAL+TRADING+LLC/@24.9989013,55.1204894,14z/data=!4m8!1m2!2m1!1sUAE+ENTERPRISES+BUILDING+MATERIAL+TRADING+LLC!3m4!1s0x3e5f5d8c2238db35:0x336afdd0131ee9a4!8m2!3d24.9989013!4d55.1204894",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "uae-enterprises-building-materials-trading-l-l-c-ae",
@@ -6416,6 +7782,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://uaeenterprises.com/",
     "phone": "+971 4 282 1260",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhOSKraj0rRZzZnILdoJ2UGZCqXYD_MoO6Ew2XLRg7MvuVtZolKPiZSq_Vy4y4ux8mcjCVSlHHONj8MCywkItG9FwqD6YeNBAVbm0OQPLYAXJu9SXVjCTs_2nj4KSLn7guZfTJiA=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-kFNTMeAz-xo/AAAAAAAAAAI/AAAAAAAAAAA/DMFccqzaXvU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhOSKraj0rRZzZnILdoJ2UGZCqXYD_MoO6Ew2XLRg7MvuVtZolKPiZSq_Vy4y4ux8mcjCVSlHHONj8MCywkItG9FwqD6YeNBAVbm0OQPLYAXJu9SXVjCTs_2nj4KSLn7guZfTJiA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhOSKraj0rRZzZnILdoJ2UGZCqXYD_MoO6Ew2XLRg7MvuVtZolKPiZSq_Vy4y4ux8mcjCVSlHHONj8MCywkItG9FwqD6YeNBAVbm0OQPLYAXJu9SXVjCTs_2nj4KSLn7guZfTJiA=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 152,
     "rating": 4,
@@ -6435,9 +7806,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8 Airport Rd - Dubai Int'l Airport - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-5PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/UAE+ENTERPRISES+BUILDING+MATERIALS+TRADING+L.L.C/@25.2552289,55.3394008,14z/data=!4m8!1m2!2m1!1sUAE+ENTERPRISES+BUILDING+MATERIALS+TRADING+L.L.C!3m4!1s0x3e5f5ce1d5e86aa9:0x2f21ac680d5ac0f6!8m2!3d25.2552289!4d55.3394008",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "masdar-group-riyadh",
@@ -6450,6 +7821,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.masdar.co/",
     "phone": "+966 11 829 3333",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHE7OQoA1oGPrOrjVABFJl6d9e25RuoKEw7f4J2AkktuPJIpZSVy7A0UbyumXpBwCEvK2M06skjQX-_YW3E30ywyTzAnO2qgSL8ZKVrOS07Sn8ZzJyV6Z9WyDjJ96EWfVd1pP7N=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-3Rp2xDw0OXA/AAAAAAAAAAI/AAAAAAAAAAA/Or781ZWm_ME/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHE7OQoA1oGPrOrjVABFJl6d9e25RuoKEw7f4J2AkktuPJIpZSVy7A0UbyumXpBwCEvK2M06skjQX-_YW3E30ywyTzAnO2qgSL8ZKVrOS07Sn8ZzJyV6Z9WyDjJ96EWfVd1pP7N=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHE7OQoA1oGPrOrjVABFJl6d9e25RuoKEw7f4J2AkktuPJIpZSVy7A0UbyumXpBwCEvK2M06skjQX-_YW3E30ywyTzAnO2qgSL8ZKVrOS07Sn8ZzJyV6Z9WyDjJ96EWfVd1pP7N=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 181,
     "rating": 4.5,
@@ -6469,9 +7845,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Al Thoumamah Rd, Al Munsiyah, Riyadh 13421, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Masdar+Group/@24.844518599999997,46.757011399999996,14z/data=!4m8!1m2!2m1!1sMasdar+Group!3m4!1s0x3e2efeae1c979a9b:0x5d51839bbc60bf7!8m2!3d24.844518599999997!4d46.757011399999996",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "daikin-saudi-head-office-riyadh",
@@ -6484,6 +7860,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.daikin-ksa.com/",
     "phone": "+966 800 111 0909",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhRvRi4E1vJDQu9C5jlJMO6wLweRG_moOtKiCLJx6P-yBe3TSWZFoEsbR1fXaUKu_z0f55Rc-rcgfivl30MxH3NAevKuSGJp3XzWIP0r24mnEAyzU8nyBPo8p5Ly3c4RFl-N9g=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-ZPIaecx9auA/AAAAAAAAAAI/AAAAAAAAAAA/67w3Xr8dU4s/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhRvRi4E1vJDQu9C5jlJMO6wLweRG_moOtKiCLJx6P-yBe3TSWZFoEsbR1fXaUKu_z0f55Rc-rcgfivl30MxH3NAevKuSGJp3XzWIP0r24mnEAyzU8nyBPo8p5Ly3c4RFl-N9g=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhRvRi4E1vJDQu9C5jlJMO6wLweRG_moOtKiCLJx6P-yBe3TSWZFoEsbR1fXaUKu_z0f55Rc-rcgfivl30MxH3NAevKuSGJp3XzWIP0r24mnEAyzU8nyBPo8p5Ly3c4RFl-N9g=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 388,
     "rating": 4.2,
@@ -6503,9 +7884,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "King Abdulaziz Rd, As Sahafah, Riyadh 11434, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-6PM · Saturday: Closed · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Daikin+Saudi+-+Head+office/@24.810962399999998,46.6471842,14z/data=!4m8!1m2!2m1!1sDaikin+Saudi+-+Head+office!3m4!1s0x3e2ee49e1bf6ad33:0x32b3a0690b2eeca5!8m2!3d24.810962399999998!4d46.6471842",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "rabiah-nassar-company-ranco-riyadh",
@@ -6518,6 +7899,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.rancogroup.com/",
     "phone": "+966 11 491 0590",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGRwx6-621wWzr-FCA7Ew6PfWPbWpyXKukgGO0TP-WOacbOPVawrFUWRwQfHJQAm-3XIQNtqdRVrlmxI4luhZUOy3Ou_8JOM9H4QZWvxg5NQln5ZHJ5FOjK0NUbJUJZU5hOwg1U=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-C3JCheDyhdc/AAAAAAAAAAI/AAAAAAAAAAA/_eJtkdxM3GM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGRwx6-621wWzr-FCA7Ew6PfWPbWpyXKukgGO0TP-WOacbOPVawrFUWRwQfHJQAm-3XIQNtqdRVrlmxI4luhZUOy3Ou_8JOM9H4QZWvxg5NQln5ZHJ5FOjK0NUbJUJZU5hOwg1U=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGRwx6-621wWzr-FCA7Ew6PfWPbWpyXKukgGO0TP-WOacbOPVawrFUWRwQfHJQAm-3XIQNtqdRVrlmxI4luhZUOy3Ou_8JOM9H4QZWvxg5NQln5ZHJ5FOjK0NUbJUJZU5hOwg1U=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 167,
     "rating": 4.5,
@@ -6537,9 +7923,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Makkah Al Mukarramah Br Rd, King Abdullah Dt., Riyadh 12421, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Rabiah+%26+Nassar+Company+RANCO/@24.705548399999998,46.746682799999995,14z/data=!4m8!1m2!2m1!1sRabiah+%26+Nassar+Company+RANCO!3m4!1s0x3e2f03e267383ec5:0x48ab9cd0404bde55!8m2!3d24.705548399999998!4d46.746682799999995",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "archi-made-materiali-per-l-architettura-rome",
@@ -6552,6 +7938,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.archimade.it/",
     "phone": "+39 06 8947 7804",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIlM912Vcl3BppQTMAyTo-L-gX5cOwJRlINfPspgkhZGhCDWovSKOzWePuGu53WW05NTd46GJ3CTlawD8A_Hv5My5bsdgt1-gd25Y53uRbjmUgsuIThu1Gb6CMJKcHtfqEdCVqaBHv188=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-xXt20X9a6Bs/AAAAAAAAAAI/AAAAAAAAAAA/h8lQDi102RA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIlM912Vcl3BppQTMAyTo-L-gX5cOwJRlINfPspgkhZGhCDWovSKOzWePuGu53WW05NTd46GJ3CTlawD8A_Hv5My5bsdgt1-gd25Y53uRbjmUgsuIThu1Gb6CMJKcHtfqEdCVqaBHv188=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIlM912Vcl3BppQTMAyTo-L-gX5cOwJRlINfPspgkhZGhCDWovSKOzWePuGu53WW05NTd46GJ3CTlawD8A_Hv5My5bsdgt1-gd25Y53uRbjmUgsuIThu1Gb6CMJKcHtfqEdCVqaBHv188=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 21,
     "rating": 4.7,
@@ -6571,9 +7962,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Antonio Baldissera, 6/8, 00159 Roma RM, Italy",
     "openingHours": "Friday: 9AM-1PM,3-7PM · Monday: 9AM-1PM,3-7PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 9AM-1PM,3-7PM · Tuesday: 9AM-1PM,3-7PM · Wednesday: 9AM-1PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Archi+Made+-+Materiali+per+L%27Architettura/@41.8976715,12.5359865,14z/data=!4m8!1m2!2m1!1sArchi+Made+-+Materiali+per+L%27Architettura!3m4!1s0x132f622c045c476d:0x2333ad676fcaf8c7!8m2!3d41.8976715!4d12.5359865",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tabularasa-s-r-l-rome",
@@ -6586,6 +7977,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.tabvlarasa.com/",
     "phone": "+39 06 445 0070",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3mFri4VkRcfTIyUlhXoxUygEAtjKj7JxcrN7kWsoyUDMY3eN62-39wbRDnyMrS-ZXibLszDM_5TM5qT3lqZ7N8NKvX-PZeDgIP6RQomb1mKqY3k-gX0rsOB6KtBv0S_eavUFW=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-ARGU0hEK-BQ/AAAAAAAAAAI/AAAAAAAAAAA/1Qhusd7Aim0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3mFri4VkRcfTIyUlhXoxUygEAtjKj7JxcrN7kWsoyUDMY3eN62-39wbRDnyMrS-ZXibLszDM_5TM5qT3lqZ7N8NKvX-PZeDgIP6RQomb1mKqY3k-gX0rsOB6KtBv0S_eavUFW=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE3mFri4VkRcfTIyUlhXoxUygEAtjKj7JxcrN7kWsoyUDMY3eN62-39wbRDnyMrS-ZXibLszDM_5TM5qT3lqZ7N8NKvX-PZeDgIP6RQomb1mKqY3k-gX0rsOB6KtBv0S_eavUFW=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 30,
     "rating": 4.6,
@@ -6605,9 +8001,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Viale dello Scalo S. Lorenzo, 40, 00185 Roma RM, Italy",
     "openingHours": "Friday: 9AM-3PM · Monday: 9AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-3PM · Tuesday: 9AM-3PM · Wednesday: 9AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Tabularasa+s.r.l./@41.8953187,12.518234699999999,14z/data=!4m8!1m2!2m1!1sTabularasa+s.r.l.!3m4!1s0x132f619ab4c701d5:0x5cd45006ae5b72eb!8m2!3d41.8953187!4d12.518234699999999",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "rubicon-mexico-materiales-y-maquinaria-para-construccion-coy",
@@ -6620,6 +8016,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://rubiconmexico.com/",
     "phone": "+52 55 7824 0432",
     "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ffRTuweZmGz9pPIeuWeLgw&cb_client=search.gws-prod.gps&w=800&h=500&yaw=282.7824&pitch=0&thumbfov=100",
+    "logoUrl": "https://lh5.googleusercontent.com/-Bt2xOF8DjA8/AAAAAAAAAAI/AAAAAAAAAAA/-gF0Chpr40A/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ffRTuweZmGz9pPIeuWeLgw&cb_client=search.gws-prod.gps&w=800&h=500&yaw=282.7824&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGreBVLrvD7-5_XNzWFPzykzoWMXAjKlNtNRXqwKaONfUzQExs2uPsBIHUSm9SzqZOT-6z-tWiw9MFEjIxYncGw6X5BlhoaaIAobkJr6btZcgfJlNaXYnrlYmz7fHtnu5fJHsYU=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 30,
     "rating": 4.6,
@@ -6639,9 +8040,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Cerro del Agua 7-INT. 101, Romero de Terreros, Coyoacán, 04310 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 9AM-3:30PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Rubic%C3%B3n+M%C3%A9xico+-+Materiales+y+maquinaria+para+construcci%C3%B3n./@19.341253599999998,-99.1719214,14z/data=!4m8!1m2!2m1!1sRubic%C3%B3n+M%C3%A9xico+-+Materiales+y+maquinaria+para+construcci%C3%B3n.!3m4!1s0x85d1ffe180bbdd8d:0xd8059f8208d99727!8m2!3d19.341253599999998!4d-99.1719214",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cemex-oficinas-corporativas-madrid",
@@ -6654,6 +8055,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.cemex.es/",
     "phone": "+34 607 18 81 88",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlL4Xvs_PAM_ZsU8RZSPy0BRsUJ8-D5IrkUCM3q5Je9_a68x0ukFBD-A2GMAFqg-OxxCfZkViKGRzsz3vxZv6_kYdkcoTI3yRhLleRZ6c1OKhpL9k4Rl6JtofJOe2ajEVGIZF6-AYf7rE=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Rl0FZUH09LY/AAAAAAAAAAI/AAAAAAAAAAA/M8KGOw8vjZo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlL4Xvs_PAM_ZsU8RZSPy0BRsUJ8-D5IrkUCM3q5Je9_a68x0ukFBD-A2GMAFqg-OxxCfZkViKGRzsz3vxZv6_kYdkcoTI3yRhLleRZ6c1OKhpL9k4Rl6JtofJOe2ajEVGIZF6-AYf7rE=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlL4Xvs_PAM_ZsU8RZSPy0BRsUJ8-D5IrkUCM3q5Je9_a68x0ukFBD-A2GMAFqg-OxxCfZkViKGRzsz3vxZv6_kYdkcoTI3yRhLleRZ6c1OKhpL9k4Rl6JtofJOe2ajEVGIZF6-AYf7rE=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 52,
     "rating": 4.4,
@@ -6673,9 +8079,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. de Burgos, 19, Chamartín, 28036 Madrid, Spain",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Cemex+Oficinas+Corporativas/@40.473839999999996,-3.6761139,14z/data=!4m8!1m2!2m1!1sCemex+Oficinas+Corporativas!3m4!1s0xd422f257a4e9367:0x10bbea2bacf97332!8m2!3d40.473839999999996!4d-3.6761139",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cnh-germany-gmbh-heidelberg",
@@ -6688,6 +8094,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.cnh.com/",
     "phone": "+49 6221 318562",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVHfYTkh32PieSiL3ar4fj3i1x5a9CEvcW238mUobeeG_9Vz2Rmn5SE1cux5zewuJ_MWBvGW_P0qabAil-AaBGU23KvvqyVx0CABZD79GKo1wfwCRzqlaP4N7KrBsgWS0sQfGk=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-nX7DlKkEUzc/AAAAAAAAAAI/AAAAAAAAAAA/r1lhYQlvDog/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVHfYTkh32PieSiL3ar4fj3i1x5a9CEvcW238mUobeeG_9Vz2Rmn5SE1cux5zewuJ_MWBvGW_P0qabAil-AaBGU23KvvqyVx0CABZD79GKo1wfwCRzqlaP4N7KrBsgWS0sQfGk=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVHfYTkh32PieSiL3ar4fj3i1x5a9CEvcW238mUobeeG_9Vz2Rmn5SE1cux5zewuJ_MWBvGW_P0qabAil-AaBGU23KvvqyVx0CABZD79GKo1wfwCRzqlaP4N7KrBsgWS0sQfGk=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 58,
     "rating": 4.3,
@@ -6707,9 +8118,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Felix-Wankel-Straße 22, 69126 Heidelberg, Germany",
     "openingHours": "Friday: 7AM-7:45PM · Monday: 7AM-7:45PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-7:45PM · Tuesday: 7AM-7:45PM · Wednesday: 7AM-7:45PM",
     "sourceUrl": "https://www.google.com/maps/place/CNH+Germany+GmbH/@49.3827626,8.6779175,14z/data=!4m8!1m2!2m1!1sCNH+Germany+GmbH!3m4!1s0x4797c0be0bab536f:0x85dc9a45a31b7895!8m2!3d49.3827626!4d8.6779175",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hirotec-mexico-sa-de-cv-villa-de-reyes",
@@ -6721,6 +8132,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Villa de Reyes",
     "website": "https://www.hirotec.co.jp/eng/group/mexico.html",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFe-slxp-5BGmzxRigS2MGD5t02abkb9SDzszqpNGA-34CUHNd66YTUToHGJ7ejTCnYcuIV3yybq39baCw8X5MrY7AeWimEB785omP5aEOhEzCOwY6OCZ-ZURRTj32duiIUM0Psw=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-aWpOlX4-aog/AAAAAAAAAAI/AAAAAAAAAAA/hu2kne0ZTLo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFe-slxp-5BGmzxRigS2MGD5t02abkb9SDzszqpNGA-34CUHNd66YTUToHGJ7ejTCnYcuIV3yybq39baCw8X5MrY7AeWimEB785omP5aEOhEzCOwY6OCZ-ZURRTj32duiIUM0Psw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFe-slxp-5BGmzxRigS2MGD5t02abkb9SDzszqpNGA-34CUHNd66YTUToHGJ7ejTCnYcuIV3yybq39baCw8X5MrY7AeWimEB785omP5aEOhEzCOwY6OCZ-ZURRTj32duiIUM0Psw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 47,
     "rating": 4.5,
@@ -6740,9 +8156,86 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. Toronto 100, Parque Logistik 2 super carretera san luis, 79526 Villa de Reyes, S.L.P., Mexico",
     "openingHours": "Friday: 6AM-4:06AM · Monday: 6AM-4:06AM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4:06AM · Tuesday: 6AM-4:06AM · Wednesday: 6AM-4:06AM",
     "sourceUrl": "https://www.google.com/maps/place/HIROTEC+MEXICO+SA+DE+CV/@21.970711899999998,-100.8619916,14z/data=!4m8!1m2!2m1!1sHIROTEC+MEXICO+SA+DE+CV!3m4!1s0x842ab961bdf1c357:0xc4c7d23687f62412!8m2!3d21.970711899999998!4d-100.8619916",
-    "score": 86,
+    "score": 92,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "stark-deutschland-gmbh-offenbach",
+    "name": "STARK Deutschland GmbH",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Offenbach, Germany",
+    "country": "Germany",
+    "city": "Offenbach",
+    "website": "https://www.stark-deutschland.de/",
+    "phone": "+49 69 6681100",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcS7_vJSH6MSFLDNjKrXeeTlRUM7vgvv5eKtLzs9nxmPHlTY3WF4Cs1SN7KKlDBKY3kKzp_REbipcuI6X_h4A5wthiKBpzsG6To7OuBKOiXxh1E8WcmXrNsnmd_POMxaX2EvJWXqe1krZ6=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-U2iZ2PYIdIw/AAAAAAAAAAI/AAAAAAAAAAA/iC8R6uNmCyo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcS7_vJSH6MSFLDNjKrXeeTlRUM7vgvv5eKtLzs9nxmPHlTY3WF4Cs1SN7KKlDBKY3kKzp_REbipcuI6X_h4A5wthiKBpzsG6To7OuBKOiXxh1E8WcmXrNsnmd_POMxaX2EvJWXqe1krZ6=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcS7_vJSH6MSFLDNjKrXeeTlRUM7vgvv5eKtLzs9nxmPHlTY3WF4Cs1SN7KKlDBKY3kKzp_REbipcuI6X_h4A5wthiKBpzsG6To7OuBKOiXxh1E8WcmXrNsnmd_POMxaX2EvJWXqe1krZ6=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.3,
+    "googleReviews": 59,
+    "rating": 4.3,
+    "reviewCount": 59,
+    "verified": true,
+    "description": "Construction supplier in Offenbach, Germany.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "1 pallet",
+    "address": "Hafeninsel 9, 63067 Offenbach am Main, Germany",
+    "sourceUrl": "https://www.google.com/maps/place/STARK+Deutschland+GmbH/@50.1130548,8.755511,14z/data=!4m8!1m2!2m1!1sSTARK+Deutschland+GmbH!3m4!1s0x47bd0e87cc2ce515:0x46aff7901cd1fe59!8m2!3d50.1130548!4d8.755511",
+    "score": 92,
+    "reliabilityScore": 86,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "agri-parts-s-r-l-castenaso",
+    "name": "Agri Parts S.r.l.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "Castenaso, Italy",
+    "country": "Italy",
+    "city": "Castenaso",
+    "website": "https://agripartsitaly.com/",
+    "phone": "+39 051 781695",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHozaE7ia3Wt5LznhhA87oq3uHC6nBbY8oL7FUmXpSBFeP4PartUV7VuqdgsK0OkMpC2FO_fZ3Nrdz-Kv7Rjzf05vmyAL24sWYc9aXfKNQeKSbKl1kYvlxJT1pLx6ANX837VsRl=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-QInAQTkQxe8/AAAAAAAAAAI/AAAAAAAAAAA/sIxmZQ9h3iw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHozaE7ia3Wt5LznhhA87oq3uHC6nBbY8oL7FUmXpSBFeP4PartUV7VuqdgsK0OkMpC2FO_fZ3Nrdz-Kv7Rjzf05vmyAL24sWYc9aXfKNQeKSbKl1kYvlxJT1pLx6ANX837VsRl=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHozaE7ia3Wt5LznhhA87oq3uHC6nBbY8oL7FUmXpSBFeP4PartUV7VuqdgsK0OkMpC2FO_fZ3Nrdz-Kv7Rjzf05vmyAL24sWYc9aXfKNQeKSbKl1kYvlxJT1pLx6ANX837VsRl=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.6,
+    "googleReviews": 34,
+    "rating": 4.6,
+    "reviewCount": 34,
+    "verified": true,
+    "description": "Industrial Parts supplier in Castenaso, Italy.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "10 units",
+    "address": "Via F. Santi, 8, 40055 Castenaso BO, Italy",
+    "openingHours": "Friday: 8AM-12:30PM,1:30-5PM · Monday: 8AM-12:30PM,1:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,1:30-5PM · Tuesday: 8AM-12:30PM,1:30-5PM · Wednesday: 8AM-12:30PM,1:30-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/Agri+Parts+S.r.l./@44.5086929,11.4379466,14z/data=!4m8!1m2!2m1!1sAgri+Parts+S.r.l.!3m4!1s0x477e2c71f5855c25:0x9219f2b5b3eec40f!8m2!3d44.5086929!4d11.4379466",
+    "score": 92,
+    "reliabilityScore": 92,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "abu-dhabi-pipe-factory-all-ae",
@@ -6755,6 +8248,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.adpf.ae/",
     "phone": "+971 2 582 1600",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-iFruyelod4j5ob1Q9bF4rZldHzUWX5FD_0UtG0p9nnFFsiH1GQPnpIr0BwxthYsFe5LW4dAYvEopwfJEKO05fQ7uhconV4FrKqKcPaRS3EpsxziyAttJsTNAKmogWzkYgLbs=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-SnlSbDOQlS4/AAAAAAAAAAI/AAAAAAAAAAA/ioiNMVfxI3E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-iFruyelod4j5ob1Q9bF4rZldHzUWX5FD_0UtG0p9nnFFsiH1GQPnpIr0BwxthYsFe5LW4dAYvEopwfJEKO05fQ7uhconV4FrKqKcPaRS3EpsxziyAttJsTNAKmogWzkYgLbs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-iFruyelod4j5ob1Q9bF4rZldHzUWX5FD_0UtG0p9nnFFsiH1GQPnpIr0BwxthYsFe5LW4dAYvEopwfJEKO05fQ7uhconV4FrKqKcPaRS3EpsxziyAttJsTNAKmogWzkYgLbs=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 26,
     "rating": 4.5,
@@ -6774,9 +8272,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Jarn Yafour - Mafraq Industrial Area - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 7AM-3PM · Saturday: 7AM-3PM · Sunday: 7AM-3PM · Thursday: 7AM-1PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Abu+Dhabi+Pipe+Factory+All/@24.2868034,54.5721479,14z/data=!4m8!1m2!2m1!1sAbu+Dhabi+Pipe+Factory+All!3m4!1s0x3e5e39a211d939f5:0xc3cebe56ad015388!8m2!3d24.2868034!4d54.5721479",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "emirates-germany-pipes-industry-l-l-c-ae",
@@ -6789,6 +8287,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.egpi-uae.com/",
     "phone": "+971 3 784 7752",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_wABznnwRWfSQ0mZSQjMUXo5Dm7vAa-mEIpeRhPqTw7SPUezJKlSmPQ07K5EFpOqxARkzSUZFEdtCtvXpzTeEXR06vMxHWOp2el-7vTus3eA8ONJzuzHuRF2GMAEsxhLU-fZG=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-kVZf3VMJj9U/AAAAAAAAAAI/AAAAAAAAAAA/L7A7Okufb_I/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_wABznnwRWfSQ0mZSQjMUXo5Dm7vAa-mEIpeRhPqTw7SPUezJKlSmPQ07K5EFpOqxARkzSUZFEdtCtvXpzTeEXR06vMxHWOp2el-7vTus3eA8ONJzuzHuRF2GMAEsxhLU-fZG=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_wABznnwRWfSQ0mZSQjMUXo5Dm7vAa-mEIpeRhPqTw7SPUezJKlSmPQ07K5EFpOqxARkzSUZFEdtCtvXpzTeEXR06vMxHWOp2el-7vTus3eA8ONJzuzHuRF2GMAEsxhLU-fZG=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 50,
     "rating": 4.3,
@@ -6808,9 +8311,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "العين - 8 Al Mujtahid 3 St - Industrial City - Mafqar 1 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: 8AM-1:30AM · Sunday: Closed · Thursday: 8AM-5:30AM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Emirates+Germany+Pipes+Industry+L.L.C./@24.0581654,55.628887,14z/data=!4m8!1m2!2m1!1sEmirates+Germany+Pipes+Industry+L.L.C.!3m4!1s0x3e8aa48919409f9f:0x1649ca3413b738b!8m2!3d24.0581654!4d55.628887",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "randhir-metal-ss-pipe-manufacturer-in-india-316l-ss-electrop",
@@ -6823,6 +8326,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.randhirmetal.com/",
     "phone": "+91 98678 15181",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGim3aFbRi3T_bu1ybFC1oWh-Ii3eJvlZJ3u8xWRrUWUxiveOwXl89vZT_rrAuI-piKTRQDqCRyZE_7R8BCSCqLcBOf_smoYO5mvL6Lt-8MsmuLPXF2RsIygN6SvKOylobjAwE2=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-zOBbL2YrhBY/AAAAAAAAAAI/AAAAAAAAAAA/ZuL_fdEGBLU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGim3aFbRi3T_bu1ybFC1oWh-Ii3eJvlZJ3u8xWRrUWUxiveOwXl89vZT_rrAuI-piKTRQDqCRyZE_7R8BCSCqLcBOf_smoYO5mvL6Lt-8MsmuLPXF2RsIygN6SvKOylobjAwE2=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGim3aFbRi3T_bu1ybFC1oWh-Ii3eJvlZJ3u8xWRrUWUxiveOwXl89vZT_rrAuI-piKTRQDqCRyZE_7R8BCSCqLcBOf_smoYO5mvL6Lt-8MsmuLPXF2RsIygN6SvKOylobjAwE2=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 24,
     "rating": 4.5,
@@ -6843,9 +8351,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "156,T.P.Street Cooper Compound Gala No-5 T.P Street, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 7AM-11PM · Monday: 7AM-11PM · Saturday: 7AM-11PM · Sunday: 7AM-11PM · Thursday: 7AM-10:30PM · Tuesday: 7AM-11PM · Wednesday: 7AM-11PM",
     "sourceUrl": "https://www.google.com/maps/place/Randhir+Metal+%E2%80%93SS+Pipe+manufacturer+in+India+316L+SS+Electropolished+Pipe+Jindal+Make+SS+Pipes+CS+fittings+Flanges+Dubai+UAE/@18.9574382,72.81796229999999,14z/data=!4m8!1m2!2m1!1sRandhir+Metal+%E2%80%93SS+Pipe+manufacturer+in+India+316L+SS+Electropolished+Pipe+Jindal+Make+SS+Pipes+CS+fittings+Flanges+Dubai+UAE!3m4!1s0x3be7ce166c636c79:0x5f16ac18c0a26d77!8m2!3d18.9574382!4d72.81796229999999",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "steel-and-pipe-supply-de-mexico-general-escobedo",
@@ -6858,6 +8366,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://steelandpipe.com.mx/",
     "phone": "+52 81 2139 7900",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwkFpMiJG8lNTkTclCClcDG5tqztEZOC7hEFUv-HMgzYy2RDq_-sqMsWk-zCpPmMNKJqyKUkCHsk0qDINpcafFZuTGBLzqOXM3inJ1ArALDo61axqLq9Lxew10onnjEbayYQ41=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-guGgFdJvdnE/AAAAAAAAAAI/AAAAAAAAAAA/lC6sv8eQccc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwkFpMiJG8lNTkTclCClcDG5tqztEZOC7hEFUv-HMgzYy2RDq_-sqMsWk-zCpPmMNKJqyKUkCHsk0qDINpcafFZuTGBLzqOXM3inJ1ArALDo61axqLq9Lxew10onnjEbayYQ41=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwkFpMiJG8lNTkTclCClcDG5tqztEZOC7hEFUv-HMgzYy2RDq_-sqMsWk-zCpPmMNKJqyKUkCHsk0qDINpcafFZuTGBLzqOXM3inJ1ArALDo61axqLq9Lxew10onnjEbayYQ41=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 50,
     "rating": 4.3,
@@ -6877,9 +8390,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Eje Metropolitano 910 72, 66050 Cdad. Gral. Escobedo, N.L., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/STEEL+AND+PIPE+SUPPLY+DE+MEXICO/@25.8197226,-100.33205989999999,14z/data=!4m8!1m2!2m1!1sSTEEL+AND+PIPE+SUPPLY+DE+MEXICO!3m4!1s0x8662923429e2b655:0xf6b8d91ecca1c878!8m2!3d25.8197226!4d-100.33205989999999",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tuberia-industrial-del-norte-s-a-de-c-v-san-nicolas-de-los-g",
@@ -6892,6 +8405,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.grupotinsa.com/",
     "phone": "+52 81 8350 2222",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4LaLJDbKJhq6t8Y7WS0nngBXyuyA0vl9l0wNNKUAJ3oK-vx8TugffkwVDo13w6Q9V1LamEnhALNjQm2Vef1GCWM9c9AXL_p6XZldOMLTOZhvPYdDOue9Di2GltOc6BDzIgWIbgQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-3F94I2YqaMQ/AAAAAAAAAAI/AAAAAAAAAAA/P9luy5fbxEw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4LaLJDbKJhq6t8Y7WS0nngBXyuyA0vl9l0wNNKUAJ3oK-vx8TugffkwVDo13w6Q9V1LamEnhALNjQm2Vef1GCWM9c9AXL_p6XZldOMLTOZhvPYdDOue9Di2GltOc6BDzIgWIbgQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4LaLJDbKJhq6t8Y7WS0nngBXyuyA0vl9l0wNNKUAJ3oK-vx8TugffkwVDo13w6Q9V1LamEnhALNjQm2Vef1GCWM9c9AXL_p6XZldOMLTOZhvPYdDOue9Di2GltOc6BDzIgWIbgQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 26,
     "rating": 4.5,
@@ -6911,9 +8429,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "República Mexicana 328, Rincón de las Puentes, 66460 San Nicolás de los Garza, N.L., Mexico",
     "openingHours": "Friday: 8:30AM-6:15PM · Monday: 8:30AM-6:15PM · Saturday: 8:30AM-1:30PM · Sunday: Closed · Thursday: 8:30AM-6:15PM · Tuesday: 8:30AM-6:15PM · Wednesday: 8:30AM-6:15PM",
     "sourceUrl": "https://www.google.com/maps/place/Tuberia+Industrial+del+Norte+S.A.+de+C.V./@25.746468099999998,-100.282561,14z/data=!4m8!1m2!2m1!1sTuberia+Industrial+del+Norte+S.A.+de+C.V.!3m4!1s0x866294eaa71e8483:0x5ead2c38cc322855!8m2!3d25.746468099999998!4d-100.282561",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "molecor-tecnologia-s-l-pvc-o-pipes-manufacturing-center-loec",
@@ -6926,6 +8444,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.molecor.com/",
     "phone": "+34 911 33 70 88",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVvvAIdkxQ4z4Ye8N54GRtUC3rxarhnI1FTntPd8756lHspMrOm3XrKca_EdLqOUJAv7odpBs7a46sNFQaOcYecdhksk11DYZxnJMIiEhst-CgNwMQpZtdBFoKWRt5J-j0Q7FR=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-95esMWnncFA/AAAAAAAAAAI/AAAAAAAAAAA/hQRkB4zacX4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVvvAIdkxQ4z4Ye8N54GRtUC3rxarhnI1FTntPd8756lHspMrOm3XrKca_EdLqOUJAv7odpBs7a46sNFQaOcYecdhksk11DYZxnJMIiEhst-CgNwMQpZtdBFoKWRt5J-j0Q7FR=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVvvAIdkxQ4z4Ye8N54GRtUC3rxarhnI1FTntPd8756lHspMrOm3XrKca_EdLqOUJAv7odpBs7a46sNFQaOcYecdhksk11DYZxnJMIiEhst-CgNwMQpZtdBFoKWRt5J-j0Q7FR=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 105,
     "rating": 4,
@@ -6945,9 +8468,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carretera M-206 Torrejón-Loeches, Km 3.1, 28890 Loeches, Madrid, Spain",
     "openingHours": "Friday: 8:30AM-2PM,3-5:30PM · Monday: 8:30AM-2PM,3-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-2PM,3-5:30PM · Tuesday: 8:30AM-2PM,3-5:30PM · Wednesday: 8:30AM-2PM,3-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Molecor+Tecnolog%C3%ADa+S.L.+PVC-O+pipes+manufacturing+center/@40.4105006,-3.4313499999999997,14z/data=!4m8!1m2!2m1!1sMolecor+Tecnolog%C3%ADa+S.L.+PVC-O+pipes+manufacturing+center!3m4!1s0xd423998ff5c39f1:0x8f057479416dbdf9!8m2!3d40.4105006!4d-3.4313499999999997",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packaging-india-bahadurgarh-asoda-todran",
@@ -6960,6 +8483,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.packagingindia.in/",
     "phone": "+91 70653 23838",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9_XOI_RHZnEu0Cb6h3CLLA7UCzPyhDMmkysoxJOy9FWhE7vQCn9COOCvJXN1GEaXjOqZm7oGTanpi8elXR5XaIaszJ2ijj6Qxb-Kjm5VeLqej1yHsQ1KFyE7k9GoJuLQs5Rf7Bg=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-q_dnu_XR6x8/AAAAAAAAAAI/AAAAAAAAAAA/aoZlHJtglZM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9_XOI_RHZnEu0Cb6h3CLLA7UCzPyhDMmkysoxJOy9FWhE7vQCn9COOCvJXN1GEaXjOqZm7oGTanpi8elXR5XaIaszJ2ijj6Qxb-Kjm5VeLqej1yHsQ1KFyE7k9GoJuLQs5Rf7Bg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9_XOI_RHZnEu0Cb6h3CLLA7UCzPyhDMmkysoxJOy9FWhE7vQCn9COOCvJXN1GEaXjOqZm7oGTanpi8elXR5XaIaszJ2ijj6Qxb-Kjm5VeLqej1yHsQ1KFyE7k9GoJuLQs5Rf7Bg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 59,
     "rating": 4.2,
@@ -6980,9 +8508,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "KH - 439, Main Rohtak Rd, behind L&T Factory, Jakhoda, Bahadurgarh, Haryana 124505, India",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: Closed · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+India/@28.728218899999998,76.8585741,14z/data=!4m8!1m2!2m1!1sPackaging+India!3m4!1s0x390d044bd8da2411:0x140fcecf2fba16de!8m2!3d28.728218899999998!4d76.8585741",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "embalo-sarl-emballages-packaging-tangier",
@@ -6995,6 +8523,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.embalo.ma/",
     "phone": "+212 5 31 09 16 18",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZHYE1RnDEHgAMhWXMCDg0Ckk3RyRXhuMoOaq7AbeKYv4wsJJnfKvTLtebeLrOk-mY7zx5TRm8V7b8UdbP_HkP5JpfhEuecN6cQjfalSe46XgG0IxFRzxph_BRipGuA3O8BJTkickcucmP=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-Sq2usplpsOQ/AAAAAAAAAAI/AAAAAAAAAAA/3Qjs7fBcAJI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZHYE1RnDEHgAMhWXMCDg0Ckk3RyRXhuMoOaq7AbeKYv4wsJJnfKvTLtebeLrOk-mY7zx5TRm8V7b8UdbP_HkP5JpfhEuecN6cQjfalSe46XgG0IxFRzxph_BRipGuA3O8BJTkickcucmP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZHYE1RnDEHgAMhWXMCDg0Ckk3RyRXhuMoOaq7AbeKYv4wsJJnfKvTLtebeLrOk-mY7zx5TRm8V7b8UdbP_HkP5JpfhEuecN6cQjfalSe46XgG0IxFRzxph_BRipGuA3O8BJTkickcucmP=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 86,
     "rating": 4.1,
@@ -7014,9 +8547,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "N°2, Magasin, Résidence Najd, Av. Marrakech, Tanger 90000, Morocco",
     "openingHours": "Friday: 9:30AM-8PM · Monday: 9:30AM-8PM · Saturday: 9:30AM-8PM · Sunday: Closed · Thursday: 9:30AM-8PM · Tuesday: 9:30AM-8PM · Wednesday: 9:30AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Embalo+Sarl+%3A+Emballages+%26+Packaging./@35.767813,-5.8043431,14z/data=!4m8!1m2!2m1!1sEmbalo+Sarl+%3A+Emballages+%26+Packaging.!3m4!1s0xd0c7f9998ceaf01:0x2ae85516adecb436!8m2!3d35.767813!4d-5.8043431",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "fatipack-group-emballage-maroc-inezgane",
@@ -7029,6 +8562,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://fatipack.com/",
     "phone": "+212 5 28 33 02 02",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgpM5sB7FD5E0MLoN8d6zVi6eefLQeeQy3JQSkKxU-4vk7Ex8r6edRrz7HiOfCJPlPAXT901FSZbv5zG3cSLrfdihh6B9unHOcfMWAwzuJkPIn2hq3RTBbKeZUUmlNCpXq1vF=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-Yt-6hFv1q7M/AAAAAAAAAAI/AAAAAAAAAAA/3CbqKKIE2pY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgpM5sB7FD5E0MLoN8d6zVi6eefLQeeQy3JQSkKxU-4vk7Ex8r6edRrz7HiOfCJPlPAXT901FSZbv5zG3cSLrfdihh6B9unHOcfMWAwzuJkPIn2hq3RTBbKeZUUmlNCpXq1vF=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgpM5sB7FD5E0MLoN8d6zVi6eefLQeeQy3JQSkKxU-4vk7Ex8r6edRrz7HiOfCJPlPAXT901FSZbv5zG3cSLrfdihh6B9unHOcfMWAwzuJkPIn2hq3RTBbKeZUUmlNCpXq1vF=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 40,
     "rating": 4.3,
@@ -7048,9 +8586,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3 Mars cité Hassani, Taghazout, Inezgane 80350, Morocco",
     "openingHours": "Friday: 9AM-1PM,3-6:30PM · Monday: 9AM-6:30PM · Saturday: 9AM-1:30PM · Sunday: Closed · Thursday: 9AM-6:30PM · Tuesday: 9AM-6:30PM · Wednesday: 9AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Fatipack+group+emballage+maroc/@30.360065199999998,-9.5355645,14z/data=!4m8!1m2!2m1!1sFatipack+group+emballage+maroc!3m4!1s0xdb3c7f4b9fcada5:0xdde973c3ae8ca745!8m2!3d30.360065199999998!4d-9.5355645",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "maroc-emballage-casablanca",
@@ -7063,6 +8601,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.marocemballage.ma/",
     "phone": "+212 5 22 34 12 11",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPWGmGaaRxyN7g7_YwTrdYp1N9yuCTAGj4dFLe8I89EO1LW_8siu4q2weL8dv6LmJnckI4wQMBhO8Nmmx5MhYnysrx-C_DyIKnwCzgyJ-fvKxB6l9sYzDnfjuJVj-7umCl73L4Rg=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-SDerEyjWPko/AAAAAAAAAAI/AAAAAAAAAAA/yMstFTpYHhA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPWGmGaaRxyN7g7_YwTrdYp1N9yuCTAGj4dFLe8I89EO1LW_8siu4q2weL8dv6LmJnckI4wQMBhO8Nmmx5MhYnysrx-C_DyIKnwCzgyJ-fvKxB6l9sYzDnfjuJVj-7umCl73L4Rg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPWGmGaaRxyN7g7_YwTrdYp1N9yuCTAGj4dFLe8I89EO1LW_8siu4q2weL8dv6LmJnckI4wQMBhO8Nmmx5MhYnysrx-C_DyIKnwCzgyJ-fvKxB6l9sYzDnfjuJVj-7umCl73L4Rg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 22,
     "rating": 4.6,
@@ -7082,9 +8625,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "116 Bd Sfax, Casablanca 20100, Morocco",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 9AM-12:30PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Maroc+Emballage/@33.6243464,-7.5089254,14z/data=!4m8!1m2!2m1!1sMaroc+Emballage!3m4!1s0xda7cb9a0781f50d:0xa97763607d4a7eb5!8m2!3d33.6243464!4d-7.5089254",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "amana-world-trading-contracting-est-riyadh",
@@ -7097,6 +8640,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.amanaworldksa.com/",
     "phone": "+966 59 498 5705",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEJDywHXFvDSlXYEbFd9Z81I8-_tgS-muKJRLHskNS-pqQbkdJNKLv2EPZOKRgUCAXaQpdQg84T89vi-uU4hX5ZcxVNzCdshE83oxDXAEH0zRTHkVdXC1AhmgIHaZ_RG2sviTf=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-QMz6EAfeJGw/AAAAAAAAAAI/AAAAAAAAAAA/kWN-xJEMhME/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEJDywHXFvDSlXYEbFd9Z81I8-_tgS-muKJRLHskNS-pqQbkdJNKLv2EPZOKRgUCAXaQpdQg84T89vi-uU4hX5ZcxVNzCdshE83oxDXAEH0zRTHkVdXC1AhmgIHaZ_RG2sviTf=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEJDywHXFvDSlXYEbFd9Z81I8-_tgS-muKJRLHskNS-pqQbkdJNKLv2EPZOKRgUCAXaQpdQg84T89vi-uU4hX5ZcxVNzCdshE83oxDXAEH0zRTHkVdXC1AhmgIHaZ_RG2sviTf=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 36,
     "rating": 4.9,
@@ -7115,9 +8663,9 @@ export const outscraperSuppliers: Supplier[] =
     "moq": "1 pallet",
     "address": "Hairs bin zaid street, Al Sina'iyah, Riyadh 12844, Saudi Arabia",
     "sourceUrl": "https://www.google.com/maps/place/AMANA+WORLD+TRADING+CONTRACTING.EST/@24.640638199999998,46.749690699999995,14z/data=!4m8!1m2!2m1!1sAMANA+WORLD+TRADING+CONTRACTING.EST!3m4!1s0x3e2f07ded30a9711:0xae36d662a7f355a4!8m2!3d24.640638199999998!4d46.749690699999995",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "alhayat-building-materials-trading-llc-br2office-ae",
@@ -7130,6 +8678,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.alhayattrading.ae/",
     "phone": "+971 52 854 4036",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHvZEYoJ9X4v2S14eODOJhKAqTvkkdg2se_Ioa4SExNKKD7WUNWq6tkPm3p2gMWWWvSKoFdBJzki9Dl2WrstxacXrhLCnnHOAUM0DQPjOIWHDVb-XXUR72rsPaWa1fuztvjm66S=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-VF6Oi2xMZ1A/AAAAAAAAAAI/AAAAAAAAAAA/Hgk_rw3qb5E/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHvZEYoJ9X4v2S14eODOJhKAqTvkkdg2se_Ioa4SExNKKD7WUNWq6tkPm3p2gMWWWvSKoFdBJzki9Dl2WrstxacXrhLCnnHOAUM0DQPjOIWHDVb-XXUR72rsPaWa1fuztvjm66S=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHvZEYoJ9X4v2S14eODOJhKAqTvkkdg2se_Ioa4SExNKKD7WUNWq6tkPm3p2gMWWWvSKoFdBJzki9Dl2WrstxacXrhLCnnHOAUM0DQPjOIWHDVb-XXUR72rsPaWa1fuztvjm66S=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 62,
     "rating": 4.2,
@@ -7149,9 +8702,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "الجرف 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 6AM-12:30PM · Monday: 6AM-8:30PM · Saturday: 6AM-8:30PM · Sunday: 6AM-8:30PM · Thursday: 6AM-8:30PM · Tuesday: 7AM-8:30PM · Wednesday: 6AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AlHayat+Building+Materials+Trading+LLC+%28br2Office%29/@25.4365921,55.5456455,14z/data=!4m8!1m2!2m1!1sAlHayat+Building+Materials+Trading+LLC+%28br2Office%29!3m4!1s0x3ef5f92ec5a8db23:0x4df0926733b161a4!8m2!3d25.4365921!4d55.5456455",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "arab-building-materials-co-wll-abmc-abu-dhabi-ae",
@@ -7164,6 +8717,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.abmcdxb.com/",
     "phone": "+971 2 555 4052",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhNPRpT7sgL2fslc7LRg_ai1fMzzJwcIcqfVi7fYyLG3T15tSNQvPNCmENyWbcoWZbfp3j2-hWPGLUH2ZZ9f2Fn9zy0V3gwYuq2r7y_ZHftS0dsWKxod3ehdLJU46Wku6gd4mlJg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-E__MHP1WQb8/AAAAAAAAAAI/AAAAAAAAAAA/QG5JJA8_0B0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhNPRpT7sgL2fslc7LRg_ai1fMzzJwcIcqfVi7fYyLG3T15tSNQvPNCmENyWbcoWZbfp3j2-hWPGLUH2ZZ9f2Fn9zy0V3gwYuq2r7y_ZHftS0dsWKxod3ehdLJU46Wku6gd4mlJg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhNPRpT7sgL2fslc7LRg_ai1fMzzJwcIcqfVi7fYyLG3T15tSNQvPNCmENyWbcoWZbfp3j2-hWPGLUH2ZZ9f2Fn9zy0V3gwYuq2r7y_ZHftS0dsWKxod3ehdLJU46Wku6gd4mlJg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 23,
     "rating": 4.6,
@@ -7183,9 +8741,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No.30, Street No.8 - Musaffah - M21 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 8AM-5:30PM · Saturday: 8AM-5:30PM · Sunday: 8AM-5:30PM · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/ARAB+BUILDING+MATERIALS+CO.+WLL+%28ABMC+Abu+Dhabi%29/@24.3734766,54.4762786,14z/data=!4m8!1m2!2m1!1sARAB+BUILDING+MATERIALS+CO.+WLL+%28ABMC+Abu+Dhabi%29!3m4!1s0x3e5e4176e5d3811d:0xf512af7c81928ef2!8m2!3d24.3734766!4d54.4762786",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "maas-italy-edilizia-forcoli",
@@ -7198,6 +8756,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://maasitaly.com/",
     "phone": "+39 377 086 5074",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ00IYw7aehE7Mu86ad0R4ORTC3wpwU5sf8Jeq1kBVPKyEbJ2Xilwb_8Fc6tjbD6G_RIe53UuHvmAYAFlOw1GODd8whwzrcV3ULZS6KaAhNdXaZBJpeHjjZxhecmURv-KGoKk=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-FTwrtCUT38Q/AAAAAAAAAAI/AAAAAAAAAAA/1csdVm3wB2Y/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ00IYw7aehE7Mu86ad0R4ORTC3wpwU5sf8Jeq1kBVPKyEbJ2Xilwb_8Fc6tjbD6G_RIe53UuHvmAYAFlOw1GODd8whwzrcV3ULZS6KaAhNdXaZBJpeHjjZxhecmURv-KGoKk=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ00IYw7aehE7Mu86ad0R4ORTC3wpwU5sf8Jeq1kBVPKyEbJ2Xilwb_8Fc6tjbD6G_RIe53UuHvmAYAFlOw1GODd8whwzrcV3ULZS6KaAhNdXaZBJpeHjjZxhecmURv-KGoKk=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 25,
     "rating": 4.5,
@@ -7217,9 +8780,48 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Guglielmo Marconi, 3-5, 56036 Forcoli PI, Italy",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/MAAS+Italy+Edilizia/@43.6049838,10.7026454,14z/data=!4m8!1m2!2m1!1sMAAS+Italy+Edilizia!3m4!1s0x132a75da06b3c4b5:0xf565cfe21cdd609a!8m2!3d43.6049838!4d10.7026454",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "warehouse-spain-s-a-las-lagunas",
+    "name": "WAREHOUSE SPAIN, S.A.",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Las Lagunas, Spain",
+    "country": "Spain",
+    "city": "Las Lagunas",
+    "website": "https://mixtadecoracion.com/",
+    "phone": "+34 952 47 57 39",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQEwxEafjk6kmO8fPwEpZ3MBv9JGZ2IVTX0LXksfcwvfmt4kO0eOOgJOptNZnCGmU4VWZXlymz3hiokjGZEVY82-aldAbey3EH08CjgPAqVflRNmkeSRlUqv6_7FqzH80cgRPCbQ=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-YMI9Ac9YUuw/AAAAAAAAAAI/AAAAAAAAAAA/Q4utGPai7kI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQEwxEafjk6kmO8fPwEpZ3MBv9JGZ2IVTX0LXksfcwvfmt4kO0eOOgJOptNZnCGmU4VWZXlymz3hiokjGZEVY82-aldAbey3EH08CjgPAqVflRNmkeSRlUqv6_7FqzH80cgRPCbQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEQEwxEafjk6kmO8fPwEpZ3MBv9JGZ2IVTX0LXksfcwvfmt4kO0eOOgJOptNZnCGmU4VWZXlymz3hiokjGZEVY82-aldAbey3EH08CjgPAqVflRNmkeSRlUqv6_7FqzH80cgRPCbQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.5,
+    "googleReviews": 28,
+    "rating": 4.5,
+    "reviewCount": 28,
+    "verified": true,
+    "description": "Construction supplier in Las Lagunas, Spain.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "1 pallet",
+    "address": "Camino Viejo de Coín, 61, 29651 Las Lagunas de Mijas, Málaga, Spain",
+    "openingHours": "Friday: 7:30AM-7PM · Monday: 7:30AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
+    "sourceUrl": "https://www.google.com/maps/place/WAREHOUSE+SPAIN%2C+S.A./@36.5387742,-4.6384302,14z/data=!4m8!1m2!2m1!1sWAREHOUSE+SPAIN%2C+S.A.!3m4!1s0xd72e218e66995cf:0xf4c0afe580699b9e!8m2!3d36.5387742!4d-4.6384302",
+    "score": 91,
+    "reliabilityScore": 90,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "grainger-industrial-supply-maspeth",
@@ -7232,6 +8834,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.grainger.com/branch/Maspeth-Branch-545",
     "phone": "+1 800-472-4643",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFt38EANpD07nVtURmsiF_yCZsLkr91nLgxGIbB4SLBZ92MRJ3IWSdicRQQ7An7CdHzv6R03yP_uhqC3qZizmJUaAjULTr0WSZNFCAwqqItPsfnbYkIsCQuqqq5oKhLKkYK60Yr=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-m7HZTHaAxEQ/AAAAAAAAAAI/AAAAAAAAAAA/jP4v4Rgqwlo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFt38EANpD07nVtURmsiF_yCZsLkr91nLgxGIbB4SLBZ92MRJ3IWSdicRQQ7An7CdHzv6R03yP_uhqC3qZizmJUaAjULTr0WSZNFCAwqqItPsfnbYkIsCQuqqq5oKhLKkYK60Yr=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFt38EANpD07nVtURmsiF_yCZsLkr91nLgxGIbB4SLBZ92MRJ3IWSdicRQQ7An7CdHzv6R03yP_uhqC3qZizmJUaAjULTr0WSZNFCAwqqItPsfnbYkIsCQuqqq5oKhLKkYK60Yr=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 121,
     "rating": 4,
@@ -7251,9 +8858,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "58-45 Grand Ave, Maspeth, NY 11378",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Grainger+Industrial+Supply/@40.7205444,-73.9099872,14z/data=!4m8!1m2!2m1!1sGrainger+Industrial+Supply!3m4!1s0x89c25e95d796bfff:0xc6bfe959d9e0036!8m2!3d40.7205444!4d-73.9099872",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ime-gmbh-machinery-spare-parts-wedemark",
@@ -7266,6 +8873,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ime-gmbh.com/",
     "phone": "+49 5130 97920",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEo-WFzacAKT3s-BWhevfHcFsEbrDK4vHj-CQnQMUC-oUXMhoNs6ZFe428ufjDO3vJ0mt7lknDZ-kP_97huLDKw0hbLFyPXKZyRiWqej-Du_ekHw1AUVqldq1gOrwNltSTmKrAL=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-wrk9CZwp4qw/AAAAAAAAAAI/AAAAAAAAAAA/H2Aa569wg8o/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEo-WFzacAKT3s-BWhevfHcFsEbrDK4vHj-CQnQMUC-oUXMhoNs6ZFe428ufjDO3vJ0mt7lknDZ-kP_97huLDKw0hbLFyPXKZyRiWqej-Du_ekHw1AUVqldq1gOrwNltSTmKrAL=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEo-WFzacAKT3s-BWhevfHcFsEbrDK4vHj-CQnQMUC-oUXMhoNs6ZFe428ufjDO3vJ0mt7lknDZ-kP_97huLDKw0hbLFyPXKZyRiWqej-Du_ekHw1AUVqldq1gOrwNltSTmKrAL=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 24,
     "rating": 4.5,
@@ -7285,9 +8897,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Bremer Ring 1, 30900 Wedemark, Germany",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/IME+GmbH+MACHINERY+SPARE+PARTS/@52.554143599999996,9.774564999999999,14z/data=!4m8!1m2!2m1!1sIME+GmbH+MACHINERY+SPARE+PARTS!3m4!1s0x47b06bca91c540f3:0x98a6addbce270a8!8m2!3d52.554143599999996!4d9.774564999999999",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "isel-germany-ag-plant-eichenzell-eichenzell",
@@ -7300,6 +8912,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.isel.com/de",
     "phone": "+49 6659 981700",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTYJ9HQALAnHB6_pHx3O3Q6fc5lKv0eG2qVDGO2aQMxx8Ed-DFO7Ty-8M_3E6TIaazJwOEv6E335sh1kWnSd2A2nca0-hR1DOzfVMFdLu8GM5rETTI2qqR3g8nspETCkRL787M=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-NC8aeSnKdqY/AAAAAAAAAAI/AAAAAAAAAAA/3caraRQgW84/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTYJ9HQALAnHB6_pHx3O3Q6fc5lKv0eG2qVDGO2aQMxx8Ed-DFO7Ty-8M_3E6TIaazJwOEv6E335sh1kWnSd2A2nca0-hR1DOzfVMFdLu8GM5rETTI2qqR3g8nspETCkRL787M=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHTYJ9HQALAnHB6_pHx3O3Q6fc5lKv0eG2qVDGO2aQMxx8Ed-DFO7Ty-8M_3E6TIaazJwOEv6E335sh1kWnSd2A2nca0-hR1DOzfVMFdLu8GM5rETTI2qqR3g8nspETCkRL787M=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 26,
     "rating": 4.5,
@@ -7319,9 +8936,86 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Bürgermeister-Ebert-Straße 40, 36124 Eichenzell-Welkers, Germany",
     "openingHours": "Friday: 7:30AM-2PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/isel+Germany+AG+%7C+Plant+Eichenzell/@50.482025199999995,9.736113399999999,14z/data=!4m8!1m2!2m1!1sisel+Germany+AG+%7C+Plant+Eichenzell!3m4!1s0x47a3308a4c5e6947:0x6522af189b3c8415!8m2!3d50.482025199999995!4d9.736113399999999",
-    "score": 85,
+    "score": 91,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "nw-construction-supply-inc-pasco",
+    "name": "NW Construction Supply Inc",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "Pasco, United States",
+    "country": "United States",
+    "city": "Pasco",
+    "website": "http://nwconstructionsupply.com/",
+    "phone": "+1 509-545-4055",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYximjV-HD7z50Kegg5Ym8PTAReCGtD4o57yzCzY__cbp2pHlnQGfUDxvdgNGKOC1Z7zM_YHNVM5I3Pq5sXyUecDmpMftq4aUR3Fz3N_p_lQMhM42BaZScJonpIs5YCenjM0Bm=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-UfxELcx9kGw/AAAAAAAAAAI/AAAAAAAAAAA/0QHDqaI6FKU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYximjV-HD7z50Kegg5Ym8PTAReCGtD4o57yzCzY__cbp2pHlnQGfUDxvdgNGKOC1Z7zM_YHNVM5I3Pq5sXyUecDmpMftq4aUR3Fz3N_p_lQMhM42BaZScJonpIs5YCenjM0Bm=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYximjV-HD7z50Kegg5Ym8PTAReCGtD4o57yzCzY__cbp2pHlnQGfUDxvdgNGKOC1Z7zM_YHNVM5I3Pq5sXyUecDmpMftq4aUR3Fz3N_p_lQMhM42BaZScJonpIs5YCenjM0Bm=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.5,
+    "googleReviews": 25,
+    "rating": 4.5,
+    "reviewCount": 25,
+    "verified": true,
+    "description": "Construction supplier in Pasco, United States.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "1 pallet",
+    "address": "2109 W Frontage Rd, Pasco, WA 99301",
+    "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
+    "sourceUrl": "https://www.google.com/maps/place/NW+Construction+Supply+Inc/@46.2291162,-119.11909689999999,14z/data=!4m8!1m2!2m1!1sNW+Construction+Supply+Inc!3m4!1s0x5498799158b289d3:0x3c90698918d358ff!8m2!3d46.2291162!4d-119.11909689999999",
+    "score": 91,
+    "reliabilityScore": 90,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "aam-driveline-eisenach-manufacturing-facility-krauthausen",
+    "name": "AAM Driveline - Eisenach Manufacturing Facility",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "Krauthausen, Germany",
+    "country": "Germany",
+    "city": "Krauthausen",
+    "website": "http://www.aam.com/",
+    "phone": "+49 36926 9720",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiwzVtqqDOwkFK2wPE2mGRQN1yrLu4dlWWX-uc0zIjXWnrxX75g9atuENdwjqrpISahSoev9ZVElrt79oNrG_STXDQtSkIN0kM7-1he3IM8ycCCSo1yViNYS7jX-L1dwre9wzU=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-riuLF3DKX4o/AAAAAAAAAAI/AAAAAAAAAAA/TvPu1YBcGHE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiwzVtqqDOwkFK2wPE2mGRQN1yrLu4dlWWX-uc0zIjXWnrxX75g9atuENdwjqrpISahSoev9ZVElrt79oNrG_STXDQtSkIN0kM7-1he3IM8ycCCSo1yViNYS7jX-L1dwre9wzU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiwzVtqqDOwkFK2wPE2mGRQN1yrLu4dlWWX-uc0zIjXWnrxX75g9atuENdwjqrpISahSoev9ZVElrt79oNrG_STXDQtSkIN0kM7-1he3IM8ycCCSo1yViNYS7jX-L1dwre9wzU=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.4,
+    "googleReviews": 40,
+    "rating": 4.4,
+    "reviewCount": 40,
+    "verified": true,
+    "description": "Industrial Parts supplier in Krauthausen, Germany.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "10 units",
+    "address": "Krauthausen Deubachshof, Stedtfelder Str. 5, 99819 Krauthausen-Deubachshof, Germany",
+    "sourceUrl": "https://www.google.com/maps/place/AAM+Driveline+-+Eisenach+Manufacturing+Facility/@51.0101552,10.2567174,14z/data=!4m8!1m2!2m1!1sAAM+Driveline+-+Eisenach+Manufacturing+Facility!3m4!1s0x47a4996da6a135b7:0xe975a4dd56b5cc90!8m2!3d51.0101552!4d10.2567174",
+    "score": 91,
+    "reliabilityScore": 88,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "airflow-trading-est-dammam",
@@ -7334,6 +9028,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.airflowtc.com/",
     "phone": "+966 13 830 1450",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLtQQmnmtIDcZAPH2H5JIyxqaA54Q-tgN47C4zICWFN6Sixh0jI8-TxJpP1YInog68RkLHWXwLpw_oLqYaS59rCA3kQXvkbUFWAEK9_wdz08j-16ZMj1cT_GDJRWex-z9Mr5JmmW_J9l6z=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-HpHCqtw09VU/AAAAAAAAAAI/AAAAAAAAAAA/bZbdND6mdPM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLtQQmnmtIDcZAPH2H5JIyxqaA54Q-tgN47C4zICWFN6Sixh0jI8-TxJpP1YInog68RkLHWXwLpw_oLqYaS59rCA3kQXvkbUFWAEK9_wdz08j-16ZMj1cT_GDJRWex-z9Mr5JmmW_J9l6z=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLtQQmnmtIDcZAPH2H5JIyxqaA54Q-tgN47C4zICWFN6Sixh0jI8-TxJpP1YInog68RkLHWXwLpw_oLqYaS59rCA3kQXvkbUFWAEK9_wdz08j-16ZMj1cT_GDJRWex-z9Mr5JmmW_J9l6z=w1600-h1000-k-no"
+    ],
     "googleRating": 5,
     "googleReviews": 20,
     "rating": 5,
@@ -7353,9 +9052,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Opposite Grand Mart, Office#405, Floor#4th, Bldg#9419, Street Prince Muhammad Ibn Fahad Road, At Tubayshi Dist, Dammam 32233, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5:30PM · Saturday: 8AM-5:30PM · Sunday: 8AM-5:30PM · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AIRFLOW+TRADING+EST./@26.4373747,50.118284499999994,14z/data=!4m8!1m2!2m1!1sAIRFLOW+TRADING+EST.!3m4!1s0x3e49fbb65bd0b0e3:0x526240ad5d27a4ea!8m2!3d26.4373747!4d50.118284499999994",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 100,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "vatan-cable-tr",
@@ -7368,6 +9067,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.vatan.com.tr/",
     "phone": "+90 282 676 42 20",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmM_Qd6MjtQtYM9K_wJWnMU_T1_qcMVO1j4fDcJd6KH1vTQtrP5E9JjZzx0yg-ARUGa4HjK5p3fZPKvWHKvKFwSoNXttY0xShBD7U-m2hIGVJ4tOnZkY1KIzLC5XwMOEUUAvIg6w=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-TkUvZdqcUPY/AAAAAAAAAAI/AAAAAAAAAAA/emkWDntp0jQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmM_Qd6MjtQtYM9K_wJWnMU_T1_qcMVO1j4fDcJd6KH1vTQtrP5E9JjZzx0yg-ARUGa4HjK5p3fZPKvWHKvKFwSoNXttY0xShBD7U-m2hIGVJ4tOnZkY1KIzLC5XwMOEUUAvIg6w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmM_Qd6MjtQtYM9K_wJWnMU_T1_qcMVO1j4fDcJd6KH1vTQtrP5E9JjZzx0yg-ARUGa4HjK5p3fZPKvWHKvKFwSoNXttY0xShBD7U-m2hIGVJ4tOnZkY1KIzLC5XwMOEUUAvIg6w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 59,
     "rating": 4.1,
@@ -7387,9 +9091,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Velimeşe OSB, 7. Km., 59930 Çorlu/Tekirdağ, Türkiye",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-6PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Vatan+Cable/@41.2114304,27.845798799999997,14z/data=!4m8!1m2!2m1!1sVatan+Cable!3m4!1s0x14b4e71845bd23c5:0x2da7655472a25711!8m2!3d41.2114304!4d27.845798799999997",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cable-depot-fzco-ae",
@@ -7402,6 +9106,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://cabledepot-me.com/",
     "phone": "+971 4 883 3767",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcxC9qdXH_ZxHD4EAPh_0mbBln34dZ3YWR7oKAG-29hRdp-fUTpyAgmDg1PZ-0R0ksQ6eAs515-aL3R06IFFvc2fNT9PM32jfzT80iJnNodBW5B3T5LJizHF7sFDwg22ygaF3k=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-sgcOqQtnWfE/AAAAAAAAAAI/AAAAAAAAAAA/ZcXBd2-EIro/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcxC9qdXH_ZxHD4EAPh_0mbBln34dZ3YWR7oKAG-29hRdp-fUTpyAgmDg1PZ-0R0ksQ6eAs515-aL3R06IFFvc2fNT9PM32jfzT80iJnNodBW5B3T5LJizHF7sFDwg22ygaF3k=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcxC9qdXH_ZxHD4EAPh_0mbBln34dZ3YWR7oKAG-29hRdp-fUTpyAgmDg1PZ-0R0ksQ6eAs515-aL3R06IFFvc2fNT9PM32jfzT80iJnNodBW5B3T5LJizHF7sFDwg22ygaF3k=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 38,
     "rating": 4.2,
@@ -7421,9 +9130,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No.S50806, Near Gate No. 12 - Jabal Ali Industrial Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Cable+Depot+FZCO/@24.9653511,55.133277799999995,14z/data=!4m8!1m2!2m1!1sCable+Depot+FZCO!3m4!1s0x3e5f0df079a5375b:0x70fb0abbce15dfa0!8m2!3d24.9653511!4d55.133277799999995",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mandeep-cables-pvt-ltd-noida",
@@ -7436,6 +9145,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.mandeepcables.com/",
     "phone": "+91 98990 00668",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNCxtzukj1xKeaNDD2LXxQrd6bn7qV12uu-qgbV8H4uDUwGSjn9WozVKb9nvRg-oID3Oam_q3w33bOytwdcCfPTc2D1WdNLPjTryfndvXCTJvVqIjhx0r1Ff6IyQHlFvig5V8f=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-miZW3xjEcTg/AAAAAAAAAAI/AAAAAAAAAAA/EIOtKhWhyi8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNCxtzukj1xKeaNDD2LXxQrd6bn7qV12uu-qgbV8H4uDUwGSjn9WozVKb9nvRg-oID3Oam_q3w33bOytwdcCfPTc2D1WdNLPjTryfndvXCTJvVqIjhx0r1Ff6IyQHlFvig5V8f=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGNCxtzukj1xKeaNDD2LXxQrd6bn7qV12uu-qgbV8H4uDUwGSjn9WozVKb9nvRg-oID3Oam_q3w33bOytwdcCfPTc2D1WdNLPjTryfndvXCTJvVqIjhx0r1Ff6IyQHlFvig5V8f=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 32,
     "rating": 4.3,
@@ -7456,9 +9170,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "A-22, Sector-80, Phase-2 Noida - 201305 - Uttar Pradesh - INDIA, Noida, Uttar Pradesh 201305, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Mandeep+Cables+Pvt+Ltd/@28.555483,77.41178599999999,14z/data=!4m8!1m2!2m1!1sMandeep+Cables+Pvt+Ltd!3m4!1s0x390ce8be254e7565:0x9f74511032204a23!8m2!3d28.555483!4d77.41178599999999",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "hi-sir-calcinate",
@@ -7471,6 +9185,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.icc.it/",
     "phone": "+39 035 449 3011",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOU5d5dIwHVKelrUChWwyZ5XuffBrfne-OBhRlG1E1imtTcyNmaYKcvZNnoRxYffG7aPtLglIOwBieABS0ty77qtlLLLKCJuDrXqXXS6ldzktFQvEhVo0OZ14me9TC-pBK0Re6_Q=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-R8zEUcXbS9U/AAAAAAAAAAI/AAAAAAAAAAA/wjaFXhGGLr0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOU5d5dIwHVKelrUChWwyZ5XuffBrfne-OBhRlG1E1imtTcyNmaYKcvZNnoRxYffG7aPtLglIOwBieABS0ty77qtlLLLKCJuDrXqXXS6ldzktFQvEhVo0OZ14me9TC-pBK0Re6_Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOU5d5dIwHVKelrUChWwyZ5XuffBrfne-OBhRlG1E1imtTcyNmaYKcvZNnoRxYffG7aPtLglIOwBieABS0ty77qtlLLLKCJuDrXqXXS6ldzktFQvEhVo0OZ14me9TC-pBK0Re6_Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 21,
     "rating": 4.5,
@@ -7490,9 +9209,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via per Bolgare, snc, 24050 Calcinate BG, Italy",
     "openingHours": "Friday: 8AM-12:30PM,1:30-5PM · Monday: 8AM-12:30PM,1:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,1:30-5PM · Tuesday: 8AM-12:30PM,1:30-5PM · Wednesday: 8AM-12:30PM,1:30-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Hi+sir%2C/@45.6275611,9.804400099999999,14z/data=!4m8!1m2!2m1!1sHi+sir%2C!3m4!1s0x478143c5dfa06581:0xab510892bffc7352!8m2!3d45.6275611!4d9.804400099999999",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "imacab-casablanca",
@@ -7505,6 +9224,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.imacab.net/",
     "phone": "+212 5 22 76 40 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUjz0fpjXz7_YfQIj0vThIYrT1yTEkcdFLTjN8f37LSlDgK5UPSmSn7FJig0KKtl4A-A5vbekcFGG30OD_tG5npSoDAEJyZrBmh5-SmZbcEjIeTtjeHsaRclebIJDFBGSgtgsS9A=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-oteQMEnc_Zo/AAAAAAAAAAI/AAAAAAAAAAA/ieg723rKqfQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUjz0fpjXz7_YfQIj0vThIYrT1yTEkcdFLTjN8f37LSlDgK5UPSmSn7FJig0KKtl4A-A5vbekcFGG30OD_tG5npSoDAEJyZrBmh5-SmZbcEjIeTtjeHsaRclebIJDFBGSgtgsS9A=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUjz0fpjXz7_YfQIj0vThIYrT1yTEkcdFLTjN8f37LSlDgK5UPSmSn7FJig0KKtl4A-A5vbekcFGG30OD_tG5npSoDAEJyZrBmh5-SmZbcEjIeTtjeHsaRclebIJDFBGSgtgsS9A=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 49,
     "rating": 4.2,
@@ -7524,9 +9248,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Boulevard Ahl Loghlam Quartier Sidi Moumen, Casablanca 20450, Morocco",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/IMACAB/@33.600836699999995,-7.4971723,14z/data=!4m8!1m2!2m1!1sIMACAB!3m4!1s0xda7cb6da49e2521:0x66bec7a4cdb35cd2!8m2!3d33.600836699999995!4d-7.4971723",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mst-seamless-tube-pipe-south-lyon",
@@ -7539,6 +9263,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.mstube.com/",
     "phone": "+1 800-521-8416",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGILYOmw2Mu913mMNOJyA59tnTxnyLZGWQC1Jr92gA-04WRo2MSpCqvh1XVjnzvBAM_do_hD2BptZTRm7YJrsTbfoD_AcSSE-I8U8YSyHXgmzaygWco-sjdqUR8deeO28UH3UXfAA=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-okhKDAV_YTM/AAAAAAAAAAI/AAAAAAAAAAA/5Wv1DoNaV7k/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGILYOmw2Mu913mMNOJyA59tnTxnyLZGWQC1Jr92gA-04WRo2MSpCqvh1XVjnzvBAM_do_hD2BptZTRm7YJrsTbfoD_AcSSE-I8U8YSyHXgmzaygWco-sjdqUR8deeO28UH3UXfAA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGILYOmw2Mu913mMNOJyA59tnTxnyLZGWQC1Jr92gA-04WRo2MSpCqvh1XVjnzvBAM_do_hD2BptZTRm7YJrsTbfoD_AcSSE-I8U8YSyHXgmzaygWco-sjdqUR8deeO28UH3UXfAA=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 89,
     "rating": 4,
@@ -7558,9 +9287,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "400 Mcmunn St, South Lyon, MI 48178",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MST+-+Seamless+Tube+%26+Pipe/@42.4575934,-83.6565456,14z/data=!4m8!1m2!2m1!1sMST+-+Seamless+Tube+%26+Pipe!3m4!1s0x882356a17c663f59:0xd787db5eb4a7ba79!8m2!3d42.4575934!4d-83.6565456",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "fr-jacob-sohne-gmbh-co-kg-porta-westfalica",
@@ -7573,6 +9302,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.jacob-group.com/",
     "phone": "+49 571 95580",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHneGYJ7heiYIC0XguEbzQtBszP-GgN1B3pqaFxb_unxkTj49I5R6NftoL9dzyCNejto22AsEDJ_bqfBqF-Gj9Jb07VIpj-tK9cNs5s7rL-2ILhE-GQuuGJqAtWWo5L0vePU7Oocg=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-yvC2XlBVYE8/AAAAAAAAAAI/AAAAAAAAAAA/vQVHy4bNtU4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHneGYJ7heiYIC0XguEbzQtBszP-GgN1B3pqaFxb_unxkTj49I5R6NftoL9dzyCNejto22AsEDJ_bqfBqF-Gj9Jb07VIpj-tK9cNs5s7rL-2ILhE-GQuuGJqAtWWo5L0vePU7Oocg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHneGYJ7heiYIC0XguEbzQtBszP-GgN1B3pqaFxb_unxkTj49I5R6NftoL9dzyCNejto22AsEDJ_bqfBqF-Gj9Jb07VIpj-tK9cNs5s7rL-2ILhE-GQuuGJqAtWWo5L0vePU7Oocg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 24,
     "rating": 4.4,
@@ -7592,9 +9326,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Niedernfeldweg 14, 32457 Porta Westfalica-Barkhausen, Germany",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Fr.+Jacob+S%C3%B6hne+GmbH+%26+Co.+KG/@52.2586997,8.9049453,14z/data=!4m8!1m2!2m1!1sFr.+Jacob+S%C3%B6hne+GmbH+%26+Co.+KG!3m4!1s0x47ba73de4856f035:0x96702cf9930d8d76!8m2!3d52.2586997!4d8.9049453",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "noksel-espana-s-a-es",
@@ -7607,6 +9341,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.nokselspain.com/",
     "phone": "+34 968 92 50 02",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHVyQxYEBjdm7ULrRBcqqGHJkUDWDmhj-0xqPkdSdggdkoylwLBm33LrwkhCmWEpyh5nKjDyAlfQrwt-e5YIIsDMgTt1bkeVrat0wS-q7AFGVHGCbZUjONKw6h8qVg5aDomcLP=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-JWfijhTjtug/AAAAAAAAAAI/AAAAAAAAAAA/fnn1OMogxNI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHVyQxYEBjdm7ULrRBcqqGHJkUDWDmhj-0xqPkdSdggdkoylwLBm33LrwkhCmWEpyh5nKjDyAlfQrwt-e5YIIsDMgTt1bkeVrat0wS-q7AFGVHGCbZUjONKw6h8qVg5aDomcLP=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHVyQxYEBjdm7ULrRBcqqGHJkUDWDmhj-0xqPkdSdggdkoylwLBm33LrwkhCmWEpyh5nKjDyAlfQrwt-e5YIIsDMgTt1bkeVrat0wS-q7AFGVHGCbZUjONKw6h8qVg5aDomcLP=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 86,
     "rating": 4,
@@ -7626,9 +9365,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Polígono Industrial Saprelorca, 30817, Murcia, Spain",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Noksel+Espa%C3%B1a%2C+S.A./@37.6160697,-1.7559338,14z/data=!4m8!1m2!2m1!1sNoksel+Espa%C3%B1a%2C+S.A.!3m4!1s0xd64de08744ef9b7:0x19ad02c8b322b77d!8m2!3d37.6160697!4d-1.7559338",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "t-a-p-tubs-d-acer-de-precisio-sant-ramon",
@@ -7641,6 +9380,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.transmesa.com/",
     "phone": "+34 973 52 43 95",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsSGyOWM4ZZE1fyW7BAvFyLzi_aPLrzmeSdUK-sThK90hhs1-vMz512MbhZkN7vTDZpw9sYIVYIZbD0PTl9An4iyn_A7oMeT0FuAeZJuLdQ48WeN-IDHZTgV1AuLKNuJLJ_bHh=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-WenIu-R1tw8/AAAAAAAAAAI/AAAAAAAAAAA/35QLwwR4UBQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsSGyOWM4ZZE1fyW7BAvFyLzi_aPLrzmeSdUK-sThK90hhs1-vMz512MbhZkN7vTDZpw9sYIVYIZbD0PTl9An4iyn_A7oMeT0FuAeZJuLdQ48WeN-IDHZTgV1AuLKNuJLJ_bHh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsSGyOWM4ZZE1fyW7BAvFyLzi_aPLrzmeSdUK-sThK90hhs1-vMz512MbhZkN7vTDZpw9sYIVYIZbD0PTl9An4iyn_A7oMeT0FuAeZJuLdQ48WeN-IDHZTgV1AuLKNuJLJ_bHh=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 37,
     "rating": 4.2,
@@ -7660,9 +9404,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer Indústria, 2, 25215 Sant Ramon, Lleida, Spain",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/T+A+P+Tubs+D%27Acer+De+Precisi%C3%B3/@41.7231369,1.3610596,14z/data=!4m8!1m2!2m1!1sT+A+P+Tubs+D%27Acer+De+Precisi%C3%B3!3m4!1s0x12a42531e79e80bb:0x8342aa37bec1849!8m2!3d41.7231369!4d1.3610596",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-najah-packing-material-tr-ae",
@@ -7675,6 +9419,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.alnajahpacking.com/",
     "phone": "+971 58 253 3970",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEL-ucoEOAgPIMU5lvewuTxjK8jSl8qfquhWzWF4WjqEpbq5KzU7XdqrE0OdWQvfAvBX3AOiq2Jptf5z0Rq_Wg-JC1yORQ7spq1_j1hvAlfVme6EGTt2fdIDRY00pb17IyffNJn=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-GPFLA9mtqE0/AAAAAAAAAAI/AAAAAAAAAAA/oPJgjE-lqUc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEL-ucoEOAgPIMU5lvewuTxjK8jSl8qfquhWzWF4WjqEpbq5KzU7XdqrE0OdWQvfAvBX3AOiq2Jptf5z0Rq_Wg-JC1yORQ7spq1_j1hvAlfVme6EGTt2fdIDRY00pb17IyffNJn=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEL-ucoEOAgPIMU5lvewuTxjK8jSl8qfquhWzWF4WjqEpbq5KzU7XdqrE0OdWQvfAvBX3AOiq2Jptf5z0Rq_Wg-JC1yORQ7spq1_j1hvAlfVme6EGTt2fdIDRY00pb17IyffNJn=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 29,
     "rating": 4.4,
@@ -7694,9 +9443,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Opposite Pak Masjid - Ware House No 12 - Industrial Area 6 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: Closed · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Najah+Packing+Material+Tr/@25.3186124,55.4215461,14z/data=!4m8!1m2!2m1!1sAl+Najah+Packing+Material+Tr!3m4!1s0x3e5f591c013eb6a1:0x7cb6770af9f654c4!8m2!3d25.3186124!4d55.4215461",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "the-armstrong-company-oklahoma-city",
@@ -7709,6 +9458,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.goarmstrong.com/locations/oklahoma-city/",
     "phone": "+1 405-947-8001",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHz5LQGfwp21rsmtJU63UXLVNnr2C0DiR9owZPBPADFE3eTdkvWN1T7bDuAX1SjwYzDY5jFG9_L-DBIvq11VwHv7zhCeBKwOaGKADJTorvBlqX8301CxWHk7sjGTmIfsy4JVPvI=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-eRdshI6T1ro/AAAAAAAAAAI/AAAAAAAAAAA/LSYZ7T41qxc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHz5LQGfwp21rsmtJU63UXLVNnr2C0DiR9owZPBPADFE3eTdkvWN1T7bDuAX1SjwYzDY5jFG9_L-DBIvq11VwHv7zhCeBKwOaGKADJTorvBlqX8301CxWHk7sjGTmIfsy4JVPvI=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHz5LQGfwp21rsmtJU63UXLVNnr2C0DiR9owZPBPADFE3eTdkvWN1T7bDuAX1SjwYzDY5jFG9_L-DBIvq11VwHv7zhCeBKwOaGKADJTorvBlqX8301CxWHk7sjGTmIfsy4JVPvI=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 71,
     "rating": 4,
@@ -7728,9 +9482,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "4800 W Point Blvd, Oklahoma City, OK 73179",
     "openingHours": "Friday: 7AM-6PM · Monday: 7AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/The+Armstrong+Company/@35.4171869,-97.64238259999999,14z/data=!4m8!1m2!2m1!1sThe+Armstrong+Company!3m4!1s0x87b20e70d26f8c1f:0x353b926c9ee9723d!8m2!3d35.4171869!4d-97.64238259999999",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "kani-packaging-mfg-of-corrugated-boxes-dapode",
@@ -7743,6 +9497,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.kanipackaging.com/",
     "phone": "+91 97739 97505",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-Wf4CbNlAVUo8uptVLBFXyGFkTUcfGqWjk_YhLim8pRDA51GzxZtnZ2sS89km7ebpdzrXf4kd1q7qkmaXr_XjSIieXOZkVpo60tDMd1cT-4MxUscIPvxpFq0wq5KM2HyrOm78=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-8PnHBKrPe5M/AAAAAAAAAAI/AAAAAAAAAAA/o0kpker-DBQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-Wf4CbNlAVUo8uptVLBFXyGFkTUcfGqWjk_YhLim8pRDA51GzxZtnZ2sS89km7ebpdzrXf4kd1q7qkmaXr_XjSIieXOZkVpo60tDMd1cT-4MxUscIPvxpFq0wq5KM2HyrOm78=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-Wf4CbNlAVUo8uptVLBFXyGFkTUcfGqWjk_YhLim8pRDA51GzxZtnZ2sS89km7ebpdzrXf4kd1q7qkmaXr_XjSIieXOZkVpo60tDMd1cT-4MxUscIPvxpFq0wq5KM2HyrOm78=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 20,
     "rating": 4.5,
@@ -7763,9 +9522,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Gala No. K-7 Gupta Warehousing Complex Nr. Sarvana NX Hotel, Dapode, Maharashtra 421302, India",
     "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: Closed · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/KANI+Packaging+%28Mfg.+of+Corrugated+Boxes%29/@19.2508029,73.0379717,14z/data=!4m8!1m2!2m1!1sKANI+Packaging+%28Mfg.+of+Corrugated+Boxes%29!3m4!1s0x3be7bd36384ac31f:0xc99863e174ca0055!8m2!3d19.2508029!4d73.0379717",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "atlantique-packaging-valencia-s-a-valencia",
@@ -7778,6 +9537,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://atlantiquepackaging.com/",
     "phone": "+34 961 34 32 53",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfhuPMAKudFFj76M2ylJbW13GTBjkWrZHNpUiP7uk7F_cR40CRM6ca6BuX75gL8DkYtjyKWveUHxzX3OccIK1Dn5mj7Y806XO1bH4irFfW-htbHm6nMUDwPmGYT12hOs0TgZD1Qg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-yY-vTT0K1BA/AAAAAAAAAAI/AAAAAAAAAAA/AfSgMkVIoFA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfhuPMAKudFFj76M2ylJbW13GTBjkWrZHNpUiP7uk7F_cR40CRM6ca6BuX75gL8DkYtjyKWveUHxzX3OccIK1Dn5mj7Y806XO1bH4irFfW-htbHm6nMUDwPmGYT12hOs0TgZD1Qg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfhuPMAKudFFj76M2ylJbW13GTBjkWrZHNpUiP7uk7F_cR40CRM6ca6BuX75gL8DkYtjyKWveUHxzX3OccIK1Dn5mj7Y806XO1bH4irFfW-htbHm6nMUDwPmGYT12hOs0TgZD1Qg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 20,
     "rating": 4.5,
@@ -7797,9 +9561,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Polígono Industrial Fuente del Jarro, Carrer Illes Balears, 16, 46988 València, Valencia, Spain",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Atlantique+Packaging+Valencia+S.A/@39.5107663,-0.462335,14z/data=!4m8!1m2!2m1!1sAtlantique+Packaging+Valencia+S.A!3m4!1s0xd605ac67587dc91:0x76cabb2ec2ea7589!8m2!3d39.5107663!4d-0.462335",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "white-cap-south-salt-lake",
@@ -7812,6 +9576,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.whitecap.com/branches/050%3Futm_source%3Dgmb%26utm_medium%3DYext",
     "phone": "+1 801-463-2770",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQFDdYi7ukAXMJOYLhsHw1fUrHvG7ZY9sp4pD7jobOz11uuTXd8DZkM26JlE41rBmBaZSLiLnWMmxt_HEVOQaRrbqGtnyE4PSMfC-inuHP1h578MMm5SLKWMronlyqHMpKxXUg=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-iEr2Zhfhjwg/AAAAAAAAAAI/AAAAAAAAAAA/LH6F9UkizQ8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQFDdYi7ukAXMJOYLhsHw1fUrHvG7ZY9sp4pD7jobOz11uuTXd8DZkM26JlE41rBmBaZSLiLnWMmxt_HEVOQaRrbqGtnyE4PSMfC-inuHP1h578MMm5SLKWMronlyqHMpKxXUg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQFDdYi7ukAXMJOYLhsHw1fUrHvG7ZY9sp4pD7jobOz11uuTXd8DZkM26JlE41rBmBaZSLiLnWMmxt_HEVOQaRrbqGtnyE4PSMfC-inuHP1h578MMm5SLKWMronlyqHMpKxXUg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 52,
     "rating": 4.1,
@@ -7831,9 +9600,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2503 S 300 W, South Salt Lake, UT 84115",
     "openingHours": "Friday: 6AM-4PM · Monday: 6AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4PM · Tuesday: 6AM-4PM · Wednesday: 6AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/White+Cap/@40.7172848,-111.8982484,14z/data=!4m8!1m2!2m1!1sWhite+Cap!3m4!1s0x87528adebbd43e23:0xc1d2e0a5c8046ef8!8m2!3d40.7172848!4d-111.8982484",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "foundation-building-materials-salt-lake-city",
@@ -7846,6 +9615,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://myfbm.com/locations/fbm-austintown-37",
     "phone": "+1 801-975-9890",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6xuw_4pM-v4qX1RyK5KTWTPijs_mT6aHdlZQZJpCHV93iHMkO5XfAO3bnotqgb6uUmE_c5vU9sBNN1EJY3q2mdfP-YjUzIvsykY_Eg_dwi4H4ziOf_R5zMD1zHHcOfO1GXi0=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-guQYIsIFDkE/AAAAAAAAAAI/AAAAAAAAAAA/sXyWxfeohdk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6xuw_4pM-v4qX1RyK5KTWTPijs_mT6aHdlZQZJpCHV93iHMkO5XfAO3bnotqgb6uUmE_c5vU9sBNN1EJY3q2mdfP-YjUzIvsykY_Eg_dwi4H4ziOf_R5zMD1zHHcOfO1GXi0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6xuw_4pM-v4qX1RyK5KTWTPijs_mT6aHdlZQZJpCHV93iHMkO5XfAO3bnotqgb6uUmE_c5vU9sBNN1EJY3q2mdfP-YjUzIvsykY_Eg_dwi4H4ziOf_R5zMD1zHHcOfO1GXi0=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 37,
     "rating": 4.2,
@@ -7865,9 +9639,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3225 S 900 W, Salt Lake City, UT 84119",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Foundation+Building+Materials/@40.7019053,-111.9166642,14z/data=!4m8!1m2!2m1!1sFoundation+Building+Materials!3m4!1s0x87528b107ee73f57:0x20f0039adf079362!8m2!3d40.7019053!4d-111.9166642",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "foundation-building-materials-south-salt-lake",
@@ -7880,6 +9654,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://myfbm.com/locations/fbm-south-salt-lake-341",
     "phone": "+1 801-265-0500",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJLJWUpJqcgK8srYZlDzz5aYvjGSBGAvktjPXw97JNJMHGWIgbvxckgFxhBXwNLFwHJL8zHFjXWirgQX-o8OghrWIMg8O515QcNusA1SbrLQOfMv5xYlh5UE1sKRCMC1UOpvTSlw=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-5CJkb-Le9CM/AAAAAAAAAAI/AAAAAAAAAAA/3QqoQFaRRnk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJLJWUpJqcgK8srYZlDzz5aYvjGSBGAvktjPXw97JNJMHGWIgbvxckgFxhBXwNLFwHJL8zHFjXWirgQX-o8OghrWIMg8O515QcNusA1SbrLQOfMv5xYlh5UE1sKRCMC1UOpvTSlw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJLJWUpJqcgK8srYZlDzz5aYvjGSBGAvktjPXw97JNJMHGWIgbvxckgFxhBXwNLFwHJL8zHFjXWirgQX-o8OghrWIMg8O515QcNusA1SbrLQOfMv5xYlh5UE1sKRCMC1UOpvTSlw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 27,
     "rating": 4.4,
@@ -7899,9 +9678,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3522 S W Temple St, South Salt Lake, UT 84115",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Foundation+Building+Materials/@40.6948097,-111.8959817,14z/data=!4m8!1m2!2m1!1sFoundation+Building+Materials!3m4!1s0x87528af8854a0179:0x9a4b72637ef7c00f!8m2!3d40.6948097!4d-111.8959817",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "alrajhi-endowment-co-for-industry-and-trade-building-materia",
@@ -7914,6 +9693,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.rajhibuild.com/",
     "phone": "+966 55 851 7297",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcq7CqRwov5CY6ZVlR6ay6NtOKREORs4zcOODt27vzZQPgsXXNrjxqcb7E-nLoDBgPPz67SQ2X51F3qaNluqHGPw5euSJ3SgZ9iSGL9ZgAZ-4OnMc2vzTu8Gdkjv6Iegna2tFpVg=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-bqw8g0LFkkU/AAAAAAAAAAI/AAAAAAAAAAA/up0K7WcNF8A/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcq7CqRwov5CY6ZVlR6ay6NtOKREORs4zcOODt27vzZQPgsXXNrjxqcb7E-nLoDBgPPz67SQ2X51F3qaNluqHGPw5euSJ3SgZ9iSGL9ZgAZ-4OnMc2vzTu8Gdkjv6Iegna2tFpVg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcq7CqRwov5CY6ZVlR6ay6NtOKREORs4zcOODt27vzZQPgsXXNrjxqcb7E-nLoDBgPPz67SQ2X51F3qaNluqHGPw5euSJ3SgZ9iSGL9ZgAZ-4OnMc2vzTu8Gdkjv6Iegna2tFpVg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 152,
     "rating": 4.2,
@@ -7933,9 +9717,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3734, Riyadh Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7AM-12PM,3-6PM · Saturday: 7AM-12PM,3-6PM · Sunday: 7AM-12PM,3-6PM · Thursday: 7AM-12PM,3-6PM · Tuesday: 9AM-12PM,3-5:30PM · Wednesday: 7AM-12PM,3-6PM",
     "sourceUrl": "https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%AD%D9%8A+%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%88%D9%82%D9%81%D9%8A%D8%A9+%28%D9%85%D9%88%D8%A7%D8%AF+%D8%A8%D9%86%D8%A7%D8%A1%29+Alrajhi+Endowment+Co.+For+Industry+and+Trade+%28Building+Material%29%E2%80%8E/@24.5915271,46.5779795,14z/data=!4m8!1m2!2m1!1s%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%AD%D9%8A+%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%88%D9%82%D9%81%D9%8A%D8%A9+%28%D9%85%D9%88%D8%A7%D8%AF+%D8%A8%D9%86%D8%A7%D8%A1%29+Alrajhi+Endowment+Co.+For+Industry+and+Trade+%28Building+Material%29%E2%80%8E!3m4!1s0x3e2f199ebaabe7b5:0x81c52ace62d7b55a!8m2!3d24.5915271!4d46.5779795",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "boltec-united-eagle-trading-company-riyadh",
@@ -7948,6 +9732,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.elloraone.com/",
     "phone": "+966 53 766 8500",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-MBM4qkdLn1pU3Z0lYd7_JMKEN8aKxwx7bACnbrwQNvcYXmS6hC-vb3Ds28RJiZJ6pv6sUkmTrbZGlsHoKBfNUXzB_1bsUFv-Nsq5ZtV69_ECecSBRKTHoNOOYold2e-Nl5LIpLKVuzU=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-dNfRrgmjD_Y/AAAAAAAAAAI/AAAAAAAAAAA/zm_Xk1l3ae0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-MBM4qkdLn1pU3Z0lYd7_JMKEN8aKxwx7bACnbrwQNvcYXmS6hC-vb3Ds28RJiZJ6pv6sUkmTrbZGlsHoKBfNUXzB_1bsUFv-Nsq5ZtV69_ECecSBRKTHoNOOYold2e-Nl5LIpLKVuzU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF-MBM4qkdLn1pU3Z0lYd7_JMKEN8aKxwx7bACnbrwQNvcYXmS6hC-vb3Ds28RJiZJ6pv6sUkmTrbZGlsHoKBfNUXzB_1bsUFv-Nsq5ZtV69_ECecSBRKTHoNOOYold2e-Nl5LIpLKVuzU=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 31,
     "rating": 4.8,
@@ -7967,9 +9756,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Near Riyadh Port, Abi Ibn Kaab, Street, Riyadh 12631, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7AM-6PM · Saturday: 7AM-6PM · Sunday: 7AM-6PM · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BOLTEC+-+United+Eagle+Trading+Company/@24.6422706,46.752271,14z/data=!4m8!1m2!2m1!1sBOLTEC+-+United+Eagle+Trading+Company!3m4!1s0x3e2f070f9605cf13:0xe5516112875c5cce!8m2!3d24.6422706!4d46.752271",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "multicolles-multiprobat-casablanca",
@@ -7982,6 +9771,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://multiprobat.com/",
     "phone": "+212 5 22 35 54 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEy8nJnMR5VgBb6EtYBqUfh79VbYux0igHjiTIov2SGA5kVQy68GsrRnFTyYhXw5SclWn9RqfqH7TjxT4mzirpZwCx-9EVQpGOqU88ULkw_mUf1T3QkmmN7s40SHg7MYD_GYJAa6w=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-9jTsX5QNZro/AAAAAAAAAAI/AAAAAAAAAAA/Q-a4l_XAcNM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEy8nJnMR5VgBb6EtYBqUfh79VbYux0igHjiTIov2SGA5kVQy68GsrRnFTyYhXw5SclWn9RqfqH7TjxT4mzirpZwCx-9EVQpGOqU88ULkw_mUf1T3QkmmN7s40SHg7MYD_GYJAa6w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEy8nJnMR5VgBb6EtYBqUfh79VbYux0igHjiTIov2SGA5kVQy68GsrRnFTyYhXw5SclWn9RqfqH7TjxT4mzirpZwCx-9EVQpGOqU88ULkw_mUf1T3QkmmN7s40SHg7MYD_GYJAa6w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 38,
     "rating": 4.3,
@@ -8001,43 +9795,48 @@ export const outscraperSuppliers: Supplier[] =
     "address": "QI Est Polygone, Lot 126-127, 2020 Route des Zenata، Casablanca 22590, Morocco",
     "openingHours": "Friday: 8AM-1PM,2-5:30PM · Monday: 8AM-1PM,2-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-1PM,2-5:30PM · Tuesday: 8AM-1PM,2-5:30PM · Wednesday: 8AM-1PM,2-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Multicolles+Multiprobat/@33.6359229,-7.499308399999999,14z/data=!4m8!1m2!2m1!1sMulticolles+Multiprobat!3m4!1s0xda7cbbf60addfa1:0xe548d722be6bd4d8!8m2!3d33.6359229!4d-7.499308399999999",
-    "score": 84,
+    "score": 90,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
-    "id": "warehouse-spain-s-a-las-lagunas",
-    "name": "WAREHOUSE SPAIN, S.A.",
-    "industry": "Construction & BTP",
-    "category": "Construction",
-    "location": "Las Lagunas, Spain",
-    "country": "Spain",
-    "city": "Las Lagunas",
-    "website": "https://mixtadecoracion.com/",
-    "phone": "+34 952 47 57 39",
-    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-vZFjbhxNlpUe7euYpsk1B_OK4vozDVUlKk0CvyuEYWKZ3W9N51WXVdX1MinVeceRQvfP6Hd3wrvLgq0jPEsKFLN-FMsodwknuWNxojLWvsOKs0wjYlSJrhlHOyLqguCj0489eg=w800-h500-k-no",
+    "id": "noksel-steel-pipe-co-tr",
+    "name": "Noksel Steel Pipe Co.",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "location": "TR, Turkey",
+    "country": "Turkey",
+    "city": "TR",
+    "website": "https://www.noksel.com/",
+    "phone": "+90 312 472 59 59",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoQEwcQFm6ICIsHhwtZIn3Dai8roeYz9nmKPEygZ87T0eaK0U3JMIBx6SeBQ9jE4_lzoIJM2Womg1TE2D29gPbB_wDZpyGWkN4YNr5-l8QBaZcLIE8q8YHJ2J3Uyspb2wzaC33hQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-gzAsmswIbO8/AAAAAAAAAAI/AAAAAAAAAAA/I35UFxD2PnE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoQEwcQFm6ICIsHhwtZIn3Dai8roeYz9nmKPEygZ87T0eaK0U3JMIBx6SeBQ9jE4_lzoIJM2Womg1TE2D29gPbB_wDZpyGWkN4YNr5-l8QBaZcLIE8q8YHJ2J3Uyspb2wzaC33hQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoQEwcQFm6ICIsHhwtZIn3Dai8roeYz9nmKPEygZ87T0eaK0U3JMIBx6SeBQ9jE4_lzoIJM2Womg1TE2D29gPbB_wDZpyGWkN4YNr5-l8QBaZcLIE8q8YHJ2J3Uyspb2wzaC33hQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
-    "googleReviews": 27,
+    "googleReviews": 24,
     "rating": 4.4,
-    "reviewCount": 27,
+    "reviewCount": 24,
     "verified": true,
-    "description": "Construction supplier in Las Lagunas, Spain.",
+    "description": "Tubes & Pipes supplier in TR, Turkey.",
     "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
+      "Steel pipes",
+      "Welded tubes",
+      "Pipe fittings"
     ],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
-    "address": "Camino Viejo de Coín, 61, 29651 Las Lagunas de Mijas, Málaga, Spain",
-    "openingHours": "Friday: 7:30AM-7PM · Monday: 7:30AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
-    "sourceUrl": "https://www.google.com/maps/place/WAREHOUSE+SPAIN%2C+S.A./@36.5387742,-4.6384302,14z/data=!4m8!1m2!2m1!1sWAREHOUSE+SPAIN%2C+S.A.!3m4!1s0xd72e218e66995cf:0xf4c0afe580699b9e!8m2!3d36.5387742!4d-4.6384302",
-    "score": 84,
+    "moq": "2 tons",
+    "address": "Yukarı Öveçler, Lizbon Cd. No: 10, 06460 Çankaya/Ankara, Türkiye",
+    "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
+    "sourceUrl": "https://www.google.com/maps/place/Noksel+Steel+Pipe+Co./@39.893733999999995,32.823256,14z/data=!4m8!1m2!2m1!1sNoksel+Steel+Pipe+Co.!3m4!1s0x14d345e098bf0915:0x266b0189fce82837!8m2!3d39.893733999999995!4d32.823256",
+    "score": 90,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "maghreb-steel-headquarters-casablanca",
@@ -8050,6 +9849,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.maghrebsteel.ma/",
     "phone": "+212 5 22 76 25 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLy_FTvovNmyfhvcpDHwRpw_lmJAjlmBig3dQY-hhT3a4DK1FSdj_c6aqxZFD3d-dmQ9m0OYGjEubdi_WedYV1ePFQUGbctZUajQsuKb1TIPRv-R6-G4G8yE8gpl3TdtI3JqKaBA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-XhBSz4uUiXc/AAAAAAAAAAI/AAAAAAAAAAA/JXALN0Hg51A/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLy_FTvovNmyfhvcpDHwRpw_lmJAjlmBig3dQY-hhT3a4DK1FSdj_c6aqxZFD3d-dmQ9m0OYGjEubdi_WedYV1ePFQUGbctZUajQsuKb1TIPRv-R6-G4G8yE8gpl3TdtI3JqKaBA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLy_FTvovNmyfhvcpDHwRpw_lmJAjlmBig3dQY-hhT3a4DK1FSdj_c6aqxZFD3d-dmQ9m0OYGjEubdi_WedYV1ePFQUGbctZUajQsuKb1TIPRv-R6-G4G8yE8gpl3TdtI3JqKaBA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 27,
     "rating": 4.2,
@@ -8069,9 +9873,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "BP : 3553، Route nationale 9, km 10 (Aéroclub Tit Mellil، km 10 N9, Casablanca 20600, Morocco",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Maghreb+Steel+%28headquarters%29/@33.5922203,-7.4735382999999995,14z/data=!4m8!1m2!2m1!1sMaghreb+Steel+%28headquarters%29!3m4!1s0xda7cade1a9662d7:0x9bdee6e2fa3bf891!8m2!3d33.5922203!4d-7.4735382999999995",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "maghreb-steel-bled-solb-ain-harrouda",
@@ -8084,6 +9888,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.maghrebsteel.ma/",
     "phone": "+212 5 22 76 25 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIu6Ykq8HphmX9AlBd3Cy3iT4CSJapOh4yQu-hMzdh8cMOfqK-gZHJSf27iwqOYXOT51e4nqvk6pUKnG1WJabUt21PvTEnknrHeR1-l6GBNKlZMZvoemg1FpNWR_YfTZrV45Q=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-zLpzyt8Crzc/AAAAAAAAAAI/AAAAAAAAAAA/c5GhcmUi018/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIu6Ykq8HphmX9AlBd3Cy3iT4CSJapOh4yQu-hMzdh8cMOfqK-gZHJSf27iwqOYXOT51e4nqvk6pUKnG1WJabUt21PvTEnknrHeR1-l6GBNKlZMZvoemg1FpNWR_YfTZrV45Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIu6Ykq8HphmX9AlBd3Cy3iT4CSJapOh4yQu-hMzdh8cMOfqK-gZHJSf27iwqOYXOT51e4nqvk6pUKnG1WJabUt21PvTEnknrHeR1-l6GBNKlZMZvoemg1FpNWR_YfTZrV45Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 36,
     "rating": 4.2,
@@ -8103,9 +9912,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Aïn Harrouda, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Maghreb+Steel+-+Bled+Solb/@33.6330824,-7.4340793,14z/data=!4m8!1m2!2m1!1sMaghreb+Steel+-+Bled+Solb!3m4!1s0xda7b58934bc47b3:0x618013652664df77!8m2!3d33.6330824!4d-7.4340793",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sofamel-maroc-materiel-electrique-eclairage-led-fiches-et-pr",
@@ -8118,6 +9927,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.sofamel.ma/",
     "phone": "+212 5 22 71 88 32",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE84_Pt14Q6b6OMrpOkP5NoccLw6x7u9mJC3SPuXYjLfDh43iU5VRfK00z-qnMk7hGeuDxI8sIS2w4GqAjVZaD-59leKyOQieHjCqpxcOP1-Pmov9RuTDRsLIXNbPnfzBLsqTrxRrKSXGAt=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-bsp4PWrgUpc/AAAAAAAAAAI/AAAAAAAAAAA/yNP4GOO88qg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE84_Pt14Q6b6OMrpOkP5NoccLw6x7u9mJC3SPuXYjLfDh43iU5VRfK00z-qnMk7hGeuDxI8sIS2w4GqAjVZaD-59leKyOQieHjCqpxcOP1-Pmov9RuTDRsLIXNbPnfzBLsqTrxRrKSXGAt=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE84_Pt14Q6b6OMrpOkP5NoccLw6x7u9mJC3SPuXYjLfDh43iU5VRfK00z-qnMk7hGeuDxI8sIS2w4GqAjVZaD-59leKyOQieHjCqpxcOP1-Pmov9RuTDRsLIXNbPnfzBLsqTrxRrKSXGAt=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 23,
     "rating": 4.3,
@@ -8137,9 +9951,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "N°10، Zone industrielle Moulay Rachid, Al Khalidia 4, Rue 5, Casablanca 20250, Morocco",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/SOFAMEL+MAROC+-+Mat%C3%A9riel+%C3%89lectrique+%7C+%C3%89clairage+LED+%7C+Fiches+et+Prises+Industrielles/@33.5683289,-7.518256,14z/data=!4m8!1m2!2m1!1sSOFAMEL+MAROC+-+Mat%C3%A9riel+%C3%89lectrique+%7C+%C3%89clairage+LED+%7C+Fiches+et+Prises+Industrielles!3m4!1s0xda7cb534b85de49:0x899b4ca9df1081e6!8m2!3d33.5683289!4d-7.518256",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "safran-electrical-power-morocco-temara",
@@ -8152,6 +9966,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.safran-group.com/",
     "phone": "+212 6 10 39 85 36",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExsBcS0ykoUrm9jIs9h7wHZlYr0xOA_mMRPAPu4PoM42UeQvY4-aWKqrPvUG5Oh7IbegeIfrV2IZBtsXgPrver3nlg4oeGSX9SttSqLCYvYfPMUgc9iS6Yj15YROnjm8lUqgGWVA=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-j5aubQNkwug/AAAAAAAAAAI/AAAAAAAAAAA/JNepSh4Z2_w/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExsBcS0ykoUrm9jIs9h7wHZlYr0xOA_mMRPAPu4PoM42UeQvY4-aWKqrPvUG5Oh7IbegeIfrV2IZBtsXgPrver3nlg4oeGSX9SttSqLCYvYfPMUgc9iS6Yj15YROnjm8lUqgGWVA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExsBcS0ykoUrm9jIs9h7wHZlYr0xOA_mMRPAPu4PoM42UeQvY4-aWKqrPvUG5Oh7IbegeIfrV2IZBtsXgPrver3nlg4oeGSX9SttSqLCYvYfPMUgc9iS6Yj15YROnjm8lUqgGWVA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 24,
     "rating": 4.3,
@@ -8171,9 +9990,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Temara, Morocco",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Safran+Electrical+%26+Power+Morocco/@33.8781047,-6.950375999999999,14z/data=!4m8!1m2!2m1!1sSafran+Electrical+%26+Power+Morocco!3m4!1s0xda70ddb2013f94d:0x67c2ac99ad61494d!8m2!3d33.8781047!4d-6.950375999999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "gg-cables-and-wires-mexico-s-de-r-l-de-c-v-san-juan-del-rio",
@@ -8186,6 +10005,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.griller.at/",
     "phone": "+52 427 268 3400",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPT-gRE_w-Hhi-bqE9piJu-CgeDhxJB_6mLAkVTMXMb_l9S9-QmppxHxV4ii_W5rS38-CU-aASZ_MxL7G68gVDS2DdIzKQVAmch_2_EexbFfFEb1tAO0JMd0XX_gzVVPM1871r=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-eOTr3NDDQ9c/AAAAAAAAAAI/AAAAAAAAAAA/CiKw3-BgIoE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPT-gRE_w-Hhi-bqE9piJu-CgeDhxJB_6mLAkVTMXMb_l9S9-QmppxHxV4ii_W5rS38-CU-aASZ_MxL7G68gVDS2DdIzKQVAmch_2_EexbFfFEb1tAO0JMd0XX_gzVVPM1871r=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPT-gRE_w-Hhi-bqE9piJu-CgeDhxJB_6mLAkVTMXMb_l9S9-QmppxHxV4ii_W5rS38-CU-aASZ_MxL7G68gVDS2DdIzKQVAmch_2_EexbFfFEb1tAO0JMd0XX_gzVVPM1871r=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 29,
     "rating": 4.2,
@@ -8205,9 +10029,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Totonacas, Carr. Querétaro - México 7, Nuevo San Juan, 76806 San Juan del Río, Qro., Mexico",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: 7AM-10:30PM · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/GG+Cables+and+Wires+Mexico%2C+S.+de+R.L.+de+C.V./@20.3618202,-99.95649709999999,14z/data=!4m8!1m2!2m1!1sGG+Cables+and+Wires+Mexico%2C+S.+de+R.L.+de+C.V.!3m4!1s0x85d30bb0bbffef81:0xb34debcdcd88246c!8m2!3d20.3618202!4d-99.95649709999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cables-y-plasticos-ciudad-lopez-mateos",
@@ -8220,6 +10044,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://cablesyplasticos.com/",
     "phone": "+52 55 9130 4778",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxCXpzjIBumsvNI8FOv8r9zZHErcBoHBcLVhsQHfs4oZOMdMzfWuLUQuSzb2Fuex4QbI2fpXBVXOImsRdfpmXtTQgrlt-Dhjl7lIoBk27sG5QEJqK4fvKqJhKD2vUx5DqQSYge=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-EK4j9oYiLUg/AAAAAAAAAAI/AAAAAAAAAAA/rx0NrM5cq0g/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxCXpzjIBumsvNI8FOv8r9zZHErcBoHBcLVhsQHfs4oZOMdMzfWuLUQuSzb2Fuex4QbI2fpXBVXOImsRdfpmXtTQgrlt-Dhjl7lIoBk27sG5QEJqK4fvKqJhKD2vUx5DqQSYge=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxCXpzjIBumsvNI8FOv8r9zZHErcBoHBcLVhsQHfs4oZOMdMzfWuLUQuSzb2Fuex4QbI2fpXBVXOImsRdfpmXtTQgrlt-Dhjl7lIoBk27sG5QEJqK4fvKqJhKD2vUx5DqQSYge=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 23,
     "rating": 4.3,
@@ -8239,9 +10068,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Cto. Dr. Gustavo Baz 5, Pedregal de Atizapan, 52948 Cdad. López Mateos, Méx., Mexico",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Cables+y+Pl%C3%A1sticos/@19.5681867,-99.25947409999999,14z/data=!4m8!1m2!2m1!1sCables+y+Pl%C3%A1sticos!3m4!1s0x85d21c8a7bfed4a7:0xb82ad359ba59f4a3!8m2!3d19.5681867!4d-99.25947409999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "loganmex-guadalajara",
@@ -8254,6 +10083,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://loganmex.com/",
     "phone": "+52 33 1693 6362",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlUeneTWIeF9cVCBlFyiX0JA1hjp-86iZOP8-rjDgZub_Zg6M9pWmBwWPCytHIw75zzOA1VrAcQTjzR8XMF6i0SaKthxstSeaAs3MYyfBdBBJze9K4ggqXxWx-q_iWR6AijGj9=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-8z8oyjxL1z4/AAAAAAAAAAI/AAAAAAAAAAA/daCC02s_hrw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlUeneTWIeF9cVCBlFyiX0JA1hjp-86iZOP8-rjDgZub_Zg6M9pWmBwWPCytHIw75zzOA1VrAcQTjzR8XMF6i0SaKthxstSeaAs3MYyfBdBBJze9K4ggqXxWx-q_iWR6AijGj9=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlUeneTWIeF9cVCBlFyiX0JA1hjp-86iZOP8-rjDgZub_Zg6M9pWmBwWPCytHIw75zzOA1VrAcQTjzR8XMF6i0SaKthxstSeaAs3MYyfBdBBJze9K4ggqXxWx-q_iWR6AijGj9=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 23,
     "rating": 4.3,
@@ -8273,9 +10107,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Calle Monte, C. Los Alpes 2757, La Esperanza (La Federacha ), 44300 Guadalajara, Jal., Mexico",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Loganmex/@20.712207,-103.32027289999999,14z/data=!4m8!1m2!2m1!1sLoganmex!3m4!1s0x8428b1ace40d07c7:0xee34ba22965c8d4c!8m2!3d20.712207!4d-103.32027289999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "thl-tube-pipe-industries-l-lc-ae",
@@ -8288,6 +10122,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.utpgroup.co/",
     "phone": "+971 4 884 8221",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCb-ShCE3EmeFr29w_Z2nhbsBDO-k4BDWLHaypfO2QVM2QxJbI3hcCfOuARH8KVI1jr5FxESrsv-c3dLdJ6RnZgLjI0XFIRqw2vbQOZupJ2ou6QgOetB7P4uCAm3L5Kg2Ofj3lYg=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-dLOHBlwfmnE/AAAAAAAAAAI/AAAAAAAAAAA/aZKmpj3wNws/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCb-ShCE3EmeFr29w_Z2nhbsBDO-k4BDWLHaypfO2QVM2QxJbI3hcCfOuARH8KVI1jr5FxESrsv-c3dLdJ6RnZgLjI0XFIRqw2vbQOZupJ2ou6QgOetB7P4uCAm3L5Kg2Ofj3lYg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCb-ShCE3EmeFr29w_Z2nhbsBDO-k4BDWLHaypfO2QVM2QxJbI3hcCfOuARH8KVI1jr5FxESrsv-c3dLdJ6RnZgLjI0XFIRqw2vbQOZupJ2ou6QgOetB7P4uCAm3L5Kg2Ofj3lYg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 21,
     "rating": 4.3,
@@ -8307,9 +10146,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Dubai Investment Park Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/THL+TUBE+%26+PIPE+INDUSTRIES+L+LC/@24.982683299999998,55.1904311,14z/data=!4m8!1m2!2m1!1sTHL+TUBE+%26+PIPE+INDUSTRIES+L+LC!3m4!1s0x3e5f725b7dc2e6af:0x3e24b791f48eeb0e!8m2!3d24.982683299999998!4d55.1904311",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "swisspac-uae-ae",
@@ -8322,6 +10161,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.swisspac.ae/",
     "phone": "+971 50 949 6101",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEk6tGAKqghorpYtjexN9XMN1n1bfEtBNQehXtkOi93paoU-uQtfQZExwkt8mmqReM-EZYieVkOhaZIV0fHYLRzbF6yVAMRd7BViDwlc4iGX0WlSA1JrcR-608Yba94-0URZgU=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/--456SqLXRs0/AAAAAAAAAAI/AAAAAAAAAAA/pnkEX6k1r3M/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEk6tGAKqghorpYtjexN9XMN1n1bfEtBNQehXtkOi93paoU-uQtfQZExwkt8mmqReM-EZYieVkOhaZIV0fHYLRzbF6yVAMRd7BViDwlc4iGX0WlSA1JrcR-608Yba94-0URZgU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEk6tGAKqghorpYtjexN9XMN1n1bfEtBNQehXtkOi93paoU-uQtfQZExwkt8mmqReM-EZYieVkOhaZIV0fHYLRzbF6yVAMRd7BViDwlc4iGX0WlSA1JrcR-608Yba94-0URZgU=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 22,
     "rating": 4.3,
@@ -8341,9 +10185,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Warehouse # 41 Behind Danube warehouse Opp. Old Ramla Mall, Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-5:30PM · Monday: 9AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5:30PM · Tuesday: 9AM-5:30PM · Wednesday: 9AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/SwissPac+UAE/@24.9692142,55.169997099999996,14z/data=!4m8!1m2!2m1!1sSwissPac+UAE!3m4!1s0x3e5f734be1e9403d:0xaa57f46fc1d04809!8m2!3d24.9692142!4d55.169997099999996",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "plast-pack-packaging-srl-sesto-fiorentino",
@@ -8356,6 +10200,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.plastpackpackaging.it/",
     "phone": "+39 055 872 3645",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8dZTZmzmw1ghiNJ0mMpxHzfslCa7pg0LgbDbPDuR7axqR_nNXKv1_P1kr-GiELGT2z_fNItfOBsTk643QQMvx0IVcIzIzkNnrXlyju1RjMOh7f0VYiXuWgOR5KLj24YULRd1L8g=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Midwsj6EJsU/AAAAAAAAAAI/AAAAAAAAAAA/HYjydr_eiBY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8dZTZmzmw1ghiNJ0mMpxHzfslCa7pg0LgbDbPDuR7axqR_nNXKv1_P1kr-GiELGT2z_fNItfOBsTk643QQMvx0IVcIzIzkNnrXlyju1RjMOh7f0VYiXuWgOR5KLj24YULRd1L8g=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8dZTZmzmw1ghiNJ0mMpxHzfslCa7pg0LgbDbPDuR7axqR_nNXKv1_P1kr-GiELGT2z_fNItfOBsTk643QQMvx0IVcIzIzkNnrXlyju1RjMOh7f0VYiXuWgOR5KLj24YULRd1L8g=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 31,
     "rating": 4.2,
@@ -8375,9 +10224,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Petrosa, 22, 50019 Sesto Fiorentino FI, Italy",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Plast+Pack+Packaging+Srl/@43.8230468,11.2071465,14z/data=!4m8!1m2!2m1!1sPlast+Pack+Packaging+Srl!3m4!1s0x132a5a2d9f9ccdeb:0xe62a45c0414b7c68!8m2!3d43.8230468!4d11.2071465",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "zeus-packaging-italia-s-r-l-garbagnate-monastero",
@@ -8390,6 +10239,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://zeuspackagingitaly.com/",
     "phone": "+39 031 357 4822",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF1-K3gOvFikTZaRBJDuRaT6LtX2qOo6h99mLDWBxqdzqGQD_tUljHlNKTSUZr3gRr9z4p4RyCN5K70YZ7RQrQagMb-L7imh7L1EGX3qRrnQl3QKnSsdYiKQ_HiFqXn7xp-pWuwVA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-3gcLKwbWtAA/AAAAAAAAAAI/AAAAAAAAAAA/F3j17TAo4EA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF1-K3gOvFikTZaRBJDuRaT6LtX2qOo6h99mLDWBxqdzqGQD_tUljHlNKTSUZr3gRr9z4p4RyCN5K70YZ7RQrQagMb-L7imh7L1EGX3qRrnQl3QKnSsdYiKQ_HiFqXn7xp-pWuwVA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF1-K3gOvFikTZaRBJDuRaT6LtX2qOo6h99mLDWBxqdzqGQD_tUljHlNKTSUZr3gRr9z4p4RyCN5K70YZ7RQrQagMb-L7imh7L1EGX3qRrnQl3QKnSsdYiKQ_HiFqXn7xp-pWuwVA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 31,
     "rating": 4.2,
@@ -8409,9 +10263,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Europa, 25/27, 23846 Garbagnate Monastero LC, Italy",
     "openingHours": "Friday: 8:30AM-5PM · Monday: 8:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5PM · Tuesday: 8:30AM-5PM · Wednesday: 8:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Zeus+Packaging+Italia+S.r.l./@45.7688633,9.2946406,14z/data=!4m8!1m2!2m1!1sZeus+Packaging+Italia+S.r.l.!3m4!1s0x4786a6b6e914c289:0x34e2367bed9fdffc!8m2!3d45.7688633!4d9.2946406",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packaging-store-leon",
@@ -8424,6 +10278,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.packagingstoremexico.com/",
     "phone": "+52 477 771 3638",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNNpRMNkcHzuna2i7P2UwqctqfLJXHIiiJp8VhEl5IB_B2ZFdpKO_bHziZvJbC7y1VdFP0TmnciRr4WkwfmVkINXpfjrPE0Gv8wJHCIrzeSV2kXHS3Nc5K8lhIRts2FwOFSwA=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-iKx-nDTOPPA/AAAAAAAAAAI/AAAAAAAAAAA/9SLn4fCvjO0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNNpRMNkcHzuna2i7P2UwqctqfLJXHIiiJp8VhEl5IB_B2ZFdpKO_bHziZvJbC7y1VdFP0TmnciRr4WkwfmVkINXpfjrPE0Gv8wJHCIrzeSV2kXHS3Nc5K8lhIRts2FwOFSwA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNNpRMNkcHzuna2i7P2UwqctqfLJXHIiiJp8VhEl5IB_B2ZFdpKO_bHziZvJbC7y1VdFP0TmnciRr4WkwfmVkINXpfjrPE0Gv8wJHCIrzeSV2kXHS3Nc5K8lhIRts2FwOFSwA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 27,
     "rating": 4.3,
@@ -8443,9 +10302,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Blvd. Omega 1101, Paseo de la Castellana, 37549 León de los Aldama, Gto., Mexico",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Store/@21.078973599999998,-101.6280939,14z/data=!4m8!1m2!2m1!1sPackaging+Store!3m4!1s0x842bbe0faf569429:0xcdb970cb934ce039!8m2!3d21.078973599999998!4d-101.6280939",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "misc-materials-salt-lake-city",
@@ -8458,6 +10317,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://miscmaterials.com/",
     "phone": "+1 801-478-6843",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDXvvnjwFAYaQns7_R8RgW-LIf4UeXK9wld1s9vTD_6fkhYZ1weBfi5Oe0FsbondQ4_tWVSLA6eSp0GVObw6CqH6-PeV1GTB8zmMfsWYX6Ju0m-TtIgHhLFpEy-703l9uowPU=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-y131VVVUPjM/AAAAAAAAAAI/AAAAAAAAAAA/t_xap7EH3TM/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDXvvnjwFAYaQns7_R8RgW-LIf4UeXK9wld1s9vTD_6fkhYZ1weBfi5Oe0FsbondQ4_tWVSLA6eSp0GVObw6CqH6-PeV1GTB8zmMfsWYX6Ju0m-TtIgHhLFpEy-703l9uowPU=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDXvvnjwFAYaQns7_R8RgW-LIf4UeXK9wld1s9vTD_6fkhYZ1weBfi5Oe0FsbondQ4_tWVSLA6eSp0GVObw6CqH6-PeV1GTB8zmMfsWYX6Ju0m-TtIgHhLFpEy-703l9uowPU=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 45,
     "rating": 4.1,
@@ -8477,9 +10341,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "36 Fayette Ave S #1, Salt Lake City, UT 84101",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Misc+Materials/@40.7483405,-111.8922918,14z/data=!4m8!1m2!2m1!1sMisc+Materials!3m4!1s0x8752f53ca96f62e3:0xb1d3ee2a522bfc50!8m2!3d40.7483405!4d-111.8922918",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "weyerhaeuser-distribution-south-salt-lake",
@@ -8492,6 +10356,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.weyerhaeuser.com/woodproducts/distribution/salt-lake-city-distribution-center/",
     "phone": "+1 800-283-9663",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzaUyEhu_o-jCfuxMzN1GWAI5TFnA905pJQz06dcLr7uQhLTSiCmyTL-3UodrbCOMN_LXchs62Xoktne_EzmT0YWigDtjPeLl38rimmawtsTIKG_hlkggXZAYcKbki-6XtAbZV=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-8-UGpKRoIGU/AAAAAAAAAAI/AAAAAAAAAAA/F1VNYZfAVgc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzaUyEhu_o-jCfuxMzN1GWAI5TFnA905pJQz06dcLr7uQhLTSiCmyTL-3UodrbCOMN_LXchs62Xoktne_EzmT0YWigDtjPeLl38rimmawtsTIKG_hlkggXZAYcKbki-6XtAbZV=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGzaUyEhu_o-jCfuxMzN1GWAI5TFnA905pJQz06dcLr7uQhLTSiCmyTL-3UodrbCOMN_LXchs62Xoktne_EzmT0YWigDtjPeLl38rimmawtsTIKG_hlkggXZAYcKbki-6XtAbZV=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 45,
     "rating": 4.1,
@@ -8511,9 +10380,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2600 S 600 W, South Salt Lake, UT 84115",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Weyerhaeuser+Distribution/@40.7142681,-111.9077403,14z/data=!4m8!1m2!2m1!1sWeyerhaeuser+Distribution!3m4!1s0x87528b212725a29f:0x8503e85a942a22d8!8m2!3d40.7142681!4d-111.9077403",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "akada-hardware-riyadh",
@@ -8525,6 +10394,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Riyadh",
     "website": "https://akada.com.sa/",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsAjhOkeKVjisQ6kPkbifJBkJG8-FfrA5QFWI_iuSuM8AHtfm7J9KQpT_DvDTfXc6AOXqIlSnwC8xhe0ceRLt-kHujz1PlbwyxjWfoTzXmU7eIe_ANU5GS6ynTrt2xkII-xWGu=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-zZFjnEqvH-E/AAAAAAAAAAI/AAAAAAAAAAA/P4l07YEJ5yU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsAjhOkeKVjisQ6kPkbifJBkJG8-FfrA5QFWI_iuSuM8AHtfm7J9KQpT_DvDTfXc6AOXqIlSnwC8xhe0ceRLt-kHujz1PlbwyxjWfoTzXmU7eIe_ANU5GS6ynTrt2xkII-xWGu=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsAjhOkeKVjisQ6kPkbifJBkJG8-FfrA5QFWI_iuSuM8AHtfm7J9KQpT_DvDTfXc6AOXqIlSnwC8xhe0ceRLt-kHujz1PlbwyxjWfoTzXmU7eIe_ANU5GS6ynTrt2xkII-xWGu=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 113,
     "rating": 4.3,
@@ -8544,9 +10418,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "HI، AL BUKHAIRIYA STREET, Al Faruq, Riyadh 12864, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 9AM-1PM,4-9PM · Saturday: 9AM-1PM,4-9PM · Sunday: 9AM-1PM,4-9PM · Thursday: 9AM-1PM,4-9PM · Tuesday: 9AM-1PM,4-9PM · Wednesday: 9AM-1PM,4-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Akada+Hardware/@24.643023,46.7624942,14z/data=!4m8!1m2!2m1!1sAkada+Hardware!3m4!1s0x3e2f06286e1dfe1f:0xe6594ab63ebdbb36!8m2!3d24.643023!4d46.7624942",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-raha-international-building-materials-trading-llc-ae",
@@ -8559,6 +10433,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://rahaintl.ae/",
     "phone": "+971 4 338 1441",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFwY0Kyh3xniRUqjK9CLEt2S0kc2Hr_GoG2-WFjciZxNy2DU5JEncbWRkqYtDY0p-4utLCXTcvnSnefNCSgcz3bm66O2s6GdUGvUnXLDoUjvU7KqcPfi0-FMOF7pUYFRq0opsAPg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-MTqmL5ISbyI/AAAAAAAAAAI/AAAAAAAAAAA/OixyeTgUzw8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFwY0Kyh3xniRUqjK9CLEt2S0kc2Hr_GoG2-WFjciZxNy2DU5JEncbWRkqYtDY0p-4utLCXTcvnSnefNCSgcz3bm66O2s6GdUGvUnXLDoUjvU7KqcPfi0-FMOF7pUYFRq0opsAPg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFwY0Kyh3xniRUqjK9CLEt2S0kc2Hr_GoG2-WFjciZxNy2DU5JEncbWRkqYtDY0p-4utLCXTcvnSnefNCSgcz3bm66O2s6GdUGvUnXLDoUjvU7KqcPfi0-FMOF7pUYFRq0opsAPg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 36,
     "rating": 4.2,
@@ -8578,9 +10457,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Near Emirates Auction - Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 8:30AM-5:30PM · Saturday: 8:30AM-5:30PM · Sunday: 8:30AM-5:30PM · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Raha+International+Building+Materials+Trading+LLC/@25.172532,55.363051999999996,14z/data=!4m8!1m2!2m1!1sAl+Raha+International+Building+Materials+Trading+LLC!3m4!1s0x3e5f698314bb01cf:0x25a4d3692fa90086!8m2!3d25.172532!4d55.363051999999996",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tdc-riyadh",
@@ -8593,6 +10472,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.tech-develop.com/",
     "phone": "+966 11 225 3576",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHD24SSj0bcqhTzZhXutRWaSH4LsOHbKAfnyT0YUZyK5ISh4j7jyMWuwr9iRNoW_bQN7-NeNCygBrvWlSIgcC2xwN0T0JflNkjlFwU2jw2IGFeM_L3kWyggCL8logrjj_t-L6_DQ=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-1f8tGHOc2rc/AAAAAAAAAAI/AAAAAAAAAAA/wbK3Gyl3bu4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHD24SSj0bcqhTzZhXutRWaSH4LsOHbKAfnyT0YUZyK5ISh4j7jyMWuwr9iRNoW_bQN7-NeNCygBrvWlSIgcC2xwN0T0JflNkjlFwU2jw2IGFeM_L3kWyggCL8logrjj_t-L6_DQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHD24SSj0bcqhTzZhXutRWaSH4LsOHbKAfnyT0YUZyK5ISh4j7jyMWuwr9iRNoW_bQN7-NeNCygBrvWlSIgcC2xwN0T0JflNkjlFwU2jw2IGFeM_L3kWyggCL8logrjj_t-L6_DQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 205,
     "rating": 4,
@@ -8612,9 +10496,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "King Fahd Branch Rd, Al Mohammadiyyah, Riyadh 12363, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%AA%D8%B7%D9%88%D9%8A%D8%B1+%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA+TDC/@24.7395446,46.6575023,14z/data=!4m8!1m2!2m1!1s%D8%B4%D8%B1%D9%83%D8%A9+%D8%AA%D8%B7%D9%88%D9%8A%D8%B1+%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA+TDC!3m4!1s0x3e2ee2a716c00985:0x64e88900ff6ff417!8m2!3d24.7395446!4d46.6575023",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "grainger-industrial-supply-brooklyn",
@@ -8627,6 +10511,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.grainger.com/branch/Brooklyn-Branch-556",
     "phone": "+1 800-472-4643",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHj_t0m-bavOqygDzaSfNwENOjDxmisJDVwZ1VZdJI0jd7y3Kpx07o21N5OVMoYVyUf-FNvEjTjNQWtRB8JjrmYI62THjjxUDeUQ33uN4hJm22MImjnvBc8kPXIG55BaGl-IzZujg=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-tKPP4CwYzvU/AAAAAAAAAAI/AAAAAAAAAAA/_yrJBRYXXHk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHj_t0m-bavOqygDzaSfNwENOjDxmisJDVwZ1VZdJI0jd7y3Kpx07o21N5OVMoYVyUf-FNvEjTjNQWtRB8JjrmYI62THjjxUDeUQ33uN4hJm22MImjnvBc8kPXIG55BaGl-IzZujg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHj_t0m-bavOqygDzaSfNwENOjDxmisJDVwZ1VZdJI0jd7y3Kpx07o21N5OVMoYVyUf-FNvEjTjNQWtRB8JjrmYI62THjjxUDeUQ33uN4hJm22MImjnvBc8kPXIG55BaGl-IzZujg=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 53,
     "rating": 4,
@@ -8646,9 +10535,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "815 3rd Ave, Brooklyn, NY 11232",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Grainger+Industrial+Supply/@40.6595273,-74.00145909999999,14z/data=!4m8!1m2!2m1!1sGrainger+Industrial+Supply!3m4!1s0x89c25aea0d8fc7cb:0x63d7ae058a867ff9!8m2!3d40.6595273!4d-74.00145909999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "unispares-india-noida",
@@ -8661,6 +10550,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.unispares.com/",
     "phone": "+91 120 437 5262",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHikaHMCYsPjxcMBpUIi08ha57o-OWMuN9gDPENudXRWe1rCIq92LBCUTyAVSps-KIAI4TM6jwFga-1S0a_WgmKqhlkaz7E1dRWwG2WEDDRKrF16TSN59bB4GfRTXpqQZvRj7d1=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-MopjqS9KqVM/AAAAAAAAAAI/AAAAAAAAAAA/Byq2IMdNcTQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHikaHMCYsPjxcMBpUIi08ha57o-OWMuN9gDPENudXRWe1rCIq92LBCUTyAVSps-KIAI4TM6jwFga-1S0a_WgmKqhlkaz7E1dRWwG2WEDDRKrF16TSN59bB4GfRTXpqQZvRj7d1=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHikaHMCYsPjxcMBpUIi08ha57o-OWMuN9gDPENudXRWe1rCIq92LBCUTyAVSps-KIAI4TM6jwFga-1S0a_WgmKqhlkaz7E1dRWwG2WEDDRKrF16TSN59bB4GfRTXpqQZvRj7d1=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 46,
     "rating": 4.1,
@@ -8681,9 +10575,87 @@ export const outscraperSuppliers: Supplier[] =
     "address": "B-131, Dist, Block B, Phase-2, Noida, Uttar Pradesh 201305, India",
     "openingHours": "Friday: 8:30AM-7:30PM · Monday: 8:30AM-7:30PM · Saturday: 8:30AM-7:30PM · Sunday: Closed · Thursday: 8:30AM-7:30PM · Tuesday: 8:30AM-7:30PM · Wednesday: 8:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Unispares+India/@28.5378057,77.40834579999999,14z/data=!4m8!1m2!2m1!1sUnispares+India!3m4!1s0x390ce8baa449bd61:0x8a46b01ecdda8014!8m2!3d28.5378057!4d77.40834579999999",
-    "score": 83,
+    "score": 89,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "supreme-steel-llc-ae",
+    "name": "Supreme Steel LLC",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "website": "https://supremesteel.ae/",
+    "phone": "+971 4 459 9939",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwFmTDxh03BcBAj7uimzfiNU9XG1f4vN2spxM1CmnJffqCdZuv711aqDuirZqxXI1LqmwH09x6OjUYF-rXLb-8jqU5gJdauhJOrgcn9d7dx5-9xB8z8jemTp3ufsIIPOLeErs=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-jDfd4pf0ZN0/AAAAAAAAAAI/AAAAAAAAAAA/syZ8lqMAlpE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwFmTDxh03BcBAj7uimzfiNU9XG1f4vN2spxM1CmnJffqCdZuv711aqDuirZqxXI1LqmwH09x6OjUYF-rXLb-8jqU5gJdauhJOrgcn9d7dx5-9xB8z8jemTp3ufsIIPOLeErs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwFmTDxh03BcBAj7uimzfiNU9XG1f4vN2spxM1CmnJffqCdZuv711aqDuirZqxXI1LqmwH09x6OjUYF-rXLb-8jqU5gJdauhJOrgcn9d7dx5-9xB8z8jemTp3ufsIIPOLeErs=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.3,
+    "googleReviews": 25,
+    "rating": 4.3,
+    "reviewCount": 25,
+    "verified": true,
+    "description": "Steel & Metals supplier in AE, United Arab Emirates.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "5 tons",
+    "address": "Saih Shuaib 3 - Dubai Industrial City - Dubai - United Arab Emirates",
+    "openingHours": "Friday: 8:04AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
+    "sourceUrl": "https://www.google.com/maps/place/Supreme+Steel+LLC/@24.8457996,55.0932422,14z/data=!4m8!1m2!2m1!1sSupreme+Steel+LLC!3m4!1s0x3e5f695e8e0ef57d:0x28d8abd6f5ab510a!8m2!3d24.8457996!4d55.0932422",
+    "score": 89,
+    "reliabilityScore": 86,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "concrete-collaborative-new-york",
+    "name": "Concrete Collaborative",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "New York, United States",
+    "country": "United States",
+    "city": "New York",
+    "website": "http://concrete-collaborative.com/",
+    "phone": "+1 855-268-0800",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuzkH13a0iFWvfmrTOzATsHSZ2wNg4-2cI-ZTiX_JllCk0VygOcMMJ_vnoKBIhBThFHxZI6_cPYW4DAFSaKY2xjedoDJEdJPOh3bwmZuuxtp6qHEyRBqpeLnm69qNvdkwHEXhM=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-UAFGFlfZCog/AAAAAAAAAAI/AAAAAAAAAAA/rT3FRLjsjUk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuzkH13a0iFWvfmrTOzATsHSZ2wNg4-2cI-ZTiX_JllCk0VygOcMMJ_vnoKBIhBThFHxZI6_cPYW4DAFSaKY2xjedoDJEdJPOh3bwmZuuxtp6qHEyRBqpeLnm69qNvdkwHEXhM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuzkH13a0iFWvfmrTOzATsHSZ2wNg4-2cI-ZTiX_JllCk0VygOcMMJ_vnoKBIhBThFHxZI6_cPYW4DAFSaKY2xjedoDJEdJPOh3bwmZuuxtp6qHEyRBqpeLnm69qNvdkwHEXhM=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.1,
+    "googleReviews": 40,
+    "rating": 4.1,
+    "reviewCount": 40,
+    "verified": true,
+    "description": "Showroom featuring a range of sustainable, innovative concrete products for interior and exterior use.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "1 pallet",
+    "address": "211 Mott St, New York, NY 10012",
+    "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/Concrete+Collaborative/@40.7219516,-73.9954966,14z/data=!4m8!1m2!2m1!1sConcrete+Collaborative!3m4!1s0x89c25988b1fde00b:0x787035ffe1f840c7!8m2!3d40.7219516!4d-73.9954966",
+    "score": 89,
+    "reliabilityScore": 82,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sudkabel-gmbh-kabelsysteme-kabel-und-kabelgarnituren-mannhei",
@@ -8696,6 +10668,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.suedkabel.de/",
     "phone": "+49 621 850701",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJKvR9nhx1j8QC0EfeSHO9AIdNePR5p5uG5dhE6Co7-1lqWBLglwj6VnoidZpO0_WQs1iRAJ7881BhdFfMhBrRmBvdzVWT7jjnX_aJ3YG563l-q35qAhC0v-3bV_yM25XJLl-r=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-nY9cvcLVSvo/AAAAAAAAAAI/AAAAAAAAAAA/sfOn387lLOs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJKvR9nhx1j8QC0EfeSHO9AIdNePR5p5uG5dhE6Co7-1lqWBLglwj6VnoidZpO0_WQs1iRAJ7881BhdFfMhBrRmBvdzVWT7jjnX_aJ3YG563l-q35qAhC0v-3bV_yM25XJLl-r=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJKvR9nhx1j8QC0EfeSHO9AIdNePR5p5uG5dhE6Co7-1lqWBLglwj6VnoidZpO0_WQs1iRAJ7881BhdFfMhBrRmBvdzVWT7jjnX_aJ3YG563l-q35qAhC0v-3bV_yM25XJLl-r=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 27,
     "rating": 4.1,
@@ -8715,9 +10692,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Rhenaniastraße 12, 68199 Mannheim-Neckarau, Germany",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/S%C3%BCdkabel+GmbH+-+Kabelsysteme%2C+Kabel+und+Kabelgarnituren/@49.44963,8.49785,14z/data=!4m8!1m2!2m1!1sS%C3%BCdkabel+GmbH+-+Kabelsysteme%2C+Kabel+und+Kabelgarnituren!3m4!1s0x4797c939f63baa13:0x5f8c1102acc20f1d!8m2!3d49.44963!4d8.49785",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "usha-cable-co-delhi",
@@ -8729,6 +10706,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Delhi",
     "phone": "+91 93157 06363",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcdSG6f0qUcuG2unF3pjEdeMAfjTd0riomth12qVOdxTpcZYoUjaClIuBySTCkmNjS5zjUTd2lEUh1SXTNkGJn8r3VqRYtjmaTS8nXFRILVERocG_kJi7ThA2xIMyoceDS4xE0=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-MWS4V6fHFho/AAAAAAAAAAI/AAAAAAAAAAA/xjpxiTSy1gA/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcdSG6f0qUcuG2unF3pjEdeMAfjTd0riomth12qVOdxTpcZYoUjaClIuBySTCkmNjS5zjUTd2lEUh1SXTNkGJn8r3VqRYtjmaTS8nXFRILVERocG_kJi7ThA2xIMyoceDS4xE0=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFcdSG6f0qUcuG2unF3pjEdeMAfjTd0riomth12qVOdxTpcZYoUjaClIuBySTCkmNjS5zjUTd2lEUh1SXTNkGJn8r3VqRYtjmaTS8nXFRILVERocG_kJi7ThA2xIMyoceDS4xE0=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 106,
     "rating": 4.9,
@@ -8749,9 +10731,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "G-13, 1568 - A, near temple, Bhagirath Palace, Chhippy Wada, Chandni Chowk, Delhi, 110006, India",
     "openingHours": "Friday: 11AM-7:30PM · Monday: 11AM-7:30PM · Saturday: 11AM-7:30PM · Sunday: Closed · Thursday: 11AM-7:30PM · Tuesday: 11AM-7:30PM · Wednesday: 11AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Usha+Cable+Co./@28.6572747,77.2340868,14z/data=!4m8!1m2!2m1!1sUsha+Cable+Co.!3m4!1s0x390cfd10f247aca5:0x9b426e228471f318!8m2!3d28.6572747!4d77.2340868",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "electrical-components-international-eci",
@@ -8764,6 +10746,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ecintl.com/",
     "phone": "+212 5 31 06 36 15",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDvKp9a0B-4yxQOKxGk2VjOoeA-4-DVyWfZTrBy41__ITMde7fbajzoCMfE7GzTB8yw7NtZt16BgE6dxf3hibkMwhORp88_9ZIKcYkJ_u_mG2Yd-0kUrM8Cu5KI0IGMyVPsAFsmA=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-3zOpYlDVFnw/AAAAAAAAAAI/AAAAAAAAAAA/GGRrooiF6fU/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDvKp9a0B-4yxQOKxGk2VjOoeA-4-DVyWfZTrBy41__ITMde7fbajzoCMfE7GzTB8yw7NtZt16BgE6dxf3hibkMwhORp88_9ZIKcYkJ_u_mG2Yd-0kUrM8Cu5KI0IGMyVPsAFsmA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDvKp9a0B-4yxQOKxGk2VjOoeA-4-DVyWfZTrBy41__ITMde7fbajzoCMfE7GzTB8yw7NtZt16BgE6dxf3hibkMwhORp88_9ZIKcYkJ_u_mG2Yd-0kUrM8Cu5KI0IGMyVPsAFsmA=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 35,
     "rating": 4,
@@ -8783,9 +10770,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "المدينة الجديدة الشرافات، Morocco",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-5:30PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Electrical+Components+International+%28ECI%29/@35.6577127,-5.6554284,14z/data=!4m8!1m2!2m1!1sElectrical+Components+International+%28ECI%29!3m4!1s0xd0b797a1b95e03d:0xf3ef018ec9ceebf4!8m2!3d35.6577127!4d-5.6554284",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "next-gen-building-material-trading-dwc-llc-hardware-shop-too",
@@ -8797,6 +10784,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "AE",
     "phone": "+971 50 524 5056",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHntL4FYA6I3wBS85Y5bZvk8ep2xAG_2OWlTyZ1lAi-2xkxUQGeg2jbjPyKw0SjthADxqieVnjG5imK1yrPpG_TLDw8jH6ZXZyrjBtWeZgkerVTrYp9Iq5-dsQQ1q5joO32Qkn9znBmuFM=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Z2TEkz_4rvE/AAAAAAAAAAI/AAAAAAAAAAA/lom2pc8tfBg/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHntL4FYA6I3wBS85Y5bZvk8ep2xAG_2OWlTyZ1lAi-2xkxUQGeg2jbjPyKw0SjthADxqieVnjG5imK1yrPpG_TLDw8jH6ZXZyrjBtWeZgkerVTrYp9Iq5-dsQQ1q5joO32Qkn9znBmuFM=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHntL4FYA6I3wBS85Y5bZvk8ep2xAG_2OWlTyZ1lAi-2xkxUQGeg2jbjPyKw0SjthADxqieVnjG5imK1yrPpG_TLDw8jH6ZXZyrjBtWeZgkerVTrYp9Iq5-dsQQ1q5joO32Qkn9znBmuFM=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 107,
     "rating": 4.9,
@@ -8816,9 +10808,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "W6RF+GG - Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-6PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Next+Gen+Building+Material+Trading+DWC+LLC+Hardware+Shop%2C+Tools%2C+Paints+%2CElectrical%2C+Plumbing+%2C+National+Paint+Mixing+Machine/@24.9412991,55.223541999999995,14z/data=!4m8!1m2!2m1!1sNext+Gen+Building+Material+Trading+DWC+LLC+Hardware+Shop%2C+Tools%2C+Paints+%2CElectrical%2C+Plumbing+%2C+National+Paint+Mixing+Machine!3m4!1s0x3e5f7300084e2539:0xefd4747a06d91232!8m2!3d24.9412991!4d55.223541999999995",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "smart-industrial-equipment-llc-ae",
@@ -8831,6 +10823,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://smartindustrialequipment.com/",
     "phone": "+971 2 555 5327",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ2o8pHpTVXh-vo7BwsvqbIF9wFydtiOfSrx_v3VOzhtcEq3lW4EfLiNuXQRlQvXewq8lh6jZzjybUBTx2ICJftIxZysxdQvwpTM_rGUF2pq5j-m2QhXOK7Dy4kAAvB33BluXu=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-G2RtA6LZrqk/AAAAAAAAAAI/AAAAAAAAAAA/42P_TSWu3hQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ2o8pHpTVXh-vo7BwsvqbIF9wFydtiOfSrx_v3VOzhtcEq3lW4EfLiNuXQRlQvXewq8lh6jZzjybUBTx2ICJftIxZysxdQvwpTM_rGUF2pq5j-m2QhXOK7Dy4kAAvB33BluXu=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcnlGWYkd9NbRpvAbHvEPODC1SYij8M9IIyakHbD1zHh9YvSy1Wuid6ie9BM7pU1FPMoGbtwOvpplh2C4nIbhqddg6QYjjRsTcTJmrYHGMg8wFMdsIvo5Qoyu7rxrrGfAqoVo=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 25,
     "rating": 4.1,
@@ -8850,9 +10847,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Smart+Industrial+Equipment+LLC/@24.3762297,54.5091712,14z/data=!4m8!1m2!2m1!1sSmart+Industrial+Equipment+LLC!3m4!1s0x3e5e4126425c5c1f:0x40f821752afc2858!8m2!3d24.3762297!4d54.5091712",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "swift-international-heavy-equipment-spare-parts-tr-ae",
@@ -8865,6 +10862,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://swifttrd.com/",
     "phone": "+971 6 542 2488",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgdlw_0HnKFWWPXN7-FqsQxHSC_QE3ro4gYQh31NdHkQGAzKULpw_34e1LPLQrbT6Anhz1pwkW3x6b4dY0svVA071_7M0sxRe2MZ-x84QEESQNtpseCteMB9uGWCCldIkH7ak_w=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-eKFrI51P3fc/AAAAAAAAAAI/AAAAAAAAAAA/oQidt8-cJU4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgdlw_0HnKFWWPXN7-FqsQxHSC_QE3ro4gYQh31NdHkQGAzKULpw_34e1LPLQrbT6Anhz1pwkW3x6b4dY0svVA071_7M0sxRe2MZ-x84QEESQNtpseCteMB9uGWCCldIkH7ak_w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbgdlw_0HnKFWWPXN7-FqsQxHSC_QE3ro4gYQh31NdHkQGAzKULpw_34e1LPLQrbT6Anhz1pwkW3x6b4dY0svVA071_7M0sxRe2MZ-x84QEESQNtpseCteMB9uGWCCldIkH7ak_w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 25,
     "rating": 4.2,
@@ -8884,9 +10886,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Industrial area, Industrial Are no.3, Sharjah - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-12PM,4-7:30PM · Monday: 8AM-1:30PM,4-7:30PM · Saturday: 8AM-1:30PM,4-7:30PM · Sunday: 8AM-1:30PM,4-7:30PM · Thursday: 8AM-1:30PM,4-7:30PM · Tuesday: 8AM-1:30PM,4-7:30PM · Wednesday: 8AM-1:",
     "sourceUrl": "https://www.google.com/maps/place/Swift+International+Heavy+Equipment+Spare+Parts+Tr/@25.3110508,55.410030799999994,14z/data=!4m8!1m2!2m1!1sSwift+International+Heavy+Equipment+Spare+Parts+Tr!3m4!1s0x3e5f5fe8c7c54639:0x5cba772017b87a1b!8m2!3d25.3110508!4d55.410030799999994",
-    "score": 82,
+    "score": 88,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "power-plus-cable-co-llc-ae",
@@ -8899,6 +10901,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://powerpluscable.com/",
     "phone": "+971 4 257 7888",
     "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=kLdE22WzN3AtjQppG_CN2Q&cb_client=search.gws-prod.gps&w=800&h=500&yaw=64.11609&pitch=0&thumbfov=100",
+    "logoUrl": "https://lh5.googleusercontent.com/-gbHBBwFxcO4/AAAAAAAAAAI/AAAAAAAAAAA/F-aII_5MeGs/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=kLdE22WzN3AtjQppG_CN2Q&cb_client=search.gws-prod.gps&w=800&h=500&yaw=64.11609&pitch=0&thumbfov=100",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=kLdE22WzN3AtjQppG_CN2Q&cb_client=search.gws-prod.gps&w=1600&h=1000&yaw=64.11609&pitch=0&thumbfov=100"
+    ],
     "googleRating": 4.1,
     "googleReviews": 21,
     "rating": 4.1,
@@ -8918,9 +10925,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Shaikha Mhara Alghrair Building - Office No.: 217 - Al Nahda St - Al Qusais 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Power+Plus+Cable+Co+LLC/@25.265888699999998,55.382543899999995,14z/data=!4m8!1m2!2m1!1sPower+Plus+Cable+Co+LLC!3m4!1s0x3e5f5dcac356e5b9:0x90449de59a3f0e17!8m2!3d25.265888699999998!4d55.382543899999995",
-    "score": 81,
+    "score": 87,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "alma-pack-ain-harrouda",
@@ -8933,6 +10940,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.almapack.ma/",
     "phone": "+212 5 22 33 22 67",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMQgJEZYZfkk6B-2l6JL-ZiKsvUcw0Jx57j_yHr2R4IVSpQ96C2RtIX7KYDdC66hXjyR8zycENBUtRzoWEc5jpdbUdKJngXnRClt7Nt9hkTkAfdgDszaBm22Z3kTtbgLFkPSqv=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-yFLpgBjbwpc/AAAAAAAAAAI/AAAAAAAAAAA/-23jMk3P0OY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMQgJEZYZfkk6B-2l6JL-ZiKsvUcw0Jx57j_yHr2R4IVSpQ96C2RtIX7KYDdC66hXjyR8zycENBUtRzoWEc5jpdbUdKJngXnRClt7Nt9hkTkAfdgDszaBm22Z3kTtbgLFkPSqv=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGMQgJEZYZfkk6B-2l6JL-ZiKsvUcw0Jx57j_yHr2R4IVSpQ96C2RtIX7KYDdC66hXjyR8zycENBUtRzoWEc5jpdbUdKJngXnRClt7Nt9hkTkAfdgDszaBm22Z3kTtbgLFkPSqv=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 23,
     "rating": 4.1,
@@ -8952,9 +10964,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Z I SIDI AHMED BEN YECHOU AIN HARROUDA MOHEMMEDIA, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Alma+Pack/@33.641915499999996,-7.4433928,14z/data=!4m8!1m2!2m1!1sAlma+Pack!3m4!1s0xda7cb1131c66f0d:0xeb1721a9676b4719!8m2!3d33.641915499999996!4d-7.4433928",
-    "score": 81,
+    "score": 87,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-yasmeen-building-material-trading-llc-ae",
@@ -8966,6 +10978,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "AE",
     "phone": "+971 4 883 0037",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQxpsN8uLB-hP15rdsbBeWuuHDy9adaw23pIqv7dVO3BZKlVu57wfNfPKNMQiLDV9WZQI3V8eCnUhizeB4YyBdlhPCcHJNF3WQYpR4b-0aZ1BgrlSe0v-j4mZs2CXX669sSdUm_g=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-itnMtZL7aEA/AAAAAAAAAAI/AAAAAAAAAAA/13rkohdytmY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQxpsN8uLB-hP15rdsbBeWuuHDy9adaw23pIqv7dVO3BZKlVu57wfNfPKNMQiLDV9WZQI3V8eCnUhizeB4YyBdlhPCcHJNF3WQYpR4b-0aZ1BgrlSe0v-j4mZs2CXX669sSdUm_g=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQxpsN8uLB-hP15rdsbBeWuuHDy9adaw23pIqv7dVO3BZKlVu57wfNfPKNMQiLDV9WZQI3V8eCnUhizeB4YyBdlhPCcHJNF3WQYpR4b-0aZ1BgrlSe0v-j4mZs2CXX669sSdUm_g=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 306,
     "rating": 4.4,
@@ -8985,9 +11002,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "D 57 - Dubai Investment Park Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12:30PM,2-7PM · Monday: 7:30AM-7PM · Saturday: 7:30AM-7PM · Sunday: 7:30AM-6:30PM · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Yasmeen+Building+Material+Trading+LLC/@24.968207,55.189902499999995,14z/data=!4m8!1m2!2m1!1sAl+Yasmeen+Building+Material+Trading+LLC!3m4!1s0x3e5f725320f049e3:0xf965dc90265d059a!8m2!3d24.968207!4d55.189902499999995",
-    "score": 81,
+    "score": 87,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "forconi-mario-snc-rome",
@@ -8999,6 +11016,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Rome",
     "phone": "+39 06 2042 7948",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEvP8mhl934dvZKi73Ul23SIHa6-Ii0CLTEnLWeFG_jPRdS4asuFFmFNfBigf7nBz2DNI5P9OcUZYBxNKTkcXmH72j7kzvxo6ZD77STHyz1YpiYtUYOqikPU1SKJKM6l_Pj8cc=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-NaOADUEjTRc/AAAAAAAAAAI/AAAAAAAAAAA/57HkoExEcQI/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEvP8mhl934dvZKi73Ul23SIHa6-Ii0CLTEnLWeFG_jPRdS4asuFFmFNfBigf7nBz2DNI5P9OcUZYBxNKTkcXmH72j7kzvxo6ZD77STHyz1YpiYtUYOqikPU1SKJKM6l_Pj8cc=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEvP8mhl934dvZKi73Ul23SIHa6-Ii0CLTEnLWeFG_jPRdS4asuFFmFNfBigf7nBz2DNI5P9OcUZYBxNKTkcXmH72j7kzvxo6ZD77STHyz1YpiYtUYOqikPU1SKJKM6l_Pj8cc=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 153,
     "rating": 4.6,
@@ -9018,9 +11040,47 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Tommaso Mercandetti, 6, 00133 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-5:30PM · Monday: 7:30AM-5:30PM · Saturday: 7:30AM-12PM · Sunday: Closed · Thursday: 7:30AM-5:30PM · Tuesday: 7:30AM-5:30PM · Wednesday: 7:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Forconi+Mario+Snc/@41.8631476,12.611053,14z/data=!4m8!1m2!2m1!1sForconi+Mario+Snc!3m4!1s0x132f62af9364468d:0x2d9661570883597d!8m2!3d41.8631476!4d12.611053",
-    "score": 81,
+    "score": 87,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "bii-de-mexico-tijuana",
+    "name": "BII de México.",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "Tijuana, Mexico",
+    "country": "Mexico",
+    "city": "Tijuana",
+    "website": "https://biidemexico.com/products/enclosures/",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfIdbJqV2xUiq4ob4F-8dktNeGtXiguz7NX5HnTMSG2ZpQKker4h9lbIqMihljBr9hg555Mrbfz0nxFA6PcOTTtALiC4kEOyMGwL5dI677sHTGo6woxgI2Sv-SslFMuD5u1AIZAQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-IyP27I_rgVo/AAAAAAAAAAI/AAAAAAAAAAA/gCB8e9_m7c4/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfIdbJqV2xUiq4ob4F-8dktNeGtXiguz7NX5HnTMSG2ZpQKker4h9lbIqMihljBr9hg555Mrbfz0nxFA6PcOTTtALiC4kEOyMGwL5dI677sHTGo6woxgI2Sv-SslFMuD5u1AIZAQ=w800-h500-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=RACZnoaTxWwquFFXdRcMHg&cb_client=search.gws-prod.gps&w=1600&h=1000&yaw=265.554&pitch=-81.952156&thumbfov=100"
+    ],
+    "googleRating": 4,
+    "googleReviews": 37,
+    "rating": 4,
+    "reviewCount": 37,
+    "verified": true,
+    "description": "Steel & Metals supplier in Tijuana, Mexico.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "5 tons",
+    "address": "Valle del Sur 8333, Parque Industrial, Valle del Sur, 22190 Tijuana, B.C., Mexico",
+    "openingHours": "Friday: 6AM-4:30AM · Monday: 6AM-4:30AM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4:30AM · Tuesday: 6AM-4:30AM · Wednesday: 6AM-4:30AM",
+    "sourceUrl": "https://www.google.com/maps/place/BII+de+M%C3%A9xico./@32.4760546,-117.03299399999999,14z/data=!4m8!1m2!2m1!1sBII+de+M%C3%A9xico.!3m4!1s0x80d937b6610f5b99:0x799e150e8d497aa3!8m2!3d32.4760546!4d-117.03299399999999",
+    "score": 87,
+    "reliabilityScore": 80,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "riddhi-cable-industry-new-delhi-delhi",
@@ -9032,6 +11092,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "New Delhi, Delhi",
     "phone": "+91 98730 54481",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLicJ1X-m0FOjRqREKOxdOgV-24zskrlEqleOPWvN5qKGo8GYX_-WUTT75NRqC7JIOfJWae-dWdNBAEwpYOXWA8ZrOMfO_br8lFGiJyLDBJP8fIQh_oTpfuVIYhn0cm_2VCAkjEQ=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-BEwdfeXIrHs/AAAAAAAAAAI/AAAAAAAAAAA/v3uFv05sbh0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLicJ1X-m0FOjRqREKOxdOgV-24zskrlEqleOPWvN5qKGo8GYX_-WUTT75NRqC7JIOfJWae-dWdNBAEwpYOXWA8ZrOMfO_br8lFGiJyLDBJP8fIQh_oTpfuVIYhn0cm_2VCAkjEQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLicJ1X-m0FOjRqREKOxdOgV-24zskrlEqleOPWvN5qKGo8GYX_-WUTT75NRqC7JIOfJWae-dWdNBAEwpYOXWA8ZrOMfO_br8lFGiJyLDBJP8fIQh_oTpfuVIYhn0cm_2VCAkjEQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.9,
     "googleReviews": 44,
     "rating": 4.9,
@@ -9052,9 +11117,48 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Building No. 315/21, Gali No.2, Near Syndicate House Sahazadabagh I.N.D.L Area Old Rohtak Road, Gali No.2, New Delhi, Delhi 110015, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Riddhi+Cable+Industry/@28.669641499999997,77.1673364,14z/data=!4m8!1m2!2m1!1sRiddhi+Cable+Industry!3m4!1s0x390d0261322e63f7:0xdc303cfeb7e40b3c!8m2!3d28.669641499999997!4d77.1673364",
-    "score": 80,
+    "score": 86,
     "reliabilityScore": 98,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "best-metal-steel-tr-llc-steel-stockist-steel-supplier-distri",
+    "name": "Best Metal Steel Tr llc | Steel Stockist |Steel Supplier, Distributor Company in Sharjah, Dubai UAE",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "website": "https://bmsteel.ae/",
+    "phone": "+971 6 525 7860",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8rUX1xseCZskzTyuOXqm3m83gZfMk6niGp_zN_ldAjRStw_QgZEKWpSAXEt_eqFAkuLXegmKOXtPbWNdpF-Eb_dAeDsnFs0_wpSjD6lgg7oU3ojEVevaqmptY7tSLnU3Yx3s=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-csa50CehT0Y/AAAAAAAAAAI/AAAAAAAAAAA/Ndv_9FV3wZ0/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8rUX1xseCZskzTyuOXqm3m83gZfMk6niGp_zN_ldAjRStw_QgZEKWpSAXEt_eqFAkuLXegmKOXtPbWNdpF-Eb_dAeDsnFs0_wpSjD6lgg7oU3ojEVevaqmptY7tSLnU3Yx3s=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8rUX1xseCZskzTyuOXqm3m83gZfMk6niGp_zN_ldAjRStw_QgZEKWpSAXEt_eqFAkuLXegmKOXtPbWNdpF-Eb_dAeDsnFs0_wpSjD6lgg7oU3ojEVevaqmptY7tSLnU3Yx3s=w1600-h1000-k-no"
+    ],
+    "googleRating": 4,
+    "googleReviews": 21,
+    "rating": 4,
+    "reviewCount": 21,
+    "verified": true,
+    "description": "Steel & Metals supplier in AE, United Arab Emirates.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "5 tons",
+    "address": "sajja - near sharjah cement factory - المنطقة الصناعية - Sharjah - United Arab Emirates",
+    "openingHours": "Friday: 7AM-7PM · Monday: 7AM-7PM · Saturday: 7AM-7PM · Sunday: 7AM-7PM · Thursday: 7AM-7PM · Tuesday: 7AM-7PM · Wednesday: 7AM-7PM",
+    "sourceUrl": "https://www.google.com/maps/place/Best+Metal+Steel+Tr+llc+%7C+Steel+Stockist+%7CSteel+Supplier%2C+Distributor+Company+in+Sharjah%2C+Dubai+UAE/@25.309309199999998,55.625411199999995,14z/data=!4m8!1m2!2m1!1sBest+Metal+Steel+Tr+llc+%7C+Steel+Stockist+%7CSteel+Supplier%2C+Distributor+Company+in+Sharjah%2C+Dubai+UAE!3m4!1s0x3ef5f3a9dad69045:0x38f9a7d1a45a9292!8m2!3d25.309309199999998!4d55.625411199999995",
+    "score": 86,
+    "reliabilityScore": 80,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packmax-india-packaging-solutions-pune",
@@ -9066,6 +11170,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Pune",
     "phone": "+91 77989 86747",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEw-KWdhwDvPuhw-VIkcbjJNok6jyCrfO5RQBx_8SpKeqyTUDwkisgOQWdpc0noc4Z9AqGClvfVCOQ5dv6_8YjSAA44k0Uzs-HitFXo6NNbfpqS7-W6zdvEfB2nmL7G_Kxo-xFEKA=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-fsAw9OwlJL4/AAAAAAAAAAI/AAAAAAAAAAA/3xn9s79WLYQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEw-KWdhwDvPuhw-VIkcbjJNok6jyCrfO5RQBx_8SpKeqyTUDwkisgOQWdpc0noc4Z9AqGClvfVCOQ5dv6_8YjSAA44k0Uzs-HitFXo6NNbfpqS7-W6zdvEfB2nmL7G_Kxo-xFEKA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEw-KWdhwDvPuhw-VIkcbjJNok6jyCrfO5RQBx_8SpKeqyTUDwkisgOQWdpc0noc4Z9AqGClvfVCOQ5dv6_8YjSAA44k0Uzs-HitFXo6NNbfpqS7-W6zdvEfB2nmL7G_Kxo-xFEKA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 51,
     "rating": 4.8,
@@ -9086,9 +11195,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Survey No. 71/9B, Janai Industrial Estate, Prayeja City Rd, Wadgaon Budruk, Unit 1, Pune, Maharashtra 411068, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PackMax+India+Packaging+Solutions/@18.466693799999998,73.8142359,14z/data=!4m8!1m2!2m1!1sPackMax+India+Packaging+Solutions!3m4!1s0x3bc2950929af373f:0x617e7e0e139f3603!8m2!3d18.466693799999998!4d73.8142359",
-    "score": 79,
+    "score": 85,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "packnear-marrakesh",
@@ -9100,6 +11209,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Marrakesh",
     "phone": "+212 6 14 44 99 78",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFi5uXNLAW6UYe7hAX6AP7fC0yXwFV4YUvouHvsSyhtit-eT2e0_5VQF7ueLmYoFL_YyyZvOVjC9-JSyxGQ_e7-J-UmNEMOjMj0s-EbenfP773xcjd8eWaaIFU6SiApXHET_y9uleyn6OE=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/--BglWRPvDXc/AAAAAAAAAAI/AAAAAAAAAAA/HQFQduBnhmY/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFi5uXNLAW6UYe7hAX6AP7fC0yXwFV4YUvouHvsSyhtit-eT2e0_5VQF7ueLmYoFL_YyyZvOVjC9-JSyxGQ_e7-J-UmNEMOjMj0s-EbenfP773xcjd8eWaaIFU6SiApXHET_y9uleyn6OE=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFi5uXNLAW6UYe7hAX6AP7fC0yXwFV4YUvouHvsSyhtit-eT2e0_5VQF7ueLmYoFL_YyyZvOVjC9-JSyxGQ_e7-J-UmNEMOjMj0s-EbenfP773xcjd8eWaaIFU6SiApXHET_y9uleyn6OE=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 48,
     "rating": 4.8,
@@ -9119,9 +11233,47 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Immeuble Atlassi E, Mag. 2 Bd Allal Al Fassi, Marrakech 40000, Morocco",
     "openingHours": "Friday: 9AM-1PM,3:30-6:30PM · Monday: 9AM-6:30PM · Saturday: 9AM-6:30PM · Sunday: Closed · Thursday: 9AM-6:30PM · Tuesday: 9AM-6:30PM · Wednesday: 9AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Packnear/@31.639146099999998,-7.999641199999999,14z/data=!4m8!1m2!2m1!1sPacknear!3m4!1s0xdafef356e45fd47:0x79d31b412a6fd45e!8m2!3d31.639146099999998!4d-7.999641199999999",
-    "score": 79,
+    "score": 85,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "morocco-autoparts-al-jadida",
+    "name": "Morocco autoparts",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "al jadida, Morocco",
+    "country": "Morocco",
+    "city": "al jadida",
+    "phone": "+212 7 23 56 64 69",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElNWlg0Rex9l0x9jLa_XO4N9qLsIJndcq3pKf_rs6G_NXNqaNC9_e7PzlSu-Uz948xnDCfZodIoesOQtlTN2ThS3JvV8mCAXxK9GXBP1ZIq_F0qSMH4kpwKS5RAfBkh-QDABEDvnlyV4Re=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-lGK5ywfsHkw/AAAAAAAAAAI/AAAAAAAAAAA/kvknhoWxwTQ/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElNWlg0Rex9l0x9jLa_XO4N9qLsIJndcq3pKf_rs6G_NXNqaNC9_e7PzlSu-Uz948xnDCfZodIoesOQtlTN2ThS3JvV8mCAXxK9GXBP1ZIq_F0qSMH4kpwKS5RAfBkh-QDABEDvnlyV4Re=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElNWlg0Rex9l0x9jLa_XO4N9qLsIJndcq3pKf_rs6G_NXNqaNC9_e7PzlSu-Uz948xnDCfZodIoesOQtlTN2ThS3JvV8mCAXxK9GXBP1ZIq_F0qSMH4kpwKS5RAfBkh-QDABEDvnlyV4Re=w1600-h1000-k-no"
+    ],
+    "googleRating": 5,
+    "googleReviews": 30,
+    "rating": 5,
+    "reviewCount": 30,
+    "verified": true,
+    "description": "Industrial Parts supplier in al jadida, Morocco.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "North Africa",
+      "EU"
+    ],
+    "moq": "10 units",
+    "address": "X7X6+CVF Bayti 6 Sale, M361, al jadida 11100, Morocco",
+    "openingHours": "Friday: 11AM-11PM · Monday: 11AM-11PM · Saturday: 11AM-11PM · Sunday: 11AM-11PM · Thursday: 11AM-11PM · Tuesday: 11AM-11PM · Wednesday: 11AM-11PM",
+    "sourceUrl": "https://www.google.com/maps/place/Morocco+autoparts/@33.998563,-6.737813,14z/data=!4m8!1m2!2m1!1sMorocco+autoparts!3m4!1s0xda741b45e661617:0x1a445bbc24e1a6da!8m2!3d33.998563!4d-6.737813",
+    "score": 85,
+    "reliabilityScore": 100,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sika-saudi-arabia-limited-riyadh-office-riyadh",
@@ -9134,6 +11286,11 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://gcc.sika.com/",
     "phone": "+966 11 217 6532",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFh_dktkbSjiF00n478xqLIxMQ6T8iupUkY44n6DzAvF5xPrSYa5lFI4vV1CIY491Rco_n2r3sqpoJlAaT2u77oXkyN2_Uk7VrqRYa6p8M-jKdtZU0xKee-3e6CU-Mu8PXjLJxC=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-LGRuUwSxVMI/AAAAAAAAAAI/AAAAAAAAAAA/ojSuk1lPpHk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFh_dktkbSjiF00n478xqLIxMQ6T8iupUkY44n6DzAvF5xPrSYa5lFI4vV1CIY491Rco_n2r3sqpoJlAaT2u77oXkyN2_Uk7VrqRYa6p8M-jKdtZU0xKee-3e6CU-Mu8PXjLJxC=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFh_dktkbSjiF00n478xqLIxMQ6T8iupUkY44n6DzAvF5xPrSYa5lFI4vV1CIY491Rco_n2r3sqpoJlAaT2u77oXkyN2_Uk7VrqRYa6p8M-jKdtZU0xKee-3e6CU-Mu8PXjLJxC=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 24,
     "rating": 4.2,
@@ -9153,9 +11310,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "6934 Al-Ulya, As Sahafah، Floor 11th & 12th, Riyadh Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sika+Saudi+Arabia+Limited+-+Riyadh+Office/@24.7859227,46.6382903,14z/data=!4m8!1m2!2m1!1sSika+Saudi+Arabia+Limited+-+Riyadh+Office!3m4!1s0x3e2efd57f03d5adb:0xb81d433ed35ceaa2!8m2!3d24.7859227!4d46.6382903",
-    "score": 78,
+    "score": 84,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "building-materials-mirandesa-madrid",
@@ -9167,6 +11324,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Madrid",
     "phone": "+34 913 23 02 01",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgDfW-dH_zul9dOdeINSswmGIRosqJx73Rtr8yELEA1mERRg9L2tC5NgZhmTBQotBGsiQ8y24EQ74-TP5VXKsqHOT-ZNrP1W2T-n1IjE8U01nm10WQEoybVsEGMlkV1AboEIUttw=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-UdbshAFEt7E/AAAAAAAAAAI/AAAAAAAAAAA/gCfIeZevUuc/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgDfW-dH_zul9dOdeINSswmGIRosqJx73Rtr8yELEA1mERRg9L2tC5NgZhmTBQotBGsiQ8y24EQ74-TP5VXKsqHOT-ZNrP1W2T-n1IjE8U01nm10WQEoybVsEGMlkV1AboEIUttw=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgDfW-dH_zul9dOdeINSswmGIRosqJx73Rtr8yELEA1mERRg9L2tC5NgZhmTBQotBGsiQ8y24EQ74-TP5VXKsqHOT-ZNrP1W2T-n1IjE8U01nm10WQEoybVsEGMlkV1AboEIUttw=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 80,
     "rating": 4.5,
@@ -9186,9 +11348,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "P.º de la Dirección, 294, Tetuán, 28029 Madrid, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3-7PM · Monday: 8AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-1:30PM,3-7PM · Tuesday: 8AM-1:30PM,3-7PM · Wednesday: 8AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Building+materials+Mirandesa/@40.4695281,-3.7069676,14z/data=!4m8!1m2!2m1!1sBuilding+materials+Mirandesa!3m4!1s0xd4229a146be50d3:0xe5a3ac47a8dbcc94!8m2!3d40.4695281!4d-3.7069676",
-    "score": 78,
+    "score": 84,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "emballage-mazirh-marrakech-marrakesh",
@@ -9200,6 +11362,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Marrakesh",
     "phone": "+212 6 79 06 70 03",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8ls45drmzpEZ9EPdWuajJbncXYbimUL0JUrW4jhx2ShxSC4X-is78N9-Ryp6PUVolltyUvhzFbjOA4iJWOuQya_l4kHrlrVLNxY77X4nGT8CYOBa5OJ8-m3h7BdZNbINN4JmG=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-arsqw1DkgUU/AAAAAAAAAAI/AAAAAAAAAAA/jAzspNfwr0o/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8ls45drmzpEZ9EPdWuajJbncXYbimUL0JUrW4jhx2ShxSC4X-is78N9-Ryp6PUVolltyUvhzFbjOA4iJWOuQya_l4kHrlrVLNxY77X4nGT8CYOBa5OJ8-m3h7BdZNbINN4JmG=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8ls45drmzpEZ9EPdWuajJbncXYbimUL0JUrW4jhx2ShxSC4X-is78N9-Ryp6PUVolltyUvhzFbjOA4iJWOuQya_l4kHrlrVLNxY77X4nGT8CYOBa5OJ8-m3h7BdZNbINN4JmG=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 86,
     "rating": 4.3,
@@ -9219,9 +11386,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "immeuble Kortoba, 30 Rue Loubnane, Marrakech 40000, Morocco",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9:30AM-6:30PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Emballage+Mazirh+Marrakech/@31.634735,-8.0097291,14z/data=!4m8!1m2!2m1!1sEmballage+Mazirh+Marrakech!3m4!1s0xdafef8ed5ec7283:0xad6a72c5df20a40c!8m2!3d31.634735!4d-8.0097291",
-    "score": 77,
+    "score": 83,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "teklas-automotive-mexico-san-francisco-de-los-romo",
@@ -9233,6 +11400,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "San Francisco de los Romo",
     "phone": "+52 449 352 5004",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwVtDWbT4iFVbXw2j6LasUW3F-HJr4FUUkcpEILCj_p-pw8U-YBLn4T1Z0t2h7RFJO8e4r6EdUXmGOFLqnxYKeAvpBELF8T-smJsu6dG5_IhaEhjKFoblwVVEp-kW6lvYMfuKo=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-zB8am1F2q9Y/AAAAAAAAAAI/AAAAAAAAAAA/6dk_XbdjtSw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwVtDWbT4iFVbXw2j6LasUW3F-HJr4FUUkcpEILCj_p-pw8U-YBLn4T1Z0t2h7RFJO8e4r6EdUXmGOFLqnxYKeAvpBELF8T-smJsu6dG5_IhaEhjKFoblwVVEp-kW6lvYMfuKo=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwVtDWbT4iFVbXw2j6LasUW3F-HJr4FUUkcpEILCj_p-pw8U-YBLn4T1Z0t2h7RFJO8e4r6EdUXmGOFLqnxYKeAvpBELF8T-smJsu6dG5_IhaEhjKFoblwVVEp-kW6lvYMfuKo=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 94,
     "rating": 4.3,
@@ -9252,9 +11424,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "MEZQUITE 106, PARQUE INDUSTRIAL SAN FRANCISCO IV, 20355 San Francisco de los Romo, Ags., Mexico",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Teklas+Automotive+Mexico/@22.0433183,-102.286452,14z/data=!4m8!1m2!2m1!1sTeklas+Automotive+Mexico!3m4!1s0x8429e491b6f51db5:0xbbb61fb516ddfa54!8m2!3d22.0433183!4d-102.286452",
-    "score": 77,
+    "score": 83,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cogemil-materiel-et-materiaux-de-construction-marrakesh",
@@ -9266,6 +11438,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Marrakesh",
     "phone": "+212 6 62 39 42 83",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcA4DvgAZw6gcmE0Adqacol2Lq_ZK9_ZK0dn_t_LYWRGWZsO2qCCsz8eKnxWuzVRVN9ge96R5OoI6MqAl1adbScImyYpvuisJ9BKCQlKU8kaSPM8-Vp_S8lnQOqAkS4AjQd14C=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/--HU0d6pkjNU/AAAAAAAAAAI/AAAAAAAAAAA/carwWqv7kiE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcA4DvgAZw6gcmE0Adqacol2Lq_ZK9_ZK0dn_t_LYWRGWZsO2qCCsz8eKnxWuzVRVN9ge96R5OoI6MqAl1adbScImyYpvuisJ9BKCQlKU8kaSPM8-Vp_S8lnQOqAkS4AjQd14C=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcA4DvgAZw6gcmE0Adqacol2Lq_ZK9_ZK0dn_t_LYWRGWZsO2qCCsz8eKnxWuzVRVN9ge96R5OoI6MqAl1adbScImyYpvuisJ9BKCQlKU8kaSPM8-Vp_S8lnQOqAkS4AjQd14C=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 26,
     "rating": 4.6,
@@ -9285,9 +11462,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "MXG2+M47, 189, Rte de Safi, Marrakech 40000, Morocco",
     "openingHours": "Friday: 8AM-12:30PM,2:30-6:30PM · Monday: 8AM-12:30PM,2:30-6:30PM · Saturday: 8AM-12:30PM,2:30-6:30PM · Sunday: Closed · Thursday: 8AM-12:30PM,2:30-6:30PM · Tuesday: 8AM-12:30PM,2:30-6:30PM · Wednesda",
     "sourceUrl": "https://www.google.com/maps/place/Cogemil+%28mat%C3%A9riel+et+mat%C3%A9riaux+de+construction%29/@31.676568999999997,-8.0500955,14z/data=!4m8!1m2!2m1!1sCogemil+%28mat%C3%A9riel+et+mat%C3%A9riaux+de+construction%29!3m4!1s0xdafec1204ef61fb:0xe64e767689465bae!8m2!3d31.676568999999997!4d-8.0500955",
-    "score": 76,
+    "score": 82,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "casa-de-materiales-construccion-y-ferreteria-barcelona",
@@ -9299,6 +11476,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Barcelona",
     "phone": "+34 931 12 04 63",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDwwFIuoSpB0lDfNlBBIwarxxSR590zAqwpifXESprOesRDw-rIUb19KtLQnTpzbQXqLoyYAOP8hVeqtVfwxhc3CxZ3UA3RZdipAWzTDvT3tY-kpqHFd6Mc52psiUmQj1lGj_x=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-bQfITli-0Wo/AAAAAAAAAAI/AAAAAAAAAAA/df8TQHjtut8/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDwwFIuoSpB0lDfNlBBIwarxxSR590zAqwpifXESprOesRDw-rIUb19KtLQnTpzbQXqLoyYAOP8hVeqtVfwxhc3CxZ3UA3RZdipAWzTDvT3tY-kpqHFd6Mc52psiUmQj1lGj_x=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDwwFIuoSpB0lDfNlBBIwarxxSR590zAqwpifXESprOesRDw-rIUb19KtLQnTpzbQXqLoyYAOP8hVeqtVfwxhc3CxZ3UA3RZdipAWzTDvT3tY-kpqHFd6Mc52psiUmQj1lGj_x=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 44,
     "rating": 4.5,
@@ -9318,9 +11500,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer de la Cera, 1, Ciutat Vella, 08001 Barcelona, Spain",
     "openingHours": "Friday: 8AM-1:45PM,3-8PM · Monday: 8AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/CASA+DE+MATERIALES+CONSTRUCCI%C3%93N+Y+FERRETER%C3%8DA/@41.3794063,2.1670604,14z/data=!4m8!1m2!2m1!1sCASA+DE+MATERIALES+CONSTRUCCI%C3%93N+Y+FERRETER%C3%8DA!3m4!1s0x12a4a25fa092fea7:0xbeb92e84232dddf7!8m2!3d41.3794063!4d2.1670604",
-    "score": 76,
+    "score": 82,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ball-aerocan-mexico-san-luis-potosi",
@@ -9332,6 +11514,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "San Luis Potosi",
     "phone": "+52 444 161 5074",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLpXqMxyMY6sU070hKUAs7i1exbRXT5bGG0LqUKBCTfSClOkituvQslr-_0fbtHDWISGU8NJsFW2o86xna9ajEye-o4BNCtt4cO3flLl1It6zufRjZ8IIU397zTkczN8-tyTLQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-J2ZHQafvnuU/AAAAAAAAAAI/AAAAAAAAAAA/mFDG8ZmtcCk/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLpXqMxyMY6sU070hKUAs7i1exbRXT5bGG0LqUKBCTfSClOkituvQslr-_0fbtHDWISGU8NJsFW2o86xna9ajEye-o4BNCtt4cO3flLl1It6zufRjZ8IIU397zTkczN8-tyTLQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLpXqMxyMY6sU070hKUAs7i1exbRXT5bGG0LqUKBCTfSClOkituvQslr-_0fbtHDWISGU8NJsFW2o86xna9ajEye-o4BNCtt4cO3flLl1It6zufRjZ8IIU397zTkczN8-tyTLQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 25,
     "rating": 4.5,
@@ -9351,9 +11538,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Eje 140 950, Zona Industrial, 78395 San Luis Potosí, S.L.P., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BALL+AEROCAN+MEXICO/@22.044314099999998,-100.8806809,14z/data=!4m8!1m2!2m1!1sBALL+AEROCAN+MEXICO!3m4!1s0x842abb5d2781506b:0xe5a7c86af1ad2b6d!8m2!3d22.044314099999998!4d-100.8806809",
-    "score": 75,
+    "score": 81,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sangsin-brake-mexico-arteaga",
@@ -9365,6 +11552,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Arteaga",
     "phone": "+52 844 216 3300",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVPiXpuqJ5YcOqAZkKSsZfHOq32Jx3LmejKGJtU9Kb6y9GLfBzdB45biF9e9WmgeyNICtI_P_xI9muawPj7ZEyA7Nb2TLR1osjWCShgFBjMP4_xqey3hhMMpJq0dYuEdQqdN_1=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Ls4yyyy43Nw/AAAAAAAAAAI/AAAAAAAAAAA/HsTpWsIsarE/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVPiXpuqJ5YcOqAZkKSsZfHOq32Jx3LmejKGJtU9Kb6y9GLfBzdB45biF9e9WmgeyNICtI_P_xI9muawPj7ZEyA7Nb2TLR1osjWCShgFBjMP4_xqey3hhMMpJq0dYuEdQqdN_1=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFVPiXpuqJ5YcOqAZkKSsZfHOq32Jx3LmejKGJtU9Kb6y9GLfBzdB45biF9e9WmgeyNICtI_P_xI9muawPj7ZEyA7Nb2TLR1osjWCShgFBjMP4_xqey3hhMMpJq0dYuEdQqdN_1=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 43,
     "rating": 4.3,
@@ -9384,9 +11576,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Parque Industrial Server, Boulvard Campestre 204 Col, 25350 Arteaga, Coah., Mexico",
     "openingHours": "Friday: 7:30AM-5:36PM · Monday: 7:30AM-5:36PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5:36PM · Tuesday: 7:30AM-5:36PM · Wednesday: 7:30AM-5:36PM",
     "sourceUrl": "https://www.google.com/maps/place/Sangsin+Brake+Mexico/@25.4783199,-100.8989155,14z/data=!4m8!1m2!2m1!1sSangsin+Brake+Mexico!3m4!1s0x8688122509ac70e7:0x231a2e8c31cbaf34!8m2!3d25.4783199!4d-100.8989155",
-    "score": 75,
+    "score": 81,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "nova-steel-coil-de-mexico-planta-2-ramos-arizpe",
@@ -9399,6 +11591,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.novasteel.ca/",
     "phone": "+52 866 953 7751",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVCRBNiijc0PbxYkKF8DXwWJ1gho4VQsfwXaEVTkWvXI9doei3vC2P_0AWU1owdjYnqs9pYT2iQ0khxXDnetFRyo_45lGM46s9x9UxN2iaNlK-0eBhv3eRsrmptOwnJuQVIbZCzQ=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVCRBNiijc0PbxYkKF8DXwWJ1gho4VQsfwXaEVTkWvXI9doei3vC2P_0AWU1owdjYnqs9pYT2iQ0khxXDnetFRyo_45lGM46s9x9UxN2iaNlK-0eBhv3eRsrmptOwnJuQVIbZCzQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEVCRBNiijc0PbxYkKF8DXwWJ1gho4VQsfwXaEVTkWvXI9doei3vC2P_0AWU1owdjYnqs9pYT2iQ0khxXDnetFRyo_45lGM46s9x9UxN2iaNlK-0eBhv3eRsrmptOwnJuQVIbZCzQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 74,
     "rating": 4.6,
@@ -9418,9 +11614,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Santa María, 25903 Ramos Arizpe, Coahuila, Mexico",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Nova+Steel+%26+Coil+De+Mexico+Planta+2/@25.5816232,-100.9157022,14z/data=!4m8!1m2!2m1!1sNova+Steel+%26+Coil+De+Mexico+Planta+2!3m4!1s0x8688144afe26a8f5:0x3824925cf631c026!8m2!3d25.5816232!4d-100.9157022",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "india-packing-thiruvananthapuram-meadows",
@@ -9432,6 +11628,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Thiruvananthapuram, meadows",
     "phone": "+91 85473 21967",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgw4LZuQb_-93nYu4ocaM13A4gxzC51JplNF7DcEfb5srhmsC_dmCyNct9LwARLoSxL4acOyHQNMcxZif9cxWnkq0JkyWKLnzo88UsX4E9g4swRqZg3ARc4oHkVExPtYl318k=w800-h500-k-no",
+    "logoUrl": "https://lh3.googleusercontent.com/-RRd3N0Nf4Gw/AAAAAAAAAAI/AAAAAAAAAAA/j-ZMhJVc4Qw/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgw4LZuQb_-93nYu4ocaM13A4gxzC51JplNF7DcEfb5srhmsC_dmCyNct9LwARLoSxL4acOyHQNMcxZif9cxWnkq0JkyWKLnzo88UsX4E9g4swRqZg3ARc4oHkVExPtYl318k=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgw4LZuQb_-93nYu4ocaM13A4gxzC51JplNF7DcEfb5srhmsC_dmCyNct9LwARLoSxL4acOyHQNMcxZif9cxWnkq0JkyWKLnzo88UsX4E9g4swRqZg3ARc4oHkVExPtYl318k=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 28,
     "rating": 4.4,
@@ -9452,9 +11653,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Alathara Rd, Alathara, Aakkulam, Thiruvananthapuram, meadows, Kerala 695017, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/India+Packing/@8.5350909,76.9043445,14z/data=!4m8!1m2!2m1!1sIndia+Packing!3m4!1s0x3b05b9b82705a255:0xb0337bd4da007c2a!8m2!3d8.5350909!4d76.9043445",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "swanson-building-materials-inc-south-salt-lake",
@@ -9467,6 +11668,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://swanut.com/",
     "phone": "+1 801-973-2736",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF87LAq1yUCjF56WOnX15EmOo6ohcJVd2yn0kOF7dqgeCP1ePhT6PALT8qyW8PeuPDK4EwtLP0OjKQnF7z9rvLJU8TVhVLNGRZtaHQveS-uTgR-OE2HDbqeJZxvimAjSDQJlZgh=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF87LAq1yUCjF56WOnX15EmOo6ohcJVd2yn0kOF7dqgeCP1ePhT6PALT8qyW8PeuPDK4EwtLP0OjKQnF7z9rvLJU8TVhVLNGRZtaHQveS-uTgR-OE2HDbqeJZxvimAjSDQJlZgh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF87LAq1yUCjF56WOnX15EmOo6ohcJVd2yn0kOF7dqgeCP1ePhT6PALT8qyW8PeuPDK4EwtLP0OjKQnF7z9rvLJU8TVhVLNGRZtaHQveS-uTgR-OE2HDbqeJZxvimAjSDQJlZgh=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 131,
     "rating": 4.4,
@@ -9486,9 +11691,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "525 W 2890 S, South Salt Lake, UT 84115",
     "openingHours": "Friday: 7AM-4:30PM · Monday: 7AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4:30PM · Tuesday: 7AM-4:30PM · Wednesday: 7AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Swanson+Building+Materials+Inc/@40.708841299999996,-111.905093,14z/data=!4m8!1m2!2m1!1sSwanson+Building+Materials+Inc!3m4!1s0x87528b1e270643f7:0xadd14f53a1daff6d!8m2!3d40.708841299999996!4d-111.905093",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "national-building-material-supplier-new-delhi",
@@ -9500,6 +11705,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "New Delhi",
     "phone": "+91 98113 32541",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHw-zFW1VX-4yQ-bHlNA3k-k_Q76dt2LRdR_UQtDcjqMsD60cKZCJLWMefiXt7j8igZIghcjvnnwtpqESLlYp1UqJZDRI0ZPX74n5-ogMoii1piPpW9q-sY33_3P44m8SGOaVARQQ=w800-h500-k-no",
+    "logoUrl": "https://lh6.googleusercontent.com/-Q8VK92H4Emo/AAAAAAAAAAI/AAAAAAAAAAA/6kThboFGoFo/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHw-zFW1VX-4yQ-bHlNA3k-k_Q76dt2LRdR_UQtDcjqMsD60cKZCJLWMefiXt7j8igZIghcjvnnwtpqESLlYp1UqJZDRI0ZPX74n5-ogMoii1piPpW9q-sY33_3P44m8SGOaVARQQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHw-zFW1VX-4yQ-bHlNA3k-k_Q76dt2LRdR_UQtDcjqMsD60cKZCJLWMefiXt7j8igZIghcjvnnwtpqESLlYp1UqJZDRI0ZPX74n5-ogMoii1piPpW9q-sY33_3P44m8SGOaVARQQ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 25,
     "rating": 4.4,
@@ -9520,9 +11730,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Gali Number 18, G-block, Block G 2, Sangam Vihar, New Delhi, Delhi 110080, India",
     "openingHours": "Friday: 8AM-6:30PM · Monday: 8AM-6:30PM · Saturday: 8AM-6:30PM · Sunday: 8AM-6:30PM · Thursday: 8AM-6:30PM · Tuesday: Closed · Wednesday: 8AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/National+Building+Material+Supplier/@28.499529199999998,77.24788989999999,14z/data=!4m8!1m2!2m1!1sNational+Building+Material+Supplier!3m4!1s0x390ce1072d03925f:0x58b36cd32ee24f37!8m2!3d28.499529199999998!4d77.24788989999999",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "al-hashemiah-contracting-co-l-l-c-hatco-riyadh",
@@ -9534,6 +11744,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Riyadh",
     "phone": "+966 11 464 7419",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF4M084tlU9lMSQXV3UVMKREc2aLIYxtEuogQrWnPLnqsvrHu-R-_yyrVQTBWx_0LKbaTu7mg-ne7fjTaVcFVcCWMPcGWqtd3K681zrZ1wsQbtIoBi1UrVl4hpYhZ2PvxcviOZd7FI07hQl=w800-h500-k-no",
+    "logoUrl": "https://lh4.googleusercontent.com/-DiIngBJK1gs/AAAAAAAAAAI/AAAAAAAAAAA/hFy68wZGJ8o/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF4M084tlU9lMSQXV3UVMKREc2aLIYxtEuogQrWnPLnqsvrHu-R-_yyrVQTBWx_0LKbaTu7mg-ne7fjTaVcFVcCWMPcGWqtd3K681zrZ1wsQbtIoBi1UrVl4hpYhZ2PvxcviOZd7FI07hQl=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF4M084tlU9lMSQXV3UVMKREc2aLIYxtEuogQrWnPLnqsvrHu-R-_yyrVQTBWx_0LKbaTu7mg-ne7fjTaVcFVcCWMPcGWqtd3K681zrZ1wsQbtIoBi1UrVl4hpYhZ2PvxcviOZd7FI07hQl=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 117,
     "rating": 4.3,
@@ -9553,9 +11768,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "7759 Prince Abdulaziz Ibn Musaid Ibn Jalawi St, 2180, As Sulimaniyah, Riyadh 12621, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: 8AM-5PM · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Hashemiah+Contracting+Co.+L.L.C+%28HATCO%29/@24.6807767,46.7013215,14z/data=!4m8!1m2!2m1!1sAl+Hashemiah+Contracting+Co.+L.L.C+%28HATCO%29!3m4!1s0x3e2f037cf19fef4b:0x34a4bd006b2f3e6c!8m2!3d24.6807767!4d46.7013215",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "materiales-de-construccion-barcelona-siesmo-s-l-barcelona",
@@ -9568,6 +11783,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://materialesdeconstruccionbarcelona.com/",
     "phone": "+34 932 03 69 16",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoqDjgeyucsEtgUdD8BvzUCq3Ex25p5gHFwENi7ADLhYA661VGzifZS2wHXcgiCF3_GPLs0if4Kg_TnpY3u_XPhEG2McqzWhhpmUEYvq8XpCu8AHFRLpjz4aBAwPwpXQAXk_Hg=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoqDjgeyucsEtgUdD8BvzUCq3Ex25p5gHFwENi7ADLhYA661VGzifZS2wHXcgiCF3_GPLs0if4Kg_TnpY3u_XPhEG2McqzWhhpmUEYvq8XpCu8AHFRLpjz4aBAwPwpXQAXk_Hg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGoqDjgeyucsEtgUdD8BvzUCq3Ex25p5gHFwENi7ADLhYA661VGzifZS2wHXcgiCF3_GPLs0if4Kg_TnpY3u_XPhEG2McqzWhhpmUEYvq8XpCu8AHFRLpjz4aBAwPwpXQAXk_Hg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 160,
     "rating": 4.3,
@@ -9587,9 +11806,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carrer del Pedró de la Creu, 37, Sarrià-Sant Gervasi, 08034 Barcelona, Spain",
     "openingHours": "Friday: 7:30AM-1:30PM,2:30-6PM · Monday: 7:30AM-1:30PM,2:30-6PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,2:30-6PM · Tuesday: 7:30AM-1:30PM,2:30-6PM · Wednesday: 7:30AM-1:30PM,2:30",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+de+construcci%C3%B3n+Barcelona+%7C+Siesmo+S.L./@41.3974858,2.1218597999999997,14z/data=!4m8!1m2!2m1!1sMateriales+de+construcci%C3%B3n+Barcelona+%7C+Siesmo+S.L.!3m4!1s0x12a49841699e84bf:0xfcbe7ce6eac79fa2!8m2!3d41.3974858!4d2.1218597999999997",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "aridos-matersan-s-l-san-miguel-de-salinas",
@@ -9602,6 +11821,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://matersan.es/",
     "phone": "+34 966 72 35 69",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmUE4KEzLFR5cvh8K1s3mmU4Qzj7AcgtfO0CMpDRDianPxepOKGGPQ996gcpyppZeuaoSqg-u2oiWaf6jzQ9LEsTXPLbkThHeZu1XpBVvFsVXlbwccyo7-we4tnW8iHNNxmlBq=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmUE4KEzLFR5cvh8K1s3mmU4Qzj7AcgtfO0CMpDRDianPxepOKGGPQ996gcpyppZeuaoSqg-u2oiWaf6jzQ9LEsTXPLbkThHeZu1XpBVvFsVXlbwccyo7-we4tnW8iHNNxmlBq=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFmUE4KEzLFR5cvh8K1s3mmU4Qzj7AcgtfO0CMpDRDianPxepOKGGPQ996gcpyppZeuaoSqg-u2oiWaf6jzQ9LEsTXPLbkThHeZu1XpBVvFsVXlbwccyo7-we4tnW8iHNNxmlBq=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 65,
     "rating": 4.7,
@@ -9621,9 +11844,47 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Carretera Montesinos, 139 Parc 0, 03193 San Miguel de Salinas, Alicante, Spain",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-1PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/%C3%81ridos+Matersan+S.L/@37.9983636,-0.7778859,14z/data=!4m8!1m2!2m1!1s%C3%81ridos+Matersan+S.L!3m4!1s0xd6309d9d9eba84d:0x39a6b8317d5cb6f8!8m2!3d37.9983636!4d-0.7778859",
-    "score": 74,
+    "score": 80,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "fleischer-tube-distributors-corporation-bay-shore",
+    "name": "Fleischer Tube Distributors Corporation",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "location": "Bay Shore, United States",
+    "country": "United States",
+    "city": "Bay Shore",
+    "website": "http://fleischertube.com/",
+    "phone": "+1 631-968-8822",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGge8jApHyKPJY8QzVjBpuBm7kJP_eYXXu9aeFp71RVTXlNhB374g-ePdH0DZr5Achu7nI5l1J8whgRv5xWUB7H2lUbGKQK57esb3VahGZlfytsSWJ1bQ1MyyOdQgeVZHZtFJ_IbQ=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGge8jApHyKPJY8QzVjBpuBm7kJP_eYXXu9aeFp71RVTXlNhB374g-ePdH0DZr5Achu7nI5l1J8whgRv5xWUB7H2lUbGKQK57esb3VahGZlfytsSWJ1bQ1MyyOdQgeVZHZtFJ_IbQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGge8jApHyKPJY8QzVjBpuBm7kJP_eYXXu9aeFp71RVTXlNhB374g-ePdH0DZr5Achu7nI5l1J8whgRv5xWUB7H2lUbGKQK57esb3VahGZlfytsSWJ1bQ1MyyOdQgeVZHZtFJ_IbQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.9,
+    "googleReviews": 32,
+    "rating": 4.9,
+    "reviewCount": 32,
+    "verified": false,
+    "description": "Tubes & Pipes supplier in Bay Shore, United States.",
+    "products": [
+      "Steel pipes",
+      "Welded tubes",
+      "Pipe fittings"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "2 tons",
+    "address": "71 Saxon Ave, Bay Shore, NY 11706",
+    "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/Fleischer+Tube+Distributors+Corporation/@40.733423699999996,-73.2292841,14z/data=!4m8!1m2!2m1!1sFleischer+Tube+Distributors+Corporation!3m4!1s0x89e833ad4dae932d:0x336142a73d6f156d!8m2!3d40.733423699999996!4d-73.2292841",
+    "score": 80,
+    "reliabilityScore": 98,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tst-manufacturing-de-mexico-s-de-r-l-de-c-v-irapuato",
@@ -9636,6 +11897,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.tstech.co.jp/english/company/networkfc/tst_manufacturing_de_mexico_s_de_rl_de_cv.html",
     "phone": "+52 462 478 3500",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDDyvcxJhuwtG9Z3eIRJmV6JpRfHk1R28MYLv7H4U5rt9giTXJtoX_DTHVxPsDcJzpDjhZqcY3G4UStO9N2g-wu3p7UlRNkeWZ1lEPtITN1lYe0cB_rEbfrXXA0F6nTLx7IZdh=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDDyvcxJhuwtG9Z3eIRJmV6JpRfHk1R28MYLv7H4U5rt9giTXJtoX_DTHVxPsDcJzpDjhZqcY3G4UStO9N2g-wu3p7UlRNkeWZ1lEPtITN1lYe0cB_rEbfrXXA0F6nTLx7IZdh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDDyvcxJhuwtG9Z3eIRJmV6JpRfHk1R28MYLv7H4U5rt9giTXJtoX_DTHVxPsDcJzpDjhZqcY3G4UStO9N2g-wu3p7UlRNkeWZ1lEPtITN1lYe0cB_rEbfrXXA0F6nTLx7IZdh=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 168,
     "rating": 4.2,
@@ -9655,9 +11920,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Rio Ota No.978 Parque Tecnoindustrial Castro 36815, Del Río, Irapuato, Gto., Mexico",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/TST+Manufacturing+de+Mexico%2C+S.+de+R.L.+de+C.V./@20.7749691,-101.3550491,14z/data=!4m8!1m2!2m1!1sTST+Manufacturing+de+Mexico%2C+S.+de+R.L.+de+C.V.!3m4!1s0x842b81c5521a7719:0x28aefd532954dcf6!8m2!3d20.7749691!4d-101.3550491",
-    "score": 73,
+    "score": 79,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "mino-industry-mexico-s-a-de-c-v-leon",
@@ -9670,6 +11935,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://mino-in.mx/",
     "phone": "+52 477 390 9988",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoU41WIv2sibJGYpgQokBikMTp4SQDn7HVbKH9IEXiE0j3HAuAfOa9w2lGLpK4KTC2M4D5ZjYymRlgaq0SglrG4izD26ypBInHg8E4Cy_trrqmR30b7DKuxVc6bZg0x2be0B6j0w=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoU41WIv2sibJGYpgQokBikMTp4SQDn7HVbKH9IEXiE0j3HAuAfOa9w2lGLpK4KTC2M4D5ZjYymRlgaq0SglrG4izD26ypBInHg8E4Cy_trrqmR30b7DKuxVc6bZg0x2be0B6j0w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoU41WIv2sibJGYpgQokBikMTp4SQDn7HVbKH9IEXiE0j3HAuAfOa9w2lGLpK4KTC2M4D5ZjYymRlgaq0SglrG4izD26ypBInHg8E4Cy_trrqmR30b7DKuxVc6bZg0x2be0B6j0w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 40,
     "rating": 4.7,
@@ -9689,9 +11958,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Paseo de Las Colinas #172 Parque Industrial de, 37430 León de los Aldama, Gto., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MINO+INDUSTRY+MEXICO+S.A.+DE+C.V/@21.101632,-101.76399239999999,14z/data=!4m8!1m2!2m1!1sMINO+INDUSTRY+MEXICO+S.A.+DE+C.V!3m4!1s0x842bbf731c70fdb1:0xee2fe31f506a7ba3!8m2!3d21.101632!4d-101.76399239999999",
-    "score": 73,
+    "score": 79,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "specialty-pipe-tube-inc-mineral-ridge",
@@ -9704,6 +11973,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.specialtypipe.com/",
     "phone": "+1 330-505-8262",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqHaZ7v-ovX0GWLkJHwDv46HT8c8SC3xfNkx5KE7V3qVAF5xtDS1mg9tbLH-d4JVtYlD1l1AGd4lhlx8UtupekxxMpit7u8bzt9PG6n6DqamPYCLE9IVxWWjKjhQoW_vKzR2Zx=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqHaZ7v-ovX0GWLkJHwDv46HT8c8SC3xfNkx5KE7V3qVAF5xtDS1mg9tbLH-d4JVtYlD1l1AGd4lhlx8UtupekxxMpit7u8bzt9PG6n6DqamPYCLE9IVxWWjKjhQoW_vKzR2Zx=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqHaZ7v-ovX0GWLkJHwDv46HT8c8SC3xfNkx5KE7V3qVAF5xtDS1mg9tbLH-d4JVtYlD1l1AGd4lhlx8UtupekxxMpit7u8bzt9PG6n6DqamPYCLE9IVxWWjKjhQoW_vKzR2Zx=w1600-h1000-k-no"
+    ],
     "googleRating": 4.8,
     "googleReviews": 22,
     "rating": 4.8,
@@ -9723,9 +11996,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3600 Union St, Mineral Ridge, OH 44440",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Specialty+Pipe+%26+Tube+Inc/@41.1449882,-80.7745458,14z/data=!4m8!1m2!2m1!1sSpecialty+Pipe+%26+Tube+Inc!3m4!1s0x8833e22edb2dbc67:0x391836537e7bf082!8m2!3d41.1449882!4d-80.7745458",
-    "score": 72,
+    "score": 78,
     "reliabilityScore": 96,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sanoh-industrial-de-mexico-parque-industrial-del-valle-de-ag",
@@ -9738,6 +12011,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.sanoh.com.mx/",
     "phone": "+52 449 910 9660",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYLXP8VrmtbgRNDPfcqiZ02ELKqomMmUcLAKdV8KR-2gqcPzyTQMF7lKe1L-OGQ7KFpvJ84ixf7Avgnh2bw-buBLHw3Lra8m5XXrHYKbiaBpFui48yVfeQ7Y_48S9A0rG0n32j0w=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYLXP8VrmtbgRNDPfcqiZ02ELKqomMmUcLAKdV8KR-2gqcPzyTQMF7lKe1L-OGQ7KFpvJ84ixf7Avgnh2bw-buBLHw3Lra8m5XXrHYKbiaBpFui48yVfeQ7Y_48S9A0rG0n32j0w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYLXP8VrmtbgRNDPfcqiZ02ELKqomMmUcLAKdV8KR-2gqcPzyTQMF7lKe1L-OGQ7KFpvJ84ixf7Avgnh2bw-buBLHw3Lra8m5XXrHYKbiaBpFui48yVfeQ7Y_48S9A0rG0n32j0w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 38,
     "rating": 4.6,
@@ -9757,9 +12034,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Cto Aguascalientes Oriente, No. 130 Ags., Mexico",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sanoh+Industrial+de+M%C3%A9xico/@21.9654019,-102.2802177,14z/data=!4m8!1m2!2m1!1sSanoh+Industrial+de+M%C3%A9xico!3m4!1s0x8429ef8a81bc925f:0xd5374ffc00ef76bc!8m2!3d21.9654019!4d-102.2802177",
-    "score": 72,
+    "score": 78,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "us-pipe-mexico-pesqueria",
@@ -9772,6 +12049,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.metalfit.com/",
     "phone": "+52 825 243 7100",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbN3vC2qU7SVxHBqSalrdwOfZpqsFh0GCqq0ZbxbeAsrba_625va1bsHeMw9MdjyMbt7kQ5czeoJr87A6UKxBRXJNAGGWcfjaNLsB40TjbBkmhFXEW8OBa-5B8OnPQFth8uCsh=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbN3vC2qU7SVxHBqSalrdwOfZpqsFh0GCqq0ZbxbeAsrba_625va1bsHeMw9MdjyMbt7kQ5czeoJr87A6UKxBRXJNAGGWcfjaNLsB40TjbBkmhFXEW8OBa-5B8OnPQFth8uCsh=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbN3vC2qU7SVxHBqSalrdwOfZpqsFh0GCqq0ZbxbeAsrba_625va1bsHeMw9MdjyMbt7kQ5czeoJr87A6UKxBRXJNAGGWcfjaNLsB40TjbBkmhFXEW8OBa-5B8OnPQFth8uCsh=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 69,
     "rating": 4.3,
@@ -9790,9 +12071,9 @@ export const outscraperSuppliers: Supplier[] =
     "moq": "2 tons",
     "address": "Carretera A Supermanzana Km 3, 66654 Pesquería, N.L., Mexico",
     "sourceUrl": "https://www.google.com/maps/place/US+Pipe+M%C3%A9xico/@25.7923454,-100.07434149999999,14z/data=!4m8!1m2!2m1!1sUS+Pipe+M%C3%A9xico!3m4!1s0x8662e5fbfb236113:0xf5e2fbe0da061476!8m2!3d25.7923454!4d-100.07434149999999",
-    "score": 71,
+    "score": 77,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "empaque-y-derivados-de-mexico-s-a-de-c-v-miguel-hidalgo-mexi",
@@ -9805,6 +12086,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.edm.com.mx/",
     "phone": "+52 55 5203 7090",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIZ-0x09pVU0oigA_zqKM6BiXXkZvix63tEcnHfLRIpOlHxyAmFWpxahrUhB6PLDVoQpUUpU9FGFZmW4pfOwN6U7vr7ypSxw1ZTOj--DF5vnu-Tu5uu9jWhGjS-LXmQIjTxv6zmg=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIZ-0x09pVU0oigA_zqKM6BiXXkZvix63tEcnHfLRIpOlHxyAmFWpxahrUhB6PLDVoQpUUpU9FGFZmW4pfOwN6U7vr7ypSxw1ZTOj--DF5vnu-Tu5uu9jWhGjS-LXmQIjTxv6zmg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFIZ-0x09pVU0oigA_zqKM6BiXXkZvix63tEcnHfLRIpOlHxyAmFWpxahrUhB6PLDVoQpUUpU9FGFZmW4pfOwN6U7vr7ypSxw1ZTOj--DF5vnu-Tu5uu9jWhGjS-LXmQIjTxv6zmg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.7,
     "googleReviews": 21,
     "rating": 4.7,
@@ -9824,9 +12109,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Lago Malar 27, Cuauhtémoc Pensil, Miguel Hidalgo, 11490 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Empaque+y+Derivados+de+M%C3%A9xico+S.A.+de+C.V./@19.4440833,-99.1930029,14z/data=!4m8!1m2!2m1!1sEmpaque+y+Derivados+de+M%C3%A9xico+S.A.+de+C.V.!3m4!1s0x85d20208f6a52d79:0x1ce31b0f0ffabda0!8m2!3d19.4440833!4d-99.1930029",
-    "score": 71,
+    "score": 77,
     "reliabilityScore": 94,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "pacific-coast-supply-salt-lake-city",
@@ -9839,6 +12124,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://paccoastsupply.com/our-companies",
     "phone": "+1 801-484-6136",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0HCKAUuEIYVywvNawa25MVGtE0TOM1SlvoK4JuzGH8xIkOW1aZEO67s1VaWUgBviCZcHwsl5Y4g2AAKIq4fL95V_WNUKDy7SejfLj0zUzdX9WCWiLEAH9nt0Ohipvai1VboVJ=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0HCKAUuEIYVywvNawa25MVGtE0TOM1SlvoK4JuzGH8xIkOW1aZEO67s1VaWUgBviCZcHwsl5Y4g2AAKIq4fL95V_WNUKDy7SejfLj0zUzdX9WCWiLEAH9nt0Ohipvai1VboVJ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0HCKAUuEIYVywvNawa25MVGtE0TOM1SlvoK4JuzGH8xIkOW1aZEO67s1VaWUgBviCZcHwsl5Y4g2AAKIq4fL95V_WNUKDy7SejfLj0zUzdX9WCWiLEAH9nt0Ohipvai1VboVJ=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 36,
     "rating": 4.5,
@@ -9858,9 +12147,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2875 S 300 W, Salt Lake City, UT 84115",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Pacific+Coast+Supply/@40.7090779,-111.8993199,14z/data=!4m8!1m2!2m1!1sPacific+Coast+Supply!3m4!1s0x87528ae6b3b8d1bd:0xe172a42628c0d6ab!8m2!3d40.7090779!4d-111.8993199",
-    "score": 71,
+    "score": 77,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "riyadh-tools-trading-est-riyadh",
@@ -9872,6 +12161,11 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Riyadh",
     "phone": "+966 50 901 6582",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMxj_bEeDcvVUneAw9qC1VIPxo44HJn__Mdzg_H2Gf6v2DB5XGR2VkZOROQiqWdlLxFGIt8EvPMm6hZNvbVs2ulWfc-fsPE5BD2FV4m0z_dT3wr1McCoUWNbeo51izE2ygPazhTg=w800-h500-k-no",
+    "logoUrl": "https://lh5.googleusercontent.com/-KwSDox5a3xw/AAAAAAAAAAI/AAAAAAAAAAA/c5nu9VI2k6o/s44-p-k-no-ns-nd/photo.jpg",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMxj_bEeDcvVUneAw9qC1VIPxo44HJn__Mdzg_H2Gf6v2DB5XGR2VkZOROQiqWdlLxFGIt8EvPMm6hZNvbVs2ulWfc-fsPE5BD2FV4m0z_dT3wr1McCoUWNbeo51izE2ygPazhTg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMxj_bEeDcvVUneAw9qC1VIPxo44HJn__Mdzg_H2Gf6v2DB5XGR2VkZOROQiqWdlLxFGIt8EvPMm6hZNvbVs2ulWfc-fsPE5BD2FV4m0z_dT3wr1McCoUWNbeo51izE2ygPazhTg=w1600-h1000-k-no"
+    ],
     "googleRating": 4.6,
     "googleReviews": 21,
     "rating": 4.6,
@@ -9891,9 +12185,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "3151 9256 Al Amir Salman Ibn Abdul Aziz Rd, Al Faisaliyyah, Riyadh 12881, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7:30AM-12:30PM,3:30-8PM · Saturday: 7:30AM-12:30PM,3:30-8PM · Sunday: 7:30AM-12:30PM,3:30-8PM · Thursday: 7:30AM-12:30PM,3:30-8PM · Tuesday: 7:30AM-12:30PM,3:30-8PM · Wednesda",
     "sourceUrl": "https://www.google.com/maps/place/RIYADH+TOOLS+TRADING+EST./@24.6447272,46.771527,14z/data=!4m8!1m2!2m1!1sRIYADH+TOOLS+TRADING+EST.!3m4!1s0x3e2f079d90e5b55b:0x3a0ff96dbf1877d3!8m2!3d24.6447272!4d46.771527",
-    "score": 71,
+    "score": 77,
     "reliabilityScore": 92,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "usui-international-manufacturing-mexico-puerto-interior",
@@ -9906,6 +12200,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.usui.co.jp/",
     "phone": "+52 472 103 9600",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFN84V7lFpSMaDuC9ipibrjvRPrTkluJz3gRoW4-JIGh_oKOFoX9m-dM-rDaemUEI6Tj_m-fQ5CBIexJvHH5PgGGZRYZCtTyVb8ScrfZtHTrc8O-VHL41h3m9g3CFnfEhkBD4dVKA=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFN84V7lFpSMaDuC9ipibrjvRPrTkluJz3gRoW4-JIGh_oKOFoX9m-dM-rDaemUEI6Tj_m-fQ5CBIexJvHH5PgGGZRYZCtTyVb8ScrfZtHTrc8O-VHL41h3m9g3CFnfEhkBD4dVKA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFN84V7lFpSMaDuC9ipibrjvRPrTkluJz3gRoW4-JIGh_oKOFoX9m-dM-rDaemUEI6Tj_m-fQ5CBIexJvHH5PgGGZRYZCtTyVb8ScrfZtHTrc8O-VHL41h3m9g3CFnfEhkBD4dVKA=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 92,
     "rating": 4.2,
@@ -9925,9 +12223,47 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Ave, Blvd. Mineral de Peñafiel No 111, Gto., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Usui+International+Manufacturing+Mexico/@21.0024746,-101.47119629999999,14z/data=!4m8!1m2!2m1!1sUsui+International+Manufacturing+Mexico!3m4!1s0x842b99707bf9c96d:0x4b905fe5778cd958!8m2!3d21.0024746!4d-101.47119629999999",
-    "score": 71,
+    "score": 77,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "sonoco-consumer-products-europe-gmbh-hockenheim",
+    "name": "Sonoco Consumer Products Europe GmbH",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "location": "Hockenheim, Germany",
+    "country": "Germany",
+    "city": "Hockenheim",
+    "website": "https://www.sonocoeurope.com/",
+    "phone": "+49 6205 2030",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAEyha1QqZwEjvuaZEsxtbyoH7oBzfDyjFZIekNYoncvmHRkRrjijj1YrbpO1DQKfn6lY354Z5PdoBRjfSZCEEILLU2hlbiYzqT13BvE78iFEYUZD7Cmg9ShA33uj-Z2KHF4fK=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAEyha1QqZwEjvuaZEsxtbyoH7oBzfDyjFZIekNYoncvmHRkRrjijj1YrbpO1DQKfn6lY354Z5PdoBRjfSZCEEILLU2hlbiYzqT13BvE78iFEYUZD7Cmg9ShA33uj-Z2KHF4fK=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFAEyha1QqZwEjvuaZEsxtbyoH7oBzfDyjFZIekNYoncvmHRkRrjijj1YrbpO1DQKfn6lY354Z5PdoBRjfSZCEEILLU2hlbiYzqT13BvE78iFEYUZD7Cmg9ShA33uj-Z2KHF4fK=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.4,
+    "googleReviews": 56,
+    "rating": 4.4,
+    "reviewCount": 56,
+    "verified": false,
+    "description": "Packaging supplier in Hockenheim, Germany.",
+    "products": [
+      "Corrugated boxes",
+      "Stretch film",
+      "Custom cartons"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "2,000 units",
+    "address": "1. Industriestraße 26, 68766 Hockenheim, Germany",
+    "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
+    "sourceUrl": "https://www.google.com/maps/place/Sonoco+Consumer+Products+Europe+GmbH/@49.34433,8.542819999999999,14z/data=!4m8!1m2!2m1!1sSonoco+Consumer+Products+Europe+GmbH!3m4!1s0x4797b828af996103:0xdce9b5204dd1c1e0!8m2!3d49.34433!4d8.542819999999999",
+    "score": 77,
+    "reliabilityScore": 88,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "sharjah-steel-pipe-manufacturing-co-l-l-c-ae",
@@ -9940,6 +12276,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.shjsteelpipe.ae/",
     "phone": "+971 6 531 1671",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqrXaZthbSy2P-j-3s7d53i3QGew3dPlhXTlMk2Na2cnh8cgFeEL8Tw4mQ4_fkPdrcb9J5zfcOzkcjfhsQmX1zmnlGDsVVGsoLuASWTDsH33aInNWKxeB4LDPUI5O6PMG1u8qK=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqrXaZthbSy2P-j-3s7d53i3QGew3dPlhXTlMk2Na2cnh8cgFeEL8Tw4mQ4_fkPdrcb9J5zfcOzkcjfhsQmX1zmnlGDsVVGsoLuASWTDsH33aInNWKxeB4LDPUI5O6PMG1u8qK=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqrXaZthbSy2P-j-3s7d53i3QGew3dPlhXTlMk2Na2cnh8cgFeEL8Tw4mQ4_fkPdrcb9J5zfcOzkcjfhsQmX1zmnlGDsVVGsoLuASWTDsH33aInNWKxeB4LDPUI5O6PMG1u8qK=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 55,
     "rating": 4.1,
@@ -9959,9 +12299,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8J22+H5G - E88 - Al Sajaa - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sharjah+Steel+Pipe+Manufacturing+Co+L.L.C/@25.3014445,55.600457299999995,14z/data=!4m8!1m2!2m1!1sSharjah+Steel+Pipe+Manufacturing+Co+L.L.C!3m4!1s0x3ef5f34058af5a3b:0x17fa5f99f7d0a14e!8m2!3d25.3014445!4d55.600457299999995",
-    "score": 69,
+    "score": 75,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "groupe-intersig-maroc-et-karkachi-fath-casablanca",
@@ -9974,6 +12314,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.intersigmaroc.com/",
     "phone": "+212 5 22 65 09 78",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTPugnLe0hTXVl5QuUCTzk0LqxZ8g8vk-VXaXJiooyws7LoWFkm1UzAVR1X8MeHFOiiljw62pwrpaeWvvEjZ5Fi34eo6Hd5xbzJ_o9Gzop3poJUqZKzKEkeoNgJ0ThU5m4mc_V=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTPugnLe0hTXVl5QuUCTzk0LqxZ8g8vk-VXaXJiooyws7LoWFkm1UzAVR1X8MeHFOiiljw62pwrpaeWvvEjZ5Fi34eo6Hd5xbzJ_o9Gzop3poJUqZKzKEkeoNgJ0ThU5m4mc_V=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTPugnLe0hTXVl5QuUCTzk0LqxZ8g8vk-VXaXJiooyws7LoWFkm1UzAVR1X8MeHFOiiljw62pwrpaeWvvEjZ5Fi34eo6Hd5xbzJ_o9Gzop3poJUqZKzKEkeoNgJ0ThU5m4mc_V=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 24,
     "rating": 4.4,
@@ -9993,9 +12337,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "RTE d'El Jadida, km d'El Jadida, km 8, route d'El Jadida,، 20190,,, Rue 8 Lotissement Zoubir, Casablanca 20260, Morocco",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/GROUPE+INTERSIG+MAROC+ET+KARKACHI+%26+FATH/@33.524922,-7.684811,14z/data=!4m8!1m2!2m1!1sGROUPE+INTERSIG+MAROC+ET+KARKACHI+%26+FATH!3m4!1s0xda62c902c89c969:0xb21ad68eb0fb730c!8m2!3d33.524922!4d-7.684811",
-    "score": 69,
+    "score": 75,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "ppm-industries-de-mexico-s-a-de-c-v-san-luis-potosi",
@@ -10008,6 +12352,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.ppmsolution.com/",
     "phone": "+52 444 454 3000",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUDlup8X-PIkt4Hp-4ItJvwrCCfHw-47BWKP_Li0AuDuUb3MNKnS-h4cmsaHnGMo-01D70umuegiUvlTOsXQtkaYdUH4WGOLwKTai7DKgkYQi4VpZ3UA3LNadjDu6TApqLk7sW=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUDlup8X-PIkt4Hp-4ItJvwrCCfHw-47BWKP_Li0AuDuUb3MNKnS-h4cmsaHnGMo-01D70umuegiUvlTOsXQtkaYdUH4WGOLwKTai7DKgkYQi4VpZ3UA3LNadjDu6TApqLk7sW=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEUDlup8X-PIkt4Hp-4ItJvwrCCfHw-47BWKP_Li0AuDuUb3MNKnS-h4cmsaHnGMo-01D70umuegiUvlTOsXQtkaYdUH4WGOLwKTai7DKgkYQi4VpZ3UA3LNadjDu6TApqLk7sW=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 41,
     "rating": 4.2,
@@ -10027,9 +12375,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Calle Uno #270 Paque Industrial Millennium, San Luis Potosí, S.L.P., Mexico",
     "openingHours": "Friday: 6AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PPM+Industries+de+Mexico+S.A.+de+C.V./@22.057088,-100.8829226,14z/data=!4m8!1m2!2m1!1sPPM+Industries+de+Mexico+S.A.+de+C.V.!3m4!1s0x842abb511405d34b:0x721089c408ae2862!8m2!3d22.057088!4d-100.8829226",
-    "score": 69,
+    "score": 75,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "kus-autopartes-de-mexico-s-de-rl-de-cv-general-escobedo",
@@ -10042,6 +12390,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://kusauto.com/",
     "phone": "+52 81 8024 9685",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCOMUoZ4-E-kjls2sQgH0IITfXAtOifBPrOPjmGV9wtMPY8eZV-u6F3_nvJWkpr2q9barmrr4EIgHavhFsz7Y-c4CCbMRQLBW1ykGWMbdBre4qkxXbYKWLhBL_B60L_61v8BlRRLhjZ9r3=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCOMUoZ4-E-kjls2sQgH0IITfXAtOifBPrOPjmGV9wtMPY8eZV-u6F3_nvJWkpr2q9barmrr4EIgHavhFsz7Y-c4CCbMRQLBW1ykGWMbdBre4qkxXbYKWLhBL_B60L_61v8BlRRLhjZ9r3=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCOMUoZ4-E-kjls2sQgH0IITfXAtOifBPrOPjmGV9wtMPY8eZV-u6F3_nvJWkpr2q9barmrr4EIgHavhFsz7Y-c4CCbMRQLBW1ykGWMbdBre4qkxXbYKWLhBL_B60L_61v8BlRRLhjZ9r3=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 39,
     "rating": 4.3,
@@ -10061,9 +12413,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Av. Nexxus 136, PARQUE INDUSTRIAL, 66055 Cdad. Gral. Escobedo, N.L., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Kus+autopartes+de+Mexico+S+DE+RL+DE+CV/@25.7713879,-100.306784,14z/data=!4m8!1m2!2m1!1sKus+autopartes+de+Mexico+S+DE+RL+DE+CV!3m4!1s0x8662937aa9e43aa3:0x67a8a2f2fa3fa3a7!8m2!3d25.7713879!4d-100.306784",
-    "score": 69,
+    "score": 75,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "national-cables-industry-ae",
@@ -10076,6 +12428,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://nci.ae/",
     "phone": "+971 6 531 1888",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBBsdp8w0TJbDZamU7FIoGfubArGC0Bi3RckkwSn_7apoPJ9kXuxmd1zYVry6eyoOXc6baShVvQkLEFxTfUXfOQfzb6o5UbgZxyO9pz5sCM3U2xtAsR4ijXM_4YaJJ1R1Py2nz=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBBsdp8w0TJbDZamU7FIoGfubArGC0Bi3RckkwSn_7apoPJ9kXuxmd1zYVry6eyoOXc6baShVvQkLEFxTfUXfOQfzb6o5UbgZxyO9pz5sCM3U2xtAsR4ijXM_4YaJJ1R1Py2nz=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBBsdp8w0TJbDZamU7FIoGfubArGC0Bi3RckkwSn_7apoPJ9kXuxmd1zYVry6eyoOXc6baShVvQkLEFxTfUXfOQfzb6o5UbgZxyO9pz5sCM3U2xtAsR4ijXM_4YaJJ1R1Py2nz=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 45,
     "rating": 4.1,
@@ -10095,9 +12451,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "8J24+45Q - Al Sajaa - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/National+Cables+Industry/@25.300344,55.605485099999996,14z/data=!4m8!1m2!2m1!1sNational+Cables+Industry!3m4!1s0x3ef5f33ed5df3ead:0x134e88c75069e03b!8m2!3d25.300344!4d55.605485099999996",
-    "score": 68,
+    "score": 74,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "unicorr-packaging-group-north-haven",
@@ -10110,6 +12466,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://unicorr.com/",
     "phone": "+1 203-248-2161",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENoJMmzIC8kYnFduTGm5jg32fEl530ce5x-hiEEFpz4zgprfv31JL3iVBmoiYImlA-q2J6sRvf1zb89Pc59JVnocFbHRgHv53vXFTWMywfmUh_0yLkXaH8bvmicNva1-0uaDrW=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENoJMmzIC8kYnFduTGm5jg32fEl530ce5x-hiEEFpz4zgprfv31JL3iVBmoiYImlA-q2J6sRvf1zb89Pc59JVnocFbHRgHv53vXFTWMywfmUh_0yLkXaH8bvmicNva1-0uaDrW=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENoJMmzIC8kYnFduTGm5jg32fEl530ce5x-hiEEFpz4zgprfv31JL3iVBmoiYImlA-q2J6sRvf1zb89Pc59JVnocFbHRgHv53vXFTWMywfmUh_0yLkXaH8bvmicNva1-0uaDrW=w1600-h1000-k-no"
+    ],
     "googleRating": 4.1,
     "googleReviews": 36,
     "rating": 4.1,
@@ -10129,9 +12489,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "455 Sackett Point Rd, North Haven, CT 06473",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Unicorr+Packaging+Group/@41.3681152,-72.8849625,14z/data=!4m8!1m2!2m1!1sUnicorr+Packaging+Group!3m4!1s0x89e7d08e25ffec71:0x7f912abc57396dc1!8m2!3d41.3681152!4d-72.8849625",
-    "score": 68,
+    "score": 74,
     "reliabilityScore": 82,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "yokohama-industries-americas-de-mexico-parque-industrial-san",
@@ -10144,6 +12504,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "http://www.yokohamaia.com/",
     "phone": "+52 449 929 9020",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuPCgctHD3k5NKWMxF_oQl8cXbg2exQF8cuUrneo5TtG6WSdxw3eLZYme0LZqqloDj99iVQdbVqwn0xlxbrkfLt667qJG7t-5GjCx_pQ8lvcV6CTSAy0qg64ZJ_7j9azq216w=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuPCgctHD3k5NKWMxF_oQl8cXbg2exQF8cuUrneo5TtG6WSdxw3eLZYme0LZqqloDj99iVQdbVqwn0xlxbrkfLt667qJG7t-5GjCx_pQ8lvcV6CTSAy0qg64ZJ_7j9azq216w=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuPCgctHD3k5NKWMxF_oQl8cXbg2exQF8cuUrneo5TtG6WSdxw3eLZYme0LZqqloDj99iVQdbVqwn0xlxbrkfLt667qJG7t-5GjCx_pQ8lvcV6CTSAy0qg64ZJ_7j9azq216w=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 33,
     "rating": 4.2,
@@ -10163,9 +12527,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Parque Industrial, Circuito Cerezos Oriente #101, San Francisco IV, 20355 Ags., Mexico",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Yokohama+industries+Americas+de+Mexico/@22.0390207,-102.281036,14z/data=!4m8!1m2!2m1!1sYokohama+industries+Americas+de+Mexico!3m4!1s0x8429e49443222457:0xcffd3ba42b5e192b!8m2!3d22.0390207!4d-102.281036",
-    "score": 68,
+    "score": 74,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "boge-rubber-plastics-mexico-s-a-de-c-v-pozos",
@@ -10178,6 +12542,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.boge-rubber-plastics.com/",
     "phone": "+52 444 474 6174",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHGxB4klr-GjmTwFcKhokvToqFJfb09PZAXfn4UbTAn7TVqbp44lu6vlpVQl9R_npO4wOVadCFAk7wsSp7ftwaVYOQ4h8FO_o2GjOTh-BUVDe9GOgzYAwUhPmpFKVl1Ncxbty5n7Q=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHGxB4klr-GjmTwFcKhokvToqFJfb09PZAXfn4UbTAn7TVqbp44lu6vlpVQl9R_npO4wOVadCFAk7wsSp7ftwaVYOQ4h8FO_o2GjOTh-BUVDe9GOgzYAwUhPmpFKVl1Ncxbty5n7Q=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHGxB4klr-GjmTwFcKhokvToqFJfb09PZAXfn4UbTAn7TVqbp44lu6vlpVQl9R_npO4wOVadCFAk7wsSp7ftwaVYOQ4h8FO_o2GjOTh-BUVDe9GOgzYAwUhPmpFKVl1Ncxbty5n7Q=w1600-h1000-k-no"
+    ],
     "googleRating": 4.2,
     "googleReviews": 33,
     "rating": 4.2,
@@ -10197,9 +12565,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Parque Industrial Colinas de San Luis, Cto. San Miguelito Ote. 120, Ciudad Satélite, 78423 Pozos, S.L.P., Mexico",
     "openingHours": "Friday: 7:30AM-5:15PM · Monday: 7:30AM-5:15PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5:15PM · Tuesday: 7:30AM-5:15PM · Wednesday: 7:30AM-5:15PM",
     "sourceUrl": "https://www.google.com/maps/place/BOGE+Rubber+%26+Plastics+Mexico%2C+S.A.+de+C.V./@22.1104789,-100.8023202,14z/data=!4m8!1m2!2m1!1sBOGE+Rubber+%26+Plastics+Mexico%2C+S.A.+de+C.V.!3m4!1s0x842aa57dea8d43eb:0xbf28229ab7634a7b!8m2!3d22.1104789!4d-100.8023202",
-    "score": 68,
+    "score": 74,
     "reliabilityScore": 84,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "tubi-s-p-a-rovigo",
@@ -10212,6 +12580,10 @@ export const outscraperSuppliers: Supplier[] =
     "website": "https://www.tubi-spa.com/en/",
     "phone": "+39 0425 404191",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSFTrq8FMS8_FsH5YT50hwgpF05n2sot_tDnnfI5XovKtJBoE6YdktyWY1kkSDLf7n6QpnZGCc9PuQ7XoK_Bf70RkucAaG9hrY15z9cuN468_KqjpN1foz3xV6IGuAEvXDf7rH=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGSFTrq8FMS8_FsH5YT50hwgpF05n2sot_tDnnfI5XovKtJBoE6YdktyWY1kkSDLf7n6QpnZGCc9PuQ7XoK_Bf70RkucAaG9hrY15z9cuN468_KqjpN1foz3xV6IGuAEvXDf7rH=w800-h500-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=WkT3JuYS34Ved8dhiFE6rA&cb_client=search.gws-prod.gps&w=1600&h=1000&yaw=46.469414&pitch=0&thumbfov=100"
+    ],
     "googleRating": 4,
     "googleReviews": 27,
     "rating": 4,
@@ -10231,9 +12603,46 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via Sant' Antonio, 22, 45100 Rovigo RO, Italy",
     "openingHours": "Friday: 8AM-12PM,1-3PM · Monday: 8AM-12PM,1-3PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12PM,1-3PM · Tuesday: 8AM-12PM,1-3PM · Wednesday: 8AM-12PM,1-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Tubi+S.p.a/@45.047167099999996,11.788406199999999,14z/data=!4m8!1m2!2m1!1sTubi+S.p.a!3m4!1s0x477ef76127aec3c3:0x36d8ca193ca6c458!8m2!3d45.047167099999996!4d11.788406199999999",
-    "score": 66,
+    "score": 72,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "emirates-steel-company-ae",
+    "name": "EMIRATES STEEL COMPANY",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "location": "AE, United Arab Emirates",
+    "country": "United Arab Emirates",
+    "city": "AE",
+    "phone": "+971 2 550 0965",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZsqUdft8bSDmfr27mztiu5VqpKoCVXJ3nGytveqXF1_cTxWZ5AqOdkT-PRYyLtz5wa1_SVlwDCsxCqULKJFXhghzPVTBA-bqBkesi-_0TXcVt_yX7sx5MAsKxW3EQBQ53GgfXwQ=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZsqUdft8bSDmfr27mztiu5VqpKoCVXJ3nGytveqXF1_cTxWZ5AqOdkT-PRYyLtz5wa1_SVlwDCsxCqULKJFXhghzPVTBA-bqBkesi-_0TXcVt_yX7sx5MAsKxW3EQBQ53GgfXwQ=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZsqUdft8bSDmfr27mztiu5VqpKoCVXJ3nGytveqXF1_cTxWZ5AqOdkT-PRYyLtz5wa1_SVlwDCsxCqULKJFXhghzPVTBA-bqBkesi-_0TXcVt_yX7sx5MAsKxW3EQBQ53GgfXwQ=w1600-h1000-k-no"
+    ],
+    "googleRating": 4.7,
+    "googleReviews": 77,
+    "rating": 4.7,
+    "reviewCount": 77,
+    "verified": false,
+    "description": "Steel & Metals supplier in AE, United Arab Emirates.",
+    "products": [
+      "Steel coils",
+      "Structural beams",
+      "Steel plates"
+    ],
+    "deliveryRegions": [
+      "MENA",
+      "Asia"
+    ],
+    "moq": "5 tons",
+    "address": "8FP9+X79 - Plot # 10E6 شارع ٧ - Musaffah - MW-5 - Abu Dhabi - United Arab Emirates",
+    "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
+    "sourceUrl": "https://www.google.com/maps/place/EMIRATES+STEEL+COMPANY/@24.340455499999997,54.4752024,14z/data=!4m8!1m2!2m1!1sEMIRATES+STEEL+COMPANY!3m4!1s0x3e5e4064ef722135:0xb157fa928f52fe13!8m2!3d24.340455499999997!4d54.4752024",
+    "score": 71,
+    "reliabilityScore": 94,
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "forconi-rome",
@@ -10245,6 +12654,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Rome",
     "phone": "+39 06 202 0105",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEJRL7xT3GuzB0bndmvi3g7is33x-Gxsf4cZDyk2akzVkN04i-kjdRt9ZEnV4Je-gqiUTe-FbHnBi0eNiRi1jOJchB1_D_cAP9ZEO4WQvxgu1H-JE1lvIwu7RwbG4pcaJI36l7K=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEJRL7xT3GuzB0bndmvi3g7is33x-Gxsf4cZDyk2akzVkN04i-kjdRt9ZEnV4Je-gqiUTe-FbHnBi0eNiRi1jOJchB1_D_cAP9ZEO4WQvxgu1H-JE1lvIwu7RwbG4pcaJI36l7K=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEJRL7xT3GuzB0bndmvi3g7is33x-Gxsf4cZDyk2akzVkN04i-kjdRt9ZEnV4Je-gqiUTe-FbHnBi0eNiRi1jOJchB1_D_cAP9ZEO4WQvxgu1H-JE1lvIwu7RwbG4pcaJI36l7K=w1600-h1000-k-no"
+    ],
     "googleRating": 4.4,
     "googleReviews": 97,
     "rating": 4.4,
@@ -10264,9 +12677,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Via di Carcaricola, 1, 00133 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-1PM,3-7PM · Monday: 7:30AM-1PM,3-7PM · Saturday: 8:30AM-12PM · Sunday: Closed · Thursday: 7:30AM-1PM,3-7PM · Tuesday: 7:30AM-1PM,3-7PM · Wednesday: 7:30AM-1PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Forconi/@41.8629544,12.612058,14z/data=!4m8!1m2!2m1!1sForconi!3m4!1s0x132f62a84e82d8ad:0x6bc4086cec76a0bf!8m2!3d41.8629544!4d12.612058",
-    "score": 63,
+    "score": 69,
     "reliabilityScore": 88,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "fine-packaging-s-a-de-c-v-zona-industrial",
@@ -10278,6 +12691,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Zona Industrial",
     "phone": "+52 712 122 7818",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuGqUXFF3kojpEXIM0aMGkyL7u4vulQ03i9AgbYCxZQ9I9CRzB-gj8DnTPFk9n0XDO9PP6kcZi6HpHkRbse2CwM3EcYzLm4CjFaHExy5IccVbZQVylDp6rL-Sm4bhucK8FT67t=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuGqUXFF3kojpEXIM0aMGkyL7u4vulQ03i9AgbYCxZQ9I9CRzB-gj8DnTPFk9n0XDO9PP6kcZi6HpHkRbse2CwM3EcYzLm4CjFaHExy5IccVbZQVylDp6rL-Sm4bhucK8FT67t=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEuGqUXFF3kojpEXIM0aMGkyL7u4vulQ03i9AgbYCxZQ9I9CRzB-gj8DnTPFk9n0XDO9PP6kcZi6HpHkRbse2CwM3EcYzLm4CjFaHExy5IccVbZQVylDp6rL-Sm4bhucK8FT67t=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 50,
     "rating": 4.5,
@@ -10297,9 +12714,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Salvador Sanchez COLIN S / N, Lot 4 and 5 Manzana 3-A, Industrial Park, 50450 Zona Industrial, Méx., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Fine+Packaging+S.A+de+C.V/@19.785545,-99.8945732,14z/data=!4m8!1m2!2m1!1sFine+Packaging+S.A+de+C.V!3m4!1s0x85d258a4450c849f:0x2b94051dcba663ac!8m2!3d19.785545!4d-99.8945732",
-    "score": 62,
+    "score": 68,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "american-spiralweld-pipe-co-columbia",
@@ -10311,6 +12728,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Columbia",
     "phone": "+1 803-695-2200",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxwrGqab-Yg8Xiu0RR7_Z9WIcVSdjhPDJn4jeZkNWZLjW3x1m8Qk3RnxInPtBfC7pQX-iMBvLgTl7XICDmkC7RKtrYqUp_nTeeeRkF32-7XMqm9vxhJRuO6q5VouFMq6nLRJs=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxwrGqab-Yg8Xiu0RR7_Z9WIcVSdjhPDJn4jeZkNWZLjW3x1m8Qk3RnxInPtBfC7pQX-iMBvLgTl7XICDmkC7RKtrYqUp_nTeeeRkF32-7XMqm9vxhJRuO6q5VouFMq6nLRJs=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHxwrGqab-Yg8Xiu0RR7_Z9WIcVSdjhPDJn4jeZkNWZLjW3x1m8Qk3RnxInPtBfC7pQX-iMBvLgTl7XICDmkC7RKtrYqUp_nTeeeRkF32-7XMqm9vxhJRuO6q5VouFMq6nLRJs=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 62,
     "rating": 4.3,
@@ -10330,9 +12751,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "2061 American Italian Way, Columbia, SC 29209",
     "openingHours": "Friday: 6AM-6PM · Monday: 6AM-6PM · Saturday: 6AM-6PM · Sunday: Closed · Thursday: 6AM-6PM · Tuesday: 6AM-6PM · Wednesday: 6AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/American+Spiralweld+Pipe+Co/@33.940042999999996,-80.9251894,14z/data=!4m8!1m2!2m1!1sAmerican+Spiralweld+Pipe+Co!3m4!1s0x88f8b1055a665df7:0x72fcd8db88d838c3!8m2!3d33.940042999999996!4d-80.9251894",
-    "score": 61,
+    "score": 67,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "aroma-packing-materials-trading-ae",
@@ -10344,6 +12765,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "AE",
     "phone": "+971 55 525 3482",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnatRrmBSOH4D5_RByomJJBD-gKNt1VFkfO_M0gk5i7rBB5s-83T6zoSWQkdGJnP6KPGbI__fHgfhAC-CXisG_47_rVW4xWnEdH6BDYFyCPO3p_B_Yz6kmg6CI6_zp5C8MlGEE=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnatRrmBSOH4D5_RByomJJBD-gKNt1VFkfO_M0gk5i7rBB5s-83T6zoSWQkdGJnP6KPGbI__fHgfhAC-CXisG_47_rVW4xWnEdH6BDYFyCPO3p_B_Yz6kmg6CI6_zp5C8MlGEE=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnatRrmBSOH4D5_RByomJJBD-gKNt1VFkfO_M0gk5i7rBB5s-83T6zoSWQkdGJnP6KPGbI__fHgfhAC-CXisG_47_rVW4xWnEdH6BDYFyCPO3p_B_Yz6kmg6CI6_zp5C8MlGEE=w1600-h1000-k-no"
+    ],
     "googleRating": 4.5,
     "googleReviews": 35,
     "rating": 4.5,
@@ -10363,9 +12788,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "Plot No 100 Unit Shop no 20 M9 - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7-11AM,4-8PM · Monday: 7AM-8PM · Saturday: 7AM-8PM · Sunday: 7AM-8PM · Thursday: 7AM-8PM · Tuesday: 7AM-8PM · Wednesday: 7AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Aroma+Packing+Materials+Trading/@24.3752429,54.5063077,14z/data=!4m8!1m2!2m1!1sAroma+Packing+Materials+Trading!3m4!1s0x3e5e41adcc10f01b:0x64fcd4df2815c603!8m2!3d24.3752429!4d54.5063077",
-    "score": 61,
+    "score": 67,
     "reliabilityScore": 90,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "anchor-building-materials-trading-branch-1-ae",
@@ -10377,6 +12802,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "AE",
     "phone": "+971 54 451 5952",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFziLSKwQUr-jkr2EC5_oAPH5m6sLQArwiBB-fFCsGvgnrXXFMfFLzk_EJc5aT8dBK6SZoxXdEZC-nepm9My32rKfyeCijuVRCAe3zsVIQnXUJTk3AJkjUyBcVp_G7uw9LfQlEG=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFziLSKwQUr-jkr2EC5_oAPH5m6sLQArwiBB-fFCsGvgnrXXFMfFLzk_EJc5aT8dBK6SZoxXdEZC-nepm9My32rKfyeCijuVRCAe3zsVIQnXUJTk3AJkjUyBcVp_G7uw9LfQlEG=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFziLSKwQUr-jkr2EC5_oAPH5m6sLQArwiBB-fFCsGvgnrXXFMfFLzk_EJc5aT8dBK6SZoxXdEZC-nepm9My32rKfyeCijuVRCAe3zsVIQnXUJTk3AJkjUyBcVp_G7uw9LfQlEG=w1600-h1000-k-no"
+    ],
     "googleRating": 4.3,
     "googleReviews": 53,
     "rating": 4.3,
@@ -10396,9 +12825,9 @@ export const outscraperSuppliers: Supplier[] =
     "address": "CGMF+46M - Sheikh Ammar Bin Humaid St - Al Jerf Industrial 1 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-8:30PM · Monday: 7AM-9PM · Saturday: 7AM-9PM · Sunday: 7:30AM-8PM · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/ANCHOR+BUILDING+MATERIALS+TRADING+BRANCH+1/@25.4328371,55.523055899999996,14z/data=!4m8!1m2!2m1!1sANCHOR+BUILDING+MATERIALS+TRADING+BRANCH+1!3m4!1s0x3ef5f959efdb2461:0x8c8454f3c15cf927!8m2!3d25.4328371!4d55.523055899999996",
-    "score": 60,
+    "score": 66,
     "reliabilityScore": 86,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
   },
   {
     "id": "cpmo-nouaceur",
@@ -10410,6 +12839,10 @@ export const outscraperSuppliers: Supplier[] =
     "city": "Nouaceur",
     "phone": "+212 5 22 42 36 00",
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbT1ll5-XdGxDiKtds0CuQ76V9jBHR9V8ntER7Yvs7Z7euxO2ndnOb7ZA0tjH6kl-C29oU1r_d3ZI9zvY89GzmnGd5hLpJ3y0ueGKu7yiyRaNps5YFwrvdJDY7LPFzrW-T4VHyNg=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbT1ll5-XdGxDiKtds0CuQ76V9jBHR9V8ntER7Yvs7Z7euxO2ndnOb7ZA0tjH6kl-C29oU1r_d3ZI9zvY89GzmnGd5hLpJ3y0ueGKu7yiyRaNps5YFwrvdJDY7LPFzrW-T4VHyNg=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbT1ll5-XdGxDiKtds0CuQ76V9jBHR9V8ntER7Yvs7Z7euxO2ndnOb7ZA0tjH6kl-C29oU1r_d3ZI9zvY89GzmnGd5hLpJ3y0ueGKu7yiyRaNps5YFwrvdJDY7LPFzrW-T4VHyNg=w1600-h1000-k-no"
+    ],
     "googleRating": 4,
     "googleReviews": 63,
     "rating": 4,
@@ -10429,8 +12862,78 @@ export const outscraperSuppliers: Supplier[] =
     "address": "9FV4+J59 Parc industriel de, Nouaceur 27000, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/CPMO/@33.394039,-7.544503799999999,14z/data=!4m8!1m2!2m1!1sCPMO!3m4!1s0xda630a1eb2dfbf1:0x8e6bfb4dae5dcf4!8m2!3d33.394039!4d-7.544503799999999",
-    "score": 58,
+    "score": 64,
     "reliabilityScore": 80,
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "centre-plumbing-electric-hardware-supply-new-york",
+    "name": "Centre Plumbing Electric Hardware Supply",
+    "industry": "Construction & BTP",
+    "category": "Construction",
+    "location": "New York, United States",
+    "country": "United States",
+    "city": "New York",
+    "phone": "+1 212-965-8038",
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH934WkqwYA3jKcQ-qCa9xoTf84IY_m6UTGe2bjg5epmJIGyzKWiQNWl56RyQUZxTZQ-13dwxExKgDEcogHWMNpDWJmatYhQ-_QAW_xuXWgtXZ3fREayIRaJfQH2BaR9h95neA=w800-h500-k-no",
+    "supplierImages": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH934WkqwYA3jKcQ-qCa9xoTf84IY_m6UTGe2bjg5epmJIGyzKWiQNWl56RyQUZxTZQ-13dwxExKgDEcogHWMNpDWJmatYhQ-_QAW_xuXWgtXZ3fREayIRaJfQH2BaR9h95neA=w800-h500-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH934WkqwYA3jKcQ-qCa9xoTf84IY_m6UTGe2bjg5epmJIGyzKWiQNWl56RyQUZxTZQ-13dwxExKgDEcogHWMNpDWJmatYhQ-_QAW_xuXWgtXZ3fREayIRaJfQH2BaR9h95neA=w1600-h1000-k-no"
+    ],
+    "googleRating": 4,
+    "googleReviews": 31,
+    "rating": 4,
+    "reviewCount": 31,
+    "verified": false,
+    "description": "Construction supplier in New York, United States.",
+    "products": [
+      "Cement",
+      "Aggregates",
+      "Insulation panels"
+    ],
+    "deliveryRegions": [
+      "North America",
+      "EU"
+    ],
+    "moq": "1 pallet",
+    "address": "233 Centre St, New York, NY 10013",
+    "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 7:30AM-5PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
+    "sourceUrl": "https://www.google.com/maps/place/Centre+Plumbing+Electric+Hardware+Supply/@40.720131699999996,-73.9985509,14z/data=!4m8!1m2!2m1!1sCentre+Plumbing+Electric+Hardware+Supply!3m4!1s0x89c25989a7ba4145:0xb6071f39f89923c2!8m2!3d40.720131699999996!4d-73.9985509",
+    "score": 62,
+    "reliabilityScore": 80,
+    "lastUpdated": "2026-06-19"
+  },
+  {
+    "id": "tecnica-industriale-srl-modugno",
+    "name": "Tecnica Industriale Srl",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "location": "Modugno, Italy",
+    "country": "Italy",
+    "city": "Modugno",
+    "website": "http://www.tecnicaindustriale.it/",
+    "phone": "+39 080 536 7090",
+    "googleRating": 4.8,
+    "googleReviews": 123,
+    "rating": 4.8,
+    "reviewCount": 123,
+    "verified": true,
+    "description": "Industrial Parts supplier in Modugno, Italy.",
+    "products": [
+      "Bearings",
+      "Hydraulic valves",
+      "Gearboxes"
+    ],
+    "deliveryRegions": [
+      "EU",
+      "MENA"
+    ],
+    "moq": "10 units",
+    "address": "S.P. 231, Km 1,110, 70026 Modugno BA, Italy",
+    "openingHours": "Friday: 8:30AM-1:30PM,3-6:30PM · Monday: 8:30AM-1:30PM,3-6:30PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8:30AM-1:30PM,3-6:30PM · Tuesday: 8:30AM-1:30PM,3-6:30PM · Wednesday: 8:30AM-1:30PM,3-6",
+    "sourceUrl": "https://www.google.com/maps/place/Tecnica+Industriale+Srl/@41.0915603,16.7629712,14z/data=!4m8!1m2!2m1!1sTecnica+Industriale+Srl!3m4!1s0x1347eea2f226b639:0x6a78592e0078ef1f!8m2!3d41.0915603!4d16.7629712",
+    "score": 92,
+    "reliabilityScore": 96,
+    "lastUpdated": "2026-06-19"
   }
 ] as Supplier[];

@@ -29,6 +29,8 @@ function toSupplier(r: SupplierRecord) {
     phone: u(r.phone),
     email: u(r.email),
     imageUrl: u(r.imageUrl),
+    logoUrl: u(r.logoUrl),
+    supplierImages: r.images && r.images.length > 0 ? r.images : undefined,
     googleRating: u(r.googleRating),
     googleReviews: u(r.googleReviews),
     rating: u(r.googleRating),

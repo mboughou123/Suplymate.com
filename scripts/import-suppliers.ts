@@ -28,6 +28,9 @@ type ImportRecord = {
   phone?: string | null;
   email?: string | null;
   imageUrl?: string | null;
+  logoUrl?: string | null;
+  images?: string[] | null;
+  supplierImages?: string[] | null;
   googleRating?: number | null;
   googleReviews?: number | null;
   description?: string | null;
@@ -74,6 +77,9 @@ function loadRecords(source: string): ImportRecord[] {
 }
 
 function toData(r: ImportRecord) {
+  // Gallery images may arrive under `supplierImages` (committed dataset / Supplier
+  // type) or `images` (raw normalized records); accept either.
+  const gallery = r.supplierImages ?? r.images ?? [];
   return {
     name: r.name,
     industry: r.industry,
@@ -85,6 +91,8 @@ function toData(r: ImportRecord) {
     phone: r.phone ?? null,
     email: r.email ?? null,
     imageUrl: r.imageUrl ?? null,
+    logoUrl: r.logoUrl ?? null,
+    images: JSON.stringify(Array.isArray(gallery) ? gallery : []),
     googleRating: r.googleRating ?? null,
     googleReviews: r.googleReviews ?? null,
     description: r.description ?? null,
