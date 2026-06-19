@@ -11,6 +11,16 @@
 import type { Supplier } from "@/data/suppliers";
 import { scoreSupplier } from "@/lib/supplier-ranking";
 import { toDisplaySupplier, type DisplaySupplier } from "@/lib/supplier-display";
+import {
+  isRealImageUrl,
+  getSupplierFallbackImage,
+  getProductFallbackImage,
+} from "@/lib/image-fallback";
+import {
+  calculateSupplierCompleteness,
+  mediaQualityFor,
+  type MediaQuality,
+} from "@/lib/supplier-completeness";
 
 /* ------------------------------------------------------------------ */
 /* Seeded deterministic randomness                                     */
@@ -161,6 +171,12 @@ export type MediaItem = {
   title: string;
   caption: string;
   gradient: string;
+  /** Best image URL — real supplier photo when available, else category tile. */
+  url: string;
+  /** Category-based fallback used if `url` fails to load. */
+  fallback: string;
+  /** True when `url` is a genuine supplier photograph (not a category tile). */
+  isReal: boolean;
 };
 
 export type ProfileProduct = {
@@ -168,6 +184,12 @@ export type ProfileProduct = {
   name: string;
   category: string;
   gradient: string;
+  /** Best product image — supplier photo when available, else category tile. */
+  image: string;
+  /** Category-based fallback used if `image` fails to load. */
+  imageFallback: string;
+  /** True when `image` is a genuine photograph. */
+  hasRealPhoto: boolean;
   priceRange: string;
   moq: string;
   leadTime: string;
@@ -241,6 +263,16 @@ export type SupplierProfile = {
   reviews: Review[];
   reviewSummary: ReviewSummary;
   ai: AiInsights;
+  /** 0–100 profile completeness (drives admin/quality signals). */
+  completenessScore: number;
+  /** High-value signals still missing (e.g. "Website", "Real product photos"). */
+  missingSignals: string[];
+  /** True when the supplier has no website (no website scraping is attempted). */
+  websiteMissing: boolean;
+  /** Coarse media-quality bucket — low/medium suppliers flagged for admin. */
+  mediaQuality: MediaQuality;
+  /** True when the gallery is backed only by category fallbacks (no real media). */
+  mediaIncomplete: boolean;
 };
 
 /* ------------------------------------------------------------------ */
@@ -437,23 +469,41 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   });
 
   /* --- Media gallery --- */
+  // Image priority: supplier website/Google Places photos (s.imageUrl +
+  // s.supplierImages) → category-based factory/warehouse fallback → branded
+  // placeholder. Never an empty gallery. Suppliers with no website rely on the
+  // Google Places photos (collected at import); we never scrape their site.
+  const realSupplierPhotos = [s.imageUrl, ...(s.supplierImages ?? [])].filter(
+    (u): u is string => isRealImageUrl(u)
+  );
+  const categoryMediaFallback = getSupplierFallbackImage(
+    s.category ?? s.industry,
+    s.name
+  );
+  // Rotating, sourcing-relevant captions for each tile.
   const mediaTitles = [
     "Production floor",
-    "Quality control lab",
     "Warehouse & logistics",
-    "Automated assembly line",
-    "Factory tour",
+    "Product showcase",
+    "Quality control",
+    "Factory exterior",
     "Material inspection",
-    "Packaging & dispatch",
-    "Head office",
   ];
-  const media: MediaItem[] = mediaTitles.slice(0, 6).map((title, i) => ({
-    id: `${base.id}-media-${i}`,
-    type: i === 3 ? "video" : "image",
-    title,
-    caption: `${base.name} — ${title.toLowerCase()}`,
-    gradient: MEDIA_GRADIENTS[(seed + i) % MEDIA_GRADIENTS.length],
-  }));
+  const media: MediaItem[] = mediaTitles.map((title, i) => {
+    const real = realSupplierPhotos[i];
+    return {
+      id: `${base.id}-media-${i}`,
+      // Only mark a tile as video when we have no real still to show for it
+      // (keeps the lightbox honest about which tiles are genuine photos).
+      type: i === 3 && realSupplierPhotos.length === 0 ? "video" : "image",
+      title,
+      caption: `${base.name} — ${title.toLowerCase()}`,
+      gradient: MEDIA_GRADIENTS[(seed + i) % MEDIA_GRADIENTS.length],
+      url: real ?? categoryMediaFallback,
+      fallback: categoryMediaFallback,
+      isReal: Boolean(real),
+    };
+  });
 
   /* --- Products --- */
   const productCats = ["Featured", "Best seller", "New", "Bulk", "Custom"];
@@ -467,11 +517,20 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     const pr = makeRng(hashString(`${s.id}-product-${i}`));
     const lo = intBetween(pr, 8, 480);
     const hi = lo + intBetween(pr, 12, 600);
+    // Prioritise real supplier photos for the catalog cards; cycle through them
+    // so each product looks distinct, then fall back to a category tile.
+    const realPhoto = realSupplierPhotos.length
+      ? realSupplierPhotos[i % realSupplierPhotos.length]
+      : undefined;
+    const imageFallback = getProductFallbackImage(name, s.category ?? base.categoryLabel);
     return {
       id: `${base.id}-p-${i}`,
       name,
       category: pick(pr, productCats),
       gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+      image: realPhoto ?? imageFallback,
+      imageFallback,
+      hasRealPhoto: Boolean(realPhoto),
       priceRange: `$${lo.toLocaleString()} – $${hi.toLocaleString()}`,
       moq: i % 2 === 0 ? base.moq : `${intBetween(pr, 1, 500)} units`,
       leadTime: pick(pr, LEAD_TIMES),
@@ -621,19 +680,54 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     ],
   };
 
-  const companySummary = `${base.name} is a ${company.businessType.toLowerCase()} based in ${
+  // Description enrichment: keep a real scraped description when present and
+  // substantial; otherwise synthesise one from AVAILABLE DATA ONLY (category,
+  // location, product names) — no invented certifications or capacity claims.
+  const realDescription =
+    typeof s.description === "string" && s.description.trim().length >= 80
+      ? s.description.trim()
+      : null;
+  const productNames = (s.products.length ? s.products : base.products.map((p) => p.name))
+    .filter(Boolean)
+    .slice(0, 3);
+  const generatedDescription = `${base.name} is a ${base.categoryLabel.toLowerCase()} supplier based in ${
     base.city
-  }, ${base.country}, serving B2B buyers across ${company.exportMarkets.slice(0, 3).join(", ")}. With ${
-    company.yearsInBusiness
-  } years in business, a ${company.factorySize} facility and ${company.employeeCount} staff, they specialize in ${base.products
-    .map((p) => p.name)
-    .slice(0, 2)
-    .join(" and ")
-    .toLowerCase()} with export-ready logistics and competitive MOQs from ${company.moq}.`;
+  }, ${base.country}${
+    productNames.length ? `, offering products such as ${productNames.join(", ")}` : ""
+  }. The company serves B2B buyers looking for reliable ${base.categoryLabel.toLowerCase()} sourcing with competitive MOQs from ${company.moq}.`;
+  const companySummary = realDescription ?? generatedDescription;
 
   const metaDescription = `${base.name} — verified ${base.categoryLabel} supplier in ${base.city}, ${base.country}. Trust score ${trustScore}/100, ${base.rating.toFixed(
     1
   )}★ (${base.reviewCount.toLocaleString()} reviews), ${onTimeDelivery}% on-time delivery. Contact, RFQ, pricing & certifications on Suplymate.`;
+
+  /* --- completeness / quality flags --- */
+  const completeness = calculateSupplierCompleteness({
+    verified: base.verified,
+    website: s.website,
+    logoUrl: s.logoUrl,
+    imageUrl: s.imageUrl,
+    images: s.supplierImages,
+    products: s.products,
+    productImages: realSupplierPhotos,
+    description: realDescription,
+    rating: base.rating,
+    reviewCount: base.reviewCount,
+    certifications: s.certificationsDetailed ?? certifications,
+    certificationImages: s.certificationImages,
+  });
+  // Suppliers with no website are NOT scraped (we only have their Google Places
+  // photos/URL, used above as the media + provenance source). They naturally
+  // rank lower via the website/completeness signals.
+  // TODO(website-enrichment): add a future "Find website for supplier" flow
+  // (Google Programmable Search or manual admin input in the review queue) that
+  // backfills `website` here; do NOT add live web-search scraping inline.
+  const websiteMissing = !(s.website && s.website.trim());
+  const mediaQuality = mediaQualityFor({
+    imageUrl: s.imageUrl,
+    images: s.supplierImages,
+    productImages: realSupplierPhotos,
+  });
 
   return {
     base,
@@ -648,5 +742,10 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     reviews,
     reviewSummary,
     ai,
+    completenessScore: completeness.scorePct,
+    missingSignals: completeness.missing,
+    websiteMissing,
+    mediaQuality,
+    mediaIncomplete: realSupplierPhotos.length === 0,
   };
 }

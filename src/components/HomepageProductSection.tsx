@@ -11,7 +11,7 @@ import HomepageProductCard, {
 
 const MAX_CARDS = 8;
 
-function toCardProps(p: Product): HomepageProductCardProps {
+function toCardProps(p: Product): HomepageProductCardProps & { hasRealPhoto: boolean } {
   const d = getProductCardData(p);
   return {
     id: d.id,
@@ -25,16 +25,19 @@ function toCardProps(p: Product): HomepageProductCardProps {
     supplierCount: p.supplierCount,
     verified: d.verified,
     href: `/products/${d.id}`,
+    hasRealPhoto: d.hasRealPhoto,
   };
 }
 
 export default async function HomepageProductSection() {
   const products = await getProductsFromDb();
-  // Prefer products that already have a real image so the section feels alive,
-  // then top up with the rest (all get a guaranteed category fallback anyway).
-  const withImages = products.filter((p) => p.images && p.images.length > 0);
-  const rest = products.filter((p) => !(p.images && p.images.length > 0));
-  const picks = [...withImages, ...rest].slice(0, MAX_CARDS).map(toCardProps);
+  // Homepage rule: ONLY show products that resolve to a REAL photograph (their
+  // own or their linked supplier's). Icon/graphic-only cards are excluded so the
+  // showcase always looks like a real catalogue, never a wall of placeholders.
+  const picks = products
+    .map(toCardProps)
+    .filter((c) => c.hasRealPhoto)
+    .slice(0, MAX_CARDS);
 
   if (picks.length === 0) return null;
 

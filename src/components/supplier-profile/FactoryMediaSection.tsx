@@ -11,10 +11,12 @@ import {
   Maximize2,
 } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 import { SectionHeading, reveal } from "./primitives";
 
 export default function FactoryMediaSection({ profile }: { profile: SupplierProfile }) {
-  const { media } = profile;
+  const { media, mediaIncomplete } = profile;
   const [active, setActive] = useState<number | null>(null);
 
   const close = () => setActive(null);
@@ -30,17 +32,11 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
         icon={<Images className="h-5 w-5" />}
       />
 
-      {media.length === 0 && (
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
-          <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan">
-            <Images className="h-7 w-7" aria-hidden />
-          </span>
-          <p className="mt-3 text-sm font-semibold text-ink">Media coming soon</p>
-          <p className="mt-1 max-w-sm text-xs text-ink-muted">
-            This supplier hasn&apos;t uploaded factory photos or videos yet. Request media
-            directly when you contact them.
-          </p>
-        </div>
+      {mediaIncomplete && (
+        <p className="mb-4 rounded-lg bg-slate-50 px-3 py-2 text-xs text-ink-muted">
+          Showing representative category imagery. This supplier hasn&apos;t shared its own
+          factory photos yet — request media directly when you contact them.
+        </p>
       )}
 
       <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -58,6 +54,13 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
             }`}
             style={{ backgroundImage: m.gradient }}
           >
+            <ImageWithFallback
+              src={m.isReal ? m.url : undefined}
+              fallbackSrc={m.fallback}
+              placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
+              alt={m.caption}
+              className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+            />
             <div className="absolute inset-0 ai-grid-bg opacity-20 transition group-hover:scale-110" />
             {m.type === "video" && (
               <span className="absolute inset-0 flex items-center justify-center">
@@ -122,6 +125,14 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
               style={{ backgroundImage: media[active].gradient }}
               onClick={(e) => e.stopPropagation()}
             >
+              <ImageWithFallback
+                src={media[active].isReal ? media[active].url : undefined}
+                fallbackSrc={media[active].fallback}
+                placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
+                alt={media[active].caption}
+                loading="eager"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <div className="absolute inset-0 ai-grid-bg opacity-25" />
               {media[active].type === "video" && (
                 <span className="absolute inset-0 flex items-center justify-center">

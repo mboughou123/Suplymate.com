@@ -20,6 +20,18 @@ import {
 import type { AdminSupplier, VerificationStatus } from "@/lib/supplier-normalize";
 import VerificationBadge from "@/components/VerificationBadge";
 import ImportPreviewTable from "@/components/admin/ImportPreviewTable";
+import { calculateSupplierCompleteness } from "@/lib/supplier-completeness";
+
+// Completeness signals an admin should fix before verifying, in priority order.
+function completenessWarnings(s: AdminSupplier): string[] {
+  const warnings: string[] = [];
+  if (!s.website) warnings.push("No website");
+  if (!s.logoUrl) warnings.push("No logo");
+  if (s.images.length === 0) warnings.push("No supplier photos");
+  if (s.products.length === 0) warnings.push("No products linked");
+  if (!s.description) warnings.push("No description");
+  return warnings;
+}
 
 type Props = { initialSuppliers: AdminSupplier[] };
 type Tab = "review" | "csv" | "scrape";
@@ -765,9 +777,59 @@ function ReviewQueue(props: {
                       {s.phone && <span>☎ {s.phone}</span>}
                     </div>
                     <p className="mt-1 text-xs text-ink-dim">
-                      {s.products.length} product(s) · {s.images.length} image(s) ·{" "}
+                      {s.products.length} product(s) · {s.images.length} photo(s) linked ·{" "}
                       {s.certificationImages.length} cert image(s) · {s.certifications.length} cert(s)
                     </p>
+                    {(() => {
+                      const c = calculateSupplierCompleteness({
+                        verified: s.verified,
+                        website: s.website,
+                        logoUrl: s.logoUrl,
+                        imageUrl: s.imageUrl,
+                        images: s.images,
+                        products: s.products,
+                        productImages: s.images,
+                        description: s.description,
+                        rating: s.rating,
+                        reviewCount: s.reviewCount,
+                        certifications: s.certifications,
+                        certificationImages: s.certificationImages,
+                      });
+                      const warnings = completenessWarnings(s);
+                      const tone =
+                        c.scorePct >= 70
+                          ? "bg-emerald-100 text-emerald-700"
+                          : c.scorePct >= 40
+                            ? "bg-amber-100 text-amber-700"
+                            : "bg-rose-100 text-rose-700";
+                      return (
+                        <div className="mt-2">
+                          <div className="flex items-center gap-2">
+                            <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${tone}`}>
+                              Completeness {c.scorePct}%
+                            </span>
+                            <div className="h-1.5 w-28 overflow-hidden rounded-full bg-slate-100">
+                              <div
+                                className="h-full rounded-full bg-cyan"
+                                style={{ width: `${c.scorePct}%` }}
+                              />
+                            </div>
+                          </div>
+                          {warnings.length > 0 && (
+                            <div className="mt-1.5 flex flex-wrap gap-1.5">
+                              {warnings.map((w) => (
+                                <span
+                                  key={w}
+                                  className="inline-flex items-center gap-1 rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700"
+                                >
+                                  <AlertTriangle className="h-3 w-3" aria-hidden /> {w}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
                     {s.sourceUrl && (
                       <a
                         href={s.sourceUrl}

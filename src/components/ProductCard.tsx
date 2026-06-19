@@ -3,19 +3,18 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { BadgeCheck, Star, MapPin, Truck, ArrowRight } from "lucide-react";
-import type { Product } from "@/data/products";
-import { getProductCardData } from "@/lib/product-detail";
+import type { ProductCardData } from "@/lib/product-detail";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { getProductFallbackImage } from "@/lib/image-fallback";
 
 type ProductCardProps = {
-  product: Product;
+  /** Precomputed on the server so the supplier dataset stays out of the bundle. */
+  data: ProductCardData;
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ data: d }: ProductCardProps) {
   const reduceMotion = useReducedMotion();
-  const d = getProductCardData(product);
 
   return (
     <motion.article

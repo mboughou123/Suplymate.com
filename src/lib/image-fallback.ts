@@ -116,6 +116,64 @@ export function getProductFallbackImage(
 }
 
 /**
+ * True only for a REAL remote photo (http/https). Local branded SVG fallbacks
+ * (under `/images/...`) and empty values are NOT real photos. This is the
+ * single source of truth used by homepage gating and catalogue scoring to tell
+ * a genuine photograph apart from a generated category tile.
+ */
+export function isRealImageUrl(url?: string | null): boolean {
+  return typeof url === "string" && /^https?:\/\//i.test(url.trim());
+}
+
+export type ProductImageInput = {
+  /** Real images attached to the product itself (DB / scraped). */
+  images?: (string | null | undefined)[] | null;
+  /**
+   * Real photos inherited from the linked supplier (e.g. Google Maps / website
+   * media). Used as a secondary real-photo source for product cards.
+   */
+  supplierImages?: (string | null | undefined)[] | null;
+  productName?: string;
+  category?: string;
+};
+
+/**
+ * Return the first REAL product photo if one exists, walking:
+ *   product image → linked-supplier photo → (undefined).
+ * Returns undefined when only category fallbacks would be available, so callers
+ * can distinguish "has a real photo" from "needs a generated tile".
+ */
+export function getRealProductImage(input: ProductImageInput): string | undefined {
+  const fromProduct = (input.images ?? []).find((u) => isRealImageUrl(u));
+  if (fromProduct) return fromProduct as string;
+  const fromSupplier = (input.supplierImages ?? []).find((u) => isRealImageUrl(u));
+  if (fromSupplier) return fromSupplier as string;
+  return undefined;
+}
+
+/**
+ * Whether a product can be shown with a genuine photograph (its own or its
+ * linked supplier's). Drives the homepage real-photo-only rule and ranks
+ * photo-bearing products above fallback-only ones in the catalogue.
+ */
+export function hasRealProductImage(input: ProductImageInput): boolean {
+  return Boolean(getRealProductImage(input));
+}
+
+/**
+ * Best image for a product, guaranteed never broken/empty. Priority:
+ *   real product photo → linked-supplier photo → category fallback → placeholder.
+ * Always returns a renderable URL (the category fallback is a local SVG).
+ */
+export function getBestProductImage(input: ProductImageInput): string {
+  return (
+    getRealProductImage(input) ??
+    getProductFallbackImage(input.productName, input.category) ??
+    GENERIC_PRODUCT_PLACEHOLDER
+  );
+}
+
+/**
  * Category-based cover/business photo fallback for a supplier. Resolves from
  * the industry/category first, then the supplier name. Always returns a local,
  * never-broken SVG path.

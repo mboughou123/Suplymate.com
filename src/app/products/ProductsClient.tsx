@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Product } from "@/data/products";
+import type { ProductCardData } from "@/lib/product-detail";
 import ProductCard from "@/components/ProductCard";
 import ProductFilters, {
   type ProductFilterState,
@@ -16,17 +17,20 @@ const defaultFilters: ProductFilterState = {
   minReliability: "",
 };
 
+export type CatalogueItem = { product: Product; card: ProductCardData };
+
 type Props = {
-  initialProducts: Product[];
+  /** Pre-sorted (priority-tier) catalogue items with server-computed cards. */
+  initialItems: CatalogueItem[];
 };
 
-export default function ProductsClient({ initialProducts }: Props) {
+export default function ProductsClient({ initialItems }: Props) {
   const [search, setSearch] = useState("");
   const [filters, setFilters] = useState<ProductFilterState>(defaultFilters);
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return initialProducts.filter((p) => {
+    return initialItems.filter(({ product: p }) => {
       if (q && !p.name.toLowerCase().includes(q) && !p.category.toLowerCase().includes(q)) {
         return false;
       }
@@ -38,7 +42,7 @@ export default function ProductsClient({ initialProducts }: Props) {
       }
       return true;
     });
-  }, [search, filters, initialProducts]);
+  }, [search, filters, initialItems]);
 
   return (
     <>
@@ -60,8 +64,8 @@ export default function ProductsClient({ initialProducts }: Props) {
             from database
           </p>
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {filtered.map(({ product, card }) => (
+              <ProductCard key={product.id} data={card} />
             ))}
           </div>
           {filtered.length === 0 && (

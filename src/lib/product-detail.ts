@@ -8,8 +8,15 @@
 
 import type { Product, ProductCategory } from "@/data/products";
 import { products as allProducts } from "@/data/products";
+import type { Supplier } from "@/data/suppliers";
 import { verifiedSuppliers } from "@/data/verified-suppliers";
+import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { toDisplaySupplier } from "@/lib/supplier-display";
+import {
+  getRealProductImage,
+  hasRealProductImage,
+} from "@/lib/image-fallback";
+import { calculateSupplierCompletenessScore } from "@/lib/supplier-completeness";
 import {
   COMMISSION_RATE,
   applyCommission,
@@ -242,11 +249,39 @@ function flagFor(country: string): string {
 
 /* ----------------------------- Linkage --------------------------------- */
 
-function linkedSupplier(product: Product) {
-  const pool = verifiedSuppliers.filter((s) => s.category === product.category);
-  const list = pool.length ? pool : verifiedSuppliers;
-  const idx = hashString(product.id) % list.length;
-  return list[idx];
+// A supplier "has a real photo" if it carries a remote banner or gallery image
+// (Google Maps / website media). Used to prefer image-bearing suppliers so the
+// products they back can show a genuine photograph rather than a category tile.
+function supplierHasRealPhoto(s: Supplier): boolean {
+  const isReal = (u?: string | null) => Boolean(u && /^https?:\/\//i.test(u));
+  return isReal(s.imageUrl) || Boolean(s.supplierImages?.some(isReal));
+}
+
+// Real photos linked to a supplier record (banner + gallery), de-duplicated.
+function supplierPhotos(s: Supplier): string[] {
+  return [s.imageUrl, ...(s.supplierImages ?? [])].filter(
+    (u): u is string => Boolean(u && /^https?:\/\//i.test(u))
+  );
+}
+
+// Deterministically link a catalogue product to a REAL supplier, preferring the
+// public Outscraper directory (which carries genuine Google Maps photos) so the
+// product card can surface a real photo. Falls back to the generated verified
+// directory only when no image-bearing supplier exists for the category.
+function linkedSupplier(product: Product): Supplier {
+  const seed = hashString(product.id || product.name);
+
+  const sameCatWithPhoto = outscraperSuppliers.filter(
+    (s) => s.category === product.category && supplierHasRealPhoto(s)
+  );
+  if (sameCatWithPhoto.length) return sameCatWithPhoto[seed % sameCatWithPhoto.length];
+
+  const anyWithPhoto = outscraperSuppliers.filter(supplierHasRealPhoto);
+  if (anyWithPhoto.length) return anyWithPhoto[seed % anyWithPhoto.length];
+
+  const verifiedSameCat = verifiedSuppliers.filter((s) => s.category === product.category);
+  const list = verifiedSameCat.length ? verifiedSameCat : verifiedSuppliers;
+  return list[seed % list.length];
 }
 
 /* ----------------------------- Card data ------------------------------- */
@@ -257,10 +292,16 @@ export type ProductCardData = {
   category: ProductCategory;
   icon: IconKey;
   gradient: string;
+  /** Best REAL photo (product's own or linked supplier's), or undefined. */
   imageUrl?: string;
+  /** True when a genuine photograph is available (not just a category tile). */
+  hasRealPhoto: boolean;
   supplierId: string;
   supplierName: string;
+  supplierLocation: string;
   verified: boolean;
+  /** Profile-completeness of the linked supplier (sort key for the catalogue). */
+  completenessScore: number;
   unit: string;
   bulkPriceLabel: string;
   moq: string;
@@ -279,16 +320,44 @@ export function getProductCardData(product: Product): ProductCardData {
   const base = product.basePrice ?? product.priceMin;
   // Bulk price = best tier (highest volume discount), commission applied.
   const bulkPrice = applyCommission(base * 0.82, rate);
+
+  const photos = supplierPhotos(supplierRecord);
+  const imageInput = {
+    images: product.images,
+    supplierImages: photos,
+    productName: product.name,
+    category: product.category,
+  };
+  const realImage = getRealProductImage(imageInput);
+
+  const completenessScore = calculateSupplierCompletenessScore({
+    verified: sd.verified,
+    website: supplierRecord.website,
+    logoUrl: supplierRecord.logoUrl,
+    imageUrl: supplierRecord.imageUrl,
+    images: supplierRecord.supplierImages,
+    products: supplierRecord.products,
+    productImages: realImage ? [realImage] : [],
+    description: supplierRecord.description,
+    rating: supplierRecord.googleRating ?? supplierRecord.rating,
+    reviewCount: supplierRecord.googleReviews ?? supplierRecord.reviewCount,
+    certifications: supplierRecord.certificationsDetailed,
+    certificationImages: supplierRecord.certificationImages,
+  });
+
   return {
     id: product.id,
     name: product.name,
     category: product.category,
     icon: ICONS_BY_CATEGORY[product.category],
     gradient: GALLERY_GRADIENTS[seed % GALLERY_GRADIENTS.length],
-    imageUrl: product.images?.[0],
+    imageUrl: realImage,
+    hasRealPhoto: hasRealProductImage(imageInput),
     supplierId: sd.id,
     supplierName: sd.name,
+    supplierLocation: [sd.city, sd.country].filter(Boolean).join(", "),
     verified: sd.verified,
+    completenessScore,
     unit: product.unit,
     bulkPriceLabel: `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`,
     moq: product.moq ?? `${intBetween(rng, 1, 50) * (product.unit === "ton" ? 1 : 10)} ${product.unit}s`,
@@ -296,6 +365,23 @@ export function getProductCardData(product: Product): ProductCardData {
     rating: product.rating ?? Math.min(5, Math.round((4.3 + rng() * 0.6) * 10) / 10),
     reviewCount: product.reviewCount ?? intBetween(rng, 24, 480),
   };
+}
+
+/**
+ * Catalogue sort key: image-rich, complete, verified suppliers first. Products
+ * backed by a real photo are boosted so they always outrank fallback-only ones
+ * (this realises the P1→P5 tiering described in the catalogue spec).
+ */
+export function productCatalogueRank(card: ProductCardData): number {
+  return card.completenessScore + (card.hasRealPhoto ? 50 : 0);
+}
+
+/** Comparator for the public catalogue (highest rank first, stable by name). */
+export function compareProductsForCatalogue(a: Product, b: Product): number {
+  const ra = productCatalogueRank(getProductCardData(a));
+  const rb = productCatalogueRank(getProductCardData(b));
+  if (rb !== ra) return rb - ra;
+  return a.name.localeCompare(b.name);
 }
 
 /* ----------------------------- Generator ------------------------------- */

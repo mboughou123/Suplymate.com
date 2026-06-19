@@ -13,6 +13,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
+import ImageWithFallback from "@/components/ImageWithFallback";
 import { SectionHeading, reveal } from "./primitives";
 import ProfileActionButton from "./ProfileActionButton";
 
@@ -105,8 +106,13 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
             transition={{ delay: (i % 6) * 0.05, duration: 0.45 }}
             className="glass-card glass-hover flex flex-col overflow-hidden p-0"
           >
-            <div className="relative flex h-36 items-center justify-center" style={{ backgroundImage: p.gradient }}>
-              <Package className="h-10 w-10 text-cyan/70" aria-hidden />
+            <div className="relative flex h-36 items-center justify-center overflow-hidden" style={{ backgroundImage: p.gradient }}>
+              <ImageWithFallback
+                src={p.hasRealPhoto ? p.image : undefined}
+                fallbackSrc={p.imageFallback}
+                alt={p.name}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               {p.aiRecommended && (
                 <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-cyan shadow-sm">
                   <Sparkles className="h-3 w-3" aria-hidden /> AI pick
