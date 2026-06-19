@@ -30,6 +30,22 @@ export function getFallbackSupplierIds(): string[] {
   return allFallbackSuppliers().map((s) => s.id);
 }
 
+/**
+ * Public visibility gate for the supplier moderation system.
+ *
+ * Suppliers collected via CSV import / the website scraper carry an explicit
+ * `verificationStatus` and must be admin-approved ("verified") before they are
+ * exposed publicly. Legacy/seed directory suppliers have NO verificationStatus
+ * (undefined) and remain visible — so this is additive and non-breaking.
+ *
+ * Rule: hide ONLY records whose status is explicitly a non-verified moderation
+ * state (pending / rejected / needs_info).
+ */
+function isPubliclyVisible(s: Supplier): boolean {
+  const status = s.verificationStatus;
+  return !status || status === "verified";
+}
+
 export async function getSuppliersFromDb() {
   try {
     const rows = await prisma.supplier.findMany({
@@ -38,7 +54,8 @@ export async function getSuppliersFromDb() {
     // Fall back to the verified directory if the DB hasn't been imported yet
     // (or only has the legacy seed rows).
     if (rows.length < 50) return directoryFallback;
-    return rows.map(mapSupplier);
+    // Never surface pending/rejected/needs_info imports on public surfaces.
+    return rows.map(mapSupplier).filter(isPubliclyVisible);
   } catch {
     return directoryFallback;
   }
@@ -52,7 +69,11 @@ export async function getSupplierById(id: string): Promise<Supplier | null> {
   if (!slug) return null;
   try {
     const row = await prisma.supplier.findUnique({ where: { id: slug } });
-    if (row) return mapSupplier(row);
+    if (row) {
+      const mapped = mapSupplier(row);
+      // Pending/rejected/needs_info imports must not be reachable by slug.
+      return isPubliclyVisible(mapped) ? mapped : null;
+    }
   } catch {
     // ignore — fall through to the deterministic dataset
   }

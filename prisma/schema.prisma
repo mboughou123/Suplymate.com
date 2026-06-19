@@ -49,9 +49,49 @@ model Supplier {
   reliabilityScore Int
   lastUpdated      DateTime @default(now()) @updatedAt
 
+  // ----- Supplier import & scraping system (additive) -----
+  // Moderation state for imported/scraped suppliers:
+  // "pending" | "verified" | "rejected" | "needs_info". Scraped/imported
+  // suppliers default to "pending" and require manual admin approval.
+  verificationStatus  String   @default("pending")
+  // JSON string[] of supplier/company gallery image URLs (separate from logoUrl).
+  images              String   @default("[]")
+  // JSON string[] of certification badge / certificate image URLs.
+  certificationImages String   @default("[]")
+  // JSON of denormalised certification details (name/type/etc.).
+  certifications      String   @default("[]")
+  // 0–100 trust score computed from completeness + signals (see lib/trust-score).
+  trustScore          Int?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @default(now()) @updatedAt
+
+  // Relational certifications (the richer, queryable representation).
+  certs               Certification[]
+
   @@index([category])
   @@index([country])
   @@index([score])
+  @@index([verificationStatus])
+}
+
+// A certification / audit / compliance badge attached to a supplier. Captured
+// either from a CSV import, the website scraper (certificationExtractor), or
+// added/edited manually by an admin. Every record stores its public sourceUrl
+// for attribution and review.
+model Certification {
+  id             String   @id @default(cuid())
+  supplierId     String
+  supplier       Supplier @relation(fields: [supplierId], references: [id], onDelete: Cascade)
+  name           String
+  // e.g. "ISO", "CE", "audit", "license", "award" — free-form classifier.
+  type           String?
+  imageUrl       String?
+  certificateUrl String?
+  sourceUrl      String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @default(now()) @updatedAt
+
+  @@index([supplierId])
 }
 
 model Product {

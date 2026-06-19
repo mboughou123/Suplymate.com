@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import { NextResponse } from "next/server";
 import type { Session } from "next-auth";
 
 /**
@@ -33,4 +34,22 @@ export async function checkAdmin(): Promise<AdminCheck> {
   const email = session?.user?.email ?? null;
   const authenticated = !!session?.user;
   return { ok: authenticated && isAdminEmail(email), authenticated, session, email };
+}
+
+/**
+ * Route-handler guard. Returns a NextResponse to short-circuit (401/403) when
+ * the caller is not an admin, or null when access is granted.
+ *
+ *   const denied = await adminGuard();
+ *   if (denied) return denied;
+ */
+export async function adminGuard(): Promise<NextResponse | null> {
+  const { ok, authenticated } = await checkAdmin();
+  if (!authenticated) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  if (!ok) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  return null;
 }

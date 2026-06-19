@@ -1,0 +1,5 @@
+# One public supplier website URL per line. Lines starting with # are ignored.
+# COMPLIANCE: list ONLY public company sites you may index. The scraper checks
+# robots.txt + Crawl-delay, rate-limits, and refuses social/private/auth pages.
+# Replace the demo URL below with real supplier homepages or catalogue pages.
+https://webscraper.io/test-sites/e-commerce/allinone
