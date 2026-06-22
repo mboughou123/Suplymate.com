@@ -13,7 +13,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-**Demo login:** `demo@suplymate.com` / `demo123`
+Create an account at `/signup`, or sign in at `/login`. Local seeding
+(`npm run db:setup`) provisions a development account for testing only — do not
+use seed credentials in production.
 
 ## What's included
 

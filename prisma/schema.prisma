@@ -15,11 +15,53 @@ model User {
   passwordHash  String
   company       String?
   createdAt     DateTime           @default(now())
-  priceAlerts   PriceAlert[]
-  conversations Conversation[]
-  rfqs          Rfq[]
-  notifications Notification[]
-  favorites     FavoriteSupplier[]
+
+  // ----- Account profile (additive; `name` stays the source of truth) -----
+  firstName String?
+  lastName  String?
+  jobTitle  String?
+  phone     String?
+  image     String?
+  // JSON blob of notification / locale preferences (see lib/preferences).
+  preferences String?
+  // Lightweight billing plan tracking. Subscription is NEVER mutable from the
+  // browser — see lib/billing.ts.
+  plan       String   @default("free")
+  planStatus String   @default("active")
+  updatedAt  DateTime @default(now()) @updatedAt
+
+  priceAlerts     PriceAlert[]
+  conversations   Conversation[]
+  rfqs            Rfq[]
+  notifications   Notification[]
+  favorites       FavoriteSupplier[]
+  aiConversations AiConversation[]
+}
+
+// ----- AI procurement assistant chat history (per authenticated user) -----
+
+model AiConversation {
+  id        String      @id @default(cuid())
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String      @default("New conversation")
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @default(now()) @updatedAt
+  messages  AiMessage[]
+
+  @@index([userId])
+}
+
+model AiMessage {
+  id             String         @id @default(cuid())
+  conversationId String
+  conversation   AiConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  // "user" | "assistant"
+  role      String
+  content   String
+  createdAt DateTime @default(now())
+
+  @@index([conversationId])
 }
 
 model Supplier {

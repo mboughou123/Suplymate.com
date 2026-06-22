@@ -45,7 +45,8 @@ npm run db:push     # creates the tables
 npm run db:seed     # loads suppliers/products/materials + demo user
 ```
 
-(Demo login: `demo@suplymate.com` / `demo123`.)
+(Seeding provisions a development-only account. Never expose seed credentials
+publicly or use them in production — create real accounts via `/signup`.)
 
 ## 4. Connect the domain (registrar: Namecheap)
 

@@ -24,6 +24,7 @@ import {
   type DashboardStats,
   type DashboardUser,
   type MaterialSummary,
+  type TopSupplier,
   buildActivityFeed,
 } from "./types";
 
@@ -31,20 +32,23 @@ type Props = {
   user: DashboardUser;
   stats: DashboardStats;
   materials: MaterialSummary[];
+  topSuppliers: TopSupplier[];
 };
 
-export default function DashboardClient({ user, stats, materials }: Props) {
+export default function DashboardClient({
+  user,
+  stats,
+  materials,
+  topSuppliers,
+}: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
-  const firstName = user.name.split(" ")[0] ?? "there";
+  const firstName = user.firstName || user.name.split(" ")[0] || "there";
   const activity = buildActivityFeed(stats);
-
   const buySignals = materials.filter((m) => m.signal === "Buy now").length;
-  const marketStatus =
-    buySignals > 2 ? "Buy signals active" : "Markets monitoring";
 
   return (
-    <div className="relative flex min-h-screen text-white">
+    <div className="relative flex min-h-screen text-ink">
       <DashboardBackground />
 
       <DashboardSidebar
@@ -67,88 +71,78 @@ export default function DashboardClient({ user, stats, materials }: Props) {
               firstName={firstName}
               supplierCount={stats.supplierCount}
               conversationCount={stats.conversationCount}
-              marketStatus={marketStatus}
             />
 
-            {/* Analytics grid */}
+            {/* Metrics — real values where available; honest empty states otherwise */}
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <StatCard
                 label="Verified suppliers"
-                value={String(stats.verifiedSuppliers)}
-                sub={`${stats.supplierCount} total indexed`}
-                trend={4}
+                value={stats.verifiedSuppliers.toLocaleString()}
+                sub={`${stats.supplierCount.toLocaleString()} total indexed`}
                 icon={Factory}
                 href="/suppliers"
-                accent="gold"
-                delay={0.05}
               />
               <StatCard
                 label="Active RFQs"
                 value={String(stats.rfqCount)}
-                sub="Open quotations"
-                trend={stats.rfqCount > 0 ? 8 : 0}
+                sub={stats.rfqCount > 0 ? "Open quotations" : "No RFQs yet"}
                 icon={FileText}
                 href="/messages"
-                accent="cyan"
-                delay={0.1}
               />
               <StatCard
                 label="Price alerts"
                 value={String(stats.alertCount)}
-                sub="Monitoring markets"
-                trend={2}
+                sub={stats.alertCount > 0 ? "Monitoring markets" : "No alerts set"}
                 icon={Bell}
                 href="/price-charts"
-                accent="violet"
-                delay={0.15}
               />
               <StatCard
                 label="AI recommendations"
-                value="12"
-                sub="This week"
-                trend={6}
+                value="—"
+                sub="Ask the assistant to get started"
                 icon={Sparkles}
                 href="/ai-assistant"
-                accent="gold"
-                delay={0.2}
+                empty
               />
               <StatCard
                 label="Market trends"
                 value={String(buySignals)}
-                sub="Buy-now signals"
-                trend={buySignals > 1 ? 3 : -1}
+                sub={
+                  materials.length > 0
+                    ? `${buySignals} buy-now signal${buySignals === 1 ? "" : "s"}`
+                    : "Not enough data"
+                }
                 icon={TrendingUp}
                 href="/price-charts"
-                accent="emerald"
-                delay={0.25}
+                empty={materials.length === 0}
               />
               <StatCard
                 label="Delivery risk"
-                value="Low"
-                sub="Portfolio average"
-                trend={-2}
+                value="—"
+                sub="Not enough data"
                 icon={Shield}
-                accent="emerald"
-                delay={0.3}
+                empty
               />
               <StatCard
                 label="Procurement savings"
-                value="8.4%"
-                sub="vs. spot last quarter"
-                trend={5}
+                value="—"
+                sub="Not enough data"
                 icon={DollarSign}
-                accent="gold"
-                delay={0.35}
+                empty
               />
               <StatCard
                 label="Supplier response rate"
-                value="87%"
-                sub={`${stats.conversationCount} conversations`}
-                trend={3}
+                value="—"
+                sub={
+                  stats.conversationCount > 0
+                    ? `${stats.conversationCount} conversation${
+                        stats.conversationCount === 1 ? "" : "s"
+                      }`
+                    : "No conversations yet"
+                }
                 icon={MessageCircle}
                 href="/messages"
-                accent="cyan"
-                delay={0.4}
+                empty
               />
             </div>
 
@@ -160,7 +154,7 @@ export default function DashboardClient({ user, stats, materials }: Props) {
                 <ActivityFeed items={activity} />
               </div>
               <div className="xl:col-span-4">
-                <InsightsPanel materials={materials} />
+                <InsightsPanel materials={materials} topSuppliers={topSuppliers} />
               </div>
             </div>
           </div>

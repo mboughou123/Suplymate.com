@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { hashPassword } from "@/lib/password";
+import { hashPassword, validatePasswordStrength } from "@/lib/password";
 
 export async function POST(request: Request) {
   try {
@@ -16,12 +16,14 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-    if (password.length < 6) {
-      return NextResponse.json(
-        { error: "Password must be at least 6 characters." },
-        { status: 400 }
-      );
+    const strengthError = validatePasswordStrength(password);
+    if (strengthError) {
+      return NextResponse.json({ error: strengthError }, { status: 400 });
     }
+
+    // Split the provided name into first/last for the account profile.
+    const [firstName, ...rest] = name.split(/\s+/);
+    const lastName = rest.join(" ") || null;
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
@@ -34,6 +36,8 @@ export async function POST(request: Request) {
     const user = await prisma.user.create({
       data: {
         name,
+        firstName: firstName || null,
+        lastName,
         email,
         passwordHash: await hashPassword(password),
         company,

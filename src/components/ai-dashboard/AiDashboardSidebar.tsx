@@ -25,7 +25,7 @@ const NAV_ITEMS = [
   { href: "/price-charts", label: "Market prices", icon: TrendingUp },
   { href: "/messages", label: "RFQs", icon: FileText },
   { href: "/price-charts", label: "Analytics", icon: BarChart3 },
-  { href: "/dashboard", label: "Settings", icon: Settings },
+  { href: "/settings", label: "Settings", icon: Settings },
 ];
 
 type Props = {
@@ -90,12 +90,14 @@ export default function AiDashboardSidebar({ open, onClose }: Props) {
       </nav>
 
       <div className="border-t border-slate-200/60 p-4">
-        <div className="ai-glass rounded-xl p-3">
-          <p className="text-xs font-semibold text-ink">Enterprise plan</p>
-          <p className="mt-0.5 text-[11px] text-ink-dim">
-            Unlimited AI queries & supplier intelligence
-          </p>
-        </div>
+        <Link
+          href="/settings/subscription"
+          onClick={onClose}
+          className="block rounded-xl border border-slate-200 bg-white p-3 transition hover:border-gold/40 hover:bg-gold/5"
+        >
+          <p className="text-xs font-semibold text-ink">Plan &amp; billing</p>
+          <p className="mt-0.5 text-[11px] text-ink-dim">Manage your subscription</p>
+        </Link>
       </div>
     </div>
   );

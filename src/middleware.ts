@@ -8,8 +8,10 @@ export default middleware;
 export const config = {
   matcher: [
     "/dashboard/:path*",
+    "/settings/:path*",
     "/messages/:path*",
     "/api/price-alerts/:path*",
+    "/api/account/:path*",
     "/login",
     "/signup",
   ],

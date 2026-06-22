@@ -56,12 +56,15 @@ export default async function DashboardPage() {
     getMaterialsFromDb(),
   ]);
 
-  const verifiedSuppliers = Math.round(suppliers.length * 0.75);
+  // Real verified-supplier count (no synthetic ratios).
+  const verifiedSuppliers = suppliers.filter(
+    (s) => s.verified === true || s.verificationStatus === "verified"
+  ).length;
 
   const dbUser = await prisma.user
     .findUnique({
       where: { id: userId },
-      select: { company: true },
+      select: { company: true, firstName: true },
     })
     .catch(() => null);
 
@@ -70,7 +73,8 @@ export default async function DashboardPage() {
       user={{
         name: session.user.name ?? "User",
         email: session.user.email ?? "",
-        company: dbUser?.company ?? "Workspace",
+        company: dbUser?.company ?? null,
+        firstName: dbUser?.firstName ?? null,
       }}
       stats={{
         alertCount,
@@ -81,6 +85,13 @@ export default async function DashboardPage() {
         supplierCount: suppliers.length,
         verifiedSuppliers,
       }}
+      topSuppliers={suppliers.slice(0, 4).map((s) => ({
+        id: s.id,
+        name: s.name,
+        location: s.country ?? s.location ?? "",
+        score: s.score ?? s.reliabilityScore ?? null,
+        verified: s.verified === true || s.verificationStatus === "verified",
+      }))}
       materials={materials.map((m) => ({
         id: m.id,
         name: m.name,

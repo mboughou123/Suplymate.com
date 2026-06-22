@@ -12,7 +12,14 @@ export const authConfig: NextAuthConfig = {
     authorized({ auth, request }) {
       const path = request.nextUrl.pathname;
       const isLoggedIn = !!auth?.user;
-      const protectedPaths = ["/dashboard", "/messages", "/api/price-alerts", "/admin"];
+      const protectedPaths = [
+        "/dashboard",
+        "/settings",
+        "/messages",
+        "/api/price-alerts",
+        "/api/account",
+        "/admin",
+      ];
       const isProtected = protectedPaths.some(
         (p) => path === p || path.startsWith(`${p}/`)
       );

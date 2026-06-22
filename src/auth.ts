@@ -18,7 +18,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const password = credentials?.password as string;
         if (!email || !password) return null;
 
-        const user = await prisma.user.findUnique({ where: { email } });
+        // Select only the columns auth needs so sign-in keeps working even if
+        // newer additive columns haven't been migrated on this database yet.
+        const user = await prisma.user.findUnique({
+          where: { email },
+          select: { id: true, email: true, name: true, passwordHash: true },
+        });
         if (!user) return null;
 
         const valid = await verifyPassword(password, user.passwordHash);
