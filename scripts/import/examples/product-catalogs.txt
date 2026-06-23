@@ -30,6 +30,28 @@ https://webscraper.io/test-sites/e-commerce/static/computers/laptops
 https://webscraper.io/test-sites/e-commerce/static/computers/tablets
 https://webscraper.io/test-sites/e-commerce/static/phones
 
-# --- Add your real industrial supplier catalogue pages below, e.g.: ---
-# https://www.acme-steel.example/catalog/hot-rolled-coil | Steel & Metals | rotterdam-steel-works
-# https://www.acme-cables.example/products | Cables & Electrical
+# --- Real industrial supplier catalogue pages ---
+https://www.allmetalindia.in/store/ | Steel & Metals
+https://cableshouse-me.com/en/audio-visual-cables/5866-c1008-bulk.html | Cables & Electrical
+https://cableshouse-me.com/en/ | Cables & Electrical
+https://www.boschrexroth.com/en/us/products/ | Industrial Parts
+https://www.festo.com/us/en/c/products-id_pim1/ | Industrial Parts
+https://www.smcusa.com/products | Industrial Parts
+https://www.sick.com/gb/en/products/c/g568268 | Industrial Parts
+https://www.phoenixcontact.com/en-pc/products | Cables & Electrical
+https://www.skf.com/group/products | Industrial Parts
+https://www.timken.com/engineered-bearing-solutions/ | Industrial Parts
+https://products.swagelok.com/en | Tubes & Pipes
+https://new.abb.com/offerings | Cables & Electrical
+https://www.se.com/us/en/all-products/ | Cables & Electrical
+https://www.siemens.com/en-us/products/simatic/ | Industrial Parts
+https://www.rockwellautomation.com/en-us/products/hardware/allen-bradley.html | Cables & Electrical
+https://www.prysmian.com/en/product-centre | Cables & Electrical
+https://www.nexans.com/electrification-solutions/product-catalog/ | Cables & Electrical
+https://www.belden.com/products | Cables & Electrical
+https://www.alro.com/metals/ | Steel & Metals
+https://www.metalsupermarkets.com/metals/ | Steel & Metals
+https://www.grainger.com/category | Industrial Parts
+https://www.3m.com/3M/en_US/p/ | Industrial Parts
+https://www.fastenal.com/product/all | Industrial Parts
+https://us.misumi-ec.com/ | Industrial Parts
