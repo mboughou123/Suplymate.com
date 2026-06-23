@@ -9,18 +9,27 @@ export type ScrapedProduct = {
   supplierId: string;
   supplierName: string;
   supplierLogo?: string | null;
+  /** Denormalised supplier country (for the public country filter). */
+  supplierCountry?: string | null;
   name: string;
+  /** URL-friendly slug derived from the name (deduped per supplier). */
+  slug?: string | null;
   category: ProductCategory;
   images: string[];
   videos: string[];
-  /** Supplier base (wholesale) price before commission. */
+  /** Supplier base (wholesale) price before commission. Null = no public price. */
   basePrice?: number | null;
+  /** Unit the price applies to (e.g. "ton"). */
+  priceUnit?: string | null;
   /** Per-product commission override; null = use global COMMISSION_RATE. */
   commissionRate?: number | null;
   currency: string;
   moq?: string | null;
+  /** Unit for the MOQ value (e.g. "tons", "pcs"). */
+  minimumOrderUnit?: string | null;
   shippingTime?: string | null;
   description?: string | null;
+  shortDescription?: string | null;
   specifications: Record<string, string>;
   customizationOptions: string[];
   certifications: string[];
@@ -28,6 +37,12 @@ export type ScrapedProduct = {
   reviewCount?: number | null;
   /** Public source page the product was collected from (for review/attribution). */
   sourceUrl: string;
+  /** Canonical product detail page on the supplier site (when distinct). */
+  productUrl?: string | null;
+  /** Original hotlinked image URL kept for attribution after re-hosting. */
+  imageSourceUrl?: string | null;
+  /** Supplier SKU / model number when present (dedupe signal). */
+  sku?: string | null;
   verifiedSupplier: boolean;
   status: ProductStatus;
   scrapedAt: string;

@@ -51,30 +51,66 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing supplier" }, { status: 400 });
     }
 
+    // Optional product / RFQ context (from a "Request Quote" action).
+    const productName = String(body.productName || "").trim();
+    const productId = String(body.productId || "").trim();
+    const quantity = String(body.quantity || "").trim();
+    const buyerMessage = String(body.message || "").trim();
+
     // Re-open existing conversation if one already exists for this pair.
-    const existing = await prisma.conversation.findFirst({
+    let conversation = await prisma.conversation.findFirst({
       where: { buyerId: session.user.id, supplierId },
     });
-    if (existing) {
-      return NextResponse.json({ conversation: existing, created: false });
-    }
+    const created = !conversation;
 
-    const conversation = await prisma.conversation.create({
-      data: {
-        buyerId: session.user.id,
-        supplierId,
-        supplierName,
-        messages: {
-          create: {
-            senderType: "supplier",
-            body: firstContactReply(supplierName),
-            readAt: new Date(),
+    if (!conversation) {
+      conversation = await prisma.conversation.create({
+        data: {
+          buyerId: session.user.id,
+          supplierId,
+          supplierName,
+          messages: {
+            create: {
+              senderType: "supplier",
+              body: firstContactReply(supplierName),
+              readAt: new Date(),
+            },
           },
         },
-      },
-    });
+      });
+    }
 
-    return NextResponse.json({ conversation, created: true });
+    // When the buyer sent a quote request, persist it as a real buyer message
+    // and a structured RFQ so it flows through the existing messaging system.
+    if (buyerMessage || productName) {
+      const text =
+        buyerMessage ||
+        `Hi, I'd like a quote for ${productName}${quantity ? ` (qty: ${quantity})` : ""}.`;
+      await prisma.message.create({
+        data: {
+          conversationId: conversation.id,
+          senderType: "buyer",
+          body: text,
+        },
+      });
+      await prisma.conversation.update({
+        where: { id: conversation.id },
+        data: { lastMessageAt: new Date(), status: "inquiry" },
+      });
+      if (productName) {
+        await prisma.rfq.create({
+          data: {
+            conversationId: conversation.id,
+            buyerId: session.user.id,
+            productName,
+            quantity: quantity || "TBD",
+            details: productId ? `Product ref: ${productId}` : null,
+          },
+        });
+      }
+    }
+
+    return NextResponse.json({ conversation, created });
   } catch {
     return NextResponse.json(
       { error: "Failed to start conversation" },

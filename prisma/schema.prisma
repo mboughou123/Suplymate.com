@@ -153,29 +153,52 @@ model ScrapedProduct {
   supplierId           String
   supplierName         String
   supplierLogo         String?
+  // Denormalised supplier country so the public catalogue can offer a country
+  // filter without a join (populated at import time from the linked supplier).
+  supplierCountry      String?
   name                 String
+  // URL-friendly slug derived from the product name (deduped per supplier).
+  slug                 String?
   category             String
   images               String   @default("[]")
   videos               String   @default("[]")
   basePrice            Float?
+  // Unit the price applies to (e.g. "ton", "meter", "piece"). Null when the
+  // source page gives no public price.
+  priceUnit            String?
   commissionRate       Float?
   currency             String   @default("USD")
   moq                  String?
+  // Unit for the minimum order quantity (e.g. "tons", "pcs").
+  minimumOrderUnit     String?
   shippingTime         String?
   description          String?
+  shortDescription     String?
   specifications       String   @default("{}")
   customizationOptions String   @default("[]")
   certifications       String   @default("[]")
   rating               Float?
   reviewCount          Int?
+  // Public catalogue/listing page the product was collected from.
   sourceUrl            String
+  // Canonical product detail page on the supplier site (when distinct from the
+  // listing page it was scraped from).
+  productUrl           String?
+  // Original (hotlinked) image URL as found on the source page — always kept for
+  // attribution even after the image is re-hosted by the storage provider.
+  imageSourceUrl       String?
+  // Supplier SKU / model number when present on the source page (dedupe signal).
+  sku                  String?
   verifiedSupplier     Boolean  @default(false)
+  // Moderation state: "pending" | "approved" (published) | "rejected" | "needs_info".
   status               String   @default("pending")
   scrapedAt            DateTime @default(now())
   updatedAt            DateTime @default(now()) @updatedAt
 
   @@index([status])
   @@index([category])
+  @@index([supplierId])
+  @@index([slug])
 }
 
 model Material {

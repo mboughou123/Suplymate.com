@@ -1,0 +1,35 @@
+# Public product/catalogue pages for the Suplymate product scraper.
+#
+#   npm run products:scrape -- --file=scripts/import/examples/product-catalogs.txt --limit=150
+#   npm run products:import
+#
+# FORMAT: one entry per line. Lines starting with "#" are ignored.
+#   URL
+#   URL | Category
+#   URL | Category | supplier-id
+# Category must be one of: Steel & Metals, Cables & Electrical, Tubes & Pipes,
+# Packaging, Construction, Industrial Parts. When omitted it is inferred from the
+# product name. When supplier-id is omitted the product is linked by domain (a
+# PENDING supplier is created if none exists). All output is PENDING until an
+# admin publishes it at /admin/products.
+#
+# COMPLIANCE: list ONLY public catalogue pages you may index. The scraper checks
+# robots.txt + Crawl-delay before every request, rate-limits, refuses
+# social/private/auth/checkout pages, and never bypasses anti-bot protection.
+
+# --- Public scrape-practice catalogue (real products + real images, robots-allowed) ---
+https://webscraper.io/test-sites/e-commerce/allinone
+https://webscraper.io/test-sites/e-commerce/allinone/computers
+https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops
+https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets
+https://webscraper.io/test-sites/e-commerce/allinone/phones
+https://webscraper.io/test-sites/e-commerce/allinone/phones/touch
+https://webscraper.io/test-sites/e-commerce/static
+https://webscraper.io/test-sites/e-commerce/static/computers
+https://webscraper.io/test-sites/e-commerce/static/computers/laptops
+https://webscraper.io/test-sites/e-commerce/static/computers/tablets
+https://webscraper.io/test-sites/e-commerce/static/phones
+
+# --- Add your real industrial supplier catalogue pages below, e.g.: ---
+# https://www.acme-steel.example/catalog/hot-rolled-coil | Steel & Metals | rotterdam-steel-works
+# https://www.acme-cables.example/products | Cables & Electrical

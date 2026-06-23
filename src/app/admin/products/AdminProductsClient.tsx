@@ -11,9 +11,14 @@ import {
   Loader2,
   ImageOff,
   ShieldCheck,
+  Trash2,
+  HelpCircle,
+  Copy,
+  ImageIcon,
 } from "lucide-react";
 import type { ScrapedProduct } from "@/data/scraped-products";
 import type { ProductStatus } from "@/data/products";
+import { productCategories } from "@/data/products";
 import { applyCommission, formatPrice } from "@/config/commerce";
 
 type Props = {
@@ -27,6 +32,14 @@ const STATUS_STYLES: Record<ProductStatus, string> = {
   pending: "bg-amber-50 text-amber-700",
   approved: "bg-emerald-50 text-emerald-700",
   rejected: "bg-rose-50 text-rose-700",
+  needs_info: "bg-sky-50 text-sky-700",
+};
+
+const STATUS_LABEL: Record<ProductStatus, string> = {
+  pending: "pending",
+  approved: "published",
+  rejected: "rejected",
+  needs_info: "needs info",
 };
 
 const GRADIENTS = [
@@ -35,38 +48,38 @@ const GRADIENTS = [
   "linear-gradient(135deg, #102a43, #1e5580 60%, rgba(96,165,250,0.4))",
 ];
 
-function initials(name: string): string {
-  return name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase() ?? "")
-    .join("");
+function normName(s: string): string {
+  return s.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
 type Draft = {
   name: string;
+  category: string;
   description: string;
   basePrice: string;
+  priceUnit: string;
   commissionRate: string;
   moq: string;
   shippingTime: string;
   images: string;
-  videos: string;
-  supplierLogo: string;
+  productUrl: string;
+  imageSourceUrl: string;
   verifiedSupplier: boolean;
 };
 
 function toDraft(p: ScrapedProduct): Draft {
   return {
     name: p.name,
+    category: p.category,
     description: p.description ?? "",
     basePrice: p.basePrice != null ? String(p.basePrice) : "",
+    priceUnit: p.priceUnit ?? "",
     commissionRate: p.commissionRate != null ? String(p.commissionRate) : "",
     moq: p.moq ?? "",
     shippingTime: p.shippingTime ?? "",
     images: (p.images ?? []).join("\n"),
-    videos: (p.videos ?? []).join("\n"),
-    supplierLogo: p.supplierLogo ?? "",
+    productUrl: p.productUrl ?? "",
+    imageSourceUrl: p.imageSourceUrl ?? p.images?.[0] ?? "",
     verifiedSupplier: p.verifiedSupplier,
   };
 }
@@ -77,25 +90,68 @@ export default function AdminProductsClient({
 }: Props) {
   const [products, setProducts] = useState<ScrapedProduct[]>(initialProducts);
   const [filter, setFilter] = useState<Filter>("pending");
+  const [supplierFilter, setSupplierFilter] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [draft, setDraft] = useState<Draft | null>(null);
   const [busyId, setBusyId] = useState<string | null>(null);
+  const [bulkBusy, setBulkBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Set<string>>(new Set());
 
   const counts = useMemo(() => {
-    const c = { all: products.length, pending: 0, approved: 0, rejected: 0 };
+    const c = { all: products.length, pending: 0, approved: 0, rejected: 0, needs_info: 0 };
     for (const p of products) c[p.status]++;
     return c;
   }, [products]);
 
-  const visible = useMemo(
-    () => (filter === "all" ? products : products.filter((p) => p.status === filter)),
-    [products, filter]
+  const suppliers = useMemo(
+    () =>
+      [...new Map(products.map((p) => [p.supplierId, p.supplierName])).entries()]
+        .map(([id, name]) => ({ id, name }))
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    [products]
   );
+
+  // Duplicate detection: flag ids that share a normalized name within the same
+  // supplier, the same source URL, or the same primary image URL.
+  const duplicateIds = useMemo(() => {
+    const byKey = new Map<string, string[]>();
+    const add = (key: string, id: string) => {
+      const arr = byKey.get(key) ?? [];
+      arr.push(id);
+      byKey.set(key, arr);
+    };
+    for (const p of products) {
+      add(`n:${p.supplierId}:${normName(p.name)}`, p.id);
+      if (p.sourceUrl) add(`u:${p.sourceUrl}`, p.id);
+      const img = p.images?.[0];
+      if (img) add(`i:${img}`, p.id);
+    }
+    const dups = new Set<string>();
+    for (const ids of byKey.values()) {
+      if (ids.length > 1) ids.forEach((id) => dups.add(id));
+    }
+    return dups;
+  }, [products]);
+
+  const visible = useMemo(() => {
+    const q = search.toLowerCase().trim();
+    return products.filter((p) => {
+      if (filter !== "all" && p.status !== filter) return false;
+      if (supplierFilter && p.supplierId !== supplierFilter) return false;
+      if (categoryFilter && p.category !== categoryFilter) return false;
+      if (q && !p.name.toLowerCase().includes(q) && !p.supplierName.toLowerCase().includes(q)) {
+        return false;
+      }
+      return true;
+    });
+  }, [products, filter, supplierFilter, categoryFilter, search]);
 
   function displayedPrice(p: ScrapedProduct, base?: number, rate?: number | null) {
     const b = base ?? p.basePrice;
-    if (b == null) return "—";
+    if (b == null) return "Contact for pricing";
     return formatPrice(applyCommission(b, rate ?? p.commissionRate ?? commissionRate), p.currency);
   }
 
@@ -123,6 +179,55 @@ export default function AdminProductsClient({
     }
   }
 
+  async function remove(id: string) {
+    if (!confirm("Permanently delete this product? This cannot be undone.")) return;
+    setBusyId(id);
+    setError(null);
+    try {
+      const res = await fetch(`/api/admin/products/${id}`, { method: "DELETE" });
+      if (!res.ok) {
+        setError("Delete failed. Please try again.");
+        return;
+      }
+      setProducts((prev) => prev.filter((p) => p.id !== id));
+      setSelected((prev) => {
+        const next = new Set(prev);
+        next.delete(id);
+        return next;
+      });
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setBusyId(null);
+    }
+  }
+
+  async function bulk(status: ProductStatus) {
+    if (selected.size === 0) return;
+    setBulkBusy(true);
+    setError(null);
+    const ids = [...selected];
+    for (const id of ids) {
+      // eslint-disable-next-line no-await-in-loop
+      await patch(id, { status });
+    }
+    setSelected(new Set());
+    setBulkBusy(false);
+  }
+
+  function toggleSelect(id: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function selectAllVisible() {
+    setSelected(new Set(visible.map((p) => p.id)));
+  }
+
   function startEdit(p: ScrapedProduct) {
     setEditingId(p.id);
     setDraft(toDraft(p));
@@ -132,14 +237,16 @@ export default function AdminProductsClient({
     if (!draft) return;
     const body = {
       name: draft.name,
+      category: draft.category,
       description: draft.description,
       basePrice: draft.basePrice === "" ? null : Number(draft.basePrice),
+      priceUnit: draft.priceUnit,
       commissionRate: draft.commissionRate === "" ? null : Number(draft.commissionRate),
       moq: draft.moq,
       shippingTime: draft.shippingTime,
       images: draft.images.split(/\n+/).map((s) => s.trim()).filter(Boolean),
-      videos: draft.videos.split(/\n+/).map((s) => s.trim()).filter(Boolean),
-      supplierLogo: draft.supplierLogo.trim() || null,
+      productUrl: draft.productUrl.trim() || null,
+      imageSourceUrl: draft.imageSourceUrl.trim() || null,
       verifiedSupplier: draft.verifiedSupplier,
     };
     const updated = await patch(id, body);
@@ -151,7 +258,8 @@ export default function AdminProductsClient({
 
   const tabs: { key: Filter; label: string }[] = [
     { key: "pending", label: `Pending (${counts.pending})` },
-    { key: "approved", label: `Approved (${counts.approved})` },
+    { key: "approved", label: `Published (${counts.approved})` },
+    { key: "needs_info", label: `Needs info (${counts.needs_info})` },
     { key: "rejected", label: `Rejected (${counts.rejected})` },
     { key: "all", label: `All (${counts.all})` },
   ];
@@ -168,8 +276,8 @@ export default function AdminProductsClient({
             Scraped product review
           </h1>
           <p className="mt-2 max-w-2xl text-sm text-white/70">
-            Review, edit and approve scraped products before they appear in the public
-            catalogue. Only approved items are published. Prices shown to buyers include
+            Review, edit and publish scraped products before they appear in the public
+            catalogue. Nothing is published automatically. Prices shown to buyers include
             the {Math.round(commissionRate * 100)}% platform commission.
           </p>
         </div>
@@ -177,7 +285,7 @@ export default function AdminProductsClient({
 
       <div className="container-page py-8">
         {/* Tabs */}
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div className="mb-4 flex flex-wrap gap-2">
           {tabs.map((t) => (
             <button
               key={t.key}
@@ -191,6 +299,73 @@ export default function AdminProductsClient({
               {t.label}
             </button>
           ))}
+        </div>
+
+        {/* Secondary filters */}
+        <div className="mb-4 flex flex-wrap items-center gap-3">
+          <input
+            type="search"
+            placeholder="Search name or supplier…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-56 rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan focus:outline-none"
+          />
+          <select
+            value={supplierFilter}
+            onChange={(e) => setSupplierFilter(e.target.value)}
+            className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan focus:outline-none"
+          >
+            <option value="">All suppliers</option>
+            {suppliers.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.name}
+              </option>
+            ))}
+          </select>
+          <select
+            value={categoryFilter}
+            onChange={(e) => setCategoryFilter(e.target.value)}
+            className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan focus:outline-none"
+          >
+            <option value="">All categories</option>
+            {productCategories.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Bulk action bar */}
+        <div className="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm">
+          <button onClick={selectAllVisible} className="font-medium text-cyan hover:underline">
+            Select all ({visible.length})
+          </button>
+          {selected.size > 0 && (
+            <button
+              onClick={() => setSelected(new Set())}
+              className="text-ink-muted hover:underline"
+            >
+              Clear ({selected.size})
+            </button>
+          )}
+          <div className="ml-auto flex items-center gap-2">
+            <button
+              disabled={selected.size === 0 || bulkBusy}
+              onClick={() => bulk("approved")}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-40"
+            >
+              {bulkBusy ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Check className="h-3.5 w-3.5" />}
+              Publish selected
+            </button>
+            <button
+              disabled={selected.size === 0 || bulkBusy}
+              onClick={() => bulk("rejected")}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-rose-200 bg-white px-3 py-1.5 text-xs font-semibold text-rose-700 hover:bg-rose-50 disabled:opacity-40"
+            >
+              <X className="h-3.5 w-3.5" /> Reject selected
+            </button>
+          </div>
         </div>
 
         {error && (
@@ -209,14 +384,25 @@ export default function AdminProductsClient({
               const isEditing = editingId === p.id;
               const busy = busyId === p.id;
               const img = p.images?.[0];
+              const isDup = duplicateIds.has(p.id);
+              const isSelected = selected.has(p.id);
               return (
                 <div
                   key={p.id}
-                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card"
+                  className={`overflow-hidden rounded-2xl border bg-white shadow-card ${
+                    isSelected ? "border-cyan ring-1 ring-cyan/30" : "border-slate-200"
+                  }`}
                 >
                   <div className="flex flex-col gap-4 p-5 sm:flex-row">
-                    {/* Preview */}
-                    <div className="shrink-0">
+                    {/* Select + preview */}
+                    <div className="flex shrink-0 items-start gap-3">
+                      <input
+                        type="checkbox"
+                        checked={isSelected}
+                        onChange={() => toggleSelect(p.id)}
+                        className="mt-1 h-4 w-4 rounded border-slate-300 text-cyan focus:ring-cyan"
+                        aria-label={`Select ${p.name}`}
+                      />
                       {img ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
@@ -242,48 +428,74 @@ export default function AdminProductsClient({
                         <span
                           className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${STATUS_STYLES[p.status]}`}
                         >
-                          {p.status}
+                          {STATUS_LABEL[p.status]}
                         </span>
                         {p.verifiedSupplier && (
                           <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
                             <BadgeCheck className="h-3 w-3" aria-hidden /> Verified
                           </span>
                         )}
+                        {isDup && (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 px-2 py-0.5 text-[11px] font-bold text-orange-700">
+                            <Copy className="h-3 w-3" aria-hidden /> Possible duplicate
+                          </span>
+                        )}
+                        {!img && (
+                          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-500">
+                            No image · stays unpublished
+                          </span>
+                        )}
                       </div>
                       <p className="mt-1 text-sm text-ink-muted">
-                        {initials(p.supplierName)} · {p.supplierName} · {p.category}
+                        {p.supplierName}
+                        {p.supplierCountry ? ` · ${p.supplierCountry}` : ""} · {p.category}
                       </p>
                       <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
                         <span className="text-ink-muted">
-                          Base: <span className="font-semibold text-ink">
+                          Base:{" "}
+                          <span className="font-semibold text-ink">
                             {p.basePrice != null ? formatPrice(p.basePrice, p.currency) : "—"}
                           </span>
                         </span>
                         <span className="text-ink-muted">
-                          Displayed:{" "}
+                          Buyer price:{" "}
                           <span className="font-bold text-cyan">{displayedPrice(p)}</span>
+                          {p.priceUnit ? ` / ${p.priceUnit}` : ""}
                         </span>
                         {p.moq && <span className="text-ink-dim">MOQ: {p.moq}</span>}
                       </div>
-                      <a
-                        href={p.sourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs text-ink-dim hover:text-cyan"
-                      >
-                        <ExternalLink className="h-3 w-3" aria-hidden />
-                        {p.sourceUrl}
-                      </a>
+                      <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1">
+                        <a
+                          href={p.productUrl ?? p.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="inline-flex items-center gap-1 text-xs text-ink-dim hover:text-cyan"
+                        >
+                          <ExternalLink className="h-3 w-3" aria-hidden />
+                          Source page
+                        </a>
+                        {(p.imageSourceUrl ?? img) && (
+                          <a
+                            href={p.imageSourceUrl ?? img}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="inline-flex items-center gap-1 text-xs text-ink-dim hover:text-cyan"
+                          >
+                            <ImageIcon className="h-3 w-3" aria-hidden />
+                            Image source
+                          </a>
+                        )}
+                      </div>
                     </div>
 
                     {/* Actions */}
-                    <div className="flex shrink-0 flex-row gap-2 sm:flex-col">
+                    <div className="grid shrink-0 grid-cols-2 gap-2 sm:grid-cols-1">
                       <button
                         onClick={() => patch(p.id, { status: "approved" })}
                         disabled={busy || p.status === "approved"}
                         className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-40"
                       >
-                        <Check className="h-4 w-4" aria-hidden /> Approve
+                        <Check className="h-4 w-4" aria-hidden /> Publish
                       </button>
                       <button
                         onClick={() => patch(p.id, { status: "rejected" })}
@@ -293,11 +505,25 @@ export default function AdminProductsClient({
                         <X className="h-4 w-4" aria-hidden /> Reject
                       </button>
                       <button
+                        onClick={() => patch(p.id, { status: "needs_info" })}
+                        disabled={busy || p.status === "needs_info"}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-sky-200 bg-white px-3 py-2 text-xs font-semibold text-sky-700 hover:bg-sky-50 disabled:opacity-40"
+                      >
+                        <HelpCircle className="h-4 w-4" aria-hidden /> Needs info
+                      </button>
+                      <button
                         onClick={() => (isEditing ? setEditingId(null) : startEdit(p))}
                         disabled={busy}
                         className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-ink hover:border-cyan/40 hover:text-cyan disabled:opacity-40"
                       >
                         <Pencil className="h-4 w-4" aria-hidden /> {isEditing ? "Close" : "Edit"}
+                      </button>
+                      <button
+                        onClick={() => remove(p.id)}
+                        disabled={busy}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-ink-muted hover:border-rose-200 hover:text-rose-700 disabled:opacity-40"
+                      >
+                        <Trash2 className="h-4 w-4" aria-hidden /> Delete
                       </button>
                     </div>
                   </div>
@@ -315,13 +541,18 @@ export default function AdminProductsClient({
                           />
                         </label>
                         <label className="text-xs font-semibold text-ink">
-                          Supplier logo URL
-                          <input
-                            value={draft.supplierLogo}
-                            onChange={(e) => setDraft({ ...draft, supplierLogo: e.target.value })}
-                            placeholder="https://… (leave blank for initials)"
+                          Category
+                          <select
+                            value={draft.category}
+                            onChange={(e) => setDraft({ ...draft, category: e.target.value })}
                             className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
-                          />
+                          >
+                            {productCategories.map((c) => (
+                              <option key={c} value={c}>
+                                {c}
+                              </option>
+                            ))}
+                          </select>
                         </label>
                         <label className="text-xs font-semibold text-ink sm:col-span-2">
                           Description
@@ -333,9 +564,7 @@ export default function AdminProductsClient({
                           />
                         </label>
                         <label className="text-xs font-semibold text-ink">
-                          Base price ({draft.basePrice && draft.commissionRate
-                            ? "override commission below"
-                            : "supplier price"})
+                          Base price (blank = no public price)
                           <input
                             type="number"
                             step="0.01"
@@ -345,7 +574,15 @@ export default function AdminProductsClient({
                           />
                         </label>
                         <label className="text-xs font-semibold text-ink">
-                          Commission override (e.g. 0.12 = 12%, blank = global)
+                          Price unit (e.g. ton, meter, piece)
+                          <input
+                            value={draft.priceUnit}
+                            onChange={(e) => setDraft({ ...draft, priceUnit: e.target.value })}
+                            className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
+                          />
+                        </label>
+                        <label className="text-xs font-semibold text-ink">
+                          Commission override (e.g. 0.12; blank = global)
                           <input
                             type="number"
                             step="0.01"
@@ -371,19 +608,26 @@ export default function AdminProductsClient({
                           />
                         </label>
                         <label className="text-xs font-semibold text-ink">
-                          Image URLs (one per line)
-                          <textarea
-                            value={draft.images}
-                            onChange={(e) => setDraft({ ...draft, images: e.target.value })}
-                            rows={2}
+                          Product source URL
+                          <input
+                            value={draft.productUrl}
+                            onChange={(e) => setDraft({ ...draft, productUrl: e.target.value })}
                             className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
                           />
                         </label>
                         <label className="text-xs font-semibold text-ink">
-                          Video URLs (one per line)
+                          Image source URL (attribution)
+                          <input
+                            value={draft.imageSourceUrl}
+                            onChange={(e) => setDraft({ ...draft, imageSourceUrl: e.target.value })}
+                            className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
+                          />
+                        </label>
+                        <label className="text-xs font-semibold text-ink sm:col-span-2">
+                          Image URLs (one per line — first is the card image)
                           <textarea
-                            value={draft.videos}
-                            onChange={(e) => setDraft({ ...draft, videos: e.target.value })}
+                            value={draft.images}
+                            onChange={(e) => setDraft({ ...draft, images: e.target.value })}
                             rows={2}
                             className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
                           />
@@ -402,30 +646,18 @@ export default function AdminProductsClient({
                           />
                           Mark supplier as verified
                         </label>
-                        <div className="flex gap-2">
-                          <span className="self-center text-xs text-ink-dim">
-                            Preview:{" "}
-                            <span className="font-bold text-cyan">
-                              {displayedPrice(
-                                p,
-                                draft.basePrice === "" ? undefined : Number(draft.basePrice),
-                                draft.commissionRate === "" ? null : Number(draft.commissionRate)
-                              )}
-                            </span>
-                          </span>
-                          <button
-                            onClick={() => saveEdit(p.id)}
-                            disabled={busy}
-                            className="btn-primary inline-flex items-center gap-1.5"
-                          >
-                            {busy ? (
-                              <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-                            ) : (
-                              <Save className="h-4 w-4" aria-hidden />
-                            )}
-                            Save changes
-                          </button>
-                        </div>
+                        <button
+                          onClick={() => saveEdit(p.id)}
+                          disabled={busy}
+                          className="btn-primary inline-flex items-center gap-1.5"
+                        >
+                          {busy ? (
+                            <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                          ) : (
+                            <Save className="h-4 w-4" aria-hidden />
+                          )}
+                          Save changes
+                        </button>
                       </div>
                     </div>
                   )}

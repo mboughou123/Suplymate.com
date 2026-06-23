@@ -22,11 +22,15 @@ export type ScrapedSupplierProduct = {
   description: string | null;
   price: number | null;
   currency: string | null;
+  /** Unit the price applies to (e.g. "ton", "piece") when stated. */
+  priceUnit: string | null;
   imageUrl: string | null;
   images: string[];
   productUrl: string | null;
   minimumOrderQuantity: string | null;
   shippingInfo: string | null;
+  /** Supplier SKU / model number when present (dedupe signal). */
+  sku: string | null;
   sourceUrl: string;
 };
 

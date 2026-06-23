@@ -10,9 +10,15 @@ export type { ScrapedProduct };
 export type ScrapeTarget = {
   /** Stable short id used to namespace scraped product ids. */
   key: string;
-  supplierId: string;
-  supplierName: string;
-  category: ProductCategory;
+  /**
+   * Optional explicit supplier linkage. When omitted, the import step matches
+   * the product to a supplier by the source URL's domain (and creates a PENDING
+   * supplier if none exists) so products are never orphaned.
+   */
+  supplierId?: string;
+  supplierName?: string;
+  /** Optional category hint; inferred from the product name when omitted. */
+  category?: ProductCategory;
   currency?: string;
   /** Public product or listing URL (no login / no query-auth). */
   url: string;

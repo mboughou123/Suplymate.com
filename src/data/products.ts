@@ -6,7 +6,10 @@ export type ProductCategory =
   | "Construction"
   | "Industrial Parts";
 
-export type ProductStatus = "pending" | "approved" | "rejected";
+// Moderation lifecycle for scraped/imported products. "approved" is the
+// published state surfaced publicly; "needs_info" parks a product for follow-up
+// without rejecting it. Scraped products are NEVER published automatically.
+export type ProductStatus = "pending" | "approved" | "rejected" | "needs_info";
 
 export type Product = {
   id: string;
@@ -33,6 +36,19 @@ export type Product = {
   rating?: number;
   reviewCount?: number;
   sourceUrl?: string;
+  /** Canonical product detail page on the supplier site (scraped products). */
+  productUrl?: string;
+  /** Original hotlinked image URL kept for attribution (scraped products). */
+  imageSourceUrl?: string;
+  /** Unit the base price applies to (e.g. "ton"); null when no public price. */
+  priceUnit?: string;
+  /** Unit for the MOQ value (e.g. "tons"). */
+  minimumOrderUnit?: string;
+  /** Denormalised supplier display fields for scraped products. */
+  supplierName?: string;
+  supplierCountry?: string;
+  /** Whether a real, public price was found on the source page. */
+  hasPublicPrice?: boolean;
   /** Moderation state for scraped/imported products. */
   status?: ProductStatus;
 };

@@ -1,223 +1,55 @@
 // Supplier-website product scraper.
 //
-//   npm run products:scrape
+//   npm run products:scrape                         # scrape the curated TARGETS
+//   npm run products:scrape -- --file=urls.txt      # scrape URLs from a file
+//   npm run products:scrape -- --url=https://…      # scrape one or more URLs
+//   npm run products:scrape -- --limit=150          # stop after N products
 //
-// COMPLIANCE & SAFETY:
-//   - Checks robots.txt before every request (skips disallowed paths).
-//   - Descriptive User-Agent, single-threaded, rate-limited between requests.
-//   - Per-request timeout + try/catch; one failure never aborts the run.
-//   - Never scrapes login / account / checkout / restricted pages.
-//   - Stores the public source URL on every product.
-//   - De-duplicates by (supplier + product name) and by source URL.
-//   - All output is marked status="pending" and must be approved by an admin
-//     (/admin/products) before it ever appears publicly.
+// The --file format is one entry per line; blank lines and lines starting with
+// "#" are ignored. Each line may optionally carry a category and supplier id:
+//   https://site.com/catalog
+//   https://site.com/catalog | Steel & Metals
+//   https://site.com/catalog | Steel & Metals | rotterdam-steel-works
+//
+// COMPLIANCE & SAFETY (delegated to src/lib/scraper):
+//   - Refuses social networks + private/auth/checkout pages (safety.ts).
+//   - Honours robots.txt + Crawl-delay (robotsChecker.ts).
+//   - Descriptive User-Agent, single-threaded, rate-limited, per-request timeout.
+//   - One failure never aborts the run.
+//   - Stores the public source URL + original image source on every product.
+//   - De-duplicates by source URL, (supplier + normalized name), SKU and image.
+//   - All output is status="pending" and must be published by an admin.
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import * as cheerio from "cheerio";
+import { checkUrlSafety } from "../../src/lib/scraper/safety";
+import { isAllowed, crawlDelaySeconds } from "../../src/lib/scraper/robotsChecker";
+import { fetchHtml, sleep } from "../../src/lib/scraper/http";
+import { extractProducts } from "../../src/lib/scraper/productExtractor";
+import { SCRAPER_USER_AGENT } from "../../src/lib/scraper/types";
 import { TARGETS } from "./targets";
-import { isAllowed } from "./robots";
+import { inferCategory } from "./category";
 import type { ScrapeTarget, ScrapedProduct, ScrapeStats } from "./types";
+import type { ProductCategory } from "../../src/data/products";
 
-const USER_AGENT =
-  "SuplymateBot/1.0 (+https://suplymate.com/bot; product catalogue indexer)";
 const DELAY_MS = Number(process.env.SCRAPE_DELAY_MS ?? 2500);
-const TIMEOUT_MS = Number(process.env.SCRAPE_TIMEOUT_MS ?? 15_000);
-const CACHE_FILE = join(
-  process.cwd(),
-  "scripts",
-  "product-scraper",
-  "cache",
-  "products.json"
-);
-
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const CACHE_FILE = join(process.cwd(), "scripts", "product-scraper", "cache", "products.json");
 
 function slugify(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60);
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
 }
 
-function dedupeKey(supplierId: string, name: string): string {
-  return `${supplierId}::${name.toLowerCase().replace(/\s+/g, " ").trim()}`;
-}
-
-function parsePrice(text: string | undefined | null): number | null {
-  if (!text) return null;
-  const m = text.replace(/,/g, "").match(/(\d+(?:\.\d+)?)/);
-  return m ? Number(m[1]) : null;
-}
-
-function absUrl(base: string, href: string | undefined): string | null {
-  if (!href) return null;
+function domainOf(url: string): string {
   try {
-    return new URL(href, base).toString();
+    return new URL(url).hostname.replace(/^www\./, "");
   } catch {
-    return null;
+    return "unknown";
   }
 }
 
-type Extracted = {
-  name: string;
-  price: number | null;
-  image: string | null;
-  description: string | null;
-  link: string | null;
-};
-
-// Prefer schema.org Product JSON-LD when present.
-function extractJsonLd($: cheerio.CheerioAPI, baseUrl: string): Extracted[] {
-  const out: Extracted[] = [];
-  $('script[type="application/ld+json"]').each((_, el) => {
-    const raw = $(el).contents().text();
-    if (!raw) return;
-    let data: unknown;
-    try {
-      data = JSON.parse(raw);
-    } catch {
-      return;
-    }
-    const nodes: Record<string, unknown>[] = [];
-    const visit = (n: unknown) => {
-      if (Array.isArray(n)) n.forEach(visit);
-      else if (n && typeof n === "object") {
-        const obj = n as Record<string, unknown>;
-        if (Array.isArray(obj["@graph"])) (obj["@graph"] as unknown[]).forEach(visit);
-        nodes.push(obj);
-      }
-    };
-    visit(data);
-    for (const node of nodes) {
-      const type = node["@type"];
-      const isProduct = Array.isArray(type)
-        ? type.includes("Product")
-        : type === "Product";
-      if (!isProduct || typeof node.name !== "string") continue;
-      const offers = node.offers as Record<string, unknown> | undefined;
-      const priceRaw =
-        offers && (offers.price ?? (offers.lowPrice as unknown));
-      const img = node.image;
-      const image = Array.isArray(img)
-        ? absUrl(baseUrl, String(img[0]))
-        : typeof img === "string"
-        ? absUrl(baseUrl, img)
-        : null;
-      out.push({
-        name: node.name,
-        price: parsePrice(priceRaw != null ? String(priceRaw) : null),
-        image,
-        description:
-          typeof node.description === "string" ? node.description : null,
-        link: typeof node.url === "string" ? absUrl(baseUrl, node.url) : null,
-      });
-    }
-  });
-  return out;
-}
-
-// Heuristic fallback for common product-card markup.
-function extractCards($: cheerio.CheerioAPI, baseUrl: string): Extracted[] {
-  const out: Extracted[] = [];
-  const selectors = [
-    ".product",
-    ".thumbnail",
-    ".card",
-    "[itemtype*='Product']",
-    "li.product",
-  ];
-  const seen = new Set<string>();
-  for (const sel of selectors) {
-    $(sel).each((_, el) => {
-      const $el = $(el);
-      const name =
-        $el.find(".title, .card-title, h3, h4, [itemprop='name']").first().text().trim() ||
-        $el.find("a[title]").first().attr("title") ||
-        "";
-      if (!name || seen.has(name.toLowerCase())) return;
-      const price =
-        $el.find(".price, .card-price, [itemprop='price']").first().text().trim() ||
-        $el.find("[data-price]").first().attr("data-price") ||
-        "";
-      const imgEl = $el.find("img").first();
-      const image = absUrl(baseUrl, imgEl.attr("src") || imgEl.attr("data-src"));
-      const description = $el
-        .find(".description, .card-text, p")
-        .first()
-        .text()
-        .trim();
-      const link = absUrl(baseUrl, $el.find("a").first().attr("href"));
-      seen.add(name.toLowerCase());
-      out.push({
-        name,
-        price: parsePrice(price),
-        image,
-        description: description || null,
-        link,
-      });
-    });
-    if (out.length) break; // first selector that yields results wins
-  }
-  return out;
-}
-
-async function fetchHtml(url: string): Promise<string | null> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
-  try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
-      signal: controller.signal,
-    });
-    if (!res.ok) {
-      console.warn(`  ! ${res.status} ${res.statusText} for ${url}`);
-      return null;
-    }
-    const ct = res.headers.get("content-type") ?? "";
-    if (!ct.includes("html")) {
-      console.warn(`  ! non-HTML content (${ct}) for ${url}`);
-      return null;
-    }
-    return await res.text();
-  } catch (err) {
-    console.warn(`  ! fetch error for ${url}: ${(err as Error).message}`);
-    return null;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-function toScrapedProduct(
-  target: ScrapeTarget,
-  e: Extracted
-): ScrapedProduct {
-  return {
-    id: `scraped-${target.key}-${slugify(e.name)}`,
-    supplierId: target.supplierId,
-    supplierName: target.supplierName,
-    supplierLogo: null,
-    name: e.name,
-    category: target.category,
-    images: e.image ? [e.image] : [],
-    videos: [],
-    basePrice: e.price,
-    commissionRate: null,
-    currency: target.currency ?? "USD",
-    moq: null,
-    shippingTime: null,
-    description: e.description,
-    specifications: {},
-    customizationOptions: [],
-    certifications: [],
-    rating: null,
-    reviewCount: null,
-    sourceUrl: e.link ?? target.url,
-    verifiedSupplier: false,
-    status: "pending",
-    scrapedAt: new Date().toISOString(),
-  };
+function dedupeName(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
 function loadCache(): ScrapedProduct[] {
@@ -234,11 +66,46 @@ function saveCache(items: ScrapedProduct[]) {
   writeFileSync(CACHE_FILE, JSON.stringify(items, null, 2));
 }
 
+function parseFileTargets(path: string): ScrapeTarget[] {
+  const abs = join(process.cwd(), path);
+  if (!existsSync(abs)) return [];
+  return readFileSync(abs, "utf8")
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"))
+    .map((line, i) => {
+      const [url, category, supplierId] = line.split("|").map((p) => p.trim());
+      return {
+        key: `file-${i}-${domainOf(url)}`,
+        url,
+        category: (category || undefined) as ProductCategory | undefined,
+        supplierId: supplierId || undefined,
+      } satisfies ScrapeTarget;
+    });
+}
+
+function argValues(name: string): string[] {
+  return process.argv
+    .filter((a) => a.startsWith(`--${name}=`))
+    .map((a) => a.split("=").slice(1).join("="));
+}
+
 async function main() {
-  console.log(`Suplymate product scraper — ${TARGETS.length} target(s)\n`);
+  const limit = Number(argValues("limit")[0] ?? 0) || Infinity;
+
+  const targets: ScrapeTarget[] = [];
+  for (const u of argValues("url")) {
+    targets.push({ key: `url-${domainOf(u)}`, url: u });
+  }
+  for (const f of argValues("file")) targets.push(...parseFileTargets(f));
+  if (targets.length === 0) targets.push(...TARGETS);
+
+  console.log(`Suplymate product scraper — ${targets.length} target(s)\n`);
+
   const existing = loadCache();
-  const byKey = new Set(existing.map((p) => dedupeKey(p.supplierId, p.name)));
   const byUrl = new Set(existing.map((p) => p.sourceUrl));
+  const byKey = new Set(existing.map((p) => `${p.supplierId}::${dedupeName(p.name)}`));
+  const byImage = new Set(existing.map((p) => p.images?.[0]).filter(Boolean) as string[]);
   const collected: ScrapedProduct[] = [...existing];
 
   const stats: ScrapeStats = {
@@ -249,51 +116,121 @@ async function main() {
     errors: 0,
   };
 
-  for (const target of TARGETS) {
+  for (const target of targets) {
+    if (stats.scraped >= limit) break;
     stats.attempted++;
-    console.log(`→ ${target.supplierName}: ${target.url}`);
+    console.log(`→ ${target.url}`);
 
-    const allowed = await isAllowed(target.url, USER_AGENT);
+    const safety = checkUrlSafety(target.url);
+    if (!safety.allowed) {
+      console.warn(`  ⨯ refused: ${safety.reason}`);
+      stats.skippedRobots++;
+      continue;
+    }
+
+    let allowed = true;
+    try {
+      allowed = await isAllowed(target.url, SCRAPER_USER_AGENT);
+    } catch {
+      allowed = true;
+    }
     if (!allowed) {
       console.warn("  ⨯ disallowed by robots.txt — skipping");
       stats.skippedRobots++;
       continue;
     }
 
-    const html = await fetchHtml(target.url);
+    const { html, error, finalUrl } = await fetchHtml(target.url);
     if (!html) {
+      console.warn(`  ! fetch failed: ${error ?? "unknown"}`);
       stats.errors++;
       await sleep(DELAY_MS);
       continue;
     }
 
     const $ = cheerio.load(html);
-    let extracted = extractJsonLd($, target.url);
-    if (!extracted.length) extracted = extractCards($, target.url);
+    const extracted = extractProducts($, finalUrl);
     console.log(`  found ${extracted.length} candidate product(s)`);
 
+    const domain = domainOf(finalUrl);
     for (const e of extracted) {
+      if (stats.scraped >= limit) break;
       if (!e.name) continue;
-      const key = dedupeKey(target.supplierId, e.name);
-      const product = toScrapedProduct(target, e);
-      if (byKey.has(key) || byUrl.has(product.sourceUrl)) {
+      const category = target.category ?? inferCategory(`${e.name} ${e.description ?? ""}`);
+      const supplierId = target.supplierId ?? `domain:${domain}`;
+      const key = `${supplierId}::${dedupeName(e.name)}`;
+      const primaryImage = e.images?.[0] ?? e.imageUrl ?? null;
+
+      if (byUrl.has(e.sourceUrl) && byKey.has(key)) {
         stats.skippedDuplicate++;
         continue;
       }
+      if (key && byKey.has(key)) {
+        stats.skippedDuplicate++;
+        continue;
+      }
+      if (primaryImage && byImage.has(primaryImage)) {
+        stats.skippedDuplicate++;
+        continue;
+      }
+
       byKey.add(key);
-      byUrl.add(product.sourceUrl);
-      collected.push(product);
+      byUrl.add(e.sourceUrl);
+      if (primaryImage) byImage.add(primaryImage);
+
+      const record: ScrapedProduct = {
+        id: `scraped-${slugify(domain)}-${slugify(e.name)}`,
+        supplierId,
+        supplierName: target.supplierName ?? domain,
+        supplierLogo: null,
+        supplierCountry: null,
+        name: e.name,
+        slug: slugify(e.name),
+        category,
+        images: e.images ?? (primaryImage ? [primaryImage] : []),
+        videos: [],
+        basePrice: e.price,
+        priceUnit: e.priceUnit,
+        commissionRate: null,
+        currency: e.currency ?? target.currency ?? "USD",
+        moq: e.minimumOrderQuantity,
+        minimumOrderUnit: null,
+        shippingTime: e.shippingInfo,
+        description: e.description,
+        shortDescription: e.description ? e.description.slice(0, 160) : null,
+        specifications: {},
+        customizationOptions: [],
+        certifications: [],
+        rating: null,
+        reviewCount: null,
+        sourceUrl: e.sourceUrl,
+        productUrl: e.productUrl,
+        imageSourceUrl: primaryImage,
+        sku: e.sku,
+        verifiedSupplier: false,
+        status: "pending",
+        scrapedAt: new Date().toISOString(),
+      };
+      collected.push(record);
       stats.scraped++;
     }
 
-    await sleep(DELAY_MS); // rate limit between targets
+    // Respect the larger of the site's crawl-delay and our default.
+    let delay = DELAY_MS;
+    try {
+      const cd = await crawlDelaySeconds(target.url);
+      if (cd && cd * 1000 > delay) delay = cd * 1000;
+    } catch {
+      // ignore
+    }
+    await sleep(delay);
   }
 
   saveCache(collected);
   console.log("\nDone.");
   console.log(stats);
-  console.log(`\nCache: ${CACHE_FILE}`);
-  console.log("Next: npm run products:import   (then review at /admin/products)");
+  console.log(`\nCache: ${CACHE_FILE} (${collected.length} total)`);
+  console.log("Next: npm run products:import   (links suppliers, then review at /admin/products)");
 }
 
 main().catch((err) => {
