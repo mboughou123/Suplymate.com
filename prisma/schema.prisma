@@ -130,10 +130,87 @@ model Certification {
   imageUrl       String?
   certificateUrl String?
   sourceUrl      String?
+  // ----- Richer certification metadata (additive) -----
+  issuingOrg        String?
+  certificateNumber String?
+  issueDate         DateTime?
+  expirationDate    DateTime?
+  verificationUrl   String?
+  notes             String?
+  // Lifecycle: claimed | pending | reviewed | verified | expired | rejected.
+  // NEVER auto-set to "verified" because an image exists — admin action only.
+  status         String   @default("claimed")
   createdAt      DateTime @default(now())
   updatedAt      DateTime @default(now()) @updatedAt
 
   @@index([supplierId])
+  @@index([status])
+}
+
+// ----- Unified media management (Shopify-style media library) -----
+//
+// A single, queryable source of truth for EVERY image across the site:
+// supplier logos/covers/factory/gallery, product images, certification images,
+// user profile images and general assets. Additive: the legacy image fields on
+// Supplier / ScrapedProduct / Certification are kept as a fallback and are
+// backfilled into Media rows by scripts/migrate-media.ts.
+//
+// Public surfaces read PUBLISHED Media first and fall back to the legacy fields
+// + image-fallback chain, so nothing breaks when a row has no Media yet.
+model Media {
+  id               String   @id @default(cuid())
+  // Hosted/serving URL (Vercel Blob when configured, else the original/remote
+  // URL in passthrough mode). Always renderable.
+  url              String
+  // Provider object key for delete/replace (null in passthrough mode).
+  storageKey       String?
+  // Original source URL (hotlink / scraped / pasted) kept for attribution.
+  originalUrl      String?
+  originalFilename String?
+  mimeType         String?
+  fileSize         Int?
+  width            Int?
+  height           Int?
+  // SUPPLIER_LOGO | SUPPLIER_COVER | SUPPLIER_FACTORY | SUPPLIER_GALLERY |
+  // PRODUCT_PRIMARY | PRODUCT_GALLERY | CERTIFICATION | PROFILE_IMAGE | GENERAL
+  mediaType        String   @default("GENERAL")
+  // SUPPLIER | PRODUCT | CERTIFICATION | USER | GENERAL
+  entityType       String   @default("GENERAL")
+  // Id of the related entity (supplier id, product id, etc.). Null = unattached.
+  entityId         String?
+  altText          String?
+  caption          String?
+  sortOrder        Int      @default(0)
+  isPrimary        Boolean  @default(false)
+  // published | unpublished | draft. NEVER shown publicly unless "published".
+  status           String   @default("unpublished")
+  // Admin email/id that uploaded/imported the asset.
+  uploadedBy       String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @default(now()) @updatedAt
+
+  @@index([entityType, entityId])
+  @@index([mediaType])
+  @@index([status])
+}
+
+// Append-only audit trail for media actions (upload, edit, publish, delete,
+// reorder, attach, replace, …) shown in the media details panel.
+model MediaAuditLog {
+  id         String   @id @default(cuid())
+  adminUser  String?
+  // create | update | publish | unpublish | delete | reorder | attach |
+  // replace | import | bulk
+  action     String
+  mediaId    String?
+  entityType String?
+  entityId   String?
+  // Optional JSON snapshot of what changed (field diffs / metadata).
+  detail     String?
+  createdAt  DateTime @default(now())
+
+  @@index([mediaId])
+  @@index([createdAt])
 }
 
 model Product {

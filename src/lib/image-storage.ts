@@ -53,6 +53,109 @@ export function storageProviderStatus(): StorageStatus {
 const slug = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60);
 
+/* ------------------------------------------------------------------ */
+/* General-purpose media upload / delete (used by the media library)   */
+/* ------------------------------------------------------------------ */
+
+export type StoredObject = {
+  /** Hosted/serving URL (always renderable). */
+  url: string;
+  /** Provider object key for later delete/replace. Null in passthrough mode. */
+  storageKey: string | null;
+  provider: StorageProvider;
+};
+
+const EXT_BY_MIME: Record<string, string> = {
+  "image/jpeg": "jpg",
+  "image/jpg": "jpg",
+  "image/png": "png",
+  "image/webp": "webp",
+  "image/gif": "gif",
+  "image/svg+xml": "svg",
+  "image/avif": "avif",
+};
+
+function extFor(contentType: string, fallbackName?: string): string {
+  const byMime = EXT_BY_MIME[contentType.split(";")[0].trim().toLowerCase()];
+  if (byMime) return byMime;
+  const fromName = fallbackName?.split(".").pop();
+  if (fromName && fromName.length <= 5) return fromName.toLowerCase();
+  return "bin";
+}
+
+/**
+ * Upload an in-memory buffer to the configured storage provider and return the
+ * hosted URL + storage key. In passthrough mode (no provider configured) this
+ * returns a `data:` URL so the asset is still renderable for previews/dev, with
+ * a null storageKey to signal nothing was persisted remotely.
+ *
+ * Never throws — on any provider error it degrades to the passthrough result.
+ */
+export async function uploadBuffer(
+  buffer: Buffer,
+  opts: { contentType: string; prefix?: string; filename?: string }
+): Promise<StoredObject> {
+  const provider = detectStorageProvider();
+  const contentType = opts.contentType || "application/octet-stream";
+  const ext = extFor(contentType, opts.filename);
+  const base = slug(opts.filename?.replace(/\.[^.]+$/, "") || "media") || "media";
+  const key = `${opts.prefix ?? "media"}/${base}-${Date.now()}-${Math.random()
+    .toString(36)
+    .slice(2, 8)}.${ext}`;
+
+  if (provider === "vercel-blob") {
+    try {
+      const spec = "@vercel/blob";
+      const mod = (await import(/* webpackIgnore: true */ spec).catch(() => null)) as {
+        put?: (
+          k: string,
+          b: Buffer,
+          o: Record<string, unknown>
+        ) => Promise<{ url: string }>;
+      } | null;
+      if (mod?.put) {
+        const { url } = await mod.put(key, buffer, {
+          access: "public",
+          contentType,
+          token: process.env.BLOB_READ_WRITE_TOKEN,
+        });
+        if (url) return { url, storageKey: key, provider };
+      }
+    } catch {
+      // fall through to passthrough
+    }
+  }
+
+  // Passthrough: embed as a data URL so previews still work without a provider.
+  const dataUrl = `data:${contentType};base64,${buffer.toString("base64")}`;
+  return { url: dataUrl, storageKey: null, provider: "passthrough" };
+}
+
+/**
+ * Delete an object previously stored via `uploadBuffer`/`persistProductImage`.
+ * No-op (resolves false) in passthrough mode or when the key is null. Never
+ * throws.
+ */
+export async function deleteFromStorage(storageKey: string | null | undefined): Promise<boolean> {
+  if (!storageKey) return false;
+  const provider = detectStorageProvider();
+  if (provider === "vercel-blob") {
+    try {
+      const spec = "@vercel/blob";
+      const mod = (await import(/* webpackIgnore: true */ spec).catch(() => null)) as {
+        del?: (k: string | string[], o?: Record<string, unknown>) => Promise<void>;
+      } | null;
+      if (mod?.del) {
+        await mod.del(storageKey, { token: process.env.BLOB_READ_WRITE_TOKEN });
+        return true;
+      }
+    } catch {
+      return false;
+    }
+  }
+  return false;
+}
+
 /**
  * Re-host a remote image and return the hosted URL. Returns the ORIGINAL url
  * unchanged for the passthrough provider or on any failure (never throws), so
