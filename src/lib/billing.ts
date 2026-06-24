@@ -59,9 +59,35 @@ export const PLANS: Plan[] = [
   },
 ];
 
+// Stripe is the billing provider. It is considered configured only when both
+// the secret key and the webhook signing secret are present — webhooks are the
+// source of truth for subscription state, so we never enable checkout without a
+// way to receive them. Price IDs map plans to Stripe Prices.
+export function isStripeConfigured(): boolean {
+  return Boolean(
+    process.env.STRIPE_SECRET_KEY &&
+      process.env.STRIPE_WEBHOOK_SECRET
+  );
+}
+
 export function isBillingProviderConfigured(): boolean {
-  // No payment provider configured yet.
-  return false;
+  return isStripeConfigured();
+}
+
+// Map a plan id to its configured Stripe Price id (set in env). Returns null
+// when not configured.
+export function stripePriceIdFor(plan: PlanId): string | null {
+  if (plan === "starter") return process.env.STRIPE_PRICE_STARTER || null;
+  if (plan === "pro") return process.env.STRIPE_PRICE_PRO || null;
+  return null;
+}
+
+// Reverse lookup: given a Stripe Price id (from a webhook), which plan is it?
+export function planForStripePriceId(priceId: string | null | undefined): PlanId {
+  if (!priceId) return "free";
+  if (priceId === process.env.STRIPE_PRICE_PRO) return "pro";
+  if (priceId === process.env.STRIPE_PRICE_STARTER) return "starter";
+  return "free";
 }
 
 export function getPlanById(id: string | null | undefined): Plan {
@@ -86,3 +112,5 @@ export function getBillingState(user: {
     providerConfigured: isBillingProviderConfigured(),
   };
 }
+
+export type { Plan as BillingPlan };
