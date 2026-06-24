@@ -15,6 +15,7 @@ import {
   MessageSquare,
   type LucideIcon,
 } from "lucide-react";
+import CartButton from "@/components/cart/CartButton";
 
 type NavItem = {
   href: string;
@@ -222,6 +223,7 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
+          <CartButton />
           {status === "loading" ? (
             <span className="hidden h-9 w-20 sm:block" />
           ) : session?.user ? (
