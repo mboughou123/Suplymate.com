@@ -61,6 +61,52 @@ function titleFromDomain(domain: string): string {
   return base.replace(/[-_]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+// Scraped images enter the media library as UNPUBLISHED rows, classified by
+// type, keeping the original source URL for attribution. Idempotent: skips an
+// image already ingested for the product. Best-effort (ignored without the
+// Media table). Admins review + publish + (on approval) re-host these.
+async function ingestProductMedia(
+  productId: string,
+  images: string[],
+  sourceUrl: string | null
+): Promise<void> {
+  const urls = (images ?? []).map((u) => String(u).trim()).filter((u) => /^https?:\/\//i.test(u));
+  if (urls.length === 0) return;
+  try {
+    const existing = await prisma.media.findMany({
+      where: { entityType: "PRODUCT", entityId: productId },
+      select: { url: true, originalUrl: true },
+    });
+    const seen = new Set<string>();
+    for (const e of existing) {
+      if (e.url) seen.add(e.url);
+      if (e.originalUrl) seen.add(e.originalUrl);
+    }
+    let order = existing.length;
+    for (let i = 0; i < urls.length; i++) {
+      const url = urls[i];
+      if (seen.has(url)) continue;
+      await prisma.media.create({
+        data: {
+          url,
+          originalUrl: sourceUrl ?? url,
+          mediaType: order === 0 ? "PRODUCT_PRIMARY" : "PRODUCT_GALLERY",
+          entityType: "PRODUCT",
+          entityId: productId,
+          isPrimary: order === 0,
+          sortOrder: order,
+          status: "unpublished",
+          uploadedBy: "scraper",
+        },
+      });
+      seen.add(url);
+      order++;
+    }
+  } catch {
+    // Media table not provisioned — skip silently.
+  }
+}
+
 type SupplierLite = {
   id: string;
   name: string;
@@ -205,6 +251,7 @@ async function main() {
       create: { id: r.id, ...data },
       update: data,
     });
+    await ingestProductMedia(r.id, r.images ?? [], r.imageSourceUrl ?? r.sourceUrl ?? null);
     ok++;
   }
 

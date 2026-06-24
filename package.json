@@ -19,7 +19,9 @@
     "suppliers:import:csv": "tsx scripts/importSuppliers.ts",
     "suppliers:scrape": "tsx scripts/scrape-suppliers.ts",
     "products:scrape": "tsx scripts/product-scraper/scrape.ts",
-    "products:import": "tsx scripts/import-products.ts --source=cache",
+    "media:migrate": "tsx scripts/migrate-media.ts",
+  "media:migrate:dry": "tsx scripts/migrate-media.ts --dry",
+  "products:import": "tsx scripts/import-products.ts --source=cache",
     "products:import:sample": "tsx scripts/import-products.ts --source=sample",
     "import:bundle": "tsx scripts/import-supplier-bundle.ts"
   },
