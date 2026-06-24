@@ -15,8 +15,9 @@ import ProductGallery from "@/components/product/ProductGallery";
 import ProductPurchasePanel from "@/components/product/ProductPurchasePanel";
 import ProductSupplierBox from "@/components/product/ProductSupplierBox";
 import ProductDescription from "@/components/product/ProductDescription";
-import ProductReviews from "@/components/product/ProductReviews";
 import RecommendedProducts from "@/components/product/RecommendedProducts";
+import AddToCartButton from "@/components/cart/AddToCartButton";
+import { parseMoq } from "@/lib/moq";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -50,6 +51,11 @@ export default async function ProductDetailPage({ params }: Props) {
   const detail = getProductDetail(product);
   const comparison =
     getComparisonByProductId(id) ?? getDefaultComparison(id, product.name);
+
+  // Honest pricing gate: only show indicative tiers when a real supplier-listed
+  // price exists. Scraped products with no public price fall back to a
+  // "Contact supplier for pricing" state.
+  const hasPublicPrice = (product.basePrice ?? product.priceMin ?? 0) > 0;
 
   return (
     <div className="min-h-screen bg-slate-50/50">
@@ -91,37 +97,73 @@ export default async function ProductDetailPage({ params }: Props) {
             </h1>
 
             <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-              <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-                {detail.rating.toFixed(1)}
-                <span className="font-normal text-ink-dim">
-                  ({detail.reviewCount.toLocaleString()} reviews)
+              {product.rating != null ? (
+                <span className="inline-flex items-center gap-1 font-semibold text-ink">
+                  <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                  {product.rating.toFixed(1)}
+                  {product.reviewCount != null && (
+                    <span className="font-normal text-ink-dim">
+                      ({product.reviewCount.toLocaleString()} supplier-site reviews)
+                    </span>
+                  )}
                 </span>
-              </span>
+              ) : (
+                <span className="text-xs text-ink-dim">No ratings yet</span>
+              )}
               <Link href={detail.supplier.href} className="text-ink-muted hover:text-cyan">
                 {detail.supplier.flag} {detail.supplier.name}
               </Link>
             </div>
 
-            {/* Tiered bulk pricing */}
-            <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-                Tiered bulk pricing
-              </p>
-              <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {detail.priceTiers.map((t) => (
-                  <div key={t.minQty} className="rounded-xl bg-slate-50 p-3">
-                    <p className="text-[11px] text-ink-dim">{t.rangeLabel}</p>
-                    <p className="mt-1 text-base font-bold text-cyan">
-                      {t.priceLabel}
-                    </p>
-                  </div>
-                ))}
+            {/* Pricing */}
+            {hasPublicPrice ? (
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+                  Indicative pricing
+                </p>
+                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  {detail.priceTiers.map((t) => (
+                    <div key={t.minQty} className="rounded-xl bg-slate-50 p-3">
+                      <p className="text-[11px] text-ink-dim">{t.rangeLabel}</p>
+                      <p className="mt-1 text-base font-bold text-cyan">
+                        {t.priceLabel}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs text-ink-dim">
+                  Estimated from the supplier-listed price (incl. Suplymate service fee). Final
+                  pricing is confirmed by the supplier in a quote. MOQ:{" "}
+                  <span className="font-semibold text-ink">{detail.moq}</span>
+                </p>
               </div>
-              <p className="mt-3 text-xs text-ink-dim">
-                Prices shown include Suplymate service fee. MOQ:{" "}
-                <span className="font-semibold text-ink">{detail.moq}</span>
-              </p>
+            ) : (
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+                <p className="text-base font-semibold text-ink">Contact supplier for pricing</p>
+                <p className="mt-1 text-xs text-ink-dim">
+                  No public price is listed. Add this product to your cart and request a quote.
+                  {detail.moq ? <> MOQ: <span className="font-semibold text-ink">{detail.moq}</span></> : null}
+                </p>
+              </div>
+            )}
+
+            {/* Procurement actions */}
+            <div className="mt-4 flex flex-wrap gap-2">
+              <AddToCartButton
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-cyan px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan/90"
+                item={{
+                  productId: product.id,
+                  productName: product.name,
+                  supplierId: product.supplierId ?? detail.supplier.id,
+                  supplierName: product.supplierName ?? detail.supplier.name,
+                  imageUrl: product.images?.[0] ?? null,
+                  unit: product.priceUnit ?? product.unit ?? null,
+                  moq: parseMoq(product.moq),
+                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
+                  currency: product.currency,
+                  sourceUrl: product.productUrl ?? null,
+                }}
+              />
             </div>
 
             {/* Options */}
@@ -181,7 +223,12 @@ export default async function ProductDetailPage({ params }: Props) {
         {/* Description + supplier */}
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
           <div>
-            <h2 className="mb-5 text-xl font-bold text-ink">Product details</h2>
+            <h2 className="mb-2 text-xl font-bold text-ink">Product details</h2>
+            <p className="mb-5 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+              Illustrative specifications based on category norms and supplier-provided
+              information. These are not independently verified — confirm exact specs,
+              certifications, and tolerances with the supplier in your RFQ.
+            </p>
             <ProductDescription
               sections={detail.descriptionSections}
               highlights={detail.highlights}
@@ -193,10 +240,21 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Reviews */}
+        {/* Reviews — honest empty state. Reviews are only published after a
+            confirmed on-platform interaction with the supplier (review policy). */}
         <section className="mt-12">
-          <h2 className="mb-5 text-xl font-bold text-ink">Customer reviews</h2>
-          <ProductReviews summary={detail.reviewSummary} reviews={detail.reviews} />
+          <h2 className="mb-5 text-xl font-bold text-ink">Reviews</h2>
+          <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center">
+            <p className="text-sm font-medium text-ink">No verified reviews yet</p>
+            <p className="mx-auto mt-1 max-w-md text-xs text-ink-dim">
+              Suplymate only publishes reviews from buyers after a confirmed interaction with the
+              supplier (an RFQ, quote, or conversation). See our{" "}
+              <Link href="/review-policy" className="text-cyan hover:underline">
+                review policy
+              </Link>
+              .
+            </p>
+          </div>
         </section>
 
         {/* Compare suppliers */}
