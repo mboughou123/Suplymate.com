@@ -15,11 +15,13 @@ import {
   HelpCircle,
   Copy,
   ImageIcon,
+  Images,
 } from "lucide-react";
 import type { ScrapedProduct } from "@/data/scraped-products";
 import type { ProductStatus } from "@/data/products";
 import { productCategories } from "@/data/products";
 import { applyCommission, formatPrice } from "@/config/commerce";
+import MediaManagerModal from "@/components/admin/media/MediaManagerModal";
 
 type Props = {
   initialProducts: ScrapedProduct[];
@@ -99,6 +101,7 @@ export default function AdminProductsClient({
   const [bulkBusy, setBulkBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [mediaFor, setMediaFor] = useState<ScrapedProduct | null>(null);
 
   const counts = useMemo(() => {
     const c = { all: products.length, pending: 0, approved: 0, rejected: 0, needs_info: 0 };
@@ -519,6 +522,13 @@ export default function AdminProductsClient({
                         <Pencil className="h-4 w-4" aria-hidden /> {isEditing ? "Close" : "Edit"}
                       </button>
                       <button
+                        onClick={() => setMediaFor(p)}
+                        disabled={busy}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-ink hover:border-cyan/40 hover:text-cyan disabled:opacity-40"
+                      >
+                        <Images className="h-4 w-4" aria-hidden /> Images
+                      </button>
+                      <button
                         onClick={() => remove(p.id)}
                         disabled={busy}
                         className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-ink-muted hover:border-rose-200 hover:text-rose-700 disabled:opacity-40"
@@ -667,6 +677,18 @@ export default function AdminProductsClient({
           </div>
         )}
       </div>
+
+      {mediaFor && (
+        <MediaManagerModal
+          entityType="PRODUCT"
+          entityId={mediaFor.id}
+          allowedTypes={["PRODUCT_PRIMARY", "PRODUCT_GALLERY"]}
+          defaultType="PRODUCT_GALLERY"
+          title={`Manage images · ${mediaFor.name}`}
+          description="Upload, reorder, set the primary image, edit captions/alt text and publish. Published images appear on the public product card & detail page; the primary image is shown first. Logos, factory and certificate images are kept separate."
+          onClose={() => setMediaFor(null)}
+        />
+      )}
     </div>
   );
 }
