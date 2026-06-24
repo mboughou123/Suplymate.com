@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { firstContactReply } from "@/lib/auto-reply";
+import { getClaimedSupplierIds } from "@/lib/supplier-access";
 
 export async function GET() {
   const session = await auth();
@@ -9,8 +10,16 @@ export async function GET() {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  // Buyer's own conversations + conversations for suppliers this user manages
+  // (participant-only access).
+  const managedSupplierIds = await getClaimedSupplierIds(session.user.id);
   const conversations = await prisma.conversation.findMany({
-    where: { buyerId: session.user.id },
+    where: {
+      OR: [
+        { buyerId: session.user.id },
+        ...(managedSupplierIds.length ? [{ supplierId: { in: managedSupplierIds } }] : []),
+      ],
+    },
     orderBy: { lastMessageAt: "desc" },
     include: {
       messages: {
@@ -27,6 +36,8 @@ export async function GET() {
       supplierId: c.supplierId,
       supplierName: c.supplierName,
       status: c.status,
+      type: c.type,
+      viewerRole: c.buyerId === session.user!.id ? "buyer" : "supplier",
       lastMessageAt: c.lastMessageAt,
       lastMessage: last
         ? { senderType: last.senderType, body: last.body, createdAt: last.createdAt }

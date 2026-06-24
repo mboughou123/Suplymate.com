@@ -4,6 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { detectRisk } from "@/lib/fraud";
 import { autoReply } from "@/lib/auto-reply";
 import { getSupplierMeta } from "@/lib/supplier-meta";
+import { canManageSupplier } from "@/lib/supplier-access";
+import { notify } from "@/lib/notifications";
 
 type AttachmentInput = {
   fileName: string;
@@ -12,8 +14,19 @@ type AttachmentInput = {
   sizeBytes?: number;
 };
 
-async function ownedConversation(id: string, userId: string) {
-  return prisma.conversation.findFirst({ where: { id, buyerId: userId } });
+// Participant-only access: the buyer who owns the conversation OR a manager of
+// the target supplier (approved claim / admin). Returns "buyer" | "supplier" |
+// null along with the conversation.
+async function participant(
+  id: string,
+  userId: string,
+  email: string | null | undefined
+): Promise<{ convo: Awaited<ReturnType<typeof prisma.conversation.findUnique>>; role: "buyer" | "supplier" | null }> {
+  const convo = await prisma.conversation.findUnique({ where: { id } });
+  if (!convo) return { convo: null, role: null };
+  if (convo.buyerId === userId) return { convo, role: "buyer" };
+  if (await canManageSupplier(userId, email, convo.supplierId)) return { convo, role: "supplier" };
+  return { convo, role: null };
 }
 
 export async function GET(
@@ -25,15 +38,23 @@ export async function GET(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await params;
-  const convo = await ownedConversation(id, session.user.id);
-  if (!convo) {
+  const { convo, role } = await participant(id, session.user.id, session.user.email);
+  if (!convo || !role) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  // Mark supplier/system messages as read (read receipts for the buyer view).
+  // Mark the OTHER side's messages as read for the current viewer.
   await prisma.message.updateMany({
-    where: { conversationId: id, senderType: { not: "buyer" }, readAt: null },
+    where: {
+      conversationId: id,
+      senderType: { not: role },
+      readAt: null,
+    },
     data: { readAt: new Date() },
+  });
+  await prisma.conversation.update({
+    where: { id },
+    data: role === "buyer" ? { buyerLastReadAt: new Date() } : { supplierLastReadAt: new Date() },
   });
 
   const messages = await prisma.message.findMany({
@@ -48,6 +69,8 @@ export async function GET(
       supplierId: convo.supplierId,
       supplierName: convo.supplierName,
       status: convo.status,
+      type: convo.type,
+      viewerRole: role,
     },
     supplierMeta: getSupplierMeta(convo.supplierId),
     messages,
@@ -63,8 +86,8 @@ export async function POST(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await params;
-  const convo = await ownedConversation(id, session.user.id);
-  if (!convo) {
+  const { convo, role } = await participant(id, session.user.id, session.user.email);
+  if (!convo || !role) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
@@ -83,12 +106,13 @@ export async function POST(
 
   const risk = detectRisk(text);
 
-  const buyerMessage = await prisma.message.create({
+  const message = await prisma.message.create({
     data: {
       conversationId: id,
-      senderType: "buyer",
+      senderType: role, // "buyer" or "supplier" — real sender
       body: text,
       riskFlag: risk?.flag ?? null,
+      readAt: new Date(),
       attachments: {
         create: attachments.map((a) => ({
           fileName: String(a.fileName).slice(0, 200),
@@ -101,37 +125,49 @@ export async function POST(
     include: { attachments: true },
   });
 
-  // Supplier "reads" the buyer message, then auto-replies.
-  await prisma.message.update({
-    where: { id: buyerMessage.id },
-    data: { readAt: new Date() },
-  });
-
-  await prisma.message.create({
-    data: {
-      conversationId: id,
-      senderType: "supplier",
-      body: autoReply(convo.supplierName, text),
-    },
-  });
-
   await prisma.conversation.update({
     where: { id },
     data: { lastMessageAt: new Date() },
   });
 
-  await prisma.notification.create({
-    data: {
-      userId: session.user.id,
+  // Determine whether a REAL supplier account backs this profile. If so, no
+  // simulated auto-reply — the supplier responds for themselves. The auto-reply
+  // remains only as an honest fallback for unclaimed directory profiles.
+  const supplier = await prisma.supplier
+    .findUnique({ where: { id: convo.supplierId }, select: { claimedByUserId: true } })
+    .catch(() => null);
+  const supplierIsReal = Boolean(supplier?.claimedByUserId);
+
+  if (role === "buyer") {
+    if (supplierIsReal && supplier?.claimedByUserId) {
+      // Notify the real supplier manager.
+      await notify({
+        userId: supplier.claimedByUserId,
+        type: "message",
+        title: `New message from a buyer`,
+        body: "You have a new message in the supplier portal.",
+        link: `/messages?c=${id}`,
+      });
+    } else {
+      // Honest fallback for unclaimed profiles: a clearly automated acknowledgement.
+      await prisma.message.create({
+        data: {
+          conversationId: id,
+          senderType: "system",
+          body: autoReply(convo.supplierName, text),
+        },
+      });
+    }
+  } else {
+    // Supplier replied — notify the buyer.
+    await notify({
+      userId: convo.buyerId,
       type: "message",
       title: `New reply from ${convo.supplierName}`,
       body: "You have a new message in your conversation.",
       link: `/messages?c=${id}`,
-    },
-  });
+    });
+  }
 
-  return NextResponse.json({
-    message: buyerMessage,
-    risk: risk ?? null,
-  });
+  return NextResponse.json({ message, risk: risk ?? null });
 }
