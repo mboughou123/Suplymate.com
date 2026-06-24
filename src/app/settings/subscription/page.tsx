@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { Check } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { PLANS, getBillingState } from "@/lib/billing";
+import { ManageBillingButton, UpgradeButton } from "@/components/settings/BillingActions";
 
 export default async function SubscriptionPage() {
   const { authenticated, user } = await getCurrentAccount();
@@ -30,14 +31,7 @@ export default async function SubscriptionPage() {
             </div>
           </div>
           <div className="flex flex-col items-end gap-2">
-            <button
-              type="button"
-              disabled
-              title="Coming soon"
-              className="cursor-not-allowed rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-ink-dim"
-            >
-              Manage billing
-            </button>
+            <ManageBillingButton configured={billing.providerConfigured} />
           </div>
         </div>
         {!billing.providerConfigured && (
@@ -77,18 +71,11 @@ export default async function SubscriptionPage() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  type="button"
-                  disabled
-                  title="Coming soon"
-                  className={`mt-5 cursor-not-allowed rounded-xl px-4 py-2.5 text-sm font-semibold ${
-                    current
-                      ? "border border-slate-200 bg-slate-50 text-ink-dim"
-                      : "border border-slate-200 bg-slate-50 text-ink-dim"
-                  }`}
-                >
-                  {current ? "Your plan" : "Coming soon"}
-                </button>
+                <UpgradeButton
+                  plan={plan.id}
+                  current={current}
+                  configured={billing.providerConfigured}
+                />
               </div>
             );
           })}
