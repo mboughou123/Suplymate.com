@@ -9,73 +9,35 @@
 
 import { prisma } from "@/lib/prisma";
 import { deleteFromStorage } from "@/lib/image-storage";
+import {
+  MEDIA_TYPES,
+  ENTITY_TYPES,
+  MEDIA_STATUSES,
+  MEDIA_TYPES_BY_ENTITY,
+  isMediaType,
+  isEntityType,
+  isMediaStatus,
+  type Media,
+  type MediaType,
+  type EntityType,
+  type MediaStatus,
+  type MediaAuditEntry,
+} from "@/lib/media-types";
+
+export {
+  MEDIA_TYPES,
+  ENTITY_TYPES,
+  MEDIA_STATUSES,
+  MEDIA_TYPES_BY_ENTITY,
+  isMediaType,
+  isEntityType,
+  isMediaStatus,
+};
+export type { Media, MediaType, EntityType, MediaStatus, MediaAuditEntry };
 
 /* ------------------------------------------------------------------ */
 /* Types                                                               */
 /* ------------------------------------------------------------------ */
-
-export const MEDIA_TYPES = [
-  "SUPPLIER_LOGO",
-  "SUPPLIER_COVER",
-  "SUPPLIER_FACTORY",
-  "SUPPLIER_GALLERY",
-  "PRODUCT_PRIMARY",
-  "PRODUCT_GALLERY",
-  "CERTIFICATION",
-  "PROFILE_IMAGE",
-  "GENERAL",
-] as const;
-export type MediaType = (typeof MEDIA_TYPES)[number];
-
-export const ENTITY_TYPES = ["SUPPLIER", "PRODUCT", "CERTIFICATION", "USER", "GENERAL"] as const;
-export type EntityType = (typeof ENTITY_TYPES)[number];
-
-export const MEDIA_STATUSES = ["published", "unpublished", "draft"] as const;
-export type MediaStatus = (typeof MEDIA_STATUSES)[number];
-
-// Which media types belong to which entity (used for validation + the UI so a
-// logo/factory/cert image is never silently treated as a product image).
-export const MEDIA_TYPES_BY_ENTITY: Record<EntityType, MediaType[]> = {
-  SUPPLIER: ["SUPPLIER_LOGO", "SUPPLIER_COVER", "SUPPLIER_FACTORY", "SUPPLIER_GALLERY"],
-  PRODUCT: ["PRODUCT_PRIMARY", "PRODUCT_GALLERY"],
-  CERTIFICATION: ["CERTIFICATION"],
-  USER: ["PROFILE_IMAGE"],
-  GENERAL: ["GENERAL"],
-};
-
-export type Media = {
-  id: string;
-  url: string;
-  storageKey: string | null;
-  originalUrl: string | null;
-  originalFilename: string | null;
-  mimeType: string | null;
-  fileSize: number | null;
-  width: number | null;
-  height: number | null;
-  mediaType: MediaType;
-  entityType: EntityType;
-  entityId: string | null;
-  altText: string | null;
-  caption: string | null;
-  sortOrder: number;
-  isPrimary: boolean;
-  status: MediaStatus;
-  uploadedBy: string | null;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export type MediaAuditEntry = {
-  id: string;
-  adminUser: string | null;
-  action: string;
-  mediaId: string | null;
-  entityType: string | null;
-  entityId: string | null;
-  detail: string | null;
-  createdAt: string;
-};
 
 export type CreateMediaInput = {
   url: string;
@@ -126,20 +88,6 @@ export type MediaFilter = {
   /** Only rows with no entity association. */
   unattached?: boolean;
 };
-
-/* ------------------------------------------------------------------ */
-/* Coercion helpers                                                    */
-/* ------------------------------------------------------------------ */
-
-export function isMediaType(v: unknown): v is MediaType {
-  return typeof v === "string" && (MEDIA_TYPES as readonly string[]).includes(v);
-}
-export function isEntityType(v: unknown): v is EntityType {
-  return typeof v === "string" && (ENTITY_TYPES as readonly string[]).includes(v);
-}
-export function isMediaStatus(v: unknown): v is MediaStatus {
-  return typeof v === "string" && (MEDIA_STATUSES as readonly string[]).includes(v);
-}
 
 /* ------------------------------------------------------------------ */
 /* In-memory overlay (no-DB fallback)                                  */
