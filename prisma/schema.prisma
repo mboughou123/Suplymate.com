@@ -25,9 +25,19 @@ model User {
   // JSON blob of notification / locale preferences (see lib/preferences).
   preferences String?
   // Lightweight billing plan tracking. Subscription is NEVER mutable from the
-  // browser — see lib/billing.ts.
+  // browser — Stripe webhooks are the source of truth (see lib/billing.ts).
   plan       String   @default("free")
   planStatus String   @default("active")
+  // Marketplace role: "buyer" | "supplier" | "admin". Admin is ALSO gated by
+  // ADMIN_EMAILS — this field is advisory for UI/onboarding only.
+  role       String   @default("buyer")
+  // Onboarding completion timestamp (null = not yet onboarded).
+  onboardedAt DateTime?
+  // ----- Stripe billing (webhook-managed; never set from the browser) -----
+  stripeCustomerId     String?
+  stripeSubscriptionId String?
+  stripePriceId        String?
+  currentPeriodEnd     DateTime?
   updatedAt  DateTime @default(now()) @updatedAt
 
   priceAlerts     PriceAlert[]
@@ -36,6 +46,16 @@ model User {
   notifications   Notification[]
   favorites       FavoriteSupplier[]
   aiConversations AiConversation[]
+
+  // ----- Two-sided marketplace (additive) -----
+  cart            Cart?
+  savedItems      SavedItem[]
+  claims          SupplierClaim[]  @relation("UserClaims")
+  teamMemberships TeamMember[]     @relation("UserTeams")
+  ownedTeams      Team[]           @relation("TeamOwner")
+  reviews         Review[]         @relation("UserReviews")
+  reports         Report[]         @relation("UserReports")
+  watchlists      Watchlist[]      @relation("UserWatch")
 }
 
 // ----- AI procurement assistant chat history (per authenticated user) -----
@@ -104,16 +124,34 @@ model Supplier {
   certifications      String   @default("[]")
   // 0–100 trust score computed from completeness + signals (see lib/trust-score).
   trustScore          Int?
+
+  // ----- Marketplace verification lifecycle (additive; see lib/verification.ts) -----
+  // Public-facing lifecycle status, independent of the legacy import
+  // `verificationStatus`. One of: UNLISTED | LISTED | CLAIMED | PENDING_REVIEW |
+  // NEEDS_INFORMATION | REVIEWED | VERIFIED | REJECTED | SUSPENDED.
+  // Default LISTED: directory rows compiled from public sources are visible but
+  // NOT independently verified. VERIFIED is set ONLY by manual admin action.
+  marketplaceStatus   String   @default("LISTED")
+  claimedByUserId     String?
+  claimedAt           DateTime?
+  verifiedAt          DateTime?
+  // Admin email/id that performed manual verification.
+  verifiedBy          String?
+  statusNote          String?
+
   createdAt           DateTime @default(now())
   updatedAt           DateTime @default(now()) @updatedAt
 
   // Relational certifications (the richer, queryable representation).
   certs               Certification[]
+  reviews             Review[]
 
   @@index([category])
   @@index([country])
   @@index([score])
   @@index([verificationStatus])
+  @@index([marketplaceStatus])
+  @@index([claimedByUserId])
 }
 
 // A certification / audit / compliance badge attached to a supplier. Captured
@@ -312,6 +350,13 @@ model Conversation {
   supplierName  String
   // inquiry | negotiation | sample_sent | order_in_progress | completed
   status        String    @default("inquiry")
+  // Conversation type (additive): GENERAL | PRODUCT | RFQ | QUOTE | SUPPORT
+  type          String    @default("GENERAL")
+  subject       String?
+  // Read tracking per side for unread badges (participant-only access enforced
+  // server-side in the API).
+  buyerLastReadAt    DateTime?
+  supplierLastReadAt DateTime?
   lastMessageAt DateTime  @default(now())
   createdAt     DateTime  @default(now())
   messages      Message[]
@@ -319,6 +364,7 @@ model Conversation {
 
   @@index([buyerId])
   @@index([supplierId])
+  @@index([type])
 }
 
 model Message {
@@ -361,10 +407,48 @@ model Rfq {
   targetPrice    String?
   deadline       String?
   details        String?
+  // Lifecycle: open | submitted | quoted | closed | expired | cancelled
   status         String        @default("open")
+
+  // ----- Cart-originated, supplier-scoped RFQs (additive) -----
+  // Human-friendly public reference, e.g. "RFQ-2026-000123".
+  publicRef      String?       @unique
+  // Each RFQ targets exactly one supplier (cart fans out to one RFQ per supplier).
+  supplierId     String?
+  supplierName   String?
+  items          RfqItem[]
+  quotes         SupplierQuote[]
+  updatedAt      DateTime      @default(now()) @updatedAt
+
   createdAt      DateTime      @default(now())
 
   @@index([buyerId])
+  @@index([supplierId])
+  @@index([status])
+}
+
+// Line-item snapshot for a cart-originated RFQ. Snapshots freeze the product
+// name / price label at submission so later catalogue edits don't rewrite the
+// buyer's request.
+model RfqItem {
+  id               String   @id @default(cuid())
+  rfqId            String
+  rfq              Rfq      @relation(fields: [rfqId], references: [id], onDelete: Cascade)
+  productId        String?
+  productName      String
+  supplierId       String?
+  imageUrl         String?
+  unit             String?
+  quantity         Int      @default(1)
+  // Buyer's optional target-price text (free-form, never treated as a real price).
+  targetPriceLabel String?
+  note             String?
+  // Provenance snapshot of any supplier-listed price at submission time.
+  snapshotPrice    Float?
+  snapshotCurrency String?
+  createdAt        DateTime @default(now())
+
+  @@index([rfqId])
 }
 
 model Notification {
@@ -391,5 +475,273 @@ model FavoriteSupplier {
   createdAt    DateTime @default(now())
 
   @@unique([userId, supplierId])
+  @@index([userId])
+}
+
+// ----- Procurement cart (one per authenticated user; guest carts live in
+// localStorage and merge on login — see lib/cart-store.ts) -----
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     CartItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now()) @updatedAt
+}
+
+model CartItem {
+  id           String   @id @default(cuid())
+  cartId       String
+  cart         Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId    String?
+  productName  String
+  supplierId   String
+  supplierName String
+  imageUrl     String?
+  unit         String?
+  // Requested quantity in MOQ units. Server clamps to >= 1 and >= moq.
+  quantity     Int      @default(1)
+  // Numeric minimum order quantity default when known (else null).
+  moq          Int?
+  // Honest, supplier-provided price snapshot (may be null = "Contact supplier
+  // for pricing"). NEVER trusted for totals — quotes are recalculated server-side.
+  basePrice    Float?
+  currency     String?
+  note         String?
+  sourceUrl    String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now()) @updatedAt
+
+  // Dedupe identical catalogue products per supplier within a cart.
+  @@unique([cartId, productId, supplierId])
+  @@index([cartId])
+}
+
+// Save-for-later items (separate from the active cart).
+model SavedItem {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId    String?
+  productName  String
+  supplierId   String
+  supplierName String
+  imageUrl     String?
+  unit         String?
+  basePrice    Float?
+  currency     String?
+  createdAt    DateTime @default(now())
+
+  @@unique([userId, productId, supplierId])
+  @@index([userId])
+}
+
+// ----- Supplier quotes in response to an RFQ -----
+//
+// Provenance is explicit: unitPrice null => the supplier did not quote a price
+// for that line ("Not quoted"). Totals are ALWAYS recomputed server-side from
+// (unitPrice * quantity); the browser never supplies totals.
+model SupplierQuote {
+  id              String      @id @default(cuid())
+  rfqId           String
+  rfq             Rfq         @relation(fields: [rfqId], references: [id], onDelete: Cascade)
+  supplierId      String
+  supplierName    String
+  // Supplier-side author (nullable: many suppliers have no account yet and a
+  // quote may be entered by an admin on their behalf).
+  createdByUserId String?
+  // Human-friendly public reference, e.g. "QUO-2026-000123".
+  publicRef       String?     @unique
+  // draft | submitted | accepted | declined | expired | withdrawn
+  status          String      @default("draft")
+  currency        String      @default("USD")
+  // Server-recomputed sum of line totals (null when no prices were quoted).
+  subtotal        Float?
+  // Supplier-provided commercial terms (clearly labelled "Supplier-provided").
+  leadTimeDays    Int?
+  incoterms       String?
+  paymentTerms    String?
+  validUntil      DateTime?
+  shippingCostLabel String?
+  notes           String?
+  items           QuoteItem[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @default(now()) @updatedAt
+
+  @@index([rfqId])
+  @@index([supplierId])
+  @@index([status])
+}
+
+model QuoteItem {
+  id          String        @id @default(cuid())
+  quoteId     String
+  quote       SupplierQuote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  rfqItemId   String?
+  productName String
+  quantity    Int           @default(1)
+  unit        String?
+  // null => supplier did not quote this line. Never invented.
+  unitPrice   Float?
+  // Server-computed (unitPrice * quantity). null when unitPrice is null.
+  lineTotal   Float?
+  note        String?
+
+  @@index([quoteId])
+}
+
+// ----- Supplier profile claiming -----
+model SupplierClaim {
+  id           String    @id @default(cuid())
+  supplierId   String
+  supplierName String
+  userId       String
+  user         User      @relation("UserClaims", fields: [userId], references: [id], onDelete: Cascade)
+  // STARTED | SUBMITTED | NEEDS_INFORMATION | APPROVED | REJECTED
+  status       String    @default("STARTED")
+  role         String?
+  workEmail    String?
+  phone        String?
+  evidenceUrl  String?
+  note         String?
+  reviewedBy   String?
+  reviewedAt   DateTime?
+  adminNote    String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @default(now()) @updatedAt
+
+  @@index([supplierId])
+  @@index([userId])
+  @@index([status])
+}
+
+// ----- Team accounts (server-enforced permissions — see lib/permissions.ts) -----
+model Team {
+  id        String       @id @default(cuid())
+  name      String
+  ownerId   String
+  owner     User         @relation("TeamOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members   TeamMember[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @default(now()) @updatedAt
+
+  @@index([ownerId])
+}
+
+model TeamMember {
+  id        String   @id @default(cuid())
+  teamId    String
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation("UserTeams", fields: [userId], references: [id], onDelete: Cascade)
+  // OWNER | ADMIN | PROCUREMENT_MANAGER | BUYER | VIEWER
+  role      String   @default("BUYER")
+  // active | invited | removed
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@unique([teamId, userId])
+  @@index([userId])
+}
+
+// ----- Supplier reviews (only after a qualifying on-platform interaction) -----
+model Review {
+  id             String    @id @default(cuid())
+  supplierId     String
+  supplier       Supplier  @relation(fields: [supplierId], references: [id], onDelete: Cascade)
+  supplierName   String
+  authorId       String
+  author         User      @relation("UserReviews", fields: [authorId], references: [id], onDelete: Cascade)
+  rating         Int
+  title          String?
+  body           String
+  // What qualified the author to review: RFQ | QUOTE | CONVERSATION
+  qualifyingType String?
+  qualifyingId   String?
+  // PENDING | PUBLISHED | REJECTED | REMOVED
+  status         String    @default("PENDING")
+  moderatedBy    String?
+  moderatedAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @default(now()) @updatedAt
+
+  @@unique([supplierId, authorId])
+  @@index([supplierId])
+  @@index([status])
+}
+
+// ----- Per-field data provenance & verification (see lib/provenance.ts) -----
+model DataPoint {
+  id            String    @id @default(cuid())
+  // SUPPLIER | PRODUCT | CERTIFICATION
+  entityType    String
+  entityId      String
+  // Field name this provenance describes, e.g. "moq", "address", "phone".
+  field         String
+  value         String?
+  sourceUrl     String?
+  // scraped | imported | supplier_provided | admin | google_places
+  sourceType    String    @default("scraped")
+  collectedAt   DateTime  @default(now())
+  lastCheckedAt DateTime?
+  // unverified | reviewed | verified | disputed
+  reviewStatus  String    @default("unverified")
+  reviewedBy    String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @default(now()) @updatedAt
+
+  @@unique([entityType, entityId, field])
+  @@index([entityType, entityId])
+  @@index([reviewStatus])
+}
+
+// ----- User reports / abuse moderation queue -----
+model Report {
+  id         String    @id @default(cuid())
+  reporterId String?
+  reporter   User?     @relation("UserReports", fields: [reporterId], references: [id], onDelete: SetNull)
+  // SUPPLIER | PRODUCT | REVIEW | MESSAGE | CONVERSATION
+  targetType String
+  targetId   String
+  reason     String
+  detail     String?
+  // OPEN | REVIEWING | RESOLVED | DISMISSED
+  status     String    @default("OPEN")
+  resolvedBy String?
+  resolvedAt DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @default(now()) @updatedAt
+
+  @@index([targetType, targetId])
+  @@index([status])
+}
+
+// ----- Generic audit trail for critical admin/user actions -----
+model AuditLog {
+  id         String   @id @default(cuid())
+  actor      String?
+  actorId    String?
+  action     String
+  targetType String?
+  targetId   String?
+  detail     String?
+  createdAt  DateTime @default(now())
+
+  @@index([targetType, targetId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// ----- Market-data watchlist (alerts live in PriceAlert) -----
+model Watchlist {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation("UserWatch", fields: [userId], references: [id], onDelete: Cascade)
+  materialId String
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, materialId])
   @@index([userId])
 }
