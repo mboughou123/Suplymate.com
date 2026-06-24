@@ -7,6 +7,9 @@ import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getPublishedSupplierMedia } from "@/lib/media-store";
 import { getSupplierCertificationImages } from "@/lib/media-public";
 import { listCertifications } from "@/lib/certifications-store";
+import { prisma } from "@/lib/prisma";
+import { normalizeMarketplaceStatus, STATUS_META } from "@/lib/verification";
+import ClaimProfileButton from "@/components/supplier-profile/ClaimProfileButton";
 
 import HeroSection from "@/components/supplier-profile/HeroSection";
 import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
@@ -97,6 +100,32 @@ export default async function SupplierProfilePage({
   const { base, trust } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
+  // Marketplace lifecycle status + claim state (DB-backed suppliers only).
+  let marketplaceStatus = "LISTED";
+  let claimed = false;
+  let provenance: { sourceUrl: string | null; collectedAt: string | null } = {
+    sourceUrl: supplier.sourceUrl ?? null,
+    collectedAt: null,
+  };
+  try {
+    const row = await prisma.supplier.findUnique({
+      where: { id: supplier.id },
+      select: { marketplaceStatus: true, claimedByUserId: true, sourceUrl: true, createdAt: true },
+    });
+    if (row) {
+      marketplaceStatus = normalizeMarketplaceStatus(row.marketplaceStatus);
+      claimed = !!row.claimedByUserId;
+      provenance = {
+        sourceUrl: row.sourceUrl ?? supplier.sourceUrl ?? null,
+        collectedAt: row.createdAt ? row.createdAt.toISOString() : null,
+      };
+    }
+  } catch {
+    // fallback dataset supplier — claiming unavailable
+  }
+  const statusMeta = STATUS_META[normalizeMarketplaceStatus(marketplaceStatus)];
+  const isDbSupplier = provenance.collectedAt !== null;
+
   // Real certification/media collected via import or the website scraper. Shown
   // alongside the generated profile content only when present. Published
   // certificate Media is merged ahead of the legacy image URLs.
@@ -172,6 +201,32 @@ export default async function SupplierProfilePage({
           <VerificationBadge status={supplier.verificationStatus} size="sm" className="ml-2" />
         )}
       </nav>
+
+      {/* Marketplace status + claim affordance */}
+      <div className="container-page mt-3 flex flex-wrap items-center gap-3">
+        <span
+          className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold ${
+            statusMeta.tone === "success"
+              ? "bg-emerald-50 text-emerald-700"
+              : statusMeta.tone === "danger"
+                ? "bg-red-50 text-red-700"
+                : statusMeta.tone === "warn"
+                  ? "bg-amber-50 text-amber-800"
+                  : statusMeta.tone === "info"
+                    ? "bg-blue-50 text-blue-700"
+                    : "bg-slate-100 text-slate-600"
+          }`}
+          title={statusMeta.description}
+        >
+          {statusMeta.label}
+        </span>
+        <span className="text-xs text-ink-dim">{statusMeta.description}</span>
+        {isDbSupplier && !claimed && (
+          <span className="ml-auto">
+            <ClaimProfileButton supplierId={supplier.id} supplierName={base.name} />
+          </span>
+        )}
+      </div>
 
       <HeroSection profile={profile} />
 
@@ -281,6 +336,45 @@ export default async function SupplierProfilePage({
 
           <FactoryMediaSection profile={profile} />
           <ProductsSection profile={profile} />
+
+          {/* Source and verification (data provenance) */}
+          <section className="py-6">
+            <h2 className="font-display text-lg font-bold text-ink">Source and verification</h2>
+            <div className="mt-3 space-y-2 rounded-xl border border-slate-200 bg-white p-4 text-sm">
+              <div className="flex justify-between gap-4">
+                <span className="text-ink-muted">Verification status</span>
+                <span className="font-medium text-ink">{statusMeta.label}</span>
+              </div>
+              <div className="flex justify-between gap-4">
+                <span className="text-ink-muted">What this means</span>
+                <span className="max-w-xs text-right text-ink-dim">{statusMeta.description}</span>
+              </div>
+              {provenance.sourceUrl && (
+                <div className="flex justify-between gap-4">
+                  <span className="text-ink-muted">Primary source</span>
+                  <a href={provenance.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="truncate text-cyan hover:underline">
+                    View source
+                  </a>
+                </div>
+              )}
+              {provenance.collectedAt && (
+                <div className="flex justify-between gap-4">
+                  <span className="text-ink-muted">Listing created</span>
+                  <span className="text-ink-dim">{new Date(provenance.collectedAt).toLocaleDateString()}</span>
+                </div>
+              )}
+              <p className="border-t border-slate-100 pt-2 text-xs text-ink-dim">
+                Much of this profile is compiled from public sources and supplier-provided
+                information. It is not independently verified unless the status above is
+                &quot;Verified&quot;. See our{" "}
+                <Link href="/supplier-verification-policy" className="text-cyan hover:underline">
+                  verification policy
+                </Link>
+                .
+              </p>
+            </div>
+          </section>
+
           <ReviewsSection profile={profile} />
         </div>
         <aside className="hidden lg:block">
@@ -294,8 +388,9 @@ export default async function SupplierProfilePage({
 
       {/* Trust score footnote */}
       <div className="container-page py-8 text-center text-xs text-ink-dim">
-        Trust score {trust.trustScore}/100 · Profile data is generated for this MVP
-        preview from public business listings and Suplymate&apos;s scoring model.
+        Trust score {trust.trustScore}/100 · a Suplymate completeness signal derived from
+        public business listings and supplier-provided information. It is not an independent
+        verification or a guarantee of supplier performance.
       </div>
 
       <StickyContactCard profile={profile} variant="mobile" />
