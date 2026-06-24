@@ -4,6 +4,9 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { getSupplierById, getFallbackSupplierIds } from "@/lib/data-service";
 import { getSupplierProfile } from "@/lib/supplier-profile";
+import { getPublishedSupplierMedia } from "@/lib/media-store";
+import { getSupplierCertificationImages } from "@/lib/media-public";
+import { listCertifications } from "@/lib/certifications-store";
 
 import HeroSection from "@/components/supplier-profile/HeroSection";
 import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
@@ -71,13 +74,40 @@ export default async function SupplierProfilePage({
   const supplier = await getSupplierById(slug);
   if (!supplier) notFound();
 
+  // Published Media takes priority over the legacy logoUrl/imageUrl/images
+  // fields; we merge them into the supplier object so the deterministic profile
+  // generator (and the media section below) surface admin-curated media first.
+  // Unpublished media is never fetched here.
+  const pubMedia = await getPublishedSupplierMedia(supplier.id).catch(() => null);
+  const mediaPhotoUrls = pubMedia
+    ? [pubMedia.cover, ...pubMedia.factory, ...pubMedia.gallery].filter(Boolean).map((m) => m!.url)
+    : [];
+  const mediaCertImages = await getSupplierCertificationImages(supplier.id).catch(() => []);
+  if (pubMedia) {
+    if (pubMedia.logo) supplier.logoUrl = pubMedia.logo.url;
+    if (pubMedia.cover) supplier.imageUrl = pubMedia.cover.url;
+    if (mediaPhotoUrls.length) {
+      supplier.supplierImages = [
+        ...new Set([...mediaPhotoUrls, ...(supplier.supplierImages ?? [])]),
+      ];
+    }
+  }
+
   const profile = getSupplierProfile(supplier);
   const { base, trust } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
   // Real certification/media collected via import or the website scraper. Shown
-  // alongside the generated profile content only when present.
-  const realCertImages = supplier.certificationImages ?? [];
+  // alongside the generated profile content only when present. Published
+  // certificate Media is merged ahead of the legacy image URLs.
+  const realCertImages = [
+    ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
+  ];
+  // Relational certifications with their admin-controlled verification status.
+  // Never shown if rejected. A certification is NOT verified just because an
+  // image exists — status is set by an admin.
+  const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
+    .filter((c) => c.status !== "rejected");
   const realCertDetails = supplier.certificationsDetailed ?? [];
   const realSupplierImages = supplier.supplierImages ?? [];
   const hasRealMedia =
@@ -200,6 +230,55 @@ export default async function SupplierProfilePage({
               )}
             </section>
           )}
+          {relationalCerts.length > 0 && (
+            <section className="py-6">
+              <h2 className="font-display text-lg font-bold text-ink">Certifications</h2>
+              <p className="mt-1 text-sm text-ink-muted">
+                Certification displayed by the supplier. Suplymate shows a verified badge only when our
+                team has independently confirmed the certificate.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {relationalCerts.map((c) => (
+                  <li
+                    key={c.id}
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3"
+                  >
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="font-semibold text-ink">{c.name}</span>
+                        {c.type && <span className="text-xs text-ink-dim">{c.type}</span>}
+                        {c.status === "verified" ? (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
+                            ✓ Suplymate verified
+                          </span>
+                        ) : (
+                          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-600">
+                            Verification status: {c.status}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-0.5 text-xs text-ink-dim">
+                        {c.issuingOrg ? `${c.issuingOrg} ` : ""}
+                        {c.certificateNumber ? `· #${c.certificateNumber} ` : ""}
+                        {c.expirationDate ? `· Expires ${c.expirationDate.slice(0, 10)}` : ""}
+                      </p>
+                    </div>
+                    {(c.verificationUrl || c.sourceUrl) && (
+                      <a
+                        href={(c.verificationUrl || c.sourceUrl) as string}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="text-xs font-medium text-cyan hover:underline"
+                      >
+                        View
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <FactoryMediaSection profile={profile} />
           <ProductsSection profile={profile} />
           <ReviewsSection profile={profile} />

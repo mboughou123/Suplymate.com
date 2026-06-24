@@ -19,6 +19,7 @@ import {
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
 import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
+import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
 
@@ -138,12 +139,17 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
     });
     const supMap = new Map(suppliers.map((s) => [s.id, s]));
 
+    // Published Media (admin-curated) takes priority over the legacy JSON
+    // `images` field; falls back to it when a product has no published media.
+    const mediaMap = await getPublishedProductImageMap(rows.map((r) => r.id));
+
     const items: PublicProductCard[] = rows.map((r) => {
       const sup = supMap.get(r.supplierId);
       const verified = sup?.verificationStatus === "verified";
       const supplierVisible =
         !sup || !sup.verificationStatus || sup.verificationStatus === "verified";
-      const images = safeArray(r.images);
+      const published = mediaMap.get(r.id) ?? [];
+      const images = published.length ? published : safeArray(r.images);
       const imageInput = {
         images,
         productName: r.name,

@@ -5,6 +5,7 @@ import { BadgeCheck, Star, ChevronRight, Layers, Wrench, Tag } from "lucide-reac
 import { products } from "@/data/products";
 import { getProductByIdAsync } from "@/lib/data-service";
 import { getProductDetail } from "@/lib/product-detail";
+import { getPublishedProductImageUrls } from "@/lib/media-public";
 import {
   getComparisonByProductId,
   getDefaultComparison,
@@ -40,6 +41,11 @@ export default async function ProductDetailPage({ params }: Props) {
   const { id } = await params;
   const product = await getProductByIdAsync(id);
   if (!product) notFound();
+
+  // Prefer admin-curated PUBLISHED media (primary first); fall back to the
+  // product's existing image list when there is none.
+  const publishedImages = await getPublishedProductImageUrls(product.id).catch(() => []);
+  if (publishedImages.length) product.images = publishedImages;
 
   const detail = getProductDetail(product);
   const comparison =
