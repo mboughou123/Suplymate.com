@@ -45,15 +45,7 @@ export type SerializedCart = {
   supplierCount: number;
 };
 
-// Parse a numeric MOQ out of a free-form string like "100 pcs" / "1 ton".
-export function parseMoq(moq: string | number | null | undefined): number | null {
-  if (typeof moq === "number") return moq > 0 ? Math.floor(moq) : null;
-  if (!moq) return null;
-  const m = String(moq).replace(/,/g, "").match(/\d+(\.\d+)?/);
-  if (!m) return null;
-  const n = Math.floor(Number(m[0]));
-  return n > 0 ? n : null;
-}
+export { parseMoq } from "@/lib/moq";
 
 function sanitizeInput(input: CartItemInput) {
   const moq = input.moq && input.moq > 0 ? Math.floor(input.moq) : null;

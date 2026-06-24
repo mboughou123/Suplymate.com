@@ -4,7 +4,9 @@ import Link from "next/link";
 import { BadgeCheck, MapPin, Truck, ArrowRight, PackageCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
+import AddToCartButton from "@/components/cart/AddToCartButton";
 import { getProductFallbackImage } from "@/lib/image-fallback";
+import { parseMoq } from "@/lib/moq";
 import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
 
 type Props = { data: PublicProduct };
@@ -96,25 +98,42 @@ export default function PublicProductCard({ data: d }: Props) {
         )}
 
         {/* Actions */}
-        <div className="mt-4 flex gap-2 pt-1">
-          <Link
-            href={`/products/${d.id}`}
-            className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
-          >
-            View Product
-            <ArrowRight
-              className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
-              aria-hidden
+        <div className="mt-4 flex flex-col gap-2 pt-1">
+          <div className="flex gap-2">
+            <Link
+              href={`/products/${d.id}`}
+              className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
+            >
+              View Product
+              <ArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
+                aria-hidden
+              />
+            </Link>
+            <ContactSupplierButton
+              supplierId={d.supplierId}
+              supplierName={d.supplierName}
+              label="Request Quote"
+              productName={d.name}
+              productId={d.id}
+              className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
             />
-          </Link>
-          <ContactSupplierButton
-            supplierId={d.supplierId}
-            supplierName={d.supplierName}
-            label="Request Quote"
-            productName={d.name}
-            productId={d.id}
-            className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
-          />
+          </div>
+          {d.supplierId && (
+            <AddToCartButton
+              className="inline-flex w-full items-center justify-center gap-1.5 rounded-xl border border-cyan/40 bg-cyan/5 px-3 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/10"
+              item={{
+                productId: d.id,
+                productName: d.name,
+                supplierId: d.supplierId,
+                supplierName: d.supplierName,
+                imageUrl: d.imageUrl,
+                unit: d.priceUnit,
+                moq: parseMoq(d.moq),
+                sourceUrl: d.productUrl,
+              }}
+            />
+          )}
         </div>
       </div>
     </article>
