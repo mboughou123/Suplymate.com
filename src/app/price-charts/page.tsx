@@ -12,7 +12,7 @@ export default async function PriceChartsPage() {
             Track material prices and buy at the right time
           </h1>
           <p className="mt-3 max-w-2xl text-white/75">
-            When should I buy? Monitor commodities with AI signals: Buy now, Wait, or Monitor.
+            Indicative commodity prices with explained signals. Not a trading venue — verify before large purchases.
           </p>
         </div>
       </div>

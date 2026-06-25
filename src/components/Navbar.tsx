@@ -13,6 +13,7 @@ import {
   Menu,
   X,
   MessageSquare,
+  Bell,
   type LucideIcon,
 } from "lucide-react";
 import CartButton from "@/components/cart/CartButton";
@@ -229,16 +230,23 @@ export default function Navbar() {
           ) : session?.user ? (
             <>
               <Link
-                href="/messages"
-                aria-label="Messages"
+                href="/notifications"
+                aria-label="Notifications"
                 className="relative hidden rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white sm:inline-flex"
               >
-                <MessageSquare className="h-5 w-5" aria-hidden />
+                <Bell className="h-5 w-5" aria-hidden />
                 {unread > 0 && (
                   <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-cyan-glow px-1 text-[10px] font-bold text-navy-dark">
                     {unread > 9 ? "9+" : unread}
                   </span>
                 )}
+              </Link>
+              <Link
+                href="/messages"
+                aria-label="Messages"
+                className="hidden rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white sm:inline-flex"
+              >
+                <MessageSquare className="h-5 w-5" aria-hidden />
               </Link>
               <Link
                 href="/dashboard"

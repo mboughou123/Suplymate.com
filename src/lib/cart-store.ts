@@ -175,6 +175,19 @@ export async function clearCart(userId: string): Promise<SerializedCart> {
   return getCart(userId);
 }
 
+// Remove cart line items for suppliers whose RFQs were successfully submitted.
+export async function removeItemsForSuppliers(
+  userId: string,
+  supplierIds: string[]
+): Promise<SerializedCart> {
+  if (supplierIds.length === 0) return getCart(userId);
+  const cart = await getOrCreateCart(userId);
+  await prisma.cartItem.deleteMany({
+    where: { cartId: cart.id, supplierId: { in: supplierIds } },
+  });
+  return getCart(userId);
+}
+
 // Merge guest (localStorage) items into the user's server cart on login.
 export async function mergeGuestItems(
   userId: string,

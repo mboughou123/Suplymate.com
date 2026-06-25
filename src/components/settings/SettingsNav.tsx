@@ -8,12 +8,14 @@ import {
   ShieldCheck,
   CreditCard,
   SlidersHorizontal,
+  Users,
   ArrowLeft,
 } from "lucide-react";
 
 const TABS = [
   { href: "/settings", label: "Overview", icon: LayoutGrid, exact: true },
   { href: "/settings/account", label: "Account", icon: User },
+  { href: "/settings/team", label: "Team", icon: Users },
   { href: "/settings/security", label: "Security", icon: ShieldCheck },
   { href: "/settings/subscription", label: "Subscription", icon: CreditCard },
   { href: "/settings/preferences", label: "Preferences", icon: SlidersHorizontal },

@@ -64,9 +64,13 @@ export default async function DashboardPage() {
   const dbUser = await prisma.user
     .findUnique({
       where: { id: userId },
-      select: { company: true, firstName: true },
+      select: { company: true, firstName: true, onboardedAt: true },
     })
     .catch(() => null);
+
+  if (!dbUser?.onboardedAt) {
+    redirect("/onboarding");
+  }
 
   return (
     <DashboardClient

@@ -16,6 +16,7 @@ import {
   Flag,
   CreditCard,
   Users,
+  ScrollText,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default async function AdminHomePage() {
     { href: "/admin/media", label: "Media library", desc: "Images & assets", icon: ImageIcon },
     { href: "/admin/import-suppliers", label: "Import suppliers", desc: "Scrape & import", icon: Users },
     { href: "/admin/subscriptions", label: "Subscriptions", desc: "Plans & billing status", icon: CreditCard },
+    { href: "/admin/audit", label: "Audit log", desc: "Privileged action history", icon: ScrollText },
     { href: "/messages", label: "Messages", desc: "Conversations", icon: MessageSquare },
   ];
 

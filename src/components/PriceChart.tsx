@@ -32,7 +32,7 @@ export default function PriceChart({ material }: PriceChartProps) {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h3 className="text-xl font-semibold text-ink">{material.name}</h3>
-          <p className="text-sm text-ink-dim">{material.symbol} · 12-month trend (demo)</p>
+          <p className="text-sm text-ink-dim">{material.symbol} · 12-month range (indicative)</p>
         </div>
         <div className="text-right">
           <p className="text-3xl font-bold text-ink">

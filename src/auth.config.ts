@@ -19,6 +19,7 @@ export const authConfig: NextAuthConfig = {
         "/rfqs",
         "/supplier-dashboard",
         "/onboarding",
+        "/notifications",
         "/api/price-alerts",
         "/api/account",
         "/admin",
