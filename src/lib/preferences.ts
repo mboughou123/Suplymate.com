@@ -3,6 +3,7 @@
 
 export type UserPreferences = {
   emailNotifications: boolean;
+  inAppNotifications: boolean;
   priceAlerts: boolean;
   supplierMessages: boolean;
   productUpdates: boolean;
@@ -13,6 +14,7 @@ export const SUPPORTED_LANGUAGES = [{ value: "en", label: "English" }] as const;
 
 export const DEFAULT_PREFERENCES: UserPreferences = {
   emailNotifications: true,
+  inAppNotifications: true,
   priceAlerts: true,
   supplierMessages: true,
   productUpdates: false,
@@ -28,6 +30,10 @@ export function parsePreferences(raw: string | null | undefined): UserPreference
         typeof parsed.emailNotifications === "boolean"
           ? parsed.emailNotifications
           : DEFAULT_PREFERENCES.emailNotifications,
+      inAppNotifications:
+        typeof parsed.inAppNotifications === "boolean"
+          ? parsed.inAppNotifications
+          : DEFAULT_PREFERENCES.inAppNotifications,
       priceAlerts:
         typeof parsed.priceAlerts === "boolean"
           ? parsed.priceAlerts

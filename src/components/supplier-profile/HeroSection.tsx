@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import FavoriteButton from "@/components/chat/FavoriteButton";
+import ReportButton from "@/components/ReportButton";
 import ProfileActionButton from "./ProfileActionButton";
 import { RadialScore } from "./primitives";
 
@@ -184,6 +185,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                     className="!h-11 !w-11"
                   />
                 </div>
+                <ReportButton targetType="SUPPLIER" targetId={base.id} />
                 {base.website && (
                   <a
                     href={base.website}

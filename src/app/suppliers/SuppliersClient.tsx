@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { Supplier } from "@/data/suppliers";
 import SupplierCard from "@/components/SupplierCard";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
@@ -40,6 +41,8 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
   const [filters, setFilters] = useState<SupplierFilterState>(DEFAULT_FILTERS);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareMode, setCompareMode] = useState(false);
 
   const categories = useMemo(
     () =>
@@ -120,8 +123,49 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function toggleCompare(id: string) {
+    setCompareIds((prev) => {
+      if (prev.includes(id)) return prev.filter((x) => x !== id);
+      if (prev.length >= 4) return prev;
+      return [...prev, id];
+    });
+  }
+
+  const compareHref = useMemo(
+    () => `/suppliers/compare?ids=${compareIds.join(",")}`,
+    [compareIds]
+  );
+
   return (
     <>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          onClick={() => {
+            setCompareMode((m) => !m);
+            if (compareMode) setCompareIds([]);
+          }}
+          className={`rounded-lg border px-3 py-1.5 text-sm font-medium ${
+            compareMode
+              ? "border-cyan bg-cyan/10 text-cyan"
+              : "border-slate-200 text-ink-muted hover:border-cyan/40"
+          }`}
+        >
+          {compareMode ? "Exit compare mode" : "Compare suppliers"}
+        </button>
+        {compareMode && compareIds.length >= 2 && (
+          <Link
+            href={compareHref}
+            className="rounded-lg bg-cyan px-4 py-1.5 text-sm font-semibold text-white hover:bg-cyan/90"
+          >
+            Compare {compareIds.length} selected
+          </Link>
+        )}
+        {compareMode && (
+          <span className="text-xs text-ink-dim">Select 2–4 suppliers</span>
+        )}
+      </div>
+
       <SupplierFilters
         state={filters}
         categories={categories}
@@ -147,7 +191,18 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         <>
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {pageItems.map((supplier) => (
-              <div key={supplier.id} id={supplier.id}>
+              <div key={supplier.id} id={supplier.id} className="relative">
+                {compareMode && (
+                  <label className="absolute right-3 top-3 z-10 flex items-center gap-1 rounded-lg bg-white/95 px-2 py-1 text-xs shadow-sm">
+                    <input
+                      type="checkbox"
+                      checked={compareIds.includes(supplier.id)}
+                      onChange={() => toggleCompare(supplier.id)}
+                      disabled={!compareIds.includes(supplier.id) && compareIds.length >= 4}
+                    />
+                    Compare
+                  </label>
+                )}
                 <SupplierCard supplier={supplier} />
               </div>
             ))}

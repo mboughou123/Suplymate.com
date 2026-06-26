@@ -31,6 +31,10 @@ export async function PATCH(request: Request) {
     const current = parsePreferences(existing?.preferences);
 
     const next: UserPreferences = {
+      inAppNotifications:
+        typeof body.inAppNotifications === "boolean"
+          ? body.inAppNotifications
+          : current.inAppNotifications,
       emailNotifications:
         typeof body.emailNotifications === "boolean"
           ? body.emailNotifications

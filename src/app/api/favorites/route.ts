@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { entitlementsFor } from "@/lib/permissions";
 
 export async function GET() {
   const session = await auth();
@@ -33,6 +34,23 @@ export async function POST(request: Request) {
   if (existing) {
     await prisma.favoriteSupplier.delete({ where: { id: existing.id } });
     return NextResponse.json({ favorited: false });
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { plan: true },
+  });
+  const ent = entitlementsFor(user?.plan);
+  if (ent.savedSuppliersLimit != null) {
+    const count = await prisma.favoriteSupplier.count({ where: { userId: session.user.id } });
+    if (count >= ent.savedSuppliersLimit) {
+      return NextResponse.json(
+        {
+          error: `Free plan allows ${ent.savedSuppliersLimit} saved suppliers. Upgrade to save more.`,
+        },
+        { status: 403 }
+      );
+    }
   }
 
   await prisma.favoriteSupplier.create({

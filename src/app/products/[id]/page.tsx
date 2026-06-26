@@ -6,17 +6,14 @@ import { products } from "@/data/products";
 import { getProductByIdAsync } from "@/lib/data-service";
 import { getProductDetail } from "@/lib/product-detail";
 import { getPublishedProductImageUrls } from "@/lib/media-public";
-import {
-  getComparisonByProductId,
-  getDefaultComparison,
-} from "@/data/comparisons";
-import SupplierComparisonTable from "@/components/SupplierComparisonTable";
 import ProductGallery from "@/components/product/ProductGallery";
 import ProductPurchasePanel from "@/components/product/ProductPurchasePanel";
 import ProductSupplierBox from "@/components/product/ProductSupplierBox";
 import ProductDescription from "@/components/product/ProductDescription";
 import RecommendedProducts from "@/components/product/RecommendedProducts";
 import AddToCartButton from "@/components/cart/AddToCartButton";
+import SaveProductButton from "@/components/SaveProductButton";
+import ReportButton from "@/components/ReportButton";
 import { parseMoq } from "@/lib/moq";
 
 type Props = {
@@ -49,8 +46,6 @@ export default async function ProductDetailPage({ params }: Props) {
   if (publishedImages.length) product.images = publishedImages;
 
   const detail = getProductDetail(product);
-  const comparison =
-    getComparisonByProductId(id) ?? getDefaultComparison(id, product.name);
 
   // Honest pricing gate: only show indicative tiers when a real supplier-listed
   // price exists. Scraped products with no public price fall back to a
@@ -164,6 +159,19 @@ export default async function ProductDetailPage({ params }: Props) {
                   sourceUrl: product.productUrl ?? null,
                 }}
               />
+              <SaveProductButton
+                item={{
+                  productId: product.id,
+                  productName: product.name,
+                  supplierId: product.supplierId ?? detail.supplier.id,
+                  supplierName: product.supplierName ?? detail.supplier.name,
+                  imageUrl: product.images?.[0] ?? null,
+                  unit: product.priceUnit ?? product.unit ?? null,
+                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
+                  currency: product.currency,
+                }}
+              />
+              <ReportButton targetType="PRODUCT" targetId={product.id} />
             </div>
 
             {/* Options */}
@@ -257,12 +265,23 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Compare suppliers */}
+        {/* Compare suppliers — honest: only real quotes after RFQ */}
         <section className="mt-12">
-          <h2 className="text-xl font-bold text-ink">Compare suppliers for this product</h2>
-          <p className="mt-1 text-sm text-ink-muted">{comparison.summary}</p>
-          <div className="mt-4">
-            <SupplierComparisonTable offers={comparison.offers} />
+          <h2 className="text-xl font-bold text-ink">Compare suppliers</h2>
+          <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-8 text-center">
+            <p className="text-sm font-medium text-ink">No side-by-side offers yet</p>
+            <p className="mx-auto mt-1 max-w-lg text-xs text-ink-dim">
+              Suplymate does not fabricate competitor pricing or reliability scores. Add this
+              product to your cart, submit an RFQ, and compare real supplier quotes on your{" "}
+              <Link href="/rfqs" className="text-cyan hover:underline">
+                RFQ dashboard
+              </Link>
+              . To compare suppliers in the directory, use{" "}
+              <Link href="/suppliers" className="text-cyan hover:underline">
+                supplier compare
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

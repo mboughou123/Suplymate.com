@@ -9,6 +9,11 @@ import {
 
 const TOGGLES: { key: keyof UserPreferences; label: string; desc: string }[] = [
   {
+    key: "inAppNotifications",
+    label: "In-app notifications",
+    desc: "Show alerts in your notification center for RFQs, quotes, and messages.",
+  },
+  {
     key: "emailNotifications",
     label: "Email notifications",
     desc: "Receive important account and activity emails.",

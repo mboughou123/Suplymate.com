@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { entitlementsFor } from "@/lib/permissions";
 
 export async function GET() {
   const session = await auth();
@@ -30,6 +31,18 @@ export async function POST(request: Request) {
 
     if (!materialId || !targetPrice || !notifyType) {
       return NextResponse.json({ error: "Invalid input" }, { status: 400 });
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      select: { plan: true },
+    });
+    const ent = entitlementsFor(user?.plan);
+    if (!ent.priceAlerts) {
+      return NextResponse.json(
+        { error: "Price alerts require a Starter or Pro plan." },
+        { status: 403 }
+      );
     }
 
     const alert = await prisma.priceAlert.create({
