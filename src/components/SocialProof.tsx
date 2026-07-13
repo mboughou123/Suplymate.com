@@ -54,7 +54,7 @@ export default function SocialProof() {
               <span
                 key={`${logo}-${i}`}
                 aria-hidden={i >= logos.length}
-                className="shrink-0 whitespace-nowrap font-display text-heading-sm font-semibold tracking-tight text-slate-400"
+                className="shrink-0 whitespace-nowrap font-display text-heading-sm font-semibold tracking-tight text-ink-dim"
               >
                 {logo}
               </span>
@@ -85,7 +85,7 @@ export default function SocialProof() {
               delay={i * 90}
               className="glass-card glass-hover flex flex-col p-7"
             >
-              <div className="flex gap-1 text-mustard-light" aria-label="5 out of 5 stars">
+              <div className="flex gap-1 text-mustard-light" role="img" aria-label="5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, s) => (
                   <Star key={s} className="h-4 w-4 fill-current" aria-hidden />
                 ))}

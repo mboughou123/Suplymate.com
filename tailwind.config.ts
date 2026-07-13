@@ -54,7 +54,7 @@ const config: Config = {
           bg: "#ECFDF5",
         },
         down: {
-          DEFAULT: "#DC2626",
+          DEFAULT: "#B91C1C",
           bright: "#F87171",
           bg: "#FEF2F2",
         },

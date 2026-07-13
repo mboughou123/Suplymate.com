@@ -19,11 +19,16 @@ export default function TiltCard({ href, children, className = "" }: TiltCardPro
 
   const handleMove = (e: React.MouseEvent) => {
     const el = ref.current;
-    if (!el || window.matchMedia("(pointer: coarse)").matches) return;
+    if (
+      !el ||
+      window.matchMedia("(pointer: coarse)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
     const r = el.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(800px) rotateY(${px * 10}deg) rotateX(${-py * 10}deg) translateY(-4px)`;
+    el.style.transform = `perspective(900px) rotateY(${px * 5}deg) rotateX(${-py * 5}deg) translateY(-4px)`;
     el.style.setProperty("--mx", `${(px + 0.5) * 100}%`);
     el.style.setProperty("--my", `${(py + 0.5) * 100}%`);
   };

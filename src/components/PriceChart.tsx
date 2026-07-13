@@ -16,7 +16,7 @@ const CHART_H = HEIGHT - PAD.top - PAD.bottom;
 
 // Semantic market colors (see tailwind config: up/down)
 const UP = "#047857";
-const DOWN = "#DC2626";
+const DOWN = "#B91C1C";
 
 function monthLabels(count: number): string[] {
   const fmt = new Intl.DateTimeFormat("en-US", { month: "short" });
@@ -94,7 +94,7 @@ export default function PriceChart({ material }: PriceChartProps) {
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h3 className="text-heading-sm text-ink">{material.name}</h3>
+          <h2 className="text-heading-sm text-ink">{material.name}</h2>
           <p className="mt-0.5 text-caption text-ink-dim">
             {material.symbol} · 12-month range (indicative)
           </p>

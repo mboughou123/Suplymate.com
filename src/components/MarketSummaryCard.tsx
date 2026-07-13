@@ -63,21 +63,21 @@ export default function MarketSummaryCard({
       </div>
       <p className="mt-2 text-lg font-bold tabular-nums text-ink">
         ${material.currentPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
-        <span className="ml-1 text-xs font-normal text-ink-dim">
+        <span className="ml-1 text-xs font-normal text-ink-muted">
           {material.unit.replace("USD/", "")}
         </span>
       </p>
       <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
         <div>
-          <p className="text-ink-dim">Daily</p>
+          <p className="text-ink-muted">Daily</p>
           <ChangeValue value={material.dailyChange} />
         </div>
         <div>
-          <p className="text-ink-dim">Monthly</p>
+          <p className="text-ink-muted">Monthly</p>
           <ChangeValue value={material.monthlyChange} />
         </div>
         <div>
-          <p className="text-ink-dim">Yearly</p>
+          <p className="text-ink-muted">Yearly</p>
           <ChangeValue value={material.yearlyChange} />
         </div>
       </div>
