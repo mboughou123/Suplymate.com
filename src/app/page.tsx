@@ -84,31 +84,12 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="relative z-10 -mt-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="glass rounded-2xl p-2 shadow-cardHover">
-          <form action="/products" className="flex flex-col gap-2 sm:flex-row">
-            <div className="flex flex-1 items-center gap-2 px-3">
-              <Search className="h-5 w-5 shrink-0 text-cyan" aria-hidden />
-              <input
-                type="search"
-                name="q"
-                placeholder="Search steel, cables, cement, packaging, machinery…"
-                className="w-full bg-transparent py-4 text-sm text-ink placeholder:text-ink-dim focus:outline-none"
-              />
-            </div>
-            <button type="submit" className="btn-primary px-8 py-4 sm:shrink-0">
-              Search products
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <section className="container-page py-20">
+      <section className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="font-display text-display text-ink">
             Everything you need to source smarter
           </h2>
-          <p className="mt-3 text-ink-muted">
+          <p className="mt-4 text-body-lg text-ink-muted">
             One platform for suppliers, products, market intelligence, and AI guidance.
           </p>
         </Reveal>
@@ -129,22 +110,22 @@ export default function HomePage() {
 
       <SocialProof />
 
-      <section className="py-20">
+      <section className="py-20 sm:py-24">
         <div className="container-page">
           <Reveal>
-            <h2 className="text-center font-display text-3xl font-bold text-ink sm:text-4xl">
+            <h2 className="text-center font-display text-display text-ink">
               Industries we cover
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-ink-muted">
+            <p className="mx-auto mt-4 max-w-xl text-center text-body-lg text-ink-muted">
               From raw materials to specialized equipment — built for B2B procurement teams.
             </p>
           </Reveal>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {industries.map((ind, i) => (
-              <Reveal key={ind} delay={i * 60}>
+              <Reveal key={ind} delay={i * 40}>
                 <Link
                   href="/suppliers"
-                  className="inline-block rounded-full border border-slate-200 bg-slate-50 px-5 py-2.5 text-sm font-medium text-ink-muted backdrop-blur transition-all duration-300 ease-cinema hover:border-cyan/50 hover:text-cyan hover:shadow-glow cursor-pointer"
+                  className="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-body-sm font-medium text-ink-muted shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200 ease-cinema hover:border-cyan/40 hover:bg-cyan-soft hover:text-cyan cursor-pointer"
                 >
                   {ind}
                 </Link>
@@ -154,44 +135,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-page py-20">
+      <section className="container-page py-20 sm:py-24">
         <Reveal>
-          <h2 className="text-center font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="text-center font-display text-display text-ink">
             How it works
           </h2>
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
-            <Reveal as="div" key={s.step} delay={i * 120} className="glass-card glass-hover relative p-8">
+            <Reveal as="div" key={s.step} delay={i * 100} className="glass-card glass-hover relative p-8">
               <div className="flex items-center justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan/20 bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-soft text-cyan ring-1 ring-inset ring-cyan/15">
                   <s.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
                 </span>
-                <span className="font-display text-4xl font-bold text-slate-200">
+                <span
+                  aria-hidden
+                  className="font-display text-display font-bold tabular-nums text-slate-200"
+                >
                   {s.step}
                 </span>
               </div>
-              <h3 className="mt-5 text-xl font-semibold text-ink">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.text}</p>
+              <h3 className="mt-6 text-heading-sm text-ink">{s.title}</h3>
+              <p className="mt-2 text-body-sm text-ink-muted">{s.text}</p>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="pb-24 pt-4">
         <div className="container-page">
-          <Reveal className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-r from-cyan/10 via-teal/10 to-mustard/10 px-8 py-14 text-center backdrop-blur-xl">
-            <h2 className="font-display text-3xl font-bold text-ink sm:text-4xl">
+          <Reveal className="relative overflow-hidden rounded-3xl bg-navy px-8 py-16 text-center">
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,rgba(56,189,248,0.18),transparent)]" />
+            </div>
+            <h2 className="relative font-display text-display text-white">
               Ready to make smarter buying decisions?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-ink-muted">
+            <p className="relative mx-auto mt-4 max-w-xl text-body-lg text-white/75">
               Join procurement teams using Suplymate to reduce costs and de-risk supply chains.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/suppliers" className="btn-primary px-6 py-3.5">
+            <div className="relative mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/suppliers"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-cardHover transition-all duration-200 ease-cinema hover:bg-cyan-soft active:translate-y-px cursor-pointer"
+              >
                 Explore suppliers
               </Link>
-              <Link href="/pricing" className="btn-ghost px-6 py-3.5">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 ease-cinema hover:border-white/40 hover:bg-white/10 active:translate-y-px cursor-pointer"
+              >
                 View pricing
               </Link>
             </div>
