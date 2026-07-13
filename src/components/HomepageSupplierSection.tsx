@@ -53,22 +53,17 @@ export default async function HomepageSupplierSection() {
   if (picks.length === 0) return null;
 
   return (
-    <section className="relative overflow-hidden py-20">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-4rem] top-10 h-72 w-72 rounded-full bg-cyan/10 blur-3xl" />
-        <div className="absolute right-[-4rem] bottom-10 h-72 w-72 rounded-full bg-teal/10 blur-3xl" />
-      </div>
-
-      <div className="relative container-page">
+    <section className="relative border-y border-slate-100 bg-base py-20 sm:py-24">
+      <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan-soft px-3 py-1 eyebrow text-cyan">
             <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
             Verified network
           </span>
-          <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="mt-4 font-display text-display text-ink">
             Verified Suppliers on Suplymate
           </h2>
-          <p className="mt-3 text-ink-muted">
+          <p className="mt-4 text-body-lg text-ink-muted">
             Real manufacturers and distributors — vetted for reliability,
             compliance, and delivery performance, with verified profiles, photos,
             and ratings.
@@ -77,7 +72,7 @@ export default async function HomepageSupplierSection() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {picks.map((supplier, i) => (
-            <Reveal key={supplier.id} delay={i * 70}>
+            <Reveal key={supplier.id} delay={(i % 3) * 70}>
               <HomepageSupplierCard {...supplier} />
             </Reveal>
           ))}
