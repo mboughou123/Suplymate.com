@@ -42,22 +42,17 @@ export default async function HomepageProductSection() {
   if (picks.length === 0) return null;
 
   return (
-    <section className="relative overflow-hidden py-20">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute right-[-4rem] top-10 h-72 w-72 rounded-full bg-teal/10 blur-3xl" />
-        <div className="absolute left-[-4rem] bottom-10 h-72 w-72 rounded-full bg-cyan/10 blur-3xl" />
-      </div>
-
-      <div className="relative container-page">
+    <section className="relative py-20 sm:py-24">
+      <div className="container-page">
         <AnimatedSection className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-teal/30 bg-teal/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-teal/25 bg-teal/5 px-3 py-1 eyebrow text-teal">
             <Boxes className="h-3.5 w-3.5" aria-hidden />
             Sourcing catalogue
           </span>
-          <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="mt-4 font-display text-display text-ink">
             Products Businesses Can Source
           </h2>
-          <p className="mt-3 text-ink-muted">
+          <p className="mt-4 text-body-lg text-ink-muted">
             From raw materials to finished goods — compare offers from vetted
             suppliers and buy at the right price, with transparent MOQs and
             delivery times.

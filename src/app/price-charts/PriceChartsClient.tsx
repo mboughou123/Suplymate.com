@@ -87,7 +87,7 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
 
       <aside className="space-y-6">
         <div className="hidden lg:block rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-card max-h-[480px] overflow-y-auto">
-          <h3 className="text-sm font-semibold text-ink mb-3">Materials</h3>
+          <h2 className="text-sm font-semibold text-ink mb-3">Materials</h2>
           <div className="space-y-2">
             {filtered.map((m) => (
               <div key={m.id} className="relative">

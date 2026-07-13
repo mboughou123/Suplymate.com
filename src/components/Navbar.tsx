@@ -138,7 +138,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-display text-xl font-bold shrink-0">
           <span className="text-white">Suply</span>
-          <span className="gradient-text">mate</span>
+          <span className="gradient-text-light">mate</span>
           <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
         </Link>
 

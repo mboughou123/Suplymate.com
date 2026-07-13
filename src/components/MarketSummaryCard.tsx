@@ -11,7 +11,7 @@ function ChangeValue({ value }: { value: number }) {
   const positive = value >= 0;
   return (
     <span
-      className={`inline-flex items-center gap-0.5 font-medium ${positive ? "text-emerald-600" : "text-red-600"}`}
+      className={`inline-flex items-center gap-0.5 font-semibold tabular-nums ${positive ? "text-up" : "text-down"}`}
     >
       {positive ? (
         <TrendingUp className="h-3 w-3" aria-hidden />
@@ -49,10 +49,10 @@ export default function MarketSummaryCard({
   selected,
   onClick,
 }: MarketSummaryCardProps) {
-  const className = `w-full rounded-xl border p-4 text-left transition ${
+  const className = `w-full rounded-xl border p-4 text-left transition-all duration-200 ease-cinema cursor-pointer ${
     selected
-      ? "border-mustard bg-mustard/15/50 shadow-md"
-      : "border-slate-200 bg-slate-50 hover:border-cyan/40 hover:shadow-sm"
+      ? "border-cyan/40 bg-cyan-soft shadow-card ring-1 ring-inset ring-cyan/20"
+      : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-card"
   }`;
 
   const content = (
@@ -61,23 +61,23 @@ export default function MarketSummaryCard({
         <span className="font-semibold text-ink">{material.name}</span>
         <SignalBadge signal={material.signal} />
       </div>
-      <p className="mt-2 text-lg font-bold text-ink">
-        ${material.currentPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-        <span className="ml-1 text-xs font-normal text-ink-dim">
+      <p className="mt-2 text-lg font-bold tabular-nums text-ink">
+        ${material.currentPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
+        <span className="ml-1 text-xs font-normal text-ink-muted">
           {material.unit.replace("USD/", "")}
         </span>
       </p>
       <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
         <div>
-          <p className="text-ink-dim">Daily</p>
+          <p className="text-ink-muted">Daily</p>
           <ChangeValue value={material.dailyChange} />
         </div>
         <div>
-          <p className="text-ink-dim">Monthly</p>
+          <p className="text-ink-muted">Monthly</p>
           <ChangeValue value={material.monthlyChange} />
         </div>
         <div>
-          <p className="text-ink-dim">Yearly</p>
+          <p className="text-ink-muted">Yearly</p>
           <ChangeValue value={material.yearlyChange} />
         </div>
       </div>

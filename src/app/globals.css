@@ -3,23 +3,52 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* — Suplymate design tokens (mirrored in tailwind.config.ts) — */
+    --color-primary: #0d3349; /* brand navy */
+    --color-accent: #0369a1; /* azure */
+    --color-accent-strong: #075985;
+    --color-gold: #b08a3e;
+    --color-up: #047857;
+    --color-down: #dc2626;
+
+    --radius-card: 1.125rem;
+    --radius-control: 0.875rem;
+
+    --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-card-hover: 0 2px 4px rgba(15, 23, 42, 0.04),
+      0 16px 40px -8px rgba(15, 23, 42, 0.14);
+
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  }
   html {
     scroll-behavior: smooth;
   }
   body {
     @apply bg-white text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
   }
   :focus-visible {
     @apply outline-none ring-2 ring-cyan/60 ring-offset-2 ring-offset-white rounded;
   }
   ::selection {
-    background: rgba(2, 132, 199, 0.18);
+    background: rgba(3, 105, 161, 0.16);
   }
 }
 
 @layer components {
   .container-page {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Display type: single family (Inter) with tight, size-appropriate tracking */
+  .font-display {
+    @apply tracking-tight;
+  }
+
+  /* Section header pattern: eyebrow → heading → lede */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em];
   }
 
   /* Clean white surfaces */
@@ -30,25 +59,30 @@
     @apply rounded-2xl border border-slate-200 bg-white shadow-card;
   }
   .glass-hover {
-    @apply transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-cyan/40 hover:shadow-cardHover;
+    @apply transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-slate-300 hover:shadow-cardHover;
   }
 
   /* Buttons */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan to-teal px-5 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 ease-cinema hover:scale-[1.02] hover:shadow-cardHover cursor-pointer;
+    @apply relative inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-5 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_1px_2px_rgba(8,30,45,0.32)] transition-all duration-200 ease-cinema hover:bg-navy-mid hover:shadow-cardHover active:translate-y-px cursor-pointer;
+  }
+  .btn-accent {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-xl bg-cyan px-5 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_1px_2px_rgba(3,105,161,0.35)] transition-all duration-200 ease-cinema hover:bg-[#075985] hover:shadow-glow active:translate-y-px cursor-pointer;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-slate-50 cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-[0_1px_2px_rgba(15,23,42,0.05)] transition-all duration-200 ease-cinema hover:border-slate-300 hover:bg-slate-50 active:translate-y-px cursor-pointer;
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-slate-50 cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition-all duration-200 ease-cinema hover:border-slate-300 hover:bg-slate-50 active:translate-y-px cursor-pointer;
   }
 
-  /* Accent gradient text */
+  /* Accent gradient text — subtle two-tone, static (no rainbow animation) */
   .gradient-text {
-    @apply bg-gradient-to-r from-cyan via-teal to-mustard bg-clip-text text-transparent;
-    background-size: 200% auto;
-    animation: gradient-x 6s ease infinite;
+    @apply bg-gradient-to-r from-cyan to-teal bg-clip-text text-transparent;
+  }
+  /* Light variant for dark navy surfaces */
+  .gradient-text-light {
+    @apply bg-gradient-to-r from-cyan-glow to-teal-glow bg-clip-text text-transparent;
   }
 
   /* Skeleton shimmer */
@@ -102,10 +136,10 @@
   /* Scroll reveal — paired with Reveal.tsx */
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
     transition:
-      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity 0.65s var(--ease-out-expo),
+      transform 0.65s var(--ease-out-expo);
     will-change: opacity, transform;
   }
   .reveal.is-visible {

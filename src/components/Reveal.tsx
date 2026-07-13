@@ -25,21 +25,47 @@ export default function Reveal({
     // Safety: if the element is already in or above the viewport on mount
     // (e.g. restored scroll position, short pages), reveal it immediately
     // so content can never get stuck hidden.
-    if (el.getBoundingClientRect().top < window.innerHeight) {
+    const inViewport = () => el.getBoundingClientRect().top < window.innerHeight;
+    if (inViewport()) {
       setVisible(true);
       return;
     }
+
+    let revealed = false;
+    const cleanups: (() => void)[] = [];
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
+      setVisible(true);
+      cleanups.forEach((fn) => fn());
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        if (entry.isIntersecting) reveal();
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    cleanups.push(() => observer.disconnect());
+
+    // Belt-and-braces fallback: also check on scroll (rAF-throttled), so a
+    // missed/late IntersectionObserver can never leave content hidden.
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        if (inViewport()) reveal();
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    cleanups.push(() => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    });
+
+    return () => cleanups.forEach((fn) => fn());
   }, []);
 
   const Tag = as as React.ElementType;

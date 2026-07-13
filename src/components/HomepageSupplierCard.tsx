@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
 import { BadgeCheck, MapPin, Star, ArrowRight } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
@@ -48,35 +47,29 @@ export default function HomepageSupplierCard({
   logoGradient,
   href,
 }: HomepageSupplierCardProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <motion.article
-      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 ease-cinema hover:border-cyan/40 hover:shadow-cardHover"
-      whileHover={reduceMotion ? undefined : { y: -8 }}
-      transition={{ type: "spring", stiffness: 360, damping: 26 }}
-    >
-      {/* Cover / business photo */}
-      <div className="relative h-36 overflow-hidden">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-slate-300 hover:shadow-cardHover motion-reduce:transform-none">
+      {/* Cover / business photo — consistent 16:9 */}
+      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
         <ImageWithFallback
           src={coverImage}
           fallbackSrc={coverFallback}
           placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
           alt={`${name} — ${category}`}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-110"
+          className="h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-[1.04] motion-reduce:transform-none"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-navy-dark/55 via-navy-dark/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-navy-dark/45 via-transparent to-transparent"
         />
         {verified && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm transition-shadow duration-300 group-hover:shadow-glow">
+          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 py-1 pl-1.5 pr-2.5 text-caption font-semibold text-up shadow-sm ring-1 ring-black/5 backdrop-blur">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
             Verified
           </span>
         )}
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-md bg-black/40 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur">
+        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
           <span aria-hidden>{flag}</span>
           {country}
         </span>
@@ -84,48 +77,59 @@ export default function HomepageSupplierCard({
 
       <div className="flex flex-1 flex-col px-5 pb-5">
         {/* Logo overlapping the cover */}
-        <div className="-mt-8">
+        <div className="-mt-7">
           <SupplierLogo
             logoUrl={logoUrl}
             initials={logoInitials}
             gradient={logoGradient}
             name={name}
+            className="h-14 w-14 rounded-xl text-sm ring-4 ring-white shadow-card"
           />
         </div>
 
         <div className="mt-3 flex-1">
-          <h3 className="text-lg font-semibold leading-tight text-ink">{name}</h3>
-          <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-            <span className="font-semibold uppercase tracking-wide text-cyan">
+          <h3 className="text-heading-sm leading-snug text-ink">{name}</h3>
+          <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+            <span className="text-caption font-semibold uppercase tracking-wide text-cyan">
               {category}
             </span>
-            <span className="inline-flex items-center gap-1 font-semibold text-ink">
-              <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
+            <span
+              aria-hidden
+              className="h-0.5 w-0.5 rounded-full bg-slate-300"
+            />
+            <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
+              <Star
+                className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
+                aria-hidden
+              />
               {rating.toFixed(1)}
               <span className="font-normal text-ink-dim">({reviewCount})</span>
             </span>
           </div>
-          <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-ink-muted">
+          <p className="mt-3 line-clamp-2 text-body-sm text-ink-muted">
             {description}
           </p>
         </div>
 
-        <div className="mt-4 flex items-center gap-1.5 border-t border-slate-100 pt-4 text-xs text-ink-muted">
-          <MapPin className="h-3.5 w-3.5 shrink-0 text-cyan" aria-hidden />
-          <span className="truncate">{location}</span>
+        <div className="mt-4 flex items-center justify-between gap-3 border-t border-slate-100 pt-4">
+          <span className="inline-flex min-w-0 items-center gap-1.5 text-caption text-ink-muted">
+            <MapPin className="h-3.5 w-3.5 shrink-0 text-ink-dim" aria-hidden />
+            <span className="truncate">{location}</span>
+          </span>
+          <Link
+            href={href}
+            className="inline-flex shrink-0 items-center gap-1 text-body-sm font-semibold text-cyan transition-colors hover:text-navy cursor-pointer"
+          >
+            View Supplier
+            <ArrowRight
+              className="h-4 w-4 transition-transform duration-300 ease-cinema group-hover:translate-x-0.5 motion-reduce:transform-none"
+              aria-hidden
+            />
+            {/* Stretched link: whole card is clickable */}
+            <span aria-hidden className="absolute inset-0" />
+          </Link>
         </div>
-
-        <Link
-          href={href}
-          className="group/btn mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
-        >
-          View Supplier
-          <ArrowRight
-            className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
-            aria-hidden
-          />
-        </Link>
       </div>
-    </motion.article>
+    </article>
   );
 }
