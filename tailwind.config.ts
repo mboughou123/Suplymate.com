@@ -1,5 +1,19 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Suplymate design tokens.
+ *
+ * Palette discipline:
+ *   - Primary (brand):  navy   #0D3349 — nav, primary buttons, dark panels
+ *   - Accent:           azure  #0369A1 (cyan.*) — links, active states, data
+ *   - Premium accent:   gold   #CBA351 (mustard.*) — ratings, sparing highlights
+ *   - Neutrals:         slate scale via ink.* aliases
+ *   - Semantic:         verified/up = emerald · down = red · warn = amber
+ *
+ * Spacing follows the default 4px scale used on an 8pt rhythm (py-2/4/6/8…).
+ * Type scale tokens (text-display-*, text-heading-*) carry their own
+ * line-height, tracking, and weight so headings stay consistent everywhere.
+ */
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,24 +29,36 @@ const config: Config = {
         ink: {
           DEFAULT: "#0F172A",
           muted: "#475569",
-          dim: "#94A3B8",
+          dim: "#64748B",
         },
-        // Primary accent — professional azure (AA contrast on white)
+        // Accent — deep azure (AA contrast on white at any size)
         cyan: {
-          DEFAULT: "#0284C7",
+          DEFAULT: "#0369A1",
           glow: "#38BDF8",
+          soft: "#F0F7FC",
         },
         // Secondary accent — trust teal
         teal: {
-          DEFAULT: "#0D9488",
+          DEFAULT: "#0F766E",
           glow: "#14B8A6",
         },
-        // Positive / money
+        // Positive / money / price-up
         emerald: {
-          DEFAULT: "#059669",
+          DEFAULT: "#047857",
           glow: "#10B981",
         },
-        // Brand accents kept
+        // Semantic market colors (fintech up/down language)
+        up: {
+          DEFAULT: "#047857",
+          bright: "#10B981",
+          bg: "#ECFDF5",
+        },
+        down: {
+          DEFAULT: "#DC2626",
+          bright: "#F87171",
+          bg: "#FEF2F2",
+        },
+        // Brand primary
         navy: {
           DEFAULT: "#0D3349",
           dark: "#081E2D",
@@ -41,8 +67,8 @@ const config: Config = {
         },
         // Refined corporate gold — premium accent, used sparingly
         mustard: {
-          DEFAULT: "#CBA351",
-          light: "#E3C176",
+          DEFAULT: "#B08A3E",
+          light: "#D4AF37",
           pale: "#F4EAD2",
         },
         gold: {
@@ -67,18 +93,52 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        // Single-family type system (Linear/Stripe pattern): display = Inter
+        // with tight tracking via the text-display-* tokens below.
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        // — type scale tokens (size, line-height, tracking, weight) —
+        caption: ["0.75rem", { lineHeight: "1.125rem", letterSpacing: "0.01em" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.5rem" }],
+        body: ["1rem", { lineHeight: "1.625rem" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.875rem" }],
+        "heading-sm": [
+          "1.125rem",
+          { lineHeight: "1.625rem", letterSpacing: "-0.01em", fontWeight: "600" },
+        ],
+        heading: [
+          "1.375rem",
+          { lineHeight: "1.875rem", letterSpacing: "-0.015em", fontWeight: "600" },
+        ],
+        "heading-lg": [
+          "1.75rem",
+          { lineHeight: "2.25rem", letterSpacing: "-0.02em", fontWeight: "600" },
+        ],
+        display: [
+          "2.25rem",
+          { lineHeight: "2.625rem", letterSpacing: "-0.025em", fontWeight: "700" },
+        ],
+        "display-lg": [
+          "3rem",
+          { lineHeight: "3.25rem", letterSpacing: "-0.03em", fontWeight: "700" },
+        ],
+        "display-xl": [
+          "3.625rem",
+          { lineHeight: "3.875rem", letterSpacing: "-0.033em", fontWeight: "700" },
+        ],
       },
       borderRadius: {
         xl: "0.875rem",
         "2xl": "1.125rem",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(15,23,42,0.06), 0 8px 24px rgba(15,23,42,0.08)",
+        // Layered, low-alpha shadows (Stripe-like): calm at rest, deeper on hover.
+        card: "0 1px 2px rgba(15,23,42,0.04), 0 2px 8px rgba(15,23,42,0.04)",
         cardHover:
-          "0 0 0 1px rgba(2,132,199,0.25), 0 16px 40px rgba(15,23,42,0.12)",
-        focus: "0 0 0 3px rgba(2,132,199,0.30)",
-        glow: "0 6px 20px rgba(2,132,199,0.25)",
+          "0 2px 4px rgba(15,23,42,0.04), 0 16px 40px -8px rgba(15,23,42,0.14)",
+        focus: "0 0 0 3px rgba(3,105,161,0.28)",
+        glow: "0 4px 16px rgba(3,105,161,0.22)",
         gold: "0 4px 24px rgba(212,175,55,0.25)",
         "ai-glow": "0 0 40px rgba(96,165,250,0.15), 0 8px 32px rgba(15,23,42,0.08)",
         glass: "0 1px 2px rgba(15,23,42,0.04), 0 8px 32px rgba(15,23,42,0.06)",
