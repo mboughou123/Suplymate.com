@@ -53,7 +53,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
       suffix: "%",
       color: "gold" as const,
       data: trust.trends.response,
-      stroke: "#CBA351",
+      stroke: "#0369A1",
     },
   ];
 

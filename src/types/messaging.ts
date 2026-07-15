@@ -57,7 +57,7 @@ export const STATUS_LABELS: Record<ConversationStatus, string> = {
 export const STATUS_STYLES: Record<ConversationStatus, string> = {
   inquiry: "bg-slate-100 text-ink-muted",
   negotiation: "bg-cyan/10 text-cyan",
-  sample_sent: "bg-mustard/15 text-amber-800",
+  sample_sent: "bg-mustard/15 text-cyan",
   order_in_progress: "bg-indigo-50 text-indigo-700",
   completed: "bg-emerald-50 text-emerald-700",
 };

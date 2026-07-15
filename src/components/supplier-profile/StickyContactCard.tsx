@@ -141,7 +141,7 @@ export default function StickyContactCard({
           label={t("aiSourcingAssistant")}
           icon={Sparkles}
           productName={firstProduct}
-          className="w-full justify-center rounded-xl border border-gold/30 bg-gradient-to-r from-gold/10 to-ai-mist px-4 py-2.5 text-sm font-semibold text-amber-800 transition hover:border-gold/50"
+          className="w-full justify-center rounded-xl border border-gold/30 bg-gradient-to-r from-gold/10 to-ai-mist px-4 py-2.5 text-sm font-semibold text-cyan transition hover:border-gold/50"
         />
       </div>
     </div>

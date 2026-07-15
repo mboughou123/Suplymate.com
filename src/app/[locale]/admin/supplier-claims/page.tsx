@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 
 const STATUS_CLS: Record<string, string> = {
   SUBMITTED: "bg-blue-50 text-blue-700",
-  NEEDS_INFORMATION: "bg-amber-50 text-amber-800",
+  NEEDS_INFORMATION: "bg-cyan-soft text-cyan",
   APPROVED: "bg-emerald-50 text-emerald-700",
   REJECTED: "bg-slate-100 text-slate-500",
   STARTED: "bg-slate-100 text-slate-600",

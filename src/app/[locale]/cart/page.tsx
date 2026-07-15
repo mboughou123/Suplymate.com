@@ -72,7 +72,7 @@ export default function CartPage() {
       <p className="mt-1 text-sm text-ink-muted">{t("noPaymentNote")}</p>
 
       {partialMsg && (
-        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+        <div className="mt-4 rounded-xl border border-cyan/20 bg-cyan-soft px-4 py-3 text-sm text-cyan">
           {partialMsg}{" "}
           <Link href="/rfqs" className="font-semibold text-cyan hover:underline">
             {rfqs("title")}

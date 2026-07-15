@@ -12,7 +12,7 @@ const CONFIG: Record<
   },
   pending: {
     label: "Pending review",
-    className: "bg-amber-50 text-amber-700 ring-amber-600/20",
+    className: "bg-cyan-soft text-cyan ring-cyan/20",
     Icon: Clock,
   },
   rejected: {

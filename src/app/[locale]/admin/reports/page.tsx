@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 const CLS: Record<string, string> = {
-  OPEN: "bg-amber-50 text-amber-800",
+  OPEN: "bg-cyan-soft text-cyan",
   REVIEWING: "bg-blue-50 text-blue-700",
   RESOLVED: "bg-emerald-50 text-emerald-700",
   DISMISSED: "bg-slate-100 text-slate-500",

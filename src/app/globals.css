@@ -8,7 +8,6 @@
     --color-primary: #0d3349; /* brand navy */
     --color-accent: #0369a1; /* azure */
     --color-accent-strong: #075985;
-    --color-gold: #b08a3e;
     --color-up: #047857;
     --color-down: #dc2626;
 
@@ -109,7 +108,7 @@
     @apply border border-slate-200/80 bg-slate-50/60 backdrop-blur-xl;
   }
   .ai-gold-border {
-    border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(96, 165, 250, 0.2)) 1;
+    border-image: linear-gradient(135deg, rgba(3, 105, 161, 0.4), rgba(96, 165, 250, 0.2)) 1;
   }
   .ai-grid-bg {
     background-image:
@@ -118,11 +117,11 @@
     background-size: 48px 48px;
   }
   .ai-gradient-text {
-    @apply bg-gradient-to-r from-ink via-slate-700 to-gold bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-ink via-slate-700 to-cyan bg-clip-text text-transparent;
   }
   .ai-input-glow:focus-within {
     box-shadow:
-      0 0 0 1px rgba(212, 175, 55, 0.3),
+      0 0 0 1px rgba(3, 105, 161, 0.3),
       0 0 24px rgba(96, 165, 250, 0.12),
       0 8px 32px rgba(15, 23, 42, 0.06);
   }

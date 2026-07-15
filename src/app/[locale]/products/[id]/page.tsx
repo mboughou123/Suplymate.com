@@ -232,7 +232,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
           <div>
             <h2 className="mb-2 text-xl font-bold text-ink">Product details</h2>
-            <p className="mb-5 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+            <p className="mb-5 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
               Illustrative specifications based on category norms and supplier-provided
               information. These are not independently verified — confirm exact specs,
               certifications, and tolerances with the supplier in your RFQ.

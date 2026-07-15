@@ -65,7 +65,7 @@ function formatDate(iso: string): string {
 const STATUS_STYLE: Record<MediaStatus, string> = {
   published: "bg-emerald-50 text-emerald-700",
   unpublished: "bg-slate-100 text-slate-500",
-  draft: "bg-amber-50 text-amber-700",
+  draft: "bg-cyan-soft text-cyan",
 };
 
 export default function MediaLibraryClient({ initialMedia, storage }: Props) {
@@ -201,15 +201,15 @@ export default function MediaLibraryClient({ initialMedia, storage }: Props) {
 
       <div className="container-page py-8">
         {!storage.configured && (
-          <div className="mb-5 flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          <div className="mb-5 flex items-start gap-2 rounded-xl border border-cyan/20 bg-cyan-soft px-4 py-3 text-sm text-cyan">
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <div>
               <p className="font-semibold">Storage provider not configured ({storage.provider}).</p>
-              <p className="mt-0.5 text-amber-700">
+              <p className="mt-0.5 text-cyan">
                 {storage.recommendation ??
                   "Uploads are kept as data URLs / original links until a provider is set."}{" "}
-                Add <code className="rounded bg-amber-100 px-1">BLOB_READ_WRITE_TOKEN</code> in Vercel → Storage
-                → Blob and in your local <code className="rounded bg-amber-100 px-1">.env</code> for real hosted uploads.
+                Add <code className="rounded bg-cyan-soft px-1">BLOB_READ_WRITE_TOKEN</code> in Vercel → Storage
+                → Blob and in your local <code className="rounded bg-cyan-soft px-1">.env</code> for real hosted uploads.
               </p>
             </div>
           </div>
@@ -393,7 +393,7 @@ function GridCard({
           {m.status}
         </span>
         {m.isPrimary && (
-          <span className="absolute bottom-2 left-2 inline-flex items-center gap-0.5 rounded-full bg-amber-500/90 px-1.5 py-0.5 text-[10px] font-bold text-white">
+          <span className="absolute bottom-2 left-2 inline-flex items-center gap-0.5 rounded-full bg-cyan-soft0/90 px-1.5 py-0.5 text-[10px] font-bold text-white">
             <Star className="h-2.5 w-2.5 fill-white" /> Primary
           </span>
         )}

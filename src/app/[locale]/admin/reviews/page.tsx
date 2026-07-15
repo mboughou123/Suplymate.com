@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 const CLS: Record<string, string> = {
-  PENDING: "bg-amber-50 text-amber-800",
+  PENDING: "bg-cyan-soft text-cyan",
   PUBLISHED: "bg-emerald-50 text-emerald-700",
   REJECTED: "bg-slate-100 text-slate-500",
   REMOVED: "bg-red-50 text-red-700",
@@ -54,7 +54,7 @@ export default async function AdminReviewsPage() {
             <li key={r.id} className="rounded-2xl border border-slate-200 p-4">
               <div className="flex flex-wrap items-center gap-2">
                 <Link href={`/supplier/${r.supplierId}`} className="font-semibold text-ink hover:text-cyan">{r.supplierName}</Link>
-                <span className="text-amber-500">{"★".repeat(r.rating)}<span className="text-slate-300">{"★".repeat(5 - r.rating)}</span></span>
+                <span className="text-cyan">{"★".repeat(r.rating)}<span className="text-slate-300">{"★".repeat(5 - r.rating)}</span></span>
                 <span className={`rounded-full px-2 py-0.5 text-[11px] font-medium ${CLS[r.status] ?? "bg-slate-100"}`}>{r.status}</span>
                 <span className="ml-auto text-xs text-ink-dim">{r.qualifyingType ?? "—"}</span>
               </div>

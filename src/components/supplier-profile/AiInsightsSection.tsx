@@ -17,7 +17,7 @@ import { Sparkline } from "./primitives";
 const TONE: Record<string, string> = {
   positive: "text-emerald-400",
   neutral: "text-cyan-glow",
-  watch: "text-amber-400",
+  watch: "text-cyan-glow",
 };
 
 export default function AiInsightsSection({ profile }: { profile: SupplierProfile }) {
@@ -29,7 +29,7 @@ export default function AiInsightsSection({ profile }: { profile: SupplierProfil
       <div className="absolute inset-0 ai-grid-bg opacity-[0.07]" />
       <div
         className="absolute -left-20 top-10 h-72 w-72 rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, rgba(212,175,55,0.4), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(3,105,161,0.4), transparent 70%)" }}
       />
       <div
         className="absolute -right-20 bottom-0 h-72 w-72 rounded-full opacity-30 blur-3xl"
@@ -82,7 +82,7 @@ export default function AiInsightsSection({ profile }: { profile: SupplierProfil
             transition={{ duration: 0.5, delay: 0.08 }}
             className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur"
           >
-            <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-amber-300">
+            <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-cyan-glow">
               <ShieldAlert className="h-4 w-4" aria-hidden /> {t("riskAnalysis")}
             </div>
             <p className="text-sm leading-relaxed text-white/75">{ai.riskAnalysis}</p>
@@ -105,7 +105,7 @@ export default function AiInsightsSection({ profile }: { profile: SupplierProfil
                 <span className="text-[10px] uppercase tracking-wider text-white/40">{t("confidence")}</span>
               </div>
               <div className="my-3">
-                <Sparkline data={c.trend} color="#E8C96A" className="h-10 w-full" />
+                <Sparkline data={c.trend} color="#38BDF8" className="h-10 w-full" />
               </div>
               <p className="text-sm font-bold text-white">{c.title}</p>
               <p className="mt-1 text-xs leading-relaxed text-white/55">{c.body}</p>

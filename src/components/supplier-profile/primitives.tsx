@@ -56,7 +56,7 @@ export function AnimatedBar({
 }: {
   value: number;
   max?: number;
-  color?: "cyan" | "teal" | "emerald" | "gold" | "amber" | "rose";
+  color?: "cyan" | "teal" | "emerald" | "gold" | "rose";
   height?: string;
 }) {
   const pct = Math.max(0, Math.min(100, (value / max) * 100));
@@ -64,8 +64,7 @@ export function AnimatedBar({
     cyan: "from-cyan to-cyan-glow",
     teal: "from-teal to-teal-glow",
     emerald: "from-emerald-500 to-emerald-400",
-    gold: "from-gold to-gold-light",
-    amber: "from-amber-500 to-amber-400",
+    gold: "from-cyan to-cyan-glow",
     rose: "from-rose-500 to-rose-400",
   };
   return (
@@ -167,7 +166,7 @@ export function RadialScore({
   const c = 2 * Math.PI * r;
   const pct = Math.max(0, Math.min(100, value));
   const offset = c - (pct / 100) * c;
-  const tone = value >= 82 ? "#059669" : value >= 68 ? "#0284C7" : "#CBA351";
+  const tone = value >= 82 ? "#059669" : value >= 68 ? "#0284C7" : "#0369A1";
   return (
     <div className="relative inline-flex items-center justify-center" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">

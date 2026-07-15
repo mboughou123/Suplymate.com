@@ -314,7 +314,7 @@ export default function ChatThread({
                   )}
                 </div>
                 {mine && m.riskFlag && (
-                  <div className="mt-1 flex items-start gap-1 rounded-lg bg-amber-50 px-2 py-1 text-[10px] text-amber-800">
+                  <div className="mt-1 flex items-start gap-1 rounded-lg bg-cyan-soft px-2 py-1 text-[10px] text-cyan">
                     <ShieldAlert className="mt-0.5 h-3 w-3 shrink-0" aria-hidden />
                     Flagged by fraud detection — avoid off-platform payments.
                   </div>
@@ -354,7 +354,7 @@ export default function ChatThread({
 
       {/* Fraud warning */}
       {riskWarning && (
-        <div className="flex items-center gap-2 border-t border-amber-200 bg-amber-50 px-4 py-2 text-xs text-amber-800">
+        <div className="flex items-center gap-2 border-t border-cyan/20 bg-cyan-soft px-4 py-2 text-xs text-cyan">
           <ShieldAlert className="h-4 w-4 shrink-0" aria-hidden />
           {riskWarning}
         </div>

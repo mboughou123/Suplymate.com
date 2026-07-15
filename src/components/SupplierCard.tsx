@@ -112,7 +112,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
               {s.categoryLabel}
             </span>
             <span
-              className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-amber-800"
+              className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-cyan"
               title="Suplymate supplier score"
             >
               <Award className="h-3 w-3" aria-hidden />

@@ -60,7 +60,7 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
       <div className="space-y-6">
-        <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900">
+        <div className="rounded-xl border border-cyan/20 bg-cyan-soft px-4 py-3 text-xs text-cyan">
           {t("provenanceNotice")}
         </div>
         <input

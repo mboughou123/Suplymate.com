@@ -514,12 +514,12 @@ export default function AdminImportSuppliersClient({ initialSuppliers }: Props) 
             </div>
 
             {csvErrors.length > 0 && (
-              <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4">
-                <p className="flex items-center gap-2 text-sm font-bold text-amber-800">
+              <div className="mt-4 rounded-2xl border border-cyan/20 bg-cyan-soft p-4">
+                <p className="flex items-center gap-2 text-sm font-bold text-cyan">
                   <AlertTriangle className="h-4 w-4" aria-hidden /> {csvErrors.length} invalid row(s)
                   skipped
                 </p>
-                <ul className="mt-2 space-y-0.5 text-xs text-amber-800">
+                <ul className="mt-2 space-y-0.5 text-xs text-cyan">
                   {csvErrors.slice(0, 8).map((e, i) => (
                     <li key={i}>
                       Line {e.line}: {e.message}
@@ -800,7 +800,7 @@ function ReviewQueue(props: {
                         c.scorePct >= 70
                           ? "bg-emerald-100 text-emerald-700"
                           : c.scorePct >= 40
-                            ? "bg-amber-100 text-amber-700"
+                            ? "bg-cyan-soft text-cyan"
                             : "bg-rose-100 text-rose-700";
                       return (
                         <div className="mt-2">
@@ -820,7 +820,7 @@ function ReviewQueue(props: {
                               {warnings.map((w) => (
                                 <span
                                   key={w}
-                                  className="inline-flex items-center gap-1 rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700"
+                                  className="inline-flex items-center gap-1 rounded-md bg-cyan-soft px-1.5 py-0.5 text-[10px] font-semibold text-cyan"
                                 >
                                   <AlertTriangle className="h-3 w-3" aria-hidden /> {w}
                                 </span>

@@ -33,7 +33,7 @@ const STATUS_KEYS: Record<string, "statusDraft" | "statusSent" | "statusQuoted" 
 const STATUS_CLS: Record<string, string> = {
   open: "bg-slate-100 text-slate-700",
   submitted: "bg-blue-50 text-blue-700",
-  quoted: "bg-amber-50 text-amber-700",
+  quoted: "bg-cyan-soft text-cyan",
   closed: "bg-emerald-50 text-emerald-700",
   expired: "bg-slate-100 text-slate-500",
   cancelled: "bg-slate-100 text-slate-500",

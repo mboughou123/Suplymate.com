@@ -39,7 +39,7 @@ export default async function AdminSubscriptionsPage() {
       </h1>
 
       {!isStripeConfigured() && (
-        <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+        <p className="mt-3 rounded-xl border border-cyan/20 bg-cyan-soft px-4 py-3 text-sm text-cyan">
           Stripe is not configured. Billing actions are disabled until the Stripe environment
           variables are set. Plan changes are managed by webhooks once configured.
         </p>

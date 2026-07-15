@@ -15,7 +15,7 @@ const ICONS = {
 
 const STATUS_COLORS = {
   success: "bg-emerald-500",
-  warning: "bg-amber-500",
+  warning: "bg-cyan-soft0",
   info: "bg-gold",
 };
 

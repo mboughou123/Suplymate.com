@@ -16,7 +16,7 @@ type Props = {
 function trustTone(score: number | null): string {
   if (score == null) return "text-ink-dim";
   if (score >= 70) return "text-emerald-700";
-  if (score >= 45) return "text-amber-700";
+  if (score >= 45) return "text-cyan";
   return "text-rose-700";
 }
 
@@ -68,7 +68,7 @@ export default function ImportPreviewTable({
           {rows.map((r) => {
             const isDup = duplicates?.has(r.id);
             return (
-              <tr key={r.id} className={isDup ? "bg-amber-50/40" : undefined}>
+              <tr key={r.id} className={isDup ? "bg-cyan-soft/40" : undefined}>
                 <td className="px-4 py-3 align-top">
                   <input
                     type="checkbox"
@@ -85,7 +85,7 @@ export default function ImportPreviewTable({
                     {r.products.length > 0 && ` · ${r.products.length} product(s)`}
                   </div>
                   {isDup && (
-                    <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-800">
+                    <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-cyan-soft px-2 py-0.5 text-[11px] font-bold text-cyan">
                       <AlertTriangle className="h-3 w-3" aria-hidden /> Possible duplicate
                     </span>
                   )}
@@ -121,7 +121,7 @@ export default function ImportPreviewTable({
                   </span>
                 </td>
                 <td className="px-4 py-3 align-top">
-                  <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                  <span className="rounded-full bg-cyan-soft px-2 py-0.5 text-[11px] font-bold text-cyan">
                     pending
                   </span>
                 </td>

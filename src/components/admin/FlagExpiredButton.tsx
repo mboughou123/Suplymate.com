@@ -28,7 +28,7 @@ export default function FlagExpiredButton({ count }: { count: number }) {
         type="button"
         onClick={run}
         disabled={busy || count === 0}
-        className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-600 disabled:opacity-50"
+        className="rounded-lg bg-cyan-soft0 px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#075985] disabled:opacity-50"
       >
         {busy ? "Flagging…" : `Flag ${count} expired`}
       </button>

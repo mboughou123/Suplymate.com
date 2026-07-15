@@ -220,7 +220,7 @@ export default async function SupplierProfilePage({
               : statusMeta.tone === "danger"
                 ? "bg-red-50 text-red-700"
                 : statusMeta.tone === "warn"
-                  ? "bg-amber-50 text-amber-800"
+                  ? "bg-cyan-soft text-cyan"
                   : statusMeta.tone === "info"
                     ? "bg-blue-50 text-blue-700"
                     : "bg-slate-100 text-slate-600"
@@ -253,7 +253,7 @@ export default async function SupplierProfilePage({
                 {supplier.sourceUrl ? t("collectedFromWebsite") : t("collectedFromImport")}
               </p>
               {(realCertImages.length > 0 || realCertDetails.length > 0) && (
-                <p className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                <p className="mt-2 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
                   {t("notIndependentlyVerified")}
                 </p>
               )}

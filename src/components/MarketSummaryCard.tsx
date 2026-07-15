@@ -33,7 +33,7 @@ function SignalBadge({ signal }: { signal: Material["signal"] }) {
       cls: "bg-emerald-100 text-emerald-800 border-emerald-200",
       Icon: TrendingUp,
     },
-    Wait: { cls: "bg-amber-100 text-amber-800 border-amber-200", Icon: Minus },
+    Wait: { cls: "bg-cyan-soft text-cyan border-cyan/20", Icon: Minus },
     Monitor: { cls: "bg-blue-100 text-blue-800 border-blue-200", Icon: TrendingDown },
   } as const;
   const { cls, Icon } = config[signal];

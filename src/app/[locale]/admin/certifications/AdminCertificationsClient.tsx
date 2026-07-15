@@ -24,7 +24,7 @@ type Props = {
 
 const STATUS_STYLE: Record<CertStatus, string> = {
   claimed: "bg-slate-100 text-slate-600",
-  pending: "bg-amber-50 text-amber-700",
+  pending: "bg-cyan-soft text-cyan",
   reviewed: "bg-sky-50 text-sky-700",
   verified: "bg-emerald-50 text-emerald-700",
   expired: "bg-orange-50 text-orange-700",

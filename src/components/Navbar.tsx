@@ -139,10 +139,18 @@ export default function Navbar() {
       className="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-r from-navy-dark to-navy text-white shadow-sm"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-display text-xl font-bold shrink-0">
-          <span className="text-white">{t("brandSuply")}</span>
-          <span className="gradient-text-light">{t("brandMate")}</span>
-          <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
+        <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-xl font-bold">
+          <span>
+            <span className="text-white">{t("brandSuply")}</span>
+            <span className="gradient-text-light">{t("brandMate")}</span>
+            <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
+          </span>
+          <span
+            className="rounded-md border border-cyan-glow/35 bg-cyan/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-glow"
+            aria-label="Beta"
+          >
+            Beta
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

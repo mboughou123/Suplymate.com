@@ -238,8 +238,8 @@ export default function MediaManager({
                         {MEDIA_TYPE_LABELS[m.mediaType]}
                       </span>
                       {m.isPrimary && (
-                        <span className="inline-flex items-center gap-0.5 rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-bold text-amber-700">
-                          <Star className="h-2.5 w-2.5 fill-amber-500 text-amber-500" /> Primary
+                        <span className="inline-flex items-center gap-0.5 rounded-full bg-cyan-soft px-2 py-0.5 text-[10px] font-bold text-cyan">
+                          <Star className="h-2.5 w-2.5 fill-cyan text-cyan" /> Primary
                         </span>
                       )}
                       <span

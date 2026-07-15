@@ -5,10 +5,9 @@ import type { Config } from "tailwindcss";
  *
  * Palette discipline:
  *   - Primary (brand):  navy   #0D3349 — nav, primary buttons, dark panels
- *   - Accent:           azure  #0369A1 (cyan.*) — links, active states, data
- *   - Premium accent:   gold   #CBA351 (mustard.*) — ratings, sparing highlights
+ *   - Accent:           azure  #0369A1 (cyan.*) — links, active states, data, highlights
  *   - Neutrals:         slate scale via ink.* aliases
- *   - Semantic:         verified/up = emerald · down = red · warn = amber
+ *   - Semantic:         verified/up = emerald · down = red
  *
  * Spacing follows the default 4px scale used on an 8pt rhythm (py-2/4/6/8…).
  * Type scale tokens (text-display-*, text-heading-*) carry their own
@@ -65,17 +64,17 @@ const config: Config = {
           mid: "#1A4A6B",
           light: "#1E5580",
         },
-        // Refined corporate gold — premium accent, used sparingly
+        // Legacy aliases — map to brand azure (cyan) for backward-compatible class names
         mustard: {
-          DEFAULT: "#B08A3E",
-          light: "#D4AF37",
-          pale: "#F4EAD2",
+          DEFAULT: "#0369A1",
+          light: "#38BDF8",
+          pale: "#F0F7FC",
         },
         gold: {
-          DEFAULT: "#D4AF37",
-          light: "#E8C96A",
-          pale: "#F8F0D8",
-          glow: "#F0D060",
+          DEFAULT: "#0369A1",
+          light: "#38BDF8",
+          pale: "#F0F7FC",
+          glow: "#38BDF8",
         },
         ai: {
           glow: "#60A5FA",
@@ -139,7 +138,7 @@ const config: Config = {
           "0 2px 4px rgba(15,23,42,0.04), 0 16px 40px -8px rgba(15,23,42,0.14)",
         focus: "0 0 0 3px rgba(3,105,161,0.28)",
         glow: "0 4px 16px rgba(3,105,161,0.22)",
-        gold: "0 4px 24px rgba(212,175,55,0.25)",
+        gold: "0 4px 24px rgba(3,105,161,0.25)",
         "ai-glow": "0 0 40px rgba(96,165,250,0.15), 0 8px 32px rgba(15,23,42,0.08)",
         glass: "0 1px 2px rgba(15,23,42,0.04), 0 8px 32px rgba(15,23,42,0.06)",
       },
