@@ -1,8 +1,10 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
-export default async function NotFound() {
-  const t = await getTranslations("errors");
+export default function NotFound() {
+  const t = useTranslations("errors");
 
   return (
     <div className="container-page flex min-h-[50vh] flex-col items-center justify-center py-20 text-center">

@@ -1,5 +1,5 @@
 import { getRequestConfig } from "next-intl/server";
-import { hasLocale } from "next-intl";
+import { hasLocale, IntlErrorCode } from "next-intl";
 import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
@@ -11,5 +11,13 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
+    onError(error) {
+      if (error.code === IntlErrorCode.MISSING_MESSAGE) return;
+      console.error(error);
+    },
+    getMessageFallback({ namespace, key }) {
+      const path = [namespace, key].filter(Boolean).join(".");
+      return path || key;
+    },
   };
 });
