@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   BadgeCheck,
@@ -21,14 +22,20 @@ import ProfileActionButton from "./ProfileActionButton";
 import { RadialScore } from "./primitives";
 
 export default function HeroSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
+  const common = useTranslations("common");
   const { base, trust, company, companySummary } = profile;
   const firstProduct = base.products[0]?.name;
 
   const indicators = [
-    { icon: ShieldCheck, label: "Verified supplier", ok: base.verified },
-    { icon: BadgeCheck, label: `${profile.certifications.length} certifications`, ok: true },
-    { icon: Truck, label: `${trust.onTimeDelivery}% on-time`, ok: true },
-    { icon: Clock, label: `Replies ${trust.responseTime}`, ok: true },
+    { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified },
+    {
+      icon: BadgeCheck,
+      label: t("certificationsCount", { count: profile.certifications.length }),
+      ok: true,
+    },
+    { icon: Truck, label: t("onTimeDelivery", { percent: trust.onTimeDelivery }), ok: true },
+    { icon: Clock, label: t("repliesIn", { time: trust.responseTime }), ok: true },
   ];
 
   return (
@@ -51,7 +58,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
         <div className="container-page relative flex h-full items-end pb-4">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            Verified Supplier Profile
+            {t("verifiedSupplierProfile")}
           </span>
         </div>
       </div>
@@ -88,7 +95,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                     {base.verified && (
                       <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
                         <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-                        Verified
+                        {common("verified")}
                       </span>
                     )}
                   </div>
@@ -102,12 +109,12 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                       <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
                       {base.rating.toFixed(1)}
                       <span className="font-normal text-ink-dim">
-                        ({base.reviewCount.toLocaleString()} reviews)
+                        {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
                       </span>
                     </span>
                     <span className="inline-flex items-center gap-1 text-ink-muted">
                       <Building2 className="h-4 w-4 text-cyan" aria-hidden />
-                      {company.yearsInBusiness} yrs in business
+                      {t("yearsInBusiness", { years: company.yearsInBusiness })}
                     </span>
                   </div>
 
@@ -129,7 +136,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
               <div className="rounded-xl border border-ai-glow/20 bg-ai-mist/60 p-4">
                 <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-cyan">
                   <Sparkles className="h-3.5 w-3.5" aria-hidden />
-                  Suplymate AI company summary
+                  {t("aiCompanySummary")}
                 </div>
                 <p className="text-sm leading-relaxed text-ink-muted">{companySummary}</p>
               </div>
@@ -156,7 +163,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   supplierId={base.id}
                   supplierName={base.name}
                   intent="contact"
-                  label="Contact Supplier"
+                  label={t("contactSupplier")}
                   icon={undefined}
                   className="btn-primary"
                 />
@@ -164,7 +171,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   supplierId={base.id}
                   supplierName={base.name}
                   intent="rfq"
-                  label="Send RFQ"
+                  label={t("sendRfq")}
                   icon={FileText}
                   productName={firstProduct}
                   className="btn-secondary"
@@ -173,7 +180,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   supplierId={base.id}
                   supplierName={base.name}
                   intent="negotiate"
-                  label="Start AI Negotiation"
+                  label={t("startAiNegotiation")}
                   icon={Handshake}
                   productName={firstProduct}
                   className="btn-secondary"
@@ -193,7 +200,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                     rel="noopener noreferrer nofollow"
                     className="btn-ghost"
                   >
-                    <Globe className="h-4 w-4" aria-hidden /> Website
+                    <Globe className="h-4 w-4" aria-hidden /> {t("website")}
                   </a>
                 )}
               </div>
@@ -201,11 +208,14 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
 
             {/* Trust score dial */}
             <div className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-gradient-to-br from-slate-50 to-white p-6 lg:w-56">
-              <RadialScore value={trust.trustScore} label="Trust score" />
+              <RadialScore value={trust.trustScore} label={t("trustScore")} />
               <div className="text-center">
-                <p className="text-xs font-semibold text-ink">Suplymate Trust Index</p>
+                <p className="text-xs font-semibold text-ink">{t("trustIndex")}</p>
                 <p className="mt-0.5 inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">
-                  {trust.riskLevel} risk · {trust.aiConfidence}% AI confidence
+                  {t("riskConfidence", {
+                    risk: trust.riskLevel,
+                    confidence: trust.aiConfidence,
+                  })}
                 </p>
               </div>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { Menu, Sparkles } from "lucide-react";
 
@@ -9,6 +10,8 @@ type Props = {
 };
 
 export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
+  const t = useTranslations("aiAssistant");
+  const nav = useTranslations("navigation");
   const { data: session } = useSession();
   const name = session?.user?.name ?? "";
   const firstName = name.split(" ")[0] || "Guest";
@@ -27,7 +30,7 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
           type="button"
           onClick={onMenuClick}
           className="rounded-xl p-2 text-ink-muted transition hover:bg-slate-100 lg:hidden"
-          aria-label="Open menu"
+          aria-label={nav("toggleMenu")}
         >
           <Menu className="h-5 w-5" />
         </button>
@@ -38,11 +41,9 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
 
         <div className="min-w-0">
           <h1 className="truncate text-base font-bold tracking-tight text-ink sm:text-lg">
-            AI Procurement Assistant
+            {t("title")}
           </h1>
-          <p className="truncate text-xs text-ink-dim">
-            Supplier intelligence, pricing &amp; sourcing help
-          </p>
+          <p className="truncate text-xs text-ink-dim">{t("subtitle")}</p>
         </div>
       </div>
 
@@ -59,7 +60,7 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
               aiMode === "openai" ? "bg-emerald-500" : "bg-slate-400"
             }`}
           />
-          {aiMode === "openai" ? "Live AI" : "Demo mode"}
+          {aiMode === "openai" ? t("badge") : t("badge")}
         </span>
 
         <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-2 py-1.5">

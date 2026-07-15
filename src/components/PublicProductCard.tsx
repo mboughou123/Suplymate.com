@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { BadgeCheck, MapPin, Truck, ArrowRight, PackageCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
@@ -12,6 +13,9 @@ import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
 type Props = { data: PublicProduct };
 
 export default function PublicProductCard({ data: d }: Props) {
+  const t = useTranslations("products");
+  const tc = useTranslations("common");
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
       <Link href={`/products/${d.id}`} className="relative block">
@@ -26,7 +30,7 @@ export default function PublicProductCard({ data: d }: Props) {
           {d.verified && (
             <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
               <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-              Verified
+              {tc("verified")}
             </span>
           )}
           <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
@@ -42,7 +46,6 @@ export default function PublicProductCard({ data: d }: Props) {
           </h3>
         </Link>
 
-        {/* Supplier + country */}
         <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-muted">
           {d.supplierVisible && d.supplierId ? (
             <Link
@@ -63,29 +66,27 @@ export default function PublicProductCard({ data: d }: Props) {
           )}
         </div>
 
-        {/* Price */}
         <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
           {d.priceLabel ? (
             <>
               <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
-                Price
+                {t("price")}
               </p>
               <p className="text-lg font-bold text-cyan">{d.priceLabel}</p>
             </>
           ) : (
             <p className="text-sm font-semibold text-ink-muted">
-              Contact supplier for pricing
+              {tc("contactForPricing")}
             </p>
           )}
         </div>
 
-        {/* MOQ + shipping (only when available) */}
         {(d.moq || d.shippingTime) && (
           <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-muted">
             {d.moq && (
               <span className="inline-flex items-center gap-1">
                 <PackageCheck className="h-3.5 w-3.5 text-teal" aria-hidden />
-                MOQ: <span className="font-semibold text-ink">{d.moq}</span>
+                {t("moqLabel")}: <span className="font-semibold text-ink">{d.moq}</span>
               </span>
             )}
             {d.shippingTime && (
@@ -97,14 +98,13 @@ export default function PublicProductCard({ data: d }: Props) {
           </div>
         )}
 
-        {/* Actions */}
         <div className="mt-4 flex flex-col gap-2 pt-1">
           <div className="flex gap-2">
             <Link
               href={`/products/${d.id}`}
               className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
             >
-              View Product
+              {t("viewProduct")}
               <ArrowRight
                 className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
                 aria-hidden
@@ -113,7 +113,7 @@ export default function PublicProductCard({ data: d }: Props) {
             <ContactSupplierButton
               supplierId={d.supplierId}
               supplierName={d.supplierName}
-              label="Request Quote"
+              label={t("requestQuote")}
               productName={d.name}
               productId={d.id}
               className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"

@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { BadgeCheck, MapPin, Shield, ArrowRight } from "lucide-react";
 
@@ -46,6 +47,9 @@ export default function HomeSupplierCard({
   logoGradient,
   href = "/suppliers",
 }: HomeSupplierCardProps) {
+  const t = useTranslations("products");
+  const ts = useTranslations("suppliers");
+  const tc = useTranslations("common");
   const gradient = getLogoGradient(logoText, logoGradient);
   const reduceMotion = useReducedMotion();
 
@@ -66,7 +70,7 @@ export default function HomeSupplierCard({
             transition={{ type: "spring", stiffness: 500, damping: 18 }}
           >
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-            Verified
+            {tc("verified")}
           </motion.span>
         )}
       </div>
@@ -106,7 +110,7 @@ export default function HomeSupplierCard({
           </span>
           <span
             className="inline-flex items-center gap-1.5 rounded-lg bg-slate-50 px-2.5 py-1 text-xs font-semibold text-ink"
-            title="Suplymate reliability score"
+            title={t("reliabilityScoreTitle")}
           >
             <Shield className="h-3.5 w-3.5 text-mustard" aria-hidden />
             {reliabilityScore}/100
@@ -117,7 +121,7 @@ export default function HomeSupplierCard({
           href={href}
           className="group/btn mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
         >
-          View Supplier
+          {ts("viewSupplier")}
           <ArrowRight
             className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
             aria-hidden

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { MessageCircle, X, Loader2, ArrowUpRight, Send } from "lucide-react";
 import ChatThread from "@/components/chat/ChatThread";
 
@@ -35,6 +35,9 @@ export default function ContactSupplierButton({
 }: Props) {
   const { status } = useSession();
   const router = useRouter();
+  const tf = useTranslations("forms");
+  const tsp = useTranslations("supplierProfile");
+  const te = useTranslations("errors");
   const isQuote = Boolean(quote || label.toLowerCase().includes("quote"));
 
   const [open, setOpen] = useState(false);
@@ -77,10 +80,10 @@ export default function ContactSupplierButton({
         setFormOpen(false);
         setOpen(true);
       } else {
-        setError("Could not start the conversation. Please try again.");
+        setError(tsp("conversationFailed"));
       }
     } catch {
-      setError("Network error. Please try again.");
+      setError(te("network"));
     } finally {
       setLoading(false);
     }
@@ -123,30 +126,30 @@ export default function ContactSupplierButton({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-5 py-3">
-              <span className="text-sm font-semibold text-ink">Request a quote</span>
-              <button onClick={() => setFormOpen(false)} aria-label="Close">
+              <span className="text-sm font-semibold text-ink">{tf("requestQuoteTitle")}</span>
+              <button onClick={() => setFormOpen(false)} aria-label={tsp("closeChat")}>
                 <X className="h-5 w-5 text-ink-dim" />
               </button>
             </div>
             <div className="space-y-4 p-5">
               {productName && (
                 <div className="rounded-xl bg-slate-50 px-3 py-2 text-sm">
-                  <p className="text-[11px] uppercase tracking-wide text-ink-dim">Product</p>
+                  <p className="text-[11px] uppercase tracking-wide text-ink-dim">{tf("product")}</p>
                   <p className="font-semibold text-ink">{productName}</p>
-                  <p className="text-xs text-ink-muted">Supplier: {supplierName}</p>
+                  <p className="text-xs text-ink-muted">{tf("supplierNameLabel", { name: supplierName })}</p>
                 </div>
               )}
               <label className="block text-xs font-semibold text-ink">
-                Quantity
+                {tf("quantity")}
                 <input
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
-                  placeholder="e.g. 500 units / 10 tons"
+                  placeholder={tf("quantityPlaceholder")}
                   className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-normal focus:border-cyan focus:outline-none"
                 />
               </label>
               <label className="block text-xs font-semibold text-ink">
-                Message
+                {tf("message")}
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -165,7 +168,7 @@ export default function ContactSupplierButton({
                 ) : (
                   <Send className="h-4 w-4" aria-hidden />
                 )}
-                Send quote request
+                {tf("sendQuoteRequest")}
               </button>
             </div>
           </div>
@@ -183,15 +186,15 @@ export default function ContactSupplierButton({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2.5">
-              <span className="text-sm font-semibold text-ink">Chat with {supplierName}</span>
+              <span className="text-sm font-semibold text-ink">{tsp("chatWith", { name: supplierName })}</span>
               <div className="flex items-center gap-3">
                 <Link
                   href={`/messages?c=${conversationId}`}
                   className="inline-flex items-center gap-1 text-xs font-medium text-cyan hover:underline"
                 >
-                  Open inbox <ArrowUpRight className="h-3.5 w-3.5" />
+                  {tsp("openInbox")} <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
-                <button onClick={() => setOpen(false)} aria-label="Close chat">
+                <button onClick={() => setOpen(false)} aria-label={tsp("closeChat")}>
                   <X className="h-5 w-5 text-ink-dim" />
                 </button>
               </div>

@@ -1,12 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { MessageSquareQuote, Sparkles, BadgeCheck, ThumbsUp } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import { SectionHeading, AnimatedBar, StarRating, reveal } from "./primitives";
 
 export default function ReviewsSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
   const { reviews, reviewSummary } = profile;
   const [filter, setFilter] = useState<"all" | "verified" | 5 | 4 | 3>("all");
 
@@ -17,19 +19,19 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
   }, [reviews, filter]);
 
   const filters: { key: typeof filter; label: string }[] = [
-    { key: "all", label: "All reviews" },
-    { key: "verified", label: "Verified purchase" },
-    { key: 5, label: "5 star" },
-    { key: 4, label: "4 star" },
-    { key: 3, label: "3 star" },
+    { key: "all", label: t("allReviews") },
+    { key: "verified", label: t("verifiedPurchase") },
+    { key: 5, label: t("starFilter", { count: 5 }) },
+    { key: 4, label: t("starFilter", { count: 4 }) },
+    { key: 3, label: t("starFilter", { count: 3 }) },
   ];
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
-        eyebrow="Reputation"
-        title="Buyer reviews"
-        description="Verified feedback from B2B buyers, scored on service, shipping and quality."
+        eyebrow={t("reputationEyebrow")}
+        title={t("buyerReviewsTitle")}
+        description={t("buyerReviewsDescription")}
         icon={<MessageSquareQuote className="h-5 w-5" />}
       />
 
@@ -44,7 +46,7 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
               <StarRating rating={reviewSummary.average} size="h-5 w-5" />
             </div>
             <p className="mt-1 text-xs text-ink-dim">
-              {reviewSummary.total.toLocaleString()} verified reviews
+              {t("verifiedReviewsCount", { count: reviewSummary.total.toLocaleString() })}
             </p>
             <div className="mt-4 space-y-1.5">
               {reviewSummary.distribution.map((d) => (
@@ -61,9 +63,9 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
 
           <div className="glass-card space-y-3 p-5">
             {[
-              { label: "Service", value: reviewSummary.avgService },
-              { label: "Shipping", value: reviewSummary.avgShipping },
-              { label: "Quality", value: reviewSummary.avgQuality },
+              { label: t("service"), value: reviewSummary.avgService },
+              { label: t("shippingLabel"), value: reviewSummary.avgShipping },
+              { label: t("quality"), value: reviewSummary.avgQuality },
             ].map((s) => (
               <div key={s.label}>
                 <div className="mb-1 flex items-center justify-between text-xs">
@@ -77,7 +79,7 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
 
           <div className="rounded-2xl border border-ai-glow/20 bg-ai-mist/60 p-4">
             <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-cyan">
-              <Sparkles className="h-3.5 w-3.5" aria-hidden /> AI review summary
+              <Sparkles className="h-3.5 w-3.5" aria-hidden /> {t("aiReviewSummary")}
             </div>
             <p className="text-sm leading-relaxed text-ink-muted">{reviewSummary.aiSummary}</p>
           </div>
@@ -133,12 +135,12 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
                 <p className="mt-1 text-sm leading-relaxed text-ink-muted">{r.body}</p>
 
                 <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-ink-dim">
-                  <span>Service <strong className="text-ink">{r.service}/5</strong></span>
-                  <span>Shipping <strong className="text-ink">{r.shipping}/5</strong></span>
-                  <span>Quality <strong className="text-ink">{r.quality}/5</strong></span>
+                  <span>{t("service")} <strong className="text-ink">{r.service}/5</strong></span>
+                  <span>{t("shippingLabel")} <strong className="text-ink">{r.shipping}/5</strong></span>
+                  <span>{t("quality")} <strong className="text-ink">{r.quality}/5</strong></span>
                   {r.verifiedPurchase && (
                     <span className="inline-flex items-center gap-1 font-semibold text-emerald-700">
-                      <BadgeCheck className="h-3.5 w-3.5" aria-hidden /> Verified purchase
+                      <BadgeCheck className="h-3.5 w-3.5" aria-hidden /> {t("verifiedPurchase")}
                     </span>
                   )}
                   <span className="ml-auto inline-flex items-center gap-1">

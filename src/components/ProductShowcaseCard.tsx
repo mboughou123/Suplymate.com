@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { Truck, Users, GitCompare, type LucideIcon } from "lucide-react";
 
@@ -24,6 +25,8 @@ export default function ProductShowcaseCard({
   supplierCount,
   href = "/products",
 }: ProductShowcaseCardProps) {
+  const t = useTranslations("products");
+  const ts = useTranslations("suppliers");
   const reduceMotion = useReducedMotion();
 
   return (
@@ -58,7 +61,7 @@ export default function ProductShowcaseCard({
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Users className="h-3.5 w-3.5 text-teal" aria-hidden />
-            {supplierCount}+ suppliers
+            {t("suppliersPlus", { count: supplierCount })}
           </span>
         </div>
 
@@ -67,7 +70,7 @@ export default function ProductShowcaseCard({
           className="group/btn mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
         >
           <GitCompare className="h-4 w-4" aria-hidden />
-          Compare Suppliers
+          {ts("compareSuppliers")}
         </Link>
       </div>
     </motion.article>

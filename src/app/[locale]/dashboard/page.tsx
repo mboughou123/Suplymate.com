@@ -1,13 +1,24 @@
-import { redirect } from "next/navigation";
+import { localeRedirect } from "@/i18n/redirect";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getMaterialsFromDb, getSuppliersFromDb } from "@/lib/data-service";
 import DashboardClient from "@/components/dashboard/DashboardClient";
 
-export const metadata = {
-  title: "Dashboard · Suplymate",
-  description: "Enterprise procurement intelligence dashboard",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "dashboard" });
+  const meta = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: meta("titleTemplate", { title: t("title") }),
+    description: t("welcomeSubtitle"),
+  };
+}
 
 async function safeCount<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
   try {
@@ -19,7 +30,7 @@ async function safeCount<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
 
 export default async function DashboardPage() {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  if (!session?.user?.id) return await localeRedirect("/login");
 
   const userId = session.user.id;
 
@@ -56,7 +67,6 @@ export default async function DashboardPage() {
     getMaterialsFromDb(),
   ]);
 
-  // Real verified-supplier count (no synthetic ratios).
   const verifiedSuppliers = suppliers.filter(
     (s) => s.verified === true || s.verificationStatus === "verified"
   ).length;
@@ -69,7 +79,7 @@ export default async function DashboardPage() {
     .catch(() => null);
 
   if (!dbUser?.onboardedAt) {
-    redirect("/onboarding");
+    return await localeRedirect("/onboarding");
   }
 
   return (

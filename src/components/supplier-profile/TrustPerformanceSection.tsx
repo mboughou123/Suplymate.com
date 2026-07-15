@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Gauge,
@@ -14,12 +15,13 @@ import type { SupplierProfile } from "@/lib/supplier-profile";
 import { SectionHeading, AnimatedBar, Sparkline, reveal } from "./primitives";
 
 export default function TrustPerformanceSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
   const { trust, certifications } = profile;
 
   const metrics = [
     {
       icon: Truck,
-      label: "On-time delivery",
+      label: t("onTimeDeliveryLabel"),
       value: trust.onTimeDelivery,
       suffix: "%",
       color: "cyan" as const,
@@ -28,7 +30,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
     },
     {
       icon: CheckCircle2,
-      label: "Order completion",
+      label: t("orderCompletion"),
       value: trust.orderCompletion,
       suffix: "%",
       color: "emerald" as const,
@@ -37,7 +39,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
     },
     {
       icon: RotateCcw,
-      label: "Repeat buyer rate",
+      label: t("repeatBuyerRate"),
       value: trust.repeatBuyerRate,
       suffix: "%",
       color: "teal" as const,
@@ -46,7 +48,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
     },
     {
       icon: Timer,
-      label: "Response rate",
+      label: t("responseRate"),
       value: trust.responseRate,
       suffix: "%",
       color: "gold" as const,
@@ -58,9 +60,9 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
-        eyebrow="Performance"
-        title="Trust & performance analytics"
-        description="Independently scored from verified order history, buyer reviews and delivery records."
+        eyebrow={t("performanceEyebrow")}
+        title={t("trustPerformanceTitle")}
+        description={t("trustPerformanceDescription")}
         icon={<Gauge className="h-5 w-5" />}
       />
 
@@ -99,13 +101,13 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
         <div className="glass-card p-5">
           <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-ink">
             <ShieldCheck className="h-4 w-4 text-emerald-600" aria-hidden />
-            Verification status
+            {t("verificationStatus")}
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              { label: "Delivery reliability", value: trust.deliveryReliability },
-              { label: "Quality consistency", value: trust.qualityConsistency },
-              { label: "AI confidence", value: trust.aiConfidence },
+              { label: t("deliveryReliability"), value: trust.deliveryReliability },
+              { label: t("qualityConsistency"), value: trust.qualityConsistency },
+              { label: t("aiConfidence"), value: trust.aiConfidence },
             ].map((v) => (
               <div key={v.label}>
                 <div className="mb-1.5 flex items-center justify-between text-xs">
@@ -121,7 +123,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
         <div className="glass-card p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
             <Award className="h-4 w-4 text-gold" aria-hidden />
-            Verified certifications
+            {t("verifiedCertifications")}
           </div>
           <div className="flex flex-wrap gap-2">
             {certifications.map((c) => (

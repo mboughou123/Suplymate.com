@@ -1,20 +1,33 @@
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { localeRedirect } from "@/i18n/redirect";
 import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { Bookmark } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Saved products | Suplymate",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "products" });
+  const meta = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: meta("titleTemplate", { title: t("pageTitle") }),
+    robots: { index: false, follow: false },
+  };
+}
 
 export const dynamic = "force-dynamic";
 
 export default async function SavedProductsPage() {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login?callbackUrl=/saved");
+  if (!session?.user?.id) return await localeRedirect("/login?callbackUrl=/saved");
+  const t = await getTranslations("products");
+  const common = await getTranslations("common");
+  const empty = await getTranslations("emptyStates");
 
   const items = await prisma.savedItem.findMany({
     where: { userId: session.user.id },
@@ -25,17 +38,15 @@ export default async function SavedProductsPage() {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="flex items-center gap-2 font-display text-2xl font-bold text-ink">
         <Bookmark className="h-6 w-6 text-cyan" aria-hidden />
-        Saved products
+        {t("pageTitle")}
       </h1>
-      <p className="mt-1 text-sm text-ink-muted">
-        Products you saved for later. Prices are supplier-listed snapshots and may change.
-      </p>
+      <p className="mt-1 text-sm text-ink-muted">{t("pageSubtitle")}</p>
 
       {items.length === 0 ? (
         <p className="mt-10 rounded-2xl border border-dashed border-slate-300 p-10 text-center text-sm text-ink-muted">
-          No saved products yet.{" "}
+          {empty("noProducts")}{" "}
           <Link href="/products" className="text-cyan hover:underline">
-            Browse products
+            {t("pageTitle")}
           </Link>
         </p>
       ) : (
@@ -58,8 +69,10 @@ export default async function SavedProductsPage() {
                 <p className="text-xs text-ink-dim">{i.supplierName}</p>
                 {i.basePrice != null && (
                   <p className="mt-1 text-xs text-ink-muted">
-                    {i.currency ?? "USD"} {i.basePrice.toLocaleString()}
-                    {i.unit ? ` / ${i.unit}` : ""} · supplier-listed
+                    {common("priceFrom", {
+                      price: `${i.currency ?? "USD"} ${i.basePrice.toLocaleString()}`,
+                      unit: i.unit ?? "",
+                    })}
                   </p>
                 )}
               </div>

@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { localeRedirect } from "@/i18n/redirect";
 import { Check } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { PLANS, getBillingState } from "@/lib/billing";
@@ -6,7 +6,7 @@ import { ManageBillingButton, UpgradeButton } from "@/components/settings/Billin
 
 export default async function SubscriptionPage() {
   const { authenticated, user } = await getCurrentAccount();
-  if (!authenticated || !user) redirect("/login?callbackUrl=/settings/subscription");
+  if (!authenticated || !user) return await localeRedirect("/login?callbackUrl=/settings/subscription");
 
   const billing = getBillingState(user);
 

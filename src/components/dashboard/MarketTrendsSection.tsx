@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { TrendingUp, TrendingDown } from "lucide-react";
 import type { MaterialSummary } from "./types";
 
@@ -9,18 +10,22 @@ type Props = {
 };
 
 export default function MarketTrendsSection({ materials }: Props) {
+  const t = useTranslations("dashboard");
+  const nav = useTranslations("navigation");
+  const common = useTranslations("common");
+
   return (
     <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-sm font-bold text-ink">Market trends</h2>
-          <p className="text-[11px] text-ink-dim">Commodity price intelligence</p>
+          <h2 className="text-sm font-bold text-ink">{t("marketTrends")}</h2>
+          <p className="text-[11px] text-ink-dim">{nav("priceChartsDescription")}</p>
         </div>
         <Link
           href="/price-charts"
           className="text-[11px] font-semibold text-ink-muted transition hover:text-gold"
         >
-          Full charts
+          {common("viewAll")}
         </Link>
       </div>
 
@@ -85,7 +90,7 @@ export default function MarketTrendsSection({ materials }: Props) {
           })}
         </div>
       ) : (
-        <p className="mt-4 text-xs text-ink-dim">Not enough data yet.</p>
+        <p className="mt-4 text-xs text-ink-dim">{t("notEnoughData")}</p>
       )}
     </section>
   );

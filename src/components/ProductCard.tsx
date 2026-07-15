@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { BadgeCheck, Star, MapPin, Truck, ArrowRight } from "lucide-react";
 import type { ProductCardData } from "@/lib/product-detail";
@@ -14,6 +15,8 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ data: d }: ProductCardProps) {
+  const t = useTranslations("products");
+  const tc = useTranslations("common");
   const reduceMotion = useReducedMotion();
 
   return (
@@ -38,7 +41,7 @@ export default function ProductCard({ data: d }: ProductCardProps) {
           {d.verified && (
             <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
               <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-              Verified
+              {tc("verified")}
             </span>
           )}
           <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
@@ -70,7 +73,7 @@ export default function ProductCard({ data: d }: ProductCardProps) {
         {/* Bulk price */}
         <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
           <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
-            Bulk price
+            {t("bulkPrice")}
           </p>
           <p className="text-lg font-bold text-cyan">{d.bulkPriceLabel}</p>
         </div>
@@ -78,7 +81,7 @@ export default function ProductCard({ data: d }: ProductCardProps) {
         {/* MOQ + shipping */}
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-muted">
           <span>
-            MOQ: <span className="font-semibold text-ink">{d.moq}</span>
+            {t("moqLabel")}: <span className="font-semibold text-ink">{d.moq}</span>
           </span>
           <span className="inline-flex items-center gap-1">
             <Truck className="h-3.5 w-3.5 text-teal" aria-hidden />
@@ -92,7 +95,7 @@ export default function ProductCard({ data: d }: ProductCardProps) {
             href={`/products/${d.id}`}
             className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
           >
-            View Product
+            {t("viewProduct")}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
               aria-hidden
@@ -101,7 +104,7 @@ export default function ProductCard({ data: d }: ProductCardProps) {
           <ContactSupplierButton
             supplierId={d.supplierId}
             supplierName={d.supplierName}
-            label="Request Quote"
+            label={t("requestQuote")}
             productName={d.name}
             className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
           />

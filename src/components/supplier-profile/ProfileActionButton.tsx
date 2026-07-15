@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { Loader2, X, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ChatThread from "@/components/chat/ChatThread";
 
@@ -55,6 +56,8 @@ export default function ProfileActionButton({
   className = "",
   productName,
 }: Props) {
+  const t = useTranslations("supplierProfile");
+  const errors = useTranslations("errors");
   const { status } = useSession();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -82,7 +85,7 @@ export default function ProfileActionButton({
       const data = await res.json().catch(() => null);
       const id = data?.conversation?.id as string | undefined;
       if (!res.ok || !id) {
-        setError("Could not start the conversation. Please try again.");
+        setError(t("conversationFailed"));
         return;
       }
       setConversationId(id);
@@ -109,7 +112,7 @@ export default function ProfileActionButton({
         }
       }
     } catch {
-      setError("Network error. Please try again.");
+      setError(errors("network"));
     } finally {
       setLoading(false);
     }
@@ -143,16 +146,16 @@ export default function ProfileActionButton({
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2.5">
               <span className="text-sm font-semibold text-ink">
-                Chat with {supplierName}
+                {t("chatWith", { name: supplierName })}
               </span>
               <div className="flex items-center gap-3">
                 <Link
                   href={`/messages?c=${conversationId}`}
                   className="inline-flex items-center gap-1 text-xs font-medium text-cyan hover:underline"
                 >
-                  Open inbox <ArrowUpRight className="h-3.5 w-3.5" />
+                  {t("openInbox")} <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
-                <button onClick={() => setOpen(false)} aria-label="Close chat">
+                <button onClick={() => setOpen(false)} aria-label={t("closeChat")}>
                   <X className="h-5 w-5 text-ink-dim" />
                 </button>
               </div>

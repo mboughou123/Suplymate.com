@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Search, MessagesSquare, Inbox } from "lucide-react";
 import ChatThread from "@/components/chat/ChatThread";
 import {
@@ -22,6 +24,10 @@ function timeAgo(iso: string): string {
 }
 
 export default function MessagesClient() {
+  const t = useTranslations("navigation");
+  const common = useTranslations("common");
+  const empty = useTranslations("emptyStates");
+  const suppliers = useTranslations("suppliers");
   const searchParams = useSearchParams();
   const initial = searchParams.get("c");
   const [conversations, setConversations] = useState<ConversationSummary[]>([]);
@@ -40,8 +46,8 @@ export default function MessagesClient() {
 
   useEffect(() => {
     load();
-    const t = setInterval(load, 6000);
-    return () => clearInterval(t);
+    const interval = setInterval(load, 6000);
+    return () => clearInterval(interval);
   }, [load]);
 
   const filtered = useMemo(() => {
@@ -56,7 +62,6 @@ export default function MessagesClient() {
 
   return (
     <div className="mx-auto flex h-[calc(100vh-4rem)] max-w-7xl">
-      {/* Sidebar */}
       <aside
         className={`w-full flex-col border-r border-slate-200 bg-white md:flex md:w-80 lg:w-96 ${
           selected ? "hidden md:flex" : "flex"
@@ -65,14 +70,14 @@ export default function MessagesClient() {
         <div className="border-b border-slate-200 p-4">
           <h1 className="flex items-center gap-2 text-lg font-bold text-ink">
             <MessagesSquare className="h-5 w-5 text-cyan" aria-hidden />
-            Messages
+            {t("messages")}
           </h1>
           <div className="relative mt-3">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim" aria-hidden />
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search conversations"
+              placeholder={common("search")}
               className="w-full rounded-xl border border-slate-200 py-2 pl-9 pr-3 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/40"
             />
           </div>
@@ -82,11 +87,11 @@ export default function MessagesClient() {
           {loaded && filtered.length === 0 && (
             <div className="p-6 text-center text-sm text-ink-dim">
               <Inbox className="mx-auto mb-2 h-8 w-8 text-slate-300" aria-hidden />
-              No conversations yet. Visit the{" "}
-              <a href="/suppliers" className="text-cyan hover:underline">
-                suppliers
-              </a>{" "}
-              page and click “Contact supplier”.
+              {empty("noMessages")}{" "}
+              <Link href="/suppliers" className="text-cyan hover:underline">
+                {t("suppliers")}
+              </Link>{" "}
+              · {suppliers("contactSupplier")}
             </div>
           )}
           {filtered.map((c) => {
@@ -113,8 +118,8 @@ export default function MessagesClient() {
                   </div>
                   <p className="truncate text-xs text-ink-dim">
                     {c.lastMessage
-                      ? `${c.lastMessage.senderType === "buyer" ? "You: " : ""}${c.lastMessage.body}`
-                      : "No messages yet"}
+                      ? `${c.lastMessage.senderType === "buyer" ? "" : ""}${c.lastMessage.body}`
+                      : empty("noMessages")}
                   </p>
                   <span
                     className={`mt-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold ${STATUS_STYLES[c.status as ConversationStatus]}`}
@@ -128,7 +133,6 @@ export default function MessagesClient() {
         </div>
       </aside>
 
-      {/* Thread */}
       <main className={`flex-1 ${selected ? "flex" : "hidden md:flex"}`}>
         {selected ? (
           <div className="flex w-full flex-col">
@@ -136,7 +140,7 @@ export default function MessagesClient() {
               onClick={() => setSelected(null)}
               className="border-b border-slate-200 px-4 py-2 text-left text-sm text-cyan md:hidden"
             >
-              ← Back to conversations
+              ← {common("back")}
             </button>
             <ChatThread
               key={selected}
@@ -148,7 +152,7 @@ export default function MessagesClient() {
         ) : (
           <div className="flex w-full flex-col items-center justify-center text-ink-dim">
             <MessagesSquare className="mb-3 h-12 w-12 text-slate-200" aria-hidden />
-            <p className="text-sm">Select a conversation to start messaging.</p>
+            <p className="text-sm">{empty("noMessages")}</p>
           </div>
         )}
       </main>

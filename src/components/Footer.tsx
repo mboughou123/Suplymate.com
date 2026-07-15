@@ -1,11 +1,13 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const linkClass = "transition-colors hover:text-cyan";
 
-export default async function Footer() {
-  const t = await getTranslations("footer");
-  const nav = await getTranslations("navigation");
+export default function Footer() {
+  const t = useTranslations("footer");
+  const nav = useTranslations("navigation");
 
   return (
     <footer className="relative border-t border-slate-200 bg-slate-50">

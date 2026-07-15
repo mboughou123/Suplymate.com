@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Building2,
@@ -18,25 +19,30 @@ import type { SupplierProfile } from "@/lib/supplier-profile";
 import { SectionHeading, reveal } from "./primitives";
 
 export default function CompanyProfileSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
   const { company } = profile;
 
   const metrics: { icon: LucideIcon; label: string; value: string }[] = [
-    { icon: CalendarDays, label: "Registered", value: company.registrationDate },
-    { icon: Building2, label: "Business type", value: company.businessType },
-    { icon: Factory, label: "Factory size", value: company.factorySize },
-    { icon: Users, label: "Employees", value: `${company.employeeCount} staff` },
-    { icon: Boxes, label: "Production lines", value: `${company.productionLines} lines` },
-    { icon: FlaskConical, label: "R&D engineers", value: `${company.rdEngineers}` },
-    { icon: Gauge, label: "Production capacity", value: company.productionCapacity },
-    { icon: PackageCheck, label: "Minimum order", value: company.moq },
+    { icon: CalendarDays, label: t("registered"), value: company.registrationDate },
+    { icon: Building2, label: t("businessType"), value: company.businessType },
+    { icon: Factory, label: t("factorySize"), value: company.factorySize },
+    { icon: Users, label: t("employees"), value: t("employeesValue", { count: company.employeeCount }) },
+    {
+      icon: Boxes,
+      label: t("productionLines"),
+      value: t("productionLinesValue", { count: company.productionLines }),
+    },
+    { icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` },
+    { icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity },
+    { icon: PackageCheck, label: t("minimumOrder"), value: company.moq },
   ];
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
-        eyebrow="Company"
-        title="Company profile"
-        description="Verified manufacturing footprint, capacity and global reach."
+        eyebrow={t("companyEyebrow")}
+        title={t("companyProfileTitle")}
+        description={t("companyProfileDescription")}
         icon={<Building2 className="h-5 w-5" />}
       />
 
@@ -68,7 +74,7 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <div className="glass-card p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Globe2 className="h-4 w-4 text-cyan" aria-hidden /> Export markets
+            <Globe2 className="h-4 w-4 text-cyan" aria-hidden /> {t("exportMarkets")}
           </div>
           <div className="flex flex-wrap gap-2">
             {company.exportMarkets.map((m) => (
@@ -83,7 +89,7 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
         </div>
         <div className="glass-card p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Languages className="h-4 w-4 text-teal" aria-hidden /> Languages spoken
+            <Languages className="h-4 w-4 text-teal" aria-hidden /> {t("languagesSpoken")}
           </div>
           <div className="flex flex-wrap gap-2">
             {company.languages.map((l) => (

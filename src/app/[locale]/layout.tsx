@@ -7,6 +7,7 @@ import NavbarGate from "@/components/NavbarGate";
 import FooterGate from "@/components/FooterGate";
 import Providers from "@/components/Providers";
 import { routing, isRtlLocale, type Locale } from "@/i18n/routing";
+import { buildPageAlternates } from "@/lib/locale-metadata";
 import "../globals.css";
 
 const inter = Inter({
@@ -26,9 +27,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const alternates = buildPageAlternates(locale as Locale);
   return {
     title: t("title"),
     description: t("description"),
+    alternates,
   };
 }
 

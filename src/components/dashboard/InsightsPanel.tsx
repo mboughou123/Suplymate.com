@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { BadgeCheck, DollarSign, Factory } from "lucide-react";
 import type { MaterialSummary, TopSupplier } from "./types";
 
@@ -10,13 +11,16 @@ type Props = {
 };
 
 export default function InsightsPanel({ materials, topSuppliers }: Props) {
+  const t = useTranslations("dashboard");
+  const common = useTranslations("common");
+  const nav = useTranslations("navigation");
   const topMaterial = materials[0];
 
   return (
     <aside className="space-y-4">
       <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
         <h3 className="text-xs font-bold uppercase tracking-wider text-ink-dim">
-          Top suppliers
+          {nav("suppliers")}
         </h3>
         {topSuppliers.length > 0 ? (
           <ul className="mt-3 space-y-2.5">
@@ -50,13 +54,13 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
             ))}
           </ul>
         ) : (
-          <p className="mt-3 text-xs text-ink-dim">Not enough data yet.</p>
+          <p className="mt-3 text-xs text-ink-dim">{t("notEnoughData")}</p>
         )}
         <Link
           href="/suppliers"
           className="mt-3 block text-center text-[11px] font-semibold text-ink-muted transition hover:text-gold"
         >
-          View all suppliers
+          {common("viewAll")} {nav("suppliers").toLowerCase()}
         </Link>
       </div>
 
@@ -65,7 +69,7 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
           <div className="flex items-center gap-2">
             <DollarSign className="h-4 w-4 text-gold" aria-hidden />
             <h3 className="text-xs font-bold uppercase tracking-wider text-ink-dim">
-              Commodity spotlight
+              {t("marketTrends")}
             </h3>
           </div>
           <p className="mt-2 text-lg font-bold text-ink">{topMaterial.name}</p>
@@ -78,13 +82,13 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
             }`}
           >
             {topMaterial.dailyChange >= 0 ? "+" : ""}
-            {topMaterial.dailyChange}% today · {topMaterial.signal}
+            {topMaterial.dailyChange}% · {topMaterial.signal}
           </p>
           <Link
             href="/price-charts"
             className="mt-3 block text-[11px] font-semibold text-ink-muted transition hover:text-gold"
           >
-            Open price charts
+            {nav("priceCharts")}
           </Link>
         </div>
       ) : (
@@ -92,10 +96,10 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
           <div className="flex items-center gap-2">
             <Factory className="h-4 w-4 text-ink-dim" aria-hidden />
             <h3 className="text-xs font-bold uppercase tracking-wider text-ink-dim">
-              Commodity spotlight
+              {t("marketTrends")}
             </h3>
           </div>
-          <p className="mt-2 text-xs text-ink-dim">Not enough data yet.</p>
+          <p className="mt-2 text-xs text-ink-dim">{t("notEnoughData")}</p>
         </div>
       )}
     </aside>

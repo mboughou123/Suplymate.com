@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { LucideIcon } from "lucide-react";
 
 type Props = {
@@ -9,7 +9,6 @@ type Props = {
   sub?: string;
   icon: LucideIcon;
   href?: string;
-  /** When true, the metric has no real data yet — render a muted empty state. */
   empty?: boolean;
 };
 

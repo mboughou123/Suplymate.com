@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   LayoutDashboard,
   Factory,
   Package,
   Sparkles,
-  FileText,
   MessageSquare,
   TrendingUp,
   Heart,
@@ -15,18 +14,14 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  type LucideIcon,
 } from "lucide-react";
 
-const NAV = [
-  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/suppliers", label: "Suppliers", icon: Factory },
-  { href: "/products", label: "Products", icon: Package },
-  { href: "/ai-assistant", label: "AI Assistant", icon: Sparkles },
-  { href: "/messages", label: "Messages & RFQs", icon: MessageSquare },
-  { href: "/price-charts", label: "Price Tracking", icon: TrendingUp },
-  { href: "/suppliers", label: "Saved Suppliers", icon: Heart },
-  { href: "/settings", label: "Settings", icon: Settings },
-];
+type NavItem = {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+};
 
 type Props = {
   open: boolean;
@@ -42,6 +37,20 @@ export default function DashboardSidebar({
   onToggleCollapse,
 }: Props) {
   const pathname = usePathname();
+  const nav = useTranslations("navigation");
+  const settings = useTranslations("settings");
+  const common = useTranslations("common");
+
+  const NAV: NavItem[] = [
+    { href: "/dashboard", label: nav("dashboard"), icon: LayoutDashboard },
+    { href: "/suppliers", label: nav("suppliers"), icon: Factory },
+    { href: "/products", label: nav("products"), icon: Package },
+    { href: "/ai-assistant", label: nav("aiAssistant"), icon: Sparkles },
+    { href: "/messages", label: nav("messages"), icon: MessageSquare },
+    { href: "/price-charts", label: nav("priceCharts"), icon: TrendingUp },
+    { href: "/suppliers", label: nav("suppliers"), icon: Heart },
+    { href: "/settings", label: settings("title"), icon: Settings },
+  ];
 
   const inner = (
     <div className="flex h-full flex-col bg-white">
@@ -52,7 +61,8 @@ export default function DashboardSidebar({
           </span>
           {!collapsed && (
             <span className="font-display text-sm font-bold text-ink">
-              Suply<span className="text-gold">mate</span>
+              {nav("brandSuply")}
+              <span className="text-gold">{nav("brandMate")}</span>
             </span>
           )}
         </Link>
@@ -60,7 +70,7 @@ export default function DashboardSidebar({
           type="button"
           onClick={onClose}
           className="rounded-lg p-1.5 text-ink-dim transition hover:bg-slate-100 lg:hidden"
-          aria-label="Close menu"
+          aria-label={common("close")}
         >
           <X className="h-5 w-5" />
         </button>
@@ -68,7 +78,7 @@ export default function DashboardSidebar({
           type="button"
           onClick={onToggleCollapse}
           className="hidden rounded-lg p-1.5 text-ink-dim transition hover:bg-slate-100 lg:block"
-          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          aria-label={collapsed ? common("showMore") : common("showLess")}
         >
           {collapsed ? (
             <ChevronRight className="h-4 w-4" />
@@ -79,13 +89,13 @@ export default function DashboardSidebar({
       </div>
 
       <nav className="flex-1 space-y-0.5 overflow-y-auto p-3">
-        {NAV.map((item) => {
+        {NAV.map((item, index) => {
           const active =
             pathname === item.href ||
             (item.href !== "/dashboard" && pathname.startsWith(`${item.href}/`));
           return (
             <Link
-              key={item.label}
+              key={`${item.href}-${index}`}
               href={item.href}
               onClick={onClose}
               title={item.label}
@@ -115,8 +125,8 @@ export default function DashboardSidebar({
             onClick={onClose}
             className="block rounded-lg border border-slate-200 bg-white px-3 py-2.5 transition hover:border-gold/40 hover:bg-gold/5"
           >
-            <p className="text-[11px] font-semibold text-ink">Plan &amp; billing</p>
-            <p className="text-[10px] text-ink-dim">Manage your subscription</p>
+            <p className="text-[11px] font-semibold text-ink">{nav("pricing")}</p>
+            <p className="text-[10px] text-ink-dim">{common("learnMore")}</p>
           </Link>
         </div>
       )}

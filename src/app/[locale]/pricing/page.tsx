@@ -1,102 +1,84 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import type { Metadata } from "next";
 
-const plans = [
-  {
-    name: "Starter",
-    price: "Free",
-    period: "14-day trial",
-    features: [
-      "Up to 10 supplier searches / month",
-      "Basic product comparison",
-      "Price charts (3 materials)",
-      "5 AI assistant queries / month",
-    ],
-    cta: "Start free trial",
-    highlighted: false,
-  },
-  {
-    name: "Pro",
-    price: "$149",
-    period: "/ month",
-    features: [
-      "Unlimited supplier & product search",
-      "Full comparison tables",
-      "All material price charts + alerts",
-      "Unlimited AI assistant",
-      "Team seats (up to 5)",
-    ],
-    cta: "Get Pro",
-    highlighted: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    features: [
-      "Dedicated account manager",
-      "API access & integrations",
-      "Custom supplier onboarding",
-      "SLA & priority support",
-      "Advanced analytics",
-    ],
-    cta: "Contact sales",
-    highlighted: false,
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: t("pricingTitle"),
+    description: t("pricingDescription"),
+  };
+}
+
+const PLANS = [
+  { key: "starter" as const, features: 4, highlighted: false },
+  { key: "pro" as const, features: 5, highlighted: true },
+  { key: "enterprise" as const, features: 5, highlighted: false },
 ];
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const t = await getTranslations("pricing");
+
   return (
     <div className="bg-transparent min-h-screen">
       <div className="bg-gradient-to-br from-navy-dark to-navy py-16 text-white text-center">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold">Pricing</h1>
-          <p className="mt-4 text-white/75 max-w-xl mx-auto">
-            Plans for procurement teams of every size. MVP preview — no billing connected.
-          </p>
+          <h1 className="font-display text-4xl font-bold">{t("pageTitle")}</h1>
+          <p className="mt-4 text-white/75 max-w-xl mx-auto">{t("pageSubtitle")}</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-3">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`flex flex-col rounded-2xl border p-8 ${
-                plan.highlighted
-                  ? "border-mustard bg-slate-50 shadow-cardHover ring-2 ring-mustard/20 scale-[1.02]"
-                  : "border-slate-200 bg-slate-50 shadow-card"
-              }`}
-            >
-              {plan.highlighted && (
-                <span className="mb-4 inline-flex w-fit rounded-full bg-mustard px-3 py-1 text-xs font-semibold text-ink">
-                  Most popular
-                </span>
-              )}
-              <h2 className="text-xl font-semibold text-ink">{plan.name}</h2>
-              <p className="mt-4">
-                <span className="text-4xl font-bold text-ink">{plan.price}</span>
-                <span className="text-ink-dim">{plan.period}</span>
-              </p>
-              <ul className="mt-8 flex-1 space-y-3 text-sm text-ink-muted">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex gap-2">
-                    <span className="text-mustard">✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/suppliers"
-                className={`mt-8 block rounded-xl py-3 text-center text-sm font-semibold transition ${
-                  plan.highlighted
-                    ? "bg-mustard text-ink hover:bg-mustard-light"
-                    : "bg-navy text-white hover:bg-navy-mid"
+          {PLANS.map(({ key: plan, features, highlighted }) => {
+            const periodKey = `${plan}Period` as "starterPeriod" | "proPeriod" | "enterprisePeriod";
+            const hasPeriod = plan !== "enterprise";
+
+            return (
+              <div
+                key={plan}
+                className={`flex flex-col rounded-2xl border p-8 ${
+                  highlighted
+                    ? "border-mustard bg-slate-50 shadow-cardHover ring-2 ring-mustard/20 scale-[1.02]"
+                    : "border-slate-200 bg-slate-50 shadow-card"
                 }`}
               >
-                {plan.cta}
-              </Link>
-            </div>
-          ))}
+                {highlighted && (
+                  <span className="mb-4 inline-flex w-fit rounded-full bg-mustard px-3 py-1 text-xs font-semibold text-ink">
+                    {t("mostPopular")}
+                  </span>
+                )}
+                <h2 className="text-xl font-semibold text-ink">{t(plan)}</h2>
+                <p className="mt-4">
+                  <span className="text-4xl font-bold text-ink">{t(`${plan}Price`)}</span>
+                  {hasPeriod && <span className="text-ink-dim">{t(periodKey)}</span>}
+                </p>
+                <ul className="mt-8 flex-1 space-y-3 text-sm text-ink-muted">
+                  {Array.from({ length: features }, (_, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-mustard">✓</span>
+                      {t(`${plan}Feature${i + 1}` as "starterFeature1")}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/suppliers"
+                  className={`mt-8 block rounded-xl py-3 text-center text-sm font-semibold transition ${
+                    highlighted
+                      ? "bg-mustard text-ink hover:bg-mustard-light"
+                      : "bg-navy text-white hover:bg-navy-mid"
+                  }`}
+                >
+                  {t(`${plan}Cta` as "starterCta")}
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

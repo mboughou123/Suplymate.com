@@ -1,15 +1,26 @@
-import Link from "next/link";
-import { redirect, notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { localeRedirect } from "@/i18n/redirect";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { ArrowLeft } from "lucide-react";
 import QuoteComparison from "@/components/rfq/QuoteComparison";
 
-export const metadata: Metadata = {
-  title: "RFQ details | Suplymate",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "rfqs" });
+  const meta = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: meta("titleTemplate", { title: t("title") }),
+    robots: { index: false, follow: false },
+  };
+}
 
 export const dynamic = "force-dynamic";
 
@@ -19,8 +30,10 @@ export default async function RfqDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  if (!session?.user?.id) return await localeRedirect("/login");
   const { id } = await params;
+  const t = await getTranslations("rfqs");
+  const common = await getTranslations("common");
 
   const rfq = await prisma.rfq.findUnique({
     where: { id },
@@ -79,27 +92,27 @@ export default async function RfqDetailPage({
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <Link href="/rfqs" className="inline-flex items-center gap-1 text-sm text-ink-muted hover:text-cyan">
-        <ArrowLeft className="h-4 w-4" aria-hidden /> Back to my RFQs
+        <ArrowLeft className="h-4 w-4" aria-hidden /> {common("back")} {t("title")}
       </Link>
 
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <h1 className="font-display text-2xl font-bold text-ink">
-          {rfq.publicRef ?? "RFQ"}
+          {rfq.publicRef ?? t("title")}
         </h1>
-        <span className="font-mono text-xs text-ink-dim">to {rfq.supplierName ?? "supplier"}</span>
+        <span className="font-mono text-xs text-ink-dim">{rfq.supplierName ?? "supplier"}</span>
       </div>
 
       <div className="mt-4 grid gap-4 rounded-2xl border border-slate-200 p-4 sm:grid-cols-3">
         <div>
-          <p className="text-xs uppercase tracking-wide text-ink-dim">Destination</p>
-          <p className="text-sm text-ink">{rfq.destination || "Not specified"}</p>
+          <p className="text-xs uppercase tracking-wide text-ink-dim">{common("to")}</p>
+          <p className="text-sm text-ink">{rfq.destination || "—"}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wide text-ink-dim">Needed by</p>
-          <p className="text-sm text-ink">{rfq.deadline || "Not specified"}</p>
+          <p className="text-xs uppercase tracking-wide text-ink-dim">{common("from")}</p>
+          <p className="text-sm text-ink">{rfq.deadline || "—"}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wide text-ink-dim">Submitted</p>
+          <p className="text-xs uppercase tracking-wide text-ink-dim">{t("statusSent")}</p>
           <p className="text-sm text-ink">{new Date(rfq.createdAt).toLocaleDateString()}</p>
         </div>
       </div>

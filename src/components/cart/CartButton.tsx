@@ -1,16 +1,17 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "./CartProvider";
 
-// Cart icon + count badge for the navbar. Visible to everyone (guests included).
 export default function CartButton() {
+  const t = useTranslations("navigation");
   const { cart, openDrawer } = useCart();
   return (
     <button
       type="button"
       onClick={openDrawer}
-      aria-label="Open cart"
+      aria-label={t("openCart")}
       className="relative inline-flex rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white"
     >
       <ShoppingCart className="h-5 w-5" aria-hidden />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Package,
@@ -19,21 +20,25 @@ import ProfileActionButton from "./ProfileActionButton";
 
 type SortKey = "recommended" | "price-low" | "rating";
 
+const ALL_CATEGORY = "__all__";
+
 export default function ProductsSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
+  const common = useTranslations("common");
   const { products, base } = profile;
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState(ALL_CATEGORY);
   const [sort, setSort] = useState<SortKey>("recommended");
 
   const categories = useMemo(
-    () => ["All", ...Array.from(new Set(products.map((p) => p.category)))],
+    () => [ALL_CATEGORY, ...Array.from(new Set(products.map((p) => p.category)))],
     [products]
   );
 
   const visible = useMemo(() => {
     let list = products.filter(
       (p) =>
-        (category === "All" || p.category === category) &&
+        (category === ALL_CATEGORY || p.category === category) &&
         (query === "" ||
           p.name.toLowerCase().includes(query.toLowerCase()) ||
           p.material.toLowerCase().includes(query.toLowerCase()))
@@ -51,9 +56,9 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
-        eyebrow="Catalog"
-        title="Products & pricing"
-        description="Search, filter and compare this supplier's catalog with live MOQ and lead times."
+        eyebrow={t("catalogEyebrow")}
+        title={t("productsPricingTitle")}
+        description={t("productsPricingDescription")}
         icon={<Package className="h-5 w-5" />}
       />
 
@@ -64,7 +69,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search products or materials…"
+            placeholder={t("searchProductsPlaceholder")}
             className="w-full rounded-xl border border-slate-200 py-2.5 pl-10 pr-3 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/30"
           />
         </div>
@@ -73,9 +78,9 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
           onChange={(e) => setSort(e.target.value as SortKey)}
           className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/30"
         >
-          <option value="recommended">AI recommended</option>
-          <option value="price-low">Price: low to high</option>
-          <option value="rating">Top rated</option>
+          <option value="recommended">{t("sortAiRecommended")}</option>
+          <option value="price-low">{t("sortPriceLow")}</option>
+          <option value="rating">{t("sortTopRated")}</option>
         </select>
       </div>
 
@@ -90,7 +95,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40"
             }`}
           >
-            {c}
+            {c === ALL_CATEGORY ? common("all") : c}
           </button>
         ))}
       </div>
@@ -115,7 +120,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
               />
               {p.aiRecommended && (
                 <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-cyan shadow-sm">
-                  <Sparkles className="h-3 w-3" aria-hidden /> AI pick
+                  <Sparkles className="h-3 w-3" aria-hidden /> {t("aiPick")}
                 </span>
               )}
               <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-ink">
@@ -128,10 +133,10 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 <p className="mt-0.5 text-base font-extrabold text-cyan">{p.priceRange}</p>
               </div>
               <dl className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[11px]">
-                <Spec icon={Layers} label="MOQ" value={p.moq} />
-                <Spec icon={Clock} label="Lead time" value={p.leadTime} />
-                <Spec icon={Package} label="Material" value={p.material} />
-                <Spec icon={Truck} label="Shipping" value={p.shipping} />
+                <Spec icon={Layers} label={t("moq")} value={p.moq} />
+                <Spec icon={Clock} label={t("leadTime")} value={p.leadTime} />
+                <Spec icon={Package} label={t("material")} value={p.material} />
+                <Spec icon={Truck} label={t("shipping")} value={p.shipping} />
               </dl>
               <div className="flex flex-wrap gap-1.5">
                 {p.certifications.map((c) => (
@@ -147,7 +152,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 supplierId={base.id}
                 supplierName={base.name}
                 intent="quote"
-                label="Request quote"
+                label={t("requestQuote")}
                 productName={p.name}
                 className="btn-secondary mt-auto w-full justify-center !py-2 text-xs"
               />
@@ -158,7 +163,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
 
       {visible.length === 0 && (
         <p className="rounded-xl border border-dashed border-slate-200 py-10 text-center text-sm text-ink-dim">
-          No products match your search.
+          {t("noProductsMatch")}
         </p>
       )}
     </motion.section>

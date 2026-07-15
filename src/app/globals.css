@@ -162,3 +162,15 @@
     transform: none !important;
   }
 }
+
+/* RTL layout support (Arabic) — logical properties used elsewhere; these handle
+   common Tailwind physical utilities that don't auto-flip. */
+[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+[dir="rtl"] input[type="search"]::-webkit-search-cancel-button {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+

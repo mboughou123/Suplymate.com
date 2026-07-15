@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Images,
@@ -16,6 +17,8 @@ import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 import { SectionHeading, reveal } from "./primitives";
 
 export default function FactoryMediaSection({ profile }: { profile: SupplierProfile }) {
+  const t = useTranslations("supplierProfile");
+  const common = useTranslations("common");
   const { media, mediaIncomplete } = profile;
   const [active, setActive] = useState<number | null>(null);
 
@@ -26,16 +29,15 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
-        eyebrow="Facility"
-        title="Factory & media gallery"
-        description="Production floor, QC labs and logistics — tap any tile for a fullscreen preview."
+        eyebrow={t("facilityEyebrow")}
+        title={t("factoryMediaTitle")}
+        description={t("factoryMediaDescription")}
         icon={<Images className="h-5 w-5" />}
       />
 
       {mediaIncomplete && (
         <p className="mb-4 rounded-lg bg-slate-50 px-3 py-2 text-xs text-ink-muted">
-          Showing representative category imagery. This supplier hasn&apos;t shared its own
-          factory photos yet — request media directly when you contact them.
+          {t("representativeImagery")}
         </p>
       )}
 
@@ -91,7 +93,7 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
             <button
               onClick={close}
               className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
-              aria-label="Close preview"
+              aria-label={t("closePreview")}
             >
               <X className="h-5 w-5" />
             </button>
@@ -101,7 +103,7 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
                 go(-1);
               }}
               className="absolute left-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:left-6"
-              aria-label="Previous"
+              aria-label={common("prev")}
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -111,7 +113,7 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
                 go(1);
               }}
               className="absolute right-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:right-6"
-              aria-label="Next"
+              aria-label={common("next")}
             >
               <ChevronRight className="h-6 w-6" />
             </button>

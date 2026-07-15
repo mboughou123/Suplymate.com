@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   LayoutGrid,
   User,
@@ -12,17 +12,21 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
-const TABS = [
-  { href: "/settings", label: "Overview", icon: LayoutGrid, exact: true },
-  { href: "/settings/account", label: "Account", icon: User },
-  { href: "/settings/team", label: "Team", icon: Users },
-  { href: "/settings/security", label: "Security", icon: ShieldCheck },
-  { href: "/settings/subscription", label: "Subscription", icon: CreditCard },
-  { href: "/settings/preferences", label: "Preferences", icon: SlidersHorizontal },
-];
-
 export default function SettingsNav() {
   const pathname = usePathname();
+  const t = useTranslations("settings");
+  const nav = useTranslations("navigation");
+  const dashboard = useTranslations("dashboard");
+  const common = useTranslations("common");
+
+  const TABS = [
+    { href: "/settings", label: t("title"), icon: LayoutGrid, exact: true },
+    { href: "/settings/account", label: common("name"), icon: User },
+    { href: "/settings/team", label: common("company"), icon: Users },
+    { href: "/settings/security", label: t("title"), icon: ShieldCheck },
+    { href: "/settings/subscription", label: nav("pricing"), icon: CreditCard },
+    { href: "/settings/preferences", label: t("preferences"), icon: SlidersHorizontal },
+  ];
 
   return (
     <nav className="lg:sticky lg:top-8 lg:self-start">
@@ -31,7 +35,7 @@ export default function SettingsNav() {
         className="mb-3 inline-flex items-center gap-1.5 text-xs font-medium text-ink-muted transition hover:text-ink"
       >
         <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
-        Back to dashboard
+        {dashboard("title")}
       </Link>
       <ul className="flex gap-1 overflow-x-auto rounded-xl border border-slate-200 bg-white p-1.5 lg:flex-col lg:overflow-visible">
         {TABS.map((tab) => {

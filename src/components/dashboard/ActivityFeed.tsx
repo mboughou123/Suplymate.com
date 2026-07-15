@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Sparkles, MessageCircle, TrendingUp, Truck, Factory } from "lucide-react";
 import type { ActivityItem } from "./types";
 
@@ -23,10 +24,14 @@ type Props = {
 };
 
 export default function ActivityFeed({ items }: Props) {
+  const t = useTranslations("dashboard");
+  const empty = useTranslations("emptyStates");
+  const nav = useTranslations("navigation");
+
   return (
     <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-      <h2 className="text-sm font-bold text-ink">Workspace activity</h2>
-      <p className="text-[11px] text-ink-dim">Based on your account</p>
+      <h2 className="text-sm font-bold text-ink">{t("title")}</h2>
+      <p className="text-[11px] text-ink-dim">{t("welcomeSubtitle")}</p>
 
       {items.length > 0 ? (
         <ul className="mt-4 space-y-0">
@@ -57,16 +62,13 @@ export default function ActivityFeed({ items }: Props) {
         </ul>
       ) : (
         <div className="mt-4 rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-8 text-center">
-          <p className="text-sm font-medium text-ink-muted">No activity yet</p>
-          <p className="mt-1 text-xs text-ink-dim">
-            Start a supplier conversation, create an RFQ, or set a price alert to
-            see updates here.
-          </p>
+          <p className="text-sm font-medium text-ink-muted">{empty("noData")}</p>
+          <p className="mt-1 text-xs text-ink-dim">{empty("noResultsSubtitle")}</p>
           <Link
             href="/suppliers"
             className="mt-3 inline-block text-xs font-semibold text-gold hover:underline"
           >
-            Browse suppliers
+            {nav("suppliers")}
           </Link>
         </div>
       )}

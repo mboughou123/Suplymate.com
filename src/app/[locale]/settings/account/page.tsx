@@ -1,10 +1,10 @@
-import { redirect } from "next/navigation";
+import { localeRedirect } from "@/i18n/redirect";
 import { getCurrentAccount } from "@/lib/account";
 import AccountForm from "@/components/settings/AccountForm";
 
 export default async function AccountPage() {
   const { authenticated, user } = await getCurrentAccount();
-  if (!authenticated || !user) redirect("/login?callbackUrl=/settings/account");
+  if (!authenticated || !user) return await localeRedirect("/login?callbackUrl=/settings/account");
 
   // Derive first/last from `name` when the dedicated fields are empty.
   const nameParts = (user.name || "").trim().split(/\s+/);

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   MessageCircle,
   FileText,
@@ -22,6 +23,7 @@ export default function StickyContactCard({
   profile: SupplierProfile;
   variant?: "sidebar" | "mobile";
 }) {
+  const t = useTranslations("supplierProfile");
   const { base } = profile;
   const meta = getSupplierMeta(base.id);
   const firstProduct = base.products[0]?.name;
@@ -43,7 +45,7 @@ export default function StickyContactCard({
           supplierId={base.id}
           supplierName={base.name}
           intent="rfq"
-          label="RFQ"
+          label={t("rfqShort")}
           icon={FileText}
           productName={firstProduct}
           className="btn-secondary !px-3 !py-2 text-xs"
@@ -52,7 +54,7 @@ export default function StickyContactCard({
           supplierId={base.id}
           supplierName={base.name}
           intent="contact"
-          label="Contact"
+          label={t("contactShort")}
           icon={MessageCircle}
           className="btn-primary !px-4 !py-2 text-xs"
         />
@@ -79,9 +81,9 @@ export default function StickyContactCard({
         </div>
 
         <dl className="mt-4 space-y-2 text-xs">
-          <Row icon={Clock} label="Avg. reply time" value={meta.responseTime} />
-          <Row icon={ShieldCheck} label="Response rate" value={`${meta.responseRate}%`} />
-          <Row icon={CalendarClock} label="Business hours" value="Mon–Fri 8:00–18:00" />
+          <Row icon={Clock} label={t("avgReplyTime")} value={meta.responseTime} />
+          <Row icon={ShieldCheck} label={t("responseRate")} value={`${meta.responseRate}%`} />
+          <Row icon={CalendarClock} label={t("businessHours")} value={t("businessHoursValue")} />
         </dl>
       </div>
 
@@ -91,7 +93,7 @@ export default function StickyContactCard({
           supplierId={base.id}
           supplierName={base.name}
           intent="contact"
-          label="Contact Supplier"
+          label={t("contactSupplier")}
           icon={MessageCircle}
           className="btn-primary w-full justify-center"
         />
@@ -100,7 +102,7 @@ export default function StickyContactCard({
             supplierId={base.id}
             supplierName={base.name}
             intent="negotiate"
-            label="Live chat"
+            label={t("liveChat")}
             icon={Handshake}
             className="btn-secondary justify-center !px-3 text-xs"
           />
@@ -108,7 +110,7 @@ export default function StickyContactCard({
             supplierId={base.id}
             supplierName={base.name}
             intent="rfq"
-            label="Send RFQ"
+            label={t("sendRfq")}
             icon={FileText}
             productName={firstProduct}
             className="btn-secondary justify-center !px-3 text-xs"
@@ -117,7 +119,7 @@ export default function StickyContactCard({
             supplierId={base.id}
             supplierName={base.name}
             intent="samples"
-            label="Samples"
+            label={t("samples")}
             icon={PackageOpen}
             productName={firstProduct}
             className="btn-secondary justify-center !px-3 text-xs"
@@ -126,7 +128,7 @@ export default function StickyContactCard({
             supplierId={base.id}
             supplierName={base.name}
             intent="quote"
-            label="Quotation"
+            label={t("quotation")}
             icon={Receipt}
             productName={firstProduct}
             className="btn-secondary justify-center !px-3 text-xs"
@@ -136,7 +138,7 @@ export default function StickyContactCard({
           supplierId={base.id}
           supplierName={base.name}
           intent="ai-sourcing"
-          label="AI sourcing assistant"
+          label={t("aiSourcingAssistant")}
           icon={Sparkles}
           productName={firstProduct}
           className="w-full justify-center rounded-xl border border-gold/30 bg-gradient-to-r from-gold/10 to-ai-mist px-4 py-2.5 text-sm font-semibold text-amber-800 transition hover:border-gold/50"

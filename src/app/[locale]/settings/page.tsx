@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { localeRedirect } from "@/i18n/redirect";
+import { getTranslations } from "next-intl/server";
 import { User, ShieldCheck, CreditCard, SlidersHorizontal } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { isAdminEmail } from "@/lib/admin";
@@ -7,46 +8,44 @@ import { getBillingState } from "@/lib/billing";
 
 export default async function SettingsOverviewPage() {
   const { authenticated, user } = await getCurrentAccount();
-  if (!authenticated || !user) redirect("/login?callbackUrl=/settings");
+  if (!authenticated || !user) return await localeRedirect("/login?callbackUrl=/settings");
 
+  const t = await getTranslations("settings");
+  const common = await getTranslations("common");
   const isAdmin = isAdminEmail(user.email);
   const billing = getBillingState(user);
   const displayName = user.name || [user.firstName, user.lastName].filter(Boolean).join(" ");
 
   const rows: { label: string; value: string }[] = [
-    { label: "Name", value: displayName || "—" },
-    { label: "Email", value: user.email },
-    { label: "Role", value: isAdmin ? "Administrator" : "Member" },
-    { label: "Current plan", value: billing.plan.name },
-    {
-      label: "Account status",
-      value: billing.status.charAt(0).toUpperCase() + billing.status.slice(1),
-    },
+    { label: common("name"), value: displayName || "—" },
+    { label: common("email"), value: user.email },
+    { label: common("company"), value: isAdmin ? "Admin" : common("verified") },
+    { label: t("title"), value: billing.plan.name },
   ];
 
   const links = [
     {
       href: "/settings/account",
-      title: "Account information",
-      desc: "Update your name, company, and contact details.",
+      title: common("name"),
+      desc: t("preferencesSubtitle"),
       icon: User,
     },
     {
       href: "/settings/security",
-      title: "Security",
-      desc: "Change your password or delete your account.",
+      title: t("title"),
+      desc: t("preferencesSubtitle"),
       icon: ShieldCheck,
     },
     {
       href: "/settings/subscription",
-      title: "Subscription & billing",
-      desc: "View your plan and available upgrades.",
+      title: t("title"),
+      desc: t("preferencesSubtitle"),
       icon: CreditCard,
     },
     {
       href: "/settings/preferences",
-      title: "Preferences",
-      desc: "Manage notifications and language.",
+      title: t("preferences"),
+      desc: t("preferencesSubtitle"),
       icon: SlidersHorizontal,
     },
   ];
@@ -54,7 +53,7 @@ export default async function SettingsOverviewPage() {
   return (
     <div className="space-y-6">
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
-        <h2 className="text-sm font-bold text-ink">Account summary</h2>
+        <h2 className="text-sm font-bold text-ink">{t("title")}</h2>
         <dl className="mt-4 divide-y divide-slate-100">
           {rows.map((row) => (
             <div

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
 /* Shared, premium UI primitives for the supplier profile sections. */
@@ -134,8 +135,9 @@ export function StarRating({
   rating: number;
   size?: string;
 }) {
+  const t = useTranslations("supplierProfile");
   return (
-    <span className="inline-flex items-center gap-0.5" aria-label={`${rating} out of 5`}>
+    <span className="inline-flex items-center gap-0.5" aria-label={t("starRating", { rating })}>
       {[1, 2, 3, 4, 5].map((i) => (
         <Star
           key={i}

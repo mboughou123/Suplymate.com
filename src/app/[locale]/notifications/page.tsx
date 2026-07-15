@@ -1,20 +1,32 @@
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { localeRedirect } from "@/i18n/redirect";
 import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { Bell } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Notifications | Suplymate",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "notifications" });
+  const meta = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: meta("titleTemplate", { title: t("title") }),
+    robots: { index: false, follow: false },
+  };
+}
 
 export const dynamic = "force-dynamic";
 
 export default async function NotificationsPage() {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login?callbackUrl=/notifications");
+  if (!session?.user?.id) return await localeRedirect("/login?callbackUrl=/notifications");
+  const t = await getTranslations("notifications");
+  const settings = await getTranslations("settings");
 
   const notifications = await prisma.notification.findMany({
     where: { userId: session.user.id },
@@ -26,19 +38,17 @@ export default async function NotificationsPage() {
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="flex items-center gap-2 font-display text-2xl font-bold text-ink">
         <Bell className="h-6 w-6 text-cyan" aria-hidden />
-        Notifications
+        {t("title")}
       </h1>
       <p className="mt-1 text-sm text-ink-muted">
-        In-app alerts for RFQs, quotes, messages, and reviews. Email delivery respects your{" "}
         <Link href="/settings/preferences" className="text-cyan hover:underline">
-          preferences
+          {settings("preferences")}
         </Link>
-        .
       </p>
 
       {notifications.length === 0 ? (
         <p className="mt-10 rounded-2xl border border-dashed border-slate-300 p-10 text-center text-sm text-ink-muted">
-          No notifications yet.
+          {t("noNotifications")}
         </p>
       ) : (
         <ul className="mt-6 space-y-2">
@@ -57,7 +67,7 @@ export default async function NotificationsPage() {
                 </div>
                 {n.link && (
                   <Link href={n.link} className="shrink-0 text-xs font-medium text-cyan hover:underline">
-                    View
+                    {t("title")}
                   </Link>
                 )}
               </div>

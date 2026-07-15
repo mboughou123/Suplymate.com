@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Factory,
   FileText,
@@ -25,7 +26,7 @@ import {
   type DashboardUser,
   type MaterialSummary,
   type TopSupplier,
-  buildActivityFeed,
+  type ActivityItem,
 } from "./types";
 
 type Props = {
@@ -41,11 +42,52 @@ export default function DashboardClient({
   materials,
   topSuppliers,
 }: Props) {
+  const t = useTranslations("dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const firstName = user.firstName || user.name.split(" ")[0] || "there";
-  const activity = buildActivityFeed(stats);
   const buySignals = materials.filter((m) => m.signal === "Buy now").length;
+
+  const activity = useMemo((): ActivityItem[] => {
+    const items: ActivityItem[] = [];
+    if (stats.conversationCount > 0) {
+      items.push({
+        id: "conversations",
+        type: "supplier",
+        title: t("conversations", { count: stats.conversationCount }),
+        detail: t("conversations", { count: stats.conversationCount }),
+        status: "success",
+      });
+    }
+    if (stats.rfqCount > 0) {
+      items.push({
+        id: "rfqs",
+        type: "quote",
+        title: t("activeRfqs"),
+        detail: t("openQuotations"),
+        status: "info",
+      });
+    }
+    if (stats.alertCount > 0) {
+      items.push({
+        id: "alerts",
+        type: "price",
+        title: t("priceAlerts"),
+        detail: t("monitoringMarkets"),
+        status: "warning",
+      });
+    }
+    if (stats.unreadNotifications > 0) {
+      items.push({
+        id: "notifications",
+        type: "ai",
+        title: t("title"),
+        detail: String(stats.unreadNotifications),
+        status: "warning",
+      });
+    }
+    return items;
+  }, [stats, t]);
 
   return (
     <div className="relative flex min-h-screen text-ink">
@@ -73,72 +115,69 @@ export default function DashboardClient({
               conversationCount={stats.conversationCount}
             />
 
-            {/* Metrics — real values where available; honest empty states otherwise */}
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <StatCard
-                label="Verified suppliers"
+                label={t("verifiedSuppliers")}
                 value={stats.verifiedSuppliers.toLocaleString()}
-                sub={`${stats.supplierCount.toLocaleString()} total indexed`}
+                sub={t("totalIndexed", { count: stats.supplierCount })}
                 icon={Factory}
                 href="/suppliers"
               />
               <StatCard
-                label="Active RFQs"
+                label={t("activeRfqs")}
                 value={String(stats.rfqCount)}
-                sub={stats.rfqCount > 0 ? "Open quotations" : "No RFQs yet"}
+                sub={stats.rfqCount > 0 ? t("openQuotations") : t("noRfqsYet")}
                 icon={FileText}
                 href="/messages"
               />
               <StatCard
-                label="Price alerts"
+                label={t("priceAlerts")}
                 value={String(stats.alertCount)}
-                sub={stats.alertCount > 0 ? "Monitoring markets" : "No alerts set"}
+                sub={stats.alertCount > 0 ? t("monitoringMarkets") : t("noAlertsSet")}
                 icon={Bell}
                 href="/price-charts"
               />
               <StatCard
-                label="AI recommendations"
+                label={t("aiRecommendations")}
                 value="—"
-                sub="Ask the assistant to get started"
+                sub={t("askAssistantToStart")}
                 icon={Sparkles}
                 href="/ai-assistant"
                 empty
               />
               <StatCard
-                label="Market trends"
+                label={t("marketTrends")}
                 value={String(buySignals)}
                 sub={
                   materials.length > 0
-                    ? `${buySignals} buy-now signal${buySignals === 1 ? "" : "s"}`
-                    : "Not enough data"
+                    ? t("buyNowSignals", { count: buySignals })
+                    : t("notEnoughData")
                 }
                 icon={TrendingUp}
                 href="/price-charts"
                 empty={materials.length === 0}
               />
               <StatCard
-                label="Delivery risk"
+                label={t("deliveryRisk")}
                 value="—"
-                sub="Not enough data"
+                sub={t("notEnoughData")}
                 icon={Shield}
                 empty
               />
               <StatCard
-                label="Procurement savings"
+                label={t("procurementSavings")}
                 value="—"
-                sub="Not enough data"
+                sub={t("notEnoughData")}
                 icon={DollarSign}
                 empty
               />
               <StatCard
-                label="Supplier response rate"
+                label={t("supplierResponseRate")}
                 value="—"
                 sub={
                   stats.conversationCount > 0
-                    ? `${stats.conversationCount} conversation${
-                        stats.conversationCount === 1 ? "" : "s"
-                      }`
-                    : "No conversations yet"
+                    ? t("conversations", { count: stats.conversationCount })
+                    : t("noConversationsYet")
                 }
                 icon={MessageCircle}
                 href="/messages"
@@ -146,7 +185,6 @@ export default function DashboardClient({
               />
             </div>
 
-            {/* Main content grid */}
             <div className="grid gap-6 xl:grid-cols-12">
               <div className="space-y-6 xl:col-span-8">
                 <ProcurementPanel />

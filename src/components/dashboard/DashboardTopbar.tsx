@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
 import { signOut } from "next-auth/react";
 import {
   Search,
@@ -27,6 +27,9 @@ export default function DashboardTopbar({
   unreadNotifications,
   onMenuClick,
 }: Props) {
+  const t = useTranslations("common");
+  const nav = useTranslations("navigation");
+  const settings = useTranslations("settings");
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -63,7 +66,7 @@ export default function DashboardTopbar({
           type="button"
           onClick={onMenuClick}
           className="rounded-lg p-2 text-ink-muted transition hover:bg-slate-100 lg:hidden"
-          aria-label="Open menu"
+          aria-label={nav("toggleMenu")}
         >
           <Menu className="h-5 w-5" />
         </button>
@@ -77,7 +80,7 @@ export default function DashboardTopbar({
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search suppliers, materials, RFQs…"
+            placeholder={t("search")}
             className="w-56 rounded-lg border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim transition focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/15 lg:w-72"
           />
         </form>
@@ -89,13 +92,13 @@ export default function DashboardTopbar({
           className="hidden items-center gap-1.5 rounded-lg bg-gold px-3 py-2 text-xs font-semibold text-ink transition hover:bg-gold-light sm:inline-flex"
         >
           <Plus className="h-3.5 w-3.5" aria-hidden />
-          Quick action
+          {nav("aiAssistant")}
         </Link>
 
         <Link
-          href="/messages"
+          href="/notifications"
           className="relative rounded-lg p-2.5 text-ink-muted transition hover:bg-slate-100 hover:text-ink"
-          aria-label="Notifications"
+          aria-label={nav("notifications")}
         >
           <Bell className="h-5 w-5" />
           {unreadNotifications > 0 && (
@@ -130,12 +133,12 @@ export default function DashboardTopbar({
                 {user.email}
               </p>
               <Link
-                href="/settings"
+                href="/settings/account"
                 onClick={() => setMenuOpen(false)}
                 className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-ink-muted transition hover:bg-slate-50 hover:text-ink"
               >
                 <UserIcon className="h-4 w-4" aria-hidden />
-                Account
+                {t("name")}
               </Link>
               <Link
                 href="/settings"
@@ -143,7 +146,7 @@ export default function DashboardTopbar({
                 className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-ink-muted transition hover:bg-slate-50 hover:text-ink"
               >
                 <Settings className="h-4 w-4" aria-hidden />
-                Settings
+                {settings("title")}
               </Link>
               <button
                 type="button"
@@ -151,7 +154,7 @@ export default function DashboardTopbar({
                 className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2 text-left text-sm text-ink-muted transition hover:bg-slate-50 hover:text-ink"
               >
                 <LogOut className="h-4 w-4" aria-hidden />
-                Sign out
+                {nav("signOut")}
               </button>
             </div>
           )}

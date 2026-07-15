@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import TiltCard from "@/components/TiltCard";
 
@@ -14,6 +17,8 @@ export default function FeatureCard({
   icon: Icon,
   href,
 }: FeatureCardProps) {
+  const t = useTranslations("common");
+
   return (
     <TiltCard href={href} className="flex h-full flex-col p-6">
       <span className="relative flex h-12 w-12 items-center justify-center rounded-xl border border-cyan/20 bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan transition-transform duration-300 group-hover:scale-110">
@@ -24,7 +29,7 @@ export default function FeatureCard({
         {description}
       </p>
       <span className="relative mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all group-hover:gap-2.5">
-        Explore <ArrowRight className="h-4 w-4" aria-hidden />
+        {t("explore")} <ArrowRight className="h-4 w-4" aria-hidden />
       </span>
     </TiltCard>
   );

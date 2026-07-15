@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 import Navbar from "./Navbar";
 
 const HIDE_NAVBAR = ["/ai-assistant", "/dashboard"];

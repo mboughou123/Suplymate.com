@@ -1,4 +1,5 @@
 import type { NextAuthConfig } from "next-auth";
+import { routing, stripLocalePrefix } from "@/i18n/routing";
 
 export const authConfig: NextAuthConfig = {
   // Required when running behind a proxy / custom domain (e.g. Vercel + suplymate.com)
@@ -10,7 +11,8 @@ export const authConfig: NextAuthConfig = {
   },
   callbacks: {
     authorized({ auth, request }) {
-      const path = request.nextUrl.pathname;
+      const pathname = request.nextUrl.pathname;
+      const path = stripLocalePrefix(pathname);
       const isLoggedIn = !!auth?.user;
       const protectedPaths = [
         "/dashboard",
@@ -27,12 +29,20 @@ export const authConfig: NextAuthConfig = {
         "/admin",
       ];
       const isProtected = protectedPaths.some(
-        (p) => path === p || path.startsWith(`${p}/`)
+        (p) => path === p || path.startsWith(`${p}/`),
       );
 
       if (isProtected && !isLoggedIn) return false;
+
       if (isLoggedIn && (path === "/login" || path === "/signup")) {
-        return Response.redirect(new URL("/dashboard", request.nextUrl));
+        const locale = routing.locales.includes(
+          pathname.split("/")[1] as (typeof routing.locales)[number],
+        )
+          ? pathname.split("/")[1]
+          : routing.defaultLocale;
+        return Response.redirect(
+          new URL(`/${locale}/dashboard`, request.nextUrl),
+        );
       }
       return true;
     },
