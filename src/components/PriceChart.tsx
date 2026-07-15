@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { TrendingDown, TrendingUp } from "lucide-react";
 import type { Material } from "@/data/materials";
 
@@ -44,6 +45,7 @@ function formatPrice(v: number, currency: string): string {
  * crosshair + tooltip that follows the pointer (tap-friendly on touch).
  */
 export default function PriceChart({ material }: PriceChartProps) {
+  const t = useTranslations("priceCharts");
   const data = material.history;
   const svgRef = useRef<SVGSVGElement>(null);
   const [hover, setHover] = useState<number | null>(null);
@@ -96,7 +98,7 @@ export default function PriceChart({ material }: PriceChartProps) {
         <div>
           <h2 className="text-heading-sm text-ink">{material.name}</h2>
           <p className="mt-0.5 text-caption text-ink-dim">
-            {material.symbol} · 12-month range (indicative)
+            {t("twelveMonthRange", { symbol: material.symbol })}
           </p>
         </div>
         <div className="text-right">
@@ -116,7 +118,7 @@ export default function PriceChart({ material }: PriceChartProps) {
                 <TrendingDown className="h-3 w-3" aria-hidden />
               )}
               {periodChange >= 0 ? "+" : ""}
-              {periodChange.toFixed(1)}% · 12mo
+              {t("periodChange", { change: periodChange.toFixed(1) })}
             </span>
           </div>
         </div>

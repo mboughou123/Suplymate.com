@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Search, SlidersHorizontal, Loader2, PackageX } from "lucide-react";
 import PublicProductCard from "@/components/PublicProductCard";
 import type {
@@ -71,6 +72,8 @@ export default function ProductsClient({
   pageSize,
   facets,
 }: Props) {
+  const t = useTranslations("products");
+  const tErrors = useTranslations("errors");
   const [items, setItems] = useState<PublicProduct[]>(initialItems);
   const [total, setTotal] = useState(initialTotal);
   const [hasMore, setHasMore] = useState(initialHasMore);
@@ -101,7 +104,7 @@ export default function ProductsClient({
         setHasMore(data.hasMore);
         setPage(nextPage);
       } catch {
-        setError("Could not load products. Please try again.");
+        setError(tErrors("generic"));
       } finally {
         setLoading(false);
         setInitialLoad(false);
@@ -155,7 +158,7 @@ export default function ProductsClient({
           <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim" />
           <input
             type="search"
-            placeholder="Search steel, cables, tubes, packaging…"
+            placeholder={t("searchPlaceholder")}
             value={filters.search}
             onChange={(e) => update("search", e.target.value)}
             className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm shadow-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
@@ -167,18 +170,18 @@ export default function ProductsClient({
         {/* Filters */}
         <aside className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-card lg:self-start">
           <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-ink-dim">
-            <SlidersHorizontal className="h-4 w-4" /> Filters
+            <SlidersHorizontal className="h-4 w-4" /> {t("filters")}
           </h2>
 
           <div className="mt-6 space-y-5">
             <div>
-              <label className="text-xs font-medium text-ink-muted">Category</label>
+              <label className="text-xs font-medium text-ink-muted">{t("category")}</label>
               <select
                 value={filters.category}
                 onChange={(e) => update("category", e.target.value)}
                 className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
-                <option value="">All categories</option>
+                <option value="">{t("allCategories")}</option>
                 {facets.categories.map((c) => (
                   <option key={c} value={c}>
                     {c}
@@ -188,13 +191,13 @@ export default function ProductsClient({
             </div>
 
             <div>
-              <label className="text-xs font-medium text-ink-muted">Supplier</label>
+              <label className="text-xs font-medium text-ink-muted">{t("supplier")}</label>
               <select
                 value={filters.supplierId}
                 onChange={(e) => update("supplierId", e.target.value)}
                 className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
-                <option value="">All suppliers</option>
+                <option value="">{t("allSuppliers")}</option>
                 {facets.suppliers.map((s) => (
                   <option key={s.id} value={s.id}>
                     {s.name}
@@ -204,13 +207,13 @@ export default function ProductsClient({
             </div>
 
             <div>
-              <label className="text-xs font-medium text-ink-muted">Supplier country</label>
+              <label className="text-xs font-medium text-ink-muted">{t("supplierCountry")}</label>
               <select
                 value={filters.country}
                 onChange={(e) => update("country", e.target.value)}
                 className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
-                <option value="">Any country</option>
+                <option value="">{t("anyCountry")}</option>
                 {facets.countries.map((c) => (
                   <option key={c} value={c}>
                     {c}
@@ -226,7 +229,7 @@ export default function ProductsClient({
                 onChange={(e) => update("verifiedOnly", e.target.checked)}
                 className="h-4 w-4 rounded border-slate-300 text-cyan focus:ring-cyan"
               />
-              Verified suppliers only
+              {t("verifiedSuppliersOnly")}
             </label>
 
             <label className="flex items-center gap-2 text-sm text-ink">
@@ -236,7 +239,7 @@ export default function ProductsClient({
                 onChange={(e) => update("hasPrice", e.target.checked)}
                 className="h-4 w-4 rounded border-slate-300 text-cyan focus:ring-cyan"
               />
-              Public price available
+              {t("publicPriceAvailable")}
             </label>
 
             {(activeFilterCount > 0 || filters.search) && (
@@ -245,7 +248,7 @@ export default function ProductsClient({
                 onClick={() => setFilters(EMPTY_FILTERS)}
                 className="w-full rounded-lg border border-slate-200 py-2 text-sm font-medium text-ink-muted hover:bg-white"
               >
-                Reset filters
+                {t("resetFilters")}
               </button>
             )}
           </div>
@@ -254,9 +257,8 @@ export default function ProductsClient({
         {/* Results */}
         <div>
           <p className="mb-6 text-sm text-ink-muted">
-            <span className="font-semibold text-ink">{total.toLocaleString()}</span>{" "}
-            {total === 1 ? "product" : "products"}
-            {activeFilterCount > 0 ? " match your filters" : ""}
+            {t("productCount", { count: total })}
+            {activeFilterCount > 0 ? ` ${t("matchFilters")}` : ""}
           </p>
 
           {error && (
@@ -266,7 +268,7 @@ export default function ProductsClient({
                 onClick={() => fetchPage(activeFiltersRef.current, 1, true)}
                 className="font-semibold underline"
               >
-                Retry
+                {t("retry")}
               </button>
             </div>
           )}
@@ -280,10 +282,8 @@ export default function ProductsClient({
           ) : items.length === 0 ? (
             <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
               <PackageX className="h-10 w-10 text-slate-300" aria-hidden />
-              <p className="mt-3 font-semibold text-ink">No products found</p>
-              <p className="mt-1 text-sm text-ink-muted">
-                Try adjusting your search or filters.
-              </p>
+              <p className="mt-3 font-semibold text-ink">{t("noProductsTitle")}</p>
+              <p className="mt-1 text-sm text-ink-muted">{t("noProductsSubtitle")}</p>
             </div>
           ) : (
             <>
@@ -297,12 +297,12 @@ export default function ProductsClient({
               <div ref={sentinelRef} className="h-10" />
               {loading && !initialLoad && (
                 <div className="mt-6 flex items-center justify-center gap-2 text-sm text-ink-muted">
-                  <Loader2 className="h-4 w-4 animate-spin" /> Loading more…
+                  <Loader2 className="h-4 w-4 animate-spin" /> {t("loadingMore")}
                 </div>
               )}
               {!hasMore && items.length > 0 && (
                 <p className="mt-8 text-center text-xs text-ink-dim">
-                  You&rsquo;ve reached the end · {items.length} of {total} shown
+                  {t("endOfResults", { shown: items.length, total })}
                 </p>
               )}
             </>

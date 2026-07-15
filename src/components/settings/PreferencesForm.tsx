@@ -1,47 +1,63 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Check, AlertCircle } from "lucide-react";
-import {
-  SUPPORTED_LANGUAGES,
-  type UserPreferences,
-} from "@/lib/preferences";
+import { locales, localeNames, type Locale } from "@/i18n/routing";
+import { type UserPreferences } from "@/lib/preferences";
 
-const TOGGLES: { key: keyof UserPreferences; label: string; desc: string }[] = [
+const TOGGLE_KEYS: {
+  key: keyof UserPreferences;
+  labelKey:
+    | "inAppNotifications"
+    | "emailNotifications"
+    | "priceAlerts"
+    | "supplierMessages"
+    | "productUpdates";
+  descKey:
+    | "inAppNotificationsDesc"
+    | "emailNotificationsDesc"
+    | "priceAlertsDesc"
+    | "supplierMessagesDesc"
+    | "productUpdatesDesc";
+}[] = [
   {
     key: "inAppNotifications",
-    label: "In-app notifications",
-    desc: "Show alerts in your notification center for RFQs, quotes, and messages.",
+    labelKey: "inAppNotifications",
+    descKey: "inAppNotificationsDesc",
   },
   {
     key: "emailNotifications",
-    label: "Email notifications",
-    desc: "Receive important account and activity emails.",
+    labelKey: "emailNotifications",
+    descKey: "emailNotificationsDesc",
   },
   {
     key: "priceAlerts",
-    label: "Price alert emails",
-    desc: "Get notified when tracked materials hit your targets.",
+    labelKey: "priceAlerts",
+    descKey: "priceAlertsDesc",
   },
   {
     key: "supplierMessages",
-    label: "Supplier message notifications",
-    desc: "Be alerted when a supplier replies to your conversations.",
+    labelKey: "supplierMessages",
+    descKey: "supplierMessagesDesc",
   },
   {
     key: "productUpdates",
-    label: "Product update emails",
-    desc: "Occasional news about new Suplymate features.",
+    labelKey: "productUpdates",
+    descKey: "productUpdatesDesc",
   },
 ];
 
 export default function PreferencesForm({ initial }: { initial: UserPreferences }) {
+  const t = useTranslations("settings");
+  const tForms = useTranslations("forms");
+  const tErrors = useTranslations("errors");
   const [prefs, setPrefs] = useState<UserPreferences>(initial);
   const [status, setStatus] = useState<"idle" | "saving">("idle");
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
-  function toggle(key: keyof UserPreferences) {
+  function handleToggle(key: keyof UserPreferences) {
     setPrefs((p) => ({ ...p, [key]: !p[key] }));
     setSuccess(false);
   }
@@ -59,12 +75,12 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
       });
       const data = await res.json().catch(() => null);
       if (!res.ok) {
-        setError(data?.error || "Could not save preferences.");
+        setError(data?.error || tErrors("savePreferencesFailed"));
         return;
       }
       setSuccess(true);
     } catch {
-      setError("Network error. Please try again.");
+      setError(tErrors("network"));
     } finally {
       setStatus("idle");
     }
@@ -75,30 +91,28 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
       onSubmit={onSubmit}
       className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"
     >
-      <h2 className="text-sm font-bold text-ink">Preferences</h2>
-      <p className="mt-1 text-xs text-ink-muted">
-        Choose what we notify you about and your language.
-      </p>
+      <h2 className="text-sm font-bold text-ink">{t("preferences")}</h2>
+      <p className="mt-1 text-xs text-ink-muted">{t("preferencesSubtitle")}</p>
 
       <div className="mt-5 divide-y divide-slate-100">
-        {TOGGLES.map((t) => (
-          <div key={t.key} className="flex items-center justify-between gap-4 py-3.5">
+        {TOGGLE_KEYS.map((item) => (
+          <div key={item.key} className="flex items-center justify-between gap-4 py-3.5">
             <div className="min-w-0">
-              <p className="text-sm font-medium text-ink">{t.label}</p>
-              <p className="text-xs text-ink-muted">{t.desc}</p>
+              <p className="text-sm font-medium text-ink">{t(item.labelKey)}</p>
+              <p className="text-xs text-ink-muted">{t(item.descKey)}</p>
             </div>
             <button
               type="button"
               role="switch"
-              aria-checked={Boolean(prefs[t.key])}
-              onClick={() => toggle(t.key)}
+              aria-checked={Boolean(prefs[item.key])}
+              onClick={() => handleToggle(item.key)}
               className={`relative h-6 w-11 shrink-0 rounded-full transition ${
-                prefs[t.key] ? "bg-gold" : "bg-slate-300"
+                prefs[item.key] ? "bg-gold" : "bg-slate-300"
               }`}
             >
               <span
                 className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition ${
-                  prefs[t.key] ? "left-[22px]" : "left-0.5"
+                  prefs[item.key] ? "left-[22px]" : "left-0.5"
                 }`}
               />
             </button>
@@ -108,7 +122,7 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
 
       <div className="mt-5 max-w-xs">
         <label htmlFor="language" className="text-xs font-medium text-ink-muted">
-          Language
+          {t("language")}
         </label>
         <select
           id="language"
@@ -119,9 +133,9 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
           }}
           className="mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/15"
         >
-          {SUPPORTED_LANGUAGES.map((l) => (
-            <option key={l.value} value={l.value}>
-              {l.label}
+          {locales.map((locale) => (
+            <option key={locale} value={locale}>
+              {localeNames[locale as Locale]}
             </option>
           ))}
         </select>
@@ -136,7 +150,7 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
       {success && (
         <p className="mt-4 flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
           <Check className="h-4 w-4 shrink-0" aria-hidden />
-          Preferences saved.
+          {t("preferencesSaved")}
         </p>
       )}
 
@@ -146,7 +160,7 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
           disabled={status === "saving"}
           className="rounded-xl bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-gold-light disabled:opacity-60"
         >
-          {status === "saving" ? "Saving…" : "Save preferences"}
+          {status === "saving" ? tForms("saving") : t("savePreferences")}
         </button>
       </div>
     </form>

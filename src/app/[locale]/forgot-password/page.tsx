@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import AuthFormLayout from "@/components/AuthFormLayout";
 
 export default function ForgotPasswordPage() {
+  const t = useTranslations("authentication");
+  const tForms = useTranslations("forms");
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
 
@@ -15,16 +18,16 @@ export default function ForgotPasswordPage() {
 
   return (
     <AuthFormLayout
-      title="Reset password"
+      title={t("forgotPassword")}
       subtitle="We'll send a reset link if an account exists for this email."
       footer={
         <Link href="/login" className="font-semibold text-ink hover:text-mustard">
-          Back to sign in
+          {t("signIn")}
         </Link>
       }
     >
       {sent ? (
-        <p className="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3 text-sm text-emerald-800">
+        <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
           If an account exists for <strong>{email}</strong>, you will receive reset
           instructions. (Email delivery not configured in MVP.)
         </p>
@@ -32,7 +35,7 @@ export default function ForgotPasswordPage() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="text-xs font-medium text-ink-muted">
-              Email
+              {tForms("email")}
             </label>
             <input
               id="email"
@@ -40,6 +43,7 @@ export default function ForgotPasswordPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder={t("emailPlaceholder")}
               className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
             />
           </div>
@@ -47,7 +51,7 @@ export default function ForgotPasswordPage() {
             type="submit"
             className="w-full rounded-xl bg-mustard py-3 text-sm font-semibold text-ink hover:bg-mustard-light"
           >
-            Send reset link
+            {tForms("submit")}
           </button>
         </form>
       )}

@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 type AuthFormLayoutProps = {
   title: string;
@@ -13,6 +16,8 @@ export default function AuthFormLayout({
   children,
   footer,
 }: AuthFormLayoutProps) {
+  const t = useTranslations("navigation");
+
   return (
     <div className="flex min-h-screen flex-col bg-[#F7F8FA]">
       <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center px-4 py-12">
@@ -21,7 +26,8 @@ export default function AuthFormLayout({
             S
           </span>
           <span className="font-display text-2xl font-bold text-ink">
-            Suply<span className="text-gold">mate</span>
+            {t("brandSuply")}
+            <span className="text-gold">{t("brandMate")}</span>
           </span>
         </Link>
         <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-card">

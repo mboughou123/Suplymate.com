@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useSession, signOut } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -17,62 +17,68 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import CartButton from "@/components/cart/CartButton";
+import LanguageSelector from "@/components/LanguageSelector";
 
 type NavItem = {
   href: string;
-  label: string;
-  description: string;
+  labelKey: "suppliers" | "products" | "priceCharts" | "aiAssistant";
+  descriptionKey:
+    | "suppliersDescription"
+    | "productsDescription"
+    | "priceChartsDescription"
+    | "aiAssistantDescription";
   icon: LucideIcon;
 };
 
 type NavCategory = {
   key: string;
-  label: string;
+  labelKey: "sourcing" | "marketIntelligence";
   items: NavItem[];
 };
 
 const categories: NavCategory[] = [
   {
     key: "sourcing",
-    label: "Sourcing",
+    labelKey: "sourcing",
     items: [
       {
         href: "/suppliers",
-        label: "Suppliers",
-        description: "Find verified suppliers by industry & region",
+        labelKey: "suppliers",
+        descriptionKey: "suppliersDescription",
         icon: Factory,
       },
       {
         href: "/products",
-        label: "Products",
-        description: "Browse and compare products side by side",
+        labelKey: "products",
+        descriptionKey: "productsDescription",
         icon: Package,
       },
     ],
   },
   {
     key: "intelligence",
-    label: "Market Intelligence",
+    labelKey: "marketIntelligence",
     items: [
       {
         href: "/price-charts",
-        label: "Price Charts",
-        description: "Track material prices and buy at the right time",
+        labelKey: "priceCharts",
+        descriptionKey: "priceChartsDescription",
         icon: TrendingUp,
       },
       {
         href: "/ai-assistant",
-        label: "AI Assistant",
-        description: "Get smart procurement recommendations",
+        labelKey: "aiAssistant",
+        descriptionKey: "aiAssistantDescription",
         icon: Bot,
       },
     ],
   },
 ];
 
-const directLinks = [{ href: "/pricing", label: "Pricing" }];
+const directLinks = [{ href: "/pricing", labelKey: "pricing" as const }];
 
 export default function Navbar() {
+  const t = useTranslations("navigation");
   const pathname = usePathname();
   const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -81,7 +87,6 @@ export default function Navbar() {
   const [unread, setUnread] = useState(0);
   const navRef = useRef<HTMLElement>(null);
 
-  // Poll unread notification count for logged-in users
   useEffect(() => {
     if (status !== "authenticated") {
       setUnread(0);
@@ -94,21 +99,19 @@ export default function Navbar() {
         .then((d) => active && setUnread(d.unread ?? 0))
         .catch(() => {});
     fetchUnread();
-    const t = setInterval(fetchUnread, 30000);
+    const interval = setInterval(fetchUnread, 30000);
     return () => {
       active = false;
-      clearInterval(t);
+      clearInterval(interval);
     };
   }, [status]);
 
-  // Close menus on route change
   useEffect(() => {
     setOpenMenu(null);
     setMobileOpen(false);
     setMobileCat(null);
   }, [pathname]);
 
-  // Close desktop dropdown on outside click / Escape
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -137,12 +140,11 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-display text-xl font-bold shrink-0">
-          <span className="text-white">Suply</span>
-          <span className="gradient-text-light">mate</span>
+          <span className="text-white">{t("brandSuply")}</span>
+          <span className="gradient-text-light">{t("brandMate")}</span>
           <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex">
           {categories.map((cat) => {
             const active = isCategoryActive(cat);
@@ -165,7 +167,7 @@ export default function Navbar() {
                       : "text-white/80 hover:text-white"
                   }`}
                 >
-                  {cat.label}
+                  {t(cat.labelKey)}
                   <ChevronDown
                     className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                     aria-hidden
@@ -190,10 +192,10 @@ export default function Navbar() {
                             </span>
                             <span>
                               <span className="block text-sm font-semibold text-ink">
-                                {item.label}
+                                {t(item.labelKey)}
                               </span>
                               <span className="block text-xs leading-snug text-ink-muted">
-                                {item.description}
+                                {t(item.descriptionKey)}
                               </span>
                             </span>
                           </Link>
@@ -216,14 +218,16 @@ export default function Navbar() {
                   active ? "text-cyan-glow" : "text-white/80 hover:text-white"
                 }`}
               >
-                {link.label}
+                {t(link.labelKey)}
               </Link>
             );
           })}
         </nav>
 
-        {/* Right side */}
         <div className="flex items-center gap-3">
+          <div className="hidden md:block">
+            <LanguageSelector />
+          </div>
           <CartButton />
           {status === "loading" ? (
             <span className="hidden h-9 w-20 sm:block" />
@@ -231,7 +235,7 @@ export default function Navbar() {
             <>
               <Link
                 href="/notifications"
-                aria-label="Notifications"
+                aria-label={t("notifications")}
                 className="relative hidden rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white sm:inline-flex"
               >
                 <Bell className="h-5 w-5" aria-hidden />
@@ -243,7 +247,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/messages"
-                aria-label="Messages"
+                aria-label={t("messages")}
                 className="hidden rounded-lg p-2 text-white/80 hover:bg-white/10 hover:text-white sm:inline-flex"
               >
                 <MessageSquare className="h-5 w-5" aria-hidden />
@@ -252,14 +256,14 @@ export default function Navbar() {
                 href="/dashboard"
                 className="hidden rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-cyan-glow hover:bg-white/15 sm:inline-block"
               >
-                Dashboard
+                {t("dashboard")}
               </Link>
               <button
                 type="button"
                 onClick={() => signOut({ callbackUrl: "/" })}
                 className="hidden rounded-lg border border-white/20 px-3 py-2 text-sm text-white/80 hover:bg-white/10 sm:inline-block"
               >
-                Sign out
+                {t("signOut")}
               </button>
             </>
           ) : (
@@ -267,21 +271,20 @@ export default function Navbar() {
               href="/login"
               className="hidden rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow hover:text-navy-dark sm:inline-block"
             >
-              Login
+              {t("login")}
             </Link>
           )}
           <button
             type="button"
             className="rounded-lg p-2 text-white md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenu")}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <nav className="border-t border-white/10 bg-navy-dark px-4 py-4 md:hidden">
           {categories.map((cat) => {
@@ -294,7 +297,7 @@ export default function Navbar() {
                   aria-expanded={expanded}
                   className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-white"
                 >
-                  {cat.label}
+                  {t(cat.labelKey)}
                   <ChevronDown
                     className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`}
                     aria-hidden
@@ -309,7 +312,7 @@ export default function Navbar() {
                       className="flex items-center gap-3 rounded-lg px-3 py-2.5 pl-5 text-sm text-white/80 hover:bg-white/5"
                     >
                       <item.icon className="h-4 w-4 text-cyan-glow" aria-hidden />
-                      {item.label}
+                      {t(item.labelKey)}
                     </Link>
                   ))}
               </div>
@@ -323,11 +326,14 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="mt-1 block rounded-lg px-3 py-2.5 text-sm font-semibold text-white hover:bg-white/5"
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
 
           <div className="mt-3 border-t border-white/10 pt-3">
+            <div className="mb-3 px-1">
+              <LanguageSelector variant="mobile" />
+            </div>
             {session?.user ? (
               <>
                 <Link
@@ -337,7 +343,7 @@ export default function Navbar() {
                 >
                   <span className="inline-flex items-center gap-2">
                     <MessageSquare className="h-4 w-4" aria-hidden />
-                    Messages
+                    {t("messages")}
                   </span>
                   {unread > 0 && (
                     <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-cyan-glow px-1.5 text-[11px] font-bold text-navy-dark">
@@ -350,14 +356,14 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="block rounded-lg px-3 py-2.5 text-sm font-medium text-cyan-glow"
                 >
-                  Dashboard
+                  {t("dashboard")}
                 </Link>
                 <button
                   type="button"
                   onClick={() => signOut({ callbackUrl: "/" })}
                   className="mt-2 w-full rounded-lg border border-white/20 px-3 py-2.5 text-sm text-white/80"
                 >
-                  Sign out
+                  {t("signOut")}
                 </button>
               </>
             ) : (
@@ -366,7 +372,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block rounded-lg bg-white px-3 py-2.5 text-center text-sm font-semibold text-navy-dark"
               >
-                Login
+                {t("login")}
               </Link>
             )}
           </div>

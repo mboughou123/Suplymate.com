@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { BadgeCheck, MapPin, Star, ArrowRight } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
@@ -47,6 +48,9 @@ export default function HomepageSupplierCard({
   logoGradient,
   href,
 }: HomepageSupplierCardProps) {
+  const t = useTranslations("suppliers");
+  const tCommon = useTranslations("common");
+
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-slate-300 hover:shadow-cardHover motion-reduce:transform-none">
       {/* Cover / business photo — consistent 16:9 */}
@@ -66,7 +70,7 @@ export default function HomepageSupplierCard({
         {verified && (
           <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 py-1 pl-1.5 pr-2.5 text-caption font-semibold text-up shadow-sm ring-1 ring-black/5 backdrop-blur">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-            Verified
+            {tCommon("verified")}
           </span>
         )}
         <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
@@ -120,7 +124,7 @@ export default function HomepageSupplierCard({
             href={href}
             className="inline-flex shrink-0 items-center gap-1 text-body-sm font-semibold text-cyan transition-colors hover:text-navy cursor-pointer"
           >
-            View Supplier
+            {t("viewSupplier")}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-300 ease-cinema group-hover:translate-x-0.5 motion-reduce:transform-none"
               aria-hidden

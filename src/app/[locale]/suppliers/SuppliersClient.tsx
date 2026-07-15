@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { Supplier } from "@/data/suppliers";
 import SupplierCard from "@/components/SupplierCard";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
@@ -38,6 +39,8 @@ function reviewsOf(s: Supplier): number {
 }
 
 export default function SuppliersClient({ initialSuppliers }: Props) {
+  const t = useTranslations("suppliers");
+  const tCommon = useTranslations("common");
   const [filters, setFilters] = useState<SupplierFilterState>(DEFAULT_FILTERS);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -151,18 +154,18 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
               : "border-slate-200 text-ink-muted hover:border-cyan/40"
           }`}
         >
-          {compareMode ? "Exit compare mode" : "Compare suppliers"}
+          {compareMode ? t("exitCompareMode") : t("compareSuppliers")}
         </button>
         {compareMode && compareIds.length >= 2 && (
           <Link
             href={compareHref}
             className="rounded-lg bg-cyan px-4 py-1.5 text-sm font-semibold text-white hover:bg-cyan/90"
           >
-            Compare {compareIds.length} selected
+            {t("compareSelected", { count: compareIds.length })}
           </Link>
         )}
         {compareMode && (
-          <span className="text-xs text-ink-dim">Select 2–4 suppliers</span>
+          <span className="text-xs text-ink-dim">{t("selectSuppliersHint")}</span>
         )}
       </div>
 
@@ -184,8 +187,8 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       ) : filtered.length === 0 ? (
         <div className="mt-16 flex flex-col items-center text-center text-ink-dim">
           <SearchX className="mb-3 h-10 w-10 text-slate-300" aria-hidden />
-          <p className="font-semibold text-ink">No suppliers match your filters</p>
-          <p className="mt-1 text-sm">Try widening your search or clearing filters.</p>
+          <p className="font-semibold text-ink">{t("noMatchTitle")}</p>
+          <p className="mt-1 text-sm">{t("noMatchSubtitle")}</p>
         </div>
       ) : (
         <>
@@ -200,7 +203,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                       onChange={() => toggleCompare(supplier.id)}
                       disabled={!compareIds.includes(supplier.id) && compareIds.length >= 4}
                     />
-                    Compare
+                    {tCommon("compare")}
                   </label>
                 )}
                 <SupplierCard supplier={supplier} />
@@ -217,7 +220,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden />
-                Prev
+                {tCommon("prev")}
               </button>
 
               {Array.from({ length: totalPages }).map((_, i) => {
@@ -258,15 +261,19 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 onClick={() => goToPage(safePage + 1)}
                 className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
               >
-                Next
+                {tCommon("next")}
                 <ChevronRight className="h-4 w-4" aria-hidden />
               </button>
             </div>
           )}
 
           <p className="mt-4 text-center text-xs text-ink-dim">
-            Page {safePage} of {totalPages} · showing {pageItems.length} of{" "}
-            {filtered.length}
+            {t("pageInfo", {
+              current: safePage,
+              total: totalPages,
+              shown: pageItems.length,
+              totalResults: filtered.length,
+            })}
           </p>
         </>
       )}

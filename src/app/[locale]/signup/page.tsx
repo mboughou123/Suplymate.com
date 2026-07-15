@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
 import AuthFormLayout from "@/components/AuthFormLayout";
 
 export default function SignupPage() {
+  const t = useTranslations("authentication");
+  const tForms = useTranslations("forms");
+  const tErrors = useTranslations("errors");
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,7 +31,7 @@ export default function SignupPage() {
     const data = await res.json();
     if (!res.ok) {
       setLoading(false);
-      setError(data.error || "Signup failed.");
+      setError(data.error || tErrors("signupFailed"));
       return;
     }
 
@@ -39,7 +42,7 @@ export default function SignupPage() {
     });
     setLoading(false);
     if (signInResult?.error) {
-      setError("Account created but sign-in failed. Please log in.");
+      setError(tErrors("signInAfterSignup"));
       return;
     }
     router.push("/dashboard");
@@ -48,26 +51,26 @@ export default function SignupPage() {
 
   return (
     <AuthFormLayout
-      title="Create account"
-      subtitle="Start sourcing smarter with Suplymate."
+      title={t("createAccount")}
+      subtitle={t("signUpSubtitle")}
       footer={
         <>
-          <span className="text-ink-muted">Already have an account? </span>
+          <span className="text-ink-muted">{t("alreadyHaveAccount")} </span>
           <Link href="/login" className="font-semibold text-ink hover:text-gold">
-            Sign in
+            {t("signIn")}
           </Link>
         </>
       }
     >
       {error && (
-        <p className="mb-4 rounded-lg bg-red-50 border border-red-200 px-3 py-2 text-sm text-red-700">
+        <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
           {error}
         </p>
       )}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="text-xs font-medium text-ink-muted">
-            Full name
+            {tForms("fullName")}
           </label>
           <input
             id="name"
@@ -79,7 +82,7 @@ export default function SignupPage() {
         </div>
         <div>
           <label htmlFor="company" className="text-xs font-medium text-ink-muted">
-            Company (optional)
+            {tForms("companyOptional")}
           </label>
           <input
             id="company"
@@ -90,7 +93,7 @@ export default function SignupPage() {
         </div>
         <div>
           <label htmlFor="email" className="text-xs font-medium text-ink-muted">
-            Email
+            {tForms("email")}
           </label>
           <input
             id="email"
@@ -103,7 +106,7 @@ export default function SignupPage() {
         </div>
         <div>
           <label htmlFor="password" className="text-xs font-medium text-ink-muted">
-            Password (min 8 chars, with upper, lower &amp; a number)
+            {t("passwordRequirements")}
           </label>
           <input
             id="password"
@@ -120,7 +123,7 @@ export default function SignupPage() {
           disabled={loading}
           className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-ink transition hover:bg-gold-light disabled:opacity-60"
         >
-          {loading ? "Creating account…" : "Create account"}
+          {loading ? t("creatingAccount") : t("createAccount")}
         </button>
       </form>
     </AuthFormLayout>

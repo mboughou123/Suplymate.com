@@ -1,6 +1,8 @@
 // User preferences: stored as a JSON string on User.preferences (additive).
 // Parsing is defensive — unknown/old shapes fall back to sane defaults.
 
+import { locales, localeNames, type Locale } from "@/i18n/routing";
+
 export type UserPreferences = {
   emailNotifications: boolean;
   inAppNotifications: boolean;
@@ -10,7 +12,10 @@ export type UserPreferences = {
   language: string;
 };
 
-export const SUPPORTED_LANGUAGES = [{ value: "en", label: "English" }] as const;
+export const SUPPORTED_LANGUAGES = locales.map((locale) => ({
+  value: locale,
+  label: localeNames[locale],
+})) satisfies ReadonlyArray<{ value: Locale; label: string }>;
 
 export const DEFAULT_PREFERENCES: UserPreferences = {
   emailNotifications: true,

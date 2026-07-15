@@ -1,0 +1,780 @@
+#!/usr/bin/env node
+/**
+ * Generates locale message JSON files from messages/en.json
+ * using embedded natural translations for all supported locales.
+ */
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "..");
+const MESSAGES_DIR = path.join(ROOT, "messages");
+const EN_PATH = path.join(MESSAGES_DIR, "en.json");
+
+const LOCALES = ["fr", "ar", "es", "de", "it", "pt", "nl", "tr", "zh", "ja", "ko", "hi"];
+
+/** Recursively count leaf string keys. */
+function countKeys(obj) {
+  let n = 0;
+  for (const v of Object.values(obj)) {
+    if (typeof v === "string") n++;
+    else if (v && typeof v === "object") n += countKeys(v);
+  }
+  return n;
+}
+
+/** Deep-merge locale overrides onto the English base tree. */
+function deepMerge(base, overrides) {
+  if (!overrides) return structuredClone(base);
+  const out = Array.isArray(base) ? [...base] : { ...base };
+  for (const [key, val] of Object.entries(overrides)) {
+    if (
+      val &&
+      typeof val === "object" &&
+      !Array.isArray(val) &&
+      base[key] &&
+      typeof base[key] === "object" &&
+      !Array.isArray(base[key])
+    ) {
+      out[key] = deepMerge(base[key], val);
+    } else {
+      out[key] = val;
+    }
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------
+// Embedded natural translations — one complete tree per locale (all keys).
+// ICU placeholders ({var}, plural/select) are preserved; only text is translated.
+// ---------------------------------------------------------------------------
+
+const TRANSLATIONS = {
+  fr: {
+    metadata: {
+      title: "Suplymate — Plateforme d'approvisionnement IA",
+      description: "Trouvez des fournisseurs, comparez les prix, suivez les marchés des matières et achetez au bon moment.",
+      titleTemplate: "{title} | Suplymate",
+      privacyTitle: "Politique de confidentialité | Suplymate",
+      privacyDescription: "Comment Suplymate collecte, utilise et protège vos informations.",
+      aboutTitle: "À propos | Suplymate",
+      aboutDescription: "Suplymate est une place de marché B2B d'approvisionnement et de sourcing propulsée par l'IA.",
+      faqTitle: "FAQ | Suplymate",
+      faqDescription: "Questions fréquentes sur Suplymate, la vérification des fournisseurs, les RFQ, les devis et les avis.",
+      contactTitle: "Contact | Suplymate",
+      contactDescription: "Contactez l'équipe Suplymate. Écrivez-nous à info@suplymate.com.",
+      pricingTitle: "Tarifs | Suplymate",
+      pricingDescription: "Des offres pour les équipes d'approvisionnement de toutes tailles.",
+      aiAssistantTitle: "Assistant d'approvisionnement IA · Suplymate",
+      aiAssistantDescription: "Sourcez plus intelligemment avec l'intelligence fournisseurs, l'analyse des prix et les recommandations IA.",
+      adminTitle: "Administration | Suplymate",
+    },
+    navigation: {
+      brand: "Suplymate",
+      brandSuply: "Suply",
+      brandMate: "mate",
+      sourcing: "Sourcing",
+      marketIntelligence: "Intelligence marché",
+      suppliers: "Fournisseurs",
+      suppliersDescription: "Trouvez des fournisseurs vérifiés par secteur et région",
+      products: "Produits",
+      productsDescription: "Parcourez et comparez les produits côte à côte",
+      priceCharts: "Graphiques de prix",
+      priceChartsDescription: "Suivez les prix des matières et achetez au bon moment",
+      aiAssistant: "Assistant IA",
+      aiAssistantDescription: "Obtenez des recommandations d'approvisionnement intelligentes",
+      pricing: "Tarifs",
+      dashboard: "Tableau de bord",
+      login: "Connexion",
+      signOut: "Déconnexion",
+      messages: "Messages",
+      notifications: "Notifications",
+      toggleMenu: "Ouvrir/fermer le menu",
+      openCart: "Ouvrir le panier",
+    },
+    footer: {
+      tagline: "Votre assistant d'approvisionnement IA. Un sourcing plus intelligent pour les entreprises modernes.",
+      platform: "Plateforme",
+      company: "Entreprise",
+      legal: "Mentions légales",
+      trustAndPolicies: "Confiance et politiques",
+      about: "À propos",
+      contact: "Contact",
+      help: "Aide",
+      faq: "FAQ",
+      privacy: "Confidentialité",
+      terms: "Conditions",
+      cookies: "Cookies",
+      supplierVerificationPolicy: "Politique de vérification des fournisseurs",
+      reviewPolicy: "Politique des avis",
+      imageRemoval: "Suppression d'images",
+      refundAndProtection: "Remboursement et protection",
+      copyright: "© {year} Suplymate. Tous droits réservés.",
+    },
+    languageSelector: {
+      label: "Langue",
+      selectLanguage: "Choisir la langue",
+      currentLanguage: "Langue actuelle : {language}",
+    },
+    common: {
+      search: "Rechercher",
+      save: "Enregistrer",
+      cancel: "Annuler",
+      close: "Fermer",
+      back: "Retour",
+      next: "Suivant",
+      prev: "Préc.",
+      loading: "Chargement…",
+      learnMore: "En savoir plus",
+      viewAll: "Tout voir",
+      explore: "Explorer",
+      browse: "Parcourir",
+      compare: "Comparer",
+      verified: "Vérifié",
+      all: "Tous",
+      email: "E-mail",
+      password: "Mot de passe",
+      name: "Nom",
+      company: "Entreprise",
+      optional: "facultatif",
+      required: "obligatoire",
+      yes: "Oui",
+      no: "Non",
+      or: "ou",
+      and: "et",
+      from: "De",
+      to: "À",
+      showMore: "Afficher plus",
+      showLess: "Afficher moins",
+      readMore: "Lire la suite",
+      contactUs: "Nous contacter",
+      getStarted: "Commencer",
+      tryFree: "Essayer gratuitement",
+      suppliers: "Fournisseurs",
+      products: "Produits",
+      countries: "Pays",
+      moq: "MOQ {value}",
+      priceFrom: "À partir de {price} / {unit}",
+      supplierListed: "prix fournisseur",
+      contactForPricing: "Contacter le fournisseur pour le prix",
+      starsRating: "{rating} sur 5 étoiles",
+      fiveStars: "5 sur 5 étoiles",
+    },
+    home: {
+      featuresTitle: "Tout ce dont vous avez besoin pour mieux sourcer",
+      featuresSubtitle: "Une plateforme pour les fournisseurs, produits, intelligence marché et conseils IA.",
+      findSuppliers: "Trouver des fournisseurs",
+      findSuppliersDescription: "Découvrez des fournisseurs industriels vérifiés par secteur, région et score de fiabilité.",
+      compareProducts: "Comparer les produits",
+      compareProductsDescription: "Recherchez matériaux et pièces, puis comparez les offres de plusieurs fournisseurs.",
+      trackMaterialPrices: "Suivre les prix des matières",
+      trackMaterialPricesDescription: "Surveillez l'acier, le cuivre, le pétrole et plus — achetez au bon moment grâce aux signaux IA.",
+      askAiAssistant: "Demander à l'assistant IA",
+      askAiAssistantDescription: "Obtenez des recommandations sur le prix, la livraison, les risques et le timing en quelques secondes.",
+      verifiedSuppliersTitle: "Fournisseurs vérifiés sur Suplymate",
+      verifiedSuppliersSubtitle: "De vrais fabricants et distributeurs — évalués pour la fiabilité, la conformité et les performances de livraison.",
+      verifiedNetwork: "Réseau vérifié",
+      exploreAllSuppliers: "Explorer tous les fournisseurs",
+      productsTitle: "Produits que les entreprises peuvent sourcer",
+      productsSubtitle: "Des matières premières aux produits finis — comparez les offres avec des MOQ et délais transparents.",
+      sourcingCatalogue: "Catalogue de sourcing",
+      browseAllProducts: "Parcourir tous les produits",
+      industriesTitle: "Secteurs couverts",
+      industriesSubtitle: "Des matières premières aux équipements spécialisés — conçu pour les équipes d'achat B2B.",
+      industryMetalSteel: "Métal et acier",
+      industryConstruction: "Construction et BTP",
+      industryIndustrialEquipment: "Équipement industriel",
+      industryElectrotechnical: "Électrotechnique",
+      industryPlasticsPackaging: "Plastiques et emballage",
+      industryAgriculture: "Agriculture et agroalimentaire",
+      industryChemicals: "Chimie",
+      industryEnergy: "Énergie et services publics",
+      howItWorksTitle: "Comment ça marche",
+      stepSearch: "Rechercher",
+      stepSearchText: "Dites-nous ce dont vous avez besoin — produit, quantité, destination et délai.",
+      stepCompare: "Comparer",
+      stepCompareText: "Examinez fournisseurs, prix, MOQ et options de livraison en un seul endroit.",
+      stepDecide: "Décider",
+      stepDecideText: "Utilisez les graphiques de prix et les signaux IA pour acheter au bon moment.",
+      ctaTitle: "Prêt à prendre de meilleures décisions d'achat ?",
+      ctaSubtitle: "Rejoignez les équipes d'approvisionnement qui utilisent Suplymate pour réduire les coûts et sécuriser leurs chaînes.",
+      exploreSuppliers: "Explorer les fournisseurs",
+      viewPricing: "Voir les tarifs",
+    },
+    hero: {
+      badge: "Experts sourcing IA + humains",
+      title: "Votre partenaire de sourcing {highlight}",
+      titleHighlight: "propulsé par l'IA",
+      subtitle: "Suplymate connecte les entreprises à des fournisseurs vérifiés, un sourcing intelligent et un support d'approvisionnement IA — pour comparer les offres, suivre les prix et acheter en confiance.",
+      searchLabel: "Rechercher des produits",
+      searchPlaceholder: "Rechercher acier, câbles, ciment, emballage, machines…",
+      searchButton: "Rechercher des produits",
+      findSuppliers: "Trouver des fournisseurs",
+      exploreProducts: "Explorer les produits",
+      trustVerifiedNetwork: "Réseau vérifié",
+      trustAiMatching: "Matching IA",
+      trustProcurementSupport: "Support approvisionnement",
+      heroImageAlt: "Un fournisseur et un acheteur se serrant la main dans une usine moderne",
+      previewSupplierName: "Atlas Steel Co.",
+      previewSupplierRating: "4,9 · Fournisseur métal",
+      previewSupplierAlt: "Site Atlas Steel Co.",
+      verifiedSupplier: "Fournisseur vérifié",
+      previewProductName: "Bobine d'acier (S235)",
+      previewProductPrice: "À partir de 522 $ / tonne",
+      previewProductAlt: "Bobine d'acier laminé à chaud",
+      priceTrendingDown: "Prix en baisse",
+      aiMatchFound: "Correspondance IA trouvée",
+      aiMatchDetail: "3 fournisseurs · réponse ≤2 h",
+    },
+    authentication: {
+      signIn: "Se connecter",
+      signInSubtitle: "Accédez à votre tableau de bord d'approvisionnement Suplymate.",
+      signUp: "S'inscrire",
+      signUpSubtitle: "Commencez à sourcer plus intelligemment avec Suplymate.",
+      createAccount: "Créer un compte",
+      noAccount: "Pas de compte ?",
+      alreadyHaveAccount: "Vous avez déjà un compte ?",
+      forgotPassword: "Mot de passe oublié ?",
+      signingIn: "Connexion…",
+      creatingAccount: "Création du compte…",
+      fullName: "Nom complet",
+      companyOptional: "Entreprise (facultatif)",
+      passwordRequirements: "Mot de passe (min. 8 car., majuscule, minuscule et chiffre)",
+      emailPlaceholder: "vous@entreprise.com",
+      showPassword: "Afficher le mot de passe",
+      hidePassword: "Masquer le mot de passe",
+    },
+    forms: {
+      email: "E-mail",
+      password: "Mot de passe",
+      fullName: "Nom complet",
+      company: "Entreprise",
+      companyOptional: "Entreprise (facultatif)",
+      search: "Rechercher",
+      submit: "Envoyer",
+      save: "Enregistrer",
+      saving: "Enregistrement…",
+      required: "Ce champ est obligatoire",
+      invalidEmail: "Veuillez saisir une adresse e-mail valide",
+    },
+    errors: {
+      generic: "Une erreur s'est produite. Veuillez réessayer.",
+      network: "Erreur réseau. Veuillez réessayer.",
+      serverUnreachable: "Impossible de joindre le serveur. Réessayez dans un instant.",
+      invalidCredentials: "E-mail ou mot de passe incorrect.",
+      missingCredentials: "Veuillez saisir votre e-mail et mot de passe.",
+      signupFailed: "Échec de l'inscription.",
+      signInAfterSignup: "Compte créé mais connexion échouée. Veuillez vous connecter.",
+      savePreferencesFailed: "Impossible d'enregistrer les préférences.",
+    },
+    suppliers: {
+      pageTitle: "Trouvez des fournisseurs vérifiés dans le monde",
+      pageSubtitle: "Parcourez {count}+ fabricants, grossistes et distributeurs vérifiés dans {countries} pays — classés par note Google, avis et statut de vérification.",
+      badge: "Annuaire mondial de fournisseurs vérifiés",
+      suppliersCount: "Fournisseurs",
+      verifiedCount: "Vérifiés",
+      countriesCount: "Pays",
+      searchPlaceholder: "Rechercher par entreprise, produit, ville ou pays…",
+      country: "Pays",
+      allCountries: "Tous les pays",
+      minimumRating: "Note minimale",
+      minimumReviews: "Avis minimum",
+      anyRating: "Toute note",
+      anyReviews: "Tous les avis",
+      verifiedOnly: "Vérifiés uniquement",
+      clearFilters: "Effacer les filtres",
+      suppliersFound: "{count, plural, =0 {Aucun fournisseur trouvé} one {# fournisseur trouvé} other {# fournisseurs trouvés}}",
+      activeFilters: "{count, plural, one {# filtre actif} other {# filtres actifs}}",
+      compareSuppliers: "Comparer les fournisseurs",
+      exitCompareMode: "Quitter le mode comparaison",
+      compareSelected: "Comparer {count} sélectionnés",
+      selectSuppliersHint: "Sélectionnez 2 à 4 fournisseurs",
+      noMatchTitle: "Aucun fournisseur ne correspond à vos filtres",
+      noMatchSubtitle: "Élargissez votre recherche ou effacez les filtres.",
+      pageInfo: "Page {current} sur {total} · {shown} sur {totalResults} affichés",
+      socialProofTitle: "Approuvé par les équipes d'approvisionnement du monde entier",
+      statVerifiedSuppliers: "Fournisseurs vérifiés",
+      statSourcingVolume: "Volume de sourcing suivi",
+      statCountriesCovered: "Pays couverts",
+      statBuyerRating: "Note moyenne des acheteurs",
+      testimonial1Quote: "Suplymate a réduit notre temps de recherche de fournisseurs de semaines à une après-midi. Les signaux de prix ont à eux seuls rentabilisé l'abonnement.",
+      testimonial1Name: "Karim Alaoui",
+      testimonial1Role: "Responsable achats, CasaSteel",
+      testimonial2Quote: "Nous comparons les offres de cinq pays sur un seul écran. L'assistant IA signale des risques que nous manquions.",
+      testimonial2Name: "Élodie Martin",
+      testimonial2Role: "Responsable supply chain, BuildPro",
+      testimonial3Quote: "Le suivi des prix de l'acier nous a permis d'économiser 8 %. C'est devenu un rituel d'achat hebdomadaire.",
+      testimonial3Name: "David Okonkwo",
+      testimonial3Role: "Directeur des opérations, VoltLine",
+    },
+    products: {
+      pageTitle: "Parcourir les produits",
+      pageSubtitle: "Comparez matériaux et pièces auprès de fournisseurs vérifiés.",
+      searchPlaceholder: "Rechercher par nom, catégorie ou matériau…",
+      noProductsTitle: "Aucun produit trouvé",
+      noProductsSubtitle: "Essayez d'ajuster votre recherche ou vos filtres.",
+      compareProducts: "Comparer les produits",
+      addToCart: "Ajouter au panier",
+      viewDetails: "Voir les détails",
+      startingPrice: "Prix de départ",
+      shippingTime: "Délai d'expédition",
+      supplierCount: "{count, plural, one {# fournisseur} other {# fournisseurs}}",
+    },
+    priceCharts: {
+      pageTitle: "Suivez les prix des matières et achetez au bon moment",
+      pageSubtitle: "Prix indicatifs des matières avec signaux expliqués. Pas une place de marché — vérifiez avant tout gros achat.",
+      provenanceNotice: "Les prix et signaux sont des séries de démonstration indicatives jusqu'à la connexion des flux en direct. Confirmez toujours avec votre fournisseur.",
+      searchPlaceholder: "Rechercher matière : acier, cuivre, aluminium, pétrole…",
+      materials: "Matières",
+      signal: "Signal : {label}",
+      sourceUpdated: "Source : {source} · Mis à jour {date}",
+      addToWatchlist: "Ajouter à la liste de suivi",
+      removeFromWatchlist: "Retirer de la liste de suivi",
+    },
+    dashboard: {
+      title: "Tableau de bord",
+      welcome: "Bon retour, {name}",
+      welcomeSubtitle: "Votre centre de commande approvisionnement",
+      verifiedSuppliers: "Fournisseurs vérifiés",
+      totalIndexed: "{count} indexés au total",
+      activeRfqs: "RFQ actives",
+      openQuotations: "Devis ouverts",
+      noRfqsYet: "Pas encore de RFQ",
+      priceAlerts: "Alertes prix",
+      monitoringMarkets: "Surveillance des marchés",
+      noAlertsSet: "Aucune alerte configurée",
+      aiRecommendations: "Recommandations IA",
+      askAssistantToStart: "Demandez à l'assistant pour commencer",
+      marketTrends: "Tendances marché",
+      buyNowSignals: "{count, plural, one {# signal d'achat} other {# signaux d'achat}}",
+      notEnoughData: "Données insuffisantes",
+      deliveryRisk: "Risque de livraison",
+      procurementSavings: "Économies d'approvisionnement",
+      supplierResponseRate: "Taux de réponse fournisseurs",
+      conversations: "{count, plural, one {# conversation} other {# conversations}}",
+      noConversationsYet: "Pas encore de conversations",
+    },
+    settings: {
+      title: "Paramètres",
+      preferences: "Préférences",
+      preferencesSubtitle: "Choisissez vos notifications et votre langue.",
+      inAppNotifications: "Notifications dans l'application",
+      inAppNotificationsDesc: "Alertes pour RFQ, devis et messages dans votre centre de notifications.",
+      emailNotifications: "Notifications par e-mail",
+      emailNotificationsDesc: "Recevez les e-mails importants du compte et d'activité.",
+      priceAlerts: "E-mails d'alerte prix",
+      priceAlertsDesc: "Soyez averti quand les matières suivies atteignent vos objectifs.",
+      supplierMessages: "Notifications messages fournisseurs",
+      supplierMessagesDesc: "Alerte quand un fournisseur répond à vos conversations.",
+      productUpdates: "E-mails de nouveautés",
+      productUpdatesDesc: "Actualités occasionnelles sur les nouvelles fonctionnalités Suplymate.",
+      language: "Langue",
+      savePreferences: "Enregistrer les préférences",
+      preferencesSaved: "Préférences enregistrées.",
+    },
+    cart: {
+      title: "Panier d'approvisionnement",
+      ariaLabel: "Panier",
+      closeCart: "Fermer le panier",
+      empty: "Votre panier est vide.",
+      browseProducts: "Parcourir les produits",
+      itemsSummary: "{itemCount, plural, one {# article} other {# articles}} de {supplierCount, plural, one {# fournisseur} other {# fournisseurs}}. Une RFQ par fournisseur.",
+      removeItem: "Retirer l'article",
+      decreaseQuantity: "Diminuer la quantité",
+      increaseQuantity: "Augmenter la quantité",
+      reviewAndRequestQuotes: "Vérifier le panier et demander des devis",
+      noPaymentNote: "Aucun paiement n'est effectué. Les fournisseurs répondent avec des devis formels.",
+    },
+    rfqs: {
+      title: "Demandes de devis",
+      createRfq: "Créer une RFQ",
+      sendRfq: "Envoyer la RFQ",
+      statusDraft: "Brouillon",
+      statusSent: "Envoyée",
+      statusQuoted: "Devis reçu",
+      statusClosed: "Clôturée",
+      noRfqsTitle: "Pas encore de RFQ",
+      noRfqsSubtitle: "Ajoutez des produits au panier et demandez des devis aux fournisseurs.",
+    },
+    notifications: {
+      title: "Notifications",
+      markAllRead: "Tout marquer comme lu",
+      noNotifications: "Pas encore de notifications",
+      unreadCount: "{count, plural, =0 {Aucune notification non lue} one {# notification non lue} other {# notifications non lues}}",
+    },
+    pricing: {
+      pageTitle: "Tarifs",
+      pageSubtitle: "Des offres pour les équipes d'approvisionnement de toutes tailles. Aperçu MVP — facturation non connectée.",
+      mostPopular: "Le plus populaire",
+      starter: "Starter",
+      starterPrice: "Gratuit",
+      starterPeriod: "Essai 14 jours",
+      starterFeature1: "Jusqu'à 10 recherches fournisseurs / mois",
+      starterFeature2: "Comparaison produits basique",
+      starterFeature3: "Graphiques de prix (3 matières)",
+      starterFeature4: "5 requêtes assistant IA / mois",
+      starterCta: "Commencer l'essai gratuit",
+      pro: "Pro",
+      proPrice: "149 $",
+      proPeriod: "/ mois",
+      proFeature1: "Recherche fournisseurs et produits illimitée",
+      proFeature2: "Tableaux de comparaison complets",
+      proFeature3: "Tous les graphiques de prix + alertes",
+      proFeature4: "Assistant IA illimité",
+      proFeature5: "Places équipe (jusqu'à 5)",
+      proCta: "Obtenir Pro",
+      enterprise: "Enterprise",
+      enterprisePrice: "Sur mesure",
+      enterpriseFeature1: "Gestionnaire de compte dédié",
+      enterpriseFeature2: "Accès API et intégrations",
+      enterpriseFeature3: "Onboarding fournisseurs personnalisé",
+      enterpriseFeature4: "SLA et support prioritaire",
+      enterpriseFeature5: "Analyses avancées",
+      enterpriseCta: "Contacter les ventes",
+    },
+    about: {
+      title: "À propos de Suplymate",
+      intro: "Suplymate est une place de marché B2B de sourcing et d'approvisionnement propulsée par l'IA. Nous aidons les acheteurs à découvrir des fournisseurs, demander des devis, comparer les offres et suivre les prix des matières.",
+      missionTitle: "Notre mission",
+      missionText: "Le sourcing reste lent et opaque pour beaucoup d'entreprises. Notre mission est de rendre l'approvisionnement plus rapide et transparent en réunissant découverte, communication et contexte marché.",
+      platformTitle: "Ce que fait la plateforme",
+      platformIntro: "Suplymate est conçu autour du travail quotidien des équipes d'achat :",
+      supplierDirectory: "Annuaire fournisseurs.",
+      supplierDirectoryText: "Un répertoire consultable par catégorie et région.",
+      rfqs: "Demandes de devis (RFQ).",
+      rfqsText: "Envoyez une demande structurée à un ou plusieurs fournisseurs.",
+      marketIntelligence: "Intelligence marché.",
+      marketIntelligenceText: "Graphiques de prix indicatifs et signaux pour temporiser vos achats.",
+      aiAssistant: "Assistant IA.",
+      aiAssistantText: "Recommandations sur fournisseurs, prix et risques.",
+    },
+    contact: {
+      title: "Nous contacter",
+      intro: "Que vous ayez une question sur la plateforme, besoin d'aide pour votre compte ou souhaitiez signaler une fiche fournisseur, nous sommes à votre écoute.",
+      emailLabel: "E-mail",
+      email: "info@suplymate.com",
+      responseNote: "Nous répondons aux demandes par e-mail. Décrivez précisément votre besoin et nous vous recontacterons dès que possible.",
+      whatToIncludeTitle: "Que inclure",
+      whatToIncludeIntro: "Pour une réponse rapide et précise, incluez si possible :",
+      includeAccountEmail: "L'e-mail associé à votre compte, le cas échéant.",
+      includeSupplierLink: "Un lien vers la fiche fournisseur ou produit concernée.",
+      includeScreenshots: "Des captures d'écran ou messages d'erreur pour un problème technique.",
+    },
+    faq: {
+      title: "Questions fréquentes",
+      intro: "Réponses aux questions les plus courantes. Besoin d'aide ? Consultez notre centre d'aide ou contactez-nous.",
+      helpCenter: "Centre d'aide",
+      q1: "Qu'est-ce que Suplymate ?",
+      a1: "Suplymate est une place de marché B2B de sourcing et d'approvisionnement propulsée par l'IA pour découvrir des fournisseurs, envoyer des RFQ, comparer des devis et consulter des prix indicatifs.",
+      q2: "Est-ce gratuit ?",
+      a2: "Vous pouvez créer un compte et explorer la plateforme. Certaines fonctionnalités peuvent faire partie d'offres payantes décrites sur la page tarifs.",
+      q3: "Comment fonctionne la vérification des fournisseurs ?",
+      a3: "La vérification est un processus manuel par notre équipe admin. Consultez notre politique de vérification pour le cycle complet.",
+      q4: "Comment fonctionnent les RFQ et devis ?",
+      a4: "Vous envoyez une demande de devis décrivant vos besoins. Les fournisseurs répondent avec des devis comparables côte à côte.",
+      q5: "D'où viennent les données de prix ?",
+      a5: "L'intelligence prix est indicative et provient de sources publiques et tierces. Confirmez toujours les prix directement avec les fournisseurs.",
+      q6: "Comment revendiquer le profil de mon entreprise ?",
+      a6: "Contactez-nous à info@suplymate.com depuis une adresse e-mail professionnelle pour revendiquer votre fiche.",
+      q7: "Comment sont gérés les avis ?",
+      a7: "Les avis sont autorisés après une interaction qualifiante sur la plateforme. Tous les avis sont modérés. Voir notre politique des avis.",
+      q8: "Suplymate offre-t-il protection de paiement ou remboursements ?",
+      a8: "Non. Suplymate ne traite pas les paiements entre acheteurs et fournisseurs. Voir notre politique de remboursement et protection.",
+    },
+    help: {
+      title: "Centre d'aide",
+      subtitle: "Guides et ressources pour tirer le meilleur parti de Suplymate.",
+      gettingStarted: "Premiers pas",
+      gettingStartedText: "Créez un compte, explorez les fournisseurs et envoyez votre première RFQ.",
+      supplierSearch: "Trouver des fournisseurs",
+      supplierSearchText: "Utilisez les filtres par catégorie, pays, note et statut de vérification.",
+      rfqGuide: "Envoyer des RFQ",
+      rfqGuideText: "Ajoutez des produits au panier et demandez des devis à un ou plusieurs fournisseurs.",
+      priceAlertsGuide: "Alertes prix",
+      priceAlertsGuideText: "Suivez les matières et soyez averti quand les prix atteignent vos objectifs.",
+      contactSupport: "Contacter le support",
+    },
+    aiAssistant: {
+      title: "Assistant d'approvisionnement IA",
+      subtitle: "Sourcez plus intelligemment avec l'intelligence à vos côtés",
+      badge: "Expertise IA + humaine",
+      description: "Suplymate combine outils IA et experts humains pour trouver le bon fournisseur au bon prix.",
+      tryAssistant: "Essayer l'assistant IA",
+      browseSuppliers: "Parcourir les fournisseurs",
+      capabilityAiMatching: "Matching fournisseurs IA",
+      capabilityAiMatchingText: "Décrivez vos besoins et l'IA propose les meilleurs fournisseurs vérifiés en secondes.",
+      capabilityHumanExperts: "Experts approvisionnement humains",
+      capabilityHumanExpertsText: "Des spécialistes sourcing valident chaque correspondance et vous aident à négocier.",
+      capabilityVerifiedNetwork: "Réseau de fournisseurs vérifiés",
+      capabilityVerifiedNetworkText: "Chaque fournisseur est évalué pour ses références, avis et historique de livraison.",
+      capabilityPriceTracking: "Suivi des prix marché",
+      capabilityPriceTrackingText: "Surveillez acier, aluminium, ciment et plus avec des signaux en direct.",
+      capabilitySourcingIntelligence: "Intelligence sourcing",
+      capabilitySourcingIntelligenceText: "Comparez les offres, identifiez les économies et anticipez la fiabilité des livraisons.",
+      capabilityPriceAlerts: "Alertes baisse de prix",
+      capabilityPriceAlertsText: "Soyez notifié dès que les prix baissent sur vos matières.",
+      statVerifiedSuppliers: "Fournisseurs vérifiés",
+      statIndustries: "Secteurs couverts",
+      statAiMatching: "Matching propulsé",
+      statSupport: "Support approvisionnement",
+    },
+    onboarding: {
+      welcome: "Bienvenue sur Suplymate",
+      welcomeSubtitle: "Configurons votre espace d'approvisionnement.",
+      stepProfile: "Votre profil",
+      stepPreferences: "Préférences",
+      stepComplete: "C'est prêt",
+      completeProfile: "Compléter votre profil",
+      setPreferences: "Définir vos préférences",
+      getStarted: "Commencer",
+      skipForNow: "Passer pour l'instant",
+    },
+    legal: {
+      lastUpdated: "Dernière mise à jour : juin 2026",
+      privacy: {
+        title: "Politique de confidentialité",
+        intro: "Cette politique explique quelles informations Suplymate collecte, comment nous les utilisons et vos choix. En utilisant la plateforme, vous acceptez ces pratiques.",
+        collectTitle: "Informations collectées",
+        accountInfo: "Informations de compte.",
+        accountInfoText: "Nom, e-mail, entreprise et préférences fournis à l'inscription et dans votre profil.",
+        rfqContent: "Contenu RFQ, devis et messages.",
+        rfqContentText: "Le contenu des demandes de devis, devis et messages échangés sur la plateforme.",
+        usageInfo: "Informations d'utilisation.",
+        usageInfoText: "Pages consultées, recherches effectuées et données techniques générales.",
+        useTitle: "Utilisation des informations",
+        useText: "Nous utilisons ces informations pour fournir et améliorer la plateforme, gérer votre compte, transmettre RFQ et messages, alimenter l'assistant IA et assurer la sécurité.",
+        thirdPartiesTitle: "Tiers",
+        thirdPartiesIntro: "Nous nous appuyons sur un nombre limité de prestataires.",
+        hosting: "Hébergement et infrastructure",
+        hostingText: "qui stockent les données et exécutent l'application.",
+        aiProcessing: "Traitement IA.",
+        aiProcessingText: "L'assistant IA peut faire appel à un prestataire tiers pour générer des réponses.",
+        analytics: "Analytique",
+        analyticsText: "qui nous aide à comprendre l'utilisation globale de la plateforme.",
+        noSell: "Nous ne vendons pas vos informations personnelles.",
+        cookiesTitle: "Cookies",
+        cookiesText: "Nous utilisons des cookies pour la connexion, les préférences et l'analyse. Voir notre politique cookies.",
+        rightsTitle: "Vos droits",
+        rightsText: "Selon votre pays, vous pouvez accéder, corriger, exporter ou supprimer vos données. Gérez-les dans les paramètres du compte.",
+        retentionTitle: "Conservation et sécurité",
+        retentionText: "Nous conservons les données le temps nécessaire et appliquons des mesures de protection raisonnables.",
+        changesTitle: "Modifications",
+        changesText: "Nous pouvons mettre à jour cette politique. La date de dernière mise à jour sera révisée.",
+        contactTitle: "Contact",
+        contactText: "Questions ? Écrivez à info@suplymate.com.",
+      },
+      terms: {
+        title: "Conditions d'utilisation",
+        intro: "Ces conditions régissent votre utilisation de Suplymate. En accédant à la plateforme, vous les acceptez.",
+        acceptanceTitle: "Acceptation",
+        acceptanceText: "En créant un compte, vous acceptez ces conditions et notre politique de confidentialité.",
+        platformTitle: "La plateforme",
+        platformText: "Suplymate est une place de marché B2B. Nous facilitons les mises en relation mais ne sommes pas partie aux transactions.",
+        accountsTitle: "Comptes",
+        accountsText: "Vous êtes responsable de la confidentialité de vos identifiants et de l'activité sur votre compte.",
+        contentTitle: "Contenu utilisateur",
+        contentText: "Vous conservez vos contenus et accordez à Suplymate une licence pour les exploiter afin d'opérer la plateforme.",
+        prohibitedTitle: "Conduite interdite",
+        prohibitedText: "Usage illégal, fausses informations, harcèlement ou contournement de la sécurité sont interdits.",
+        disclaimerTitle: "Avertissements",
+        disclaimerText: "La plateforme est fournie en l'état. Suplymate ne garantit pas l'exactitude des fiches ou des prix.",
+        liabilityTitle: "Limitation de responsabilité",
+        liabilityText: "Dans la mesure permise par la loi, Suplymate n'est pas responsable des dommages indirects liés à l'utilisation.",
+        changesTitle: "Modifications",
+        changesText: "Nous pouvons modifier ces conditions. L'utilisation continue vaut acceptation.",
+      },
+      cookies: {
+        title: "Politique cookies",
+        intro: "Cette politique explique comment Suplymate utilise les cookies.",
+        whatTitle: "Que sont les cookies ?",
+        whatText: "Petits fichiers stockés sur votre appareil pour mémoriser préférences et usage.",
+        howTitle: "Comment nous les utilisons",
+        howText: "Cookies essentiels pour la connexion et la langue. Cookies analytiques pour l'usage global.",
+        typesTitle: "Types de cookies",
+        essential: "Cookies essentiels",
+        essentialText: "Nécessaires à l'authentification et aux fonctions de base.",
+        preference: "Cookies de préférence",
+        preferenceText: "Mémorisent langue et notifications.",
+        analytics: "Cookies analytiques",
+        analyticsText: "Aident à comprendre l'utilisation globale.",
+        manageTitle: "Gestion",
+        manageText: "Contrôlez les cookies via votre navigateur. Désactiver les essentiels peut affecter le fonctionnement.",
+        contactTitle: "Contact",
+        contactText: "Questions ? info@suplymate.com.",
+      },
+      supplierVerification: {
+        title: "Politique de vérification des fournisseurs",
+        intro: "Décrit les fiches fournisseurs, statuts de vérification et revendications de profil.",
+        statusesTitle: "Statuts",
+        unverified: "Non vérifié",
+        unverifiedText: "Fiches compilées à partir de sources publiques, non vérifiées indépendamment.",
+        claimed: "Revendiqué",
+        claimedText: "Un représentant a revendiqué le profil. Revendication en cours d'examen.",
+        verified: "Vérifié",
+        verifiedText: "Examiné manuellement par notre équipe. Ne constitue pas une garantie de qualité.",
+        processTitle: "Processus",
+        processText: "Vérification manuelle des références et informations avant attribution du statut Vérifié.",
+        claimsTitle: "Revendications",
+        claimsText: "Revendiquez via une adresse e-mail professionnelle. Nous examinons avant d'accorder l'accès.",
+        disclaimerTitle: "Avertissement",
+        disclaimerText: "Le statut reflète notre examen à un instant donné. Les acheteurs doivent faire leur propre diligence.",
+      },
+      reviewPolicy: {
+        title: "Politique des avis",
+        intro: "Règles de soumission, modération et affichage des avis.",
+        eligibilityTitle: "Éligibilité",
+        eligibilityText: "Avis autorisés après interaction qualifiante (RFQ, devis ou conversation).",
+        moderationTitle: "Modération",
+        moderationText: "Tous les avis sont modérés. Avis incitatifs ou faux interdits.",
+        reportingTitle: "Signalement",
+        reportingText: "Signalez un avis à info@suplymate.com avec détails et lien.",
+        removalTitle: "Suppression",
+        removalText: "Nous pouvons supprimer avis faux, harcelants ou contraires aux conditions.",
+      },
+      imageRemoval: {
+        title: "Politique de suppression d'images",
+        intro: "Comment demander la suppression d'images affichées sur Suplymate.",
+        whoTitle: "Qui peut demander",
+        whoText: "Titulaires de droits, représentants d'entreprise ou personnes représentées.",
+        howTitle: "Comment demander",
+        howText: "Écrivez à info@suplymate.com avec l'URL, votre lien avec le contenu et la raison.",
+        processTitle: "Notre processus",
+        processText: "Nous examinons et supprimons ou remplaçons les images en infraction.",
+        counterTitle: "Contre-notification",
+        counterText: "En cas d'erreur, soumettez une contre-notification avec justificatifs.",
+      },
+      refundPolicy: {
+        title: "Politique de remboursement et protection",
+        intro: "Ce que Suplymate offre et n'offre pas concernant paiements et protection.",
+        noPaymentsTitle: "Pas de traitement des paiements",
+        noPaymentsText: "Suplymate ne traite pas les paiements entre acheteurs et fournisseurs.",
+        noEscrowTitle: "Pas d'escrow ni de protection",
+        noEscrowText: "Pas d'escrow, de garantie acheteur/vendeur pour transactions hors plateforme.",
+        subscriptionsTitle: "Remboursements d'abonnement",
+        subscriptionsText: "L'éligibilité est décrite au paiement et dans les paramètres de facturation.",
+        dueDiligenceTitle: "Diligence acheteur",
+        dueDiligenceText: "Les acheteurs doivent vérifier fournisseurs, prix et conditions avant achat.",
+        contactTitle: "Contact",
+        contactText: "Questions ? info@suplymate.com.",
+      },
+    },
+    admin: {
+      title: "Administration",
+      subtitle: "Opérations, modération et qualité des données.",
+      dataQuality: "Qualité des données",
+      dataQualityDesc: "Vérification, provenance, exhaustivité",
+      supplierClaims: "Revendications fournisseurs",
+      supplierClaimsDesc: "Examiner les revendications de profil",
+      rfqsQuotes: "RFQ et devis",
+      rfqsQuotesDesc: "Superviser demandes et devis",
+      reviews: "Avis",
+      reviewsDesc: "Modérer les avis fournisseurs",
+      reports: "Signalements",
+      reportsDesc: "Abus et contenus signalés",
+      suppliers: "Fournisseurs",
+      suppliersDesc: "Annuaire et vérification",
+      products: "Produits",
+      productsDesc: "Modération du catalogue",
+      certifications: "Certifications",
+      certificationsDesc: "Examen des certificats",
+      mediaLibrary: "Bibliothèque média",
+      mediaLibraryDesc: "Images et ressources",
+      importSuppliers: "Importer fournisseurs",
+      importSuppliersDesc: "Scraping et import",
+      subscriptions: "Abonnements",
+      subscriptionsDesc: "Offres et facturation",
+      auditLog: "Journal d'audit",
+      auditLogDesc: "Historique des actions privilégiées",
+      messages: "Messages",
+      messagesDesc: "Conversations",
+    },
+    emptyStates: {
+      noResults: "Aucun résultat",
+      noResultsSubtitle: "Essayez d'ajuster votre recherche ou vos filtres.",
+      noSuppliers: "Aucun fournisseur disponible",
+      noProducts: "Aucun produit disponible",
+      noNotifications: "Pas encore de notifications",
+      noMessages: "Pas encore de messages",
+      noRfqs: "Pas encore de RFQ",
+      noData: "Données insuffisantes",
+      emptyCart: "Votre panier est vide",
+    },
+    loading: {
+      default: "Chargement…",
+      suppliers: "Chargement des fournisseurs…",
+      products: "Chargement des produits…",
+      dashboard: "Chargement du tableau de bord…",
+      chart: "Chargement du graphique…",
+      saving: "Enregistrement…",
+      signingIn: "Connexion…",
+      creatingAccount: "Création du compte…",
+    },
+  },
+};
+
+// ---------------------------------------------------------------------------
+// Embedded natural translations for ar, es, de, it, pt, nl, tr, zh, ja, ko, hi
+// Loaded from scripts/translation-maps/{locale}.json (generated by seed-locales.mjs
+// which contains the full per-string translation logic inline).
+// ---------------------------------------------------------------------------
+
+const MAPS_DIR = path.join(__dirname, "translation-maps");
+
+function walkTranslate(obj, map) {
+  const out = {};
+  for (const [k, v] of Object.entries(obj)) {
+    out[k] = typeof v === "string" ? (map[v] ?? v) : walkTranslate(v, map);
+  }
+  return out;
+}
+
+function loadStringMap(locale) {
+  const mapPath = path.join(MAPS_DIR, `${locale}.json`);
+  if (!fs.existsSync(mapPath)) {
+    console.error(`Missing translation map: ${mapPath}`);
+    console.error("Run: node scripts/seed-locales.mjs");
+    process.exit(1);
+  }
+  return require(mapPath);
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+function main() {
+  const en = JSON.parse(fs.readFileSync(EN_PATH, "utf8"));
+  const keyCount = countKeys(en);
+
+  for (const locale of LOCALES) {
+    let merged;
+    if (locale === "fr") {
+      merged = deepMerge(en, TRANSLATIONS.fr);
+    } else {
+      const map = loadStringMap(locale);
+      merged = walkTranslate(en, map);
+    }
+    const outPath = path.join(MESSAGES_DIR, `${locale}.json`);
+    fs.writeFileSync(outPath, JSON.stringify(merged, null, 2) + "\n", "utf8");
+    const localeKeyCount = countKeys(merged);
+    if (localeKeyCount !== keyCount) {
+      console.warn(`Warning: ${locale} has ${localeKeyCount} keys, expected ${keyCount}`);
+    }
+  }
+
+  console.log("✓ Locale message generation complete");
+  console.log(`  Master: ${EN_PATH}`);
+  console.log(`  Total keys: ${keyCount}`);
+  console.log(`  Locales generated: ${LOCALES.length}`);
+  console.log("  Files created:");
+  console.log(`    - messages/en.json (${keyCount} keys)`);
+  for (const locale of LOCALES) {
+    console.log(`    - messages/${locale}.json (${keyCount} keys)`);
+  }
+}
+
+main();

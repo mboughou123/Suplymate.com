@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   BadgeCheck,
   Star,
@@ -45,6 +48,8 @@ function Metric({
 }
 
 export default function SupplierCard({ supplier }: SupplierCardProps) {
+  const t = useTranslations("suppliers");
+  const tCommon = useTranslations("common");
   const s = toDisplaySupplier(supplier);
 
   return (
@@ -65,7 +70,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
         {s.verified && (
           <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-            Verified
+            {tCommon("verified")}
           </span>
         )}
         <FavoriteButton
@@ -91,7 +96,10 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
               <span aria-hidden>{s.flag}</span>
               {s.country}
             </span>
-            <span className="inline-flex items-center gap-1 font-semibold text-ink">
+            <span
+              className="inline-flex items-center gap-1 font-semibold text-ink"
+              aria-label={tCommon("starsRating", { rating: s.rating.toFixed(1) })}
+            >
               <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
               {s.rating.toFixed(1)}/5
             </span>
@@ -161,7 +169,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                   {p.name}
                 </p>
                 <p className="text-[11px] font-bold text-cyan">{p.price}</p>
-                <p className="text-[10px] text-ink-dim">MOQ {p.moq}</p>
+                <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
               </div>
             ))}
           </div>
@@ -173,12 +181,12 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
             href={`/supplier/${s.id}`}
             className="btn-secondary flex-1 justify-center"
           >
-            View profile
+            {t("viewProfile")}
           </Link>
           <ContactSupplierButton
             supplierId={s.id}
             supplierName={s.name}
-            label="Contact supplier"
+            label={t("contactSupplier")}
             className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
           />
         </div>

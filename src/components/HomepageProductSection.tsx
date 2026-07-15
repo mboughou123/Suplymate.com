@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, Boxes } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { getProductsFromDb } from "@/lib/data-service";
@@ -30,10 +31,8 @@ function toCardProps(p: Product): HomepageProductCardProps & { hasRealPhoto: boo
 }
 
 export default async function HomepageProductSection() {
+  const t = await getTranslations("home");
   const products = await getProductsFromDb();
-  // Homepage rule: ONLY show products that resolve to a REAL photograph (their
-  // own or their linked supplier's). Icon/graphic-only cards are excluded so the
-  // showcase always looks like a real catalogue, never a wall of placeholders.
   const picks = products
     .map(toCardProps)
     .filter((c) => c.hasRealPhoto)
@@ -47,15 +46,13 @@ export default async function HomepageProductSection() {
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-teal/25 bg-teal/5 px-3 py-1 eyebrow text-teal">
             <Boxes className="h-3.5 w-3.5" aria-hidden />
-            Sourcing catalogue
+            {t("sourcingCatalogue")}
           </span>
           <h2 className="mt-4 font-display text-display text-ink">
-            Products Businesses Can Source
+            {t("productsTitle")}
           </h2>
           <p className="mt-4 text-body-lg text-ink-muted">
-            From raw materials to finished goods — compare offers from vetted
-            suppliers and buy at the right price, with transparent MOQs and
-            delivery times.
+            {t("productsSubtitle")}
           </p>
         </AnimatedSection>
 
@@ -69,7 +66,7 @@ export default async function HomepageProductSection() {
 
         <div className="mt-10 flex justify-center">
           <Link href="/products" className="btn-secondary px-6 py-3">
-            Browse all products
+            {t("browseAllProducts")}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>

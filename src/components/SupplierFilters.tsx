@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 
 export type SupplierFilterState = {
@@ -20,18 +21,8 @@ type Props = {
   resultCount: number;
 };
 
-const RATING_OPTIONS = [
-  { label: "Any rating", value: 0 },
-  { label: "4.0+", value: 4.0 },
-  { label: "4.5+", value: 4.5 },
-];
-
-const REVIEW_OPTIONS = [
-  { label: "Any reviews", value: 0 },
-  { label: "20+", value: 20 },
-  { label: "100+", value: 100 },
-  { label: "500+", value: 500 },
-];
+const RATING_VALUES = [0, 4.0, 4.5] as const;
+const REVIEW_VALUES = [0, 20, 100, 500] as const;
 
 export default function SupplierFilters({
   state,
@@ -41,6 +32,25 @@ export default function SupplierFilters({
   onReset,
   resultCount,
 }: Props) {
+  const t = useTranslations("suppliers");
+  const tCommon = useTranslations("common");
+
+  const ratingOptions = [
+    { label: t("anyRating"), value: 0 },
+    ...RATING_VALUES.filter((v) => v > 0).map((value) => ({
+      label: `${value}+`,
+      value,
+    })),
+  ];
+
+  const reviewOptions = [
+    { label: t("anyReviews"), value: 0 },
+    ...REVIEW_VALUES.filter((v) => v > 0).map((value) => ({
+      label: `${value}+`,
+      value,
+    })),
+  ];
+
   const activeFilters =
     (state.category !== "All" ? 1 : 0) +
     (state.country !== "All" ? 1 : 0) +
@@ -58,7 +68,7 @@ export default function SupplierFilters({
         />
         <input
           type="search"
-          placeholder="Search by company, product, city, or country…"
+          placeholder={t("searchPlaceholder")}
           value={state.search}
           onChange={(e) => onChange({ search: e.target.value })}
           className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-3 text-sm text-ink placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
@@ -78,7 +88,7 @@ export default function SupplierFilters({
                 : "border border-slate-200 bg-white text-ink-muted hover:border-navy/30 hover:text-ink"
             }`}
           >
-            {cat}
+            {cat === "All" ? tCommon("all") : cat}
           </button>
         ))}
       </div>
@@ -86,13 +96,13 @@ export default function SupplierFilters({
       {/* Dropdowns + toggles */}
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <label className="flex flex-col gap-1 text-xs font-medium text-ink-dim">
-          Country
+          {t("country")}
           <select
             value={state.country}
             onChange={(e) => onChange({ country: e.target.value })}
             className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
-            <option value="All">All countries</option>
+            <option value="All">{t("allCountries")}</option>
             {countries.map((c) => (
               <option key={c} value={c}>
                 {c}
@@ -102,13 +112,13 @@ export default function SupplierFilters({
         </label>
 
         <label className="flex flex-col gap-1 text-xs font-medium text-ink-dim">
-          Minimum rating
+          {t("minimumRating")}
           <select
             value={state.minRating}
             onChange={(e) => onChange({ minRating: Number(e.target.value) })}
             className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
-            {RATING_OPTIONS.map((o) => (
+            {ratingOptions.map((o) => (
               <option key={o.value} value={o.value}>
                 {o.label}
               </option>
@@ -117,13 +127,13 @@ export default function SupplierFilters({
         </label>
 
         <label className="flex flex-col gap-1 text-xs font-medium text-ink-dim">
-          Minimum reviews
+          {t("minimumReviews")}
           <select
             value={state.minReviews}
             onChange={(e) => onChange({ minReviews: Number(e.target.value) })}
             className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
-            {REVIEW_OPTIONS.map((o) => (
+            {reviewOptions.map((o) => (
               <option key={o.value} value={o.value}>
                 {o.label}
               </option>
@@ -133,7 +143,7 @@ export default function SupplierFilters({
 
         <label className="flex items-end pb-0.5">
           <span className="flex w-full cursor-pointer items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink">
-            <span className="font-medium">Verified only</span>
+            <span className="font-medium">{t("verifiedOnly")}</span>
             <input
               type="checkbox"
               checked={state.verifiedOnly}
@@ -148,8 +158,8 @@ export default function SupplierFilters({
       <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
         <p className="flex items-center gap-1.5 text-xs text-ink-dim">
           <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden />
-          <span className="font-semibold text-ink">{resultCount}</span> suppliers
-          {activeFilters > 0 && ` · ${activeFilters} filter${activeFilters > 1 ? "s" : ""} active`}
+          {t("suppliersFound", { count: resultCount })}
+          {activeFilters > 0 && ` · ${t("activeFilters", { count: activeFilters })}`}
         </p>
         {activeFilters > 0 && (
           <button
@@ -158,7 +168,7 @@ export default function SupplierFilters({
             className="inline-flex items-center gap-1 text-xs font-medium text-cyan hover:underline"
           >
             <X className="h-3.5 w-3.5" aria-hidden />
-            Clear filters
+            {t("clearFilters")}
           </button>
         )}
       </div>

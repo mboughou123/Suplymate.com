@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 import type { Material } from "@/data/materials";
 
@@ -49,6 +52,7 @@ export default function MarketSummaryCard({
   selected,
   onClick,
 }: MarketSummaryCardProps) {
+  const t = useTranslations("priceCharts");
   const className = `w-full rounded-xl border p-4 text-left transition-all duration-200 ease-cinema cursor-pointer ${
     selected
       ? "border-cyan/40 bg-cyan-soft shadow-card ring-1 ring-inset ring-cyan/20"
@@ -69,15 +73,15 @@ export default function MarketSummaryCard({
       </p>
       <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
         <div>
-          <p className="text-ink-muted">Daily</p>
+          <p className="text-ink-muted">{t("daily")}</p>
           <ChangeValue value={material.dailyChange} />
         </div>
         <div>
-          <p className="text-ink-muted">Monthly</p>
+          <p className="text-ink-muted">{t("monthly")}</p>
           <ChangeValue value={material.monthlyChange} />
         </div>
         <div>
-          <p className="text-ink-muted">Yearly</p>
+          <p className="text-ink-muted">{t("yearly")}</p>
           <ChangeValue value={material.yearlyChange} />
         </div>
       </div>

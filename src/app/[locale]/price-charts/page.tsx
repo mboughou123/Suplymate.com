@@ -1,7 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import { getMaterialsFromDb } from "@/lib/data-service";
 import PriceChartsClient from "./PriceChartsClient";
 
 export default async function PriceChartsPage() {
+  const t = await getTranslations("priceCharts");
   const materials = await getMaterialsFromDb();
 
   return (
@@ -9,11 +11,9 @@ export default async function PriceChartsPage() {
       <div className="bg-gradient-to-br from-navy-dark to-navy py-14 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-3xl font-bold sm:text-4xl text-balance">
-            Track material prices and buy at the right time
+            {t("pageTitle")}
           </h1>
-          <p className="mt-3 max-w-2xl text-white/75">
-            Indicative commodity prices with explained signals. Not a trading venue — verify before large purchases.
-          </p>
+          <p className="mt-3 max-w-2xl text-white/75">{t("pageSubtitle")}</p>
         </div>
       </div>
 

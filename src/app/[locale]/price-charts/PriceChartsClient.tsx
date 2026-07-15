@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import type { Material } from "@/data/materials";
 import MarketSummaryCard from "@/components/MarketSummaryCard";
@@ -22,6 +23,7 @@ type Props = {
 };
 
 export default function PriceChartsClient({ initialMaterials }: Props) {
+  const t = useTranslations("priceCharts");
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState(initialMaterials[0]?.id ?? "steel");
   const [watchlist, setWatchlist] = useState<string[]>([]);
@@ -59,12 +61,11 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
     <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
       <div className="space-y-6">
         <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900">
-          <strong>Provenance:</strong> Prices and signals are indicative demo series until live market
-          feeds are connected. Always confirm with your supplier before large orders.
+          {t("provenanceNotice")}
         </div>
         <input
           type="search"
-          placeholder="Search material: steel, copper, aluminum, oil…"
+          placeholder={t("searchPlaceholder")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm lg:hidden"
@@ -74,10 +75,13 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
             <PriceChart material={selected} />
             {signalInfo && (
               <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm">
-                <p className="font-semibold text-ink">Signal: {signalInfo.label}</p>
+                <p className="font-semibold text-ink">{t("signal", { label: signalInfo.label })}</p>
                 <p className="mt-1 text-xs text-ink-muted">{signalInfo.reason}</p>
                 <p className="mt-2 text-[11px] text-ink-dim">
-                  Source: {signalInfo.source} · Updated {signalInfo.lastUpdated}
+                  {t("sourceUpdated", {
+                    source: signalInfo.source,
+                    date: signalInfo.lastUpdated,
+                  })}
                 </p>
               </div>
             )}
@@ -87,7 +91,7 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
 
       <aside className="space-y-6">
         <div className="hidden lg:block rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-card max-h-[480px] overflow-y-auto">
-          <h2 className="text-sm font-semibold text-ink mb-3">Materials</h2>
+          <h2 className="text-sm font-semibold text-ink mb-3">{t("materials")}</h2>
           <div className="space-y-2">
             {filtered.map((m) => (
               <div key={m.id} className="relative">
@@ -100,7 +104,11 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
                   type="button"
                   onClick={() => toggleWatch(m.id)}
                   className="absolute right-2 top-2 rounded p-1 text-ink-dim hover:text-gold"
-                  aria-label={watchlist.includes(m.id) ? "Remove from watchlist" : "Add to watchlist"}
+                  aria-label={
+                    watchlist.includes(m.id)
+                      ? t("removeFromWatchlist")
+                      : t("addToWatchlist")
+                  }
                 >
                   <Star className={`h-4 w-4 ${watchlist.includes(m.id) ? "fill-gold text-gold" : ""}`} />
                 </button>

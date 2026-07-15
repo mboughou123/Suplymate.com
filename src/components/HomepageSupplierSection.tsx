@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { getSuppliersFromDb } from "@/lib/data-service";
@@ -41,11 +42,10 @@ function toCardProps(s: Supplier): HomepageSupplierCardProps {
 }
 
 export default async function HomepageSupplierSection() {
+  const t = await getTranslations("home");
   const all = await getSuppliersFromDb();
 
-  // Respect the verification gate — only verified suppliers are shown publicly.
   const verified = all.filter((s) => toDisplaySupplier(s).verified);
-  // Prefer image-bearing suppliers so the homepage feels populated and alive.
   const withImages = verified.filter(hasRealImage);
   const pool = withImages.length >= MAX_CARDS ? withImages : verified;
   const picks = pool.slice(0, MAX_CARDS).map(toCardProps);
@@ -58,15 +58,13 @@ export default async function HomepageSupplierSection() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan-soft px-3 py-1 eyebrow text-cyan">
             <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
-            Verified network
+            {t("verifiedNetwork")}
           </span>
           <h2 className="mt-4 font-display text-display text-ink">
-            Verified Suppliers on Suplymate
+            {t("verifiedSuppliersTitle")}
           </h2>
           <p className="mt-4 text-body-lg text-ink-muted">
-            Real manufacturers and distributors — vetted for reliability,
-            compliance, and delivery performance, with verified profiles, photos,
-            and ratings.
+            {t("verifiedSuppliersSubtitle")}
           </p>
         </Reveal>
 
@@ -80,7 +78,7 @@ export default async function HomepageSupplierSection() {
 
         <div className="mt-10 flex justify-center">
           <Link href="/suppliers" className="btn-secondary px-6 py-3">
-            Explore all suppliers
+            {t("exploreAllSuppliers")}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>

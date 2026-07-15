@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { Truck, Users, GitCompare, BadgeCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_PRODUCT_PLACEHOLDER } from "@/lib/image-fallback";
@@ -33,6 +34,9 @@ export default function HomepageProductCard({
   verified,
   href,
 }: HomepageProductCardProps) {
+  const t = useTranslations("products");
+  const tCommon = useTranslations("common");
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-slate-300 hover:shadow-cardHover motion-reduce:transform-none">
       {/* Product photo — consistent 4:3 */}
@@ -48,7 +52,7 @@ export default function HomepageProductCard({
         {verified && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 py-1 pl-1.5 pr-2.5 text-caption font-semibold text-up shadow-sm ring-1 ring-black/5 backdrop-blur">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-            Verified
+            {tCommon("verified")}
           </span>
         )}
         <span className="absolute right-3 top-3 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
@@ -66,7 +70,7 @@ export default function HomepageProductCard({
         <div className="mt-3 flex items-baseline justify-between gap-2">
           <div>
             <p className="text-caption font-medium uppercase tracking-wide text-ink-dim">
-              Starting at
+              {t("startingPrice")}
             </p>
             <p className="text-heading-sm font-bold tabular-nums text-ink">
               {startingPriceLabel}
@@ -76,22 +80,24 @@ export default function HomepageProductCard({
 
         <dl className="mt-4 flex flex-1 flex-col gap-2 border-t border-slate-100 pt-4 text-caption text-ink-muted">
           <div className="flex items-center justify-between gap-2">
-            <dt>MOQ</dt>
+            <dt>{t("moqLabel")}</dt>
             <dd className="font-semibold tabular-nums text-ink">{moq}</dd>
           </div>
           <div className="flex items-center justify-between gap-2">
             <dt className="inline-flex items-center gap-1.5">
               <Truck className="h-3.5 w-3.5 text-ink-dim" aria-hidden />
-              Delivery
+              {t("shippingTime")}
             </dt>
             <dd className="font-semibold text-ink">{shippingTime}</dd>
           </div>
           <div className="flex items-center justify-between gap-2">
             <dt className="inline-flex items-center gap-1.5">
               <Users className="h-3.5 w-3.5 text-ink-dim" aria-hidden />
-              Suppliers
+              {tCommon("suppliers")}
             </dt>
-            <dd className="font-semibold tabular-nums text-ink">{supplierCount}+</dd>
+            <dd className="font-semibold tabular-nums text-ink">
+              {t("supplierCount", { count: supplierCount })}
+            </dd>
           </div>
         </dl>
 
@@ -100,7 +106,7 @@ export default function HomepageProductCard({
           className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-body-sm font-semibold text-ink transition-all duration-200 ease-cinema hover:border-cyan/40 hover:bg-cyan-soft hover:text-cyan cursor-pointer"
         >
           <GitCompare className="h-4 w-4" aria-hidden />
-          Compare Suppliers
+          {t("compareProducts")}
         </Link>
       </div>
     </article>

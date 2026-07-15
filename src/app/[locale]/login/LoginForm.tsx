@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { signIn } from "next-auth/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Eye, EyeOff, AlertCircle, Loader2 } from "lucide-react";
+import { Link, useRouter } from "@/i18n/navigation";
 import AuthFormLayout from "@/components/AuthFormLayout";
 
 export default function LoginForm() {
+  const t = useTranslations("authentication");
+  const tForms = useTranslations("forms");
+  const tErrors = useTranslations("errors");
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
@@ -22,7 +26,7 @@ export default function LoginForm() {
     setError("");
 
     if (!email.trim() || !password) {
-      setError("Please enter your email and password.");
+      setError(tErrors("missingCredentials"));
       return;
     }
 
@@ -39,15 +43,13 @@ export default function LoginForm() {
         const health = await fetch("/api/health");
         const data = await health.json();
         if (!data.ok) {
-          setError(
-            "We couldn't reach the server right now. Please try again in a moment."
-          );
+          setError(tErrors("serverUnreachable"));
           return;
         }
       } catch {
         /* fall through to generic message */
       }
-      setError("Invalid email or password.");
+      setError(tErrors("invalidCredentials"));
       return;
     }
 
@@ -57,13 +59,13 @@ export default function LoginForm() {
 
   return (
     <AuthFormLayout
-      title="Sign in"
-      subtitle="Access your Suplymate procurement dashboard."
+      title={t("signIn")}
+      subtitle={t("signInSubtitle")}
       footer={
         <>
-          <span className="text-ink-muted">No account? </span>
+          <span className="text-ink-muted">{t("noAccount")} </span>
           <Link href="/signup" className="font-semibold text-ink hover:text-gold">
-            Sign up
+            {t("signUp")}
           </Link>
         </>
       }
@@ -77,7 +79,7 @@ export default function LoginForm() {
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <div>
           <label htmlFor="email" className="text-xs font-medium text-ink-muted">
-            Email
+            {tForms("email")}
           </label>
           <input
             id="email"
@@ -86,13 +88,13 @@ export default function LoginForm() {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@company.com"
+            placeholder={t("emailPlaceholder")}
             className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/20"
           />
         </div>
         <div>
           <label htmlFor="password" className="text-xs font-medium text-ink-muted">
-            Password
+            {tForms("password")}
           </label>
           <div className="relative mt-1.5">
             <input
@@ -108,7 +110,7 @@ export default function LoginForm() {
               type="button"
               onClick={() => setShowPassword((s) => !s)}
               className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-ink-dim transition hover:text-ink"
-              aria-label={showPassword ? "Hide password" : "Show password"}
+              aria-label={showPassword ? t("hidePassword") : t("showPassword")}
             >
               {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
             </button>
@@ -117,7 +119,7 @@ export default function LoginForm() {
             href="/forgot-password"
             className="mt-2 inline-block text-xs font-medium text-ink-muted hover:text-gold hover:underline"
           >
-            Forgot password?
+            {t("forgotPassword")}
           </Link>
         </div>
         <button
@@ -126,7 +128,7 @@ export default function LoginForm() {
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold py-3 text-sm font-semibold text-ink transition hover:bg-gold-light disabled:opacity-60"
         >
           {loading && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
-          {loading ? "Signing in…" : "Sign in"}
+          {loading ? t("signingIn") : t("signIn")}
         </button>
       </form>
     </AuthFormLayout>
