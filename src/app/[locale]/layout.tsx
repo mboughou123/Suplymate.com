@@ -52,7 +52,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={inter.variable}
     >
       <body className="min-h-screen flex flex-col font-sans">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <NavbarGate />
             <main className="flex-1">{children}</main>
