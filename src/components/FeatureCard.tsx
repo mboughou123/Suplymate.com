@@ -1,23 +1,48 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowRight, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Factory,
+  BarChart3,
+  TrendingUp,
+  Bot,
+  type LucideIcon,
+} from "lucide-react";
 import TiltCard from "@/components/TiltCard";
+
+// Icons are resolved inside this Client Component from a serializable string
+// key. A Lucide component (a forwardRef object) must NOT be passed as a prop
+// from a Server Component — React cannot serialize functions across the
+// server→client boundary, which crashes the render.
+export type FeatureIconName =
+  | "findSuppliers"
+  | "compareProducts"
+  | "trackMaterialPrices"
+  | "askAiAssistant";
+
+const FEATURE_ICONS: Record<FeatureIconName, LucideIcon> = {
+  findSuppliers: Factory,
+  compareProducts: BarChart3,
+  trackMaterialPrices: TrendingUp,
+  askAiAssistant: Bot,
+};
 
 type FeatureCardProps = {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: FeatureIconName;
   href: string;
 };
 
 export default function FeatureCard({
   title,
   description,
-  icon: Icon,
+  icon,
   href,
 }: FeatureCardProps) {
   const t = useTranslations("common");
+  const Icon = FEATURE_ICONS[icon];
 
   return (
     <TiltCard href={href} className="flex h-full flex-col p-6">

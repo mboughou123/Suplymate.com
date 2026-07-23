@@ -1,17 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
-  Factory,
-  BarChart3,
-  TrendingUp,
-  Bot,
   Search,
   GitCompare,
   CheckCircle2,
-  type LucideIcon,
 } from "lucide-react";
 import Hero from "@/components/Hero";
-import FeatureCard from "@/components/FeatureCard";
+import FeatureCard, { type FeatureIconName } from "@/components/FeatureCard";
 import SocialProof from "@/components/SocialProof";
 import HomepageSupplierSection from "@/components/HomepageSupplierSection";
 import HomepageProductSection from "@/components/HomepageProductSection";
@@ -19,13 +14,15 @@ import TrustAiSection from "@/components/TrustAiSection";
 import Reveal from "@/components/Reveal";
 
 type Feature = {
-  titleKey: "findSuppliers" | "compareProducts" | "trackMaterialPrices" | "askAiAssistant";
+  titleKey: FeatureIconName;
   descriptionKey:
     | "findSuppliersDescription"
     | "compareProductsDescription"
     | "trackMaterialPricesDescription"
     | "askAiAssistantDescription";
-  icon: LucideIcon;
+  // Serializable icon key resolved inside the client FeatureCard — never pass
+  // a Lucide component across the server→client boundary.
+  icon: FeatureIconName;
   href: string;
 };
 
@@ -33,25 +30,25 @@ const features: Feature[] = [
   {
     titleKey: "findSuppliers",
     descriptionKey: "findSuppliersDescription",
-    icon: Factory,
+    icon: "findSuppliers",
     href: "/suppliers",
   },
   {
     titleKey: "compareProducts",
     descriptionKey: "compareProductsDescription",
-    icon: BarChart3,
+    icon: "compareProducts",
     href: "/products",
   },
   {
     titleKey: "trackMaterialPrices",
     descriptionKey: "trackMaterialPricesDescription",
-    icon: TrendingUp,
+    icon: "trackMaterialPrices",
     href: "/price-charts",
   },
   {
     titleKey: "askAiAssistant",
     descriptionKey: "askAiAssistantDescription",
-    icon: Bot,
+    icon: "askAiAssistant",
     href: "/ai-assistant",
   },
 ];
