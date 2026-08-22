@@ -52,3 +52,4 @@ yarn-error.log*
 
 # One-off audit scripts and dumps (never ship)
 .tmp-audit/
+.vercel
