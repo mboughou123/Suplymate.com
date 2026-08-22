@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Globe2, Search, Package, ShieldCheck, Bot } from "lucide-react";
 import TrustBadge from "@/components/TrustBadge";
+import HeroHeading from "@/components/HeroHeading";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_PRODUCT_PLACEHOLDER } from "@/lib/image-fallback";
 import { getHomepageProducts, type HomepageProduct } from "@/lib/homepage-products";
@@ -25,13 +26,7 @@ export default async function Hero() {
               {t("badge")}
             </span>
 
-            <h1 className="mt-6 font-display text-display text-ink sm:text-display-lg lg:text-display-xl text-balance">
-              {t.rich("title", {
-                highlight: () => (
-                  <span className="gradient-text">{t("titleHighlight")}</span>
-                ),
-              })}
-            </h1>
+            <HeroHeading />
 
             <p className="mx-auto mt-5 max-w-xl text-body-lg text-ink-muted lg:mx-0">
               {t("subtitle")}
