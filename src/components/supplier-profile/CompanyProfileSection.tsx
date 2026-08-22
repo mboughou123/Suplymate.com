@@ -4,52 +4,71 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Building2,
-  CalendarDays,
-  Factory,
-  Users,
-  Boxes,
-  FlaskConical,
-  Globe2,
-  Languages,
+  Globe,
+  MapPin,
+  Phone,
+  Mail,
   PackageCheck,
-  Gauge,
+  Tag,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import { SectionHeading, reveal } from "./primitives";
 
-export default function CompanyProfileSection({ profile }: { profile: SupplierProfile }) {
+/**
+ * Company details as collected.
+ *
+ * This section used to show registration date, business type, factory size,
+ * employee count, production lines, R&D engineers, production capacity, export
+ * markets and languages spoken — all generated from a hash of the supplier id.
+ * Only fields with a real source remain, and any that is missing is omitted
+ * rather than filled in.
+ */
+export default function CompanyProfileSection({
+  profile,
+}: {
+  profile: SupplierProfile;
+}) {
   const t = useTranslations("supplierProfile");
   const { company } = profile;
 
-  const metrics: { icon: LucideIcon; label: string; value: string }[] = [
-    { icon: CalendarDays, label: t("registered"), value: company.registrationDate },
-    { icon: Building2, label: t("businessType"), value: company.businessType },
-    { icon: Factory, label: t("factorySize"), value: company.factorySize },
-    { icon: Users, label: t("employees"), value: t("employeesValue", { count: company.employeeCount }) },
-    {
-      icon: Boxes,
-      label: t("productionLines"),
-      value: t("productionLinesValue", { count: company.productionLines }),
-    },
-    { icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` },
-    { icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity },
-    { icon: PackageCheck, label: t("minimumOrder"), value: company.moq },
+  const details: { icon: LucideIcon; label: string; value: string }[] = [
+    { icon: Tag, label: t("category"), value: company.categoryLabel },
+    { icon: MapPin, label: t("locationLabel"), value: company.location },
+    ...(company.address
+      ? [{ icon: Building2, label: t("addressLabel"), value: company.address }]
+      : []),
+    ...(company.phone
+      ? [{ icon: Phone, label: t("phoneLabel"), value: company.phone }]
+      : []),
+    ...(company.email
+      ? [{ icon: Mail, label: t("emailLabel"), value: company.email }]
+      : []),
+    ...(company.website
+      ? [{ icon: Globe, label: t("websiteLabel"), value: company.website }]
+      : []),
+    ...(company.moq
+      ? [{ icon: PackageCheck, label: t("minimumOrder"), value: company.moq }]
+      : []),
   ];
 
   return (
-    <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
+    <motion.section
+      {...reveal}
+      transition={{ duration: 0.6 }}
+      className="py-8 sm:py-10"
+    >
       <SectionHeading
         eyebrow={t("companyEyebrow")}
         title={t("companyProfileTitle")}
-        description={t("companyProfileDescription")}
+        description={t("companyDetailsDescription")}
         icon={<Building2 className="h-5 w-5" />}
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {metrics.map((m, i) => (
+      <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {details.map((detail, i) => (
           <motion.div
-            key={m.label}
+            key={detail.label}
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,52 +76,24 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
             className="glass-card glass-hover flex items-start gap-3 p-4"
           >
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan">
-              <m.icon className="h-5 w-5" aria-hidden />
+              <detail.icon className="h-5 w-5" aria-hidden />
             </span>
             <div className="min-w-0">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-ink-dim">
-                {m.label}
-              </p>
-              <p className="truncate text-sm font-bold text-ink" title={m.value}>
-                {m.value}
-              </p>
+              <dt className="text-[11px] font-medium uppercase tracking-wider text-ink-dim">
+                {detail.label}
+              </dt>
+              <dd
+                className="truncate text-sm font-bold text-ink"
+                title={detail.value}
+              >
+                {detail.value}
+              </dd>
             </div>
           </motion.div>
         ))}
-      </div>
+      </dl>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        <div className="glass-card p-5">
-          <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Globe2 className="h-4 w-4 text-cyan" aria-hidden /> {t("exportMarkets")}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {company.exportMarkets.map((m) => (
-              <span
-                key={m}
-                className="rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan"
-              >
-                {m}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="glass-card p-5">
-          <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Languages className="h-4 w-4 text-teal" aria-hidden /> {t("languagesSpoken")}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {company.languages.map((l) => (
-              <span
-                key={l}
-                className="rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal"
-              >
-                {l}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
+      <p className="mt-4 text-xs text-ink-dim">{t("detailsFromPublicSources")}</p>
     </motion.section>
   );
 }

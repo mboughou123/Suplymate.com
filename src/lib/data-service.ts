@@ -9,12 +9,20 @@ import {
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
+import { isRealImageUrl } from "@/lib/image-fallback";
+import {
+  isMarketplaceVisible,
+  isVerified,
+} from "@/lib/verification";
 
 // A supplier "has an image" if it carries a primary photo or any gallery image.
 // Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
 // lead the directory.
 function supplierHasImage(s: Supplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
+  return (
+    isRealImageUrl(s.imageUrl) ||
+    Boolean(s.supplierImages?.some((url) => isRealImageUrl(url)))
+  );
 }
 
 // Public directory ordering: image-bearing first, then by Suplymate score
@@ -60,8 +68,17 @@ export function getFallbackSupplierIds(): string[] {
  * state (pending / rejected / needs_info).
  */
 function isPubliclyVisible(s: Supplier): boolean {
-  const status = s.verificationStatus;
-  return !status || status === "verified";
+  return isMarketplaceVisible(s.marketplaceStatus);
+}
+
+function withHonestVerification(s: Supplier): Supplier {
+  return {
+    ...s,
+    verified: isVerified({
+      marketplaceStatus: s.marketplaceStatus,
+      verifiedBy: s.verifiedBy,
+    }),
+  };
 }
 
 export async function getSuppliersFromDb() {
@@ -71,14 +88,21 @@ export async function getSuppliersFromDb() {
     });
     // Fall back to the verified directory if the DB hasn't been imported yet
     // (or only has the legacy seed rows).
-    if (rows.length < 50) return [...directoryFallback].sort(compareForDirectory);
-    // Never surface pending/rejected/needs_info imports on public surfaces.
+    if (rows.length < 50) {
+      return directoryFallback
+        .map(withHonestVerification)
+        .sort(compareForDirectory);
+    }
+    // Marketplace lifecycle is authoritative for public visibility.
     return rows
       .map(mapSupplier)
       .filter(isPubliclyVisible)
+      .map(withHonestVerification)
       .sort(compareForDirectory);
   } catch {
-    return [...directoryFallback].sort(compareForDirectory);
+    return directoryFallback
+      .map(withHonestVerification)
+      .sort(compareForDirectory);
   }
 }
 
@@ -91,14 +115,14 @@ export async function getSupplierById(id: string): Promise<Supplier | null> {
   try {
     const row = await prisma.supplier.findUnique({ where: { id: slug } });
     if (row) {
-      const mapped = mapSupplier(row);
-      // Pending/rejected/needs_info imports must not be reachable by slug.
+      const mapped = withHonestVerification(mapSupplier(row));
       return isPubliclyVisible(mapped) ? mapped : null;
     }
   } catch {
     // ignore — fall through to the deterministic dataset
   }
-  return allFallbackSuppliers().find((s) => s.id === slug) ?? null;
+  const fallback = allFallbackSuppliers().find((s) => s.id === slug);
+  return fallback ? withHonestVerification(fallback) : null;
 }
 
 // Alias: slugs and ids are the same thing in this data model.

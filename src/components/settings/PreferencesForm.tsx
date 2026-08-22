@@ -120,7 +120,8 @@ export default function PreferencesForm({ initial }: { initial: UserPreferences 
         ))}
       </div>
 
-      <div className="mt-5 max-w-xs">
+      {/* Hidden while the site is English-only; returns with more locales. */}
+      <div className="mt-5 max-w-xs" hidden={locales.length <= 1}>
         <label htmlFor="language" className="text-xs font-medium text-ink-muted">
           {t("language")}
         </label>

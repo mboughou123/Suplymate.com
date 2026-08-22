@@ -20,7 +20,7 @@ type DbSupplier = {
   description?: string | null;
   products: string;
   deliveryRegions: string;
-  moq: string;
+  moq: string | null;
   verified?: boolean | null;
   address?: string | null;
   openingHours?: string | null;
@@ -33,6 +33,8 @@ type DbSupplier = {
   certificationImages?: string | null;
   certifications?: string | null;
   verificationStatus?: string | null;
+  marketplaceStatus?: string | null;
+  verifiedBy?: string | null;
   trustScore?: number | null;
 };
 
@@ -83,7 +85,7 @@ export function mapSupplier(row: DbSupplier): Supplier {
     description: row.description ?? undefined,
     products: JSON.parse(row.products) as string[],
     deliveryRegions: JSON.parse(row.deliveryRegions) as string[],
-    moq: row.moq,
+    moq: row.moq ?? null,
     verified: row.verified ?? undefined,
     address: row.address ?? undefined,
     openingHours: row.openingHours ?? undefined,
@@ -101,6 +103,8 @@ export function mapSupplier(row: DbSupplier): Supplier {
     >(row.certifications),
     verificationStatus:
       (row.verificationStatus as Supplier["verificationStatus"]) ?? undefined,
+    marketplaceStatus: row.marketplaceStatus ?? undefined,
+    verifiedBy: row.verifiedBy ?? undefined,
     trustScore: row.trustScore ?? undefined,
   };
 }

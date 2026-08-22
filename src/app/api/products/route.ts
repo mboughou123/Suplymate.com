@@ -15,7 +15,6 @@ export async function GET(request: Request) {
       category: searchParams.get("category") ?? undefined,
       supplierId: searchParams.get("supplierId") ?? undefined,
       country: searchParams.get("country") ?? undefined,
-      verifiedOnly: searchParams.get("verifiedOnly") === "1",
       hasPrice: searchParams.get("hasPrice") === "1",
     });
     return NextResponse.json(result);

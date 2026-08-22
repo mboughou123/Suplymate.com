@@ -22,7 +22,6 @@ type Filters = {
   category: string;
   supplierId: string;
   country: string;
-  verifiedOnly: boolean;
   hasPrice: boolean;
 };
 
@@ -31,7 +30,6 @@ const EMPTY_FILTERS: Filters = {
   category: "",
   supplierId: "",
   country: "",
-  verifiedOnly: false,
   hasPrice: false,
 };
 
@@ -43,22 +41,21 @@ function buildQuery(f: Filters, page: number, pageSize: number): string {
   if (f.category) p.set("category", f.category);
   if (f.supplierId) p.set("supplierId", f.supplierId);
   if (f.country) p.set("country", f.country);
-  if (f.verifiedOnly) p.set("verifiedOnly", "1");
   if (f.hasPrice) p.set("hasPrice", "1");
   return p.toString();
 }
 
 function CardSkeleton() {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
       <div className="h-44 w-full animate-pulse bg-slate-200" />
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="h-4 w-3/4 animate-pulse rounded bg-slate-200" />
-        <div className="h-3 w-1/2 animate-pulse rounded bg-slate-100" />
-        <div className="mt-2 h-12 w-full animate-pulse rounded-xl bg-slate-100" />
+        <div className="h-3 w-1/2 animate-pulse rounded bg-base" />
+        <div className="mt-2 h-12 w-full animate-pulse rounded-xl bg-base" />
         <div className="mt-auto flex gap-2">
-          <div className="h-10 flex-1 animate-pulse rounded-xl bg-slate-100" />
-          <div className="h-10 flex-1 animate-pulse rounded-xl bg-slate-100" />
+          <div className="h-10 flex-1 animate-pulse rounded-xl bg-base" />
+          <div className="h-10 flex-1 animate-pulse rounded-xl bg-base" />
         </div>
       </div>
     </div>
@@ -147,7 +144,6 @@ export default function ProductsClient({
     (filters.category ? 1 : 0) +
     (filters.supplierId ? 1 : 0) +
     (filters.country ? 1 : 0) +
-    (filters.verifiedOnly ? 1 : 0) +
     (filters.hasPrice ? 1 : 0);
 
   return (
@@ -161,14 +157,14 @@ export default function ProductsClient({
             placeholder={t("searchPlaceholder")}
             value={filters.search}
             onChange={(e) => update("search", e.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm shadow-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            className="input-field py-3.5 pl-11 pr-4 shadow-sm"
           />
         </div>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
         {/* Filters */}
-        <aside className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-card lg:self-start">
+        <aside className="rounded-2xl border border-line bg-base p-6 shadow-card lg:self-start">
           <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-ink-dim">
             <SlidersHorizontal className="h-4 w-4" /> {t("filters")}
           </h2>
@@ -179,7 +175,7 @@ export default function ProductsClient({
               <select
                 value={filters.category}
                 onChange={(e) => update("category", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-lg border border-line px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
                 <option value="">{t("allCategories")}</option>
                 {facets.categories.map((c) => (
@@ -195,7 +191,7 @@ export default function ProductsClient({
               <select
                 value={filters.supplierId}
                 onChange={(e) => update("supplierId", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-lg border border-line px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
                 <option value="">{t("allSuppliers")}</option>
                 {facets.suppliers.map((s) => (
@@ -211,7 +207,7 @@ export default function ProductsClient({
               <select
                 value={filters.country}
                 onChange={(e) => update("country", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-lg border border-line px-3 py-2 text-sm focus:border-mustard focus:outline-none"
               >
                 <option value="">{t("anyCountry")}</option>
                 {facets.countries.map((c) => (
@@ -221,16 +217,6 @@ export default function ProductsClient({
                 ))}
               </select>
             </div>
-
-            <label className="flex items-center gap-2 text-sm text-ink">
-              <input
-                type="checkbox"
-                checked={filters.verifiedOnly}
-                onChange={(e) => update("verifiedOnly", e.target.checked)}
-                className="h-4 w-4 rounded border-slate-300 text-cyan focus:ring-cyan"
-              />
-              {t("verifiedSuppliersOnly")}
-            </label>
 
             <label className="flex items-center gap-2 text-sm text-ink">
               <input
@@ -246,7 +232,7 @@ export default function ProductsClient({
               <button
                 type="button"
                 onClick={() => setFilters(EMPTY_FILTERS)}
-                className="w-full rounded-lg border border-slate-200 py-2 text-sm font-medium text-ink-muted hover:bg-white"
+                className="w-full rounded-lg border border-line py-2 text-sm font-medium text-ink-muted hover:bg-surface"
               >
                 {t("resetFilters")}
               </button>
@@ -280,7 +266,7 @@ export default function ProductsClient({
               ))}
             </div>
           ) : items.length === 0 ? (
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
+            <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-surface py-20 text-center">
               <PackageX className="h-10 w-10 text-slate-300" aria-hidden />
               <p className="mt-3 font-semibold text-ink">{t("noProductsTitle")}</p>
               <p className="mt-1 text-sm text-ink-muted">{t("noProductsSubtitle")}</p>

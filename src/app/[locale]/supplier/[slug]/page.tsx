@@ -15,15 +15,11 @@ import { buildPageAlternates } from "@/lib/locale-metadata";
 import ClaimProfileButton from "@/components/supplier-profile/ClaimProfileButton";
 
 import HeroSection from "@/components/supplier-profile/HeroSection";
-import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
 import CompanyProfileSection from "@/components/supplier-profile/CompanyProfileSection";
-import CertificationsSection from "@/components/supplier-profile/CertificationsSection";
 import CertificationGallery from "@/components/supplier-profile/CertificationGallery";
-import VerificationBadge from "@/components/VerificationBadge";
 import FactoryMediaSection from "@/components/supplier-profile/FactoryMediaSection";
 import ProductsSection from "@/components/supplier-profile/ProductsSection";
 import ReviewsSection from "@/components/supplier-profile/ReviewsSection";
-import AiInsightsSection from "@/components/supplier-profile/AiInsightsSection";
 import StickyContactCard from "@/components/supplier-profile/StickyContactCard";
 
 const SITE_URL = (
@@ -32,6 +28,13 @@ const SITE_URL = (
 
 // Pre-render every supplier known to the deterministic dataset; unknown slugs
 // are still resolved on demand (and fall back to the DB when available).
+//
+// This route deliberately has no loading.tsx. A loading boundary flushes the
+// layout shell before the supplier lookup resolves, which locks the response at
+// HTTP 200 — so a deleted or never-existent slug rendered the 404 page for
+// humans while returning 200 to crawlers, and the on-demand cache then held
+// that 200 for a year. Without the boundary the lookup completes first and
+// notFound() can set a real 404.
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -106,7 +109,7 @@ export default async function SupplierProfilePage({
   }
 
   const profile = getSupplierProfile(supplier);
-  const { base, trust } = profile;
+  const { base, dataQuality } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
   // Marketplace lifecycle status + claim state (DB-backed suppliers only).
@@ -165,17 +168,24 @@ export default async function SupplierProfilePage({
       addressCountry: base.country,
     },
     ...(base.website ? { sameAs: [base.website] } : {}),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: base.rating.toFixed(1),
-      reviewCount: base.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    // Emitted only when a real Google Places rating exists. This previously
+    // published a generated rating and review count as AggregateRating, which
+    // fed fabricated numbers straight into search-engine rich results.
+    ...(base.rating !== null && base.reviewCount !== null
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: base.rating.toFixed(1),
+            reviewCount: base.reviewCount,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
+    // No `price` is asserted: we do not know what these products cost.
     makesOffer: profile.products.slice(0, 6).map((p) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Product", name: p.name },
-      priceCurrency: "USD",
     })),
   };
 
@@ -206,10 +216,11 @@ export default async function SupplierProfilePage({
         </Link>
         <ChevronRight className="h-3.5 w-3.5" aria-hidden />
         <span className="font-medium text-ink-muted">{base.name}</span>
-        {supplier.verificationStatus && (
-          <VerificationBadge status={supplier.verificationStatus} size="sm" className="ml-2" />
-        )}
       </nav>
+      {/* The legacy `verificationStatus` badge that sat here rendered a green
+          "Verified" pill on every imported supplier, none of which a human had
+          reviewed. The authoritative marketplace status is shown below instead;
+          the legacy field remains for the admin moderation queue only. */}
 
       {/* Marketplace status + claim affordance */}
       <div className="container-page mt-3 flex flex-wrap items-center gap-3">
@@ -223,7 +234,7 @@ export default async function SupplierProfilePage({
                   ? "bg-cyan-soft text-cyan"
                   : statusMeta.tone === "info"
                     ? "bg-blue-50 text-blue-700"
-                    : "bg-slate-100 text-slate-600"
+                    : "bg-base text-slate-600"
           }`}
           title={statusMeta.description}
         >
@@ -241,9 +252,7 @@ export default async function SupplierProfilePage({
 
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-8">
         <div className="min-w-0">
-          <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
-          <CertificationsSection profile={profile} />
           {hasRealMedia && (
             <section className="py-6">
               <h2 className="font-display text-lg font-bold text-ink">
@@ -272,7 +281,7 @@ export default async function SupplierProfilePage({
                       src={src}
                       alt={`${base.name} media ${i + 1}`}
                       loading="lazy"
-                      className="h-28 w-full rounded-xl border border-slate-200 object-cover"
+                      className="h-28 w-full rounded-xl border border-line object-cover"
                     />
                   ))}
                 </div>
@@ -299,7 +308,7 @@ export default async function SupplierProfilePage({
                 {relationalCerts.map((c) => (
                   <li
                     key={c.id}
-                    className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3"
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-line bg-surface px-4 py-3"
                   >
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
@@ -310,7 +319,7 @@ export default async function SupplierProfilePage({
                             {t("suplymateVerified")}
                           </span>
                         ) : (
-                          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-600">
+                          <span className="rounded-full bg-base px-2 py-0.5 text-[11px] font-semibold text-slate-600">
                             {t("verificationStatusLabel", { status: c.status })}
                           </span>
                         )}
@@ -343,7 +352,7 @@ export default async function SupplierProfilePage({
           {/* Source and verification (data provenance) */}
           <section className="py-6">
             <h2 className="font-display text-lg font-bold text-ink">{t("sourceVerificationTitle")}</h2>
-            <div className="mt-3 space-y-2 rounded-xl border border-slate-200 bg-white p-4 text-sm">
+            <div className="mt-3 space-y-2 rounded-xl border border-line bg-surface p-4 text-sm">
               <div className="flex justify-between gap-4">
                 <span className="text-ink-muted">{t("verificationStatus")}</span>
                 <span className="font-medium text-ink">{statusMeta.label}</span>
@@ -366,7 +375,7 @@ export default async function SupplierProfilePage({
                   <span className="text-ink-dim">{new Date(provenance.collectedAt).toLocaleDateString()}</span>
                 </div>
               )}
-              <p className="border-t border-slate-100 pt-2 text-xs text-ink-dim">
+              <p className="border-t border-line pt-2 text-xs text-ink-dim">
                 {t("provenanceDisclaimerBefore")}{" "}
                 <Link href="/supplier-verification-policy" className="text-cyan hover:underline">
                   {t("verificationPolicy")}
@@ -385,11 +394,10 @@ export default async function SupplierProfilePage({
         </aside>
       </div>
 
-      <AiInsightsSection profile={profile} />
-
-      {/* Trust score footnote */}
+      {/* Data-completeness footnote. This describes how complete our record is,
+          not how good the supplier is. */}
       <div className="container-page py-8 text-center text-xs text-ink-dim">
-        {t("trustFootnote", { score: trust.trustScore })}
+        {t("trustFootnote", { score: dataQuality.trustScore })}
       </div>
 
       <StickyContactCard profile={profile} variant="mobile" />

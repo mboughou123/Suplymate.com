@@ -85,10 +85,10 @@ async function main() {
   if (!existing) {
     await prisma.user.create({
       data: {
-        name: "Karim Alaoui",
+        name: "Demo User",
         email: demoEmail,
         passwordHash: await hash("demo123", 12),
-        company: "CasaSteel",
+        company: "Demo Account",
       },
     });
     console.log("Demo user: demo@suplymate.com / demo123");

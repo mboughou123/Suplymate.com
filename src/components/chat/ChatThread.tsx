@@ -5,7 +5,6 @@ import {
   Send,
   Paperclip,
   Sparkles,
-  ShieldCheck,
   ShieldAlert,
   FileText,
   ImageIcon,
@@ -14,10 +13,10 @@ import {
   ScrollText,
   Handshake,
   Loader2,
+  Info,
 } from "lucide-react";
 import {
   type Message,
-  type SupplierMeta,
   type ConversationStatus,
   STATUS_LABELS,
   STATUS_STYLES,
@@ -65,7 +64,6 @@ export default function ChatThread({
   onStatusChange,
 }: Props) {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [meta, setMeta] = useState<SupplierMeta | null>(null);
   const [supplierName, setSupplierName] = useState("Supplier");
   const [status, setStatus] = useState<ConversationStatus>("inquiry");
   const [input, setInput] = useState("");
@@ -90,7 +88,6 @@ export default function ChatThread({
     if (!res.ok) return;
     const data = await res.json();
     setMessages(data.messages);
-    setMeta(data.supplierMeta);
     setSupplierName(data.conversation.supplierName);
     setStatus(data.conversation.status);
   }, [conversationId]);
@@ -210,26 +207,12 @@ export default function ChatThread({
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan to-teal text-sm font-bold text-white">
               {supplierName.slice(0, 2).toUpperCase()}
             </div>
-            <span
-              className={`absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full ring-2 ring-white ${
-                meta?.online ? "bg-emerald-500" : "bg-slate-300"
-              }`}
-            />
           </div>
           <div>
-            <div className="flex items-center gap-1.5">
-              <span className="text-sm font-semibold text-ink">{supplierName}</span>
-              {meta?.verified && (
-                <ShieldCheck className="h-4 w-4 text-emerald-600" aria-label="Verified" />
-              )}
-            </div>
-            <div className="flex items-center gap-2 text-[11px] text-ink-dim">
-              <span>{meta?.lastActive ?? "—"}</span>
-              <span>·</span>
-              <span>Replies {meta?.responseTime ?? "—"}</span>
-              <span>·</span>
-              <span>{meta?.responseRate ?? "—"}% response rate</span>
-            </div>
+            <span className="text-sm font-semibold text-ink">{supplierName}</span>
+            {/* The presence dot, "Active now", reply time, response rate and
+                verified tick that sat here were all generated from a hash of the
+                supplier id. Suppliers have no accounts, so none of it was real. */}
           </div>
         </div>
         <select
@@ -270,11 +253,21 @@ export default function ChatThread({
 
         {messages.map((m) => {
           if (m.senderType === "system") {
+            // Notices from Suplymate, never from the company. These carry the
+            // "this supplier has not registered" disclaimers, so they need a
+            // visible author — as an unlabelled grey pill they read as if the
+            // company had written them.
             return (
-              <div key={m.id} className="text-center">
-                <span className="rounded-full bg-slate-200 px-3 py-1 text-[11px] text-ink-dim">
-                  {m.body}
-                </span>
+              <div key={m.id} className="flex justify-center">
+                <div className="max-w-[88%] rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+                  <p className="mb-0.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-ink-dim">
+                    <Info className="h-3 w-3" aria-hidden />
+                    Suplymate
+                  </p>
+                  <p className="whitespace-pre-wrap text-[11px] leading-relaxed text-ink-dim">
+                    {m.body}
+                  </p>
+                </div>
               </div>
             );
           }

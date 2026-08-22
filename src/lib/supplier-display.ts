@@ -1,9 +1,23 @@
 import type { Supplier } from "@/data/suppliers";
+import { extractSupplierCity } from "@/lib/supplier-normalize";
+import { isVerified } from "@/lib/verification";
+
+// Presentation shape for a supplier.
+//
+// Every field here must trace back to collected data: Google Places, the
+// supplier's own site, an admin entry, or the database. Fields that cannot be
+// known are `null` and the UI omits them.
+//
+// This file previously invented review counts (up to 1,240), years in business,
+// employee counts, factory area, on-time-delivery rates, response times,
+// reorder rates and per-product prices, seeded from a hash of the supplier id.
+// Those were presented as fact about real companies, so they were removed.
+// Operational-performance metrics have no honest source until suppliers
+// transact on the platform, so they are absent from the type entirely rather
+// than nullable — the compiler then flags any attempt to render them.
 
 export type DisplayProduct = {
   name: string;
-  price: string;
-  moq: string;
   gradient: string;
 };
 
@@ -21,24 +35,23 @@ export type DisplaySupplier = {
   email?: string;
   description?: string;
   sourceUrl?: string;
+  /** Data-completeness score (0–100) for our own record, not a quality rating. */
   score: number;
   logoText: string;
   logoGradient: string;
   bannerGradient: string;
   logoUrl?: string;
   imageUrl?: string;
-  rating: number;
-  reviewCount: number;
+  /** Google Places rating. Null when the supplier has none. */
+  rating: number | null;
+  /** Google Places review count. Null when the supplier has none. */
+  reviewCount: number | null;
   verified: boolean;
-  yearsInBusiness: number;
-  employees: string;
-  area: string;
-  onTimeDelivery: number;
-  responseTime: string;
-  reorderRate: number;
   products: DisplayProduct[];
-  moq: string;
+  /** Supplier-stated MOQ, or null when never supplied. */
+  moq: string | null;
   deliveryRegions: string[];
+  /** Alias of `score`; retained for existing call sites. */
   reliabilityScore: number;
 };
 
@@ -93,18 +106,12 @@ const FLAGS: Record<string, string> = {
   vietnam: "🇻🇳",
 };
 
-const EMPLOYEE_BUCKETS = ["10+", "50+", "100+", "200+", "500+"];
-
 function hashString(str: string): number {
   let h = 0;
   for (let i = 0; i < str.length; i++) {
     h = (h * 31 + str.charCodeAt(i)) | 0;
   }
   return Math.abs(h);
-}
-
-function seeded(seed: number, min: number, max: number): number {
-  return min + (seed % (max - min + 1));
 }
 
 function initials(name: string): string {
@@ -122,51 +129,42 @@ function flagFor(country: string): string {
   return FLAGS[country.toLowerCase()] ?? "🌍";
 }
 
-function priceFor(seed: number, industry: string): string {
-  // Rough per-industry price bands to feel realistic.
-  const bands: Record<string, [number, number]> = {
-    Metal: [12, 980],
-    "Construction & BTP": [8, 140],
-    "Industrial Equipment": [1200, 85000],
-    "Electrotechnical & Cabling": [1, 45],
-    "Plastics & Packaging": [1, 12],
-    "Agriculture & Agrofood": [10, 120],
-  };
-  const [lo, hi] = bands[industry] ?? [5, 200];
-  const low = lo + (seed % Math.max(1, Math.floor((hi - lo) * 0.3)));
-  const high = low + Math.max(1, Math.floor((hi - low) * 0.5));
-  const fmt = (n: number) =>
-    n >= 1 ? `$${n.toLocaleString()}` : `$${n.toFixed(2)}`;
-  return `${fmt(low)} – ${fmt(high)}`;
-}
-
 export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
   const country = s.country ?? countryOf(s.location);
-  const city = s.city ?? s.location.split(",")[0].trim();
-  const rating =
-    s.googleRating ??
-    s.rating ??
-    Math.min(5, Math.max(3.8, Math.round((s.reliabilityScore / 20) * 10) / 10));
-  const reviewCount = s.googleReviews ?? s.reviewCount ?? seeded(seed, 18, 1240);
-  const verified = s.verified ?? s.reliabilityScore >= 85;
-  const yearsInBusiness = s.yearsInBusiness ?? seeded(seed >> 2, 5, 30);
-  const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
+  const city =
+    extractSupplierCity({
+      city: s.city,
+      country,
+      address: s.address,
+      location: s.location,
+    }) ?? "";
+  const location = [city, country].filter(Boolean).join(", ") || s.location;
+  // Only a real Google Places rating counts. There is no defensible way to
+  // derive a buyer rating from our own data-completeness score.
+  const rating = s.googleRating ?? s.rating ?? null;
+  const reviewCount = s.googleReviews ?? s.reviewCount ?? null;
+  const verified = isVerified({
+    marketplaceStatus: s.marketplaceStatus,
+    verifiedBy: s.verifiedBy,
+  });
 
-  const moqList = [s.moq];
   const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
     name,
-    price: priceFor(seed + i * 7, s.industry),
-    moq: moqList[i] ?? `${seeded(seed + i, 1, 500)} pcs`,
     gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
   }));
+
+  // The importer defaults MOQ to "Contact for MOQ", which is a prompt rather
+  // than a supplier-stated figure, so it is treated as unknown.
+  const statedMoq =
+    s.moq && s.moq.trim() && !/^contact/i.test(s.moq.trim()) ? s.moq.trim() : null;
 
   return {
     id: s.id,
     name: s.name,
     industry: s.industry,
     categoryLabel: s.category ?? s.industry,
-    location: s.location,
+    location,
     country,
     city,
     flag: flagFor(country),
@@ -184,14 +182,8 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     rating,
     reviewCount,
     verified,
-    yearsInBusiness,
-    employees,
-    area: `${(seeded(seed, 5, 60) * 100).toLocaleString()}+ m²`,
-    onTimeDelivery: seeded(seed, 90, 99),
-    responseTime: `≤${[1, 2, 3, 4, 6][seed % 5]}h`,
-    reorderRate: seeded(seed >> 1, 12, 46),
     products,
-    moq: s.moq,
+    moq: statedMoq,
     deliveryRegions: s.deliveryRegions,
     reliabilityScore: s.reliabilityScore,
   };

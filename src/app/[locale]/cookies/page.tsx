@@ -1,18 +1,21 @@
 import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "legal.cookies" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
-  return {
+  return completeLocalizedMetadata({
+    locale,
+    pathname: "/cookies",
     title: meta("titleTemplate", { title: t("title") }),
     description: t("intro"),
-  };
+    siteName: meta("siteName"),
+  });
 }
 
 export default async function CookiesPage() {

@@ -62,7 +62,7 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
       {open && (
         <div className="fixed inset-0 z-[70] flex items-center justify-center p-4" role="dialog" aria-modal="true">
           <button type="button" aria-label={common("close")} className="absolute inset-0 bg-ink/40" onClick={() => setOpen(false)} />
-          <div className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="relative w-full max-w-md rounded-2xl bg-surface p-6 shadow-2xl">
             <button type="button" onClick={() => setOpen(false)} className="absolute right-4 top-4 text-ink-dim hover:text-ink" aria-label={common("close")}>
               <X className="h-5 w-5" />
             </button>
@@ -84,11 +84,11 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
                   {t("claimDescription")}
                 </p>
                 <div className="mt-4 space-y-3">
-                  <input value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })} placeholder={t("rolePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.workEmail} onChange={(e) => setForm({ ...form, workEmail: e.target.value })} placeholder={t("workEmailPlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={t("phonePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.evidenceUrl} onChange={(e) => setForm({ ...form, evidenceUrl: e.target.value })} placeholder={t("evidencePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <textarea value={form.note} onChange={(e) => setForm({ ...form, note: e.target.value })} rows={2} placeholder={t("notePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
+                  <input value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })} placeholder={t("rolePlaceholder")} className="w-full rounded-lg border border-line px-3 py-2 text-sm" />
+                  <input value={form.workEmail} onChange={(e) => setForm({ ...form, workEmail: e.target.value })} placeholder={t("workEmailPlaceholder")} className="w-full rounded-lg border border-line px-3 py-2 text-sm" />
+                  <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={t("phonePlaceholder")} className="w-full rounded-lg border border-line px-3 py-2 text-sm" />
+                  <input value={form.evidenceUrl} onChange={(e) => setForm({ ...form, evidenceUrl: e.target.value })} placeholder={t("evidencePlaceholder")} className="w-full rounded-lg border border-line px-3 py-2 text-sm" />
+                  <textarea value={form.note} onChange={(e) => setForm({ ...form, note: e.target.value })} rows={2} placeholder={t("notePlaceholder")} className="w-full rounded-lg border border-line px-3 py-2 text-sm" />
                 </div>
                 {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
                 <button type="button" onClick={submit} disabled={submitting} className="mt-4 w-full rounded-lg bg-cyan px-4 py-2.5 text-sm font-semibold text-white hover:bg-cyan/90 disabled:opacity-60">

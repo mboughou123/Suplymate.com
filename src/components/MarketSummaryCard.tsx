@@ -56,7 +56,7 @@ export default function MarketSummaryCard({
   const className = `w-full rounded-xl border p-4 text-left transition-all duration-200 ease-cinema cursor-pointer ${
     selected
       ? "border-cyan/40 bg-cyan-soft shadow-card ring-1 ring-inset ring-cyan/20"
-      : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-card"
+      : "border-line bg-surface hover:border-cyan/30 hover:shadow-card"
   }`;
 
   const content = (

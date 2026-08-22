@@ -1,155 +1,85 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { MessageSquareQuote, Sparkles, BadgeCheck, ThumbsUp } from "lucide-react";
+import { MessageSquareQuote, Star } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
-import { SectionHeading, AnimatedBar, StarRating, reveal } from "./primitives";
+import { SectionHeading, StarRating, reveal } from "./primitives";
 
-export default function ReviewsSection({ profile }: { profile: SupplierProfile }) {
+/**
+ * Ratings and reviews.
+ *
+ * This section previously rendered five to eight fabricated reviews per
+ * supplier — invented authors, invented buyer companies, invented bodies, and a
+ * "verified purchase" badge assigned at random — plus a star distribution
+ * derived from them.
+ *
+ * Suplymate has collected no buyer reviews, so there are none to show. Where a
+ * Google Places rating exists it is shown and attributed to Google, because it
+ * is somebody else's rating rather than a platform review.
+ */
+export default function ReviewsSection({
+  profile,
+}: {
+  profile: SupplierProfile;
+}) {
   const t = useTranslations("supplierProfile");
-  const { reviews, reviewSummary } = profile;
-  const [filter, setFilter] = useState<"all" | "verified" | 5 | 4 | 3>("all");
-
-  const visible = useMemo(() => {
-    if (filter === "all") return reviews;
-    if (filter === "verified") return reviews.filter((r) => r.verifiedPurchase);
-    return reviews.filter((r) => r.rating === filter);
-  }, [reviews, filter]);
-
-  const filters: { key: typeof filter; label: string }[] = [
-    { key: "all", label: t("allReviews") },
-    { key: "verified", label: t("verifiedPurchase") },
-    { key: 5, label: t("starFilter", { count: 5 }) },
-    { key: 4, label: t("starFilter", { count: 4 }) },
-    { key: 3, label: t("starFilter", { count: 3 }) },
-  ];
+  const { rating, reviewCount } = profile.base;
+  const hasGoogleRating = rating !== null && reviewCount !== null;
 
   return (
-    <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
+    <motion.section
+      {...reveal}
+      transition={{ duration: 0.6 }}
+      className="py-8 sm:py-10"
+    >
       <SectionHeading
         eyebrow={t("reputationEyebrow")}
-        title={t("buyerReviewsTitle")}
-        description={t("buyerReviewsDescription")}
+        title={t("ratingsTitle")}
+        description={t("ratingsDescription")}
         icon={<MessageSquareQuote className="h-5 w-5" />}
       />
 
-      <div className="grid gap-4 lg:grid-cols-[320px_1fr]">
-        {/* Summary panel */}
-        <div className="space-y-4">
-          <div className="glass-card p-5 text-center">
-            <p className="text-5xl font-extrabold tracking-tight text-ink">
-              {reviewSummary.average.toFixed(1)}
+      <div className="grid gap-4 lg:grid-cols-2">
+        {hasGoogleRating ? (
+          <div className="glass-card p-5">
+            <p className="text-[11px] font-medium uppercase tracking-wider text-ink-dim">
+              {t("googleRatingLabel")}
             </p>
-            <div className="mt-1 flex justify-center">
-              <StarRating rating={reviewSummary.average} size="h-5 w-5" />
-            </div>
-            <p className="mt-1 text-xs text-ink-dim">
-              {t("verifiedReviewsCount", { count: reviewSummary.total.toLocaleString() })}
-            </p>
-            <div className="mt-4 space-y-1.5">
-              {reviewSummary.distribution.map((d) => (
-                <div key={d.stars} className="flex items-center gap-2 text-xs">
-                  <span className="w-3 text-ink-muted">{d.stars}</span>
-                  <div className="flex-1">
-                    <AnimatedBar value={d.pct} color="gold" height="h-1.5" />
-                  </div>
-                  <span className="w-8 text-right text-ink-dim">{d.pct}%</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="glass-card space-y-3 p-5">
-            {[
-              { label: t("service"), value: reviewSummary.avgService },
-              { label: t("shippingLabel"), value: reviewSummary.avgShipping },
-              { label: t("quality"), value: reviewSummary.avgQuality },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="mb-1 flex items-center justify-between text-xs">
-                  <span className="text-ink-muted">{s.label}</span>
-                  <span className="font-bold text-ink">{s.value.toFixed(1)}/5</span>
-                </div>
-                <AnimatedBar value={(s.value / 5) * 100} color="cyan" height="h-1.5" />
+            <div className="mt-2 flex items-center gap-3">
+              <span className="text-4xl font-extrabold tracking-tight text-ink">
+                {rating.toFixed(1)}
+              </span>
+              <div>
+                <StarRating rating={rating} size="h-4 w-4" />
+                <p className="mt-1 text-xs text-ink-dim">
+                  {t("googleReviewCount", { count: reviewCount })}
+                </p>
               </div>
-            ))}
-          </div>
-
-          <div className="rounded-2xl border border-ai-glow/20 bg-ai-mist/60 p-4">
-            <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-cyan">
-              <Sparkles className="h-3.5 w-3.5" aria-hidden /> {t("aiReviewSummary")}
             </div>
-            <p className="text-sm leading-relaxed text-ink-muted">{reviewSummary.aiSummary}</p>
+            <p className="mt-4 border-t border-line pt-3 text-xs text-ink-dim">
+              {t("googleRatingDisclaimer")}
+            </p>
           </div>
-        </div>
-
-        {/* Reviews list */}
-        <div>
-          <div className="mb-4 flex flex-wrap gap-2">
-            {filters.map((f) => (
-              <button
-                key={String(f.key)}
-                onClick={() => setFilter(f.key)}
-                className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
-                  filter === f.key
-                    ? "bg-cyan text-white shadow-glow"
-                    : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40"
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
+        ) : (
+          <div className="glass-card p-5">
+            <p className="text-[11px] font-medium uppercase tracking-wider text-ink-dim">
+              {t("googleRatingLabel")}
+            </p>
+            <p className="mt-2 text-body text-ink-muted">{t("noGoogleRating")}</p>
           </div>
+        )}
 
-          <div className="space-y-3">
-            {visible.map((r, i) => (
-              <motion.article
-                key={r.id}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 5) * 0.05, duration: 0.4 }}
-                className="glass-card p-5"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan/15 to-teal/15 text-lg" aria-hidden>
-                      {r.flag}
-                    </span>
-                    <div>
-                      <p className="text-sm font-bold text-ink">{r.author}</p>
-                      <p className="text-xs text-ink-dim">
-                        {r.company} · {r.country}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <StarRating rating={r.rating} />
-                    <p className="mt-0.5 text-[11px] text-ink-dim">{r.date}</p>
-                  </div>
-                </div>
-
-                <p className="mt-3 text-sm font-semibold text-ink">{r.title}</p>
-                <p className="mt-1 text-sm leading-relaxed text-ink-muted">{r.body}</p>
-
-                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-ink-dim">
-                  <span>{t("service")} <strong className="text-ink">{r.service}/5</strong></span>
-                  <span>{t("shippingLabel")} <strong className="text-ink">{r.shipping}/5</strong></span>
-                  <span>{t("quality")} <strong className="text-ink">{r.quality}/5</strong></span>
-                  {r.verifiedPurchase && (
-                    <span className="inline-flex items-center gap-1 font-semibold text-emerald-700">
-                      <BadgeCheck className="h-3.5 w-3.5" aria-hidden /> {t("verifiedPurchase")}
-                    </span>
-                  )}
-                  <span className="ml-auto inline-flex items-center gap-1">
-                    <ThumbsUp className="h-3.5 w-3.5" aria-hidden /> {r.helpful}
-                  </span>
-                </div>
-              </motion.article>
-            ))}
-          </div>
+        <div className="glass-card flex flex-col justify-center p-5">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-base text-ink-dim">
+            <Star className="h-5 w-5" aria-hidden />
+          </span>
+          <p className="mt-3 text-body font-semibold text-ink">
+            {t("noPlatformReviewsTitle")}
+          </p>
+          <p className="mt-1.5 text-body text-ink-muted">
+            {t("noPlatformReviewsBody")}
+          </p>
         </div>
       </div>
     </motion.section>

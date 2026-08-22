@@ -11,6 +11,8 @@ import { join } from "node:path";
 import { PrismaClient } from "@prisma/client";
 import { verifiedSuppliers } from "../src/data/verified-suppliers";
 import { outscraperSuppliers } from "../src/data/outscraper-suppliers";
+import { isKnownDeadImageUrl } from "../src/lib/image-fallback";
+import { normalizeSupplierInput } from "../src/lib/supplier-normalize";
 import { normalizeCache } from "./outscraper/normalize";
 
 const prisma = new PrismaClient();
@@ -36,7 +38,7 @@ type ImportRecord = {
   description?: string | null;
   products: string[];
   deliveryRegions: string[];
-  moq: string;
+  moq: string | null;
   verified?: boolean | null;
   address?: string | null;
   openingHours?: string | null;
@@ -76,29 +78,45 @@ function loadRecords(source: string): ImportRecord[] {
   return verifiedSuppliers as unknown as ImportRecord[];
 }
 
-function toData(r: ImportRecord) {
+function toData(r: ImportRecord, sequence: number) {
   // Gallery images may arrive under `supplierImages` (committed dataset / Supplier
   // type) or `images` (raw normalized records); accept either.
-  const gallery = r.supplierImages ?? r.images ?? [];
+  const gallery = (r.supplierImages ?? r.images ?? []).filter(
+    (url) => !isKnownDeadImageUrl(url)
+  );
+  const normalized = normalizeSupplierInput(
+    {
+      name: r.name,
+      industry: r.industry,
+      category: r.category,
+      location: r.location,
+      country: r.country,
+      city: r.city,
+      address: r.address,
+      description: r.description,
+    },
+    sequence
+  );
   return {
     name: r.name,
     industry: r.industry,
     category: r.category ?? null,
-    location: r.location,
+    location: normalized.location,
     country: r.country ?? null,
-    city: r.city ?? null,
+    city: normalized.city,
     website: r.website ?? null,
     phone: r.phone ?? null,
     email: r.email ?? null,
-    imageUrl: r.imageUrl ?? null,
-    logoUrl: r.logoUrl ?? null,
-    images: JSON.stringify(Array.isArray(gallery) ? gallery : []),
+    imageUrl:
+      r.imageUrl && !isKnownDeadImageUrl(r.imageUrl) ? r.imageUrl : null,
+    logoUrl: r.logoUrl && !isKnownDeadImageUrl(r.logoUrl) ? r.logoUrl : null,
+    images: JSON.stringify(gallery),
     googleRating: r.googleRating ?? null,
     googleReviews: r.googleReviews ?? null,
-    description: r.description ?? null,
+    description: normalized.description,
     products: JSON.stringify(r.products ?? []),
     deliveryRegions: JSON.stringify(r.deliveryRegions ?? []),
-    moq: r.moq,
+    moq: r.moq ?? null,
     verified: Boolean(r.verified),
     address: r.address ?? null,
     openingHours: r.openingHours ?? null,
@@ -125,8 +143,8 @@ async function main() {
   }
 
   let imported = 0;
-  for (const r of records) {
-    const data = toData(r);
+  for (const [index, r] of records.entries()) {
+    const data = toData(r, index);
     await prisma.supplier.upsert({
       where: { id: r.id },
       create: { id: r.id, ...data },

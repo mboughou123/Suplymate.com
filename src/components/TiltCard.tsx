@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { useRef, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type TiltCardProps = {
   href: string;
@@ -10,50 +10,15 @@ type TiltCardProps = {
 };
 
 /**
- * Interactive card wrapper: 3D pointer tilt + cursor-following spotlight.
- * Children (including icons) are rendered by the parent server component,
- * so no component functions cross the server/client boundary.
+ * Linked card with a hover lift. The previous 3D pointer-follow tilt was
+ * retired — Phase 4b forbids parallax-style motion.
  */
 export default function TiltCard({ href, children, className = "" }: TiltCardProps) {
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  const handleMove = (e: React.MouseEvent) => {
-    const el = ref.current;
-    if (
-      !el ||
-      window.matchMedia("(pointer: coarse)").matches ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    )
-      return;
-    const r = el.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5;
-    const py = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(900px) rotateY(${px * 5}deg) rotateX(${-py * 5}deg) translateY(-4px)`;
-    el.style.setProperty("--mx", `${(px + 0.5) * 100}%`);
-    el.style.setProperty("--my", `${(py + 0.5) * 100}%`);
-  };
-
-  const handleLeave = () => {
-    const el = ref.current;
-    if (el) el.style.transform = "";
-  };
-
   return (
     <Link
-      ref={ref}
       href={href}
-      onMouseMove={handleMove}
-      onMouseLeave={handleLeave}
-      className={`group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card backdrop-blur-xl transition-[transform,border-color,box-shadow] duration-300 ease-cinema hover:border-cyan/40 hover:shadow-cardHover ${className}`}
+      className={`group relative block overflow-hidden rounded-2xl border border-line bg-surface shadow-card transition-all duration-200 ease-cinema hover:-translate-y-1 hover:border-cyan/40 hover:shadow-cardHover motion-reduce:transform-none ${className}`}
     >
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(18rem 18rem at var(--mx,50%) var(--my,50%), rgba(14,165,233,0.12), transparent 60%)",
-        }}
-      />
       {children}
     </Link>
   );

@@ -2,13 +2,16 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { GENERIC_PRODUCT_PLACEHOLDER } from "@/lib/image-fallback";
+import {
+  GENERIC_PRODUCT_PLACEHOLDER,
+  isKnownDeadImageUrl,
+} from "@/lib/image-fallback";
 
 // Hosts allowed through the Next.js image optimizer (kept in sync with
 // `images.remotePatterns` in next.config.ts). Remote photos from these hosts
 // are proxied, resized, and served as WebP/AVIF from our own edge cache
 // instead of hotlinking the third-party origin.
-const OPTIMIZED_HOST = /(\.googleusercontent\.com|^streetviewpixels-pa\.googleapis\.com$|\.public\.blob\.vercel-storage\.com)$/i;
+const OPTIMIZED_HOST = /\.public\.blob\.vercel-storage\.com$/i;
 
 function canOptimize(src: string): boolean {
   if (src.startsWith("/")) {
@@ -65,7 +68,7 @@ export default function ImageWithFallback({
   // Ordered, de-duplicated, non-empty chain of candidate sources.
   const chain = useMemo(() => {
     const candidates = [src, fallbackSrc, placeholderSrc].filter(
-      (s): s is string => Boolean(s && s.trim())
+      (s): s is string => Boolean(s && s.trim()) && !isKnownDeadImageUrl(s)
     );
     const seen = new Set<string>();
     const unique = candidates.filter((s) => {

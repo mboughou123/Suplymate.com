@@ -23,7 +23,7 @@ export type SupplierBundleProduct = {
 /**
  * Supplier bundle JSON shape for bulk import (logo, banner, product media).
  *
- * @example scripts/import/examples/metalworks-china.json
+ * @example scripts/import/examples/example-supplier.json
  */
 export type SupplierBundle = {
   supplierName: string;

@@ -23,7 +23,7 @@ const DEFAULT_FILTERS: SupplierFilterState = {
   country: "All",
   minRating: 0,
   minReviews: 0,
-  verifiedOnly: false,
+  contactableOnly: false,
 };
 
 function categoryOf(s: Supplier): string {
@@ -75,7 +75,15 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         if (filters.country !== "All" && country !== filters.country) return false;
         if (ratingOf(s) < filters.minRating) return false;
         if (reviewsOf(s) < filters.minReviews) return false;
-        if (filters.verifiedOnly && !s.verified) return false;
+        // Was `verifiedOnly && !s.verified`, a filter that now matches nothing
+        // because no supplier has been verified by a person. Filtering on
+        // reachable contact details is something we can actually honour.
+        if (
+          filters.contactableOnly &&
+          !(s.phone || s.email || s.website)
+        ) {
+          return false;
+        }
         if (!q) return true;
         return (
           s.name.toLowerCase().includes(q) ||
@@ -151,7 +159,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
           className={`rounded-lg border px-3 py-1.5 text-sm font-medium ${
             compareMode
               ? "border-cyan bg-cyan/10 text-cyan"
-              : "border-slate-200 text-ink-muted hover:border-cyan/40"
+              : "border-line text-ink-muted hover:border-cyan/40"
           }`}
         >
           {compareMode ? t("exitCompareMode") : t("compareSuppliers")}
@@ -217,7 +225,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 type="button"
                 disabled={safePage === 1}
                 onClick={() => goToPage(safePage - 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
+                className="inline-flex h-9 items-center gap-1 rounded-lg border border-line bg-surface px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden />
                 {tCommon("prev")}
@@ -247,7 +255,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                     className={`h-9 w-9 rounded-lg text-sm font-semibold transition ${
                       n === safePage
                         ? "bg-navy text-white"
-                        : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40 hover:text-ink"
+                        : "border border-line bg-surface text-ink-muted hover:border-cyan/40 hover:text-ink"
                     }`}
                   >
                     {n}
@@ -259,7 +267,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 type="button"
                 disabled={safePage === totalPages}
                 onClick={() => goToPage(safePage + 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
+                className="inline-flex h-9 items-center gap-1 rounded-lg border border-line bg-surface px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
               >
                 {tCommon("next")}
                 <ChevronRight className="h-4 w-4" aria-hidden />

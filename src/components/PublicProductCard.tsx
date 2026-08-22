@@ -17,9 +17,9 @@ export default function PublicProductCard({ data: d }: Props) {
   const tc = useTranslations("common");
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
       <Link href={`/products/${d.id}`} className="relative block">
-        <div className="relative flex h-44 items-center justify-center overflow-hidden bg-slate-100">
+        <div className="relative flex h-44 items-center justify-center overflow-hidden bg-base">
           <ImageWithFallback
             src={d.imageUrl}
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
@@ -66,7 +66,7 @@ export default function PublicProductCard({ data: d }: Props) {
           )}
         </div>
 
-        <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
+        <div className="mt-3 rounded-xl bg-base px-3 py-2.5">
           {d.priceLabel ? (
             <>
               <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
@@ -102,7 +102,7 @@ export default function PublicProductCard({ data: d }: Props) {
           <div className="flex gap-2">
             <Link
               href={`/products/${d.id}`}
-              className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
+              className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-line bg-surface px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
             >
               {t("viewProduct")}
               <ArrowRight

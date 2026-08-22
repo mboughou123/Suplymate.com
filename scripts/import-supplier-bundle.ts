@@ -1,7 +1,7 @@
 // Supplier bundle JSON import — logos, banners, and product images in one file.
 //
 // Usage:
-//   npm run import:bundle -- --file=scripts/import/examples/metalworks-china.json
+//   npm run import:bundle -- --file=scripts/import/examples/example-supplier.json
 //   npm run import:bundle -- --file=scripts/import/examples/          # all *.json in dir
 //   add --approve to publish products to the public catalogue immediately
 //   add --dry-run to preview without writing
@@ -279,10 +279,13 @@ async function upsertCatalogProductDb(sp: ScrapedProduct, dryRun: boolean): Prom
   const data = {
     name: sp.name,
     category: sp.category,
+    // priceMax was `base * 1.35`, an invented 35% ceiling that turned one
+    // scraped price into a range, and bestDeliveryDays was hardcoded to 14 for
+    // every imported row. We hold one price and no lead time.
     priceMin: base,
-    priceMax: Math.round(base * 1.35 * 100) / 100,
+    priceMax: base,
     currency: sp.currency,
-    bestDeliveryDays: 14,
+    bestDeliveryDays: 0,
     supplierCount: 1,
     unit: "unit",
   };

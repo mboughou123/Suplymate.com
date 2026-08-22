@@ -1,0 +1,22 @@
+{
+  "supplierName": "Example Supplier Ltd",
+  "logo": "/logos/metalworks.png",
+  "bannerImage": "/banners/metalworks.jpg",
+  "category": "Steel & Metals",
+  "country": "China",
+  "currency": "USD",
+  "moq": "5 tons",
+  "description": "Placeholder description. Replace every field in this file with the supplier's real details before importing.",
+  "website": "https://example.invalid/example-supplier",
+  "products": [
+    {
+      "name": "Steel Beam",
+      "image": "/products/steelbeam.jpg",
+      "price": 120,
+      "category": "Steel & Metals",
+      "moq": "5 tons",
+      "description": "Placeholder product. Replace with a real product from the supplier's catalogue."
+    }
+  ],
+  "supplierId": "example-supplier"
+}

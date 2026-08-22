@@ -2,7 +2,7 @@
 
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { BadgeCheck, MapPin, Star, ArrowRight } from "lucide-react";
+import { MapPin, Star, ArrowRight } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
 import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
@@ -14,10 +14,12 @@ export type HomepageSupplierCardProps = {
   location: string;
   country: string;
   flag: string;
-  rating: number;
-  reviewCount: number;
+  /** Google Places rating; null when the supplier has none. */
+  rating: number | null;
+  /** Google Places review count; null when the supplier has none. */
+  reviewCount: number | null;
   verified: boolean;
-  description: string;
+  description?: string;
   /** Real cover/business photo (DB/CDN); may be empty. */
   coverImage?: string;
   /** Category-based fallback cover. */
@@ -39,7 +41,6 @@ export default function HomepageSupplierCard({
   flag,
   rating,
   reviewCount,
-  verified,
   description,
   coverImage,
   coverFallback,
@@ -49,12 +50,10 @@ export default function HomepageSupplierCard({
   href,
 }: HomepageSupplierCardProps) {
   const t = useTranslations("suppliers");
-  const tCommon = useTranslations("common");
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-slate-300 hover:shadow-cardHover motion-reduce:transform-none">
-      {/* Cover / business photo — consistent 16:9 */}
-      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-card transition-all duration-200 ease-cinema hover:-translate-y-1 hover:border-cyan/30 hover:shadow-cardHover motion-reduce:transform-none">
+      <div className="relative aspect-[16/9] overflow-hidden bg-base">
         <ImageWithFallback
           src={coverImage}
           fallbackSrc={coverFallback}
@@ -67,13 +66,7 @@ export default function HomepageSupplierCard({
           aria-hidden
           className="absolute inset-0 bg-gradient-to-t from-navy-dark/45 via-transparent to-transparent"
         />
-        {verified && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 py-1 pl-1.5 pr-2.5 text-caption font-semibold text-up shadow-sm ring-1 ring-black/5 backdrop-blur">
-            <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-            {tCommon("verified")}
-          </span>
-        )}
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
+        <span className="absolute start-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
           <span aria-hidden>{flag}</span>
           {country}
         </span>
@@ -87,7 +80,7 @@ export default function HomepageSupplierCard({
             initials={logoInitials}
             gradient={logoGradient}
             name={name}
-            className="h-14 w-14 rounded-xl text-sm ring-4 ring-white shadow-card"
+            className="h-14 w-14 rounded-xl text-sm ring-4 ring-surface shadow-card"
           />
         </div>
 
@@ -97,25 +90,35 @@ export default function HomepageSupplierCard({
             <span className="text-caption font-semibold uppercase tracking-wide text-cyan">
               {category}
             </span>
-            <span
-              aria-hidden
-              className="h-0.5 w-0.5 rounded-full bg-slate-300"
-            />
-            <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
-              <Star
-                className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
-                aria-hidden
-              />
-              {rating.toFixed(1)}
-              <span className="font-normal text-ink-dim">({reviewCount})</span>
-            </span>
+            {rating !== null && (
+              <>
+                <span
+                  aria-hidden
+                  className="h-0.5 w-0.5 rounded-full bg-slate-300"
+                />
+                <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
+                  <Star
+                    className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
+                    aria-hidden
+                  />
+                  {rating.toFixed(1)}
+                  {reviewCount !== null && (
+                    <span className="font-normal text-ink-dim">
+                      ({reviewCount})
+                    </span>
+                  )}
+                </span>
+              </>
+            )}
           </div>
-          <p className="mt-3 line-clamp-2 text-body-sm text-ink-muted">
-            {description}
-          </p>
+          {description && (
+            <p className="mt-3 line-clamp-2 text-body-sm text-ink-muted">
+              {description}
+            </p>
+          )}
         </div>
 
-        <div className="mt-4 flex items-center justify-between gap-3 border-t border-slate-100 pt-4">
+        <div className="mt-4 flex items-center justify-between gap-3 border-t border-line pt-4">
           <span className="inline-flex min-w-0 items-center gap-1.5 text-caption text-ink-muted">
             <MapPin className="h-3.5 w-3.5 shrink-0 text-ink-dim" aria-hidden />
             <span className="truncate">{location}</span>

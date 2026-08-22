@@ -5,7 +5,7 @@ export type DashboardStats = {
   favoriteCount: number;
   unreadNotifications: number;
   supplierCount: number;
-  verifiedSuppliers: number;
+  contactableSuppliers: number;
 };
 
 export type MaterialSummary = {

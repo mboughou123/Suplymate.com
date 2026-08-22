@@ -3,6 +3,12 @@ import { Check } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { PLANS, getBillingState } from "@/lib/billing";
 import { ManageBillingButton, UpgradeButton } from "@/components/settings/BillingActions";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/settings/subscription", titleKey: "settingsSubscriptionTitle", descriptionKey: "settingsDescription", robots: { index: false, follow: false } });
+}
 
 export default async function SubscriptionPage() {
   const { authenticated, user } = await getCurrentAccount();

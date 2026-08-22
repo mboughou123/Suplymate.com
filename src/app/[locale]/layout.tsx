@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
+import Script from "next/script";
 import NavbarGate from "@/components/NavbarGate";
 import FooterGate from "@/components/FooterGate";
 import Providers from "@/components/Providers";
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
   const alternates = buildPageAlternates(locale as Locale);
   return {
+    metadataBase: new URL(alternates.canonical),
     title: t("title"),
     description: t("description"),
     alternates,
@@ -50,8 +52,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       dir={dir}
       data-scroll-behavior="smooth"
       className={inter.variable}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col font-sans">
+      <body className="min-h-screen flex flex-col font-sans bg-page text-ink">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function(){try{var t=localStorage.getItem("suplymate-theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");}catch(e){}})();`}
+        </Script>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <NavbarGate />

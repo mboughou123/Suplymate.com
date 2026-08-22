@@ -48,7 +48,7 @@ export type AdminSupplier = {
   certifications: CertificationDetail[];
   products: string[];
   deliveryRegions: string[];
-  moq: string;
+  moq: string | null;
   verified: boolean;
   verificationStatus: VerificationStatus;
   trustScore: number | null;
@@ -122,6 +122,138 @@ export function dedupeStrings(arr: string[]): string[] {
   return out;
 }
 
+export function isBareIsoCode(value: string | null | undefined): boolean {
+  return Boolean(value && /^[A-Za-z]{2}$/.test(value.trim()));
+}
+
+function addressParts(value: string | null | undefined): string[] {
+  return (value ?? "")
+    .split(/\s+-\s+|,\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+/** Lowercase and strip diacritics so "Türkiye" and "turkiye" compare equal. */
+function fold(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
+/**
+ * Endonyms that appear as the final address segment while the country column
+ * holds the English exonym. Without these the country name survives filtering
+ * and is mistaken for the city — the observed case was six Turkish suppliers
+ * whose city read "Türkiye".
+ *
+ * Keys are folded exonyms; values are folded alternatives.
+ */
+const COUNTRY_ALIASES: Record<string, readonly string[]> = {
+  turkey: ["turkiye"],
+  germany: ["deutschland"],
+  spain: ["espana"],
+  italy: ["italia"],
+  morocco: ["maroc"],
+  japan: ["nippon", "nihon"],
+  china: ["zhongguo"],
+  mexico: ["mexico"],
+};
+
+function isCountryName(part: string, country: string | null): boolean {
+  if (!country) return false;
+  const folded = fold(part);
+  const target = fold(country);
+  if (folded === target) return true;
+  return (COUNTRY_ALIASES[target] ?? []).includes(folded);
+}
+
+/**
+ * Strip artefacts that sit alongside the city inside one address segment:
+ * a leading postcode ("47228 Rheinhausen") and Google's district/province
+ * pairing ("Çorlu/Tekirdağ"), where the province is the useful half.
+ */
+function cleanCityCandidate(part: string): string {
+  const withoutPostcode = part.replace(/^\d{4,6}\s+/, "").trim();
+  const afterSlash = withoutPostcode.split("/").at(-1)?.trim();
+  return afterSlash || withoutPostcode;
+}
+
+/** A US state + ZIP tail ("TN 37604"), which is never a city. */
+const US_STATE_ZIP = /^[A-Za-z]{2}\s+\d{5}(-\d{4})?$/;
+
+export function extractSupplierCity(input: {
+  city?: string | null;
+  country?: string | null;
+  address?: string | null;
+  location?: string | null;
+}): string | null {
+  const direct = input.city?.trim();
+  if (direct && !isBareIsoCode(direct)) return direct;
+
+  const country = input.country?.trim() ?? null;
+  const candidates = [
+    ...addressParts(input.address),
+    ...addressParts(input.location),
+  ]
+    .filter(
+      (part) =>
+        !isBareIsoCode(part) &&
+        !isCountryName(part, country) &&
+        !US_STATE_ZIP.test(part) &&
+        // Plus codes ("78F5+FH") and bare numbers/coordinates.
+        !/^[A-Z0-9]{4,}\+[A-Z0-9]{2,}$/i.test(part) &&
+        !/^[\d.\s-]+$/.test(part)
+    )
+    .map(cleanCityCandidate)
+    // Cleaning can empty a segment or reduce it to the country name.
+    .filter((part) => part.length > 0 && !isCountryName(part, country));
+
+  return candidates.at(-1) ?? null;
+}
+
+/**
+ * Indefinite article for a category name ("an industrial parts supplier").
+ *
+ * A plain vowel test is sufficient because the categories are ordinary nouns
+ * ("Industrial Parts", "Agriculture & Agrofood"); none hit the classic
+ * pronunciation exceptions like "a university" or "an hour".
+ */
+function indefiniteArticle(word: string): string {
+  return /^[aeiou]/i.test(word.trim()) ? "an" : "a";
+}
+
+function descriptionVariant(name: string): number {
+  let hash = 0;
+  for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) | 0;
+  return Math.abs(hash) % 4;
+}
+
+export function generateSupplierDescription(
+  input: Pick<
+    SupplierInput,
+    "name" | "industry" | "category" | "country" | "city" | "address" | "location"
+  >,
+  variant = descriptionVariant(input.name)
+): string {
+  const name = input.name.trim();
+  const category =
+    input.category?.trim() || input.industry?.trim() || "Uncategorized";
+  const city = extractSupplierCity(input);
+  const country = input.country?.trim() || null;
+  const place = [city, country].filter(Boolean).join(", ") || "location not provided";
+
+  const lowerCategory = category.toLowerCase();
+  const templates = [
+    `${name} is listed as ${indefiniteArticle(lowerCategory)} ${lowerCategory} supplier in ${place}.`,
+    `Based in ${place}, ${name} is categorized under ${category}.`,
+    `${name} appears in the ${category} directory for ${place}.`,
+    `This public-source listing places ${name} in ${place} under ${category}.`,
+  ];
+  return templates[((variant % templates.length) + templates.length) % templates.length];
+}
+
 export function regionFor(country: string | null): string[] {
   const c = (country ?? "").toLowerCase();
   if (/(usa|united states|mexico|canada)/.test(c)) return ["North America", "EU"];
@@ -138,13 +270,20 @@ export function normalizeStatus(v: unknown): VerificationStatus {
 }
 
 /** Build a full AdminSupplier from partial input, computing derived fields. */
-export function normalizeSupplierInput(input: SupplierInput): AdminSupplier {
+export function normalizeSupplierInput(
+  input: SupplierInput,
+  descriptionSequence?: number
+): AdminSupplier {
   const name = (input.name ?? "").trim();
   const id = (input.id?.trim() || slugifySupplierId(name)) || `supplier-${Date.now()}`;
   const country = input.country?.trim() || null;
-  const city = input.city?.trim() || null;
+  const city = extractSupplierCity(input);
+  const suppliedLocation = input.location?.trim() || null;
+  const locationHasIsoCity =
+    suppliedLocation !== null &&
+    isBareIsoCode(suppliedLocation.split(",")[0]?.trim());
   const location =
-    input.location?.trim() ||
+    (!locationHasIsoCity ? suppliedLocation : null) ||
     [city, country].filter(Boolean).join(", ") ||
     country ||
     "Global";
@@ -152,6 +291,14 @@ export function normalizeSupplierInput(input: SupplierInput): AdminSupplier {
   const certificationImages = dedupeStrings(input.certificationImages ?? []);
   const certifications = (input.certifications ?? []).filter((c) => c && c.name);
   const status = normalizeStatus(input.verificationStatus);
+  const suppliedDescription = input.description?.trim() || null;
+  const description =
+    suppliedDescription && !/^.+ supplier in .+\.$/i.test(suppliedDescription)
+      ? suppliedDescription
+      : generateSupplierDescription(
+          { ...input, name, country, city, location },
+          descriptionSequence
+        );
 
   const trust = computeTrustScore({
     website: input.website,
@@ -167,7 +314,8 @@ export function normalizeSupplierInput(input: SupplierInput): AdminSupplier {
   return {
     id,
     name,
-    industry: input.industry?.trim() || "Industrial Equipment",
+    industry:
+      input.industry?.trim() || input.category?.trim() || "Uncategorized",
     category: input.category?.trim() || null,
     location,
     country,
@@ -176,7 +324,7 @@ export function normalizeSupplierInput(input: SupplierInput): AdminSupplier {
     website: input.website?.trim() || null,
     phone: input.phone?.trim() || null,
     email: input.email?.trim() || null,
-    description: input.description?.trim() || null,
+    description,
     logoUrl: input.logoUrl?.trim() || null,
     imageUrl: input.imageUrl?.trim() || null,
     images,
@@ -187,7 +335,9 @@ export function normalizeSupplierInput(input: SupplierInput): AdminSupplier {
       input.deliveryRegions && input.deliveryRegions.length
         ? dedupeStrings(input.deliveryRegions)
         : regionFor(country),
-    moq: input.moq?.trim() || "Contact for MOQ",
+    // Was defaulted to "Contact for MOQ", which reads as a supplier
+    // instruction. Null means we simply do not know.
+    moq: input.moq?.trim() || null,
     // Imported/scraped suppliers are never auto-verified.
     verified: status === "verified",
     verificationStatus: status,

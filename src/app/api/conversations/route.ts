@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
-import { firstContactReply } from "@/lib/auto-reply";
+import { firstContactNotice } from "@/lib/auto-reply";
 import { getClaimedSupplierIds } from "@/lib/supplier-access";
 
 export async function GET() {
@@ -75,18 +75,31 @@ export async function POST(request: Request) {
     const created = !conversation;
 
     if (!conversation) {
+      // Opening notice, only for profiles no supplier has claimed. This used to
+      // be written as `senderType: "supplier"` with text in the company's own
+      // voice ("thank you for contacting X, a sales representative will respond
+      // shortly"), which put words in the mouth of a real business that has no
+      // account here. It is now a system notice that says so.
+      const claimed = await prisma.supplier
+        .findUnique({ where: { id: supplierId }, select: { claimedByUserId: true } })
+        .catch(() => null);
+
       conversation = await prisma.conversation.create({
         data: {
           buyerId: session.user.id,
           supplierId,
           supplierName,
-          messages: {
-            create: {
-              senderType: "supplier",
-              body: firstContactReply(supplierName),
-              readAt: new Date(),
-            },
-          },
+          ...(claimed?.claimedByUserId
+            ? {}
+            : {
+                messages: {
+                  create: {
+                    senderType: "system",
+                    body: firstContactNotice(supplierName),
+                    readAt: new Date(),
+                  },
+                },
+              }),
         },
       });
     }

@@ -12,6 +12,17 @@ import HomepageSupplierSection from "@/components/HomepageSupplierSection";
 import HomepageProductSection from "@/components/HomepageProductSection";
 import TrustAiSection from "@/components/TrustAiSection";
 import Reveal from "@/components/Reveal";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "",
+    titleKey: "title",
+    descriptionKey: "description",
+  });
+}
 
 type Feature = {
   titleKey: FeatureIconName;
@@ -138,7 +149,7 @@ export default async function HomePage() {
               <Reveal key={key} delay={i * 40}>
                 <Link
                   href="/suppliers"
-                  className="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-body-sm font-medium text-ink-muted shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200 ease-cinema hover:border-cyan/40 hover:bg-cyan-soft hover:text-cyan cursor-pointer"
+                  className="inline-block rounded-full border border-line bg-surface px-5 py-2.5 text-body-sm font-medium text-ink-muted shadow-card transition-all duration-200 ease-cinema hover:border-cyan/40 hover:bg-cyan-soft hover:text-cyan cursor-pointer"
                 >
                   {t(key)}
                 </Link>
@@ -179,7 +190,7 @@ export default async function HomePage() {
         <div className="container-page">
           <Reveal className="relative overflow-hidden rounded-3xl bg-navy px-8 py-16 text-center">
             <div aria-hidden className="pointer-events-none absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,rgba(56,189,248,0.18),transparent)]" />
+              <div className="absolute inset-0 bg-navy-mid/40" />
             </div>
             <h2 className="relative font-display text-display text-white">
               {t("ctaTitle")}

@@ -10,7 +10,7 @@ export default function Footer() {
   const nav = useTranslations("navigation");
 
   return (
-    <footer className="relative border-t border-slate-200 bg-slate-50">
+    <footer className="relative border-t border-line bg-base">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/50 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
@@ -40,6 +40,7 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
               <li><Link href="/pricing" className={linkClass}>{nav("pricing")}</Link></li>
+              <li><Link href="/for-suppliers" className={linkClass}>{t("forSuppliers")}</Link></li>
               <li><Link href="/about" className={linkClass}>{t("about")}</Link></li>
               <li><Link href="/contact" className={linkClass}>{t("contact")}</Link></li>
               <li><Link href="/help" className={linkClass}>{t("help")}</Link></li>

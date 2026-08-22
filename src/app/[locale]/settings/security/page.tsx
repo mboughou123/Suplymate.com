@@ -3,6 +3,12 @@ import { auth } from "@/auth";
 import ChangePasswordForm from "@/components/settings/ChangePasswordForm";
 import DangerZone from "@/components/settings/DangerZone";
 import SessionActions from "@/components/settings/SessionActions";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/settings/security", titleKey: "settingsSecurityTitle", descriptionKey: "settingsDescription", robots: { index: false, follow: false } });
+}
 
 export default async function SecurityPage() {
   const session = await auth();

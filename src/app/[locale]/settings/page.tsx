@@ -5,6 +5,12 @@ import { User, ShieldCheck, CreditCard, SlidersHorizontal } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { isAdminEmail } from "@/lib/admin";
 import { getBillingState } from "@/lib/billing";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/settings", titleKey: "settingsTitle", descriptionKey: "settingsDescription", robots: { index: false, follow: false } });
+}
 
 export default async function SettingsOverviewPage() {
   const { authenticated, user } = await getCurrentAccount();

@@ -89,7 +89,7 @@ export default function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={t("emailPlaceholder")}
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/20"
+            className="input-field mt-1.5"
           />
         </div>
         <div>
@@ -104,7 +104,7 @@ export default function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-lg border border-slate-200 px-3 py-2.5 pr-10 text-sm focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/20"
+              className="input-field pr-10"
             />
             <button
               type="button"

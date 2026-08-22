@@ -29,21 +29,25 @@ type Props = {
 // Builds a tailored opening message so each CTA lands the buyer in the existing
 // chat flow with the right intent pre-filled (reusing the conversations + RFQ
 // APIs rather than reinventing them).
+//
+// These are sent as the buyer, without a review step, so they must not commit
+// the buyer to anything they did not type. The samples template used to offer to
+// "cover a refundable sample fee" on their behalf; it now asks the cost instead.
 function openingMessage(intent: ProfileIntent, supplierName: string, product?: string): string | null {
   const p = product || "the products on your profile";
   switch (intent) {
     case "contact":
-      return null; // plain contact — supplier auto-greets first
+      return null; // plain contact — the buyer writes the first message
     case "rfq":
       return `📋 Request for Quotation\n• Product: ${p}\n• Quantity: [please advise tiers]\n• Destination: [our facility]\n\nPlease include unit price, MOQ, lead time, payment terms and Incoterms.`;
     case "negotiate":
-      return `Hello ${supplierName} team, I'd like to start a negotiation for ${p}. Could you share your best volume pricing, MOQ tiers, and payment terms? We're evaluating recurring orders.`;
+      return `Hello ${supplierName} team, we are pricing ${p}. Could you share your volume pricing, MOQ tiers, and payment terms? We are evaluating recurring orders.`;
     case "samples":
-      return `Could you send a sample of ${p} for quality validation before a bulk order? Happy to cover a refundable sample fee.`;
+      return `Could you send a sample of ${p} for quality validation before a bulk order? Please let us know the sample cost and whether it is credited against a first order.`;
     case "quote":
       return `Please provide a formal quotation for ${p}, including unit price, MOQ, lead time, Incoterms and certifications.`;
     case "ai-sourcing":
-      return `I'm using Suplymate AI sourcing to evaluate suppliers for ${p}. Could you confirm capacity, current lead time, and any active promotions?`;
+      return `We are evaluating suppliers for ${p}. Could you confirm capacity, current lead time, and any active promotions?`;
   }
 }
 
@@ -141,10 +145,10 @@ export default function ProfileActionButton({
           onClick={() => setOpen(false)}
         >
           <div
-            className="flex h-[85vh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl bg-white shadow-cardHover sm:h-[70vh] sm:rounded-2xl"
+            className="flex h-[85vh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl bg-surface shadow-cardHover sm:h-[70vh] sm:rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2.5">
+            <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
               <span className="text-sm font-semibold text-ink">
                 {t("chatWith", { name: supplierName })}
               </span>

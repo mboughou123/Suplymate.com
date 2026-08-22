@@ -55,8 +55,13 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
     return (
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center">
         <p className="text-lg font-semibold text-emerald-800">Alert saved</p>
+        {/* This promised a notification by {notifyType} when the price hit the
+            target. Nothing evaluates stored alerts yet, and the price series is
+            a fixed sample that does not move, so no alert could ever fire. */}
         <p className="mt-2 text-sm text-emerald-700">
-          We&apos;ll notify you via {notifyType.toLowerCase()} when {materials.find((m) => m.id === material)?.name} reaches your target (stored in database).
+          Your target for {materials.find((m) => m.id === material)?.name} is
+          saved to your account. Alert delivery by {notifyType.toLowerCase()} is
+          not switched on yet — we will tell you when it is.
         </p>
         <Link
           href="/dashboard"
@@ -78,7 +83,7 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-card"
+      className="rounded-2xl border border-line bg-base p-6 shadow-card"
     >
       <h3 className="text-lg font-semibold text-ink">Price alert</h3>
       <p className="mt-1 text-sm text-ink-dim">
@@ -107,7 +112,7 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
             id="alert-material"
             value={material}
             onChange={(e) => setMaterial(e.target.value)}
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
           >
             {materials.map((m) => (
               <option key={m.id} value={m.id}>
@@ -129,7 +134,7 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
             placeholder="e.g. 600"
             value={targetPrice}
             onChange={(e) => setTargetPrice(e.target.value)}
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            className="mt-1.5 w-full rounded-lg border border-line px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
           />
         </div>
 
@@ -142,7 +147,7 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
                 className={`flex flex-1 cursor-pointer items-center justify-center rounded-lg border px-3 py-2.5 text-sm font-medium transition ${
                   notifyType === type
                     ? "border-navy bg-navy text-white"
-                    : "border-slate-200 text-ink-muted hover:border-navy/30"
+                    : "border-line text-ink-muted hover:border-navy/30"
                 }`}
               >
                 <input

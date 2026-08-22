@@ -1,18 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("privacyTitle"),
-    description: t("privacyDescription"),
-  };
+  return buildLocalizedPageMetadata({ locale, pathname: "/privacy", titleKey: "privacyTitle", descriptionKey: "privacyDescription" });
 }
 
 export default async function PrivacyPage() {

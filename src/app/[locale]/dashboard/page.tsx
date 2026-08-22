@@ -1,23 +1,27 @@
 import { localeRedirect } from "@/i18n/redirect";
 import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getMaterialsFromDb, getSuppliersFromDb } from "@/lib/data-service";
 import DashboardClient from "@/components/dashboard/DashboardClient";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "dashboard" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
-  return {
+  return completeLocalizedMetadata({
+    locale,
+    pathname: "/dashboard",
     title: meta("titleTemplate", { title: t("title") }),
     description: t("welcomeSubtitle"),
-  };
+    siteName: meta("siteName"),
+    robots: { index: false, follow: false },
+  });
 }
 
 async function safeCount<T>(fn: () => Promise<T>, fallback: T): Promise<T> {
@@ -67,8 +71,11 @@ export default async function DashboardPage() {
     getMaterialsFromDb(),
   ]);
 
-  const verifiedSuppliers = suppliers.filter(
-    (s) => s.verified === true || s.verificationStatus === "verified"
+  // This counted verified suppliers, which is now always zero: the flag it read
+  // was auto-granted by the importer and has been cleared. Reachable suppliers
+  // is the figure a buyer can act on.
+  const contactableSuppliers = suppliers.filter(
+    (s) => s.phone || s.email || s.website
   ).length;
 
   const dbUser = await prisma.user
@@ -97,7 +104,7 @@ export default async function DashboardPage() {
         favoriteCount,
         unreadNotifications,
         supplierCount: suppliers.length,
-        verifiedSuppliers,
+        contactableSuppliers,
       }}
       topSuppliers={suppliers.slice(0, 4).map((s) => ({
         id: s.id,

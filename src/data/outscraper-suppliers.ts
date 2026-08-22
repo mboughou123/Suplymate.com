@@ -1,4 +1,9 @@
 // AUTO-GENERATED from public Outscraper (Google Maps) data.
+//
+// `products` and `moq` were stripped after generation: the pipeline used to
+// fill both from a per-category template, so every steel supplier claimed the
+// same three products and a 5-ton minimum order. scripts/outscraper/queries.ts
+// no longer defines those templates, so a regenerate produces empty values.
 // Regenerate: npm run suppliers:fetch && npx tsx scripts/outscraper/build-dataset.ts
 // Generated 2026-06-19 · 332 suppliers
 import type { Supplier } from "./suppliers";
@@ -26,17 +31,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 349,
     "verified": true,
     "description": "Steel & Metals supplier in Pune, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Ami Mansion, 94 B/2, Pune-11, opp. Swaminarayan Mandir, near K E M HOSPITAL, Rasta Peth, Pune, Maharashtra 411011, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-12:30PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/ALL+METAL+INDIA+PVT.+LTD/@18.5176101,73.8671193,14z/data=!4m8!1m2!2m1!1sALL+METAL+INDIA+PVT.+LTD!3m4!1s0x3bc2c042ea91281f:0xcd67ca7ea8852acd!8m2!3d18.5176101!4d73.8671193",
@@ -66,17 +67,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 220,
     "verified": true,
     "description": "Steel & Metals supplier in Panvel, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Office no. 101, B Wing, Swaroop Chs, Plot no.16, Sector 5E, Kalamboli, Panvel, Maharashtra 410218, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Sarfraz+Steel+India/@19.032894799999998,73.1035984,14z/data=!4m8!1m2!2m1!1sSarfraz+Steel+India!3m4!1s0x3be7c3eb2d770641:0xdda24519551ef0f7!8m2!3d19.032894799999998!4d73.1035984",
@@ -106,17 +103,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 1153,
     "verified": true,
     "description": "Steel & Metals supplier in Visakhapatnam, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "4th Floor, Navaratna Trade Centre, 15/1, NTR Rd, beside Hotel Meghalaya, CBM Compound, Ram Nagar, Visakhapatnam, Andhra Pradesh 530003, India",
     "openingHours": "Friday: 9:30AM-9PM · Monday: 9:30AM-9PM · Saturday: 9:30AM-9PM · Sunday: Closed · Thursday: 9:30AM-9PM · Tuesday: 9:30AM-9PM · Wednesday: 9:30AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Steeloncall+-+Online+Steel+Market+Place/@17.7247222,83.30937449999999,14z/data=!4m8!1m2!2m1!1sSteeloncall+-+Online+Steel+Market+Place!3m4!1s0x3a39433e870fbb0f:0xc300de7e51be9838!8m2!3d17.7247222!4d83.30937449999999",
@@ -146,16 +139,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 450,
     "verified": true,
     "description": "Chain with a wide variety of agricultural & livestock supplies, plus tools, workwear & boots.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "507 Boones Creek Rd, Jonesborough, TN 37659",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-7PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Tractor+Supply+Co./@36.3014124,-82.4684218,14z/data=!4m8!1m2!2m1!1sTractor+Supply+Co.!3m4!1s0x885a63e42492c57b:0x2917123e9cacb49d!8m2!3d36.3014124!4d-82.4684218",
@@ -185,16 +174,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 2056,
     "verified": true,
     "description": "Membership-only warehouse chain selling a variety of bulk grocery items, electronics & home goods.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "3060 Franklin Terrace, Johnson City, TN 37604",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-8PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Sam%27s+Club/@36.355296599999996,-82.40004619999999,14z/data=!4m8!1m2!2m1!1sSam%27s+Club!3m4!1s0x885a62bbb0f4089b:0x1841da72f579613a!8m2!3d36.355296599999996!4d-82.40004619999999",
@@ -224,16 +209,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 260,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "78F5+FH - Naif - Deira - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-9:30PM · Monday: 9AM-9:30PM · Saturday: 9AM-9:30PM · Sunday: Closed · Thursday: 9AM-9:30PM · Tuesday: 9AM-9:30PM · Wednesday: 9AM-9:30PM",
     "sourceUrl": "https://www.google.com/maps/place/CABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC/@25.273774,55.3089873,14z/data=!4m8!1m2!2m1!1sCABLES+HOUSE+WIRES+AND+CABLES+TRADING+LLC!3m4!1s0x3e5f4374c3db6d71:0x9f7bb824a57920b3!8m2!3d25.273774!4d55.3089873",
@@ -263,17 +244,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 468,
     "verified": true,
     "description": "Cables & Electrical supplier in Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "A-9/2, near Metro Station Dilshad Garden, Jhilmil Industrial Area, Vivek Vihar, Delhi, 110095, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Foliflex+Wires+%26+Cables/@28.6750659,77.32007159999999,14z/data=!4m8!1m2!2m1!1sFoliflex+Wires+%26+Cables!3m4!1s0x390cfb7f99e665cf:0x2c3a7fa574634361!8m2!3d28.6750659!4d77.32007159999999",
@@ -303,16 +280,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 797,
     "verified": true,
     "description": "Cables & Electrical supplier in Barcelona, Spain.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Carrer de Sepúlveda, 166, Local TiendaCables, Eixample, 08011 Barcelona, Spain",
     "openingHours": "Friday: 9:30AM-2PM,4-7:30PM · Monday: 9:30AM-2PM,4-7:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-2PM,4-7:30PM · Tuesday: 9:30AM-2PM,4-7:30PM · Wednesday: 9:30AM-2PM,4-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/CablesShop/@41.3824174,2.1621102,14z/data=!4m8!1m2!2m1!1sCablesShop!3m4!1s0x12a4a28a577f1e07:0xb02543a71cfc1a35!8m2!3d41.3824174!4d2.1621102",
@@ -342,16 +315,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 2016,
     "verified": true,
     "description": "Packaging supplier in Spremberg, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Tuchmacherallee 6, 03130 Spremberg, Germany",
     "openingHours": "Friday: 8AM-12PM,12:30-5PM · Monday: 8AM-12PM,12:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12PM,12:30-5PM · Tuesday: 8AM-12PM,12:30-5PM · Wednesday: 8AM-12PM,12:30-5PM",
     "sourceUrl": "https://www.google.com/maps/place/IPS+Karton.eu+GmbH+%26+Co.+KG/@51.574981099999995,14.4115261,14z/data=!4m8!1m2!2m1!1sIPS+Karton.eu+GmbH+%26+Co.+KG!3m4!1s0x47086f480305dc45:0x869f13425a3685f2!8m2!3d51.574981099999995!4d14.4115261",
@@ -381,16 +350,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 1015,
     "verified": true,
     "description": "Packaging supplier in Pulheim, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Donatusstraße 161, 50259 Pulheim-Brauweiler, Germany",
     "openingHours": "Friday: 7AM-12PM,2-5:30PM · Monday: 7AM-1PM,1:45-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-1PM,1:45-5:30PM · Tuesday: 7AM-1PM,1:45-5:30PM · Wednesday: 7AM-1PM,1:45-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Onlinepack+Kartons+%26+Kartonagen/@50.966022099999996,6.81502,14z/data=!4m8!1m2!2m1!1sOnlinepack+Kartons+%26+Kartonagen!3m4!1s0x47bf3af9a645953b:0xd9ea80403670c45c!8m2!3d50.966022099999996!4d6.81502",
@@ -420,16 +385,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 690,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Warehouse No 5, Gate No 80, Plot 363-364 - Al Qouz Ind.first - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Duboxx+Packaging+LLC/@25.135248299999997,55.2363498,14z/data=!4m8!1m2!2m1!1sDuboxx+Packaging+LLC!3m4!1s0x3e5f695fde45be35:0x73cc0eeb7ff6fec9!8m2!3d25.135248299999997!4d55.2363498",
@@ -459,16 +420,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 232,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "25.376298050531396 - 55.489411309857275 Beirut St - industrial area 1 - Ajman - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Shabouk+Printing+And+Packaging/@25.376856699999998,55.4882613,14z/data=!4m8!1m2!2m1!1sShabouk+Printing+And+Packaging!3m4!1s0x3e5f58791f68cc21:0xd7a75c9be3ffbd7!8m2!3d25.376856699999998!4d55.4882613",
@@ -498,17 +455,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 838,
     "verified": true,
     "description": "Packaging supplier in Agra, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Shoe Market, Shop No 8, Block No S4, opp. Shrivrindavan Tower, Sanjay Place, Agra, Uttar Pradesh 282002, India",
     "openingHours": "Friday: 10AM-8PM · Monday: 10AM-8PM · Saturday: 10AM-8PM · Sunday: Closed · Thursday: 10AM-8PM · Tuesday: 10AM-8PM · Wednesday: 10AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/International+Packaging/@27.1984891,78.00659809999999,14z/data=!4m8!1m2!2m1!1sInternational+Packaging!3m4!1s0x39747747b7f54389:0x1aa78deb191bacd2!8m2!3d27.1984891!4d78.00659809999999",
@@ -538,17 +491,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 464,
     "verified": true,
     "description": "Packaging supplier in Greater Noida, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "293, Surajpur - Kasna Rd, Ecotech extension 1, Greater Noida, Uttar Pradesh 201315, India",
     "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: Closed · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/PACKMAN+PACKAGING+PRIVATE+LIMITED/@28.4420139,77.5496801,14z/data=!4m8!1m2!2m1!1sPACKMAN+PACKAGING+PRIVATE+LIMITED!3m4!1s0x390cc06e083d4469:0xd09df3c38e245fd3!8m2!3d28.4420139!4d77.5496801",
@@ -578,16 +527,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 1812,
     "verified": true,
     "description": "Chain retailer carrying art & hobby supplies plus home decor (most offer classes & custom framing).",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Mayfair Village Shopping Center, 5012 N May Ave, Oklahoma City, OK 73112",
     "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: 10AM-7PM · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Michaels/@35.5210124,-97.5645883,14z/data=!4m8!1m2!2m1!1sMichaels!3m4!1s0x87b21a619c70790b:0xf709c46a9f64f2fc!8m2!3d35.5210124!4d-97.5645883",
@@ -617,17 +562,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 674,
     "verified": true,
     "description": "Packaging supplier in Pune, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Lane no.4C , Sanjay Park, Airport Road,Pune 411014, Pune, Maharashtra 411032, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: 10AM-7PM · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Square+Solutions/@18.571495,73.9050754,14z/data=!4m8!1m2!2m1!1sSquare+Solutions!3m4!1s0x3bc2c167a50c3859:0xe81fe8e59eb886ec!8m2!3d18.571495!4d73.9050754",
@@ -657,17 +598,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 577,
     "verified": true,
     "description": "Packaging supplier in Valthan, Surat, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Gokul campus, Kosmada patiya Puna, nehar road, Valthan, Surat, Gujarat 395013, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Parul+Packaging+%7C+box+manufacturer+in+surat/@21.2131516,72.93335979999999,14z/data=!4m8!1m2!2m1!1sParul+Packaging+%7C+box+manufacturer+in+surat!3m4!1s0x3be045891cdef90f:0xff0929a6aef28e12!8m2!3d21.2131516!4d72.93335979999999",
@@ -697,16 +634,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 390,
     "verified": true,
     "description": "Packaging supplier in Campochiaro, Italy.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Bretella 2 Via Amerigo Vespucci, 86020 Campochiaro CB, Italy",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Packly/@41.4677101,14.5225817,14z/data=!4m8!1m2!2m1!1sPackly!3m4!1s0x133a6e2a4177682b:0x43fe82843a025c27!8m2!3d41.4677101!4d14.5225817",
@@ -736,16 +669,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 15449,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Largo Carlo Guzzi, 8, 00155 Roma RM, Italy",
     "openingHours": "Friday: 7AM-8:30PM · Monday: 7AM-8:30PM · Saturday: 7AM-8:30PM · Sunday: 8:30AM-8:30PM · Thursday: 7AM-8:30PM · Tuesday: 7AM-8:30PM · Wednesday: 7AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tecnomat/@41.883873699999995,12.610069,14z/data=!4m8!1m2!2m1!1sTecnomat!3m4!1s0x132f62cff8c0ff57:0x98f4cf89787897bd!8m2!3d41.883873699999995!4d12.610069",
@@ -775,16 +704,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 411,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Raffaele Garofalo, 137, 00173 Roma RM, Italy",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-4PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/GM+Tecnoedil/@41.843098,12.598953499999999,14z/data=!4m8!1m2!2m1!1sGM+Tecnoedil!3m4!1s0x1325881624446f97:0xe9f297baa2caa9a1!8m2!3d41.843098!4d12.598953499999999",
@@ -814,16 +739,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 1046,
     "verified": true,
     "description": "Industrial Parts supplier in Kassel, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Konrad-Zuse-Straße 1, 34123 Kassel-Waldau, Germany",
     "openingHours": "Friday: 7AM-6PM · Monday: 7AM-9PM · Saturday: Closed · Sunday: 12-3PM · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Landefeld+Druckluft+und+Hydraulik/@51.279689,9.523923,14z/data=!4m8!1m2!2m1!1sLandefeld+Druckluft+und+Hydraulik!3m4!1s0x47bb476df0cb5229:0x53f38c6fd4ff565d!8m2!3d51.279689!4d9.523923",
@@ -853,17 +774,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 204,
     "verified": true,
     "description": "Cables & Electrical supplier in New Delhi, Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "SANSAR COMPOUND, Olive Cables (India) Pvt. Ltd, 519/1/16, Grand Trunk Rd, Block R, Dilshad Garden, New Delhi, Delhi, 110095, India",
     "openingHours": "Friday: 10:30AM-7PM · Monday: 10:30AM-7PM · Saturday: 10:30AM-7PM · Sunday: 10:30AM-7PM · Thursday: 10:30AM-7PM · Tuesday: Closed · Wednesday: 10:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Olive+Cables+%28India%29+Pvt.+Ltd/@28.676368699999998,77.30334289999999,14z/data=!4m8!1m2!2m1!1sOlive+Cables+%28India%29+Pvt.+Ltd!3m4!1s0x390cfb1772bf5c89:0xe68df19278948e6b!8m2!3d28.676368699999998!4d77.30334289999999",
@@ -893,16 +810,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 372,
     "verified": true,
     "description": "Tubes & Pipes supplier in New Century, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "401 New Century Pkwy, New Century, KS 66031",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Closed · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Steel+%26+Pipe+Supply+Co+Inc/@38.8249999,-94.9003888,14z/data=!4m8!1m2!2m1!1sSteel+%26+Pipe+Supply+Co+Inc!3m4!1s0x87c0a349fa793a81:0x47b9a520aea48c9c!8m2!3d38.8249999!4d-94.9003888",
@@ -932,16 +845,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 148,
     "verified": true,
     "description": "Packaging supplier in Bad Breisig, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Goldene Meile Glasfabrik 4, 53498 Bad Breisig-Glasfabrik, Germany",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: 8AM-4PM · Sunday: 8AM-4PM · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/MyPack+-+G%C3%BCnstig+Kartons+kaufen/@50.5324415,7.2732287,14z/data=!4m8!1m2!2m1!1sMyPack+-+G%C3%BCnstig+Kartons+kaufen!3m4!1s0x47bef6d32d7b5211:0xf9b881b000585ffd!8m2!3d50.5324415!4d7.2732287",
@@ -971,16 +880,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 103,
     "verified": true,
     "description": "Packaging supplier in Alaquàs, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Carrer dels Fusters, 22, 46970 Alaquàs, Valencia, Spain",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-2PM,5-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-2PM,5-7PM · Tuesday: 8AM-2PM,5-7PM · Wednesday: 8AM-2PM,5-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Tupackaging/@39.4483003,-0.4750057,14z/data=!4m8!1m2!2m1!1sTupackaging!3m4!1s0xd6051d78b5f788b:0xc76802e707e3bf9b!8m2!3d39.4483003!4d-0.4750057",
@@ -1010,16 +915,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 341,
     "verified": true,
     "description": "Construction supplier in La Hoya, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Partida de La Hoya 1, 23A, 03294 La Hoya, Alicante, Spain",
     "openingHours": "Friday: 7:30AM-1:30PM,3-7PM · Monday: 7:30AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,3-7PM · Tuesday: 7:30AM-1:30PM,3-7PM · Wednesday: 7:30AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+Cano%2C+S.L./@38.218343399999995,-0.6842142,14z/data=!4m8!1m2!2m1!1sMateriales+Cano%2C+S.L.!3m4!1s0xd63b695fa5785f9:0x5a3d7baae012b6e7!8m2!3d38.218343399999995!4d-0.6842142",
@@ -1049,17 +950,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 152,
     "verified": true,
     "description": "Steel & Metals supplier in Kolkata, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "EP & GP, J-1, Salt Lake Bypass, above idlyGo Xpress, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091, India",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: 9:30AM-5PM · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Shree+Ji+Steel+Private+Limited/@22.5718052,88.43604719999999,14z/data=!4m8!1m2!2m1!1sShree+Ji+Steel+Private+Limited!3m4!1s0x3a02779404fff905:0xe7d561543d64b8b7!8m2!3d22.5718052!4d88.43604719999999",
@@ -1089,16 +986,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 289,
     "verified": true,
     "description": "Cables & Electrical supplier in Al Khobar, Saudi Arabia.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "76J5+RRR, Al Khobar Al Shamalia, Al Khobar 34429, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 9AM-1PM,4-9PM · Saturday: 9AM-1PM,4-9PM · Sunday: 9AM-1PM,4-9PM · Thursday: 9AM-1PM,4-9PM · Tuesday: 9AM-1PM,4-9PM · Wednesday: 9AM-1PM,4-9PM",
     "sourceUrl": "https://www.google.com/maps/place/%D9%82%D9%8A%D9%85%D9%86%D9%82+%D9%81%D9%8A%D8%AA%D8%B4+-+Gaming+fetch/@26.2819774,50.2089862,14z/data=!4m8!1m2!2m1!1s%D9%82%D9%8A%D9%85%D9%86%D9%82+%D9%81%D9%8A%D8%AA%D8%B4+-+Gaming+fetch!3m4!1s0x3e49e9a0e94889a1:0x6843a4eddbbdbdbf!8m2!3d26.2819774!4d50.2089862",
@@ -1128,16 +1021,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 450,
     "verified": true,
     "description": "Chain with a wide variety of agricultural & livestock supplies, plus tools, workwear & boots.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "4534 Bristol Hwy, Johnson City, TN 37601",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-7PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Tractor+Supply+Co./@36.4025636,-82.34580299999999,14z/data=!4m8!1m2!2m1!1sTractor+Supply+Co.!3m4!1s0x885a87a970ac24e1:0x49eeaa20412a4124!8m2!3d36.4025636!4d-82.34580299999999",
@@ -1167,16 +1056,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 129,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Post Box number: 115299 - 26th St - Al Qouz Ind.fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 7:30AM-5PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Idea+Star+Packing+Materials+Company+LLC/@25.1109041,55.233090399999995,14z/data=!4m8!1m2!2m1!1sIdea+Star+Packing+Materials+Company+LLC!3m4!1s0x3e5f69511b3aa643:0x17b5ca6de11f5331!8m2!3d25.1109041!4d55.233090399999995",
@@ -1206,16 +1091,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 113,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "81 11A Street - Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-6PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Galaxy+Plast+LLC/@25.1827938,55.3616629,14z/data=!4m8!1m2!2m1!1sGalaxy+Plast+LLC!3m4!1s0x3e5f67008db2c0f1:0x64649386ac4ddf84!8m2!3d25.1827938!4d55.3616629",
@@ -1245,17 +1126,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Packaging supplier in Mira Bhayandar, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "G, 3, Phatak Rd, behind HDFC Bank, Bhayandar, Vikas Industrial Estate, Bhayandar (E, Mira Bhayandar, Maharashtra 401105, India",
     "openingHours": "Friday: 9:30AM-8:30PM · Monday: 9:30AM-8:30PM · Saturday: 9:30AM-8:30PM · Sunday: 10:15AM-4:15PM · Thursday: 9:30AM-8:30PM · Tuesday: 9:30AM-8:30PM · Wednesday: 9:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ak+Packaging/@19.2995303,72.854233,14z/data=!4m8!1m2!2m1!1sAk+Packaging!3m4!1s0x3be7b13e80f0b375:0x15a849f48584911e!8m2!3d19.2995303!4d72.854233",
@@ -1285,16 +1162,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 93,
     "verified": true,
     "description": "Packaging supplier in Casablanca, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "42 RUE IMAM HARAMAIN, Casablanca 20400, Morocco",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BROPACK+Emballage+Maroc/@33.5769829,-7.6427081999999995,14z/data=!4m8!1m2!2m1!1sBROPACK+Emballage+Maroc!3m4!1s0xda7cd8e13e6c943:0x1746c3ba260663a0!8m2!3d33.5769829!4d-7.6427081999999995",
@@ -1324,16 +1197,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 77,
     "verified": true,
     "description": "Packaging supplier in Zaragoza, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Polígono San Valero, nave 44, Carr. de Castellón, km. 4,8, 50013 Zaragoza, Spain",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Boxpack/@41.615266399999996,-0.8416634,14z/data=!4m8!1m2!2m1!1sBoxpack!3m4!1s0xd593c8ffc787a19:0xe300e2299d081f6e!8m2!3d41.615266399999996!4d-0.8416634",
@@ -1363,16 +1232,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 227,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Warehouse # 8 Doha St - opposite Zulekha Hospital - Al Qusais Ind. First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-8PM · Monday: 7AM-8PM · Saturday: 7AM-8PM · Sunday: 7AM-6PM · Thursday: 7AM-8PM · Tuesday: 7AM-8PM · Wednesday: 7AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Dani+Trading+Building+Materials+Supplier+LLC/@25.2934646,55.3872261,14z/data=!4m8!1m2!2m1!1sDani+Trading+Building+Materials+Supplier+LLC!3m4!1s0x3e5f5c16b0ed1cc5:0x15d5f77ef37b9f11!8m2!3d25.2934646!4d55.3872261",
@@ -1402,16 +1267,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 194,
     "verified": true,
     "description": "Construction supplier in Tijuana, Mexico.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Blvd. Manuel Jesus Clouthier 3980, Murua Oriente, 22465 Tijuana, B.C., Mexico",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/CONSTRUCTION+WORLD+DE+M%C3%89XICO/@32.5171792,-116.9262392,14z/data=!4m8!1m2!2m1!1sCONSTRUCTION+WORLD+DE+M%C3%89XICO!3m4!1s0x80d938ed097dd131:0xe1c503426d18dff6!8m2!3d32.5171792!4d-116.9262392",
@@ -1441,16 +1302,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 175,
     "verified": true,
     "description": "Construction supplier in Málaga, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "C. Concepción Arenal, 15, Churriana, 29004 Málaga, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3-7PM · Monday: 8AM-1:30PM,3-7PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-1:30PM,3-7PM · Tuesday: 8AM-1:30PM,3-7PM · Wednesday: 8AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/BigMat+Macosol/@36.692832599999996,-4.4805557,14z/data=!4m8!1m2!2m1!1sBigMat+Macosol!3m4!1s0xd72fa01f9aedceb:0x84d6189c3ab5b96f!8m2!3d36.692832599999996!4d-4.4805557",
@@ -1480,16 +1337,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Ajman Industrial 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: Closed · Saturday: 8AM-5:30PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Creative+Industrial+Plant+Equipment+%26+Spare+Parts+Trading/@25.3787271,55.473192999999995,14z/data=!4m8!1m2!2m1!1sCreative+Industrial+Plant+Equipment+%26+Spare+Parts+Trading!3m4!1s0x3e5f586262514a75:0xad2f4c874ed15b28!8m2!3d25.3787271!4d55.473192999999995",
@@ -1519,16 +1372,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Steel & Metals supplier in New York, United States.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "30 Wall St 8th floor, New York, NY 10005",
     "openingHours": "Friday: 7:30AM-4:30PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Allied+Steel+NY/@40.7070885,-74.0100839,14z/data=!4m8!1m2!2m1!1sAllied+Steel+NY!3m4!1s0x89c25a170297bff3:0x673aaaf089e937e3!8m2!3d40.7070885!4d-74.0100839",
@@ -1558,17 +1407,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 110,
     "verified": true,
     "description": "Industrial Parts supplier in Pune, Pimpri-Chinchwad, India.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Plot No. J, 288, S Block, MIDC, Bhosari, Pune, Maharashtra 411026, India",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/MAPSONS+INDIA+PVT.+LTD%3A+MANUFACTURER+OF+SS+PIPE+FITTINGS%2C+TANK+FITTINGS%2C+SS+FABRICATION%2C+CUSTOMIZE+VMC+CNC+COMPONENTS/@18.6356801,73.8387558,14z/data=!4m8!1m2!2m1!1sMAPSONS+INDIA+PVT.+LTD%3A+MANUFACTURER+OF+SS+PIPE+FITTINGS%2C+TANK+FITTINGS%2C+SS+FABRICATION%2C+CUSTOMIZE+VMC+CNC+COMPONENTS!3m4!1s0x3bc2b9ca657158f1:0x487d613a83dba557!8m2!3d18.6356801!4d73.8387558",
@@ -1598,16 +1443,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 104,
     "verified": true,
     "description": "Long-running supplier of a huge range of electronic components, tools, cables & more.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "2040 Walsh Ave, Santa Clara, CA 95050",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Anchor+Electronics/@37.3692662,-121.9606766,14z/data=!4m8!1m2!2m1!1sAnchor+Electronics!3m4!1s0x808fca25ba26dfd5:0xc0ca43e28395709a!8m2!3d37.3692662!4d-121.9606766",
@@ -1637,16 +1478,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 156,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Al Hesah Street - Hessyan First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-12PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/DUCAB+%28Dubai+Cable+Company+Pvt+Ltd%29/@24.963912099999998,55.0236702,14z/data=!4m8!1m2!2m1!1sDUCAB+%28Dubai+Cable+Company+Pvt+Ltd%29!3m4!1s0x3e5f0f3191c6d017:0x776d5fa1b46389ff!8m2!3d24.963912099999998!4d55.0236702",
@@ -1676,17 +1513,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 75,
     "verified": true,
     "description": "Cables & Electrical supplier in Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "1/536- D-15, Grand Trunk Rd, FRIENDS COLONY, Industrial Area, Jhilmil Colony, Delhi, 110095, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/JK+WIRES+%26+CABLES/@28.6740835,77.3046952,14z/data=!4m8!1m2!2m1!1sJK+WIRES+%26+CABLES!3m4!1s0x390cfb358bb69d27:0x84f9a5a05bda0f60!8m2!3d28.6740835!4d77.3046952",
@@ -1716,17 +1549,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 61,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "110/112, Habib Building, Central Plaza Cinema, Plot No, Jagannath Shankarsheth Marg, Charni Road, Opera House, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Tubewell+Steel+%26+Engg.Co./@18.9535391,72.81653279999999,14z/data=!4m8!1m2!2m1!1sTubewell+Steel+%26+Engg.Co.!3m4!1s0x3be7ce114f2b1e83:0xe2f6cd57f91c05ac!8m2!3d18.9535391!4d72.81653279999999",
@@ -1756,16 +1585,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 88,
     "verified": true,
     "description": "Packaging supplier in Hauppauge, United States.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "400 Oser Ave #1400, Hauppauge, NY 11788",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Supply+Depot/@40.8191005,-73.2660473,14z/data=!4m8!1m2!2m1!1sPackaging+Supply+Depot!3m4!1s0x89e830255f881241:0xfe93acac22851a0e!8m2!3d40.8191005!4d-73.2660473",
@@ -1795,16 +1620,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 74,
     "verified": true,
     "description": "Packaging supplier in DE, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Dieselstraße 4, 47228 Rheinhausen, Germany",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Enpack+GmbH+%7C+Gro%C3%9Fh%C3%A4ndler+f%C3%BCr+Einweg+Verpackungsmaterial+%7C+Umweltfreundliche+take-away+Verpackungen/@51.4170837,6.7028965,14z/data=!4m8!1m2!2m1!1sEnpack+GmbH+%7C+Gro%C3%9Fh%C3%A4ndler+f%C3%BCr+Einweg+Verpackungsmaterial+%7C+Umweltfreundliche+take-away+Verpackungen!3m4!1s0x47b8bf4ce9ca3c1b:0x6821dd98c8dca38e!8m2!3d51.4170837!4d6.7028965",
@@ -1834,17 +1655,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 91,
     "verified": true,
     "description": "Packaging supplier in New Delhi, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "C-79 India, C Block Rd, Pocket C, Okhla Phase I, Okhla Industrial Estate, New Delhi, Delhi 110020, India",
     "openingHours": "Friday: 9AM-9:08PM · Monday: 9AM-9:08PM · Saturday: 9AM-9:08PM · Sunday: Closed · Thursday: 9AM-9:08PM · Tuesday: 9AM-9:08PM · Wednesday: 9AM-9:08PM",
     "sourceUrl": "https://www.google.com/maps/place/Nature+Packaging+Pvt.Ltd./@28.5261449,77.2814339,14z/data=!4m8!1m2!2m1!1sNature+Packaging+Pvt.Ltd.!3m4!1s0x390ce15208135363:0xd716dab89da35e46!8m2!3d28.5261449!4d77.2814339",
@@ -1874,17 +1691,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 67,
     "verified": true,
     "description": "Packaging supplier in Ahmedabad, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "OPP: chachar dairy, Madarasi Mandir Rd, Khokhra, Ahmedabad, Gujarat 380008, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: 9AM-12:30PM · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/PARAS+PACKAGING+%28Packaging+Material+Wholesale+Supplier%29/@23.0020722,72.6158779,14z/data=!4m8!1m2!2m1!1sPARAS+PACKAGING+%28Packaging+Material+Wholesale+Supplier%29!3m4!1s0x395e86754818a611:0x1eeaf9ab490ae0ff!8m2!3d23.0020722!4d72.6158779",
@@ -1914,16 +1727,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 104,
     "verified": true,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "801 Layton Ave, Salt Lake City, UT 84104",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Source+Build+Building+Materials/@40.7299819,-111.9142888,14z/data=!4m8!1m2!2m1!1sSource+Build+Building+Materials!3m4!1s0x48cc8f59d6ed85c9:0xf10c99b1d74fd5e8!8m2!3d40.7299819!4d-111.9142888",
@@ -1953,16 +1762,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 128,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "M45 ICAD P. BOX 109785 ABUDHABI - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: 8AM-7PM · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Imperial+Middle+East+Building+Material+Trading+LLC+%28Fosroc+%2C+Sika+%2C+Henkel+%2C+Laticrete%2C+Weber+%2C+Mapei+%2C+Fischer%29/@24.349904,54.481826,14z/data=!4m8!1m2!2m1!1sImperial+Middle+East+Building+Material+Trading+LLC+%28Fosroc+%2C+Sika+%2C+Henkel+%2C+Laticrete%2C+Weber+%2C+Mapei+%2C+Fischer%29!3m4!1s0x3e5e40f58678b8ed:0x99537568742e2144!8m2!3d24.349904!4d54.481826",
@@ -1992,16 +1797,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 60,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Street # 13B Al Ittihad Rd - Al Khabaisi - Deira - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM,2-7:30PM · Monday: 7:30AM-7:30PM · Saturday: 7:30AM-7:30PM · Sunday: 8AM-5:30PM · Thursday: 7:30AM-7:30PM · Tuesday: 7:30AM-7:30PM · Wednesday: 7:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Rahmania+Building+and+Construction+Materials+Trading+LLC/@25.2649011,55.3350995,14z/data=!4m8!1m2!2m1!1sAl+Rahmania+Building+and+Construction+Materials+Trading+LLC!3m4!1s0x3e5f5d4fd89600e3:0x966ae98866ce6cfd!8m2!3d25.2649011!4d55.3350995",
@@ -2031,16 +1832,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 63,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "building materials mall - shop no 33 - Warsan Third - Warsan 3 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 11AM-9PM · Thursday: 7AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/OKZEELA+STAR+BUILDING+MATERIALS+TRADING+LLC/@25.162225499999998,55.462291799999996,14z/data=!4m8!1m2!2m1!1sOKZEELA+STAR+BUILDING+MATERIALS+TRADING+LLC!3m4!1s0x3e5f4391294a7201:0x41ea57253d9dc545!8m2!3d25.162225499999998!4d55.462291799999996",
@@ -2070,16 +1867,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 104,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Warehouse# 73, Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12:30PM,2:30-7:30PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-6PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Planet+Eco+Building+Materials%2C+DIP%2C+Dubai/@24.9701295,55.1696482,14z/data=!4m8!1m2!2m1!1sPlanet+Eco+Building+Materials%2C+DIP%2C+Dubai!3m4!1s0x3e5f7394a6205049:0x6b5196424cf05b99!8m2!3d24.9701295!4d55.1696482",
@@ -2109,17 +1902,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 89,
     "verified": true,
     "description": "Construction supplier in Hyderabad, India.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "8-6-47, 3rd Floor, Zeenath Manzil Piller No - 141, Behind Pai Electricals, beside Kailash Dabha, Attapur, Telangana 500048, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Builders9/@17.3644583,78.4291537,14z/data=!4m8!1m2!2m1!1sBuilders9!3m4!1s0x3bcb974057122f0d:0xaf0888b479327a77!8m2!3d17.3644583!4d78.4291537",
@@ -2149,16 +1938,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 61,
     "verified": true,
     "description": "Construction supplier in Casablanca, Morocco.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Mag A66, Lot Al wouroud, A66, Casablanca 20190, Morocco",
     "openingHours": "Friday: 8:30AM-1:30PM,2:30-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: 10AM-6PM · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Caballus+Industrie/@33.5177121,-7.64642,14z/data=!4m8!1m2!2m1!1sCaballus+Industrie!3m4!1s0xda62d198cf2bbe7:0x38e4f3e74b6218e3!8m2!3d33.5177121!4d-7.64642",
@@ -2188,17 +1973,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 317,
     "verified": true,
     "description": "Construction supplier in Taito City, Japan.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "1 Chome-5-16 Nishiasakusa, Taito City, Tokyo 111-0035, Japan",
     "openingHours": "Friday: 10AM-5:30PM · Monday: 10AM-5:30PM · Saturday: 10AM-5:30PM · Sunday: 10AM-5:30PM · Thursday: 10AM-5:30PM · Tuesday: 10AM-5:30PM · Wednesday: 10AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tokuzo/@35.7120071,139.788545,14z/data=!4m8!1m2!2m1!1sTokuzo!3m4!1s0x60188fd8f10c51bb:0x98b36ca7c2d03b6c!8m2!3d35.7120071!4d139.788545",
@@ -2228,16 +2009,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 145,
     "verified": true,
     "description": "Construction supplier in Partida de La Marina (Elche), Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Partida de La Marina Pol.1 Nº161, 03194 Partida de La Marina (Elche), Alicante, Spain",
     "openingHours": "Friday: 7:30AM-1PM,3-7PM · Monday: 7:30AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,3-7PM · Tuesday: 7:30AM-1:30PM,3-7PM · Wednesday: 7:30AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+Cano+-+La+Marina/@38.143212999999996,-0.660103,14z/data=!4m8!1m2!2m1!1sMateriales+Cano+-+La+Marina!3m4!1s0xd63adf4e2ac8b63:0x7347ef0851dfff3e!8m2!3d38.143212999999996!4d-0.660103",
@@ -2267,16 +2044,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 253,
     "verified": true,
     "description": "Construction supplier in Madrid, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "P.º de la Castellana, 116, Chamartín, 28046 Madrid, Spain",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-2PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Cosentino+City+Madrid/@40.4480346,-3.6902996999999997,14z/data=!4m8!1m2!2m1!1sCosentino+City+Madrid!3m4!1s0xd4228e489bf9925:0xcc669fdfe6a35bd6!8m2!3d40.4480346!4d-3.6902996999999997",
@@ -2306,17 +2079,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 58,
     "verified": true,
     "description": "Steel & Metals supplier in Chennai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "178/232, Linghi Chetty Street, Mannadi, George Town, Chennai, Tamil Nadu 600001, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/VIRWADIA+STEELS+-+SS+Sheet%2C+SS+Pipe%2C+SS+Rod+304%2C+316+Jindal/@13.0940339,80.2896878,14z/data=!4m8!1m2!2m1!1sVIRWADIA+STEELS+-+SS+Sheet%2C+SS+Pipe%2C+SS+Rod+304%2C+316+Jindal!3m4!1s0x3a526f4f968b552b:0xade93a7f63079864!8m2!3d13.0940339!4d80.2896878",
@@ -2346,17 +2115,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 34,
     "verified": true,
     "description": "Steel & Metals supplier in Mumbai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "C, Mahavir Darshan Saidham Complex, 4, Khemraj Srikrishna Das Marg, Khetwadi, Khambata Lane, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Rekha+Bright+Steels+Private+Limited/@18.9598236,72.8234422,14z/data=!4m8!1m2!2m1!1sRekha+Bright+Steels+Private+Limited!3m4!1s0x3be7ce143d4c9641:0x102f4d9ee5edd583!8m2!3d18.9598236!4d72.8234422",
@@ -2386,16 +2151,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 2706,
     "verified": true,
     "description": "Cables & Electrical supplier in Al Khobar, Saudi Arabia.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "3rd Street, Al Khobar Al Shamalia, Al Khobar 34429, Saudi Arabia",
     "openingHours": "Friday: 4-10PM · Monday: 8AM-12PM,4-10PM · Saturday: 8AM-12PM,4-10PM · Sunday: 8AM-12PM,4-10PM · Thursday: 8AM-12PM,4-10PM · Tuesday: 8AM-12PM,4-10PM · Wednesday: 8AM-12PM,4-10PM",
     "sourceUrl": "https://www.google.com/maps/place/ALZAMIL+STORES/@26.2834616,50.218291,14z/data=!4m8!1m2!2m1!1sALZAMIL+STORES!3m4!1s0x3e49e82e67aeb50f:0x54eabec42efb1a7c!8m2!3d26.2834616!4d50.218291",
@@ -2425,16 +2186,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Shop 5 - 37D St - Naif - Deira - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-9PM · Monday: 7AM-9PM · Saturday: 7AM-9PM · Sunday: Closed · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Walaja+Trading+LLC+-+Electrical+Accessories+Suppliers+in+Dubai+UAE+%7C+Cables+%26+Wires+%7C+Switches+%26+Sockets+%7C+LED+Lights/@25.273364899999997,55.312726299999994,14z/data=!4m8!1m2!2m1!1sAl+Walaja+Trading+LLC+-+Electrical+Accessories+Suppliers+in+Dubai+UAE+%7C+Cables+%26+Wires+%7C+Switches+%26+Sockets+%7C+LED+Lights!3m4!1s0x3e5f5f8dc38184d3:0xe8596bafa6351443!8m2!3d25.273364899999997!4d55.312726299999994",
@@ -2464,16 +2221,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 34,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "University City Road S120, #104, Shoes4Us Building, Al Ghubaiba - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CIMCO+Trading+Company/@25.342214,55.407824,14z/data=!4m8!1m2!2m1!1sCIMCO+Trading+Company!3m4!1s0x3e5f59638d07ab63:0xbe9a3dea5da806aa!8m2!3d25.342214!4d55.407824",
@@ -2503,17 +2256,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 70,
     "verified": true,
     "description": "Cables & Electrical supplier in Faridabad, Kheri Gujran, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Nangla Enclave Part 2, Ghazipur, Sector 51, Faridabad, Kheri Gujran, Haryana 121004, India",
     "openingHours": "Friday: 8:30AM-8PM · Monday: 8:30AM-8PM · Saturday: 8:30AM-8PM · Sunday: Closed · Thursday: 8:30AM-8PM · Tuesday: 8:30AM-8PM · Wednesday: 8:30AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Electrical+panel+and+Cable+Tray+Manufacturer+-+Apeco+India/@28.3560989,77.2630101,14z/data=!4m8!1m2!2m1!1sElectrical+panel+and+Cable+Tray+Manufacturer+-+Apeco+India!3m4!1s0x390cdeca41623e99:0xc9167d6d6b8f3350!8m2!3d28.3560989!4d77.2630101",
@@ -2543,16 +2292,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Cables & Electrical supplier in Humanes de Madrid, Spain.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "C. de Atenas, 16, 28970 Humanes de Madrid, Madrid, Spain",
     "openingHours": "Friday: 8:30AM-2:30PM · Monday: 8:30AM-2PM,3-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-2PM,3-6PM · Tuesday: 8:30AM-2PM,3-6PM · Wednesday: 8:30AM-2PM,3-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ib%C3%A9rica+del+Cable+y+Elevaci%C3%B3n+JJ%2C+S.L./@40.27173,-3.81173,14z/data=!4m8!1m2!2m1!1sIb%C3%A9rica+del+Cable+y+Elevaci%C3%B3n+JJ%2C+S.L.!3m4!1s0xd418b43620d4fd9:0x5bbdb93df5f2946c!8m2!3d40.27173!4d-3.81173",
@@ -2582,17 +2327,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 62,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "33/35, Damodar Bhavan, 1st Parsiwada Lane, V P Road, Circle, near C.P.Tank, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-8:30PM · Monday: 10AM-8:30PM · Saturday: 10AM-8:30PM · Sunday: Closed · Thursday: 10AM-8:30PM · Tuesday: 10AM-8:30PM · Wednesday: 10AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ispat+Alloys+%26+Tube+Industries/@18.955876099999998,72.8247128,14z/data=!4m8!1m2!2m1!1sIspat+Alloys+%26+Tube+Industries!3m4!1s0x3be7ce1706e111a3:0x1ea8743bfd2a8429!8m2!3d18.955876099999998!4d72.8247128",
@@ -2622,16 +2363,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 148,
     "verified": true,
     "description": "Tubes & Pipes supplier in Monterrey, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Vicente Guerrero 3729, Del Nte., 64500 Monterrey, N.L., Mexico",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Tubacero+S.A.+de+C.V./@25.713891999999998,-100.30832769999999,14z/data=!4m8!1m2!2m1!1sTubacero+S.A.+de+C.V.!3m4!1s0x866295a904a57789:0xe6808214fcefc578!8m2!3d25.713891999999998!4d-100.30832769999999",
@@ -2661,16 +2398,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 147,
     "verified": true,
     "description": "Tubes & Pipes supplier in Monterrey, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Av. Francisco I. Madero 1958 Ote, Obrera, 64010 Monterrey, N.L., Mexico",
     "openingHours": "Friday: 8AM-5:45PM · Monday: 8AM-5:45PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-5:45PM · Tuesday: 8AM-5:45PM · Wednesday: 8AM-5:45PM",
     "sourceUrl": "https://www.google.com/maps/place/Pipes+Mexico+SA+de+C.V./@25.6818469,-100.29581309999999,14z/data=!4m8!1m2!2m1!1sPipes+Mexico+SA+de+C.V.!3m4!1s0x8662957c9b80dfa9:0x4260b78ce1b1011c!8m2!3d25.6818469!4d-100.29581309999999",
@@ -2700,16 +2433,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 106,
     "verified": true,
     "description": "Tubes & Pipes supplier in Torreón, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Km. 5.5, Periférico Raúl López Sánchez s/n, Ejido Ignacio Allende, 27400 Torreón, Coah., Mexico",
     "openingHours": "Friday: 8:30AM-7PM · Monday: 8:30AM-7PM · Saturday: 8:30AM-2PM · Sunday: Closed · Thursday: 8:30AM-7PM · Tuesday: 8:30AM-7PM · Wednesday: 8:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/GRUPO+MEXICANA+DE+TUBOS/@25.5769967,-103.3926237,14z/data=!4m8!1m2!2m1!1sGRUPO+MEXICANA+DE+TUBOS!3m4!1s0x868fdaefd5cc6c1d:0xf31ebb43b51af511!8m2!3d25.5769967!4d-103.3926237",
@@ -2739,16 +2468,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 57,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "461 sheik zayed road - 1 - Al Qouz First - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Alfam+Packing+And+Packaging+Materials+Trading+LLC/@25.1709987,55.2421448,14z/data=!4m8!1m2!2m1!1sAlfam+Packing+And+Packaging+Materials+Trading+LLC!3m4!1s0x3e5f43c693c6f9e9:0x1865474df843c128!8m2!3d25.1709987!4d55.2421448",
@@ -2778,16 +2503,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 42,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-7PM · Monday: 7AM-7PM · Saturday: 7AM-7PM · Sunday: Closed · Thursday: 7AM-7PM · Tuesday: 7AM-7PM · Wednesday: 7AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Albustan+Co+Packing+LLC/@24.9895767,55.156473399999996,14z/data=!4m8!1m2!2m1!1sAlbustan+Co+Packing+LLC!3m4!1s0x3e5f736d62ef9255:0xf109ff5f9638136e!8m2!3d24.9895767!4d55.156473399999996",
@@ -2817,16 +2538,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 41,
     "verified": true,
     "description": "Packaging supplier in Ciudad Juárez, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Mexico, C. Don Pedro Meneses Hoyos 6470-int B4, Partido Iglesias, 32528 Juárez, Chih., Mexico",
     "openingHours": "Friday: 7:30AM-4:30PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/BMS+-+Packaging/@31.6895079,-106.4332122,14z/data=!4m8!1m2!2m1!1sBMS+-+Packaging!3m4!1s0x86e75966c7d70209:0xc6d0d8aec5976eb9!8m2!3d31.6895079!4d-106.4332122",
@@ -2856,16 +2573,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 118,
     "verified": true,
     "description": "Construction supplier in Barcelona, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Carrer de Rocafort, 78, Local, Eixample, 08015 Barcelona, Spain",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Boada+cementos+y+ladrillos+SA/@41.3793329,2.1536769,14z/data=!4m8!1m2!2m1!1sBoada+cementos+y+ladrillos+SA!3m4!1s0x12a4a27d178b3e71:0x41bbbf280f1d4b85!8m2!3d41.3793329!4d2.1536769",
@@ -2895,16 +2608,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 125,
     "verified": true,
     "description": "Industrial Parts supplier in Brooklyn, United States.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "259 Johnson Ave, Brooklyn, NY 11206",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: 7AM-12PM · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Electric+Supply/@40.7072122,-73.939137,14z/data=!4m8!1m2!2m1!1sIndustrial+Electric+Supply!3m4!1s0x89c25bfe535d4e17:0xf7325a382f214d9b!8m2!3d40.7072122!4d-73.939137",
@@ -2934,16 +2643,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 63,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Musaffah Industrial area Sector M11,Shop 4 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: 8AM-7PM · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/MATRIX+Heavy+Equipment+spare+parts/@24.361846399999997,54.5021694,14z/data=!4m8!1m2!2m1!1sMATRIX+Heavy+Equipment+spare+parts!3m4!1s0x3e5e40da8779d6f3:0xb894f195f2d7d3df!8m2!3d24.361846399999997!4d54.5021694",
@@ -2973,16 +2678,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 60,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "238 First Industrial St - Industrial Areas - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-6PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+NIHAL+INDUSTRIAL+EQUIP.+TR.+LLC/@25.319287199999998,55.4004458,14z/data=!4m8!1m2!2m1!1sAL+NIHAL+INDUSTRIAL+EQUIP.+TR.+LLC!3m4!1s0x3e5f5bb9597241e7:0xc6953db924dccb5c!8m2!3d25.319287199999998!4d55.4004458",
@@ -3012,16 +2713,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 73,
     "verified": true,
     "description": "Industrial Parts supplier in New York, United States.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "184 Bowery, New York, NY 10012",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/ACBM+TECH/@40.7208079,-73.99418949999999,14z/data=!4m8!1m2!2m1!1sACBM+TECH!3m4!1s0x89c2598622c78cb1:0x7e9f5ee101de9f08!8m2!3d40.7208079!4d-73.99418949999999",
@@ -3051,16 +2748,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 147,
     "verified": true,
     "description": "Industrial Parts supplier in Morelos, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Boulevard Paseo de la Plata # 1123, Parque Industrial SUMAR I, 98100 Morelos, Zac., Mexico",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Closed · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Murakami+Manufacturing+M%C3%A9xico+SA.+de+CV./@22.895412399999998,-102.6705703,14z/data=!4m8!1m2!2m1!1sMurakami+Manufacturing+M%C3%A9xico+SA.+de+CV.!3m4!1s0x8683ace07d25c027:0x3e5a7d97736bdc8d!8m2!3d22.895412399999998!4d-102.6705703",
@@ -3090,17 +2783,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 97,
     "verified": true,
     "description": "Construction supplier in Bengaluru, India.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "2nd Floor, Vasanthalakshmi Towers, 20/7, Kanakapura Main Rd, near JP Nagar Metro Station, Sarakki Gate, 1st Phase, J. P. Nagar, Bengaluru, Karnataka 560078, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-2PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/buildmaadi/@12.9088944,77.573154,14z/data=!4m8!1m2!2m1!1sbuildmaadi!3m4!1s0x3bae1502777d40c5:0xf74ac977a6a12fa!8m2!3d12.9088944!4d77.573154",
@@ -3130,17 +2819,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Steel & Metals supplier in Vadodara, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "B / h, super bread, C11 sardar industrial estate Road no 1, Ajwa Rd, Vadodara, Gujarat 390019, India",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: 8:30AM-6:30PM · Sunday: 9:30-11:30AM · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Steel+Vyapar+-+Vinayak+Steel+Industries+-+www.steelvyapar.com+-+Steel+Supplier+-+Gujarat+%7C/@22.313684499999997,73.23460589999999,14z/data=!4m8!1m2!2m1!1sSteel+Vyapar+-+Vinayak+Steel+Industries+-+www.steelvyapar.com+-+Steel+Supplier+-+Gujarat+%7C!3m4!1s0x395fcfaf260f66d5:0xee5572493ef9402e!8m2!3d22.313684499999997!4d73.23460589999999",
@@ -3170,17 +2855,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 81,
     "verified": true,
     "description": "Steel & Metals supplier in Chennai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "33, Lawyer Chinnathambi Street, Kondithope, George Town, Chennai, Tamil Nadu 600001, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED/@13.100890699999999,80.2773404,14z/data=!4m8!1m2!2m1!1sSALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED!3m4!1s0x3a526f5f15267a09:0x4786ca4fe3329de9!8m2!3d13.100890699999999!4d80.2773404",
@@ -3210,16 +2891,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Tubes & Pipes supplier in Tampa, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "3417 E 7th Ave, Tampa, FL 33605",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Steel+%26+Pipe+Supply/@27.9599416,-82.42140839999999,14z/data=!4m8!1m2!2m1!1sSteel+%26+Pipe+Supply!3m4!1s0x88c2c5a2bc9f8ed7:0xb1288319b23992da!8m2!3d27.9599416!4d-82.42140839999999",
@@ -3249,16 +2926,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 48,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "KIZAD - A8 - 351 Al Intifa’ St - Al Taweelah - Khalifa Industrial Zone - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: Closed · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Gharbia+Pipe+Company+LLC/@24.711569299999997,54.7314521,14z/data=!4m8!1m2!2m1!1sAl+Gharbia+Pipe+Company+LLC!3m4!1s0x3e5e558f90cb50a7:0xefe5db24481331fb!8m2!3d24.711569299999997!4d54.7314521",
@@ -3288,16 +2961,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 77,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "93323, ICAD II, Musaffah - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: 8:30AM-6:30PM · Sunday: 8:30AM-6:30PM · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AJ+STEEL+-+ICAD2/@24.283545,54.470335999999996,14z/data=!4m8!1m2!2m1!1sAJ+STEEL+-+ICAD2!3m4!1s0x3e5e3fac47ddcbf5:0x6fed2c7f0adaac76!8m2!3d24.283545!4d54.470335999999996",
@@ -3327,16 +2996,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Plot No. 33C2,34C2 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-5PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/AJ+STEEL/@24.326355,54.491495699999994,14z/data=!4m8!1m2!2m1!1sAJ+STEEL!3m4!1s0x3e5e3f6280da7447:0x29c8436c3a6249c4!8m2!3d24.326355!4d54.491495699999994",
@@ -3366,17 +3031,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Shop No. 8, Bhiwandiwala Building, Khetwadi 8th Ln, Pathe Bapurao Marg, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/M+Metal+Tubes+India+Pvt+Ltd/@18.959297499999998,72.82296529999999,14z/data=!4m8!1m2!2m1!1sM+Metal+Tubes+India+Pvt+Ltd!3m4!1s0x3be7cfc3c48d0309:0x19f4378c35b4fdf4!8m2!3d18.959297499999998!4d72.82296529999999",
@@ -3406,17 +3067,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Tubes & Pipes supplier in Kurali, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Block/Survey No 71,72,73, 105, At, Tal Karjan, Kurali, Gujarat 391210, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Swastico+Pipe+And+Tube+Pvt.Ltd/@22.033177199999997,73.2014255,14z/data=!4m8!1m2!2m1!1sSwastico+Pipe+And+Tube+Pvt.Ltd!3m4!1s0x395fe9031dde302f:0x4e7266a221ed4521!8m2!3d22.033177199999997!4d73.2014255",
@@ -3446,17 +3103,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 37129,
     "verified": true,
     "description": "Packaging supplier in Osaka, Japan.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "8-7 Kakudacho, Kita Ward, Osaka, 530-8350, Japan",
     "openingHours": "Friday: 10AM-8PM · Monday: 10AM-8PM · Saturday: 10AM-8PM · Sunday: 10AM-8PM · Thursday: 10AM-8PM · Tuesday: 10AM-8PM · Wednesday: 10AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Hankyu+Umeda+Main+Store/@34.7028186,135.4985323,14z/data=!4m8!1m2!2m1!1sHankyu+Umeda+Main+Store!3m4!1s0x6000e692589cb9eb:0xbc9b6d5116f447ad!8m2!3d34.7028186!4d135.4985323",
@@ -3486,16 +3139,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Packaging supplier in Weingarten, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Ravensburger Str. 30, 88250 Weingarten, Germany",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/packaging+warehouse/@47.80079,9.63142,14z/data=!4m8!1m2!2m1!1spackaging+warehouse!3m4!1s0x479baf7fea8b652b:0x1c135e06a912da55!8m2!3d47.80079!4d9.63142",
@@ -3525,16 +3174,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 47,
     "verified": true,
     "description": "Packaging supplier in Berlin, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Lahnstraße 33 B, 12055 Berlin, Germany",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-4PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BMPack+-+Gastronomiebedarf+%26+Verpackungsspezialist/@52.4678806,13.449325499999999,14z/data=!4m8!1m2!2m1!1sBMPack+-+Gastronomiebedarf+%26+Verpackungsspezialist!3m4!1s0x47a84f1f733a4ac3:0xc8711fc5676600b4!8m2!3d52.4678806!4d13.449325499999999",
@@ -3564,16 +3209,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 47,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Deira - 24 Al Wuheida Street, Deira, Office M4, Royal House Building - Hor Al Anz East - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-4PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Superior+Pack+Customised+Packaging+Manufacturer/@25.282589899999998,55.353266899999994,14z/data=!4m8!1m2!2m1!1sSuperior+Pack+Customised+Packaging+Manufacturer!3m4!1s0x3ef5f742ee27e389:0x301e79929309ba84!8m2!3d25.282589899999998!4d55.353266899999994",
@@ -3603,16 +3244,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "https://maps.app.goo.gl/Ca6KhzRKRJPUF2MTA - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-6:30PM · Monday: 7AM-6:30PM · Saturday: 7AM-6:30PM · Sunday: 7-10:30AM · Thursday: 7AM-6:30PM · Tuesday: 7AM-6:30PM · Wednesday: 7AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Zerah+Packing+Materials+Trading+LLC/@25.117414699999998,55.236239299999994,14z/data=!4m8!1m2!2m1!1sZerah+Packing+Materials+Trading+LLC!3m4!1s0x3e5f6969f17c6e8d:0x553b1fae095743ab!8m2!3d25.117414699999998!4d55.236239299999994",
@@ -3642,16 +3279,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Obaid Essa Ahmed Warehouse, Shed no: B10 Near Double cola signal, Industrial area no:4 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Bony+Packaging/@25.3352117,55.4116551,14z/data=!4m8!1m2!2m1!1sBony+Packaging!3m4!1s0x3e5f5944008c23bf:0x2f953deda964d5af!8m2!3d25.3352117!4d55.4116551",
@@ -3681,17 +3314,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 55,
     "verified": true,
     "description": "Packaging supplier in Sonipat, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "1788, HSIIDC, Rai, Industrial Estate, Sonipat, Haryana 131029, India",
     "sourceUrl": "https://www.google.com/maps/place/N.G.+PACKAGING+PVT.+LTD/@28.9300033,77.0913781,14z/data=!4m8!1m2!2m1!1sN.G.+PACKAGING+PVT.+LTD!3m4!1s0x390dac282ed23873:0xce7794472a83302b!8m2!3d28.9300033!4d77.0913781",
     "score": 95,
@@ -3720,16 +3349,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 39,
     "verified": true,
     "description": "Packaging supplier in Platja de la Pobla de Farnals, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Carrer Cantarrana, 1, 46137 Platja de la Pobla de Farnals, Valencia, Spain",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PackCo+%7C+Brand+%26+Packaging/@39.5615903,-0.28901869999999996,14z/data=!4m8!1m2!2m1!1sPackCo+%7C+Brand+%26+Packaging!3m4!1s0xd6048921db49f61:0xe9592e6ff7b869fb!8m2!3d39.5615903!4d-0.28901869999999996",
@@ -3759,16 +3384,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "PLOT 150 Az Zad 6 St - Musaffah - MW4 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7AM-6:30PM · Monday: 7AM-6:30PM · Saturday: 7AM-6:30PM · Sunday: Closed · Thursday: 7AM-6:30PM · Tuesday: 7AM-6:30PM · Wednesday: 7AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Woodline+General+Trading+L.L.C+S.P.C+%7C+Building+Materials+Supplier+in+Abu+Dhabi%2C+UAE/@24.347438999999998,54.4652598,14z/data=!4m8!1m2!2m1!1sWoodline+General+Trading+L.L.C+S.P.C+%7C+Building+Materials+Supplier+in+Abu+Dhabi%2C+UAE!3m4!1s0x3e5e41b7b98289c7:0x613494cbe9de4d2f!8m2!3d24.347438999999998!4d54.4652598",
@@ -3798,16 +3419,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "near al khail mall - Al Qouz Fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 6AM-9PM · Monday: 6AM-9PM · Saturday: 6AM-9PM · Sunday: 6AM-12:30PM · Thursday: 6AM-9PM · Tuesday: 6AM-9PM · Wednesday: 6AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Gratis+Building+%26+Construction+Materials+Trading+LLC/@25.1543869,55.2593964,14z/data=!4m8!1m2!2m1!1sGratis+Building+%26+Construction+Materials+Trading+LLC!3m4!1s0x3e5f697918c75379:0x68a44dbcac7168d5!8m2!3d25.1543869!4d55.2593964",
@@ -3837,16 +3454,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 93,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "شارع ١٦ - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-1PM,2-6PM · Monday: 8AM-1PM,2-6PM · Saturday: 8AM-1PM,2-6PM · Sunday: Closed · Thursday: 8AM-1PM,2-6PM · Tuesday: 8AM-1PM,2-6PM · Wednesday: 8AM-1PM,2-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Zoom+Building+Materials+Trading+%7C+Construction+Materials+Supplier+in+Abu+Dhabi%2C+UAE/@24.347362999999998,54.497939499999994,14z/data=!4m8!1m2!2m1!1sZoom+Building+Materials+Trading+%7C+Construction+Materials+Supplier+in+Abu+Dhabi%2C+UAE!3m4!1s0x3e5e409510971f71:0xb68ab2a41fdd57ba!8m2!3d24.347362999999998!4d54.497939499999994",
@@ -3876,17 +3489,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Construction supplier in Hyderabad, India.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Flat No : 402, IV th Floor, Vision Ultima, Sy.No : 103/1 105 & 106, DLF Rd, opposite to Dog park, Jayabheri Enclave, Gachibowli, Hyderabad, Telangana 500032, India",
     "openingHours": "Friday: 9:30AM-6:30PM · Monday: 9:30AM-6:30PM · Saturday: 9:30AM-6:30PM · Sunday: Closed · Thursday: 9:30AM-6:30PM · Tuesday: 9:30AM-6:30PM · Wednesday: 9:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Istika+Building+Materials+Private+Limited/@17.4483689,78.3622255,14z/data=!4m8!1m2!2m1!1sIstika+Building+Materials+Private+Limited!3m4!1s0x3bcb932ddbfc94af:0x5309002f8b50e7fd!8m2!3d17.4483689!4d78.3622255",
@@ -3916,16 +3525,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 140,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Ardeatina, 810, 00178 Roma RM, Italy",
     "openingHours": "Friday: 6:30AM-5PM · Monday: 6:30AM-5PM · Saturday: 6:30AM-1PM · Sunday: Closed · Thursday: 6:30AM-5PM · Tuesday: 6:30AM-5PM · Wednesday: 6:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BigMat+Edilnovelli+S.r.l./@41.8078676,12.5310179,14z/data=!4m8!1m2!2m1!1sBigMat+Edilnovelli+S.r.l.!3m4!1s0x13258961c455c6bf:0xde64fda30e8cf53a!8m2!3d41.8078676!4d12.5310179",
@@ -3955,16 +3560,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 72,
     "verified": true,
     "description": "Construction supplier in Estepona, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "C. Monterroso, 132, 29680 Estepona, Málaga, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3:30-6:30PM · Monday: 8AM-1:30PM,3:30-6:30PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-1:30PM,3:30-6:30PM · Tuesday: 8AM-1:30PM,3:30-6:30PM · Wednesday: 8AM-1:30PM,3:30-6",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+de+Construccion+Estepona+S.+L./@36.432594699999996,-5.164532599999999,14z/data=!4m8!1m2!2m1!1sMateriales+de+Construccion+Estepona+S.+L.!3m4!1s0xd0cd6bb6bf960f5:0xddba096ea6504490!8m2!3d36.432594699999996!4d-5.164532599999999",
@@ -3994,16 +3595,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Industrial Parts supplier in Garfield, United States.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "163 Belmont Ave #1, Garfield, NJ 07026",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Parts+Company+LLC/@40.8765048,-74.1049587,14z/data=!4m8!1m2!2m1!1sIndustrial+Parts+Company+LLC!3m4!1s0x89c2f943dd4da58f:0xbfac30778d5ae995!8m2!3d40.8765048!4d-74.1049587",
@@ -4033,16 +3630,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Industrial Area 3 Caterpillar Street Before Madinah Hyper market - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: 9AM-5PM · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MAK+HEAVY+EQUIPMENT+MACHINEARY+SPARE+PARTS+TRADING/@25.307776999999998,55.404163,14z/data=!4m8!1m2!2m1!1sMAK+HEAVY+EQUIPMENT+MACHINEARY+SPARE+PARTS+TRADING!3m4!1s0x3e5f5c032002b925:0xbae63e3cc7d986d2!8m2!3d25.307776999999998!4d55.404163",
@@ -4072,16 +3665,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 82,
     "verified": true,
     "description": "Industrial Parts supplier in San Miguel de Allende, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Boulevard los Picachos # 7 Poligono Empresarial San Miguel Industrial, 37888 San Miguel de Allende, Gto., Mexico",
     "openingHours": "Friday: 8AM-2PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Hirschmann+Automotive+Mexico+S.+de+R.L.+de+C.V./@20.8934745,-100.619461,14z/data=!4m8!1m2!2m1!1sHirschmann+Automotive+Mexico+S.+de+R.L.+de+C.V.!3m4!1s0x85d4accd30cd633f:0x983869811692b72a!8m2!3d20.8934745!4d-100.619461",
@@ -4111,16 +3700,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Steel & Metals supplier in Settimo Milanese, Italy.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Via Luigi Galvani, 21/D, 20019 Settimo Milanese MI, Italy",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/DS+Steel+srl+-+Vendita+Acciai+Speciali+tagliati+a+misura/@45.4721346,9.0722287,14z/data=!4m8!1m2!2m1!1sDS+Steel+srl+-+Vendita+Acciai+Speciali+tagliati+a+misura!3m4!1s0x4786eb3437385c7b:0xf4f07902e5f7f7be!8m2!3d45.4721346!4d9.0722287",
@@ -4150,16 +3735,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 67,
     "verified": true,
     "description": "Construction supplier in Waltershausen, Germany.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Gothaer Str. 44, 99880 Waltershausen, Germany",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/CARLISLE+Construction+Materials+GmbH+-+WERK+WHS/@50.899171499999994,10.5747825,14z/data=!4m8!1m2!2m1!1sCARLISLE+Construction+Materials+GmbH+-+WERK+WHS!3m4!1s0x47a48172ba1df279:0xe040047f35c37d6c!8m2!3d50.899171499999994!4d10.5747825",
@@ -4189,16 +3770,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 138,
     "verified": true,
     "description": "Construction supplier in Berlin, Germany.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Bergholzstraße 4, 12099 Berlin, Germany",
     "openingHours": "Friday: 5:30AM-8PM · Monday: 5:30AM-8PM · Saturday: 7AM-4PM · Sunday: Closed · Thursday: 5:30AM-8PM · Tuesday: 5:30AM-8PM · Wednesday: 5:30AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Capital+Baustoffe+GmbH/@52.457813099999996,13.4226266,14z/data=!4m8!1m2!2m1!1sCapital+Baustoffe+GmbH!3m4!1s0x47a84f4a826b4641:0xadbdcc5f704d62cf!8m2!3d52.457813099999996!4d13.4226266",
@@ -4228,17 +3805,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Steel & Metals supplier in Mumbai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Tower 48/52, Cosmos Sunshine, Flat No. 402, 3rd Panjrapole Lane, near CP Tank, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED/@18.9554299,72.828497,14z/data=!4m8!1m2!2m1!1sSALEM+STAINLESS+STEEL+SUPPLIERS+PRIVATE+LIMITED!3m4!1s0x3be7ce3d5d1cee81:0x7baa9cbe93e8c697!8m2!3d18.9554299!4d72.828497",
@@ -4268,16 +3841,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Cables & Electrical supplier in Geretsried, Germany.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Lauterbachstraße 23c, 82538 Geretsried-Gelting, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Hochfrequenzkabel+el-spec+GmbH/@47.8860526,11.431733699999999,14z/data=!4m8!1m2!2m1!1sHochfrequenzkabel+el-spec+GmbH!3m4!1s0x479dc6b604596715:0x82f134910b7a4637!8m2!3d47.8860526!4d11.431733699999999",
@@ -4307,16 +3876,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Dubai Investment Park Warehouse No. 7 – Plot No. 598-1212, Dubai, 36154 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: Closed · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Cable+Tech+Middle+East+%26+Africa+LLC/@24.986587999999998,55.167593,14z/data=!4m8!1m2!2m1!1sCable+Tech+Middle+East+%26+Africa+LLC!3m4!1s0x3e5f7293d1628395:0x67022d8e0036b43a!8m2!3d24.986587999999998!4d55.167593",
@@ -4346,16 +3911,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 83,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Electric Way Technopark, Jebel Ali Tel : +971 4 8170777 Beside Pacific Controls - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-2PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Electric+Way/@24.939891,55.0531722,14z/data=!4m8!1m2!2m1!1sElectric+Way!3m4!1s0x3e5f0dd7400ea559:0x9e0c6b71a7a2dbbc!8m2!3d24.939891!4d55.0531722",
@@ -4385,16 +3946,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 28,
     "verified": true,
     "description": "Cables & Electrical supplier in ES, Spain.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Polígono Industrial Sangroniz Iberre 3, módulos, 15-17, 48150, Bizkaia, Spain",
     "openingHours": "Friday: 8AM-2PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Cabelec+S.L./@43.297457699999995,-2.9371264999999998,14z/data=!4m8!1m2!2m1!1sCabelec+S.L.!3m4!1s0xd4e45534fb3b25d:0x8ac7aff71f4fd9ca!8m2!3d43.297457699999995!4d-2.9371264999999998",
@@ -4424,16 +3981,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Tubes & Pipes supplier in Nistertal, Germany.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Hirtscheider Str. 13-15, 57647 Nistertal-Büdingen, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/TUBE-TEC+GmbH/@50.631862,7.896179,14z/data=!4m8!1m2!2m1!1sTUBE-TEC+GmbH!3m4!1s0x47bc271288ded16b:0xe4f9c03a360c6a77!8m2!3d50.631862!4d7.896179",
@@ -4463,16 +4016,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 39,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Industrial Area - ICAD 1 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-1PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Union+Pipes+Industry/@24.32164,54.5076141,14z/data=!4m8!1m2!2m1!1sUnion+Pipes+Industry!3m4!1s0x3e5e3f44d28a16dd:0x71d28579172dfdd3!8m2!3d24.32164!4d54.5076141",
@@ -4502,17 +4051,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Moti Mansion, 9, Khetwadi 5th Ln, Bori Chawl, Khetwadi, Grant Road, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: 10AM-7PM · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Neeka+Tubes/@18.958754499999998,72.8241529,14z/data=!4m8!1m2!2m1!1sNeeka+Tubes!3m4!1s0x3be7cf08c71784e7:0x4094399bd77e112d!8m2!3d18.958754499999998!4d72.8241529",
@@ -4542,17 +4087,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "1st floor office no 10, Tabela Building, 57, Bhandari St, Cawasji Patel Tank, Kamathipura, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/SUPREME+STEEL+%26+ENGG+CO+Pipe+Fittings+Manufacturer+In+Mumbai+India%2C+Pipe+Manufacturer%2C/@18.9589341,72.8281721,14z/data=!4m8!1m2!2m1!1sSUPREME+STEEL+%26+ENGG+CO+Pipe+Fittings+Manufacturer+In+Mumbai+India%2C+Pipe+Manufacturer%2C!3m4!1s0x3be7ce3df47054b9:0x4f49207a8445c979!8m2!3d18.9589341!4d72.8281721",
@@ -4582,16 +4123,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 30,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Warehouse # 6, 25th Street - Doha St - Al Qusais - Industrial Area-1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 10AM-5PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ideas+Packaging+Machinery+%7C+Packaging+Machines+Manufacturer+in+Dubai+%7C+Experts+in+Filling%2C+Capping%2C+Labeling+Machines+UAE/@25.2940298,55.3878986,14z/data=!4m8!1m2!2m1!1sIdeas+Packaging+Machinery+%7C+Packaging+Machines+Manufacturer+in+Dubai+%7C+Experts+in+Filling%2C+Capping%2C+Labeling+Machines+UAE!3m4!1s0x4dd74286280c626f:0xbdf5c1e8c3c576d1!8m2!3d25.2940298!4d55.3878986",
@@ -4621,16 +4158,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Emirates industrial city Block B - Shed# 1 to 8 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-7:30PM · Monday: 7:30AM-7:30PM · Saturday: 7:30AM-7:30PM · Sunday: Closed · Thursday: 7:30AM-7:30PM · Tuesday: 7:30AM-7:30PM · Wednesday: 7:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Areen+Packaging+Mat.+Ind.+LLC+%2F+Al+Areen+Household+Trading+LLC/@25.3326168,55.638915999999995,14z/data=!4m8!1m2!2m1!1sAl+Areen+Packaging+Mat.+Ind.+LLC+%2F+Al+Areen+Household+Trading+LLC!3m4!1s0x3ef5f23361feac69:0xcca57d6f4a44e6a!8m2!3d25.3326168!4d55.638915999999995",
@@ -4660,17 +4193,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 43,
     "verified": true,
     "description": "Packaging supplier in Thirumudivakkam, Irandankattalai, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "SF-80, Kundrathur Main Road, Thirumudivakkam, Irandankattalai, Tamil Nadu 600132, India",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Total+Packaging+Solutions/@12.9717749,80.1045779,14z/data=!4m8!1m2!2m1!1sTotal+Packaging+Solutions!3m4!1s0x3a528aa766274251:0x1d0a197254cb9e43!8m2!3d12.9717749!4d80.1045779",
@@ -4700,16 +4229,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 87,
     "verified": true,
     "description": "Chain carrying a variety of arts & crafts materials, plus party supplies, fabric & home-decor items.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "2848 NW 63rd St, Oklahoma City, OK 73116",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Hobby+Lobby/@35.5350499,-97.5645036,14z/data=!4m8!1m2!2m1!1sHobby+Lobby!3m4!1s0x87b21b5efbaa5187:0x4eafbd9c357470c4!8m2!3d35.5350499!4d-97.5645036",
@@ -4739,16 +4264,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Packaging supplier in Verolanuova, Italy.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Località Breda libera 13, 25028 Verolanuova BS, Italy",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Lic+Packaging/@45.3527312,10.0916336,14z/data=!4m8!1m2!2m1!1sLic+Packaging!3m4!1s0x47810fd804181167:0x2d0cf2c9d3c86f8a!8m2!3d45.3527312!4d10.0916336",
@@ -4778,16 +4299,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Packaging supplier in Rabat, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Numéro 140, Extension 3, Rabat 10210, Morocco",
     "openingHours": "Friday: 10AM-1:30PM,4-7:30PM · Monday: 10AM-1:30PM,3:30-7:30PM · Saturday: 10AM-1:30PM,3:30-7:30PM · Sunday: Closed · Thursday: 10AM-1:30PM,3:30-7:30PM · Tuesday: 10AM-1:30PM,3:30-7:30PM · Wednesday: ",
     "sourceUrl": "https://www.google.com/maps/place/Sofipak/@33.9729549,-6.8178573,14z/data=!4m8!1m2!2m1!1sSofipak!3m4!1s0xda76bec6c5e0eed:0x3ee115175e949e7c!8m2!3d33.9729549!4d-6.8178573",
@@ -4817,16 +4334,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Packaging supplier in Òdena, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Pol. Ind, Carrer de Cal Llacuna, 20-24, 08711 Òdena, Barcelona, Spain",
     "openingHours": "Friday: 6AM-10PM · Monday: 6AM-10PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-10PM · Tuesday: 6AM-10PM · Wednesday: 6AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/Innovapack+Packaging+Barcelona/@41.5775558,1.6587139,14z/data=!4m8!1m2!2m1!1sInnovapack+Packaging+Barcelona!3m4!1s0x12a469d4f51b9067:0x85fd340fdfdb1fde!8m2!3d41.5775558!4d1.6587139",
@@ -4856,16 +4369,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Packaging supplier in Benasau, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Av. Benidorm, 20, 03814 Benasau, Alicante, Spain",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Eurobox+-+Packaging+y+Envases+Met%C3%A1licos/@38.688231699999996,-0.34325249999999996,14z/data=!4m8!1m2!2m1!1sEurobox+-+Packaging+y+Envases+Met%C3%A1licos!3m4!1s0xd618a517b87cc81:0x9d43b252354b23b0!8m2!3d38.688231699999996!4d-0.34325249999999996",
@@ -4895,16 +4404,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Persia N08 - Shop 09 - 08 Cluster G - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7AM-10PM · Monday: 7AM-10PM · Saturday: 7AM-10PM · Sunday: 7AM-10PM · Thursday: 7AM-10PM · Tuesday: 7AM-10PM · Wednesday: 7AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+ZEHRA+BUILDING+MATERIAL+LLC+DUBAI+%28BR%29/@25.1590314,55.407125799999996,14z/data=!4m8!1m2!2m1!1sAL+ZEHRA+BUILDING+MATERIAL+LLC+DUBAI+%28BR%29!3m4!1s0x3e5f61d67ec39873:0x7ab94cdaa69d9d99!8m2!3d25.1590314!4d55.407125799999996",
@@ -4934,16 +4439,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Maleha St - opposite Sahara Glass & Frames - Industrial Area 2 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7:30-11AM,3:30-6:30PM · Monday: 7:30AM-1PM,3:30-8PM · Saturday: 7:30AM-1PM,3:30-8PM · Sunday: 7:30AM-1PM · Thursday: 7:30AM-1PM,3:30-8PM · Tuesday: 7:30AM-1PM,3:30-8PM · Wednesday: 7:30AM-1PM,",
     "sourceUrl": "https://www.google.com/maps/place/Al+Sughra+Building+Material+Trading+LLC/@25.318128299999998,55.408709599999995,14z/data=!4m8!1m2!2m1!1sAl+Sughra+Building+Material+Trading+LLC!3m4!1s0x3e5f599d3ad4a601:0x964e15d1a0bcc34c!8m2!3d25.318128299999998!4d55.408709599999995",
@@ -4973,17 +4474,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 39,
     "verified": true,
     "description": "Construction supplier in Gurugram, India.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "shop 12, Jail Rd, sector 67, Civil Lines, Gurugram, Haryana 122001, India",
     "openingHours": "Friday: 6AM-12AM · Monday: 6AM-12AM · Saturday: 6AM-12AM · Sunday: 6AM-12AM · Thursday: 6AM-12AM · Tuesday: 6AM-12AM · Wednesday: 6AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/Build+Makaan/@28.4571297,77.0282601,14z/data=!4m8!1m2!2m1!1sBuild+Makaan!3m4!1s0x390d235e142f69d3:0xb2332419b4e1b7d4!8m2!3d28.4571297!4d77.0282601",
@@ -5013,16 +4510,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 44,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Prenestina, 956, 00155 Roma RM, Italy",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Punto+Prefedil/@41.8932669,12.604985399999999,14z/data=!4m8!1m2!2m1!1sPunto+Prefedil!3m4!1s0x132f62d8b7a8e839:0x5544576b972d9801!8m2!3d41.8932669!4d12.604985399999999",
@@ -5052,16 +4545,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 54,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via del Boccaccio, 7, 00187 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 8AM-1PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Ferramenta+PELLI%2C+Elettricit%C3%A0%2C+Casalinghi%2C+Idraulica%2C+Centro+chiavi%2C+Tintometro/@41.902783299999996,12.4869939,14z/data=!4m8!1m2!2m1!1sFerramenta+PELLI%2C+Elettricit%C3%A0%2C+Casalinghi%2C+Idraulica%2C+Centro+chiavi%2C+Tintometro!3m4!1s0x132f61ab80c10771:0x2adf250b38f63b0e!8m2!3d41.902783299999996!4d12.4869939",
@@ -5091,16 +4580,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 99,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Casilina, 1777, 00132 Roma RM, Italy",
     "openingHours": "Friday: 7AM-12PM,2-6:30PM · Monday: 7AM-12PM,2-6:30PM · Saturday: 7AM-1PM · Sunday: Closed · Thursday: 7AM-12PM,2-6:30PM · Tuesday: 7AM-12PM,2-6:30PM · Wednesday: 7AM-12PM,2-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Benedettini+Ceramiche/@41.8643165,12.6711022,14z/data=!4m8!1m2!2m1!1sBenedettini+Ceramiche!3m4!1s0x132f7d99c091aceb:0xf53ee007baeaea40!8m2!3d41.8643165!4d12.6711022",
@@ -5130,16 +4615,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 56,
     "verified": true,
     "description": "Construction supplier in Miguel Hidalgo, Mexico City, Mexico.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Calz. Gral. Mariano Escobedo 710-Piso 8, Anzures, Miguel Hidalgo, 11590 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-7PM · Saturday: 8AM-2PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/MITRA+SA+de+CV/@19.4265306,-99.1788953,14z/data=!4m8!1m2!2m1!1sMITRA+SA+de+CV!3m4!1s0x85d200c48d619d7d:0x1607f1c64c525ea9!8m2!3d19.4265306!4d-99.1788953",
@@ -5169,16 +4650,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 57,
     "verified": true,
     "description": "Construction supplier in Marbella, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Av. Francisco Zarco, nave 25, 29604 Marbella, Málaga, Spain",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Aim+British+Building+Supplies/@36.49525,-4.765791,14z/data=!4m8!1m2!2m1!1sAim+British+Building+Supplies!3m4!1s0xd73206103ee054b:0xf61bfc2da16e80b!8m2!3d36.49525!4d-4.765791",
@@ -5208,16 +4685,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Caterpillar road - Second Industrial St - Industrial Area 3 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/AL+SAIF+AL+MALAKI+HEAVY+EQUIPMENTS+SPARE+PARTS+LLC/@25.3092409,55.405458599999996,14z/data=!4m8!1m2!2m1!1sAL+SAIF+AL+MALAKI+HEAVY+EQUIPMENTS+SPARE+PARTS+LLC!3m4!1s0x3e5f5f4c7f2692d3:0xf923f4faa94713c0!8m2!3d25.3092409!4d55.405458599999996",
@@ -5247,16 +4720,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 77,
     "verified": true,
     "description": "Industrial Parts supplier in Villa de Reyes, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "calle bangalore 303, Parque Industrial Logistik, 79525 Villa de Reyes, S.L.P., Mexico",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/VUTEQ+Industries+Mexico/@21.982360999999997,-100.861379,14z/data=!4m8!1m2!2m1!1sVUTEQ+Industries+Mexico!3m4!1s0x842abbdb67ffc6a1:0x41620cc832ea2c98!8m2!3d21.982360999999997!4d-100.861379",
@@ -5286,16 +4755,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 65,
     "verified": true,
     "description": "Tubes & Pipes supplier in TR, Turkey.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Adana Hacı Sabancı Organize Sanayi Bölgesi İstiklal Cd. No:10, 01350 Sarıçam/Adana, Türkiye",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/MAZLUM+%C3%87EL%C4%B0K+BORU+-+MAZLUM+STEEL+PIPES+-+MAZLUM+BORU/@36.9778326,35.617132,14z/data=!4m8!1m2!2m1!1sMAZLUM+%C3%87EL%C4%B0K+BORU+-+MAZLUM+STEEL+PIPES+-+MAZLUM+BORU!3m4!1s0x1528bef3300e0ffd:0xd087dd555f29ec33!8m2!3d36.9778326!4d35.617132",
@@ -5325,16 +4790,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 69,
     "verified": true,
     "description": "Industrial Parts supplier in POLIGONO DE, Spain.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "C. de Júpiter, 4, NAVE 2, 28830 POLIGONO DE, Madrid, Spain",
     "openingHours": "Friday: 8:30AM-1:45PM,3:15-7PM · Monday: 8:30AM-1:45PM,3:15-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-1:45PM,3:15-7PM · Tuesday: 8:30AM-1:45PM,3:15-7PM · Wednesday: 8:30AM-1:45PM,3:15",
     "sourceUrl": "https://www.google.com/maps/place/Global+Parts/@40.45019,-3.49078,14z/data=!4m8!1m2!2m1!1sGlobal+Parts!3m4!1s0xd42372ffce64f1d:0x55639b8e66bc0fc6!8m2!3d40.45019!4d-3.49078",
@@ -5364,17 +4825,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 67,
     "verified": true,
     "description": "Steel & Metals supplier in Panvel, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "plot 18 kwc Bima ware housing complex Raighad, Kalamboli, Panvel, Maharashtra 410218, India",
     "openingHours": "Friday: 8:30AM-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: Closed · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Ferrite+Structural+Steels+Pvt+Ltd/@19.0283095,73.10973129999999,14z/data=!4m8!1m2!2m1!1sFerrite+Structural+Steels+Pvt+Ltd!3m4!1s0x3be7e9c7bdd3f85d:0x62e194ff73009362!8m2!3d19.0283095!4d73.10973129999999",
@@ -5404,17 +4861,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Steel & Metals supplier in Pimpri-Chinchwad, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Balaji Nagar, MIDC, Bhosari, Pimpri-Chinchwad, Maharashtra 411026, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: 9AM-7PM · Thursday: Closed · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Almas+Steel+%26+Alloys+Private+Limited/@18.636234299999998,73.8296058,14z/data=!4m8!1m2!2m1!1sAlmas+Steel+%26+Alloys+Private+Limited!3m4!1s0x3bc2b86e04d42edb:0x3e65322e7f0d4101!8m2!3d18.636234299999998!4d73.8296058",
@@ -5444,16 +4897,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Cables & Electrical supplier in TR, Turkey.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Osmangazi, Müstesna Sk. No.: 37, 34887 Sancaktepe/İstanbul, Türkiye",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/ETK+Kablo+Sanayi+ve+Ticaret+A.+%C5%9E./@40.980548399999996,29.2464251,14z/data=!4m8!1m2!2m1!1sETK+Kablo+Sanayi+ve+Ticaret+A.+%C5%9E.!3m4!1s0x14cad03c80555555:0xfc72908a0dd28e5d!8m2!3d40.980548399999996!4d29.2464251",
@@ -5483,17 +4932,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Cables & Electrical supplier in Pune, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Opp. Pasodya Vithoba Mandir, 437, near Tiranga Hotel, Budhwar Peth, Pune, Maharashtra 411002, India",
     "openingHours": "Friday: 10:15AM-8PM · Monday: 10:15AM-8PM · Saturday: 10:15AM-8PM · Sunday: Closed · Thursday: 10:15AM-8PM · Tuesday: 10:15AM-8PM · Wednesday: 10:15AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Sarv+Wires+and+Cables+Private+Limited.+%7C+Wholesale+Electrical+Market+in+Pune%2C+India/@18.5169128,73.8582168,14z/data=!4m8!1m2!2m1!1sSarv+Wires+and+Cables+Private+Limited.+%7C+Wholesale+Electrical+Market+in+Pune%2C+India!3m4!1s0x3bc2c06f50000075:0x184785220f6b756f!8m2!3d18.5169128!4d73.8582168",
@@ -5523,16 +4968,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 95,
     "verified": true,
     "description": "Cables & Electrical supplier in Bolgare, Italy.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Via Francesca, 8, 24060 Bolgare BG, Italy",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Italian+Cable+Company+Spa/@45.628668399999995,9.807339299999999,14z/data=!4m8!1m2!2m1!1sItalian+Cable+Company+Spa!3m4!1s0x47814354177d011d:0xc1a7758fff594831!8m2!3d45.628668399999995!4d9.807339299999999",
@@ -5562,16 +5003,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 61,
     "verified": true,
     "description": "Tubes & Pipes supplier in Holiday, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "3351 Grand Blvd, Holiday, FL 34690",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/US+Wholesale+Pipe+%26+Tube+Inc/@28.2083251,-82.72434609999999,14z/data=!4m8!1m2!2m1!1sUS+Wholesale+Pipe+%26+Tube+Inc!3m4!1s0x88c291fa7df6e1dd:0x9ffc82245c76265e!8m2!3d28.2083251!4d-82.72434609999999",
@@ -5601,16 +5038,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 229,
     "verified": true,
     "description": "Tubes & Pipes supplier in Bessemer, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "2101 18th Ave N, Bessemer, AL 35020",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/U.S.+Pipe/@33.4141882,-86.9715114,14z/data=!4m8!1m2!2m1!1sU.S.+Pipe!3m4!1s0x8888e1a83a8e2fb9:0x35b4cd823ce03db4!8m2!3d33.4141882!4d-86.9715114",
@@ -5640,16 +5073,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 22,
     "verified": true,
     "description": "Tubes & Pipes supplier in Siegen, Germany.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Eisenhüttenstraße 11-17, 57074 Siegen-Kaan-Marienborn, Germany",
     "openingHours": "Friday: 8AM-3:30PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Esta+Rohr+GmbH/@50.8708701,8.053519699999999,14z/data=!4m8!1m2!2m1!1sEsta+Rohr+GmbH!3m4!1s0x47bc1b652d5c46db:0x5e5d6ab4750c2d63!8m2!3d50.8708701!4d8.053519699999999",
@@ -5679,16 +5108,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Tubes & Pipes supplier in TR, Turkey.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Karaduvar SB, D-3 Cd (Mersin Serbest Bölgesi), 33040 Akdeniz/Mersin, Türkiye",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: 8AM-8PM · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/HDM+Spirally+Welded+Steel+Pipe+Inc./@36.815193,34.664394,14z/data=!4m8!1m2!2m1!1sHDM+Spirally+Welded+Steel+Pipe+Inc.!3m4!1s0x1527f217c4562073:0x9205671384a22598!8m2!3d36.815193!4d34.664394",
@@ -5718,16 +5143,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 49,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Dubai Investment Park First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM · Monday: 7:30AM-3:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-3:30PM · Tuesday: 7:30AM-3:30PM · Wednesday: 7:30AM-3:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Dubai+Pipes+Factory+Co+LLC/@24.974279199999998,55.1559702,14z/data=!4m8!1m2!2m1!1sDubai+Pipes+Factory+Co+LLC!3m4!1s0x3e5f428cdf52c4cd:0xd8580cc5c81b0f80!8m2!3d24.974279199999998!4d55.1559702",
@@ -5757,16 +5178,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 64,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Plot No: 597-595, Dubai Investment Park - 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/JSS+Pipes+And+Fittings+Trading+LLC/@24.9827306,55.189225699999994,14z/data=!4m8!1m2!2m1!1sJSS+Pipes+And+Fittings+Trading+LLC!3m4!1s0x3e5f725c70ca1211:0x5e5c48dbedac01e1!8m2!3d24.9827306!4d55.189225699999994",
@@ -5796,16 +5213,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Sheikh Zayed Rd - Al Qouz Third - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Delta+Pipe+%26+Tube/@25.162435,55.234209899999996,14z/data=!4m8!1m2!2m1!1sDelta+Pipe+%26+Tube!3m4!1s0x3e5f698daab35a6d:0xb03136c9b48d6c09!8m2!3d25.162435!4d55.234209899999996",
@@ -5835,16 +5248,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "13th St - Mina Jebel Ali - Jebel Ali Freezone - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-5PM · Monday: 8AM-6PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Arrow+Pipes+%26+Fittings+FZCO/@24.962234,55.068341999999994,14z/data=!4m8!1m2!2m1!1sArrow+Pipes+%26+Fittings+FZCO!3m4!1s0x3e5f0dec59428929:0xe123944050c17939!8m2!3d24.962234!4d55.068341999999994",
@@ -5874,16 +5283,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "29WR7 - ICAD III - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 6:30AM-5PM · Monday: 6:30AM-5PM · Saturday: Closed · Sunday: 6:30AM-3:20PM · Thursday: 6:30AM-5PM · Tuesday: 6:30AM-5PM · Wednesday: 6:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Shaw+Emirates+Pipes+Manufacturing+LLC+%28The+Shaw+Group%29/@24.2794799,54.444774599999995,14z/data=!4m8!1m2!2m1!1sShaw+Emirates+Pipes+Manufacturing+LLC+%28The+Shaw+Group%29!3m4!1s0x3e5e3fd1fe29b63b:0x66bb6ead09d23e9b!8m2!3d24.2794799!4d54.444774599999995",
@@ -5913,17 +5318,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Tubes & Pipes supplier in New Delhi, Delhi, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "1/6 - B, Ground Floor, Asaf Ali Rd, New Delhi, Delhi 110006, India",
     "openingHours": "Friday: 10AM-6:30PM · Monday: 10AM-6:30PM · Saturday: 10AM-5:30PM · Sunday: Closed · Thursday: 10AM-6:30PM · Tuesday: 10AM-6:30PM · Wednesday: 10AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Apex+Tubes+Private+Limited/@28.645520899999998,77.2250251,14z/data=!4m8!1m2!2m1!1sApex+Tubes+Private+Limited!3m4!1s0x390cfd3dcc34a68d:0x7dfdb7a3d3e6d3c5!8m2!3d28.645520899999998!4d77.2250251",
@@ -5953,16 +5354,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 103,
     "verified": true,
     "description": "Tubes & Pipes supplier in Medina del Campo, Spain.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Parque Empresarial Medina On, Autovía A-6, km 152, 47400 Medina del Campo, Valladolid, Spain",
     "openingHours": "Friday: 7AM-9PM · Monday: 7AM-9PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/ABN+Pipe+Systems/@41.2565953,-4.8738268,14z/data=!4m8!1m2!2m1!1sABN+Pipe+Systems!3m4!1s0xd47502c56295199:0x58f646e9145f5ef6!8m2!3d41.2565953!4d-4.8738268",
@@ -5992,16 +5389,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Packaging supplier in West Babylon, United States.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "1531 Herzel Blvd, West Babylon, NY 11704",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/Custom+Boxes+Mart+-+Custom+Boxes+Wholesale+USA+-+Packaging+Manufacturer+in+USA+-+CBD+Boxes+in+USA/@40.722939499999995,-73.3612677,14z/data=!4m8!1m2!2m1!1sCustom+Boxes+Mart+-+Custom+Boxes+Wholesale+USA+-+Packaging+Manufacturer+in+USA+-+CBD+Boxes+in+USA!3m4!1s0x89e82d698eeae85d:0xdb85ed528a8aab2c!8m2!3d40.722939499999995!4d-73.3612677",
@@ -6031,16 +5424,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 91,
     "verified": true,
     "description": "Packaging supplier in Brooklyn, United States.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "1290 Metropolitan Ave, Brooklyn, NY 11237",
     "openingHours": "Friday: 9AM-1PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Prime+Packaging+Corporation/@40.7131767,-73.9256668,14z/data=!4m8!1m2!2m1!1sPrime+Packaging+Corporation!3m4!1s0x89c25eaf6cae4ded:0xf6baf09061707adc!8m2!3d40.7131767!4d-73.9256668",
@@ -6070,16 +5459,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Packaging supplier in Alf, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Bad-Bertricher-Straße 6, 56859 Alf-Fabrik, Germany",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Huhtamaki+Foodservice+Germany+Sales+GmbH+%26+Co.+KG/@50.05827,7.103949999999999,14z/data=!4m8!1m2!2m1!1sHuhtamaki+Foodservice+Germany+Sales+GmbH+%26+Co.+KG!3m4!1s0x47be39f1d199b1d1:0xc25e4527ec75c093!8m2!3d50.05827!4d7.103949999999999",
@@ -6109,17 +5494,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Packaging supplier in Delhi, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "C-53, R Block, Plot No, near Jain Mandir, Dilshad Garden, Delhi, 110095, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Dipack+Corporation+%7C+Packaging+Machinery+Supplier+Delhi+NCR/@28.6769948,77.3088483,14z/data=!4m8!1m2!2m1!1sDipack+Corporation+%7C+Packaging+Machinery+Supplier+Delhi+NCR!3m4!1s0x390cfb03e6d854a9:0x9126ba2948508c55!8m2!3d28.6769948!4d77.3088483",
@@ -6149,16 +5530,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 28,
     "verified": true,
     "description": "Packaging supplier in Casablanca, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "8 Rue du Gabon, Casablanca 20250, Morocco",
     "openingHours": "Friday: 9:30AM-1:30PM,3-6:30PM · Monday: 9:30AM-1:30PM,2:30-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9:30AM-1:30PM,2:30-6:30PM · Tuesday: 9:30AM-1:30PM,2:30-6:30PM · Wednesday: 9:30AM-1:",
     "sourceUrl": "https://www.google.com/maps/place/Youpack/@33.5927929,-7.6348619,14z/data=!4m8!1m2!2m1!1sYoupack!3m4!1s0xda7d347aaa922f3:0x5b91a15dbc4ea97b!8m2!3d33.5927929!4d-7.6348619",
@@ -6188,16 +5565,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 37,
     "verified": true,
     "description": "Packaging supplier in ES, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Ctra, BP-2151, Km 13, 8, 08775, Barcelona, Spain",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/FONT+EMBALATGES%2C+FABRICA+DE+PALETS/@41.440865099999996,1.7295352,14z/data=!4m8!1m2!2m1!1sFONT+EMBALATGES%2C+FABRICA+DE+PALETS!3m4!1s0x12a464b7360ccf8d:0xca2675a0464aec1c!8m2!3d41.440865099999996!4d1.7295352",
@@ -6227,16 +5600,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 52,
     "verified": true,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "955 W 2100 S Expy, Salt Lake City, UT 84119",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/SRS+Building+Products/@40.725579499999995,-111.91888139999999,14z/data=!4m8!1m2!2m1!1sSRS+Building+Products!3m4!1s0x87528b32506e7915:0xba336c274d418e1b!8m2!3d40.725579499999995!4d-111.91888139999999",
@@ -6266,16 +5635,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Shop-1 - near Hadi Express Exchange Sonapur - Muhaisanah Second - Muhaisanah 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 6:30AM-12AM · Monday: 6AM-11PM · Saturday: 6:30AM-12AM · Sunday: 7AM-11PM · Thursday: 6:30AM-12AM · Tuesday: 6AM-11PM · Wednesday: 6:30AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/Safinat+Al+Salam+Building+Materials+Trading/@25.259743699999998,55.4231391,14z/data=!4m8!1m2!2m1!1sSafinat+Al+Salam+Building+Materials+Trading!3m4!1s0xa2fb9078e9786e23:0x84e0adcdd4c58514!8m2!3d25.259743699999998!4d55.4231391",
@@ -6305,16 +5670,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "M-15,Musaffah Industrial Area - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12PM · Monday: 7:30AM-5:30PM · Saturday: 7:30AM-5:30PM · Sunday: Closed · Thursday: 7:30AM-5:30PM · Tuesday: 7:30AM-5:30PM · Wednesday: 7:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Modern+Building+Materials+Trading/@24.3787351,54.485322399999994,14z/data=!4m8!1m2!2m1!1sModern+Building+Materials+Trading!3m4!1s0x3e5e410f1aafe27d:0x4d8e81d8ffb5d699!8m2!3d24.3787351!4d54.485322399999994",
@@ -6344,16 +5705,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 47,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "AL JURF - Al Jamia St - Al Jerf 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 6AM-8PM · Monday: 6AM-8:30PM · Saturday: 6AM-8:30PM · Sunday: 6AM-10PM · Thursday: 6AM-8:30PM · Tuesday: 6AM-8:30PM · Wednesday: 6AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Buildline+Building+Materials+Trading+LLC/@25.4324995,55.5364819,14z/data=!4m8!1m2!2m1!1sBuildline+Building+Materials+Trading+LLC!3m4!1s0x3e5f58765c06d95b:0xa51510ff93752315!8m2!3d25.4324995!4d55.5364819",
@@ -6383,16 +5740,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 85,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Warehouse - 27 & 28 318th Rd - next to Al Ahli Driving Centre - Al Qouz Ind.fourth - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-7PM · Monday: 7:30AM-7PM · Saturday: 7:30AM-7PM · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/QCON+General+Trading+LLC+-+AL+QUOZ+4%2C+DUBAI+HEAD+OFFICE/@25.122536999999998,55.2271724,14z/data=!4m8!1m2!2m1!1sQCON+General+Trading+LLC+-+AL+QUOZ+4%2C+DUBAI+HEAD+OFFICE!3m4!1s0x3e5f696012f9b20f:0x6508fdeb07939d13!8m2!3d25.122536999999998!4d55.2271724",
@@ -6422,16 +5775,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 84,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Ibn Al-Ameed Street, An Noor, Riyadh 11323, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7:30AM-4:30PM · Saturday: 7:30AM-4:30PM · Sunday: 7:30AM-4:30PM · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Bait+Al-Tatawor+Company+for+Steel+Trading+and+Manufacturing/@24.6497413,46.8117096,14z/data=!4m8!1m2!2m1!1sBait+Al-Tatawor+Company+for+Steel+Trading+and+Manufacturing!3m4!1s0x3e2f07e59a747181:0x9c076116fc16e748!8m2!3d24.6497413!4d46.8117096",
@@ -6461,16 +5810,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 66,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via dei Sette Metri, 42a, 00118 Roma RM, Italy",
     "openingHours": "Friday: 7AM-6PM · Monday: 7AM-6PM · Saturday: 7AM-1PM · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Edil+Cimini+Company+SRL/@41.816402,12.607552,14z/data=!4m8!1m2!2m1!1sEdil+Cimini+Company+SRL!3m4!1s0x13258862850bfbbf:0xd94a4cc48103e905!8m2!3d41.816402!4d12.607552",
@@ -6500,16 +5845,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Construction supplier in Farmers Branch, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "11410 Mathis Ave, Farmers Branch, TX 75234",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/JT+Construction+Supply/@32.8973558,-96.9117777,14z/data=!4m8!1m2!2m1!1sJT+Construction+Supply!3m4!1s0x864c2707d7a83937:0xdb61e126c0e5cbab!8m2!3d32.8973558!4d-96.9117777",
@@ -6539,16 +5880,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Industrial Parts supplier in Brooklyn, United States.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "126 Scott Ave, Brooklyn, NY 11237",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Century+Industrial+Supply/@40.711600399999995,-73.9233488,14z/data=!4m8!1m2!2m1!1sCentury+Industrial+Supply!3m4!1s0x89c2592a215caa53:0xabc3c585ca3b760a!8m2!3d40.711600399999995!4d-73.9233488",
@@ -6578,16 +5915,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Caterpillar - Road - Industrial Area 3 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Rukn+Al+Burhan+-+Heavy+Equipment+Spare+Parts+Trading+Suppliers+in+UAE/@25.3066107,55.4029877,14z/data=!4m8!1m2!2m1!1sRukn+Al+Burhan+-+Heavy+Equipment+Spare+Parts+Trading+Suppliers+in+UAE!3m4!1s0x3e5f5f85445c703d:0x7382f075442683fa!8m2!3d25.3066107!4d55.4029877",
@@ -6617,16 +5950,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Bayan Business Center - Dubai Investment Park First - Green Community Village - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-12:30PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/SourceHub+Heavy+Equipment+and+Machinery+Spare+Parts+Trading+Co.+LLC/@24.9978314,55.1726831,14z/data=!4m8!1m2!2m1!1sSourceHub+Heavy+Equipment+and+Machinery+Spare+Parts+Trading+Co.+LLC!3m4!1s0x3e5f73ba0f28dec5:0xc7882b52b758a63f!8m2!3d24.9978314!4d55.1726831",
@@ -6656,16 +5985,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mohammedia, Morocco.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "111, zone industrielle Lotissement ElMasbahia, Mohammedia 20800, Morocco",
     "openingHours": "Friday: 8:30AM-12:30PM,1:30-6PM · Monday: 8:30AM-12:30PM,1:30-6PM · Saturday: 8:30AM-12:30PM · Sunday: Closed · Thursday: 8:30AM-12:30PM,1:30-6PM · Tuesday: 8:30AM-12:30PM,1:30-6PM · Wednesday: 8:30AM",
     "sourceUrl": "https://www.google.com/maps/place/BATIFER+SA+%3A+Production+de+tubes+soud%C3%A9s+et+profil%C3%A9s+m%C3%A9tallurgiques.+D%C3%A9coupe+laser+de+tubes./@33.6715356,-7.415113,14z/data=!4m8!1m2!2m1!1sBATIFER+SA+%3A+Production+de+tubes+soud%C3%A9s+et+profil%C3%A9s+m%C3%A9tallurgiques.+D%C3%A9coupe+laser+de+tubes.!3m4!1s0xda7b672e2f8fbc7:0x2b0f685f4776c473!8m2!3d33.6715356!4d-7.415113",
@@ -6695,16 +6020,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Packaging company offering specialty products, such as displays, shipping boxes, and labels.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "2601 Network Blvd Suite 440, Frisco, TX 75034",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Source%2C+Inc.+-+Custom+Retail+Packaging%2C+Printed+Boxes%2C+Folding+Cartons%2C+%26+POP+Displays+Dallas%2C+TX/@33.1017717,-96.8273069,14z/data=!4m8!1m2!2m1!1sPackaging+Source%2C+Inc.+-+Custom+Retail+Packaging%2C+Printed+Boxes%2C+Folding+Cartons%2C+%26+POP+Displays+Dallas%2C+TX!3m4!1s0x864c3b801bb1e977:0x648af815bf118440!8m2!3d33.1017717!4d-96.8273069",
@@ -6734,16 +6055,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 126,
     "verified": true,
     "description": "Supplier of hardware, lighting fixtures, tools & equipment for contractors & home design hobbyists.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "176 Grand St, New York, NY 10013",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8:30AM-5PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Lendy+Electric+Equipment+%26+Supply+Corp./@40.719663,-73.997675,14z/data=!4m8!1m2!2m1!1sLendy+Electric+Equipment+%26+Supply+Corp.!3m4!1s0x89c25989ad56f57b:0x73e477759382aa86!8m2!3d40.719663!4d-73.997675",
@@ -6773,17 +6090,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Steel & Metals supplier in Mumbai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "803, Excel Plaza, 90 Feet Rd, Pant Nagar, Ghatkopar East, Mumbai, Maharashtra 400075, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/FERRITE+STRUCTURAL+STEELS+PRIVATE+LIMITED/@19.0827627,72.91296059999999,14z/data=!4m8!1m2!2m1!1sFERRITE+STRUCTURAL+STEELS+PRIVATE+LIMITED!3m4!1s0x3be7c63228390683:0x2506e2db4710f800!8m2!3d19.0827627!4d72.91296059999999",
@@ -6813,17 +6126,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Steel & Metals supplier in Vasai-Virar, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "2,3,4 Richa Trade Centre, Sativali Rd, opposite NEXA & Mahindra Showroom, Vasai East, Maharashtra 401208, India",
     "openingHours": "Friday: 10AM-7PM · Monday: 10AM-7PM · Saturday: 10AM-7PM · Sunday: Closed · Thursday: 10AM-7PM · Tuesday: 10AM-7PM · Wednesday: 10AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/SUMAN+STEELS+INDIA+LLP/@19.4063624,72.86476019999999,14z/data=!4m8!1m2!2m1!1sSUMAN+STEELS+INDIA+LLP!3m4!1s0x3be7a9472d144b27:0xffc49cc6e00edfa!8m2!3d19.4063624!4d72.86476019999999",
@@ -6853,17 +6162,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Steel & Metals supplier in Chennai, India.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Mugappair Rd, Mannurpet, Padi, Chennai, Tamil Nadu 600050, India",
     "openingHours": "Friday: 10:30AM-6:30PM · Monday: 10:30AM-6:30PM · Saturday: 10:30AM-6:30PM · Sunday: Closed · Thursday: 10:30AM-6:30PM · Tuesday: 10:30AM-6:30PM · Wednesday: 10:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/VIRWADIA+METAL+AND+ALLOYS/@13.0977809,80.1765453,14z/data=!4m8!1m2!2m1!1sVIRWADIA+METAL+AND+ALLOYS!3m4!1s0x3a5263618e58bd0b:0x6eab89e07ee267b1!8m2!3d13.0977809!4d80.1765453",
@@ -6893,16 +6198,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Steel & Metals supplier in Berrechid, Morocco.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Route de Settat, C.R. Sidi Mekki, Berrechid, Morocco",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Universal+Industrial+Steel+-+Usine/@33.2172894,-7.6099765999999995,14z/data=!4m8!1m2!2m1!1sUniversal+Industrial+Steel+-+Usine!3m4!1s0xda63d4d3b905633:0xec2a3747d1f0b4d4!8m2!3d33.2172894!4d-7.6099765999999995",
@@ -6932,16 +6233,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 63,
     "verified": true,
     "description": "Cables & Electrical supplier in Nuremberg, Germany.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Sieboldstraße 10, 90411 Nürnberg, Germany",
     "openingHours": "Friday: 7AM-1PM · Monday: 7AM-1PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-1PM · Tuesday: 7AM-1PM · Wednesday: 7AM-1PM",
     "sourceUrl": "https://www.google.com/maps/place/Lynxeo+Deutschland+GmbH/@49.478474,11.118702899999999,14z/data=!4m8!1m2!2m1!1sLynxeo+Deutschland+GmbH!3m4!1s0x479f57fe99c38241:0xe8b7ef60342eafec!8m2!3d49.478474!4d11.118702899999999",
@@ -6971,16 +6268,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-8PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/TRANS+LIGHT+ELECTRICALS+LLC/@25.1741304,55.3505755,14z/data=!4m8!1m2!2m1!1sTRANS+LIGHT+ELECTRICALS+LLC!3m4!1s0x3e5e41a93b279b0f:0x869aa19d1f4702dd!8m2!3d25.1741304!4d55.3505755",
@@ -7010,17 +6303,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Cables & Electrical supplier in Mumbai, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "HARE KRISHAN BHAVAN, 201/202, opp. DRAGON FLY HOTEL, near SOLITAIRE PARK, Dr. Charatsingh Colony, S B Singh Colony, J B Nagar, Andheri East, Mumbai, Maharashtra 400093, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-5PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Tegh+Cables+India+Pvt+Ltd+-+Polycab+Cables+%26+Wires+Distributor+%7C+Mumbai+%7C+Pune+%7C+Gujarat+%7C+Hyderabad/@19.1119469,72.8627295,14z/data=!4m8!1m2!2m1!1sTegh+Cables+India+Pvt+Ltd+-+Polycab+Cables+%26+Wires+Distributor+%7C+Mumbai+%7C+Pune+%7C+Gujarat+%7C+Hyderabad!3m4!1s0x3be7c83767368965:0x14fb8a77f22e0af7!8m2!3d19.1119469!4d72.8627295",
@@ -7050,16 +6339,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Cables & Electrical supplier in Ferentino, Italy.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Via Casilina, KM. 78/600, 03013 Ferentino FR, Italy",
     "openingHours": "Friday: 8AM-12:30PM,2-5PM · Monday: 8AM-12:30PM,2-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,2-5PM · Tuesday: 8AM-12:30PM,2-5PM · Wednesday: 8AM-12:30PM,2-5PM",
     "sourceUrl": "https://www.google.com/maps/place/CCI+Cable+Service+S.r.l.+-+MANUFACTURING+PLANT/@41.6689989,13.2964457,14z/data=!4m8!1m2!2m1!1sCCI+Cable+Service+S.r.l.+-+MANUFACTURING+PLANT!3m4!1s0x13255c0932570381:0x82070f8847cb5102!8m2!3d41.6689989!4d13.2964457",
@@ -7089,16 +6374,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 30,
     "verified": true,
     "description": "Cables & Electrical supplier in Tangier, Morocco.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Tangier, Morocco",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/ACOME+MAROC/@35.7137899,-5.9214066999999995,14z/data=!4m8!1m2!2m1!1sACOME+MAROC!3m4!1s0xd0b88ed14f4b33b:0x82fc22b2cb3c98a9!8m2!3d35.7137899!4d-5.9214066999999995",
@@ -7128,16 +6409,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Cables & Electrical supplier in Santiago de Querétaro, Mexico.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Conin, Carretera Federal 57 México – Querétaro Lateral Norte Km 201 + 100 El Marqués, Querétaro C.P. 76240 México Business Park, 76240 Santiago de Querétaro, Qro., Mexico",
     "openingHours": "Friday: 8AM-2PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/HELUKABEL+MEXICO+S.+DE+R.L.+DE+C.V./@20.570857999999998,-100.30848689999999,14z/data=!4m8!1m2!2m1!1sHELUKABEL+MEXICO+S.+DE+R.L.+DE+C.V.!3m4!1s0x85d34321d0981173:0xe08181a0166e4019!8m2!3d20.570857999999998!4d-100.30848689999999",
@@ -7167,16 +6444,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 59,
     "verified": true,
     "description": "Tubes & Pipes supplier in Nordhausen, Germany.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Darrweg 43, 99734 Nordhausen, Germany",
     "openingHours": "Friday: 7:30AM-3PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BRUGG+German+Pipe/@51.4851678,10.797160199999999,14z/data=!4m8!1m2!2m1!1sBRUGG+German+Pipe!3m4!1s0x47a4ff8165819145:0xae40a620de189613!8m2!3d51.4851678!4d10.797160199999999",
@@ -7206,16 +6479,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "7 St - Industrial Area 7 - Industrial Area - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-12PM,1:30-7PM · Monday: 8:30AM-7PM · Saturday: 8:30AM-7PM · Sunday: Closed · Thursday: 8:30AM-7PM · Tuesday: 8:30AM-7PM · Wednesday: 8:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Khaleel+building+material+trading/@25.3111967,55.379829799999996,14z/data=!4m8!1m2!2m1!1sAl+Khaleel+building+material+trading!3m4!1s0x3e5f5c78524d6867:0x5d401755ada6f011!8m2!3d25.3111967!4d55.379829799999996",
@@ -7245,16 +6514,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 56,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "AL QUOZ INDUSTRIAL AREA #4, Street No 23 - شارع ٤ - behind Emirates Glass - Al Quoz - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-4PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Golden+Harbour+LLC/@25.1166187,55.225161199999995,14z/data=!4m8!1m2!2m1!1sGolden+Harbour+LLC!3m4!1s0x140dc5480f149847:0x845b4e89f74123d0!8m2!3d25.1166187!4d55.225161199999995",
@@ -7284,17 +6549,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Shop, B, P.T, Plot No. 217, Kolsa St, Bundar, Byculla, Mumbai, Maharashtra 400010, India",
     "openingHours": "Friday: 9AM-10PM · Monday: 9AM-10PM · Saturday: 9AM-10PM · Sunday: 9AM-10PM · Thursday: 9AM-10PM · Tuesday: 9AM-10PM · Wednesday: 9AM-10PM",
     "sourceUrl": "https://www.google.com/maps/place/Ms+pipe+MS+SEAMLESS+PIPE+suppliers+mumbai+AAKAR+PIPE+%26+TUBES+msl+pipe+suppliers/@18.977727299999998,72.8470438,14z/data=!4m8!1m2!2m1!1sMs+pipe+MS+SEAMLESS+PIPE+suppliers+mumbai+AAKAR+PIPE+%26+TUBES+msl+pipe+suppliers!3m4!1s0x3be7cf9d68f44d61:0x526ac01be8010073!8m2!3d18.977727299999998!4d72.8470438",
@@ -7324,17 +6585,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 49,
     "verified": true,
     "description": "Tubes & Pipes supplier in Chhatral, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "D.C, Ind. Estate, 414, Phase I, G.I, nr. Axis Bank, Chhatral, Gujarat 382729, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Divine+Tubes+Private+Limited/@23.2854763,72.4466802,14z/data=!4m8!1m2!2m1!1sDivine+Tubes+Private+Limited!3m4!1s0x395c248b0c712e47:0xe16297b4a9730c29!8m2!3d23.2854763!4d72.4466802",
@@ -7364,16 +6621,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 66,
     "verified": true,
     "description": "Tubes & Pipes supplier in Silao, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Av. de los industriales, Col. Villa de las flores, 36270 Silao de la Victoria, Gto., Mexico",
     "openingHours": "Friday: 12-6AM,9AM-12AM · Monday: 9AM-12AM · Saturday: 12-6AM · Sunday: Closed · Thursday: 12-6AM,9AM-12AM · Tuesday: 12-6AM,9AM-12AM · Wednesday: 12-6AM,9AM-12AM",
     "sourceUrl": "https://www.google.com/maps/place/KRAH+M%C3%A9xico/@20.894399999999997,-101.391409,14z/data=!4m8!1m2!2m1!1sKRAH+M%C3%A9xico!3m4!1s0x842b83290ab493b7:0x7b4ab650071024cc!8m2!3d20.894399999999997!4d-101.391409",
@@ -7403,16 +6656,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Packaging supplier in TR, Turkey.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Zühtüpaşa, Rüştiye Sk. No: 8/3, 34724 Kadıköy/İstanbul, Türkiye",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Feniks+Ambalaj/@40.9829104,29.0394953,14z/data=!4m8!1m2!2m1!1sFeniks+Ambalaj!3m4!1s0x14cab9c212dae5ab:0xdcb6aa98ef1e66d1!8m2!3d40.9829104!4d29.0394953",
@@ -7442,16 +6691,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "DIRC Warehouse Complex WH#E1 - Dubai Investment Park-2 - مجمع دبي للإستثمار - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Dexopack+Packaging+LLC+-+Leading+Packaging+Company+%26+Packaging+Supply+Store/@24.9661677,55.1940349,14z/data=!4m8!1m2!2m1!1sDexopack+Packaging+LLC+-+Leading+Packaging+Company+%26+Packaging+Supply+Store!3m4!1s0x3e5f73c8d84939df:0xca8c8b95dd9684ec!8m2!3d24.9661677!4d55.1940349",
@@ -7481,16 +6726,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 22,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Plot No : 6230-1 - Emirates Industrial City - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Innovation+Line+Ind+L.+L.+C+%7C+Lashing+%26+Packaging+company+in+UAE/@25.3472559,55.6193203,14z/data=!4m8!1m2!2m1!1sInnovation+Line+Ind+L.+L.+C+%7C+Lashing+%26+Packaging+company+in+UAE!3m4!1s0x3ef5f35837b1081d:0x1e37a55916ebb23e!8m2!3d25.3472559!4d55.6193203",
@@ -7520,16 +6761,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 33,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Street No.12 - Industrial Area 15 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-5:30PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CITY+PACK+%7C+ENPI+Group/@25.292181199999998,55.4362382,14z/data=!4m8!1m2!2m1!1sCITY+PACK+%7C+ENPI+Group!3m4!1s0x3e5f5eec23175621:0x850d83d3b0406442!8m2!3d25.292181199999998!4d55.4362382",
@@ -7559,16 +6796,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Packaging supplier in Arzano, Italy.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Via Sette Re, 84, 80022 Arzano NA, Italy",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Hinojosa+Packaging+Arzano/@40.918498299999996,14.273344999999999,14z/data=!4m8!1m2!2m1!1sHinojosa+Packaging+Arzano!3m4!1s0x133b077011ebf9ff:0x547bf14998868509!8m2!3d40.918498299999996!4d14.273344999999999",
@@ -7598,16 +6831,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 68,
     "verified": true,
     "description": "Packaging supplier in Casablanca, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "100 Bd Abdellah Ben Yacine, Casablanca 20100, Morocco",
     "openingHours": "Friday: 8AM-12PM,2:30-6PM · Monday: 8AM-12PM,2-6PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 8AM-12PM,2-6PM · Tuesday: 8AM-12PM,2-6PM · Wednesday: 8AM-12PM,2-6PM",
     "sourceUrl": "https://www.google.com/maps/place/CASAPACKING+Sarl/@33.5901643,-7.599341,14z/data=!4m8!1m2!2m1!1sCASAPACKING+Sarl!3m4!1s0xda7cd6924489765:0x9329e523c594305c!8m2!3d33.5901643!4d-7.599341",
@@ -7637,16 +6866,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 56,
     "verified": true,
     "description": "Packaging supplier in Tijuana, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "C. 7 Nte. 108, Cd Industrial, 22444 Tijuana, B.C., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Global+Packaging+Solution+S.A.+de+C.V./@32.540180299999996,-116.91943619999999,14z/data=!4m8!1m2!2m1!1sGlobal+Packaging+Solution+S.A.+de+C.V.!3m4!1s0x80d947fec4336ad9:0x18debfba2f7620f6!8m2!3d32.540180299999996!4d-116.91943619999999",
@@ -7676,16 +6901,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Packaging supplier in Sant Just Desvern, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Carrer de Joan Ramon Jiménez, 6, 08960 Sant Just Desvern, Barcelona, Spain",
     "openingHours": "Friday: 6AM-6PM · Monday: 6AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-6PM · Tuesday: 6AM-6PM · Wednesday: 6AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Color+Manufacturing/@41.3840055,2.0663289,14z/data=!4m8!1m2!2m1!1sPackaging+Color+Manufacturing!3m4!1s0x12a49a2a81f354fd:0x79b6b14d6b189a4!8m2!3d41.3840055!4d2.0663289",
@@ -7715,16 +6936,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 74,
     "verified": true,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "1635 S 300 W, Salt Lake City, UT 84115",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Industrial+Supply+Company/@40.734122899999996,-111.89921799999999,14z/data=!4m8!1m2!2m1!1sIndustrial+Supply+Company!3m4!1s0x8752f52b7d10a443:0xc36f262f6d23d032!8m2!3d40.734122899999996!4d-111.89921799999999",
@@ -7754,16 +6971,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 39,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "X4XC+H77 - Jabal Ali Industrial First - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-5:30PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/UAE+ENTERPRISES+BUILDING+MATERIAL+TRADING+LLC/@24.9989013,55.1204894,14z/data=!4m8!1m2!2m1!1sUAE+ENTERPRISES+BUILDING+MATERIAL+TRADING+LLC!3m4!1s0x3e5f5d8c2238db35:0x336afdd0131ee9a4!8m2!3d24.9989013!4d55.1204894",
@@ -7793,16 +7006,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 152,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "8 Airport Rd - Dubai Int'l Airport - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-5PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/UAE+ENTERPRISES+BUILDING+MATERIALS+TRADING+L.L.C/@25.2552289,55.3394008,14z/data=!4m8!1m2!2m1!1sUAE+ENTERPRISES+BUILDING+MATERIALS+TRADING+L.L.C!3m4!1s0x3e5f5ce1d5e86aa9:0x2f21ac680d5ac0f6!8m2!3d25.2552289!4d55.3394008",
@@ -7832,16 +7041,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 181,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Al Thoumamah Rd, Al Munsiyah, Riyadh 13421, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Masdar+Group/@24.844518599999997,46.757011399999996,14z/data=!4m8!1m2!2m1!1sMasdar+Group!3m4!1s0x3e2efeae1c979a9b:0x5d51839bbc60bf7!8m2!3d24.844518599999997!4d46.757011399999996",
@@ -7871,16 +7076,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 388,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "King Abdulaziz Rd, As Sahafah, Riyadh 11434, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-6PM · Saturday: Closed · Sunday: 8AM-6PM · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Daikin+Saudi+-+Head+office/@24.810962399999998,46.6471842,14z/data=!4m8!1m2!2m1!1sDaikin+Saudi+-+Head+office!3m4!1s0x3e2ee49e1bf6ad33:0x32b3a0690b2eeca5!8m2!3d24.810962399999998!4d46.6471842",
@@ -7910,16 +7111,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 167,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Makkah Al Mukarramah Br Rd, King Abdullah Dt., Riyadh 12421, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Rabiah+%26+Nassar+Company+RANCO/@24.705548399999998,46.746682799999995,14z/data=!4m8!1m2!2m1!1sRabiah+%26+Nassar+Company+RANCO!3m4!1s0x3e2f03e267383ec5:0x48ab9cd0404bde55!8m2!3d24.705548399999998!4d46.746682799999995",
@@ -7949,16 +7146,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Antonio Baldissera, 6/8, 00159 Roma RM, Italy",
     "openingHours": "Friday: 9AM-1PM,3-7PM · Monday: 9AM-1PM,3-7PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 9AM-1PM,3-7PM · Tuesday: 9AM-1PM,3-7PM · Wednesday: 9AM-1PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Archi+Made+-+Materiali+per+L%27Architettura/@41.8976715,12.5359865,14z/data=!4m8!1m2!2m1!1sArchi+Made+-+Materiali+per+L%27Architettura!3m4!1s0x132f622c045c476d:0x2333ad676fcaf8c7!8m2!3d41.8976715!4d12.5359865",
@@ -7988,16 +7181,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 30,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Viale dello Scalo S. Lorenzo, 40, 00185 Roma RM, Italy",
     "openingHours": "Friday: 9AM-3PM · Monday: 9AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-3PM · Tuesday: 9AM-3PM · Wednesday: 9AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Tabularasa+s.r.l./@41.8953187,12.518234699999999,14z/data=!4m8!1m2!2m1!1sTabularasa+s.r.l.!3m4!1s0x132f619ab4c701d5:0x5cd45006ae5b72eb!8m2!3d41.8953187!4d12.518234699999999",
@@ -8027,16 +7216,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 30,
     "verified": true,
     "description": "Construction supplier in Coyoacán, Mexico City, Mexico.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Cerro del Agua 7-INT. 101, Romero de Terreros, Coyoacán, 04310 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 9AM-3:30PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Rubic%C3%B3n+M%C3%A9xico+-+Materiales+y+maquinaria+para+construcci%C3%B3n./@19.341253599999998,-99.1719214,14z/data=!4m8!1m2!2m1!1sRubic%C3%B3n+M%C3%A9xico+-+Materiales+y+maquinaria+para+construcci%C3%B3n.!3m4!1s0x85d1ffe180bbdd8d:0xd8059f8208d99727!8m2!3d19.341253599999998!4d-99.1719214",
@@ -8066,16 +7251,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 52,
     "verified": true,
     "description": "Construction supplier in Madrid, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Av. de Burgos, 19, Chamartín, 28036 Madrid, Spain",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Cemex+Oficinas+Corporativas/@40.473839999999996,-3.6761139,14z/data=!4m8!1m2!2m1!1sCemex+Oficinas+Corporativas!3m4!1s0xd422f257a4e9367:0x10bbea2bacf97332!8m2!3d40.473839999999996!4d-3.6761139",
@@ -8105,16 +7286,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 58,
     "verified": true,
     "description": "Industrial Parts supplier in Heidelberg, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Felix-Wankel-Straße 22, 69126 Heidelberg, Germany",
     "openingHours": "Friday: 7AM-7:45PM · Monday: 7AM-7:45PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-7:45PM · Tuesday: 7AM-7:45PM · Wednesday: 7AM-7:45PM",
     "sourceUrl": "https://www.google.com/maps/place/CNH+Germany+GmbH/@49.3827626,8.6779175,14z/data=!4m8!1m2!2m1!1sCNH+Germany+GmbH!3m4!1s0x4797c0be0bab536f:0x85dc9a45a31b7895!8m2!3d49.3827626!4d8.6779175",
@@ -8143,16 +7320,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 47,
     "verified": true,
     "description": "Industrial Parts supplier in Villa de Reyes, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Av. Toronto 100, Parque Logistik 2 super carretera san luis, 79526 Villa de Reyes, S.L.P., Mexico",
     "openingHours": "Friday: 6AM-4:06AM · Monday: 6AM-4:06AM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4:06AM · Tuesday: 6AM-4:06AM · Wednesday: 6AM-4:06AM",
     "sourceUrl": "https://www.google.com/maps/place/HIROTEC+MEXICO+SA+DE+CV/@21.970711899999998,-100.8619916,14z/data=!4m8!1m2!2m1!1sHIROTEC+MEXICO+SA+DE+CV!3m4!1s0x842ab961bdf1c357:0xc4c7d23687f62412!8m2!3d21.970711899999998!4d-100.8619916",
@@ -8182,16 +7355,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 59,
     "verified": true,
     "description": "Construction supplier in Offenbach, Germany.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Hafeninsel 9, 63067 Offenbach am Main, Germany",
     "sourceUrl": "https://www.google.com/maps/place/STARK+Deutschland+GmbH/@50.1130548,8.755511,14z/data=!4m8!1m2!2m1!1sSTARK+Deutschland+GmbH!3m4!1s0x47bd0e87cc2ce515:0x46aff7901cd1fe59!8m2!3d50.1130548!4d8.755511",
     "score": 92,
@@ -8220,16 +7389,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 34,
     "verified": true,
     "description": "Industrial Parts supplier in Castenaso, Italy.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Via F. Santi, 8, 40055 Castenaso BO, Italy",
     "openingHours": "Friday: 8AM-12:30PM,1:30-5PM · Monday: 8AM-12:30PM,1:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,1:30-5PM · Tuesday: 8AM-12:30PM,1:30-5PM · Wednesday: 8AM-12:30PM,1:30-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Agri+Parts+S.r.l./@44.5086929,11.4379466,14z/data=!4m8!1m2!2m1!1sAgri+Parts+S.r.l.!3m4!1s0x477e2c71f5855c25:0x9219f2b5b3eec40f!8m2!3d44.5086929!4d11.4379466",
@@ -8259,16 +7424,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Jarn Yafour - Mafraq Industrial Area - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 7AM-3PM · Saturday: 7AM-3PM · Sunday: 7AM-3PM · Thursday: 7AM-1PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Abu+Dhabi+Pipe+Factory+All/@24.2868034,54.5721479,14z/data=!4m8!1m2!2m1!1sAbu+Dhabi+Pipe+Factory+All!3m4!1s0x3e5e39a211d939f5:0xc3cebe56ad015388!8m2!3d24.2868034!4d54.5721479",
@@ -8298,16 +7459,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 50,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "العين - 8 Al Mujtahid 3 St - Industrial City - Mafqar 1 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: 8AM-1:30AM · Sunday: Closed · Thursday: 8AM-5:30AM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Emirates+Germany+Pipes+Industry+L.L.C./@24.0581654,55.628887,14z/data=!4m8!1m2!2m1!1sEmirates+Germany+Pipes+Industry+L.L.C.!3m4!1s0x3e8aa48919409f9f:0x1649ca3413b738b!8m2!3d24.0581654!4d55.628887",
@@ -8337,17 +7494,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Tubes & Pipes supplier in Mumbai, India.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "156,T.P.Street Cooper Compound Gala No-5 T.P Street, Girgaon, Mumbai, Maharashtra 400004, India",
     "openingHours": "Friday: 7AM-11PM · Monday: 7AM-11PM · Saturday: 7AM-11PM · Sunday: 7AM-11PM · Thursday: 7AM-10:30PM · Tuesday: 7AM-11PM · Wednesday: 7AM-11PM",
     "sourceUrl": "https://www.google.com/maps/place/Randhir+Metal+%E2%80%93SS+Pipe+manufacturer+in+India+316L+SS+Electropolished+Pipe+Jindal+Make+SS+Pipes+CS+fittings+Flanges+Dubai+UAE/@18.9574382,72.81796229999999,14z/data=!4m8!1m2!2m1!1sRandhir+Metal+%E2%80%93SS+Pipe+manufacturer+in+India+316L+SS+Electropolished+Pipe+Jindal+Make+SS+Pipes+CS+fittings+Flanges+Dubai+UAE!3m4!1s0x3be7ce166c636c79:0x5f16ac18c0a26d77!8m2!3d18.9574382!4d72.81796229999999",
@@ -8377,16 +7530,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 50,
     "verified": true,
     "description": "Tubes & Pipes supplier in General Escobedo, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Eje Metropolitano 910 72, 66050 Cdad. Gral. Escobedo, N.L., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/STEEL+AND+PIPE+SUPPLY+DE+MEXICO/@25.8197226,-100.33205989999999,14z/data=!4m8!1m2!2m1!1sSTEEL+AND+PIPE+SUPPLY+DE+MEXICO!3m4!1s0x8662923429e2b655:0xf6b8d91ecca1c878!8m2!3d25.8197226!4d-100.33205989999999",
@@ -8416,16 +7565,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Tubes & Pipes supplier in San Nicolás de los Garza, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "República Mexicana 328, Rincón de las Puentes, 66460 San Nicolás de los Garza, N.L., Mexico",
     "openingHours": "Friday: 8:30AM-6:15PM · Monday: 8:30AM-6:15PM · Saturday: 8:30AM-1:30PM · Sunday: Closed · Thursday: 8:30AM-6:15PM · Tuesday: 8:30AM-6:15PM · Wednesday: 8:30AM-6:15PM",
     "sourceUrl": "https://www.google.com/maps/place/Tuberia+Industrial+del+Norte+S.A.+de+C.V./@25.746468099999998,-100.282561,14z/data=!4m8!1m2!2m1!1sTuberia+Industrial+del+Norte+S.A.+de+C.V.!3m4!1s0x866294eaa71e8483:0x5ead2c38cc322855!8m2!3d25.746468099999998!4d-100.282561",
@@ -8455,16 +7600,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 105,
     "verified": true,
     "description": "Tubes & Pipes supplier in Loeches, Spain.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Carretera M-206 Torrejón-Loeches, Km 3.1, 28890 Loeches, Madrid, Spain",
     "openingHours": "Friday: 8:30AM-2PM,3-5:30PM · Monday: 8:30AM-2PM,3-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-2PM,3-5:30PM · Tuesday: 8:30AM-2PM,3-5:30PM · Wednesday: 8:30AM-2PM,3-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Molecor+Tecnolog%C3%ADa+S.L.+PVC-O+pipes+manufacturing+center/@40.4105006,-3.4313499999999997,14z/data=!4m8!1m2!2m1!1sMolecor+Tecnolog%C3%ADa+S.L.+PVC-O+pipes+manufacturing+center!3m4!1s0xd423998ff5c39f1:0x8f057479416dbdf9!8m2!3d40.4105006!4d-3.4313499999999997",
@@ -8494,17 +7635,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 59,
     "verified": true,
     "description": "Packaging supplier in Bahadurgarh, Asoda Todran, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "KH - 439, Main Rohtak Rd, behind L&T Factory, Jakhoda, Bahadurgarh, Haryana 124505, India",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: Closed · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+India/@28.728218899999998,76.8585741,14z/data=!4m8!1m2!2m1!1sPackaging+India!3m4!1s0x390d044bd8da2411:0x140fcecf2fba16de!8m2!3d28.728218899999998!4d76.8585741",
@@ -8534,16 +7671,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Packaging supplier in Tangier, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "N°2, Magasin, Résidence Najd, Av. Marrakech, Tanger 90000, Morocco",
     "openingHours": "Friday: 9:30AM-8PM · Monday: 9:30AM-8PM · Saturday: 9:30AM-8PM · Sunday: Closed · Thursday: 9:30AM-8PM · Tuesday: 9:30AM-8PM · Wednesday: 9:30AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Embalo+Sarl+%3A+Emballages+%26+Packaging./@35.767813,-5.8043431,14z/data=!4m8!1m2!2m1!1sEmbalo+Sarl+%3A+Emballages+%26+Packaging.!3m4!1s0xd0c7f9998ceaf01:0x2ae85516adecb436!8m2!3d35.767813!4d-5.8043431",
@@ -8573,16 +7706,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Packaging supplier in Inezgane, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "3 Mars cité Hassani, Taghazout, Inezgane 80350, Morocco",
     "openingHours": "Friday: 9AM-1PM,3-6:30PM · Monday: 9AM-6:30PM · Saturday: 9AM-1:30PM · Sunday: Closed · Thursday: 9AM-6:30PM · Tuesday: 9AM-6:30PM · Wednesday: 9AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Fatipack+group+emballage+maroc/@30.360065199999998,-9.5355645,14z/data=!4m8!1m2!2m1!1sFatipack+group+emballage+maroc!3m4!1s0xdb3c7f4b9fcada5:0xdde973c3ae8ca745!8m2!3d30.360065199999998!4d-9.5355645",
@@ -8612,16 +7741,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 22,
     "verified": true,
     "description": "Packaging supplier in Casablanca, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "116 Bd Sfax, Casablanca 20100, Morocco",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 9AM-12:30PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Maroc+Emballage/@33.6243464,-7.5089254,14z/data=!4m8!1m2!2m1!1sMaroc+Emballage!3m4!1s0xda7cb9a0781f50d:0xa97763607d4a7eb5!8m2!3d33.6243464!4d-7.5089254",
@@ -8651,16 +7776,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Hairs bin zaid street, Al Sina'iyah, Riyadh 12844, Saudi Arabia",
     "sourceUrl": "https://www.google.com/maps/place/AMANA+WORLD+TRADING+CONTRACTING.EST/@24.640638199999998,46.749690699999995,14z/data=!4m8!1m2!2m1!1sAMANA+WORLD+TRADING+CONTRACTING.EST!3m4!1s0x3e2f07ded30a9711:0xae36d662a7f355a4!8m2!3d24.640638199999998!4d46.749690699999995",
     "score": 91,
@@ -8689,16 +7810,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 62,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "الجرف 2 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 6AM-12:30PM · Monday: 6AM-8:30PM · Saturday: 6AM-8:30PM · Sunday: 6AM-8:30PM · Thursday: 6AM-8:30PM · Tuesday: 7AM-8:30PM · Wednesday: 6AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AlHayat+Building+Materials+Trading+LLC+%28br2Office%29/@25.4365921,55.5456455,14z/data=!4m8!1m2!2m1!1sAlHayat+Building+Materials+Trading+LLC+%28br2Office%29!3m4!1s0x3ef5f92ec5a8db23:0x4df0926733b161a4!8m2!3d25.4365921!4d55.5456455",
@@ -8728,16 +7845,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Plot No.30, Street No.8 - Musaffah - M21 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 8AM-5:30PM · Saturday: 8AM-5:30PM · Sunday: 8AM-5:30PM · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/ARAB+BUILDING+MATERIALS+CO.+WLL+%28ABMC+Abu+Dhabi%29/@24.3734766,54.4762786,14z/data=!4m8!1m2!2m1!1sARAB+BUILDING+MATERIALS+CO.+WLL+%28ABMC+Abu+Dhabi%29!3m4!1s0x3e5e4176e5d3811d:0xf512af7c81928ef2!8m2!3d24.3734766!4d54.4762786",
@@ -8767,16 +7880,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Construction supplier in Forcoli, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Guglielmo Marconi, 3-5, 56036 Forcoli PI, Italy",
     "openingHours": "Friday: 8AM-8PM · Monday: 8AM-8PM · Saturday: 8AM-12PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/MAAS+Italy+Edilizia/@43.6049838,10.7026454,14z/data=!4m8!1m2!2m1!1sMAAS+Italy+Edilizia!3m4!1s0x132a75da06b3c4b5:0xf565cfe21cdd609a!8m2!3d43.6049838!4d10.7026454",
@@ -8806,16 +7915,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 28,
     "verified": true,
     "description": "Construction supplier in Las Lagunas, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Camino Viejo de Coín, 61, 29651 Las Lagunas de Mijas, Málaga, Spain",
     "openingHours": "Friday: 7:30AM-7PM · Monday: 7:30AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/WAREHOUSE+SPAIN%2C+S.A./@36.5387742,-4.6384302,14z/data=!4m8!1m2!2m1!1sWAREHOUSE+SPAIN%2C+S.A.!3m4!1s0xd72e218e66995cf:0xf4c0afe580699b9e!8m2!3d36.5387742!4d-4.6384302",
@@ -8845,16 +7950,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 121,
     "verified": true,
     "description": "Chain offering a broad range of industrial equipment, maintenance supplies, tools & parts.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "58-45 Grand Ave, Maspeth, NY 11378",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Grainger+Industrial+Supply/@40.7205444,-73.9099872,14z/data=!4m8!1m2!2m1!1sGrainger+Industrial+Supply!3m4!1s0x89c25e95d796bfff:0xc6bfe959d9e0036!8m2!3d40.7205444!4d-73.9099872",
@@ -8884,16 +7985,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Industrial Parts supplier in Wedemark, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Bremer Ring 1, 30900 Wedemark, Germany",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/IME+GmbH+MACHINERY+SPARE+PARTS/@52.554143599999996,9.774564999999999,14z/data=!4m8!1m2!2m1!1sIME+GmbH+MACHINERY+SPARE+PARTS!3m4!1s0x47b06bca91c540f3:0x98a6addbce270a8!8m2!3d52.554143599999996!4d9.774564999999999",
@@ -8923,16 +8020,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Industrial Parts supplier in Eichenzell, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Bürgermeister-Ebert-Straße 40, 36124 Eichenzell-Welkers, Germany",
     "openingHours": "Friday: 7:30AM-2PM · Monday: 7:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4:30PM · Tuesday: 7:30AM-4:30PM · Wednesday: 7:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/isel+Germany+AG+%7C+Plant+Eichenzell/@50.482025199999995,9.736113399999999,14z/data=!4m8!1m2!2m1!1sisel+Germany+AG+%7C+Plant+Eichenzell!3m4!1s0x47a3308a4c5e6947:0x6522af189b3c8415!8m2!3d50.482025199999995!4d9.736113399999999",
@@ -8962,16 +8055,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Construction supplier in Pasco, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "2109 W Frontage Rd, Pasco, WA 99301",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/NW+Construction+Supply+Inc/@46.2291162,-119.11909689999999,14z/data=!4m8!1m2!2m1!1sNW+Construction+Supply+Inc!3m4!1s0x5498799158b289d3:0x3c90698918d358ff!8m2!3d46.2291162!4d-119.11909689999999",
@@ -9001,16 +8090,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Industrial Parts supplier in Krauthausen, Germany.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Krauthausen Deubachshof, Stedtfelder Str. 5, 99819 Krauthausen-Deubachshof, Germany",
     "sourceUrl": "https://www.google.com/maps/place/AAM+Driveline+-+Eisenach+Manufacturing+Facility/@51.0101552,10.2567174,14z/data=!4m8!1m2!2m1!1sAAM+Driveline+-+Eisenach+Manufacturing+Facility!3m4!1s0x47a4996da6a135b7:0xe975a4dd56b5cc90!8m2!3d51.0101552!4d10.2567174",
     "score": 91,
@@ -9039,16 +8124,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Cables & Electrical supplier in Dammam, Saudi Arabia.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Opposite Grand Mart, Office#405, Floor#4th, Bldg#9419, Street Prince Muhammad Ibn Fahad Road, At Tubayshi Dist, Dammam 32233, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5:30PM · Saturday: 8AM-5:30PM · Sunday: 8AM-5:30PM · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/AIRFLOW+TRADING+EST./@26.4373747,50.118284499999994,14z/data=!4m8!1m2!2m1!1sAIRFLOW+TRADING+EST.!3m4!1s0x3e49fbb65bd0b0e3:0x526240ad5d27a4ea!8m2!3d26.4373747!4d50.118284499999994",
@@ -9078,16 +8159,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 59,
     "verified": true,
     "description": "Cables & Electrical supplier in TR, Turkey.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Velimeşe OSB, 7. Km., 59930 Çorlu/Tekirdağ, Türkiye",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: 8:30AM-6PM · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Vatan+Cable/@41.2114304,27.845798799999997,14z/data=!4m8!1m2!2m1!1sVatan+Cable!3m4!1s0x14b4e71845bd23c5:0x2da7655472a25711!8m2!3d41.2114304!4d27.845798799999997",
@@ -9117,16 +8194,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Plot No.S50806, Near Gate No. 12 - Jabal Ali Industrial Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Cable+Depot+FZCO/@24.9653511,55.133277799999995,14z/data=!4m8!1m2!2m1!1sCable+Depot+FZCO!3m4!1s0x3e5f0df079a5375b:0x70fb0abbce15dfa0!8m2!3d24.9653511!4d55.133277799999995",
@@ -9156,17 +8229,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": true,
     "description": "Cables & Electrical supplier in Noida, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "A-22, Sector-80, Phase-2 Noida - 201305 - Uttar Pradesh - INDIA, Noida, Uttar Pradesh 201305, India",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Mandeep+Cables+Pvt+Ltd/@28.555483,77.41178599999999,14z/data=!4m8!1m2!2m1!1sMandeep+Cables+Pvt+Ltd!3m4!1s0x390ce8be254e7565:0x9f74511032204a23!8m2!3d28.555483!4d77.41178599999999",
@@ -9196,16 +8265,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Cables & Electrical supplier in Calcinate, Italy.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Via per Bolgare, snc, 24050 Calcinate BG, Italy",
     "openingHours": "Friday: 8AM-12:30PM,1:30-5PM · Monday: 8AM-12:30PM,1:30-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12:30PM,1:30-5PM · Tuesday: 8AM-12:30PM,1:30-5PM · Wednesday: 8AM-12:30PM,1:30-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Hi+sir%2C/@45.6275611,9.804400099999999,14z/data=!4m8!1m2!2m1!1sHi+sir%2C!3m4!1s0x478143c5dfa06581:0xab510892bffc7352!8m2!3d45.6275611!4d9.804400099999999",
@@ -9235,16 +8300,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 49,
     "verified": true,
     "description": "Cables & Electrical supplier in Casablanca, Morocco.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Boulevard Ahl Loghlam Quartier Sidi Moumen, Casablanca 20450, Morocco",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/IMACAB/@33.600836699999995,-7.4971723,14z/data=!4m8!1m2!2m1!1sIMACAB!3m4!1s0xda7cb6da49e2521:0x66bec7a4cdb35cd2!8m2!3d33.600836699999995!4d-7.4971723",
@@ -9274,16 +8335,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 89,
     "verified": true,
     "description": "Tubes & Pipes supplier in South Lyon, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "400 Mcmunn St, South Lyon, MI 48178",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MST+-+Seamless+Tube+%26+Pipe/@42.4575934,-83.6565456,14z/data=!4m8!1m2!2m1!1sMST+-+Seamless+Tube+%26+Pipe!3m4!1s0x882356a17c663f59:0xd787db5eb4a7ba79!8m2!3d42.4575934!4d-83.6565456",
@@ -9313,16 +8370,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Tubes & Pipes supplier in Porta Westfalica, Germany.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Niedernfeldweg 14, 32457 Porta Westfalica-Barkhausen, Germany",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Fr.+Jacob+S%C3%B6hne+GmbH+%26+Co.+KG/@52.2586997,8.9049453,14z/data=!4m8!1m2!2m1!1sFr.+Jacob+S%C3%B6hne+GmbH+%26+Co.+KG!3m4!1s0x47ba73de4856f035:0x96702cf9930d8d76!8m2!3d52.2586997!4d8.9049453",
@@ -9352,16 +8405,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Tubes & Pipes supplier in ES, Spain.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Polígono Industrial Saprelorca, 30817, Murcia, Spain",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Noksel+Espa%C3%B1a%2C+S.A./@37.6160697,-1.7559338,14z/data=!4m8!1m2!2m1!1sNoksel+Espa%C3%B1a%2C+S.A.!3m4!1s0xd64de08744ef9b7:0x19ad02c8b322b77d!8m2!3d37.6160697!4d-1.7559338",
@@ -9391,16 +8440,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 37,
     "verified": true,
     "description": "Tubes & Pipes supplier in Sant Ramon, Spain.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Carrer Indústria, 2, 25215 Sant Ramon, Lleida, Spain",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/T+A+P+Tubs+D%27Acer+De+Precisi%C3%B3/@41.7231369,1.3610596,14z/data=!4m8!1m2!2m1!1sT+A+P+Tubs+D%27Acer+De+Precisi%C3%B3!3m4!1s0x12a42531e79e80bb:0x8342aa37bec1849!8m2!3d41.7231369!4d1.3610596",
@@ -9430,16 +8475,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Opposite Pak Masjid - Ware House No 12 - Industrial Area 6 - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8:30AM-8:30PM · Monday: 8:30AM-8:30PM · Saturday: 8:30AM-8:30PM · Sunday: Closed · Thursday: 8:30AM-8:30PM · Tuesday: 8:30AM-8:30PM · Wednesday: 8:30AM-8:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Najah+Packing+Material+Tr/@25.3186124,55.4215461,14z/data=!4m8!1m2!2m1!1sAl+Najah+Packing+Material+Tr!3m4!1s0x3e5f591c013eb6a1:0x7cb6770af9f654c4!8m2!3d25.3186124!4d55.4215461",
@@ -9469,16 +8510,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 71,
     "verified": true,
     "description": "Packaging supplier in Oklahoma City, United States.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "4800 W Point Blvd, Oklahoma City, OK 73179",
     "openingHours": "Friday: 7AM-6PM · Monday: 7AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/The+Armstrong+Company/@35.4171869,-97.64238259999999,14z/data=!4m8!1m2!2m1!1sThe+Armstrong+Company!3m4!1s0x87b20e70d26f8c1f:0x353b926c9ee9723d!8m2!3d35.4171869!4d-97.64238259999999",
@@ -9508,17 +8545,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Packaging supplier in Dapode, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Gala No. K-7 Gupta Warehousing Complex Nr. Sarvana NX Hotel, Dapode, Maharashtra 421302, India",
     "openingHours": "Friday: 9AM-9PM · Monday: 9AM-9PM · Saturday: 9AM-9PM · Sunday: Closed · Thursday: 9AM-9PM · Tuesday: 9AM-9PM · Wednesday: 9AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/KANI+Packaging+%28Mfg.+of+Corrugated+Boxes%29/@19.2508029,73.0379717,14z/data=!4m8!1m2!2m1!1sKANI+Packaging+%28Mfg.+of+Corrugated+Boxes%29!3m4!1s0x3be7bd36384ac31f:0xc99863e174ca0055!8m2!3d19.2508029!4d73.0379717",
@@ -9548,16 +8581,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 20,
     "verified": true,
     "description": "Packaging supplier in València, Spain.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Polígono Industrial Fuente del Jarro, Carrer Illes Balears, 16, 46988 València, Valencia, Spain",
     "openingHours": "Friday: 8AM-3PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Atlantique+Packaging+Valencia+S.A/@39.5107663,-0.462335,14z/data=!4m8!1m2!2m1!1sAtlantique+Packaging+Valencia+S.A!3m4!1s0xd605ac67587dc91:0x76cabb2ec2ea7589!8m2!3d39.5107663!4d-0.462335",
@@ -9587,16 +8616,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 52,
     "verified": true,
     "description": "Construction supplier in South Salt Lake, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "2503 S 300 W, South Salt Lake, UT 84115",
     "openingHours": "Friday: 6AM-4PM · Monday: 6AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4PM · Tuesday: 6AM-4PM · Wednesday: 6AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/White+Cap/@40.7172848,-111.8982484,14z/data=!4m8!1m2!2m1!1sWhite+Cap!3m4!1s0x87528adebbd43e23:0xc1d2e0a5c8046ef8!8m2!3d40.7172848!4d-111.8982484",
@@ -9626,16 +8651,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 37,
     "verified": true,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "3225 S 900 W, Salt Lake City, UT 84119",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Foundation+Building+Materials/@40.7019053,-111.9166642,14z/data=!4m8!1m2!2m1!1sFoundation+Building+Materials!3m4!1s0x87528b107ee73f57:0x20f0039adf079362!8m2!3d40.7019053!4d-111.9166642",
@@ -9665,16 +8686,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 27,
     "verified": true,
     "description": "Construction supplier in South Salt Lake, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "3522 S W Temple St, South Salt Lake, UT 84115",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Foundation+Building+Materials/@40.6948097,-111.8959817,14z/data=!4m8!1m2!2m1!1sFoundation+Building+Materials!3m4!1s0x87528af8854a0179:0x9a4b72637ef7c00f!8m2!3d40.6948097!4d-111.8959817",
@@ -9704,16 +8721,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 152,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "3734, Riyadh Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7AM-12PM,3-6PM · Saturday: 7AM-12PM,3-6PM · Sunday: 7AM-12PM,3-6PM · Thursday: 7AM-12PM,3-6PM · Tuesday: 9AM-12PM,3-5:30PM · Wednesday: 7AM-12PM,3-6PM",
     "sourceUrl": "https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%AD%D9%8A+%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%88%D9%82%D9%81%D9%8A%D8%A9+%28%D9%85%D9%88%D8%A7%D8%AF+%D8%A8%D9%86%D8%A7%D8%A1%29+Alrajhi+Endowment+Co.+For+Industry+and+Trade+%28Building+Material%29%E2%80%8E/@24.5915271,46.5779795,14z/data=!4m8!1m2!2m1!1s%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%AD%D9%8A+%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9+%D8%A7%D9%84%D9%88%D9%82%D9%81%D9%8A%D8%A9+%28%D9%85%D9%88%D8%A7%D8%AF+%D8%A8%D9%86%D8%A7%D8%A1%29+Alrajhi+Endowment+Co.+For+Industry+and+Trade+%28Building+Material%29%E2%80%8E!3m4!1s0x3e2f199ebaabe7b5:0x81c52ace62d7b55a!8m2!3d24.5915271!4d46.5779795",
@@ -9743,16 +8756,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Near Riyadh Port, Abi Ibn Kaab, Street, Riyadh 12631, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7AM-6PM · Saturday: 7AM-6PM · Sunday: 7AM-6PM · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/BOLTEC+-+United+Eagle+Trading+Company/@24.6422706,46.752271,14z/data=!4m8!1m2!2m1!1sBOLTEC+-+United+Eagle+Trading+Company!3m4!1s0x3e2f070f9605cf13:0xe5516112875c5cce!8m2!3d24.6422706!4d46.752271",
@@ -9782,16 +8791,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": true,
     "description": "Construction supplier in Casablanca, Morocco.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "QI Est Polygone, Lot 126-127, 2020 Route des Zenata، Casablanca 22590, Morocco",
     "openingHours": "Friday: 8AM-1PM,2-5:30PM · Monday: 8AM-1PM,2-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-1PM,2-5:30PM · Tuesday: 8AM-1PM,2-5:30PM · Wednesday: 8AM-1PM,2-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Multicolles+Multiprobat/@33.6359229,-7.499308399999999,14z/data=!4m8!1m2!2m1!1sMulticolles+Multiprobat!3m4!1s0xda7cbbf60addfa1:0xe548d722be6bd4d8!8m2!3d33.6359229!4d-7.499308399999999",
@@ -9821,16 +8826,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Tubes & Pipes supplier in TR, Turkey.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Yukarı Öveçler, Lizbon Cd. No: 10, 06460 Çankaya/Ankara, Türkiye",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Noksel+Steel+Pipe+Co./@39.893733999999995,32.823256,14z/data=!4m8!1m2!2m1!1sNoksel+Steel+Pipe+Co.!3m4!1s0x14d345e098bf0915:0x266b0189fce82837!8m2!3d39.893733999999995!4d32.823256",
@@ -9860,16 +8861,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 27,
     "verified": true,
     "description": "Steel & Metals supplier in Casablanca, Morocco.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "BP : 3553، Route nationale 9, km 10 (Aéroclub Tit Mellil، km 10 N9, Casablanca 20600, Morocco",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Maghreb+Steel+%28headquarters%29/@33.5922203,-7.4735382999999995,14z/data=!4m8!1m2!2m1!1sMaghreb+Steel+%28headquarters%29!3m4!1s0xda7cade1a9662d7:0x9bdee6e2fa3bf891!8m2!3d33.5922203!4d-7.4735382999999995",
@@ -9899,16 +8896,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Steel & Metals supplier in Aïn Harrouda, Morocco.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Aïn Harrouda, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Maghreb+Steel+-+Bled+Solb/@33.6330824,-7.4340793,14z/data=!4m8!1m2!2m1!1sMaghreb+Steel+-+Bled+Solb!3m4!1s0xda7b58934bc47b3:0x618013652664df77!8m2!3d33.6330824!4d-7.4340793",
@@ -9938,16 +8931,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Cables & Electrical supplier in Casablanca, Morocco.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "N°10، Zone industrielle Moulay Rachid, Al Khalidia 4, Rue 5, Casablanca 20250, Morocco",
     "openingHours": "Friday: 8:30AM-6:30PM · Monday: 8:30AM-6:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6:30PM · Tuesday: 8:30AM-6:30PM · Wednesday: 8:30AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/SOFAMEL+MAROC+-+Mat%C3%A9riel+%C3%89lectrique+%7C+%C3%89clairage+LED+%7C+Fiches+et+Prises+Industrielles/@33.5683289,-7.518256,14z/data=!4m8!1m2!2m1!1sSOFAMEL+MAROC+-+Mat%C3%A9riel+%C3%89lectrique+%7C+%C3%89clairage+LED+%7C+Fiches+et+Prises+Industrielles!3m4!1s0xda7cb534b85de49:0x899b4ca9df1081e6!8m2!3d33.5683289!4d-7.518256",
@@ -9977,16 +8966,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Cables & Electrical supplier in Temara, Morocco.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Temara, Morocco",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Safran+Electrical+%26+Power+Morocco/@33.8781047,-6.950375999999999,14z/data=!4m8!1m2!2m1!1sSafran+Electrical+%26+Power+Morocco!3m4!1s0xda70ddb2013f94d:0x67c2ac99ad61494d!8m2!3d33.8781047!4d-6.950375999999999",
@@ -10016,16 +9001,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 29,
     "verified": true,
     "description": "Cables & Electrical supplier in San Juan del Río, Mexico.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Totonacas, Carr. Querétaro - México 7, Nuevo San Juan, 76806 San Juan del Río, Qro., Mexico",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: 7AM-10:30PM · Sunday: Closed · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/GG+Cables+and+Wires+Mexico%2C+S.+de+R.L.+de+C.V./@20.3618202,-99.95649709999999,14z/data=!4m8!1m2!2m1!1sGG+Cables+and+Wires+Mexico%2C+S.+de+R.L.+de+C.V.!3m4!1s0x85d30bb0bbffef81:0xb34debcdcd88246c!8m2!3d20.3618202!4d-99.95649709999999",
@@ -10055,16 +9036,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Cables & Electrical supplier in Ciudad López Mateos, Mexico.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Cto. Dr. Gustavo Baz 5, Pedregal de Atizapan, 52948 Cdad. López Mateos, Méx., Mexico",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Cables+y+Pl%C3%A1sticos/@19.5681867,-99.25947409999999,14z/data=!4m8!1m2!2m1!1sCables+y+Pl%C3%A1sticos!3m4!1s0x85d21c8a7bfed4a7:0xb82ad359ba59f4a3!8m2!3d19.5681867!4d-99.25947409999999",
@@ -10094,16 +9071,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Cables & Electrical supplier in Guadalajara, Mexico.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Calle Monte, C. Los Alpes 2757, La Esperanza (La Federacha ), 44300 Guadalajara, Jal., Mexico",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Loganmex/@20.712207,-103.32027289999999,14z/data=!4m8!1m2!2m1!1sLoganmex!3m4!1s0x8428b1ace40d07c7:0xee34ba22965c8d4c!8m2!3d20.712207!4d-103.32027289999999",
@@ -10133,16 +9106,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Dubai Investment Park Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/THL+TUBE+%26+PIPE+INDUSTRIES+L+LC/@24.982683299999998,55.1904311,14z/data=!4m8!1m2!2m1!1sTHL+TUBE+%26+PIPE+INDUSTRIES+L+LC!3m4!1s0x3e5f725b7dc2e6af:0x3e24b791f48eeb0e!8m2!3d24.982683299999998!4d55.1904311",
@@ -10172,16 +9141,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 22,
     "verified": true,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Warehouse # 41 Behind Danube warehouse Opp. Old Ramla Mall, Dubai Investment Park - 1 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-5:30PM · Monday: 9AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5:30PM · Tuesday: 9AM-5:30PM · Wednesday: 9AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/SwissPac+UAE/@24.9692142,55.169997099999996,14z/data=!4m8!1m2!2m1!1sSwissPac+UAE!3m4!1s0x3e5f734be1e9403d:0xaa57f46fc1d04809!8m2!3d24.9692142!4d55.169997099999996",
@@ -10211,16 +9176,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Packaging supplier in Sesto Fiorentino, Italy.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Via Petrosa, 22, 50019 Sesto Fiorentino FI, Italy",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Plast+Pack+Packaging+Srl/@43.8230468,11.2071465,14z/data=!4m8!1m2!2m1!1sPlast+Pack+Packaging+Srl!3m4!1s0x132a5a2d9f9ccdeb:0xe62a45c0414b7c68!8m2!3d43.8230468!4d11.2071465",
@@ -10250,16 +9211,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": true,
     "description": "Packaging supplier in Garbagnate Monastero, Italy.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Via Europa, 25/27, 23846 Garbagnate Monastero LC, Italy",
     "openingHours": "Friday: 8:30AM-5PM · Monday: 8:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5PM · Tuesday: 8:30AM-5PM · Wednesday: 8:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Zeus+Packaging+Italia+S.r.l./@45.7688633,9.2946406,14z/data=!4m8!1m2!2m1!1sZeus+Packaging+Italia+S.r.l.!3m4!1s0x4786a6b6e914c289:0x34e2367bed9fdffc!8m2!3d45.7688633!4d9.2946406",
@@ -10289,16 +9246,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 27,
     "verified": true,
     "description": "Packaging supplier in Leon, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Blvd. Omega 1101, Paseo de la Castellana, 37549 León de los Aldama, Gto., Mexico",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Packaging+Store/@21.078973599999998,-101.6280939,14z/data=!4m8!1m2!2m1!1sPackaging+Store!3m4!1s0x842bbe0faf569429:0xcdb970cb934ce039!8m2!3d21.078973599999998!4d-101.6280939",
@@ -10328,16 +9281,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": true,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "36 Fayette Ave S #1, Salt Lake City, UT 84101",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Misc+Materials/@40.7483405,-111.8922918,14z/data=!4m8!1m2!2m1!1sMisc+Materials!3m4!1s0x8752f53ca96f62e3:0xb1d3ee2a522bfc50!8m2!3d40.7483405!4d-111.8922918",
@@ -10367,16 +9316,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": true,
     "description": "Construction supplier in South Salt Lake, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "2600 S 600 W, South Salt Lake, UT 84115",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Weyerhaeuser+Distribution/@40.7142681,-111.9077403,14z/data=!4m8!1m2!2m1!1sWeyerhaeuser+Distribution!3m4!1s0x87528b212725a29f:0x8503e85a942a22d8!8m2!3d40.7142681!4d-111.9077403",
@@ -10405,16 +9350,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 113,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "HI، AL BUKHAIRIYA STREET, Al Faruq, Riyadh 12864, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 9AM-1PM,4-9PM · Saturday: 9AM-1PM,4-9PM · Sunday: 9AM-1PM,4-9PM · Thursday: 9AM-1PM,4-9PM · Tuesday: 9AM-1PM,4-9PM · Wednesday: 9AM-1PM,4-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Akada+Hardware/@24.643023,46.7624942,14z/data=!4m8!1m2!2m1!1sAkada+Hardware!3m4!1s0x3e2f06286e1dfe1f:0xe6594ab63ebdbb36!8m2!3d24.643023!4d46.7624942",
@@ -10444,16 +9385,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Near Emirates Auction - Ras Al Khor Industrial Area 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: Closed · Monday: 8:30AM-5:30PM · Saturday: 8:30AM-5:30PM · Sunday: 8:30AM-5:30PM · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Raha+International+Building+Materials+Trading+LLC/@25.172532,55.363051999999996,14z/data=!4m8!1m2!2m1!1sAl+Raha+International+Building+Materials+Trading+LLC!3m4!1s0x3e5f698314bb01cf:0x25a4d3692fa90086!8m2!3d25.172532!4d55.363051999999996",
@@ -10483,16 +9420,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 205,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "King Fahd Branch Rd, Al Mohammadiyyah, Riyadh 12363, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%AA%D8%B7%D9%88%D9%8A%D8%B1+%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA+TDC/@24.7395446,46.6575023,14z/data=!4m8!1m2!2m1!1s%D8%B4%D8%B1%D9%83%D8%A9+%D8%AA%D8%B7%D9%88%D9%8A%D8%B1+%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA+TDC!3m4!1s0x3e2ee2a716c00985:0x64e88900ff6ff417!8m2!3d24.7395446!4d46.6575023",
@@ -10522,16 +9455,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 53,
     "verified": true,
     "description": "Chain offering a broad range of industrial equipment, maintenance supplies, tools & parts.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "815 3rd Ave, Brooklyn, NY 11232",
     "openingHours": "Friday: 7:30AM-4PM · Monday: 7:30AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-4PM · Tuesday: 7:30AM-4PM · Wednesday: 7:30AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Grainger+Industrial+Supply/@40.6595273,-74.00145909999999,14z/data=!4m8!1m2!2m1!1sGrainger+Industrial+Supply!3m4!1s0x89c25aea0d8fc7cb:0x63d7ae058a867ff9!8m2!3d40.6595273!4d-74.00145909999999",
@@ -10561,17 +9490,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 46,
     "verified": true,
     "description": "Industrial Parts supplier in Noida, India.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "B-131, Dist, Block B, Phase-2, Noida, Uttar Pradesh 201305, India",
     "openingHours": "Friday: 8:30AM-7:30PM · Monday: 8:30AM-7:30PM · Saturday: 8:30AM-7:30PM · Sunday: Closed · Thursday: 8:30AM-7:30PM · Tuesday: 8:30AM-7:30PM · Wednesday: 8:30AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Unispares+India/@28.5378057,77.40834579999999,14z/data=!4m8!1m2!2m1!1sUnispares+India!3m4!1s0x390ce8baa449bd61:0x8a46b01ecdda8014!8m2!3d28.5378057!4d77.40834579999999",
@@ -10601,16 +9526,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Steel & Metals supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Saih Shuaib 3 - Dubai Industrial City - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8:04AM-6PM · Monday: 8AM-6PM · Saturday: 8AM-6PM · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Supreme+Steel+LLC/@24.8457996,55.0932422,14z/data=!4m8!1m2!2m1!1sSupreme+Steel+LLC!3m4!1s0x3e5f695e8e0ef57d:0x28d8abd6f5ab510a!8m2!3d24.8457996!4d55.0932422",
@@ -10640,16 +9561,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": true,
     "description": "Showroom featuring a range of sustainable, innovative concrete products for interior and exterior use.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "211 Mott St, New York, NY 10012",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Concrete+Collaborative/@40.7219516,-73.9954966,14z/data=!4m8!1m2!2m1!1sConcrete+Collaborative!3m4!1s0x89c25988b1fde00b:0x787035ffe1f840c7!8m2!3d40.7219516!4d-73.9954966",
@@ -10679,16 +9596,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 27,
     "verified": true,
     "description": "Cables & Electrical supplier in Mannheim, Germany.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Rhenaniastraße 12, 68199 Mannheim-Neckarau, Germany",
     "openingHours": "Friday: 6:30AM-4:30PM · Monday: 6:30AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 6:30AM-4:30PM · Tuesday: 6:30AM-4:30PM · Wednesday: 6:30AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/S%C3%BCdkabel+GmbH+-+Kabelsysteme%2C+Kabel+und+Kabelgarnituren/@49.44963,8.49785,14z/data=!4m8!1m2!2m1!1sS%C3%BCdkabel+GmbH+-+Kabelsysteme%2C+Kabel+und+Kabelgarnituren!3m4!1s0x4797c939f63baa13:0x5f8c1102acc20f1d!8m2!3d49.44963!4d8.49785",
@@ -10717,17 +9630,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 106,
     "verified": true,
     "description": "Cables & Electrical supplier in Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "G-13, 1568 - A, near temple, Bhagirath Palace, Chhippy Wada, Chandni Chowk, Delhi, 110006, India",
     "openingHours": "Friday: 11AM-7:30PM · Monday: 11AM-7:30PM · Saturday: 11AM-7:30PM · Sunday: Closed · Thursday: 11AM-7:30PM · Tuesday: 11AM-7:30PM · Wednesday: 11AM-7:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Usha+Cable+Co./@28.6572747,77.2340868,14z/data=!4m8!1m2!2m1!1sUsha+Cable+Co.!3m4!1s0x390cfd10f247aca5:0x9b426e228471f318!8m2!3d28.6572747!4d77.2340868",
@@ -10757,16 +9666,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 35,
     "verified": true,
     "description": "Cables & Electrical supplier in المدينة الجديدة الشرافات, Morocco.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "المدينة الجديدة الشرافات، Morocco",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 8AM-5:30PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Electrical+Components+International+%28ECI%29/@35.6577127,-5.6554284,14z/data=!4m8!1m2!2m1!1sElectrical+Components+International+%28ECI%29!3m4!1s0xd0b797a1b95e03d:0xf3ef018ec9ceebf4!8m2!3d35.6577127!4d-5.6554284",
@@ -10795,16 +9700,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 107,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "W6RF+GG - Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates",
     "openingHours": "Friday: 8AM-9PM · Monday: 8AM-9PM · Saturday: 8AM-9PM · Sunday: 9AM-6PM · Thursday: 8AM-9PM · Tuesday: 8AM-9PM · Wednesday: 8AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/Next+Gen+Building+Material+Trading+DWC+LLC+Hardware+Shop%2C+Tools%2C+Paints+%2CElectrical%2C+Plumbing+%2C+National+Paint+Mixing+Machine/@24.9412991,55.223541999999995,14z/data=!4m8!1m2!2m1!1sNext+Gen+Building+Material+Trading+DWC+LLC+Hardware+Shop%2C+Tools%2C+Paints+%2CElectrical%2C+Plumbing+%2C+National+Paint+Mixing+Machine!3m4!1s0x3e5f7300084e2539:0xefd4747a06d91232!8m2!3d24.9412991!4d55.223541999999995",
@@ -10834,16 +9735,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 8AM-7PM · Monday: 8AM-7PM · Saturday: 8AM-7PM · Sunday: Closed · Thursday: 8AM-7PM · Tuesday: 8AM-7PM · Wednesday: 8AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Smart+Industrial+Equipment+LLC/@24.3762297,54.5091712,14z/data=!4m8!1m2!2m1!1sSmart+Industrial+Equipment+LLC!3m4!1s0x3e5e4126425c5c1f:0x40f821752afc2858!8m2!3d24.3762297!4d54.5091712",
@@ -10873,16 +9770,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Industrial Parts supplier in AE, United Arab Emirates.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Industrial area, Industrial Are no.3, Sharjah - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-12PM,4-7:30PM · Monday: 8AM-1:30PM,4-7:30PM · Saturday: 8AM-1:30PM,4-7:30PM · Sunday: 8AM-1:30PM,4-7:30PM · Thursday: 8AM-1:30PM,4-7:30PM · Tuesday: 8AM-1:30PM,4-7:30PM · Wednesday: 8AM-1:",
     "sourceUrl": "https://www.google.com/maps/place/Swift+International+Heavy+Equipment+Spare+Parts+Tr/@25.3110508,55.410030799999994,14z/data=!4m8!1m2!2m1!1sSwift+International+Heavy+Equipment+Spare+Parts+Tr!3m4!1s0x3e5f5fe8c7c54639:0x5cba772017b87a1b!8m2!3d25.3110508!4d55.410030799999994",
@@ -10912,16 +9805,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Shaikha Mhara Alghrair Building - Office No.: 217 - Al Nahda St - Al Qusais 2 - Dubai - United Arab Emirates",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Power+Plus+Cable+Co+LLC/@25.265888699999998,55.382543899999995,14z/data=!4m8!1m2!2m1!1sPower+Plus+Cable+Co+LLC!3m4!1s0x3e5f5dcac356e5b9:0x90449de59a3f0e17!8m2!3d25.265888699999998!4d55.382543899999995",
@@ -10951,16 +9840,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 23,
     "verified": true,
     "description": "Packaging supplier in Aïn Harrouda, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Z I SIDI AHMED BEN YECHOU AIN HARROUDA MOHEMMEDIA, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Alma+Pack/@33.641915499999996,-7.4433928,14z/data=!4m8!1m2!2m1!1sAlma+Pack!3m4!1s0xda7cb1131c66f0d:0xeb1721a9676b4719!8m2!3d33.641915499999996!4d-7.4433928",
@@ -10989,16 +9874,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 306,
     "verified": true,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "D 57 - Dubai Investment Park Second - Dubai - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-12:30PM,2-7PM · Monday: 7:30AM-7PM · Saturday: 7:30AM-7PM · Sunday: 7:30AM-6:30PM · Thursday: 7:30AM-7PM · Tuesday: 7:30AM-7PM · Wednesday: 7:30AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Yasmeen+Building+Material+Trading+LLC/@24.968207,55.189902499999995,14z/data=!4m8!1m2!2m1!1sAl+Yasmeen+Building+Material+Trading+LLC!3m4!1s0x3e5f725320f049e3:0xf965dc90265d059a!8m2!3d24.968207!4d55.189902499999995",
@@ -11027,16 +9908,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 153,
     "verified": true,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via Tommaso Mercandetti, 6, 00133 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-5:30PM · Monday: 7:30AM-5:30PM · Saturday: 7:30AM-12PM · Sunday: Closed · Thursday: 7:30AM-5:30PM · Tuesday: 7:30AM-5:30PM · Wednesday: 7:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Forconi+Mario+Snc/@41.8631476,12.611053,14z/data=!4m8!1m2!2m1!1sForconi+Mario+Snc!3m4!1s0x132f62af9364468d:0x2d9661570883597d!8m2!3d41.8631476!4d12.611053",
@@ -11065,16 +9942,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 37,
     "verified": true,
     "description": "Steel & Metals supplier in Tijuana, Mexico.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "Valle del Sur 8333, Parque Industrial, Valle del Sur, 22190 Tijuana, B.C., Mexico",
     "openingHours": "Friday: 6AM-4:30AM · Monday: 6AM-4:30AM · Saturday: Closed · Sunday: Closed · Thursday: 6AM-4:30AM · Tuesday: 6AM-4:30AM · Wednesday: 6AM-4:30AM",
     "sourceUrl": "https://www.google.com/maps/place/BII+de+M%C3%A9xico./@32.4760546,-117.03299399999999,14z/data=!4m8!1m2!2m1!1sBII+de+M%C3%A9xico.!3m4!1s0x80d937b6610f5b99:0x799e150e8d497aa3!8m2!3d32.4760546!4d-117.03299399999999",
@@ -11103,17 +9976,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 44,
     "verified": true,
     "description": "Cables & Electrical supplier in New Delhi, Delhi, India.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "Building No. 315/21, Gali No.2, Near Syndicate House Sahazadabagh I.N.D.L Area Old Rohtak Road, Gali No.2, New Delhi, Delhi 110015, India",
     "openingHours": "Friday: 9AM-8PM · Monday: 9AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 9AM-8PM · Tuesday: 9AM-8PM · Wednesday: 9AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Riddhi+Cable+Industry/@28.669641499999997,77.1673364,14z/data=!4m8!1m2!2m1!1sRiddhi+Cable+Industry!3m4!1s0x390d0261322e63f7:0xdc303cfeb7e40b3c!8m2!3d28.669641499999997!4d77.1673364",
@@ -11143,16 +10012,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Steel & Metals supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "sajja - near sharjah cement factory - المنطقة الصناعية - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7AM-7PM · Monday: 7AM-7PM · Saturday: 7AM-7PM · Sunday: 7AM-7PM · Thursday: 7AM-7PM · Tuesday: 7AM-7PM · Wednesday: 7AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Best+Metal+Steel+Tr+llc+%7C+Steel+Stockist+%7CSteel+Supplier%2C+Distributor+Company+in+Sharjah%2C+Dubai+UAE/@25.309309199999998,55.625411199999995,14z/data=!4m8!1m2!2m1!1sBest+Metal+Steel+Tr+llc+%7C+Steel+Stockist+%7CSteel+Supplier%2C+Distributor+Company+in+Sharjah%2C+Dubai+UAE!3m4!1s0x3ef5f3a9dad69045:0x38f9a7d1a45a9292!8m2!3d25.309309199999998!4d55.625411199999995",
@@ -11181,17 +10046,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 51,
     "verified": true,
     "description": "Packaging supplier in Pune, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Survey No. 71/9B, Janai Industrial Estate, Prayeja City Rd, Wadgaon Budruk, Unit 1, Pune, Maharashtra 411068, India",
     "openingHours": "Friday: 10AM-6PM · Monday: 10AM-6PM · Saturday: 10AM-6PM · Sunday: Closed · Thursday: 10AM-6PM · Tuesday: 10AM-6PM · Wednesday: 10AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PackMax+India+Packaging+Solutions/@18.466693799999998,73.8142359,14z/data=!4m8!1m2!2m1!1sPackMax+India+Packaging+Solutions!3m4!1s0x3bc2950929af373f:0x617e7e0e139f3603!8m2!3d18.466693799999998!4d73.8142359",
@@ -11220,16 +10081,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 48,
     "verified": true,
     "description": "Packaging supplier in Marrakesh, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Immeuble Atlassi E, Mag. 2 Bd Allal Al Fassi, Marrakech 40000, Morocco",
     "openingHours": "Friday: 9AM-1PM,3:30-6:30PM · Monday: 9AM-6:30PM · Saturday: 9AM-6:30PM · Sunday: Closed · Thursday: 9AM-6:30PM · Tuesday: 9AM-6:30PM · Wednesday: 9AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Packnear/@31.639146099999998,-7.999641199999999,14z/data=!4m8!1m2!2m1!1sPacknear!3m4!1s0xdafef356e45fd47:0x79d31b412a6fd45e!8m2!3d31.639146099999998!4d-7.999641199999999",
@@ -11258,16 +10115,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 30,
     "verified": true,
     "description": "Industrial Parts supplier in al jadida, Morocco.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "X7X6+CVF Bayti 6 Sale, M361, al jadida 11100, Morocco",
     "openingHours": "Friday: 11AM-11PM · Monday: 11AM-11PM · Saturday: 11AM-11PM · Sunday: 11AM-11PM · Thursday: 11AM-11PM · Tuesday: 11AM-11PM · Wednesday: 11AM-11PM",
     "sourceUrl": "https://www.google.com/maps/place/Morocco+autoparts/@33.998563,-6.737813,14z/data=!4m8!1m2!2m1!1sMorocco+autoparts!3m4!1s0xda741b45e661617:0x1a445bbc24e1a6da!8m2!3d33.998563!4d-6.737813",
@@ -11297,16 +10150,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "6934 Al-Ulya, As Sahafah، Floor 11th & 12th, Riyadh Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: Closed · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sika+Saudi+Arabia+Limited+-+Riyadh+Office/@24.7859227,46.6382903,14z/data=!4m8!1m2!2m1!1sSika+Saudi+Arabia+Limited+-+Riyadh+Office!3m4!1s0x3e2efd57f03d5adb:0xb81d433ed35ceaa2!8m2!3d24.7859227!4d46.6382903",
@@ -11335,16 +10184,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 80,
     "verified": true,
     "description": "Construction supplier in Madrid, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "P.º de la Dirección, 294, Tetuán, 28029 Madrid, Spain",
     "openingHours": "Friday: 8AM-1:30PM,3-7PM · Monday: 8AM-1:30PM,3-7PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-1:30PM,3-7PM · Tuesday: 8AM-1:30PM,3-7PM · Wednesday: 8AM-1:30PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Building+materials+Mirandesa/@40.4695281,-3.7069676,14z/data=!4m8!1m2!2m1!1sBuilding+materials+Mirandesa!3m4!1s0xd4229a146be50d3:0xe5a3ac47a8dbcc94!8m2!3d40.4695281!4d-3.7069676",
@@ -11373,16 +10218,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 86,
     "verified": true,
     "description": "Packaging supplier in Marrakesh, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "immeuble Kortoba, 30 Rue Loubnane, Marrakech 40000, Morocco",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9:30AM-6:30PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Emballage+Mazirh+Marrakech/@31.634735,-8.0097291,14z/data=!4m8!1m2!2m1!1sEmballage+Mazirh+Marrakech!3m4!1s0xdafef8ed5ec7283:0xad6a72c5df20a40c!8m2!3d31.634735!4d-8.0097291",
@@ -11411,16 +10252,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 94,
     "verified": true,
     "description": "Industrial Parts supplier in San Francisco de los Romo, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "MEZQUITE 106, PARQUE INDUSTRIAL SAN FRANCISCO IV, 20355 San Francisco de los Romo, Ags., Mexico",
     "openingHours": "Friday: 8AM-5:30PM · Monday: 8AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5:30PM · Tuesday: 8AM-5:30PM · Wednesday: 8AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Teklas+Automotive+Mexico/@22.0433183,-102.286452,14z/data=!4m8!1m2!2m1!1sTeklas+Automotive+Mexico!3m4!1s0x8429e491b6f51db5:0xbbb61fb516ddfa54!8m2!3d22.0433183!4d-102.286452",
@@ -11449,16 +10286,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 26,
     "verified": true,
     "description": "Construction supplier in Marrakesh, Morocco.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "MXG2+M47, 189, Rte de Safi, Marrakech 40000, Morocco",
     "openingHours": "Friday: 8AM-12:30PM,2:30-6:30PM · Monday: 8AM-12:30PM,2:30-6:30PM · Saturday: 8AM-12:30PM,2:30-6:30PM · Sunday: Closed · Thursday: 8AM-12:30PM,2:30-6:30PM · Tuesday: 8AM-12:30PM,2:30-6:30PM · Wednesda",
     "sourceUrl": "https://www.google.com/maps/place/Cogemil+%28mat%C3%A9riel+et+mat%C3%A9riaux+de+construction%29/@31.676568999999997,-8.0500955,14z/data=!4m8!1m2!2m1!1sCogemil+%28mat%C3%A9riel+et+mat%C3%A9riaux+de+construction%29!3m4!1s0xdafec1204ef61fb:0xe64e767689465bae!8m2!3d31.676568999999997!4d-8.0500955",
@@ -11487,16 +10320,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 44,
     "verified": true,
     "description": "Construction supplier in Barcelona, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Carrer de la Cera, 1, Ciutat Vella, 08001 Barcelona, Spain",
     "openingHours": "Friday: 8AM-1:45PM,3-8PM · Monday: 8AM-8PM · Saturday: 9AM-8PM · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-8PM · Wednesday: 8AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/CASA+DE+MATERIALES+CONSTRUCCI%C3%93N+Y+FERRETER%C3%8DA/@41.3794063,2.1670604,14z/data=!4m8!1m2!2m1!1sCASA+DE+MATERIALES+CONSTRUCCI%C3%93N+Y+FERRETER%C3%8DA!3m4!1s0x12a4a25fa092fea7:0xbeb92e84232dddf7!8m2!3d41.3794063!4d2.1670604",
@@ -11525,16 +10354,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Packaging supplier in San Luis Potosi, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Eje 140 950, Zona Industrial, 78395 San Luis Potosí, S.L.P., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/BALL+AEROCAN+MEXICO/@22.044314099999998,-100.8806809,14z/data=!4m8!1m2!2m1!1sBALL+AEROCAN+MEXICO!3m4!1s0x842abb5d2781506b:0xe5a7c86af1ad2b6d!8m2!3d22.044314099999998!4d-100.8806809",
@@ -11563,16 +10388,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 43,
     "verified": true,
     "description": "Industrial Parts supplier in Arteaga, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Parque Industrial Server, Boulvard Campestre 204 Col, 25350 Arteaga, Coah., Mexico",
     "openingHours": "Friday: 7:30AM-5:36PM · Monday: 7:30AM-5:36PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5:36PM · Tuesday: 7:30AM-5:36PM · Wednesday: 7:30AM-5:36PM",
     "sourceUrl": "https://www.google.com/maps/place/Sangsin+Brake+Mexico/@25.4783199,-100.8989155,14z/data=!4m8!1m2!2m1!1sSangsin+Brake+Mexico!3m4!1s0x8688122509ac70e7:0x231a2e8c31cbaf34!8m2!3d25.4783199!4d-100.8989155",
@@ -11601,16 +10422,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 74,
     "verified": false,
     "description": "Tubes & Pipes supplier in Ramos Arizpe, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Santa María, 25903 Ramos Arizpe, Coahuila, Mexico",
     "openingHours": "Friday: 7AM-3PM · Monday: 7AM-3PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-3PM · Tuesday: 7AM-3PM · Wednesday: 7AM-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Nova+Steel+%26+Coil+De+Mexico+Planta+2/@25.5816232,-100.9157022,14z/data=!4m8!1m2!2m1!1sNova+Steel+%26+Coil+De+Mexico+Planta+2!3m4!1s0x8688144afe26a8f5:0x3824925cf631c026!8m2!3d25.5816232!4d-100.9157022",
@@ -11639,17 +10456,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 28,
     "verified": true,
     "description": "Packaging supplier in Thiruvananthapuram, meadows, India.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Alathara Rd, Alathara, Aakkulam, Thiruvananthapuram, meadows, Kerala 695017, India",
     "openingHours": "Friday: 9AM-7PM · Monday: 9AM-7PM · Saturday: 9AM-7PM · Sunday: Closed · Thursday: 9AM-7PM · Tuesday: 9AM-7PM · Wednesday: 9AM-7PM",
     "sourceUrl": "https://www.google.com/maps/place/India+Packing/@8.5350909,76.9043445,14z/data=!4m8!1m2!2m1!1sIndia+Packing!3m4!1s0x3b05b9b82705a255:0xb0337bd4da007c2a!8m2!3d8.5350909!4d76.9043445",
@@ -11678,16 +10491,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 131,
     "verified": false,
     "description": "Construction supplier in South Salt Lake, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "525 W 2890 S, South Salt Lake, UT 84115",
     "openingHours": "Friday: 7AM-4:30PM · Monday: 7AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4:30PM · Tuesday: 7AM-4:30PM · Wednesday: 7AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Swanson+Building+Materials+Inc/@40.708841299999996,-111.905093,14z/data=!4m8!1m2!2m1!1sSwanson+Building+Materials+Inc!3m4!1s0x87528b1e270643f7:0xadd14f53a1daff6d!8m2!3d40.708841299999996!4d-111.905093",
@@ -11716,17 +10525,13 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 25,
     "verified": true,
     "description": "Construction supplier in New Delhi, India.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "Asia",
       "EU",
       "Africa"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Gali Number 18, G-block, Block G 2, Sangam Vihar, New Delhi, Delhi 110080, India",
     "openingHours": "Friday: 8AM-6:30PM · Monday: 8AM-6:30PM · Saturday: 8AM-6:30PM · Sunday: 8AM-6:30PM · Thursday: 8AM-6:30PM · Tuesday: Closed · Wednesday: 8AM-6:30PM",
     "sourceUrl": "https://www.google.com/maps/place/National+Building+Material+Supplier/@28.499529199999998,77.24788989999999,14z/data=!4m8!1m2!2m1!1sNational+Building+Material+Supplier!3m4!1s0x390ce1072d03925f:0x58b36cd32ee24f37!8m2!3d28.499529199999998!4d77.24788989999999",
@@ -11755,16 +10560,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 117,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "7759 Prince Abdulaziz Ibn Musaid Ibn Jalawi St, 2180, As Sulimaniyah, Riyadh 12621, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 8AM-5PM · Saturday: 8AM-5PM · Sunday: 8AM-5PM · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Al+Hashemiah+Contracting+Co.+L.L.C+%28HATCO%29/@24.6807767,46.7013215,14z/data=!4m8!1m2!2m1!1sAl+Hashemiah+Contracting+Co.+L.L.C+%28HATCO%29!3m4!1s0x3e2f037cf19fef4b:0x34a4bd006b2f3e6c!8m2!3d24.6807767!4d46.7013215",
@@ -11793,16 +10594,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 160,
     "verified": false,
     "description": "Construction supplier in Barcelona, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Carrer del Pedró de la Creu, 37, Sarrià-Sant Gervasi, 08034 Barcelona, Spain",
     "openingHours": "Friday: 7:30AM-1:30PM,2:30-6PM · Monday: 7:30AM-1:30PM,2:30-6PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-1:30PM,2:30-6PM · Tuesday: 7:30AM-1:30PM,2:30-6PM · Wednesday: 7:30AM-1:30PM,2:30",
     "sourceUrl": "https://www.google.com/maps/place/Materiales+de+construcci%C3%B3n+Barcelona+%7C+Siesmo+S.L./@41.3974858,2.1218597999999997,14z/data=!4m8!1m2!2m1!1sMateriales+de+construcci%C3%B3n+Barcelona+%7C+Siesmo+S.L.!3m4!1s0x12a49841699e84bf:0xfcbe7ce6eac79fa2!8m2!3d41.3974858!4d2.1218597999999997",
@@ -11831,16 +10628,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 65,
     "verified": false,
     "description": "Construction supplier in San Miguel de Salinas, Spain.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Carretera Montesinos, 139 Parc 0, 03193 San Miguel de Salinas, Alicante, Spain",
     "openingHours": "Friday: 7:30AM-6PM · Monday: 7:30AM-6PM · Saturday: 7:30AM-1PM · Sunday: Closed · Thursday: 7:30AM-6PM · Tuesday: 7:30AM-6PM · Wednesday: 7:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/%C3%81ridos+Matersan+S.L/@37.9983636,-0.7778859,14z/data=!4m8!1m2!2m1!1s%C3%81ridos+Matersan+S.L!3m4!1s0xd6309d9d9eba84d:0x39a6b8317d5cb6f8!8m2!3d37.9983636!4d-0.7778859",
@@ -11869,16 +10662,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 32,
     "verified": false,
     "description": "Tubes & Pipes supplier in Bay Shore, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "71 Saxon Ave, Bay Shore, NY 11706",
     "openingHours": "Friday: 9AM-5PM · Monday: 9AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-5PM · Tuesday: 9AM-5PM · Wednesday: 9AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Fleischer+Tube+Distributors+Corporation/@40.733423699999996,-73.2292841,14z/data=!4m8!1m2!2m1!1sFleischer+Tube+Distributors+Corporation!3m4!1s0x89e833ad4dae932d:0x336142a73d6f156d!8m2!3d40.733423699999996!4d-73.2292841",
@@ -11907,16 +10696,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 168,
     "verified": false,
     "description": "Industrial Parts supplier in Irapuato, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Rio Ota No.978 Parque Tecnoindustrial Castro 36815, Del Río, Irapuato, Gto., Mexico",
     "openingHours": "Friday: 8:30AM-6PM · Monday: 8:30AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-6PM · Tuesday: 8:30AM-6PM · Wednesday: 8:30AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/TST+Manufacturing+de+Mexico%2C+S.+de+R.L.+de+C.V./@20.7749691,-101.3550491,14z/data=!4m8!1m2!2m1!1sTST+Manufacturing+de+Mexico%2C+S.+de+R.L.+de+C.V.!3m4!1s0x842b81c5521a7719:0x28aefd532954dcf6!8m2!3d20.7749691!4d-101.3550491",
@@ -11945,16 +10730,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 40,
     "verified": false,
     "description": "Industrial Parts supplier in Leon, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Paseo de Las Colinas #172 Parque Industrial de, 37430 León de los Aldama, Gto., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/MINO+INDUSTRY+MEXICO+S.A.+DE+C.V/@21.101632,-101.76399239999999,14z/data=!4m8!1m2!2m1!1sMINO+INDUSTRY+MEXICO+S.A.+DE+C.V!3m4!1s0x842bbf731c70fdb1:0xee2fe31f506a7ba3!8m2!3d21.101632!4d-101.76399239999999",
@@ -11983,16 +10764,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 22,
     "verified": false,
     "description": "Tubes & Pipes supplier in Mineral Ridge, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "3600 Union St, Mineral Ridge, OH 44440",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Specialty+Pipe+%26+Tube+Inc/@41.1449882,-80.7745458,14z/data=!4m8!1m2!2m1!1sSpecialty+Pipe+%26+Tube+Inc!3m4!1s0x8833e22edb2dbc67:0x391836537e7bf082!8m2!3d41.1449882!4d-80.7745458",
@@ -12021,16 +10798,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 38,
     "verified": false,
     "description": "Industrial Parts supplier in Parque Industrial del Valle de Aguascalientes, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Cto Aguascalientes Oriente, No. 130 Ags., Mexico",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sanoh+Industrial+de+M%C3%A9xico/@21.9654019,-102.2802177,14z/data=!4m8!1m2!2m1!1sSanoh+Industrial+de+M%C3%A9xico!3m4!1s0x8429ef8a81bc925f:0xd5374ffc00ef76bc!8m2!3d21.9654019!4d-102.2802177",
@@ -12059,16 +10832,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 69,
     "verified": false,
     "description": "Tubes & Pipes supplier in Pesquería, Mexico.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Carretera A Supermanzana Km 3, 66654 Pesquería, N.L., Mexico",
     "sourceUrl": "https://www.google.com/maps/place/US+Pipe+M%C3%A9xico/@25.7923454,-100.07434149999999,14z/data=!4m8!1m2!2m1!1sUS+Pipe+M%C3%A9xico!3m4!1s0x8662e5fbfb236113:0xf5e2fbe0da061476!8m2!3d25.7923454!4d-100.07434149999999",
     "score": 77,
@@ -12096,16 +10865,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": false,
     "description": "Packaging supplier in Miguel Hidalgo, Mexico City, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Lago Malar 27, Cuauhtémoc Pensil, Miguel Hidalgo, 11490 Ciudad de México, CDMX, Mexico",
     "openingHours": "Friday: 9AM-6PM · Monday: 9AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 9AM-6PM · Tuesday: 9AM-6PM · Wednesday: 9AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Empaque+y+Derivados+de+M%C3%A9xico+S.A.+de+C.V./@19.4440833,-99.1930029,14z/data=!4m8!1m2!2m1!1sEmpaque+y+Derivados+de+M%C3%A9xico+S.A.+de+C.V.!3m4!1s0x85d20208f6a52d79:0x1ce31b0f0ffabda0!8m2!3d19.4440833!4d-99.1930029",
@@ -12134,16 +10899,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": false,
     "description": "Construction supplier in Salt Lake City, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "2875 S 300 W, Salt Lake City, UT 84115",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Pacific+Coast+Supply/@40.7090779,-111.8993199,14z/data=!4m8!1m2!2m1!1sPacific+Coast+Supply!3m4!1s0x87528ae6b3b8d1bd:0xe172a42628c0d6ab!8m2!3d40.7090779!4d-111.8993199",
@@ -12172,16 +10933,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 21,
     "verified": true,
     "description": "Construction supplier in Riyadh, Saudi Arabia.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "3151 9256 Al Amir Salman Ibn Abdul Aziz Rd, Al Faisaliyyah, Riyadh 12881, Saudi Arabia",
     "openingHours": "Friday: Closed · Monday: 7:30AM-12:30PM,3:30-8PM · Saturday: 7:30AM-12:30PM,3:30-8PM · Sunday: 7:30AM-12:30PM,3:30-8PM · Thursday: 7:30AM-12:30PM,3:30-8PM · Tuesday: 7:30AM-12:30PM,3:30-8PM · Wednesda",
     "sourceUrl": "https://www.google.com/maps/place/RIYADH+TOOLS+TRADING+EST./@24.6447272,46.771527,14z/data=!4m8!1m2!2m1!1sRIYADH+TOOLS+TRADING+EST.!3m4!1s0x3e2f079d90e5b55b:0x3a0ff96dbf1877d3!8m2!3d24.6447272!4d46.771527",
@@ -12210,16 +10967,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 92,
     "verified": false,
     "description": "Industrial Parts supplier in Puerto Interior, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Ave, Blvd. Mineral de Peñafiel No 111, Gto., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Usui+International+Manufacturing+Mexico/@21.0024746,-101.47119629999999,14z/data=!4m8!1m2!2m1!1sUsui+International+Manufacturing+Mexico!3m4!1s0x842b99707bf9c96d:0x4b905fe5778cd958!8m2!3d21.0024746!4d-101.47119629999999",
@@ -12248,16 +11001,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 56,
     "verified": false,
     "description": "Packaging supplier in Hockenheim, Germany.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "1. Industriestraße 26, 68766 Hockenheim, Germany",
     "openingHours": "Friday: 7AM-4PM · Monday: 7AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-4PM · Tuesday: 7AM-4PM · Wednesday: 7AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Sonoco+Consumer+Products+Europe+GmbH/@49.34433,8.542819999999999,14z/data=!4m8!1m2!2m1!1sSonoco+Consumer+Products+Europe+GmbH!3m4!1s0x4797b828af996103:0xdce9b5204dd1c1e0!8m2!3d49.34433!4d8.542819999999999",
@@ -12286,16 +11035,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 55,
     "verified": false,
     "description": "Tubes & Pipes supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "8J22+H5G - E88 - Al Sajaa - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 7AM-5PM · Monday: 7AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 7AM-5PM · Tuesday: 7AM-5PM · Wednesday: 7AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Sharjah+Steel+Pipe+Manufacturing+Co+L.L.C/@25.3014445,55.600457299999995,14z/data=!4m8!1m2!2m1!1sSharjah+Steel+Pipe+Manufacturing+Co+L.L.C!3m4!1s0x3ef5f34058af5a3b:0x17fa5f99f7d0a14e!8m2!3d25.3014445!4d55.600457299999995",
@@ -12324,16 +11069,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 24,
     "verified": false,
     "description": "Construction supplier in Casablanca, Morocco.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "RTE d'El Jadida, km d'El Jadida, km 8, route d'El Jadida,، 20190,,, Rue 8 Lotissement Zoubir, Casablanca 20260, Morocco",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-6PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/GROUPE+INTERSIG+MAROC+ET+KARKACHI+%26+FATH/@33.524922,-7.684811,14z/data=!4m8!1m2!2m1!1sGROUPE+INTERSIG+MAROC+ET+KARKACHI+%26+FATH!3m4!1s0xda62c902c89c969:0xb21ad68eb0fb730c!8m2!3d33.524922!4d-7.684811",
@@ -12362,16 +11103,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 41,
     "verified": false,
     "description": "Industrial Parts supplier in San Luis Potosi, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Calle Uno #270 Paque Industrial Millennium, San Luis Potosí, S.L.P., Mexico",
     "openingHours": "Friday: 6AM-6PM · Monday: 9AM-6PM · Saturday: 9AM-6PM · Sunday: Closed · Thursday: 7AM-6PM · Tuesday: 7AM-6PM · Wednesday: 7AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/PPM+Industries+de+Mexico+S.A.+de+C.V./@22.057088,-100.8829226,14z/data=!4m8!1m2!2m1!1sPPM+Industries+de+Mexico+S.A.+de+C.V.!3m4!1s0x842abb511405d34b:0x721089c408ae2862!8m2!3d22.057088!4d-100.8829226",
@@ -12400,16 +11137,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 39,
     "verified": false,
     "description": "Industrial Parts supplier in General Escobedo, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Av. Nexxus 136, PARQUE INDUSTRIAL, 66055 Cdad. Gral. Escobedo, N.L., Mexico",
     "openingHours": "Friday: 8AM-6PM · Monday: 8AM-6PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-8PM · Tuesday: 8AM-6PM · Wednesday: 8AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/Kus+autopartes+de+Mexico+S+DE+RL+DE+CV/@25.7713879,-100.306784,14z/data=!4m8!1m2!2m1!1sKus+autopartes+de+Mexico+S+DE+RL+DE+CV!3m4!1s0x8662937aa9e43aa3:0x67a8a2f2fa3fa3a7!8m2!3d25.7713879!4d-100.306784",
@@ -12438,16 +11171,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 45,
     "verified": false,
     "description": "Cables & Electrical supplier in AE, United Arab Emirates.",
-    "products": [
-      "Power cables",
-      "Control panels",
-      "Copper wiring"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "500 m",
+    "moq": null,
     "address": "8J24+45Q - Al Sajaa - Sharjah - United Arab Emirates",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: 9AM-3PM · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/National+Cables+Industry/@25.300344,55.605485099999996,14z/data=!4m8!1m2!2m1!1sNational+Cables+Industry!3m4!1s0x3ef5f33ed5df3ead:0x134e88c75069e03b!8m2!3d25.300344!4d55.605485099999996",
@@ -12476,16 +11205,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 36,
     "verified": false,
     "description": "Packaging supplier in North Haven, United States.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "455 Sackett Point Rd, North Haven, CT 06473",
     "openingHours": "Friday: 8AM-4:30PM · Monday: 8AM-4:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4:30PM · Tuesday: 8AM-4:30PM · Wednesday: 8AM-4:30PM",
     "sourceUrl": "https://www.google.com/maps/place/Unicorr+Packaging+Group/@41.3681152,-72.8849625,14z/data=!4m8!1m2!2m1!1sUnicorr+Packaging+Group!3m4!1s0x89e7d08e25ffec71:0x7f912abc57396dc1!8m2!3d41.3681152!4d-72.8849625",
@@ -12514,16 +11239,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 33,
     "verified": false,
     "description": "Industrial Parts supplier in Parque Industrial San Francisco, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Parque Industrial, Circuito Cerezos Oriente #101, San Francisco IV, 20355 Ags., Mexico",
     "openingHours": "Friday: 8AM-4PM · Monday: 8AM-4PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-4PM · Tuesday: 8AM-4PM · Wednesday: 8AM-4PM",
     "sourceUrl": "https://www.google.com/maps/place/Yokohama+industries+Americas+de+Mexico/@22.0390207,-102.281036,14z/data=!4m8!1m2!2m1!1sYokohama+industries+Americas+de+Mexico!3m4!1s0x8429e49443222457:0xcffd3ba42b5e192b!8m2!3d22.0390207!4d-102.281036",
@@ -12552,16 +11273,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 33,
     "verified": false,
     "description": "Industrial Parts supplier in Pozos, Mexico.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "Parque Industrial Colinas de San Luis, Cto. San Miguelito Ote. 120, Ciudad Satélite, 78423 Pozos, S.L.P., Mexico",
     "openingHours": "Friday: 7:30AM-5:15PM · Monday: 7:30AM-5:15PM · Saturday: Closed · Sunday: Closed · Thursday: 7:30AM-5:15PM · Tuesday: 7:30AM-5:15PM · Wednesday: 7:30AM-5:15PM",
     "sourceUrl": "https://www.google.com/maps/place/BOGE+Rubber+%26+Plastics+Mexico%2C+S.A.+de+C.V./@22.1104789,-100.8023202,14z/data=!4m8!1m2!2m1!1sBOGE+Rubber+%26+Plastics+Mexico%2C+S.A.+de+C.V.!3m4!1s0x842aa57dea8d43eb:0xbf28229ab7634a7b!8m2!3d22.1104789!4d-100.8023202",
@@ -12590,16 +11307,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 27,
     "verified": false,
     "description": "Tubes & Pipes supplier in Rovigo, Italy.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "Via Sant' Antonio, 22, 45100 Rovigo RO, Italy",
     "openingHours": "Friday: 8AM-12PM,1-3PM · Monday: 8AM-12PM,1-3PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-12PM,1-3PM · Tuesday: 8AM-12PM,1-3PM · Wednesday: 8AM-12PM,1-3PM",
     "sourceUrl": "https://www.google.com/maps/place/Tubi+S.p.a/@45.047167099999996,11.788406199999999,14z/data=!4m8!1m2!2m1!1sTubi+S.p.a!3m4!1s0x477ef76127aec3c3:0x36d8ca193ca6c458!8m2!3d45.047167099999996!4d11.788406199999999",
@@ -12627,16 +11340,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 77,
     "verified": false,
     "description": "Steel & Metals supplier in AE, United Arab Emirates.",
-    "products": [
-      "Steel coils",
-      "Structural beams",
-      "Steel plates"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "5 tons",
+    "moq": null,
     "address": "8FP9+X79 - Plot # 10E6 شارع ٧ - Musaffah - MW-5 - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: Open 24 hours · Monday: Open 24 hours · Saturday: Open 24 hours · Sunday: Open 24 hours · Thursday: Open 24 hours · Tuesday: Open 24 hours · Wednesday: Open 24 hours",
     "sourceUrl": "https://www.google.com/maps/place/EMIRATES+STEEL+COMPANY/@24.340455499999997,54.4752024,14z/data=!4m8!1m2!2m1!1sEMIRATES+STEEL+COMPANY!3m4!1s0x3e5e4064ef722135:0xb157fa928f52fe13!8m2!3d24.340455499999997!4d54.4752024",
@@ -12664,16 +11373,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 97,
     "verified": false,
     "description": "Construction supplier in Rome, Italy.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "Via di Carcaricola, 1, 00133 Roma RM, Italy",
     "openingHours": "Friday: 7:30AM-1PM,3-7PM · Monday: 7:30AM-1PM,3-7PM · Saturday: 8:30AM-12PM · Sunday: Closed · Thursday: 7:30AM-1PM,3-7PM · Tuesday: 7:30AM-1PM,3-7PM · Wednesday: 7:30AM-1PM,3-7PM",
     "sourceUrl": "https://www.google.com/maps/place/Forconi/@41.8629544,12.612058,14z/data=!4m8!1m2!2m1!1sForconi!3m4!1s0x132f62a84e82d8ad:0x6bc4086cec76a0bf!8m2!3d41.8629544!4d12.612058",
@@ -12701,16 +11406,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 50,
     "verified": false,
     "description": "Packaging supplier in Zona Industrial, Mexico.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Salvador Sanchez COLIN S / N, Lot 4 and 5 Manzana 3-A, Industrial Park, 50450 Zona Industrial, Méx., Mexico",
     "openingHours": "Friday: 8AM-5PM · Monday: 8AM-5PM · Saturday: Closed · Sunday: Closed · Thursday: 8AM-5PM · Tuesday: 8AM-5PM · Wednesday: 8AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Fine+Packaging+S.A+de+C.V/@19.785545,-99.8945732,14z/data=!4m8!1m2!2m1!1sFine+Packaging+S.A+de+C.V!3m4!1s0x85d258a4450c849f:0x2b94051dcba663ac!8m2!3d19.785545!4d-99.8945732",
@@ -12738,16 +11439,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 62,
     "verified": false,
     "description": "Tubes & Pipes supplier in Columbia, United States.",
-    "products": [
-      "Steel pipes",
-      "Welded tubes",
-      "Pipe fittings"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "2 tons",
+    "moq": null,
     "address": "2061 American Italian Way, Columbia, SC 29209",
     "openingHours": "Friday: 6AM-6PM · Monday: 6AM-6PM · Saturday: 6AM-6PM · Sunday: Closed · Thursday: 6AM-6PM · Tuesday: 6AM-6PM · Wednesday: 6AM-6PM",
     "sourceUrl": "https://www.google.com/maps/place/American+Spiralweld+Pipe+Co/@33.940042999999996,-80.9251894,14z/data=!4m8!1m2!2m1!1sAmerican+Spiralweld+Pipe+Co!3m4!1s0x88f8b1055a665df7:0x72fcd8db88d838c3!8m2!3d33.940042999999996!4d-80.9251894",
@@ -12775,16 +11472,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 35,
     "verified": false,
     "description": "Packaging supplier in AE, United Arab Emirates.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "Plot No 100 Unit Shop no 20 M9 - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates",
     "openingHours": "Friday: 7-11AM,4-8PM · Monday: 7AM-8PM · Saturday: 7AM-8PM · Sunday: 7AM-8PM · Thursday: 7AM-8PM · Tuesday: 7AM-8PM · Wednesday: 7AM-8PM",
     "sourceUrl": "https://www.google.com/maps/place/Aroma+Packing+Materials+Trading/@24.3752429,54.5063077,14z/data=!4m8!1m2!2m1!1sAroma+Packing+Materials+Trading!3m4!1s0x3e5e41adcc10f01b:0x64fcd4df2815c603!8m2!3d24.3752429!4d54.5063077",
@@ -12812,16 +11505,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 53,
     "verified": false,
     "description": "Construction supplier in AE, United Arab Emirates.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "MENA",
       "Asia"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "CGMF+46M - Sheikh Ammar Bin Humaid St - Al Jerf Industrial 1 - Ajman - United Arab Emirates",
     "openingHours": "Friday: 7:30AM-8:30PM · Monday: 7AM-9PM · Saturday: 7AM-9PM · Sunday: 7:30AM-8PM · Thursday: 7AM-9PM · Tuesday: 7AM-9PM · Wednesday: 7AM-9PM",
     "sourceUrl": "https://www.google.com/maps/place/ANCHOR+BUILDING+MATERIALS+TRADING+BRANCH+1/@25.4328371,55.523055899999996,14z/data=!4m8!1m2!2m1!1sANCHOR+BUILDING+MATERIALS+TRADING+BRANCH+1!3m4!1s0x3ef5f959efdb2461:0x8c8454f3c15cf927!8m2!3d25.4328371!4d55.523055899999996",
@@ -12849,16 +11538,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 63,
     "verified": false,
     "description": "Packaging supplier in Nouaceur, Morocco.",
-    "products": [
-      "Corrugated boxes",
-      "Stretch film",
-      "Custom cartons"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North Africa",
       "EU"
     ],
-    "moq": "2,000 units",
+    "moq": null,
     "address": "9FV4+J59 Parc industriel de, Nouaceur 27000, Morocco",
     "openingHours": "Friday: 8:30AM-5:30PM · Monday: 8:30AM-5:30PM · Saturday: Closed · Sunday: Closed · Thursday: 8:30AM-5:30PM · Tuesday: 8:30AM-5:30PM · Wednesday: 8:30AM-5:30PM",
     "sourceUrl": "https://www.google.com/maps/place/CPMO/@33.394039,-7.544503799999999,14z/data=!4m8!1m2!2m1!1sCPMO!3m4!1s0xda630a1eb2dfbf1:0x8e6bfb4dae5dcf4!8m2!3d33.394039!4d-7.544503799999999",
@@ -12886,16 +11571,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 31,
     "verified": false,
     "description": "Construction supplier in New York, United States.",
-    "products": [
-      "Cement",
-      "Aggregates",
-      "Insulation panels"
-    ],
+    "products": [],
     "deliveryRegions": [
       "North America",
       "EU"
     ],
-    "moq": "1 pallet",
+    "moq": null,
     "address": "233 Centre St, New York, NY 10013",
     "openingHours": "Friday: 7:30AM-5PM · Monday: 7:30AM-5PM · Saturday: 7:30AM-5PM · Sunday: Closed · Thursday: 7:30AM-5PM · Tuesday: 7:30AM-5PM · Wednesday: 7:30AM-5PM",
     "sourceUrl": "https://www.google.com/maps/place/Centre+Plumbing+Electric+Hardware+Supply/@40.720131699999996,-73.9985509,14z/data=!4m8!1m2!2m1!1sCentre+Plumbing+Electric+Hardware+Supply!3m4!1s0x89c25989a7ba4145:0xb6071f39f89923c2!8m2!3d40.720131699999996!4d-73.9985509",
@@ -12919,16 +11600,12 @@ export const outscraperSuppliers: Supplier[] =
     "reviewCount": 123,
     "verified": true,
     "description": "Industrial Parts supplier in Modugno, Italy.",
-    "products": [
-      "Bearings",
-      "Hydraulic valves",
-      "Gearboxes"
-    ],
+    "products": [],
     "deliveryRegions": [
       "EU",
       "MENA"
     ],
-    "moq": "10 units",
+    "moq": null,
     "address": "S.P. 231, Km 1,110, 70026 Modugno BA, Italy",
     "openingHours": "Friday: 8:30AM-1:30PM,3-6:30PM · Monday: 8:30AM-1:30PM,3-6:30PM · Saturday: 9AM-1PM · Sunday: Closed · Thursday: 8:30AM-1:30PM,3-6:30PM · Tuesday: 8:30AM-1:30PM,3-6:30PM · Wednesday: 8:30AM-1:30PM,3-6",
     "sourceUrl": "https://www.google.com/maps/place/Tecnica+Industriale+Srl/@41.0915603,16.7629712,14z/data=!4m8!1m2!2m1!1sTecnica+Industriale+Srl!3m4!1s0x1347eea2f226b639:0x6a78592e0078ef1f!8m2!3d41.0915603!4d16.7629712",

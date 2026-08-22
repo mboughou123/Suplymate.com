@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import type { Metadata } from "next";
 import { checkAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { Star } from "lucide-react";
 import ModerationActions from "@/components/admin/ModerationActions";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Reviews · Admin | Suplymate",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/admin/reviews", titleKey: "adminReviewsTitle", descriptionKey: "adminDescription", robots: { index: false, follow: false } });
+}
 
 export const dynamic = "force-dynamic";
 

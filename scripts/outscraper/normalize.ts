@@ -2,6 +2,11 @@
 // applies the quality gate, and computes the Suplymate score.
 
 import { scoreSupplier, rejectionReason } from "../../src/lib/supplier-ranking";
+import { isKnownDeadImageUrl } from "../../src/lib/image-fallback";
+import {
+  extractSupplierCity,
+  generateSupplierDescription,
+} from "../../src/lib/supplier-normalize";
 import { CATEGORY_QUERIES } from "./queries";
 
 export type SupplierRecord = {
@@ -23,7 +28,7 @@ export type SupplierRecord = {
   description: string | null;
   products: string[];
   deliveryRegions: string[];
-  moq: string;
+  moq: string | null;
   verified: boolean;
   address: string | null;
   openingHours: string | null;
@@ -131,11 +136,15 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
   if (!name) return null;
 
   const country = normalizeCountry(str(place.country), str(place.country_code));
-  const city = str(place.city) ?? str(place.borough);
+  const fullAddress = str(place.full_address) ?? str(place.address);
+  const city = extractSupplierCity({
+    city: str(place.city) ?? str(place.borough),
+    country,
+    address: fullAddress,
+  });
   const website = str(place.site) ?? str(place.website);
   const rating = num(place.rating);
   const reviews = num(place.reviews) ?? num(place.reviews_count);
-  const fullAddress = str(place.full_address) ?? str(place.address);
   const location = [city, country].filter(Boolean).join(", ") || (fullAddress ?? "—");
 
   // Outscraper Google Maps places expose several image fields:
@@ -148,7 +157,9 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
   const photo = str(place.photo);
   const streetView = str(place.street_view);
   const logo = str(place.logo);
-  const primaryImage = photo ?? streetView;
+  const primaryImage = [photo, streetView].find(
+    (url) => url && !isKnownDeadImageUrl(url)
+  ) ?? null;
 
   const extraPhotos: string[] = [];
   for (const arrField of [place.photos_sample, place.photos]) {
@@ -161,7 +172,7 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
               ? str((item as Record<string, unknown>).photo_url) ??
                 str((item as Record<string, unknown>).photo)
               : null;
-        if (url) extraPhotos.push(url);
+        if (url && !isKnownDeadImageUrl(url)) extraPhotos.push(url);
       }
     }
   }
@@ -181,7 +192,7 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
     phone: str(place.phone) ?? str(place.phone_1),
     email: str(place.email_1) ?? str(place.email),
     imageUrl: primaryImage,
-    logoUrl: logo,
+    logoUrl: logo && !isKnownDeadImageUrl(logo) ? logo : null,
     images,
     googleRating: rating,
     googleReviews: reviews,
@@ -189,10 +200,19 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
       str(place.description) ??
       str(place.about) ??
       (spec ? `${category} supplier in ${location}.` : null),
-    products: spec?.defaultProducts ?? [],
+    // A Google Maps listing does not tell us what a company sells or what it
+    // will accept as a minimum order. Both fields used to be filled from a
+    // per-category template, which put an identical catalogue and MOQ on every
+    // supplier in a category. Left empty until a supplier tells us.
+    products: [],
     deliveryRegions: regionFor(country),
-    moq: spec?.moq ?? "Contact for MOQ",
-    verified: Boolean(place.verified) || (rating !== null && rating >= 4.5 && (reviews ?? 0) >= 100),
+    moq: null,
+    // Never auto-verify. This used to set `verified` when a place had a Google
+    // rating of 4.5+ with 100+ reviews, which put a "Verified supplier" badge on
+    // 302 companies that nobody at Suplymate had ever contacted. A good Google
+    // rating is a rating, not a verification. `verified` is now set only by a
+    // human reviewer through the admin moderation flow.
+    verified: false,
     address: fullAddress,
     openingHours: openingHours(place.working_hours ?? place.working_hours_old_format),
     sourceUrl:
@@ -201,7 +221,12 @@ function toRecord(place: RawPlace, category: string): SupplierRecord | null {
       (str(place.place_id)
         ? `https://www.google.com/maps/place/?q=place_id:${str(place.place_id)}`
         : null),
-    reliabilityScore: rating ? Math.round((rating / 5) * 100) : 70,
+    // Google rating rescaled to 0–100. It was previously surfaced to buyers as a
+    // "Suplymate reliability score", which claimed to measure something we have
+    // not observed; the card that displayed it is gone. Kept only as a sort
+    // tiebreaker. The old `: 70` fallback invented a passing grade for
+    // unrated places, so unrated now scores 0 rather than a flattering guess.
+    reliabilityScore: rating ? Math.round((rating / 5) * 100) : 0,
     score: 0,
   };
 
@@ -248,6 +273,12 @@ export function normalizeCache(entries: CacheEntry[]): {
     r.imageUrl || (r.images && r.images.length > 0) ? 1 : 0;
   const records = Array.from(seen.values()).sort(
     (a, b) => hasImage(b) - hasImage(a) || b.score - a.score
-  );
+  ).map((record, index) => ({
+    ...record,
+    description:
+      record.description && !/^.+ supplier in .+\.$/i.test(record.description)
+        ? record.description
+        : generateSupplierDescription(record, index),
+  }));
   return { records, stats: { found, rejected, deduped } };
 }

@@ -1,18 +1,22 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "help" });
-  return {
+  const meta = await getTranslations({ locale, namespace: "metadata" });
+  return completeLocalizedMetadata({
+    locale,
+    pathname: "/help",
     title: t("title"),
     description: t("subtitle"),
-  };
+    siteName: meta("siteName"),
+  });
 }
 
 const SECTIONS = [
@@ -35,7 +39,7 @@ export default async function HelpPage() {
         {SECTIONS.map((section) => (
           <section
             key={section.titleKey}
-            className="rounded-2xl border border-slate-200 bg-slate-50 p-6"
+            className="rounded-2xl border border-line bg-base p-6"
           >
             <h2 className="font-display text-xl font-semibold text-ink">
               {t(section.titleKey)}

@@ -9,7 +9,7 @@ export type SupplierFilterState = {
   country: string;
   minRating: number;
   minReviews: number;
-  verifiedOnly: boolean;
+  contactableOnly: boolean;
 };
 
 type Props = {
@@ -56,10 +56,10 @@ export default function SupplierFilters({
     (state.country !== "All" ? 1 : 0) +
     (state.minRating > 0 ? 1 : 0) +
     (state.minReviews > 0 ? 1 : 0) +
-    (state.verifiedOnly ? 1 : 0);
+    (state.contactableOnly ? 1 : 0);
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+    <div className="rounded-2xl border border-line bg-surface p-5 shadow-card">
       {/* Search */}
       <div className="relative">
         <Search
@@ -71,7 +71,7 @@ export default function SupplierFilters({
           placeholder={t("searchPlaceholder")}
           value={state.search}
           onChange={(e) => onChange({ search: e.target.value })}
-          className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-3 text-sm text-ink placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+          className="w-full rounded-xl border border-line bg-base py-3 pl-10 pr-3 text-sm text-ink placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
         />
       </div>
 
@@ -85,7 +85,7 @@ export default function SupplierFilters({
             className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
               state.category === cat
                 ? "bg-navy text-white shadow-sm"
-                : "border border-slate-200 bg-white text-ink-muted hover:border-navy/30 hover:text-ink"
+                : "border border-line bg-surface text-ink-muted hover:border-navy/30 hover:text-ink"
             }`}
           >
             {cat === "All" ? tCommon("all") : cat}
@@ -100,7 +100,7 @@ export default function SupplierFilters({
           <select
             value={state.country}
             onChange={(e) => onChange({ country: e.target.value })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             <option value="All">{t("allCountries")}</option>
             {countries.map((c) => (
@@ -116,7 +116,7 @@ export default function SupplierFilters({
           <select
             value={state.minRating}
             onChange={(e) => onChange({ minRating: Number(e.target.value) })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             {ratingOptions.map((o) => (
               <option key={o.value} value={o.value}>
@@ -131,7 +131,7 @@ export default function SupplierFilters({
           <select
             value={state.minReviews}
             onChange={(e) => onChange({ minReviews: Number(e.target.value) })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             {reviewOptions.map((o) => (
               <option key={o.value} value={o.value}>
@@ -142,12 +142,12 @@ export default function SupplierFilters({
         </label>
 
         <label className="flex items-end pb-0.5">
-          <span className="flex w-full cursor-pointer items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink">
-            <span className="font-medium">{t("verifiedOnly")}</span>
+          <span className="flex w-full cursor-pointer items-center justify-between rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink">
+            <span className="font-medium">{t("contactableOnly")}</span>
             <input
               type="checkbox"
-              checked={state.verifiedOnly}
-              onChange={(e) => onChange({ verifiedOnly: e.target.checked })}
+              checked={state.contactableOnly}
+              onChange={(e) => onChange({ contactableOnly: e.target.checked })}
               className="h-4 w-4 accent-emerald-600"
             />
           </span>
@@ -155,7 +155,7 @@ export default function SupplierFilters({
       </div>
 
       {/* Footer row */}
-      <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
+      <div className="mt-4 flex items-center justify-between border-t border-line pt-3">
         <p className="flex items-center gap-1.5 text-xs text-ink-dim">
           <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden />
           {t("suppliersFound", { count: resultCount })}

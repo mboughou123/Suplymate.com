@@ -1,115 +1,75 @@
 import { getTranslations } from "next-intl/server";
-import { Star } from "lucide-react";
+import { Database, MapPin, ShieldCheck } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import Reveal from "@/components/Reveal";
-import CountUp from "@/components/CountUp";
-
-const logos = [
-  "CasaSteel",
-  "Atlas Metals",
-  "BuildPro",
-  "VoltLine",
-  "PackSmart",
-  "AgroFresh",
-];
+import { getSiteStats } from "@/lib/site-stats";
 
 export default async function SocialProof() {
   const t = await getTranslations("suppliers");
-  const common = await getTranslations("common");
-
-  const stats = [
-    { node: <CountUp value={12} suffix="k+" />, label: t("statVerifiedSuppliers") },
-    { node: <CountUp value={2.4} prefix="$" suffix="B" decimals={1} />, label: t("statSourcingVolume") },
-    { node: <CountUp value={48} />, label: t("statCountriesCovered") },
-    { node: <CountUp value={4.8} suffix="/5" decimals={1} />, label: t("statBuyerRating") },
-  ];
-
-  const testimonials = [
-    {
-      quote: t("testimonial1Quote"),
-      name: t("testimonial1Name"),
-      role: t("testimonial1Role"),
-    },
-    {
-      quote: t("testimonial2Quote"),
-      name: t("testimonial2Name"),
-      role: t("testimonial2Role"),
-    },
-    {
-      quote: t("testimonial3Quote"),
-      name: t("testimonial3Name"),
-      role: t("testimonial3Role"),
-    },
-  ];
+  const stats = await getSiteStats();
 
   return (
-    <section className="border-b border-slate-100 py-20 sm:py-24">
+    <section className="border-b border-line py-20 sm:py-24">
       <div className="container-page">
-        <p className="text-center eyebrow text-ink-dim">
-          {t("socialProofTitle")}
-        </p>
-
-        <div className="mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-          <div className="flex w-max animate-marquee items-center gap-14 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center">
-            {[...logos, ...logos].map((logo, i) => (
-              <span
-                key={`${logo}-${i}`}
-                aria-hidden={i >= logos.length}
-                className="shrink-0 whitespace-nowrap font-display text-heading-sm font-semibold tracking-tight text-ink-dim"
-              >
-                {logo}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <Reveal className="mt-14">
-          <dl className="grid grid-cols-2 divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card lg:grid-cols-4 lg:divide-x">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col-reverse px-6 py-8 text-center">
-                <dt className="mt-1.5 text-body-sm text-ink-muted">{stat.label}</dt>
-                <dd className="font-display text-display font-bold text-navy">
-                  {stat.node}
-                </dd>
-              </div>
-            ))}
-          </dl>
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow text-cyan">{t("coverageEyebrow")}</p>
+          <h2 className="mt-4 font-display text-display text-ink">
+            {t("coverageTitle")}
+          </h2>
+          <p className="mt-4 text-body-lg text-ink-muted">
+            {t("coverageSummary", {
+              suppliers: stats.supplierCount,
+              countries: stats.countryCount,
+              categories: stats.categoryCount,
+            })}
+          </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((item, i) => (
-            <Reveal
-              as="article"
-              key={item.name}
-              delay={i * 90}
-              className="glass-card glass-hover flex flex-col p-7"
-            >
-              <div className="flex gap-1 text-mustard-light" role="img" aria-label={common("fiveStars")}>
-                {Array.from({ length: 5 }).map((_, s) => (
-                  <Star key={s} className="h-4 w-4 fill-current" aria-hidden />
-                ))}
+        <Reveal className="mt-10">
+          <ul className="flex flex-wrap justify-center gap-3">
+            {stats.countryCoverage.map(({ country, supplierCount }) => (
+              <li
+                key={country ?? "unknown"}
+                className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-body-sm text-ink shadow-sm"
+              >
+                <MapPin className="h-4 w-4 text-cyan" aria-hidden />
+                <span>{country ?? t("countryNotProvided")}</span>
+                <span className="font-semibold tabular-nums text-ink">
+                  {supplierCount.toLocaleString()}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <Reveal className="mt-10 rounded-2xl border border-line bg-base p-6 sm:p-8">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex items-start gap-3">
+              <Database className="mt-0.5 h-5 w-5 shrink-0 text-cyan" aria-hidden />
+              <div>
+                <h3 className="font-semibold text-ink">{t("coverageSourcesTitle")}</h3>
+                <p className="mt-1 text-body-sm text-ink-muted">
+                  {t("coverageSourcesText")}
+                </p>
               </div>
-              <blockquote className="mt-4 flex-1 text-body-sm text-ink-muted">
-                &ldquo;{item.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-5">
-                <span
-                  aria-hidden
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy text-caption font-bold text-white"
-                >
-                  {item.name
-                    .split(" ")
-                    .map((w) => w[0])
-                    .slice(0, 2)
-                    .join("")}
-                </span>
-                <span>
-                  <p className="text-body-sm font-semibold text-ink">{item.name}</p>
-                  <p className="text-caption text-ink-dim">{item.role}</p>
-                </span>
-              </figcaption>
-            </Reveal>
-          ))}
-        </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-cyan" aria-hidden />
+              <div>
+                <h3 className="font-semibold text-ink">{t("coverageStatusTitle")}</h3>
+                <p className="mt-1 text-body-sm text-ink-muted">
+                  {t("coverageStatusText")}{" "}
+                  <Link
+                    href="/supplier-verification-policy"
+                    className="font-semibold text-cyan underline-offset-4 hover:underline"
+                  >
+                    {t("coveragePolicyLink")}
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

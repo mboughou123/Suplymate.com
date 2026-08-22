@@ -68,7 +68,7 @@ export function AnimatedBar({
     rose: "from-rose-500 to-rose-400",
   };
   return (
-    <div className={`w-full overflow-hidden rounded-full bg-slate-100 ${height}`}>
+    <div className={`w-full overflow-hidden rounded-full bg-base ${height}`}>
       <motion.div
         className={`h-full rounded-full bg-gradient-to-r ${colors[color]}`}
         initial={{ width: 0 }}

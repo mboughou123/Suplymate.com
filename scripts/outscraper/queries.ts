@@ -12,11 +12,15 @@ export type SupplierCategory =
   | "Construction"
   | "Industrial Parts";
 
+// `moq` and `defaultProducts` used to live here and were written onto every
+// imported supplier as if they were facts about that company. They were not:
+// each steel supplier got "5 tons" and "Steel coils, Structural beams, Steel
+// plates" regardless of what it actually sells. Across 340 suppliers there were
+// only six distinct product lists. A search query cannot tell us a company's
+// catalogue or its minimum order, so neither field is derived here any more.
 export type CategoryQuery = {
   category: SupplierCategory;
   industry: string;
-  moq: string;
-  defaultProducts: string[];
   // {country} is substituted per target country.
   templates: string[];
 };
@@ -38,8 +42,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Steel & Metals",
     industry: "Metal",
-    moq: "5 tons",
-    defaultProducts: ["Steel coils", "Structural beams", "Steel plates"],
     templates: [
       "verified steel suppliers {country}",
       "industrial metal suppliers {country}",
@@ -49,8 +51,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Cables & Electrical",
     industry: "Electrotechnical & Cabling",
-    moq: "500 m",
-    defaultProducts: ["Power cables", "Control panels", "Copper wiring"],
     templates: [
       "electrical cable manufacturers {country}",
       "industrial electrical suppliers {country}",
@@ -59,8 +59,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Tubes & Pipes",
     industry: "Metal",
-    moq: "2 tons",
-    defaultProducts: ["Steel pipes", "Welded tubes", "Pipe fittings"],
     templates: [
       "tubes and pipes manufacturers {country}",
       "industrial pipe suppliers {country}",
@@ -69,8 +67,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Packaging",
     industry: "Plastics & Packaging",
-    moq: "2,000 units",
-    defaultProducts: ["Corrugated boxes", "Stretch film", "Custom cartons"],
     templates: [
       "packaging suppliers {country}",
       "industrial packaging manufacturers {country}",
@@ -79,8 +75,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Construction",
     industry: "Construction & BTP",
-    moq: "1 pallet",
-    defaultProducts: ["Cement", "Aggregates", "Insulation panels"],
     templates: [
       "construction material suppliers {country}",
       "wholesale construction suppliers {country}",
@@ -89,8 +83,6 @@ export const CATEGORY_QUERIES: CategoryQuery[] = [
   {
     category: "Industrial Parts",
     industry: "Industrial Equipment",
-    moq: "10 units",
-    defaultProducts: ["Bearings", "Hydraulic valves", "Gearboxes"],
     templates: [
       "industrial parts suppliers {country}",
       "B2B industrial suppliers {country}",

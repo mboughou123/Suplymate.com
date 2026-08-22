@@ -88,15 +88,15 @@ export function isMarketplaceVisible(status: string | null | undefined): boolean
   return s !== "REJECTED" && s !== "SUSPENDED" && s !== "UNLISTED";
 }
 
-// Only VERIFIED earns the trust badge. The legacy boolean `verified` is honored
-// for backward-compatibility with already-approved imports.
+// Only a manually VERIFIED row with an audit actor earns the trust badge.
+// Legacy booleans are intentionally ignored because imported public-source rows
+// historically set them without a human verification event.
 export function isVerified(opts: {
   marketplaceStatus?: string | null;
-  verified?: boolean | null;
-  verificationStatus?: string | null;
+  verifiedBy?: string | null;
 }): boolean {
-  if (normalizeMarketplaceStatus(opts.marketplaceStatus) === "VERIFIED") return true;
-  if (opts.verified === true) return true;
-  if ((opts.verificationStatus ?? "").toLowerCase() === "verified") return true;
-  return false;
+  return (
+    normalizeMarketplaceStatus(opts.marketplaceStatus) === "VERIFIED" &&
+    Boolean(opts.verifiedBy?.trim())
+  );
 }

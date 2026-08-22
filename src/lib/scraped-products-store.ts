@@ -255,11 +255,18 @@ export function scrapedToProduct(sp: ScrapedProduct): Product {
     name: sp.name,
     category: sp.category,
     // priceMin/priceMax keep legacy catalogue filters working; the rich card
-    // and detail page recompute commissioned tiers from basePrice.
+    // and detail page recompute the commissioned price from basePrice.
+    //
+    // priceMax used to be `base * 1.35`, an invented 35% ceiling that fed the
+    // catalogue's price filters and made a single scraped price look like a
+    // negotiated range. We hold one price, so both bounds are that price.
     priceMin: base,
-    priceMax: hasPublicPrice ? Math.round(base * 1.35 * 100) / 100 : 0,
+    priceMax: hasPublicPrice ? base : 0,
     currency: sp.currency,
-    bestDeliveryDays: 14,
+    // We do not hold a lead time for scraped rows. This was hardcoded to 14 for
+    // every product, so it measured nothing; 0 means "unknown" and no surface
+    // renders it (the detail page reads product.shippingTime instead).
+    bestDeliveryDays: 0,
     supplierCount: 1,
     unit: sp.priceUnit ?? "unit",
     supplierId: sp.supplierId,

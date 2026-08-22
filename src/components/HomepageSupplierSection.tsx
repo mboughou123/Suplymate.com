@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, Database } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { toDisplaySupplier } from "@/lib/supplier-display";
@@ -18,9 +18,6 @@ function hasRealImage(s: Supplier): boolean {
 
 function toCardProps(s: Supplier): HomepageSupplierCardProps {
   const d = toDisplaySupplier(s);
-  const description =
-    s.description?.trim() ||
-    `${d.name} is a verified ${d.categoryLabel.toLowerCase()} supplier based in ${d.city}, ${d.country}, vetted for reliability, compliance, and delivery performance on Suplymate.`;
   return {
     id: d.id,
     name: d.name,
@@ -31,7 +28,7 @@ function toCardProps(s: Supplier): HomepageSupplierCardProps {
     rating: d.rating,
     reviewCount: d.reviewCount,
     verified: d.verified,
-    description,
+    description: s.description?.trim(),
     coverImage: d.imageUrl,
     coverFallback: getSupplierFallbackImage(s.category ?? s.industry, d.name),
     logoUrl: d.logoUrl,
@@ -45,9 +42,8 @@ export default async function HomepageSupplierSection() {
   const t = await getTranslations("home");
   const all = await getSuppliersFromDb();
 
-  const verified = all.filter((s) => toDisplaySupplier(s).verified);
-  const withImages = verified.filter(hasRealImage);
-  const pool = withImages.length >= MAX_CARDS ? withImages : verified;
+  const withImages = all.filter(hasRealImage);
+  const pool = withImages.length >= MAX_CARDS ? withImages : all;
   const picks = pool.slice(0, MAX_CARDS).map(toCardProps);
 
   if (picks.length === 0) return null;
@@ -57,14 +53,14 @@ export default async function HomepageSupplierSection() {
       <div className="container-page">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan-soft px-3 py-1 eyebrow text-cyan">
-            <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
-            {t("verifiedNetwork")}
+            <Database className="h-3.5 w-3.5" aria-hidden />
+            {t("listedDirectory")}
           </span>
           <h2 className="mt-4 font-display text-display text-ink">
-            {t("verifiedSuppliersTitle")}
+            {t("listedSuppliersTitle")}
           </h2>
           <p className="mt-4 text-body-lg text-ink-muted">
-            {t("verifiedSuppliersSubtitle")}
+            {t("listedSuppliersSubtitle")}
           </p>
         </Reveal>
 

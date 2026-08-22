@@ -14,6 +14,7 @@ import type { Config } from "tailwindcss";
  * line-height, tracking, and weight so headings stay consistent everywhere.
  */
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,19 +23,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Clean light corporate theme
-        deep: "#FFFFFF",
-        base: "#F8FAFC",
+        page: "var(--color-page)",
+        deep: "var(--color-page)",
+        base: "var(--color-base)",
+        line: "var(--color-line)",
         ink: {
-          DEFAULT: "#0F172A",
-          muted: "#475569",
-          dim: "#64748B",
+          DEFAULT: "var(--color-ink)",
+          muted: "var(--color-ink-muted)",
+          dim: "var(--color-ink-dim)",
         },
         // Accent — deep azure (AA contrast on white at any size)
         cyan: {
           DEFAULT: "#0369A1",
           glow: "#38BDF8",
-          soft: "#F0F7FC",
+          soft: "var(--color-cyan-soft)",
         },
         // Secondary accent — trust teal
         teal: {
@@ -86,8 +88,8 @@ const config: Config = {
           muted: "#6E7C97",
         },
         surface: {
-          DEFAULT: "#FFFFFF",
-          card: "#FFFFFF",
+          DEFAULT: "var(--color-surface)",
+          card: "var(--color-surface)",
         },
       },
       fontFamily: {
@@ -133,9 +135,8 @@ const config: Config = {
       },
       boxShadow: {
         // Layered, low-alpha shadows (Stripe-like): calm at rest, deeper on hover.
-        card: "0 1px 2px rgba(15,23,42,0.04), 0 2px 8px rgba(15,23,42,0.04)",
-        cardHover:
-          "0 2px 4px rgba(15,23,42,0.04), 0 16px 40px -8px rgba(15,23,42,0.14)",
+        card: "var(--shadow-card)",
+        cardHover: "var(--shadow-card-hover)",
         focus: "0 0 0 3px rgba(3,105,161,0.28)",
         glow: "0 4px 16px rgba(3,105,161,0.22)",
         gold: "0 4px 24px rgba(3,105,161,0.25)",

@@ -102,7 +102,10 @@ model Supplier {
   description      String?
   products         String
   deliveryRegions  String
-  moq              String
+  // Null when the supplier has not told us a minimum order. This was
+  // non-nullable and filled from a per-category template at import, so every
+  // steel supplier claimed a 5-ton MOQ it had never quoted.
+  moq              String?
   verified         Boolean  @default(false)
   address          String?
   openingHours     String?
@@ -744,4 +747,55 @@ model Watchlist {
 
   @@unique([userId, materialId])
   @@index([userId])
+}
+
+// ----- Inbound demand capture (no account required) -----
+
+// Email capture for features that are not live yet. Deliberately minimal: we
+// only store what someone volunteers, and `source` records which surface the
+// signup came from so interest can be attributed per page.
+model WaitlistSignup {
+  id        String   @id @default(cuid())
+  email     String
+  // Originating surface, e.g. "for-suppliers" | "pricing" | "home".
+  source    String   @default("unknown")
+  // Optional context the visitor chose to share.
+  company   String?
+  country   String?
+  note      String?
+  // PENDING | CONTACTED | CONVERTED | DECLINED
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  // One signup per email per surface; re-submitting updates rather than
+  // creating duplicates.
+  @@unique([email, source])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// Sales/enquiry messages from the contact and supplier-onboarding surfaces.
+// Separate from Rfq: an Rfq is a structured request for pricing against a
+// product, whereas this is unstructured inbound to a human.
+model SalesInquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  phone     String?
+  // SUPPLIER_ONBOARDING | BUYER_ENQUIRY | PARTNERSHIP | SUPPORT | OTHER
+  topic     String   @default("OTHER")
+  message   String
+  source    String   @default("unknown")
+  // NEW | IN_PROGRESS | CLOSED | SPAM
+  status    String   @default("NEW")
+  handledBy String?
+  handledAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@index([status])
+  @@index([topic])
+  @@index([createdAt])
 }

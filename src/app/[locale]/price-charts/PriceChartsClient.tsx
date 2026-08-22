@@ -12,8 +12,8 @@ import { Star } from "lucide-react";
 const PriceChart = dynamic(() => import("@/components/PriceChart"), {
   loading: () => (
     <div className="glass-card h-[360px] animate-pulse p-6">
-      <div className="h-6 w-40 rounded bg-slate-100" />
-      <div className="mt-6 h-[260px] rounded-xl bg-slate-50" />
+      <div className="h-6 w-40 rounded bg-base" />
+      <div className="mt-6 h-[260px] rounded-xl bg-base" />
     </div>
   ),
 });
@@ -68,20 +68,17 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
           placeholder={t("searchPlaceholder")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm lg:hidden"
+          className="w-full rounded-xl border border-line bg-base px-4 py-3 text-sm lg:hidden"
         />
         {selected && (
           <>
             <PriceChart material={selected} />
             {signalInfo && (
-              <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm">
+              <div className="rounded-xl border border-line bg-surface p-4 text-sm">
                 <p className="font-semibold text-ink">{t("signal", { label: signalInfo.label })}</p>
                 <p className="mt-1 text-xs text-ink-muted">{signalInfo.reason}</p>
                 <p className="mt-2 text-[11px] text-ink-dim">
-                  {t("sourceUpdated", {
-                    source: signalInfo.source,
-                    date: signalInfo.lastUpdated,
-                  })}
+                  {t("sourceLabel", { source: signalInfo.source })}
                 </p>
               </div>
             )}
@@ -90,7 +87,7 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
       </div>
 
       <aside className="space-y-6">
-        <div className="hidden lg:block rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-card max-h-[480px] overflow-y-auto">
+        <div className="hidden lg:block rounded-2xl border border-line bg-base p-4 shadow-card max-h-[480px] overflow-y-auto">
           <h2 className="text-sm font-semibold text-ink mb-3">{t("materials")}</h2>
           <div className="space-y-2">
             {filtered.map((m) => (

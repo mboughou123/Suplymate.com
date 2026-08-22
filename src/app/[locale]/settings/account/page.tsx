@@ -1,6 +1,12 @@
 import { localeRedirect } from "@/i18n/redirect";
 import { getCurrentAccount } from "@/lib/account";
 import AccountForm from "@/components/settings/AccountForm";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/settings/account", titleKey: "settingsAccountTitle", descriptionKey: "settingsDescription", robots: { index: false, follow: false } });
+}
 
 export default async function AccountPage() {
   const { authenticated, user } = await getCurrentAccount();

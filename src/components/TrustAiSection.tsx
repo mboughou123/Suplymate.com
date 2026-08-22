@@ -12,7 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import CountUp from "@/components/CountUp";
+import { getSiteStats } from "@/lib/site-stats";
 
 type Capability = {
   icon: LucideIcon;
@@ -43,12 +43,12 @@ const capabilities: Capability[] = [
 
 export default async function TrustAiSection() {
   const t = await getTranslations("aiAssistant");
+  const siteStats = await getSiteStats();
 
   const stats = [
-    { node: <CountUp value={500} suffix="+" />, label: t("statVerifiedSuppliers") },
-    { node: <CountUp value={20} suffix="+" />, label: t("statIndustries") },
-    { node: <span>AI</span>, label: t("statAiMatching") },
-    { node: <span>24/7</span>, label: t("statSupport") },
+    { value: siteStats.supplierCount, label: t("statListedSuppliers") },
+    { value: siteStats.countryCount, label: t("statCountries") },
+    { value: siteStats.categoryCount, label: t("statCategories") },
   ];
 
   return (
@@ -81,7 +81,7 @@ export default async function TrustAiSection() {
           </p>
         </AnimatedSection>
 
-        <div className="mt-14 grid grid-cols-2 divide-white/10 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm sm:grid-cols-4 sm:divide-x">
+        <div className="mt-14 grid divide-white/10 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm sm:grid-cols-3 sm:divide-x">
           {stats.map((stat, i) => (
             <AnimatedSection
               key={stat.label}
@@ -90,7 +90,7 @@ export default async function TrustAiSection() {
               className="px-6 py-7 text-center"
             >
               <p className="font-display text-heading-lg font-bold tabular-nums text-white sm:text-display">
-                {stat.node}
+                {stat.value.toLocaleString()}
               </p>
               <p className="mt-1 text-body-sm text-white/60">{stat.label}</p>
             </AnimatedSection>

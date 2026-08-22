@@ -1,9 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useSession, signOut } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   Factory,
   Package,
@@ -18,6 +19,8 @@ import {
 } from "lucide-react";
 import CartButton from "@/components/cart/CartButton";
 import LanguageSelector from "@/components/LanguageSelector";
+import ThemeToggle from "@/components/ThemeToggle";
+import { isRtlLocale } from "@/i18n/routing";
 
 type NavItem = {
   href: string;
@@ -79,13 +82,19 @@ const directLinks = [{ href: "/pricing", labelKey: "pricing" as const }];
 
 export default function Navbar() {
   const t = useTranslations("navigation");
+  const locale = useLocale();
   const pathname = usePathname();
   const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileCat, setMobileCat] = useState<string | null>(null);
   const [unread, setUnread] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const navRef = useRef<HTMLElement>(null);
+  const triggerRefs = useRef(new Map<string, HTMLButtonElement>());
+  const itemRefs = useRef(new Map<string, HTMLAnchorElement[]>());
+  const isRtl = isRtlLocale(locale);
 
   useEffect(() => {
     if (status !== "authenticated") {
@@ -118,14 +127,72 @@ export default function Navbar() {
         setOpenMenu(null);
       }
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenMenu(null);
     document.addEventListener("mousedown", onClick);
-    document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("mousedown", onClick);
-      document.removeEventListener("keydown", onKey);
     };
   }, []);
+
+  useEffect(() => {
+    const updateScrolled = () => setScrolled(window.scrollY > 12);
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrolled);
+  }, []);
+
+  const focusItem = (categoryKey: string, index: number) => {
+    requestAnimationFrame(() => itemRefs.current.get(categoryKey)?.[index]?.focus());
+  };
+
+  const openAndFocus = (categoryKey: string, index: number) => {
+    setOpenMenu(categoryKey);
+    focusItem(categoryKey, index);
+  };
+
+  const focusAdjacentTrigger = (categoryKey: string, direction: -1 | 1) => {
+    const current = categories.findIndex((category) => category.key === categoryKey);
+    const next = (current + direction + categories.length) % categories.length;
+    triggerRefs.current.get(categories[next].key)?.focus();
+  };
+
+  const handleTriggerKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    category: NavCategory,
+  ) => {
+    if (event.key === "Enter" || event.key === " " || event.key === "ArrowDown") {
+      event.preventDefault();
+      openAndFocus(category.key, 0);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      openAndFocus(category.key, category.items.length - 1);
+    } else if (event.key === "Escape") {
+      setOpenMenu(null);
+    } else if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+      event.preventDefault();
+      const visualDirection = event.key === "ArrowRight" ? 1 : -1;
+      focusAdjacentTrigger(category.key, (isRtl ? -visualDirection : visualDirection) as -1 | 1);
+    }
+  };
+
+  const handleItemKeyDown = (
+    event: React.KeyboardEvent<HTMLAnchorElement>,
+    category: NavCategory,
+    itemIndex: number,
+  ) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setOpenMenu(null);
+      triggerRefs.current.get(category.key)?.focus();
+    } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      const next = (itemIndex + direction + category.items.length) % category.items.length;
+      focusItem(category.key, next);
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      focusItem(category.key, event.key === "Home" ? 0 : category.items.length - 1);
+    }
+  };
 
   const authPaths = ["/login", "/signup", "/forgot-password"];
   if (authPaths.includes(pathname)) return null;
@@ -134,16 +201,23 @@ export default function Navbar() {
     cat.items.some((i) => pathname === i.href);
 
   return (
-    <header
+    <motion.header
       ref={navRef}
-      className="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-r from-navy-dark to-navy text-white shadow-sm"
+      initial={false}
+      animate={{
+        backgroundColor: scrolled ? "rgba(9, 30, 66, 0.97)" : "rgba(9, 30, 66, 0.92)",
+        borderColor: scrolled ? "rgba(255, 255, 255, 0.16)" : "rgba(255, 255, 255, 0.08)",
+        boxShadow: scrolled ? "0 6px 18px rgba(9, 30, 66, 0.12)" : "0 1px 2px rgba(9, 30, 66, 0.06)",
+      }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
+      className="sticky top-0 z-50 border-b text-white backdrop-blur-md"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-xl font-bold">
           <span>
             <span className="text-white">{t("brandSuply")}</span>
             <span className="gradient-text-light">{t("brandMate")}</span>
-            <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
+            <span className="ms-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
           </span>
           <span
             className="rounded-md border border-cyan-glow/35 bg-cyan/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-glow"
@@ -158,18 +232,20 @@ export default function Navbar() {
             const active = isCategoryActive(cat);
             const isOpen = openMenu === cat.key;
             return (
-              <div
-                key={cat.key}
-                className="relative"
-                onMouseEnter={() => setOpenMenu(cat.key)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
+              <div key={cat.key} className="relative">
                 <button
+                  id={`${cat.key}-trigger`}
+                  ref={(node) => {
+                    if (node) triggerRefs.current.set(cat.key, node);
+                    else triggerRefs.current.delete(cat.key);
+                  }}
                   type="button"
                   onClick={() => setOpenMenu(isOpen ? null : cat.key)}
+                  onKeyDown={(event) => handleTriggerKeyDown(event, cat)}
                   aria-expanded={isOpen}
-                  aria-haspopup="true"
-                  className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                  aria-haspopup="menu"
+                  aria-controls={`${cat.key}-menu`}
+                  className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow ${
                     active || isOpen
                       ? "text-cyan-glow"
                       : "text-white/80 hover:text-white"
@@ -183,15 +259,29 @@ export default function Navbar() {
                 </button>
 
                 {isOpen && (
-                  <div className="absolute left-0 top-full w-80 pt-2">
-                    <div className="animate-fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-cardHover">
+                  <div className="absolute start-0 top-full w-80 pt-2">
+                    <div
+                      id={`${cat.key}-menu`}
+                      role="menu"
+                      aria-labelledby={`${cat.key}-trigger`}
+                      className="animate-fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-cardHover"
+                    >
                       {cat.items.map((item) => {
                         const itemActive = pathname === item.href;
+                        const itemIndex = cat.items.indexOf(item);
                         return (
                           <Link
+                            ref={(node) => {
+                              const refs = itemRefs.current.get(cat.key) ?? [];
+                              if (node) refs[itemIndex] = node;
+                              else refs.splice(itemIndex, 1);
+                              itemRefs.current.set(cat.key, refs);
+                            }}
                             key={item.href}
                             href={item.href}
-                            className={`flex items-start gap-3 rounded-xl p-3 transition-colors ${
+                            role="menuitem"
+                            onKeyDown={(event) => handleItemKeyDown(event, cat, itemIndex)}
+                            className={`flex items-start gap-3 rounded-xl p-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan ${
                               itemActive ? "bg-cyan/5" : "hover:bg-slate-50"
                             }`}
                           >
@@ -236,6 +326,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <LanguageSelector />
           </div>
+          <ThemeToggle />
           <CartButton />
           {status === "loading" ? (
             <span className="hidden h-9 w-20 sm:block" />
@@ -248,7 +339,7 @@ export default function Navbar() {
               >
                 <Bell className="h-5 w-5" aria-hidden />
                 {unread > 0 && (
-                  <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-cyan-glow px-1 text-[10px] font-bold text-navy-dark">
+                  <span className="absolute -end-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-cyan-glow px-1 text-[10px] font-bold text-navy-dark">
                     {unread > 9 ? "9+" : unread}
                   </span>
                 )}
@@ -275,12 +366,20 @@ export default function Navbar() {
               </button>
             </>
           ) : (
-            <Link
-              href="/login"
-              className="hidden rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow hover:text-navy-dark sm:inline-block"
-            >
-              {t("login")}
-            </Link>
+            <>
+              <Link
+                href="/login"
+                className="hidden rounded-lg px-3 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white sm:inline-block"
+              >
+                {t("login")}
+              </Link>
+              <Link
+                href="/signup"
+                className="hidden rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow sm:inline-block"
+              >
+                {t("getStarted")}
+              </Link>
+            </>
           )}
           <button
             type="button"
@@ -317,7 +416,7 @@ export default function Navbar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-3 rounded-lg px-3 py-2.5 pl-5 text-sm text-white/80 hover:bg-white/5"
+                      className="flex items-center gap-3 rounded-lg px-3 py-2.5 ps-5 text-sm text-white/80 hover:bg-white/5"
                     >
                       <item.icon className="h-4 w-4 text-cyan-glow" aria-hidden />
                       {t(item.labelKey)}
@@ -342,6 +441,7 @@ export default function Navbar() {
             <div className="mb-3 px-1">
               <LanguageSelector variant="mobile" />
             </div>
+            <ThemeToggle variant="mobile" />
             {session?.user ? (
               <>
                 <Link
@@ -386,6 +486,6 @@ export default function Navbar() {
           </div>
         </nav>
       )}
-    </header>
+    </motion.header>
   );
 }

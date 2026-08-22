@@ -3,7 +3,7 @@
 // Goal: NO supplier or product card is ever empty or broken. Every card always
 // resolves to a real, non-broken image via this chain:
 //
-//   real DB image  →  scraped/imported image  →  category-based fallback  →
+//   usable DB image  →  scraped/imported image  →  category-based fallback  →
 //   generic Suplymate placeholder
 //
 // IMAGE SOURCE CHOICE
@@ -13,11 +13,9 @@
 // We deliberately avoid hotlinking fragile/random endpoints (e.g. the
 // deprecated `source.unsplash.com`): local SVGs are zero-dependency,
 // build-safe, never 404, render instantly, and look intentional (gradient +
-// industrial glyph + category label + wordmark). Real photos from the DB /
-// CDN (e.g. lh3.googleusercontent.com Google Maps photos) always take priority
-// and are tried first; only when they are missing or fail to load does the
-// branded fallback show. Swap in preferred photos any time by replacing the
-// SVGs or pointing these maps at curated CDN URLs.
+// industrial glyph + category label + wordmark). Known-dead Google Places photo
+// URLs are discarded before rendering so their permanent 403/404 responses are
+// never retried. Other usable photos still take priority over local fallbacks.
 
 export type FallbackCategoryKey =
   | "steel"
@@ -116,13 +114,39 @@ export function getProductFallbackImage(
 }
 
 /**
+ * Outscraper's historical Google Places image URLs are permanently unusable:
+ * `gps-cs-s` photos return 403 and legacy profile `photo.jpg` URLs return 404.
+ * Street View URLs from the same import are treated identically.
+ */
+export function isKnownDeadImageUrl(url?: string | null): boolean {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    const googleusercontent = /\.googleusercontent\.com$/i.test(parsed.hostname);
+    const streetView = parsed.hostname === "streetviewpixels-pa.googleapis.com";
+    return (
+      streetView ||
+      (googleusercontent &&
+        (/\/gps-cs-s\//i.test(parsed.pathname) ||
+          /\/photo\.jpg$/i.test(parsed.pathname)))
+    );
+  } catch {
+    return false;
+  }
+}
+
+/**
  * True only for a REAL remote photo (http/https). Local branded SVG fallbacks
  * (under `/images/...`) and empty values are NOT real photos. This is the
  * single source of truth used by homepage gating and catalogue scoring to tell
  * a genuine photograph apart from a generated category tile.
  */
 export function isRealImageUrl(url?: string | null): boolean {
-  return typeof url === "string" && /^https?:\/\//i.test(url.trim());
+  return (
+    typeof url === "string" &&
+    /^https?:\/\//i.test(url.trim()) &&
+    !isKnownDeadImageUrl(url)
+  );
 }
 
 export type ProductImageInput = {

@@ -1,10 +1,22 @@
-// Deterministic Alibaba-style product detail generator.
+// Product detail assembly.
 //
-// Given a base Product, this derives everything a premium B2B product page needs
-// (gallery, tiered commissioned pricing, specs, description sections, reviews,
-// recommended products, and the linked supplier) seeded from the product id, so
-// pages render correctly WITHOUT a database. The platform commission from
-// src/config/commerce.ts is applied to every displayed price.
+// This module used to generate a complete Alibaba-style product page from a hash
+// of the product id: physical dimensions (thickness, width, length), material,
+// grade, surface treatment, a manufacturing standard (ASTM A36, EN 10025,
+// ISO 9001), place of origin, packaging, a shipping port, Incoterms, a lead
+// time, a volume-discount ladder, and four to six buyer reviews per product with
+// invented authors, employers, countries, dates and ratings. Ratings, review
+// counts and MOQs were invented whenever the record had none.
+//
+// None of it was collected. It was published against real, identifiable
+// companies and their real scraped products, and read as fact.
+//
+// All of it has been removed. What remains is either a collected field or
+// plainly derived from one: the specification table and customization list come
+// from the scraped record (`Product.specifications`,
+// `Product.customizationOptions`) and are simply absent when the record has
+// none. The Review table holds no product reviews, so the page shows an honest
+// empty state rather than generating one.
 
 import type { Product, ProductCategory } from "@/data/products";
 import { products as allProducts } from "@/data/products";
@@ -23,8 +35,11 @@ import {
   formatPrice,
 } from "@/config/commerce";
 
-/* ----------------------------- RNG helpers ----------------------------- */
+/* --------------------------- Deterministic seed ------------------------- */
 
+// The only remaining use of a hash is choosing a stable gradient per product and
+// resolving the supplier link, so the same card always looks the same. It no
+// longer drives any factual claim.
 function hashString(str: string): number {
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
@@ -34,36 +49,13 @@ function hashString(str: string): number {
   return h >>> 0;
 }
 
-function makeRng(seed: number) {
-  let a = seed >>> 0;
-  return () => {
-    a |= 0;
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-function pick<T>(rng: () => number, arr: readonly T[]): T {
-  return arr[Math.floor(rng() * arr.length) % arr.length];
-}
-
-function intBetween(rng: () => number, min: number, max: number): number {
-  return min + Math.floor(rng() * (max - min + 1));
-}
-
 /* ----------------------------- Public types ---------------------------- */
 
 export type IconKey =
-  | "shield"
-  | "truck"
   | "award"
   | "factory"
-  | "leaf"
   | "ruler"
   | "package"
-  | "globe"
   | "sparkles";
 
 export type GalleryImage = {
@@ -75,11 +67,20 @@ export type GalleryImage = {
   url?: string;
 };
 
-export type PriceTier = {
-  minQty: number;
-  rangeLabel: string;
+/**
+ * The supplier-listed unit price with the platform commission applied.
+ *
+ * This replaced a four-step volume-discount ladder (1 / 50 / 200 / 1000 units
+ * at 0% / 6% / 12% / 18% off). The price itself was derived from a real
+ * `basePrice`, but the volume bands and the discounts at each band were
+ * invented, so they read as a price list the supplier had agreed to. Only the
+ * one price we actually hold is published.
+ */
+export type ListedPrice = {
+  /** Supplier-listed base price before commission. */
   basePrice: number;
-  price: number; // displayed (commission applied)
+  /** Displayed price (commission applied). */
+  price: number;
   priceLabel: string;
 };
 
@@ -93,41 +94,16 @@ export type DescriptionSection = {
   table?: SpecRow[];
 };
 
-export type ProductHighlight = {
-  icon: IconKey;
-  title: string;
-  text: string;
-};
-
-export type ProductOption = { name: string; values: string[] };
-
-export type ProductReview = {
-  id: string;
-  author: string;
-  company: string;
-  country: string;
-  flag: string;
-  rating: number;
-  date: string;
-  verifiedPurchase: boolean;
-  title: string;
-  body: string;
-};
-
-export type ReviewSummary = {
-  average: number;
-  total: number;
-  distribution: { stars: number; count: number; pct: number }[];
-};
-
 export type RecommendedProduct = {
   id: string;
   name: string;
   category: string;
   gradient: string;
   icon: IconKey;
-  priceFromLabel: string;
-  moq: string;
+  /** Commissioned supplier-listed price; null when there is no public price. */
+  priceFromLabel: string | null;
+  /** Supplier-stated MOQ; null when the record has none. */
+  moq: string | null;
 };
 
 export type ProductSupplierCard = {
@@ -139,12 +115,10 @@ export type ProductSupplierCard = {
   city: string;
   flag: string;
   verified: boolean;
-  rating: number;
-  reviewCount: number;
-  responseTime: string;
-  yearsInBusiness: number;
-  onTimeDelivery: number;
-  reorderRate: number;
+  /** Google Places rating; null when the supplier has none. */
+  rating: number | null;
+  /** Google Places review count; null when the supplier has none. */
+  reviewCount: number | null;
   href: string;
 };
 
@@ -152,33 +126,33 @@ export type ProductDetail = {
   product: Product;
   category: ProductCategory;
   unit: string;
-  moq: string;
-  leadTime: string;
-  rating: number;
-  reviewCount: number;
+  /** Supplier-stated MOQ; null when the record has none. */
+  moq: string | null;
+  /**
+   * Supplier-stated lead time; null when the record has none.
+   *
+   * `Product.bestDeliveryDays` is not a source for this: the scraped-product
+   * importer defaults it to 14 for every row, so it measures nothing.
+   */
+  leadTime: string | null;
+  /** Rating published on the supplier's own site; null when there is none. */
+  rating: number | null;
+  /** Review count published on the supplier's own site; null when none. */
+  reviewCount: number | null;
   commissionRate: number;
-  displayFromLabel: string;
+  /** Null when the record has no public price. */
+  listedPrice: ListedPrice | null;
   gallery: GalleryImage[];
-  priceTiers: PriceTier[];
-  options: ProductOption[];
+  /** Supplier-listed customization options; empty when the record has none. */
   customizationOptions: string[];
-  highlights: ProductHighlight[];
+  /** Specifications as scraped from the supplier; empty when none were found. */
   specs: SpecRow[];
   descriptionSections: DescriptionSection[];
-  reviews: ProductReview[];
-  reviewSummary: ReviewSummary;
   recommended: RecommendedProduct[];
   supplier: ProductSupplierCard;
-  shipping: {
-    leadTime: string;
-    methods: string[];
-    incoterms: string[];
-    packaging: string;
-    port: string;
-  };
 };
 
-/* ----------------------------- Source pools ---------------------------- */
+/* --------------------------- Presentation pools ------------------------- */
 
 const GALLERY_GRADIENTS = [
   "linear-gradient(135deg, #0b1b30, #143a5f 55%, rgba(14,165,183,0.55))",
@@ -197,65 +171,7 @@ const ICONS_BY_CATEGORY: Record<ProductCategory, IconKey> = {
   "Industrial Parts": "award",
 };
 
-const MATERIALS: Record<ProductCategory, string[]> = {
-  "Steel & Metals": ["Carbon steel Q235", "Stainless steel 304/316", "Galvanized steel", "Aluminum 6061"],
-  "Cables & Electrical": ["Electrolytic copper", "Tinned copper", "XLPE insulation", "PVC sheath"],
-  "Tubes & Pipes": ["Seamless carbon steel", "Stainless steel 304", "HDPE PE100", "PVC-U"],
-  Packaging: ["Kraft paper 200gsm", "Corrugated E-flute", "PET / rPET", "LDPE film"],
-  Construction: ["Portland clinker", "Reinforced concrete", "Mineral wool", "EPDM membrane"],
-  "Industrial Parts": ["Alloy steel 40Cr", "Cast iron GG25", "Hardened steel", "Bronze bushing"],
-};
-
-const SURFACE_TREATMENTS = ["Hot-dip galvanized", "Powder coated", "Anodized", "Mill finish", "Polished"];
-const STANDARDS = ["ASTM A36", "EN 10025", "ISO 9001", "DIN 17100", "GB/T 700", "JIS G3101"];
-const GRADES = ["Grade A", "Premium", "Industrial", "Commercial", "Export grade"];
-const ORIGINS = ["China", "Germany", "India", "Turkey", "Italy", "United States"];
-const PACKAGING_OPTIONS = [
-  "Export-standard wooden pallets + steel strapping",
-  "Seaworthy crates with moisture barrier",
-  "Bundled with waterproof wrap on pallets",
-  "Carton boxes on shrink-wrapped pallets",
-];
-const INCOTERMS = ["FOB", "CIF", "EXW", "DDP", "FCA"];
-const SHIP_METHODS = ["Sea freight (FCL/LCL)", "Air freight", "Rail freight", "Express courier"];
-const PORTS = ["Shanghai", "Hamburg", "Mumbai (Nhava Sheva)", "Istanbul (Ambarli)", "Genoa", "Rotterdam"];
-
-const REVIEW_AUTHORS = [
-  "Procurement Director",
-  "Sourcing Manager",
-  "Operations Lead",
-  "Category Buyer",
-  "Plant Manager",
-  "Head of Purchasing",
-];
-const REVIEW_COMPANIES = [
-  "Meridian Industries",
-  "Vortex Manufacturing",
-  "Northwind Trading",
-  "Apex Build Group",
-  "Cardinal Components",
-  "Stratos Engineering",
-  "Orion Procurement",
-];
-const REVIEW_COUNTRIES = ["United States", "Germany", "France", "United Kingdom", "Netherlands", "UAE", "Spain", "Canada"];
-const FLAGS: Record<string, string> = {
-  "united states": "🇺🇸", usa: "🇺🇸", germany: "🇩🇪", france: "🇫🇷", "united kingdom": "🇬🇧", uk: "🇬🇧",
-  netherlands: "🇳🇱", uae: "🇦🇪", "united arab emirates": "🇦🇪", spain: "🇪🇸", italy: "🇮🇹", canada: "🇨🇦",
-  china: "🇨🇳", india: "🇮🇳", turkey: "🇹🇷", morocco: "🇲🇦", mexico: "🇲🇽", brazil: "🇧🇷",
-};
-function flagFor(country: string): string {
-  return FLAGS[country.trim().toLowerCase()] ?? "🌍";
-}
-
 /* ----------------------------- Linkage --------------------------------- */
-
-// A supplier "has a real photo" if it carries a remote banner or gallery image
-// (Google Maps / website media). Used to prefer image-bearing suppliers so the
-// products they back can show a genuine photograph rather than a category tile.
-function supplierHasRealPhoto(s: Supplier): boolean {
-  const isReal = (u?: string | null) => Boolean(u && /^https?:\/\//i.test(u));
-  return isReal(s.imageUrl) || Boolean(s.supplierImages?.some(isReal));
-}
 
 // Real photos linked to a supplier record (banner + gallery), de-duplicated.
 function supplierPhotos(s: Supplier): string[] {
@@ -264,24 +180,65 @@ function supplierPhotos(s: Supplier): string[] {
   );
 }
 
-// Deterministically link a catalogue product to a REAL supplier, preferring the
-// public Outscraper directory (which carries genuine Google Maps photos) so the
-// product card can surface a real photo. Falls back to the generated verified
-// directory only when no image-bearing supplier exists for the category.
-function linkedSupplier(product: Product): Supplier {
-  const seed = hashString(product.id || product.name);
+const suppliersById = new Map<string, Supplier>(
+  [...outscraperSuppliers, ...verifiedSuppliers].map((s) => [s.id, s])
+);
 
-  const sameCatWithPhoto = outscraperSuppliers.filter(
-    (s) => s.category === product.category && supplierHasRealPhoto(s)
-  );
-  if (sameCatWithPhoto.length) return sameCatWithPhoto[seed % sameCatWithPhoto.length];
+/**
+ * Resolves the supplier that actually sells this product.
+ *
+ * This used to hash the product id and pick whichever same-category supplier
+ * happened to land on that index, preferring ones with photos — it never read
+ * `product.supplierId`, which every scraped row carries. So a real listing from
+ * one company was bylined, described and illustrated as another real company's,
+ * while the cart and RFQ (which do read `product.supplierId`) transacted with a
+ * third. Two named businesses were misrepresented per mismatch.
+ *
+ * `photos` is empty unless they belong to this supplier, so a product can no
+ * longer illustrate itself with an unrelated company's premises.
+ */
+function resolveSupplier(product: Product): { record: Supplier; photos: string[] } {
+  const known = product.supplierId ? suppliersById.get(product.supplierId) : undefined;
+  if (known) return { record: known, photos: supplierPhotos(known) };
 
-  const anyWithPhoto = outscraperSuppliers.filter(supplierHasRealPhoto);
-  if (anyWithPhoto.length) return anyWithPhoto[seed % anyWithPhoto.length];
+  // The supplier is known to the product but absent from the static bundle,
+  // which is a snapshot that trails the database. Build a minimal record from
+  // the product's own denormalised fields rather than substituting a different
+  // company. Anything we do not hold stays empty so the UI omits it.
+  const country = product.supplierCountry ?? "";
+  return {
+    record: {
+      id: product.supplierId ?? "",
+      name: product.supplierName ?? "",
+      industry: "Metal",
+      location: country,
+      products: [],
+      deliveryRegions: [],
+      moq: null,
+      reliabilityScore: 0,
+      category: product.category,
+      country,
+    },
+    photos: [],
+  };
+}
 
-  const verifiedSameCat = verifiedSuppliers.filter((s) => s.category === product.category);
-  const list = verifiedSameCat.length ? verifiedSameCat : verifiedSuppliers;
-  return list[seed % list.length];
+/* ----------------------------- Price helpers --------------------------- */
+
+// Scraped rows frequently carry no public price; arithmetic on a nullish base
+// would render as "$0.00", implying the product is free.
+function listedPriceFor(product: Product): ListedPrice | null {
+  const base = product.basePrice ?? product.priceMin;
+  if (typeof base !== "number" || !Number.isFinite(base) || base <= 0) return null;
+  const rate = product.commissionRate ?? COMMISSION_RATE;
+  const price = applyCommission(base, rate);
+  return {
+    basePrice: base,
+    price,
+    priceLabel: [formatPrice(price, product.currency), product.unit]
+      .filter(Boolean)
+      .join(" / "),
+  };
 }
 
 /* ----------------------------- Card data ------------------------------- */
@@ -303,25 +260,24 @@ export type ProductCardData = {
   /** Profile-completeness of the linked supplier (sort key for the catalogue). */
   completenessScore: number;
   unit: string;
-  bulkPriceLabel: string;
-  moq: string;
-  shippingTime: string;
-  rating: number;
-  reviewCount: number;
+  /** Null when the product has no public price ("contact supplier"). */
+  priceLabel: string | null;
+  /** Supplier-stated MOQ; null when the record has none. */
+  moq: string | null;
+  /** Supplier-stated lead time; null when the record has none. */
+  shippingTime: string | null;
+  /** Rating published on the supplier's own site; null when there is none. */
+  rating: number | null;
+  /** Review count published on the supplier's own site; null when none. */
+  reviewCount: number | null;
 };
 
 /** Lightweight derivation for catalogue cards (no full detail generation). */
 export function getProductCardData(product: Product): ProductCardData {
   const seed = hashString(product.id || product.name);
-  const rng = makeRng(seed);
-  const supplierRecord = linkedSupplier(product);
+  const { record: supplierRecord, photos } = resolveSupplier(product);
   const sd = toDisplaySupplier(supplierRecord);
-  const rate = product.commissionRate ?? COMMISSION_RATE;
-  const base = product.basePrice ?? product.priceMin;
-  // Bulk price = best tier (highest volume discount), commission applied.
-  const bulkPrice = applyCommission(base * 0.82, rate);
 
-  const photos = supplierPhotos(supplierRecord);
   const imageInput = {
     images: product.images,
     supplierImages: photos,
@@ -359,11 +315,11 @@ export function getProductCardData(product: Product): ProductCardData {
     verified: sd.verified,
     completenessScore,
     unit: product.unit,
-    bulkPriceLabel: `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`,
-    moq: product.moq ?? `${intBetween(rng, 1, 50) * (product.unit === "ton" ? 1 : 10)} ${product.unit}s`,
-    shippingTime: product.shippingTime ?? `${product.bestDeliveryDays}–${product.bestDeliveryDays + 8} days`,
-    rating: product.rating ?? Math.min(5, Math.round((4.3 + rng() * 0.6) * 10) / 10),
-    reviewCount: product.reviewCount ?? intBetween(rng, 24, 480),
+    priceLabel: listedPriceFor(product)?.priceLabel ?? null,
+    moq: product.moq?.trim() || null,
+    shippingTime: product.shippingTime?.trim() || null,
+    rating: product.rating ?? null,
+    reviewCount: product.reviewCount ?? null,
   };
 }
 
@@ -384,234 +340,94 @@ export function compareProductsForCatalogue(a: Product, b: Product): number {
   return a.name.localeCompare(b.name);
 }
 
-/* ----------------------------- Generator ------------------------------- */
+/* ------------------------------ Assembly ------------------------------- */
 
 export function getProductDetail(product: Product): ProductDetail {
   const seed = hashString(product.id || product.name);
-  const rng = makeRng(seed);
 
-  const supplierRecord = linkedSupplier(product);
+  const { record: supplierRecord } = resolveSupplier(product);
   const sd = toDisplaySupplier(supplierRecord);
 
   const unit = product.unit;
   const icon = ICONS_BY_CATEGORY[product.category];
-
-  /* --- pricing (commission applied) --- */
-  const base = product.basePrice ?? product.priceMin;
   const rate = product.commissionRate ?? COMMISSION_RATE;
-  const tierDefs = [
-    { minQty: 1, mult: 1.0 },
-    { minQty: 50, mult: 0.94 },
-    { minQty: 200, mult: 0.88 },
-    { minQty: 1000, mult: 0.82 },
-  ];
-  const priceTiers: PriceTier[] = tierDefs.map((t, i) => {
-    const basePrice = Math.round(base * t.mult * 100) / 100;
-    const price = applyCommission(basePrice, rate);
-    const next = tierDefs[i + 1];
-    const rangeLabel = next
-      ? `${t.minQty} – ${next.minQty - 1} ${unit}s`
-      : `≥ ${t.minQty} ${unit}s`;
-    return {
-      minQty: t.minQty,
-      rangeLabel,
-      basePrice,
-      price,
-      priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
-    };
-  });
-  const displayFromLabel = `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
-    applyCommission(product.priceMax, rate),
-    product.currency
-  )}`;
+  const listedPrice = listedPriceFor(product);
+  const moq = product.moq?.trim() || null;
+  const leadTime = product.shippingTime?.trim() || null;
 
   /* --- gallery --- */
-  const galleryLabels = ["Main view", "Detail", "Application", "Packaging", "Factory video"];
-  const hasVideos = (product.videos?.length ?? 0) > 0;
-  let gallery: GalleryImage[];
-
-  if (product.images?.length) {
-    gallery = product.images.map((url, i) => ({
-      id: `${product.id}-img-${i}`,
-      label: galleryLabels[i] ?? `Image ${i + 1}`,
-      gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
+  // Labels describe position only. The gallery was previously padded to five
+  // captioned tiles ("Detail", "Application", "Packaging", "Factory video")
+  // whether or not any such media existed; we do not know what a given photo
+  // shows, and an absent photo is not a photo.
+  const gallery: GalleryImage[] = (product.images ?? []).map((url, i) => ({
+    id: `${product.id}-img-${i}`,
+    label: i === 0 ? "Main view" : `View ${i + 1}`,
+    gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
+    icon,
+    url,
+    isVideo: false,
+  }));
+  (product.videos ?? []).forEach((_, i) => {
+    gallery.push({
+      id: `${product.id}-video-${i}`,
+      label: `Video ${i + 1}`,
+      gradient: GALLERY_GRADIENTS[(seed + gallery.length) % GALLERY_GRADIENTS.length],
       icon,
-      url,
+      isVideo: true,
+    });
+  });
+  if (gallery.length === 0) {
+    gallery.push({
+      id: `${product.id}-no-media`,
+      label: "No photo provided",
+      gradient: GALLERY_GRADIENTS[seed % GALLERY_GRADIENTS.length],
+      icon,
       isVideo: false,
-    }));
-    while (gallery.length < 2) {
-      const i = gallery.length;
-      gallery.push({
-        id: `${product.id}-placeholder-${i}`,
-        label: galleryLabels[i] ?? `View ${i + 1}`,
-        gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
-        icon,
-        isVideo: false,
-      });
-    }
-    if (hasVideos) {
-      gallery.push({
-        id: `${product.id}-video-0`,
-        label: "Factory video",
-        gradient: GALLERY_GRADIENTS[(seed + gallery.length) % GALLERY_GRADIENTS.length],
-        icon,
-        isVideo: true,
-      });
-    }
-  } else {
-    gallery = galleryLabels.map((label, i) => ({
-      id: `${product.id}-img-${i}`,
-      label,
-      gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
-      icon,
-      isVideo: hasVideos && i === galleryLabels.length - 1,
-    }));
+    });
   }
 
-  /* --- moq / lead time / rating --- */
-  const moq = product.moq ?? `${intBetween(rng, 1, 50) * (unit === "ton" ? 1 : 10)} ${unit}s`;
-  const leadTime = product.shippingTime ?? `${product.bestDeliveryDays}–${product.bestDeliveryDays + 8} days`;
-  const rating = product.rating ?? Math.min(5, Math.round((4.3 + rng() * 0.6) * 10) / 10);
-  const reviewCount = product.reviewCount ?? intBetween(rng, 24, 480);
+  /* --- specifications --- */
+  // Only what the supplier published. The previous table asserted thickness,
+  // width, length, material, grade, surface treatment, standard, certification
+  // ("ISO 9001, CE, SGS") and packaging for every product, none of it measured.
+  const specs: SpecRow[] = Object.entries(product.specifications ?? {})
+    .filter(([label, value]) => label.trim() && String(value).trim())
+    .map(([label, value]) => ({ label, value: String(value) }));
 
-  /* --- options & customization --- */
-  const material = pick(rng, MATERIALS[product.category]);
-  const options: ProductOption[] = [
-    { name: "Grade", values: [pick(rng, GRADES), pick(rng, GRADES)].filter((v, i, a) => a.indexOf(v) === i) },
-    { name: "Surface", values: [pick(rng, SURFACE_TREATMENTS), pick(rng, SURFACE_TREATMENTS)].filter((v, i, a) => a.indexOf(v) === i) },
-    { name: "Packaging", values: ["Standard export", "Custom branded"] },
-  ];
-  const customizationOptions = product.customizationOptions ?? [
-    "Custom dimensions & tolerances",
-    "OEM / private-label branding",
-    "Bespoke surface treatment & color",
-    "Tailored packaging & labeling",
-    "Third-party inspection on request",
-  ];
-
-  /* --- highlights --- */
-  const highlights: ProductHighlight[] = [
-    { icon: "shield", title: "Verified supplier", text: `Sourced from ${sd.name}, a vetted ${product.category.toLowerCase()} supplier.` },
-    { icon: "award", title: "Certified quality", text: `Produced under ${pick(rng, STANDARDS)} with full documentation.` },
-    { icon: "truck", title: "Export-ready", text: `Ships in ${leadTime} with ${pick(rng, INCOTERMS)} / ${pick(rng, INCOTERMS)} terms.` },
-    { icon: "package", title: "Flexible MOQ", text: `Orders from ${moq}, with tiered volume discounts.` },
-  ];
-
-  /* --- specifications table (Alibaba-style) --- */
-  const origin = supplierRecord.country ?? pick(rng, ORIGINS);
-  const standard = pick(rng, STANDARDS);
-  const grade = pick(rng, GRADES);
-  const surface = pick(rng, SURFACE_TREATMENTS);
-  const packaging = pick(rng, PACKAGING_OPTIONS);
-  const specs: SpecRow[] = [
-    { label: "Product Name", value: product.name },
-    { label: "Material", value: material },
-    { label: "Thickness", value: `${intBetween(rng, 1, 40)} mm` },
-    { label: "Width", value: `${intBetween(rng, 50, 2000)} mm` },
-    { label: "Length", value: `${intBetween(rng, 1, 12)} m / custom` },
-    { label: "Surface Treatment", value: surface },
-    { label: "Standard", value: standard },
-    { label: "Grade", value: grade },
-    { label: "Certification", value: "ISO 9001, CE, SGS" },
-    { label: "Place of Origin", value: origin },
-    { label: "MOQ", value: moq },
-    { label: "Delivery Time", value: leadTime },
-    { label: "Packaging", value: packaging },
-    { label: "Customization Available", value: "Yes (OEM / ODM)" },
-  ];
+  const customizationOptions = (product.customizationOptions ?? []).filter((c) =>
+    c.trim()
+  );
 
   /* --- description sections --- */
+  const place = [sd.city, sd.country].filter(Boolean).join(", ");
+  // Keeps the scraped description when there is one; otherwise states only what
+  // the record holds. No grade, standard, tolerance or quality-control claim.
+  const overviewBody =
+    product.description?.trim() ||
+    `${product.name} is listed under ${product.category.toLowerCase()} by ${sd.name}${
+      place ? ` (${place})` : ""
+    }. Request a quote for specifications, pricing, minimum order quantity and lead time.`;
+
   const descriptionSections: DescriptionSection[] = [
-    {
-      id: "overview",
-      title: "Overview",
-      body:
-        product.description ??
-        `The ${product.name} is a premium ${product.category.toLowerCase()} product supplied by ${sd.name} (${sd.city}, ${sd.country}). Manufactured to ${standard} under strict quality control, it is engineered for demanding industrial applications and available for global B2B export with flexible MOQs and tiered volume pricing.`,
-    },
-    {
-      id: "features",
-      title: "Key Features",
-      bullets: [
-        `Manufactured from ${material.toLowerCase()} for consistent performance`,
-        `${surface} finish for durability and corrosion resistance`,
-        `Compliant with ${standard} and ${grade.toLowerCase()} specifications`,
-        "Batch-traceable with full quality documentation",
-        "Available in standard and custom dimensions",
-      ],
-    },
-    { id: "specifications", title: "Specifications", table: specs },
-    {
-      id: "applications",
-      title: "Applications",
-      bullets: applicationsFor(product.category),
-    },
-    {
-      id: "materials",
-      title: "Materials",
-      body: `Primary material: ${material}. Raw inputs are sourced from certified mills and verified on intake. Material certificates (mill test reports) are provided with every shipment on request.`,
-    },
-    {
-      id: "certifications",
-      title: "Certifications",
-      bullets: ["ISO 9001 — Quality Management", "CE — European Conformity", "SGS — Verified factory audit", "RoHS — Hazardous substance compliance"],
-    },
-    {
-      id: "packaging",
-      title: "Packaging",
-      body: `${packaging}. Each unit is labeled with product code, batch number, and handling instructions. Custom branded packaging is available for OEM orders.`,
-    },
-    {
-      id: "shipping",
-      title: "Shipping & Delivery",
-      body: `Standard lead time is ${leadTime} after order confirmation. We ship via ${SHIP_METHODS.slice(0, 3).join(", ")} from the Port of ${pick(rng, PORTS)} under ${INCOTERMS.slice(0, 3).join(" / ")} terms. Express options are available for urgent orders.`,
-    },
-    {
+    { id: "overview", title: "Overview", body: overviewBody },
+  ];
+  if (specs.length) {
+    descriptionSections.push({
+      id: "specifications",
+      title: "Specifications",
+      table: specs,
+    });
+  }
+  if (customizationOptions.length) {
+    descriptionSections.push({
       id: "customization",
-      title: "Customization Options",
+      title: "Customization options",
       bullets: customizationOptions,
-    },
-  ];
+    });
+  }
 
-  /* --- reviews --- */
-  const reviewTitles = [
-    "Reliable quality for recurring orders",
-    "Exactly as specified, on time",
-    "Competitive pricing and fast quotes",
-    "Great export experience",
-    "Consistent batches, solid documentation",
-  ];
-  const reviewBodies = [
-    "Delivered on spec and on time. Material certificates were complete and the packaging held up well for ocean freight.",
-    "We've reordered several times — quality has been consistent and communication is responsive.",
-    "Pricing beat three other quotes and the lead time was shorter than promised.",
-    "Samples matched the production batch. Smooth from RFQ to delivery.",
-    "Handled a custom spec without issues; QC photos were shared before dispatch.",
-  ];
-  const reviewN = intBetween(rng, 4, 6);
-  const reviews: ProductReview[] = Array.from({ length: reviewN }).map((_, i) => {
-    const rr = makeRng(hashString(`${product.id}-rev-${i}`));
-    const country = pick(rr, REVIEW_COUNTRIES);
-    return {
-      id: `${product.id}-rev-${i}`,
-      author: pick(rr, REVIEW_AUTHORS),
-      company: pick(rr, REVIEW_COMPANIES),
-      country,
-      flag: flagFor(country),
-      rating: rr() > 0.82 ? 4 : 5,
-      date: `${pick(rr, ["Jan", "Feb", "Mar", "Apr", "May", "Sep", "Oct", "Nov"])} 202${intBetween(rr, 4, 6)}`,
-      verifiedPurchase: rr() > 0.2,
-      title: pick(rr, reviewTitles),
-      body: pick(rr, reviewBodies),
-    };
-  });
-  const distribution = [5, 4, 3, 2, 1].map((stars) => {
-    const count = reviews.filter((r) => r.rating === stars).length;
-    return { stars, count, pct: Math.round((count / reviews.length) * 100) };
-  });
-  const reviewSummary: ReviewSummary = { average: rating, total: reviewCount, distribution };
-
-  /* --- recommended (same category, excluding self) --- */
+  /* --- recommended (same category first, excluding self) --- */
   const recommended: RecommendedProduct[] = allProducts
     .filter((p) => p.id !== product.id)
     .sort((a, b) => (a.category === product.category ? -1 : 1) - (b.category === product.category ? -1 : 1))
@@ -622,8 +438,8 @@ export function getProductDetail(product: Product): ProductDetail {
       category: p.category,
       gradient: GALLERY_GRADIENTS[(hashString(p.id) + i) % GALLERY_GRADIENTS.length],
       icon: ICONS_BY_CATEGORY[p.category],
-      priceFromLabel: `From ${formatPrice(applyCommission((p.basePrice ?? p.priceMin) * 0.82, rate), p.currency)}`,
-      moq: p.moq ?? `${intBetween(makeRng(hashString(p.id)), 1, 50)} ${p.unit}s`,
+      priceFromLabel: listedPriceFor(p)?.priceLabel ?? null,
+      moq: p.moq?.trim() || null,
     }));
 
   /* --- supplier card --- */
@@ -638,10 +454,6 @@ export function getProductDetail(product: Product): ProductDetail {
     verified: sd.verified,
     rating: sd.rating,
     reviewCount: sd.reviewCount,
-    responseTime: sd.responseTime,
-    yearsInBusiness: sd.yearsInBusiness,
-    onTimeDelivery: sd.onTimeDelivery,
-    reorderRate: sd.reorderRate,
     href: `/supplier/${sd.id}`,
   };
 
@@ -651,39 +463,15 @@ export function getProductDetail(product: Product): ProductDetail {
     unit,
     moq,
     leadTime,
-    rating,
-    reviewCount,
+    rating: product.rating ?? null,
+    reviewCount: product.reviewCount ?? null,
     commissionRate: rate,
-    displayFromLabel,
+    listedPrice,
     gallery,
-    priceTiers,
-    options,
     customizationOptions,
-    highlights,
     specs,
     descriptionSections,
-    reviews,
-    reviewSummary,
     recommended,
     supplier,
-    shipping: {
-      leadTime,
-      methods: SHIP_METHODS.slice(0, 3),
-      incoterms: INCOTERMS.slice(0, 3),
-      packaging,
-      port: pick(rng, PORTS),
-    },
   };
-}
-
-function applicationsFor(category: ProductCategory): string[] {
-  const map: Record<ProductCategory, string[]> = {
-    "Steel & Metals": ["Structural construction & framing", "Automotive & machinery fabrication", "Shipbuilding & infrastructure", "Industrial equipment manufacturing"],
-    "Cables & Electrical": ["Power transmission & distribution", "Building & industrial wiring", "Telecom & data networks", "Renewable energy installations"],
-    "Tubes & Pipes": ["Oil, gas & fluid transport", "Plumbing & HVAC systems", "Structural & scaffolding", "Irrigation & water supply"],
-    Packaging: ["FMCG & retail packaging", "Industrial & export shipping", "Food-grade packaging", "E-commerce fulfillment"],
-    Construction: ["Commercial & residential building", "Infrastructure & civil works", "Roads, bridges & foundations", "Insulation & waterproofing"],
-    "Industrial Parts": ["Heavy machinery & equipment", "Automotive & transport", "Hydraulic & pneumatic systems", "MRO & maintenance"],
-  };
-  return map[category];
 }

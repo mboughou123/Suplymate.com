@@ -29,7 +29,9 @@ export async function GET(
       rating: r.rating,
       title: r.title,
       body: r.body,
-      author: r.author?.name ?? "Verified buyer",
+      // Was "Verified buyer", which awarded a credential to any reviewer who
+      // had simply left their name blank.
+      author: r.author?.name ?? "Suplymate user",
       createdAt: r.createdAt,
     })),
   });

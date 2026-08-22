@@ -1,10 +1,16 @@
 // Shared supplier scoring used by the import pipeline AND the website, so the
-// score shown to buyers is identical to the one computed at ingest time.
+// directory orders suppliers the same way they were ranked at ingest time.
 //
 //   score = ratingScore + reviewScore + verifiedBonus + websiteBonus
 //           + categoryMatchBonus + completenessBonus + countryRelevance
 //
 // Result is clamped to 0–100.
+//
+// This is a ranking heuristic, not a rating of the company. It is built from the
+// Google rating, review volume, and how much of the record we managed to fill
+// in — it says nothing about whether a supplier is good to trade with. It was
+// once printed on directory cards as a "Suplymate supplier score N/100", which
+// invited buyers to read it as a verdict. Keep it internal to sorting.
 
 export type RankableSupplier = {
   name?: string | null;
@@ -74,6 +80,9 @@ export function scoreSupplier(s: RankableSupplier): number {
   const reviewScore =
     reviews <= 0 ? 0 : Math.min(20, (Math.log10(reviews + 1) / 3) * 20);
 
+  // Only a human reviewer sets `verified`, so this is 0 for every imported
+  // supplier. It used to be worth 15 points to anything with a 4.5+ Google
+  // rating, which double-counted the rating already scored above.
   const verifiedBonus = s.verified ? 15 : 0;
   const websiteBonus = s.website ? 10 : 0;
   const categoryMatchBonus =

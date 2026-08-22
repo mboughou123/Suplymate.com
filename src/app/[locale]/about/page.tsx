@@ -1,18 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("aboutTitle"),
-    description: t("aboutDescription"),
-  };
+  return buildLocalizedPageMetadata({ locale, pathname: "/about", titleKey: "aboutTitle", descriptionKey: "aboutDescription" });
 }
 
 export default async function AboutPage() {
@@ -63,7 +59,7 @@ export default async function AboutPage() {
         </ul>
       </section>
 
-      <section className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+      <section className="mt-12 rounded-2xl border border-line bg-base p-8">
         <h2 className="font-display text-2xl font-semibold text-ink">{footer("contact")}</h2>
         <p className="mt-4 leading-relaxed text-ink-muted">
           <Link href="/contact" className="text-cyan transition-colors hover:text-teal">

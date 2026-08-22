@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BadgeCheck, Star, ChevronRight, Layers, Wrench, Tag } from "lucide-react";
+import { BadgeCheck, Star, ChevronRight, Wrench, Tag } from "lucide-react";
 import { products } from "@/data/products";
 import { getProductByIdAsync } from "@/lib/data-service";
 import { getProductDetail } from "@/lib/product-detail";
@@ -15,28 +15,52 @@ import AddToCartButton from "@/components/cart/AddToCartButton";
 import SaveProductButton from "@/components/SaveProductButton";
 import ReportButton from "@/components/ReportButton";
 import { parseMoq } from "@/lib/moq";
+import { getTranslations } from "next-intl/server";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ locale: string; id: string }>;
 };
 
+// No loading.tsx for this route on purpose: a loading boundary flushes the
+// layout shell before the product lookup resolves, which pins the response at
+// HTTP 200 and turns notFound() into a soft 404 that crawlers index.
 export function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params;
+  const { locale, id } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
   const product = await getProductByIdAsync(id);
-  if (!product) return { title: "Product not found · Suplymate" };
+  if (!product) {
+    return completeLocalizedMetadata({
+      locale,
+      pathname: `/products/${id}`,
+      title: t("productNotFoundTitle"),
+      description: t("productNotFoundDescription"),
+      siteName: t("siteName"),
+    });
+  }
   const detail = getProductDetail(product);
-  return {
-    title: `${product.name} · ${detail.supplier.name} | Suplymate`,
-    description: `Buy ${product.name} from ${detail.supplier.name}. ${detail.displayFromLabel} per ${product.unit}, MOQ ${detail.moq}, ships in ${detail.leadTime}. Tiered bulk pricing, specs & reviews on Suplymate.`,
-  };
+  return completeLocalizedMetadata({
+    locale,
+    pathname: `/products/${id}`,
+    title: t("productTitle", { product: product.name, supplier: detail.supplier.name }),
+    // The description used to interpolate a price range, MOQ and lead time, all
+    // of which were generated when the record had none.
+    description: t("productDescription", {
+      product: product.name,
+      supplier: detail.supplier.name,
+    }),
+    siteName: t("siteName"),
+  });
 }
 
 export default async function ProductDetailPage({ params }: Props) {
-  const { id } = await params;
+  const { locale, id } = await params;
+  const t = await getTranslations({ locale, namespace: "products" });
+  const tc = await getTranslations({ locale, namespace: "common" });
   const product = await getProductByIdAsync(id);
   if (!product) notFound();
 
@@ -46,14 +70,10 @@ export default async function ProductDetailPage({ params }: Props) {
   if (publishedImages.length) product.images = publishedImages;
 
   const detail = getProductDetail(product);
-
-  // Honest pricing gate: only show indicative tiers when a real supplier-listed
-  // price exists. Scraped products with no public price fall back to a
-  // "Contact supplier for pricing" state.
-  const hasPublicPrice = (product.basePrice ?? product.priceMin ?? 0) > 0;
+  const { listedPrice } = detail;
 
   return (
-    <div className="min-h-screen bg-slate-50/50">
+    <div className="min-h-screen bg-base/50">
       <div className="container-page py-6">
         {/* Breadcrumb */}
         <nav className="flex flex-wrap items-center gap-1 text-xs text-ink-muted">
@@ -92,13 +112,13 @@ export default async function ProductDetailPage({ params }: Props) {
             </h1>
 
             <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-              {product.rating != null ? (
+              {detail.rating !== null ? (
                 <span className="inline-flex items-center gap-1 font-semibold text-ink">
                   <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-                  {product.rating.toFixed(1)}
-                  {product.reviewCount != null && (
+                  {detail.rating.toFixed(1)}
+                  {detail.reviewCount !== null && (
                     <span className="font-normal text-ink-dim">
-                      ({product.reviewCount.toLocaleString()} supplier-site reviews)
+                      ({detail.reviewCount.toLocaleString()} supplier-site reviews)
                     </span>
                   )}
                 </span>
@@ -110,37 +130,29 @@ export default async function ProductDetailPage({ params }: Props) {
               </Link>
             </div>
 
-            {/* Pricing */}
-            {hasPublicPrice ? (
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-                  Indicative pricing
+            {/* Pricing. The four-band volume-discount grid that sat here was an
+                invented price list; only the one listed price is published. */}
+            <div className="mt-5 rounded-2xl border border-line bg-surface p-5 shadow-card">
+              {listedPrice ? (
+                <>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+                    {t("listedPrice")}
+                  </p>
+                  <p className="mt-2 text-2xl font-bold text-cyan">{listedPrice.priceLabel}</p>
+                  <p className="mt-2 text-xs text-ink-dim">{t("priceNote")}</p>
+                </>
+              ) : (
+                <>
+                  <p className="text-base font-semibold text-ink">{tc("contactForPricing")}</p>
+                  <p className="mt-1 text-xs text-ink-dim">{t("noPublicPriceNote")}</p>
+                </>
+              )}
+              {detail.moq && (
+                <p className="mt-2 text-xs text-ink-dim">
+                  {t("moqLabel")}: <span className="font-semibold text-ink">{detail.moq}</span>
                 </p>
-                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {detail.priceTiers.map((t) => (
-                    <div key={t.minQty} className="rounded-xl bg-slate-50 p-3">
-                      <p className="text-[11px] text-ink-dim">{t.rangeLabel}</p>
-                      <p className="mt-1 text-base font-bold text-cyan">
-                        {t.priceLabel}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-3 text-xs text-ink-dim">
-                  Estimated from the supplier-listed price (incl. Suplymate service fee). Final
-                  pricing is confirmed by the supplier in a quote. MOQ:{" "}
-                  <span className="font-semibold text-ink">{detail.moq}</span>
-                </p>
-              </div>
-            ) : (
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-base font-semibold text-ink">Contact supplier for pricing</p>
-                <p className="mt-1 text-xs text-ink-dim">
-                  No public price is listed. Add this product to your cart and request a quote.
-                  {detail.moq ? <> MOQ: <span className="font-semibold text-ink">{detail.moq}</span></> : null}
-                </p>
-              </div>
-            )}
+              )}
+            </div>
 
             {/* Procurement actions */}
             <div className="mt-4 flex flex-wrap gap-2">
@@ -154,7 +166,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   imageUrl: product.images?.[0] ?? null,
                   unit: product.priceUnit ?? product.unit ?? null,
                   moq: parseMoq(product.moq),
-                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
+                  basePrice: listedPrice?.basePrice ?? null,
                   currency: product.currency,
                   sourceUrl: product.productUrl ?? null,
                 }}
@@ -167,53 +179,37 @@ export default async function ProductDetailPage({ params }: Props) {
                   supplierName: product.supplierName ?? detail.supplier.name,
                   imageUrl: product.images?.[0] ?? null,
                   unit: product.priceUnit ?? product.unit ?? null,
-                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
+                  basePrice: listedPrice?.basePrice ?? null,
                   currency: product.currency,
                 }}
               />
               <ReportButton targetType="PRODUCT" targetId={product.id} />
             </div>
 
-            {/* Options */}
-            <div className="mt-5 space-y-3">
-              {detail.options.map((opt) => (
-                <div key={opt.name}>
-                  <p className="flex items-center gap-1.5 text-xs font-semibold text-ink">
-                    <Layers className="h-3.5 w-3.5 text-cyan" aria-hidden />
-                    {opt.name}
-                  </p>
-                  <div className="mt-1.5 flex flex-wrap gap-2">
-                    {opt.values.map((v) => (
-                      <span
-                        key={v}
-                        className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted hover:border-cyan/50 hover:text-cyan"
-                      >
-                        {v}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+            {/* The "Grade" and "Surface" selectors that sat here offered values
+                ("Premium", "Export grade", "Hot-dip galvanized", "Anodized")
+                picked per product from a pool. No supplier had listed them. */}
 
-            {/* Customization */}
-            <div className="mt-5 rounded-xl border border-cyan/15 bg-cyan/5 p-4">
-              <p className="flex items-center gap-1.5 text-xs font-semibold text-cyan">
-                <Wrench className="h-3.5 w-3.5" aria-hidden />
-                Customization available
-              </p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {detail.customizationOptions.slice(0, 4).map((c) => (
-                  <span
-                    key={c}
-                    className="inline-flex items-center gap-1 rounded-md bg-white px-2 py-1 text-[11px] text-ink-muted"
-                  >
-                    <Tag className="h-3 w-3 text-teal" aria-hidden />
-                    {c}
-                  </span>
-                ))}
+            {/* Customization — only what the supplier published */}
+            {detail.customizationOptions.length > 0 && (
+              <div className="mt-5 rounded-xl border border-cyan/15 bg-cyan/5 p-4">
+                <p className="flex items-center gap-1.5 text-xs font-semibold text-cyan">
+                  <Wrench className="h-3.5 w-3.5" aria-hidden />
+                  Customization available
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {detail.customizationOptions.slice(0, 4).map((c) => (
+                    <span
+                      key={c}
+                      className="inline-flex items-center gap-1 rounded-md bg-surface px-2 py-1 text-[11px] text-ink-muted"
+                    >
+                      <Tag className="h-3 w-3 text-teal" aria-hidden />
+                      {c}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Purchase sidebar */}
@@ -232,15 +228,12 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
           <div>
             <h2 className="mb-2 text-xl font-bold text-ink">Product details</h2>
-            <p className="mb-5 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
-              Illustrative specifications based on category norms and supplier-provided
-              information. These are not independently verified — confirm exact specs,
-              certifications, and tolerances with the supplier in your RFQ.
-            </p>
-            <ProductDescription
-              sections={detail.descriptionSections}
-              highlights={detail.highlights}
-            />
+            {detail.specs.length > 0 && (
+              <p className="mb-5 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
+                {t("specsNote")}
+              </p>
+            )}
+            <ProductDescription sections={detail.descriptionSections} />
           </div>
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="mb-5 text-xl font-bold text-ink">Supplier</h2>

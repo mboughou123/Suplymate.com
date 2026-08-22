@@ -3,15 +3,8 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  BadgeCheck,
   Star,
-  MapPin,
-  Clock,
-  Truck,
-  Building2,
   Globe,
-  ShieldCheck,
-  Sparkles,
   FileText,
   Handshake,
 } from "lucide-react";
@@ -23,19 +16,20 @@ import { RadialScore } from "./primitives";
 
 export default function HeroSection({ profile }: { profile: SupplierProfile }) {
   const t = useTranslations("supplierProfile");
-  const common = useTranslations("common");
-  const { base, trust, company, companySummary } = profile;
+  const { base, company, companySummary } = profile;
   const firstProduct = base.products[0]?.name;
 
+  // Only signals with a real source. The row previously asserted a
+  // certification count, an on-time-delivery percentage and a reply time, none
+  // of which were measured. The "Verified supplier" entry has gone too: it read
+  // `base.verified`, a flag the importer granted on Google rating alone.
   const indicators = [
-    { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified },
-    {
-      icon: BadgeCheck,
-      label: t("certificationsCount", { count: profile.certifications.length }),
-      ok: true,
-    },
-    { icon: Truck, label: t("onTimeDelivery", { percent: trust.onTimeDelivery }), ok: true },
-    { icon: Clock, label: t("repliesIn", { time: trust.responseTime }), ok: true },
+    ...(company.website
+      ? [{ icon: Globe, label: t("hasWebsite"), ok: true }]
+      : []),
+    ...(base.rating !== null
+      ? [{ icon: Star, label: t("hasGoogleRating"), ok: true }]
+      : []),
   ];
 
   return (
@@ -58,7 +52,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
         <div className="container-page relative flex h-full items-end pb-4">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            {t("verifiedSupplierProfile")}
+            {t("directoryListing")}
           </span>
         </div>
       </div>
@@ -92,12 +86,8 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                     <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
                       {base.name}
                     </h1>
-                    {base.verified && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
-                        <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-                        {common("verified")}
-                      </span>
-                    )}
+                    {/* No green "Verified" pill. It rendered on `base.verified`,
+                        which the importer set from the Google rating alone. */}
                   </div>
 
                   <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm">
@@ -105,40 +95,43 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                       <span aria-hidden className="text-base">{base.flag}</span>
                       {base.city}, {base.country}
                     </span>
-                    <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                      <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-                      {base.rating.toFixed(1)}
-                      <span className="font-normal text-ink-dim">
-                        {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
+                    {base.rating !== null && base.reviewCount !== null && (
+                      <span className="inline-flex items-center gap-1 font-semibold text-ink">
+                        <Star
+                          className="h-4 w-4 fill-mustard text-mustard"
+                          aria-hidden
+                        />
+                        {base.rating.toFixed(1)}
+                        <span className="font-normal text-ink-dim">
+                          {t("googleReviewCount", { count: base.reviewCount })}
+                        </span>
                       </span>
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-ink-muted">
-                      <Building2 className="h-4 w-4 text-cyan" aria-hidden />
-                      {t("yearsInBusiness", { years: company.yearsInBusiness })}
-                    </span>
+                    )}
                   </div>
 
                   <div className="mt-3 flex flex-wrap gap-2 text-xs">
                     <span className="rounded-md bg-cyan/10 px-2.5 py-1 font-semibold text-cyan">
                       {base.categoryLabel}
                     </span>
-                    <span className="rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
-                      {company.businessType}
-                    </span>
-                    <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
-                      <MapPin className="h-3 w-3" aria-hidden /> {company.factorySize}
-                    </span>
+                    {company.moq && (
+                      <span className="rounded-md bg-base px-2.5 py-1 font-medium text-ink-muted">
+                        {t("minimumOrder")}: {company.moq}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
 
-              {/* AI company summary */}
-              <div className="rounded-xl border border-ai-glow/20 bg-ai-mist/60 p-4">
-                <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-cyan">
-                  <Sparkles className="h-3.5 w-3.5" aria-hidden />
-                  {t("aiCompanySummary")}
+              {/* Company summary. Either the supplier's own scraped description
+                  or a sentence assembled from collected fields — never AI-written,
+                  so it is no longer labelled as such. */}
+              <div className="rounded-xl border border-line bg-base/80 p-4">
+                <div className="mb-1.5 text-xs font-semibold text-ink-muted">
+                  {t("aboutThisCompany")}
                 </div>
-                <p className="text-sm leading-relaxed text-ink-muted">{companySummary}</p>
+                <p className="text-sm leading-relaxed text-ink-muted">
+                  {companySummary}
+                </p>
               </div>
 
               {/* Trust indicators */}
@@ -146,7 +139,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                 {indicators.map((ind) => (
                   <span
                     key={ind.label}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-medium text-ink-muted"
                   >
                     <ind.icon
                       className={`h-3.5 w-3.5 ${ind.ok ? "text-emerald-600" : "text-ink-dim"}`}
@@ -180,7 +173,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   supplierId={base.id}
                   supplierName={base.name}
                   intent="negotiate"
-                  label={t("startAiNegotiation")}
+                  label={t("askAboutPricing")}
                   icon={Handshake}
                   productName={firstProduct}
                   className="btn-secondary"
@@ -206,18 +199,17 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
               </div>
             </div>
 
-            {/* Trust score dial */}
+            {/* Data-completeness dial. This measures how complete our record of
+                the company is, so it is honest to publish. The risk level and
+                "AI confidence" that sat beneath it were generated and are gone. */}
             <div className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-gradient-to-br from-slate-50 to-white p-6 lg:w-56">
-              <RadialScore value={trust.trustScore} label={t("trustScore")} />
-              <div className="text-center">
-                <p className="text-xs font-semibold text-ink">{t("trustIndex")}</p>
-                <p className="mt-0.5 inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">
-                  {t("riskConfidence", {
-                    risk: trust.riskLevel,
-                    confidence: trust.aiConfidence,
-                  })}
-                </p>
-              </div>
+              <RadialScore
+                value={profile.dataQuality.completenessScore}
+                label={t("profileCompleteness")}
+              />
+              <p className="text-center text-[11px] leading-relaxed text-ink-dim">
+                {t("completenessExplainer")}
+              </p>
             </div>
           </div>
         </motion.div>

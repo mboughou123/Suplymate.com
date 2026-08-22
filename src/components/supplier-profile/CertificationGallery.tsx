@@ -29,7 +29,7 @@ function CertImage({ src, alt }: { src: string; alt: string }) {
       alt={alt}
       loading="lazy"
       onError={() => setBroken(true)}
-      className="h-28 w-full rounded-xl border border-slate-200 bg-white object-contain p-2"
+      className="h-28 w-full rounded-xl border border-line bg-surface object-contain p-2"
     />
   );
 }
@@ -44,7 +44,7 @@ export default function CertificationGallery({ images = [], certifications = [],
 
   if (!hasImages && !hasDetails) {
     return (
-      <div className={`rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-center ${className}`}>
+      <div className={`rounded-2xl border border-dashed border-slate-300 bg-surface p-6 text-center ${className}`}>
         <Award className="mx-auto h-6 w-6 text-ink-dim" aria-hidden />
         <p className="mt-2 text-sm text-ink-muted">No certifications on file yet.</p>
       </div>
@@ -74,7 +74,7 @@ export default function CertificationGallery({ images = [], certifications = [],
               </>
             );
             const base =
-              "inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs";
+              "inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-xs";
             return (
               <li key={`${c.name}-${i}`}>
                 {href ? (

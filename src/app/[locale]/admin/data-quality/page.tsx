@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import type { Metadata } from "next";
 import { checkAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { Database } from "lucide-react";
 import { MARKETPLACE_STATUSES } from "@/lib/verification";
 import SupplierStatusControl from "@/components/admin/SupplierStatusControl";
 import FlagExpiredButton from "@/components/admin/FlagExpiredButton";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Data quality · Admin | Suplymate",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({ locale, pathname: "/admin/data-quality", titleKey: "adminDataQualityTitle", descriptionKey: "adminDescription", robots: { index: false, follow: false } });
+}
 
 export const dynamic = "force-dynamic";
 

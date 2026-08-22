@@ -1,11 +1,20 @@
 import type { Material } from "@/data/materials";
 
+/**
+ * The price series behind these signals is a fixed seed dataset, not a live
+ * feed: the Material rows in the database are identical to the static seed and
+ * carry no timestamp. `lastUpdated` used to return `new Date()`, which stamped
+ * today's date on numbers that had not moved since the seed was written. That
+ * was the one genuinely misleading claim on this page — the surrounding copy
+ * already calls the series indicative. There is no real capture date to report,
+ * so the field is gone rather than replaced with a guess. Reinstate it when a
+ * live feed provides a timestamp.
+ */
 export type SignalExplanation = {
   label: string;
   tone: "info" | "warn" | "neutral";
   reason: string;
   source: string;
-  lastUpdated: string;
 };
 
 export function explainSignal(material: Material): SignalExplanation {
@@ -19,8 +28,7 @@ export function explainSignal(material: Material): SignalExplanation {
     label: material.signal,
     tone: material.signal === "Buy now" ? "info" : material.signal === "Wait" ? "warn" : "neutral",
     reason: reasons[material.signal],
-    source: "Suplymate market data (seed/demo series until live feeds are connected)",
-    lastUpdated: new Date().toISOString().slice(0, 10),
+    source: "Suplymate seed series — a fixed sample dataset, not a live market feed",
   };
 }
 

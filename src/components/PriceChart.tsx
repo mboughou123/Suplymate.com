@@ -93,7 +93,7 @@ export default function PriceChart({ material }: PriceChartProps) {
   const active = hover !== null ? points[hover] : null;
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+    <div className="rounded-2xl border border-line bg-surface p-6 shadow-card">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h2 className="text-heading-sm text-ink">{material.name}</h2>
@@ -238,7 +238,7 @@ export default function PriceChart({ material }: PriceChartProps) {
         {/* Tooltip */}
         {active && hover !== null && (
           <div
-            className="pointer-events-none absolute -translate-x-1/2 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 shadow-cardHover"
+            className="pointer-events-none absolute -translate-x-1/2 rounded-lg border border-line bg-surface px-2.5 py-1.5 shadow-cardHover"
             style={{
               left: `${(active.x / WIDTH) * 100}%`,
               top: `${(Math.max(active.y - 14, 6) / HEIGHT) * 100}%`,

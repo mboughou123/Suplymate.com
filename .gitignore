@@ -40,3 +40,15 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# graphify code index (regenerate via `graphify extract . --code-only`)
+/graphify-out/
+
+# skills installed via `npx skills add` (see skills-lock.json to restore)
+/.agents/skills/
+
+# Local DB field snapshots taken before backfill scripts
+.backups/
+
+# One-off audit scripts and dumps (never ship)
+.tmp-audit/

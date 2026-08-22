@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { detectRisk } from "@/lib/fraud";
-import { autoReply } from "@/lib/auto-reply";
-import { getSupplierMeta } from "@/lib/supplier-meta";
+import { autoReplyNotice } from "@/lib/auto-reply";
 import { canManageSupplier } from "@/lib/supplier-access";
 import { notify } from "@/lib/notifications";
 
@@ -72,7 +71,6 @@ export async function GET(
       type: convo.type,
       viewerRole: role,
     },
-    supplierMeta: getSupplierMeta(convo.supplierId),
     messages,
   });
 }
@@ -149,12 +147,14 @@ export async function POST(
         link: `/messages?c=${id}`,
       });
     } else {
-      // Honest fallback for unclaimed profiles: a clearly automated acknowledgement.
+      // Unclaimed profile: a system notice explaining what happens next. This
+      // must never answer as the supplier — see lib/auto-reply.ts for what the
+      // previous version was promising on the company's behalf.
       await prisma.message.create({
         data: {
           conversationId: id,
           senderType: "system",
-          body: autoReply(convo.supplierName, text),
+          body: autoReplyNotice(convo.supplierName, text),
         },
       });
     }

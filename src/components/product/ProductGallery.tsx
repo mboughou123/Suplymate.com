@@ -62,7 +62,7 @@ export default function ProductGallery({ images }: { images: GalleryImage[] }) {
     <div className="lg:sticky lg:top-24">
       {/* Main view */}
       <div
-        className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-200"
+        className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-line"
         style={{ backgroundImage: current.gradient }}
       >
         <GallerySlide image={current} size="main" />
@@ -74,23 +74,26 @@ export default function ProductGallery({ images }: { images: GalleryImage[] }) {
         </span>
       </div>
 
-      {/* Thumbnails */}
-      <div className="mt-3 flex gap-2.5 overflow-x-auto pb-1">
-        {images.map((img, i) => (
-          <button
-            key={img.id}
-            type="button"
-            onClick={() => setActive(i)}
-            className={`relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 transition-all ${
-              i === active ? "border-cyan" : "border-transparent opacity-70 hover:opacity-100"
-            }`}
-            style={{ backgroundImage: img.gradient }}
-            aria-label={`View ${img.label}`}
-          >
-            <GallerySlide image={img} size="thumb" />
-          </button>
-        ))}
-      </div>
+      {/* Thumbnails. The gallery is no longer padded to five captioned tiles, so
+          a product with a single photo (or none) has nothing to switch between. */}
+      {images.length > 1 && (
+        <div className="mt-3 flex gap-2.5 overflow-x-auto pb-1">
+          {images.map((img, i) => (
+            <button
+              key={img.id}
+              type="button"
+              onClick={() => setActive(i)}
+              className={`relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 transition-all ${
+                i === active ? "border-cyan" : "border-transparent opacity-70 hover:opacity-100"
+              }`}
+              style={{ backgroundImage: img.gradient }}
+              aria-label={`View ${img.label}`}
+            >
+              <GallerySlide image={img} size="thumb" />
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

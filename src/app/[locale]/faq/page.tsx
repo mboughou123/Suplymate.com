@@ -1,18 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("faqTitle"),
-    description: t("faqDescription"),
-  };
+  return buildLocalizedPageMetadata({ locale, pathname: "/faq", titleKey: "faqTitle", descriptionKey: "faqDescription" });
 }
 
 const FAQ_KEYS = [1, 2, 3, 4, 5, 6, 7, 8] as const;
@@ -39,7 +35,7 @@ export default async function FaqPage() {
         {FAQ_KEYS.map((n) => (
           <details
             key={n}
-            className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-colors open:border-cyan/40"
+            className="group rounded-2xl border border-line bg-base p-6 transition-colors open:border-cyan/40"
           >
             <summary className="flex cursor-pointer items-center justify-between font-display text-lg font-semibold text-ink marker:content-['']">
               {t(`q${n}`)}

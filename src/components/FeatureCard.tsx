@@ -46,7 +46,7 @@ export default function FeatureCard({
 
   return (
     <TiltCard href={href} className="flex h-full flex-col p-6">
-      <span className="relative flex h-12 w-12 items-center justify-center rounded-xl border border-cyan/20 bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan transition-transform duration-300 group-hover:scale-110">
+      <span className="relative flex h-12 w-12 items-center justify-center rounded-xl border border-cyan/20 bg-cyan-soft text-cyan">
         <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
       </span>
       <h3 className="relative mt-4 text-lg font-semibold text-ink">{title}</h3>

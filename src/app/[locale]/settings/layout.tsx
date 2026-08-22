@@ -1,21 +1,25 @@
 import { localeRedirect } from "@/i18n/redirect";
 import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
 import { auth } from "@/auth";
 import SettingsNav from "@/components/settings/SettingsNav";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "settings" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
-  return {
+  return completeLocalizedMetadata({
+    locale,
+    pathname: "/settings",
     title: meta("titleTemplate", { title: t("title") }),
     description: t("preferencesSubtitle"),
-  };
+    siteName: meta("siteName"),
+    robots: { index: false, follow: false },
+  });
 }
 
 export default async function SettingsLayout({

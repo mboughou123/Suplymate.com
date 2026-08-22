@@ -24,7 +24,12 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
 
   const close = () => setActive(null);
   const go = (dir: 1 | -1) =>
-    setActive((i) => (i === null ? null : (i + dir + media.length) % media.length));
+    setActive((i) =>
+      i === null || media.length === 0
+        ? null
+        : (i + dir + media.length) % media.length
+    );
+  const preview = active === null ? null : (media[active] ?? null);
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
@@ -35,8 +40,11 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
         icon={<Images className="h-5 w-5" />}
       />
 
+      {/* The gallery is now only as long as the number of real photos, so it can
+          be empty. It used to be padded to six tiles with a category stock
+          image, which made every supplier look photographed. */}
       {mediaIncomplete && (
-        <p className="mb-4 rounded-lg bg-slate-50 px-3 py-2 text-xs text-ink-muted">
+        <p className="rounded-lg bg-base px-3 py-2 text-xs text-ink-muted">
           {t("representativeImagery")}
         </p>
       )}
@@ -82,7 +90,7 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
       </div>
 
       <AnimatePresence>
-        {active !== null && (
+        {preview && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -119,24 +127,24 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
             </button>
 
             <motion.div
-              key={media[active].id}
+              key={preview.id}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
               className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl shadow-cardHover"
-              style={{ backgroundImage: media[active].gradient }}
+              style={{ backgroundImage: preview.gradient }}
               onClick={(e) => e.stopPropagation()}
             >
               <ImageWithFallback
-                src={media[active].isReal ? media[active].url : undefined}
-                fallbackSrc={media[active].fallback}
+                src={preview.isReal ? preview.url : undefined}
+                fallbackSrc={preview.fallback}
                 placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
-                alt={media[active].caption}
+                alt={preview.caption}
                 loading="eager"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 ai-grid-bg opacity-25" />
-              {media[active].type === "video" && (
+              {preview.type === "video" && (
                 <span className="absolute inset-0 flex items-center justify-center">
                   <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-cyan shadow-cardHover">
                     <Play className="ml-1 h-9 w-9 fill-cyan" aria-hidden />
@@ -144,8 +152,8 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
                 </span>
               )}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5">
-                <p className="text-lg font-semibold text-white">{media[active].title}</p>
-                <p className="text-sm text-white/70">{media[active].caption}</p>
+                <p className="text-lg font-semibold text-white">{preview.title}</p>
+                <p className="text-sm text-white/70">{preview.caption}</p>
               </div>
             </motion.div>
           </motion.div>

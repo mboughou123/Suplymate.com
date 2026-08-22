@@ -1,14 +1,35 @@
 import { getTranslations } from "next-intl/server";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import SuppliersClient from "./SuppliersClient";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/suppliers",
+    titleKey: "suppliersTitle",
+    descriptionKey: "suppliersDescription",
+  });
+}
 
 export default async function SuppliersPage() {
   const t = await getTranslations("suppliers");
   const suppliers = await getSuppliersFromDb();
 
-  const verifiedCount = suppliers.filter((s) => s.verified).length;
+  // This used to count `s.verified`, which the importer set for any supplier
+  // with a strong Google rating. Nothing here has been verified by a person, so
+  // that count is now always zero. A buyer is better served knowing how many
+  // listings they can actually act on.
+  const contactableCount = suppliers.filter(
+    (s) => s.phone || s.email || s.website
+  ).length;
+  // Count only the recorded `country` field. Falling back to the last comma-
+  // separated fragment of `location` split city strings into pseudo-countries,
+  // so this page advertised 19 countries while the homepage, which reads the
+  // same database through getSiteStats, said 11.
   const countryCount = new Set(
-    suppliers.map((s) => s.country ?? s.location.split(",").pop()!.trim())
+    suppliers.map((s) => s.country?.trim()).filter(Boolean)
   ).size;
 
   return (
@@ -31,7 +52,7 @@ export default async function SuppliersPage() {
               <p className="text-white/60">{t("suppliersCount")}</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white">{verifiedCount}</p>
+              <p className="text-2xl font-bold text-white">{contactableCount}</p>
               <p className="text-white/60">{t("verifiedCount")}</p>
             </div>
             <div>

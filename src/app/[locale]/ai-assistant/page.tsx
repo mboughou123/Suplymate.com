@@ -1,19 +1,14 @@
 import { Suspense } from "react";
-import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
 import AiProcurementDashboard from "@/components/ai-dashboard/AiProcurementDashboard";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("aiAssistantTitle"),
-    description: t("aiAssistantDescription"),
-  };
+  return buildLocalizedPageMetadata({ locale, pathname: "/ai-assistant", titleKey: "aiAssistantTitle", descriptionKey: "aiAssistantDescription" });
 }
 
 export default function AiAssistantPage() {

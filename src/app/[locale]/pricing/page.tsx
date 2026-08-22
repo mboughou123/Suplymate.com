@@ -1,18 +1,22 @@
 import { getTranslations } from "next-intl/server";
+import { auth } from "@/auth";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+import { isStripeConfigured, stripePriceIdFor } from "@/lib/billing";
+import PricingCheckoutButton from "@/components/PricingCheckoutButton";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("pricingTitle"),
-    description: t("pricingDescription"),
-  };
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/pricing",
+    titleKey: "pricingTitle",
+    descriptionKey: "pricingDescription",
+  });
 }
 
 const PLANS = [
@@ -23,13 +27,18 @@ const PLANS = [
 
 export default async function PricingPage() {
   const t = await getTranslations("pricing");
+  const session = await auth();
+  const proCheckoutConfigured =
+    isStripeConfigured() && Boolean(stripePriceIdFor("pro"));
 
   return (
     <div className="bg-transparent min-h-screen">
       <div className="bg-gradient-to-br from-navy-dark to-navy py-16 text-white text-center">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-bold">{t("pageTitle")}</h1>
-          <p className="mt-4 text-white/75 max-w-xl mx-auto">{t("pageSubtitle")}</p>
+          <p className="mt-4 text-white/75 max-w-xl mx-auto">
+            {t(proCheckoutConfigured ? "pageSubtitle" : "pageSubtitleUnavailable")}
+          </p>
         </div>
       </div>
 
@@ -44,8 +53,8 @@ export default async function PricingPage() {
                 key={plan}
                 className={`flex flex-col rounded-2xl border p-8 ${
                   highlighted
-                    ? "border-mustard bg-slate-50 shadow-cardHover ring-2 ring-mustard/20 scale-[1.02]"
-                    : "border-slate-200 bg-slate-50 shadow-card"
+                    ? "border-mustard bg-base shadow-cardHover ring-2 ring-mustard/20 scale-[1.02]"
+                    : "border-line bg-base shadow-card"
                 }`}
               >
                 {highlighted && (
@@ -66,16 +75,47 @@ export default async function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/suppliers"
-                  className={`mt-8 block rounded-xl py-3 text-center text-sm font-semibold transition ${
+                {(() => {
+                  const ctaClass = `mt-8 block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${
                     highlighted
                       ? "bg-mustard text-ink hover:bg-mustard-light"
                       : "bg-navy text-white hover:bg-navy-mid"
-                  }`}
-                >
-                  {t(`${plan}Cta` as "starterCta")}
-                </Link>
+                  }`;
+
+                  if (plan === "starter") {
+                    return (
+                      <Link href="/signup" className={ctaClass}>
+                        {t("starterCta")}
+                      </Link>
+                    );
+                  }
+                  if (plan === "enterprise" || !proCheckoutConfigured) {
+                    return (
+                      <Link href="/contact" className={ctaClass}>
+                        {t(
+                          plan === "enterprise"
+                            ? "enterpriseCta"
+                            : "billingUnavailableCta"
+                        )}
+                      </Link>
+                    );
+                  }
+                  if (!session?.user) {
+                    return (
+                      <Link href="/signup" className={ctaClass}>
+                        {t("proSignupCta")}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <PricingCheckoutButton
+                      label={t("proCta")}
+                      busyLabel={t("checkoutStarting")}
+                      errorLabel={t("checkoutError")}
+                      className={ctaClass}
+                    />
+                  );
+                })()}
               </div>
             );
           })}

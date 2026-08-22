@@ -1,23 +1,27 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { localeRedirect } from "@/i18n/redirect";
-import type { Metadata } from "next";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { FileText, ChevronRight } from "lucide-react";
+import { completeLocalizedMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "rfqs" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
-  return {
+  return completeLocalizedMetadata({
+    locale,
+    pathname: "/rfqs",
     title: meta("titleTemplate", { title: t("title") }),
+    description: meta("description"),
+    siteName: meta("siteName"),
     robots: { index: false, follow: false },
-  };
+  });
 }
 
 export const dynamic = "force-dynamic";

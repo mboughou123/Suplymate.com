@@ -19,6 +19,7 @@ import {
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
 import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
+import { isRealProductName, nonProductNameFilter } from "@/lib/product-quality";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
@@ -51,7 +52,6 @@ export type PublicProductsQuery = {
   category?: string;
   supplierId?: string;
   country?: string;
-  verifiedOnly?: boolean;
   hasPrice?: boolean;
 };
 
@@ -99,11 +99,15 @@ function priceLabelFor(
 type Where = Record<string, unknown>;
 
 function buildWhere(q: PublicProductsQuery): Where {
-  const where: Where = { status: "approved" };
+  // Scraped navigation labels are excluded in SQL so `count` and `findMany`
+  // agree and pagination does not develop holes.
+  const where: Where = { status: "approved", ...nonProductNameFilter() };
   if (q.category) where.category = q.category;
   if (q.supplierId) where.supplierId = q.supplierId;
   if (q.country) where.supplierCountry = q.country;
-  if (q.verifiedOnly) where.verifiedSupplier = true;
+  // A `verifiedOnly` filter used to map to `verifiedSupplier: true`. That flag
+  // was inherited from the scraper's auto-verified suppliers and has been
+  // cleared, so the filter could only ever return an empty catalogue.
   if (q.hasPrice) where.basePrice = { not: null };
   if (q.search && q.search.trim()) {
     const s = q.search.trim();
@@ -200,19 +204,20 @@ function safeArray(value: string | null | undefined): string[] {
 
 async function dbFacets(): Promise<CatalogueFacets> {
   try {
+    const approved = { status: "approved", ...nonProductNameFilter() };
     const [cats, countries, sups] = await Promise.all([
       prisma.scrapedProduct.findMany({
-        where: { status: "approved" },
+        where: approved,
         distinct: ["category"],
         select: { category: true },
       }),
       prisma.scrapedProduct.findMany({
-        where: { status: "approved", supplierCountry: { not: null } },
+        where: { ...approved, supplierCountry: { not: null } },
         distinct: ["supplierCountry"],
         select: { supplierCountry: true },
       }),
       prisma.scrapedProduct.findMany({
-        where: { status: "approved" },
+        where: approved,
         distinct: ["supplierId"],
         select: { supplierId: true, supplierName: true },
         orderBy: { supplierName: "asc" },
@@ -266,7 +271,7 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
   const merged: Product[] = [
     ...approved.map(scrapedToProduct),
     ...staticProducts,
-  ];
+  ].filter((p) => isRealProductName(p.name));
   let cards = merged.map(staticToCard);
 
   // Filters.
@@ -278,7 +283,6 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     if (q.category && c.category !== q.category) return false;
     if (q.supplierId && c.supplierId !== q.supplierId) return false;
     if (q.country && c.supplierCountry !== q.country) return false;
-    if (q.verifiedOnly && !c.verified) return false;
     if (q.hasPrice && !c.priceLabel) return false;
     return true;
   });

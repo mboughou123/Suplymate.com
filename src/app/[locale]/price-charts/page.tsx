@@ -1,6 +1,17 @@
 import { getTranslations } from "next-intl/server";
 import { getMaterialsFromDb } from "@/lib/data-service";
 import PriceChartsClient from "./PriceChartsClient";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/price-charts",
+    titleKey: "priceChartsTitle",
+    descriptionKey: "priceChartsDescription",
+  });
+}
 
 export default async function PriceChartsPage() {
   const t = await getTranslations("priceCharts");

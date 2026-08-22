@@ -1,18 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("contactTitle"),
-    description: t("contactDescription"),
-  };
+  return buildLocalizedPageMetadata({ locale, pathname: "/contact", titleKey: "contactTitle", descriptionKey: "contactDescription" });
 }
 
 export default async function ContactPage() {
@@ -24,7 +20,7 @@ export default async function ContactPage() {
       <h1 className="font-display text-4xl font-bold text-ink">{t("title")}</h1>
       <p className="mt-6 text-lg leading-relaxed text-ink-muted">{t("intro")}</p>
 
-      <section className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+      <section className="mt-10 rounded-2xl border border-line bg-base p-8">
         <p className="text-xs font-semibold uppercase tracking-wider text-ink-dim">
           {t("emailLabel")}
         </p>

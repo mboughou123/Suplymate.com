@@ -1,13 +1,19 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { BadgeCheck, MapPin, Star } from "lucide-react";
 import ReportButton from "@/components/ReportButton";
+import { buildLocalizedPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Compare suppliers | Suplymate",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/suppliers/compare",
+    titleKey: "compareSuppliersTitle",
+    descriptionKey: "compareSuppliersDescription",
+  });
+}
 
 export const dynamic = "force-dynamic";
 
@@ -55,9 +61,9 @@ export default async function CompareSuppliersPage({ searchParams }: Props) {
         Side-by-side view of directory facts only — no fabricated reliability scores or pricing.
       </p>
 
-      <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200">
+      <div className="mt-8 overflow-x-auto rounded-2xl border border-line">
         <table className="min-w-full text-left text-sm">
-          <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase text-ink-dim">
+          <thead className="border-b border-line bg-base text-xs uppercase text-ink-dim">
             <tr>
               <th className="px-4 py-3">Attribute</th>
               {selected.map((s) => (

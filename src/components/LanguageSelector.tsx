@@ -92,6 +92,10 @@ export default function LanguageSelector({
     }
   };
 
+  // A picker offering a single choice is a dead control. Placed after the hooks
+  // so hook order stays stable, and self-removing once more locales return.
+  if (locales.length <= 1) return null;
+
   const isNavbar = variant === "navbar";
   const triggerClass = isNavbar
     ? "inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-2.5 py-2 text-sm font-medium text-white/90 transition-colors hover:border-white/35 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow/60"

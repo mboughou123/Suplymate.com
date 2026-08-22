@@ -117,8 +117,8 @@ export default function DashboardClient({
 
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <StatCard
-                label={t("verifiedSuppliers")}
-                value={stats.verifiedSuppliers.toLocaleString()}
+                label={t("contactableSuppliers")}
+                value={stats.contactableSuppliers.toLocaleString()}
                 sub={t("totalIndexed", { count: stats.supplierCount })}
                 icon={Factory}
                 href="/suppliers"

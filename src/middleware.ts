@@ -1,24 +1,20 @@
 import createIntlMiddleware from "next-intl/middleware";
 import { getToken } from "next-auth/jwt";
 import { NextResponse, type NextRequest } from "next/server";
-import { routing, stripLocalePrefix, type Locale } from "@/i18n/routing";
+import {
+  routing,
+  stripLocalePrefix,
+  isRetiredLocale,
+  type Locale,
+} from "@/i18n/routing";
+import {
+  PROTECTED_PREFIXES,
+  PROTECTED_API_PREFIXES,
+  matchesPrefix,
+} from "@/lib/protected-routes";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-const PROTECTED_PREFIXES = [
-  "/dashboard",
-  "/settings",
-  "/messages",
-  "/rfqs",
-  "/supplier-dashboard",
-  "/onboarding",
-  "/notifications",
-  "/purchase-orders",
-  "/saved",
-  "/admin",
-];
-
-const PROTECTED_API_PREFIXES = ["/api/price-alerts", "/api/account"];
 
 function shouldSkip(pathname: string): boolean {
   return (
@@ -31,15 +27,9 @@ function shouldSkip(pathname: string): boolean {
 
 function isProtectedPath(pathname: string): boolean {
   const path = stripLocalePrefix(pathname);
-  if (
-    PROTECTED_API_PREFIXES.some(
-      (p) => path === p || path.startsWith(`${p}/`),
-    )
-  ) {
-    return true;
-  }
-  return PROTECTED_PREFIXES.some(
-    (p) => path === p || path.startsWith(`${p}/`),
+  return (
+    matchesPrefix(path, PROTECTED_API_PREFIXES) ||
+    matchesPrefix(path, PROTECTED_PREFIXES)
   );
 }
 
@@ -56,6 +46,17 @@ export default async function middleware(req: NextRequest) {
 
   if (shouldSkip(pathname)) {
     return NextResponse.next();
+  }
+
+  // The site is English-only for now. Send previously-served locale URLs to
+  // their English equivalent with a permanent redirect; without this, the intl
+  // middleware would treat "/fr" as a path segment and produce "/en/fr/...",
+  // turning every indexed non-English URL into a 404.
+  const firstSegment = pathname.split("/")[1] ?? "";
+  if (isRetiredLocale(firstSegment)) {
+    const target = req.nextUrl.clone();
+    target.pathname = `/${routing.defaultLocale}${stripLocalePrefix(pathname)}`;
+    return NextResponse.redirect(target, 308);
   }
 
   const path = stripLocalePrefix(pathname);

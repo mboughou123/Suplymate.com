@@ -102,7 +102,7 @@ function toDraft(s: AdminSupplier): Draft {
     description: s.description ?? "",
     logoUrl: s.logoUrl ?? "",
     imageUrl: s.imageUrl ?? "",
-    moq: s.moq,
+    moq: s.moq ?? "",
     products: s.products.join("\n"),
     images: s.images.join("\n"),
     certificationImages: s.certificationImages.join("\n"),

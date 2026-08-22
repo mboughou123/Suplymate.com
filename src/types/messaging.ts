@@ -28,14 +28,11 @@ export type Message = {
   attachments: Attachment[];
 };
 
-export type SupplierMeta = {
-  online: boolean;
-  responseTime: string;
-  responseRate: number;
-  lastActive: string;
-  verified: boolean;
-  deliveryReliability: number;
-};
+// `SupplierMeta` (online, responseTime, responseRate, lastActive, verified,
+// deliveryReliability) was removed along with lib/supplier-meta.ts, which
+// generated all six values from a hash of the supplier id. Suppliers do not
+// have accounts on the platform, so there is no presence or responsiveness to
+// report. Reinstate this only when it can be measured from real activity.
 
 export type ConversationSummary = {
   id: string;
