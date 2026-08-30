@@ -1,7 +1,8 @@
 "use client";
 
+import { type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   Search,
@@ -22,6 +23,14 @@ import {
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const router = useRouter();
+
+  const onSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const q = new FormData(e.currentTarget).get("q");
+    const query = typeof q === "string" ? q.trim() : "";
+    router.push(query ? `/products?q=${encodeURIComponent(query)}` : "/products");
+  };
 
   return (
     <section className="relative overflow-hidden border-b border-slate-100">
@@ -57,7 +66,7 @@ export default function Hero() {
             </p>
 
             <form
-              action="/products"
+              onSubmit={onSearch}
               className="group mt-8 flex animate-fade-up flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-cardHover transition-shadow duration-300 focus-within:border-cyan/50 focus-within:shadow-[0_0_0_4px_rgba(3,105,161,0.10),0_16px_40px_-8px_rgba(15,23,42,0.14)] sm:flex-row"
               style={{ animationDelay: "180ms" }}
               role="search"
@@ -111,17 +120,17 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto hidden w-full max-w-lg sm:block lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative animate-fade-up" style={{ animationDelay: "200ms" }}>
-              <div className="relative overflow-hidden rounded-2xl shadow-cardHover ring-1 ring-black/5">
+              <div className="relative overflow-hidden rounded-2xl shadow-cardHover ring-1 ring-black/5 max-sm:mx-auto max-sm:max-w-xs">
                 <Image
                   src="/hero-handshake.png"
                   alt={t("heroImageAlt")}
                   width={1024}
                   height={683}
                   priority
-                  className="h-full w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="aspect-[4/3] h-full w-full object-cover sm:aspect-auto"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 100vw, 45vw"
                 />
                 <div
                   aria-hidden
@@ -129,7 +138,7 @@ export default function Hero() {
                 />
               </div>
 
-              <div className="absolute -left-3 top-6 w-60 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur lg:-left-6">
+              <div className="absolute -left-1 top-4 w-52 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur sm:-left-3 sm:top-6 sm:w-60 lg:-left-6">
                 <div className="flex items-center gap-3">
                   <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
                     <ImageWithFallback
@@ -156,7 +165,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -right-2 w-60 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur lg:-right-5">
+              <div className="absolute -bottom-3 -right-1 w-52 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur sm:-bottom-4 sm:-right-2 sm:w-60 lg:-right-5">
                 <div className="flex items-center gap-3">
                   <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
                     <ImageWithFallback
@@ -182,7 +191,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 left-6 hidden items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/95 px-3.5 py-2.5 shadow-cardHover backdrop-blur lg:flex">
+              <div className="absolute -bottom-3 left-2 flex items-center gap-2 rounded-xl border border-slate-200/80 bg-white/95 px-3 py-2 shadow-cardHover backdrop-blur sm:-bottom-4 sm:left-6 sm:gap-2.5 sm:px-3.5 sm:py-2.5">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-white">
                   <Sparkles className="h-4 w-4" strokeWidth={1.9} aria-hidden />
                 </span>

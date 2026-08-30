@@ -42,19 +42,19 @@ export default async function SocialProof() {
   ];
 
   return (
-    <section className="border-b border-slate-100 py-20 sm:py-24">
+    <section className="border-b border-slate-100 bg-gradient-to-b from-white to-slate-50/60 py-20 sm:py-24">
       <div className="container-page">
         <p className="text-center eyebrow text-ink-dim">
           {t("socialProofTitle")}
         </p>
 
-        <div className="mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-          <div className="flex w-max animate-marquee items-center gap-14 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center">
+        <div className="mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+          <div className="flex w-max animate-marquee items-center gap-4 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center sm:gap-5">
             {[...logos, ...logos].map((logo, i) => (
               <span
                 key={`${logo}-${i}`}
                 aria-hidden={i >= logos.length}
-                className="shrink-0 whitespace-nowrap font-display text-heading-sm font-semibold tracking-tight text-ink-dim"
+                className="inline-flex shrink-0 items-center rounded-full border border-slate-200/90 bg-white px-5 py-2.5 font-display text-sm font-semibold tracking-tight text-ink-muted shadow-sm"
               >
                 {logo}
               </span>
@@ -63,11 +63,11 @@ export default async function SocialProof() {
         </div>
 
         <Reveal className="mt-14">
-          <dl className="grid grid-cols-2 divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card lg:grid-cols-4 lg:divide-x">
+          <dl className="grid grid-cols-2 divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card lg:grid-cols-4 lg:divide-x lg:divide-y-0">
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col-reverse px-6 py-8 text-center">
+              <div key={stat.label} className="flex flex-col-reverse px-5 py-7 text-center sm:px-6 sm:py-8">
                 <dt className="mt-1.5 text-body-sm text-ink-muted">{stat.label}</dt>
-                <dd className="font-display text-display font-bold text-navy">
+                <dd className="font-display text-2xl font-bold tabular-nums text-navy sm:text-display">
                   {stat.node}
                 </dd>
               </div>
@@ -81,20 +81,20 @@ export default async function SocialProof() {
               as="article"
               key={item.name}
               delay={i * 90}
-              className="glass-card glass-hover flex flex-col p-7"
+              className="glass-card glass-hover flex flex-col p-6 sm:p-7"
             >
               <div className="flex gap-1 text-mustard-light" role="img" aria-label={common("fiveStars")}>
                 {Array.from({ length: 5 }).map((_, s) => (
                   <Star key={s} className="h-4 w-4 fill-current" aria-hidden />
                 ))}
               </div>
-              <blockquote className="mt-4 flex-1 text-body-sm text-ink-muted">
+              <blockquote className="mt-4 flex-1 text-body-sm leading-relaxed text-ink-muted">
                 &ldquo;{item.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-5">
                 <span
                   aria-hidden
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy text-caption font-bold text-white"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-navy to-navy-mid text-caption font-bold text-white"
                 >
                   {item.name
                     .split(" ")

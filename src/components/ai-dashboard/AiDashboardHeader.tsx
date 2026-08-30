@@ -24,7 +24,7 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
       .toUpperCase() || "U";
 
   return (
-    <header className="flex shrink-0 items-center justify-between gap-4 border-b border-slate-200 bg-white px-4 py-3 sm:px-6">
+    <header className="flex shrink-0 items-center justify-between gap-4 border-b border-slate-200 bg-gradient-to-r from-white to-slate-50/80 px-4 py-3 sm:px-6">
       <div className="flex min-w-0 items-center gap-3">
         <button
           type="button"
@@ -35,8 +35,8 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
           <Menu className="h-5 w-5" />
         </button>
 
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gold/15">
-          <Sparkles className="h-5 w-5 text-gold" aria-hidden />
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan/20 bg-gradient-to-br from-cyan/10 to-teal/10">
+          <Sparkles className="h-5 w-5 text-cyan" aria-hidden />
         </span>
 
         <div className="min-w-0">
@@ -64,7 +64,7 @@ export default function AiDashboardHeader({ aiMode, onMenuClick }: Props) {
         </span>
 
         <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-2 py-1.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/20 text-xs font-bold text-ink">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy text-xs font-bold text-white">
             {initials}
           </span>
           <span className="hidden text-xs font-semibold text-ink sm:block">

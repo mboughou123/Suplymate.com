@@ -17,9 +17,9 @@ export default function PublicProductCard({ data: d }: Props) {
   const tc = useTranslations("common");
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:border-cyan/35 hover:shadow-cardHover">
       <Link href={`/products/${d.id}`} className="relative block">
-        <div className="relative flex h-44 items-center justify-center overflow-hidden bg-slate-100">
+        <div className="relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50 sm:h-44">
           <ImageWithFallback
             src={d.imageUrl}
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
@@ -33,20 +33,20 @@ export default function PublicProductCard({ data: d }: Props) {
               {tc("verified")}
             </span>
           )}
-          <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
+          <span className="absolute right-3 top-3 rounded-full bg-navy/75 px-2.5 py-0.5 text-[10px] font-semibold text-white backdrop-blur-sm">
             {d.category}
           </span>
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <Link href={`/products/${d.id}`}>
-          <h3 className="line-clamp-2 text-base font-semibold text-ink transition-colors group-hover:text-cyan">
+          <h3 className="line-clamp-2 text-base font-semibold leading-snug text-ink transition-colors group-hover:text-cyan">
             {d.name}
           </h3>
         </Link>
 
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-muted">
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-muted">
           {d.supplierVisible && d.supplierId ? (
             <Link
               href={`/supplier/${d.supplierId}`}
@@ -62,66 +62,65 @@ export default function PublicProductCard({ data: d }: Props) {
             </span>
           )}
           {d.supplierCountry && (
-            <span className="text-ink-dim">{d.supplierCountry}</span>
-          )}
-        </div>
-
-        <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
-          {d.priceLabel ? (
             <>
-              <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
-                {t("price")}
-              </p>
-              <p className="text-lg font-bold text-cyan">{d.priceLabel}</p>
+              <span aria-hidden className="text-ink-dim">·</span>
+              <span className="text-ink-dim">{d.supplierCountry}</span>
             </>
-          ) : (
-            <p className="text-sm font-semibold text-ink-muted">
-              {tc("contactForPricing")}
-            </p>
           )}
         </div>
 
-        {(d.moq || d.shippingTime) && (
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-muted">
-            {d.moq && (
-              <span className="inline-flex items-center gap-1">
-                <PackageCheck className="h-3.5 w-3.5 text-teal" aria-hidden />
-                {t("moqLabel")}: <span className="font-semibold text-ink">{d.moq}</span>
-              </span>
-            )}
-            {d.shippingTime && (
-              <span className="inline-flex items-center gap-1">
-                <Truck className="h-3.5 w-3.5 text-teal" aria-hidden />
-                {d.shippingTime}
-              </span>
+        <div className="mt-3 flex items-end justify-between gap-3 rounded-xl border border-slate-100 bg-slate-50/90 px-3 py-2.5">
+          <div>
+            {d.priceLabel ? (
+              <>
+                <p className="text-[10px] font-semibold uppercase tracking-wide text-ink-dim">
+                  {t("price")}
+                </p>
+                <p className="text-lg font-bold tabular-nums text-cyan">{d.priceLabel}</p>
+              </>
+            ) : (
+              <p className="text-sm font-semibold text-ink-muted">{tc("contactForPricing")}</p>
             )}
           </div>
-        )}
+          {(d.moq || d.shippingTime) && (
+            <div className="text-right text-[11px] text-ink-muted">
+              {d.moq && (
+                <p className="inline-flex items-center justify-end gap-1">
+                  <PackageCheck className="h-3 w-3 text-teal" aria-hidden />
+                  {d.moq}
+                </p>
+              )}
+              {d.shippingTime && (
+                <p className="mt-0.5 inline-flex items-center justify-end gap-1">
+                  <Truck className="h-3 w-3 text-teal" aria-hidden />
+                  {d.shippingTime}
+                </p>
+              )}
+            </div>
+          )}
+        </div>
 
-        <div className="mt-4 flex flex-col gap-2 pt-1">
-          <div className="flex gap-2">
-            <Link
-              href={`/products/${d.id}`}
-              className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
-            >
-              {t("viewProduct")}
-              <ArrowRight
-                className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5"
-                aria-hidden
-              />
-            </Link>
-            <ContactSupplierButton
-              supplierId={d.supplierId}
-              supplierName={d.supplierName}
-              label={t("requestQuote")}
-              productName={d.name}
-              productId={d.id}
-              className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
-            />
-          </div>
+        <div className="mt-4 flex items-stretch gap-2 pt-1 sm:mt-auto">
+          <ContactSupplierButton
+            supplierId={d.supplierId}
+            supplierName={d.supplierName}
+            label={t("requestQuote")}
+            productName={d.name}
+            productId={d.id}
+            className="btn-accent inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
+          />
+          <Link
+            href={`/products/${d.id}`}
+            className="inline-flex flex-1 items-center justify-center gap-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-200 hover:border-cyan/40 hover:bg-cyan/5 hover:text-cyan"
+          >
+            {t("viewProduct")}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
           {d.supplierId && (
             <AddToCartButton
-              className="inline-flex w-full items-center justify-center gap-1.5 rounded-xl border border-cyan/40 bg-cyan/5 px-3 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/10"
+              compact
+              label={t("addToCart")}
+              className="inline-flex shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-cyan transition hover:border-cyan/40 hover:bg-cyan/5"
               item={{
                 productId: d.id,
                 productName: d.name,
