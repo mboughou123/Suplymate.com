@@ -11,6 +11,34 @@
     --color-up: #047857;
     --color-down: #dc2626;
 
+    --color-navy-deep: #061018;
+    --color-navy-mid: #1a4a6b;
+
+    --space-section-y: 5rem;
+    --space-section-y-lg: 6rem;
+    --space-block: 2.5rem;
+
+    --gradient-navy-deep: linear-gradient(145deg, #061018 0%, #0d3349 42%, #1a4a6b 100%);
+    --gradient-azure-mist: linear-gradient(
+      160deg,
+      rgba(240, 247, 252, 0.95) 0%,
+      rgba(255, 255, 255, 0.88) 55%,
+      rgba(240, 249, 255, 0.75) 100%
+    );
+    --gradient-panel-dark: linear-gradient(
+      145deg,
+      rgba(6, 16, 24, 0.98) 0%,
+      rgba(13, 51, 73, 0.96) 50%,
+      rgba(26, 74, 107, 0.92) 100%
+    );
+
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.88);
+    --glass-bg-dark: rgba(13, 51, 73, 0.55);
+
+    --glow-azure-subtle: 0 0 48px rgba(56, 189, 248, 0.1);
+    --glow-azure-panel: 0 4px 28px rgba(3, 105, 161, 0.12);
+
     --radius-card: 1.125rem;
     --radius-control: 0.875rem;
 
@@ -38,6 +66,46 @@
 @layer components {
   .container-page {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Fairmarkit-like vertical rhythm — reuse on future homepage bands */
+  .section-y {
+    @apply py-section sm:py-24 lg:py-section-lg;
+  }
+  .section-y-tight {
+    @apply py-16 sm:py-section;
+  }
+  .stack-block {
+    @apply space-y-block;
+  }
+
+  /* Futuristic navy / azure surfaces */
+  .bg-navy-gradient {
+    background: var(--gradient-navy-deep);
+  }
+  .bg-azure-mist {
+    background: var(--gradient-azure-mist);
+  }
+  .bg-panel-dark {
+    background: var(--gradient-panel-dark);
+  }
+
+  /* Soft glass panels — demo, cards, hero placeholders */
+  .panel-glass {
+    @apply rounded-2xl border shadow-glass backdrop-blur-xl;
+    border-color: var(--glass-border);
+    background: var(--glass-bg);
+  }
+  .panel-glass-dark {
+    @apply rounded-2xl border border-white/10 shadow-glow-panel backdrop-blur-xl;
+    background: var(--glass-bg-dark);
+  }
+  .panel-glass-hover {
+    @apply transition-all duration-300 ease-cinema hover:shadow-glow-panel hover:border-cyan/25;
+  }
+
+  .glow-azure-subtle {
+    box-shadow: var(--glow-azure-subtle);
   }
 
   /* Display type: single family (Inter) with tight, size-appropriate tracking */

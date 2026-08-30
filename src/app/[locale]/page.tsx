@@ -6,6 +6,8 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import Hero from "@/components/Hero";
+import HomeAiDemoSection from "@/components/HomeAiDemoSection";
+import HomeCloseSection from "@/components/HomeCloseSection";
 import FeatureCard, { type FeatureIconName } from "@/components/FeatureCard";
 import SocialProof from "@/components/SocialProof";
 import HomepageSupplierSection from "@/components/HomepageSupplierSection";
@@ -92,6 +94,8 @@ export default async function HomePage() {
     <>
       <Hero />
 
+      <HomeAiDemoSection />
+
       <section className="container-page py-20 sm:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-display text-ink">
@@ -175,35 +179,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="pb-24 pt-4">
-        <div className="container-page">
-          <Reveal className="relative overflow-hidden rounded-3xl bg-navy px-8 py-16 text-center">
-            <div aria-hidden className="pointer-events-none absolute inset-0">
-              <div className="absolute inset-0 bg-[radial-gradient(40rem_20rem_at_50%_-4rem,rgba(56,189,248,0.18),transparent)]" />
-            </div>
-            <h2 className="relative font-display text-display text-white">
-              {t("ctaTitle")}
-            </h2>
-            <p className="relative mx-auto mt-4 max-w-xl text-body-lg text-white/75">
-              {t("ctaSubtitle")}
-            </p>
-            <div className="relative mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/suppliers"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-cardHover transition-all duration-200 ease-cinema hover:bg-cyan-soft active:translate-y-px cursor-pointer"
-              >
-                {t("exploreSuppliers")}
-              </Link>
-              <Link
-                href="/pricing"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 ease-cinema hover:border-white/40 hover:bg-white/10 active:translate-y-px cursor-pointer"
-              >
-                {t("viewPricing")}
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <HomeCloseSection
+        title={t("ctaTitle")}
+        subtitle={t("ctaSubtitle")}
+        tryLabel={t("tryWalkthrough")}
+        plansLabel={t("seePlans")}
+      />
     </>
   );
 }
