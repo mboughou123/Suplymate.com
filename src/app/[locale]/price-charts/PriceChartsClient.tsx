@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import { Search, Star, TrendingUp } from "lucide-react";
 import type { Material } from "@/data/materials";
 import MarketSummaryCard from "@/components/MarketSummaryCard";
 import PriceAlertForm from "@/components/PriceAlertForm";
 import { explainSignal } from "@/lib/market-intelligence";
-import { Star } from "lucide-react";
 
 const PriceChart = dynamic(() => import("@/components/PriceChart"), {
   loading: () => (
@@ -60,24 +60,33 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
       <div className="space-y-6">
-        <div className="rounded-xl border border-cyan/20 bg-cyan-soft px-4 py-3 text-xs text-cyan">
-          {t("provenanceNotice")}
+        <div className="flex items-start gap-3 rounded-xl border border-cyan/20 bg-gradient-to-r from-cyan-soft to-white px-4 py-3.5 text-xs leading-relaxed text-cyan">
+          <TrendingUp className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+          <p>{t("provenanceNotice")}</p>
         </div>
-        <input
-          type="search"
-          placeholder={t("searchPlaceholder")}
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm lg:hidden"
-        />
+
+        <div className="relative lg:hidden">
+          <Search
+            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+            aria-hidden
+          />
+          <input
+            type="search"
+            placeholder={t("searchPlaceholder")}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-4 text-sm shadow-sm transition focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/15"
+          />
+        </div>
+
         {selected && (
           <>
             <PriceChart material={selected} />
             {signalInfo && (
-              <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm">
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
                 <p className="font-semibold text-ink">{t("signal", { label: signalInfo.label })}</p>
-                <p className="mt-1 text-xs text-ink-muted">{signalInfo.reason}</p>
-                <p className="mt-2 text-[11px] text-ink-dim">
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{signalInfo.reason}</p>
+                <p className="mt-3 text-[11px] text-ink-dim">
                   {t("sourceUpdated", {
                     source: signalInfo.source,
                     date: signalInfo.lastUpdated,
@@ -90,8 +99,21 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
       </div>
 
       <aside className="space-y-6">
-        <div className="hidden lg:block rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-card max-h-[480px] overflow-y-auto">
-          <h2 className="text-sm font-semibold text-ink mb-3">{t("materials")}</h2>
+        <div className="hidden max-h-[520px] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-4 shadow-card lg:block">
+          <div className="relative mb-4">
+            <Search
+              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+              aria-hidden
+            />
+            <input
+              type="search"
+              placeholder={t("searchPlaceholder")}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2.5 pl-9 pr-3 text-sm transition focus:border-cyan/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan/15"
+            />
+          </div>
+          <h2 className="mb-3 text-sm font-semibold text-ink">{t("materials")}</h2>
           <div className="space-y-2">
             {filtered.map((m) => (
               <div key={m.id} className="relative">
@@ -103,21 +125,23 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
                 <button
                   type="button"
                   onClick={() => toggleWatch(m.id)}
-                  className="absolute right-2 top-2 rounded p-1 text-ink-dim hover:text-gold"
+                  className="absolute right-2 top-2 rounded-lg p-1.5 text-ink-dim transition hover:bg-slate-100 hover:text-cyan"
                   aria-label={
                     watchlist.includes(m.id)
                       ? t("removeFromWatchlist")
                       : t("addToWatchlist")
                   }
                 >
-                  <Star className={`h-4 w-4 ${watchlist.includes(m.id) ? "fill-gold text-gold" : ""}`} />
+                  <Star
+                    className={`h-4 w-4 ${watchlist.includes(m.id) ? "fill-cyan text-cyan" : ""}`}
+                  />
                 </button>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="lg:hidden grid gap-2 sm:grid-cols-2">
+        <div className="grid gap-2 sm:grid-cols-2 lg:hidden">
           {filtered.map((m) => (
             <MarketSummaryCard
               key={m.id}

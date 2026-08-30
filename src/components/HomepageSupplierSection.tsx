@@ -77,7 +77,7 @@ export default async function HomepageSupplierSection() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <Link href="/suppliers" className="btn-secondary px-6 py-3">
+          <Link href="/suppliers" className="btn-accent px-6 py-3">
             {t("exploreAllSuppliers")}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
