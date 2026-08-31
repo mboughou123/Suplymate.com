@@ -108,7 +108,40 @@
     box-shadow: var(--glow-azure-subtle);
   }
 
-  /* Display type: single family (Inter) with tight, size-appropriate tracking */
+  /* Magic Patterns homepage — floating nav + agent console */
+  .nav-float-glass {
+    @apply rounded-2xl border border-white/70 bg-white/75 shadow-glass backdrop-blur-xl;
+  }
+
+  .hero-ambient {
+    background:
+      radial-gradient(ellipse 80% 55% at 50% -10%, rgba(56, 189, 248, 0.14), transparent 60%),
+      radial-gradient(ellipse 45% 40% at 85% 15%, rgba(3, 105, 161, 0.06), transparent 55%),
+      radial-gradient(ellipse 40% 35% at 10% 25%, rgba(13, 51, 73, 0.06), transparent 50%),
+      #f8fafc;
+  }
+
+  .agent-console {
+    @apply relative overflow-hidden rounded-2xl border border-white/10 shadow-glow-panel backdrop-blur-xl;
+    background: linear-gradient(
+      165deg,
+      #0d3349 0%,
+      #1a4a6b 48%,
+      #0d3349 100%
+    );
+  }
+
+  .agent-console-scan {
+    @apply pointer-events-none absolute inset-x-0 top-0 h-24 opacity-30 motion-safe:animate-scan-line;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(56, 189, 248, 0.35),
+      transparent
+    );
+  }
+
+  /* Display type: Outfit for headlines, Inter for body */
   .font-display {
     @apply tracking-tight;
   }
@@ -145,11 +178,11 @@
 
   /* Accent gradient text — subtle two-tone, static (no rainbow animation) */
   .gradient-text {
-    @apply bg-gradient-to-r from-cyan to-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan to-cyan-glow bg-clip-text text-transparent;
   }
   /* Light variant for dark navy surfaces */
   .gradient-text-light {
-    @apply bg-gradient-to-r from-cyan-glow to-teal-glow bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-glow to-cyan bg-clip-text text-transparent;
   }
 
   /* Skeleton shimmer */

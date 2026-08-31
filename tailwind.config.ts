@@ -96,7 +96,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         // Single-family type system (Linear/Stripe pattern): display = Inter
         // with tight tracking via the text-display-* tokens below.
-        display: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-outfit)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
         // — type scale tokens (size, line-height, tracking, weight) —
@@ -127,6 +127,14 @@ const config: Config = {
         "display-xl": [
           "3.625rem",
           { lineHeight: "3.875rem", letterSpacing: "-0.033em", fontWeight: "700" },
+        ],
+        "display-2xl": [
+          "4.5rem",
+          { lineHeight: "1.05", letterSpacing: "-0.038em", fontWeight: "700" },
+        ],
+        "display-hero": [
+          "2.75rem",
+          { lineHeight: "1.08", letterSpacing: "-0.03em", fontWeight: "700" },
         ],
       },
       spacing: {
@@ -192,6 +200,14 @@ const config: Config = {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(40px)" },
         },
+        "scan-line": {
+          "0%": { transform: "translateY(-120%)" },
+          "100%": { transform: "translateY(420%)" },
+        },
+        "nav-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-2px)" },
+        },
         "orb-float": {
           "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
           "50%": { transform: "translateY(-8px) rotate(3deg)" },
@@ -206,6 +222,8 @@ const config: Config = {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "ai-pulse": "ai-pulse 3s ease-in-out infinite",
         "grid-drift": "grid-drift 20s linear infinite",
+        "scan-line": "scan-line 5s linear infinite",
+        "nav-float": "nav-float 6s ease-in-out infinite",
         "orb-float": "orb-float 6s ease-in-out infinite",
       },
     },

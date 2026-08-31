@@ -180,31 +180,37 @@
     "verified": "Verificado",
     "idleHint": "Press Run walkthrough to see Scout → Compare → Watch in action.",
     "ctaHint": "Ready to run your own ask? Open the full AI assistant.",
-    "openAssistant": "Open AI assistant"
+    "openAssistant": "Open AI assistant",
+    "consoleLabel": "Agent console"
+  },
+  "homeTopNav": {
+    "mainNav": "Main navigation",
+    "logIn": "Log in",
+    "requestDemo": "Request a demo"
+  },
+  "homeStats": {
+    "verifiedSuppliers": "Fornitori vérifiés",
+    "countries": "Países couverts",
+    "buyerRating": "Buyer rating"
+  },
+  "homeModules": {
+    "title": "Three agents, three advantages",
+    "subtitle": "Scout, Compare, and Watch map to how procurement teams actually work — from shortlist to RFQ to market timing.",
+    "scoutTitle": "Scout",
+    "scoutDescription": "Find verified mills and build a shortlist that matches your spec, region, and lead-time constraints.",
+    "compareTitle": "Comparar",
+    "compareDescription": "Line up side-by-side offers with price, MOQ, and lead time — RFQ-style, without spreadsheet chaos.",
+    "watchTitle": "Watch",
+    "watchDescription": "Track price windows and rate signals so you know when to lock volume or wait a week.",
+    "readMore": "Lire la suite"
   },
   "hero": {
     "badge": "Experts sourcing IA + humains",
-    "title": "Votre partenaire de sourcing {highlight}",
-    "titleHighlight": "propulsé par l'IA",
-    "subtitle": "Suplymate connects procurement teams with a verified supplier network and a three-agent AI — Scout, Compare, and Watch — so you shortlist mills, line up offers, and time RFQs with confidence.",
-    "searchLabel": "Search suppliers",
-    "searchPlaceholder": "HDPE mills, pipe fabricators, verified suppliers by region…",
-    "searchButton": "Trouver des fornitori",
-    "findSuppliers": "Browse network",
+    "titleGradient": "Agentic sourcing",
+    "titleRest": "fine-tuned for industry.",
+    "subtitle": "Shortlist verified mills, compare offers side by side, and watch material price windows — Scout, Compare, and Watch agents built for industrial procurement.",
     "tryWalkthrough": "Try the walkthrough",
-    "trustVerifiedNetwork": "Réseau vérifié",
-    "trustAiMatching": "Matching IA",
-    "trustProcurementSupport": "Support approvisionnement",
-    "visualEyebrow": "AI agent workflow",
-    "visualCaption": "Scout verified mills, compare offers side by side, and watch material signals before you RFQ.",
-    "visualScout": "Scout",
-    "visualCompare": "Comparar",
-    "visualWatch": "Watch",
-    "previewSupplierName": "Al Gharbia Pipe Company LLC",
-    "previewSupplierRegion": "UAE · Verified mill",
-    "verifiedSupplier": "Fournisseur vérifié",
-    "aiMatchFound": "Correspondance IA trouvée",
-    "aiMatchDetail": "3 mills · ≤14 day lead"
+    "seePlans": "See plans"
   },
   "authentication": {
     "signIn": "Se connecter",

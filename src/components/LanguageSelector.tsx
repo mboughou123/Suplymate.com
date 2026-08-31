@@ -12,7 +12,7 @@ import {
 
 type LanguageSelectorProps = {
   /** Compact styling for the dark navbar */
-  variant?: "navbar" | "mobile";
+  variant?: "navbar" | "mobile" | "inline";
   className?: string;
 };
 
@@ -93,16 +93,19 @@ export default function LanguageSelector({
   };
 
   const isNavbar = variant === "navbar";
+  const isInline = variant === "inline";
   const triggerClass = isNavbar
     ? "inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-2.5 py-2 text-sm font-medium text-white/90 transition-colors hover:border-white/35 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow/60"
-    : "flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm font-medium text-white";
+    : isInline
+      ? "inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/80 px-2.5 py-2 text-sm font-medium text-ink-muted transition-colors hover:border-cyan/30 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/40"
+      : "flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm font-medium text-white";
 
-  const panelClass = isNavbar
+  const panelClass = isNavbar || isInline
     ? "absolute end-0 top-full z-50 mt-2 max-h-80 w-52 overflow-y-auto rounded-xl border border-slate-200 bg-white py-1 shadow-cardHover"
     : "mt-2 max-h-60 w-full overflow-y-auto rounded-xl border border-white/15 bg-navy-dark py-1";
 
   const optionClass = (active: boolean, selected: boolean) => {
-    if (isNavbar) {
+    if (isNavbar || isInline) {
       return `flex w-full items-center justify-between gap-2 px-3 py-2 text-start text-sm transition-colors focus-visible:outline-none focus-visible:bg-cyan-soft ${
         selected ? "bg-cyan-soft/60 font-semibold text-cyan" : "text-ink hover:bg-slate-50"
       }`;
