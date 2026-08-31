@@ -9,7 +9,8 @@ import type { Config } from "tailwindcss";
  *   - Neutrals:         slate scale via ink.* aliases
  *   - Semantic:         verified/up = emerald · down = red
  *
- * Spacing follows the default 4px scale used on an 8pt rhythm (py-2/4/6/8…).
+ * Spacing follows a generous Fairmarkit-like rhythm on an 8pt grid
+ * (section-y, gap-block utilities in globals.css).
  * Type scale tokens (text-display-*, text-heading-*) carry their own
  * line-height, tracking, and weight so headings stay consistent everywhere.
  */
@@ -61,6 +62,7 @@ const config: Config = {
         navy: {
           DEFAULT: "#0D3349",
           dark: "#081E2D",
+          deep: "#061018",
           mid: "#1A4A6B",
           light: "#1E5580",
         },
@@ -94,7 +96,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         // Single-family type system (Linear/Stripe pattern): display = Inter
         // with tight tracking via the text-display-* tokens below.
-        display: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-outfit)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontSize: {
         // — type scale tokens (size, line-height, tracking, weight) —
@@ -126,6 +128,20 @@ const config: Config = {
           "3.625rem",
           { lineHeight: "3.875rem", letterSpacing: "-0.033em", fontWeight: "700" },
         ],
+        "display-2xl": [
+          "4.5rem",
+          { lineHeight: "1.05", letterSpacing: "-0.038em", fontWeight: "700" },
+        ],
+        "display-hero": [
+          "2.75rem",
+          { lineHeight: "1.08", letterSpacing: "-0.03em", fontWeight: "700" },
+        ],
+      },
+      spacing: {
+        section: "5rem",
+        "section-lg": "6rem",
+        block: "2.5rem",
+        "block-lg": "3.5rem",
       },
       borderRadius: {
         xl: "0.875rem",
@@ -141,6 +157,8 @@ const config: Config = {
         gold: "0 4px 24px rgba(3,105,161,0.25)",
         "ai-glow": "0 0 40px rgba(96,165,250,0.15), 0 8px 32px rgba(15,23,42,0.08)",
         glass: "0 1px 2px rgba(15,23,42,0.04), 0 8px 32px rgba(15,23,42,0.06)",
+        "glow-subtle": "0 0 48px rgba(56,189,248,0.10)",
+        "glow-panel": "0 4px 24px rgba(3,105,161,0.08), 0 0 0 1px rgba(56,189,248,0.06)",
       },
       transitionTimingFunction: {
         cinema: "cubic-bezier(0.16, 1, 0.3, 1)",
@@ -182,6 +200,14 @@ const config: Config = {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(40px)" },
         },
+        "scan-line": {
+          "0%": { transform: "translateY(-120%)" },
+          "100%": { transform: "translateY(420%)" },
+        },
+        "nav-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-2px)" },
+        },
         "orb-float": {
           "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
           "50%": { transform: "translateY(-8px) rotate(3deg)" },
@@ -196,6 +222,8 @@ const config: Config = {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "ai-pulse": "ai-pulse 3s ease-in-out infinite",
         "grid-drift": "grid-drift 20s linear infinite",
+        "scan-line": "scan-line 5s linear infinite",
+        "nav-float": "nav-float 6s ease-in-out infinite",
         "orb-float": "orb-float 6s ease-in-out infinite",
       },
     },

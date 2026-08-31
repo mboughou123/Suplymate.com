@@ -27,11 +27,16 @@ describe("messages/en.json", () => {
       "languageSelector",
       "common",
       "home",
+      "homeAiDemo",
+      "homeTopNav",
+      "homeStats",
+      "homeModules",
       "authentication",
       "errors",
       "suppliers",
       "products",
       "supplierProfile",
+      "pricing",
     ];
     for (const ns of namespaces) {
       expect(en).toHaveProperty(ns);

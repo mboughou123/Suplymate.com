@@ -1,39 +1,44 @@
 "use client";
 
+import { type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import Image from "next/image";
+import { Link, useRouter } from "@/i18n/navigation";
 import {
   Search,
   Sparkles,
-  Package,
   BadgeCheck,
-  TrendingDown,
   ShieldCheck,
   Bot,
-  Star,
+  Binoculars,
+  Columns3,
+  LineChart,
+  Factory,
 } from "lucide-react";
 import TrustBadge from "@/components/TrustBadge";
-import ImageWithFallback from "@/components/ImageWithFallback";
-import {
-  getProductFallbackImage,
-  getSupplierFallbackImage,
-} from "@/lib/image-fallback";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const router = useRouter();
+
+  const onSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const q = new FormData(e.currentTarget).get("q");
+    const query = typeof q === "string" ? q.trim() : "";
+    router.push(query ? `/suppliers?q=${encodeURIComponent(query)}` : "/suppliers");
+  };
 
   return (
-    <section className="relative overflow-hidden border-b border-slate-100">
+    <section className="relative overflow-hidden border-b border-slate-100/80 bg-azure-mist">
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 ai-grid-bg opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
-        <div className="absolute -top-40 left-1/2 h-[30rem] w-[52rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan/10 via-teal/10 to-transparent blur-3xl" />
+        <div className="absolute inset-0 ai-grid-bg opacity-40 [mask-image:linear-gradient(to_bottom,black,transparent_88%)]" />
+        <div className="absolute -top-48 left-1/2 h-[34rem] w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan/12 via-teal/8 to-transparent blur-3xl glow-azure-subtle" />
+        <div className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/4 translate-y-1/4 rounded-full bg-navy/5 blur-3xl" />
       </div>
 
-      <div className="relative container-page py-16 sm:py-20 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="relative container-page section-y-tight lg:py-section-lg">
+        <div className="grid items-center gap-block-lg lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="max-w-2xl text-center lg:text-left">
-            <span className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-cyan/25 bg-cyan-soft px-3.5 py-1.5 text-caption font-semibold uppercase tracking-[0.12em] text-cyan">
+            <span className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-cyan/25 bg-white/80 px-3.5 py-1.5 text-caption font-semibold uppercase tracking-[0.12em] text-cyan shadow-sm backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
               {t("badge")}
             </span>
@@ -57,13 +62,16 @@ export default function Hero() {
             </p>
 
             <form
-              action="/products"
-              className="group mt-8 flex animate-fade-up flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-cardHover transition-shadow duration-300 focus-within:border-cyan/50 focus-within:shadow-[0_0_0_4px_rgba(3,105,161,0.10),0_16px_40px_-8px_rgba(15,23,42,0.14)] sm:flex-row"
+              onSubmit={onSearch}
+              className="panel-glass group mt-8 flex animate-fade-up flex-col gap-2 p-2 motion-safe:transition-shadow motion-safe:duration-300 focus-within:border-cyan/40 focus-within:shadow-glow-panel sm:flex-row"
               style={{ animationDelay: "180ms" }}
               role="search"
             >
               <div className="flex flex-1 items-center gap-2.5 px-3.5">
-                <Search className="h-5 w-5 shrink-0 text-ink-dim transition-colors group-focus-within:text-cyan" aria-hidden />
+                <Search
+                  className="h-5 w-5 shrink-0 text-ink-dim transition-colors group-focus-within:text-cyan"
+                  aria-hidden
+                />
                 <label htmlFor="hero-search" className="sr-only">
                   {t("searchLabel")}
                 </label>
@@ -81,24 +89,24 @@ export default function Hero() {
             </form>
 
             <div
-              className="mt-5 flex animate-fade-up flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:justify-start"
+              className="mt-6 flex animate-fade-up flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:justify-start"
               style={{ animationDelay: "240ms" }}
             >
               <Link
                 href="/suppliers"
                 className="inline-flex items-center gap-1.5 text-body-sm font-semibold text-cyan transition-colors hover:text-navy cursor-pointer"
               >
-                <Search className="h-4 w-4" aria-hidden />
+                <Factory className="h-4 w-4" aria-hidden />
                 {t("findSuppliers")}
               </Link>
               <span aria-hidden className="hidden h-4 w-px bg-slate-200 sm:block" />
-              <Link
-                href="/products"
+              <a
+                href="#ai-demo-walkthrough"
                 className="inline-flex items-center gap-1.5 text-body-sm font-semibold text-cyan transition-colors hover:text-navy cursor-pointer"
               >
-                <Package className="h-4 w-4" aria-hidden />
-                {t("exploreProducts")}
-              </Link>
+                <Sparkles className="h-4 w-4" aria-hidden />
+                {t("tryWalkthrough")}
+              </a>
             </div>
 
             <div
@@ -111,84 +119,78 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto hidden w-full max-w-lg sm:block lg:max-w-none">
+          {/* TODO(supplier-imagery): Replace gradient placeholder with verified factory photography */}
+          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative animate-fade-up" style={{ animationDelay: "200ms" }}>
-              <div className="relative overflow-hidden rounded-2xl shadow-cardHover ring-1 ring-black/5">
-                <Image
-                  src="/hero-handshake.png"
-                  alt={t("heroImageAlt")}
-                  width={1024}
-                  height={683}
-                  priority
-                  className="h-full w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
+              <div className="panel-glass-dark relative aspect-[4/3] overflow-hidden glow-azure-subtle sm:aspect-[5/4]">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(56,189,248,0.18),transparent_55%)]"
                 />
                 <div
                   aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-navy-dark/30 via-transparent to-transparent"
+                  className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(20,184,166,0.12),transparent_50%)]"
                 />
+                <div className="relative flex h-full flex-col justify-between p-6 sm:p-8">
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-glow/80">
+                      {t("visualEyebrow")}
+                    </p>
+                    <p className="mt-2 max-w-[16rem] text-sm font-medium leading-relaxed text-white/85">
+                      {t("visualCaption")}
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { icon: Binoculars, label: t("visualScout") },
+                      { icon: Columns3, label: t("visualCompare") },
+                      { icon: LineChart, label: t("visualWatch") },
+                    ].map(({ icon: Icon, label }) => (
+                      <div
+                        key={label}
+                        className="rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center backdrop-blur-sm"
+                      >
+                        <Icon className="mx-auto h-5 w-5 text-cyan-glow" aria-hidden />
+                        <p className="mt-1.5 text-[10px] font-semibold text-white/75">{label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              <div className="absolute -left-3 top-6 w-60 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur lg:-left-6">
+              <div className="absolute -left-2 top-5 w-52 rounded-xl panel-glass p-3 shadow-glow-panel sm:-left-4 sm:w-56 lg:-left-6">
                 <div className="flex items-center gap-3">
-                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
-                    <ImageWithFallback
-                      src="/banners/metalworks.jpg"
-                      fallbackSrc={getSupplierFallbackImage("Metal", t("previewSupplierName"))}
-                      alt={t("previewSupplierAlt")}
-                      loading="eager"
-                      sizes="44px"
-                      className="h-full w-full object-cover"
-                    />
+                  {/* TODO(supplier-imagery): Supplier logo slot */}
+                  <div
+                    aria-hidden
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-navy to-navy-mid text-xs font-bold text-white"
+                  >
+                    AG
                   </div>
                   <div className="min-w-0">
                     <p className="truncate text-body-sm font-semibold text-ink">
                       {t("previewSupplierName")}
                     </p>
-                    <p className="flex items-center gap-1 text-caption text-ink-muted">
-                      <Star className="h-3 w-3 fill-mustard-light text-mustard-light" aria-hidden />
-                      {t("previewSupplierRating")}
-                    </p>
+                    <p className="text-caption text-ink-muted">{t("previewSupplierRegion")}</p>
                   </div>
-                  <span className="ml-auto inline-flex items-center rounded-full bg-up-bg p-1 text-up" aria-label={t("verifiedSupplier")}>
+                  <span
+                    className="ml-auto inline-flex items-center rounded-full bg-up-bg p-1 text-up"
+                    aria-label={t("verifiedSupplier")}
+                  >
                     <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                   </span>
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -right-2 w-60 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-cardHover backdrop-blur lg:-right-5">
+              <div className="absolute -bottom-3 -right-1 w-52 rounded-xl panel-glass p-3 shadow-glow-panel sm:-bottom-4 sm:-right-3 sm:w-56">
                 <div className="flex items-center gap-3">
-                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
-                    <ImageWithFallback
-                      src="/products/steelbeam.jpg"
-                      fallbackSrc={getProductFallbackImage(t("previewProductName"), "Steel & Metals")}
-                      alt={t("previewProductAlt")}
-                      loading="eager"
-                      sizes="44px"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="truncate text-body-sm font-semibold text-ink">
-                      {t("previewProductName")}
-                    </p>
-                    <p className="text-caption font-semibold tabular-nums text-ink-muted">
-                      {t("previewProductPrice")}
-                    </p>
-                  </div>
-                  <span className="ml-auto inline-flex items-center rounded-full bg-up-bg p-1 text-up" aria-label={t("priceTrendingDown")}>
-                    <TrendingDown className="h-3.5 w-3.5" aria-hidden />
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan/10 text-cyan">
+                    <Sparkles className="h-4 w-4" aria-hidden />
                   </span>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 left-6 hidden items-center gap-2.5 rounded-xl border border-slate-200/80 bg-white/95 px-3.5 py-2.5 shadow-cardHover backdrop-blur lg:flex">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-white">
-                  <Sparkles className="h-4 w-4" strokeWidth={1.9} aria-hidden />
-                </span>
-                <div className="min-w-0">
-                  <p className="truncate text-caption font-semibold text-ink">{t("aiMatchFound")}</p>
-                  <p className="truncate text-caption text-ink-muted">{t("aiMatchDetail")}</p>
+                  <div className="min-w-0">
+                    <p className="truncate text-caption font-semibold text-ink">{t("aiMatchFound")}</p>
+                    <p className="truncate text-caption text-ink-muted">{t("aiMatchDetail")}</p>
+                  </div>
                 </div>
               </div>
             </div>
