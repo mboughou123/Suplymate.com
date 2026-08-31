@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { BadgeCheck } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -16,70 +16,83 @@ export async function generateMetadata({
 }
 
 const PLANS = [
-  { key: "starter" as const, features: 4, highlighted: false },
-  { key: "pro" as const, features: 5, highlighted: true },
-  { key: "enterprise" as const, features: 5, highlighted: false },
+  { key: "starter" as const, highlighted: false },
+  { key: "growth" as const, highlighted: true },
+  { key: "enterprise" as const, highlighted: false },
 ];
 
 export default async function PricingPage() {
   const t = await getTranslations("pricing");
 
   return (
-    <div className="bg-transparent min-h-screen">
-      <div className="bg-gradient-to-br from-navy-dark to-navy py-16 text-white text-center">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl font-bold">{t("pageTitle")}</h1>
-          <p className="mt-4 text-white/75 max-w-xl mx-auto">{t("pageSubtitle")}</p>
+    <div className="min-h-screen bg-gradient-to-b from-base/60 to-white">
+      <div className="bg-navy-gradient section-y-tight text-center text-white">
+        <div className="container-page relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(36rem_18rem_at_50%_0%,rgba(56,189,248,0.16),transparent_70%)]"
+          />
+          <h1 className="relative font-display text-display text-white sm:text-display-lg">
+            {t("pageTitle")}
+          </h1>
+          <p className="relative mx-auto mt-4 max-w-xl text-body-lg text-white/75">
+            {t("pageSubtitle")}
+          </p>
+          <p className="relative mt-3 text-sm font-medium text-cyan-glow">{t("annualNote")}</p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-3">
-          {PLANS.map(({ key: plan, features, highlighted }) => {
-            const periodKey = `${plan}Period` as "starterPeriod" | "proPeriod" | "enterprisePeriod";
-            const hasPeriod = plan !== "enterprise";
+      <div className="container-page section-y-tight">
+        <p className="mx-auto mb-block max-w-2xl rounded-xl border border-amber-200/70 bg-amber-50/90 px-4 py-3 text-center text-sm text-amber-950">
+          {t("stubNotice")}
+        </p>
 
-            return (
-              <div
-                key={plan}
-                className={`flex flex-col rounded-2xl border p-8 ${
+        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
+          {PLANS.map(({ key: plan, highlighted }) => (
+            <article
+              key={plan}
+              className={`panel-glass flex flex-col p-6 sm:p-8 ${
+                highlighted ? "shadow-glow-panel ring-1 ring-cyan/20 lg:-translate-y-1" : ""
+              }`}
+            >
+              {highlighted && (
+                <span className="mb-4 inline-flex w-fit rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">
+                  {t("mostPopular")}
+                </span>
+              )}
+              <h2 className="text-heading-sm text-ink">{t(plan)}</h2>
+              <p className="mt-2 text-sm text-ink-muted">{t(`${plan}Blurb`)}</p>
+              <p className="mt-6">
+                <span className="font-display text-display font-bold tabular-nums text-ink">
+                  {t(`${plan}Price`)}
+                </span>
+                <span className="text-ink-dim">{t(`${plan}Period`)}</span>
+              </p>
+              <div className="mt-6 flex-1 rounded-xl border border-slate-100 bg-slate-50/80 px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+                  {t("featuresLabel")}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{t("featuresTbd")}</p>
+              </div>
+              <button
+                type="button"
+                disabled
+                className={`mt-8 w-full cursor-not-allowed rounded-xl py-3 text-sm font-semibold opacity-70 ${
                   highlighted
-                    ? "border-mustard bg-slate-50 shadow-cardHover ring-2 ring-mustard/20 scale-[1.02]"
-                    : "border-slate-200 bg-slate-50 shadow-card"
+                    ? "bg-cyan text-white"
+                    : "border border-slate-200 bg-white text-ink"
                 }`}
               >
-                {highlighted && (
-                  <span className="mb-4 inline-flex w-fit rounded-full bg-mustard px-3 py-1 text-xs font-semibold text-ink">
-                    {t("mostPopular")}
-                  </span>
-                )}
-                <h2 className="text-xl font-semibold text-ink">{t(plan)}</h2>
-                <p className="mt-4">
-                  <span className="text-4xl font-bold text-ink">{t(`${plan}Price`)}</span>
-                  {hasPeriod && <span className="text-ink-dim">{t(periodKey)}</span>}
-                </p>
-                <ul className="mt-8 flex-1 space-y-3 text-sm text-ink-muted">
-                  {Array.from({ length: features }, (_, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-mustard">✓</span>
-                      {t(`${plan}Feature${i + 1}` as "starterFeature1")}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/suppliers"
-                  className={`mt-8 block rounded-xl py-3 text-center text-sm font-semibold transition ${
-                    highlighted
-                      ? "bg-mustard text-ink hover:bg-mustard-light"
-                      : "bg-navy text-white hover:bg-navy-mid"
-                  }`}
-                >
-                  {t(`${plan}Cta` as "starterCta")}
-                </Link>
-              </div>
-            );
-          })}
+                {t("ctaComingSoon")}
+              </button>
+            </article>
+          ))}
         </div>
+
+        <p className="mx-auto mt-block flex max-w-lg items-start justify-center gap-2 text-center text-sm text-ink-muted">
+          <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-cyan" aria-hidden />
+          {t("comingSoon")}
+        </p>
       </div>
     </div>
   );

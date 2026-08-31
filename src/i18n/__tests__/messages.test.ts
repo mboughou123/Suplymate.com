@@ -33,6 +33,7 @@ describe("messages/en.json", () => {
       "suppliers",
       "products",
       "supplierProfile",
+      "pricing",
     ];
     for (const ns of namespaces) {
       expect(en).toHaveProperty(ns);
