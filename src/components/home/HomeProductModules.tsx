@@ -1,25 +1,34 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, Binoculars, Columns3, LineChart } from "lucide-react";
+import {
+  HOME_PRODUCT_MODULE_LINKS,
+  type HomeProductModuleKey,
+} from "@/lib/home-product-module-links";
 
-const MODULES = [
+const MODULES: {
+  key: HomeProductModuleKey;
+  icon: typeof Binoculars;
+  href: (typeof HOME_PRODUCT_MODULE_LINKS)[HomeProductModuleKey];
+  preview: "scout" | "compare" | "watch";
+}[] = [
   {
-    key: "scout" as const,
+    key: "scout",
     icon: Binoculars,
-    href: "/suppliers",
-    preview: "scout" as const,
+    href: HOME_PRODUCT_MODULE_LINKS.scout,
+    preview: "scout",
   },
   {
-    key: "compare" as const,
+    key: "compare",
     icon: Columns3,
-    href: "/products",
-    preview: "compare" as const,
+    href: HOME_PRODUCT_MODULE_LINKS.compare,
+    preview: "compare",
   },
   {
-    key: "watch" as const,
+    key: "watch",
     icon: LineChart,
-    href: "/price-charts",
-    preview: "watch" as const,
+    href: HOME_PRODUCT_MODULE_LINKS.watch,
+    preview: "watch",
   },
 ];
 
