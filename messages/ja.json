@@ -204,6 +204,25 @@
     "watchDescription": "Track price windows and rate signals so you know when to lock volume or wait a week.",
     "readMore": "Lire la suite"
   },
+  "homeSuppliers": {
+    "eyebrow": "Réseau 認証済み",
+    "title": "Suppliers around the world",
+    "subtitle": "Real mills and manufacturers on Suplymate — factory-verified profiles across the UAE, India, and beyond.",
+    "viewProfile": "View profile",
+    "exploreDirectory": "Explore supplier directory",
+    "alGharbiaName": "Al Gharbia Pipe",
+    "alGharbiaLocation": "Abu Dhabi, UAE (KEZAD)",
+    "alGharbiaCaption": "LSAW pipe mill exterior, Khalifa Industrial Zone",
+    "emsteelName": "EMSTEEL",
+    "emsteelLocation": "Mussafah, Abu Dhabi, UAE (ICAD)",
+    "emsteelCaption": "EMSTEEL integrated steel complex, ICAD / Mussafah, Abu Dhabi",
+    "ferriteName": "Ferrite Structural Steels",
+    "ferriteLocation": "Kalamboli, Navi Mumbai, India",
+    "ferriteCaption": "Ferrite facility exterior",
+    "foliflexName": "Foliflex Wires & Cables",
+    "foliflexLocation": "Delhi, India (Jhilmil)",
+    "foliflexCaption": "Foliflex cable warehouse aisles, Jhilmil"
+  },
   "hero": {
     "badge": "Experts sourcing IA + humains",
     "titleGradient": "Agentic sourcing",

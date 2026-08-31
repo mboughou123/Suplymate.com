@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import HomeTopNav from "@/components/home/HomeTopNav";
 import HomeHero from "@/components/home/HomeHero";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
+import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
 import HomeAiDemoSection from "@/components/HomeAiDemoSection";
 import HomeProductModules from "@/components/home/HomeProductModules";
 import HomeStatsRow from "@/components/home/HomeStatsRow";
@@ -15,6 +16,7 @@ export default async function HomePage() {
       <HomeTopNav />
       <HomeHero />
       <HomeTrustStrip />
+      <HomeSuppliersBand />
       <HomeAiDemoSection />
       <HomeProductModules />
       <HomeStatsRow />
