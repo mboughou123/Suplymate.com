@@ -3,7 +3,7 @@
 import { usePathname } from "@/i18n/navigation";
 import Navbar from "./Navbar";
 
-const HIDE_NAVBAR = ["/ai-assistant", "/dashboard"];
+const HIDE_NAVBAR = ["/", "/ai-assistant", "/dashboard"];
 
 export default function NavbarGate() {
   const pathname = usePathname();

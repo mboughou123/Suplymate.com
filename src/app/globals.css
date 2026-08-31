@@ -11,6 +11,34 @@
     --color-up: #047857;
     --color-down: #dc2626;
 
+    --color-navy-deep: #061018;
+    --color-navy-mid: #1a4a6b;
+
+    --space-section-y: 5rem;
+    --space-section-y-lg: 6rem;
+    --space-block: 2.5rem;
+
+    --gradient-navy-deep: linear-gradient(145deg, #061018 0%, #0d3349 42%, #1a4a6b 100%);
+    --gradient-azure-mist: linear-gradient(
+      160deg,
+      rgba(240, 247, 252, 0.95) 0%,
+      rgba(255, 255, 255, 0.88) 55%,
+      rgba(240, 249, 255, 0.75) 100%
+    );
+    --gradient-panel-dark: linear-gradient(
+      145deg,
+      rgba(6, 16, 24, 0.98) 0%,
+      rgba(13, 51, 73, 0.96) 50%,
+      rgba(26, 74, 107, 0.92) 100%
+    );
+
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.88);
+    --glass-bg-dark: rgba(13, 51, 73, 0.55);
+
+    --glow-azure-subtle: 0 0 48px rgba(56, 189, 248, 0.1);
+    --glow-azure-panel: 0 4px 28px rgba(3, 105, 161, 0.12);
+
     --radius-card: 1.125rem;
     --radius-control: 0.875rem;
 
@@ -40,7 +68,80 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* Display type: single family (Inter) with tight, size-appropriate tracking */
+  /* Fairmarkit-like vertical rhythm — reuse on future homepage bands */
+  .section-y {
+    @apply py-section sm:py-24 lg:py-section-lg;
+  }
+  .section-y-tight {
+    @apply py-16 sm:py-section;
+  }
+  .stack-block {
+    @apply space-y-block;
+  }
+
+  /* Futuristic navy / azure surfaces */
+  .bg-navy-gradient {
+    background: var(--gradient-navy-deep);
+  }
+  .bg-azure-mist {
+    background: var(--gradient-azure-mist);
+  }
+  .bg-panel-dark {
+    background: var(--gradient-panel-dark);
+  }
+
+  /* Soft glass panels — demo, cards, hero placeholders */
+  .panel-glass {
+    @apply rounded-2xl border shadow-glass backdrop-blur-xl;
+    border-color: var(--glass-border);
+    background: var(--glass-bg);
+  }
+  .panel-glass-dark {
+    @apply rounded-2xl border border-white/10 shadow-glow-panel backdrop-blur-xl;
+    background: var(--glass-bg-dark);
+  }
+  .panel-glass-hover {
+    @apply transition-all duration-300 ease-cinema hover:shadow-glow-panel hover:border-cyan/25;
+  }
+
+  .glow-azure-subtle {
+    box-shadow: var(--glow-azure-subtle);
+  }
+
+  /* Magic Patterns homepage — floating nav + agent console */
+  .nav-float-glass {
+    @apply rounded-2xl border border-white/70 bg-white/75 shadow-glass backdrop-blur-xl;
+  }
+
+  .hero-ambient {
+    background:
+      radial-gradient(ellipse 80% 55% at 50% -10%, rgba(56, 189, 248, 0.14), transparent 60%),
+      radial-gradient(ellipse 45% 40% at 85% 15%, rgba(3, 105, 161, 0.06), transparent 55%),
+      radial-gradient(ellipse 40% 35% at 10% 25%, rgba(13, 51, 73, 0.06), transparent 50%),
+      #f8fafc;
+  }
+
+  .agent-console {
+    @apply relative overflow-hidden rounded-2xl border border-white/10 shadow-glow-panel backdrop-blur-xl;
+    background: linear-gradient(
+      165deg,
+      #0d3349 0%,
+      #1a4a6b 48%,
+      #0d3349 100%
+    );
+  }
+
+  .agent-console-scan {
+    @apply pointer-events-none absolute inset-x-0 top-0 h-24 opacity-30 motion-safe:animate-scan-line;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(56, 189, 248, 0.35),
+      transparent
+    );
+  }
+
+  /* Display type: Outfit for headlines, Inter for body */
   .font-display {
     @apply tracking-tight;
   }
@@ -77,11 +178,11 @@
 
   /* Accent gradient text — subtle two-tone, static (no rainbow animation) */
   .gradient-text {
-    @apply bg-gradient-to-r from-cyan to-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan to-cyan-glow bg-clip-text text-transparent;
   }
   /* Light variant for dark navy surfaces */
   .gradient-text-light {
-    @apply bg-gradient-to-r from-cyan-glow to-teal-glow bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-glow to-cyan bg-clip-text text-transparent;
   }
 
   /* Skeleton shimmer */

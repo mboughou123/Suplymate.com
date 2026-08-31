@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -14,6 +14,11 @@ import "../globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
 });
 
 type Props = {
@@ -49,7 +54,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       lang={locale}
       dir={dir}
       data-scroll-behavior="smooth"
-      className={inter.variable}
+      className={`${inter.variable} ${outfit.variable}`}
     >
       <body className="min-h-screen flex flex-col font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
