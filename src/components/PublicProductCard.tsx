@@ -17,7 +17,7 @@ export default function PublicProductCard({ data: d }: Props) {
   const tc = useTranslations("common");
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
+    <article className="group glass-card glass-hover flex h-full flex-col overflow-hidden p-0">
       <Link href={`/products/${d.id}`} className="relative block">
         <div className="relative flex h-44 items-center justify-center overflow-hidden bg-slate-100">
           <ImageWithFallback
@@ -25,15 +25,15 @@ export default function PublicProductCard({ data: d }: Props) {
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
             alt={d.name}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-cover transition duration-500 ease-cinema group-hover:scale-[1.03]"
           />
           {d.verified && (
-            <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
+            <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-xl bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-card">
               <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
               {tc("verified")}
             </span>
           )}
-          <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
+          <span className="absolute right-3 top-3 rounded-xl bg-white/95 px-2 py-0.5 text-[10px] font-semibold text-navy shadow-card">
             {d.category}
           </span>
         </div>
@@ -41,7 +41,7 @@ export default function PublicProductCard({ data: d }: Props) {
 
       <div className="flex flex-1 flex-col p-5">
         <Link href={`/products/${d.id}`}>
-          <h3 className="line-clamp-2 text-base font-semibold text-ink transition-colors group-hover:text-cyan">
+          <h3 className="font-display line-clamp-2 text-heading-sm text-navy transition-colors group-hover:text-cyan">
             {d.name}
           </h3>
         </Link>
@@ -102,7 +102,7 @@ export default function PublicProductCard({ data: d }: Props) {
           <div className="flex gap-2">
             <Link
               href={`/products/${d.id}`}
-              className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"
+              className="btn-secondary group/btn flex-1 !px-3 !py-2.5"
             >
               {t("viewProduct")}
               <ArrowRight
@@ -116,12 +116,12 @@ export default function PublicProductCard({ data: d }: Props) {
               label={t("requestQuote")}
               productName={d.name}
               productId={d.id}
-              className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
+              className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 !px-3 !py-2.5 text-sm"
             />
           </div>
           {d.supplierId && (
             <AddToCartButton
-              className="inline-flex w-full items-center justify-center gap-1.5 rounded-xl border border-cyan/40 bg-cyan/5 px-3 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/10"
+              className="btn-ghost w-full !px-3 !py-2 text-sm"
               item={{
                 productId: d.id,
                 productName: d.name,

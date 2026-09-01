@@ -189,7 +189,7 @@ export default async function SupplierProfilePage({
   };
 
   return (
-    <div className="bg-base/40 min-h-screen pb-20 lg:pb-0">
+    <div className="min-h-screen bg-base pb-20 lg:pb-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -214,7 +214,7 @@ export default async function SupplierProfilePage({
       {/* Marketplace status + claim affordance */}
       <div className="container-page mt-3 flex flex-wrap items-center gap-3">
         <span
-          className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold ${
+          className={`inline-flex items-center rounded-xl px-2.5 py-1 text-[11px] font-semibold ${
             statusMeta.tone === "success"
               ? "bg-emerald-50 text-emerald-700"
               : statusMeta.tone === "danger"
@@ -245,8 +245,8 @@ export default async function SupplierProfilePage({
           <CompanyProfileSection profile={profile} />
           <CertificationsSection profile={profile} />
           {hasRealMedia && (
-            <section className="py-6">
-              <h2 className="font-display text-lg font-bold text-ink">
+            <section className="py-8 sm:py-10">
+              <h2 className="font-display text-heading-lg text-ink">
                 {t("collectedInfoTitle")}
               </h2>
               <p className="mt-1 text-sm text-ink-muted">
@@ -290,8 +290,8 @@ export default async function SupplierProfilePage({
             </section>
           )}
           {relationalCerts.length > 0 && (
-            <section className="py-6">
-              <h2 className="font-display text-lg font-bold text-ink">{t("certificationsHeading")}</h2>
+            <section className="py-8 sm:py-10">
+              <h2 className="font-display text-heading-lg text-ink">{t("certificationsHeading")}</h2>
               <p className="mt-1 text-sm text-ink-muted">
                 {t("certificationsDisclaimer")}
               </p>
@@ -299,18 +299,18 @@ export default async function SupplierProfilePage({
                 {relationalCerts.map((c) => (
                   <li
                     key={c.id}
-                    className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3"
+                    className="glass-card flex flex-wrap items-center justify-between gap-2 px-4 py-3"
                   >
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="font-semibold text-ink">{c.name}</span>
                         {c.type && <span className="text-xs text-ink-dim">{c.type}</span>}
                         {c.status === "verified" ? (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
+                          <span className="inline-flex items-center gap-1 rounded-xl bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
                             {t("suplymateVerified")}
                           </span>
                         ) : (
-                          <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-600">
+                          <span className="rounded-xl bg-slate-100 px-2 py-0.5 text-[11px] font-semibold text-slate-600">
                             {t("verificationStatusLabel", { status: c.status })}
                           </span>
                         )}
@@ -341,9 +341,9 @@ export default async function SupplierProfilePage({
           <ProductsSection profile={profile} />
 
           {/* Source and verification (data provenance) */}
-          <section className="py-6">
-            <h2 className="font-display text-lg font-bold text-ink">{t("sourceVerificationTitle")}</h2>
-            <div className="mt-3 space-y-2 rounded-xl border border-slate-200 bg-white p-4 text-sm">
+          <section className="py-8 sm:py-10">
+            <h2 className="font-display text-heading-lg text-ink">{t("sourceVerificationTitle")}</h2>
+            <div className="glass-card mt-3 space-y-2 p-5 text-sm">
               <div className="flex justify-between gap-4">
                 <span className="text-ink-muted">{t("verificationStatus")}</span>
                 <span className="font-medium text-ink">{statusMeta.label}</span>

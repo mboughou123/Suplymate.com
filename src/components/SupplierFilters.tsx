@@ -59,8 +59,7 @@ export default function SupplierFilters({
     (state.verifiedOnly ? 1 : 0);
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-      {/* Search */}
+    <div className="glass-card p-5">
       <div className="relative">
         <Search
           className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
@@ -71,21 +70,20 @@ export default function SupplierFilters({
           placeholder={t("searchPlaceholder")}
           value={state.search}
           onChange={(e) => onChange({ search: e.target.value })}
-          className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-3 text-sm text-ink placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+          className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-3 text-sm text-ink placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
         />
       </div>
 
-      {/* Category chips */}
       <div className="mt-4 flex flex-wrap gap-2">
         {["All", ...categories].map((cat) => (
           <button
             key={cat}
             type="button"
             onClick={() => onChange({ category: cat })}
-            className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
+            className={`cursor-pointer rounded-xl px-3.5 py-1.5 text-xs font-semibold transition duration-200 ease-cinema ${
               state.category === cat
-                ? "bg-navy text-white shadow-sm"
-                : "border border-slate-200 bg-white text-ink-muted hover:border-navy/30 hover:text-ink"
+                ? "bg-navy text-white shadow-card"
+                : "border border-slate-200 bg-white text-ink-muted hover:border-slate-300 hover:bg-slate-50 hover:text-ink"
             }`}
           >
             {cat === "All" ? tCommon("all") : cat}
@@ -100,7 +98,7 @@ export default function SupplierFilters({
           <select
             value={state.country}
             onChange={(e) => onChange({ country: e.target.value })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             <option value="All">{t("allCountries")}</option>
             {countries.map((c) => (
@@ -116,7 +114,7 @@ export default function SupplierFilters({
           <select
             value={state.minRating}
             onChange={(e) => onChange({ minRating: Number(e.target.value) })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             {ratingOptions.map((o) => (
               <option key={o.value} value={o.value}>
@@ -131,7 +129,7 @@ export default function SupplierFilters({
           <select
             value={state.minReviews}
             onChange={(e) => onChange({ minReviews: Number(e.target.value) })}
-            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
+            className="rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-ink focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           >
             {reviewOptions.map((o) => (
               <option key={o.value} value={o.value}>
@@ -142,7 +140,7 @@ export default function SupplierFilters({
         </label>
 
         <label className="flex items-end pb-0.5">
-          <span className="flex w-full cursor-pointer items-center justify-between rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink">
+          <span className="flex w-full cursor-pointer items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-ink">
             <span className="font-medium">{t("verifiedOnly")}</span>
             <input
               type="checkbox"

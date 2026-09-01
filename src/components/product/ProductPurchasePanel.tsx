@@ -36,8 +36,8 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
   return (
     <div className="space-y-4">
       {/* Purchase / price card */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-        <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+      <div className="glass-card p-5">
+        <p className="eyebrow text-ink-dim">
           Order quantity
         </p>
         <div className="mt-2 inline-flex items-center rounded-xl border border-slate-200">
@@ -121,7 +121,7 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
       </div>
 
       {/* Shipping box */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-5">
+      <div className="glass-card p-5">
         <div className="flex items-center gap-2 text-sm font-bold text-ink">
           <Truck className="h-5 w-5 text-teal" aria-hidden />
           Shipping & logistics

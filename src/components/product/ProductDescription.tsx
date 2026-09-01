@@ -39,7 +39,7 @@ export default function ProductDescription({
           return (
             <div
               key={h.title}
-              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-card"
+              className="glass-card p-4"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan/10 to-teal/10 text-cyan">
                 <Icon className="h-5 w-5" aria-hidden />
@@ -52,11 +52,11 @@ export default function ProductDescription({
       </div>
 
       {/* Description sections */}
-      <div className="space-y-8 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <div className="glass-card space-y-8 p-6 sm:p-8">
         {sections.map((section) => (
           <section key={section.id} id={section.id} className="scroll-mt-24">
-            <h3 className="flex items-center gap-2 text-lg font-bold text-ink">
-              <span className="h-5 w-1 rounded-full bg-gradient-to-b from-cyan to-teal" />
+            <h3 className="font-display flex items-center gap-2 text-heading-sm text-ink">
+              <span className="h-5 w-1 rounded-full bg-cyan" />
               {section.title}
             </h3>
             {section.body && (

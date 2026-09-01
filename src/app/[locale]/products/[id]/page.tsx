@@ -53,9 +53,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const hasPublicPrice = (product.basePrice ?? product.priceMin ?? 0) > 0;
 
   return (
-    <div className="min-h-screen bg-slate-50/50">
-      <div className="container-page py-6">
-        {/* Breadcrumb */}
+    <div className="min-h-screen bg-base">
+      <div className="container-page py-8 sm:py-10">
         <nav className="flex flex-wrap items-center gap-1 text-xs text-ink-muted">
           <Link href="/" className="hover:text-cyan">Home</Link>
           <ChevronRight className="h-3 w-3" aria-hidden />
@@ -76,25 +75,25 @@ export default async function ProductDetailPage({ params }: Props) {
           {/* Core info */}
           <div className="lg:col-span-4">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-md bg-cyan/10 px-2.5 py-1 text-xs font-semibold text-cyan">
+              <span className="rounded-xl bg-cyan/10 px-2.5 py-1 text-xs font-semibold text-cyan">
                 {detail.category}
               </span>
               {detail.supplier.verified && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
+                <span className="inline-flex items-center gap-1 rounded-xl bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
                   <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                   Verified supplier
                 </span>
               )}
             </div>
 
-            <h1 className="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+            <h1 className="mt-3 font-display text-heading-lg text-navy sm:text-display">
               {product.name}
             </h1>
 
             <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
               {product.rating != null ? (
                 <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                  <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                  <Star className="h-4 w-4 fill-cyan text-cyan" aria-hidden />
                   {product.rating.toFixed(1)}
                   {product.reviewCount != null && (
                     <span className="font-normal text-ink-dim">
@@ -112,8 +111,8 @@ export default async function ProductDetailPage({ params }: Props) {
 
             {/* Pricing */}
             {hasPublicPrice ? (
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+              <div className="glass-card mt-5 p-5">
+                <p className="eyebrow text-ink-dim">
                   Indicative pricing
                 </p>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -133,8 +132,8 @@ export default async function ProductDetailPage({ params }: Props) {
                 </p>
               </div>
             ) : (
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-base font-semibold text-ink">Contact supplier for pricing</p>
+              <div className="glass-card mt-5 p-5">
+                <p className="font-display text-heading-sm text-ink">Contact supplier for pricing</p>
                 <p className="mt-1 text-xs text-ink-dim">
                   No public price is listed. Add this product to your cart and request a quote.
                   {detail.moq ? <> MOQ: <span className="font-semibold text-ink">{detail.moq}</span></> : null}
@@ -145,7 +144,7 @@ export default async function ProductDetailPage({ params }: Props) {
             {/* Procurement actions */}
             <div className="mt-4 flex flex-wrap gap-2">
               <AddToCartButton
-                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-cyan px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan/90"
+                className="btn-primary flex-1"
                 item={{
                   productId: product.id,
                   productName: product.name,
@@ -160,6 +159,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 }}
               />
               <SaveProductButton
+                className="btn-ghost"
                 item={{
                   productId: product.id,
                   productName: product.name,
@@ -186,7 +186,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     {opt.values.map((v) => (
                       <span
                         key={v}
-                        className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted hover:border-cyan/50 hover:text-cyan"
+                        className="rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted hover:border-cyan/50 hover:text-cyan"
                       >
                         {v}
                       </span>
@@ -197,7 +197,7 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
 
             {/* Customization */}
-            <div className="mt-5 rounded-xl border border-cyan/15 bg-cyan/5 p-4">
+            <div className="mt-5 rounded-xl border border-cyan/15 bg-cyan-soft p-4">
               <p className="flex items-center gap-1.5 text-xs font-semibold text-cyan">
                 <Wrench className="h-3.5 w-3.5" aria-hidden />
                 Customization available
@@ -231,7 +231,7 @@ export default async function ProductDetailPage({ params }: Props) {
         {/* Description + supplier */}
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
           <div>
-            <h2 className="mb-2 text-xl font-bold text-ink">Product details</h2>
+            <h2 className="mb-2 font-display text-heading-lg text-ink">Product details</h2>
             <p className="mb-5 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
               Illustrative specifications based on category norms and supplier-provided
               information. These are not independently verified — confirm exact specs,
@@ -243,7 +243,7 @@ export default async function ProductDetailPage({ params }: Props) {
             />
           </div>
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <h2 className="mb-5 text-xl font-bold text-ink">Supplier</h2>
+            <h2 className="mb-5 font-display text-heading-lg text-ink">Supplier</h2>
             <ProductSupplierBox supplier={detail.supplier} />
           </div>
         </div>
@@ -251,8 +251,8 @@ export default async function ProductDetailPage({ params }: Props) {
         {/* Reviews — honest empty state. Reviews are only published after a
             confirmed on-platform interaction with the supplier (review policy). */}
         <section className="mt-12">
-          <h2 className="mb-5 text-xl font-bold text-ink">Reviews</h2>
-          <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center">
+          <h2 className="mb-5 font-display text-heading-lg text-ink">Reviews</h2>
+          <div className="glass-card p-8 text-center">
             <p className="text-sm font-medium text-ink">No verified reviews yet</p>
             <p className="mx-auto mt-1 max-w-md text-xs text-ink-dim">
               Suplymate only publishes reviews from buyers after a confirmed interaction with the
@@ -267,8 +267,8 @@ export default async function ProductDetailPage({ params }: Props) {
 
         {/* Compare suppliers — honest: only real quotes after RFQ */}
         <section className="mt-12">
-          <h2 className="text-xl font-bold text-ink">Compare suppliers</h2>
-          <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-8 text-center">
+          <h2 className="font-display text-heading-lg text-ink">Compare suppliers</h2>
+          <div className="glass-card mt-4 p-8 text-center">
             <p className="text-sm font-medium text-ink">No side-by-side offers yet</p>
             <p className="mx-auto mt-1 max-w-lg text-xs text-ink-dim">
               Suplymate does not fabricate competitor pricing or reliability scores. Add this
@@ -287,7 +287,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
         {/* Recommended */}
         <section className="mt-12">
-          <h2 className="mb-5 text-xl font-bold text-ink">Recommended for you</h2>
+          <h2 className="mb-5 font-display text-heading-lg text-ink">Recommended for you</h2>
           <RecommendedProducts products={detail.recommended} />
         </section>
       </div>

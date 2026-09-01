@@ -62,14 +62,14 @@ export default function ProductGallery({ images }: { images: GalleryImage[] }) {
     <div className="lg:sticky lg:top-24">
       {/* Main view */}
       <div
-        className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-200"
+        className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-200 shadow-card"
         style={{ backgroundImage: current.gradient }}
       >
         <GallerySlide image={current} size="main" />
-        <span className="absolute left-4 top-4 rounded-md bg-black/35 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
+        <span className="absolute left-4 top-4 rounded-xl bg-white/95 px-2.5 py-1 text-xs font-medium text-navy shadow-card">
           {current.label}
         </span>
-        <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-md bg-black/35 text-white backdrop-blur">
+        <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/95 text-navy shadow-card">
           <Maximize2 className="h-4 w-4" aria-hidden />
         </span>
       </div>

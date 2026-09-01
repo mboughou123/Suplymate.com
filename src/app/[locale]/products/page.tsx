@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getPublicProductsPage } from "@/lib/public-products";
+import ListingPageHeader from "@/components/listing/ListingPageHeader";
 import ProductsClient from "./ProductsClient";
 
 export const dynamic = "force-dynamic";
@@ -9,15 +10,10 @@ export default async function ProductsPage() {
   const initial = await getPublicProductsPage({ page: 1, pageSize: 24 });
 
   return (
-    <div className="bg-transparent min-h-screen">
-      <div className="bg-gradient-to-br from-navy-dark to-navy py-14 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">{t("pageTitle")}</h1>
-          <p className="mt-3 max-w-2xl text-white/75">{t("pageSubtitle")}</p>
-        </div>
-      </div>
+    <div className="min-h-screen bg-base">
+      <ListingPageHeader title={t("pageTitle")} subtitle={t("pageSubtitle")} />
 
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="container-page py-10 sm:py-12">
         <ProductsClient
           initialItems={initial.items}
           initialTotal={initial.total}

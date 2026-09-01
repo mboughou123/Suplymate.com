@@ -18,7 +18,7 @@ export default function RecommendedProducts({
           <Link
             key={p.id}
             href={`/products/${p.id}`}
-            className="group flex w-56 shrink-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 ease-cinema hover:-translate-y-1 hover:border-cyan/40 hover:shadow-cardHover"
+            className="group glass-card glass-hover flex w-56 shrink-0 flex-col overflow-hidden p-0"
           >
             <div
               className="relative flex h-32 items-center justify-center"
