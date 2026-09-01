@@ -19,6 +19,7 @@
     "suppliers:import:sample": "tsx scripts/import-suppliers.ts --source=sample",
     "suppliers:refresh": "tsx scripts/import-suppliers.ts --source=real --reset",
     "suppliers:import:csv": "tsx scripts/importSuppliers.ts",
+    "suppliers:import:phase1": "tsx scripts/importSuppliers.ts --file=scripts/import/examples/suppliers-phase1.csv",
     "suppliers:scrape": "tsx scripts/scrape-suppliers.ts",
     "products:scrape": "tsx scripts/product-scraper/scrape.ts",
     "media:migrate": "tsx scripts/migrate-media.ts",
