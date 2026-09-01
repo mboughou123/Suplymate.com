@@ -1,0 +1,1778 @@
+{
+  "generated_at": "2026-09-01T02:47:34.654947+00:00",
+  "source_csv": "/workspace/suppliers-phase1/suppliers-phase1-merged-59.csv",
+  "source_json": "/workspace/suppliers-phase1/suppliers-phase1-merged-59.json",
+  "image_root": "/workspace/suppliers-phase1/enhanced",
+  "web_prefix": "/images/suppliers/phase1",
+  "rules": {
+    "active_jpgs_only": "top-level *.jpg; IGNORE _backup-*",
+    "match": "filename stem vs company keyword prefixes",
+    "prefer": "factory/mill/plant/production/aerial over product/marketing",
+    "category_normalize": "Tube & Pipes -> Tubes & Pipes"
+  },
+  "coverage": {
+    "suppliers": 59,
+    "with_local_images": 56,
+    "without_local_images": 3,
+    "without_names": [
+      "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "Magicrete Building Solutions Private Limited",
+      "Tong Ming Enterprise (Zhejiang) Co., Ltd."
+    ],
+    "active_jpgs": 113,
+    "assigned_jpgs": 113,
+    "unmatched_jpgs": []
+  },
+  "gaps": {
+    "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)": {
+      "code": "aj-steel-empty",
+      "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
+    },
+    "Tong Ming Enterprise (Zhejiang) Co., Ltd.": {
+      "code": "tong-ming-logo-only",
+      "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
+    },
+    "Magicrete Building Solutions Private Limited": {
+      "code": "magicrete-no-plant-still",
+      "note": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback."
+    }
+  },
+  "remote_fallback": [
+    {
+      "name": "Magicrete Building Solutions Private Limited",
+      "reason": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback.",
+      "remote_photoUrls": [
+        "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png"
+      ]
+    },
+    {
+      "name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "reason": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs.",
+      "remote_photoUrls": [
+        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
+      ]
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "Al Gharbia Pipe Company LLC",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-2.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-production-banner.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-1.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-2.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-3.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-5.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+      "source_files": [
+        "al-gharbia-pipe-factory-1.jpg",
+        "al-gharbia-pipe-factory-2.jpg",
+        "al-gharbia-pipe-factory-3.jpg",
+        "al-gharbia-production-banner.jpg",
+        "al-gharbia-prod-1.jpg",
+        "al-gharbia-prod-2.jpg",
+        "al-gharbia-prod-3.jpg",
+        "al-gharbia-prod-5.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-pipe-factory-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-pipe-factory-3.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-production-banner.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-prod-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-prod-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-prod-3.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-gharbia-prod-5.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/production-banner.jpg",
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/1.jpg",
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/2.jpg",
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/3.jpg",
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/5.jpg",
+        "https://www.jfe-steel.co.jp/en/release/2019/img/190924-1.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [],
+      "hero": null,
+      "source_files": [],
+      "source_folders": [],
+      "local_abs": [],
+      "remote_photoUrls_original": [],
+      "used_remote_fallback": false,
+      "gap": {
+        "code": "aj-steel-empty",
+        "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
+      }
+    },
+    {
+      "name": "Jindal SAW Limited",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg",
+        "/images/suppliers/phase1/tube-pipes/jindal-saw-lsaw.jpg",
+        "/images/suppliers/phase1/tube-pipes/jindal-saw-pipe.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg",
+      "source_files": [
+        "jindal-saw-hsaw.jpg",
+        "jindal-saw-lsaw.jpg",
+        "jindal-saw-pipe.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/jindal-saw-hsaw.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/jindal-saw-lsaw.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/jindal-saw-pipe.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://jindalsaw.com/wp-content/uploads/2025/07/saw-jco1.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/07/saw-spiral-1.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/07/saw-spiral-2.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Welspun Corp Limited",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg",
+        "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg",
+      "source_files": [
+        "welspun-corp-factory-1.jpg",
+        "welspun-corp-factory-2.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/welspun-corp-factory-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/welspun-corp-factory-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.welspuncorp.com/images/welcome-img.webp",
+        "https://www.welspuncorp.com/images/welcome-img-2.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Arabian Pipes Company",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg",
+        "/images/suppliers/phase1/tube-pipes/arabian-pipes-product.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg",
+      "source_files": [
+        "arabian-pipes-factory.jpg",
+        "arabian-pipes-product.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/arabian-pipes-factory.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/arabian-pipes-product.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://arabian-pipes.com/images/slides/Optimized-slide2.jpg",
+        "https://arabian-pipes.com/images/slides/Optimized-slide3.jpg",
+        "https://arabian-pipes.com/images/Events/ADIPEC_2019.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "APL Apollo Tubes Limited",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg",
+        "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-2.jpg",
+        "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-3.jpg",
+        "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-4.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg",
+      "source_files": [
+        "apl-apollo-raipur-1.jpg",
+        "apl-apollo-raipur-2.jpg",
+        "apl-apollo-raipur-3.jpg",
+        "apl-apollo-raipur-4.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/apl-apollo-raipur-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/apl-apollo-raipur-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/apl-apollo-raipur-3.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/apl-apollo-raipur-4.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://aplapollocoatedsteel.com/wp-content/uploads/2024/04/factory-image.webp",
+        "https://aplapollocoatedsteel.com/wp-content/uploads/2025/03/raipur-manufacturing-facility-tour-2025-1.webp",
+        "https://aplapollocoatedsteel.com/wp-content/uploads/2025/03/raipur-manufacturing-facility-tour-2025-3.webp",
+        "https://aplapollocoatedsteel.com/wp-content/uploads/2025/03/raipur-manufacturing-facility-tour-2025-4.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Man Industries (India) Limited",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg",
+        "/images/suppliers/phase1/tube-pipes/man-industries-lsaw.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg",
+      "source_files": [
+        "man-industries-hsaw.jpg",
+        "man-industries-lsaw.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/man-industries-hsaw.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/man-industries-lsaw.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://mangroup.com/wp-content/uploads/2024/11/LSAW-1-1024x683.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/11/HSAW1-1024x681.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/11/ERW-5-1024x683.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/09/Coating.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Hebei Huayang Steel Pipe Co., Ltd.",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg",
+      "source_files": [
+        "hebei-huayang-factory.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/hebei-huayang-factory.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.huayang-steelpipe.com/uploads/43557/banner/20250822035044d1698.jpg",
+        "https://www.huayang-steelpipe.com/uploads/43557/small/api-5l-psl1-erw-steel-gas-pipef8e1f.jpg",
+        "https://www.huayang-steelpipe.com/uploads/43557/small/astm-a53-lsaw-steel-fluid-pipe72b82.jpg",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024041220495845731/cms/image/2fb57d16-bb81-46fa-8a96-f60c6282b6d9.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Al Jazeera Steel Products Co. SAOG",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg",
+        "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-quality.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg",
+      "source_files": [
+        "al-jazeera-steel-factory.jpg",
+        "al-jazeera-steel-quality.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-jazeera-steel-factory.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/al-jazeera-steel-quality.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.jazeerasteel.com/images/jazeera-company-info.jpg",
+        "https://www.jazeerasteel.com/images/quality.jpg",
+        "https://www.jazeerasteel.com/images/trust.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Ratnamani Metals & Tubes Limited",
+      "category": "Tubes & Pipes",
+      "category_slug": "tube-pipes",
+      "csv_category_original": "Tube & Pipes",
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg",
+        "/images/suppliers/phase1/tube-pipes/ratnamani-product-carbonsteel.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg",
+      "source_files": [
+        "ratnamani-factory.jpg",
+        "ratnamani-product-carbonsteel.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/ratnamani-factory.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/ratnamani-product-carbonsteel.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.ratnamani.com/images/banner/banner1.jpg",
+        "https://www.ratnamani.com/images/banner/banner3.jpg",
+        "https://www.ratnamani.com/images/banner/banner4.jpg",
+        "https://www.ratnamani.com/images/company_profile2.jpg",
+        "https://www.ratnamani.com/images/product_lines/carbonsteel.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/emsteel-company.jpg",
+        "/images/suppliers/phase1/steel-metals/emsteel-product.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/emsteel-company.jpg",
+      "source_files": [
+        "emsteel-company.jpg",
+        "emsteel-product.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/emsteel-company.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/emsteel-product.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://ar2024.emsteel.com/images/components/custom-pages/images/our-products/img-1.png",
+        "https://ar2024.emsteel.com/images/components/custom-pages/images/our-products/img-2.png",
+        "https://ar2024.emsteel.com/images/components/mainpage/images/s1-bg.jpeg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Ferrite Structural Steels Private Limited",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg",
+        "/images/suppliers/phase1/steel-metals/ferrite-structural-home.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg",
+      "source_files": [
+        "ferrite-structural-banner.jpg",
+        "ferrite-structural-home.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/ferrite-structural-banner.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/ferrite-structural-home.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://ferrite.in/wp-content/uploads/2024/06/Ferrite-Structural-Steels-1520_600-scaled.jpg",
+        "https://ferrite.in/wp-content/uploads/2024/05/home1.jpg",
+        "https://ferrite.in/wp-content/uploads/2024/05/home2.jpg",
+        "https://5.imimg.com/data5/EV/DB/MY-8638432/ferrite-structural-steels-private-limited-120x120.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Qatar Steel Company (Q.P.S.C.)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg",
+        "/images/suppliers/phase1/steel-metals/qatar-steel-billets.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg",
+      "source_files": [
+        "qatar-steel-rebars.jpg",
+        "qatar-steel-billets.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/qatar-steel-rebars.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/qatar-steel-billets.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2022/01/construction-bars-1.jpg",
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2022/01/billets.jpg",
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2016/06/cold-direct-reduced-iron.jpg",
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2025/08/rebar_specification_product-scaled.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "JSW Steel Limited",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg",
+        "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg",
+      "source_files": [
+        "jsw-steel-vijayanagar-1.jpg",
+        "jsw-steel-vijayanagar-2.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jsw-steel-vijayanagar-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jsw-steel-vijayanagar-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/01/vijaynagarworksimg.jpg",
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/01/vijaynagar-works-banner.jpg",
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2025/12/JSW-Neosteel-550D.jpg",
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2025/11/cold-rolled-products-1.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Saudi Iron and Steel Company (Hadeed)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg",
+        "/images/suppliers/phase1/steel-metals/hadeed-module-e.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg",
+      "source_files": [
+        "hadeed-module-e-htc.jpg",
+        "hadeed-module-e.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/hadeed-module-e-htc.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/hadeed-module-e.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.midrex.com/wp-content/uploads/FIGURE-3-2.jpg",
+        "https://www.midrex.com/wp-content/uploads/hadeed.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Tata Steel Limited",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg",
+        "/images/suppliers/phase1/steel-metals/tata-steel-factory-2.jpg",
+        "/images/suppliers/phase1/construction/tata-steel-night.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg",
+      "source_files": [
+        "tata-steel-factory-1.jpg",
+        "tata-steel-factory-2.jpg",
+        "tata-steel-night.jpg"
+      ],
+      "source_folders": [
+        "construction",
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/tata-steel-factory-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/tata-steel-factory-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/tata-steel-night.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-6.jpg",
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-7.jpg",
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-10.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Jingye Steel (Jingye Group)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg",
+        "/images/suppliers/phase1/steel-metals/jingye-pingshan-rolling.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg",
+      "source_files": [
+        "jingye-pingshan-aerial.jpg",
+        "jingye-pingshan-rolling.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jingye-pingshan-aerial.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jingye-pingshan-rolling.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2025112709483949130/cms/image/615cfba6-3843-45fb-931c-7490446d6440.jpg?vf=B7gH3s",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2025112709483949130/cms/image/4dfdb5c7-e47c-4522-b286-9863e693e1d8.jpg?vf=B7gH3s"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg",
+      "source_files": [
+        "rinl-vizag-plant.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/rinl-vizag-plant.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pylon_at_Vizag_Steel_Plant_01.jpg/1280px-Pylon_at_Vizag_Steel_Plant_01.jpg",
+        "https://www.vizagsteel.com/images/LMMM.jpg",
+        "https://www.vizagsteel.com/images/MMSM.jpg",
+        "https://www.vizagsteel.com/images/sp.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg",
+        "/images/suppliers/phase1/steel-metals/jindal-steel-tmt.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg",
+      "source_files": [
+        "jindal-steel-beam.jpg",
+        "jindal-steel-tmt.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jindal-steel-beam.jpg",
+        "/workspace/suppliers-phase1/enhanced/steel-metals/jindal-steel-tmt.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://5.imimg.com/data5/SELLER/Default/2021/6/MT/YK/XI/8999366/tmt-rebars-500x500.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2021/6/NP/HX/HR/8999366/parallel-flange-beam-500x500.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2021/6/ZE/NX/HO/8999366/wire-rod-500x500.jpg",
+        "https://docs.jindalsteel.in/document/124/1770874007_1758972428_NJ2.png"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Ezz Steel",
+      "category": "Steel & Metals",
+      "category_slug": "steel-metals",
+      "csv_category_original": "Steel & Metals",
+      "local_paths": [
+        "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg",
+      "source_files": [
+        "ezz-steel-suez.jpg"
+      ],
+      "source_folders": [
+        "steel-metals"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/steel-metals/ezz-steel-suez.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.ezzsteel.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjM4LCJwdXIiOiJibG9iX2lkIn19--241e17f450bf54bcca748fc197082e5932d75839/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6WzEyMDAsNjMwXSwic2F2ZXIiOnsicXVhbGl0eSI6OTB9fSwicHVyIjoidmFyaWF0aW9uIn19--e8f5d4a6d1794a4caea4e5641535d88f7aef4a01/03-Mobile-suez2.jpg",
+        "https://www.ezzsteel.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjMyLCJwdXIiOiJibG9iX2lkIn19--66cbbc5d35c704b48c2faf679287774e79603774/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6WzEyMDAsNjMwXSwic2F2ZXIiOnsicXVhbGl0eSI6OTB9fSwicHVyIjoidmFyaWF0aW9uIn19--e8f5d4a6d1794a4caea4e5641535d88f7aef4a01/03-Mobile-rebar2.jpg",
+        "https://www.ezzsteel.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzA4NywicHVyIjoiYmxvYl9pZCJ9fQ==--44bdc996ed3f42bcdd31830c73a8d00235e7929b/suez.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Foliflex Cables (India) Private Limited",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/foliflex-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg",
+      "source_files": [
+        "foliflex-1.jpg",
+        "foliflex-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/foliflex-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/foliflex-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://5.imimg.com/data5/GLADMIN/Default/2022/12/GL/LE/BI/26908440/fr-housing-wire-500x500.jpg",
+        "https://5.imimg.com/data5/GLADMIN/Default/2022/12/JQ/MS/MZ/26908440/industrial-copper-cable-500x500.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2025/11/563183696/TA/JK/NL/26908440/foliflex-50-mm-aluminum-cables-500x500.jpg",
+        "https://foliflexcables.in/img/products/wires/housing-wire-range.webp",
+        "https://foliflexcables.in/img/products/cables/submersible-flat-cable.webp",
+        "https://foliflexcables.in/img/company/cable-quality-and-testing.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "KEI Industries Limited",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/kei-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/kei-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/kei-1.jpg",
+      "source_files": [
+        "kei-1.jpg",
+        "kei-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/kei-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/kei-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/ehv-cable.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/ht-cables.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/lt-cable.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/control-cables.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2026/06/house-wire-menu.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/solar-cable.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Polycab India Limited",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/polycab-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/polycab-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/polycab-1.jpg",
+      "source_files": [
+        "polycab-1.jpg",
+        "polycab-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/polycab-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/polycab-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://cms.polycab.com/media/ba3nqfh5/aboutus_web-banner_new.jpg",
+        "https://cms.polycab.com/media/zhchv2lo/about-wire.webp",
+        "https://cms.polycab.com/media/lggfsb3o/about-2.webp",
+        "https://cms.polycab.com/media/zu0l1tex/03_about.webp",
+        "https://cms.polycab.com/media/mnrcbcjk/about-3.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "R R Kabel Limited",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/rr-kabel-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg",
+      "source_files": [
+        "rr-kabel-1.jpg",
+        "rr-kabel-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/rr-kabel-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/rr-kabel-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.rrkabel.com/wp-content/uploads/2024/04/factories-banner.jpg",
+        "https://www.rrkabel.com/wp-content/uploads/2023/07/new-product-range-2.png",
+        "https://www.rrkabel.com/wp-content/uploads/2023/07/new-product-range-3.png",
+        "https://www.rrkabel.com/wp-content/uploads/2023/07/new-product-range-4.png",
+        "https://www.rrkabel.com/wp-content/uploads/2026/07/RR-Kabel-FutureReadyWires-HomePage-Banner-scaled-1.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Jiangsu Yuhui Cable Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg",
+      "source_files": [
+        "jiangsu-yuhui-1.jpg",
+        "jiangsu-yuhui-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/jiangsu-yuhui-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/jiangsu-yuhui-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://image.made-in-china.com/214f0j00IMrGUvpyOPgW/Jiangsu-Yuhui-Cable-Co-Ltd-.webp",
+        "https://image.made-in-china.com/214f0j00HBgGRFrtuLuW/Jiangsu-Yuhui-Cable-Co-Ltd-.webp",
+        "https://image.made-in-china.com/214f0j00lepRUEgaoIuV/Jiangsu-Yuhui-Cable-Co-Ltd-.webp",
+        "https://image.made-in-china.com/155f0j00LEevgwZqCBuT/Low-Capacitance-High-Efficiency-XLPE-Insulated-PVC-Sheathed-35kv-Medium-Voltage-Power-Cable-for-Long-Distance-Transmission.webp",
+        "https://image.made-in-china.com/43f0j00eQqMCvgGbczB/Double-Insulated-XLPE-PVC-Power-Cable-1kv-Low-Voltage-Cable-with-Solid-Copper-Conductor-for-Permanent-Wiring-in-Commercial-Building-Construction.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg",
+      "source_files": [
+        "shenghua-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/shenghua-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.shanpowercable.com/photo/cl19658438-shanghai_shenghua_cable_group_co_ltd.jpg",
+        "https://www.shanpowercable.com/photo/cd12078887-shanghai_shenghua_cable_group_co_ltd.jpg",
+        "https://www.shanpowercable.com/photo/cd12078872-shanghai_shenghua_cable_group_co_ltd.jpg",
+        "https://www.shanpowercable.com/photo/cd12080212-shanghai_shenghua_cable_group_co_ltd.jpg",
+        "https://www.shanpowercable.com/photo/cd12080255-shanghai_shenghua_cable_group_co_ltd.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "XWA Power & Cable Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/xwa-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/xwa-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/xwa-1.jpg",
+      "source_files": [
+        "xwa-1.jpg",
+        "xwa-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/xwa-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/xwa-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.xwacable.com/wp-content/uploads/2026/04/XWA-Chinese-Cable-Factory-1024x576.webp",
+        "https://www.xwacable.com/wp-content/uploads/2026/02/XWA-POWER-Factory-1-1024x483.webp",
+        "https://www.xwacable.com/wp-content/uploads/2026/02/XWA-POWER-Factory-Equipment-1024x520.webp",
+        "https://www.xwacable.com/wp-content/uploads/2026/03/XWA-Medium-Voltage-Cable.webp",
+        "https://www.xwacable.com/wp-content/uploads/2026/01/XWA-control-cable.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Henan Huadong Cable Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/huadong-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/huadong-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/huadong-1.jpg",
+      "source_files": [
+        "huadong-1.jpg",
+        "huadong-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/huadong-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/huadong-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Power-Cable-1.png",
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Overhead-Cable.png",
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Communication-Cable.png",
+        "https://huadongcablegroup.com/wp-content/uploads/2025/04/Rubber-Cable-diagram.png"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Shandong New Luxing Cable Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/luxing-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/luxing-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/luxing-1.jpg",
+      "source_files": [
+        "luxing-1.jpg",
+        "luxing-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/luxing-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/luxing-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.luxingcable.com/Content/upload/2018247128/201801120832458816304.jpg",
+        "https://www.luxingcable.com/Content/upload/2018247128/201801120833248644628.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "People's Cable Group Co., Ltd.",
+      "category": "Cables & Electrical",
+      "category_slug": "cables-electrical",
+      "csv_category_original": "Cables & Electrical",
+      "local_paths": [
+        "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg",
+        "/images/suppliers/phase1/cables-electrical/peoples-cable-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg",
+      "source_files": [
+        "peoples-cable-1.jpg",
+        "peoples-cable-2.jpg"
+      ],
+      "source_folders": [
+        "cables-electrical"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/peoples-cable-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/cables-electrical/peoples-cable-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.rmjtcable.com/wp-content/uploads/2023/05/DSC_5549-768x513.jpg",
+        "https://www.rmjtcable.com/wp-content/uploads/2023/05/DSC_5554-768x513.jpg",
+        "https://www.rmjtcable.com/wp-content/uploads/2026/04/%E6%96%B0%E5%8E%82%E5%9B%BE%E7%89%87.jpg",
+        "https://image.made-in-china.com/2f1j00LUNqRnFYnubB/N2xby-N2xfy-Ry-Nyy-N2xy-Copper-Aluminium-Standard-PVC-XLPE-Power-Cable.jpg",
+        "https://image.made-in-china.com/2f1j00IcufSJLjMAqb/300-500V-Flexible-Rvv-2-1-5-mm2-Building-Copper-Wire-Electrical-Cable.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "UltraTech Cement Limited",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg",
+        "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg",
+      "source_files": [
+        "ultratech-cement-jafrabad-1.jpg",
+        "ultratech-cement-jafrabad-2.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/ultratech-cement-jafrabad-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/ultratech-cement-jafrabad-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ultra_Tech_Cement_plant_at_Jafrabad.jpg/1280px-Ultra_Tech_Cement_plant_at_Jafrabad.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ultra_Tech_Cement_plant_Jafrabad.jpg/1280px-Ultra_Tech_Cement_plant_Jafrabad.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "CEMEX, S.A.B. de C.V.",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/cemex-rugby-works.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/cemex-rugby-works.jpg",
+      "source_files": [
+        "cemex-rugby-works.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/cemex-rugby-works.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Rugby_Cemex_cement_works_7.20.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Anhui Conch Cement Company Limited",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg",
+      "source_files": [
+        "anhui-conch-qixia.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/anhui-conch-qixia.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6565.jpg/1280px-Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6565.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6561.jpg/1280px-Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6561.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6572.jpg/1280px-Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6572.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Heidelberg Materials AG",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg",
+        "/images/suppliers/phase1/construction/heidelberg-hannover.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg",
+      "source_files": [
+        "heidelberg-ennigerloh.jpg",
+        "heidelberg-hannover.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/heidelberg-ennigerloh.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/heidelberg-hannover.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/HeidelbergCement_Hannover-Misburg.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/67/Ennigerloh%2C_Zementwerk_HeidelbergCement_--_2014_--_8672.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Commercial Metals Company",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/cmc-fab.jpg",
+        "/images/suppliers/phase1/construction/cmc-rebar.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/cmc-fab.jpg",
+      "source_files": [
+        "cmc-fab.jpg",
+        "cmc-rebar.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/cmc-fab.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/cmc-rebar.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.cmc.com/getmedia/4bfa8be1-1d30-462b-b177-3e497888de9a/repurposed-bonus-fab.jpg",
+        "https://www.cmc.com/getmedia/82be22bb-99e5-4adb-baa2-94cf8475c8a5/CMC_Mill_Rebar_Thumbnail.png",
+        "https://www.cmc.com/getmedia/0e127204-d093-49df-97e7-1819b7e0dd75/march-2025-Steel-WV-13MAR25-Southwest-Corner.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Vulcan Materials Company",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg",
+        "/images/suppliers/phase1/construction/vulcan-medina.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg",
+      "source_files": [
+        "vulcan-miami-quarry.jpg",
+        "vulcan-medina.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/vulcan-miami-quarry.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/vulcan-medina.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/blta9f9d5126bba7cce/68caf82948d330540b41bf0c/HERO_Miami_Quarry-1628_Cropped.png",
+        "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/bltbca9f929c6c3b97f/68e9491890fcab4a8fccc6e4/Medina_02.jpg",
+        "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/blt8b941ea21671ed06/68fb92a61ace63ab12675782/HRO_1-Miami_Quarry-1618-1.JPG"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg",
+        "/images/suppliers/phase1/construction/zamil-steel-manufacturing.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg",
+      "source_files": [
+        "zamil-steel-factory-aerial.jpg",
+        "zamil-steel-manufacturing.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/zamil-steel-factory-aerial.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/zamil-steel-manufacturing.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://zamilsteel.com/peb/en/img/manufacturing.jpg",
+        "https://zamilsteel.com/peb/en/img/factory-ariel.jpg",
+        "https://zamilsteel.com/peb/en/img/factory_saudiarabia.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Magicrete Building Solutions Private Limited",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [],
+      "hero": null,
+      "source_files": [],
+      "source_folders": [],
+      "local_abs": [],
+      "remote_photoUrls_original": [
+        "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png"
+      ],
+      "used_remote_fallback": true,
+      "gap": {
+        "code": "magicrete-no-plant-still",
+        "note": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback."
+      }
+    },
+    {
+      "name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "category": "Construction",
+      "category_slug": "construction",
+      "csv_category_original": "Construction",
+      "local_paths": [
+        "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg",
+        "/images/suppliers/phase1/construction/hangxiao-steel-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg",
+      "source_files": [
+        "hangxiao-steel-1.jpg",
+        "hangxiao-steel-2.jpg"
+      ],
+      "source_folders": [
+        "construction"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/construction/hangxiao-steel-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/construction/hangxiao-steel-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.hxss.com.cn/upload/at/image/20220316/16474010691202958052.png",
+        "https://www.hxss.com.cn/en/upload/2022/05/19/16529261986363dzreh.jpg",
+        "https://www.hxss.com.cn/en/upload/2022/05/19/16529263221468ysudp.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Chaoda Valves Group Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/chaoda-2.jpg",
+        "/images/suppliers/phase1/industrial-parts/chaoda-3.jpg",
+        "/images/suppliers/phase1/industrial-parts/chaoda-4.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg",
+      "source_files": [
+        "chaoda-1.jpg",
+        "chaoda-2.jpg",
+        "chaoda-3.jpg",
+        "chaoda-4.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/chaoda-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/chaoda-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/chaoda-3.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/chaoda-4.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://chaodausa.com/wp-content/uploads/2023/09/Wuxing-Ball-Valve-2.jpg",
+        "https://chaodausa.com/wp-content/uploads/2023/06/Lishui.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": {
+        "code": "chaoda-now-staged",
+        "note": "Chaoda previously had no staged media (WAF-blocked CDN / 160px MIC thumbs). Now has 4 factory aerials chaoda-1..4.jpg (Wuxing + Lishui campuses from chaodausa.com) in industrial-parts/; included as local media."
+      }
+    },
+    {
+      "name": "Neway Valve (Suzhou) Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/neway-1.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/neway-1.jpg",
+      "source_files": [
+        "neway-1.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/neway-1.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.newayvalve.com/upload/jpg/202211/img1.jpg",
+        "https://www.newayvalve.com/upload/jpg/202401/%E8%BD%AE%E6%92%AD%E5%9B%BE--1--%E8%8B%B1%E6%96%87_01.jpg",
+        "https://www.newayvalve.com/upload/jpg/202401/%E8%BD%AE%E6%92%AD%E5%9B%BE--2--%E8%8B%B1%E6%96%87_01.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/leo-pump-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg",
+      "source_files": [
+        "leo-pump-1.jpg",
+        "leo-pump-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/leo-pump-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/leo-pump-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.leopump.com/en/bocupload/2023/08/09/LEO-PUMP-manufacturer.jpg",
+        "https://www.leopump.com/en/bocupload/2023/08/09/LEO-PUMP-company.jpg",
+        "https://www.leopump.com/en/bocupload/2023/07/18/XST-standard-centrifugal-pump.png",
+        "https://image.made-in-china.com/206f0j00vatEhVQWoTqg/Leo-Group-Pump-Zhejiang-Co-Ltd.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Nanfang Pump Industry Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg",
+      "source_files": [
+        "nanfang-1.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/nanfang-1.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://usimg.bjyyb.net/sites/51500/51534/20200417182846697.jpg",
+        "https://usimg.bjyyb.net/sites/51500/51534/20200430093243409.jpg",
+        "https://usimg.bjyyb.net/sites/51500/51534/20200430170338355.jpg",
+        "https://usimg.bjyyb.net/sites/51500/51534/20200421104726979.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/zhiju-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg",
+      "source_files": [
+        "zhiju-1.jpg",
+        "zhiju-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/zhiju-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/zhiju-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.zhiju-steel.com/wp-content/uploads/2025/03/zhiju-b1.jpg",
+        "https://www.zhiju-steel.com/wp-content/uploads/2025/03/zhiju-b2.png",
+        "https://www.zhiju-steel.com/wp-content/uploads/2025/09/Sanitary-Polish-Fitting-1.jpg",
+        "https://www.zhiju-steel.com/wp-content/uploads/2025/02/90%C2%B0-LR-Elbow-SCH10-1.jpg",
+        "https://image.made-in-china.com/206f0j00ZTQEtjrIFags/Zhejiang-Zhiju-Pipeline-Industry-Co-Ltd-.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Wafangdian Bearing Group Corp., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/zwz-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/zwz-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/zwz-1.jpg",
+      "source_files": [
+        "zwz-1.jpg",
+        "zwz-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/zwz-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/zwz-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210926/163262643829c35cdd9e09e547.jpg",
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210926/163262644172d0db2c498a2a52.jpg",
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210927/1632735365b07bee9518e03b6f.jpg",
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210927/163274637435b8af2d33bad209.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/huigong-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/huigong-2.jpg",
+      "source_files": [
+        "huigong-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/huigong-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.lyhgbearing.com/images/huigong_01_04.jpg",
+        "https://www.lyhgbearing.com/upfiles/20180930/15382768847725.jpg",
+        "https://www.chgbearings.com/upload/1/cms/content/1728527731336.png",
+        "https://www.lyhgbearing.com/images/huigong_01_04-06.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [],
+      "hero": null,
+      "source_files": [],
+      "source_folders": [],
+      "local_abs": [],
+      "remote_photoUrls_original": [
+        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
+      ],
+      "used_remote_fallback": true,
+      "gap": {
+        "code": "tong-ming-logo-only",
+        "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
+      }
+    },
+    {
+      "name": "Sundram Fasteners Limited",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/sundram-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/sundram-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/sundram-1.jpg",
+      "source_files": [
+        "sundram-1.jpg",
+        "sundram-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/sundram-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/sundram-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://sundram.com/images/row-1/fasteners-one.jpg",
+        "https://sundram.com/images/row-1/fasteners-two.jpg",
+        "https://sundram.com/images/row-1/fasteners-three.jpg",
+        "https://sundram.com/images/row-2/cold-ex-four.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Kirloskar Brothers Limited",
+      "category": "Industrial Parts",
+      "category_slug": "industrial-parts",
+      "csv_category_original": "Industrial Parts",
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/kirloskar-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg",
+      "source_files": [
+        "kirloskar-1.jpg",
+        "kirloskar-2.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/kirloskar-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/kirloskar-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kdi-01_1_7.jpg",
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kcil-05_4_1.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Shandong Corruone New Material Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/corruone-1.jpg",
+        "/images/suppliers/phase1/packaging/corruone-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/corruone-1.jpg",
+      "source_files": [
+        "corruone-1.jpg",
+        "corruone-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/corruone-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/corruone-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.corruone.com/photo/cs150656131-shandong_corruone_new_material_co_ltd.jpg",
+        "https://www.corruone.com/photo/pt150948815-pp_pe_mango_corrugated_box_polypropylene_corflute_storage_boxes.jpg",
+        "https://image.made-in-china.com/2f1j00wVWrlfSUfmqc/Waterproof-Anti-UV-Flame-Retardant-PP-Honeycomb-Sheet-Corrugated-Plastic-Panel.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Dongguan Yalan Packing Materials Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/yalan-1.jpg",
+        "/images/suppliers/phase1/packaging/yalan-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/yalan-1.jpg",
+      "source_files": [
+        "yalan-1.jpg",
+        "yalan-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/yalan-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/yalan-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://bsg-i.nbxc.com/company/38/bbb6f68c3c435524e4a7484629dfa2.jpg",
+        "https://bsg-i.nbxc.com/company/7d/fafe7de543d905a1ce150988ad0065.jpg",
+        "https://bsg-i.nbxc.com/product/67/07/36/cc9766c4d457fc7838ca38da02.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Jiangsu Jieyuan Container Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/jieyuan-1.jpg",
+        "/images/suppliers/phase1/packaging/jieyuan-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/jieyuan-1.jpg",
+      "source_files": [
+        "jieyuan-1.jpg",
+        "jieyuan-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/jieyuan-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/jieyuan-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/12/factory-3.webp",
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/12/FULLY-AUTOMATIC-FRAMEWORK-INSTALLATION-ASSEMBLY-LINE-4.webp",
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/12/1000L.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/hansin-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/hansin-2.jpg",
+      "source_files": [
+        "hansin-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/hansin-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://image.made-in-china.com/206f0j00CagEonTsItuD/Hangzhou-Hansin-New-Packing-Material-Co-Ltd-.webp",
+        "https://image.made-in-china.com/2f1j00MsqEYKUzfnbJ/IBC-1000L-Aseptic-Bag-HS1AAL1000-.jpg",
+        "https://image.made-in-china.com/2f1j00SUYGKauZqToV/BPA-Free-Aseptic-Bag-for-NFC-Juices.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Dongguan Caicheng Printing Factory",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/caicheng-1.jpg",
+        "/images/suppliers/phase1/packaging/caicheng-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/caicheng-1.jpg",
+      "source_files": [
+        "caicheng-1.jpg",
+        "caicheng-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/caicheng-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/caicheng-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://packccp.com/wp-content/uploads/2026/07/pacckccp-factory-1.webp",
+        "https://packccp.com/wp-content/uploads/2026/07/Offset-Printing-Press.webp",
+        "https://packccp.com/wp-content/uploads/2026/07/custom-paper-packaging.webp"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Wuxi Sifang Youxin Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/sifang-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/sifang-2.jpg",
+      "source_files": [
+        "sifang-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/sifang-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://shopcdnpro.grainajz.com/category/403801/4007/23ffb72114e9cc748992f1f65bc9fe8a/image.png",
+        "https://shopcdnpro.grainajz.com/category/403801/4007/e7cf43ccbb2323f2a75d0990e1a55177/SYY02629%20%281%29.png",
+        "https://shopcdnpro.grainajz.com/category/403801/4007/86b46ccf8134fab61feb7f3f1c56b730/SYY01365.png.png"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Meghdoot Packaging (Uttaranchal)",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/meghdoot-1.jpg",
+        "/images/suppliers/phase1/packaging/meghdoot-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/meghdoot-1.jpg",
+      "source_files": [
+        "meghdoot-1.jpg",
+        "meghdoot-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/meghdoot-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/meghdoot-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project.jpg",
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project-1.jpg",
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/image.png"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Shangyue (Shanghai) Printing Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/shangyue-1.jpg",
+        "/images/suppliers/phase1/packaging/shangyue-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/shangyue-1.jpg",
+      "source_files": [
+        "shangyue-1.jpg",
+        "shangyue-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/shangyue-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/shangyue-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/banner4.jpg",
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/thermal-labels-2.jpg",
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-07/shipping-labels.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "UFlex Limited",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/uflex-1.jpg",
+        "/images/suppliers/phase1/packaging/uflex-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/uflex-1.jpg",
+      "source_files": [
+        "uflex-1.jpg",
+        "uflex-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/uflex-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/uflex-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.uflexltd.com/assets/images/sliders/Manufacturing-Facilities-banner.jpg",
+        "https://www.uflexltd.com/assets/images/sliders/Flexible-Packaging-banner.jpg",
+        "https://www.uflexltd.com/assets/images/film/Operational-Excellence-1.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    },
+    {
+      "name": "Shandong Dingsheng Container Co., Ltd.",
+      "category": "Packaging",
+      "category_slug": "packaging",
+      "csv_category_original": "Packaging",
+      "local_paths": [
+        "/images/suppliers/phase1/packaging/dingsheng-1.jpg",
+        "/images/suppliers/phase1/packaging/dingsheng-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/packaging/dingsheng-1.jpg",
+      "source_files": [
+        "dingsheng-1.jpg",
+        "dingsheng-2.jpg"
+      ],
+      "source_folders": [
+        "packaging"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/packaging/dingsheng-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/packaging/dingsheng-2.jpg"
+      ],
+      "remote_photoUrls_original": [
+        "https://www.dsibctank.com/uploads/42465/banner/2025041505535117cb9.jpg",
+        "https://www.dsibctank.com/uploads/42465/list/n202504141520165c438.jpg",
+        "https://www.dsibctank.com/uploads/42465/small/white-anti-static-1000l-ibc-tank-brand-newb815d.jpg"
+      ],
+      "used_remote_fallback": false,
+      "gap": null
+    }
+  ],
+  "notes": {
+    "Chaoda Valves Group Co., Ltd.": "Chaoda previously had no staged media (WAF-blocked CDN / 160px MIC thumbs). Now has 4 factory aerials chaoda-1..4.jpg (Wuxing + Lishui campuses from chaodausa.com) in industrial-parts/; included as local media."
+  }
+}

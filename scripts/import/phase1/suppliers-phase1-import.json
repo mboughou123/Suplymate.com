@@ -1,0 +1,2883 @@
+[
+  {
+    "name": "Al Gharbia Pipe Company LLC",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "United Arab Emirates",
+    "city": "Al Taweelah",
+    "address": null,
+    "website": "https://algharbiapipe.com/",
+    "phone": null,
+    "email": null,
+    "description": "Al Gharbia Pipe Company is an LSAW mill in KEZAD (Khalifa Economic Zone Abu Dhabi), Al Taweelah, about 10 km from Khalifa Port. It is a joint venture of ADQ/SENAAT (51%), JFE Steel (27%) and Marubeni-Itochu Steel (22%), established in 2015 with commercial production from 2019. The mill produces large-diameter longitudinally submerged-arc welded pipe from 18 to 60 inch OD, including sour-service linepipe, using a JCO forming press and Industry 4.0 MES. Nameplate capacity was raised to 400,000 metric tonnes; the company is ADNOC-approved for onshore/offshore sour linepipe and conductor pipe.",
+    "logoUrl": "https://algharbiapipe.com/wp-content/uploads/2022/10/production-banner.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-2.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-production-banner.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-2.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-3.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-gharbia-prod-5.jpg"
+    ],
+    "products": [
+      "LSAW linepipe (API 5L Grade B to X80 non-sour; Grade B to X65 sour)",
+      "Conductor pipe (API 5L)",
+      "Structural tubulars (API 2B / EN 10219 / ASTM A252)"
+    ],
+    "certifications": [
+      {
+        "name": "API 5L (License 5L-1170)"
+      },
+      {
+        "name": "API 2B (License 2B-0193)"
+      },
+      {
+        "name": "API Spec Q1 (Q1-3826)"
+      },
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "ISO/IEC 17025:2017"
+      },
+      {
+        "name": "ADNOC ICV / ADNOC approval (onshore-offshore sour linepipe and conductor)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://algharbiapipe.com/about/",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-2.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-production-banner.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-prod-1.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-prod-2.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-prod-3.jpg|/images/suppliers/phase1/tube-pipes/al-gharbia-prod-5.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "United Arab Emirates",
+    "city": "Mussafah",
+    "address": null,
+    "website": "https://www.ajsteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Ajmal Steel Tubes & Pipes Industries LLC, trading as AJ Steel, is an ERW/HFW pipe mill with two manufacturing units in Mussafah ICAD-1 and ICAD-2, Abu Dhabi. Established around 2006–2007, it produces circular, square and rectangular hollow sections from 1/2 inch to 20 inch NB, in black, varnished, primer, powder-coated and hot-dip galvanized finishes. Stated annual capacity is about 500,000 MT. Products are supplied to construction, infrastructure, fire protection and industrial applications under ASTM, EN, AS/NZS and related specifications.",
+    "logoUrl": "https://www.ajsteel.com/assets/images/logo.png",
+    "imageUrl": null,
+    "images": [],
+    "products": [
+      "ERW/HFW circular pipes (1/2\"–20\" NB)",
+      "Square and rectangular hollow sections (SHS/RHS)",
+      "Hot-dip galvanized, powder-coated and primer-coated ERW tubes"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO/IEC 17025 (in-house lab, ICAD-2 branch)"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "CE / CPR EN 10210, EN 10219, EN 10255, EN 10217"
+      },
+      {
+        "name": "ACRS (AS/NZS 1163 cold-formed hollow sections, cert 230302)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf",
+    "photoUrls": "",
+    "media": {
+      "local": false,
+      "hero": null,
+      "gap": {
+        "code": "aj-steel-empty",
+        "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
+      }
+    }
+  },
+  {
+    "name": "Jindal SAW Limited",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "India",
+    "city": "Mundra",
+    "address": null,
+    "website": "https://jindalsaw.com/",
+    "phone": null,
+    "email": null,
+    "description": "Jindal SAW Limited, founded in 1984 in the O.P. Jindal Group, is a listed Indian manufacturer of large-diameter SAW line pipe, seamless carbon/alloy tubes, and ductile-iron pipe. Integrated SAW mills sit at Nanakapaya and Samaghogha near Mundra Port, Gujarat, with additional plants at Kosi Kalan, Bellary, Nashik and overseas. The company was the first in India to make SAW pipe by UOE and later added JCO LSAW and HSAW mills plus a Nashik seamless mill for OCTG and industrial tubes. Products are made to API and related specifications for oil, gas, water and industrial customers in India and export markets.",
+    "logoUrl": "https://jindalsaw.com/wp-content/uploads/2025/07/saw-jco1.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg",
+      "/images/suppliers/phase1/tube-pipes/jindal-saw-lsaw.jpg",
+      "/images/suppliers/phase1/tube-pipes/jindal-saw-pipe.jpg"
+    ],
+    "products": [
+      "LSAW (UOE/JCO) and HSAW line pipes",
+      "Seamless carbon and alloy pipes and OCTG (Nashik mill)",
+      "Ductile iron pipes and anti-corrosion coatings"
+    ],
+    "certifications": [
+      {
+        "name": "API 5L (historic first Indian API SAW license 1986; current mill licenses listed by plant)"
+      },
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://jindalsaw.com/",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg|/images/suppliers/phase1/tube-pipes/jindal-saw-lsaw.jpg|/images/suppliers/phase1/tube-pipes/jindal-saw-pipe.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/jindal-saw-hsaw.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Welspun Corp Limited",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "India",
+    "city": "Anjar",
+    "address": null,
+    "website": "https://www.welspuncorp.com/",
+    "phone": null,
+    "email": null,
+    "description": "Welspun Corp Limited is a listed welded line-pipe manufacturer with its largest Indian complex at Welspun City, Anjar, Gujarat, plus mills at Dahej, Mandya and Bhopal and overseas plants in Dammam, Saudi Arabia and Little Rock, USA. It produces LSAW, HSAW, HFW/HFIW pipe from about 1.5 to 143 inch, with in-house coating, double-jointing and bending. Combined installed capacity is on the order of 2.2 million tonnes. The company supplies onshore and offshore oil and gas projects (including Saudi Aramco, TC Energy and PTTEP) and has IndiaMART manufacturer listings alongside the corporate site.",
+    "logoUrl": "https://www.welspuncorp.com/images/welcome-img.webp",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-2.jpg"
+    ],
+    "products": [
+      "LSAW line pipe",
+      "HSAW (spiral) line pipe",
+      "HFW/HFIW (ERW) line pipe and pipe coatings"
+    ],
+    "certifications": [
+      {
+        "name": "API Spec Q1"
+      },
+      {
+        "name": "API 5L"
+      },
+      {
+        "name": "API 5CT (HFW)"
+      },
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO/TS 29001"
+      },
+      {
+        "name": "BIS"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/welspun-corp-limitedmumbai/aboutus.html",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg|/images/suppliers/phase1/tube-pipes/welspun-corp-factory-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/welspun-corp-factory-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Arabian Pipes Company",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "Saudi Arabia",
+    "city": "Riyadh",
+    "address": null,
+    "website": "https://www.arabian-pipes.com/",
+    "phone": null,
+    "email": null,
+    "description": "Arabian Pipes Company (APC) is a Saudi listed mill that owns an ERW/HFW plant in Riyadh Second Industrial City (about 160,000 t/year, 6–20 inch) and an LSAW plant in Jubail (about 300,000 t/year, 16–48 inch). Combined capacity is about 460,000 t/year, plus casing threading, coating and coil slitting. Commercial ERW production started in the mid-1990s. APC supplies Saudi Aramco and other regional oil and gas operators and exports across the Gulf, the wider Middle East and North Africa.",
+    "logoUrl": "https://arabian-pipes.com/images/Events/ADIPEC_2019.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg",
+      "/images/suppliers/phase1/tube-pipes/arabian-pipes-product.jpg"
+    ],
+    "products": [
+      "ERW/HFW line pipe and casing (6–20 inch)",
+      "LSAW pipe (16–48 inch, Jubail mill)",
+      "Anti-corrosion coated pipe and threaded casing"
+    ],
+    "certifications": [
+      {
+        "name": "API"
+      },
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 29001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "ISO/IEC 17025"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://arabian-pipes.com/About-us.php",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg|/images/suppliers/phase1/tube-pipes/arabian-pipes-product.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/arabian-pipes-factory.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "APL Apollo Tubes Limited",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "India",
+    "city": "Sikandrabad",
+    "address": null,
+    "website": "https://aplapollo.com/",
+    "phone": null,
+    "email": null,
+    "description": "APL Apollo Tubes Limited is India’s largest structural ERW steel tube producer, founded in 1986 with its original mill at Sikandrabad, Uttar Pradesh. It now runs multiple plants across India (including Sikandrabad, Hosur, Raipur, Murbad and others) with multi-million-tonne ERW capacity, and has added a UAE mill. The company makes MS black, galvanized and pre-galvanized round tubes plus SHS/RHS for construction, infrastructure, irrigation and engineering. IndiaMART lists it as a manufacturer; products are BIS-marked and the group cites ISO 9001, ISO 14001 and ISO 45001 plant certifications.",
+    "logoUrl": "https://aplapollocoatedsteel.com/wp-content/uploads/2024/04/factory-image.webp",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-2.jpg",
+      "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-3.jpg",
+      "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-4.jpg"
+    ],
+    "products": [
+      "ERW structural hollow sections (SHS/RHS)",
+      "MS black round tubes and pipes",
+      "Galvanized and pre-galvanized ERW tubes"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "BIS (IS 1239 / IS 3589 and related product marks)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/apl-apollo-tubes-ltd/",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg|/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-2.jpg|/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-3.jpg|/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-4.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/apl-apollo-raipur-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Man Industries (India) Limited",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "India",
+    "city": "Anjar",
+    "address": null,
+    "website": "https://mangroup.com/",
+    "phone": null,
+    "email": null,
+    "description": "Man Industries (India) Limited is a listed manufacturer of large-diameter carbon-steel LSAW, HSAW and ERW line pipe, incorporated in 1988. The main pipe and coating complex is at Khedoi village, Anjar, Kutch (two LSAW units, two HSAW units, one ERW unit and coating lines), with a second plant at Pithampur, Madhya Pradesh. Combined installed capacity is stated at over 1.2 million MTPA. The mill is port-linked to Kandla and Mundra for export of oil, gas, water and hydrocarbon line pipe up to API 5L X80 PSL2.",
+    "logoUrl": "https://mangroup.com/wp-content/uploads/2024/11/LSAW-1-1024x683.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg",
+      "/images/suppliers/phase1/tube-pipes/man-industries-lsaw.jpg"
+    ],
+    "products": [
+      "LSAW line pipe (Anjar JCO mills)",
+      "HSAW (spiral) line pipe",
+      "ERW/HFW pipe and 3LPE/FBE coating"
+    ],
+    "certifications": [
+      {
+        "name": "API Spec Q1"
+      },
+      {
+        "name": "API 5L"
+      },
+      {
+        "name": "API 2B"
+      },
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "ISO 3834-2"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://mangroup.com/",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg|/images/suppliers/phase1/tube-pipes/man-industries-lsaw.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/man-industries-hsaw.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Hebei Huayang Steel Pipe Co., Ltd.",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "China",
+    "city": "Cangzhou",
+    "address": null,
+    "website": "https://www.hbhuayang.com/",
+    "phone": null,
+    "email": null,
+    "description": "Hebei Huayang Steel Pipe Co., Ltd. is a Cangzhou (Mengcun) mill founded in 2005 that manufactures high-frequency ERW/HFW and LSAW (JCOE) carbon-steel pipe. Company materials cite a large Mengcun campus, 600-plus employees, and annual ERW/LSAW capacity in the multi-million-tonne range, with HFW lines covering about 76–660 mm and LSAW about 406–1422 mm. It holds API 5L and API 2B monogram rights plus ISO 9001/14001/45001 and CE, and exports to more than 80 regions. This is a producing mill rather than a Cangzhou trading desk.",
+    "logoUrl": "https://www.huayang-steelpipe.com/uploads/43557/banner/20250822035044d1698.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg"
+    ],
+    "products": [
+      "ERW/HFW line pipe (approx. Φ76–Φ660 mm)",
+      "LSAW/JCOE pipe (approx. Φ406–Φ1422 mm)",
+      "3PE/3PP coated and hot-expanded welded pipe"
+    ],
+    "certifications": [
+      {
+        "name": "API 5L"
+      },
+      {
+        "name": "API 2B"
+      },
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "CE"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.huayang-steelpipe.com/",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/hebei-huayang-factory.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Al Jazeera Steel Products Co. SAOG",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "Oman",
+    "city": "Sohar",
+    "address": null,
+    "website": "https://www.jazeerasteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Al Jazeera Steel Products Co. SAOG (formerly Al Jazeera Tube Mills) is a Muscat Securities Market-listed mill in Sohar Industrial Estate, Oman, about 10 km from Sohar Port. Founded in 1996, its tube mill has four ERW lines with about 300,000 MT per year of black and galvanized circular, square and rectangular hollow sections; a merchant-bar mill of similar capacity sits on the same site. The company states ISO 9001:2015 and API Q1 for the tube mill and has obtained API monogram approval for oil and gas pipe. Key markets include Oman, UAE, Saudi Arabia and North America.",
+    "logoUrl": "https://www.jazeerasteel.com/images/jazeera-company-info.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg",
+      "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-quality.jpg"
+    ],
+    "products": [
+      "ERW/HFIW black steel pipes",
+      "Hot-dip galvanized ERW pipes",
+      "Square and rectangular hollow sections"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "API Q1 (10th edition)"
+      },
+      {
+        "name": "API 5L monogram (tube mill upgrade, disclosed in 2024 annual report)"
+      },
+      {
+        "name": "UL product certification (fire-protection pipe)"
+      },
+      {
+        "name": "FM Approval"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.jazeerasteel.com/company.php",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg|/images/suppliers/phase1/tube-pipes/al-jazeera-steel-quality.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/al-jazeera-steel-factory.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Ratnamani Metals & Tubes Limited",
+    "industry": "Metal",
+    "category": "Tubes & Pipes",
+    "country": "India",
+    "city": "Bhimasar",
+    "address": null,
+    "website": "https://www.ratnamani.com/",
+    "phone": null,
+    "email": null,
+    "description": "Ratnamani Metals & Tubes Ltd. is a listed Gujarat mill group founded in 1983, with carbon-steel SAW/HFW pipe and coating at Kutch works, Survey No. 474, Bhimasar (Anjar), plus stainless/nickel seamless at Indrad and additional SAW at Chhatral and Sundargarh. Kutch produces LSAW, HSAW, CSAW and HF-ERW carbon-steel pipe to API 5L (including X80), with stated SAW capacities of roughly 250,000 MT LSAW and 300,000 MT HSAW and 100,000 MT HF-ERW. About 40% of volume is exported; customers sit in oil and gas, refining, power, LNG and water.",
+    "logoUrl": "https://www.ratnamani.com/images/banner/banner1.jpg",
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg",
+      "/images/suppliers/phase1/tube-pipes/ratnamani-product-carbonsteel.jpg"
+    ],
+    "products": [
+      "Carbon steel LSAW / HSAW / CSAW line pipe",
+      "HF-ERW carbon steel pipe",
+      "Stainless and nickel-alloy seamless and welded tubes (Indrad/Kutch)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "API Q1 (CS Kutch)"
+      },
+      {
+        "name": "API 5L (CS Kutch and Chhatral)"
+      },
+      {
+        "name": "API 5CT (CS Kutch)"
+      },
+      {
+        "name": "API 2B (CS Kutch and Chhatral)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.ratnamani.com/company_profile.html",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg|/images/suppliers/phase1/tube-pipes/ratnamani-product-carbonsteel.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/ratnamani-factory.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "United Arab Emirates",
+    "city": "Mussafah / Abu Dhabi Industrial City (ICAD I)",
+    "address": null,
+    "website": "https://www.emsteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "EMSTEEL is the UAE’s largest publicly listed steel and building-materials group (ADX: EMSTEEL), formed from the merger of Emirates Steel and Arkan. Its integrated Emirates Steel complex in Abu Dhabi Industrial City uses DRI and EAF technology with rolling mills that produce rebar, wire rod, heavy/jumbo sections and the region’s only hot-rolled sheet piles. Rated steel capacity is about 3.5 million tonnes per year; finished products from Abu Dhabi have been shipped to more than 70 countries.",
+    "logoUrl": "https://ar2024.emsteel.com/images/components/mainpage/images/s1-bg.jpeg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/emsteel-company.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/emsteel-company.jpg",
+      "/images/suppliers/phase1/steel-metals/emsteel-product.jpg"
+    ],
+    "products": [
+      "Rebar (straight bar and coil)",
+      "Carbon steel wire rod",
+      "Heavy and jumbo structural sections",
+      "Hot-rolled sheet piles"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (UK CARES)"
+      },
+      {
+        "name": "ISO 14001 (TUV Middle East)"
+      },
+      {
+        "name": "ISO 45001 (TUV Middle East)"
+      },
+      {
+        "name": "UK CARES product conformity for rebar"
+      },
+      {
+        "name": "ASME nuclear-grade rebar (Material Organization QSC 667)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.emsteel.com/about-emirates-steel/",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/emsteel-company.jpg|/images/suppliers/phase1/steel-metals/emsteel-product.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/emsteel-company.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Ferrite Structural Steels Private Limited",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "India",
+    "city": "Kalamboli, Navi Mumbai",
+    "address": null,
+    "website": "https://ferrite.in/",
+    "phone": null,
+    "email": null,
+    "description": "Ferrite Structural Steels (formerly Payal Enterprises) is a Mumbai-based structural-steel company with a published factory at Plot 18, KWC Kalamboli, Navi Mumbai, plus stockholding warehouses at the same hub. It manufactures and processes angles, beams, channels, bars, pipes, sheets and plates, and also stocks mill brands as an authorized SAIL / RINL MoU distributor. The firm states it operates a rolling mill and galvanizing capability (including PRECITECH fabrication in Jejuri, Pune) alongside service-center processing such as cut-to-size and slitting.",
+    "logoUrl": "https://ferrite.in/wp-content/uploads/2024/06/Ferrite-Structural-Steels-1520_600-scaled.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg",
+      "/images/suppliers/phase1/steel-metals/ferrite-structural-home.jpg"
+    ],
+    "products": [
+      "Mild steel angles",
+      "MS beams / I-beams and H-beams",
+      "MS channels",
+      "Steel plates and sheets"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      }
+    ],
+    "moq": "1 ton (listed on TradeIndia product pages)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/ferrite-structural/profile.html",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg|/images/suppliers/phase1/steel-metals/ferrite-structural-home.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/ferrite-structural-banner.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Qatar Steel Company (Q.P.S.C.)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "Qatar",
+    "city": "Mesaieed Industrial City",
+    "address": null,
+    "website": "https://www.qatarsteel.com.qa/",
+    "phone": null,
+    "email": null,
+    "description": "Qatar Steel, established in 1974 and a subsidiary of Industries Qatar, is the first integrated steel plant in the Arabian Gulf. Its Mesaieed works produces DRI, HBI, steel billets, reinforcing bars (8–40 mm) and wire rod using DRI–EAF steelmaking and rolling mills. The mill holds long-standing ISO 9001 and UK CARES product-conformity certificates and supplies GCC and other export markets under BS 4449, ASTM A615 and related standards.",
+    "logoUrl": "https://www.qatarsteel.com.qa/wp-content/uploads/2022/01/construction-bars-1.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg",
+      "/images/suppliers/phase1/steel-metals/qatar-steel-billets.jpg"
+    ],
+    "products": [
+      "Reinforcing steel bars (rebar, 8–40 mm)",
+      "Wire rod and rebar in coil",
+      "Steel billets",
+      "Direct reduced iron (DRI) / hot briquetted iron (HBI)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO/IEC 17025 laboratory accreditation"
+      },
+      {
+        "name": "UK CARES product conformity (ASTM A615 Gr.60, BS 4449 B500B)"
+      },
+      {
+        "name": "Dubai Central Laboratory (DCL) product conformity"
+      },
+      {
+        "name": "Qatar Quality Mark"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.qatarsteel.com.qa/qatar-steel-main-products/",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg|/images/suppliers/phase1/steel-metals/qatar-steel-billets.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/qatar-steel-rebars.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "JSW Steel Limited",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "India",
+    "city": "Toranagallu (Vijayanagar Works), Ballari, Karnataka",
+    "address": null,
+    "website": "https://www.jswsteel.in/",
+    "phone": null,
+    "email": null,
+    "description": "JSW Steel is one of India’s largest integrated steel producers. Flagship Vijayanagar Works at Toranagallu is a ~10,000-acre complex with blast furnaces, BOFs, continuous casting, India’s widest hot strip mill, cold rolling and coating lines, plus long-product mills for TMT bars and wire rods. The site holds ISO 9001/14001/45001/50001, SA8000 and ResponsibleSteel certification and supplies flat and long products to infrastructure, automotive and construction markets in India and overseas.",
+    "logoUrl": "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/01/vijaynagarworksimg.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg",
+      "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-2.jpg"
+    ],
+    "products": [
+      "Hot rolled coils, plates and sheets",
+      "JSW Neosteel TMT bars (Fe 550D / 600)",
+      "Wire rods",
+      "Cold rolled and galvanised / galvalume coils"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "ISO 50001:2018"
+      },
+      {
+        "name": "ResponsibleSteel"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.jswsteel.in/facility/vijayanagar-works",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg|/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/jsw-steel-vijayanagar-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Saudi Iron and Steel Company (Hadeed)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "Saudi Arabia",
+    "city": "Jubail Industrial City",
+    "address": null,
+    "website": "https://hadeed.com.sa/",
+    "phone": null,
+    "email": null,
+    "description": "Hadeed is the first fully integrated iron-and-steel complex in Saudi Arabia (founded 1979) and the largest long-and-flat producer in the GCC. The Jubail plant uses multiple DRI modules, EAFs and rolling mills with about 3.8 Mt of long products and 2.2 Mt of flat products annually. Product range covers rebar, rebar-in-coil, wire rod, light sections, hot-rolled and cold-rolled coil, galvanized and pre-painted coil. PIF acquired Hadeed in May 2024; the company also absorbed AlRajhi Steel Industries.",
+    "logoUrl": "https://www.midrex.com/wp-content/uploads/FIGURE-3-2.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg",
+      "/images/suppliers/phase1/steel-metals/hadeed-module-e.jpg"
+    ],
+    "products": [
+      "Concrete reinforcing bars (rebar and rebar-in-coil)",
+      "Wire rod",
+      "Hot-rolled coils",
+      "Cold-rolled and hot-dip galvanized coils",
+      "Light sections (flats, squares, equal angles, channels)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (TUV Austria)"
+      },
+      {
+        "name": "ISO 14001:2015 (DNV)"
+      },
+      {
+        "name": "ISO 45001:2018 (DNV)"
+      },
+      {
+        "name": "ISO 50001:2018 (Bureau Veritas)"
+      },
+      {
+        "name": "UK CARES product conformity (BS 4449)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://hadeed.com.sa/about-us",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg|/images/suppliers/phase1/steel-metals/hadeed-module-e.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/hadeed-module-e-htc.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Tata Steel Limited",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "India",
+    "city": "Jamshedpur",
+    "address": null,
+    "website": "https://www.tatasteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Tata Steel operates Asia’s first integrated steel plant at Jamshedpur (founded 1907), with additional Indian works at Kalinganagar and Meramandali and captive iron-ore and coal mines. Jamshedpur produces hot-rolled, cold-rolled and galvanised coils plus long products including Tata Tiscon rebars and wire rods via the BF–BOF route. The Jamshedpur Steel Works was India’s first ResponsibleSteel-certified site; key Indian manufacturing sites hold ISO 9001, ISO 14001 and ISO 45001.",
+    "logoUrl": "https://www.tatasteel.com/tata-steel-brochure/images/inside-10.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg",
+      "/images/suppliers/phase1/steel-metals/tata-steel-factory-2.jpg",
+      "/images/suppliers/phase1/construction/tata-steel-night.jpg"
+    ],
+    "products": [
+      "Tata Tiscon TMT rebars",
+      "Hot rolled coils",
+      "Cold rolled coils",
+      "Galvanised coils and sheets",
+      "Wire rods"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (key Indian manufacturing sites)"
+      },
+      {
+        "name": "ISO 14001:2015 (Jamshedpur Steel Works)"
+      },
+      {
+        "name": "ResponsibleSteel (Jamshedpur)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.tatasteel.com/tata-steel-brochure/inside-tata-steel.html",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg|/images/suppliers/phase1/steel-metals/tata-steel-factory-2.jpg|/images/suppliers/phase1/construction/tata-steel-night.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/tata-steel-factory-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Jingye Steel (Jingye Group)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "China",
+    "city": "Shijiazhuang (Pingshan / Nandian), Hebei",
+    "address": null,
+    "website": "https://www.jingyesteel.com.cn/",
+    "phone": null,
+    "email": null,
+    "description": "Jingye Steel, founded in 1990, is a Fortune Global 500 Chinese steelmaker with multiple mills (Shijiazhuang Iron & Steel, Yingkou Medium Plate, Guangdong Jingye, Jiangsu Jingye and others). It operates a large bar-and-wire-rod base (about 18 production lines) plus plate, HRC, cold-rolled, galvanized, colour-coated and pipe mills. Rebar is offered in Chinese, British, American, Korean, Australian and other grades; the group states exports to 130+ countries and ISO 9001/14001/45001 plus CE, CARES and ACRS product certifications.",
+    "logoUrl": "https://omo-oss-image1.thefastimg.com/portal-saas/pg2025112709483949130/cms/image/615cfba6-3843-45fb-931c-7490446d6440.jpg?vf=B7gH3s",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg",
+      "/images/suppliers/phase1/steel-metals/jingye-pingshan-rolling.jpg"
+    ],
+    "products": [
+      "Hot-rolled ribbed bars / rebar (HRB400, HRB500, B500B, ASTM Gr.60)",
+      "Medium and thick steel plate",
+      "Hot rolled coil (HRC)",
+      "Galvanized and pre-painted steel coil (PPGI)",
+      "Steel pipe (SSAW / SAW)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "EU CE"
+      },
+      {
+        "name": "UK CARES / ACRS (rebar)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.made-in-china.com/showroom/jingyesteelrebar/",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg|/images/suppliers/phase1/steel-metals/jingye-pingshan-rolling.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/jingye-pingshan-aerial.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "India",
+    "city": "Visakhapatnam",
+    "address": null,
+    "website": "https://www.vizagsteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "RINL is a Government of India Navaratna enterprise operating Visakhapatnam Steel Plant, India’s first shore-based integrated steel plant and a long-products specialist. The works includes steel melt shops, a light-and-medium merchant mill, wire-rod mills (~1.65 Mt combined), a structural mill and a special bar mill producing Vizag TMT rebars, wire-rod coils, beams, channels, angles and rounds. RINL states it was the first Indian steel plant certified to ISO 9001, ISO 14001, ISO 45001 and ISO 50001.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pylon_at_Vizag_Steel_Plant_01.jpg/1280px-Pylon_at_Vizag_Steel_Plant_01.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg"
+    ],
+    "products": [
+      "Vizag TMT rebars",
+      "Plain wire rod coils",
+      "Vizag Ukku structurals (beams, channels, angles)",
+      "Plain and forged rounds"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "ISO 50001:2018"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.vizagsteel.com/index.asp",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/rinl-vizag-plant.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "India",
+    "city": "Angul (Jindal Nagar), Odisha",
+    "address": null,
+    "website": "https://www.jindalsteel.in/",
+    "phone": null,
+    "email": null,
+    "description": "Jindal Steel Limited is a major Indian integrated steelmaker (OP Jindal Group). The Angul complex includes a large blast furnace, India’s first coal-gasification / syngas-based DRI route, a ~1.4 Mtpa TMT rebar mill (Jindal Panther), a plate mill producing plates up to about 5 m wide, plus rails, parallel-flange beams, round bars and wire rod from Angul and sister works at Raigarh and Patratu. Public EPDs state Angul facilities are certified to ISO 9001, ISO 14001 and ISO 45001.",
+    "logoUrl": "https://docs.jindalsteel.in/document/124/1770874007_1758972428_NJ2.png",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg",
+      "/images/suppliers/phase1/steel-metals/jindal-steel-tmt.jpg"
+    ],
+    "products": [
+      "Jindal Panther TMT rebars",
+      "Wide steel plates (Rockhard / structural / API)",
+      "Parallel flange beams",
+      "Wire rod",
+      "Rails"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 50001:2018"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/jindal-steel-power-limited-angul-angul/",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg|/images/suppliers/phase1/steel-metals/jindal-steel-tmt.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/jindal-steel-beam.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Ezz Steel",
+    "industry": "Metal",
+    "category": "Steel & Metals",
+    "country": "Egypt",
+    "city": "Ain Sokhna / Suez (also Alexandria, Sadat City, 10th of Ramadan City)",
+    "address": null,
+    "website": "https://www.ezzsteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Ezz Steel is Egypt’s largest steel producer, with four integrated DRI–EAF plants and about 7 million tonnes per year of long and flat products. The Suez / Ain Sokhna complex includes a DRI module, EAFs, a hot strip mill with thin-slab casting, a billet caster and two rebar mills (~1.1 Mt rebar and 1.2 Mt HRC). Other works at Alexandria, Sadat City and 10th of Ramadan City produce rebar, wire rod, HRC and welded fabric. Plants hold ISO 9001/14001/45001/50001 plus UK CARES, CE and SASO product certificates.",
+    "logoUrl": "https://www.ezzsteel.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjM4LCJwdXIiOiJibG9iX2lkIn19--241e17f450bf54bcca748fc197082e5932d75839/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fZmlsbCI6WzEyMDAsNjMwXSwic2F2ZXIiOnsicXVhbGl0eSI6OTB9fSwicHVyIjoidmFyaWF0aW9uIn19--e8f5d4a6d1794a4caea4e5641535d88f7aef4a01/03-Mobile-suez2.jpg",
+    "imageUrl": "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg",
+    "images": [
+      "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg"
+    ],
+    "products": [
+      "Plain and deformed rebar (10–40 mm)",
+      "Wire rod",
+      "Hot rolled coil / flat steel",
+      "Welded steel fabric"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (Alexandria, Suez, Sadat City, 10th of Ramadan)"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "UK CARES BS 4449"
+      },
+      {
+        "name": "CE Mark"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.ezzsteel.com/",
+    "photoUrls": "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/steel-metals/ezz-steel-suez.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Foliflex Cables (India) Private Limited",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "India",
+    "city": "Delhi",
+    "address": null,
+    "website": "https://www.foliflexcables.co.in/",
+    "phone": null,
+    "email": null,
+    "description": "IndiaMART lists Foliflex Cables (India) Private Limited as a manufacturer (also retailer and service provider) of aluminum cables, PVC housing wire, electric house wire, submersible cable, aluminium armoured cable and CCTV wire, with GST 07AADCF2064K1ZN and CIN U31909DL2017PTC323894. The registered/manufacturing address on IndiaMART and company pages is Block A, A-9/2, Jhilmil Industrial Area, G.T. Road, Shahdara, New Delhi 110095; GST registration date is 19-02-2018. Sister site foliflexcables.in describes the same Jhilmil unit as a wire and cable manufacturer of housing wire, FR-LSH cable, telephone/LAN cable, submersible flat cable, copper flexible cable and aluminium cables, and states FR-LSH products are IS 694 certified and made under ISO 9001:2015. A parallel site, foliflexcablesindia.com, also names the Jhilmil manufacturing unit and claims operations from 1976, which conflicts with the 2017/2018 incorporation dates on the IndiaMART profile.",
+    "logoUrl": "https://foliflexcables.in/img/company/cable-quality-and-testing.webp",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/foliflex-2.jpg"
+    ],
+    "products": [
+      "PVC housing / electric house wire (including FR-LSH, IS 694 claimed)",
+      "Aluminum cables and aluminium armoured cable",
+      "Submersible cable",
+      "Multi-core / industrial copper cable",
+      "CCTV wire and RG-6 coaxial cable"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (claimed for manufacturing)"
+      },
+      {
+        "name": "IS 694 (claimed for FR-LSH / PVC house wire up to 1100V)"
+      },
+      {
+        "name": "ISI and ISO standards (products stated as conforming)"
+      },
+      {
+        "name": "GST 07AADCF2064K1ZN"
+      }
+    ],
+    "moq": "IndiaMART product pages list 1 Meter on some coaxial SKUs; no published import/export MOQ found",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.foliflexcables.co.in/profile.html",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg|/images/suppliers/phase1/cables-electrical/foliflex-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/foliflex-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "KEI Industries Limited",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "India",
+    "city": "New Delhi",
+    "address": null,
+    "website": "https://www.kei-ind.com/",
+    "phone": null,
+    "email": null,
+    "description": "KEI Industries Limited is a publicly listed Indian wires and cables manufacturer founded in 1968, with registered/corporate office at D-90, Okhla Industrial Area, Phase-I, New Delhi 110020 (CIN L74899DL1992PLC051527). Official materials describe six-plus manufacturing plants at Bhiwadi, Chopanki and Pathredi (Rajasthan) and Rakholi and Chinchpada (Silvassa, Dadra and Nagar Haveli), producing EHV, HT and LT power cables, control and instrumentation cables, house wire, winding wire, rubber cable, solar cable and stainless steel wire. The company states it serves clients in 60+ countries through 2000+ channel partners and has overseas offices including UAE, South Africa, Nepal and Gambia. Manufacturing facilities are stated as certified to ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018, with NABL/ISO 17025 lab accreditation and product testing/approvals including KEMA, TUV, UL, CE and UKCA as listed in company presentations.",
+    "logoUrl": "https://www.kei-ind.com/wp-content/uploads/2018/04/ehv-cable.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/kei-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/kei-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/kei-2.jpg"
+    ],
+    "products": [
+      "EHV / HT / LT power cables",
+      "House wire and winding wire",
+      "Control, instrumentation and communication cables",
+      "Rubber, solar and fire-survival cables"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "NABL ISO/IEC 17025:2017 (in-house lab, stated in BRSR)"
+      },
+      {
+        "name": "CE marking / UL (including UL 1072 MV power cable, stated in BRSR)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.kei-ind.com/",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/kei-1.jpg|/images/suppliers/phase1/cables-electrical/kei-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/kei-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Polycab India Limited",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "India",
+    "city": "Halol",
+    "address": null,
+    "website": "https://polycab.com/",
+    "phone": null,
+    "email": null,
+    "description": "Polycab India Limited describes itself as India's largest manufacturer of wires and cables, with 28 manufacturing facilities (including two JVs) across Gujarat, Maharashtra, Uttarakhand and Daman and Diu, and about 26% wires-and-cables market share. Registered office is Unit 4, Plot No. 105, Halol Vadodara Road, Village Nurpura, Taluka Halol, Panchmahal, Gujarat 389350; corporate office is The Ruby, Dadar West, Mumbai. About-us states manufacturing QMS certifications ISO 9001, ISO 14001 and OHSAS 18001, a NABL- and UL-accredited central lab in Halol, and product certifications including BIS, BASEC, UL and IEC. An ISO 9001:2015 certificate on the company CMS covers design/manufacture of conductors, wires and cables at Halol and Daman locations (valid 10.08.2024-09.08.2027, cert. 44 100 24395341).",
+    "logoUrl": "https://cms.polycab.com/media/ba3nqfh5/aboutus_web-banner_new.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/polycab-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/polycab-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/polycab-2.jpg"
+    ],
+    "products": [
+      "Wires and cables (PVC, XLPE, ZHFR, elastomeric, EHV/HV/MV/LT power cables)",
+      "Control and instrumentation cables; railway signalling and telecom cables",
+      "ABC cable and conductors",
+      "FMEG (fans, switches, switchgear, luminaires, conduits) — adjacent to core cable manufacturing"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (TUV cert. 44 100 24395341; valid to 09.08.2027)"
+      },
+      {
+        "name": "ISO 14001 and OHSAS 18001 (stated on about-us)"
+      },
+      {
+        "name": "BIS (Bureau of Indian Standards)"
+      },
+      {
+        "name": "BASEC, UL, IEC (product certifications stated on about-us); NABL and UL lab accreditation at Halol"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://polycab.com/about-us",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/polycab-1.jpg|/images/suppliers/phase1/cables-electrical/polycab-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/polycab-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "R R Kabel Limited",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "India",
+    "city": "Silvassa",
+    "address": null,
+    "website": "https://www.rrkabel.com/",
+    "phone": null,
+    "email": null,
+    "description": "R R Kabel Limited is an Indian wires and cables manufacturer with dedicated W&C plants at Survey No. 142/2, Madhuban Dam Road, Silvassa 396240 (D&NH) and Survey No. 201-203 & 327/3, Village Waghodia, Vadodara, Gujarat 391760; other listed sites (Bengaluru, Roorkee, Gagret) are described in the FY2024-25 annual report as FMEG plants. The Wires & Cables segment covers housewires, industrial wires, power cables and special cables, with stated capability up to 66 kV. The company calls itself India's leading exporter of wires and cables; a Q3 FY24 earnings transcript hosted on rrkabel.com states an export footprint of 67 countries. Product certification pages list ISI/BIS standards (IS 694, IS 1554-1, IS 7098-1 & 2, IS 17048) plus BASEC, VDE, UL, CSA and TUV (EN 50618 solar).",
+    "logoUrl": "https://www.rrkabel.com/wp-content/uploads/2024/04/factories-banner.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/rr-kabel-2.jpg"
+    ],
+    "products": [
+      "Housewires (IS 694)",
+      "Industrial wires",
+      "LT/HT power cables (up to 66 kV, company-stated)",
+      "Special cables including solar (EN 50618 / TUV)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001, ISO 14001, ISO 45001 (stated in FY2024-25 annual report)"
+      },
+      {
+        "name": "BIS / ISI: IS 694, IS 7098-1 & 2, IS 1554-1, IS 17048, IS 9857, IS 1293"
+      },
+      {
+        "name": "BASEC (UK): BS EN 50525-2-11/2-31/3-41, BS 5467, BS 6231, BS 6004"
+      },
+      {
+        "name": "UL and CSA (appliance wiring materials); TUV EN 50618 solar; VDE DIN VDE 0281-3/5"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.rrkabel.com/factories/",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg|/images/suppliers/phase1/cables-electrical/rr-kabel-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/rr-kabel-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Jiangsu Yuhui Cable Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Wuxi",
+    "address": null,
+    "website": "https://yuhuicable.en.made-in-china.com/",
+    "phone": null,
+    "email": null,
+    "description": "Made-in-China lists Jiangsu Yuhui Cable Co., Ltd. as a Manufacturer/Factory & Trading Company in Wuxi, Jiangsu, established 2006-05-25, with 60 employees and plant area 26,928 m2 (SGS-verified fields on the company overview). The company manufactures 0.6/1kV-26/35kV power cable, control cable, aerial insulated cable, fire-resistant cable, aluminum alloy cable, photovoltaic cable and energy storage cable, plus a subsidiary for cable accessories up to 220 kV. Management-system certifications shown are ISO9001:2015, ISO14001 and ISO45001:2018; product certification CCC; also claimed National Industrial Production License and type-test reports at 1 kV through 220 kV. Listed main export region is Southeast Asia/Mideast; MOQ 100 meters; 9 production lines.",
+    "logoUrl": "https://image.made-in-china.com/214f0j00IMrGUvpyOPgW/Jiangsu-Yuhui-Cable-Co-Ltd-.webp",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-2.jpg"
+    ],
+    "products": [
+      "PVC/XLPE insulated PVC-sheathed power cable (Cu and Al)",
+      "Control cable and fire-protective/LSZH cable",
+      "Aerial insulated, photovoltaic and energy storage cable",
+      "66-220 kV cable accessories (subsidiary)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "CCC"
+      }
+    ],
+    "moq": "100 meters (Made-in-China company overview)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://yuhuicable.en.made-in-china.com/company-MBdQJbWUHKkp/Jiangsu-Yuhui-Cable-Co-Ltd.html",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg|/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/jiangsu-yuhui-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Shanghai",
+    "address": null,
+    "website": "https://www.shenghuacablegroup.com/",
+    "phone": null,
+    "email": null,
+    "description": "Shanghai Shenghua Cable Group, founded in 1997, is a large Chinese wire and cable manufacturer headquartered at No. 7577 Hunan Road, Pudong New District, Shanghai; a factory address is given as No. 188 Yuanzhong Road, Nanhui Industry Park, Shanghai. About pages state multiple manufacturing bases (Shanghai, Jiangsu, Anhui, Henan, Heilongjiang, Ningxia and others) producing 110 kV and below power cable, control cable, fireproof/mining/locomotive/rail/photovoltaic/marine/nuclear cables and building wire under brands including SHANCABLE and Xin Xin. Group pages claim ISO 9001:2015, ISO 14001, ISO 45001:2018, CCC/3C, CCS ship inspection, MA coal-safety, CE and KEMA, and exports to more than 60 countries (export share stated as 70-80% on shanpowercable.com). Listed as Manufacturer on the company profile, with OEM/ODM cable supply.",
+    "logoUrl": "https://www.shanpowercable.com/photo/cl19658438-shanghai_shenghua_cable_group_co_ltd.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg"
+    ],
+    "products": [
+      "XLPE insulated LV/MV power cable (up to 110 kV stated)",
+      "PVC insulated cable and building/electrical wire (H05V-K / H07V-K)",
+      "Armoured, LSZH, fire-resistant and control/instrument cable",
+      "Aerial bundled, rubber, PV and special cables"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001 (page text also cites ISO14001:2005)"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "CCC / 3C; CCS (ship); MA (coal safety); CE; KEMA (claimed)"
+      }
+    ],
+    "moq": "Flexible MOQ (stated on shenghuacablegroup.com; no numeric MOQ published on the pages reviewed)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.shanpowercable.com/aboutus.html",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/shenghua-2.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "XWA Power & Cable Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Xiangcheng",
+    "address": null,
+    "website": "https://www.xwacable.com/",
+    "phone": null,
+    "email": null,
+    "description": "XWA Power & Cable Co., Ltd. states it is a direct cable (and transformer) manufacturer founded in 2007 in the 6th Industrial Park, Xiangcheng, Henan, China, with a 33,000 m2 factory, 20+ production lines and 300-600 employees. Product scope covers LV, MV and HV power cables (0.6 kV up to 500 kV stated), overhead conductors (AAC/AAAC/ACSR), ABC, control, rubber and submarine cables to IEC 60227/60502/60840 and other standards. The company publishes ISO 9001, ISO 14001, ISO 45001, CCC and CE (C143436 LVD/EMC) certificate images, exports to 60+ countries, and states trial orders as low as 200 meters. FAQ text explicitly says it is not a trading company and welcomes SGS/BV/TUV/Intertek audits.",
+    "logoUrl": "https://www.xwacable.com/wp-content/uploads/2026/04/XWA-Chinese-Cable-Factory-1024x576.webp",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/xwa-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/xwa-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/xwa-2.jpg"
+    ],
+    "products": [
+      "LV / MV / HV power cable (XLPE, PVC, PE, LSZH; armoured/unarmoured)",
+      "Overhead conductors (AAC, AAAC, ACSR) and ABC cable",
+      "Control cable and rubber cable",
+      "Submarine / HVDC cable (listed on product range)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "CCC"
+      },
+      {
+        "name": "CE C143436 LVD/EMC"
+      }
+    ],
+    "moq": "Trial orders as low as 200 meters (company factory page); bulk/project MOQ depends on construction",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.xwacable.com/our-factory/",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/xwa-1.jpg|/images/suppliers/phase1/cables-electrical/xwa-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/xwa-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Henan Huadong Cable Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Jiaozuo",
+    "address": null,
+    "website": "https://huadongcablegroup.com/",
+    "phone": null,
+    "email": null,
+    "description": "Henan Huadong Cable Co., Ltd. (Huadong Cable Group) is a joint-stock cable manufacturer founded in 1999 (Made-in-China also lists establishment 2005-06-28 / 257 employees). Factory is on the north side of Yunxiang Road West Section, Economic & Technological Development Zone, Xiuwu County, Jiaozuo, Henan; sales office Floor 6, Building 5B, No. 80 Jinshui East Road, Zhengdong New District, Zhengzhou. Company site states about 150,000 m2 factory area, about 400 employees, and exports to 130+ countries. Products: 0.6-35 kV power cables, ABC, AAC/AAAC/ACSR, control, welding, rubber and mining cables to GB/IEC/BS/ASTM/DIN and others. Made-in-China lists ISO14001, ISO9001:2015, ISO45001:2018, CCC and CE, MOQ 100 m, annual export revenue USD 12,266,352.",
+    "logoUrl": "https://huadongcablegroup.com/wp-content/uploads/2023/11/Power-Cable-1.png",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/huadong-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/huadong-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/huadong-2.jpg"
+    ],
+    "products": [
+      "0.6-35 kV power / armoured cable",
+      "Overhead ABC and bare conductors (AAC, AAAC, ACSR)",
+      "Control and instrument cable",
+      "Rubber, welding and mining cable"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "CCC"
+      },
+      {
+        "name": "CE"
+      }
+    ],
+    "moq": "100 m (Made-in-China introduce page)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.madeinchina.com/supplier/huadongcable/introduce/",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/huadong-1.jpg|/images/suppliers/phase1/cables-electrical/huadong-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/huadong-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Shandong New Luxing Cable Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Jinan",
+    "address": null,
+    "website": "https://www.luxingcable.com/",
+    "phone": null,
+    "email": null,
+    "description": "Shandong New Luxing Cable Co., Ltd. states it was established in 1999, with headquarters at Room D901, Binhe Business Center, Tianqiao District, Jinan, Shandong, and a factory in Linyi Economic Development Zone (company-introduce). Product pages also claim three production bases in Tengzhou, Dezhou and Wuxi and 700+ employees, which is higher than the 150 employees on the company-introduce page. The factory manufactures 300/500V and 450/750V building wire, 0.6/1 kV PVC/XLPE power cable, 1.8/3 kV-26/35 kV power cable, armoured, control/instrument, ABC, rubber cable and AAC/AAAC/ACSR conductors. Company-introduce says production follows ISO 9001; product pages additionally claim CE, CCC, IEC, BS, EN and VDE. Named export regions include South America, East Asia, Africa, Southeast Asia and Europe, plus supply to State Grid Corporation of China.",
+    "logoUrl": "https://www.luxingcable.com/Content/upload/2018247128/201801120832458816304.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/luxing-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/luxing-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/luxing-2.jpg"
+    ],
+    "products": [
+      "PVC house / building wire (IEC 60227 BV/RV/RVV, H07V-U, H05V-U)",
+      "0.6/1 kV PVC and XLPE power cable; armoured underground cable",
+      "MV power cable 1.8/3 kV to 26/35 kV",
+      "Control/instrument cable; ABC; AAC/AAAC/ACSR"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (stated on company-introduce)"
+      },
+      {
+        "name": "ISO 9001/14000, CE, CCC, IEC, BS, EN, VDE (claimed on product pages)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.luxingcable.com/company-introduce",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/luxing-1.jpg|/images/suppliers/phase1/cables-electrical/luxing-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/luxing-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "People's Cable Group Co., Ltd.",
+    "industry": "Electrotechnical & Cabling",
+    "category": "Cables & Electrical",
+    "country": "China",
+    "city": "Gongyi",
+    "address": null,
+    "website": "https://www.rmjtcable.com/",
+    "phone": null,
+    "email": null,
+    "description": "People's Cable Group Co., Ltd. (RMJT) is listed on Made-in-China as Manufacturer/Factory, founded 2007, factory at No. 13 Yongding Road, Gongyi, Zhengzhou, Henan, with a later ZhuLin Town Gongyi plant for AAC/AAAC/ACSR lines. Company occupies >160,000 m2 (building area 100,000 m2) and about 500 staff. Products: PVC building wire, PVC/XLPE power cable to 35 kV, rubber/mining/welding cable, ABC to 10 kV, and bare conductors (AAC, AAAC, ACSR, ACSR/AW, AACSR, ACAR). Official site rmjtcable.com and Made-in-China cite ISO 9001, ISO 14001, OHSAS/ISO 18001, CCC and CE. Export share 51-70%; named markets include Chile, Colombia, Peru, Bolivia, USA, Germany, Spain, UK, Middle East, Africa, Southeast Asia and Mongolia. Typical listed MOQ 500-1,000 meters.",
+    "logoUrl": "https://www.rmjtcable.com/wp-content/uploads/2023/05/DSC_5549-768x513.jpg",
+    "imageUrl": "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg",
+      "/images/suppliers/phase1/cables-electrical/peoples-cable-2.jpg"
+    ],
+    "products": [
+      "PVC building / house wire",
+      "PVC and XLPE power cable up to 35 kV",
+      "ABC aerial bundled cable",
+      "Bare conductors (AAC, AAAC, ACSR and variants); rubber/mining/welding cable"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "OHSAS / ISO 18001 (MIC); OHSAS 8001 also cited on rmjtcable.com"
+      },
+      {
+        "name": "CCC"
+      },
+      {
+        "name": "CE (company about-us)"
+      }
+    ],
+    "moq": "500-1,000 meters (typical Made-in-China product listings; some SKUs 500 m, others 1,000 m)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://renmincable.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg|/images/suppliers/phase1/cables-electrical/peoples-cable-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/cables-electrical/peoples-cable-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "UltraTech Cement Limited",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "India",
+    "city": "Mumbai",
+    "address": null,
+    "website": "https://www.ultratechcement.com/",
+    "phone": null,
+    "email": null,
+    "description": "UltraTech Cement Limited is the cement company of the Aditya Birla Group and a manufacturer of grey cement, white cement, wall-care putty and ready-mix concrete. The company states a consolidated grey-cement capacity of 205.5 MTPA, with 34 integrated manufacturing units, 36 grinding units, one clinkerisation unit and 10 bulk packaging terminals, plus operations in India, the UAE, Bahrain and Sri Lanka. Its Sewagram Cement Works unit in Kutch, Gujarat, is documented as a 5.0 MTPA grey-cement and clinker plant established in 2009.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ultra_Tech_Cement_plant_at_Jafrabad.jpg/1280px-Ultra_Tech_Cement_plant_at_Jafrabad.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg",
+      "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-2.jpg"
+    ],
+    "products": [
+      "Grey cement (OPC and PPC)",
+      "White cement and wall-care putty (Birla White)",
+      "Ready-mix concrete",
+      "Clinker"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 50001:2011"
+      },
+      {
+        "name": "ISO 27001:2013"
+      },
+      {
+        "name": "NABL ISO/IEC 17025 (quality-control laboratory)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.ultratechcement.com/about-us/overview",
+    "photoUrls": "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg|/images/suppliers/phase1/construction/ultratech-cement-jafrabad-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/ultratech-cement-jafrabad-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "CEMEX, S.A.B. de C.V.",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "Mexico",
+    "city": "San Pedro Garza García",
+    "address": null,
+    "website": "https://www.cemex.com/en",
+    "phone": null,
+    "email": null,
+    "description": "CEMEX is a multinational manufacturer of cement, ready-mix concrete, aggregates, admixtures and mortars, founded in 1906 and headquartered at Av. Ricardo Margáin Zozaya 325, San Pedro Garza García, Nuevo León, Mexico. Its 2025 integrated report lists 52 cement plants and grinding facilities, 225 aggregates sites and 1,136 ready-mix plants worldwide, with about 40,000 employees and US$16.1 billion in 2025 net sales. Mexico operations include 15 cement plants, 252 ready-mix plants and multiple aggregate quarries, including named cement plants at Monterrey, Tepeaca, Campana, Yaqui, Atotonilco and Tamuín.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Rugby_Cemex_cement_works_7.20.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/cemex-rugby-works.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/cemex-rugby-works.jpg"
+    ],
+    "products": [
+      "Cement",
+      "Ready-mix concrete",
+      "Construction aggregates",
+      "Admixtures and mortars"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (Castillejo cement plant, Spain)"
+      },
+      {
+        "name": "ISO 14001 (Castillejo cement plant, Spain)"
+      },
+      {
+        "name": "ISO 45001 (Castillejo cement plant, Spain)"
+      },
+      {
+        "name": "ISO 50001 (Castillejo cement plant, Spain)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.cemex.com/en",
+    "photoUrls": "/images/suppliers/phase1/construction/cemex-rugby-works.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/cemex-rugby-works.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Anhui Conch Cement Company Limited",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "China",
+    "city": "Wuhu",
+    "address": null,
+    "website": "https://www.conch.cn/",
+    "phone": null,
+    "email": null,
+    "description": "Anhui Conch Cement Company Limited is an A+H listed cement manufacturer headquartered at No. 39 Wenhua Road, Wuhu, Anhui, China, and is the core cement subsidiary of Anhui Conch Group. The listed company produces cement, commercial clinker, commercial concrete, aggregates, dry-mix mortar, tile adhesives, putty powder and waterproof coatings. Group disclosures state clinker capacity of 229 million tons, cement capacity of 415 million tons, aggregates capacity of 181 million tons and commercial-concrete capacity of 70.85 million cubic meters as of end-2025, with named 10-million-ton clinker bases at Tongling, Yingde, Chizhou, Fuyang and Wuhu and overseas factories in Belt and Road markets.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6565.jpg/1280px-Jiangsu_Nanjing_Qixia_-_China_Cement_Factory_(Anhui_CONCH)_-_Zhuizi_Mt_IMG_6565.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg"
+    ],
+    "products": [
+      "Cement",
+      "Commercial clinker",
+      "Aggregates",
+      "Commercial concrete",
+      "Dry-mix mortar"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (quality management system for production monitoring)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.chinaconch.com/english/AboutConch/ConchIntroduction/",
+    "photoUrls": "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/anhui-conch-qixia.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Heidelberg Materials AG",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "Germany",
+    "city": "Heidelberg",
+    "address": null,
+    "website": "https://www.heidelbergmaterials.com/en",
+    "phone": null,
+    "email": null,
+    "description": "Heidelberg Materials AG is a German building-materials manufacturer headquartered at Berliner Strasse 6, 69120 Heidelberg. It produces cement, aggregates, ready-mixed concrete and asphalt at thousands of sites across about 50 countries. German operations include named cement works at Burglengenfeld, Ennigerloh, Geseke, Hannover, Königs Wusterhausen, Lengfurt, Leimen, Mainz, Paderborn and Schelklingen, with VDZ Cert management-system certificates covering development, production and distribution of cement, lime products, gypsum, sand and gravel.",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/HeidelbergCement_Hannover-Misburg.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg",
+      "/images/suppliers/phase1/construction/heidelberg-hannover.jpg"
+    ],
+    "products": [
+      "Cement",
+      "Aggregates (sand, gravel, crushed stone)",
+      "Ready-mixed concrete",
+      "Asphalt"
+    ],
+    "certifications": [
+      {
+        "name": "DIN EN ISO 50001:2018"
+      },
+      {
+        "name": "DIN EN ISO 9001:2015"
+      },
+      {
+        "name": "DIN EN ISO 14001:2015"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.heidelbergmaterials.com/en",
+    "photoUrls": "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg|/images/suppliers/phase1/construction/heidelberg-hannover.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/heidelberg-ennigerloh.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Commercial Metals Company",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "United States",
+    "city": "Irving",
+    "address": null,
+    "website": "https://www.cmc.com/",
+    "phone": null,
+    "email": null,
+    "description": "Commercial Metals Company (NYSE: CMC) is a steel manufacturer headquartered at 6565 N. MacArthur Blvd., Irving, Texas. It operates electric-arc-furnace mini and micro mills that melt recycled scrap into long products and is described by the company as the largest U.S. producer of concrete reinforcing bar. Named mill locations include Birmingham, Alabama; Magnolia, Arkansas; Mesa, Arizona; Jacksonville, Florida; Sayreville, New Jersey; Durant, Oklahoma; Cayce, South Carolina; Knoxville, Tennessee; and Seguin, Texas, supported by a North American rebar fabrication network.",
+    "logoUrl": "https://www.cmc.com/getmedia/4bfa8be1-1d30-462b-b177-3e497888de9a/repurposed-bonus-fab.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/cmc-fab.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/cmc-fab.jpg",
+      "/images/suppliers/phase1/construction/cmc-rebar.jpg"
+    ],
+    "products": [
+      "Steel reinforcing bar (straight, coiled and spooled rebar)",
+      "Merchant bar and light structural shapes",
+      "Wire rod",
+      "Fabricated rebar and construction products"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (CMC Steel Alabama, New Jersey, South Carolina, Texas)"
+      },
+      {
+        "name": "ASTM A615 / ASTM A706 rebar grades"
+      },
+      {
+        "name": "Product-specific EPDs certified to ISO 21930 and ISO 14025 (ASTM / SCS PCR)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.cmc.com/en-us/what-we-do/america/mill-products/rebar",
+    "photoUrls": "/images/suppliers/phase1/construction/cmc-fab.jpg|/images/suppliers/phase1/construction/cmc-rebar.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/cmc-fab.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Vulcan Materials Company",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "United States",
+    "city": "Birmingham",
+    "address": null,
+    "website": "https://www.vulcanmaterials.com/",
+    "phone": null,
+    "email": null,
+    "description": "Vulcan Materials Company (NYSE: VMC) is a construction-aggregates manufacturer headquartered at 1200 Urban Center Drive, Birmingham, Alabama. The 2024 annual report states 423 active aggregates facilities as of 31 December 2024, plus 70 asphalt facilities and 74 concrete facilities. Products are crushed stone, sand and gravel from deposits such as granite, limestone and trap rock, with additional asphalt mix, ready-mixed concrete, railroad ballast and recycled concrete/asphalt at selected sites.",
+    "logoUrl": "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/blta9f9d5126bba7cce/68caf82948d330540b41bf0c/HERO_Miami_Quarry-1628_Cropped.png",
+    "imageUrl": "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg",
+      "/images/suppliers/phase1/construction/vulcan-medina.jpg"
+    ],
+    "products": [
+      "Crushed stone, sand and gravel (construction aggregates)",
+      "Asphalt mix",
+      "Ready-mixed concrete",
+      "Railroad ballast and recycled aggregates"
+    ],
+    "certifications": [],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.vulcanmaterials.com/construction-materials",
+    "photoUrls": "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg|/images/suppliers/phase1/construction/vulcan-medina.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/vulcan-miami-quarry.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "Saudi Arabia",
+    "city": "Dammam",
+    "address": null,
+    "website": "https://zamilsteel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Zamil Steel Pre-Engineered Buildings Co. Ltd. is a steel-building manufacturer headquartered in Dammam 1st Industrial City, PO Box 877, Dammam 31421, Saudi Arabia. The company operates PEB factories in Dammam (described as the world's largest single PEB plant, 74,000 sq m site, 400,000 sq m/month capacity), Pune and Trichy (India), 6th of October City and Sadat (Egypt), and Ho Chi Minh City (Vietnam). Combined PEB capacity is stated at more than 10 million square meters per year and about 500,000 MT of fabricated steel per year across ten factories; the company says it has supplied over 90,000 buildings to more than 90 countries.",
+    "logoUrl": "https://zamilsteel.com/peb/en/img/manufacturing.jpg",
+    "imageUrl": "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg",
+      "/images/suppliers/phase1/construction/zamil-steel-manufacturing.jpg"
+    ],
+    "products": [
+      "Pre-engineered steel buildings (PEB)",
+      "Insulated and sandwich wall/roof panels",
+      "Fabricated structural steel",
+      "High-rise and industrial steel structures"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001 (design and manufacturing facilities; PEB quality-assurance page cites ISO 9001 procedures)"
+      },
+      {
+        "name": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 (Zamil Structural Steel, Saudi Arabia)"
+      },
+      {
+        "name": "AISC 207 (Zamil Structural Steel, Saudi Arabia)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://zamilsteel.com/peb/en/manufacturing",
+    "photoUrls": "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg|/images/suppliers/phase1/construction/zamil-steel-manufacturing.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/zamil-steel-factory-aerial.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Magicrete Building Solutions Private Limited",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "India",
+    "city": "Surat",
+    "address": null,
+    "website": "https://www.magicrete.in/",
+    "phone": null,
+    "email": null,
+    "description": "Magicrete Building Solutions Private Limited is an AAC (autoclaved aerated concrete) block and dry-mix manufacturer founded in 2008, with corporate office at 101-102, Ritz Square, Ghod Dod Road, Surat, Gujarat. IndiaMART lists the firm as a manufacturer (GST 24AAFCM5517N1Z8, TrustSEAL verified). Official manufacturing-unit pages name plants at Navsari (Gujarat), Jhajjar (Haryana) and Wada (Maharashtra), plus additional units at Attibele (Karnataka), Shoolagiri (Tamil Nadu) and Khimsar (Rajasthan), with stated installed capacity of 1,300,000 CBM/year. AAC blocks are specified to IS 2185 Part-3.",
+    "logoUrl": "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png",
+    "imageUrl": "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png",
+    "images": [
+      "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png"
+    ],
+    "products": [
+      "AAC blocks (Magic Blox)",
+      "AAC wall panels",
+      "Tile adhesives and grouts",
+      "Block-joining mortar / dry-mix plasters",
+      "Waterproofing products"
+    ],
+    "certifications": [
+      {
+        "name": "BIS licence IS 6072:2023 (Navsari factory, CM/L 7100045186)"
+      },
+      {
+        "name": "IS 2185 Part-3 (AAC blocks)"
+      },
+      {
+        "name": "ISO 9001 / ISO 14001 / ISO 18001 (as listed on TradeIndia company profile)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/magicrete-building/",
+    "photoUrls": "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png",
+    "media": {
+      "local": false,
+      "hero": "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png",
+      "gap": {
+        "code": "magicrete-no-plant-still",
+        "note": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback."
+      }
+    }
+  },
+  {
+    "name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+    "industry": "Construction",
+    "category": "Construction",
+    "country": "China",
+    "city": "Qingdao",
+    "address": null,
+    "website": "https://www.hxsssd.com/",
+    "phone": null,
+    "email": null,
+    "description": "Hangxiao Steel Structure (Shandong) Co., Ltd. is a wholly owned subsidiary of listed Hangxiao Steel Structure Co., Ltd. (SSE: 600477), with factory address No. 8 Yunxi Road, Jiaozhou Bay Industrial Park, Qingdao, Shandong. Made-in-China lists it as an audited Manufacturer/Factory & Trading Company established 12 December 2001, 535 employees, 10,000 sq m plant area, two production lines and 100,000,000 RMB registered capital. The Shandong mill fabricates prefabricated steel-structure industrial buildings, large-span space frames and multi-storey/high-rise steel frames; the parent group, founded 1985 in Hangzhou, states projects in more than 70 countries.",
+    "logoUrl": "https://www.hxss.com.cn/upload/at/image/20220316/16474010691202958052.png",
+    "imageUrl": "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg",
+      "/images/suppliers/phase1/construction/hangxiao-steel-2.jpg"
+    ],
+    "products": [
+      "Prefabricated steel-structure industrial warehouses and workshops",
+      "Large-span space-frame steel structures",
+      "Multi-storey and high-rise steel frames",
+      "H-beam / steel-structure components"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "EN 1090-2 / CPR 1090-1 (parent Hangxiao Steel Structure Co., Ltd.)"
+      },
+      {
+        "name": "AISC system certification (parent Hangxiao Steel Structure Co., Ltd.)"
+      }
+    ],
+    "moq": "100 tons (company-level MOQ on Made-in-China profile); product listings also show 100 square meters",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.madeinchina.com/supplier/hxsssd/introduce/",
+    "photoUrls": "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg|/images/suppliers/phase1/construction/hangxiao-steel-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/construction/hangxiao-steel-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Chaoda Valves Group Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Wenzhou",
+    "address": null,
+    "website": "http://www.chinavalve.com",
+    "phone": null,
+    "email": null,
+    "description": "Chaoda Valves Group Co., Ltd. was established in 1984 in Oubei, Yongjia County, Wenzhou, Zhejiang, and is listed on Made-in-China as a Manufacturer/Factory with two specialized manufacturing plants plus a wholly owned investment-casting foundry in Qingtian. The group manufactures industrial steel valves to API, ASME, EN, ISO, JIS, DIN, BS, GOST and GB standards, with featured products including metal-seated ball valves, bellow-sealed valves and wafer check valves. Made-in-China lists about 500 employees, more than 10 production lines, factory address on Jiangbei Street in Oubei, and prior-year valve output of 30,000 tons.",
+    "logoUrl": "https://image.made-in-china.com/206f0j00nauTLkjEqQpF/Chaoda-Valves-Group-Co-Ltd-.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/chaoda-2.jpg",
+      "/images/suppliers/phase1/industrial-parts/chaoda-3.jpg",
+      "/images/suppliers/phase1/industrial-parts/chaoda-4.jpg"
+    ],
+    "products": [
+      "Ball valves",
+      "Gate valves",
+      "Globe valves",
+      "Check valves",
+      "Butterfly valves",
+      "Metal-seated ball valves"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "OHSAS/OHSMS 18001"
+      },
+      {
+        "name": "API 6D"
+      },
+      {
+        "name": "API 600"
+      },
+      {
+        "name": "API 607"
+      },
+      {
+        "name": "API 6FA"
+      },
+      {
+        "name": "CE/PED"
+      }
+    ],
+    "moq": "1 piece (Made-in-China product listings)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://chaodavalves.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg|/images/suppliers/phase1/industrial-parts/chaoda-2.jpg|/images/suppliers/phase1/industrial-parts/chaoda-3.jpg|/images/suppliers/phase1/industrial-parts/chaoda-4.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/chaoda-1.jpg",
+      "gap": {
+        "code": "chaoda-now-staged",
+        "note": "Chaoda previously had no staged media (WAF-blocked CDN / 160px MIC thumbs). Now has 4 factory aerials chaoda-1..4.jpg (Wuxing + Lishui campuses from chaodausa.com) in industrial-parts/; included as local media."
+      }
+    }
+  },
+  {
+    "name": "Neway Valve (Suzhou) Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Suzhou",
+    "address": null,
+    "website": "https://www.newayvalve.com",
+    "phone": null,
+    "email": null,
+    "description": "Neway Valve (Suzhou) Co., Ltd. is an industrial-valve manufacturer headquartered at No. 666 Taishan Road, Suzhou New District, Jiangsu, and listed on the Shanghai Stock Exchange as 603699. Company materials describe a multi-plant system with foundries, an API 6A plant and the Taishan assembly base, which produces ball, butterfly, gate, globe, check and control valves. The 2025 company profile states the Taishan plant was built in March 2006 and spans about 2.5 million square feet, with machining shops, painting facilities, robots, a 3D components warehouse and testing labs.",
+    "logoUrl": "https://www.newayvalve.com/upload/jpg/202211/img1.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/neway-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/neway-1.jpg"
+    ],
+    "products": [
+      "Ball valves",
+      "Butterfly valves",
+      "Gate valves",
+      "Globe valves",
+      "Check valves",
+      "Control valves",
+      "API 6A valves",
+      "Subsea valves",
+      "Nuclear valves",
+      "Safety valves",
+      "Plug valves"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "API 6A"
+      },
+      {
+        "name": "API 6D"
+      },
+      {
+        "name": "CE/PED"
+      },
+      {
+        "name": "ASME UV / NBBI"
+      },
+      {
+        "name": "API 6DSS (subsea)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.newayvalve.com/upload/pdf/202507/01%20Company%20Profile-2025.pdf",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/neway-1.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/neway-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Wenling",
+    "address": null,
+    "website": "https://www.leopump.com/en/",
+    "phone": null,
+    "email": null,
+    "description": "Leo Group Pump (Zhejiang) Co., Ltd. is the Wenling production subsidiary of LEO Group Co., Ltd., a Shenzhen-listed pump maker (002131) founded in 1995. The official manufacturer page states the group runs five production bases covering about 600,000 m², with about 6,000 employees and roughly 6 million pumps produced yearly, and products sold in more than 160 countries and regions. The Zhejiang base at No. 1, 3rd Street, East Industry Center, Wenling, manufactures domestic, commercial, garden and related pumps; industrial-pump capacity is described at additional group bases in Xiangtan, Hunan and Dalian, Liaoning. Alibaba lists the Zhejiang entity as a Custom Manufacturer of water, centrifugal, submersible, solar and multistage pumps.",
+    "logoUrl": "https://www.leopump.com/en/bocupload/2023/08/09/LEO-PUMP-company.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/leo-pump-2.jpg"
+    ],
+    "products": [
+      "Centrifugal pumps",
+      "Submersible pumps",
+      "Multistage pumps",
+      "Jet pumps",
+      "Circulation pumps",
+      "Solar pumps",
+      "Gasoline water pumps"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "OHSAS/OHSMS 18001"
+      },
+      {
+        "name": "ISO 17025"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.leopump.com/en/pump-manufacturer.html",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg|/images/suppliers/phase1/industrial-parts/leo-pump-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/leo-pump-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Nanfang Pump Industry Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Hangzhou",
+    "address": null,
+    "website": "https://cnppump.com",
+    "phone": null,
+    "email": null,
+    "description": "Nanfang Pump Industry Co., Ltd. (CNP) was founded in 1991 in Hangzhou and listed on the Shenzhen Stock Exchange in 2010 (stock code 300145). The official About page states the company operates 21 subsidiaries, more than 5,000 employees, 3 R&D centers and 8 manufacturing bases, with annual output of about 1.2 million units and exports to over 90 countries. Hangzhou headquarters specializes in stainless-steel stamped and welded centrifugal pumps used in water supply, HVAC, water treatment, fire protection and industrial service; the company describes a Hangzhou smart factory using SAP, robotic laser welding and 100% factory inspection, plus a CNAS-certified laboratory.",
+    "logoUrl": "https://usimg.bjyyb.net/sites/51500/51534/20200421104726979.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg"
+    ],
+    "products": [
+      "Stainless steel vertical multistage centrifugal pumps",
+      "End-suction pumps",
+      "Inline pumps",
+      "Split-case pumps",
+      "Sewage pumps",
+      "Deep-well pumps"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "CNAS laboratory accreditation"
+      },
+      {
+        "name": "CE"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://cnppump.com/ABOUT_CNP.html",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/nanfang-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Wenzhou",
+    "address": null,
+    "website": "https://www.zhiju-steel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Zhejiang Zhiju Pipeline Industry Co., Ltd. (also listed as Wenzhou Zhiju Pipe Fitting Co., Ltd.) was established in 1991 and is recorded on Made-in-China as a Manufacturer/Factory of stainless steel pipe fittings and forged flanges, not a trading company. The factory address is Tonghai Road, Gaoxin Industrial Zone, Longwan District, Wenzhou; the official site also lists No. 1199 Yansheng Road, Kunpeng Street, Wenzhou Marine Economic Development Demonstration Zone. Made-in-China reports 10 production lines, own-brand ZHIJU PIPE, prior-year fittings output of 2,000 tons, and an export license in the name WENZHOU ZHIJU PIPE CO.,LTD.",
+    "logoUrl": "https://image.made-in-china.com/206f0j00ZTQEtjrIFags/Zhejiang-Zhiju-Pipeline-Industry-Co-Ltd-.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/zhiju-2.jpg"
+    ],
+    "products": [
+      "Butt-weld pipe fittings",
+      "Elbows",
+      "Tees",
+      "Reducers",
+      "Flanges",
+      "Pipe caps",
+      "Lap-joint stub ends",
+      "Sanitary fittings"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "PED"
+      },
+      {
+        "name": "BV"
+      }
+    ],
+    "moq": "10 pieces (Made-in-China product listings; some items 50–100 pieces)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://zhiju123.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg|/images/suppliers/phase1/industrial-parts/zhiju-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/zhiju-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Wafangdian Bearing Group Corp., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Wafangdian",
+    "address": null,
+    "website": "https://zwz-bearing.com/en/",
+    "phone": null,
+    "email": null,
+    "description": "Wafangdian Bearing Group Corp., Ltd. (ZWZ) is a large-scale bearing manufacturer based at No. 1 Beigongji Street, Wafangdian, Liaoning, in the historic center of China’s bearing industry. The official site states the group has 9 manufacturing bases, 10 business divisions and 26 wholly-owned or holding subsidiaries, producing more than 20,000 specifications across ten bearing categories from 20 mm inner diameter to 16 m outer diameter. Products are used in industrial equipment, railway, automotive, wind power and special applications; the group operates a national large-scale bearing engineering and technology research center plus overseas R&D in Europe and the United States.",
+    "logoUrl": "https://www.zwz-bearing.com/en/Public/Upload/image/20210926/163262643829c35cdd9e09e547.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/zwz-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/zwz-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/zwz-2.jpg"
+    ],
+    "products": [
+      "Deep groove ball bearings",
+      "Spherical roller bearings",
+      "Tapered roller bearings",
+      "Cylindrical roller bearings",
+      "Slewing bearings",
+      "Thrust bearings",
+      "Joint bearings"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9000 / ISO 9001 family"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "QS9000"
+      },
+      {
+        "name": "ISO 18000"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://zwz-bearing.com/en/",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/zwz-1.jpg|/images/suppliers/phase1/industrial-parts/zwz-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/zwz-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Luoyang",
+    "address": null,
+    "website": "https://www.chgbearings.com/en",
+    "phone": null,
+    "email": null,
+    "description": "Luoyang Huigong Bearing Technology Co., Ltd. (brand CHG), established in 1998, designs and manufactures rolling-mill bearings, high-precision thin-section bearings and large high-end rollers at No. 999 Guanlin Road, Luolong District, Luoyang, Henan. The company profile states a site of 39,330 m², more than 350 employees, over 150 production machines and 2023 output value of about CNY 150 million. Rolling-mill bearings are described as the flagship line (inner diameters 90 mm to 1,400 mm); thin-section bearings are offered from 1 inch to 40 inches with accuracy up to P2. Products are stated to be supplied to more than 30 countries and regions.",
+    "logoUrl": "https://www.lyhgbearing.com/images/huigong_01_04.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/huigong-2.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/huigong-2.jpg"
+    ],
+    "products": [
+      "Rolling mill bearings",
+      "Thin-section bearings",
+      "Slewing bearings",
+      "Crossed roller bearings",
+      "Large cylindrical/tapered/spherical rollers",
+      "Precision angular contact ball bearings"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.chgbearings.com/en/CompanyProfile/index.html",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/huigong-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/huigong-2.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "China",
+    "city": "Jiaxing",
+    "address": null,
+    "website": "https://eng.tonggroup.com.tw/",
+    "phone": null,
+    "email": null,
+    "description": "Tong Ming Enterprise (Zhejiang) Co., Ltd. (浙江东明不锈钢制品股份有限公司) is the principal operating factory of Tong Ming Enterprise Co., Ltd., a Taiwan Stock Exchange-listed stainless-steel fastener group (ticker 5538). The Jiaxing Economic Development Zone plant was founded in December 1995 at No. 88 Chang Sheng Road (East), Jiaxing, on a 152,000 m² site producing more than 120,000 tonnes per year of stainless steel fasteners and wire. Fastener World and the group site describe two production plants, an automated warehouse (from 2004) and a newer Gaoke fastener plant in production since October 2023. Main products are screws, nuts, threaded rod and stainless steel wire under the TONG / THE head mark.",
+    "logoUrl": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png",
+    "imageUrl": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+    "images": [
+      "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+      "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
+    ],
+    "products": [
+      "Hexagon head bolts",
+      "Hexagon nuts",
+      "Tapping screws",
+      "Machine screws",
+      "Threaded rod",
+      "Flange nuts",
+      "Stainless steel wire"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "CE / PED"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://eng.tonggroup.com.tw/",
+    "photoUrls": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg|https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png",
+    "media": {
+      "local": false,
+      "hero": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+      "gap": {
+        "code": "tong-ming-logo-only",
+        "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
+      }
+    }
+  },
+  {
+    "name": "Sundram Fasteners Limited",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "India",
+    "city": "Chennai",
+    "address": null,
+    "website": "https://sundram.com/",
+    "phone": null,
+    "email": null,
+    "description": "Sundram Fasteners Limited is a TVS Group manufacturer of high-tensile fasteners and precision metal components, incorporated in 1962 with production starting in 1966 and registered office at 98-A, Dr. Radhakrishnan Salai, Mylapore, Chennai. IndiaMART lists the firm as a Manufacturer. Indian factories named in company filings include Padi, Hosur, Aviyur, Gummidipoondi, Mahindra World City SEZ and others, plus overseas plants Sundram Fasteners (Zhejiang) Limited in China and Cramlington Precision Forge Limited in the UK. Product lines cover high-tensile fasteners (about M3 to M80), powder-metal parts, cold-extruded and hot-forged components, radiator caps and automotive pumps.",
+    "logoUrl": "https://sundram.com/images/row-1/fasteners-one.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/sundram-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/sundram-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/sundram-2.jpg"
+    ],
+    "products": [
+      "High-tensile fasteners",
+      "Hot-forged parts",
+      "Cold-extruded parts",
+      "Powder-metal components",
+      "Radiator caps",
+      "Automotive pumps",
+      "Powertrain components"
+    ],
+    "certifications": [
+      {
+        "name": "IATF 16949"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "ISO/IEC 17025"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.indiamart.com/sundram-fastener-limited/aboutus.html",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/sundram-1.jpg|/images/suppliers/phase1/industrial-parts/sundram-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/sundram-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Kirloskar Brothers Limited",
+    "industry": "Industrial Equipment",
+    "category": "Industrial Parts",
+    "country": "India",
+    "city": "Pune",
+    "address": null,
+    "website": "https://www.kirloskarpumps.com/",
+    "phone": null,
+    "email": null,
+    "description": "Kirloskar Brothers Limited (KBL), founded in 1888 and incorporated in 1920 (CIN L29113PN1920PLC000670), manufactures pumps and industrial valves. Global headquarters is Yamuna, Survey No. 98/(3-7), Baner, Pune; the mother plant at Kirloskarvadi, Sangli district, Maharashtra (established 1910) runs foundry through machining, assembly and testing of pumps from 5 kW to 4,500 kW and a dedicated valve shop. The company states manufacturing facilities in India, the UK, the Netherlands and the USA and customers in over 130 countries. Bureau Veritas IMS certificate C728093 covers design and manufacture of centrifugal pumps, hydel turbines, a wide valve range and ferrous/non-ferrous/alloy steel castings at Kirloskarvadi and other Indian sites.",
+    "logoUrl": "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kdi-01_1_7.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/kirloskar-2.jpg"
+    ],
+    "products": [
+      "Centrifugal pumps",
+      "Split-case pumps",
+      "Vertical turbine pumps",
+      "Process pumps",
+      "Butterfly valves",
+      "Sluice/gate valves",
+      "Check valves",
+      "Knife-edge gate valves"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001:2015"
+      },
+      {
+        "name": "ISO 45001:2018"
+      },
+      {
+        "name": "ISO 50001:2018"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.kirloskarpumps.com/",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg|/images/suppliers/phase1/industrial-parts/kirloskar-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/kirloskar-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Shandong Corruone New Material Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Anqiu",
+    "address": null,
+    "website": "https://www.corruone.com/",
+    "phone": null,
+    "email": null,
+    "description": "Made-in-China lists Shandong Corruone New Material Co., Ltd. as a Manufacturer/Factory founded in 2008, producing corrugated plastic sheets, PP honeycomb sheet, corrugated plastic boxes, signs, layer pads and related products. The listed factory is in Xin'an Subdistrict, Anqiu, Weifang, Shandong, with three sheet production lines plus finishing lines for boxes and signs. The company states ISO 9001, ISO 14001, ISO 45001 and IATF 16949 on its site and Made-in-China profile, and names North America, South America, Southeast Asia, Oceania, the Mid East and Western Europe as main markets. Typical listed MOQ on sheet products is 500 kg.",
+    "logoUrl": "https://www.corruone.com/photo/cs150656131-shandong_corruone_new_material_co_ltd.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/corruone-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/corruone-1.jpg",
+      "/images/suppliers/phase1/packaging/corruone-2.jpg"
+    ],
+    "products": [
+      "PP corrugated plastic sheets (coroplast/corflute)",
+      "Corrugated plastic boxes and turnover boxes",
+      "PP honeycomb sheets and layer pads"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "ISO 45001"
+      },
+      {
+        "name": "IATF 16949"
+      }
+    ],
+    "moq": "500 kg (typical sheet listings on Made-in-China)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://china-coroplast.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/corruone-1.jpg|/images/suppliers/phase1/packaging/corruone-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/corruone-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Dongguan Yalan Packing Materials Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Dongguan",
+    "address": null,
+    "website": "https://www.yalanpack.com/",
+    "phone": null,
+    "email": null,
+    "description": "Made-in-China classifies Dongguan Yalan Packing Materials Co., Ltd. as a Manufacturer/Factory at No. 230 West Liuhua Street, Xiakou, Dongcheng District, Dongguan. The legal entity is listed as established 21 January 2009; the firm produces LLDPE stretch film, PP/PET strapping, BOPP packing tape and related packing materials under the Junxing brand. Company pages state ISO 9001:2015 and SGS product testing, a plant of about 18,000 square meters, and jumbo stretch-film listings with MOQs from 1,000 kg. The factory address on the company site matches the Made-in-China factory address.",
+    "logoUrl": "https://bsg-i.nbxc.com/company/38/bbb6f68c3c435524e4a7484629dfa2.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/yalan-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/yalan-1.jpg",
+      "/images/suppliers/phase1/packaging/yalan-2.jpg"
+    ],
+    "products": [
+      "LLDPE hand and machine stretch film",
+      "Jumbo/master-roll stretch film",
+      "PP/PET strapping and BOPP packing tape"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "SGS (product testing, as stated by company)"
+      }
+    ],
+    "moq": "1,000 kg (jumbo stretch film listings)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://yalanpacking.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/yalan-1.jpg|/images/suppliers/phase1/packaging/yalan-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/yalan-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Jiangsu Jieyuan Container Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Zhenjiang",
+    "address": null,
+    "website": "https://jieyuanpackaging.com/",
+    "phone": null,
+    "email": null,
+    "description": "Jiangsu Jieyuan Container Co., Ltd. (formerly Jinshan Pack) is an IBC manufacturer founded in 1994, with headquarters at No. 69 Hengyuan Road, Dantu Industrial Park, Zhenjiang, Jiangsu. Made-in-China lists ISO 9001:2015 and ISO 14001; the company site also states UN certification and FSSC 22000 and says it co-drafted China's GB/T 19161 IBC standard. The site describes seven automated production bases, a Zhenjiang flagship plant, and composite IBCs in 500L–1200L plus food-grade, UV-blocking and anti-static variants. Products and IBC production machinery are shown on the company site and Made-in-China storefront.",
+    "logoUrl": "https://jieyuanpackaging.com/wp-content/uploads/2025/12/factory-3.webp",
+    "imageUrl": "/images/suppliers/phase1/packaging/jieyuan-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/jieyuan-1.jpg",
+      "/images/suppliers/phase1/packaging/jieyuan-2.jpg"
+    ],
+    "products": [
+      "1000L and 1200L composite IBC tanks",
+      "500L horizontal and vertical IBCs",
+      "Food-grade, anti-static and explosion-proof IBCs and accessories"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "FSSC 22000"
+      },
+      {
+        "name": "UN certification (IBC, as stated by company)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://jieyuanpackaging.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/jieyuan-1.jpg|/images/suppliers/phase1/packaging/jieyuan-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/jieyuan-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Hangzhou",
+    "address": null,
+    "website": "https://hansinpacking.com/",
+    "phone": null,
+    "email": null,
+    "description": "Hangzhou Hansin New Packing Material Co., Ltd. is listed on Made-in-China as a manufacturer of aseptic bags, bag-in-box, IBC liners and related liquid flexible packaging, with the factory at No. 98 Dakang Road, Qingshanhu Science and Technology City, Lin'an, Hangzhou. Founded in 2006, the company states it helped draft China's national standard for composite bags for aseptic packaging of liquid foods and is an Asian member of the European Aseptic Bag Manufacturers Association. Made-in-China lists ISO 9001 and ISO 22000; the company certificate page also lists BRC, FSSC 22000, ISO 45001, Halal and Kosher. Aseptic-bag listings commonly show MOQ of 2,000 pieces, with named export regions including the Middle East, Southeast Asia, South America and North Africa.",
+    "logoUrl": "https://image.made-in-china.com/206f0j00CagEonTsItuD/Hangzhou-Hansin-New-Packing-Material-Co-Ltd-.webp",
+    "imageUrl": "/images/suppliers/phase1/packaging/hansin-2.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/hansin-2.jpg"
+    ],
+    "products": [
+      "Aseptic bags for liquid food (including 220L)",
+      "Bag-in-box liners",
+      "IBC liners and form-fit liners (1000L–1500L)"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 22000"
+      },
+      {
+        "name": "FSSC 22000"
+      },
+      {
+        "name": "BRC (BRCGS, as stated by company)"
+      }
+    ],
+    "moq": "2,000 pieces (typical aseptic-bag listings on Made-in-China)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://hansinpack.en.made-in-china.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/hansin-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/hansin-2.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Dongguan Caicheng Printing Factory",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Dongguan",
+    "address": null,
+    "website": "https://www.ccprinting.cn/",
+    "phone": null,
+    "email": null,
+    "description": "Dongguan Caicheng Printing Factory (export brand PACKCCP) is listed on Made-in-China as a Manufacturer/Factory of paper boxes, gift boxes and paper bags, established in 1996 at Luwu Industrial Zone, Chashan Town, Dongguan. The Made-in-China profile and company sites describe Heidelberg offset printing, lamination, foil stamping and box-gluing lines, with ISO 9001, FSC and Sedex/BSCI stated. PACKCCP says it exports to 50+ countries including the UK, Australia, Middle East, Russia and Singapore, and lists MOQ from 500 pieces on custom box/bag listings. Factory and certificate images are published on packccp.com.",
+    "logoUrl": "https://packccp.com/wp-content/uploads/2026/07/pacckccp-factory-1.webp",
+    "imageUrl": "/images/suppliers/phase1/packaging/caicheng-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/caicheng-1.jpg",
+      "/images/suppliers/phase1/packaging/caicheng-2.jpg"
+    ],
+    "products": [
+      "Folding cartons and paper boxes",
+      "Rigid/magnetic gift boxes",
+      "Corrugated mailer boxes and printed paper bags"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "FSC"
+      },
+      {
+        "name": "SEDEX"
+      },
+      {
+        "name": "BSCI"
+      }
+    ],
+    "moq": "500 pieces (Made-in-China and PACKCCP listings)",
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.made-in-china.com/showroom/christinaccprinting/",
+    "photoUrls": "/images/suppliers/phase1/packaging/caicheng-1.jpg|/images/suppliers/phase1/packaging/caicheng-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/caicheng-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Wuxi Sifang Youxin Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Wuxi",
+    "address": null,
+    "website": "https://www.wxsfgroup.com/",
+    "phone": null,
+    "email": null,
+    "description": "Wuxi Sifang Youxin Co., Ltd. is a steel-drum and industrial packaging manufacturer in Binhu District, Wuxi, Jiangsu (office listed at No. 48 Changkang Road, Mashan). The company dates industrial roots to 1977 and states four packaging production bases making 4–230L open- and closed-head steel drums and IBC totes, with claimed annual capacity of 12 million units. Product pages state UN/ISO compliance for industrial liquid packaging; named industrial customers on the about page include Sinopec and BASF. Tianyancha records the registered Chinese legal name 无锡四方友信股份有限公司 at a Mashan, Binhu, Wuxi address.",
+    "logoUrl": "https://shopcdnpro.grainajz.com/category/403801/4007/23ffb72114e9cc748992f1f65bc9fe8a/image.png",
+    "imageUrl": "/images/suppliers/phase1/packaging/sifang-2.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/sifang-2.jpg"
+    ],
+    "products": [
+      "Tight-head and open-head steel drums (including 200L/210L)",
+      "Composite/lined steel drums",
+      "IBC totes"
+    ],
+    "certifications": [
+      {
+        "name": "UN packaging standards (as stated on product pages)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.wxsfgroup.com/about-us",
+    "photoUrls": "/images/suppliers/phase1/packaging/sifang-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/sifang-2.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Meghdoot Packaging (Uttaranchal)",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "India",
+    "city": "Rudrapur",
+    "address": null,
+    "website": "https://meghdootpackaging.com/",
+    "phone": null,
+    "email": null,
+    "description": "Meghdoot Packaging is an Indian corrugated-box manufacturer with a manufacturing campus at Khasra No. 73/89/90ka/91, Dineshpur Road, Jafarpur, Udham Singh Nagar, Uttarakhand 263153 (Rudrapur area), plus a New Delhi site. GSTIN 05AAQFM3933Q1ZL and an active LEI record the same Uttarakhand factory/manufacturing address. The company site describes multi-colour corrugated cartons, fruit and vegetable cartons, and 6-colour flexo post-print, with ISO 9001:2015 and FSC-certified materials stated. Named customers on the site include Nestlé, Reckitt Benckiser, Tata Global Beverages, Flipkart, Zara, Puma and Adidas.",
+    "logoUrl": "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/meghdoot-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/meghdoot-1.jpg",
+      "/images/suppliers/phase1/packaging/meghdoot-2.jpg"
+    ],
+    "products": [
+      "Multi-colour printed corrugated boxes",
+      "RSC and export shipping cartons",
+      "Fruit and vegetable corrugated cartons"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015"
+      },
+      {
+        "name": "FSC-certified materials (as stated by company)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://meghdootpackaging.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/meghdoot-1.jpg|/images/suppliers/phase1/packaging/meghdoot-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/meghdoot-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Shangyue (Shanghai) Printing Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Shanghai",
+    "address": null,
+    "website": "https://www.sh-sylabel.com/",
+    "phone": null,
+    "email": null,
+    "description": "Shangyue (Shanghai) Printing Co., Ltd. (Sy Label) is a self-adhesive label manufacturer established in 2001, with the factory at Building A, No. 1688 Minta Road, Shihudang Town, Songjiang District, Shanghai. Made-in-China lists ISO 9001 and FSC; the company site also states FSC CoC and in-house coating plus converting (thermal, laser/inkjet, and printed labels). The firm states additional plants in Shenzhen, Kunshan and Jinan. U.S. import records on ImportYeti use the same Songjiang factory address, supporting that it is a producing exporter rather than a trading desk.",
+    "logoUrl": "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/banner4.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/shangyue-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/shangyue-1.jpg",
+      "/images/suppliers/phase1/packaging/shangyue-2.jpg"
+    ],
+    "products": [
+      "Direct thermal and thermal-transfer labels",
+      "A4/letter sheet labels",
+      "Custom printed self-adhesive labels and jumbo label rolls"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "FSC"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.made-in-china.com/showroom/afinazhang/",
+    "photoUrls": "/images/suppliers/phase1/packaging/shangyue-1.jpg|/images/suppliers/phase1/packaging/shangyue-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/shangyue-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "UFlex Limited",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "India",
+    "city": "Noida",
+    "address": null,
+    "website": "https://www.uflexltd.com/",
+    "phone": null,
+    "email": null,
+    "description": "UFlex Limited is an NSE/BSE-listed Indian flexible-packaging manufacturer founded in 1985, with corporate office at A-107-108, Sector-IV, Noida, and film plants including A-1, Sector-60, Noida. The company manufactures BOPET, BOPP, CPP and metallized films, converted flexible packaging (pouches, laminates, tubes) and aseptic liquid packs, with additional Indian plants in Jammu, Dharwad, Sanand, Panipat and Malanpur and overseas film plants in the UAE, Egypt, Mexico, USA, Poland, Russia, Nigeria and Hungary. Noida plant accreditations published by UFlex include DNV-GL ISO 9001:2015, FSSC 22000 and BRC Global Standard for Packaging Materials. The site states clients in about 140 countries.",
+    "logoUrl": "https://www.uflexltd.com/assets/images/sliders/Manufacturing-Facilities-banner.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/uflex-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/uflex-1.jpg",
+      "/images/suppliers/phase1/packaging/uflex-2.jpg"
+    ],
+    "products": [
+      "BOPET, BOPP, CPP and metallized packaging films",
+      "Converted flexible packaging (pouches, laminates, 4D bags)",
+      "Aseptic liquid packaging (Asepto) and flexible tubes"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001:2015 (Noida plant, DNV-GL)"
+      },
+      {
+        "name": "FSSC 22000 (Noida plant, DNV-GL)"
+      },
+      {
+        "name": "BRC Global Standard for Packaging Materials (Noida plant, DNV-GL)"
+      },
+      {
+        "name": "ISO 14001:2015 (Packaging Films, Noida, TÜV Rheinland)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.uflexltd.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/uflex-1.jpg|/images/suppliers/phase1/packaging/uflex-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/uflex-1.jpg",
+      "gap": null
+    }
+  },
+  {
+    "name": "Shandong Dingsheng Container Co., Ltd.",
+    "industry": "Plastics & Packaging",
+    "category": "Packaging",
+    "country": "China",
+    "city": "Qingzhou",
+    "address": null,
+    "website": "https://www.dsibctank.com/",
+    "phone": null,
+    "email": null,
+    "description": "Shandong Dingsheng Container Co., Ltd. is an IBC tank and fittings manufacturer based in Qingzhou, Shandong, with roots stated as 1995. The company site describes HDPE blow-moulded inner containers with metal cages, plus IBC valves, lids, pallets and couplings, and a second production base opened in Quanzhou, Fujian, in 2022. Stated certifications include a national industrial product production license, ISO 9001, ISO 14001 and OHSAS 18001. The firm says finished IBCs and accessories are sold in Oceania, North America and Southeast Asia and exhibited at Korea Chem 2025.",
+    "logoUrl": "https://www.dsibctank.com/uploads/42465/banner/2025041505535117cb9.jpg",
+    "imageUrl": "/images/suppliers/phase1/packaging/dingsheng-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/packaging/dingsheng-1.jpg",
+      "/images/suppliers/phase1/packaging/dingsheng-2.jpg"
+    ],
+    "products": [
+      "1000L composite IBC tanks",
+      "Anti-static IBC tanks",
+      "IBC valves, lids, pallets and fittings"
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001"
+      },
+      {
+        "name": "ISO 14001"
+      },
+      {
+        "name": "OHSAS 18001"
+      },
+      {
+        "name": "National industrial product production license (China, as stated by company)"
+      }
+    ],
+    "moq": null,
+    "rating": null,
+    "reviewCount": null,
+    "sourceUrl": "https://www.dsibctank.com/",
+    "photoUrls": "/images/suppliers/phase1/packaging/dingsheng-1.jpg|/images/suppliers/phase1/packaging/dingsheng-2.jpg",
+    "media": {
+      "local": true,
+      "hero": "/images/suppliers/phase1/packaging/dingsheng-1.jpg",
+      "gap": null
+    }
+  }
+]
