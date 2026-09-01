@@ -76,8 +76,11 @@
     "email": null,
     "description": "Ajmal Steel Tubes & Pipes Industries LLC, trading as AJ Steel, is an ERW/HFW pipe mill with two manufacturing units in Mussafah ICAD-1 and ICAD-2, Abu Dhabi. Established around 2006–2007, it produces circular, square and rectangular hollow sections from 1/2 inch to 20 inch NB, in black, varnished, primer, powder-coated and hot-dip galvanized finishes. Stated annual capacity is about 500,000 MT. Products are supplied to construction, infrastructure, fire protection and industrial applications under ASTM, EN, AS/NZS and related specifications.",
     "logoUrl": "https://www.ajsteel.com/assets/images/logo.png",
-    "imageUrl": null,
-    "images": [],
+    "imageUrl": "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+    "images": [
+      "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/aj-steel-2.jpg"
+    ],
     "products": [
       "ERW/HFW circular pipes (1/2\"–20\" NB)",
       "Square and rectangular hollow sections (SHS/RHS)",
@@ -107,14 +110,11 @@
     "rating": null,
     "reviewCount": null,
     "sourceUrl": "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf",
-    "photoUrls": "",
+    "photoUrls": "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg|/images/suppliers/phase1/tube-pipes/aj-steel-2.jpg",
     "media": {
-      "local": false,
-      "hero": null,
-      "gap": {
-        "code": "aj-steel-empty",
-        "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
-      }
+      "local": true,
+      "hero": "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+      "gap": null
     }
   },
   {
@@ -2297,10 +2297,11 @@
     "email": null,
     "description": "Tong Ming Enterprise (Zhejiang) Co., Ltd. (浙江东明不锈钢制品股份有限公司) is the principal operating factory of Tong Ming Enterprise Co., Ltd., a Taiwan Stock Exchange-listed stainless-steel fastener group (ticker 5538). The Jiaxing Economic Development Zone plant was founded in December 1995 at No. 88 Chang Sheng Road (East), Jiaxing, on a 152,000 m² site producing more than 120,000 tonnes per year of stainless steel fasteners and wire. Fastener World and the group site describe two production plants, an automated warehouse (from 2004) and a newer Gaoke fastener plant in production since October 2023. Main products are screws, nuts, threaded rod and stainless steel wire under the TONG / THE head mark.",
     "logoUrl": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png",
-    "imageUrl": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
+    "imageUrl": "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
     "images": [
-      "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
-      "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
+      "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/tong-ming-2.jpg",
+      "/images/suppliers/phase1/industrial-parts/tong-ming-3.jpg"
     ],
     "products": [
       "Hexagon head bolts",
@@ -2326,14 +2327,11 @@
     "rating": null,
     "reviewCount": null,
     "sourceUrl": "https://eng.tonggroup.com.tw/",
-    "photoUrls": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg|https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png",
+    "photoUrls": "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg|/images/suppliers/phase1/industrial-parts/tong-ming-2.jpg|/images/suppliers/phase1/industrial-parts/tong-ming-3.jpg",
     "media": {
-      "local": false,
-      "hero": "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
-      "gap": {
-        "code": "tong-ming-logo-only",
-        "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
-      }
+      "local": true,
+      "hero": "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
+      "gap": null
     }
   },
   {

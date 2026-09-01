@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T02:47:34.654947+00:00",
+  "generated_at": "2026-09-01T03:04:16.928706+00:00",
   "source_csv": "/workspace/suppliers-phase1/suppliers-phase1-merged-59.csv",
   "source_json": "/workspace/suppliers-phase1/suppliers-phase1-merged-59.json",
   "image_root": "/workspace/suppliers-phase1/enhanced",
@@ -12,26 +12,16 @@
   },
   "coverage": {
     "suppliers": 59,
-    "with_local_images": 56,
-    "without_local_images": 3,
+    "with_local_images": 58,
+    "without_local_images": 1,
     "without_names": [
-      "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
-      "Magicrete Building Solutions Private Limited",
-      "Tong Ming Enterprise (Zhejiang) Co., Ltd."
+      "Magicrete Building Solutions Private Limited"
     ],
-    "active_jpgs": 113,
-    "assigned_jpgs": 113,
+    "active_jpgs": 118,
+    "assigned_jpgs": 118,
     "unmatched_jpgs": []
   },
   "gaps": {
-    "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)": {
-      "code": "aj-steel-empty",
-      "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
-    },
-    "Tong Ming Enterprise (Zhejiang) Co., Ltd.": {
-      "code": "tong-ming-logo-only",
-      "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
-    },
     "Magicrete Building Solutions Private Limited": {
       "code": "magicrete-no-plant-still",
       "note": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback."
@@ -43,14 +33,6 @@
       "reason": "Magicrete has no staged enhanced JPG. Only a 120x120 IndiaMART thumbnail in remote photoUrls; kept as remote fallback.",
       "remote_photoUrls": [
         "https://4.imimg.com/data4/BC/PD/MY-2511554/magicrete-building-solutions-private-limited-120x120.png"
-      ]
-    },
-    {
-      "name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
-      "reason": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs.",
-      "remote_photoUrls": [
-        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
-        "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
       ]
     }
   ],
@@ -110,17 +92,25 @@
       "category": "Tubes & Pipes",
       "category_slug": "tube-pipes",
       "csv_category_original": "Tube & Pipes",
-      "local_paths": [],
-      "hero": null,
-      "source_files": [],
-      "source_folders": [],
-      "local_abs": [],
+      "local_paths": [
+        "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+        "/images/suppliers/phase1/tube-pipes/aj-steel-2.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+      "source_files": [
+        "aj-steel-1.jpg",
+        "aj-steel-2.jpg"
+      ],
+      "source_folders": [
+        "tube-pipes"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/aj-steel-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/tube-pipes/aj-steel-2.jpg"
+      ],
       "remote_photoUrls_original": [],
       "used_remote_fallback": false,
-      "gap": {
-        "code": "aj-steel-empty",
-        "note": "AJ Steel empty: public site is a JS shell; no staged factory JPGs. Image Enhancer skipped. photoUrls remain empty."
-      }
+      "gap": null
     },
     {
       "name": "Jindal SAW Limited",
@@ -1414,20 +1404,31 @@
       "category": "Industrial Parts",
       "category_slug": "industrial-parts",
       "csv_category_original": "Industrial Parts",
-      "local_paths": [],
-      "hero": null,
-      "source_files": [],
-      "source_folders": [],
-      "local_abs": [],
+      "local_paths": [
+        "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
+        "/images/suppliers/phase1/industrial-parts/tong-ming-2.jpg",
+        "/images/suppliers/phase1/industrial-parts/tong-ming-3.jpg"
+      ],
+      "hero": "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
+      "source_files": [
+        "tong-ming-1.jpg",
+        "tong-ming-2.jpg",
+        "tong-ming-3.jpg"
+      ],
+      "source_folders": [
+        "industrial-parts"
+      ],
+      "local_abs": [
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/tong-ming-1.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/tong-ming-2.jpg",
+        "/workspace/suppliers-phase1/enhanced/industrial-parts/tong-ming-3.jpg"
+      ],
       "remote_photoUrls_original": [
         "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/editor/506500_1.jpg",
         "https://eng.tonggroup.com.tw/uploads/1/6/0/5/16052026/2376290501.png"
       ],
-      "used_remote_fallback": true,
-      "gap": {
-        "code": "tong-ming-logo-only",
-        "note": "Tong Ming logo-only backed up: tong-ming-1.jpg lives in industrial-parts/_backup-weak/ (logo, not mill). Keep remote tonggroup URLs."
-      }
+      "used_remote_fallback": false,
+      "gap": null
     },
     {
       "name": "Sundram Fasteners Limited",
@@ -1774,5 +1775,15 @@
   ],
   "notes": {
     "Chaoda Valves Group Co., Ltd.": "Chaoda previously had no staged media (WAF-blocked CDN / 160px MIC thumbs). Now has 4 factory aerials chaoda-1..4.jpg (Wuxing + Lishui campuses from chaodausa.com) in industrial-parts/; included as local media."
+  },
+  "pending_binaries": {
+    "note": "Chat attachments for AJ Steel (2) and Tong Ming (3) did not persist to this VM; metadata points at these local paths. Binaries must be committed when re-uploaded.",
+    "files": [
+      "/images/suppliers/phase1/tube-pipes/aj-steel-1.jpg",
+      "/images/suppliers/phase1/tube-pipes/aj-steel-2.jpg",
+      "/images/suppliers/phase1/industrial-parts/tong-ming-1.jpg",
+      "/images/suppliers/phase1/industrial-parts/tong-ming-2.jpg",
+      "/images/suppliers/phase1/industrial-parts/tong-ming-3.jpg"
+    ]
   }
 }

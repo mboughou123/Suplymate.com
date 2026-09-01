@@ -20,9 +20,15 @@ CSV columns match canonical (18 cols). Category Tube & Pipes normalized to Tubes
 photoUrls use local /images/suppliers/phase1/<slug>/<file>.jpg when available.
 Remote photoUrls kept only when no local media exists.
 
-Coverage: 56/59 suppliers have local images.
-Gaps: AJ Steel (empty); Tong Ming (logo-only backup); Magicrete (no plant still).
-Chaoda now has 4 staged factory aerials (chaoda-1..4.jpg).
+Coverage: 58/59 suppliers have local images (metadata).
+Gaps: Magicrete only (tiny remote IndiaMART thumb — kept as remote fallback).
+AJ Steel + Tong Ming Jiaxing mill stills are mapped to local photoUrls:
+  - /images/suppliers/phase1/tube-pipes/aj-steel-{1,2}.jpg
+  - /images/suppliers/phase1/industrial-parts/tong-ming-{1,2,3}.jpg
+Chat attachments for those 5 JPGs did not persist on the Cloud Agent VM —
+re-upload/push the binaries into `public/images/suppliers/phase1/` before merge
+if they are not already on the branch.
+Chaoda has 4 staged factory aerials (chaoda-1..4.jpg).
 
 Image slugs: steel-metals, tube-pipes, construction, packaging, cables-electrical, industrial-parts.
 Box zip: /workspace/suppliers-phase1/import/phase1-images.zip
