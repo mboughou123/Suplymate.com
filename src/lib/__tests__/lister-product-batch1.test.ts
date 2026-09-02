@@ -79,6 +79,17 @@ describe("Lister product-media batch 1", () => {
     }
   });
 
+  it("keeps APL Apollo priced rows as dealer_list (not mill FOB)", () => {
+    const apollo = listerProductsForSupplier("apl-apollo-tubes-limited-in");
+    const priced = apollo.filter((p) => hasSourcedPrice(p.basePrice));
+    expect(priced.length).toBe(3);
+    for (const p of priced) {
+      expect(p.priceSourceType).toBe("dealer_list");
+    }
+    const column = apollo.find((p) => p.slug === "apollo-column-large-shs");
+    expect(column?.basePrice).toBeNull();
+  });
+
   it("surfaces Caicheng / AJ Steel / APL Apollo SKUs under the right mills", () => {
     expect(
       listerProductsForSupplier("dongguan-caicheng-printing-factory-cn").length

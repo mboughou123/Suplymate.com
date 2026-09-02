@@ -46,6 +46,8 @@ export type ScrapedProduct = {
   verifiedSupplier: boolean;
   status: ProductStatus;
   scrapedAt: string;
+  /** Lister price_source_type (dealer_list, listed_fob, …). */
+  priceSourceType?: string | null;
 };
 
 // Committed demo dataset so the admin review queue is populated and fully

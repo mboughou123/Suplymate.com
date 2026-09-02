@@ -306,6 +306,11 @@ export function scrapedToProduct(sp: ScrapedProduct): Product {
     sourceUrl: sp.sourceUrl,
     productUrl: sp.productUrl ?? undefined,
     imageSourceUrl: sp.imageSourceUrl ?? undefined,
+    priceSourceType:
+      sp.priceSourceType ??
+      (typeof sp.specifications?.["Price source type"] === "string"
+        ? sp.specifications["Price source type"]
+        : undefined),
     status: "approved",
   };
 }

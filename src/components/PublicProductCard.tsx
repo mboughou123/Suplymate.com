@@ -67,9 +67,16 @@ export default function PublicProductCard({ data: d }: Props) {
         <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
           {d.priceLabel ? (
             <>
-              <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
-                {t("price")}
-              </p>
+              <div className="flex flex-wrap items-center gap-1.5">
+                <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
+                  {t("price")}
+                </p>
+                {d.priceSourceLabel ? (
+                  <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                    {d.priceSourceLabel}
+                  </span>
+                ) : null}
+              </div>
               <p className="text-lg font-bold text-cyan">{d.priceLabel}</p>
               {d.priceNote && (
                 <p

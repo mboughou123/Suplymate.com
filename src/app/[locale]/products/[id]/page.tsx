@@ -112,9 +112,16 @@ export default async function ProductDetailPage({ params }: Props) {
             {/* Pricing */}
             {hasPublicPrice ? (
               <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-                  Indicative pricing
-                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+                    Indicative pricing
+                  </p>
+                  {detail.priceSourceLabel ? (
+                    <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                      {detail.priceSourceLabel}
+                    </span>
+                  ) : null}
+                </div>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {detail.priceTiers.map((t) => (
                     <div key={t.minQty} className="rounded-xl bg-slate-50 p-3">
@@ -126,8 +133,10 @@ export default async function ProductDetailPage({ params }: Props) {
                   ))}
                 </div>
                 <p className="mt-3 text-xs text-ink-dim">
-                  Estimated from the supplier-listed price (incl. Suplymate service fee). Final
-                  pricing is confirmed by the supplier in a quote. MOQ:{" "}
+                  {detail.priceSourceCaption
+                    ? `${detail.priceSourceCaption}. `
+                    : "Estimated from the sourced unit price (incl. Suplymate service fee). "}
+                  Final pricing is confirmed by the supplier in a quote. MOQ:{" "}
                   <span className="font-semibold text-ink">{detail.moq}</span>
                 </p>
               </div>

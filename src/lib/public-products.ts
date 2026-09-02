@@ -23,6 +23,7 @@ import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
+import { priceSourceBadgeLabel } from "@/lib/price-source";
 
 export type PublicProductCard = {
   id: string;
@@ -42,6 +43,8 @@ export type PublicProductCard = {
   priceUnit: string | null;
   /** Sourced price footnote / provenance (e.g. Lister price_note). */
   priceNote: string | null;
+  /** Honesty badge, e.g. "Dealer list" — never mill FOB for dealer lists. */
+  priceSourceLabel: string | null;
   moq: string | null;
   shippingTime: string | null;
   productUrl: string | null;
@@ -191,6 +194,10 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
         priceNote: typeof specs["Price note"] === "string" ? specs["Price note"] : null,
+        priceSourceLabel: priceSourceBadgeLabel(
+          typeof specs["Price source type"] === "string" ? specs["Price source type"] : null,
+          hasSourcedPrice(r.basePrice)
+        ),
         moq: r.moq ?? null,
         shippingTime: r.shippingTime ?? null,
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
@@ -303,6 +310,13 @@ function staticToCard(p: Product): PublicProductCard {
     priceLabel: priceLabelFor(base, p.currency, p.unit ?? p.priceUnit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
     priceNote,
+    priceSourceLabel: priceSourceBadgeLabel(
+      p.priceSourceType ??
+        (typeof p.specifications?.["Price source type"] === "string"
+          ? p.specifications["Price source type"]
+          : null),
+      hasSourcedPrice(base)
+    ),
     moq: p.moq ?? null,
     shippingTime: p.shippingTime ?? null,
     productUrl: p.productUrl ?? null,

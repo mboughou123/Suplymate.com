@@ -7,6 +7,7 @@ import {
 } from "@/lib/phase1";
 import { listerProductsForSupplier } from "@/lib/lister-product-batch1";
 import { formatPrice } from "@/config/commerce";
+import { priceSourceBadgeLabel } from "@/lib/price-source";
 
 export type DisplayProduct = {
   name: string;
@@ -21,6 +22,8 @@ export type DisplayProduct = {
   hasRealPrice: boolean;
   /** True when moq is a sourced supplier value. */
   hasRealMoq: boolean;
+  /** Honesty badge such as "Dealer list". */
+  priceSourceLabel?: string | null;
 };
 
 export type DisplaySupplier = {
@@ -193,6 +196,13 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
             imageUrl: p.images[0],
             hasRealPrice: priced,
             hasRealMoq: Boolean(realMoq),
+            priceSourceLabel: priceSourceBadgeLabel(
+              p.priceSourceType ??
+                (typeof p.specifications?.["Price source type"] === "string"
+                  ? p.specifications["Price source type"]
+                  : null),
+              priced
+            ),
           };
         })
       : s.products.slice(0, 3).map((name, i) => ({

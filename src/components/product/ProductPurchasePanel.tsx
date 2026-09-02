@@ -81,7 +81,14 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
         {detail.hasPublicPrice ? (
           <>
             <div className="mt-4 flex items-baseline justify-between border-t border-slate-100 pt-4">
-              <span className="text-sm text-ink-muted">Unit price</span>
+              <span className="text-sm text-ink-muted">
+                Unit price
+                {detail.priceSourceLabel ? (
+                  <span className="ml-2 rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                    {detail.priceSourceLabel}
+                  </span>
+                ) : null}
+              </span>
               <span className="text-2xl font-extrabold text-cyan">
                 {tier ? formatPrice(tier.price, currency) : "RFQ"}
               </span>

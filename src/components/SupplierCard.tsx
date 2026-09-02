@@ -174,6 +174,11 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                     {p.name}
                   </p>
                   <p className="text-[11px] font-bold text-cyan">{p.price}</p>
+                  {p.priceSourceLabel ? (
+                    <p className="text-[9px] font-semibold uppercase tracking-wide text-amber-800">
+                      {p.priceSourceLabel}
+                    </p>
+                  ) : null}
                   {p.hasRealMoq && (
                     <p className="text-[10px] text-ink-dim">
                       {tCommon("moq", { value: p.moq })}

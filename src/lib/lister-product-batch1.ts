@@ -22,8 +22,10 @@
 
 import resolvedJson from "../../data/product-media-batch1-resolved.json";
 import enhancedManifest from "../../data/product-media-batch1-enhanced-manifest.json";
+import rawBatch from "../../data/product-media-batch1.json";
 import type { ScrapedProduct } from "@/data/scraped-products";
 import type { ProductCategory } from "@/data/products";
+import { parsePriceSourceType, type PriceSourceType } from "@/lib/price-source";
 
 type ResolvedRow = {
   id: string;
@@ -46,6 +48,7 @@ type ResolvedRow = {
   imageSourceUrl: string | null;
   verifiedSupplier: boolean;
   scrapedAt: string;
+  priceSourceType?: PriceSourceType | null;
 };
 
 type ManifestEntry = { repo_path: string; from?: string };
@@ -221,6 +224,38 @@ export function assignEnhancedLocalImages(
   return assigned;
 }
 
+type RawSku = {
+  product_name: string;
+  product_slug: string | null;
+  supplier_slug_guess: string;
+  price_source_type?: string | null;
+};
+
+function indexPriceSourceTypes(): Map<string, PriceSourceType> {
+  const map = new Map<string, PriceSourceType>();
+  const buckets = rawBatch as Record<string, RawSku[]>;
+  for (const items of Object.values(buckets)) {
+    for (const sku of items) {
+      const parsed = parsePriceSourceType(sku.price_source_type);
+      if (!parsed) continue;
+      const slug = sku.product_slug || slugifyProductName(sku.product_name);
+      map.set(`${sku.supplier_slug_guess}/${slug}`, parsed);
+      map.set(`${sku.supplier_slug_guess}/${slugifyProductName(sku.product_name)}`, parsed);
+    }
+  }
+  return map;
+}
+
+const PRICE_SOURCE_BY_KEY = indexPriceSourceTypes();
+
+function priceSourceFor(row: Pick<ResolvedRow, "supplierSlug" | "slug" | "name">): PriceSourceType | null {
+  return (
+    PRICE_SOURCE_BY_KEY.get(`${row.supplierSlug}/${row.slug}`) ??
+    PRICE_SOURCE_BY_KEY.get(`${row.supplierSlug}/${slugifyProductName(row.name)}`) ??
+    null
+  );
+}
+
 function toScraped(row: ResolvedRow): ScrapedProduct {
   const priced =
     typeof row.basePrice === "number" &&
@@ -251,8 +286,10 @@ function toScraped(row: ResolvedRow): ScrapedProduct {
       Supplier: row.supplierName,
       Category: row.category,
       ...(row.priceNote ? { "Price note": row.priceNote } : {}),
+      ...(row.priceSourceType ? { "Price source type": row.priceSourceType } : {}),
       ...(priced && row.priceUnit ? { Unit: row.priceUnit } : {}),
     },
+    priceSourceType: row.priceSourceType,
     customizationOptions: [],
     certifications: [],
     rating: null,
@@ -272,7 +309,7 @@ const enhancedById = assignEnhancedLocalImages(rows);
 const wiredRows: ResolvedRow[] = rows.map((row) => {
   const local = enhancedById.get(row.id) ?? [];
   const images = local.length > 0 ? local : row.images.filter((u) => u.startsWith("/images/products/"));
-  return { ...row, images };
+  return { ...row, images, priceSourceType: priceSourceFor(row) };
 });
 
 export const listerBatch1Products: ScrapedProduct[] = wiredRows.map(toScraped);

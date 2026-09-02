@@ -22,6 +22,7 @@ import {
   applyCommission,
   formatPrice,
 } from "@/config/commerce";
+import { priceSourceBadgeLabel, priceSourceCaption } from "@/lib/price-source";
 
 function hasSourcedPrice(value: number | null | undefined): boolean {
   return typeof value === "number" && Number.isFinite(value) && value > 0;
@@ -32,6 +33,12 @@ function productHasPublicPrice(
 ): boolean {
   if (hasSourcedPrice(product.basePrice)) return true;
   return Boolean(product.hasPublicPrice) && hasSourcedPrice(product.priceMin);
+}
+
+function priceSourceTypeOf(product: Product): string | null {
+  if (product.priceSourceType) return product.priceSourceType;
+  const spec = product.specifications?.["Price source type"];
+  return typeof spec === "string" ? spec : null;
 }
 
 /* ----------------------------- RNG helpers ----------------------------- */
@@ -173,6 +180,10 @@ export type ProductDetail = {
   displayFromLabel: string;
   /** False when unit_price is null — UI must show RFQ, never $0.00. */
   hasPublicPrice: boolean;
+  /** Honesty badge such as "Dealer list". */
+  priceSourceLabel: string | null;
+  /** Caption that must not imply mill FOB for dealer lists. */
+  priceSourceCaption: string | null;
   gallery: GalleryImage[];
   priceTiers: PriceTier[];
   options: ProductOption[];
@@ -680,6 +691,8 @@ export function getProductDetail(product: Product): ProductDetail {
     commissionRate: rate,
     displayFromLabel,
     hasPublicPrice,
+    priceSourceLabel: priceSourceBadgeLabel(priceSourceTypeOf(product), hasPublicPrice),
+    priceSourceCaption: priceSourceCaption(priceSourceTypeOf(product), hasPublicPrice),
     gallery,
     priceTiers,
     options,
