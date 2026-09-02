@@ -11,6 +11,7 @@ import { hasSourcedPrice } from "@/lib/public-products";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
 import { isRealImageUrl } from "@/lib/image-fallback";
 import { publicPathFromEnhancedDst } from "@/lib/lister-media";
+import enhancedManifest from "../../../data/product-media-batch3-enhanced-manifest.json";
 
 describe("Lister product-media batch 3", () => {
   it("loads all steel + cable SKUs", () => {
@@ -72,19 +73,27 @@ describe("Lister product-media batch 3", () => {
   it("prefers local enhanced JPGs over remote image_urls", () => {
     for (const p of listerBatch3Products) {
       expect(p.images.length).toBeGreaterThan(0);
-      const primary = p.images[0];
-      expect(primary.toLowerCase()).not.toContain(".pdf");
-      expect(isRealImageUrl(primary), `${p.name} → ${primary}`).toBe(true);
-      if (primary.startsWith("/images/products/")) {
-        const abs = join(process.cwd(), "public", primary.replace(/^\//, ""));
-        expect(existsSync(abs), primary).toBe(true);
-        expect(/\.(webp|png)$/i.test(primary)).toBe(false);
+      for (const url of p.images) {
+        expect(url.toLowerCase()).not.toContain(".pdf");
+        expect(/^https?:\/\//i.test(url), url).toBe(false);
+        expect(url.startsWith("/images/products/"), `${p.name} → ${url}`).toBe(true);
+        expect(isRealImageUrl(url)).toBe(true);
+        const abs = join(process.cwd(), "public", url.replace(/^\//, ""));
+        expect(existsSync(abs), url).toBe(true);
+        expect(/\.(webp|png)$/i.test(url)).toBe(false);
       }
     }
-    const localPrimaries = listerBatch3Products.filter((p) =>
-      p.images[0].startsWith("/images/products/")
-    );
-    expect(localPrimaries.length).toBe(listerBatch3Count());
+  });
+
+  it("uses sealed steel/cable JPGs except Hadeed midrex/plant extras", () => {
+    const used = new Set(listerBatch3Products.flatMap((p) => p.images));
+    const skip = /hadeed\/(midrex|plant|product-s3a|s3a|s3b)/i;
+    for (const entry of enhancedManifest as { dst_rel?: string }[]) {
+      const pub = publicPathFromEnhancedDst(entry.dst_rel ?? "");
+      expect(pub, entry.dst_rel).toBeTruthy();
+      if (skip.test(pub!)) continue;
+      expect(used.has(pub!), pub).toBe(true);
+    }
   });
 
   it("surfaces Foliflex / EMSTEEL / Yuhui under the right mills", () => {

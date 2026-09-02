@@ -198,6 +198,71 @@ function buildRows(): BuiltRow[] {
 const rows = buildRows();
 const localById = assignLocalProductImages(rows, localFiles, STEM_ALIASES);
 
+/** Leftover sealed JPGs that token-overlap misses — gallery extras, not primaries. */
+const EXTRA_STEMS: Record<string, string> = {
+  "emsteel/rebar-annual-report-png": "emsteel-reinforcing-bar-straight-bar-coil",
+  "emsteel/img-3": "emsteel-continuous-cast-billets-made-in-uae",
+  "emsteel/img-3-png": "emsteel-continuous-cast-billets-made-in-uae",
+  "emsteel/img-4": "emsteel-heavy-jumbo-structural-sections",
+  "emsteel/img-4-png": "emsteel-heavy-jumbo-structural-sections",
+  "emsteel/img-5": "emsteel-reinforcing-bar-straight-bar-coil",
+  "emsteel/img-5-png": "emsteel-reinforcing-bar-straight-bar-coil",
+  "emsteel/abu-dhabi-mill": "emsteel-continuous-cast-billets-made-in-uae",
+  "emsteel/mill-aerial": "emsteel-continuous-cast-billets-made-in-uae",
+  "ferrite-structural-steels/home1": "ferrite-equal-mild-steel-angles",
+  "ferrite-structural-steels/home2": "ferrite-mild-steel-i-beams-h-beams",
+  "ferrite-structural-steels/mill-yard": "ferrite-mild-steel-plates-sheets",
+  "jingye-steel/hero": "jingye-hot-rolled-ribbed-bar-rebar-hrb400-b500b-astm-gr-60",
+  "rinl-vizag-steel/lmmm": "vizag-tmt-rebars-rinl",
+  "rinl-vizag-steel/mmsm": "vizag-ukku-structurals-beams-channels-angles",
+  "rinl-vizag-steel/sp": "vizag-plain-wire-rod-coils",
+  "rinl-vizag-steel/pylon": "vizag-tmt-rebars-rinl",
+  "foliflex-cables/al-50mm-500": "foliflex-2-5-mm-aluminum-cable-90-m",
+  "foliflex-cables/industrial-copper-500": "foliflex-2-5-sq-mm-pvc-housing-wire-frls-90-m",
+  "foliflex-cables/eb-zhfr-webp": "foliflex-1-5-mm-pvc-housing-wire-90-m-coil",
+  "foliflex-cables/gold-fr-lsh-webp": "foliflex-1-5-mm-pvc-housing-wire-90-m-coil",
+  "foliflex-cables/sheathed": "foliflex-1-5-mm-pvc-housing-wire-90-m-coil",
+  "foliflex-cables/testing-webp": "foliflex-1-5-mm-pvc-housing-wire-90-m-coil",
+  "jiangsu-yuhui-cable/1kv-43": "yuhui-double-insulated-xlpe-pvc-0-6-1-kv-lv-power-cable",
+  "jiangsu-yuhui-cable/35kv-155-webp": "yuhui-xlpe-insulated-pvc-sheathed-35-kv-mv-power-cable",
+  "henan-huadong-cable/swa-06-1kv":
+    "huadong-underground-xlpe-copper-power-cable-5x16-mm-0-6-1-kv",
+  "henan-huadong-cable/swa-155-webp":
+    "huadong-underground-xlpe-copper-power-cable-5x16-mm-0-6-1-kv",
+  "peoples-cable-group/factory": "rmjt-pvc-xlpe-power-cable-up-to-35-kv",
+  "peoples-cable-group/factory-dsc5549": "rmjt-pvc-xlpe-power-cable-up-to-35-kv",
+  "peoples-cable-group/factory-dsc5554": "rmjt-pvc-xlpe-power-cable-up-to-35-kv",
+  "xwa-power-cable/factory": "xwa-lv-power-cable-0-6-1-kv-xlpe-pvc",
+  "xwa-power-cable/factory-webp": "xwa-lv-power-cable-0-6-1-kv-xlpe-pvc",
+  "xwa-power-cable/factory-1024-webp": "xwa-lv-power-cable-0-6-1-kv-xlpe-pvc",
+};
+
+function attachExtraStems() {
+  const byKey = new Map<string, BuiltRow>();
+  for (const row of rows) {
+    byKey.set(`${row.supplierSlug}/${row.slug}`, row);
+  }
+  for (const file of localFiles) {
+    if (/\.(webp|png|jpeg)$/i.test(file.filename)) continue;
+    if (file.supplierSlug === "hadeed" && HADEED_PLANT.test(file.filename)) continue;
+    if (file.supplierSlug === "hadeed" && /^(product-s3a|s3a|s3b)\./i.test(file.filename)) {
+      continue;
+    }
+    const stem = file.filename.replace(/\.(jpe?g|png|webp)$/i, "");
+    const targetSlug =
+      EXTRA_STEMS[`${file.supplierSlug}/${stem}`] ??
+      EXTRA_STEMS[`${file.supplierSlug}/${stem.replace(/-\d+$/, "")}`];
+    if (!targetSlug) continue;
+    const row = byKey.get(`${file.supplierSlug}/${targetSlug}`);
+    if (!row) continue;
+    const current = localById.get(row.id) ?? [];
+    if (!current.includes(file.publicPath)) {
+      localById.set(row.id, [...current, file.publicPath]);
+    }
+  }
+}
+attachExtraStems();
+
 function orderHadeedImages(images: string[]): string[] {
   const official = images.filter((u) => HADEED_OFFICIAL.test(u));
   const plant = images.filter((u) => HADEED_PLANT.test(u));
