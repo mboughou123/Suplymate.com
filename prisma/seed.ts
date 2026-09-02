@@ -103,9 +103,20 @@ async function main() {
         email: demoEmail,
         passwordHash: await hash("demo123", 12),
         company: "CasaSteel",
+        role: "buyer",
+        onboardedAt: new Date(),
       },
     });
     console.log("Demo user: demo@suplymate.com / demo123");
+  } else if (!existing.onboardedAt) {
+    await prisma.user.update({
+      where: { email: demoEmail },
+      data: {
+        company: existing.company ?? "CasaSteel",
+        role: existing.role ?? "buyer",
+        onboardedAt: new Date(),
+      },
+    });
   }
 
   console.log("Seed complete.");

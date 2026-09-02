@@ -20,10 +20,6 @@ import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
-import {
-  getSupplierFallbackImage,
-  GENERIC_SUPPLIER_PLACEHOLDER,
-} from "@/lib/image-fallback";
 
 type SupplierCardProps = {
   supplier: Supplier;
@@ -51,24 +47,34 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const s = toDisplaySupplier(supplier);
+  const hasFactoryPhoto = Boolean(s.factoryPhotoUrl);
 
   return (
     <article className="glass-card glass-hover flex flex-col overflow-hidden p-0">
-      {/* Banner + logo + company image */}
+      {/* Factory / mill photo header with navy scrim for badge legibility */}
       <div
-        className="relative h-24 overflow-hidden"
+        className="relative h-32 overflow-hidden sm:h-36"
         style={{ backgroundImage: s.bannerGradient }}
       >
-        <ImageWithFallback
-          src={s.imageUrl}
-          fallbackSrc={getSupplierFallbackImage(supplier.category ?? supplier.industry, s.name)}
-          placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
-          alt={`${s.name} facility`}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="absolute inset-0 h-full w-full object-cover"
+        {hasFactoryPhoto && (
+          <ImageWithFallback
+            src={s.factoryPhotoUrl}
+            alt={`${s.name} facility`}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
+        {/* Gradient scrim — keeps Verified + controls readable on photography */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(6,16,24,0.55) 0%, rgba(6,16,24,0.15) 45%, rgba(6,16,24,0.65) 100%)",
+          }}
+          aria-hidden
         />
         {s.verified && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
+          <span className="absolute right-3 top-3 z-[1] inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm backdrop-blur-sm">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
             {tCommon("verified")}
           </span>
@@ -76,14 +82,14 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
         <FavoriteButton
           supplierId={s.id}
           supplierName={s.name}
-          className="absolute left-[5.5rem] top-3"
+          className="absolute left-[5.5rem] top-3 z-[1]"
         />
         <SupplierLogo
           logoUrl={s.logoUrl}
           initials={s.logoText}
           gradient={s.logoGradient}
           name={s.name}
-          className="absolute -bottom-7 left-5 h-16 w-16 rounded-2xl text-xl font-extrabold shadow-cardHover ring-4 ring-white"
+          className="absolute -bottom-7 left-5 z-[1] h-16 w-16 rounded-full text-xl font-extrabold shadow-cardHover ring-4 ring-white"
         />
       </div>
 
@@ -148,7 +154,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           />
         </div>
 
-        {/* Featured products */}
+        {/* Featured products — RFQ when no sourced price; MOQ only if real */}
         <div>
           <p className="mb-1.5 text-xs font-semibold text-ink-dim">
             Featured products
@@ -169,7 +175,11 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                   {p.name}
                 </p>
                 <p className="text-[11px] font-bold text-cyan">{p.price}</p>
-                <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
+                {p.hasRealMoq && (
+                  <p className="text-[10px] text-ink-dim">
+                    {tCommon("moq", { value: p.moq })}
+                  </p>
+                )}
               </div>
             ))}
           </div>

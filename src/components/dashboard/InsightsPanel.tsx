@@ -27,17 +27,17 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
             {topSuppliers.map((s, i) => (
               <li key={`${s.id}-${i}`} className="flex items-center justify-between gap-2">
                 <div className="flex min-w-0 items-center gap-2.5">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-[10px] font-bold text-gold">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy/5 text-[10px] font-bold text-navy">
                     {i + 1}
                   </span>
                   <div className="min-w-0">
                     <Link
                       href={`/supplier/${s.id}`}
-                      className="flex items-center gap-1 truncate text-xs font-semibold text-ink hover:text-gold"
+                      className="flex items-center gap-1 truncate text-xs font-semibold text-ink hover:text-cyan"
                     >
                       <span className="truncate">{s.name}</span>
                       {s.verified && (
-                        <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-gold" aria-hidden />
+                        <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-cyan" aria-hidden />
                       )}
                     </Link>
                     {s.location && (

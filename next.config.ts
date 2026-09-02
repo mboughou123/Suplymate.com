@@ -14,6 +14,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "streetviewpixels-pa.googleapis.com" },
       // Uploaded media (Vercel Blob)
       { protocol: "https", hostname: "**.public.blob.vercel-storage.com" },
+      // Phase-1 mill logo hosts (common CDN / company origins). Unknown hosts
+      // still render via plain <img> in SupplierLogo.
+      { protocol: "https", hostname: "**.ajsteel.com" },
+      { protocol: "https", hostname: "www.ajsteel.com" },
+      { protocol: "https", hostname: "**.imimg.com" },
+      { protocol: "https", hostname: "**.made-in-china.com" },
+      { protocol: "https", hostname: "**.contentstack.io" },
+      { protocol: "https", hostname: "**.amazonaws.com" },
     ],
     // Remote photos change rarely — cache optimized variants for 31 days.
     minimumCacheTTL: 2678400,

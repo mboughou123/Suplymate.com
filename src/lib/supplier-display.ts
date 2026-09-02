@@ -1,10 +1,17 @@
 import type { Supplier } from "@/data/suppliers";
+import { getFactoryPhotoUrl, getSupplierLogoUrl } from "@/lib/phase1";
 
 export type DisplayProduct = {
   name: string;
+  /** Real price string, or "RFQ" when no sourced commercial price exists. */
   price: string;
+  /** Real MOQ when present; empty string means omit from the card. */
   moq: string;
   gradient: string;
+  /** True when price is a sourced value (never a fabricated band). */
+  hasRealPrice: boolean;
+  /** True when moq is a sourced supplier value. */
+  hasRealMoq: boolean;
 };
 
 export type DisplaySupplier = {
@@ -26,6 +33,8 @@ export type DisplaySupplier = {
   logoGradient: string;
   bannerGradient: string;
   logoUrl?: string;
+  /** Primary factory / mill photograph for the card header (or undefined). */
+  factoryPhotoUrl?: string;
   imageUrl?: string;
   rating: number;
   reviewCount: number;
@@ -54,16 +63,16 @@ const LOGO_GRADIENTS = [
 ];
 
 const BANNER_GRADIENTS = [
-  "linear-gradient(135deg, #0b1b30, #143a5f 55%, rgba(14,165,183,0.55))",
-  "linear-gradient(135deg, #1e293b, #0b1b30 55%, rgba(20,184,166,0.5))",
-  "linear-gradient(135deg, #0b1b30, rgba(14,165,183,0.4) 60%, #0f172a)",
-  "linear-gradient(135deg, #0f172a, #0b1b30 55%, rgba(20,184,166,0.45))",
+  "linear-gradient(135deg, #061018, #0d3349 55%, rgba(3,105,161,0.55))",
+  "linear-gradient(135deg, #0d3349, #061018 55%, rgba(26,74,107,0.55))",
+  "linear-gradient(135deg, #061018, rgba(3,105,161,0.4) 60%, #0d3349)",
+  "linear-gradient(135deg, #0d3349, #1a4a6b 55%, rgba(3,105,161,0.45))",
 ];
 
 const PRODUCT_GRADIENTS = [
-  "linear-gradient(135deg, rgba(14,165,183,0.18), rgba(20,184,166,0.18))",
-  "linear-gradient(135deg, rgba(30,58,95,0.14), rgba(14,165,183,0.2))",
-  "linear-gradient(135deg, rgba(20,184,166,0.18), rgba(16,185,129,0.18))",
+  "linear-gradient(135deg, rgba(3,105,161,0.12), rgba(14,165,183,0.16))",
+  "linear-gradient(135deg, rgba(13,51,73,0.10), rgba(3,105,161,0.14))",
+  "linear-gradient(135deg, rgba(20,184,166,0.14), rgba(16,185,129,0.12))",
   "linear-gradient(135deg, #eef2f7, #f8fafc)",
 ];
 
@@ -122,24 +131,6 @@ function flagFor(country: string): string {
   return FLAGS[country.toLowerCase()] ?? "🌍";
 }
 
-function priceFor(seed: number, industry: string): string {
-  // Rough per-industry price bands to feel realistic.
-  const bands: Record<string, [number, number]> = {
-    Metal: [12, 980],
-    "Construction & BTP": [8, 140],
-    "Industrial Equipment": [1200, 85000],
-    "Electrotechnical & Cabling": [1, 45],
-    "Plastics & Packaging": [1, 12],
-    "Agriculture & Agrofood": [10, 120],
-  };
-  const [lo, hi] = bands[industry] ?? [5, 200];
-  const low = lo + (seed % Math.max(1, Math.floor((hi - lo) * 0.3)));
-  const high = low + Math.max(1, Math.floor((hi - low) * 0.5));
-  const fmt = (n: number) =>
-    n >= 1 ? `$${n.toLocaleString()}` : `$${n.toFixed(2)}`;
-  return `${fmt(low)} – ${fmt(high)}`;
-}
-
 export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
   const country = s.country ?? countryOf(s.location);
@@ -153,12 +144,20 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const yearsInBusiness = s.yearsInBusiness ?? seeded(seed >> 2, 5, 30);
   const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
 
-  const moqList = [s.moq];
+  const factoryPhotoUrl = getFactoryPhotoUrl(s);
+  const logoUrl = getSupplierLogoUrl(s.logoUrl);
+
+  // Featured products: never invent price bands or MOQ figures.
+  // Supplier.products is a string[] of names only — show RFQ for price.
+  // MOQ is only shown when the supplier record itself carries a real moq.
+  const realMoq = (s.moq ?? "").trim();
   const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
     name,
-    price: priceFor(seed + i * 7, s.industry),
-    moq: moqList[i] ?? `${seeded(seed + i, 1, 500)} pcs`,
+    price: "RFQ",
+    moq: realMoq,
     gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+    hasRealPrice: false,
+    hasRealMoq: Boolean(realMoq),
   }));
 
   return {
@@ -179,8 +178,9 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     logoText: initials(s.name),
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
     bannerGradient: BANNER_GRADIENTS[seed % BANNER_GRADIENTS.length],
-    logoUrl: s.logoUrl,
-    imageUrl: s.imageUrl,
+    logoUrl,
+    factoryPhotoUrl,
+    imageUrl: factoryPhotoUrl ?? s.imageUrl,
     rating,
     reviewCount,
     verified,
@@ -191,7 +191,7 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     responseTime: `≤${[1, 2, 3, 4, 6][seed % 5]}h`,
     reorderRate: seeded(seed >> 1, 12, 46),
     products,
-    moq: s.moq,
+    moq: realMoq,
     deliveryRegions: s.deliveryRegions,
     reliabilityScore: s.reliabilityScore,
   };

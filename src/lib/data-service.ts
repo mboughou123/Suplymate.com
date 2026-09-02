@@ -10,24 +10,9 @@ import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
+import { compareForDirectory } from "@/lib/supplier-directory-sort";
 
-// A supplier "has an image" if it carries a primary photo or any gallery image.
-// Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
-// lead the directory.
-function supplierHasImage(s: Supplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
-}
-
-// Public directory ordering: image-bearing first, then by Suplymate score
-// (falling back to reliabilityScore), then alphabetically. Used so the server
-// and the client agree on ordering.
-export function compareForDirectory(a: Supplier, b: Supplier): number {
-  const img = Number(supplierHasImage(b)) - Number(supplierHasImage(a));
-  if (img) return img;
-  const score = (b.score ?? b.reliabilityScore ?? 0) - (a.score ?? a.reliabilityScore ?? 0);
-  if (score) return score;
-  return a.name.localeCompare(b.name);
-}
+export { compareForDirectory } from "@/lib/supplier-directory-sort";
 
 // Prefer the real Outscraper dataset (public Google Maps data); fall back to the
 // generated directory only if it's somehow empty.

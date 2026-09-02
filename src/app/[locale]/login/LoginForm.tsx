@@ -2,19 +2,34 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Eye, EyeOff, AlertCircle, Loader2 } from "lucide-react";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { stripLocalePrefix } from "@/i18n/routing";
 import AuthFormLayout from "@/components/AuthFormLayout";
+
+function normalizeCallbackUrl(raw: string | null): string {
+  if (!raw || !raw.trim()) return "/dashboard";
+  // Absolute URLs are rejected — stay on-site.
+  if (/^https?:\/\//i.test(raw)) return "/dashboard";
+  const path = stripLocalePrefix(raw.trim());
+  if (!path.startsWith("/")) return "/dashboard";
+  // Never bounce back to auth pages after a successful sign-in.
+  if (path === "/login" || path === "/signup" || path === "/forgot-password") {
+    return "/dashboard";
+  }
+  return path;
+}
 
 export default function LoginForm() {
   const t = useTranslations("authentication");
   const tForms = useTranslations("forms");
   const tErrors = useTranslations("errors");
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+  const params = useParams();
+  const locale = typeof params?.locale === "string" ? params.locale : "en";
+  const callbackUrl = normalizeCallbackUrl(searchParams.get("callbackUrl"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -36,9 +51,9 @@ export default function LoginForm() {
       password,
       redirect: false,
     });
-    setLoading(false);
 
     if (result?.error) {
+      setLoading(false);
       try {
         const health = await fetch("/api/health");
         const data = await health.json();
@@ -53,8 +68,10 @@ export default function LoginForm() {
       return;
     }
 
-    router.push(callbackUrl);
-    router.refresh();
+    // Hard navigation so the session cookie is visible to the next server
+    // render — soft router.push + refresh races auth() and bounces back to login.
+    const target = callbackUrl.startsWith("/") ? callbackUrl : `/${callbackUrl}`;
+    window.location.assign(`/${locale}${target}`);
   }
 
   return (
