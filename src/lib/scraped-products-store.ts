@@ -132,7 +132,7 @@ export async function listScrapedProducts(): Promise<ScrapedProduct[]> {
       // Overlay phase-1 + Lister batch so curated products appear without a prod DB import.
       const byId = new Map(rows.map((r) => [r.id, mapRow(r as ScrapedRow)]));
       for (const p of phase1Products) byId.set(p.id, p);
-      for (const p of listerBatch1Products) byId.set(p.id, p);
+      for (const p of listerCatalogueProducts) byId.set(p.id, p);
       return [...byId.values()].sort((a, b) =>
         b.scrapedAt.localeCompare(a.scrapedAt)
       );
