@@ -72,6 +72,19 @@ function sortVariants(filenames: string[]): string[] {
   return [...filenames].sort((a, b) => variantIndex(a) - variantIndex(b));
 }
 
+/** Alias `foo` also matches enhancer renames `foo-png.jpg` / `foo-webp.jpg`. */
+function resolveAliasStem(
+  alias: string | undefined,
+  byStem: Map<string, IndexedLocalFile[]>,
+  claimed: Set<string>
+): string | null {
+  if (!alias) return null;
+  for (const stem of [alias, `${alias}-png`, `${alias}-webp`, `${alias}-jpeg`]) {
+    if (byStem.has(stem) && !claimed.has(stem)) return stem;
+  }
+  return null;
+}
+
 export type MediaAssignRow = {
   id: string;
   name: string;
@@ -151,9 +164,10 @@ export function assignLocalProductImages(
       const alias =
         aliases[`${row.supplierSlug}/${row.slug}`] ??
         aliases[`${row.supplierSlug}/${slugifyProductName(row.name)}`];
-      if (alias && byStem.has(alias) && !claimed.has(alias)) {
-        claimed.add(alias);
-        assigned.set(row.id, pathsForStem(alias));
+      const aliasStem = resolveAliasStem(alias, byStem, claimed);
+      if (aliasStem) {
+        claimed.add(aliasStem);
+        assigned.set(row.id, pathsForStem(aliasStem));
       }
     }
 
