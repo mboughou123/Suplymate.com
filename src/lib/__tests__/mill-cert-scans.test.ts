@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import {
   CERT_GALLERY_BLOCKED_SLUGS,
   CERT_SUPPLIER_ID_BY_SLUG,
+  EMSTEEL_VERIFY,
+  isEmsteelSupplier,
   listAllMillCertScans,
   listMillCertScansForSupplier,
 } from "@/lib/mill-cert-scans";
@@ -36,6 +38,8 @@ describe("mill certificate scans", () => {
     expect(scans.some((s) => s.supplierSlug === "ferrite")).toBe(false);
     expect(scans.some((s) => s.supplierSlug === "apl-apollo")).toBe(false);
     expect(scans.some((s) => s.supplierSlug === "emsteel")).toBe(false);
+    expect(isEmsteelSupplier(EMSTEEL_VERIFY.supplierId)).toBe(true);
+    expect(EMSTEEL_VERIFY.caresUrl).toMatch(/ukcares\.com/);
   });
 
   it("prefers Foliflex current ISO and drops the expired PCMS scan", () => {

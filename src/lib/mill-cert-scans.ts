@@ -183,3 +183,14 @@ export function listMillCertScansForSupplier(supplierId: string): MillCertScan[]
 export function millCertImageUrlsForSupplier(supplierId: string): string[] {
   return listMillCertScansForSupplier(supplierId).map((c) => c.publicPath);
 }
+
+/** EMSTEEL: no cert image gallery. Text/link only — never show 2020 PDFs as current. */
+export const EMSTEEL_VERIFY = {
+  supplierId: "emsteel-building-materials-pjsc-emsteel-ae",
+  caresUrl: "https://www.ukcares.com/",
+  millQualityUrl: "https://www.emsteel.com/es-quality-assurance/",
+} as const;
+
+export function isEmsteelSupplier(supplierId: string): boolean {
+  return supplierId === EMSTEEL_VERIFY.supplierId;
+}

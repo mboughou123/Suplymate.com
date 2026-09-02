@@ -9,7 +9,11 @@ import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getPublishedSupplierMedia } from "@/lib/media-store";
 import { getSupplierCertificationImages } from "@/lib/media-public";
 import { listCertifications } from "@/lib/certifications-store";
-import { listMillCertScansForSupplier } from "@/lib/mill-cert-scans";
+import {
+  EMSTEEL_VERIFY,
+  isEmsteelSupplier,
+  listMillCertScansForSupplier,
+} from "@/lib/mill-cert-scans";
 import { prisma } from "@/lib/prisma";
 import { normalizeMarketplaceStatus, STATUS_META } from "@/lib/verification";
 import { buildPageAlternates } from "@/lib/locale-metadata";
@@ -265,6 +269,31 @@ export default async function SupplierProfilePage({
           <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
           <CertificationsSection profile={profile} />
+          {isEmsteelSupplier(supplier.id) && (
+            <section className="py-4">
+              <p className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-ink-muted">
+                Certificate scans are not shown for this mill (expired 2020 PDFs
+                are out of date).{" "}
+                <a
+                  href={EMSTEEL_VERIFY.caresUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-semibold text-ink underline decoration-gold/50 underline-offset-2 hover:text-gold"
+                >
+                  Verify on CARES
+                </a>
+                {" · "}
+                <a
+                  href={EMSTEEL_VERIFY.millQualityUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-semibold text-ink underline decoration-gold/50 underline-offset-2 hover:text-gold"
+                >
+                  Mill quality page
+                </a>
+              </p>
+            </section>
+          )}
           {hasRealMedia && (
             <section className="py-6">
               <h2 className="font-display text-lg font-bold text-ink">
