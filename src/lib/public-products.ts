@@ -316,7 +316,7 @@ function staticToCard(p: Product): PublicProductCard {
     supplierId: p.supplierId ?? "",
     supplierName: p.supplierName ?? "Suplymate catalogue",
     supplierCountry: p.supplierCountry ?? null,
-    supplierVisible: Boolean(p.supplierId) && publicSupplierIdSet().has(p.supplierId),
+    supplierVisible: Boolean(p.supplierId) && publicSupplierIdSet().has(p.supplierId ?? ""),
     verified: false,
     imageUrl: getBestProductImage(imageInput),
     hasRealPhoto: hasPhoto,
