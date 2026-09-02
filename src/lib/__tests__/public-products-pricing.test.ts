@@ -75,6 +75,8 @@ describe("scrapedToProduct pricing honesty", () => {
     expect(detail.hasPublicPrice).toBe(false);
     expect(detail.displayFromLabel).toBe("RFQ");
     expect(detail.displayFromLabel).not.toContain("$0");
+    expect(detail.priceTiers).toEqual([]);
+    expect(JSON.stringify(detail)).not.toContain("$0.00");
     expect(detail.recommended.every((r) => !r.priceFromLabel.includes("$0"))).toBe(
       true
     );

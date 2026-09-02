@@ -30,8 +30,11 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
   const { priceTiers, unit, supplier, shipping } = detail;
   const [qty, setQty] = useState(priceTiers[0]?.minQty ?? 1);
 
-  const tier = useMemo(() => tierForQty(priceTiers, qty), [priceTiers, qty]);
-  const subtotal = tier.price * qty;
+  const tier = useMemo(
+    () => (priceTiers.length ? tierForQty(priceTiers, qty) : null),
+    [priceTiers, qty]
+  );
+  const subtotal = tier ? tier.price * qty : 0;
 
   return (
     <div className="space-y-4">
@@ -80,7 +83,7 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
             <div className="mt-4 flex items-baseline justify-between border-t border-slate-100 pt-4">
               <span className="text-sm text-ink-muted">Unit price</span>
               <span className="text-2xl font-extrabold text-cyan">
-                {formatPrice(tier.price, currency)}
+                {tier ? formatPrice(tier.price, currency) : "RFQ"}
               </span>
             </div>
             <div className="mt-1 flex items-baseline justify-between">

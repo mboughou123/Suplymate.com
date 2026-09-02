@@ -414,7 +414,8 @@ export function getProductDetail(product: Product): ProductDetail {
   const unit = product.unit;
   const icon = ICONS_BY_CATEGORY[product.category];
 
-  /* --- pricing (commission applied) --- */
+  /* --- pricing (commission applied). No sourced price → no $0.00 tiers. --- */
+  const hasPublicPrice = productHasPublicPrice(product);
   const base = product.basePrice ?? product.priceMin;
   const rate = product.commissionRate ?? COMMISSION_RATE;
   const tierDefs = [
@@ -423,22 +424,23 @@ export function getProductDetail(product: Product): ProductDetail {
     { minQty: 200, mult: 0.88 },
     { minQty: 1000, mult: 0.82 },
   ];
-  const priceTiers: PriceTier[] = tierDefs.map((t, i) => {
-    const basePrice = Math.round(base * t.mult * 100) / 100;
-    const price = applyCommission(basePrice, rate);
-    const next = tierDefs[i + 1];
-    const rangeLabel = next
-      ? `${t.minQty} – ${next.minQty - 1} ${unit}s`
-      : `≥ ${t.minQty} ${unit}s`;
-    return {
-      minQty: t.minQty,
-      rangeLabel,
-      basePrice,
-      price,
-      priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
-    };
-  });
-  const hasPublicPrice = productHasPublicPrice(product);
+  const priceTiers: PriceTier[] = hasPublicPrice
+    ? tierDefs.map((t, i) => {
+        const basePrice = Math.round(base * t.mult * 100) / 100;
+        const price = applyCommission(basePrice, rate);
+        const next = tierDefs[i + 1];
+        const rangeLabel = next
+          ? `${t.minQty} – ${next.minQty - 1} ${unit}s`
+          : `≥ ${t.minQty} ${unit}s`;
+        return {
+          minQty: t.minQty,
+          rangeLabel,
+          basePrice,
+          price,
+          priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
+        };
+      })
+    : [];
   const displayFromLabel = hasPublicPrice
     ? `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
         applyCommission(product.priceMax, rate),
