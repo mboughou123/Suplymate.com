@@ -135,12 +135,22 @@ describe("factory photos and local logos", () => {
     );
     const mapped = new Set(Object.values(LOGO_SLUG_BY_ID));
 
+    // Complete pack: 58 wordmarks; Magicrete intentionally skipped.
+    expect(onDisk.size).toBe(58);
+    expect(mapped.size).toBe(58);
+    expect(onDisk.has("magicrete")).toBe(false);
+    expect(
+      localLogoPathForSupplierId("magicrete-building-solutions-private-limited-in")
+    ).toBeUndefined();
+
     for (const [id, slug] of Object.entries(LOGO_SLUG_BY_ID)) {
+      const mill = phase1Suppliers.find((s) => s.id === id);
+      expect(mill, id).toBeTruthy();
       const rel = localLogoPathForSupplierId(id);
       expect(rel).toBe(`/images/suppliers/logos/logo-${slug}.png`);
       const abs = resolve(process.cwd(), "public", rel!.replace(/^\//, ""));
       expect(existsSync(abs), abs).toBe(true);
-      expect(toDisplaySupplier(phase1Suppliers.find((s) => s.id === id)!).logoUrl).toBe(
+      expect(toDisplaySupplier(mill!).logoUrl).toBe(
         `/images/suppliers/logos/logo-${slug}.png`
       );
     }
