@@ -6,9 +6,6 @@ import {
   BadgeCheck,
   Star,
   MapPin,
-  Clock,
-  Truck,
-  RotateCcw,
   Package,
   Users,
   Building2,
@@ -20,75 +17,69 @@ import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
-import {
-  getSupplierFallbackImage,
-  GENERIC_SUPPLIER_PLACEHOLDER,
-} from "@/lib/image-fallback";
+import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 
 type SupplierCardProps = {
   supplier: Supplier;
 };
 
-function Metric({
-  icon: Icon,
-  value,
-  label,
-}: {
-  icon: typeof Clock;
-  value: string;
-  label: string;
-}) {
-  return (
-    <div className="flex flex-col items-center rounded-lg bg-slate-50 px-2 py-2.5 text-center">
-      <Icon className="mb-1 h-4 w-4 text-cyan" aria-hidden />
-      <span className="text-sm font-bold text-ink">{value}</span>
-      <span className="text-[10px] leading-tight text-ink-dim">{label}</span>
-    </div>
-  );
-}
-
 export default function SupplierCard({ supplier }: SupplierCardProps) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const s = toDisplaySupplier(supplier);
+  const hasFactoryPhoto = Boolean(s.factoryPhotoUrl);
 
   return (
     <article className="glass-card glass-hover flex flex-col overflow-hidden p-0">
-      {/* Banner + logo + company image */}
+      {/* Factory / mill photo header with navy scrim — gradient only when no photo */}
       <div
-        className="relative h-24 overflow-hidden"
+        className="relative h-32 overflow-hidden sm:h-36"
         style={{ backgroundImage: s.bannerGradient }}
       >
-        <ImageWithFallback
-          src={s.imageUrl}
-          fallbackSrc={getSupplierFallbackImage(supplier.category ?? supplier.industry, s.name)}
-          placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
-          alt={`${s.name} facility`}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="absolute inset-0 h-full w-full object-cover"
+        {hasFactoryPhoto && (
+          <ImageWithFallback
+            src={s.factoryPhotoUrl}
+            placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
+            alt={`${s.name} facility`}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(6,16,24,0.55) 0%, rgba(6,16,24,0.15) 45%, rgba(6,16,24,0.65) 100%)",
+          }}
+          aria-hidden
         />
-        {s.verified && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
+            {s.verified && !s.likelyTrader && (
+          <span className="absolute right-3 top-3 z-[1] inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm backdrop-blur-sm">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
             {tCommon("verified")}
+          </span>
+        )}
+        {s.likelyTrader && (
+          <span className="absolute right-3 top-3 z-[1] inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-ink-muted shadow-sm backdrop-blur-sm">
+            {s.businessTypeLabel}
           </span>
         )}
         <FavoriteButton
           supplierId={s.id}
           supplierName={s.name}
-          className="absolute left-[5.5rem] top-3"
+          className="absolute left-[5.5rem] top-3 z-[1]"
         />
         <SupplierLogo
           logoUrl={s.logoUrl}
           initials={s.logoText}
           gradient={s.logoGradient}
           name={s.name}
-          className="absolute -bottom-7 left-5 h-16 w-16 rounded-2xl text-xl font-extrabold shadow-cardHover ring-4 ring-white"
+          darkChip={s.logoDarkChip}
+          className="absolute -bottom-7 left-5 z-[1] h-16 w-16 rounded-full text-xl font-extrabold shadow-cardHover ring-4 ring-white"
         />
       </div>
 
       <div className="flex flex-1 flex-col gap-4 px-5 pb-5 pt-9">
-        {/* Identity */}
         <div>
           <h3 className="text-base font-bold leading-tight text-ink">{s.name}</h3>
           <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
@@ -96,36 +87,52 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
               <span aria-hidden>{s.flag}</span>
               {s.country}
             </span>
-            <span
-              className="inline-flex items-center gap-1 font-semibold text-ink"
-              aria-label={tCommon("starsRating", { rating: s.rating.toFixed(1) })}
-            >
-              <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
-              {s.rating.toFixed(1)}/5
-            </span>
-            <span className="text-ink-dim">({s.reviewCount} reviews)</span>
+            {s.hasRealRating && s.rating != null && (
+              <span
+                className="inline-flex items-center gap-1 font-semibold text-ink"
+                aria-label={tCommon("starsRating", {
+                  rating: s.rating.toFixed(1),
+                })}
+              >
+                <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
+                {s.rating.toFixed(1)}/5
+              </span>
+            )}
+            {s.hasRealReviews && s.reviewCount != null && (
+              <span className="text-ink-dim">({s.reviewCount} reviews)</span>
+            )}
           </div>
 
-          {/* Tags */}
           <div className="mt-2.5 flex flex-wrap gap-1.5 text-[11px]">
             <span className="rounded-md bg-cyan/10 px-2 py-0.5 font-semibold text-cyan">
               {s.categoryLabel}
             </span>
-            <span
-              className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-cyan"
-              title="Suplymate supplier score"
-            >
-              <Award className="h-3 w-3" aria-hidden />
-              {s.score}/100
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
-              <Building2 className="h-3 w-3" aria-hidden />
-              {s.yearsInBusiness} yrs
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
-              <Users className="h-3 w-3" aria-hidden />
-              {s.employees} staff
-            </span>
+            {!s.likelyTrader && (
+              <span className="rounded-md bg-slate-100 px-2 py-0.5 font-semibold text-ink-muted">
+                {s.businessTypeLabel}
+              </span>
+            )}
+            {s.score > 0 && (
+              <span
+                className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-cyan"
+                title="Suplymate supplier score"
+              >
+                <Award className="h-3 w-3" aria-hidden />
+                {s.score}/100
+              </span>
+            )}
+            {s.yearsInBusiness != null && (
+              <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
+                <Building2 className="h-3 w-3" aria-hidden />
+                {s.yearsInBusiness} yrs
+              </span>
+            )}
+            {s.employees && (
+              <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
+                <Users className="h-3 w-3" aria-hidden />
+                {s.employees} staff
+              </span>
+            )}
             <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
               <MapPin className="h-3 w-3" aria-hidden />
               {s.location}
@@ -133,49 +140,42 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           </div>
         </div>
 
-        {/* Marketplace metrics */}
-        <div className="grid grid-cols-3 gap-2">
-          <Metric
-            icon={Truck}
-            value={`${s.onTimeDelivery}%`}
-            label="On-time delivery"
-          />
-          <Metric icon={Clock} value={s.responseTime} label="Response time" />
-          <Metric
-            icon={RotateCcw}
-            value={`${s.reorderRate}%`}
-            label="Reorder rate"
-          />
-        </div>
-
-        {/* Featured products */}
-        <div>
-          <p className="mb-1.5 text-xs font-semibold text-ink-dim">
-            Featured products
-          </p>
-          <div className="grid grid-cols-3 gap-2">
-            {s.products.map((p, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-slate-200 p-1.5"
-              >
+        {/* Featured products — RFQ when no sourced price; MOQ only if real */}
+        {s.products.length > 0 && (
+          <div>
+            <p className="mb-1.5 text-xs font-semibold text-ink-dim">
+              Featured products
+            </p>
+            <div className="grid grid-cols-3 gap-2">
+              {s.products.map((p, i) => (
                 <div
-                  className="mb-1.5 flex h-14 items-center justify-center rounded-md"
-                  style={{ backgroundImage: p.gradient }}
+                  key={i}
+                  className="rounded-lg border border-slate-200 p-1.5"
                 >
-                  <Package className="h-5 w-5 text-cyan" aria-hidden />
+                  <div
+                    className="mb-1.5 flex h-14 items-center justify-center rounded-md"
+                    style={{ backgroundImage: p.gradient }}
+                  >
+                    <Package className="h-5 w-5 text-cyan" aria-hidden />
+                  </div>
+                  <p
+                    className="truncate text-[11px] font-semibold text-ink"
+                    title={p.name}
+                  >
+                    {p.name}
+                  </p>
+                  <p className="text-[11px] font-bold text-cyan">{p.price}</p>
+                  {p.hasRealMoq && (
+                    <p className="text-[10px] text-ink-dim">
+                      {tCommon("moq", { value: p.moq })}
+                    </p>
+                  )}
                 </div>
-                <p className="truncate text-[11px] font-semibold text-ink" title={p.name}>
-                  {p.name}
-                </p>
-                <p className="text-[11px] font-bold text-cyan">{p.price}</p>
-                <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Actions */}
         <div className="mt-auto flex gap-2 pt-1">
           <Link
             href={`/supplier/${s.id}`}

@@ -6,8 +6,6 @@ import {
   BadgeCheck,
   Star,
   MapPin,
-  Clock,
-  Truck,
   Building2,
   Globe,
   ShieldCheck,
@@ -20,6 +18,7 @@ import FavoriteButton from "@/components/chat/FavoriteButton";
 import ReportButton from "@/components/ReportButton";
 import ProfileActionButton from "./ProfileActionButton";
 import { RadialScore } from "./primitives";
+import SupplierLogo from "@/components/SupplierLogo";
 
 export default function HeroSection({ profile }: { profile: SupplierProfile }) {
   const t = useTranslations("supplierProfile");
@@ -28,24 +27,22 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
   const firstProduct = base.products[0]?.name;
 
   const indicators = [
-    { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified },
+    { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified && !base.likelyTrader },
     {
       icon: BadgeCheck,
       label: t("certificationsCount", { count: profile.certifications.length }),
-      ok: true,
+      ok: profile.certifications.length > 0,
     },
-    { icon: Truck, label: t("onTimeDelivery", { percent: trust.onTimeDelivery }), ok: true },
-    { icon: Clock, label: t("repliesIn", { time: trust.responseTime }), ok: true },
   ];
 
   return (
     <section className="relative overflow-hidden">
       {/* Dark glass banner */}
       <div className="relative h-56 sm:h-64" style={{ backgroundImage: base.bannerGradient }}>
-        {base.imageUrl && (
+        {base.factoryPhotoUrl && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={base.imageUrl}
+            src={base.factoryPhotoUrl}
             alt={`${base.name} facility`}
             className="absolute inset-0 h-full w-full object-cover opacity-60"
           />
@@ -75,27 +72,29 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
             <div className="flex flex-col gap-5">
               <div className="flex flex-wrap items-start gap-5">
                 {/* Logo */}
-                <div
-                  className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl text-2xl font-extrabold text-white shadow-cardHover ring-4 ring-white"
-                  style={{ backgroundImage: base.logoGradient }}
-                >
-                  {base.logoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={base.logoUrl} alt={base.name} className="h-full w-full object-cover" />
-                  ) : (
-                    base.logoText
-                  )}
-                </div>
+                <SupplierLogo
+                  logoUrl={base.logoUrl}
+                  initials={base.logoText}
+                  gradient={base.logoGradient}
+                  name={base.name}
+                  darkChip={base.logoDarkChip}
+                  className="h-20 w-20 shrink-0 rounded-2xl text-2xl font-extrabold shadow-cardHover ring-4 ring-white"
+                />
 
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
                     <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
                       {base.name}
                     </h1>
-                    {base.verified && (
+                    {base.verified && !base.likelyTrader && (
                       <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
                         <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                         {common("verified")}
+                      </span>
+                    )}
+                    {base.likelyTrader && (
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-ink-muted">
+                        {base.businessTypeLabel}
                       </span>
                     )}
                   </div>
@@ -105,17 +104,23 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                       <span aria-hidden className="text-base">{base.flag}</span>
                       {base.city}, {base.country}
                     </span>
-                    <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                      <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-                      {base.rating.toFixed(1)}
-                      <span className="font-normal text-ink-dim">
-                        {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
+                    {base.hasRealRating && base.rating != null && (
+                      <span className="inline-flex items-center gap-1 font-semibold text-ink">
+                        <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                        {base.rating.toFixed(1)}
+                        {base.hasRealReviews && base.reviewCount != null && (
+                          <span className="font-normal text-ink-dim">
+                            {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
+                          </span>
+                        )}
                       </span>
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-ink-muted">
-                      <Building2 className="h-4 w-4 text-cyan" aria-hidden />
-                      {t("yearsInBusiness", { years: company.yearsInBusiness })}
-                    </span>
+                    )}
+                    {company.yearsInBusiness != null && (
+                      <span className="inline-flex items-center gap-1 text-ink-muted">
+                        <Building2 className="h-4 w-4 text-cyan" aria-hidden />
+                        {t("yearsInBusiness", { years: company.yearsInBusiness })}
+                      </span>
+                    )}
                   </div>
 
                   <div className="mt-3 flex flex-wrap gap-2 text-xs">
@@ -125,9 +130,11 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                     <span className="rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
                       {company.businessType}
                     </span>
-                    <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
-                      <MapPin className="h-3 w-3" aria-hidden /> {company.factorySize}
-                    </span>
+                    {company.factorySize && (
+                      <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
+                        <MapPin className="h-3 w-3" aria-hidden /> {company.factorySize}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -143,7 +150,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
 
               {/* Trust indicators */}
               <div className="flex flex-wrap gap-2">
-                {indicators.map((ind) => (
+                {indicators.filter((ind) => ind.ok).map((ind) => (
                   <span
                     key={ind.label}
                     className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted"

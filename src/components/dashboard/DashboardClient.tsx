@@ -8,9 +8,9 @@ import {
   Bell,
   Sparkles,
   TrendingUp,
-  Shield,
-  DollarSign,
+  Heart,
   MessageCircle,
+  Package,
 } from "lucide-react";
 import DashboardBackground from "./DashboardBackground";
 import DashboardSidebar from "./DashboardSidebar";
@@ -21,6 +21,7 @@ import ProcurementPanel from "./ProcurementPanel";
 import InsightsPanel from "./InsightsPanel";
 import ActivityFeed from "./ActivityFeed";
 import MarketTrendsSection from "./MarketTrendsSection";
+import CarouselCards from "@/components/kokonutui/carousel-cards";
 import {
   type DashboardStats,
   type DashboardUser,
@@ -75,6 +76,15 @@ export default function DashboardClient({
         title: t("priceAlerts"),
         detail: t("monitoringMarkets"),
         status: "warning",
+      });
+    }
+    if (stats.favoriteCount > 0) {
+      items.push({
+        id: "favorites",
+        type: "supplier",
+        title: t("verifiedSuppliers"),
+        detail: String(stats.favoriteCount),
+        status: "info",
       });
     }
     if (stats.unreadNotifications > 0) {
@@ -158,17 +168,23 @@ export default function DashboardClient({
                 empty={materials.length === 0}
               />
               <StatCard
-                label={t("deliveryRisk")}
-                value="—"
-                sub={t("notEnoughData")}
-                icon={Shield}
-                empty
+                label="Saved"
+                value={String(stats.favoriteCount)}
+                sub={
+                  stats.favoriteCount > 0
+                    ? t("totalIndexed", { count: stats.favoriteCount })
+                    : t("notEnoughData")
+                }
+                icon={Heart}
+                href="/saved"
+                empty={stats.favoriteCount === 0}
               />
               <StatCard
-                label={t("procurementSavings")}
+                label="Products"
                 value="—"
-                sub={t("notEnoughData")}
-                icon={DollarSign}
+                sub={t("askAssistantToStart")}
+                icon={Package}
+                href="/products"
                 empty
               />
               <StatCard
@@ -184,6 +200,8 @@ export default function DashboardClient({
                 empty
               />
             </div>
+
+            <CarouselCards title="Phase-1 mills" />
 
             <div className="grid gap-6 xl:grid-cols-12">
               <div className="space-y-6 xl:col-span-8">

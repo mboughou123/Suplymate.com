@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import BeamsBackground from "@/components/kokonutui/beams-background";
 
 type AuthFormLayoutProps = {
   title: string;
@@ -19,8 +20,9 @@ export default function AuthFormLayout({
   const t = useTranslations("navigation");
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F7F8FA]">
-      <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center px-4 py-12">
+    <div className="relative flex min-h-screen flex-col bg-[#F7F8FA]">
+      <BeamsBackground className="pointer-events-none absolute inset-0" intensity="subtle" />
+      <div className="relative z-10 mx-auto flex w-full max-w-md flex-1 flex-col justify-center px-4 py-12">
         <Link href="/" className="mb-8 flex items-center justify-center gap-2.5">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold text-base font-bold text-ink">
             S

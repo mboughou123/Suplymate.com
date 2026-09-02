@@ -9,6 +9,7 @@ import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
 import SupplierFilters, {
   type SupplierFilterState,
 } from "@/components/SupplierFilters";
+import { compareForDirectory } from "@/lib/supplier-directory-sort";
 import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
 
 type Props = {
@@ -86,18 +87,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
           s.products.some((p) => p.toLowerCase().includes(q))
         );
       })
-      .sort((a, b) => {
-        // Image-bearing suppliers first (empty cards look untrustworthy),
-        // then by Suplymate score, then alphabetically.
-        const hasImg = (s: Supplier) =>
-          s.imageUrl || (s.supplierImages && s.supplierImages.length > 0) ? 1 : 0;
-        const img = hasImg(b) - hasImg(a);
-        if (img) return img;
-        const score =
-          (b.score ?? b.reliabilityScore) - (a.score ?? a.reliabilityScore);
-        if (score) return score;
-        return a.name.localeCompare(b.name);
-      });
+      .sort(compareForDirectory);
   }, [filters, initialSuppliers]);
 
   // Reset to page 1 and show a brief loading state whenever filters change.

@@ -135,16 +135,18 @@ export type ProductSupplierCard = {
   name: string;
   logoText: string;
   logoGradient: string;
+  logoUrl?: string;
+  logoDarkChip?: boolean;
   country: string;
   city: string;
   flag: string;
   verified: boolean;
-  rating: number;
-  reviewCount: number;
-  responseTime: string;
-  yearsInBusiness: number;
-  onTimeDelivery: number;
-  reorderRate: number;
+  rating: number | null;
+  reviewCount: number | null;
+  responseTime?: string;
+  yearsInBusiness: number | null;
+  onTimeDelivery?: number | null;
+  reorderRate?: number | null;
   href: string;
 };
 
@@ -632,16 +634,15 @@ export function getProductDetail(product: Product): ProductDetail {
     name: sd.name,
     logoText: sd.logoText,
     logoGradient: sd.logoGradient,
+    logoUrl: sd.logoUrl,
+    logoDarkChip: sd.logoDarkChip,
     country: sd.country,
     city: sd.city,
     flag: sd.flag,
-    verified: sd.verified,
+    verified: sd.verified && !sd.likelyTrader,
     rating: sd.rating,
     reviewCount: sd.reviewCount,
-    responseTime: sd.responseTime,
     yearsInBusiness: sd.yearsInBusiness,
-    onTimeDelivery: sd.onTimeDelivery,
-    reorderRate: sd.reorderRate,
     href: `/supplier/${sd.id}`,
   };
 

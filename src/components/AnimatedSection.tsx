@@ -1,7 +1,9 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { createElement, type ReactNode } from "react";
+
+type AnimatedSectionTag = "div" | "section" | "article" | "li" | "span";
 
 type AnimatedSectionProps = {
   children: ReactNode;
@@ -10,7 +12,7 @@ type AnimatedSectionProps = {
   delay?: number;
   /** Animation direction */
   from?: "up" | "down" | "left" | "right" | "scale";
-  as?: "div" | "section" | "article" | "li" | "span";
+  as?: AnimatedSectionTag;
 };
 
 const OFFSET = 28;
@@ -49,9 +51,10 @@ export default function AnimatedSection({
   const reduceMotion = useReducedMotion();
   const MotionTag = motion[as] as typeof motion.div;
 
+  // Use createElement for the static tag path — casting intrinsic tags to
+  // ElementType breaks under @types/three (children: never / giant unions).
   if (reduceMotion) {
-    const Tag = as as React.ElementType;
-    return <Tag className={className}>{children}</Tag>;
+    return createElement(as, { className }, children);
   }
 
   return (

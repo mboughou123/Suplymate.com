@@ -3,6 +3,7 @@ import {
   sampleScrapedProducts,
   type ScrapedProduct,
 } from "@/data/scraped-products";
+import { phase1Products } from "@/data/phase1-products";
 import type { Product, ProductCategory } from "@/data/products";
 import { persistProductImage } from "@/lib/image-storage";
 
@@ -19,6 +20,10 @@ let seeded = false;
 function ensureSeed() {
   if (seeded) return;
   for (const p of sampleScrapedProducts) {
+    if (!overlay.has(p.id)) overlay.set(p.id, { ...p });
+  }
+  // Phase-1 factory pack products (approved, no fabricated prices).
+  for (const p of phase1Products) {
     if (!overlay.has(p.id)) overlay.set(p.id, { ...p });
   }
   seeded = true;
@@ -117,7 +122,14 @@ export async function listScrapedProducts(): Promise<ScrapedProduct[]> {
     const rows = await prisma.scrapedProduct.findMany({
       orderBy: { scrapedAt: "desc" },
     });
-    if (rows.length) return rows.map((r) => mapRow(r as ScrapedRow));
+    if (rows.length) {
+      // Overlay the phase-1 pack so curated products appear without a prod DB import.
+      const byId = new Map(rows.map((r) => [r.id, mapRow(r as ScrapedRow)]));
+      for (const p of phase1Products) byId.set(p.id, p);
+      return [...byId.values()].sort((a, b) =>
+        b.scrapedAt.localeCompare(a.scrapedAt)
+      );
+    }
   } catch {
     // table not provisioned — fall back to the in-memory overlay/seed
   }

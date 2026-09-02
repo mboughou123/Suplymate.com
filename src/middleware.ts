@@ -74,7 +74,9 @@ export default async function middleware(req: NextRequest) {
 
     if (isProtectedPath(pathname) && !isLoggedIn) {
       const loginUrl = new URL(`/${locale}/login`, req.nextUrl);
-      loginUrl.searchParams.set("callbackUrl", pathname);
+      // Store locale-stripped path so LoginForm can feed next-intl's router
+      // (which expects `/dashboard`, not `/en/dashboard`).
+      loginUrl.searchParams.set("callbackUrl", path);
       return NextResponse.redirect(loginUrl);
     }
 

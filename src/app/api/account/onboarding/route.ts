@@ -11,19 +11,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const body = await request.json().catch(() => ({}));
+  const skip = Boolean(body.skip);
   const company = String(body.company || "").trim();
   const jobTitle = body.jobTitle ? String(body.jobTitle).trim() : null;
   const role = body.role === "supplier" ? "supplier" : "buyer";
 
-  if (!company) {
+  if (!skip && !company) {
     return NextResponse.json({ error: "Company name is required" }, { status: 400 });
   }
 
   await prisma.user.update({
     where: { id: session.user.id },
     data: {
-      company,
-      jobTitle,
+      ...(company ? { company } : {}),
+      ...(jobTitle ? { jobTitle } : {}),
       role,
       onboardedAt: new Date(),
     },
@@ -32,10 +33,10 @@ export async function POST(request: Request) {
   await recordAudit({
     actorId: session.user.id,
     actor: session.user.email,
-    action: "user.onboard",
+    action: skip ? "user.onboard.skip" : "user.onboard",
     targetType: "USER",
     targetId: session.user.id,
-    detail: { role, company },
+    detail: { role, company: company || null, skip },
   });
 
   return NextResponse.json({ ok: true });

@@ -21,9 +21,9 @@ export default function StatCard({
   empty = false,
 }: Props) {
   const card = (
-    <div className="group h-full rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-gold/40 hover:shadow-card">
+    <div className="group h-full rounded-2xl border border-white/80 bg-white/80 p-5 shadow-sm backdrop-blur transition hover:border-cyan/30 hover:shadow-card">
       <div className="flex items-center justify-between">
-        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold/10 text-gold">
+        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy/5 text-navy">
           <Icon className="h-[18px] w-[18px]" aria-hidden />
         </span>
       </div>

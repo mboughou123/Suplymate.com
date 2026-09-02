@@ -165,13 +165,17 @@ export default async function SupplierProfilePage({
       addressCountry: base.country,
     },
     ...(base.website ? { sameAs: [base.website] } : {}),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: base.rating.toFixed(1),
-      reviewCount: base.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    ...(base.hasRealRating && base.rating != null
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: base.rating.toFixed(1),
+            reviewCount: base.reviewCount ?? 1,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
     makesOffer: profile.products.slice(0, 6).map((p) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Product", name: p.name },
@@ -376,7 +380,7 @@ export default async function SupplierProfilePage({
             </div>
           </section>
 
-          <ReviewsSection profile={profile} />
+          {profile.reviews.length > 0 && <ReviewsSection profile={profile} />}
         </div>
         <aside className="hidden lg:block">
           <div className="sticky top-6 py-8 sm:py-10">

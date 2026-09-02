@@ -8,40 +8,40 @@ import {
 } from "@/lib/scraped-products-store";
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
+import { phase1Suppliers } from "@/data/phase1-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
+import { compareForDirectory } from "@/lib/supplier-directory-sort";
 
-// A supplier "has an image" if it carries a primary photo or any gallery image.
-// Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
-// lead the directory.
-function supplierHasImage(s: Supplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
-}
-
-// Public directory ordering: image-bearing first, then by Suplymate score
-// (falling back to reliabilityScore), then alphabetically. Used so the server
-// and the client agree on ordering.
-export function compareForDirectory(a: Supplier, b: Supplier): number {
-  const img = Number(supplierHasImage(b)) - Number(supplierHasImage(a));
-  if (img) return img;
-  const score = (b.score ?? b.reliabilityScore ?? 0) - (a.score ?? a.reliabilityScore ?? 0);
-  if (score) return score;
-  return a.name.localeCompare(b.name);
-}
+export { compareForDirectory } from "@/lib/supplier-directory-sort";
 
 // Prefer the real Outscraper dataset (public Google Maps data); fall back to the
 // generated directory only if it's somehow empty.
 const directoryFallback =
   outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers;
 
+/**
+ * Merge supplier lists by id. Later lists win so the phase-1 factory pack can
+ * overlay richer photos/descriptions onto Outscraper/DB rows without a prod
+ * DB import.
+ */
+function mergeSuppliersById(...lists: Supplier[][]): Supplier[] {
+  const byId = new Map<string, Supplier>();
+  for (const list of lists) {
+    for (const s of list) byId.set(s.id, s);
+  }
+  return [...byId.values()];
+}
+
 // Every supplier known to the deterministic (DB-less) fallback path. The union
 // powers profile lookups and static params so links resolve whether the slug
 // comes from the live directory, the generated verified set, or the legacy seed.
 function allFallbackSuppliers(): Supplier[] {
-  const byId = new Map<string, Supplier>();
-  for (const s of [...directoryFallback, ...verifiedSuppliers, ...legacySuppliers]) {
-    if (!byId.has(s.id)) byId.set(s.id, s);
-  }
-  return [...byId.values()];
+  return mergeSuppliersById(
+    directoryFallback,
+    verifiedSuppliers,
+    legacySuppliers,
+    phase1Suppliers
+  );
 }
 
 export function getFallbackSupplierIds(): string[] {
@@ -70,15 +70,20 @@ export async function getSuppliersFromDb() {
       orderBy: [{ score: "desc" }, { name: "asc" }],
     });
     // Fall back to the verified directory if the DB hasn't been imported yet
-    // (or only has the legacy seed rows).
-    if (rows.length < 50) return [...directoryFallback].sort(compareForDirectory);
+    // (or only has the legacy seed rows). Overlay the phase-1 factory pack so
+    // curated local photos land without a production DB deploy.
+    if (rows.length < 50) {
+      return mergeSuppliersById(directoryFallback, phase1Suppliers).sort(
+        compareForDirectory
+      );
+    }
     // Never surface pending/rejected/needs_info imports on public surfaces.
-    return rows
-      .map(mapSupplier)
-      .filter(isPubliclyVisible)
-      .sort(compareForDirectory);
+    const fromDb = rows.map(mapSupplier).filter(isPubliclyVisible);
+    return mergeSuppliersById(fromDb, phase1Suppliers).sort(compareForDirectory);
   } catch {
-    return [...directoryFallback].sort(compareForDirectory);
+    return mergeSuppliersById(directoryFallback, phase1Suppliers).sort(
+      compareForDirectory
+    );
   }
 }
 

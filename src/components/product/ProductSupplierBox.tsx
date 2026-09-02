@@ -9,10 +9,16 @@ export default function ProductSupplierBox({
   supplier: ProductSupplierCard;
 }) {
   const metrics = [
-    { icon: Clock, label: "Response", value: supplier.responseTime },
-    { icon: Truck, label: "On-time", value: `${supplier.onTimeDelivery}%` },
-    { icon: Repeat, label: "Reorder rate", value: `${supplier.reorderRate}%` },
-  ];
+    supplier.responseTime
+      ? { icon: Clock, label: "Response", value: supplier.responseTime }
+      : null,
+    supplier.onTimeDelivery != null
+      ? { icon: Truck, label: "On-time", value: `${supplier.onTimeDelivery}%` }
+      : null,
+    supplier.reorderRate != null
+      ? { icon: Repeat, label: "Reorder rate", value: `${supplier.reorderRate}%` }
+      : null,
+  ].filter((m): m is NonNullable<typeof m> => Boolean(m));
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
@@ -43,18 +49,25 @@ export default function ProductSupplierBox({
               <span aria-hidden>{supplier.flag}</span>
               {supplier.city}, {supplier.country}
             </span>
-            <span className="inline-flex items-center gap-1 font-semibold text-ink">
-              <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-              {supplier.rating.toFixed(1)}
-              <span className="font-normal text-ink-dim">
-                ({supplier.reviewCount.toLocaleString()})
+            {supplier.rating != null && (
+              <span className="inline-flex items-center gap-1 font-semibold text-ink">
+                <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                {supplier.rating.toFixed(1)}
+                {supplier.reviewCount != null && (
+                  <span className="font-normal text-ink-dim">
+                    ({supplier.reviewCount.toLocaleString()})
+                  </span>
+                )}
               </span>
-            </span>
-            <span className="text-ink-dim">{supplier.yearsInBusiness} yrs in business</span>
+            )}
+            {supplier.yearsInBusiness != null && (
+              <span className="text-ink-dim">{supplier.yearsInBusiness} yrs in business</span>
+            )}
           </div>
         </div>
       </div>
 
+      {metrics.length > 0 && (
       <div className="mt-5 grid grid-cols-3 gap-3">
         {metrics.map((m) => (
           <div key={m.label} className="rounded-xl bg-slate-50 p-3 text-center">
@@ -64,6 +77,7 @@ export default function ProductSupplierBox({
           </div>
         ))}
       </div>
+      )}
 
       <div className="mt-5 flex flex-wrap gap-2">
         <ContactSupplierButton
