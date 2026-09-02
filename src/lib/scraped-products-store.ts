@@ -4,7 +4,7 @@ import {
   type ScrapedProduct,
 } from "@/data/scraped-products";
 import { phase1Products } from "@/data/phase1-products";
-import { listerBatch1Products } from "@/lib/lister-product-batch1";
+import { listerCatalogueProducts } from "@/lib/lister-catalogue";
 import type { Product, ProductCategory } from "@/data/products";
 import { persistProductImage } from "@/lib/image-storage";
 
@@ -27,9 +27,9 @@ function ensureSeed() {
   for (const p of phase1Products) {
     if (!overlay.has(p.id)) overlay.set(p.id, { ...p });
   }
-  // Lister batch 1 SKUs with curated local photos — overwrite by id and sit
+  // Lister batch SKUs with curated photos — overwrite by id and sit
   // above generic phase-1 name tiles when sorting by scrapedAt.
-  for (const p of listerBatch1Products) {
+  for (const p of listerCatalogueProducts) {
     overlay.set(p.id, { ...p });
   }
   seeded = true;

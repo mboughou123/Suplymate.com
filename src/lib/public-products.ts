@@ -24,6 +24,7 @@ import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
+import { isListerProductId } from "@/lib/lister-media";
 
 export type PublicProductCard = {
   id: string;
@@ -201,7 +202,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         moq: r.moq ?? null,
         shippingTime: r.shippingTime ?? null,
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
-        rankBoost: r.id.startsWith("lister-b1-") ? 100 : hasRealProductImage(imageInput) ? 10 : 0,
+        rankBoost: isListerProductId(r.id) ? 100 : hasRealProductImage(imageInput) ? 10 : 0,
       };
     });
 
@@ -320,7 +321,7 @@ function staticToCard(p: Product): PublicProductCard {
     moq: p.moq ?? null,
     shippingTime: p.shippingTime ?? null,
     productUrl: p.productUrl ?? null,
-    rankBoost: p.id.startsWith("lister-b1-") ? 100 : hasPhoto ? 10 : 0,
+    rankBoost: isListerProductId(p.id) ? 100 : hasPhoto ? 10 : 0,
   };
 }
 

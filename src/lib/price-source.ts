@@ -35,6 +35,7 @@ const CAPTIONS: Partial<Record<PriceSourceType, string>> = {
   dealer_list: "Dealer list (excl. GST) — not mill FOB",
   printed_mrp: "Printed MRP — not a dealer quote",
   mill_estimate: "Mill estimate — not a firm FOB offer",
+  mill_list: "Published mill list price",
   listed_fob: "Listed FOB — confirm with the mill",
   retail_eshop: "Retail / e-shop price — not mill FOB",
   marketplace_listing: "Marketplace listing — not mill FOB",

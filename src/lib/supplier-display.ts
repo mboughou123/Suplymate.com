@@ -5,7 +5,7 @@ import {
   isPhase1Supplier,
   logoNeedsDarkChip,
 } from "@/lib/phase1";
-import { listerProductsForSupplier } from "@/lib/lister-product-batch1";
+import { listerProductsForSupplier } from "@/lib/lister-catalogue";
 import { formatPrice } from "@/config/commerce";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
 
