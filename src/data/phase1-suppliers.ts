@@ -2656,7 +2656,7 @@ export const phase1Suppliers: Supplier[] =
     "reliabilityScore": 44
   },
   {
-    "id": "shabouk-printing-and-packaging-ae",
+    "id": "dongguan-caicheng-printing-factory-cn",
     "name": "Dongguan Caicheng Printing Factory",
     "industry": "Plastics & Packaging",
     "category": "Packaging",
@@ -2664,17 +2664,12 @@ export const phase1Suppliers: Supplier[] =
     "country": "China",
     "city": "Dongguan",
     "website": "https://www.ccprinting.cn/",
-    "phone": "+971 56 398 0456",
     "logoUrl": "https://packccp.com/wp-content/uploads/2026/07/pacckccp-factory-1.webp",
     "imageUrl": "/images/suppliers/phase1/packaging/caicheng-1.jpg",
     "supplierImages": [
       "/images/suppliers/phase1/packaging/caicheng-1.jpg",
       "/images/suppliers/phase1/packaging/caicheng-2.jpg"
     ],
-    "googleRating": 4.9,
-    "googleReviews": 232,
-    "rating": 4.9,
-    "reviewCount": 232,
     "verified": true,
     "description": "Dongguan Caicheng Printing Factory (export brand PACKCCP) is listed on Made-in-China as a Manufacturer/Factory of paper boxes, gift boxes and paper bags, established in 1996 at Luwu Industrial Zone, Chashan Town, Dongguan. The Made-in-China profile and company sites describe Heidelberg offset printing, lamination, foil stamping and box-gluing lines, with ISO 9001, FSC and Sedex/BSCI stated. PACKCCP says it exports to 50+ countries including the UK, Australia, Middle East, Russia and Singapore, and lists MOQ from 500 pieces on custom box/bag listings. Factory and certificate images are published on packccp.com.",
     "products": [
@@ -2688,7 +2683,6 @@ export const phase1Suppliers: Supplier[] =
       "Africa"
     ],
     "moq": "500 pieces (Made-in-China and PACKCCP listings)",
-    "address": "25.376298050531396 - 55.489411309857275 Beirut St - industrial area 1 - Ajman - United Arab Emirates",
     "sourceUrl": "https://www.made-in-china.com/showroom/christinaccprinting/",
     "certificationsDetailed": [
       {
@@ -2787,7 +2781,7 @@ export const phase1Suppliers: Supplier[] =
     "reliabilityScore": 44
   },
   {
-    "id": "shabouk-printing-and-packaging-ae",
+    "id": "shangyue-shanghai-printing-co-ltd-cn",
     "name": "Shangyue (Shanghai) Printing Co., Ltd.",
     "industry": "Plastics & Packaging",
     "category": "Packaging",
@@ -2795,17 +2789,12 @@ export const phase1Suppliers: Supplier[] =
     "country": "China",
     "city": "Shanghai",
     "website": "https://www.sh-sylabel.com/",
-    "phone": "+971 56 398 0456",
     "logoUrl": "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/banner4.jpg",
     "imageUrl": "/images/suppliers/phase1/packaging/shangyue-1.jpg",
     "supplierImages": [
       "/images/suppliers/phase1/packaging/shangyue-1.jpg",
       "/images/suppliers/phase1/packaging/shangyue-2.jpg"
     ],
-    "googleRating": 4.9,
-    "googleReviews": 232,
-    "rating": 4.9,
-    "reviewCount": 232,
     "verified": true,
     "description": "Shangyue (Shanghai) Printing Co., Ltd. (Sy Label) is a self-adhesive label manufacturer established in 2001, with the factory at Building A, No. 1688 Minta Road, Shihudang Town, Songjiang District, Shanghai. Made-in-China lists ISO 9001 and FSC; the company site also states FSC CoC and in-house coating plus converting (thermal, laser/inkjet, and printed labels). The firm states additional plants in Shenzhen, Kunshan and Jinan. U.S. import records on ImportYeti use the same Songjiang factory address, supporting that it is a producing exporter rather than a trading desk.",
     "products": [
@@ -2819,7 +2808,6 @@ export const phase1Suppliers: Supplier[] =
       "Africa"
     ],
     "moq": "2,000 units",
-    "address": "25.376298050531396 - 55.489411309857275 Beirut St - industrial area 1 - Ajman - United Arab Emirates",
     "sourceUrl": "https://www.made-in-china.com/showroom/afinazhang/",
     "certificationsDetailed": [
       {
