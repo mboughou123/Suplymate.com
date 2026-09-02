@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
-import { getFactoryPhotoUrl } from "@/lib/phase1";
+import { collectFactoryPhotoUrls, getFactoryPhotoUrl } from "@/lib/phase1";
 import {
   LOGO_SLUG_BY_ID,
   localLogoPathForSupplierId,
@@ -123,6 +123,7 @@ describe("factory photos and local logos", () => {
     expect(getFactoryPhotoUrl(magicrete!)).toBeUndefined();
     const d = toDisplaySupplier(magicrete!);
     expect(d.factoryPhotoUrl).toBeUndefined();
+    expect(collectFactoryPhotoUrls(magicrete!)).toEqual([]);
   });
 
   it("maps every local logo-{slug}.png pack file onto a known mill id", () => {

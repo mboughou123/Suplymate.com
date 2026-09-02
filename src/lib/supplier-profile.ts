@@ -12,10 +12,10 @@ import type { Supplier } from "@/data/suppliers";
 import { scoreSupplier } from "@/lib/supplier-ranking";
 import { toDisplaySupplier, inferBusinessType, type DisplaySupplier } from "@/lib/supplier-display";
 import {
-  isRealImageUrl,
   getSupplierFallbackImage,
   getProductFallbackImage,
 } from "@/lib/image-fallback";
+import { collectFactoryPhotoUrls, isPhase1Supplier } from "@/lib/phase1";
 import {
   calculateSupplierCompleteness,
   mediaQualityFor,
@@ -367,9 +367,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   // s.supplierImages) → category-based factory/warehouse fallback → branded
   // placeholder. Never an empty gallery. Suppliers with no website rely on the
   // Google Places photos (collected at import); we never scrape their site.
-  const realSupplierPhotos = [s.imageUrl, ...(s.supplierImages ?? [])].filter(
-    (u): u is string => isRealImageUrl(u)
-  );
+  const realSupplierPhotos = collectFactoryPhotoUrls(s);
   const categoryMediaFallback = getSupplierFallbackImage(
     s.category ?? s.industry,
     s.name
@@ -402,7 +400,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   /* --- Products --- */
   const productCats = ["Featured", "Best seller", "New", "Bulk", "Custom"];
   const baseProducts = s.products.length ? s.products : base.products.map((p) => p.name);
-  const realMoq = (s.moq ?? "").trim();
+  const realMoq = isPhase1Supplier(s) ? (s.moq ?? "").trim() : "";
   const products: ProfileProduct[] = baseProducts.slice(0, 8).map((name, i) => {
     const pr = makeRng(hashString(`${s.id}-product-${i}`));
     const realPhoto = realSupplierPhotos.length

@@ -9,6 +9,7 @@ import type { ProductCategory } from "@/data/products";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
 import { defaultMoqForCategory } from "@/data/supplier-bundle";
 import type { SupplierCategory } from "@/data/suppliers";
+import { collectFactoryPhotoUrls } from "@/lib/phase1";
 
 function slugifyProduct(name: string): string {
   return name
@@ -27,11 +28,7 @@ function productsFromPhase1(): ScrapedProduct[] {
   for (const s of phase1Suppliers) {
     const category = (s.category ?? "Industrial Parts") as ProductCategory;
     const moq = s.moq || defaultMoqForCategory(s.category as SupplierCategory | undefined);
-    const gallery = s.supplierImages?.length
-      ? s.supplierImages
-      : s.imageUrl
-        ? [s.imageUrl]
-        : [];
+    const gallery = collectFactoryPhotoUrls(s);
     const names = s.products?.length ? s.products : [`${s.name} industrial supply`];
 
     for (const productName of names) {
