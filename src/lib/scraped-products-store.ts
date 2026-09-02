@@ -4,6 +4,7 @@ import {
   type ScrapedProduct,
 } from "@/data/scraped-products";
 import { phase1Products } from "@/data/phase1-products";
+import { listerBatch1Products } from "@/lib/lister-product-batch1";
 import type { Product, ProductCategory } from "@/data/products";
 import { persistProductImage } from "@/lib/image-storage";
 
@@ -25,6 +26,11 @@ function ensureSeed() {
   // Phase-1 factory pack products (approved, no fabricated prices).
   for (const p of phase1Products) {
     if (!overlay.has(p.id)) overlay.set(p.id, { ...p });
+  }
+  // Lister batch 1 SKUs with curated local photos — overwrite by id and sit
+  // above generic phase-1 name tiles when sorting by scrapedAt.
+  for (const p of listerBatch1Products) {
+    overlay.set(p.id, { ...p });
   }
   seeded = true;
 }
@@ -123,9 +129,10 @@ export async function listScrapedProducts(): Promise<ScrapedProduct[]> {
       orderBy: { scrapedAt: "desc" },
     });
     if (rows.length) {
-      // Overlay the phase-1 pack so curated products appear without a prod DB import.
+      // Overlay phase-1 + Lister batch so curated products appear without a prod DB import.
       const byId = new Map(rows.map((r) => [r.id, mapRow(r as ScrapedRow)]));
       for (const p of phase1Products) byId.set(p.id, p);
+      for (const p of listerBatch1Products) byId.set(p.id, p);
       return [...byId.values()].sort((a, b) =>
         b.scrapedAt.localeCompare(a.scrapedAt)
       );

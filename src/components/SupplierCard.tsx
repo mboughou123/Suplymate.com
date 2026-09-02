@@ -153,10 +153,19 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                   className="rounded-lg border border-slate-200 p-1.5"
                 >
                   <div
-                    className="mb-1.5 flex h-14 items-center justify-center rounded-md"
-                    style={{ backgroundImage: p.gradient }}
+                    className="relative mb-1.5 flex h-14 items-center justify-center overflow-hidden rounded-md"
+                    style={p.imageUrl ? undefined : { backgroundImage: p.gradient }}
                   >
-                    <Package className="h-5 w-5 text-cyan" aria-hidden />
+                    {p.imageUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={p.imageUrl}
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : (
+                      <Package className="h-5 w-5 text-cyan" aria-hidden />
+                    )}
                   </div>
                   <p
                     className="truncate text-[11px] font-semibold text-ink"

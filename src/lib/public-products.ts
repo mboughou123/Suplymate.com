@@ -40,9 +40,13 @@ export type PublicProductCard = {
   /** Commissioned price label, or null when no public price is available. */
   priceLabel: string | null;
   priceUnit: string | null;
+  /** Sourced price footnote / provenance (e.g. Lister price_note). */
+  priceNote: string | null;
   moq: string | null;
   shippingTime: string | null;
   productUrl: string | null;
+  /** Higher = show earlier in the default catalogue (Lister photos first). */
+  rankBoost: number;
 };
 
 export type PublicProductsQuery = {
@@ -164,6 +168,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         productName: r.name,
         category: r.category,
       };
+      const specs = safeObject(r.specifications);
       return {
         id: r.id,
         name: r.name,
@@ -177,9 +182,11 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         hasRealPhoto: hasRealProductImage(imageInput),
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
+        priceNote: typeof specs["Price note"] === "string" ? specs["Price note"] : null,
         moq: r.moq ?? null,
         shippingTime: r.shippingTime ?? null,
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
+        rankBoost: r.id.startsWith("lister-b1-") ? 100 : hasRealProductImage(imageInput) ? 10 : 0,
       };
     });
 
@@ -204,6 +211,18 @@ function safeArray(value: string | null | undefined): string[] {
     return Array.isArray(v) ? v : [];
   } catch {
     return [];
+  }
+}
+
+function safeObject(value: string | null | undefined): Record<string, string> {
+  if (!value) return {};
+  try {
+    const v = JSON.parse(value);
+    return v && typeof v === "object" && !Array.isArray(v)
+      ? (v as Record<string, string>)
+      : {};
+  } catch {
+    return {};
   }
 }
 
@@ -257,6 +276,11 @@ function staticToCard(p: Product): PublicProductCard {
       : p.hasPublicPrice && hasSourcedPrice(p.priceMin)
         ? p.priceMin
         : null;
+  const priceNote =
+    typeof p.specifications?.["Price note"] === "string"
+      ? p.specifications["Price note"]
+      : null;
+  const hasPhoto = hasRealProductImage(imageInput);
   return {
     id: p.id,
     name: p.name,
@@ -267,12 +291,14 @@ function staticToCard(p: Product): PublicProductCard {
     supplierVisible: Boolean(p.supplierId),
     verified: false,
     imageUrl: getBestProductImage(imageInput),
-    hasRealPhoto: hasRealProductImage(imageInput),
+    hasRealPhoto: hasPhoto,
     priceLabel: priceLabelFor(base, p.currency, p.unit ?? p.priceUnit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
+    priceNote,
     moq: p.moq ?? null,
     shippingTime: p.shippingTime ?? null,
     productUrl: p.productUrl ?? null,
+    rankBoost: p.id.startsWith("lister-b1-") ? 100 : hasPhoto ? 10 : 0,
   };
 }
 
@@ -296,6 +322,12 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     if (q.verifiedOnly && !c.verified) return false;
     if (q.hasPrice && !c.priceLabel) return false;
     return true;
+  });
+
+  // Lister batch + real-photo SKUs first so the grid opens with photos, not icons.
+  cards.sort((a, b) => {
+    if (b.rankBoost !== a.rankBoost) return b.rankBoost - a.rankBoost;
+    return a.name.localeCompare(b.name);
   });
 
   const total = cards.length;

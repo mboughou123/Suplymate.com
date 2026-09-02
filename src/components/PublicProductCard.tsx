@@ -71,6 +71,14 @@ export default function PublicProductCard({ data: d }: Props) {
                 {t("price")}
               </p>
               <p className="text-lg font-bold text-cyan">{d.priceLabel}</p>
+              {d.priceNote && (
+                <p
+                  className="mt-1 line-clamp-2 text-[10px] leading-snug text-ink-dim"
+                  title={d.priceNote}
+                >
+                  {d.priceNote}
+                </p>
+              )}
             </>
           ) : (
             <>
@@ -79,6 +87,14 @@ export default function PublicProductCard({ data: d }: Props) {
               </p>
               <p className="text-lg font-bold text-cyan">{tc("rfq")}</p>
               <p className="mt-0.5 text-xs text-ink-muted">{tc("priceOnRequest")}</p>
+              {d.priceNote && (
+                <p
+                  className="mt-1 line-clamp-2 text-[10px] leading-snug text-ink-dim"
+                  title={d.priceNote}
+                >
+                  {d.priceNote}
+                </p>
+              )}
             </>
           )}
         </div>
