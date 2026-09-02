@@ -1,6 +1,8 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { phase1Suppliers } from "@/data/phase1-suppliers";
+import { getSupplierProfile } from "@/lib/supplier-profile";
 import {
   CERT_GALLERY_BLOCKED_SLUGS,
   CERT_SUPPLIER_ID_BY_SLUG,
@@ -61,6 +63,23 @@ describe("mill certificate scans", () => {
     ).toBeGreaterThanOrEqual(8);
     expect(listMillCertScansForSupplier("aj-steel-icad2-ae").length).toBeGreaterThan(
       0,
+    );
+  });
+
+  it("does not invent ISO badges on not_found mill profiles", () => {
+    const ferrite = phase1Suppliers.find(
+      (s) => s.id === "ferrite-structural-steels-pvt-ltd-panvel",
+    )!;
+    expect(getSupplierProfile(ferrite).certifications).toEqual([]);
+
+    const apl = phase1Suppliers.find((s) => s.id === "apl-apollo-tubes-limited-in")!;
+    expect(getSupplierProfile(apl).certifications).toEqual([]);
+
+    const gharbia = phase1Suppliers.find(
+      (s) => s.id === "al-gharbia-pipe-company-llc-ae",
+    )!;
+    expect(getSupplierProfile(gharbia).certifications.length).toBeGreaterThanOrEqual(
+      7,
     );
   });
 });

@@ -21,6 +21,7 @@ import {
   mediaQualityFor,
   type MediaQuality,
 } from "@/lib/supplier-completeness";
+import { listMillCertScansForSupplier } from "@/lib/mill-cert-scans";
 
 /* ------------------------------------------------------------------ */
 /* Seeded deterministic randomness                                     */
@@ -49,20 +50,6 @@ function makeRng(seed: number) {
 
 function pick<T>(rng: () => number, arr: readonly T[]): T {
   return arr[Math.floor(rng() * arr.length) % arr.length];
-}
-
-function pickSome<T>(rng: () => number, arr: readonly T[], min: number, max: number): T[] {
-  const count = Math.min(arr.length, min + Math.floor(rng() * (max - min + 1)));
-  const pool = [...arr];
-  const out: T[] = [];
-  for (let i = 0; i < count && pool.length; i++) {
-    out.push(pool.splice(Math.floor(rng() * pool.length), 1)[0]);
-  }
-  return out;
-}
-
-function intBetween(rng: () => number, min: number, max: number): number {
-  return min + Math.floor(rng() * (max - min + 1));
 }
 
 /* ------------------------------------------------------------------ */
@@ -234,17 +221,7 @@ export type SupplierProfile = {
 /* Source pools                                                        */
 /* ------------------------------------------------------------------ */
 
-const CERT_POOL: { code: string; name: string; authority: string }[] = [
-  { code: "ISO 9001", name: "Quality Management System", authority: "Bureau Veritas" },
-  { code: "ISO 14001", name: "Environmental Management", authority: "SGS" },
-  { code: "CE", name: "European Conformity", authority: "TÜV Rheinland" },
-  { code: "RoHS", name: "Hazardous Substances Compliance", authority: "Intertek" },
-  { code: "SGS", name: "Verified Supplier Audit", authority: "SGS Group" },
-  { code: "Intertek", name: "Factory Inspection Report", authority: "Intertek" },
-  { code: "FDA", name: "Food & Drug Compliance", authority: "US FDA" },
-  { code: "GMP", name: "Good Manufacturing Practice", authority: "NSF International" },
-  { code: "ISO 45001", name: "Occupational Health & Safety", authority: "DNV" },
-];
+/** Real mill scans only — never invent ISO badges for not_found mills. */
 
 /* ------------------------------------------------------------------ */
 /* Generator                                                           */
@@ -347,20 +324,18 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     productionCapacity: "",
   };
 
-  /* --- Certifications --- */
-  const certPool = pickSome(rng, CERT_POOL, 4, 6);
-  const certifications: Certification[] = certPool.map((c, i) => {
-    const issuedYear = intBetween(rng, 2019, 2024);
-    return {
+  /* --- Certifications (real scans only; no invented ISO badges) --- */
+  const certifications: Certification[] = listMillCertScansForSupplier(s.id).map(
+    (scan, i) => ({
       id: `${base.id}-cert-${i}`,
-      code: c.code,
-      name: c.name,
-      authority: c.authority,
-      issued: `${issuedYear}`,
-      expiry: `${issuedYear + 3}`,
-      verified: rng() > 0.18,
-    };
-  });
+      code: scan.certType || scan.name,
+      name: scan.name,
+      authority: "",
+      issued: "",
+      expiry: "",
+      verified: false,
+    }),
+  );
 
   /* --- Media gallery --- */
   // Image priority: supplier website/Google Places photos (s.imageUrl +
@@ -545,7 +520,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     description: realDescription,
     rating: base.rating,
     reviewCount: base.reviewCount,
-    certifications: s.certificationsDetailed ?? certifications,
+    certifications: certifications.length ? certifications : (s.certificationsDetailed ?? []),
     certificationImages: s.certificationImages,
   });
   // Suppliers with no website are NOT scraped (we only have their Google Places

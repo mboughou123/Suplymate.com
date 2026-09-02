@@ -22,7 +22,6 @@ import ClaimProfileButton from "@/components/supplier-profile/ClaimProfileButton
 import HeroSection from "@/components/supplier-profile/HeroSection";
 import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
 import CompanyProfileSection from "@/components/supplier-profile/CompanyProfileSection";
-import CertificationsSection from "@/components/supplier-profile/CertificationsSection";
 import CertificationGallery from "@/components/supplier-profile/CertificationGallery";
 import VerificationBadge from "@/components/VerificationBadge";
 import FactoryMediaSection from "@/components/supplier-profile/FactoryMediaSection";
@@ -145,18 +144,6 @@ export default async function SupplierProfilePage({
   // certificate Media is merged ahead of the legacy image URLs.
   const millCertScans = listMillCertScansForSupplier(supplier.id);
   const millCertImages = millCertScans.map((c) => c.publicPath);
-  const realCertImages = [
-    ...new Set([
-      ...millCertImages,
-      ...mediaCertImages,
-      ...(supplier.certificationImages ?? []),
-    ]),
-  ];
-  // Relational certifications with their admin-controlled verification status.
-  // Never shown if rejected. A certification is NOT verified just because an
-  // image exists — status is set by an admin.
-  const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
-    .filter((c) => c.status !== "rejected");
   const millCertDetails = millCertScans.map((c) => ({
     name: c.name,
     type: c.certType,
@@ -164,13 +151,18 @@ export default async function SupplierProfilePage({
     sourceUrl: c.sourceUrl,
     certificateUrl: null,
   }));
-  const realCertDetails = [
-    ...millCertDetails,
-    ...(supplier.certificationsDetailed ?? []),
+  // Collected-info gallery: admin/legacy URLs only. Mill scans live in the
+  // dedicated section so not_found mills never get invented ISO badges.
+  const realCertImages = [
+    ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
   ];
+  // Relational certifications with their admin-controlled verification status.
+  // Never shown if rejected. A certification is NOT verified just because an
+  // image exists — status is set by an admin.
+  const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
+    .filter((c) => c.status !== "rejected");
   const realSupplierImages = supplier.supplierImages ?? [];
-  const hasRealMedia =
-    realCertImages.length > 0 || realCertDetails.length > 0 || realSupplierImages.length > 0;
+  const hasRealMedia = realCertImages.length > 0 || realSupplierImages.length > 0;
 
   // schema.org structured data (Organization / LocalBusiness + AggregateRating)
   const jsonLd = {
@@ -268,7 +260,22 @@ export default async function SupplierProfilePage({
         <div className="min-w-0">
           <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
-          <CertificationsSection profile={profile} />
+          {millCertScans.length > 0 && (
+            <section className="py-8 sm:py-10">
+              <h2 className="font-display text-lg font-bold text-ink">
+                {t("certificationsTitle")}
+              </h2>
+              <p className="mt-1 text-sm text-ink-muted">
+                {t("notIndependentlyVerified")}
+              </p>
+              <div className="mt-4">
+                <CertificationGallery
+                  images={millCertImages}
+                  certifications={millCertDetails}
+                />
+              </div>
+            </section>
+          )}
           {isEmsteelSupplier(supplier.id) && (
             <section className="py-4">
               <p className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-ink-muted">
@@ -302,17 +309,16 @@ export default async function SupplierProfilePage({
               <p className="mt-1 text-sm text-ink-muted">
                 {supplier.sourceUrl ? t("collectedFromWebsite") : t("collectedFromImport")}
               </p>
-              {(realCertImages.length > 0 || realCertDetails.length > 0) && (
-                <p className="mt-2 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
-                  {t("notIndependentlyVerified")}
-                </p>
+              {realCertImages.length > 0 && (
+                <>
+                  <p className="mt-2 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
+                    {t("notIndependentlyVerified")}
+                  </p>
+                  <div className="mt-4">
+                    <CertificationGallery images={realCertImages} />
+                  </div>
+                </>
               )}
-              <div className="mt-4">
-                <CertificationGallery
-                  images={realCertImages}
-                  certifications={realCertDetails}
-                />
-              </div>
               {realSupplierImages.length > 0 && (
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
                   {realSupplierImages.slice(0, 12).map((src, i) => (
