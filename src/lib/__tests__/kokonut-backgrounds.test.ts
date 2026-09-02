@@ -35,7 +35,7 @@ describe("Kokonut background adapters", () => {
 });
 
 describe("homepage agent orb", () => {
-  it("lazy-loads beside the console and strips the source debug strings", () => {
+  it("uses translucent particles behind the console and strips source debug strings", () => {
     const section = readFileSync(
       resolve(process.cwd(), "src/components/HomeAiDemoSection.tsx"),
       "utf8"
@@ -46,12 +46,13 @@ describe("homepage agent orb", () => {
     );
     expect(section).toMatch("next/dynamic");
     expect(section).toMatch("ssr: false");
-    expect(section).toMatch("lg:grid-cols-12");
+    expect(section).toMatch('variant="background"');
+    expect(section).toMatch("backdrop-blur");
     expect(orb).not.toMatch("setInfo");
     expect(orb).not.toMatch("annotate");
     expect(orb).not.toMatch("Siri");
     expect(orb).toMatch("enableRotate={false}");
-    expect(orb).toMatch("7000");
-    expect(orb).toMatch("14000");
+    expect(orb).toMatch('variant?: "card" | "background"');
+    expect(orb).toMatch("transparent");
   });
 });
