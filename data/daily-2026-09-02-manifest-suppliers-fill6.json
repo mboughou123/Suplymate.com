@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "sail",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/sail/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/sail/01.jpg",
+    "in_size": [
+      3888,
+      2592
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "sail",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/sail/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/sail/02.jpg",
+    "in_size": [
+      5184,
+      3456
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "sail",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/sail/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/sail/03.jpg",
+    "in_size": [
+      1920,
+      1440
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "hyundai-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/hyundai-steel/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/hyundai-steel/01.jpg",
+    "in_size": [
+      1920,
+      1277
+    ],
+    "out_size": [
+      1600,
+      1064
+    ]
+  },
+  {
+    "slug": "hyundai-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/hyundai-steel/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/hyundai-steel/02.jpg",
+    "in_size": [
+      2894,
+      1824
+    ],
+    "out_size": [
+      1600,
+      1008
+    ]
+  },
+  {
+    "slug": "hyundai-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/hyundai-steel/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/hyundai-steel/03.jpg",
+    "in_size": [
+      4297,
+      2865
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "prysmian",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/prysmian/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/prysmian/01.jpg",
+    "in_size": [
+      4000,
+      3000
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "prysmian",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/prysmian/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/prysmian/02.jpg",
+    "in_size": [
+      1280,
+      2819
+    ],
+    "out_size": [
+      1280,
+      2819
+    ]
+  },
+  {
+    "slug": "prysmian",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/prysmian/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/prysmian/03.jpg",
+    "in_size": [
+      1280,
+      2276
+    ],
+    "out_size": [
+      1280,
+      2276
+    ]
+  },
+  {
+    "slug": "skf",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/skf/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/skf/01.jpg",
+    "in_size": [
+      6000,
+      4000
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "skf",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/skf/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/skf/02.jpg",
+    "in_size": [
+      2048,
+      1536
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "skf",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/skf/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/skf/03.jpg",
+    "in_size": [
+      1280,
+      821
+    ],
+    "out_size": [
+      1280,
+      821
+    ]
+  },
+  {
+    "slug": "crh",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/crh/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/crh/01.jpg",
+    "in_size": [
+      2272,
+      1704
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "crh",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/crh/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/crh/02.jpg",
+    "in_size": [
+      4256,
+      2832
+    ],
+    "out_size": [
+      1600,
+      1064
+    ]
+  },
+  {
+    "slug": "crh",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/crh/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/crh/03.jpg",
+    "in_size": [
+      1024,
+      756
+    ],
+    "out_size": [
+      1200,
+      885
+    ]
+  },
+  {
+    "slug": "ball",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ball/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ball/01.jpg",
+    "in_size": [
+      1920,
+      942
+    ],
+    "out_size": [
+      1600,
+      785
+    ]
+  },
+  {
+    "slug": "ball",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ball/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ball/02.jpg",
+    "in_size": [
+      4943,
+      3041
+    ],
+    "out_size": [
+      1600,
+      984
+    ]
+  },
+  {
+    "slug": "ball",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ball/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ball/03.jpg",
+    "in_size": [
+      1204,
+      670
+    ],
+    "out_size": [
+      1204,
+      670
+    ]
+  }
+]
