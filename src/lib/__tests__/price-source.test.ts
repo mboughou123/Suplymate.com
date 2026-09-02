@@ -17,6 +17,16 @@ describe("price source honesty", () => {
     expect(parsePriceSourceType("dealer_list")).toBe("dealer_list");
   });
 
+  it("maps Lister honesty types to the public badge copy", () => {
+    expect(priceSourceBadgeLabel("marketplace_listing", true)).toBe("Marketplace listing");
+    expect(priceSourceCaption("marketplace_listing", true)).toMatch(/not mill FOB/i);
+    expect(priceSourceBadgeLabel("listed_fob", true)).toBe("Listed FOB");
+    expect(priceSourceBadgeLabel("listed_public", true)).toBe("Listed price");
+    expect(priceSourceBadgeLabel("public_listing", true)).toBe("Listed price");
+    expect(priceSourceCaption("public_listing", true)).toMatch(/not mill FOB/i);
+    expect(priceSourceBadgeLabel("rfq", true)).toBeNull();
+  });
+
   it("tags priced APL Apollo SKUs as dealer_list, not mill FOB", () => {
     const apollo = listerProductsForSupplier("apl-apollo-tubes-limited-in");
     expect(apollo).toHaveLength(4);

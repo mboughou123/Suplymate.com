@@ -40,6 +40,10 @@ export function publicPathFromRepo(repoPath: string): string {
 
 /** Map Image Enhancer dst …/enhanced/{bucket}/{supplier}/{file} → public URL. */
 export function publicPathFromEnhancedDst(dst: string): string | null {
+  const rel = dst.trim().replace(/^\/+/, "");
+  if (/^(construction|industrial|packaging|tubes|steel|cables)\/[^/]+\/[^/]+$/i.test(rel)) {
+    return `/images/products/${rel}`;
+  }
   const m = dst.match(
     /\/(?:enhanced|images)\/(construction|industrial|packaging|tubes|steel|cables)\/([^/]+)\/([^/]+)$/i
   );
@@ -210,5 +214,21 @@ export function isListerProductId(id: string): boolean {
 export function isUsableRemoteImageUrl(url: string): boolean {
   if (!/^https?:\/\//i.test(url.trim())) return false;
   if (/\.pdf(\b|$)/i.test(url)) return false;
-  return true;
+  const path = url.split("?")[0];
+  if (/\.(jpe?g|png|webp|gif|avif)$/i.test(path)) return true;
+  if (/\/(photo|images|img|media|uploads|coreimg|getmedia)\//i.test(url)) return true;
+  return false;
+}
+
+/** Drop leftover .webp/.png/.jpeg when an enhanced .jpg sibling exists. */
+export function preferEnhancedJpegPaths(paths: string[]): string[] {
+  const set = new Set(paths);
+  return paths.filter((p) => {
+    if (/\.jpeg$/i.test(p) && set.has(p.replace(/\.jpeg$/i, ".jpg"))) return false;
+    const m = p.match(/^(.*)\.(webp|png)$/i);
+    if (!m) return true;
+    const stem = m[1];
+    const ext = m[2].toLowerCase();
+    return !set.has(`${stem}.jpg`) && !set.has(`${stem}-${ext}.jpg`);
+  });
 }
