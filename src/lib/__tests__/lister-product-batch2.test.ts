@@ -10,6 +10,8 @@ import {
 import { hasSourcedPrice } from "@/lib/public-products";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
 import { isRealImageUrl } from "@/lib/image-fallback";
+import enhancedManifest from "../../../data/product-media-batch2-enhanced-manifest.json";
+import { publicPathFromEnhancedDst } from "@/lib/lister-media";
 
 describe("Lister product-media batch 2", () => {
   it("loads all 29 construction + industrial SKUs", () => {
@@ -84,14 +86,24 @@ describe("Lister product-media batch 2", () => {
   it("prefers enhanced local JPGs over remote image_urls", () => {
     for (const p of listerBatch2Products) {
       expect(p.images.length).toBeGreaterThan(0);
-      const primary = p.images[0];
-      expect(primary.toLowerCase()).not.toContain(".pdf");
-      expect(isRealImageUrl(primary), `${p.name} → ${primary}`).toBe(true);
-      expect(primary.startsWith("/images/products/"), `${p.name} → ${primary}`).toBe(
-        true
-      );
-      const abs = join(process.cwd(), "public", primary.replace(/^\//, ""));
-      expect(existsSync(abs), primary).toBe(true);
+      for (const url of p.images) {
+        expect(url.toLowerCase()).not.toContain(".pdf");
+        expect(/^https?:\/\//i.test(url), url).toBe(false);
+        expect(url.startsWith("/images/products/"), `${p.name} → ${url}`).toBe(true);
+        expect(isRealImageUrl(url)).toBe(true);
+        const abs = join(process.cwd(), "public", url.replace(/^\//, ""));
+        expect(existsSync(abs), url).toBe(true);
+      }
+    }
+  });
+
+  it("uses all 64 construction + industrial enhanced JPGs", () => {
+    expect(enhancedManifest).toHaveLength(64);
+    const used = new Set(listerBatch2Products.flatMap((p) => p.images));
+    for (const entry of enhancedManifest as { dst?: string }[]) {
+      const pub = publicPathFromEnhancedDst(entry.dst ?? "");
+      expect(pub, entry.dst).toBeTruthy();
+      expect(used.has(pub!), pub).toBe(true);
     }
   });
 

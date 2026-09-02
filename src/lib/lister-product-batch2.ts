@@ -148,6 +148,39 @@ function buildRows(): BuiltRow[] {
 const rows = buildRows();
 const localById = assignLocalProductImages(rows, localFiles, STEM_ALIASES);
 
+/** Leftover Zamil stills that token-overlap misses — gallery extras, not primaries. */
+const EXTRA_STEMS: Record<string, string> = {
+  "zamil-steel-peb/single-skin-sw-panel":
+    "zamil-tempcon-insulated-sandwich-wall-roof-panels",
+  "zamil-steel-peb/temparch-dimensions":
+    "zamil-tempcon-insulated-sandwich-wall-roof-panels",
+  "zamil-steel-peb/temparch-thermal":
+    "zamil-tempcon-insulated-sandwich-wall-roof-panels",
+  "zamil-steel-peb/dx-ex-liner-panel":
+    "zamil-tempcon-insulated-sandwich-wall-roof-panels",
+  "zamil-steel-peb/factory-aerial": "zamil-steel-pre-engineered-building-peb-system",
+  "zamil-steel-peb/applications": "zamil-steel-pre-engineered-building-peb-system",
+};
+
+function attachExtraStems() {
+  const byKey = new Map<string, BuiltRow>();
+  for (const row of rows) {
+    byKey.set(`${row.supplierSlug}/${row.slug}`, row);
+  }
+  for (const file of localFiles) {
+    const stem = file.filename.replace(/\.(jpe?g|png|webp)$/i, "").replace(/-\d+$/, "");
+    const targetSlug = EXTRA_STEMS[`${file.supplierSlug}/${stem}`];
+    if (!targetSlug) continue;
+    const row = byKey.get(`${file.supplierSlug}/${targetSlug}`);
+    if (!row) continue;
+    const current = localById.get(row.id) ?? [];
+    if (!current.includes(file.publicPath)) {
+      localById.set(row.id, [...current, file.publicPath]);
+    }
+  }
+}
+attachExtraStems();
+
 function toScraped(row: BuiltRow): ScrapedProduct {
   const local = localById.get(row.id) ?? [];
   const images = local.length > 0 ? local : row.remoteImages;
