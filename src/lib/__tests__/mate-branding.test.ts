@@ -38,4 +38,14 @@ describe("Mate locked marketing line", () => {
     expect(prompt).toMatch("MATE_TAGLINE");
     expect(chat).not.toMatch("Scout finds mills, Compare lines up offers");
   });
+
+  it("uses a Bot AI-worker mark (not Sparkles) on the Mate welcome hero", () => {
+    const chat = readFileSync(
+      resolve(process.cwd(), "src/components/ai-dashboard/AiChatPanel.tsx"),
+      "utf8"
+    );
+    expect(chat).toMatch(/\bBot\b/);
+    expect(chat).toMatch(/<Bot /);
+    expect(chat).not.toMatch(/Sparkles/);
+  });
 });

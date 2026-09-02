@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Sparkles,
+  Bot,
   RotateCcw,
   Trash2,
   User as UserIcon,
@@ -224,8 +224,11 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
               exit={{ opacity: 0 }}
               className="mx-auto flex max-w-2xl flex-col items-center px-2 py-8 text-center"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan/15">
-                <Sparkles className="h-7 w-7 text-cyan" aria-hidden />
+              <span
+                className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan/15"
+                aria-hidden
+              >
+                <Bot className="h-7 w-7 text-cyan" strokeWidth={1.75} />
               </span>
               <h2 className="mt-5 text-xl font-bold tracking-tight text-ink sm:text-2xl text-balance">
                 {t("mateTitle")}
@@ -266,8 +269,11 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
                   </div>
                 ) : (
                   <div key={msg.id} className="flex gap-3">
-                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan/15">
-                      <Sparkles className="h-4 w-4 text-cyan" aria-hidden />
+                    <span
+                      className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan/15"
+                      aria-hidden
+                    >
+                      <Bot className="h-4 w-4 text-cyan" strokeWidth={1.75} />
                     </span>
                     <div className="max-w-[85%] rounded-2xl rounded-tl-md border border-slate-200 bg-white/90 px-4 py-2.5 text-sm leading-relaxed text-ink">
                       {msg.content ? (
