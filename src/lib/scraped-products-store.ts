@@ -311,6 +311,9 @@ export function scrapedToProduct(sp: ScrapedProduct): Product {
       (typeof sp.specifications?.["Price source type"] === "string"
         ? sp.specifications["Price source type"]
         : undefined),
+    aiGeneratedImage:
+      sp.aiGeneratedImage === true ||
+      sp.specifications?.["Image note"] === "AI-generated image",
     status: "approved",
   };
 }

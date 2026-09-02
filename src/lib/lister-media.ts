@@ -51,6 +51,42 @@ export function publicPathFromEnhancedDst(dst: string): string | null {
   return `/images/products/${m[1]}/${m[2]}/${m[3]}`;
 }
 
+/**
+ * Daily expansion photos live at public/images/products/{supplier}/{file}
+ * (no category bucket). Manifest dst:
+ *   …/enhanced/products/{supplier}/{file}
+ */
+export function publicPathFromDailyEnhancedDst(dst: string): string | null {
+  const rel = dst.trim().replace(/^\/+/, "");
+  if (/^products\/[^/]+\/[^/]+$/i.test(rel)) {
+    return `/images/${rel}`;
+  }
+  if (/^images\/products\/[^/]+\/[^/]+$/i.test(rel)) {
+    return `/${rel}`;
+  }
+  const m = dst.match(/\/(?:enhanced\/)?products\/([^/]+)\/([^/]+)$/i);
+  if (!m) return null;
+  return `/images/products/${m[1]}/${m[2]}`;
+}
+
+/** Index `/images/products/{supplier}/{file}` paths (daily / flat layout). */
+export function indexFlatProductImagePaths(paths: string[]): IndexedLocalFile[] {
+  const out: IndexedLocalFile[] = [];
+  for (const raw of paths) {
+    const pub = raw.startsWith("/images/") ? raw : publicPathFromRepo(raw);
+    const parts = pub.replace(/^\//, "").split("/");
+    if (parts.length !== 4 || parts[0] !== "images" || parts[1] !== "products") continue;
+    if (!parts[3] || !/\.(jpe?g|png|webp)$/i.test(parts[3])) continue;
+    out.push({
+      bucket: "daily",
+      supplierSlug: parts[2],
+      filename: parts[3],
+      publicPath: pub.startsWith("/") ? pub : `/${pub}`,
+    });
+  }
+  return out;
+}
+
 function scoreStem(stem: string, slug: string, nameSlug: string): number {
   if (stem === slug || stem === nameSlug) return 1000;
   if (nameSlug.startsWith(stem) || stem.startsWith(nameSlug)) {

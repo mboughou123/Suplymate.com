@@ -25,6 +25,15 @@ import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce
 import type { Product, ProductCategory } from "@/data/products";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
 import { isListerProductId } from "@/lib/lister-media";
+import { getFallbackSupplierIds } from "@/lib/data-service";
+
+let cachedPublicSupplierIds: Set<string> | null = null;
+function publicSupplierIdSet(): Set<string> {
+  if (!cachedPublicSupplierIds) {
+    cachedPublicSupplierIds = new Set(getFallbackSupplierIds());
+  }
+  return cachedPublicSupplierIds;
+}
 
 export type PublicProductCard = {
   id: string;
@@ -51,6 +60,8 @@ export type PublicProductCard = {
   productUrl: string | null;
   /** Higher = show earlier in the default catalogue (Lister photos first). */
   rankBoost: number;
+  /** Small caption on the card photo — Magicrete mortar only, for now. */
+  aiGeneratedImage?: boolean;
 };
 
 export type PublicProductsQuery = {
@@ -203,6 +214,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         shippingTime: r.shippingTime ?? null,
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
         rankBoost: isListerProductId(r.id) ? 100 : hasRealProductImage(imageInput) ? 10 : 0,
+        aiGeneratedImage: specs["Image note"] === "AI-generated image",
       };
     });
 
@@ -304,7 +316,7 @@ function staticToCard(p: Product): PublicProductCard {
     supplierId: p.supplierId ?? "",
     supplierName: p.supplierName ?? "Suplymate catalogue",
     supplierCountry: p.supplierCountry ?? null,
-    supplierVisible: Boolean(p.supplierId),
+    supplierVisible: Boolean(p.supplierId) && publicSupplierIdSet().has(p.supplierId),
     verified: false,
     imageUrl: getBestProductImage(imageInput),
     hasRealPhoto: hasPhoto,
@@ -322,6 +334,9 @@ function staticToCard(p: Product): PublicProductCard {
     shippingTime: p.shippingTime ?? null,
     productUrl: p.productUrl ?? null,
     rankBoost: isListerProductId(p.id) ? 100 : hasPhoto ? 10 : 0,
+    aiGeneratedImage:
+      p.aiGeneratedImage === true ||
+      p.specifications?.["Image note"] === "AI-generated image",
   };
 }
 

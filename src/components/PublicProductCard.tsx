@@ -34,6 +34,11 @@ export default function PublicProductCard({ data: d }: Props) {
           <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
             {d.category}
           </span>
+          {d.aiGeneratedImage ? (
+            <span className="absolute bottom-2 left-2 rounded-md bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur">
+              AI-generated image
+            </span>
+          ) : null}
         </div>
       </Link>
 

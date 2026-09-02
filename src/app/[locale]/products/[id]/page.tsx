@@ -70,6 +70,9 @@ export default async function ProductDetailPage({ params }: Props) {
           {/* Gallery */}
           <div className="lg:col-span-5">
             <ProductGallery images={detail.gallery} />
+            {product.aiGeneratedImage ? (
+              <p className="mt-2 text-xs text-ink-muted">AI-generated image</p>
+            ) : null}
           </div>
 
           {/* Core info */}
