@@ -1,0 +1,487 @@
+{
+  "packaging": [
+    {
+      "product_name": "Folding Gift Box",
+      "product_slug": null,
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug_guess": "dongguan-caicheng-printing",
+      "source_url": "https://packccp.com/products/folding-gift-box/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 PACKCCP mill product page (quote calculator / contact sales); no public unit price as of fetch",
+      "image_urls": [
+        "https://packccp.com/wp-content/uploads/2024/12/G008-6.jpg",
+        "https://packccp.com/wp-content/uploads/2024/12/G008-8.jpg"
+      ]
+    },
+    {
+      "product_name": "Custom Premium Luxury Rigid Foldable Magnetic Gift Packaging Box",
+      "product_slug": null,
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug_guess": "dongguan-caicheng-printing",
+      "source_url": "https://www.made-in-china.com/showroom/christinaccprinting/product-detailZjLQFIiMkykG/China-Custom-Premium-Luxury-Rigid-Cardboard-Black-Foldable-Paper-Gift-Wig-Hair-Extension-Magnetic-Packaging-Box.html",
+      "unit_price": 0.8,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$0.80\u20133.50/piece (schema.org low price 0.80; qty band shown from 500 pieces). Mill-site photos from packccp.com foldable-magnetic-rigid-gift-box",
+      "image_urls": [
+        "https://packccp.com/wp-content/uploads/2024/12/G010-6.jpg",
+        "https://packccp.com/wp-content/uploads/2024/12/G010-4.jpg",
+        "https://image.made-in-china.com/2f0j00kLaUqoMnCbcP/Custom-Premium-Luxury-Rigid-Cardboard-Black-Foldable-Paper-Gift-Wig-Hair-Extension-Magnetic-Packaging-Box.jpg"
+      ]
+    },
+    {
+      "product_name": "Corrugated Mailer Box M001",
+      "product_slug": null,
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug_guess": "dongguan-caicheng-printing",
+      "source_url": "https://packccp.com/products/m001/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 PACKCCP mailer SKU page; instant quote tool requires size/material/qty (no static public unit price)",
+      "image_urls": [
+        "https://packccp.com/wp-content/uploads/2025/07/M001-3.webp",
+        "https://packccp.com/wp-content/uploads/2025/07/M001-1.webp"
+      ]
+    },
+    {
+      "product_name": "Full Cover Lid and Base Rigid Box",
+      "product_slug": null,
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug_guess": "dongguan-caicheng-printing",
+      "source_url": "https://packccp.com/products/lid-base-rigid-box-full-cover/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 PACKCCP mill rigid-box product page; quotation on request",
+      "image_urls": [
+        "https://packccp.com/wp-content/uploads/2024/12/G001-2.jpg",
+        "https://packccp.com/wp-content/uploads/2024/12/G001-4.jpg"
+      ]
+    },
+    {
+      "product_name": "PP PE Mango Corrugated Box Polypropylene Corflute Storage Boxes",
+      "product_slug": null,
+      "supplier_name": "Shandong Corruone New Material Co., Ltd.",
+      "supplier_slug_guess": "shandong-corruone-new-material",
+      "source_url": "https://www.corruone.com/sale-37905461-pp-pe-mango-corrugated-box-polypropylene-corflute-storage-boxes.html",
+      "unit_price": 0.7,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Mill site listing as of fetch: $0.70/pieces for 1000\u20134999 pieces (corruone.com)",
+      "image_urls": [
+        "https://www.corruone.com/photo/pl150948815-pp_pe_mango_corrugated_box_polypropylene_corflute_storage_boxes.jpg",
+        "https://www.corruone.com/photo/pl150948816-pp_pe_mango_corrugated_box_polypropylene_corflute_storage_boxes.jpg"
+      ]
+    },
+    {
+      "product_name": "Corflute Recycled Fruit and Vegetable Packaging Boxes Polypropylene",
+      "product_slug": null,
+      "supplier_name": "Shandong Corruone New Material Co., Ltd.",
+      "supplier_slug_guess": "shandong-corruone-new-material",
+      "source_url": "https://www.corruone.com/sale-37905418-corflute-recycled-fruit-and-vegetable-packaging-boxes-polypropylene.html",
+      "unit_price": 0.7,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Mill site listing as of fetch: $0.70/pieces for 1000\u20134999 pieces (corruone.com). MIC mirror lists broader FOB US$1\u201310/piece",
+      "image_urls": [
+        "https://www.corruone.com/photo/pl150948633-corflute_recycled_fruit_and_vegetable_packaging_boxes_polypropylene.jpg",
+        "https://www.corruone.com/photo/pl150948634-corflute_recycled_fruit_and_vegetable_packaging_boxes_polypropylene.jpg"
+      ]
+    },
+    {
+      "product_name": "2440x1220 PP Corrugated Sheet 5mm 6mm Fluted Polypropylene Sheet",
+      "product_slug": null,
+      "supplier_name": "Shandong Corruone New Material Co., Ltd.",
+      "supplier_slug_guess": "shandong-corruone-new-material",
+      "source_url": "https://www.corruone.com/sale-37904696-2440x1220-pp-corrugated-sheet-5mm-6mm-fluted-polypropylene-sheet.html",
+      "unit_price": 3.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Mill site listing as of fetch: $3.00/pieces for 1\u20131999 pieces (per sheet). Typical MIC sheet MOQ also stated as 500 kg on other sheet SKUs",
+      "image_urls": [
+        "https://www.corruone.com/photo/pl150945288-2440x1220_pp_corrugated_sheet_5mm_6mm_fluted_polypropylene_sheet.jpg",
+        "https://www.corruone.com/photo/pl150945289-2440x1220_pp_corrugated_sheet_5mm_6mm_fluted_polypropylene_sheet.jpg"
+      ]
+    },
+    {
+      "product_name": "Collapsible PP Corrugated Plastic Danpla Storage Box",
+      "product_slug": null,
+      "supplier_name": "Shandong Corruone New Material Co., Ltd.",
+      "supplier_slug_guess": "shandong-corruone-new-material",
+      "source_url": "https://www.corruone.com/sale-37905150-corruone-collapsible-pp-corrugated-plastic-danpla-box-polypropylene-plastic-sheet-crates-corrugated-.html",
+      "unit_price": 5.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Mill site listing as of fetch: $5.00/pieces for 2\u20131999 pieces. MIC collapsible turnover box lists FOB US$2\u201310/piece",
+      "image_urls": [
+        "https://www.corruone.com/photo/ps150947266-corruone_collapsible_pp_corrugated_plastic_danpla_box_polypropylene_plastic_sheet_crates_corrugated_storage_box.jpg",
+        "https://www.corruone.com/photo/pl150947267-.jpg"
+      ]
+    },
+    {
+      "product_name": "Multi-colour Printed Corrugated Shipping Cartons (RSC / Export)",
+      "product_slug": null,
+      "supplier_name": "Meghdoot Packaging (Uttaranchal)",
+      "supplier_slug_guess": "meghdoot-packaging",
+      "source_url": "https://meghdootpackaging.com/corrugated-box-manufacturer/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill site product gallery (no public unit price). IndiaMART Delhi storefront snippets show ~\u20b98\u201312/piece for related Meghdoot Packaging listings but Uttarakhand entity page and IndiaMART HTML were not fetchable here (bot block); do not treat as verified for this legal entity",
+      "image_urls": [
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/4.png",
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/FE86F56D-D498-41F1-9DFD-09EAABFE6776.png"
+      ]
+    },
+    {
+      "product_name": "Corrugated Point-of-Sale Display Units",
+      "product_slug": null,
+      "supplier_name": "Meghdoot Packaging (Uttaranchal)",
+      "supplier_slug_guess": "meghdoot-packaging",
+      "source_url": "https://meghdootpackaging.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill homepage product gallery (POSM / corrugated displays); no public unit price",
+      "image_urls": [
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project.jpg",
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project-1.jpg"
+      ]
+    },
+    {
+      "product_name": "Corrugated Retail Floor Display Units",
+      "product_slug": null,
+      "supplier_name": "Meghdoot Packaging (Uttaranchal)",
+      "supplier_slug_guess": "meghdoot-packaging",
+      "source_url": "https://meghdootpackaging.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill homepage gallery photo of branded corrugated floor display; no public unit price",
+      "image_urls": [
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/image.png",
+        "https://meghdootpackaging.com/wp-content/uploads/2025/06/New-Project-1.jpg"
+      ]
+    },
+    {
+      "product_name": "Heavy Duty Clear LLDPE Stretch Wrap Film (High Elasticity)",
+      "product_slug": null,
+      "supplier_name": "Dongguan Yalan Packing Materials Co., Ltd.",
+      "supplier_slug_guess": "dongguan-yalan-packing-materials",
+      "source_url": "https://yalanpack.en.made-in-china.com/product/yUtYvmeOnfWw/China-Yalanpack-Heavy-Duty-Clear-Stretch-Wrap-Roll-High-Elasticity-Logistics-Stretch-Film.html",
+      "unit_price": 1.15,
+      "currency": "USD",
+      "unit": "per kg",
+      "price_note": "Made-in-China FOB listing as of fetch: US$1.15\u20131.75/kg; MOQ 1,000 kg",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00ElmCMtVWbpob/High-Elasticity-Stretch-Film-Roll-for-Secure-Packaging.jpg",
+        "https://image.made-in-china.com/2f0j00QhAveuWgbrbk/High-Elasticity-Stretch-Film-Roll-for-Secure-Packaging.webp"
+      ]
+    },
+    {
+      "product_name": "LLDPE 15 Micron Pallet Wrapping Stretch Film",
+      "product_slug": null,
+      "supplier_name": "Dongguan Yalan Packing Materials Co., Ltd.",
+      "supplier_slug_guess": "dongguan-yalan-packing-materials",
+      "source_url": "https://yalanpack.en.made-in-china.com/product/PQXUMLoYJGVW/China-LLDPE-Strech-Polyethylene-Plastic-Pallet-Wrapping-15-Micron-Stretch-Film.html",
+      "unit_price": 1.05,
+      "currency": "USD",
+      "unit": "per kg",
+      "price_note": "Made-in-China FOB listing as of fetch: US$1.05\u20131.51/kg; MOQ 1,000 kg",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00bfIknBHdkFcz/LLDPE-Strech-Polyethylene-Plastic-Pallet-Wrapping-15-Micron-Stretch-Film.jpg",
+        "https://image.made-in-china.com/2f0j00ofHkOnIMlyqz/LLDPE-Strech-Polyethylene-Plastic-Pallet-Wrapping-15-Micron-Stretch-Film.webp"
+      ]
+    },
+    {
+      "product_name": "Industrial LLDPE Heat Resistant Jumbo Roll Stretch Film",
+      "product_slug": null,
+      "supplier_name": "Dongguan Yalan Packing Materials Co., Ltd.",
+      "supplier_slug_guess": "dongguan-yalan-packing-materials",
+      "source_url": "https://yalanpack.en.made-in-china.com/product/qxGrKQUcJLhd/China-Industrial-LLDPE-Heat-Resistant-Jumbo-Roll-Plastic-Film-Transparent-Soft-Packaging.html",
+      "unit_price": 1.05,
+      "currency": "USD",
+      "unit": "per kg",
+      "price_note": "Made-in-China FOB listing as of fetch: US$1.05\u20131.51/kg; MOQ 1,000 kg",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00qzFcOINHwPow/Industrial-LLDPE-Heat-Resistant-Jumbo-Roll-Plastic-Film-Transparent-Soft-Packaging.jpg",
+        "https://image.made-in-china.com/2f0j00ouncFkyGwIqA/Industrial-LLDPE-Heat-Resistant-Jumbo-Roll-Plastic-Film-Transparent-Soft-Packaging.webp"
+      ]
+    },
+    {
+      "product_name": "BPA Free Aseptic Bag for NFC Juices",
+      "product_slug": null,
+      "supplier_name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+      "supplier_slug_guess": "hangzhou-hansin-new-packing",
+      "source_url": "https://hansinpack.en.made-in-china.com/product/msQEOSdFyHWw/China-BPA-Free-Aseptic-Bag-for-NFC-Juices.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 Made-in-China shows Negotiable; typical MOQ 2,000 pieces on storefront",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00SUYGKauZqToV/BPA-Free-Aseptic-Bag-for-NFC-Juices.jpg",
+        "https://image.made-in-china.com/2f0j00SUYGKauZqToV/BPA-Free-Aseptic-Bag-for-NFC-Juices.webp"
+      ]
+    },
+    {
+      "product_name": "IBC 1000L Aseptic Bag (HS1AAL1000)",
+      "product_slug": null,
+      "supplier_name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+      "supplier_slug_guess": "hangzhou-hansin-new-packing",
+      "source_url": "https://hansinpack.en.made-in-china.com/product/XvZmwdhxknkM/China-IBC-1000L-Aseptic-Bag-HS1AAL1000-.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 Made-in-China shows Negotiable; typical MOQ 2,000 pieces on storefront",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00MsqEYKUzfnbJ/IBC-1000L-Aseptic-Bag-HS1AAL1000-.jpg",
+        "https://image.made-in-china.com/2f0j00MsqEYKUzfnbJ/IBC-1000L-Aseptic-Bag-HS1AAL1000-.webp"
+      ]
+    },
+    {
+      "product_name": "Aseptic Bag 2 Inch Spout (1-250L)",
+      "product_slug": null,
+      "supplier_name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+      "supplier_slug_guess": "hangzhou-hansin-new-packing",
+      "source_url": "https://hansinpack.en.made-in-china.com/product/KegnzkMUguWL/China-Aseptic-Bag-2-Inch-Spout-1-250L-.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 Made-in-China shows Negotiable; MOQ 5,000 pieces on listing",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00YjJaZtdrnzce/Aseptic-Bag-2-Inch-Spout-1-250L-.jpg",
+        "https://image.made-in-china.com/2f0j00YjJaZtdrnzce/Aseptic-Bag-2-Inch-Spout-1-250L-.webp"
+      ]
+    }
+  ],
+  "tubes": [
+    {
+      "product_name": "LSAW Linepipe (API 5L Grade B\u2013X80 / sour X65)",
+      "product_slug": "lsaw-linepipe-api-5l",
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug_guess": "al-gharbia-pipe",
+      "source_url": "https://algharbiapipe.com/solutions/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill LSAW/conductor/structural tubulars are project-priced; no public unit list on algharbiapipe.com or brochure (confirmed).",
+      "image_urls": [
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/solutions-pipeline-ny.jpg"
+      ]
+    },
+    {
+      "product_name": "Conductor Pipe (API 5L Gr. B\u2013X80, plain end)",
+      "product_slug": "conductor-pipe-api-5l",
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug_guess": "al-gharbia-pipe",
+      "source_url": "https://algharbiapipe.com/solutions/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill LSAW/conductor/structural tubulars are project-priced; no public unit list on algharbiapipe.com or brochure (confirmed).",
+      "image_urls": [
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/admin-Conductor-1-Feature-492x600-1.png"
+      ]
+    },
+    {
+      "product_name": "Structural Tubulars (API 2B / EN 10219 / ASTM A252)",
+      "product_slug": "structural-tubulars-api-2b",
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug_guess": "al-gharbia-pipe",
+      "source_url": "https://algharbiapipe.com/solutions/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill LSAW/conductor/structural tubulars are project-priced; no public unit list on algharbiapipe.com or brochure (confirmed).",
+      "image_urls": [
+        "https://algharbiapipe.com/wp-content/uploads/2022/10/solutions-structuralpipe.jpg"
+      ]
+    },
+    {
+      "product_name": "ERW/HFW Circular Steel Pipes (1/2\"\u201320\" NB)",
+      "product_slug": "erw-hfw-circular-pipes",
+      "supplier_name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "supplier_slug_guess": "aj-steel",
+      "source_url": "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public unit price list on ajsteel.com; mill quotes by RFQ/custom quotation portal.",
+      "image_urls": [
+        "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf#page=2"
+      ]
+    },
+    {
+      "product_name": "Square & Rectangular Hollow Sections (SHS/RHS)",
+      "product_slug": "shs-rhs-hollow-sections",
+      "supplier_name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "supplier_slug_guess": "aj-steel",
+      "source_url": "https://www.ajsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public SHS/RHS list price. Size charts in catalogue (RHS/SHS ~20\u2013400 mm) without prices.",
+      "image_urls": [
+        "https://www.ajsteel.com/assets/images/about/who-we-are/whoWeAre.png"
+      ]
+    },
+    {
+      "product_name": "Hot-Dip Galvanized ERW Tubes & Pipes",
+      "product_slug": "hot-dip-galvanized-erw-pipes",
+      "supplier_name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "supplier_slug_guess": "aj-steel",
+      "source_url": "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 HDG finish available; no public zinc-coated unit prices.",
+      "image_urls": [
+        "https://www.ajsteel.com/assets/images/products-applications/viewCatalog.pdf#page=2"
+      ]
+    },
+    {
+      "product_name": "Apollo Build MS Square Hollow Section 50\u00d750\u00d72.0 mm (6 m)",
+      "product_slug": "apollo-build-shs-50x50x2mm",
+      "supplier_name": "APL Apollo Tubes Limited",
+      "supplier_slug_guess": "apl-apollo",
+      "source_url": "https://new.aplapollo.com/products/categories/apollo-structural/apollo-build",
+      "unit_price": 1183.91,
+      "currency": "INR",
+      "unit": "per 6 m length",
+      "price_note": "Public dealer list (Tubes & Valves Mfg Co, Chennai): valid 01-04-2026 to 28-04-2026; Ex-Godown Chennai, excl. GST 18%. Implied ~INR 65/kg (wt 18.21 kg/length). Source: https://www.tubesandvalves.com/files/pricelists/apollo-pipes-pricelist-pdf.pdf \u2014 subject to change; not mill MSRP.",
+      "image_urls": [
+        "https://media.aplapollo.com/home/steelpipe_4.png"
+      ]
+    },
+    {
+      "product_name": "Apollo Build MS Rectangular Hollow Section (RHS)",
+      "product_slug": "apollo-ms-rhs-hollow-section",
+      "supplier_name": "APL Apollo Tubes Limited",
+      "supplier_slug_guess": "apl-apollo",
+      "source_url": "https://new.aplapollo.com/products/categories/apollo-structural/apollo-build",
+      "unit_price": 65.0,
+      "currency": "INR",
+      "unit": "per kg",
+      "price_note": "Public Chennai dealer list (Apr 2026) prices all MS round/SHS/RHS at a constant ~INR 65/kg converted to rate-per-6m length. Example RHS 60\u00d740\u00d72.0 mm = INR 1,183.91 / 18.21 kg. Ex-Godown Chennai, excl. GST 18%. Source PDF: https://www.tubesandvalves.com/files/pricelists/apollo-pipes-pricelist-pdf.pdf",
+      "image_urls": [
+        "https://media.aplapollo.com/images/steel_2.png"
+      ]
+    },
+    {
+      "product_name": "Apollo Standard MS Round ERW Pipe 50 NB (60.3 mm OD) \u00d7 2.0 mm (6 m)",
+      "product_slug": "apollo-standard-ms-round-50nb",
+      "supplier_name": "APL Apollo Tubes Limited",
+      "supplier_slug_guess": "apl-apollo",
+      "source_url": "https://aplapollo.com/",
+      "unit_price": 1121.25,
+      "currency": "INR",
+      "unit": "per 6 m length",
+      "price_note": "Public dealer list Tubes & Valves Chennai, valid 01-04-2026\u201328-04-2026; wt 17.25 kg/length \u2192 ~INR 65/kg. Ex-Godown Chennai, excl. GST 18%. Source: https://www.tubesandvalves.com/files/pricelists/apollo-pipes-pricelist-pdf.pdf",
+      "image_urls": [
+        "https://strapi.aplapollo.com/uploads/Apollo_standard_890d504d66.png"
+      ]
+    },
+    {
+      "product_name": "Apollo Column Large SHS (175\u00d7175\u20131000\u00d71000 mm)",
+      "product_slug": "apollo-column-large-shs",
+      "supplier_name": "APL Apollo Tubes Limited",
+      "supplier_slug_guess": "apl-apollo",
+      "source_url": "https://new.aplapollo.com/products/categories/apollo-structural/apollo-column",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 large Apollo Column sizes (DFT) not on the Chennai small-section dealer list (list covers up to ~200\u00d7200). Contact mill/dealer for project pricing.",
+      "image_urls": [
+        "https://strapi.aplapollo.com/uploads/Column_Usp_image_03fed54eeb.png"
+      ]
+    },
+    {
+      "product_name": "LSAW (JCO) Line Pipe API 5L",
+      "product_slug": "lsaw-jco-linepipe",
+      "supplier_name": "Jindal SAW Limited",
+      "supplier_slug_guess": "jindal-saw",
+      "source_url": "https://jindalsaw.com/business-operations/products/pipes-helical-longitudinal-submerged-arc-welding/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public mill unit prices for SAW linepipe.",
+      "image_urls": [
+        "https://jindalsaw.com/wp-content/uploads/2025/07/saw-jco1.jpg"
+      ]
+    },
+    {
+      "product_name": "HSAW (Spiral) Line Pipe API 5L",
+      "product_slug": "hsaw-spiral-linepipe",
+      "supplier_name": "Jindal SAW Limited",
+      "supplier_slug_guess": "jindal-saw",
+      "source_url": "https://jindalsaw.com/business-operations/products/pipes-helical-longitudinal-submerged-arc-welding/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public mill unit prices for HSAW linepipe.",
+      "image_urls": [
+        "https://jindalsaw.com/wp-content/uploads/2025/07/saw-spiral-1.jpg"
+      ]
+    },
+    {
+      "product_name": "LSAW / HSAW Line Pipe (API 5L)",
+      "product_slug": "lsaw-hsaw-linepipe-mill",
+      "supplier_name": "Welspun Corp Limited",
+      "supplier_slug_guess": "welspun-corp",
+      "source_url": "https://www.welspuncorp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public unit prices; project/tender pricing only.",
+      "image_urls": [
+        "https://www.welspuncorp.com/images/pipe-img.webp"
+      ]
+    },
+    {
+      "product_name": "Coated Line Pipe (Yard Stock)",
+      "product_slug": "coated-linepipe-yard",
+      "supplier_name": "Welspun Corp Limited",
+      "supplier_slug_guess": "welspun-corp",
+      "source_url": "https://www.welspuncorp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 coating/double-joint/bend packages quoted per project.",
+      "image_urls": [
+        "https://www.welspuncorp.com/images/welcome-img.webp"
+      ]
+    },
+    {
+      "product_name": "LSAW Steel Pipe 16\"\u201348\" (Jubail Mill)",
+      "product_slug": "lsaw-pipe-jubail-yard",
+      "supplier_name": "Arabian Pipes Company",
+      "supplier_slug_guess": "arabian-pipes",
+      "source_url": "https://arabian-pipes.com/LSAW-Steel-Pipe-Plant.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public unit prices on arabian-pipes.com.",
+      "image_urls": [
+        "https://arabian-pipes.com/images/lsaw_gard.jpg",
+        "https://arabian-pipes.com/images/slides/Optimized-slide3.jpg"
+      ]
+    },
+    {
+      "product_name": "ERW/HFW Line Pipe & Casing 6\"\u201320\" (Riyadh Mill)",
+      "product_slug": "erw-hfw-pipe-riyadh",
+      "supplier_name": "Arabian Pipes Company",
+      "supplier_slug_guess": "arabian-pipes",
+      "source_url": "https://arabian-pipes.com/ERW-HFW-Plant.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public unit prices; Aramco/project RFQ channel.",
+      "image_urls": [
+        "https://arabian-pipes.com/images/erwp.jpg"
+      ]
+    }
+  ]
+}
