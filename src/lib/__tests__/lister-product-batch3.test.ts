@@ -56,13 +56,17 @@ describe("Lister product-media batch 3", () => {
       expect(primary.startsWith("/images/products/steel/hadeed/")).toBe(true);
       expect(/midrex|plant/i.test(primary)).toBe(false);
       expect(p.specifications["Photo credit"]).toBe("Hadeed product still");
+      expect(p.imageSourceUrl).toMatch(/hadeed\.com\.sa/i);
+      expect(p.imageSourceUrl).not.toMatch(/rajhi|midrex/i);
     }
     const hrc = hadeed.find((p) => /HRC/i.test(p.name));
     expect(hrc?.images[0]).toBe("/images/products/steel/hadeed/hrc.jpg");
+    expect(hrc?.images).toContain("/images/products/steel/hadeed/flat-cate.jpg");
     const rod = hadeed.find((p) => /Wire Rod/i.test(p.name));
     expect(rod?.images[0]).toBe("/images/products/steel/hadeed/wire-rod.jpg");
     const rebar = hadeed.find((p) => /Reinforcing Bars/i.test(p.name));
     expect(rebar?.images[0]).toBe("/images/products/steel/hadeed/rebar-straight.jpg");
+    expect(rebar?.images).toContain("/images/products/steel/hadeed/rebar-in-coil.jpg");
   });
 
   it("prefers local enhanced JPGs over remote image_urls", () => {

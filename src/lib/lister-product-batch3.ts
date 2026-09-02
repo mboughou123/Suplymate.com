@@ -9,8 +9,9 @@
  *          marketplace_listing → Marketplace listing;
  *          listed_fob → Listed FOB; null/rfq → RFQ.
  *
- * Hadeed: official product stills (hrc, flat-cate, rebar-straight,
- * wire-rod, rebar-in-coil) are primaries. Midrex/plant shots are extras only.
+ * Hadeed: official S3 product stills (hrc, flat-cate, flat-products,
+ * rebar-in-coil, wire-rod; plus rebar-straight) are card primaries.
+ * Midrex/plant shots are extras only. Never attribute Rajhi remotes.
  */
 
 import rawBatch from "../../data/product-media-batch3.json";
@@ -89,6 +90,7 @@ const STEM_ALIASES: Record<string, string> = {
 
 const HADEED_OFFICIAL = /flat-cate|hrc\.jpg|rebar-in-coil|wire-rod|rebar-straight|flat-products/i;
 const HADEED_PLANT = /midrex|plant/i;
+const HADEED_STANDIN_REMOTE = /rajhisteel|midrex\.com/i;
 
 type RawSku = {
   product_name: string;
@@ -158,7 +160,13 @@ function buildRows(): BuiltRow[] {
         typeof sku.unit_price === "number" &&
         Number.isFinite(sku.unit_price) &&
         sku.unit_price > 0;
-      const remotes = (sku.image_urls ?? []).filter(isUsableRemoteImageUrl);
+      const remotes = (sku.image_urls ?? []).filter((url) => {
+        if (!isUsableRemoteImageUrl(url)) return false;
+        if (sku.supplier_slug_guess === "hadeed" && HADEED_STANDIN_REMOTE.test(url)) {
+          return false;
+        }
+        return true;
+      });
       out.push({
         id: `lister-b3-${sku.supplier_slug_guess}-${slug}`,
         supplierId: supplierId ?? sku.supplier_slug_guess,
@@ -176,7 +184,10 @@ function buildRows(): BuiltRow[] {
         moq: moqFromNote(sku.price_note, mill?.moq ?? null),
         priceNote: sku.price_note,
         sourceUrl: sku.source_url,
-        imageSourceUrl: remotes[0] ?? null,
+        imageSourceUrl:
+          sku.supplier_slug_guess === "hadeed"
+            ? sku.source_url
+            : (remotes[0] ?? null),
         priceSourceType: parsePriceSourceType(sku.price_source_type),
       });
     }
