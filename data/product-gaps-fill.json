@@ -1,0 +1,432 @@
+{
+  "product_gaps": [
+    {
+      "product_name": "1000L IBC Tank for Chemical Transportation",
+      "product_slug": "1000l-ibc-tank-for-chemical-transportation",
+      "supplier_name": "Jiangsu Jieyuan Container Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-jieyuan-container",
+      "source_url": "https://jieyuanpackaging.en.made-in-china.com/product/HRApzGyUqchP/China-1000L-IBC-Tank-for-Chemical-Transportation.html",
+      "unit_price": 68.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$68.00–90.00 / Piece; MOQ 42 Pieces. unit_price = listed low bound (schema.org 68.00). Model JYP1000, UN 31HA1.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00VjFBPYRmLekD/1000L-IBC-Tank-for-Chemical-Transportation.jpg",
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/12/1000L.webp"
+      ]
+    },
+    {
+      "product_name": "1000L Food-Grade IBC Tank",
+      "product_slug": "1000l-food-grade-ibc-tank",
+      "supplier_name": "Jiangsu Jieyuan Container Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-jieyuan-container",
+      "source_url": "https://jieyuanpackaging.com/products/special-ibcs/1000l-food-grade-ibc-tank/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill product page (jieyuanpackaging.com) has specs/FSSC 22000/UN 31HA1 but no public unit price. Do not use $0.00.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/12/1000L.webp",
+        "https://jieyuanpackaging.com/wp-content/uploads/2025/11/1000l-standard-ibcs-load-specifications.webp"
+      ]
+    },
+    {
+      "product_name": "500L Horizontal IBC Tank (Fertilizer Storage)",
+      "product_slug": "500l-horizontal-ibc-tank-fertilizer-storage",
+      "supplier_name": "Jiangsu Jieyuan Container Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-jieyuan-container",
+      "source_url": "https://jieyuanpackaging.en.made-in-china.com/product/WUCRADyjkkcF/China-500L-IBC-Tank-Designed-for-Fertilizer-Storage-and-Handling.html",
+      "unit_price": 68.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$68.00–108.00 / Piece (schema.org low 68.00). Model JYP500-Horizontal; 500L nominal / 560L brimful.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00NSACZgwhplqU/500L-IBC-Tank-Designed-for-Fertilizer-Storage-and-Handling.jpg"
+      ]
+    },
+    {
+      "product_name": "200L / 210L / 230L Mouth Closed Metal Barrels",
+      "product_slug": "200l-210l-230l-mouth-closed-metal-barrels",
+      "supplier_name": "Wuxi Sifang Youxin Co., Ltd.",
+      "supplier_slug_guess": "wuxi-sifang-youxin",
+      "source_url": "https://www.wxsfgroup.com/200l-/-210l-/-230l-mouth-closed-metal-barrels",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill product page lists specs (cold-rolled steel 0.8–1.2 mm, 2\"/3/4\" bungs) but no public FOB/unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shopcdnpro.grainajz.com/category/403801/4007/26e291525b069c9228114054f91d12ed/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_17627460897420.png",
+        "https://shopcdnpro.grainajz.com/category/403801/4007/9a4d5e397224ecb485cc785fa735b2b3/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_17627460982553.png"
+      ]
+    },
+    {
+      "product_name": "200L / 205L / 210L / 230L Mouth Open Metal Barrels",
+      "product_slug": "200l-205l-210l-230l-mouth-open-metal-barrels",
+      "supplier_name": "Wuxi Sifang Youxin Co., Ltd.",
+      "supplier_slug_guess": "wuxi-sifang-youxin",
+      "source_url": "https://www.wxsfgroup.com/200l-/-205l-567-/-210l-/-230l-mouth-open-metal-barrels",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill open-head drum page; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shopcdnpro.grainajz.com/category/403801/4007/c54287f24fffdaee431d18f48ef00f5e/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_17627461454743.png"
+      ]
+    },
+    {
+      "product_name": "ICI Composite Steel Drums (50–230L)",
+      "product_slug": "ici-composite-steel-drums-50-230l",
+      "supplier_name": "Wuxi Sifang Youxin Co., Ltd.",
+      "supplier_slug_guess": "wuxi-sifang-youxin",
+      "source_url": "https://www.wxsfgroup.com/ici-composite-drums",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill ICI composite-drum page (steel shell + polymer/PVF lining); UN-approved claimed; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shopcdnpro.grainajz.com/category/403801/4007/48cd06ef4f8e0fe7cd5f2016f81b253f/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_1762746860392.png",
+        "https://shopcdnpro.grainajz.com/category/403801/4007/e7cf43ccbb2323f2a75d0990e1a55177/SYY02629%20%281%29.png"
+      ]
+    },
+    {
+      "product_name": "30-up Laser & Inkjet Address Labels (Avery 5160 Template)",
+      "product_slug": "30-up-laser-inkjet-address-labels-avery-5160-template",
+      "supplier_name": "Shangyue (Shanghai) Printing Co., Ltd.",
+      "supplier_slug_guess": "shangyue-shanghai-printing",
+      "source_url": "https://www.made-in-china.com/showroom/afinazhang/product-detailoXwJHBEjwOhe/China-30-up-Laser-Inkjet-Labels-Easy-Peel-Address-Labels-2-625-X-1-100-Sheets-Per-Bag-5160-Template.html",
+      "unit_price": 2.0,
+      "currency": "USD",
+      "unit": "per bag",
+      "price_note": "Made-in-China listing as of fetch: US$2.50/bag (500–4,999 bags) and US$2.00/bag (5,000+ bags). unit_price = listed low bound 2.00. 100 sheets/bag, 30 labels/sheet.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00ENvtoRsySAqO/30-up-Laser-Inkjet-Labels-Easy-Peel-Address-Labels-2-625-X-1-100-Sheets-Per-Bag-5160-Template.jpg",
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/custom-a4-printed-labels-for-laserinkjet-printing-1.jpg"
+      ]
+    },
+    {
+      "product_name": "4x6 Direct Thermal Shipping Label (Dymo 4XL 1744907 Compatible)",
+      "product_slug": "4x6-direct-thermal-shipping-label-dymo-4xl-1744907-compatible",
+      "supplier_name": "Shangyue (Shanghai) Printing Co., Ltd.",
+      "supplier_slug_guess": "shangyue-shanghai-printing",
+      "source_url": "https://www.made-in-china.com/showroom/afinazhang/product-detailibgnqoXTZZph/China-Permanent-Adhesive-Perforated-1744907-4XL-4-X-6-4X6-White-Blank-Shipping-Direct-Thermal-Label.html",
+      "unit_price": 1.5,
+      "currency": "USD",
+      "unit": "per roll",
+      "price_note": "Made-in-China FOB listing as of fetch: US$1.50–1.85 / Roll (schema.org price 1.50). Permanent adhesive, perforated 4\"×6\" white blank direct thermal.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00dkKWMujwyRYZ/Permanent-Adhesive-Perforated-1744907-4XL-4-X-6-4X6-White-Blank-Shipping-Direct-Thermal-Label.jpg",
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/zebra-compatible-label-white-blank-thermal-shipping-labels.jpg"
+      ]
+    },
+    {
+      "product_name": "Zebra Compatible Blank Thermal Shipping Labels 4x6 (250 Labels/Roll)",
+      "product_slug": "zebra-compatible-blank-thermal-shipping-labels-4x6-250-labels-roll",
+      "supplier_name": "Shangyue (Shanghai) Printing Co., Ltd.",
+      "supplier_slug_guess": "shangyue-shanghai-printing",
+      "source_url": "https://www.sh-sylabel.com/zebra-compatible-blank-thermal-shipping-labels-4x6-quality-factory-supplies-from-china-250-labels-per-roll-product/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill product page (sh-sylabel.com) describes 4×6 / 250 labels per roll three-proof thermal paper; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-08/zebra-compatible-label-white-blank-thermal-shipping-labels.jpg",
+        "https://ecdn6.globalso.com/upload/p/4332/image_other/2025-07/shipping-labels.jpg"
+      ]
+    },
+    {
+      "product_name": "FLEXPET BOPET Packaging Films",
+      "product_slug": "flexpet-bopet-packaging-films",
+      "supplier_name": "UFlex Limited",
+      "supplier_slug_guess": "uflex",
+      "source_url": "https://www.uflexltd.com/packaging-films-products.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill films product page (6.5–75 micron FLEXPET BOPET); no public unit/FOB list. Do not invent film prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.uflexltd.com/assets/images/film/products.jpg",
+        "https://www.uflexltd.com/assets/images/sliders/Packaging-Film-banner.jpg"
+      ]
+    },
+    {
+      "product_name": "Pre-Formed Flexible Pouches",
+      "product_slug": "pre-formed-flexible-pouches",
+      "supplier_name": "UFlex Limited",
+      "supplier_slug_guess": "uflex",
+      "source_url": "https://www.uflexltd.com/packaging-products.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill converted-packaging page (stand-up, 3D/4D, zipper, spout pouches); no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.uflexltd.com/assets/images/packaging/IMP/UFLEX_Moulded_Products_Pouches_1.jpg",
+        "https://www.uflexltd.com/assets/images/packaging/IMP/UFLEX_Moulded_Products_Pouches_2.jpg"
+      ]
+    },
+    {
+      "product_name": "Asepto Aseptic Liquid Packaging Cartons",
+      "product_slug": "asepto-aseptic-liquid-packaging-cartons",
+      "supplier_name": "UFlex Limited",
+      "supplier_slug_guess": "uflex",
+      "source_url": "https://www.uflexltd.com/asepto.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — UFlex Asepto mill page; aseptic liquid cartons are project/contract priced, no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.uflexltd.com/assets/images/sliders/Aseptic-Liquid-Packaging-banner.jpg",
+        "https://www.uflexltd.com/assets/images/sliders/Flexible-Packaging-banner.jpg"
+      ]
+    },
+    {
+      "product_name": "1000L IBC Tank Container for Chemical Storage and Industrial Use",
+      "product_slug": "1000l-ibc-tank-container-for-chemical-storage-and-industrial-use",
+      "supplier_name": "Shandong Dingsheng Container Co., Ltd.",
+      "supplier_slug_guess": "shandong-dingsheng-container",
+      "source_url": "https://ibc-tank.en.made-in-china.com/product/axspvMNTXSUh/China-1000L-IBC-Tank-Container-Price-for-Chemical-Storage-and-Industrial-Use.html",
+      "unit_price": 68.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$68.00–85.00 / Piece; MOQ 42 Pieces. unit_price = listed low bound. Mill site schema.org 0.0 is NOT a real price — ignored.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00tqecuwfWEdgj/1000L-IBC-Tank-Container-Price-for-Chemical-Storage-and-Industrial-Use.jpg",
+        "https://www.dsibctank.com/uploads/42465/small/white-anti-static-1000l-ibc-tank-brand-newb815d.jpg"
+      ]
+    },
+    {
+      "product_name": "White 1000L Plastic IBC Tank with Steel Cage",
+      "product_slug": "white-1000l-plastic-ibc-tank-with-steel-cage",
+      "supplier_name": "Shandong Dingsheng Container Co., Ltd.",
+      "supplier_slug_guess": "shandong-dingsheng-container",
+      "source_url": "https://ibc-tank.en.made-in-china.com/product/lEDUCXWyAjru/China-White-1000L-Plastic-IBC-Tank-with-Steel-Cage-for-Liquid-Storage.html",
+      "unit_price": 68.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$68.00–85.00 / Piece; MOQ 42 Pieces. Trademark Dingsheng; 1200×1000×1145 mm; 57±1 kg.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00hvQknduBHYzE/White-1000L-Plastic-IBC-Tank-with-Steel-Cage-for-Liquid-Storage.jpg"
+      ]
+    },
+    {
+      "product_name": "White Anti-static 1000L IBC Tank",
+      "product_slug": "white-anti-static-1000l-ibc-tank",
+      "supplier_name": "Shandong Dingsheng Container Co., Ltd.",
+      "supplier_slug_guess": "shandong-dingsheng-container",
+      "source_url": "https://www.dsibctank.com/ibc-packaging-container/white-anti-static-1000l-ibc-tank-brand-new.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill page lists UN/ISO specs. Schema.org price 0.0 on dsibctank.com is a placeholder, NOT a sell price; unit_price left null.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.dsibctank.com/uploads/42465/white-anti-static-1000l-ibc-tank-brand-newb815d.jpg",
+        "https://www.dsibctank.com/uploads/42465/small/white-anti-static-1000l-ibc-tank-brand-newb815d.jpg"
+      ]
+    },
+    {
+      "product_name": "LSAW Line Pipe (API 5L / API 2B, 16–56 in)",
+      "product_slug": "lsaw-line-pipe-api-5l-api-2b-16-56-in",
+      "supplier_name": "Man Industries (India) Limited",
+      "supplier_slug_guess": "man-industries",
+      "source_url": "https://mangroup.com/lsaw/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill LSAW page (Anjar 3-roll + JCO lines, API 5L up to X80 PSL2). Linepipe is project-priced; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://mangroup.com/wp-content/uploads/2024/11/LSAW-1-1024x683.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/11/LSAW-1-scaled.jpg"
+      ]
+    },
+    {
+      "product_name": "HSAW (Spiral) Line Pipe",
+      "product_slug": "hsaw-spiral-line-pipe",
+      "supplier_name": "Man Industries (India) Limited",
+      "supplier_slug_guess": "man-industries",
+      "source_url": "https://mangroup.com/hsaw/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill HSAW product page; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://mangroup.com/wp-content/uploads/2024/11/HSAW1-1024x681.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/11/HSAW1-768x511.jpg"
+      ]
+    },
+    {
+      "product_name": "ERW / HFW Line Pipe (API 5L, 4–18 in NB)",
+      "product_slug": "erw-hfw-line-pipe-api-5l-4-18-in-nb",
+      "supplier_name": "Man Industries (India) Limited",
+      "supplier_slug_guess": "man-industries",
+      "source_url": "https://mangroup.com/electro-resistance-welded-erw/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill ERW page (Anjar, API 5L Gr. B–X80, 125,000 MTPA). No public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://mangroup.com/wp-content/uploads/2024/11/ERW-5-1024x683.jpg",
+        "https://mangroup.com/wp-content/uploads/2024/11/ERW-5-768x512.jpg"
+      ]
+    },
+    {
+      "product_name": "API 5L PSL1 ERW Steel Gas Pipe",
+      "product_slug": "api-5l-psl1-erw-steel-gas-pipe",
+      "supplier_name": "Hebei Huayang Steel Pipe Co., Ltd.",
+      "supplier_slug_guess": "hebei-huayang-steel-pipe",
+      "source_url": "https://www.huayang-steelpipe.com/showroom/api-5l-psl1-erw-steel-gas-pipe/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill showroom SKU. Schema.org 0.0 on mill pages is a placeholder, not a sell price. No public FOB found.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huayang-steelpipe.com/uploads/43557/small/api-5l-psl1-erw-steel-gas-pipef8e1f.jpg",
+        "https://www.huayang-steelpipe.com/uploads/43557/banner/20250822035044d1698.jpg"
+      ]
+    },
+    {
+      "product_name": "ASTM A53 LSAW Steel Fluid Pipe",
+      "product_slug": "astm-a53-lsaw-steel-fluid-pipe",
+      "supplier_name": "Hebei Huayang Steel Pipe Co., Ltd.",
+      "supplier_slug_guess": "hebei-huayang-steel-pipe",
+      "source_url": "https://www.huayang-steelpipe.com/showroom/astm-a53-lsaw-steel-fluid-pipe/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill LSAW/JCOE fluid-pipe SKU; no public unit price. Do not treat mill 0.0 as a price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huayang-steelpipe.com/uploads/43557/small/astm-a53-lsaw-steel-fluid-pipe72b82.jpg"
+      ]
+    },
+    {
+      "product_name": "3PP Coated LSAW Welded Steel Pipe (API 5L)",
+      "product_slug": "3pp-coated-lsaw-welded-steel-pipe-api-5l",
+      "supplier_name": "Hebei Huayang Steel Pipe Co., Ltd.",
+      "supplier_slug_guess": "hebei-huayang-steel-pipe",
+      "source_url": "https://www.huayang-steelpipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill homepage product card 3PP-coated LSAW API 5L; coating/linepipe is project-priced, no public FOB.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huayang-steelpipe.com/uploads/43557/small/3pp-coated-lsaw-welded-steel-pipe-api-5l0c6e9.jpg",
+        "https://www.huayang-steelpipe.com/uploads/43557/small/thick-wall-carbon-steel-tube72af8.jpg"
+      ]
+    },
+    {
+      "product_name": "ASTM A53 ERW Steel Pipes",
+      "product_slug": "astm-a53-erw-steel-pipes",
+      "supplier_name": "Al Jazeera Steel Products Co. SAOG",
+      "supplier_slug_guess": "al-jazeera-steel",
+      "source_url": "https://jazeerasteel.com/steel-ASTM-A53.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill ASTM A53 product page; Sohar ERW tube mill does not publish a unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jazeerasteel.com/images/steel-pipe.jpg",
+        "https://jazeerasteel.com/images/plant-tube-mill-1.jpg"
+      ]
+    },
+    {
+      "product_name": "EN 10219 Structural Hollow Sections",
+      "product_slug": "en-10219-structural-hollow-sections",
+      "supplier_name": "Al Jazeera Steel Products Co. SAOG",
+      "supplier_slug_guess": "al-jazeera-steel",
+      "source_url": "https://jazeerasteel.com/tube-mill-en-10219.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill EN 10219 SHS/RHS page; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jazeerasteel.com/images/plant-tube-mill-1.jpg",
+        "https://jazeerasteel.com/images/steel-pipe.jpg"
+      ]
+    },
+    {
+      "product_name": "ISO 65 ERW Pipes (Black / Galvanized)",
+      "product_slug": "iso-65-erw-pipes-black-galvanized",
+      "supplier_name": "Al Jazeera Steel Products Co. SAOG",
+      "supplier_slug_guess": "al-jazeera-steel",
+      "source_url": "https://www.jazeerasteel.com/tube-mill-iso-65.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill ISO 65 tube-mill page (black and galvanized ERW). Galvanizing capacity ~90 kt/y stated on manufacturing-plant.php. No public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jazeerasteel.com/images/gallery-1.jpg",
+        "https://jazeerasteel.com/images/gallery-2.jpg"
+      ]
+    },
+    {
+      "product_name": "Carbon Steel LSAW / HSAW SAW Line Pipe",
+      "product_slug": "carbon-steel-lsaw-hsaw-saw-line-pipe",
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug_guess": "ratnamani-metals-tubes",
+      "source_url": "https://ratnamani.com/saw_pipes.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill SAW pipes page (LSAW 8–56 NPS, HSAW 457–3640 mm, API 5L). Project-priced; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ratnamani.com/images/inner_banner/products/CarbonSteel/SawPipes/saw_pipes1.jpg",
+        "https://www.ratnamani.com/images/inner_banner/products/CarbonSteel/SawPipes/saw_pipes2.jpg"
+      ]
+    },
+    {
+      "product_name": "Carbon Steel HF-ERW Pipes",
+      "product_slug": "carbon-steel-hf-erw-pipes",
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug_guess": "ratnamani-metals-tubes",
+      "source_url": "https://www.ratnamani.com/hfw_erw_pipes.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill HF-ERW page (168.3–457 mm, API 5L/5CT, 100,000 MT/y). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ratnamani.com/images/inner_banner/products/CarbonSteel/HFWPipes/HFW_pipes1.jpg",
+        "https://www.ratnamani.com/images/inner_banner/products/CarbonSteel/HFWPipes/HFW_pipes2.jpg"
+      ]
+    },
+    {
+      "product_name": "Stainless Steel Seamless and Welded Tubes",
+      "product_slug": "stainless-steel-seamless-and-welded-tubes",
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug_guess": "ratnamani-metals-tubes",
+      "source_url": "https://www.ratnamani.com/stainless_steel.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill stainless division page (Indrad/Kutch seamless & welded SS/nickel/titanium tubes). No public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ratnamani.com/images/product_lines/stainless_steel/product1.jpg",
+        "https://www.ratnamani.com/images/inner_banner/products/StainlessSteel/stainless_steel1.jpg"
+      ]
+    }
+  ]
+}
