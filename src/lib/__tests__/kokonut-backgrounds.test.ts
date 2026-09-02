@@ -19,12 +19,39 @@ describe("Kokonut background adapters", () => {
   });
 
   it("is not imported on the homepage marketing surface", () => {
-    const home = readFileSync(
+    const files = [
+      "src/app/[locale]/page.tsx",
+      "src/components/HomeAiDemoSection.tsx",
+      "src/components/home/HomeHero.tsx",
+      "src/components/home/HomeAgentOrb.tsx",
+    ];
+    for (const rel of files) {
+      const src = readFileSync(resolve(process.cwd(), rel), "utf8");
+      expect(src, rel).not.toMatch("BeamsBackground");
+      expect(src, rel).not.toMatch("BackgroundPaths");
+      expect(src, rel).not.toMatch("FlowField");
+    }
+  });
+});
+
+describe("homepage agent orb", () => {
+  it("lazy-loads beside the console and strips the source debug strings", () => {
+    const section = readFileSync(
       resolve(process.cwd(), "src/components/HomeAiDemoSection.tsx"),
       "utf8"
     );
-    expect(home).not.toMatch("BeamsBackground");
-    expect(home).not.toMatch("BackgroundPaths");
-    expect(home).not.toMatch("FlowField");
+    const orb = readFileSync(
+      resolve(process.cwd(), "src/components/home/HomeAgentOrb.tsx"),
+      "utf8"
+    );
+    expect(section).toMatch("next/dynamic");
+    expect(section).toMatch("ssr: false");
+    expect(section).toMatch("lg:grid-cols-12");
+    expect(orb).not.toMatch("setInfo");
+    expect(orb).not.toMatch("annotate");
+    expect(orb).not.toMatch("Siri");
+    expect(orb).toMatch("enableRotate={false}");
+    expect(orb).toMatch("7000");
+    expect(orb).toMatch("14000");
   });
 });

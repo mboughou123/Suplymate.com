@@ -157,15 +157,18 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const country = s.country ?? countryOf(s.location);
   const city = s.city ?? s.location.split(",")[0].trim();
 
-  // Ratings / reviews: only sourced fields — never invent demo junk.
-  const rating = s.googleRating ?? s.rating ?? null;
-  const reviewCount = s.googleReviews ?? s.reviewCount ?? null;
+  // Phase-1 / Lister rows may carry sourced Google/listing ratings and MOQ.
+  // Older seed / Outscraper leftovers used category-default MOQs and should
+  // not present ratings, review counts, or MOQ as if they came from Lister.
+  const sourced = isPhase1Supplier(s);
+  const rating = sourced ? (s.googleRating ?? s.rating ?? null) : null;
+  const reviewCount = sourced ? (s.googleReviews ?? s.reviewCount ?? null) : null;
   const verified = s.verified ?? false;
 
   const factoryPhotoUrl = getFactoryPhotoUrl(s);
   const logoUrl = getSupplierLogoUrl(s);
 
-  const realMoq = (s.moq ?? "").trim();
+  const realMoq = sourced ? (s.moq ?? "").trim() : "";
   const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
     name,
     price: "RFQ",

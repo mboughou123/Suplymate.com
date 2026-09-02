@@ -56,6 +56,38 @@ describe("toDisplaySupplier commercial honesty", () => {
     expect(d.yearsInBusiness).toBeNull();
     expect(d.employees).toBeNull();
   });
+
+  it("hides leftover seed ratings / MOQ that are not from the Lister pack", () => {
+    const leftover = toDisplaySupplier(
+      stub({
+        id: "all-metal-india-pvt-ltd-pune",
+        name: "ALL METAL INDIA PVT. LTD",
+        googleRating: 5,
+        googleReviews: 349,
+        rating: 5,
+        reviewCount: 349,
+        moq: "5 tons",
+        products: ["Steel coils"],
+      })
+    );
+    expect(leftover.rating).toBeNull();
+    expect(leftover.reviewCount).toBeNull();
+    expect(leftover.hasRealRating).toBe(false);
+    expect(leftover.hasRealReviews).toBe(false);
+    expect(leftover.products[0]?.price).toBe("RFQ");
+    expect(leftover.products[0]?.hasRealMoq).toBe(false);
+    expect(leftover.moq).toBe("");
+  });
+
+  it("keeps Lister-sourced ratings on phase-1 mills", () => {
+    const foliflex = phase1Suppliers.find((s) => s.id === "foliflex-wires-cables-delhi");
+    expect(foliflex).toBeTruthy();
+    const d = toDisplaySupplier(foliflex!);
+    expect(d.hasRealRating).toBe(Boolean(foliflex!.googleRating ?? foliflex!.rating));
+    if (foliflex!.googleRating != null) {
+      expect(d.rating).toBe(foliflex!.googleRating);
+    }
+  });
 });
 
 describe("trader vs mill labels", () => {
