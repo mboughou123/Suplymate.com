@@ -91,6 +91,14 @@ export function hasSourcedPrice(basePrice: number | null | undefined): boolean {
   return typeof basePrice === "number" && Number.isFinite(basePrice) && basePrice > 0;
 }
 
+/** Catalogue / detail gate: RFQ when there is no sourced unit price. */
+export function productHasPublicPrice(
+  product: Pick<Product, "basePrice" | "priceMin" | "hasPublicPrice">
+): boolean {
+  if (hasSourcedPrice(product.basePrice)) return true;
+  return Boolean(product.hasPublicPrice) && hasSourcedPrice(product.priceMin);
+}
+
 function priceLabelFor(
   basePrice: number | null | undefined,
   currency: string,

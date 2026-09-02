@@ -23,6 +23,17 @@ import {
   formatPrice,
 } from "@/config/commerce";
 
+function hasSourcedPrice(value: number | null | undefined): boolean {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+function productHasPublicPrice(
+  product: Pick<Product, "basePrice" | "priceMin" | "hasPublicPrice">
+): boolean {
+  if (hasSourcedPrice(product.basePrice)) return true;
+  return Boolean(product.hasPublicPrice) && hasSourcedPrice(product.priceMin);
+}
+
 /* ----------------------------- RNG helpers ----------------------------- */
 
 function hashString(str: string): number {
@@ -160,6 +171,8 @@ export type ProductDetail = {
   reviewCount: number;
   commissionRate: number;
   displayFromLabel: string;
+  /** False when unit_price is null — UI must show RFQ, never $0.00. */
+  hasPublicPrice: boolean;
   gallery: GalleryImage[];
   priceTiers: PriceTier[];
   options: ProductOption[];
@@ -305,6 +318,7 @@ export type ProductCardData = {
   /** Profile-completeness of the linked supplier (sort key for the catalogue). */
   completenessScore: number;
   unit: string;
+  /** Sourced bulk price, or "RFQ" — never "$0.00". */
   bulkPriceLabel: string;
   moq: string;
   shippingTime: string;
@@ -361,7 +375,9 @@ export function getProductCardData(product: Product): ProductCardData {
     verified: sd.verified,
     completenessScore,
     unit: product.unit,
-    bulkPriceLabel: `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`,
+    bulkPriceLabel: productHasPublicPrice(product)
+      ? `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`
+      : "RFQ",
     moq: product.moq ?? `${intBetween(rng, 1, 50) * (product.unit === "ton" ? 1 : 10)} ${product.unit}s`,
     shippingTime: product.shippingTime ?? `${product.bestDeliveryDays}–${product.bestDeliveryDays + 8} days`,
     rating: product.rating ?? Math.min(5, Math.round((4.3 + rng() * 0.6) * 10) / 10),
@@ -422,10 +438,13 @@ export function getProductDetail(product: Product): ProductDetail {
       priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
     };
   });
-  const displayFromLabel = `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
-    applyCommission(product.priceMax, rate),
-    product.currency
-  )}`;
+  const hasPublicPrice = productHasPublicPrice(product);
+  const displayFromLabel = hasPublicPrice
+    ? `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
+        applyCommission(product.priceMax, rate),
+        product.currency
+      )}`
+    : "RFQ";
 
   /* --- gallery --- */
   const galleryLabels = ["Main view", "Detail", "Application", "Packaging", "Factory video"];
@@ -624,7 +643,9 @@ export function getProductDetail(product: Product): ProductDetail {
       category: p.category,
       gradient: GALLERY_GRADIENTS[(hashString(p.id) + i) % GALLERY_GRADIENTS.length],
       icon: ICONS_BY_CATEGORY[p.category],
-      priceFromLabel: `From ${formatPrice(applyCommission((p.basePrice ?? p.priceMin) * 0.82, rate), p.currency)}`,
+      priceFromLabel: productHasPublicPrice(p)
+        ? `From ${formatPrice(applyCommission((p.basePrice ?? p.priceMin) * 0.82, rate), p.currency)}`
+        : "RFQ",
       moq: p.moq ?? `${intBetween(makeRng(hashString(p.id)), 1, 50)} ${p.unit}s`,
     }));
 
@@ -656,6 +677,7 @@ export function getProductDetail(product: Product): ProductDetail {
     reviewCount,
     commissionRate: rate,
     displayFromLabel,
+    hasPublicPrice,
     gallery,
     priceTiers,
     options,

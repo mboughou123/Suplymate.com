@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { hasSourcedPrice } from "@/lib/public-products";
+import { hasSourcedPrice, productHasPublicPrice } from "@/lib/public-products";
 import { scrapedToProduct } from "@/lib/scraped-products-store";
+import { getProductDetail } from "@/lib/product-detail";
 import type { ScrapedProduct } from "@/data/scraped-products";
 
 describe("hasSourcedPrice", () => {
@@ -65,5 +66,17 @@ describe("scrapedToProduct pricing honesty", () => {
     const p = scrapedToProduct({ ...base, basePrice: 14.2 });
     expect(p.hasPublicPrice).toBe(true);
     expect(p.basePrice).toBe(14.2);
+  });
+
+  it("never surfaces $0.00 on RFQ detail / recommended labels", () => {
+    const p = scrapedToProduct(base);
+    expect(productHasPublicPrice(p)).toBe(false);
+    const detail = getProductDetail(p);
+    expect(detail.hasPublicPrice).toBe(false);
+    expect(detail.displayFromLabel).toBe("RFQ");
+    expect(detail.displayFromLabel).not.toContain("$0");
+    expect(detail.recommended.every((r) => !r.priceFromLabel.includes("$0"))).toBe(
+      true
+    );
   });
 });

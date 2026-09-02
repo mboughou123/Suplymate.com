@@ -49,7 +49,7 @@ export default async function ProductDetailPage({ params }: Props) {
   // Honest pricing gate: only show indicative tiers when a real supplier-listed
   // price exists. Scraped products with no public price fall back to a
   // "Contact supplier for pricing" state.
-  const hasPublicPrice = (product.basePrice ?? product.priceMin ?? 0) > 0;
+  const hasPublicPrice = detail.hasPublicPrice;
 
   return (
     <div className="min-h-screen bg-slate-50/50">

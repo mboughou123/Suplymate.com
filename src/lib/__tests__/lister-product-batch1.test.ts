@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  CAICHENG_FOLDING_GIFT_BOX_IMAGE,
   LISTER_SUPPLIER_ID_BY_SLUG,
   listerBatch1Count,
   listerBatch1Products,
@@ -10,6 +11,7 @@ import {
 import { hasSourcedPrice } from "@/lib/public-products";
 import { isRealImageUrl } from "@/lib/image-fallback";
 import { MATE_TAGLINE } from "@/lib/mate-branding";
+import enhancedManifest from "../../../data/product-media-batch1-enhanced-manifest.json";
 
 describe("Lister product-media batch 1", () => {
   it("loads all 33 packaging + tubes SKUs", () => {
@@ -38,16 +40,42 @@ describe("Lister product-media batch 1", () => {
     }
   });
 
-  it("attaches local product photographs (not PDF catalogs)", () => {
+  it("prefers enhanced local public paths over remote image_urls", () => {
     for (const p of listerBatch1Products) {
       expect(p.images.length).toBeGreaterThan(0);
-      const primary = p.images[0];
-      expect(primary.toLowerCase()).not.toContain(".pdf");
-      expect(isRealImageUrl(primary)).toBe(true);
-      if (primary.startsWith("/images/products/")) {
-        const abs = join(process.cwd(), "public", primary.replace(/^\//, ""));
-        expect(existsSync(abs), primary).toBe(true);
+      for (const url of p.images) {
+        expect(url.startsWith("/images/products/")).toBe(true);
+        expect(url.toLowerCase()).not.toContain(".pdf");
+        expect(/^https?:\/\//i.test(url)).toBe(false);
+        expect(isRealImageUrl(url)).toBe(true);
+        const abs = join(process.cwd(), "public", url.replace(/^\//, ""));
+        expect(existsSync(abs), url).toBe(true);
       }
+    }
+  });
+
+  it("maps Folding Gift Box to the Caicheng packaging JPEG", () => {
+    const box = listerBatch1Products.find((p) => p.name === "Folding Gift Box");
+    expect(box).toBeDefined();
+    expect(box!.supplierId).toBe("dongguan-caicheng-printing-factory-cn");
+    expect(box!.images[0]).toBe(CAICHENG_FOLDING_GIFT_BOX_IMAGE);
+    expect(box!.images).toContain(
+      "/images/products/packaging/dongguan-caicheng-printing/folding-gift-box-2.jpg"
+    );
+    expect(box!.basePrice).toBeNull();
+  });
+
+  it("attaches secondary enhanced JPGs from the 51-file manifest", () => {
+    const withSecondaries = listerBatch1Products.filter((p) =>
+      p.images.some((u) => /-\d+\.jpe?g$/i.test(u))
+    );
+    expect(withSecondaries.length).toBeGreaterThanOrEqual(17);
+    expect(enhancedManifest).toHaveLength(51);
+
+    const used = new Set(listerBatch1Products.flatMap((p) => p.images));
+    for (const entry of enhancedManifest as { repo_path: string }[]) {
+      const pub = `/${entry.repo_path.replace(/^public\//, "")}`;
+      expect(used.has(pub), pub).toBe(true);
     }
   });
 
