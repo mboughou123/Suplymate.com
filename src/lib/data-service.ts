@@ -9,6 +9,7 @@ import {
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
+import { daily20260902Suppliers } from "@/lib/daily-2026-09-02-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
 import { compareForDirectory } from "@/lib/supplier-directory-sort";
 
@@ -40,7 +41,8 @@ function allFallbackSuppliers(): Supplier[] {
     directoryFallback,
     verifiedSuppliers,
     legacySuppliers,
-    phase1Suppliers
+    phase1Suppliers,
+    daily20260902Suppliers
   );
 }
 
@@ -73,17 +75,23 @@ export async function getSuppliersFromDb() {
     // (or only has the legacy seed rows). Overlay the phase-1 factory pack so
     // curated local photos land without a production DB deploy.
     if (rows.length < 50) {
-      return mergeSuppliersById(directoryFallback, phase1Suppliers).sort(
-        compareForDirectory
-      );
+      return mergeSuppliersById(
+        directoryFallback,
+        phase1Suppliers,
+        daily20260902Suppliers,
+      ).sort(compareForDirectory);
     }
     // Never surface pending/rejected/needs_info imports on public surfaces.
     const fromDb = rows.map(mapSupplier).filter(isPubliclyVisible);
-    return mergeSuppliersById(fromDb, phase1Suppliers).sort(compareForDirectory);
-  } catch {
-    return mergeSuppliersById(directoryFallback, phase1Suppliers).sort(
-      compareForDirectory
+    return mergeSuppliersById(fromDb, phase1Suppliers, daily20260902Suppliers).sort(
+      compareForDirectory,
     );
+  } catch {
+    return mergeSuppliersById(
+      directoryFallback,
+      phase1Suppliers,
+      daily20260902Suppliers,
+    ).sort(compareForDirectory);
   }
 }
 
