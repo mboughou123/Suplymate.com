@@ -221,13 +221,22 @@ function moqFromNote(note: string | null, fallback: string | null): string | nul
   return fallback;
 }
 
+/** AI bag photo — on disk, not in the enhancer manifest (no mill source still). */
+const MAGICRETE_AI_IMAGE =
+  "/images/products/magicrete-building-solutions/block-jointing-mortar-ai.jpg";
+
 const localFiles = indexFlatProductImagePaths(
   preferEnhancedJpegPaths(
-    (enhancedManifest as ManifestRow[])
-      .map((e) =>
-        publicPathFromDailyEnhancedDst(e.dst_rel ?? e.dst ?? e.repo_path ?? e.src ?? ""),
-      )
-      .filter((p): p is string => Boolean(p)),
+    [
+      ...(enhancedManifest as ManifestRow[])
+        .map((e) =>
+          publicPathFromDailyEnhancedDst(
+            e.dst_rel ?? e.dst ?? e.repo_path ?? e.src ?? "",
+          ),
+        )
+        .filter((p): p is string => Boolean(p)),
+      MAGICRETE_AI_IMAGE,
+    ],
   ),
 );
 
