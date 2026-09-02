@@ -21,6 +21,7 @@ import ProcurementPanel from "./ProcurementPanel";
 import InsightsPanel from "./InsightsPanel";
 import ActivityFeed from "./ActivityFeed";
 import MarketTrendsSection from "./MarketTrendsSection";
+import CarouselCards from "@/components/kokonutui/carousel-cards";
 import {
   type DashboardStats,
   type DashboardUser,
@@ -199,6 +200,8 @@ export default function DashboardClient({
                 empty
               />
             </div>
+
+            <CarouselCards title="Phase-1 mills" />
 
             <div className="grid gap-6 xl:grid-cols-12">
               <div className="space-y-6 xl:col-span-8">

@@ -6,6 +6,11 @@ import {
   HOME_SUPPLIERS_BAND,
   getSupplierBandHref,
 } from "@/lib/home-suppliers-band";
+import {
+  localLogoPathForSupplierId,
+  logoNeedsDarkChip,
+} from "@/lib/local-supplier-logos";
+import SupplierLogo from "@/components/SupplierLogo";
 
 export default async function HomeSuppliersBand() {
   const t = await getTranslations("homeSuppliers");
@@ -45,6 +50,19 @@ export default async function HomeSuppliersBand() {
                       className="h-full w-full object-cover transition duration-500 ease-cinema group-hover:scale-[1.03]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
+                    {entry.supplierId &&
+                      localLogoPathForSupplierId(entry.supplierId) && (
+                        <div className="absolute left-3 bottom-3">
+                          <SupplierLogo
+                            logoUrl={localLogoPathForSupplierId(entry.supplierId)}
+                            initials=""
+                            gradient="linear-gradient(135deg, #0d3349, #0369a1)"
+                            name={t(`${entry.key}Name`)}
+                            darkChip={logoNeedsDarkChip(entry.supplierId)}
+                            className="h-12 w-12 rounded-full text-xs ring-2 ring-white shadow-card"
+                          />
+                        </div>
+                      )}
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="font-display text-heading-sm text-navy">

@@ -10,7 +10,7 @@
 
 import type { Supplier } from "@/data/suppliers";
 import { scoreSupplier } from "@/lib/supplier-ranking";
-import { toDisplaySupplier, type DisplaySupplier } from "@/lib/supplier-display";
+import { toDisplaySupplier, inferBusinessType, type DisplaySupplier } from "@/lib/supplier-display";
 import {
   isRealImageUrl,
   getSupplierFallbackImage,
@@ -65,55 +65,6 @@ function intBetween(rng: () => number, min: number, max: number): number {
   return min + Math.floor(rng() * (max - min + 1));
 }
 
-function trend(rng: () => number, points: number, base: number, spread: number): number[] {
-  const out: number[] = [];
-  let v = base;
-  for (let i = 0; i < points; i++) {
-    v += (rng() - 0.42) * spread;
-    out.push(Math.round(Math.max(0, v) * 10) / 10);
-  }
-  return out;
-}
-
-/* ------------------------------------------------------------------ */
-/* Country flags (extends the card flag map for review authors)        */
-/* ------------------------------------------------------------------ */
-
-const FLAGS: Record<string, string> = {
-  "united states": "🇺🇸",
-  usa: "🇺🇸",
-  germany: "🇩🇪",
-  france: "🇫🇷",
-  "united kingdom": "🇬🇧",
-  uk: "🇬🇧",
-  italy: "🇮🇹",
-  spain: "🇪🇸",
-  netherlands: "🇳🇱",
-  china: "🇨🇳",
-  india: "🇮🇳",
-  japan: "🇯🇵",
-  "south korea": "🇰🇷",
-  "united arab emirates": "🇦🇪",
-  uae: "🇦🇪",
-  "saudi arabia": "🇸🇦",
-  turkey: "🇹🇷",
-  morocco: "🇲🇦",
-  mexico: "🇲🇽",
-  brazil: "🇧🇷",
-  canada: "🇨🇦",
-  australia: "🇦🇺",
-  poland: "🇵🇱",
-  vietnam: "🇻🇳",
-  singapore: "🇸🇬",
-  belgium: "🇧🇪",
-  sweden: "🇸🇪",
-  switzerland: "🇨🇭",
-};
-
-function flagFor(country: string): string {
-  return FLAGS[country.trim().toLowerCase()] ?? "🌍";
-}
-
 /* ------------------------------------------------------------------ */
 /* Public types                                                        */
 /* ------------------------------------------------------------------ */
@@ -122,17 +73,17 @@ export type RiskLevel = "Low" | "Moderate" | "Elevated";
 
 export type TrustMetrics = {
   trustScore: number;
-  rating: number;
-  reviewCount: number;
-  onTimeDelivery: number;
-  repeatBuyerRate: number;
-  orderCompletion: number;
+  rating: number | null;
+  reviewCount: number | null;
+  onTimeDelivery: number | null;
+  repeatBuyerRate: number | null;
+  orderCompletion: number | null;
   riskLevel: RiskLevel;
   aiConfidence: number;
-  responseRate: number;
-  responseTime: string;
-  deliveryReliability: number;
-  qualityConsistency: number;
+  responseRate: number | null;
+  responseTime: string | null;
+  deliveryReliability: number | null;
+  qualityConsistency: number | null;
   trends: {
     onTime: number[];
     quality: number[];
@@ -142,12 +93,12 @@ export type TrustMetrics = {
 
 export type CompanyProfile = {
   registrationDate: string;
-  yearsInBusiness: number;
+  yearsInBusiness: number | null;
   businessType: string;
   factorySize: string;
   employeeCount: string;
-  productionLines: number;
-  rdEngineers: number;
+  productionLines: number | null;
+  rdEngineers: number | null;
   annualOutput: string;
   exportMarkets: string[];
   languages: string[];
@@ -191,13 +142,15 @@ export type ProfileProduct = {
   /** True when `image` is a genuine photograph. */
   hasRealPhoto: boolean;
   priceRange: string;
+  hasRealPrice: boolean;
   moq: string;
+  hasRealMoq: boolean;
   leadTime: string;
   material: string;
   certifications: string[];
   shipping: string;
   aiRecommended: boolean;
-  rating: number;
+  rating: number | null;
 };
 
 export type Review = {
@@ -243,7 +196,7 @@ export type AiInsights = {
   riskAnalysis: string;
   pricingCompetitiveness: number;
   bestMarkets: string[];
-  deliveryReliabilityPrediction: number;
+  deliveryReliabilityPrediction: number | null;
   overallConfidence: number;
   cards: AiInsight[];
   priceTrend: number[];
@@ -273,6 +226,8 @@ export type SupplierProfile = {
   mediaQuality: MediaQuality;
   /** True when the gallery is backed only by category fallbacks (no real media). */
   mediaIncomplete: boolean;
+  /** False until sourced mill KPIs exist — never invent on-time / reorder %. */
+  hasSourcedTrustMetrics: boolean;
 };
 
 /* ------------------------------------------------------------------ */
@@ -289,73 +244,6 @@ const CERT_POOL: { code: string; name: string; authority: string }[] = [
   { code: "FDA", name: "Food & Drug Compliance", authority: "US FDA" },
   { code: "GMP", name: "Good Manufacturing Practice", authority: "NSF International" },
   { code: "ISO 45001", name: "Occupational Health & Safety", authority: "DNV" },
-];
-
-const LANGUAGES = ["English", "Mandarin", "German", "French", "Spanish", "Arabic", "Italian", "Portuguese"];
-const EXPORT_MARKETS = [
-  "North America",
-  "European Union",
-  "Middle East",
-  "Southeast Asia",
-  "Latin America",
-  "Africa",
-  "United Kingdom",
-  "Oceania",
-];
-const BUSINESS_TYPES = [
-  "Manufacturer",
-  "Manufacturer & Exporter",
-  "Verified Factory",
-  "Industrial Supplier",
-  "OEM / ODM Manufacturer",
-];
-const MATERIALS = [
-  "Carbon steel",
-  "Stainless steel 304/316",
-  "Aluminum alloy",
-  "HDPE polymer",
-  "Copper grade A",
-  "Galvanized steel",
-  "Reinforced composite",
-  "PVC compound",
-];
-const LEAD_TIMES = ["7–12 days", "10–15 days", "15–20 days", "20–30 days", "3–6 weeks"];
-const SHIPPING_TERMS = ["FOB", "CIF", "EXW", "DDP", "FOB / CIF"];
-
-const REVIEW_AUTHORS = [
-  "Procurement Director",
-  "Sourcing Manager",
-  "Operations Lead",
-  "Supply Chain Manager",
-  "Category Buyer",
-  "Plant Manager",
-  "Head of Purchasing",
-];
-const REVIEW_COMPANIES = [
-  "Meridian Industries",
-  "Vortex Manufacturing",
-  "Northwind Trading",
-  "Apex Build Group",
-  "BlueHarbor Logistics",
-  "Cardinal Components",
-  "Stratos Engineering",
-  "Lumen Fabrication",
-  "Orion Procurement",
-  "Halcyon Supplies",
-];
-const REVIEW_COUNTRIES = [
-  "United States",
-  "Germany",
-  "France",
-  "United Kingdom",
-  "Netherlands",
-  "United Arab Emirates",
-  "Spain",
-  "Italy",
-  "Canada",
-  "Mexico",
-  "Saudi Arabia",
-  "Singapore",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -407,50 +295,56 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   });
 
   /* --- Trust & performance --- */
-  const onTimeDelivery = base.onTimeDelivery;
-  const repeatBuyerRate = base.reorderRate;
-  const orderCompletion = intBetween(rng, 94, 99);
-  const responseRate = intBetween(rng, 84, 99);
-  const deliveryReliability = intBetween(rng, 88, 99);
-  const qualityConsistency = intBetween(rng, 90, 99);
-  const aiConfidence = Math.min(98, Math.round((trustScore + base.rating * 10) / 1.5));
+  // Directory cards no longer invent on-time / reorder / response figures.
+  // Keep the same stance on the profile until sourced mill KPIs exist.
+  const ratingLabel =
+    base.hasRealRating && base.rating != null ? `${base.rating.toFixed(1)}★` : "no sourced rating";
+  const reviewLabel =
+    base.hasRealReviews && base.reviewCount != null
+      ? `${base.reviewCount.toLocaleString()} reviews`
+      : "no sourced review count";
+  const aiConfidence = Math.min(
+    98,
+    Math.round(
+      base.rating != null ? (trustScore + base.rating * 10) / 1.5 : trustScore
+    )
+  );
 
   const trust: TrustMetrics = {
     trustScore,
     rating: base.rating,
     reviewCount: base.reviewCount,
-    onTimeDelivery,
-    repeatBuyerRate,
-    orderCompletion,
+    onTimeDelivery: null,
+    repeatBuyerRate: null,
+    orderCompletion: null,
     riskLevel: riskFromScore(trustScore),
     aiConfidence,
-    responseRate,
-    responseTime: base.responseTime,
-    deliveryReliability,
-    qualityConsistency,
+    responseRate: null,
+    responseTime: null,
+    deliveryReliability: null,
+    qualityConsistency: null,
     trends: {
-      onTime: trend(rng, 8, onTimeDelivery - 4, 4),
-      quality: trend(rng, 8, qualityConsistency - 4, 4),
-      response: trend(rng, 8, responseRate - 6, 6),
+      onTime: [],
+      quality: [],
+      response: [],
     },
   };
 
   /* --- Company profile --- */
   const years = base.yearsInBusiness;
-  const regYear = 2026 - years;
   const company: CompanyProfile = {
-    registrationDate: `${["Jan", "Mar", "Apr", "Jun", "Sep", "Nov"][seed % 6]} ${regYear}`,
+    registrationDate: years != null ? `${["Jan", "Mar", "Apr", "Jun", "Sep", "Nov"][seed % 6]} ${2026 - years}` : "",
     yearsInBusiness: years,
-    businessType: pick(rng, BUSINESS_TYPES),
-    factorySize: `${(intBetween(rng, 8, 85) * 1000).toLocaleString()} m²`,
-    employeeCount: base.employees,
-    productionLines: intBetween(rng, 4, 24),
-    rdEngineers: intBetween(rng, 6, 60),
-    annualOutput: `${intBetween(rng, 12, 240)}k units / yr`,
-    exportMarkets: pickSome(rng, EXPORT_MARKETS, 3, 6),
-    languages: ["English", ...pickSome(rng, LANGUAGES.filter((l) => l !== "English"), 1, 3)],
-    moq: base.moq,
-    productionCapacity: `${intBetween(rng, 5, 60)},000 ${pick(rng, ["units", "tons", "pcs", "m"])}/month`,
+    businessType: inferBusinessType(s),
+    factorySize: "",
+    employeeCount: base.employees ?? "",
+    productionLines: null,
+    rdEngineers: null,
+    annualOutput: "",
+    exportMarkets: [],
+    languages: [],
+    moq: base.moq || "RFQ",
+    productionCapacity: "",
   };
 
   /* --- Certifications --- */
@@ -508,17 +402,9 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   /* --- Products --- */
   const productCats = ["Featured", "Best seller", "New", "Bulk", "Custom"];
   const baseProducts = s.products.length ? s.products : base.products.map((p) => p.name);
-  const expanded = [...baseProducts];
-  // pad to at least 6 product cards so the grid feels complete
-  while (expanded.length < 6) {
-    expanded.push(`${baseProducts[expanded.length % baseProducts.length]} — Series ${expanded.length}`);
-  }
-  const products: ProfileProduct[] = expanded.slice(0, 8).map((name, i) => {
+  const realMoq = (s.moq ?? "").trim();
+  const products: ProfileProduct[] = baseProducts.slice(0, 8).map((name, i) => {
     const pr = makeRng(hashString(`${s.id}-product-${i}`));
-    const lo = intBetween(pr, 8, 480);
-    const hi = lo + intBetween(pr, 12, 600);
-    // Prioritise real supplier photos for the catalog cards; cycle through them
-    // so each product looks distinct, then fall back to a category tile.
     const realPhoto = realSupplierPhotos.length
       ? realSupplierPhotos[i % realSupplierPhotos.length]
       : undefined;
@@ -531,150 +417,100 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
       image: realPhoto ?? imageFallback,
       imageFallback,
       hasRealPhoto: Boolean(realPhoto),
-      priceRange: `$${lo.toLocaleString()} – $${hi.toLocaleString()}`,
-      moq: i % 2 === 0 ? base.moq : `${intBetween(pr, 1, 500)} units`,
-      leadTime: pick(pr, LEAD_TIMES),
-      material: pick(pr, MATERIALS),
-      certifications: certPool.slice(0, intBetween(pr, 1, 3)).map((c) => c.code),
-      shipping: pick(pr, SHIPPING_TERMS),
-      aiRecommended: pr() > 0.62,
-      rating: Math.min(5, Math.round((4.2 + pr() * 0.8) * 10) / 10),
+      priceRange: "RFQ",
+      hasRealPrice: false,
+      moq: realMoq,
+      hasRealMoq: Boolean(realMoq),
+      leadTime: "",
+      material: "",
+      certifications: [],
+      shipping: "",
+      aiRecommended: false,
+      rating: null,
     };
   });
 
   /* --- Reviews --- */
-  const reviewCount = intBetween(rng, 5, 8);
-  const reviewTitles = [
-    "Reliable partner for recurring orders",
-    "Excellent quality and communication",
-    "Fast turnaround, competitive pricing",
-    "Consistent and professional",
-    "Great export experience",
-    "Solid supplier, would reorder",
-    "Strong QC and documentation",
-    "Smooth negotiation and delivery",
-  ];
-  const reviewBodies = [
-    "Delivered on spec and on time. Documentation and certificates were complete, and their team responded within hours throughout the process.",
-    "We've placed several bulk orders and quality has been consistent. Packaging held up well for international freight.",
-    "Pricing was competitive versus three other quotes and the lead time was shorter than promised. Will source again.",
-    "Responsive sales team, transparent on MOQ and Incoterms. Samples matched the production batch.",
-    "Handled a custom spec without issues. QC photos were shared before dispatch which gave us confidence.",
-    "Professional from RFQ to delivery. Minor delay on one shipment but they communicated proactively.",
-  ];
-  const reviews: Review[] = Array.from({ length: reviewCount }).map((_, i) => {
-    const rr = makeRng(hashString(`${s.id}-review-${i}`));
-    const country = pick(rr, REVIEW_COUNTRIES);
-    const rating = Math.min(5, 4 + Math.round(rr())); // 4 or 5 mostly
-    return {
-      id: `${base.id}-r-${i}`,
-      author: pick(rr, REVIEW_AUTHORS),
-      company: pick(rr, REVIEW_COMPANIES),
-      country,
-      flag: flagFor(country),
-      rating: rr() > 0.85 ? 3 : rating,
-      date: `${pick(rr, ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Sep", "Oct", "Nov"])} 202${intBetween(rr, 4, 6)}`,
-      verifiedPurchase: rr() > 0.2,
-      title: pick(rr, reviewTitles),
-      body: pick(rr, reviewBodies),
-      service: intBetween(rr, 4, 5),
-      shipping: intBetween(rr, 4, 5),
-      quality: intBetween(rr, 4, 5),
-      helpful: intBetween(rr, 0, 34),
-    };
-  });
-
-  const avg = (fn: (r: Review) => number) =>
-    Math.round((reviews.reduce((a, r) => a + fn(r), 0) / reviews.length) * 10) / 10;
-  const distribution = [5, 4, 3, 2, 1].map((stars) => {
-    const count = reviews.filter((r) => r.rating === stars).length;
-    return { stars, count, pct: Math.round((count / reviews.length) * 100) };
-  });
-
+  // Do not fabricate buyer reviews. Show sourced Google rating/count in the
+  // hero when present; the reviews grid stays empty until real reviews exist.
+  const reviews: Review[] = [];
   const reviewSummary: ReviewSummary = {
-    average: base.rating,
-    total: base.reviewCount,
-    distribution,
-    avgService: avg((r) => r.service),
-    avgShipping: avg((r) => r.shipping),
-    avgQuality: avg((r) => r.quality),
-    aiSummary: `Across ${base.reviewCount.toLocaleString()} verified buyer reviews, ${base.name} is consistently rated for ${
-      trust.qualityConsistency >= 95 ? "outstanding" : "strong"
-    } product quality and responsive communication. Buyers most frequently highlight on-time delivery (${onTimeDelivery}%) and reliable documentation, with a ${repeatBuyerRate}% reorder rate signalling durable supplier relationships.`,
+    average: base.rating ?? 0,
+    total: base.reviewCount ?? 0,
+    distribution: [5, 4, 3, 2, 1].map((stars) => ({ stars, count: 0, pct: 0 })),
+    avgService: 0,
+    avgShipping: 0,
+    avgQuality: 0,
+    aiSummary: base.hasRealReviews
+      ? `${base.name} has a sourced public listing score of ${ratingLabel} (${reviewLabel}).`
+      : `Suplymate has not sourced independent buyer reviews for ${base.name} yet.`,
   };
 
   /* --- AI insights --- */
-  const pricingCompetitiveness = intBetween(rng, 68, 94);
-  const deliveryReliabilityPrediction = deliveryReliability;
   const bestMarkets = company.exportMarkets.slice(0, 3);
   const overallConfidence = aiConfidence;
+  const moqNote = company.moq && company.moq !== "RFQ" ? ` Typical MOQ: ${company.moq}.` : "";
 
   const ai: AiInsights = {
-    analysis: `${base.name} ranks in the top tier of ${base.categoryLabel.toLowerCase()} suppliers in ${
-      base.country
-    } based on Suplymate's composite trust model. With a ${trustScore}/100 trust score, ${base.rating.toFixed(
-      1
-    )}★ rating across ${base.reviewCount.toLocaleString()} reviews, and ${onTimeDelivery}% on-time delivery, the supplier presents ${
-      trust.riskLevel === "Low" ? "low" : trust.riskLevel.toLowerCase()
-    } sourcing risk for recurring B2B procurement.`,
+    analysis: `${base.name} is a ${base.businessTypeLabel.toLowerCase()} in ${
+      base.categoryLabel
+    }, based in ${base.city}, ${base.country}. Suplymate score ${trustScore}/100 (${ratingLabel}; ${reviewLabel}). Request an RFQ for live pricing — listed commercial figures are not estimated.`,
     sourcingRecommendations: [
-      `Best fit for buyers needing ${base.products[0]?.name ?? "core products"} with ${company.moq}+ volumes.`,
-      `Negotiate tiered pricing above ${intBetween(rng, 2, 5)}x MOQ to unlock an estimated ${intBetween(
-        rng,
-        4,
-        12
-      )}% discount.`,
+      `Best fit for buyers needing ${base.products[0]?.name ?? "core products"}.${moqNote}`,
+      `Ask Scout to match specs against other phase-1 mills in the same category.`,
       `Request a paid sample (refundable against first order) to validate spec before bulk commitment.`,
     ],
     negotiationInsights: [
-      `Pricing is ${pricingCompetitiveness}% competitive vs. regional peers — room to anchor on volume.`,
-      `Response time of ${base.responseTime} suggests fast quote cycles; push for a 24h RFQ SLA.`,
-      `Trade ${intBetween(rng, 20, 40)}% deposit for improved Incoterms (FOB → CIF) to offset freight.`,
+      `Open an RFQ rather than relying on directory estimates — Suplymate does not invent price bands.`,
+      `Ask for mill test certificates and lead time with the first quote.`,
+      `Confirm Incoterms (FOB / CIF / EXW) in writing before committing volume.`,
     ],
-    riskAnalysis: `Risk level: ${trust.riskLevel}. Financial and operational signals (verification status, ${
-      base.reviewCount
-    } reviews, ${company.yearsInBusiness} years in business) indicate ${
-      trust.riskLevel === "Low" ? "a stable, well-established" : "a developing"
-    } supplier. Recommended safeguards: milestone payments and pre-shipment QC inspection.`,
-    pricingCompetitiveness,
+    riskAnalysis: `Risk level from directory completeness: ${trust.riskLevel}. ${
+      base.likelyTrader
+        ? "This listing reads as a trader/distributor, not a mill — confirm manufacturing origin before treating it as a verified factory."
+        : "Recommended safeguards: milestone payments and pre-shipment QC inspection."
+    }`,
+    pricingCompetitiveness: 0,
     bestMarkets,
-    deliveryReliabilityPrediction,
+    deliveryReliabilityPrediction: null,
     overallConfidence,
-    priceTrend: trend(rng, 10, 100, 8),
-    demandTrend: trend(rng, 10, 60, 14),
+    priceTrend: [],
+    demandTrend: [],
     cards: [
       {
         id: "pricing",
-        title: "Pricing competitiveness",
-        body: `Quotes trend ${pricingCompetitiveness >= 80 ? "below" : "near"} the category median for comparable specs.`,
-        confidence: intBetween(rng, 78, 95),
-        trend: trend(rng, 7, 50, 10),
-        tone: pricingCompetitiveness >= 80 ? "positive" : "neutral",
+        title: "Pricing",
+        body: "No sourced commercial price is on file. Use RFQ for live mill quotes.",
+        confidence: overallConfidence,
+        trend: [],
+        tone: "neutral",
       },
       {
         id: "delivery",
-        title: "Delivery reliability forecast",
-        body: `Predicted ${deliveryReliabilityPrediction}% on-time performance for the next 2 quarters.`,
-        confidence: intBetween(rng, 80, 96),
-        trend: trust.trends.onTime,
-        tone: deliveryReliabilityPrediction >= 92 ? "positive" : "neutral",
+        title: "Delivery",
+        body: "On-time performance is not estimated. Confirm lead time in the RFQ.",
+        confidence: overallConfidence,
+        trend: [],
+        tone: "neutral",
       },
       {
         id: "quality",
-        title: "Quality consistency",
-        body: `Defect-rate signals remain ${trust.qualityConsistency >= 95 ? "very low" : "low"} across recent batches.`,
-        confidence: intBetween(rng, 82, 97),
-        trend: trust.trends.quality,
-        tone: "positive",
+        title: "Quality",
+        body: "Ask for mill test certificates and recent production photos with the quote.",
+        confidence: overallConfidence,
+        trend: [],
+        tone: "neutral",
       },
       {
         id: "risk",
         title: "Sourcing risk",
-        body: `${trust.riskLevel} risk profile. ${
-          trust.riskLevel === "Low" ? "Suitable for strategic, recurring contracts." : "Use milestone payments."
+        body: `${trust.riskLevel} completeness profile. ${
+          base.likelyTrader
+            ? "Treat as a trader until a mill of origin is confirmed."
+            : "Use milestone payments on first orders."
         }`,
         confidence: aiConfidence,
-        trend: trend(rng, 7, 40, 8),
+        trend: [],
         tone: trust.riskLevel === "Low" ? "positive" : "watch",
       },
     ],
@@ -697,9 +533,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   }. The company serves B2B buyers looking for reliable ${base.categoryLabel.toLowerCase()} sourcing with competitive MOQs from ${company.moq}.`;
   const companySummary = realDescription ?? generatedDescription;
 
-  const metaDescription = `${base.name} — verified ${base.categoryLabel} supplier in ${base.city}, ${base.country}. Trust score ${trustScore}/100, ${base.rating.toFixed(
-    1
-  )}★ (${base.reviewCount.toLocaleString()} reviews), ${onTimeDelivery}% on-time delivery. Contact, RFQ, pricing & certifications on Suplymate.`;
+  const metaDescription = `${base.name} — ${base.businessTypeLabel.toLowerCase()} in ${base.city}, ${base.country} (${base.categoryLabel}). Trust score ${trustScore}/100, ${ratingLabel}. Contact and RFQ on Suplymate.`;
 
   /* --- completeness / quality flags --- */
   const completeness = calculateSupplierCompleteness({
@@ -747,5 +581,6 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     websiteMissing,
     mediaQuality,
     mediaIncomplete: realSupplierPhotos.length === 0,
+    hasSourcedTrustMetrics: false,
   };
 }

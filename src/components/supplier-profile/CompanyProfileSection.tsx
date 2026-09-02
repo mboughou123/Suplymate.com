@@ -23,18 +23,32 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
   const { company } = profile;
 
   const metrics: { icon: LucideIcon; label: string; value: string }[] = [
-    { icon: CalendarDays, label: t("registered"), value: company.registrationDate },
+    ...(company.registrationDate
+      ? [{ icon: CalendarDays, label: t("registered"), value: company.registrationDate }]
+      : []),
     { icon: Building2, label: t("businessType"), value: company.businessType },
-    { icon: Factory, label: t("factorySize"), value: company.factorySize },
-    { icon: Users, label: t("employees"), value: t("employeesValue", { count: company.employeeCount }) },
-    {
-      icon: Boxes,
-      label: t("productionLines"),
-      value: t("productionLinesValue", { count: company.productionLines }),
-    },
-    { icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` },
-    { icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity },
-    { icon: PackageCheck, label: t("minimumOrder"), value: company.moq },
+    ...(company.factorySize
+      ? [{ icon: Factory, label: t("factorySize"), value: company.factorySize }]
+      : []),
+    ...(company.employeeCount
+      ? [{ icon: Users, label: t("employees"), value: company.employeeCount }]
+      : []),
+    ...(company.productionLines
+      ? [
+          {
+            icon: Boxes,
+            label: t("productionLines"),
+            value: t("productionLinesValue", { count: company.productionLines }),
+          },
+        ]
+      : []),
+    ...(company.rdEngineers
+      ? [{ icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` }]
+      : []),
+    ...(company.productionCapacity
+      ? [{ icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity }]
+      : []),
+    { icon: PackageCheck, label: t("minimumOrder"), value: company.moq || "RFQ" },
   ];
 
   return (
@@ -71,7 +85,9 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
         ))}
       </div>
 
+      {(company.exportMarkets.length > 0 || company.languages.length > 0) && (
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
+        {company.exportMarkets.length > 0 && (
         <div className="glass-card p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
             <Globe2 className="h-4 w-4 text-cyan" aria-hidden /> {t("exportMarkets")}
@@ -87,6 +103,8 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
             ))}
           </div>
         </div>
+        )}
+        {company.languages.length > 0 && (
         <div className="glass-card p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
             <Languages className="h-4 w-4 text-teal" aria-hidden /> {t("languagesSpoken")}
@@ -102,7 +120,9 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
             ))}
           </div>
         </div>
+        )}
       </div>
+      )}
     </motion.section>
   );
 }

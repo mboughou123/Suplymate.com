@@ -14,9 +14,13 @@ export type HomepageSupplierCardProps = {
   location: string;
   country: string;
   flag: string;
-  rating: number;
-  reviewCount: number;
+  rating: number | null;
+  reviewCount: number | null;
+  hasRealRating?: boolean;
+  hasRealReviews?: boolean;
   verified: boolean;
+  likelyTrader?: boolean;
+  businessTypeLabel?: string;
   description: string;
   /** Real cover/business photo (DB/CDN); may be empty. */
   coverImage?: string;
@@ -28,6 +32,7 @@ export type HomepageSupplierCardProps = {
   logoInitials: string;
   /** Inline CSS gradient for the initials avatar. */
   logoGradient: string;
+  logoDarkChip?: boolean;
   href: string;
 };
 
@@ -39,13 +44,18 @@ export default function HomepageSupplierCard({
   flag,
   rating,
   reviewCount,
+  hasRealRating,
+  hasRealReviews,
   verified,
+  likelyTrader,
+  businessTypeLabel,
   description,
   coverImage,
   coverFallback,
   logoUrl,
   logoInitials,
   logoGradient,
+  logoDarkChip,
   href,
 }: HomepageSupplierCardProps) {
   const t = useTranslations("suppliers");
@@ -73,6 +83,11 @@ export default function HomepageSupplierCard({
             {tCommon("verified")}
           </span>
         )}
+        {likelyTrader && businessTypeLabel && (
+          <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-white/95 py-1 px-2.5 text-caption font-semibold text-ink-muted shadow-sm ring-1 ring-black/5 backdrop-blur">
+            {businessTypeLabel}
+          </span>
+        )}
         <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-dark/60 px-2.5 py-1 text-caption font-medium text-white backdrop-blur">
           <span aria-hidden>{flag}</span>
           {country}
@@ -87,6 +102,7 @@ export default function HomepageSupplierCard({
             initials={logoInitials}
             gradient={logoGradient}
             name={name}
+            darkChip={logoDarkChip}
             className="h-14 w-14 rounded-xl text-sm ring-4 ring-white shadow-card"
           />
         </div>
@@ -97,18 +113,24 @@ export default function HomepageSupplierCard({
             <span className="text-caption font-semibold uppercase tracking-wide text-cyan">
               {category}
             </span>
-            <span
-              aria-hidden
-              className="h-0.5 w-0.5 rounded-full bg-slate-300"
-            />
-            <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
-              <Star
-                className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
-                aria-hidden
-              />
-              {rating.toFixed(1)}
-              <span className="font-normal text-ink-dim">({reviewCount})</span>
-            </span>
+            {hasRealRating && rating != null && (
+              <>
+                <span
+                  aria-hidden
+                  className="h-0.5 w-0.5 rounded-full bg-slate-300"
+                />
+                <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
+                  <Star
+                    className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
+                    aria-hidden
+                  />
+                  {rating.toFixed(1)}
+                  {hasRealReviews && reviewCount != null && (
+                    <span className="font-normal text-ink-dim">({reviewCount})</span>
+                  )}
+                </span>
+              </>
+            )}
           </div>
           <p className="mt-3 line-clamp-2 text-body-sm text-ink-muted">
             {description}

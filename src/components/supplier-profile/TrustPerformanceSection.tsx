@@ -18,6 +18,8 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
   const t = useTranslations("supplierProfile");
   const { trust, certifications } = profile;
 
+  if (!profile.hasSourcedTrustMetrics) return null;
+
   const metrics = [
     {
       icon: Truck,
@@ -55,7 +57,7 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
       data: trust.trends.response,
       stroke: "#0369A1",
     },
-  ];
+  ].filter((m): m is typeof m & { value: number } => m.value != null);
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
@@ -108,7 +110,9 @@ export default function TrustPerformanceSection({ profile }: { profile: Supplier
               { label: t("deliveryReliability"), value: trust.deliveryReliability },
               { label: t("qualityConsistency"), value: trust.qualityConsistency },
               { label: t("aiConfidence"), value: trust.aiConfidence },
-            ].map((v) => (
+            ]
+              .filter((v): v is { label: string; value: number } => v.value != null)
+              .map((v) => (
               <div key={v.label}>
                 <div className="mb-1.5 flex items-center justify-between text-xs">
                   <span className="text-ink-muted">{v.label}</span>

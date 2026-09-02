@@ -145,8 +145,8 @@ export default function AiInsightsSection({ profile }: { profile: SupplierProfil
               ))}
             </div>
             <div className="space-y-2 text-xs text-white/60">
-              <Stat label={t("pricingCompetitiveness")} value={`${ai.pricingCompetitiveness}%`} />
-              <Stat label={t("deliveryReliabilityForecast")} value={`${ai.deliveryReliabilityPrediction}%`} />
+              <Stat label={t("pricingCompetitiveness")} value={ai.pricingCompetitiveness ? `${ai.pricingCompetitiveness}%` : "RFQ"} />
+              <Stat label={t("deliveryReliabilityForecast")} value={ai.deliveryReliabilityPrediction != null ? `${ai.deliveryReliabilityPrediction}%` : "—"} />
               <div className="flex items-center gap-2 pt-1">
                 <TrendingUp className="h-3.5 w-3.5 text-emerald-300" aria-hidden />
                 <span>{t("demandTrend", { category: base.categoryLabel.toLowerCase() })}</span>

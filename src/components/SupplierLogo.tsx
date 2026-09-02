@@ -20,20 +20,18 @@ function canOptimize(src: string): boolean {
 }
 
 type SupplierLogoProps = {
-  /** Real logo image (DB/CDN); may be empty. */
   logoUrl?: string | null;
-  /** Initials shown when no logo image / on error. */
   initials: string;
-  /** Inline CSS gradient for the avatar background. */
   gradient: string;
   name: string;
   className?: string;
+  /** White-on-dark reverse logos (e.g. Al Gharbia) need a dark chip. */
+  darkChip?: boolean;
 };
 
 /**
- * Circular logo avatar that shows the real logo image when available and
- * gracefully falls back to initials on missing/broken images — so a supplier
- * logo is never empty or broken. Never invents or substitutes product photos.
+ * Circular logo avatar. Local pack logos and remote logoUrl render here;
+ * missing/broken images fall back to initials. Never invents logos.
  */
 export default function SupplierLogo({
   logoUrl,
@@ -41,6 +39,7 @@ export default function SupplierLogo({
   gradient,
   name,
   className = "h-16 w-16 rounded-full text-base ring-4 ring-white shadow-glow",
+  darkChip = false,
 }: SupplierLogoProps) {
   const [failed, setFailed] = useState(false);
   const showImage = Boolean(logoUrl) && !failed;
@@ -50,7 +49,7 @@ export default function SupplierLogo({
       className={`relative flex items-center justify-center overflow-hidden font-bold tracking-wide text-white ${className}`}
       style={
         showImage
-          ? { backgroundColor: "#ffffff" }
+          ? { backgroundColor: darkChip ? "#0d3349" : "#ffffff" }
           : { backgroundImage: gradient }
       }
     >

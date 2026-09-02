@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -19,6 +20,15 @@ import {
   AI_DEMO_WEEKLY_CHANGE,
   getDemoSupplier,
 } from "@/lib/ai-demo-walkthrough";
+
+const HomeAgentOrb = dynamic(() => import("@/components/home/HomeAgentOrb"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full min-h-[280px] items-center justify-center rounded-2xl bg-navy-gradient sm:min-h-[360px]">
+      <div className="h-24 w-24 animate-pulse rounded-full bg-cyan/20" />
+    </div>
+  ),
+});
 
 type AgentId = "scout" | "compare" | "watch";
 type DemoStep = 0 | 1 | 2 | 3 | 4;
@@ -123,8 +133,12 @@ export default function HomeAiDemoSection() {
           <p className="mt-4 text-body-lg text-ink-muted">{t("subtitle")}</p>
         </div>
 
-        <div className="mx-auto mt-block-lg max-w-4xl">
-          <div className="agent-console glow-azure-subtle">
+        <div className="mx-auto mt-block-lg grid max-w-6xl gap-6 lg:grid-cols-12 lg:items-stretch">
+          <div className="order-2 lg:order-1 lg:col-span-5">
+            <HomeAgentOrb />
+          </div>
+          <div className="order-1 lg:order-2 lg:col-span-7">
+            <div className="agent-console glow-azure-subtle h-full">
             <div aria-hidden className="agent-console-scan motion-reduce:hidden" />
 
             <div className="relative border-b border-white/10 px-4 py-3 sm:px-5">
@@ -304,14 +318,15 @@ export default function HomeAiDemoSection() {
                 <p className="py-10 text-center text-sm text-white/45">{t("idleHint")}</p>
               )}
             </div>
+            </div>
           </div>
+        </div>
 
-          <p className="mt-5 text-center text-xs text-ink-dim">{t("ctaHint")}</p>
-          <div className="mt-4 flex justify-center">
-            <Link href="/ai-assistant" className="btn-secondary px-5 py-2.5 text-sm">
-              {t("openAssistant")}
-            </Link>
-          </div>
+        <p className="mt-5 text-center text-xs text-ink-dim">{t("ctaHint")}</p>
+        <div className="mt-4 flex justify-center">
+          <Link href="/ai-assistant" className="btn-secondary px-5 py-2.5 text-sm">
+            {t("openAssistant")}
+          </Link>
         </div>
       </div>
     </section>

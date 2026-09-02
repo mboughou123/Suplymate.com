@@ -44,9 +44,9 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
           p.material.toLowerCase().includes(query.toLowerCase()))
     );
     if (sort === "price-low") {
-      list = [...list].sort((a, b) => priceVal(a.priceRange) - priceVal(b.priceRange));
+      list = [...list].sort((a, b) => Number(b.hasRealPrice) - Number(a.hasRealPrice) || priceVal(a.priceRange) - priceVal(b.priceRange));
     } else if (sort === "rating") {
-      list = [...list].sort((a, b) => b.rating - a.rating);
+      list = [...list].sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
     } else {
       list = [...list].sort((a, b) => Number(b.aiRecommended) - Number(a.aiRecommended));
     }
@@ -123,9 +123,11 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                   <Sparkles className="h-3 w-3" aria-hidden /> {t("aiPick")}
                 </span>
               )}
-              <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-ink">
-                <Star className="h-3 w-3 fill-mustard text-mustard" aria-hidden /> {p.rating}
-              </span>
+              {p.rating != null && (
+                <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-ink">
+                  <Star className="h-3 w-3 fill-mustard text-mustard" aria-hidden /> {p.rating}
+                </span>
+              )}
             </div>
             <div className="flex flex-1 flex-col gap-3 p-4">
               <div>
@@ -133,10 +135,10 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 <p className="mt-0.5 text-base font-extrabold text-cyan">{p.priceRange}</p>
               </div>
               <dl className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[11px]">
-                <Spec icon={Layers} label={t("moq")} value={p.moq} />
-                <Spec icon={Clock} label={t("leadTime")} value={p.leadTime} />
-                <Spec icon={Package} label={t("material")} value={p.material} />
-                <Spec icon={Truck} label={t("shipping")} value={p.shipping} />
+                {p.hasRealMoq && p.moq && <Spec icon={Layers} label={t("moq")} value={p.moq} />}
+                {p.leadTime && <Spec icon={Clock} label={t("leadTime")} value={p.leadTime} />}
+                {p.material && <Spec icon={Package} label={t("material")} value={p.material} />}
+                {p.shipping && <Spec icon={Truck} label={t("shipping")} value={p.shipping} />}
               </dl>
               <div className="flex flex-wrap gap-1.5">
                 {p.certifications.map((c) => (

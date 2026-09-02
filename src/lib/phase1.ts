@@ -1,5 +1,9 @@
 import { phase1Suppliers } from "@/data/phase1-suppliers";
 import type { Supplier } from "@/data/suppliers";
+import {
+  localLogoPathForSupplierId,
+  logoNeedsDarkChip,
+} from "@/lib/local-supplier-logos";
 
 /** Stable id set for the curated phase-1 mill pack (59 factories). */
 export const PHASE1_SUPPLIER_IDS: ReadonlySet<string> = new Set(
@@ -17,10 +21,11 @@ export function isPhase1Supplier(
 
 /**
  * Prefer a real factory / mill photo for card headers.
- * Accepts local phase-1 assets and remote photos; rejects SVG placeholders.
+ * Accepts local phase-1 / band assets. Rejects logo thumbnails (e.g. Magicrete's
+ * IndiaMART 120x120) so cards never stretch a logo into the header band.
  */
 export function getFactoryPhotoUrl(
-  supplier: Pick<Supplier, "imageUrl" | "supplierImages">
+  supplier: Pick<Supplier, "id" | "imageUrl" | "supplierImages" | "logoUrl">
 ): string | undefined {
   const candidates = [
     supplier.imageUrl,
@@ -29,23 +34,42 @@ export function getFactoryPhotoUrl(
 
   for (const url of candidates) {
     const trimmed = url.trim();
-    // Local curated mill photography (phase-1 pack and homepage band).
+
+    // Local curated mill photography — always preferred.
     if (
       trimmed.startsWith("/images/suppliers/phase1/") ||
       trimmed.startsWith("/images/suppliers/band/")
     ) {
       return trimmed;
     }
-    // Remote photographs (http/https), skip SVG category tiles.
-    if (/^https?:\/\//i.test(trimmed) && !/\.svg(\?|$)/i.test(trimmed)) {
-      return trimmed;
+
+    // Never use logo assets (local or remote) as a factory header.
+    if (
+      /\/logos?\//i.test(trimmed) ||
+      /logo[-_.]/i.test(trimmed) ||
+      /120x120|50x50|64x64|80x80|100x100/i.test(trimmed) ||
+      (supplier.logoUrl && trimmed === supplier.logoUrl.trim())
+    ) {
+      continue;
     }
-    // Other local raster photos under /images/
+
+    // Skip SVG placeholders / category tiles.
+    if (/\.svg(\?|$)/i.test(trimmed)) continue;
+    if (trimmed.startsWith("/images/placeholder")) continue;
+
+    // Other local raster photos under /images/ (not logos folder).
     if (
       trimmed.startsWith("/") &&
-      !trimmed.startsWith("/images/placeholder") &&
-      !/\.svg(\?|$)/i.test(trimmed)
+      !trimmed.startsWith("/images/suppliers/logos/")
     ) {
+      return trimmed;
+    }
+
+    // Remote photographs — reject obvious logo/thumbnail hosts used as cover.
+    if (/^https?:\/\//i.test(trimmed)) {
+      if (/imimg\.com/i.test(trimmed) && /120x120|logo/i.test(trimmed)) {
+        continue;
+      }
       return trimmed;
     }
   }
@@ -53,11 +77,16 @@ export function getFactoryPhotoUrl(
 }
 
 /**
- * Return the supplier's logoUrl for the avatar slot.
- * Never invent a logo and never substitute a product thumbnail — only the
- * explicit logo field. Empty/missing → caller shows initials.
+ * Resolve the avatar logo: local pack first, then remote logoUrl.
+ * Never invents a logo and never substitutes a product thumbnail.
  */
-export function getSupplierLogoUrl(logoUrl?: string | null): string | undefined {
-  if (!logoUrl || !logoUrl.trim()) return undefined;
-  return logoUrl.trim();
+export function getSupplierLogoUrl(
+  supplier: Pick<Supplier, "id" | "logoUrl">
+): string | undefined {
+  const local = localLogoPathForSupplierId(supplier.id);
+  if (local) return local;
+  if (!supplier.logoUrl || !supplier.logoUrl.trim()) return undefined;
+  return supplier.logoUrl.trim();
 }
+
+export { logoNeedsDarkChip };

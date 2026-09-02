@@ -1,5 +1,10 @@
 import type { Supplier } from "@/data/suppliers";
-import { getFactoryPhotoUrl, getSupplierLogoUrl } from "@/lib/phase1";
+import {
+  getFactoryPhotoUrl,
+  getSupplierLogoUrl,
+  isPhase1Supplier,
+  logoNeedsDarkChip,
+} from "@/lib/phase1";
 
 export type DisplayProduct = {
   name: string;
@@ -33,32 +38,33 @@ export type DisplaySupplier = {
   logoGradient: string;
   bannerGradient: string;
   logoUrl?: string;
+  /** White-on-dark reverse logos need a dark avatar chip. */
+  logoDarkChip: boolean;
   /** Primary factory / mill photograph for the card header (or undefined). */
   factoryPhotoUrl?: string;
   imageUrl?: string;
-  rating: number;
-  reviewCount: number;
+  rating: number | null;
+  reviewCount: number | null;
+  hasRealRating: boolean;
+  hasRealReviews: boolean;
   verified: boolean;
-  yearsInBusiness: number;
-  employees: string;
-  area: string;
-  onTimeDelivery: number;
-  responseTime: string;
-  reorderRate: number;
+  yearsInBusiness: number | null;
+  employees: string | null;
+  /** Name-heuristic only — the directory has no manufacturer/trader column. */
+  likelyTrader: boolean;
+  businessTypeLabel: string;
   products: DisplayProduct[];
   moq: string;
   deliveryRegions: string[];
   reliabilityScore: number;
 };
 
-// Inline CSS gradients (rendered via style=) so they never depend on Tailwind's
-// JIT picking up dynamically-built class names.
 const LOGO_GRADIENTS = [
   "linear-gradient(135deg, #0ea5b7, #14b8a6)",
   "linear-gradient(135deg, #1e3a5f, #0ea5b7)",
   "linear-gradient(135deg, #14b8a6, #10b981)",
-  "linear-gradient(135deg, #6366f1, #0ea5b7)",
   "linear-gradient(135deg, #0284c7, #14b8a6)",
+  "linear-gradient(135deg, #0D3349, #0284c7)",
   "linear-gradient(135deg, #10b981, #0ea5b7)",
 ];
 
@@ -100,9 +106,10 @@ const FLAGS: Record<string, string> = {
   "saudi arabia": "🇸🇦",
   poland: "🇵🇱",
   vietnam: "🇻🇳",
+  oman: "🇴🇲",
+  qatar: "🇶🇦",
+  egypt: "🇪🇬",
 };
-
-const EMPLOYEE_BUCKETS = ["10+", "50+", "100+", "200+", "500+"];
 
 function hashString(str: string): number {
   let h = 0;
@@ -110,10 +117,6 @@ function hashString(str: string): number {
     h = (h * 31 + str.charCodeAt(i)) | 0;
   }
   return Math.abs(h);
-}
-
-function seeded(seed: number, min: number, max: number): number {
-  return min + (seed % (max - min + 1));
 }
 
 function initials(name: string): string {
@@ -131,25 +134,37 @@ function flagFor(country: string): string {
   return FLAGS[country.toLowerCase()] ?? "🌍";
 }
 
+/** True when the legal name reads as a trader/distributor, not a mill. */
+export function looksLikeTrader(name: string): boolean {
+  return /\b(trading|trader|traders)\b/i.test(name);
+}
+
+/**
+ * Public label for mill vs trader. Phase-1 pack rows are mills; names that
+ * include Trading/Trader are labeled as traders so they are never presented
+ * as verified manufacturers. Everyone else is a generic supplier.
+ */
+export function inferBusinessType(
+  supplier: Pick<Supplier, "id" | "name">
+): string {
+  if (looksLikeTrader(supplier.name)) return "Trader / distributor";
+  if (isPhase1Supplier(supplier)) return "Manufacturer";
+  return "Supplier";
+}
+
 export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
   const country = s.country ?? countryOf(s.location);
   const city = s.city ?? s.location.split(",")[0].trim();
-  const rating =
-    s.googleRating ??
-    s.rating ??
-    Math.min(5, Math.max(3.8, Math.round((s.reliabilityScore / 20) * 10) / 10));
-  const reviewCount = s.googleReviews ?? s.reviewCount ?? seeded(seed, 18, 1240);
-  const verified = s.verified ?? s.reliabilityScore >= 85;
-  const yearsInBusiness = s.yearsInBusiness ?? seeded(seed >> 2, 5, 30);
-  const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
+
+  // Ratings / reviews: only sourced fields — never invent demo junk.
+  const rating = s.googleRating ?? s.rating ?? null;
+  const reviewCount = s.googleReviews ?? s.reviewCount ?? null;
+  const verified = s.verified ?? false;
 
   const factoryPhotoUrl = getFactoryPhotoUrl(s);
-  const logoUrl = getSupplierLogoUrl(s.logoUrl);
+  const logoUrl = getSupplierLogoUrl(s);
 
-  // Featured products: never invent price bands or MOQ figures.
-  // Supplier.products is a string[] of names only — show RFQ for price.
-  // MOQ is only shown when the supplier record itself carries a real moq.
   const realMoq = (s.moq ?? "").trim();
   const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
     name,
@@ -179,17 +194,18 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
     bannerGradient: BANNER_GRADIENTS[seed % BANNER_GRADIENTS.length],
     logoUrl,
+    logoDarkChip: logoNeedsDarkChip(s.id),
     factoryPhotoUrl,
-    imageUrl: factoryPhotoUrl ?? s.imageUrl,
+    imageUrl: factoryPhotoUrl,
     rating,
     reviewCount,
+    hasRealRating: rating != null,
+    hasRealReviews: reviewCount != null,
     verified,
-    yearsInBusiness,
-    employees,
-    area: `${(seeded(seed, 5, 60) * 100).toLocaleString()}+ m²`,
-    onTimeDelivery: seeded(seed, 90, 99),
-    responseTime: `≤${[1, 2, 3, 4, 6][seed % 5]}h`,
-    reorderRate: seeded(seed >> 1, 12, 46),
+    yearsInBusiness: s.yearsInBusiness ?? null,
+    employees: s.employees ?? null,
+    likelyTrader: looksLikeTrader(s.name),
+    businessTypeLabel: inferBusinessType(s),
     products,
     moq: realMoq,
     deliveryRegions: s.deliveryRegions,
