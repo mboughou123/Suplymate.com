@@ -20,6 +20,7 @@ import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
+import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 
 type SupplierCardProps = {
   supplier: Supplier;
@@ -59,6 +60,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
         {hasFactoryPhoto && (
           <ImageWithFallback
             src={s.factoryPhotoUrl}
+            placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
             alt={`${s.name} facility`}
             sizes="(max-width: 768px) 100vw, 33vw"
             className="absolute inset-0 h-full w-full object-cover"
