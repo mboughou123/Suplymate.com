@@ -1,4 +1,4 @@
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
@@ -127,12 +127,26 @@ describe("factory photos and local logos", () => {
   });
 
   it("maps every local logo-{slug}.png pack file onto a known mill id", () => {
+    const logoDir = resolve(process.cwd(), "public/images/suppliers/logos");
+    const onDisk = new Set(
+      readdirSync(logoDir)
+        .filter((f) => /^logo-.+\.png$/i.test(f))
+        .map((f) => f.replace(/^logo-|\.png$/gi, ""))
+    );
+    const mapped = new Set(Object.values(LOGO_SLUG_BY_ID));
+
     for (const [id, slug] of Object.entries(LOGO_SLUG_BY_ID)) {
       const rel = localLogoPathForSupplierId(id);
       expect(rel).toBe(`/images/suppliers/logos/logo-${slug}.png`);
       const abs = resolve(process.cwd(), "public", rel!.replace(/^\//, ""));
       expect(existsSync(abs), abs).toBe(true);
+      expect(toDisplaySupplier(phase1Suppliers.find((s) => s.id === id)!).logoUrl).toBe(
+        `/images/suppliers/logos/logo-${slug}.png`
+      );
     }
+
+    // No orphan files and no missing mappings — later batches must wire both.
+    expect([...onDisk].sort()).toEqual([...mapped].sort());
   });
 
   it("prefers the local Al Gharbia reverse logo over a remote banner", () => {
@@ -143,5 +157,28 @@ describe("factory photos and local logos", () => {
     });
     expect(d.logoUrl).toBe("/images/suppliers/logos/logo-al-gharbia.png");
     expect(d.logoDarkChip).toBe(true);
+  });
+
+  it("wires the batch-2 mill logos instead of remote CSV banners", () => {
+    const batch2: Array<[string, string]> = [
+      ["aj-steel-icad2-ae", "aj-steel"],
+      ["jindal-saw-limited-in", "jindal-saw"],
+      ["welspun-corp-limited-in", "welspun"],
+      ["arabian-pipes-company-sa", "arabian-pipes"],
+      ["apl-apollo-tubes-limited-in", "apl-apollo"],
+      ["man-industries-india-limited-in", "man-industries"],
+      ["hebei-huayang-steel-pipe-co-ltd-cn", "huayang"],
+      ["al-jazeera-steel-products-co-saog-om", "al-jazeera"],
+      ["ratnamani-metals-tubes-limited-in", "ratnamani"],
+      ["qatar-steel-company-q-p-s-c-qa", "qatar-steel"],
+    ];
+    for (const [id, slug] of batch2) {
+      const mill = phase1Suppliers.find((s) => s.id === id)!;
+      const d = toDisplaySupplier({
+        ...mill,
+        logoUrl: "https://example.com/remote-banner.png",
+      });
+      expect(d.logoUrl).toBe(`/images/suppliers/logos/logo-${slug}.png`);
+    }
   });
 });
