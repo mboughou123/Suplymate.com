@@ -106,7 +106,9 @@
     "supplierListed": "价格 供应商",
     "contactForPricing": "联系er le 供应商用于le 价格",
     "starsRating": "{rating} sur 5 étoiles",
-    "fiveStars": "5 sur 5 étoiles"
+    "fiveStars": "5 sur 5 étoiles",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ"
   },
   "home": {
     "featuresTitle": "更智能采购所需的一切",
@@ -554,7 +556,13 @@
     "statVerifiedSuppliers": "供应商 已验证s",
     "statIndustries": "Secteurs 覆盖s",
     "statAiMatching": "Matching propulsé",
-    "statSupport": "Support approvisionnement"
+    "statSupport": "Support approvisionnement",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
+    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
   },
   "onboarding": {
     "welcome": "欢迎使用 Suplymate",

@@ -82,14 +82,22 @@ function clampSize(n: number | undefined): number {
   return Math.min(Math.max(v, 1), 60);
 }
 
+/** True only for a real, positive sourced price — never treat 0 as public. */
+export function hasSourcedPrice(basePrice: number | null | undefined): boolean {
+  return typeof basePrice === "number" && Number.isFinite(basePrice) && basePrice > 0;
+}
+
 function priceLabelFor(
   basePrice: number | null | undefined,
   currency: string,
   unit: string | null | undefined,
   rate?: number | null
 ): string | null {
-  if (basePrice == null) return null;
-  const label = formatPrice(applyCommission(basePrice, rate ?? COMMISSION_RATE), currency);
+  if (!hasSourcedPrice(basePrice)) return null;
+  const label = formatPrice(
+    applyCommission(basePrice as number, rate ?? COMMISSION_RATE),
+    currency
+  );
   return unit ? `${label} / ${unit}` : label;
 }
 
@@ -242,7 +250,13 @@ function staticToCard(p: Product): PublicProductCard {
     productName: p.name,
     category: p.category,
   };
-  const base = p.basePrice ?? p.priceMin;
+  // Prefer explicit basePrice; never fall back to a zeroed priceMin placeholder.
+  const base =
+    hasSourcedPrice(p.basePrice)
+      ? p.basePrice
+      : p.hasPublicPrice && hasSourcedPrice(p.priceMin)
+        ? p.priceMin
+        : null;
   return {
     id: p.id,
     name: p.name,
@@ -254,7 +268,7 @@ function staticToCard(p: Product): PublicProductCard {
     verified: false,
     imageUrl: getBestProductImage(imageInput),
     hasRealPhoto: hasRealProductImage(imageInput),
-    priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
+    priceLabel: priceLabelFor(base, p.currency, p.unit ?? p.priceUnit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
     moq: p.moq ?? null,
     shippingTime: p.shippingTime ?? null,

@@ -184,7 +184,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         <>
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {pageItems.map((supplier) => (
-              <div key={supplier.id} id={supplier.id} className="relative">
+              <div key={supplier.id} id={supplier.id} className="relative h-full">
                 {compareMode && (
                   <label className="absolute right-3 top-3 z-10 flex items-center gap-1 rounded-lg bg-white/95 px-2 py-1 text-xs shadow-sm">
                     <input

@@ -260,14 +260,19 @@ export async function deleteScrapedProduct(id: string): Promise<boolean> {
 
 /** Convert an APPROVED scraped product into a catalogue Product. */
 export function scrapedToProduct(sp: ScrapedProduct): Product {
-  const hasPublicPrice = sp.basePrice != null;
-  const base = sp.basePrice ?? 0;
+  const hasPublicPrice =
+    typeof sp.basePrice === "number" &&
+    Number.isFinite(sp.basePrice) &&
+    sp.basePrice > 0;
+  const base = hasPublicPrice ? (sp.basePrice as number) : 0;
   return {
     id: sp.id,
     name: sp.name,
     category: sp.category,
     // priceMin/priceMax keep legacy catalogue filters working; the rich card
     // and detail page recompute commissioned tiers from basePrice.
+    // When no sourced price exists, leave priceMin at 0 but hasPublicPrice=false
+    // so the UI shows RFQ / Price on request — never $0.00.
     priceMin: base,
     priceMax: hasPublicPrice ? Math.round(base * 1.35 * 100) / 100 : 0,
     currency: sp.currency,

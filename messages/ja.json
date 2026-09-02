@@ -106,7 +106,9 @@
     "supplierListed": "価格 サプライヤー",
     "contactForPricing": "お問い合わせer le サプライヤー向けle 価格",
     "starsRating": "{rating} sur 5 étoiles",
-    "fiveStars": "5 sur 5 étoiles"
+    "fiveStars": "5 sur 5 étoiles",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ"
   },
   "home": {
     "featuresTitle": "Tout ce dont vous avez 需要向けmieux sourcer",
@@ -554,7 +556,13 @@
     "statVerifiedSuppliers": "サプライヤー 認証済みs",
     "statIndustries": "Secteurs 覆盖s",
     "statAiMatching": "Matching propulsé",
-    "statSupport": "Support approvisionnement"
+    "statSupport": "Support approvisionnement",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
+    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
   },
   "onboarding": {
     "welcome": "ようこそ sur Suplymate",

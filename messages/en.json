@@ -13,8 +13,8 @@
     "contactDescription": "Get in touch with the Suplymate team. Email us at info@suplymate.com.",
     "pricingTitle": "Pricing | Suplymate",
     "pricingDescription": "Starter, Growth, and Enterprise plans for procurement teams. Preview pricing — billing coming soon.",
-    "aiAssistantTitle": "AI Procurement Assistant · Suplymate",
-    "aiAssistantDescription": "Source smarter with AI-powered supplier intelligence, pricing analysis, and procurement recommendations.",
+    "aiAssistantTitle": "Mate · AI Assistant | Suplymate",
+    "aiAssistantDescription": "Meet Mate — 1 AI, 3 agents (Scout, Compare, Watch) for industrial procurement.",
     "adminTitle": "Admin | Suplymate"
   },
   "navigation": {
@@ -30,7 +30,7 @@
     "priceCharts": "Price Charts",
     "priceChartsDescription": "Track material prices and buy at the right time",
     "aiAssistant": "AI Assistant",
-    "aiAssistantDescription": "Get smart procurement recommendations",
+    "aiAssistantDescription": "Meet Mate — Scout, Compare, and Watch",
     "pricing": "Pricing",
     "dashboard": "Dashboard",
     "login": "Login",
@@ -105,6 +105,8 @@
     "priceFrom": "From {price} / {unit}",
     "supplierListed": "supplier-listed",
     "contactForPricing": "Contact supplier for pricing",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ",
     "starsRating": "{rating} out of 5 stars",
     "fiveStars": "5 out of 5 stars"
   },
@@ -152,8 +154,8 @@
     "viewPricing": "View pricing"
   },
   "homeAiDemo": {
-    "eyebrow": "Example walkthrough",
-    "title": "Three AI agents, one sourcing workflow",
+    "eyebrow": "Meet Mate",
+    "title": "Meet Mate — 1 AI, 3 agents working for you",
     "subtitle": "Scout finds verified mills, Compare lines up offers, and Watch flags price windows — built for industrial procurement, not generic chat.",
     "walkthroughDisclaimer": "Walkthrough · Example scenario. Supplier names are from the Suplymate verified network; prices and signals shown are illustrative.",
     "agentScout": "Scout",
@@ -179,9 +181,9 @@
     "watchFootnote": "Indicative market signal · not trading advice.",
     "verified": "Verified",
     "idleHint": "Press Run walkthrough to see Scout → Compare → Watch in action.",
-    "ctaHint": "Ready to run your own ask? Open the full AI assistant.",
-    "openAssistant": "Open AI assistant",
-    "consoleLabel": "Agent console"
+    "ctaHint": "Ready to run your own ask? Open Mate.",
+    "openAssistant": "Open Mate",
+    "consoleLabel": "Mate console"
   },
   "homeTopNav": {
     "mainNav": "Main navigation",
@@ -361,9 +363,9 @@
     "moqLabel": "MOQ"
   },
   "priceCharts": {
-    "pageTitle": "Track material prices and buy at the right time",
-    "pageSubtitle": "Indicative commodity prices with explained signals. Not a trading venue — verify before large purchases.",
-    "provenanceNotice": "Prices and signals are indicative demo series until live market feeds are connected. Always confirm with your supplier before large orders.",
+    "pageTitle": "Track material prices",
+    "pageSubtitle": "Indicative commodity prices for planning. Not a trading venue — verify with suppliers before large purchases.",
+    "provenanceNotice": "Prices are indicative demo series until live market feeds are connected. Always confirm with your supplier before large orders.",
     "searchPlaceholder": "Search material: steel, copper, aluminum, oil…",
     "materials": "Materials",
     "signal": "Signal: {label}",
@@ -533,11 +535,17 @@
     "contactSupport": "Contact support"
   },
   "aiAssistant": {
-    "title": "AI Procurement Assistant",
-    "subtitle": "Source smarter with intelligence on your side",
-    "badge": "AI + human expertise",
-    "description": "Suplymate blends AI-powered procurement tools with real human experts so you find the right supplier, at the right price, every time.",
-    "tryAssistant": "Try the AI assistant",
+    "title": "Mate",
+    "subtitle": "1 AI, 3 agents working for you",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
+    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers",
+    "badge": "Mate · Scout / Compare / Watch",
+    "description": "Mate blends AI-powered procurement tools with real human experts so you find the right supplier, at the right price, every time.",
+    "tryAssistant": "Try Mate",
     "browseSuppliers": "Browse suppliers",
     "capabilityAiMatching": "AI supplier matching",
     "capabilityAiMatchingText": "Describe what you need and our AI surfaces the best-fit verified suppliers in seconds — ranked by price, reliability, and lead time.",

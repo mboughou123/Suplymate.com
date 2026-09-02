@@ -106,7 +106,9 @@
     "supplierListed": "Lieferantenpreis",
     "contactForPricing": "Lieferant für Preis kontaktieren",
     "starsRating": "{rating} von 5 Sternen",
-    "fiveStars": "5 von 5 Sternen"
+    "fiveStars": "5 von 5 Sternen",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ"
   },
   "home": {
     "featuresTitle": "Alles, was Sie für intelligenteres Beschaffung brauchen",
@@ -554,7 +556,13 @@
     "statVerifiedSuppliers": "Lieferanten vérifiés",
     "statIndustries": "Abgedeckte Branchen",
     "statAiMatching": "Matching propulsé",
-    "statSupport": "Beschaffungs-Support"
+    "statSupport": "Beschaffungs-Support",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
+    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
   },
   "onboarding": {
     "welcome": "Willkommen bei Suplymate",

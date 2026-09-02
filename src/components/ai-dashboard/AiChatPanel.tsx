@@ -4,13 +4,14 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
-  Send,
-  Square,
   RotateCcw,
   Trash2,
   User as UserIcon,
   AlertCircle,
 } from "lucide-react";
+import AIPrompt, { type SuplymateAgent } from "@/components/kokonutui/ai-prompt";
+
+export type AiChatMode = "grok" | "openai" | "demo";
 
 type Role = "user" | "assistant";
 type ChatTurn = { id: string; role: Role; content: string };
@@ -25,7 +26,7 @@ export const EXAMPLE_PROMPTS = [
 
 type Props = {
   initialQuery?: string | null;
-  onModeChange?: (mode: "demo" | "openai") => void;
+  onModeChange?: (mode: AiChatMode) => void;
 };
 
 function uid(prefix: string) {
@@ -34,14 +35,12 @@ function uid(prefix: string) {
 
 export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
   const [messages, setMessages] = useState<ChatTurn[]>([]);
-  const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [streaming, setStreaming] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const conversationId = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const querySent = useRef(false);
 
   const showWelcome = messages.length === 0 && !loading;
@@ -50,7 +49,6 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Load the user's most recent conversation so it persists across visits.
   useEffect(() => {
     let cancelled = false;
     fetch("/api/ai/chat")
@@ -75,12 +73,11 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
   }, []);
 
   const send = useCallback(
-    async (text: string) => {
+    async (text: string, _agent?: SuplymateAgent) => {
       const trimmed = text.trim();
       if (!trimmed || loading) return;
 
       setError(null);
-      setInput("");
 
       const history = messages.map((m) => ({ role: m.role, content: m.content }));
       const userTurn: ChatTurn = { id: uid("user"), role: "user", content: trimmed };
@@ -99,6 +96,7 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
             message: trimmed,
             history,
             conversationId: conversationId.current,
+            agent: _agent,
           }),
           signal: controller.signal,
         });
@@ -106,7 +104,9 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
         const convoId = res.headers.get("x-conversation-id");
         if (convoId) conversationId.current = convoId;
         const source = res.headers.get("x-ai-source");
-        if (source === "openai" || source === "demo") onModeChange?.(source);
+        if (source === "grok" || source === "openai" || source === "demo") {
+          onModeChange?.(source);
+        }
 
         const contentType = res.headers.get("content-type") || "";
 
@@ -115,8 +115,10 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
           if (!res.ok) {
             throw new Error(data?.error || "The AI request failed. Please try again.");
           }
-          // JSON (demo mode) response.
           if (data?.conversationId) conversationId.current = data.conversationId;
+          if (data?.source === "grok" || data?.source === "openai" || data?.source === "demo") {
+            onModeChange?.(data.source);
+          }
           setMessages((m) =>
             m.map((msg) =>
               msg.id === assistantId ? { ...msg, content: data?.reply ?? "" } : msg
@@ -125,7 +127,6 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
           return;
         }
 
-        // Streaming text response.
         setStreaming(true);
         const reader = res.body?.getReader();
         if (!reader) throw new Error("No response stream.");
@@ -143,7 +144,6 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
         const aborted = err instanceof DOMException && err.name === "AbortError";
         setMessages((m) => {
           const last = m[m.length - 1];
-          // Drop the empty assistant placeholder on error/abort.
           if (last && last.id === assistantId && last.content.trim() === "") {
             return m.slice(0, -1);
           }
@@ -169,10 +169,6 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialQuery]);
 
-  function stop() {
-    abortRef.current?.abort();
-  }
-
   function retry() {
     let idx = -1;
     for (let i = messages.length - 1; i >= 0; i--) {
@@ -193,22 +189,14 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
     setMessages([]);
     setError(null);
     conversationId.current = null;
-    querySent.current = true; // don't re-trigger the initial query
-  }
-
-  function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      send(input);
-    }
+    querySent.current = true;
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col bg-white">
-      {/* Header strip */}
-      <div className="flex shrink-0 items-center justify-between border-b border-slate-200 px-4 py-2.5 sm:px-6">
+    <div className="flex min-h-0 flex-1 flex-col bg-transparent">
+      <div className="flex shrink-0 items-center justify-between border-b border-slate-200/80 px-4 py-2.5 sm:px-6">
         <p className="text-xs font-medium text-ink-muted">
-          {streaming ? "Generating response…" : "Procurement assistant"}
+          {streaming ? "Mate is thinking…" : "Mate · Scout · Compare · Watch"}
         </p>
         {messages.length > 0 && (
           <button
@@ -223,7 +211,6 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
         )}
       </div>
 
-      {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
         <AnimatePresence mode="wait">
           {showWelcome ? (
@@ -232,18 +219,18 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="mx-auto flex max-w-2xl flex-col items-center px-2 py-10 text-center"
+              className="mx-auto flex max-w-2xl flex-col items-center px-2 py-8 text-center"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/15">
-                <Sparkles className="h-7 w-7 text-gold" aria-hidden />
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan/15">
+                <Sparkles className="h-7 w-7 text-cyan" aria-hidden />
               </span>
               <h2 className="mt-5 text-xl font-bold tracking-tight text-ink sm:text-2xl">
-                How can I help you source today?
+                Meet Mate — 1 AI, 3 agents working for you
               </h2>
               <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-muted">
-                Ask about suppliers, pricing, shipping, MOQs, RFQs, certifications,
-                or supplier risk. Answers use Suplymate&apos;s real supplier data
-                where available.
+                Scout finds mills, Compare lines up offers, Watch tracks price
+                windows. Answers use Suplymate&apos;s real supplier data when
+                available — never invented live quotes.
               </p>
               <div className="mt-7 grid w-full gap-2 sm:grid-cols-2">
                 {EXAMPLE_PROMPTS.map((prompt) => (
@@ -251,7 +238,7 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
                     key={prompt}
                     type="button"
                     onClick={() => send(prompt)}
-                    className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-ink-muted transition hover:border-gold/50 hover:bg-gold/5 hover:text-ink"
+                    className="rounded-xl border border-slate-200 bg-white/90 px-4 py-3 text-left text-sm text-ink-muted transition hover:border-cyan/50 hover:bg-cyan/5 hover:text-ink"
                   >
                     {prompt}
                   </button>
@@ -277,17 +264,17 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
                   </div>
                 ) : (
                   <div key={msg.id} className="flex gap-3">
-                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold/15">
-                      <Sparkles className="h-4 w-4 text-gold" aria-hidden />
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan/15">
+                      <Sparkles className="h-4 w-4 text-cyan" aria-hidden />
                     </span>
-                    <div className="max-w-[85%] rounded-2xl rounded-tl-md border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm leading-relaxed text-ink">
+                    <div className="max-w-[85%] rounded-2xl rounded-tl-md border border-slate-200 bg-white/90 px-4 py-2.5 text-sm leading-relaxed text-ink">
                       {msg.content ? (
                         <span className="whitespace-pre-wrap break-words">{msg.content}</span>
                       ) : (
                         <span className="inline-flex items-center gap-1 py-1">
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gold [animation-delay:0ms]" />
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gold [animation-delay:150ms]" />
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-gold [animation-delay:300ms]" />
+                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-cyan [animation-delay:0ms]" />
+                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-cyan [animation-delay:150ms]" />
+                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-cyan [animation-delay:300ms]" />
                         </span>
                       )}
                     </div>
@@ -317,44 +304,17 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
         </AnimatePresence>
       </div>
 
-      {/* Composer */}
-      <div className="shrink-0 border-t border-slate-200 bg-white px-4 py-4 sm:px-6">
+      <div className="shrink-0 border-t border-slate-200/80 bg-white/70 px-4 py-4 backdrop-blur-sm sm:px-6">
         <div className="mx-auto max-w-3xl">
-          <div className="flex items-end gap-2 rounded-2xl border border-slate-200 bg-white p-2 transition focus-within:border-gold/50 focus-within:ring-2 focus-within:ring-gold/15">
-            <textarea
-              ref={textareaRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              rows={1}
-              placeholder="Ask about suppliers, pricing, logistics, or sourcing strategy…"
-              className="max-h-40 min-h-[40px] flex-1 resize-none bg-transparent px-2 py-2 text-sm text-ink placeholder:text-ink-dim focus:outline-none"
-            />
-            {streaming ? (
-              <button
-                type="button"
-                onClick={stop}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 text-ink-muted transition hover:bg-slate-100"
-                aria-label="Stop generating"
-                title="Stop generating"
-              >
-                <Square className="h-4 w-4" aria-hidden />
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => send(input)}
-                disabled={loading || !input.trim()}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold text-ink transition hover:bg-gold-light disabled:opacity-40"
-                aria-label="Send message"
-                title="Send"
-              >
-                <Send className="h-4 w-4" aria-hidden />
-              </button>
-            )}
-          </div>
+          <AIPrompt
+            headerText="— 1 AI, 3 agents working for you"
+            headerAction=""
+            placeholder="Ask Mate: Scout mills, Compare offers, or Watch a price…"
+            busy={loading}
+            onSubmit={(value, agent) => send(value, agent)}
+          />
           <p className="mt-2 text-center text-[11px] text-ink-dim">
-            Suplymate AI can make mistakes — verify important sourcing decisions.
+            Mate can make mistakes — verify important sourcing decisions. No invented live prices.
           </p>
         </div>
       </div>

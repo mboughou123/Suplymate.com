@@ -60,9 +60,9 @@ interface AIPromptProps {
 export default function AIPrompt({
   agents = SUPLYMATE_AGENTS,
   defaultAgent = "Scout",
-  placeholder = "Ask Scout to find mills, Compare quotes, or Watch a price…",
-  headerText = "Your procurement agents are ready",
-  headerAction = "Open assistant",
+  placeholder = "Ask Mate: Scout mills, Compare offers, or Watch a price…",
+  headerText = "— 1 AI, 3 agents working for you",
+  headerAction = "Open Mate",
   onSubmit,
   className,
   busy = false,
@@ -98,7 +98,7 @@ export default function AIPrompt({
       <div className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-card">
         <div className="flex items-center justify-between gap-3 border-b border-slate-100 bg-gradient-to-r from-navy/5 via-white to-cyan/5 px-4 py-2.5">
           <p className="text-xs font-medium text-ink-muted">
-            <span className="font-semibold text-navy">Suplymate</span>{" "}
+            <span className="font-semibold text-navy">Mate</span>{" "}
             {headerText}
           </p>
           {headerAction ? (

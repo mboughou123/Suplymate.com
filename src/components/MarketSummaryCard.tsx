@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 import type { Material } from "@/data/materials";
 
 type MarketSummaryCardProps = {
@@ -27,26 +27,6 @@ function ChangeValue({ value }: { value: number }) {
   );
 }
 
-function SignalBadge({ signal }: { signal: Material["signal"] }) {
-  const config = {
-    "Buy now": {
-      cls: "bg-emerald-100 text-emerald-800 border-emerald-200",
-      Icon: TrendingUp,
-    },
-    Wait: { cls: "bg-cyan-soft text-cyan border-cyan/20", Icon: Minus },
-    Monitor: { cls: "bg-blue-100 text-blue-800 border-blue-200", Icon: TrendingDown },
-  } as const;
-  const { cls, Icon } = config[signal];
-  return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${cls}`}
-    >
-      <Icon className="h-3 w-3" aria-hidden />
-      {signal}
-    </span>
-  );
-}
-
 export default function MarketSummaryCard({
   material,
   selected,
@@ -63,7 +43,6 @@ export default function MarketSummaryCard({
     <>
       <div className="flex items-center justify-between gap-2">
         <span className="font-semibold text-ink">{material.name}</span>
-        <SignalBadge signal={material.signal} />
       </div>
       <p className="mt-2 text-lg font-bold tabular-nums text-ink">
         ${material.currentPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}

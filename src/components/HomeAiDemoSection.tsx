@@ -121,10 +121,11 @@ export default function HomeAiDemoSection() {
   return (
     <section
       id="ai-demo-walkthrough"
-      className="relative section-y-tight scroll-mt-28"
+      className="relative overflow-hidden section-y-tight scroll-mt-28"
       aria-labelledby="ai-demo-heading"
     >
-      <div className="container-page">
+      <HomeAgentOrb variant="background" />
+      <div className="container-page relative z-[1]">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-cyan">{t("eyebrow")}</p>
           <h2 id="ai-demo-heading" className="mt-3 font-display text-display text-ink text-balance">
@@ -133,12 +134,8 @@ export default function HomeAiDemoSection() {
           <p className="mt-4 text-body-lg text-ink-muted">{t("subtitle")}</p>
         </div>
 
-        <div className="mx-auto mt-block-lg grid max-w-6xl gap-6 lg:grid-cols-12 lg:items-stretch">
-          <div className="order-2 lg:order-1 lg:col-span-5">
-            <HomeAgentOrb />
-          </div>
-          <div className="order-1 lg:order-2 lg:col-span-7">
-            <div className="agent-console glow-azure-subtle h-full">
+        <div className="mx-auto mt-block-lg max-w-4xl">
+            <div className="agent-console glow-azure-subtle relative overflow-hidden bg-navy-dark/70 backdrop-blur-md">
             <div aria-hidden className="agent-console-scan motion-reduce:hidden" />
 
             <div className="relative border-b border-white/10 px-4 py-3 sm:px-5">
@@ -319,7 +316,6 @@ export default function HomeAiDemoSection() {
               )}
             </div>
             </div>
-          </div>
         </div>
 
         <p className="mt-5 text-center text-xs text-ink-dim">{t("ctaHint")}</p>

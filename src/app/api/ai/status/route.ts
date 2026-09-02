@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
-import { isOpenAiConfigured } from "@/lib/openai";
+import { isAiConfigured, resolveAiProvider } from "@/lib/openai";
 
 export async function GET() {
-  return NextResponse.json({ configured: isOpenAiConfigured() });
+  const provider = resolveAiProvider();
+  return NextResponse.json({
+    configured: isAiConfigured(),
+    provider,
+  });
 }

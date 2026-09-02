@@ -89,8 +89,8 @@ export default function ProductCard({ data: d }: ProductCardProps) {
           </span>
         </div>
 
-        {/* Actions */}
-        <div className="mt-4 flex gap-2 pt-1">
+        {/* Actions — pinned to card baseline */}
+        <div className="mt-auto flex min-h-[44px] gap-2 pt-4">
           <Link
             href={`/products/${d.id}`}
             className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-ink transition-all duration-300 ease-cinema hover:border-cyan/50 hover:bg-cyan/5 hover:text-cyan"

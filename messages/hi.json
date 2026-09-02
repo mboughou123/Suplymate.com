@@ -106,7 +106,9 @@
     "supplierListed": "कीमतें आपूर्तिकर्ता",
     "contactForPricing": "संपर्कer le आपूर्तिकर्ता के लिएle कीमतें",
     "starsRating": "{rating} sur 5 étoiles",
-    "fiveStars": "5 sur 5 étoiles"
+    "fiveStars": "5 sur 5 étoiles",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ"
   },
   "home": {
     "featuresTitle": "Tout ce dont vous avez ज़रूरत के लिएmieux sourcer",
@@ -554,7 +556,13 @@
     "statVerifiedSuppliers": "आपूर्तिकर्ता vérifiés",
     "statIndustries": "Secteurs कवरs",
     "statAiMatching": "Matching propulsé",
-    "statSupport": "Support approvisionnement"
+    "statSupport": "Support approvisionnement",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
+    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
   },
   "onboarding": {
     "welcome": "स्वागत है sur Suplymate",

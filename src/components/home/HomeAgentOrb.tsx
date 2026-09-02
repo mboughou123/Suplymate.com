@@ -1,9 +1,9 @@
 "use client";
 
 /**
- * Glass particle orb beside the homepage Scout/Compare/Watch console.
- * Source adapted from scripts/tmp/homepage-particle-swarm.jsx — debug strings
- * and full-bleed black takeover removed; particle count scales for mobile.
+ * Particle orb / atmosphere for Mate (Scout / Compare / Watch).
+ * Supports a solid card variant (legacy) and a translucent background variant
+ * used behind the homepage console and the AI assistant page.
  */
 
 import { useMemo, useRef, useState, useEffect } from "react";
@@ -35,7 +35,7 @@ function ParticleSwarm({ count }: { count: number }) {
   }, [count]);
 
   const material = useMemo(
-    () => new THREE.MeshBasicMaterial({ color: 0xffffff }),
+    () => new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 }),
     []
   );
   const geometry = useMemo(() => new THREE.TetrahedronGeometry(0.25), []);
@@ -78,25 +78,15 @@ function ParticleSwarm({ count }: { count: number }) {
       const shellMix = band * shell;
       const rMod =
         breath * (1.0 - shellMix * (0.55 + 0.35 * Math.sin(th * 0.5 + t)));
-      const dist = turb * 0.22;
 
-      const rotA = t * 0.25;
-      const cA = Math.cos(rotA);
-      const sA = Math.sin(rotA);
-      const xr = x * cA - z * sA;
-      const zr = x * sA + z * cA;
+      x = x * radius * rMod + w1 * turb * 4.5;
+      const yy = y * radius * rMod + w2 * turb * 3.5;
+      z = z * radius * rMod + w3 * turb * 4.5;
 
-      target.set(
-        (xr + w1 * dist) * radius * rMod,
-        (y + w2 * dist * 1.15) * radius * rMod,
-        (zr + w3 * dist) * radius * rMod
-      );
+      target.set(x, yy, z);
 
-      // Navy / cyan / azure iridescence (Suplymate palette, not stock violet).
-      const swirl =
-        0.5 + 0.5 * Math.sin(y * 2.0 + xr * 1.5 + t * 1.4 + w1 * 2.0);
-      const hue =
-        0.48 + hueShift * 0.22 * swirl + 0.04 * Math.sin(t * 0.5 + frac * 6.28318);
+      const swirl = 0.5 + 0.5 * Math.sin(th + t * 0.8);
+      const hue = 0.48 + hueShift * swirl + 0.04 * Math.sin(t + frac * 12.0);
       const edge = Math.abs(y0);
       const light = 0.5 + 0.22 * w2 * turb + 0.12 * edge;
       const sat = 0.7 + 0.18 * swirl;
@@ -122,16 +112,17 @@ function ParticleSwarm({ count }: { count: number }) {
   return <instancedMesh ref={meshRef} args={[geometry, material, count]} />;
 }
 
-function OrbCanvas({ count }: { count: number }) {
+function OrbCanvas({ count, transparent }: { count: number; transparent?: boolean }) {
   return (
     <Canvas
       camera={{ position: [0, 0, 95], fov: 55 }}
       dpr={[1, 1.5]}
       gl={{ antialias: true, alpha: true }}
       className="h-full w-full"
+      style={{ background: "transparent" }}
     >
-      <color attach="background" args={["#061018"]} />
-      <fog attach="fog" args={["#061018", 40, 160]} />
+      {!transparent && <color attach="background" args={["#061018"]} />}
+      {!transparent && <fog attach="fog" args={["#061018", 40, 160]} />}
       <ParticleSwarm count={count} />
       <OrbitControls
         enableZoom={false}
@@ -142,14 +133,20 @@ function OrbCanvas({ count }: { count: number }) {
       />
       <Effects disableGamma>
         {/* @ts-expect-error drei Effects JSX for UnrealBloomPass */}
-        <unrealBloomPass threshold={0} strength={1.35} radius={0.45} />
+        <unrealBloomPass threshold={0} strength={transparent ? 1.1 : 1.35} radius={0.45} />
       </Effects>
     </Canvas>
   );
 }
 
-export default function HomeAgentOrb() {
-  const [count, setCount] = useState(12000);
+type Props = {
+  /** "card" = solid panel; "background" = translucent atmosphere behind UI */
+  variant?: "card" | "background";
+  className?: string;
+};
+
+export default function HomeAgentOrb({ variant = "card", className = "" }: Props) {
+  const [count, setCount] = useState(variant === "background" ? 9000 : 12000);
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
@@ -157,7 +154,11 @@ export default function HomeAgentOrb() {
     const mqNarrow = window.matchMedia("(max-width: 768px)");
     const apply = () => {
       setReduced(mqMotion.matches);
-      setCount(mqNarrow.matches ? 7000 : 14000);
+      if (variant === "background") {
+        setCount(mqNarrow.matches ? 4500 : 9000);
+      } else {
+        setCount(mqNarrow.matches ? 7000 : 14000);
+      }
     };
     apply();
     mqMotion.addEventListener("change", apply);
@@ -166,24 +167,46 @@ export default function HomeAgentOrb() {
       mqMotion.removeEventListener("change", apply);
       mqNarrow.removeEventListener("change", apply);
     };
-  }, []);
+  }, [variant]);
+
+  if (variant === "background") {
+    if (reduced) {
+      return (
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute inset-0 bg-gradient-to-br from-navy/40 via-cyan/10 to-transparent ${className}`}
+        />
+      );
+    }
+    return (
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-0 overflow-hidden opacity-55 ${className}`}
+      >
+        <OrbCanvas count={count} transparent />
+        <div className="absolute inset-0 bg-gradient-to-b from-base/40 via-transparent to-base/70" />
+      </div>
+    );
+  }
 
   if (reduced) {
     return (
-      <div className="flex h-full min-h-[260px] items-center justify-center rounded-2xl bg-navy-gradient">
+      <div className={`flex h-full min-h-[260px] items-center justify-center rounded-2xl bg-navy-gradient ${className}`}>
         <div className="h-28 w-28 rounded-full bg-gradient-to-br from-cyan/40 via-navy-mid to-navy shadow-[0_0_60px_rgba(14,165,183,0.35)]" />
       </div>
     );
   }
 
   return (
-    <div className="relative h-full min-h-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#061018] shadow-card sm:min-h-[360px]">
+    <div
+      className={`relative h-full min-h-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#061018] shadow-card sm:min-h-[360px] ${className}`}
+    >
       <OrbCanvas count={count} />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#061018]/90 to-transparent px-4 py-3">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan/90">
           Scout · Compare · Watch
         </p>
-        <p className="mt-0.5 text-xs text-white/60">Agent console atmosphere</p>
+        <p className="mt-0.5 text-xs text-white/60">Mate atmosphere</p>
       </div>
     </div>
   );
