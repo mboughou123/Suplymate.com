@@ -43,7 +43,13 @@ describe("toDisplaySupplier commercial honesty", () => {
     const without = toDisplaySupplier(stub({ id: "a", name: "A", moq: "" }));
     expect(without.products[0]?.hasRealMoq).toBe(false);
 
-    const withMoq = toDisplaySupplier(stub({ id: "b", name: "B", moq: "20 tons" }));
+    const withMoq = toDisplaySupplier(
+      stub({
+        id: "foliflex-wires-cables-delhi",
+        name: "Foliflex Cables (India) Private Limited",
+        moq: "20 tons",
+      })
+    );
     expect(withMoq.products[0]?.hasRealMoq).toBe(true);
     expect(withMoq.products[0]?.moq).toBe("20 tons");
   });
