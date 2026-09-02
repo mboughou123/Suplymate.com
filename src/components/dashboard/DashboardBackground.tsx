@@ -1,13 +1,16 @@
 "use client";
 
 /**
- * Soft navy-glass canvas for the dashboard — matches the homepage Harvey/
- * navy-glass system without drowning the content cards.
+ * Soft navy-glass canvas for the dashboard — Harvey tokens plus a retinted
+ * Kokonut Background Paths layer (no stock title, not used on marketing pages).
  */
+import BackgroundPaths from "@/components/kokonutui/background-paths";
+
 export default function DashboardBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div className="absolute inset-0 bg-[#F4F7FA]" />
+      <BackgroundPaths className="absolute inset-0 opacity-40" />
       <div
         className="absolute -left-24 top-0 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
         style={{

@@ -110,6 +110,14 @@ export default function CarouselCards({
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+              {m.logoUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={m.logoUrl}
+                  alt=""
+                  className="absolute left-3 top-3 h-8 w-8 rounded-full bg-white object-contain p-0.5 ring-2 ring-white/80"
+                />
+              )}
               <p className="absolute bottom-2 left-3 text-[11px] font-bold text-white">
                 RFQ
               </p>
