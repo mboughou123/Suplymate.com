@@ -14,7 +14,7 @@
     "pricingTitle": "Pricing | Suplymate",
     "pricingDescription": "Starter, Growth, and Enterprise plans for procurement teams. Preview pricing — billing coming soon.",
     "aiAssistantTitle": "Mate · AI Assistant | Suplymate",
-    "aiAssistantDescription": "Meet Mate — 1 AI, 3 agents (Scout, Compare, Watch) for industrial procurement.",
+    "aiAssistantDescription": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "adminTitle": "Admin | Suplymate"
   },
   "navigation": {
@@ -30,7 +30,7 @@
     "priceCharts": "Price Charts",
     "priceChartsDescription": "Track material prices and buy at the right time",
     "aiAssistant": "AI Assistant",
-    "aiAssistantDescription": "Meet Mate — Scout, Compare, and Watch",
+    "aiAssistantDescription": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "pricing": "Pricing",
     "dashboard": "Dashboard",
     "login": "Login",
@@ -155,8 +155,8 @@
   },
   "homeAiDemo": {
     "eyebrow": "Meet Mate",
-    "title": "Meet Mate — 1 AI, 3 agents working for you",
-    "subtitle": "Scout finds verified mills, Compare lines up offers, and Watch flags price windows — built for industrial procurement, not generic chat.",
+    "title": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
+    "subtitle": "Built for industrial procurement, not generic chat — run the example walkthrough below.",
     "walkthroughDisclaimer": "Walkthrough · Example scenario. Supplier names are from the Suplymate verified network; prices and signals shown are illustrative.",
     "agentScout": "Scout",
     "agentCompare": "Compare",
@@ -536,10 +536,10 @@
   },
   "aiAssistant": {
     "title": "Mate",
-    "subtitle": "1 AI, 3 agents working for you",
+    "subtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "mateEyebrow": "Mate AI",
-    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
-    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
+    "mateSubtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "modeGrok": "Live · xAI Grok",
     "modeOpenAi": "Live · OpenAI",
     "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers",

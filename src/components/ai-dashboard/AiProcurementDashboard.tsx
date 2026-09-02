@@ -37,10 +37,9 @@ export default function AiProcurementDashboard() {
       <div className="relative z-[1] mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-6 sm:px-6">
         <header className="mb-5 text-center">
           <p className="eyebrow text-cyan">{t("mateEyebrow")}</p>
-          <h1 className="mt-2 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+          <h1 className="mt-2 font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl text-balance">
             {t("mateTitle")}
           </h1>
-          <p className="mt-2 text-sm text-ink-muted">{t("mateSubtitle")}</p>
           <p className="mt-3 text-xs text-ink-dim">
             {aiMode === "grok"
               ? t("modeGrok")

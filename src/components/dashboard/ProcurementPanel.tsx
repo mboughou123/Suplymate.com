@@ -96,7 +96,7 @@ export default function ProcurementPanel() {
         ) : (
           <AIPrompt
             onSubmit={go}
-            headerText="agents ready for your next RFQ"
+            headerText="Mate — agents ready for your next RFQ"
             headerAction="Open assistant"
             placeholder="Ask Scout to find mills, Compare quotes, or Watch a price…"
           />

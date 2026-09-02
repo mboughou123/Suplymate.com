@@ -9,7 +9,9 @@ import {
   User as UserIcon,
   AlertCircle,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import AIPrompt, { type SuplymateAgent } from "@/components/kokonutui/ai-prompt";
+import { MATE_TAGLINE } from "@/lib/mate-branding";
 
 export type AiChatMode = "grok" | "openai" | "demo";
 
@@ -34,6 +36,7 @@ function uid(prefix: string) {
 }
 
 export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
+  const t = useTranslations("aiAssistant");
   const [messages, setMessages] = useState<ChatTurn[]>([]);
   const [loading, setLoading] = useState(false);
   const [streaming, setStreaming] = useState(false);
@@ -224,13 +227,12 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan/15">
                 <Sparkles className="h-7 w-7 text-cyan" aria-hidden />
               </span>
-              <h2 className="mt-5 text-xl font-bold tracking-tight text-ink sm:text-2xl">
-                Meet Mate — 1 AI, 3 agents working for you
+              <h2 className="mt-5 text-xl font-bold tracking-tight text-ink sm:text-2xl text-balance">
+                {t("mateTitle")}
               </h2>
               <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-muted">
-                Scout finds mills, Compare lines up offers, Watch tracks price
-                windows. Answers use Suplymate&apos;s real supplier data when
-                available — never invented live quotes.
+                Answers use Suplymate&apos;s real supplier data when available —
+                never invented live quotes.
               </p>
               <div className="mt-7 grid w-full gap-2 sm:grid-cols-2">
                 {EXAMPLE_PROMPTS.map((prompt) => (
@@ -307,7 +309,7 @@ export default function AiChatPanel({ initialQuery, onModeChange }: Props) {
       <div className="shrink-0 border-t border-slate-200/80 bg-white/70 px-4 py-4 backdrop-blur-sm sm:px-6">
         <div className="mx-auto max-w-3xl">
           <AIPrompt
-            headerText="— 1 AI, 3 agents working for you"
+            headerText={MATE_TAGLINE}
             headerAction=""
             placeholder="Ask Mate: Scout mills, Compare offers, or Watch a price…"
             busy={loading}

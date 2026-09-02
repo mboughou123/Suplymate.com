@@ -155,7 +155,7 @@
   },
   "homeAiDemo": {
     "eyebrow": "Example walkthrough",
-    "title": "Three AI agents, one sourcing workflow",
+    "title": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "subtitle": "Scout finds verified mills, Compare lines up offers, and Watch flags price windows — built for industrial procurement, not generic chat.",
     "walkthroughDisclaimer": "Walkthrough · Example scenario. Supplier names are from the Suplymate verified network; prices and signals shown are illustrative.",
     "agentScout": "Scout",
@@ -536,7 +536,7 @@
   },
   "aiAssistant": {
     "title": "Assistant d'approvisionnement IA",
-    "subtitle": "Kaynakz pokundus intelligemment avec l'intelligence à vos côtés",
+    "subtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "badge": "Expertise IA + humaine",
     "description": "Suplymate combine outils IA veuzmanlar humains içintrouver le bon tedarikçi au bon fiyatlar.",
     "tryAssistant": "Essayer l'asistan IA",
@@ -558,8 +558,8 @@
     "statAiMatching": "Matching propulsé",
     "statSupport": "Support approvisionnement",
     "mateEyebrow": "Mate AI",
-    "mateTitle": "Meet Mate — 1 AI, 3 agents working for you",
-    "mateSubtitle": "Scout finds mills, Compare lines up offers, Watch tracks price windows.",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
+    "mateSubtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "modeGrok": "Live · xAI Grok",
     "modeOpenAi": "Live · OpenAI",
     "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
