@@ -2,7 +2,6 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
-  DAILY_NO_FACTORY_PHOTO_SLUGS,
   DUCAB_EXISTING_ID,
   daily20260902Suppliers,
 } from "@/lib/daily-2026-09-02-suppliers";
@@ -20,24 +19,16 @@ describe("daily 2026-09-02 mill directory", () => {
     expect(daily20260902Suppliers.some((s) => s.id === "ducab")).toBe(false);
   });
 
-  it("uses local factory stills for 44 mills and leaves 6 photo-less", () => {
-    const withPhoto = daily20260902Suppliers.filter(
-      (s) => (s.supplierImages?.length ?? 0) > 0,
+  it("uses local factory stills for all 50 mills", () => {
+    expect(daily20260902Suppliers.every((s) => (s.supplierImages?.length ?? 0) > 0)).toBe(
+      true,
     );
-    const without = daily20260902Suppliers.filter(
-      (s) => !s.imageUrl && !(s.supplierImages?.length ?? 0),
-    );
-    expect(withPhoto).toHaveLength(44);
-    expect(without).toHaveLength(6);
-
-    for (const slug of DAILY_NO_FACTORY_PHOTO_SLUGS) {
+    for (const slug of ["sail", "hyundai-steel", "prysmian", "skf", "crh", "ball"]) {
       const mill = daily20260902Suppliers.find((s) => s.id === slug);
-      expect(mill, slug).toBeDefined();
-      expect(mill?.imageUrl).toBeUndefined();
-      expect(mill?.supplierImages).toEqual([]);
+      expect(mill?.supplierImages?.length, slug).toBe(3);
     }
 
-    for (const mill of withPhoto) {
+    for (const mill of daily20260902Suppliers) {
       const photos = collectFactoryPhotoUrls(mill);
       expect(photos.length, mill.name).toBeGreaterThan(0);
       for (const url of photos) {

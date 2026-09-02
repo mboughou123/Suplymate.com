@@ -2,9 +2,9 @@
  * Daily expansion 2026-09-02 — 50 new mills for /suppliers.
  *
  * Metadata: data/daily-2026-09-02-suppliers.json
- * Factory stills: public/images/suppliers/<slug>/*.jpg (44 mills).
+ * Factory stills: public/images/suppliers/<slug>/*.jpg (50 mills).
  *
- * Honesty: no invented factory photos (6 mills stay photo-less);
+ * Honesty: use on-disk stills only (no stock / AI yards);
  *          no ISO badges from research-note certifications;
  *          RFQ / unpublished MOQ — never invent FOB.
  */
@@ -13,14 +13,10 @@ import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import rawDaily from "../../data/daily-2026-09-02-suppliers.json";
 import type { Industry, Supplier, SupplierCategory } from "@/data/suppliers";
-import {
-  DAILY_NO_FACTORY_PHOTO_SLUGS,
-  dailySupplierIdForSlug,
-} from "@/lib/daily-2026-09-02-ids";
+import { dailySupplierIdForSlug } from "@/lib/daily-2026-09-02-ids";
 
 export {
   DAILY_20260902_SUPPLIER_IDS,
-  DAILY_NO_FACTORY_PHOTO_SLUGS,
   DUCAB_EXISTING_ID,
   dailySupplierIdForSlug,
   isDaily20260902Supplier,
@@ -64,7 +60,6 @@ function suppliersRoot(): string {
 }
 
 function listLocalFactoryStills(slug: string): string[] {
-  if ((DAILY_NO_FACTORY_PHOTO_SLUGS as readonly string[]).includes(slug)) return [];
   const dir = join(suppliersRoot(), slug);
   if (!existsSync(dir)) return [];
   let files: string[] = [];

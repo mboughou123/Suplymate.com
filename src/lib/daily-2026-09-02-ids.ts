@@ -5,15 +5,6 @@
 
 export const DUCAB_EXISTING_ID = "ducab-dubai-cable-company-pvt-ltd-ae";
 
-export const DAILY_NO_FACTORY_PHOTO_SLUGS = [
-  "ball",
-  "crh",
-  "hyundai-steel",
-  "prysmian",
-  "sail",
-  "skf",
-] as const;
-
 export const DAILY_20260902_SLUGS = [
   "posco",
   "nucor",
