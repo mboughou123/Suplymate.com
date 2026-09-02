@@ -9,6 +9,7 @@ import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getPublishedSupplierMedia } from "@/lib/media-store";
 import { getSupplierCertificationImages } from "@/lib/media-public";
 import { listCertifications } from "@/lib/certifications-store";
+import { listMillCertScansForSupplier } from "@/lib/mill-cert-scans";
 import { prisma } from "@/lib/prisma";
 import { normalizeMarketplaceStatus, STATUS_META } from "@/lib/verification";
 import { buildPageAlternates } from "@/lib/locale-metadata";
@@ -138,15 +139,31 @@ export default async function SupplierProfilePage({
   // Real certification/media collected via import or the website scraper. Shown
   // alongside the generated profile content only when present. Published
   // certificate Media is merged ahead of the legacy image URLs.
+  const millCertScans = listMillCertScansForSupplier(supplier.id);
+  const millCertImages = millCertScans.map((c) => c.publicPath);
   const realCertImages = [
-    ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
+    ...new Set([
+      ...millCertImages,
+      ...mediaCertImages,
+      ...(supplier.certificationImages ?? []),
+    ]),
   ];
   // Relational certifications with their admin-controlled verification status.
   // Never shown if rejected. A certification is NOT verified just because an
   // image exists — status is set by an admin.
   const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
     .filter((c) => c.status !== "rejected");
-  const realCertDetails = supplier.certificationsDetailed ?? [];
+  const millCertDetails = millCertScans.map((c) => ({
+    name: c.name,
+    type: c.certType,
+    imageUrl: c.publicPath,
+    sourceUrl: c.sourceUrl,
+    certificateUrl: null,
+  }));
+  const realCertDetails = [
+    ...millCertDetails,
+    ...(supplier.certificationsDetailed ?? []),
+  ];
   const realSupplierImages = supplier.supplierImages ?? [];
   const hasRealMedia =
     realCertImages.length > 0 || realCertDetails.length > 0 || realSupplierImages.length > 0;

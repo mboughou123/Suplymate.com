@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Award, ShieldCheck, ExternalLink, ImageOff } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Award, ShieldCheck, ExternalLink, ImageOff, X } from "lucide-react";
 import type { CertificationDetail } from "@/lib/supplier-normalize";
 
 type Props = {
@@ -35,12 +35,34 @@ function CertImage({ src, alt }: { src: string; alt: string }) {
 }
 
 /**
- * Gallery of certification badges + details. Renders nothing intrusive when a
- * supplier has no certifications (shows a tidy empty state instead of breaking).
+ * Gallery of certification scans + details. Thumbnails open a full-size view.
+ * Renders a tidy empty state when a supplier has no certifications.
  */
-export default function CertificationGallery({ images = [], certifications = [], className = "" }: Props) {
+export default function CertificationGallery({
+  images = [],
+  certifications = [],
+  className = "",
+}: Props) {
   const hasImages = images.length > 0;
   const hasDetails = certifications.length > 0;
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowRight") {
+        setLightbox((i) => (i == null ? i : (i + 1) % images.length));
+      }
+      if (e.key === "ArrowLeft") {
+        setLightbox((i) =>
+          i == null ? i : (i - 1 + images.length) % images.length,
+        );
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, images.length]);
 
   if (!hasImages && !hasDetails) {
     return (
@@ -51,13 +73,30 @@ export default function CertificationGallery({ images = [], certifications = [],
     );
   }
 
+  const open = lightbox != null ? images[lightbox] : null;
+  const openAlt =
+    lightbox != null
+      ? certifications[lightbox]?.name || `Certificate ${lightbox + 1}`
+      : "";
+
   return (
     <div className={className}>
       {hasImages && (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-          {images.map((src, i) => (
-            <CertImage key={`${src}-${i}`} src={src} alt={`Certification ${i + 1}`} />
-          ))}
+          {images.map((src, i) => {
+            const alt = certifications[i]?.name || `Certification ${i + 1}`;
+            return (
+              <button
+                key={`${src}-${i}`}
+                type="button"
+                onClick={() => setLightbox(i)}
+                className="block w-full text-left transition hover:-translate-y-0.5"
+                aria-label={`View ${alt} full size`}
+              >
+                <CertImage src={src} alt={alt} />
+              </button>
+            );
+          })}
         </div>
       )}
 
@@ -94,6 +133,32 @@ export default function CertificationGallery({ images = [], certifications = [],
         <p className="mt-3 inline-flex items-center gap-1 text-xs text-ink-dim">
           <ImageOff className="h-3 w-3" aria-hidden /> Certificate images not provided.
         </p>
+      )}
+
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={openAlt}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            type="button"
+            className="absolute right-4 top-4 rounded-full bg-white/90 p-2 text-ink shadow"
+            onClick={() => setLightbox(null)}
+            aria-label="Close certificate"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={open}
+            alt={openAlt}
+            className="max-h-[90vh] max-w-[min(1100px,96vw)] rounded-xl bg-white object-contain shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
       )}
     </div>
   );
