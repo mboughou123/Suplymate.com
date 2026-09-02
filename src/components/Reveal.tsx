@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  createElement,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -68,15 +74,14 @@ export default function Reveal({
     return () => cleanups.forEach((fn) => fn());
   }, []);
 
-  const Tag = as as React.ElementType;
-
-  return (
-    <Tag
-      ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </Tag>
+  // createElement avoids ElementType JSX casts that explode under @types/three.
+  return createElement(
+    as,
+    {
+      ref,
+      className: `reveal ${visible ? "is-visible" : ""} ${className}`,
+      style: { transitionDelay: `${delay}ms` },
+    },
+    children
   );
 }
