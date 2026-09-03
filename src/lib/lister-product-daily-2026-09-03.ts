@@ -9,10 +9,12 @@
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
  * No new mills — attach to existing phase-1 + 2026-09-02 mill ids.
  *
- * Research QA hold: 12 SKUs stay in the pack (JSON/photos untouched) but are
- * status `needs_info` so they do not appear on public /products until
- * replacement images land (6 Jiuli + 6 named image mismatches). Soft-but-OK
- * (Ball beverage, SKF DGBB, Smurfit CGI, Tetra Prisma/Brik) remain approved.
+ * Research QA hold: 7 SKUs stay in the pack (JSON/photos untouched) but are
+ * status `needs_info` so they do not appear on public /products until a later
+ * sealed drop (6 Jiuli + Ball Aluminum Aerosol). Soft-but-OK (Ball beverage,
+ * SKF DGBB, Smurfit CGI, Tetra Prisma/Brik) remain approved. Flowserve TX3 /
+ * BigMax, KSB ISORIA, Huhtamaki blueloop, Tenaris BlueCoil, and NSK HPS were
+ * unhidden after official mill stills replaced the mismatched cards.
  */
 
 import rawDaily from "../../data/daily-2026-09-03-products.json";
@@ -78,11 +80,6 @@ export function daily20260903SupplierId(slug: string): string {
  * All Jiuli SKUs are held via supplier slug alone (see isDaily20260903QaHeld).
  */
 export const DAILY_20260903_QA_HELD_KEYS = new Set([
-  "flowserve|flowserve-butterfly-valves",
-  "ksb|ksb-industrial-valves-globe-butterfly-gate",
-  "huhtamaki|huhtamaki-flexible-food-packaging-films-and-pouches",
-  "tenaris|tenaris-coiled-tubing-and-industrial-pipe",
-  "nsk|nsk-spherical-roller-bearings",
   "ball|ball-aluminum-aerosol-cans",
 ]);
 

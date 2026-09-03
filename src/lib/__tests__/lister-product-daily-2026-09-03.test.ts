@@ -44,11 +44,11 @@ describe("Lister daily expansion 2026-09-03", () => {
     ).toHaveLength(4);
   });
 
-  it("holds 12 Research QA rejects from public /products (58 remain approved)", () => {
-    // 6 Jiuli + Flowserve butterfly + KSB valves + Huhtamaki flexible +
-    // Tenaris coiled tubing + NSK spherical + Ball aerosol = 12.
-    expect(listerDaily20260903HeldCount()).toBe(12);
-    expect(listerDaily20260903PublicCount()).toBe(58);
+  it("holds 7 Research QA rejects from public /products (63 remain approved)", () => {
+    // 6 Jiuli + Ball aerosol = 7. Official stills unhid Flowserve / KSB /
+    // Huhtamaki / Tenaris / NSK.
+    expect(listerDaily20260903HeldCount()).toBe(7);
+    expect(listerDaily20260903PublicCount()).toBe(63);
     expect(listerDaily20260903HeldCount() + listerDaily20260903PublicCount()).toBe(
       70,
     );
@@ -57,19 +57,20 @@ describe("Lister daily expansion 2026-09-03", () => {
     expect(held.every((p) => p.status === "needs_info")).toBe(true);
     expect(held.filter((p) => p.supplierId === "jiuli")).toHaveLength(6);
     const heldNames = new Set(held.map((p) => p.name));
+    expect(heldNames.has("Ball Aluminum Aerosol Cans")).toBe(true);
     for (const name of [
       "Flowserve Butterfly Valves",
       "KSB Industrial Valves (Globe / Butterfly / Gate)",
       "Huhtamaki Flexible Food Packaging Films and Pouches",
       "Tenaris Coiled Tubing and Industrial Pipe",
       "NSK Spherical Roller Bearings",
-      "Ball Aluminum Aerosol Cans",
     ]) {
-      expect(heldNames.has(name), name).toBe(true);
+      expect(heldNames.has(name), name).toBe(false);
     }
 
-    // Soft-but-OK remain public.
-    const pubNames = new Set(listerDaily20260903PublicProducts().map((p) => p.name));
+    // Soft-but-OK + official-still replacements remain public.
+    const pub = listerDaily20260903PublicProducts();
+    const pubNames = new Set(pub.map((p) => p.name));
     expect(pubNames.has("Ball Aluminum Beverage Cans")).toBe(true);
     expect(pubNames.has("SKF Explorer Deep Groove Ball Bearings")).toBe(true);
     expect(
@@ -77,8 +78,49 @@ describe("Lister daily expansion 2026-09-03", () => {
     ).toBe(true);
     expect(pubNames.has("Tetra Pak Tetra Prisma Aseptic Carton Packages")).toBe(true);
     expect(pubNames.has("Ball Aluminum Aerosol Cans")).toBe(false);
+    expect(pubNames.has("Flowserve Butterfly Valves")).toBe(true);
+    expect(pubNames.has("KSB Industrial Valves (Globe / Butterfly / Gate)")).toBe(true);
+    expect(
+      pubNames.has("Huhtamaki Flexible Food Packaging Films and Pouches"),
+    ).toBe(true);
+    expect(pubNames.has("Tenaris Coiled Tubing and Industrial Pipe")).toBe(true);
+    expect(pubNames.has("NSK Spherical Roller Bearings")).toBe(true);
+
+    const byName = new Map(pub.map((p) => [p.name, p]));
+    expect(byName.get("Flowserve Butterfly Valves")?.images).toEqual(
+      expect.arrayContaining([
+        "/images/products/flowserve/butterfly-fallback-local.jpg",
+        "/images/products/flowserve/butterfly-fallback-local-2.jpg",
+      ]),
+    );
+    expect(byName.get("KSB Industrial Valves (Globe / Butterfly / Gate)")?.images).toEqual(
+      expect.arrayContaining(["/images/products/ksb/ksb-valves-fallback-local.jpg"]),
+    );
+    expect(
+      byName.get("Huhtamaki Flexible Food Packaging Films and Pouches")?.images,
+    ).toEqual(
+      expect.arrayContaining([
+        "/images/products/huhtamaki/flexible-food-pack.jpg",
+        "/images/products/huhtamaki/picnic-flex.jpg",
+      ]),
+    );
+    expect(byName.get("Tenaris Coiled Tubing and Industrial Pipe")?.images).toEqual(
+      expect.arrayContaining(["/images/products/tenaris/coiled-tubing.jpg"]),
+    );
+    expect(byName.get("NSK Spherical Roller Bearings")?.images).toEqual(
+      expect.arrayContaining([
+        "/images/products/nsk/nsk-spherical-comp.jpg",
+        "/images/products/nsk/nsk-cutaway.jpg",
+      ]),
+    );
+
     expect(isDaily20260903QaHeld("jiuli", "anything")).toBe(true);
+    expect(isDaily20260903QaHeld("ball", "ball-aluminum-aerosol-cans")).toBe(true);
     expect(isDaily20260903QaHeld("ball", "ball-aluminum-beverage-cans")).toBe(false);
+    expect(isDaily20260903QaHeld("flowserve", "flowserve-butterfly-valves")).toBe(false);
+    expect(
+      isDaily20260903QaHeld("ksb", "ksb-industrial-valves-globe-butterfly-gate"),
+    ).toBe(false);
   });
 
   it("excludes held SKUs from the public products overlay", async () => {
