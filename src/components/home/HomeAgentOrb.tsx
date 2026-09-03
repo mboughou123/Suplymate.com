@@ -174,17 +174,17 @@ export default function HomeAgentOrb({ variant = "card", className = "" }: Props
       return (
         <div
           aria-hidden
-          className={`pointer-events-none absolute inset-0 bg-gradient-to-br from-navy/40 via-cyan/10 to-transparent ${className}`}
+          className={`pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-navy/40 via-cyan/10 to-transparent ${className}`}
         />
       );
     }
     return (
       <div
         aria-hidden
-        className={`pointer-events-none absolute inset-0 overflow-hidden opacity-55 ${className}`}
+        className={`pointer-events-none absolute inset-0 -z-10 overflow-hidden ${className}`}
       >
         <OrbCanvas count={count} transparent />
-        <div className="absolute inset-0 bg-gradient-to-b from-base/40 via-transparent to-base/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-base/20 via-transparent to-base/40" />
       </div>
     );
   }

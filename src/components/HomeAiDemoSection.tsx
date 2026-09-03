@@ -124,7 +124,7 @@ export default function HomeAiDemoSection() {
       className="relative overflow-hidden section-y-tight scroll-mt-28"
       aria-labelledby="ai-demo-heading"
     >
-      <HomeAgentOrb variant="background" />
+      <HomeAgentOrb variant="background" className="opacity-55" />
       <div className="container-page relative z-[1]">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-cyan">{t("eyebrow")}</p>

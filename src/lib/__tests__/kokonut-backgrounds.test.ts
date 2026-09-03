@@ -56,3 +56,25 @@ describe("homepage agent orb", () => {
     expect(orb).toMatch("transparent");
   });
 });
+
+describe("AI assistant Mate atmosphere", () => {
+  it("mounts the background orb behind a translucent chat (not covered / not opacity-0)", () => {
+    const dash = readFileSync(
+      resolve(process.cwd(), "src/components/ai-dashboard/AiProcurementDashboard.tsx"),
+      "utf8"
+    );
+    const orb = readFileSync(
+      resolve(process.cwd(), "src/components/home/HomeAgentOrb.tsx"),
+      "utf8"
+    );
+    expect(dash).toMatch(/<HomeAgentOrb\s+variant="background"/);
+    expect(dash).toMatch("opacity-85");
+    expect(dash).toMatch("-z-10");
+    expect(dash).toMatch("relative");
+    expect(dash).toMatch("bg-white/80");
+    expect(dash).toMatch("backdrop-blur");
+    expect(dash).not.toMatch("opacity-0");
+    expect(orb).toMatch("absolute inset-0 -z-10");
+    expect(orb).not.toMatch("opacity-55");
+  });
+});
