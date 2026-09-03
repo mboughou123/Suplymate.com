@@ -1,0 +1,600 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/acrs-as-nzs-1163.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/acrs-as-nzs-1163.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/api-5ct-api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/api-5ct-api-5l.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/api-q1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/api-q1.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/ce-en-10210.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/ce-en-10210.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/ce-en-10219.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/ce-en-10219.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/ce-en-10255.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/ce-en-10255.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/fm-approvals.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/fm-approvals.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/iso-14001-iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/iso-14001-iso-45001.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/iso-17025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/iso-17025.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/iso-9001.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/aj-steel/ul.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/aj-steel/ul.jpg",
+    "in_size": [
+      1754,
+      1241
+    ],
+    "out_size": [
+      1754,
+      1241
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-jazeera-steel/api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-jazeera-steel/api-5l.jpg",
+    "in_size": [
+      1650,
+      1275
+    ],
+    "out_size": [
+      1650,
+      1275
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-jazeera-steel/api-q1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-jazeera-steel/api-q1.jpg",
+    "in_size": [
+      1271,
+      1648
+    ],
+    "out_size": [
+      1271,
+      1648
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-jazeera-steel/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-jazeera-steel/iso-9001.jpg",
+    "in_size": [
+      1606,
+      2290
+    ],
+    "out_size": [
+      1542,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/ezz-steel/cares-bs-4449-alexandria.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ezz-steel/cares-bs-4449-alexandria.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/ezz-steel/iso-14001-alexandria.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ezz-steel/iso-14001-alexandria.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/ezz-steel/iso-45001-alexandria.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ezz-steel/iso-45001-alexandria.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/ezz-steel/iso-9001-alexandria.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ezz-steel/iso-9001-alexandria.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/ezz-steel/iso-9001-suez.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ezz-steel/iso-9001-suez.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/iso-9001-pcms-2018.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/iso-9001-pcms-2018.jpg",
+    "in_size": [
+      1060,
+      1497
+    ],
+    "out_size": [
+      1060,
+      1497
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/cqm-hse.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/cqm-hse.jpg",
+    "in_size": [
+      1600,
+      2265
+    ],
+    "out_size": [
+      1554,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/api-q1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/api-q1.jpg",
+    "in_size": [
+      1271,
+      1648
+    ],
+    "out_size": [
+      1271,
+      1648
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/basec.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/basec.jpg",
+    "in_size": [
+      1276,
+      1790
+    ],
+    "out_size": [
+      1276,
+      1790
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/iso-14001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/iso-45001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/iso-9001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/man-industries/api-2b.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/man-industries/api-2b.jpg",
+    "in_size": [
+      1408,
+      1088
+    ],
+    "out_size": [
+      1408,
+      1088
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/man-industries/api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/man-industries/api-5l.jpg",
+    "in_size": [
+      1408,
+      1088
+    ],
+    "out_size": [
+      1408,
+      1088
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/man-industries/api-q1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/man-industries/api-q1.jpg",
+    "in_size": [
+      1084,
+      1406
+    ],
+    "out_size": [
+      1084,
+      1406
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/man-industries/iso-27001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/man-industries/iso-27001.jpg",
+    "in_size": [
+      902,
+      1280
+    ],
+    "out_size": [
+      986,
+      1400
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/polycab-india/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/polycab-india/iso-14001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/polycab-india/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/polycab-india/iso-45001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/iso-14001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/iso-45001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/iso-9001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/tata-steel/iso-14001-jamshedpur-crm-bara.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/tata-steel/iso-14001-jamshedpur-crm-bara.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/tata-steel/iso-14001-meramandali.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/tata-steel/iso-14001-meramandali.jpg",
+    "in_size": [
+      1263,
+      1750
+    ],
+    "out_size": [
+      1263,
+      1750
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/zhejiang-zhiju-pipeline/ped-tuv-sud-annex.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/zhejiang-zhiju-pipeline/ped-tuv-sud-annex.jpg",
+    "in_size": [
+      1500,
+      2121
+    ],
+    "out_size": [
+      1500,
+      2121
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/zhejiang-zhiju-pipeline/ped-tuv-sud.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/zhejiang-zhiju-pipeline/ped-tuv-sud.jpg",
+    "in_size": [
+      1500,
+      2121
+    ],
+    "out_size": [
+      1500,
+      2121
+    ]
+  },
+  {
+    "slug": "kei-industries",
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/iso-17025-nabl-bhiwadi.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/iso-17025-nabl-bhiwadi.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "slug": "kei-industries",
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/iatf-16949-loc.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/iatf-16949-loc.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ]
+  },
+  {
+    "slug": "kei-industries",
+    "src": "/workspace/suppliers-phase1/product-media/certs/kei-industries/ce-lvd-11200-2025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/kei-industries/ce-lvd-11200-2025.jpg",
+    "in_size": [
+      1240,
+      1754
+    ],
+    "out_size": [
+      1240,
+      1754
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/ce.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/ce.jpg",
+    "in_size": [
+      600,
+      849
+    ],
+    "out_size": [
+      1131,
+      1600
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/iso-9001.jpg",
+    "in_size": [
+      600,
+      849
+    ],
+    "out_size": [
+      1131,
+      1600
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/api-2b.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/api-2b.jpg",
+    "in_size": [
+      900,
+      695
+    ],
+    "out_size": [
+      1600,
+      1236
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/iso-45001.jpg",
+    "in_size": [
+      600,
+      849
+    ],
+    "out_size": [
+      1131,
+      1600
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/en-1090.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/en-1090.jpg",
+    "in_size": [
+      2470,
+      3529
+    ],
+    "out_size": [
+      2470,
+      3529
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/iso-14001.jpg",
+    "in_size": [
+      600,
+      849
+    ],
+    "out_size": [
+      1131,
+      1600
+    ]
+  },
+  {
+    "slug": "hebei-huayang-steel-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hebei-huayang-steel-pipe/api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hebei-huayang-steel-pipe/api-5l.jpg",
+    "in_size": [
+      900,
+      695
+    ],
+    "out_size": [
+      1600,
+      1236
+    ]
+  }
+]
