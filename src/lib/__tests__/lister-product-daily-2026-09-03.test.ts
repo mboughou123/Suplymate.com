@@ -44,40 +44,21 @@ describe("Lister daily expansion 2026-09-03", () => {
     ).toHaveLength(4);
   });
 
-  it("holds 7 Research QA rejects from public /products (63 remain approved)", () => {
-    // 6 Jiuli + Ball aerosol = 7. Official stills unhid Flowserve / KSB /
-    // Huhtamaki / Tenaris / NSK.
-    expect(listerDaily20260903HeldCount()).toBe(7);
-    expect(listerDaily20260903PublicCount()).toBe(63);
-    expect(listerDaily20260903HeldCount() + listerDaily20260903PublicCount()).toBe(
-      70,
-    );
+  it("approves all 70 SKUs with no remaining Research QA holds", () => {
+    expect(listerDaily20260903HeldCount()).toBe(0);
+    expect(listerDaily20260903PublicCount()).toBe(70);
+    expect(listerDaily20260903HeldProducts()).toHaveLength(0);
+    expect(listerDaily20260903Products.every((p) => p.status === "approved")).toBe(true);
 
-    const held = listerDaily20260903HeldProducts();
-    expect(held.every((p) => p.status === "needs_info")).toBe(true);
-    expect(held.filter((p) => p.supplierId === "jiuli")).toHaveLength(6);
-    const heldNames = new Set(held.map((p) => p.name));
-    expect(heldNames.has("Ball Aluminum Aerosol Cans")).toBe(true);
-    for (const name of [
-      "Flowserve Butterfly Valves",
-      "KSB Industrial Valves (Globe / Butterfly / Gate)",
-      "Huhtamaki Flexible Food Packaging Films and Pouches",
-      "Tenaris Coiled Tubing and Industrial Pipe",
-      "NSK Spherical Roller Bearings",
-    ]) {
-      expect(heldNames.has(name), name).toBe(false);
-    }
-
-    // Soft-but-OK + official-still replacements remain public.
     const pub = listerDaily20260903PublicProducts();
     const pubNames = new Set(pub.map((p) => p.name));
     expect(pubNames.has("Ball Aluminum Beverage Cans")).toBe(true);
+    expect(pubNames.has("Ball Aluminum Aerosol Cans")).toBe(true);
     expect(pubNames.has("SKF Explorer Deep Groove Ball Bearings")).toBe(true);
     expect(
       pubNames.has("Smurfit Westrock Sustainable Packaging Design and Containerboard"),
     ).toBe(true);
     expect(pubNames.has("Tetra Pak Tetra Prisma Aseptic Carton Packages")).toBe(true);
-    expect(pubNames.has("Ball Aluminum Aerosol Cans")).toBe(false);
     expect(pubNames.has("Flowserve Butterfly Valves")).toBe(true);
     expect(pubNames.has("KSB Industrial Valves (Globe / Butterfly / Gate)")).toBe(true);
     expect(
@@ -87,6 +68,9 @@ describe("Lister daily expansion 2026-09-03", () => {
     expect(pubNames.has("NSK Spherical Roller Bearings")).toBe(true);
 
     const byName = new Map(pub.map((p) => [p.name, p]));
+    expect(byName.get("Ball Aluminum Aerosol Cans")?.images[0]).toBe(
+      "/images/products/ball/aerosol-cans.jpg",
+    );
     expect(byName.get("Flowserve Butterfly Valves")?.images).toEqual(
       expect.arrayContaining([
         "/images/products/flowserve/butterfly-fallback-local.jpg",
@@ -114,8 +98,15 @@ describe("Lister daily expansion 2026-09-03", () => {
       ]),
     );
 
-    expect(isDaily20260903QaHeld("jiuli", "anything")).toBe(true);
-    expect(isDaily20260903QaHeld("ball", "ball-aluminum-aerosol-cans")).toBe(true);
+    const jiuli = pub.filter((p) => p.supplierId === "jiuli");
+    expect(jiuli).toHaveLength(6);
+    for (const p of jiuli) {
+      expect(p.status, p.name).toBe("approved");
+      expect(p.images.length, p.name).toBeGreaterThan(0);
+    }
+
+    expect(isDaily20260903QaHeld("jiuli", "anything")).toBe(false);
+    expect(isDaily20260903QaHeld("ball", "ball-aluminum-aerosol-cans")).toBe(false);
     expect(isDaily20260903QaHeld("ball", "ball-aluminum-beverage-cans")).toBe(false);
     expect(isDaily20260903QaHeld("flowserve", "flowserve-butterfly-valves")).toBe(false);
     expect(
@@ -123,15 +114,17 @@ describe("Lister daily expansion 2026-09-03", () => {
     ).toBe(false);
   });
 
-  it("excludes held SKUs from the public products overlay", async () => {
+  it("surfaces Jiuli and Ball aerosol on the public products overlay", async () => {
     const page = await getPublicProductsPage({ page: 1, pageSize: 200, search: "Jiuli" });
-    expect(page.items.filter((i) => i.id.startsWith("lister-b7-"))).toHaveLength(0);
+    expect(page.items.filter((i) => i.id.startsWith("lister-b7-jiuli-"))).toHaveLength(6);
     const aerosol = await getPublicProductsPage({
       page: 1,
       pageSize: 50,
       search: "Ball Aluminum Aerosol",
     });
-    expect(aerosol.items.some((i) => i.id.includes("aerosol"))).toBe(false);
+    expect(
+      aerosol.items.some((i) => i.id === "lister-b7-ball-ball-aluminum-aerosol-cans"),
+    ).toBe(true);
     const beverage = await getPublicProductsPage({
       page: 1,
       pageSize: 50,
@@ -198,9 +191,8 @@ describe("Lister daily expansion 2026-09-03", () => {
 
   it("surfaces known mills on the shared catalogue helper", () => {
     expect(listerDaily20260903ForSupplier("youfa").length).toBeGreaterThanOrEqual(1);
-    // Pack still retains Jiuli records; public helper hides QA holds.
     expect(listerDaily20260903ForSupplier("jiuli")).toHaveLength(6);
-    expect(listerProductsForSupplier("jiuli")).toHaveLength(0);
+    expect(listerProductsForSupplier("jiuli")).toHaveLength(6);
     expect(
       listerProductsForSupplier("youfa").some((p) => p.id.startsWith("lister-b7-")),
     ).toBe(true);

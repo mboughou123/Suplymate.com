@@ -9,12 +9,12 @@
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
  * No new mills — attach to existing phase-1 + 2026-09-02 mill ids.
  *
- * Research QA hold: 7 SKUs stay in the pack (JSON/photos untouched) but are
- * status `needs_info` so they do not appear on public /products until a later
- * sealed drop (6 Jiuli + Ball Aluminum Aerosol). Soft-but-OK (Ball beverage,
- * SKF DGBB, Smurfit CGI, Tetra Prisma/Brik) remain approved. Flowserve TX3 /
- * BigMax, KSB ISORIA, Huhtamaki blueloop, Tenaris BlueCoil, and NSK HPS were
- * unhidden after official mill stills replaced the mismatched cards.
+ * No remaining Research QA holds on this pack. All 70 SKUs are status
+ * `approved`. Soft-but-OK (Ball beverage, SKF DGBB, Smurfit CGI, Tetra
+ * Prisma/Brik) stay public. Flowserve TX3 / BigMax, KSB ISORIA, Huhtamaki
+ * blueloop, Tenaris BlueCoil, and NSK HPS stay on their official mill stills.
+ * Jiuli 6 + Ball Aluminum Aerosol were unhidden after sealed product stills
+ * replaced the mismatched cards.
  */
 
 import rawDaily from "../../data/daily-2026-09-03-products.json";
@@ -77,13 +77,11 @@ export function daily20260903SupplierId(slug: string): string {
 
 /**
  * Stable Research QA holds: `supplier_slug_guess|product_slug`.
- * All Jiuli SKUs are held via supplier slug alone (see isDaily20260903QaHeld).
+ * Empty — no remaining Research QA holds on this pack.
  */
-export const DAILY_20260903_QA_HELD_KEYS = new Set([
-  "ball|ball-aluminum-aerosol-cans",
-]);
+export const DAILY_20260903_QA_HELD_KEYS = new Set<string>([]);
 
-export const DAILY_20260903_QA_HELD_SUPPLIER_SLUGS = new Set(["jiuli"]);
+export const DAILY_20260903_QA_HELD_SUPPLIER_SLUGS = new Set<string>([]);
 
 export function isDaily20260903QaHeld(
   supplierSlug: string,
