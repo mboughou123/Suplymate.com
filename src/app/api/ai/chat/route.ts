@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { rateLimit } from "@/lib/rate-limit";
-import { isOpenAiConfigured, type ChatMessage } from "@/lib/openai";
+import { isOpenAiConfigured, resolveAiProvider, type ChatMessage } from "@/lib/openai";
 import {
   demoReply,
   getAiReply,
@@ -189,11 +189,12 @@ export async function POST(request: Request) {
     },
   });
 
+  const provider = resolveAiProvider();
   return new Response(stream, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "no-store",
-      "x-ai-source": "openai",
+      "x-ai-source": provider === "demo" ? "openai" : provider,
       ...(threadId ? { "x-conversation-id": threadId } : {}),
     },
   });

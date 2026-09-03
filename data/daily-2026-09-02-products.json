@@ -1,0 +1,896 @@
+{
+  "products": [
+    {
+      "product_name": "ArcelorMittal European IPE I-Sections (EN 10365)",
+      "product_slug": "arcelormittal-european-ipe-i-sections-en-10365",
+      "supplier_name": "ArcelorMittal",
+      "supplier_slug_guess": "arcelormittal",
+      "source_url": "https://constructalia.arcelormittal.com/en/products/i-sections",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Constructalia / sections.arcelormittal.com list IPE 80–750 (EN 10365) and HISTAR grades; mill quotes by section/ton, no public unit/FOB list. Never invent beam prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://constructalia.arcelormittal.com/repository/OG_Images/Products/I_sections_OG.jpg",
+        "https://constructalia.arcelormittal.com/files/styles/xcarb_banner/public/I_sections_web--5e0a587201a42c6856a5225017a4373e.jpg",
+        "https://constructalia.arcelormittal.com/files/styles/xcarb_carousel/public/European-sections-cut--617ded157dc1ed06de319843dd7ffc69.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ArcelorMittal Hot-Rolled UPE Parallel Flange Channels",
+      "product_slug": "arcelormittal-hot-rolled-upe-parallel-flange-channels",
+      "supplier_name": "ArcelorMittal",
+      "supplier_slug_guess": "arcelormittal",
+      "source_url": "https://sections.arcelormittal.com/EN",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — ArcelorMittal Commercial Sections sales programme lists UPE/UPN channels; no public unit price on mill site.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://constructalia.arcelormittal.com/files/styles/xcarb_carousel/public/UPE_pic_1--7414030327b55d47ee4e04027f49bfd0.JPG"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nucor Hot-Rolled SBQ Steel Bar (Rounds / Squares / Hexes / Flats)",
+      "product_slug": "nucor-hot-rolled-sbq-steel-bar-rounds-squares-hexes-flats",
+      "supplier_name": "Nucor Corporation",
+      "supplier_slug_guess": "nucor",
+      "source_url": "https://nucor.com/products/hot-rolled-bar/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Nucor hot-rolled SBQ bar page (rounds/squares/hexes/flats/wire rod) has no public mill list price; quote via Nucor representative.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://nucor.com/wp-content/uploads/nucor-products-hot-rolled-steel-bar.jpg",
+        "https://nucor.com/wp-content/uploads/nucor-banner-hero-spiral.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nucor EAF Hot-Rolled Steel Sheet Coil",
+      "product_slug": "nucor-eaf-hot-rolled-steel-sheet-coil",
+      "supplier_name": "Nucor Corporation",
+      "supplier_slug_guess": "nucor",
+      "source_url": "https://nucor.com/products/sheet/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Nucor sheet products page (American-made EAF sheet/coil, Econiq) does not publish a unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://nucor.com/wp-content/uploads/2025/07/nucor-product-sheet-coil.jpg",
+        "https://nucor.com/wp-content/uploads/2025/07/nucor-product-sheet-econiq-certification.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SSAB Hardox Wear Plate (400 / 450 / 500 Tuf / 500 / 550 / 600)",
+      "product_slug": "ssab-hardox-wear-plate-400-450-500-tuf-500-550-600",
+      "supplier_name": "SSAB AB",
+      "supplier_slug_guess": "ssab",
+      "source_url": "https://www.ssab.com/en/brands-and-products/hardox",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Hardox mill/brand pages (ssab.com) publish grades and datasheets, not a public unit/FOB plate price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ssab.com/-/media/images/hardox/landing-new/new-after-grid-change/hardox-web-images.jpg?m=20260602080726",
+        "https://www.ssab.com/-/media/images/hardox/landing-new/new-2026/hardox-web-images01.jpg",
+        "https://www.ssab.com/-/media/images/hardox/product-program/hardox-500-tuf/hero-1.jpg?m=20231116133240",
+        "https://www.ssab.com/-/media/images/hardox/product-program/hardox-500-tuf/2.jpg?m=20231116133023"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SSAB Strenx High-Strength Structural Steel",
+      "product_slug": "ssab-strenx-high-strength-structural-steel",
+      "supplier_name": "SSAB AB",
+      "supplier_slug_guess": "ssab",
+      "source_url": "https://www.ssab.com/en/brands-and-products/strenx",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Strenx performance-steel page has no public unit price; mill quotes by grade/thickness.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ssab.com/-/media/images/strenx/strenx-lp/new/strenx_header_fight_gravity_v3_1920x850.jpg?m=20240618133104",
+        "https://www.ssab.com/-/media/images/strenx/customer-cases/fassi/1920x570-fassi-customer-case.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nippon Steel Heavy Plate (Ship / Bridge / Offshore / Power)",
+      "product_slug": "nippon-steel-heavy-plate-ship-bridge-offshore-power",
+      "supplier_name": "Nippon Steel Corporation",
+      "supplier_slug_guess": "nippon-steel",
+      "source_url": "https://www.nipponsteel.com/product/plate/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Nippon Steel plate product page (shipbuilding, bridges, offshore, power plant plate) has no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nipponsteel.com/product/plate/__icsFiles/metafile/2025/08/25/plate_im01.jpg",
+        "https://www.nipponsteel.com/product/plate/list/ships/__icsFiles/metafile/2025/08/25/plate_im02.png",
+        "https://www.nipponsteel.com/product/plate/list/offshore-structures/__icsFiles/metafile/2025/08/25/plate_im07.png"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Gerdau Straight Concrete Reinforcing Bar (ASTM A615 / A706)",
+      "product_slug": "gerdau-straight-concrete-reinforcing-bar-astm-a615-a706",
+      "supplier_name": "Gerdau S.A.",
+      "supplier_slug_guess": "gerdau",
+      "source_url": "https://www2.gerdau.com/products/rebar",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Gerdau NA rebar catalog (straight rebar, jumbo 75S, dowel bar) is RFQ; no public mill unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www2.gerdau.com/sites/gln_gerdau/files/rebar_banner.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tata Steelium Cold Rolled Steel Coils and Sheets",
+      "product_slug": "tata-steelium-cold-rolled-steel-coils-and-sheets",
+      "supplier_name": "Tata Steel Limited",
+      "supplier_slug_guess": "tata-steel",
+      "source_url": "https://www.tatasteel.com/products-solutions/india/products/tata-steelium/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Tata Steelium CR page (tatasteel.com) describes CR grades for appliances/auto; no public unit/FOB list. Distinct from existing Tata Tiscon / Astrum / Galvano SKUs.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tatasteel.com/media/3365/tata-steelium.jpg?width=1200"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jindal SAW Ductile Iron Pipes (Centrifugal Casting, DN40–DN2200)",
+      "product_slug": "jindal-saw-ductile-iron-pipes-centrifugal-casting-dn40-dn2200",
+      "supplier_name": "Jindal SAW Limited",
+      "supplier_slug_guess": "jindal-saw",
+      "source_url": "https://jindalsaw.com/business-operations/products/pipes-fittings-centrifugal-casting/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Mill DI pipes & fittings page (IS 8329 / ISO 2531 / BS EN 545/598; K-class / C-class). No public unit price. New SKU vs existing LSAW/HSAW line pipe.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jindalsaw.com/wp-content/uploads/2024/09/DI-Pipe-1.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/03/DI-Pipes-home-products-banner.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/04/di-fittings.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/04/di-flanged.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jindal SAW Carbon / Alloy Steel Seamless Pipes and Tubes",
+      "product_slug": "jindal-saw-carbon-alloy-steel-seamless-pipes-and-tubes",
+      "supplier_name": "Jindal SAW Limited",
+      "supplier_slug_guess": "jindal-saw",
+      "source_url": "https://jindalsaw.com/business-operations/products/pipes-tubes-carbon-steel-alloy-steel-seamless/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Mill CS/AS seamless pipes & tubes page (O&G, power, fertilizer). No public unit price. Distinct from existing welded LSAW/HSAW SKUs.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jindalsaw.com/wp-content/uploads/2024/09/cs-as-pipes2.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/03/CS-AS-Pipes-home-products-banner.jpg",
+        "https://jindalsaw.com/wp-content/uploads/2025/03/Oil-Gas-1.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Welspun ERW / HFIW Line Pipe (1½–16 in)",
+      "product_slug": "welspun-erw-hfiw-line-pipe-1-16-in",
+      "supplier_name": "Welspun Corp Limited",
+      "supplier_slug_guess": "welspun-corp",
+      "source_url": "https://www.welspuncorp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Welspun Corp homepage/line-pipe offer lists HFW/HFIW/ERW 1½–16 in alongside LSAW/HSAW; no public unit price. New SKU vs existing LSAW/HSAW and coated line pipe.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.welspuncorp.com/images/Dahej-gujarat.webp",
+        "https://www.welspuncorp.com/images/Anjar-tab.jpg",
+        "https://www.welspuncorp.com/images/Bhopal-tab.jpg",
+        "https://www.welspuncorp.com/images/Dammam.webp"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tenaris Seamless OCTG Casing and Tubing",
+      "product_slug": "tenaris-seamless-octg-casing-and-tubing",
+      "supplier_name": "Tenaris S.A.",
+      "supplier_slug_guess": "tenaris",
+      "source_url": "https://www.tenaris.com/en/products-and-services/octg",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Tenaris OCTG page (casing/tubing, TenarisHydril Wedge/Blue, Dopeless). Project-priced; no public mill unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tenaris.com/media/5fdbw5d3/animated-hero-static.jpg?v=1db50eb566b4990",
+        "https://www.tenaris.com/media/iy3eumdl/hero-22.png",
+        "https://www.tenaris.com/media/w0ocw23c/perforating-guns.jpg?v=1d5ecc146dd9e30",
+        "https://www.tenaris.com/media/ymgcebzl/0270-wedge-463-2025_low.png?v=1dbe43d6edf5670"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "TenarisHydril Blue Premium Connections",
+      "product_slug": "tenarishydril-blue-premium-connections",
+      "supplier_name": "Tenaris S.A.",
+      "supplier_slug_guess": "tenaris",
+      "source_url": "https://www.tenaris.com/en/products-and-services/octg",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — TenarisHydril Blue / Blue Heavy Wall / Blue Max connections are project-quoted with the pipe string; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tenaris.com/media/nyhbxtxb/blueriser.png?v=1d5cb807e3f55b0",
+        "https://www.tenaris.com/media/2xyhj4yz/blueqs.png?v=1d5cbb09df17f70",
+        "https://www.tenaris.com/media/jolcug2j/blue-dock.png?v=1d5cbb06f702200"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Vallourec VAM Premium Connections and OCTG",
+      "product_slug": "vallourec-vam-premium-connections-and-octg",
+      "supplier_name": "Vallourec S.A.",
+      "supplier_slug_guess": "vallourec",
+      "source_url": "https://www.vallourec.com/en/our-offers/oil-and-gas/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Vallourec Oil & Gas / VAM connections page; seamless OCTG and premium threading quoted by project, no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-gas-filetage-de-VAM.jpg",
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-and-gas-VAM-solutions.jpg",
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-gas-line-pipes.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Vallourec Seamless Line Pipe (Oil & Gas)",
+      "product_slug": "vallourec-seamless-line-pipe-oil-and-gas",
+      "supplier_name": "Vallourec S.A.",
+      "supplier_slug_guess": "vallourec",
+      "source_url": "https://www.vallourec.com/en/our-offers/oil-and-gas/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Vallourec line-pipe offer for onshore/offshore oil & gas; mill RFQ, no public FOB unit.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-gas-line-pipes.jpg",
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-gas-raffinerie.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Arabian Pipes Coated Line Pipe (3LPE / FBE mill coating)",
+      "product_slug": "arabian-pipes-coated-line-pipe-3lpe-fbe-mill-coating",
+      "supplier_name": "Arabian Pipes Company",
+      "supplier_slug_guess": "arabian-pipes",
+      "source_url": "https://www.arabian-pipes.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — APC Jubail/Riyadh mills coat LSAW/ERW line pipe (3LPE/FBE typical for KSA/GCC projects). No public unit price. New SKU vs existing bare LSAW and ERW/HFW casing.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.arabian-pipes.com/images/slides/Optimized-slide4.jpg",
+        "https://www.arabian-pipes.com/images/slides/Optimized-slide3.jpg",
+        "https://www.arabian-pipes.com/images/slides/Optimized-slide7.jpg",
+        "https://www.arabian-pipes.com/images/slides/Optimized-slide9.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Havells LifeGuard FR-LSH 2.5 sq mm House Wire (90 m coil)",
+      "product_slug": "havells-lifeguard-fr-lsh-2-5-sq-mm-house-wire-90-m-coil",
+      "supplier_name": "Havells India Limited",
+      "supplier_slug_guess": "havells",
+      "source_url": "https://havells.com/home-electricals/flexible-cables/life-guard-fr-lsh/life-guard-fr-lsh-2-5-sq-mm-cables.html",
+      "unit_price": 5353.0,
+      "currency": "INR",
+      "unit": "per 90 m coil",
+      "price_note": "Public MRP on havells.com product page (SKU WHFFFNKA12X5-C) as of fetch: ₹5,353 / 90 m coil of Life Guard FR-LSH 2.5 sq mm (IS 694). Indicative retail list; copper-linked — confirm current rate / dealer net.",
+      "price_source_type": "public_listing",
+      "image_urls": [
+        "https://havells.com/media/catalog/product/import/flexible_cables/life_guard/90m/black.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Havells Lifeline FR 2.5 sq mm House Wire (180 m)",
+      "product_slug": "havells-lifeline-fr-2-5-sq-mm-house-wire-180-m",
+      "supplier_name": "Havells India Limited",
+      "supplier_slug_guess": "havells",
+      "source_url": "https://havells.com/home-electricals/flexible-cables/lifeline-fr-2-5-sq-mm-180-m.html",
+      "unit_price": 8988.0,
+      "currency": "INR",
+      "unit": "per 180 m coil",
+      "price_note": "Public MRP on havells.com product page (SKU WHFFDNRL12X57-C) as of fetch: ₹8,988 / 180 m Lifeline FR 2.5 sq mm (IS 694). Indicative retail list; confirm current rate.",
+      "price_source_type": "public_listing",
+      "image_urls": [
+        "https://havells.com/media/catalog/product/l/i/lifeline_fr_red_2_1.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Finolex FR PVC House Wires and Cables (IS 694)",
+      "product_slug": "finolex-fr-pvc-house-wires-and-cables-is-694",
+      "supplier_name": "Finolex Cables Limited",
+      "supplier_slug_guess": "finolex-cables",
+      "source_url": "https://www.finolex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Finolex homepage wires-and-cables category; dealer/MRP lists exist off-site but mill page has no static unit price captured. Do not invent.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.finolex.com/UploadedImages/Finolex - Wires & Cables.jpg",
+        "https://www.finolex.com/UploadedImages/Cables_Original.png",
+        "https://www.finolex.com/UploadedImages/Door_Lock_Shot-category.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Ducab LV XLPE / PVC Power Cables (0.6/1 kV)",
+      "product_slug": "ducab-lv-xlpe-pvc-power-cables-0-6-1-kv",
+      "supplier_name": "Dubai Cable Company (Private) Limited (Ducab)",
+      "supplier_slug_guess": "ducab",
+      "source_url": "https://ducab.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Ducab LV range (BS 5467 / IEC 60502-1 XLPE, armoured/unarmoured) is project-quoted in GCC; no public unit price on ducab.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://ducabwebsitestorage.blob.core.windows.net/prod/2025/10/lv-cables.png",
+        "https://ducabwebsitestorage.blob.core.windows.net/prod/2025/10/place-holder-ducab-lv.png"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Ducab HV / EHV Power Cables (up to 400 kV)",
+      "product_slug": "ducab-hv-ehv-power-cables-up-to-400-kv",
+      "supplier_name": "Dubai Cable Company (Private) Limited (Ducab)",
+      "supplier_slug_guess": "ducab",
+      "source_url": "https://ducab.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Ducab HV/EHV (Powerplus MV up to 33 kV and HV/EHV to 400 kV) is utility/project RFQ; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://ducabwebsitestorage.blob.core.windows.net/prod/2025/11/hv-ehv-cables.png",
+        "https://ducabwebsitestorage.blob.core.windows.net/prod/2025/10/place-holder-ducab-mv.png"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nexans Building and Power Cables",
+      "product_slug": "nexans-building-and-power-cables",
+      "supplier_name": "Nexans S.A.",
+      "supplier_slug_guess": "nexans",
+      "source_url": "https://www.nexans.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Nexans electrification / buildings cable offer is distributor/project quoted; no public mill unit list on nexans.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nexans.com/app/uploads/2024/03/cable-wiring-portrait.jpg",
+        "https://www.nexans.com/app/uploads/2024/01/buildings.jpg",
+        "https://www.nexans.com/app/uploads/2024/01/superconducting-cable.jpg",
+        "https://www.nexans.com/app/uploads/2024/01/HD-4203-fire-tests-in-ampacity-1-scaled.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nexans Subsea / Offshore Power Cables",
+      "product_slug": "nexans-subsea-offshore-power-cables",
+      "supplier_name": "Nexans S.A.",
+      "supplier_slug_guess": "nexans",
+      "source_url": "https://www.nexans.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Nexans subsea/offshore wind and interconnection cables are EPC/project RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nexans.com/app/uploads/2022/03/offshore-wind-farm-thumbnail.jpg",
+        "https://www.nexans.com/app/uploads/2026/06/nexans-electra-sea-trial-banner-2.jpg",
+        "https://www.nexans.com/app/uploads/2026/08/tyrrhenian-link-irm-banner.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "KEI Marine and Offshore Cables",
+      "product_slug": "kei-marine-and-offshore-cables",
+      "supplier_name": "KEI Industries Limited",
+      "supplier_slug_guess": "kei-industries",
+      "source_url": "https://www.kei-ind.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — KEI marine/offshore cable range on kei-ind.com; no public unit price. New SKU vs existing EHV / LT / house-wire.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.kei-ind.com/wp-content/uploads/2023/06/home-banner-1.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Holcim Cement (Portland / Blended / ECOPlanet)",
+      "product_slug": "holcim-cement-portland-blended-ecoplanet",
+      "supplier_name": "Holcim Ltd",
+      "supplier_slug_guess": "holcim",
+      "source_url": "https://www.holcim.com/what-we-do/cement",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Holcim cement operations page; bag/bulk cement is sold regionally via Holcim/Lafarge operating companies. No global public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.holcim.com/sites/holcim/files/2022-08/holcim_2021_gettyimages_1200044574_isocv2.jpg",
+        "https://www.holcim.com/sites/holcim/files/2023-01/holcim_2021_pylon_1522_isocv2.jpg",
+        "https://www.holcim.com/sites/holcim/files/styles/box_slider_extra/public/img/drone-lafarge-capturelab-11-mai-2026-003.JPG.webp"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Sika Concrete Admixtures (ViscoCrete / Water Reducers)",
+      "product_slug": "sika-concrete-admixtures-viscocrete-water-reducers",
+      "supplier_name": "Sika AG",
+      "supplier_slug_guess": "sika",
+      "source_url": "https://www.sika.com/en/construction/concrete-admixtures.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Sika concrete admixtures page; packaging/drum prices are local distributor RFQ, not a public global unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://dynamicmedia.sika.com/adobe/assets/urn:aaid:aem:54b11284-f797-4ee0-b047-408208ce17fc/as/glo-S.1-1-00180839.jpg?width=1600",
+        "https://dynamicmedia.sika.com/adobe/assets/urn:aaid:aem:c8f63b2b-099f-47e6-a000-aab60bb8104c/as/es-klave-07917164.jpg?width=1600",
+        "https://dynamicmedia.sika.com/adobe/assets/urn:aaid:aem:0d90ad9c-6ad7-42df-b3aa-9d81f19c64f4/as/glo-DSC-9539-01975266.jpg?width=1600"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "CMC Recycled Mill Rebar (GreenBar / 100% recycled content)",
+      "product_slug": "cmc-recycled-mill-rebar-greenbar-100-recycled-content",
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug_guess": "commercial-metals-company",
+      "source_url": "https://www.cmc.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CMC mill rebar (including recycled-content GreenBar messaging on cmc.com) is quoted by region; no public unit price. Extra SKU vs existing ASTM A615/A706 rebar and fabricated rebar.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.cmc.com/getmedia/845a59eb-0f3a-4bef-a089-49f10a94be21/100-recycled-metal-POPOrangebar.jpg",
+        "https://www.cmc.com/getmedia/63f71b9a-af85-4f8e-961b-761de16a7c6e/80-less_energyGreenBar-English.jpg",
+        "https://www.cmc.com/getmedia/aa0828da-d8ba-433a-9dd5-8c768679ea27/garage-with_rebar-800x450.jpg",
+        "https://www.cmc.com/getmedia/d44b3899-2f15-419a-b01a-f3be53795a44/CMC_concreteoverpass-rebarexposedfadedbackground_sm.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "UltraTech Ready Mix Concrete",
+      "product_slug": "ultratech-ready-mix-concrete",
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug_guess": "ultratech-cement",
+      "source_url": "https://www.ultratechcement.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — UltraTech RMC / concrete is plant-quoted by mix design and city; no public unit price on ultratechcement.com. New SKU vs existing OPC 53 / Super / PPC bagged cement.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/Homebuilding-Stages-Updated.jpg",
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/Home-banner-mob-1.jpeg",
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/Hotspot-Desktop-2.jpg",
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/Common-Concerns-Updated.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "UltraTech Home Building Products (Waterproofing / Repair)",
+      "product_slug": "ultratech-home-building-products-waterproofing-repair",
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug_guess": "ultratech-cement",
+      "source_url": "https://www.ultratechcement.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — UltraTech IHB building-product range (waterproofing, repair, tile adhesives) is dealer-quoted; no static public unit on the homepage captured. Distinct from bagged OPC/PPC SKUs.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/Hotspot-Desktop-3.jpg",
+        "https://www.ultratechcement.com/content/dam/phase-3/ultratechcement/ihb/ihb-card-1.png"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Zamil Steel Standing Seam / Roof Sheeting Systems",
+      "product_slug": "zamil-steel-standing-seam-roof-sheeting-systems",
+      "supplier_name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "supplier_slug_guess": "zamil-steel-peb",
+      "source_url": "https://zamilsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Zamil PEB roof/wall sheeting is project-priced with the building package. New SKU vs existing PEB system, Tempcon panels, and fabricated members.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Hangxiao Prefabricated Steel Structure Workshop",
+      "product_slug": "hangxiao-prefabricated-steel-structure-workshop",
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug_guess": "hangxiao-steel-structure-shandong",
+      "source_url": "https://www.hxsssd.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Hangxiao PEB/workshop buildings quoted by span/ton; no public unit. Extra SKU vs existing warehouse/hangar listings.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Magicrete Block Jointing Mortar",
+      "product_slug": "magicrete-block-jointing-mortar",
+      "supplier_name": "Magicrete Building Solutions Private Limited",
+      "supplier_slug_guess": "magicrete-building-solutions",
+      "source_url": "https://www.magicrete.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Magicrete AAC block-jointing mortar is a dealer-quoted bagged SKU; mill site typically has no static public unit. New vs existing AAC blocks, wall panels, and Superflex tile adhesive. PHOTO: needs_ai_generate — mill site blocked (415); prior AAC/Magic Blox photos intentionally NOT reused for this mortar SKU.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "needs_ai_generate": true
+    },
+    {
+      "product_name": "NSK Deep Groove Ball Bearings",
+      "product_slug": "nsk-deep-groove-ball-bearings",
+      "supplier_name": "NSK Ltd.",
+      "supplier_slug_guess": "nsk",
+      "source_url": "https://www.nsk.com/products/ball-bearings/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — NSK deep-groove ball bearings catalog (nsk.com); distributor net, no public mill FOB unit on the product family page.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--3d38d2ff-b572-4d91-9769-091d6775f235/p-dgbb-th-cut.jpg?quality=85",
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--5f7ec27e-bd92-4328-8cfa-4b789ba4288d/p-bb-sa-cut.jpg?quality=85",
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--46ef2497-b3ac-4920-ba01-f1d6bd76ddcb/p-dgbb-spacea-hybrid-3comp-500x500.jpg?quality=85"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "NSK Angular Contact Ball Bearings",
+      "product_slug": "nsk-angular-contact-ball-bearings",
+      "supplier_name": "NSK Ltd.",
+      "supplier_slug_guess": "nsk",
+      "source_url": "https://www.nsk.com/products/ball-bearings/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — NSK angular-contact ball bearings; no public unit price on family page.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--2292c030-e770-4696-8721-f3996235baf4/p-acbb-2comp.jpg?quality=85",
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--8bc8c860-1753-4c96-9cb7-387fa33af5c2/p-comp-thin-section-bearings-6comp-500x500.jpg?quality=85"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Timken Tapered Roller Bearings",
+      "product_slug": "timken-tapered-roller-bearings",
+      "supplier_name": "The Timken Company",
+      "supplier_slug_guess": "timken",
+      "source_url": "https://www.timken.com/products/timken-bearings/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Timken tapered roller bearings sold via authorized distribution; mill site has no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.timken.com/wp-content/uploads/2026/08/bearing-transparent-300x200-1-300x200-1.png",
+        "https://www.timken.com/wp-content/uploads/2026/08/bearing-transparent-300x200-1-300x200-1-1024x683.png",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR24100092-CSR-PRODUCT-REVISED.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR18070040-CSR.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Flowserve Argus Trunnion-Mounted Ball Valves (FK76M)",
+      "product_slug": "flowserve-argus-trunnion-mounted-ball-valves-fk76m",
+      "supplier_name": "Flowserve Corporation",
+      "supplier_slug_guess": "flowserve",
+      "source_url": "https://www.flowserve.com/en/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Flowserve Argus soft/metal-seated trunnion ball valves are project-quoted; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://flowserve.widen.net/content/m5pxe218yg/webp/Flowserve-Argus-Soft-MetalSeatedTrunnionMountedOn-OffBallValves-FK76M.webp",
+        "https://www.flowserve.com/sites/default/files/2022-01/023-I-BX_Single_Cutaway.jpg",
+        "https://flowserve.widen.net/content/mwlqdvkrww/jpeg/023-P-DecokingIsolation_Large_500x500px.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Flowserve Mark 3 ANSI Standard Process Pump",
+      "product_slug": "flowserve-mark-3-ansi-standard-process-pump",
+      "supplier_name": "Flowserve Corporation",
+      "supplier_slug_guess": "flowserve",
+      "source_url": "https://www.flowserve.com/en/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Flowserve Durco Mark 3 ANSI process pump is configured/quoted; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.flowserve.com/sites/default/files/2022-01/pu_img_Mark3_ANSI_9163.jpg",
+        "https://www.flowserve.com/sites/default/files/2022-01/023-P-DWEER_calder.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Flowserve Limitorque MXb Electric Valve Actuator",
+      "product_slug": "flowserve-limitorque-mxb-electric-valve-actuator",
+      "supplier_name": "Flowserve Corporation",
+      "supplier_slug_guess": "flowserve",
+      "source_url": "https://www.flowserve.com/en/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Limitorque MXb actuators are configured; no public unit price on flowserve.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.flowserve.com/sites/default/files/2022-01/Limitorque_MXb_CKB3278.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Wilo Helix Vertical Multistage Centrifugal Pump",
+      "product_slug": "wilo-helix-vertical-multistage-centrifugal-pump",
+      "supplier_name": "WILO SE",
+      "supplier_slug_guess": "wilo",
+      "source_url": "https://wilo.com/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Wilo Helix high-pressure multistage pumps quoted via Wilo sales companies; no public mill unit on the 404/media assets captured.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cms.media.wilo.com/cdnpic/wilo108932/1224271/wilo108932_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo251879/4192184/wilo251879_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo166272/1237127/wilo166272_1416x350.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "KSB Standard Water and Process Pumps",
+      "product_slug": "ksb-standard-water-and-process-pumps",
+      "supplier_name": "KSB SE & Co. KGaA",
+      "supplier_slug_guess": "ksb",
+      "source_url": "https://www.ksb.com/en-global",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — KSB pumps (Etanorm / MegaCPK family and water pumps) are configured via KSB sales; homepage has no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://live-resources-e2e-sales.ksb.com/resource/blob/2669560/188b8fdbc5978f6f0b768317156b8622/pic-noriresist-data.jpg",
+        "https://live-resources-e2e-sales.ksb.com/resource/blob/2147758/b3a58f3203ff293a81c6daedb5e47418/pic-video-stage-natxo-gonzalez-data.jpg",
+        "https://acszigalen.cloudimg.io/v7/https://live-resources-e2e-sales.ksb.com/resource/blob/2669560/188b8fdbc5978f6f0b768317156b8622/pic-noriresist-data.jpg?width=1200"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Amcor Rigid Custom Packaging",
+      "product_slug": "amcor-rigid-custom-packaging",
+      "supplier_name": "Amcor plc",
+      "supplier_slug_guess": "amcor",
+      "source_url": "https://www.amcor.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Amcor rigid packaging (custom bottles/jars/tubs) is brand/volume quoted; no public unit on amcor.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.ctfassets.net/f7tuyt85vtoa/1uFEgabeDmGg913aNtZl1S/4e123402f779458019e805b85fc46dff/Rigids_custom_design.jpg",
+        "https://images.ctfassets.net/f7tuyt85vtoa/3EshO2X859VsfxinAmATlo/aed585953cc5cb750da83a52ab20e121/9aa719b4-45c3-4be2-b309-08a4c48bd940.png",
+        "https://images.ctfassets.net/f7tuyt85vtoa/29WGwu2wxWVXeV9s50FVXU/82511a1a900f8655d5454dffc2a1c75d/68eecb20-f3ab-49b7-808d-851f52f73422.png"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Amcor Flexible Packaging Films and Pouches",
+      "product_slug": "amcor-flexible-packaging-films-and-pouches",
+      "supplier_name": "Amcor plc",
+      "supplier_slug_guess": "amcor",
+      "source_url": "https://www.amcor.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Amcor flexible packaging (films/pouches) is specification/volume RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.ctfassets.net/f7tuyt85vtoa/1ONn1nyxYB9WgNuQhmXRGH/8491ab59dbaf4d56f760757ee551bd51/PK_Grad_CENTER.jpg",
+        "https://images.ctfassets.net/f7tuyt85vtoa/1YjmCsKpEPtINzOJGcLGns/859ec7354946916e7e44eca6aa4eb71e/Sustainable-Brands.jpg",
+        "https://images.ctfassets.net/f7tuyt85vtoa/4XrMimV8VSpoFwRte0yOsy/cdb207e9990c63f2ce0dd24e0eea9f39/hna-puerto-rico-crop_home-v2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Mondi SmartKraft White Kraft Paper Packaging",
+      "product_slug": "mondi-smartkraft-white-kraft-paper-packaging",
+      "supplier_name": "Mondi plc",
+      "supplier_slug_guess": "mondi",
+      "source_url": "https://www.mondigroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Mondi SmartKraft / kraft paper is sold by paper merchants and converters; no public mill unit on mondigroup.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.mondigroup.com/cdn-cgi/image/f=auto,fit=cover,w=1211,h=1499,g=auto,sharpen=1/AdaptiveImages/celum/392271/Appearance_SmartKraft_White_Lifestyle_260108.jpg?stamp=d4c4d705628b063d2974be451f9e356510272db9",
+        "https://www.mondigroup.com/cdn-cgi/image/f=auto,fit=cover,w=600,h=353,g=auto,sharpen=1/AdaptiveImages/celum/366954/221128_RICHBAY_2_FIBRE_0316.jpg?stamp=a9017732d43b4a64618aff12a998c5ac408af202"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Mondi RecycleReady FlexiBag / Bag-in-Box",
+      "product_slug": "mondi-recycleready-flexibag-bag-in-box",
+      "supplier_name": "Mondi plc",
+      "supplier_slug_guess": "mondi",
+      "source_url": "https://www.mondigroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Mondi CFlex recycle FlexiBag / bag-in-box is converter RFQ; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.mondigroup.com/cdn-cgi/image/f=auto,w=1200,sharpen=1/AdaptiveImages/celum/395451/CFlex%20-%20recycle%20FlexiBag%20Bag-in-box%20rendering%20-%20TB%20(1).png?stamp=201f308ecc1eecde29786f237cc30af503543fbf",
+        "https://www.mondigroup.com/cdn-cgi/image/f=auto,w=1600/AdaptiveImages/celum/372311/Mondi_Campaign-Pictures-3000x2000px-6.png?stamp=164c664c6d308858e63b7fa6fbeef1724243248b"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "International Paper Corrugated Packaging (incl. leak-resistant)",
+      "product_slug": "international-paper-corrugated-packaging-incl-leak-resistant",
+      "supplier_name": "International Paper Company",
+      "supplier_slug_guess": "international-paper",
+      "source_url": "https://www.internationalpaper.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — IP corrugated packaging is plant/region quoted; no public unit on internationalpaper.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.internationalpaper.com/sites/default/files/image/2023-02/Leak%20Resistant%20Corrugated%20Packaging%20Industry%201%20Image%20Complete.jpg",
+        "https://www.internationalpaper.com/sites/default/files/image/2023-02/Packaging%20Solutions%20Teaser%20Complete.jpg",
+        "https://www.internationalpaper.com/sites/default/files/image/2025-02/recycling%20forklift%20corrugated%20wide%20shot.jpg",
+        "https://www.internationalpaper.com/sites/default/files/image/2025-10/Homepage_Box%20Line_Green%20Shirt.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Smurfit Westrock Corrugated Packaging and Paper Bags",
+      "product_slug": "smurfit-westrock-corrugated-packaging-and-paper-bags",
+      "supplier_name": "Smurfit Westrock plc",
+      "supplier_slug_guess": "smurfit-westrock",
+      "source_url": "https://www.smurfitwestrock.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Smurfit Westrock corrugated boxes, paper bags and retail packaging are plant-quoted; no public unit.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.smurfitwestrock.com/-/m/images/products-images-740x-740/packaging/bags/paper-bags500x500.png?rev=6c6f8ccf76e44b1790698a5238d5497a",
+        "https://www.smurfitwestrock.com/-/m/images/products-images-740x-740/packaging/fresh-produce-trays/lettuce-tray.png?rev=bc22c8c3caa84003a896cf1a653f5642",
+        "https://www.smurfitwestrock.com/-/m/images/products-images-740x-740/bag-in-box-packaging/boxes/bib-easy-split-wine-740x740.png?rev=fd95d46074d74fc3ac152017f4e75014",
+        "https://www.smurfitwestrock.com/-/m/images/smurfit-westrock/homepage-banner-1366-x-450/employees-with-box-768x553.png?rev=31e310105c2c4aeca60f5cb766d2279a"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Huhtamaki Foodservice Paper and Fiber Packaging",
+      "product_slug": "huhtamaki-foodservice-paper-and-fiber-packaging",
+      "supplier_name": "Huhtamäki Oyj",
+      "supplier_slug_guess": "huhtamaki",
+      "source_url": "https://www.huhtamaki.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Huhtamaki foodservice cups/lids/fiber packaging quoted by program/volume; no public unit on huhtamaki.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huhtamaki.com/globalassets/global/home/hero-home-picnic-mobile.jpg",
+        "https://www.huhtamaki.com/contentassets/06895f2a9ce749068740d043bddb1847/huhtamaki_safety_hml26_0038~3.jpg",
+        "https://www.huhtamaki.com/contentassets/2cd29019a3f74f8cbb69a75778638720/website.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "UFlex Kraftika Paper Tube Packaging",
+      "product_slug": "uflex-kraftika-paper-tube-packaging",
+      "supplier_name": "UFlex Limited",
+      "supplier_slug_guess": "uflex",
+      "source_url": "https://www.uflexltd.com/films.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — UFlex Kraftika paper-tube packaging is custom RFQ. New SKU vs existing FLEXPET films, pre-formed pouches, and Asepto cartons.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.uflexltd.com/assets/images/Innovation/Kraftika-Paper-Tube.png",
+        "https://www.uflexltd.com/assets/images/Innovation/F-HSS_Mono-Material_PET_Film.jpg",
+        "https://www.uflexltd.com/assets/images/Innovation/4D-Bag.png",
+        "https://www.uflexltd.com/assets/images/Innovation/CERUFLEX500.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "UFlex F-HSS Mono-Material PET Packaging Film",
+      "product_slug": "uflex-f-hss-mono-material-pet-packaging-film",
+      "supplier_name": "UFlex Limited",
+      "supplier_slug_guess": "uflex",
+      "source_url": "https://www.uflexltd.com/films.php",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — UFlex F-HSS mono-material PET film is mill RFQ. Distinct from existing FLEXPET BOPET SKU (different film family / recycle-ready mono PET).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.uflexltd.com/assets/images/Innovation/F-HSS_Mono-Material_PET_Film.jpg",
+        "https://www.uflexltd.com/assets/images/Innovation/Flexgreen-HRK9542.png",
+        "https://www.uflexltd.com/assets/images/Innovation/Asclepius-PCR-Film.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Dongguan Caicheng QA040 Rigid Gift Packaging Box",
+      "product_slug": "dongguan-caicheng-qa040-rigid-gift-packaging-box",
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug_guess": "dongguan-caicheng-printing",
+      "source_url": "https://packccp.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — PACKCCP mill product archive (QA040 rigid box); instant quote tool, no static public unit. New SKU vs existing folding/magnetic/mailer/lid-base boxes.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://packccp.com/wp-content/uploads/2025/09/QA040-4.webp",
+        "https://packccp.com/wp-content/uploads/2025/09/QA040-4-768x768.webp"
+      ],
+      "needs_ai_generate": false
+    }
+  ]
+}

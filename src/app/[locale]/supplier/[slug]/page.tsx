@@ -9,6 +9,11 @@ import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getPublishedSupplierMedia } from "@/lib/media-store";
 import { getSupplierCertificationImages } from "@/lib/media-public";
 import { listCertifications } from "@/lib/certifications-store";
+import {
+  EMSTEEL_VERIFY,
+  isEmsteelSupplier,
+  listMillCertScansForSupplier,
+} from "@/lib/mill-cert-scans";
 import { prisma } from "@/lib/prisma";
 import { normalizeMarketplaceStatus, STATUS_META } from "@/lib/verification";
 import { buildPageAlternates } from "@/lib/locale-metadata";
@@ -17,7 +22,6 @@ import ClaimProfileButton from "@/components/supplier-profile/ClaimProfileButton
 import HeroSection from "@/components/supplier-profile/HeroSection";
 import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
 import CompanyProfileSection from "@/components/supplier-profile/CompanyProfileSection";
-import CertificationsSection from "@/components/supplier-profile/CertificationsSection";
 import CertificationGallery from "@/components/supplier-profile/CertificationGallery";
 import VerificationBadge from "@/components/VerificationBadge";
 import FactoryMediaSection from "@/components/supplier-profile/FactoryMediaSection";
@@ -138,6 +142,17 @@ export default async function SupplierProfilePage({
   // Real certification/media collected via import or the website scraper. Shown
   // alongside the generated profile content only when present. Published
   // certificate Media is merged ahead of the legacy image URLs.
+  const millCertScans = listMillCertScansForSupplier(supplier.id);
+  const millCertImages = millCertScans.map((c) => c.publicPath);
+  const millCertDetails = millCertScans.map((c) => ({
+    name: c.name,
+    type: c.certType,
+    imageUrl: c.publicPath,
+    sourceUrl: c.sourceUrl,
+    certificateUrl: null,
+  }));
+  // Collected-info gallery: admin/legacy URLs only. Mill scans live in the
+  // dedicated section so not_found mills never get invented ISO badges.
   const realCertImages = [
     ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
   ];
@@ -146,10 +161,8 @@ export default async function SupplierProfilePage({
   // image exists — status is set by an admin.
   const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
     .filter((c) => c.status !== "rejected");
-  const realCertDetails = supplier.certificationsDetailed ?? [];
   const realSupplierImages = supplier.supplierImages ?? [];
-  const hasRealMedia =
-    realCertImages.length > 0 || realCertDetails.length > 0 || realSupplierImages.length > 0;
+  const hasRealMedia = realCertImages.length > 0 || realSupplierImages.length > 0;
 
   // schema.org structured data (Organization / LocalBusiness + AggregateRating)
   const jsonLd = {
@@ -247,7 +260,47 @@ export default async function SupplierProfilePage({
         <div className="min-w-0">
           <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
-          <CertificationsSection profile={profile} />
+          {millCertScans.length > 0 && (
+            <section className="py-8 sm:py-10">
+              <h2 className="font-display text-lg font-bold text-ink">
+                {t("certificationsTitle")}
+              </h2>
+              <p className="mt-1 text-sm text-ink-muted">
+                {t("notIndependentlyVerified")}
+              </p>
+              <div className="mt-4">
+                <CertificationGallery
+                  images={millCertImages}
+                  certifications={millCertDetails}
+                />
+              </div>
+            </section>
+          )}
+          {isEmsteelSupplier(supplier.id) && (
+            <section className="py-4">
+              <p className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-ink-muted">
+                Certificate scans are not shown for this mill (expired 2020 PDFs
+                are out of date).{" "}
+                <a
+                  href={EMSTEEL_VERIFY.caresUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-semibold text-ink underline decoration-gold/50 underline-offset-2 hover:text-gold"
+                >
+                  Verify on CARES
+                </a>
+                {" · "}
+                <a
+                  href={EMSTEEL_VERIFY.millQualityUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-semibold text-ink underline decoration-gold/50 underline-offset-2 hover:text-gold"
+                >
+                  Mill quality page
+                </a>
+              </p>
+            </section>
+          )}
           {hasRealMedia && (
             <section className="py-6">
               <h2 className="font-display text-lg font-bold text-ink">
@@ -256,17 +309,16 @@ export default async function SupplierProfilePage({
               <p className="mt-1 text-sm text-ink-muted">
                 {supplier.sourceUrl ? t("collectedFromWebsite") : t("collectedFromImport")}
               </p>
-              {(realCertImages.length > 0 || realCertDetails.length > 0) && (
-                <p className="mt-2 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
-                  {t("notIndependentlyVerified")}
-                </p>
+              {realCertImages.length > 0 && (
+                <>
+                  <p className="mt-2 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
+                    {t("notIndependentlyVerified")}
+                  </p>
+                  <div className="mt-4">
+                    <CertificationGallery images={realCertImages} />
+                  </div>
+                </>
               )}
-              <div className="mt-4">
-                <CertificationGallery
-                  images={realCertImages}
-                  certifications={realCertDetails}
-                />
-              </div>
               {realSupplierImages.length > 0 && (
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
                   {realSupplierImages.slice(0, 12).map((src, i) => (

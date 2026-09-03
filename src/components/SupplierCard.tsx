@@ -30,10 +30,10 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
   const hasFactoryPhoto = Boolean(s.factoryPhotoUrl);
 
   return (
-    <article className="glass-card glass-hover flex flex-col overflow-hidden p-0">
+    <article className="glass-card glass-hover flex h-full flex-col overflow-hidden p-0">
       {/* Factory / mill photo header with navy scrim — gradient only when no photo */}
       <div
-        className="relative h-32 overflow-hidden sm:h-36"
+        className="relative h-32 shrink-0 overflow-hidden sm:h-36"
         style={{ backgroundImage: s.bannerGradient }}
       >
         {hasFactoryPhoto && (
@@ -153,10 +153,19 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                   className="rounded-lg border border-slate-200 p-1.5"
                 >
                   <div
-                    className="mb-1.5 flex h-14 items-center justify-center rounded-md"
-                    style={{ backgroundImage: p.gradient }}
+                    className="relative mb-1.5 flex h-14 items-center justify-center overflow-hidden rounded-md"
+                    style={p.imageUrl ? undefined : { backgroundImage: p.gradient }}
                   >
-                    <Package className="h-5 w-5 text-cyan" aria-hidden />
+                    {p.imageUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={p.imageUrl}
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : (
+                      <Package className="h-5 w-5 text-cyan" aria-hidden />
+                    )}
                   </div>
                   <p
                     className="truncate text-[11px] font-semibold text-ink"
@@ -165,6 +174,11 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                     {p.name}
                   </p>
                   <p className="text-[11px] font-bold text-cyan">{p.price}</p>
+                  {p.priceSourceLabel ? (
+                    <p className="text-[9px] font-semibold uppercase tracking-wide text-amber-800">
+                      {p.priceSourceLabel}
+                    </p>
+                  ) : null}
                   {p.hasRealMoq && (
                     <p className="text-[10px] text-ink-dim">
                       {tCommon("moq", { value: p.moq })}
@@ -176,30 +190,34 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           </div>
         )}
 
-        <div className="mt-auto flex gap-2 pt-1">
-          <Link
-            href={`/supplier/${s.id}`}
-            className="btn-secondary flex-1 justify-center"
-          >
-            {t("viewProfile")}
-          </Link>
-          <ContactSupplierButton
-            supplierId={s.id}
-            supplierName={s.name}
-            label={t("contactSupplier")}
-            className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
-          />
+        <div className="mt-auto flex flex-col gap-2 pt-3">
+          <div className="flex min-h-[44px] gap-2">
+            <Link
+              href={`/supplier/${s.id}`}
+              className="btn-secondary flex flex-1 items-center justify-center"
+            >
+              {t("viewProfile")}
+            </Link>
+            <ContactSupplierButton
+              supplierId={s.id}
+              supplierName={s.name}
+              label={t("contactSupplier")}
+              className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
+            />
+          </div>
+          {s.sourceUrl ? (
+            <a
+              href={s.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="min-h-[16px] text-center text-[10px] text-ink-dim hover:text-cyan"
+            >
+              Source: public business listing
+            </a>
+          ) : (
+            <span className="min-h-[16px]" aria-hidden />
+          )}
         </div>
-        {s.sourceUrl && (
-          <a
-            href={s.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="text-center text-[10px] text-ink-dim hover:text-cyan"
-          >
-            Source: public business listing
-          </a>
-        )}
       </div>
     </article>
   );

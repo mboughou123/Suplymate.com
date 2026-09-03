@@ -1,0 +1,1886 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/amcor-pack-1.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/amcor-pack-1.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/amcor-pack-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/amcor-pack-2.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/flex-pk-grad.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/flex-pk-grad.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/hna-plant.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/hna-plant.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/rigid-custom.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/rigid-custom.jpg",
+    "in_size": [
+      600,
+      600
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/amcor/sustainable-brands.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/amcor/sustainable-brands.jpg",
+    "in_size": [
+      364,
+      364
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arabian-pipes/mill-slide-3.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arabian-pipes/mill-slide-3.jpg",
+    "in_size": [
+      1200,
+      797
+    ],
+    "out_size": [
+      1200,
+      797
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arabian-pipes/mill-slide-4.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arabian-pipes/mill-slide-4.jpg",
+    "in_size": [
+      1200,
+      756
+    ],
+    "out_size": [
+      1200,
+      756
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arabian-pipes/mill-slide-7.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arabian-pipes/mill-slide-7.jpg",
+    "in_size": [
+      3216,
+      2136
+    ],
+    "out_size": [
+      1600,
+      1062
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arabian-pipes/mill-slide-9.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arabian-pipes/mill-slide-9.jpg",
+    "in_size": [
+      4160,
+      3120
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arcelormittal/column-beam.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arcelormittal/column-beam.jpg",
+    "in_size": [
+      1000,
+      675
+    ],
+    "out_size": [
+      1200,
+      810
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arcelormittal/european-sections-cut.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arcelormittal/european-sections-cut.jpg",
+    "in_size": [
+      1024,
+      694
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arcelormittal/ipe-i-sections.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arcelormittal/ipe-i-sections.jpg",
+    "in_size": [
+      500,
+      339
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/arcelormittal/upe-pic.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/arcelormittal/upe-pic.jpg",
+    "in_size": [
+      1000,
+      675
+    ],
+    "out_size": [
+      1200,
+      810
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/commercial-metals-company/greenbar-energy.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/commercial-metals-company/greenbar-energy.jpg",
+    "in_size": [
+      660,
+      330
+    ],
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/commercial-metals-company/greenbar-recycled.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/commercial-metals-company/greenbar-recycled.jpg",
+    "in_size": [
+      660,
+      390
+    ],
+    "out_size": [
+      1200,
+      709
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/commercial-metals-company/rebar-garage.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/commercial-metals-company/rebar-garage.jpg",
+    "in_size": [
+      800,
+      450
+    ],
+    "out_size": [
+      1200,
+      675
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/commercial-metals-company/rebar-overpass.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/commercial-metals-company/rebar-overpass.jpg",
+    "in_size": [
+      800,
+      450
+    ],
+    "out_size": [
+      1200,
+      675
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/dongguan-caicheng-printing/g008.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/dongguan-caicheng-printing/g008.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/dongguan-caicheng-printing/qa040-768.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/dongguan-caicheng-printing/qa040-768.jpg",
+    "in_size": [
+      768,
+      768
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/dongguan-caicheng-printing/qa040.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/dongguan-caicheng-printing/qa040.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/hv-ehv-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/hv-ehv-cables.jpg",
+    "in_size": [
+      519,
+      474
+    ],
+    "out_size": [
+      1200,
+      1095
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/lss.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/lss.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/lv-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/lv-cables.jpg",
+    "in_size": [
+      519,
+      474
+    ],
+    "out_size": [
+      1200,
+      1095
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/lv-placeholder.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/lv-placeholder.jpg",
+    "in_size": [
+      519,
+      474
+    ],
+    "out_size": [
+      1200,
+      1095
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/mv-placeholder.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/mv-placeholder.jpg",
+    "in_size": [
+      519,
+      474
+    ],
+    "out_size": [
+      1200,
+      1095
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/s01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/s01.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/s02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/s02.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ducab/s03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ducab/s03.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/finolex-cables/cables-original.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/finolex-cables/cables-original.jpg",
+    "in_size": [
+      372,
+      372
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/finolex-cables/category-shot.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/finolex-cables/category-shot.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/finolex-cables/wires-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/finolex-cables/wires-cables.jpg",
+    "in_size": [
+      1600,
+      750
+    ],
+    "out_size": [
+      1600,
+      750
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/argus-fk76m.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/argus-fk76m.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/bx-cutaway.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/bx-cutaway.jpg",
+    "in_size": [
+      1200,
+      1207
+    ],
+    "out_size": [
+      1200,
+      1207
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/decoking-isolation.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/decoking-isolation.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/dweer.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/dweer.jpg",
+    "in_size": [
+      720,
+      500
+    ],
+    "out_size": [
+      1200,
+      833
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/limitorque-mxb.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/limitorque-mxb.jpg",
+    "in_size": [
+      2048,
+      1365
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/flowserve/mark3-ansi.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/flowserve/mark3-ansi.jpg",
+    "in_size": [
+      2048,
+      1614
+    ],
+    "out_size": [
+      1600,
+      1260
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/gerdau/rebar-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/gerdau/rebar-banner.jpg",
+    "in_size": [
+      2560,
+      860
+    ],
+    "out_size": [
+      1600,
+      537
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/hangxiao-steel-structure-shandong/banner-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/hangxiao-steel-structure-shandong/banner-local.jpg",
+    "in_size": [
+      1080,
+      1080
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/hangxiao-steel-structure-shandong/workshop-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/hangxiao-steel-structure-shandong/workshop-local.jpg",
+    "in_size": [
+      1280,
+      1280
+    ],
+    "out_size": [
+      1280,
+      1280
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/havells/lifeguard-frlsh-90m.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/havells/lifeguard-frlsh-90m.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/havells/lifeline-fr-red.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/havells/lifeline-fr-red.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/holcim/cement-ops.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/holcim/cement-ops.jpg",
+    "in_size": [
+      2048,
+      1347
+    ],
+    "out_size": [
+      1600,
+      1052
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/holcim/plant-drone-webp.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/holcim/plant-drone-webp.jpg",
+    "in_size": [
+      470,
+      264
+    ],
+    "out_size": [
+      1200,
+      674
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/holcim/pylon.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/holcim/pylon.jpg",
+    "in_size": [
+      2506,
+      1673
+    ],
+    "out_size": [
+      1600,
+      1068
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/huhtamaki/picnic-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/huhtamaki/picnic-hero.jpg",
+    "in_size": [
+      750,
+      500
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/huhtamaki/safety-pack.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/huhtamaki/safety-pack.jpg",
+    "in_size": [
+      5944,
+      3963
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/huhtamaki/website-pack.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/huhtamaki/website-pack.jpg",
+    "in_size": [
+      3864,
+      2576
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/international-paper/box-line.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/international-paper/box-line.jpg",
+    "in_size": [
+      4800,
+      3200
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/international-paper/leak-resistant-corrugated.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/international-paper/leak-resistant-corrugated.jpg",
+    "in_size": [
+      6720,
+      4480
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/international-paper/packaging-solutions.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/international-paper/packaging-solutions.jpg",
+    "in_size": [
+      5520,
+      3684
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/international-paper/recycling-forklift.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/international-paper/recycling-forklift.jpg",
+    "in_size": [
+      1500,
+      1000
+    ],
+    "out_size": [
+      1500,
+      1000
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/cs-as-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/cs-as-banner.jpg",
+    "in_size": [
+      2383,
+      1289
+    ],
+    "out_size": [
+      1600,
+      865
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/cs-as-seamless.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/cs-as-seamless.jpg",
+    "in_size": [
+      1662,
+      810
+    ],
+    "out_size": [
+      1600,
+      779
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/di-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/di-banner.jpg",
+    "in_size": [
+      2383,
+      1289
+    ],
+    "out_size": [
+      1600,
+      865
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/di-fittings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/di-fittings.jpg",
+    "in_size": [
+      1104,
+      606
+    ],
+    "out_size": [
+      1200,
+      658
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/di-flanged.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/di-flanged.jpg",
+    "in_size": [
+      817,
+      606
+    ],
+    "out_size": [
+      1200,
+      890
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/di-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/di-pipe.jpg",
+    "in_size": [
+      1662,
+      810
+    ],
+    "out_size": [
+      1600,
+      779
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/jindal-saw/oil-gas.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/jindal-saw/oil-gas.jpg",
+    "in_size": [
+      594,
+      396
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/kei-industries/home-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/kei-industries/home-banner.jpg",
+    "in_size": [
+      1920,
+      570
+    ],
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ksb/ksb-stage.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ksb/ksb-stage.jpg",
+    "in_size": [
+      1857,
+      1038
+    ],
+    "out_size": [
+      1600,
+      894
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ksb/noriresist-cdn.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ksb/noriresist-cdn.jpg",
+    "in_size": [
+      1200,
+      992
+    ],
+    "out_size": [
+      1200,
+      992
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ksb/noriresist.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ksb/noriresist.jpg",
+    "in_size": [
+      4000,
+      3307
+    ],
+    "out_size": [
+      1600,
+      1322
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/fibre-pack.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/fibre-pack.jpg",
+    "in_size": [
+      600,
+      353
+    ],
+    "out_size": [
+      1200,
+      706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flexibag-0.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flexibag-0.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flexibag-1.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flexibag-1.jpg",
+    "in_size": [
+      1200,
+      800
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flexibag-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flexibag-2.jpg",
+    "in_size": [
+      1600,
+      1066
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flexibag-3.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flexibag-3.jpg",
+    "in_size": [
+      1200,
+      800
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flexibag.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flexibag.jpg",
+    "in_size": [
+      700,
+      525
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/flowwrap.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/flowwrap.jpg",
+    "in_size": [
+      1920,
+      960
+    ],
+    "out_size": [
+      1600,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/frantschach-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/frantschach-mill.jpg",
+    "in_size": [
+      600,
+      353
+    ],
+    "out_size": [
+      1200,
+      706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/mondi-0.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/mondi-0.jpg",
+    "in_size": [
+      1211,
+      1499
+    ],
+    "out_size": [
+      1211,
+      1499
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/mondi-4.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/mondi-4.jpg",
+    "in_size": [
+      600,
+      353
+    ],
+    "out_size": [
+      1200,
+      706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/mondi-5.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/mondi-5.jpg",
+    "in_size": [
+      600,
+      353
+    ],
+    "out_size": [
+      1200,
+      706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/mondi-6.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/mondi-6.jpg",
+    "in_size": [
+      803,
+      1499
+    ],
+    "out_size": [
+      1200,
+      2240
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/pillow-pack.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/pillow-pack.jpg",
+    "in_size": [
+      700,
+      533
+    ],
+    "out_size": [
+      1200,
+      913
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-keyvisual.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-keyvisual.jpg",
+    "in_size": [
+      1420,
+      798
+    ],
+    "out_size": [
+      1420,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-lifestyle.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-lifestyle.jpg",
+    "in_size": [
+      600,
+      353
+    ],
+    "out_size": [
+      1200,
+      706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-white-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-white-2.jpg",
+    "in_size": [
+      803,
+      1499
+    ],
+    "out_size": [
+      1200,
+      2240
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-white-lifestyle.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-white-lifestyle.jpg",
+    "in_size": [
+      2100,
+      2506
+    ],
+    "out_size": [
+      1600,
+      1909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-white-product.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-white-product.jpg",
+    "in_size": [
+      1981,
+      2364
+    ],
+    "out_size": [
+      1600,
+      1909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/mondi/smartkraft-white.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/mondi/smartkraft-white.jpg",
+    "in_size": [
+      1211,
+      1499
+    ],
+    "out_size": [
+      1211,
+      1499
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/ampacity-test.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/ampacity-test.jpg",
+    "in_size": [
+      2560,
+      1707
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/buildings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/buildings.jpg",
+    "in_size": [
+      800,
+      416
+    ],
+    "out_size": [
+      1200,
+      624
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/cable-wiring.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/cable-wiring.jpg",
+    "in_size": [
+      550,
+      737
+    ],
+    "out_size": [
+      1200,
+      1608
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/electra-sea-trial.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/electra-sea-trial.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/offshore-wind.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/offshore-wind.jpg",
+    "in_size": [
+      860,
+      810
+    ],
+    "out_size": [
+      1200,
+      1130
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/superconducting-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/superconducting-cable.jpg",
+    "in_size": [
+      800,
+      420
+    ],
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nexans/tyrrhenian-link.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nexans/tyrrhenian-link.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nippon-steel/heavy-plate.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nippon-steel/heavy-plate.jpg",
+    "in_size": [
+      699,
+      388
+    ],
+    "out_size": [
+      1200,
+      666
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nippon-steel/offshore-plate.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nippon-steel/offshore-plate.jpg",
+    "in_size": [
+      561,
+      377
+    ],
+    "out_size": [
+      1200,
+      806
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nippon-steel/ship-plate.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nippon-steel/ship-plate.jpg",
+    "in_size": [
+      557,
+      378
+    ],
+    "out_size": [
+      1200,
+      814
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nsk/acbb.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nsk/acbb.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nsk/bb-sa-cut.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nsk/bb-sa-cut.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nsk/dgbb-cut.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nsk/dgbb-cut.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nsk/dgbb-hybrid.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nsk/dgbb-hybrid.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nsk/thin-section.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nsk/thin-section.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nucor/econiq-cert.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nucor/econiq-cert.jpg",
+    "in_size": [
+      1280,
+      1120
+    ],
+    "out_size": [
+      1280,
+      1120
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nucor/hot-rolled-steel-bar.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nucor/hot-rolled-steel-bar.jpg",
+    "in_size": [
+      1280,
+      1120
+    ],
+    "out_size": [
+      1280,
+      1120
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nucor/mill-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nucor/mill-hero.jpg",
+    "in_size": [
+      1440,
+      700
+    ],
+    "out_size": [
+      1440,
+      700
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/nucor/sheet-coil.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/nucor/sheet-coil.jpg",
+    "in_size": [
+      1280,
+      1120
+    ],
+    "out_size": [
+      1280,
+      1120
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/sika/sika-admixture-pour.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/sika/sika-admixture-pour.jpg",
+    "in_size": [
+      1600,
+      1200
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/sika/sika-construction.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/sika/sika-construction.jpg",
+    "in_size": [
+      1600,
+      1068
+    ],
+    "out_size": [
+      1600,
+      1068
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/sika/sika-klave.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/sika/sika-klave.jpg",
+    "in_size": [
+      680,
+      364
+    ],
+    "out_size": [
+      1200,
+      642
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/smurfit-westrock/bag-in-box.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/smurfit-westrock/bag-in-box.jpg",
+    "in_size": [
+      740,
+      740
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/smurfit-westrock/employees-box.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/smurfit-westrock/employees-box.jpg",
+    "in_size": [
+      768,
+      553
+    ],
+    "out_size": [
+      1200,
+      864
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/smurfit-westrock/paper-bags.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/smurfit-westrock/paper-bags.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/smurfit-westrock/produce-tray.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/smurfit-westrock/produce-tray.jpg",
+    "in_size": [
+      740,
+      740
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/hardox-500-tuf-hero-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/hardox-500-tuf-hero-2.jpg",
+    "in_size": [
+      1280,
+      527
+    ],
+    "out_size": [
+      1280,
+      527
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/hardox-500-tuf-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/hardox-500-tuf-hero.jpg",
+    "in_size": [
+      1920,
+      570
+    ],
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/hardox-wear-plate.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/hardox-wear-plate.jpg",
+    "in_size": [
+      1920,
+      720
+    ],
+    "out_size": [
+      1600,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/hardox-web-01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/hardox-web-01.jpg",
+    "in_size": [
+      1280,
+      720
+    ],
+    "out_size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/strenx-application.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/strenx-application.jpg",
+    "in_size": [
+      1920,
+      570
+    ],
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ssab/strenx-header.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ssab/strenx-header.jpg",
+    "in_size": [
+      1920,
+      850
+    ],
+    "out_size": [
+      1600,
+      708
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tata-steel/steelium-24.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tata-steel/steelium-24.jpg",
+    "in_size": [
+      1200,
+      716
+    ],
+    "out_size": [
+      1200,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tata-steel/steelium-mobile-bg.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tata-steel/steelium-mobile-bg.jpg",
+    "in_size": [
+      640,
+      999
+    ],
+    "out_size": [
+      1200,
+      1873
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tata-steel/steelium2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tata-steel/steelium2.jpg",
+    "in_size": [
+      1400,
+      790
+    ],
+    "out_size": [
+      1400,
+      790
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tata-steel/tata-steelium.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tata-steel/tata-steelium.jpg",
+    "in_size": [
+      1200,
+      716
+    ],
+    "out_size": [
+      1200,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/blue-dock.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/blue-dock.jpg",
+    "in_size": [
+      446,
+      1084
+    ],
+    "out_size": [
+      1200,
+      2916
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/blue-qs.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/blue-qs.jpg",
+    "in_size": [
+      446,
+      1084
+    ],
+    "out_size": [
+      1200,
+      2916
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/blue-riser.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/blue-riser.jpg",
+    "in_size": [
+      446,
+      1084
+    ],
+    "out_size": [
+      1200,
+      2916
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/octg-hero-22.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/octg-hero-22.jpg",
+    "in_size": [
+      1919,
+      851
+    ],
+    "out_size": [
+      1600,
+      709
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/octg-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/octg-hero.jpg",
+    "in_size": [
+      1920,
+      860
+    ],
+    "out_size": [
+      1600,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/perforating-guns.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/perforating-guns.jpg",
+    "in_size": [
+      980,
+      650
+    ],
+    "out_size": [
+      1200,
+      795
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/tenaris/wedge-463.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/tenaris/wedge-463.jpg",
+    "in_size": [
+      446,
+      1084
+    ],
+    "out_size": [
+      1200,
+      2916
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/timken/csr-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/timken/csr-2.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/timken/csr-product.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/timken/csr-product.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/timken/tapered-1024.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/timken/tapered-1024.jpg",
+    "in_size": [
+      1024,
+      683
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/timken/tapered-bearing.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/timken/tapered-bearing.jpg",
+    "in_size": [
+      1536,
+      1024
+    ],
+    "out_size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/4d-bag.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/4d-bag.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/asclepius-pcr.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/asclepius-pcr.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/ceruflex.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/ceruflex.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/fhss-pet-film-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/fhss-pet-film-2.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/fhss-pet-film.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/fhss-pet-film.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/flexgreen.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/flexgreen.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/uflex/kraftika-paper-tube.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/uflex/kraftika-paper-tube.jpg",
+    "in_size": [
+      390,
+      266
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/common-concerns.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/common-concerns.jpg",
+    "in_size": [
+      1250,
+      600
+    ],
+    "out_size": [
+      1250,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/home-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/home-banner.jpg",
+    "in_size": [
+      500,
+      625
+    ],
+    "out_size": [
+      1200,
+      1500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/homebuilding-stages.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/homebuilding-stages.jpg",
+    "in_size": [
+      1250,
+      600
+    ],
+    "out_size": [
+      1250,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/hotspot-3.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/hotspot-3.jpg",
+    "in_size": [
+      900,
+      600
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/hotspot-desktop.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/hotspot-desktop.jpg",
+    "in_size": [
+      4096,
+      2731
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/ultratech-cement/ihb-card.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/ultratech-cement/ihb-card.jpg",
+    "in_size": [
+      4096,
+      2731
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/vallourec/line-pipes-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/vallourec/line-pipes-2.jpg",
+    "in_size": [
+      833,
+      554
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/vallourec/line-pipes.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/vallourec/line-pipes.jpg",
+    "in_size": [
+      833,
+      554
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/vallourec/refinery.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/vallourec/refinery.jpg",
+    "in_size": [
+      1500,
+      1000
+    ],
+    "out_size": [
+      1500,
+      1000
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/vallourec/vam-solutions.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/vallourec/vam-solutions.jpg",
+    "in_size": [
+      1325,
+      883
+    ],
+    "out_size": [
+      1325,
+      883
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/vallourec/vam-threading.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/vallourec/vam-threading.jpg",
+    "in_size": [
+      1597,
+      1277
+    ],
+    "out_size": [
+      1597,
+      1277
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/welspun-corp/anjar-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/welspun-corp/anjar-mill.jpg",
+    "in_size": [
+      1032,
+      512
+    ],
+    "out_size": [
+      1200,
+      595
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/welspun-corp/bhopal-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/welspun-corp/bhopal-mill.jpg",
+    "in_size": [
+      1032,
+      512
+    ],
+    "out_size": [
+      1200,
+      595
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/welspun-corp/dahej-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/welspun-corp/dahej-mill.jpg",
+    "in_size": [
+      1032,
+      512
+    ],
+    "out_size": [
+      1200,
+      595
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/welspun-corp/dammam-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/welspun-corp/dammam-mill.jpg",
+    "in_size": [
+      1032,
+      512
+    ],
+    "out_size": [
+      1200,
+      595
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/wilo/helix-696.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/wilo/helix-696.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/wilo/wilo-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/wilo/wilo-banner.jpg",
+    "in_size": [
+      1416,
+      350
+    ],
+    "out_size": [
+      1416,
+      350
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/wilo/wilo-pump-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/wilo/wilo-pump-2.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/zamil-steel-peb/peb-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/zamil-steel-peb/peb-local.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/products/zamil-steel-peb/roof-systems-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/products/zamil-steel-peb/roof-systems-local.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ]
+  }
+]

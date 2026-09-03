@@ -1,30 +1,75 @@
-// OpenAI integration for Suplymate AI features.
+// AI provider integration for Suplymate (Mate).
 //
-// Local: add OPENAI_API_KEY=sk-... to .env.local (never commit this file).
-// Production: Vercel → Project Settings → Environment Variables → OPENAI_API_KEY.
-// Without a key, AI features use built-in demo fallbacks.
+// Preference order:
+//   1. XAI_API_KEY or GROK_API_KEY → xAI Grok (OpenAI-compatible https://api.x.ai/v1)
+//   2. OPENAI_API_KEY → OpenAI Chat Completions
+//   3. Neither → honest demo fallback (no fake live answers)
 //
-// The API key is read on the server ONLY. It is never exposed to the browser
-// (no NEXT_PUBLIC_ prefix) and is never logged.
+// Keys are read on the server ONLY. Never prefix with NEXT_PUBLIC_.
 
 import OpenAI from "openai";
 
-/** Chat model. Override with OPENAI_MODEL; falls back to a sane default. */
+export type AiProvider = "grok" | "openai" | "demo";
+
+const XAI_BASE_URL = "https://api.x.ai/v1";
+
+function xaiKey(): string | undefined {
+  return (
+    process.env.XAI_API_KEY?.trim() ||
+    process.env.GROK_API_KEY?.trim() ||
+    undefined
+  );
+}
+
+function openAiKey(): string | undefined {
+  return process.env.OPENAI_API_KEY?.trim() || undefined;
+}
+
+/** Active live provider, or "demo" when no key is configured. */
+export function resolveAiProvider(): AiProvider {
+  if (xaiKey()) return "grok";
+  if (openAiKey()) return "openai";
+  return "demo";
+}
+
+/** True when a live LLM key is available (Grok or OpenAI). */
+export function isOpenAiConfigured(): boolean {
+  return resolveAiProvider() !== "demo";
+}
+
+export function isAiConfigured(): boolean {
+  return isOpenAiConfigured();
+}
+
+/** Chat model for the active provider. */
 export function openAiModel(): string {
+  const provider = resolveAiProvider();
+  if (provider === "grok") {
+    return process.env.GROK_MODEL?.trim() || process.env.XAI_MODEL?.trim() || "grok-2-latest";
+  }
   return process.env.OPENAI_MODEL?.trim() || "gpt-4o-mini";
 }
 
-export function isOpenAiConfigured(): boolean {
-  return Boolean(process.env.OPENAI_API_KEY?.trim());
-}
-
 let client: OpenAI | null = null;
+let clientProvider: AiProvider | null = null;
 
-/** Lazily construct a singleton OpenAI client. Throws if no key is configured. */
+/** Lazily construct a singleton OpenAI-compatible client. Throws if none configured. */
 export function getOpenAiClient(): OpenAI {
-  const apiKey = process.env.OPENAI_API_KEY?.trim();
-  if (!apiKey) throw new Error("OPENAI_API_KEY not configured");
-  if (!client) client = new OpenAI({ apiKey });
+  const provider = resolveAiProvider();
+  if (provider === "demo") {
+    throw new Error("No AI API key configured (set XAI_API_KEY, GROK_API_KEY, or OPENAI_API_KEY)");
+  }
+  if (!client || clientProvider !== provider) {
+    if (provider === "grok") {
+      client = new OpenAI({
+        apiKey: xaiKey()!,
+        baseURL: XAI_BASE_URL,
+      });
+    } else {
+      client = new OpenAI({ apiKey: openAiKey()! });
+    }
+    clientProvider = provider;
+  }
   return client;
 }
 
@@ -42,7 +87,6 @@ type ChatCompletionOptions = {
 
 /**
  * Non-streaming chat completion. Returns the assistant message text.
- * Used by the AI writing assistant (compose) and JSON-mode helpers.
  */
 export async function chatCompletion(
   options: ChatCompletionOptions
@@ -65,8 +109,7 @@ export async function chatCompletion(
 }
 
 /**
- * Streaming chat completion. Yields text deltas as they arrive so the UI can
- * render a live, token-by-token response.
+ * Streaming chat completion. Yields text deltas as they arrive.
  */
 export async function* chatStream(
   options: ChatCompletionOptions

@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { compareForDirectory } from "@/lib/supplier-directory-sort";
+import { compareForDirectory, isCuratedDirectoryMill } from "@/lib/supplier-directory-sort";
 import { isPhase1Supplier, PHASE1_SUPPLIER_IDS } from "@/lib/phase1";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
+import { daily20260902Suppliers } from "@/lib/daily-2026-09-02-suppliers";
 import type { Supplier } from "@/data/suppliers";
 
 function stub(partial: Partial<Supplier> & Pick<Supplier, "id" | "name">): Supplier {
@@ -67,15 +68,25 @@ describe("compareForDirectory", () => {
     const foliflex = phase1Suppliers.find((s) => s.id === "foliflex-wires-cables-delhi");
     expect(foliflex).toBeTruthy();
 
-    const mixed = [...NOT_IN_PACK, ...phase1Suppliers].sort(compareForDirectory);
-    const first59 = mixed.slice(0, 59);
-    expect(first59.every((s) => isPhase1Supplier(s))).toBe(true);
-    expect(mixed.slice(59).some((s) => isPhase1Supplier(s))).toBe(false);
+    const mixed = [...NOT_IN_PACK, ...phase1Suppliers, ...daily20260902Suppliers].sort(
+      compareForDirectory,
+    );
+    const curatedCount = 59 + daily20260902Suppliers.length;
+    const first = mixed.slice(0, curatedCount);
+    expect(first.every((s) => isCuratedDirectoryMill(s))).toBe(true);
+    expect(mixed.slice(curatedCount).some((s) => isCuratedDirectoryMill(s))).toBe(
+      false,
+    );
     expect(mixed.map((s) => s.id)).toContain("foliflex-wires-cables-delhi");
-    expect(mixed.findIndex((s) => s.id === "foliflex-wires-cables-delhi")).toBeLessThan(59);
+    expect(mixed.findIndex((s) => s.id === "foliflex-wires-cables-delhi")).toBeLessThan(
+      curatedCount,
+    );
+    expect(mixed.findIndex((s) => s.id === "nucor")).toBeLessThan(curatedCount);
 
     for (const leftover of NOT_IN_PACK) {
-      expect(mixed.findIndex((s) => s.id === leftover.id)).toBeGreaterThanOrEqual(59);
+      expect(mixed.findIndex((s) => s.id === leftover.id)).toBeGreaterThanOrEqual(
+        curatedCount,
+      );
       expect(compareForDirectory(foliflex!, leftover)).toBeLessThan(0);
     }
   });

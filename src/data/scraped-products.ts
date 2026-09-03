@@ -46,6 +46,10 @@ export type ScrapedProduct = {
   verifiedSupplier: boolean;
   status: ProductStatus;
   scrapedAt: string;
+  /** Lister price_source_type (dealer_list, listed_fob, …). */
+  priceSourceType?: string | null;
+  /** True when the card/gallery photo is AI-generated and must be labelled. */
+  aiGeneratedImage?: boolean;
 };
 
 // Committed demo dataset so the admin review queue is populated and fully

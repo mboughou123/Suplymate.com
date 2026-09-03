@@ -22,6 +22,24 @@ import {
   applyCommission,
   formatPrice,
 } from "@/config/commerce";
+import { priceSourceBadgeLabel, priceSourceCaption } from "@/lib/price-source";
+
+function hasSourcedPrice(value: number | null | undefined): boolean {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+function productHasPublicPrice(
+  product: Pick<Product, "basePrice" | "priceMin" | "hasPublicPrice">
+): boolean {
+  if (hasSourcedPrice(product.basePrice)) return true;
+  return Boolean(product.hasPublicPrice) && hasSourcedPrice(product.priceMin);
+}
+
+function priceSourceTypeOf(product: Product): string | null {
+  if (product.priceSourceType) return product.priceSourceType;
+  const spec = product.specifications?.["Price source type"];
+  return typeof spec === "string" ? spec : null;
+}
 
 /* ----------------------------- RNG helpers ----------------------------- */
 
@@ -160,6 +178,12 @@ export type ProductDetail = {
   reviewCount: number;
   commissionRate: number;
   displayFromLabel: string;
+  /** False when unit_price is null — UI must show RFQ, never $0.00. */
+  hasPublicPrice: boolean;
+  /** Honesty badge such as "Dealer list". */
+  priceSourceLabel: string | null;
+  /** Caption that must not imply mill FOB for dealer lists. */
+  priceSourceCaption: string | null;
   gallery: GalleryImage[];
   priceTiers: PriceTier[];
   options: ProductOption[];
@@ -305,6 +329,7 @@ export type ProductCardData = {
   /** Profile-completeness of the linked supplier (sort key for the catalogue). */
   completenessScore: number;
   unit: string;
+  /** Sourced bulk price, or "RFQ" — never "$0.00". */
   bulkPriceLabel: string;
   moq: string;
   shippingTime: string;
@@ -361,7 +386,9 @@ export function getProductCardData(product: Product): ProductCardData {
     verified: sd.verified,
     completenessScore,
     unit: product.unit,
-    bulkPriceLabel: `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`,
+    bulkPriceLabel: productHasPublicPrice(product)
+      ? `${formatPrice(bulkPrice, product.currency)} / ${product.unit}`
+      : "RFQ",
     moq: product.moq ?? `${intBetween(rng, 1, 50) * (product.unit === "ton" ? 1 : 10)} ${product.unit}s`,
     shippingTime: product.shippingTime ?? `${product.bestDeliveryDays}–${product.bestDeliveryDays + 8} days`,
     rating: product.rating ?? Math.min(5, Math.round((4.3 + rng() * 0.6) * 10) / 10),
@@ -398,7 +425,8 @@ export function getProductDetail(product: Product): ProductDetail {
   const unit = product.unit;
   const icon = ICONS_BY_CATEGORY[product.category];
 
-  /* --- pricing (commission applied) --- */
+  /* --- pricing (commission applied). No sourced price → no $0.00 tiers. --- */
+  const hasPublicPrice = productHasPublicPrice(product);
   const base = product.basePrice ?? product.priceMin;
   const rate = product.commissionRate ?? COMMISSION_RATE;
   const tierDefs = [
@@ -407,25 +435,29 @@ export function getProductDetail(product: Product): ProductDetail {
     { minQty: 200, mult: 0.88 },
     { minQty: 1000, mult: 0.82 },
   ];
-  const priceTiers: PriceTier[] = tierDefs.map((t, i) => {
-    const basePrice = Math.round(base * t.mult * 100) / 100;
-    const price = applyCommission(basePrice, rate);
-    const next = tierDefs[i + 1];
-    const rangeLabel = next
-      ? `${t.minQty} – ${next.minQty - 1} ${unit}s`
-      : `≥ ${t.minQty} ${unit}s`;
-    return {
-      minQty: t.minQty,
-      rangeLabel,
-      basePrice,
-      price,
-      priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
-    };
-  });
-  const displayFromLabel = `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
-    applyCommission(product.priceMax, rate),
-    product.currency
-  )}`;
+  const priceTiers: PriceTier[] = hasPublicPrice
+    ? tierDefs.map((t, i) => {
+        const basePrice = Math.round(base * t.mult * 100) / 100;
+        const price = applyCommission(basePrice, rate);
+        const next = tierDefs[i + 1];
+        const rangeLabel = next
+          ? `${t.minQty} – ${next.minQty - 1} ${unit}s`
+          : `≥ ${t.minQty} ${unit}s`;
+        return {
+          minQty: t.minQty,
+          rangeLabel,
+          basePrice,
+          price,
+          priceLabel: `${formatPrice(price, product.currency)} / ${unit}`,
+        };
+      })
+    : [];
+  const displayFromLabel = hasPublicPrice
+    ? `${formatPrice(applyCommission(base * 0.82, rate), product.currency)} – ${formatPrice(
+        applyCommission(product.priceMax, rate),
+        product.currency
+      )}`
+    : "RFQ";
 
   /* --- gallery --- */
   const galleryLabels = ["Main view", "Detail", "Application", "Packaging", "Factory video"];
@@ -624,7 +656,9 @@ export function getProductDetail(product: Product): ProductDetail {
       category: p.category,
       gradient: GALLERY_GRADIENTS[(hashString(p.id) + i) % GALLERY_GRADIENTS.length],
       icon: ICONS_BY_CATEGORY[p.category],
-      priceFromLabel: `From ${formatPrice(applyCommission((p.basePrice ?? p.priceMin) * 0.82, rate), p.currency)}`,
+      priceFromLabel: productHasPublicPrice(p)
+        ? `From ${formatPrice(applyCommission((p.basePrice ?? p.priceMin) * 0.82, rate), p.currency)}`
+        : "RFQ",
       moq: p.moq ?? `${intBetween(makeRng(hashString(p.id)), 1, 50)} ${p.unit}s`,
     }));
 
@@ -656,6 +690,9 @@ export function getProductDetail(product: Product): ProductDetail {
     reviewCount,
     commissionRate: rate,
     displayFromLabel,
+    hasPublicPrice,
+    priceSourceLabel: priceSourceBadgeLabel(priceSourceTypeOf(product), hasPublicPrice),
+    priceSourceCaption: priceSourceCaption(priceSourceTypeOf(product), hasPublicPrice),
     gallery,
     priceTiers,
     options,

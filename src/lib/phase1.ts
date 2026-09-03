@@ -31,7 +31,8 @@ export function isUsableFactoryPhotoUrl(
 
   if (
     trimmed.startsWith("/images/suppliers/phase1/") ||
-    trimmed.startsWith("/images/suppliers/band/")
+    trimmed.startsWith("/images/suppliers/band/") ||
+    /^\/images\/suppliers\/(?!logos\/)[^/]+\//.test(trimmed)
   ) {
     return true;
   }

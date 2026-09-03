@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import HomeTopNav from "@/components/home/HomeTopNav";
 import HomeHero from "@/components/home/HomeHero";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
@@ -13,7 +12,6 @@ export default async function HomePage() {
 
   return (
     <div className="bg-base">
-      <HomeTopNav />
       <HomeHero />
       <HomeTrustStrip />
       <HomeSuppliersBand />

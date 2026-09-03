@@ -1,18 +1,24 @@
-// Conversational AI procurement assistant.
+// Conversational AI procurement assistant — Mate (Scout / Compare / Watch).
 //
-// - Uses OpenAI (chat.completions) when OPENAI_API_KEY is set, otherwise a
-//   safe, honest template fallback (demo mode).
+// - Uses xAI Grok (XAI_API_KEY / GROK_API_KEY) or OpenAI when configured,
+//   otherwise a safe, honest template fallback (demo mode).
 // - Grounds answers with a SMALL, relevant slice of real DB data (RAG-lite):
 //   only verified/visible suppliers and product categories. No private data,
-//   no whole-DB dumps.
+//   no whole-DB dumps. Never invent live prices.
 
-import { chatCompletion, chatStream, isOpenAiConfigured, type ChatMessage } from "@/lib/openai";
+import {
+  chatCompletion,
+  chatStream,
+  isOpenAiConfigured,
+  resolveAiProvider,
+  type ChatMessage,
+} from "@/lib/openai";
 import { getSuppliersFromDb, getProductsFromDb } from "@/lib/data-service";
 
 export const MAX_MESSAGE_LENGTH = 2000;
 export const MAX_HISTORY_MESSAGES = 12;
 
-export const SYSTEM_PROMPT = `You are Suplymate's AI procurement assistant, a professional advisor for B2B industrial sourcing and supply-chain decisions.
+export const SYSTEM_PROMPT = `You are Mate — Suplymate's AI procurement assistant. You coordinate three agents: Scout (find verified mills), Compare (line up offers and lead times), and Watch (flag indicative price windows). One AI, three agents working for the buyer.
 
 You help buyers with: finding and comparing suppliers, pricing and cost ranges, shipping and lead times, minimum order quantities (MOQs), preparing RFQs, supplier risk, certifications, procurement planning, and general sourcing strategy.
 
@@ -99,11 +105,11 @@ export async function buildSupplierContext(message: string): Promise<string> {
   }
 }
 
-/** Honest, useful template reply when no OpenAI key is configured. */
+/** Honest, useful template reply when no live LLM key is configured. */
 export function demoReply(message: string): string {
   const lower = message.toLowerCase();
   const intro =
-    "You're in demo mode — live AI responses require an OpenAI API key. Here's general guidance:";
+    "You're in demo mode — live Mate answers need an XAI_API_KEY / GROK_API_KEY (or OPENAI_API_KEY). Here's general guidance (not a live model reply):";
 
   if (lower.includes("rfq")) {
     return `${intro}\n\nA strong RFQ usually includes:\n• Product name and exact specifications (grade, dimensions, tolerances)\n• Quantity and any volume tiers\n• Destination and required Incoterms (FOB, CIF, etc.)\n• Target price (optional) and required delivery date\n• Packaging and certification requirements (ISO, CE, etc.)\n• Requested payment terms\n\nYou can browse suppliers in the directory and start a conversation to send your RFQ directly.`;
@@ -135,13 +141,14 @@ async function buildMessages({ message, history }: ReplyArgs): Promise<ChatMessa
 /** Non-streaming reply. Returns the assistant text and which engine produced it. */
 export async function getAiReply(
   args: ReplyArgs
-): Promise<{ reply: string; source: "openai" | "demo" }> {
-  if (!isOpenAiConfigured()) {
+): Promise<{ reply: string; source: "grok" | "openai" | "demo" }> {
+  const provider = resolveAiProvider();
+  if (provider === "demo" || !isOpenAiConfigured()) {
     return { reply: demoReply(args.message), source: "demo" };
   }
   const messages = await buildMessages(args);
   const reply = await chatCompletion({ messages, temperature: 0.4, max_tokens: 700 });
-  return { reply, source: "openai" };
+  return { reply, source: provider };
 }
 
 /** Streaming reply generator (OpenAI only). */

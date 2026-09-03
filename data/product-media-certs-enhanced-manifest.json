@@ -1,0 +1,828 @@
+[
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-2b.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/api-2b.jpg",
+    "in_size": [
+      1584,
+      1224
+    ],
+    "out_size": [
+      1584,
+      1224
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/api-5l.jpg",
+    "in_size": [
+      1584,
+      1224
+    ],
+    "out_size": [
+      1584,
+      1224
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-q1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/api-q1.jpg",
+    "in_size": [
+      1224,
+      1584
+    ],
+    "out_size": [
+      1224,
+      1584
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/iso-14001.jpg",
+    "in_size": [
+      1190,
+      1683
+    ],
+    "out_size": [
+      1190,
+      1683
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-17025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/iso-17025.jpg",
+    "in_size": [
+      1684,
+      1191
+    ],
+    "out_size": [
+      1684,
+      1191
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/iso-45001.jpg",
+    "in_size": [
+      1190,
+      1683
+    ],
+    "out_size": [
+      1190,
+      1683
+    ],
+    "priority": true
+  },
+  {
+    "slug": "al-gharbia-pipe",
+    "src": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/al-gharbia-pipe/iso-9001.jpg",
+    "in_size": [
+      1224,
+      1584
+    ],
+    "out_size": [
+      1224,
+      1584
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/bis-is-694.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/bis-is-694.jpg",
+    "in_size": [
+      1088,
+      1408
+    ],
+    "out_size": [
+      1088,
+      1408
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/ce-lvd-300625502.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/ce-lvd-300625502.jpg",
+    "in_size": [
+      1275,
+      1756
+    ],
+    "out_size": [
+      1275,
+      1756
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/ce-lvd.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/ce-lvd.jpg",
+    "in_size": [
+      1060,
+      1497
+    ],
+    "out_size": [
+      1060,
+      1497
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/iso-9001-aap-2022.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/iso-9001-aap-2022.jpg",
+    "in_size": [
+      1058,
+      1497
+    ],
+    "out_size": [
+      1058,
+      1497
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/iso-9001.jpg",
+    "in_size": [
+      1240,
+      1754
+    ],
+    "out_size": [
+      1240,
+      1754
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/rohs-2015-863.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/rohs-2015-863.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ],
+    "priority": true
+  },
+  {
+    "slug": "foliflex-cables",
+    "src": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/rohs.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/foliflex-cables/rohs.jpg",
+    "in_size": [
+      1060,
+      1497
+    ],
+    "out_size": [
+      1060,
+      1497
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/cares-bs-4449.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/cares-bs-4449.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/en-10025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/en-10025.jpg",
+    "in_size": [
+      1240,
+      1752
+    ],
+    "out_size": [
+      1240,
+      1752
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-14001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-17025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-17025.jpg",
+    "in_size": [
+      1650,
+      1275
+    ],
+    "out_size": [
+      1650,
+      1275
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-22301.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-22301.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-45001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-50001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-50001.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": true
+  },
+  {
+    "slug": "hadeed",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hadeed/iso-9001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": true
+  },
+  {
+    "slug": "commercial-metals-company",
+    "src": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-14001-new-jersey.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/commercial-metals-company/iso-14001-new-jersey.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": false
+  },
+  {
+    "slug": "commercial-metals-company",
+    "src": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-9001-new-jersey.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/commercial-metals-company/iso-9001-new-jersey.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": false
+  },
+  {
+    "slug": "commercial-metals-company",
+    "src": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-alabama.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/commercial-metals-company/iso-alabama.jpg",
+    "in_size": [
+      1275,
+      1650
+    ],
+    "out_size": [
+      1275,
+      1650
+    ],
+    "priority": false
+  },
+  {
+    "slug": "commercial-metals-company",
+    "src": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-texas.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/commercial-metals-company/iso-texas.jpg",
+    "in_size": [
+      1275,
+      1650
+    ],
+    "out_size": [
+      1275,
+      1650
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-10012.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-10012.jpg",
+    "in_size": [
+      800,
+      1095
+    ],
+    "out_size": [
+      1022,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-14001.jpg",
+    "in_size": [
+      800,
+      1108
+    ],
+    "out_size": [
+      1010,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-27001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-27001.jpg",
+    "in_size": [
+      800,
+      1115
+    ],
+    "out_size": [
+      1004,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-45001.jpg",
+    "in_size": [
+      800,
+      1091
+    ],
+    "out_size": [
+      1026,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-50001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-50001.jpg",
+    "in_size": [
+      800,
+      1108
+    ],
+    "out_size": [
+      1010,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "hangxiao-steel-structure-shandong",
+    "src": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/hangxiao-steel-structure-shandong/iso-9001.jpg",
+    "in_size": [
+      800,
+      1092
+    ],
+    "out_size": [
+      1025,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "heidelberg-materials",
+    "src": "/workspace/suppliers-phase1/product-media/certs/heidelberg-materials/iso-50001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/heidelberg-materials/iso-50001.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "heidelberg-materials",
+    "src": "/workspace/suppliers-phase1/product-media/certs/heidelberg-materials/iso-9001-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/heidelberg-materials/iso-9001-14001.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "polycab-india",
+    "src": "/workspace/suppliers-phase1/product-media/certs/polycab-india/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/polycab-india/iso-9001.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/cares-astm-a615.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/cares-astm-a615.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/cares-bs-4449.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/cares-bs-4449.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/iso-14001.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-17025.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/iso-17025.jpg",
+    "in_size": [
+      1275,
+      1650
+    ],
+    "out_size": [
+      1275,
+      1650
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/iso-45001.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "qatar-steel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/qatar-steel/iso-9001.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-2b-cs-kutch.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/api-2b-cs-kutch.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-5ct-cs-kutch.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/api-5ct-cs-kutch.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-5l-cs-kutch.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/api-5l-cs-kutch.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-q1-cs-kutch.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/api-q1-cs-kutch.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iatf-16949.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/iatf-16949.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/iso-14001.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/iso-45001.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "ratnamani-metals-tubes",
+    "src": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/ratnamani-metals-tubes/iso-9001.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1400,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "rr-kabel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/basec-bs-en-50525-2-11.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/basec-bs-en-50525-2-11.jpg",
+    "in_size": [
+      1276,
+      1791
+    ],
+    "out_size": [
+      1276,
+      1791
+    ],
+    "priority": false
+  },
+  {
+    "slug": "rr-kabel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/bis-is-694.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/bis-is-694.jpg",
+    "in_size": [
+      1240,
+      1754
+    ],
+    "out_size": [
+      1240,
+      1754
+    ],
+    "priority": false
+  },
+  {
+    "slug": "rr-kabel",
+    "src": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/tuv-en-50618.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/rr-kabel/tuv-en-50618.jpg",
+    "in_size": [
+      1241,
+      1755
+    ],
+    "out_size": [
+      1241,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "uflex",
+    "src": "/workspace/suppliers-phase1/product-media/certs/uflex/brc-noida.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/uflex/brc-noida.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "uflex",
+    "src": "/workspace/suppliers-phase1/product-media/certs/uflex/fssc-22000-noida.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/uflex/fssc-22000-noida.jpg",
+    "in_size": [
+      1240,
+      1755
+    ],
+    "out_size": [
+      1240,
+      1755
+    ],
+    "priority": false
+  },
+  {
+    "slug": "uflex",
+    "src": "/workspace/suppliers-phase1/product-media/certs/uflex/iso-9001-noida.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/uflex/iso-9001-noida.jpg",
+    "in_size": [
+      1241,
+      1754
+    ],
+    "out_size": [
+      1241,
+      1754
+    ],
+    "priority": false
+  },
+  {
+    "slug": "xwa-power-cable",
+    "src": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/ce-lvd-emc.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/xwa-power-cable/ce-lvd-emc.jpg",
+    "in_size": [
+      1587,
+      2243
+    ],
+    "out_size": [
+      1556,
+      2200
+    ],
+    "priority": false
+  },
+  {
+    "slug": "xwa-power-cable",
+    "src": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-14001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/xwa-power-cable/iso-14001.jpg",
+    "in_size": [
+      800,
+      1131
+    ],
+    "out_size": [
+      990,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "xwa-power-cable",
+    "src": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-45001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/xwa-power-cable/iso-45001.jpg",
+    "in_size": [
+      800,
+      1131
+    ],
+    "out_size": [
+      990,
+      1400
+    ],
+    "priority": false
+  },
+  {
+    "slug": "xwa-power-cable",
+    "src": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-9001.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/xwa-power-cable/iso-9001.jpg",
+    "in_size": [
+      800,
+      1131
+    ],
+    "out_size": [
+      990,
+      1400
+    ],
+    "priority": false
+  }
+]

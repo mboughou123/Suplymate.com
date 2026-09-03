@@ -106,7 +106,9 @@
     "supplierListed": "Lieferantenpreis",
     "contactForPricing": "Lieferant für Preis kontaktieren",
     "starsRating": "{rating} von 5 Sternen",
-    "fiveStars": "5 von 5 Sternen"
+    "fiveStars": "5 von 5 Sternen",
+    "priceOnRequest": "Price on request",
+    "rfq": "RFQ"
   },
   "home": {
     "featuresTitle": "Alles, was Sie für intelligenteres Beschaffung brauchen",
@@ -153,7 +155,7 @@
   },
   "homeAiDemo": {
     "eyebrow": "Example walkthrough",
-    "title": "Three AI agents, one sourcing workflow",
+    "title": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "subtitle": "Scout finds verified mills, Compare lines up offers, and Watch flags price windows — built for industrial procurement, not generic chat.",
     "walkthroughDisclaimer": "Walkthrough · Example scenario. Supplier names are from the Suplymate verified network; prices and signals shown are illustrative.",
     "agentScout": "Scout",
@@ -534,7 +536,7 @@
   },
   "aiAssistant": {
     "title": "Assistant Beschaffung IA",
-    "subtitle": "Sourcez plus intelligemment avec die Intelligenz à vos côtés",
+    "subtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
     "badge": "Expertise IA + humaine",
     "description": "Suplymate combine outils IA und experts humains für trouver le bon fournisseur au bon Preise.",
     "tryAssistant": "Essayer den Assistenten IA",
@@ -554,7 +556,13 @@
     "statVerifiedSuppliers": "Lieferanten vérifiés",
     "statIndustries": "Abgedeckte Branchen",
     "statAiMatching": "Matching propulsé",
-    "statSupport": "Beschaffungs-Support"
+    "statSupport": "Beschaffungs-Support",
+    "mateEyebrow": "Mate AI",
+    "mateTitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
+    "mateSubtitle": "Meet Mate — 1 AI, 3 agents (Scout / Compare / Watch) working for you.",
+    "modeGrok": "Live · xAI Grok",
+    "modeOpenAi": "Live · OpenAI",
+    "modeDemo": "Demo mode · add XAI_API_KEY or GROK_API_KEY for live Mate answers"
   },
   "onboarding": {
     "welcome": "Willkommen bei Suplymate",

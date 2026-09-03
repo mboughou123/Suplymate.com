@@ -49,6 +49,10 @@ export type Product = {
   supplierCountry?: string;
   /** Whether a real, public price was found on the source page. */
   hasPublicPrice?: boolean;
+  /** Lister price_source_type — dealer_list must never be shown as mill FOB. */
+  priceSourceType?: string | null;
+  /** True when the card/gallery photo is AI-generated and must be labelled. */
+  aiGeneratedImage?: boolean;
   /** Moderation state for scraped/imported products. */
   status?: ProductStatus;
 };

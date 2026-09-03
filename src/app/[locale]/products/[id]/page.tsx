@@ -11,10 +11,9 @@ import ProductPurchasePanel from "@/components/product/ProductPurchasePanel";
 import ProductSupplierBox from "@/components/product/ProductSupplierBox";
 import ProductDescription from "@/components/product/ProductDescription";
 import RecommendedProducts from "@/components/product/RecommendedProducts";
-import AddToCartButton from "@/components/cart/AddToCartButton";
 import SaveProductButton from "@/components/SaveProductButton";
 import ReportButton from "@/components/ReportButton";
-import { parseMoq } from "@/lib/moq";
+import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -50,7 +49,7 @@ export default async function ProductDetailPage({ params }: Props) {
   // Honest pricing gate: only show indicative tiers when a real supplier-listed
   // price exists. Scraped products with no public price fall back to a
   // "Contact supplier for pricing" state.
-  const hasPublicPrice = (product.basePrice ?? product.priceMin ?? 0) > 0;
+  const hasPublicPrice = detail.hasPublicPrice;
 
   return (
     <div className="min-h-screen bg-slate-50/50">
@@ -71,6 +70,9 @@ export default async function ProductDetailPage({ params }: Props) {
           {/* Gallery */}
           <div className="lg:col-span-5">
             <ProductGallery images={detail.gallery} />
+            {product.aiGeneratedImage ? (
+              <p className="mt-2 text-xs text-ink-muted">AI-generated image</p>
+            ) : null}
           </div>
 
           {/* Core info */}
@@ -113,9 +115,16 @@ export default async function ProductDetailPage({ params }: Props) {
             {/* Pricing */}
             {hasPublicPrice ? (
               <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-                  Indicative pricing
-                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+                    Indicative pricing
+                  </p>
+                  {detail.priceSourceLabel ? (
+                    <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                      {detail.priceSourceLabel}
+                    </span>
+                  ) : null}
+                </div>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {detail.priceTiers.map((t) => (
                     <div key={t.minQty} className="rounded-xl bg-slate-50 p-3">
@@ -127,16 +136,18 @@ export default async function ProductDetailPage({ params }: Props) {
                   ))}
                 </div>
                 <p className="mt-3 text-xs text-ink-dim">
-                  Estimated from the supplier-listed price (incl. Suplymate service fee). Final
-                  pricing is confirmed by the supplier in a quote. MOQ:{" "}
+                  {detail.priceSourceCaption
+                    ? `${detail.priceSourceCaption}. `
+                    : "Estimated from the sourced unit price (incl. Suplymate service fee). "}
+                  Final pricing is confirmed by the supplier in a quote. MOQ:{" "}
                   <span className="font-semibold text-ink">{detail.moq}</span>
                 </p>
               </div>
             ) : (
               <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-                <p className="text-base font-semibold text-ink">Contact supplier for pricing</p>
+                <p className="text-base font-semibold text-ink">Price on request</p>
                 <p className="mt-1 text-xs text-ink-dim">
-                  No public price is listed. Add this product to your cart and request a quote.
+                  No public price is listed. Request a quote for live mill pricing.
                   {detail.moq ? <> MOQ: <span className="font-semibold text-ink">{detail.moq}</span></> : null}
                 </p>
               </div>
@@ -144,20 +155,13 @@ export default async function ProductDetailPage({ params }: Props) {
 
             {/* Procurement actions */}
             <div className="mt-4 flex flex-wrap gap-2">
-              <AddToCartButton
-                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-cyan px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan/90"
-                item={{
-                  productId: product.id,
-                  productName: product.name,
-                  supplierId: product.supplierId ?? detail.supplier.id,
-                  supplierName: product.supplierName ?? detail.supplier.name,
-                  imageUrl: product.images?.[0] ?? null,
-                  unit: product.priceUnit ?? product.unit ?? null,
-                  moq: parseMoq(product.moq),
-                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
-                  currency: product.currency,
-                  sourceUrl: product.productUrl ?? null,
-                }}
+              <ContactSupplierButton
+                supplierId={product.supplierId ?? detail.supplier.id}
+                supplierName={product.supplierName ?? detail.supplier.name}
+                productName={product.name}
+                productId={product.id}
+                label="Request quote"
+                className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-4 py-2.5 text-sm"
               />
               <SaveProductButton
                 item={{
@@ -271,8 +275,8 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-8 text-center">
             <p className="text-sm font-medium text-ink">No side-by-side offers yet</p>
             <p className="mx-auto mt-1 max-w-lg text-xs text-ink-dim">
-              Suplymate does not fabricate competitor pricing or reliability scores. Add this
-              product to your cart, submit an RFQ, and compare real supplier quotes on your{" "}
+              Suplymate does not fabricate competitor pricing or reliability scores. Request a
+              quote, then compare real supplier quotes on your{" "}
               <Link href="/rfqs" className="text-cyan hover:underline">
                 RFQ dashboard
               </Link>

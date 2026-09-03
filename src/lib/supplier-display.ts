@@ -5,6 +5,9 @@ import {
   isPhase1Supplier,
   logoNeedsDarkChip,
 } from "@/lib/phase1";
+import { listerProductsForSupplier } from "@/lib/lister-catalogue";
+import { formatPrice } from "@/config/commerce";
+import { priceSourceBadgeLabel } from "@/lib/price-source";
 
 export type DisplayProduct = {
   name: string;
@@ -13,10 +16,14 @@ export type DisplayProduct = {
   /** Real MOQ when present; empty string means omit from the card. */
   moq: string;
   gradient: string;
+  /** Curated product photo when available (Lister batch / mill). */
+  imageUrl?: string;
   /** True when price is a sourced value (never a fabricated band). */
   hasRealPrice: boolean;
   /** True when moq is a sourced supplier value. */
   hasRealMoq: boolean;
+  /** Honesty badge such as "Dealer list". */
+  priceSourceLabel?: string | null;
 };
 
 export type DisplaySupplier = {
@@ -169,14 +176,43 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const logoUrl = getSupplierLogoUrl(s);
 
   const realMoq = sourced ? (s.moq ?? "").trim() : "";
-  const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
-    name,
-    price: "RFQ",
-    moq: realMoq,
-    gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
-    hasRealPrice: false,
-    hasRealMoq: Boolean(realMoq),
-  }));
+  const lister = listerProductsForSupplier(s.id).slice(0, 3);
+  const products: DisplayProduct[] =
+    lister.length > 0
+      ? lister.map((p, i) => {
+          const priced =
+            typeof p.basePrice === "number" &&
+            Number.isFinite(p.basePrice) &&
+            p.basePrice > 0;
+          return {
+            name: p.name,
+            price: priced
+              ? `${formatPrice(p.basePrice as number, p.currency)}${
+                  p.priceUnit ? ` / ${p.priceUnit}` : ""
+                }`
+              : "RFQ",
+            moq: realMoq,
+            gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+            imageUrl: p.images[0],
+            hasRealPrice: priced,
+            hasRealMoq: Boolean(realMoq),
+            priceSourceLabel: priceSourceBadgeLabel(
+              p.priceSourceType ??
+                (typeof p.specifications?.["Price source type"] === "string"
+                  ? p.specifications["Price source type"]
+                  : null),
+              priced
+            ),
+          };
+        })
+      : s.products.slice(0, 3).map((name, i) => ({
+          name,
+          price: "RFQ",
+          moq: realMoq,
+          gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+          hasRealPrice: false,
+          hasRealMoq: Boolean(realMoq),
+        }));
 
   return {
     id: s.id,

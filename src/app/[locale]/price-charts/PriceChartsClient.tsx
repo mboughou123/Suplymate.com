@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import type { Material } from "@/data/materials";
 import MarketSummaryCard from "@/components/MarketSummaryCard";
 import PriceAlertForm from "@/components/PriceAlertForm";
-import { explainSignal } from "@/lib/market-intelligence";
 import { Star } from "lucide-react";
 
 const PriceChart = dynamic(() => import("@/components/PriceChart"), {
@@ -55,7 +54,6 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
 
   const selected =
     initialMaterials.find((m) => m.id === selectedId) ?? initialMaterials[0];
-  const signalInfo = selected ? explainSignal(selected) : null;
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
@@ -70,23 +68,7 @@ export default function PriceChartsClient({ initialMaterials }: Props) {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm lg:hidden"
         />
-        {selected && (
-          <>
-            <PriceChart material={selected} />
-            {signalInfo && (
-              <div className="rounded-xl border border-slate-200 bg-white p-4 text-sm">
-                <p className="font-semibold text-ink">{t("signal", { label: signalInfo.label })}</p>
-                <p className="mt-1 text-xs text-ink-muted">{signalInfo.reason}</p>
-                <p className="mt-2 text-[11px] text-ink-dim">
-                  {t("sourceUpdated", {
-                    source: signalInfo.source,
-                    date: signalInfo.lastUpdated,
-                  })}
-                </p>
-              </div>
-            )}
-          </>
-        )}
+        {selected && <PriceChart material={selected} />}
       </div>
 
       <aside className="space-y-6">

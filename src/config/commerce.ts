@@ -26,13 +26,14 @@ export function applyCommission(
   return basePrice * (1 + rate);
 }
 
-/** Format a number as a price string (no decimals for large values). */
+/** Format a number as a price string. Keeps cents when the sourced value has them. */
 export function formatPrice(
   value: number,
   currency: string = DEFAULT_CURRENCY
 ): string {
   const symbol = currency === "USD" ? "$" : `${currency} `;
-  const fractionDigits = value < 100 ? 2 : 0;
+  const hasFraction = Math.abs(value % 1) > 1e-9;
+  const fractionDigits = hasFraction || value < 100 ? 2 : 0;
   return `${symbol}${value.toLocaleString(undefined, {
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits,

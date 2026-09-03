@@ -1,7 +1,7 @@
 import createIntlMiddleware from "next-intl/middleware";
-import { getToken } from "next-auth/jwt";
 import { NextResponse, type NextRequest } from "next/server";
 import { routing, stripLocalePrefix, type Locale } from "@/i18n/routing";
+import { getSessionJwt } from "@/lib/auth-session-token";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -66,10 +66,7 @@ export default async function middleware(req: NextRequest) {
     isProtectedPath(pathname) || path === "/login" || path === "/signup";
 
   if (needsAuthCheck) {
-    const token = await getToken({
-      req,
-      secret: process.env.AUTH_SECRET,
-    });
+    const token = await getSessionJwt(req);
     const isLoggedIn = !!token;
 
     if (isProtectedPath(pathname) && !isLoggedIn) {

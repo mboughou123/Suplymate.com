@@ -30,55 +30,82 @@ export default function ProductPurchasePanel({ detail, currency, productName }: 
   const { priceTiers, unit, supplier, shipping } = detail;
   const [qty, setQty] = useState(priceTiers[0]?.minQty ?? 1);
 
-  const tier = useMemo(() => tierForQty(priceTiers, qty), [priceTiers, qty]);
-  const subtotal = tier.price * qty;
+  const tier = useMemo(
+    () => (priceTiers.length ? tierForQty(priceTiers, qty) : null),
+    [priceTiers, qty]
+  );
+  const subtotal = tier ? tier.price * qty : 0;
 
   return (
     <div className="space-y-4">
       {/* Purchase / price card */}
       <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-        <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-          Order quantity
-        </p>
-        <div className="mt-2 inline-flex items-center rounded-xl border border-slate-200">
-          <button
-            type="button"
-            onClick={() => setQty((q) => Math.max(1, q - 1))}
-            className="flex h-10 w-10 items-center justify-center text-ink-muted hover:text-cyan"
-            aria-label="Decrease quantity"
-          >
-            <Minus className="h-4 w-4" aria-hidden />
-          </button>
-          <input
-            type="number"
-            min={1}
-            value={qty}
-            onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))}
-            className="w-20 border-x border-slate-200 py-2 text-center text-sm font-semibold text-ink focus:outline-none"
-          />
-          <button
-            type="button"
-            onClick={() => setQty((q) => q + 1)}
-            className="flex h-10 w-10 items-center justify-center text-ink-muted hover:text-cyan"
-            aria-label="Increase quantity"
-          >
-            <Plus className="h-4 w-4" aria-hidden />
-          </button>
-          <span className="px-3 text-sm text-ink-muted">{unit}s</span>
-        </div>
+        {detail.hasPublicPrice ? (
+          <>
+            <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+              Order quantity
+            </p>
+            <div className="mt-2 inline-flex items-center rounded-xl border border-slate-200">
+              <button
+                type="button"
+                onClick={() => setQty((q) => Math.max(1, q - 1))}
+                className="flex h-10 w-10 items-center justify-center text-ink-muted hover:text-cyan"
+                aria-label="Decrease quantity"
+              >
+                <Minus className="h-4 w-4" aria-hidden />
+              </button>
+              <input
+                type="number"
+                min={1}
+                value={qty}
+                onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))}
+                className="w-20 border-x border-slate-200 py-2 text-center text-sm font-semibold text-ink focus:outline-none"
+              />
+              <button
+                type="button"
+                onClick={() => setQty((q) => q + 1)}
+                className="flex h-10 w-10 items-center justify-center text-ink-muted hover:text-cyan"
+                aria-label="Increase quantity"
+              >
+                <Plus className="h-4 w-4" aria-hidden />
+              </button>
+              <span className="px-3 text-sm text-ink-muted">{unit}s</span>
+            </div>
+          </>
+        ) : (
+          <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
+            Pricing
+          </p>
+        )}
 
-        <div className="mt-4 flex items-baseline justify-between border-t border-slate-100 pt-4">
-          <span className="text-sm text-ink-muted">Unit price</span>
-          <span className="text-2xl font-extrabold text-cyan">
-            {formatPrice(tier.price, currency)}
-          </span>
-        </div>
-        <div className="mt-1 flex items-baseline justify-between">
-          <span className="text-sm text-ink-muted">Est. subtotal</span>
-          <span className="text-base font-bold text-ink">
-            {formatPrice(subtotal, currency)}
-          </span>
-        </div>
+        {detail.hasPublicPrice ? (
+          <>
+            <div className="mt-4 flex items-baseline justify-between border-t border-slate-100 pt-4">
+              <span className="text-sm text-ink-muted">
+                Unit price
+                {detail.priceSourceLabel ? (
+                  <span className="ml-2 rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                    {detail.priceSourceLabel}
+                  </span>
+                ) : null}
+              </span>
+              <span className="text-2xl font-extrabold text-cyan">
+                {tier ? formatPrice(tier.price, currency) : "RFQ"}
+              </span>
+            </div>
+            <div className="mt-1 flex items-baseline justify-between">
+              <span className="text-sm text-ink-muted">Est. subtotal</span>
+              <span className="text-base font-bold text-ink">
+                {formatPrice(subtotal, currency)}
+              </span>
+            </div>
+          </>
+        ) : (
+          <div className="mt-4 border-t border-slate-100 pt-4">
+            <p className="text-2xl font-extrabold text-cyan">RFQ</p>
+            <p className="mt-0.5 text-sm text-ink-muted">Price on request</p>
+          </div>
+        )}
 
         <div className="mt-4 space-y-2">
           <ContactSupplierButton
