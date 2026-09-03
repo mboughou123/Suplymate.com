@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { postAuthAssignHref } from "@/lib/auth-post-login";
 import AuthFormLayout from "@/components/AuthFormLayout";
 
 export default function SignupPage() {
   const t = useTranslations("authentication");
   const tForms = useTranslations("forms");
   const tErrors = useTranslations("errors");
-  const router = useRouter();
+  const params = useParams();
+  const locale = typeof params?.locale === "string" ? params.locale : "en";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,13 +43,15 @@ export default function SignupPage() {
       password,
       redirect: false,
     });
-    setLoading(false);
     if (signInResult?.error) {
+      setLoading(false);
       setError(tErrors("signInAfterSignup"));
       return;
     }
-    router.push("/dashboard");
-    router.refresh();
+
+    // Hard navigation so the session cookie is visible to the next server
+    // render — soft router.push + refresh races auth() and bounces back to login.
+    window.location.assign(postAuthAssignHref(locale));
   }
 
   return (

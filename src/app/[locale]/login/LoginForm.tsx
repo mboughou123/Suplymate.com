@@ -6,21 +6,11 @@ import { useParams, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Eye, EyeOff, AlertCircle, Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { stripLocalePrefix } from "@/i18n/routing";
+import {
+  normalizeCallbackUrl,
+  postAuthAssignHref,
+} from "@/lib/auth-post-login";
 import AuthFormLayout from "@/components/AuthFormLayout";
-
-function normalizeCallbackUrl(raw: string | null): string {
-  if (!raw || !raw.trim()) return "/dashboard";
-  // Absolute URLs are rejected — stay on-site.
-  if (/^https?:\/\//i.test(raw)) return "/dashboard";
-  const path = stripLocalePrefix(raw.trim());
-  if (!path.startsWith("/")) return "/dashboard";
-  // Never bounce back to auth pages after a successful sign-in.
-  if (path === "/login" || path === "/signup" || path === "/forgot-password") {
-    return "/dashboard";
-  }
-  return path;
-}
 
 export default function LoginForm() {
   const t = useTranslations("authentication");
@@ -70,8 +60,7 @@ export default function LoginForm() {
 
     // Hard navigation so the session cookie is visible to the next server
     // render — soft router.push + refresh races auth() and bounces back to login.
-    const target = callbackUrl.startsWith("/") ? callbackUrl : `/${callbackUrl}`;
-    window.location.assign(`/${locale}${target}`);
+    window.location.assign(postAuthAssignHref(locale, callbackUrl));
   }
 
   return (
