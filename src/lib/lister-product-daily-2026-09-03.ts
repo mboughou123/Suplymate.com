@@ -8,6 +8,11 @@
  * Honesty: all 70 SKUs are mill RFQ (never invent FOB / unit prices).
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
  * No new mills — attach to existing phase-1 + 2026-09-02 mill ids.
+ *
+ * Research QA hold: 12 SKUs stay in the pack (JSON/photos untouched) but are
+ * status `needs_info` so they do not appear on public /products until
+ * replacement images land (6 Jiuli + 6 named image mismatches). Soft-but-OK
+ * (Ball beverage, SKF DGBB, Smurfit CGI, Tetra Prisma/Brik) remain approved.
  */
 
 import rawDaily from "../../data/daily-2026-09-03-products.json";
@@ -68,6 +73,29 @@ export function daily20260903SupplierId(slug: string): string {
   return LISTER_DAILY_SUPPLIER_ID_BY_SLUG[slug] ?? dailySupplierIdForSlug(slug);
 }
 
+/**
+ * Stable Research QA holds: `supplier_slug_guess|product_slug`.
+ * All Jiuli SKUs are held via supplier slug alone (see isDaily20260903QaHeld).
+ */
+export const DAILY_20260903_QA_HELD_KEYS = new Set([
+  "flowserve|flowserve-butterfly-valves",
+  "ksb|ksb-industrial-valves-globe-butterfly-gate",
+  "huhtamaki|huhtamaki-flexible-food-packaging-films-and-pouches",
+  "tenaris|tenaris-coiled-tubing-and-industrial-pipe",
+  "nsk|nsk-spherical-roller-bearings",
+  "ball|ball-aluminum-aerosol-cans",
+]);
+
+export const DAILY_20260903_QA_HELD_SUPPLIER_SLUGS = new Set(["jiuli"]);
+
+export function isDaily20260903QaHeld(
+  supplierSlug: string,
+  productSlug: string,
+): boolean {
+  if (DAILY_20260903_QA_HELD_SUPPLIER_SLUGS.has(supplierSlug)) return true;
+  return DAILY_20260903_QA_HELD_KEYS.has(`${supplierSlug}|${productSlug}`);
+}
+
 function toProductCategory(raw: string | null | undefined): ProductCategory | null {
   if (!raw) return null;
   return CATEGORY_ALIASES[raw.trim()] ?? null;
@@ -111,6 +139,7 @@ function buildProducts(): ScrapedProduct[] {
       parsePriceSourceType(sku.price_source_type) ?? "rfq";
     // Pack contract: all RFQ — never invent FOB / unit prices even if a number sneaks in.
     const basePrice = null;
+    const held = isDaily20260903QaHeld(sku.supplier_slug_guess, slug);
     out.push({
       id: `lister-b7-${sku.supplier_slug_guess}-${slug}`,
       supplierId,
@@ -137,6 +166,12 @@ function buildProducts(): ScrapedProduct[] {
         Category: category,
         ...(sku.price_note ? { "Price note": sku.price_note } : {}),
         "Price source type": priceSourceType,
+        ...(held
+          ? {
+              "QA hold":
+                "Research QA — held from public /products until replacement images land",
+            }
+          : {}),
       },
       priceSourceType,
       aiGeneratedImage: false,
@@ -148,7 +183,8 @@ function buildProducts(): ScrapedProduct[] {
       productUrl: sku.source_url,
       imageSourceUrl: images[0] ?? null,
       verifiedSupplier: true,
-      status: "approved",
+      // needs_info = held from public catalogue; JSON + photos remain on disk.
+      status: held ? "needs_info" : "approved",
       scrapedAt: "2026-09-03T05:21:59.000Z",
     });
   }
@@ -159,6 +195,22 @@ export const listerDaily20260903Products: ScrapedProduct[] = buildProducts();
 
 export function listerDaily20260903Count(): number {
   return listerDaily20260903Products.length;
+}
+
+export function listerDaily20260903PublicProducts(): ScrapedProduct[] {
+  return listerDaily20260903Products.filter((p) => p.status === "approved");
+}
+
+export function listerDaily20260903HeldProducts(): ScrapedProduct[] {
+  return listerDaily20260903Products.filter((p) => p.status === "needs_info");
+}
+
+export function listerDaily20260903PublicCount(): number {
+  return listerDaily20260903PublicProducts().length;
+}
+
+export function listerDaily20260903HeldCount(): number {
+  return listerDaily20260903HeldProducts().length;
 }
 
 export function listerDaily20260903ForSupplier(supplierId: string): ScrapedProduct[] {

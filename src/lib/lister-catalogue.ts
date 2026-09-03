@@ -17,6 +17,9 @@ export const listerCatalogueProducts: ScrapedProduct[] = [
   ...listerDaily20260903Products,
 ];
 
+/** Public-facing Lister SKUs for a mill (excludes Research QA holds / non-approved). */
 export function listerProductsForSupplier(supplierId: string): ScrapedProduct[] {
-  return listerCatalogueProducts.filter((p) => p.supplierId === supplierId);
+  return listerCatalogueProducts.filter(
+    (p) => p.supplierId === supplierId && p.status === "approved",
+  );
 }
