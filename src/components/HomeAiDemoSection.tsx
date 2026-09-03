@@ -121,7 +121,7 @@ export default function HomeAiDemoSection() {
   return (
     <section
       id="ai-demo-walkthrough"
-      className="relative overflow-hidden section-y-tight scroll-mt-28"
+      className="relative isolate overflow-hidden section-y-tight scroll-mt-28"
       aria-labelledby="ai-demo-heading"
     >
       <HomeAgentOrb variant="background" className="opacity-55" />

@@ -31,7 +31,7 @@ export default function AiProcurementDashboard() {
   }, []);
 
   return (
-    <div className="relative flex min-h-[calc(100vh-5.5rem)] flex-col overflow-hidden bg-base">
+    <div className="relative isolate flex min-h-[calc(100vh-5.5rem)] flex-col overflow-hidden bg-base">
       <HomeAgentOrb variant="background" className="absolute inset-0 -z-10 opacity-85" />
 
       <div className="relative z-[1] mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-6 sm:px-6">

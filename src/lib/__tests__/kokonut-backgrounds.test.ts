@@ -70,7 +70,7 @@ describe("AI assistant Mate atmosphere", () => {
     expect(dash).toMatch(/<HomeAgentOrb\s+variant="background"/);
     expect(dash).toMatch("opacity-85");
     expect(dash).toMatch("-z-10");
-    expect(dash).toMatch("relative");
+    expect(dash).toMatch("relative isolate");
     expect(dash).toMatch("bg-white/80");
     expect(dash).toMatch("backdrop-blur");
     expect(dash).not.toMatch("opacity-0");
