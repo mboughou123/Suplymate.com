@@ -66,6 +66,51 @@ describe("mill certificate scans", () => {
     );
   });
 
+  it("wires the KEI + Hebei Huayang cert append (10 real scan JPGs)", () => {
+    const kei = listMillCertScansForSupplier("kei-industries-limited-in");
+    const huayang = listMillCertScansForSupplier(
+      "hebei-huayang-steel-pipe-co-ltd-cn",
+    );
+    const keiPaths = kei.map((c) => c.publicPath);
+    const huayangPaths = huayang.map((c) => c.publicPath);
+
+    for (const rel of [
+      "/images/certs/kei-industries/iso-17025-nabl-bhiwadi.jpg",
+      "/images/certs/kei-industries/iatf-16949-loc.jpg",
+      "/images/certs/kei-industries/ce-lvd-11200-2025.jpg",
+    ]) {
+      expect(keiPaths, rel).toContain(rel);
+      expect(existsSync(join(process.cwd(), "public", rel.replace(/^\//, "")))).toBe(
+        true,
+      );
+    }
+    for (const rel of [
+      "/images/certs/hebei-huayang-steel-pipe/ce.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/iso-9001.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/api-2b.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/iso-45001.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/en-1090.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/iso-14001.jpg",
+      "/images/certs/hebei-huayang-steel-pipe/api-5l.jpg",
+    ]) {
+      expect(huayangPaths, rel).toContain(rel);
+      expect(existsSync(join(process.cwd(), "public", rel.replace(/^\//, "")))).toBe(
+        true,
+      );
+    }
+
+    expect(kei.length).toBeGreaterThanOrEqual(8);
+    expect(huayang.length).toBeGreaterThanOrEqual(8);
+    expect(kei.find((c) => c.publicPath.endsWith("iso-17025-nabl-bhiwadi.jpg"))?.name).toMatch(
+      /ISO 17025 NABL/i,
+    );
+    expect(kei.find((c) => c.publicPath.endsWith("ce-lvd-11200-2025.jpg"))?.name).toMatch(
+      /CE LVD/i,
+    );
+    expect(huayang.find((c) => c.publicPath.endsWith("api-5l.jpg"))?.name).toBe("API 5L");
+    expect(huayang.find((c) => c.publicPath.endsWith("api-2b.jpg"))?.name).toBe("API 2B");
+  });
+
   it("does not invent ISO badges on not_found mill profiles", () => {
     const ferrite = phase1Suppliers.find(
       (s) => s.id === "ferrite-structural-steels-pvt-ltd-panvel",

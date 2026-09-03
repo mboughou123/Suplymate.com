@@ -72,10 +72,14 @@ function titleFromFilename(filename: string): string {
     .map((part) => {
       const upper = part.toUpperCase();
       if (
-        /^(API|ISO|CE|UL|BIS|PED|TUV|CARES|IATF|ASTM|EN|HSE|CQM|ACRS|FM|ROHS|BASEC|Q1)$/.test(
+        /^(API|ISO|CE|UL|BIS|PED|TUV|CARES|IATF|ASTM|EN|HSE|CQM|ACRS|FM|ROHS|BASEC|Q1|NABL|LVD|LOC|EMC)$/.test(
           upper,
         )
       ) {
+        return upper;
+      }
+      // API monogram suffixes: 5L, 2B, 5CT, Q1, …
+      if (/^\d+[A-Z0-9]*$/i.test(part) && /[A-Za-z]/.test(part)) {
         return upper;
       }
       if (/^\d/.test(part)) return part;
