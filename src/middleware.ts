@@ -1,7 +1,7 @@
 import createIntlMiddleware from "next-intl/middleware";
-import { getToken } from "next-auth/jwt";
 import { NextResponse, type NextRequest } from "next/server";
 import { routing, stripLocalePrefix, type Locale } from "@/i18n/routing";
+import { getSessionJwt } from "@/lib/auth-session-token";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -66,15 +66,14 @@ export default async function middleware(req: NextRequest) {
     isProtectedPath(pathname) || path === "/login" || path === "/signup";
 
   if (needsAuthCheck) {
-    const token = await getToken({
-      req,
-      secret: process.env.AUTH_SECRET,
-    });
+    const token = await getSessionJwt(req);
     const isLoggedIn = !!token;
 
     if (isProtectedPath(pathname) && !isLoggedIn) {
       const loginUrl = new URL(`/${locale}/login`, req.nextUrl);
-      loginUrl.searchParams.set("callbackUrl", pathname);
+      // Store locale-stripped path so LoginForm can feed next-intl's router
+      // (which expects `/dashboard`, not `/en/dashboard`).
+      loginUrl.searchParams.set("callbackUrl", path);
       return NextResponse.redirect(loginUrl);
     }
 
