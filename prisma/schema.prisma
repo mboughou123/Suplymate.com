@@ -148,6 +148,19 @@ model Supplier {
   verifiedBy          String?
   statusNote          String?
 
+  // ----- Supplier-managed profile fields (additive; edited from the supplier
+  // dashboard by the account that owns the profile) -----
+  // JSON string[] of industry ids from src/data/industries.ts.
+  industriesServed    String   @default("[]")
+  // JSON string[] of materials / product families offered.
+  materials           String   @default("[]")
+  // Free-text pricing guidance, e.g. "From $610/ton FOB, volume tiers available".
+  pricingNotes        String?
+  // Typical lead time as supplier-stated text, e.g. "2–4 weeks".
+  leadTime            String?
+  yearsInBusiness     Int?
+  employees           String?
+
   createdAt           DateTime @default(now())
   updatedAt           DateTime @default(now()) @updatedAt
 
