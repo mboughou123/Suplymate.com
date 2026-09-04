@@ -16,6 +16,7 @@ export default async function AccountPage() {
       initial={{
         firstName,
         lastName,
+        username: user.username ?? "",
         email: user.email,
         company: user.company ?? "",
         jobTitle: user.jobTitle ?? "",

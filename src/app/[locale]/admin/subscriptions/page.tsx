@@ -45,8 +45,8 @@ export default async function AdminSubscriptionsPage() {
         </p>
       )}
 
-      <div className="mt-6 grid grid-cols-3 gap-3">
-        {["free", "starter", "pro"].map((p) => {
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {["free", "basic", "premium", "enterprise"].map((p) => {
           const g = groups.find((x) => x.plan === p);
           return (
             <div key={p} className="rounded-xl border border-slate-200 p-4">

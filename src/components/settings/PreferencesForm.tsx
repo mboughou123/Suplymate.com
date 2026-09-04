@@ -13,13 +13,17 @@ const TOGGLE_KEYS: {
     | "emailNotifications"
     | "priceAlerts"
     | "supplierMessages"
-    | "productUpdates";
+    | "productUpdates"
+    | "aiRecommendations"
+    | "supplierMatches";
   descKey:
     | "inAppNotificationsDesc"
     | "emailNotificationsDesc"
     | "priceAlertsDesc"
     | "supplierMessagesDesc"
-    | "productUpdatesDesc";
+    | "productUpdatesDesc"
+    | "aiRecommendationsDesc"
+    | "supplierMatchesDesc";
 }[] = [
   {
     key: "inAppNotifications",
@@ -40,6 +44,16 @@ const TOGGLE_KEYS: {
     key: "supplierMessages",
     labelKey: "supplierMessages",
     descKey: "supplierMessagesDesc",
+  },
+  {
+    key: "aiRecommendations",
+    labelKey: "aiRecommendations",
+    descKey: "aiRecommendationsDesc",
+  },
+  {
+    key: "supplierMatches",
+    labelKey: "supplierMatches",
+    descKey: "supplierMatchesDesc",
   },
   {
     key: "productUpdates",
