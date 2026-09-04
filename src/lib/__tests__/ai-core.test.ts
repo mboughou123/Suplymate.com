@@ -28,6 +28,12 @@ describe("requirement parser", () => {
     expect(r.intent).toBe("sourcing_plan");
   });
 
+  it("treats material price comparisons as price questions", () => {
+    expect(parseRequirement("Compare steel, aluminum and stainless prices.").intent).toBe("price");
+    expect(parseRequirement("Compare these three suppliers.").intent).toBe("compare_suppliers");
+    expect(parseRequirement("Which supplier has the best delivery time?").intent).toBe("compare_suppliers");
+  });
+
   it("recognises material comparisons and substitutions", () => {
     expect(parseRequirement("What's the difference between 6061 and 7075 aluminum?").intent).toBe("material_info");
     expect(parseRequirement("Can I replace this material with something cheaper?").intent).toBe("material_substitute");

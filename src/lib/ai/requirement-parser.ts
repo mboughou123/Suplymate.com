@@ -47,12 +47,14 @@ function detectIntent(lower: string): Intent {
   if (/\b(replace|substitute|alternative|alternatives|instead of|cheaper material|swap)\b/.test(lower)) {
     return "material_substitute";
   }
+  const mentionsPrice = /\b(price|prices|pricing|cost|costs|cheap|cheapest|expensive|budget|how much)\b/.test(lower);
+  const mentionsSupplier = /\b(supplier|suppliers|vendor|vendors|manufacturer|manufacturers|mill|mills|factory|factories)\b/.test(lower);
+  // "Compare steel and aluminum prices" is a price question; "compare these suppliers" is not.
+  if (mentionsPrice && !mentionsSupplier) return "price";
   if (/\b(compare|comparison|versus|vs\.?|which (one|supplier) is better|best delivery)\b/.test(lower)) {
     return "compare_suppliers";
   }
-  if (/\b(price|prices|pricing|cost|costs|cheap|cheapest|expensive|budget|how much)\b/.test(lower)) {
-    return "price";
-  }
+  if (mentionsPrice) return "price";
   if (/\b(delivery|lead time|shipping|ship|deliver|how long|fastest)\b/.test(lower)) return "delivery";
   if (/\b(start|starting|launch|build a house|building a house|new business|first time|beginner|how do i|where do i start|what do i need|plan|strategy|roadmap|steps)\b/.test(lower)) {
     return "sourcing_plan";
