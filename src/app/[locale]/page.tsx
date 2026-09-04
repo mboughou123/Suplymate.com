@@ -7,14 +7,16 @@ import HomeAiDemoSection from "@/components/HomeAiDemoSection";
 import HomeProductModules from "@/components/home/HomeProductModules";
 import HomeStatsRow from "@/components/home/HomeStatsRow";
 import HomeCloseSection from "@/components/HomeCloseSection";
+import { getSuppliersFromDb } from "@/lib/data-service";
 
 export default async function HomePage() {
   const t = await getTranslations("home");
+  const suppliers = await getSuppliersFromDb().catch(() => []);
 
   return (
     <div className="bg-base">
       <HomeTopNav />
-      <HomeHero />
+      <HomeHero supplierCount={suppliers.length} />
       <HomeTrustStrip />
       <HomeSuppliersBand />
       <HomeAiDemoSection />
