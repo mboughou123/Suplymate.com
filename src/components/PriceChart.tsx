@@ -98,7 +98,7 @@ export default function PriceChart({ material }: PriceChartProps) {
         <div>
           <h2 className="text-heading-sm text-ink">{material.name}</h2>
           <p className="mt-0.5 text-caption text-ink-dim">
-            {t("twelveMonthRange", { symbol: material.symbol })}
+            {t("rangeLabel", { symbol: material.symbol, count: data.length })}
           </p>
         </div>
         <div className="text-right">
@@ -118,7 +118,7 @@ export default function PriceChart({ material }: PriceChartProps) {
                 <TrendingDown className="h-3 w-3" aria-hidden />
               )}
               {periodChange >= 0 ? "+" : ""}
-              {t("periodChange", { change: periodChange.toFixed(1) })}
+              {t("periodChangeLabel", { change: periodChange.toFixed(1), count: data.length })}
             </span>
           </div>
         </div>
