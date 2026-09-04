@@ -227,7 +227,7 @@ export default function AiWorkspace() {
               </div>
               <p className="eyebrow text-cyan-glow">Meet Mate — your AI sourcing expert</p>
               <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-                Source smarter <span className="gradient-text-light">with AI.</span>
+                Source smarter <span className="gradient-text-light whitespace-nowrap">with AI.</span>
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
                 Find suppliers, compare prices, understand materials, and make better procurement decisions with an AI trained for industrial sourcing.
