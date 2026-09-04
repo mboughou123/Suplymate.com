@@ -15,7 +15,7 @@ export default function ProductSupplierBox({
   ];
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+    <div className="glass-card p-6">
       <div className="flex items-start gap-4">
         <div
           className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl text-xl font-extrabold text-white shadow-card"
@@ -27,12 +27,12 @@ export default function ProductSupplierBox({
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href={supplier.href}
-              className="truncate text-lg font-bold text-ink hover:text-cyan"
+              className="font-display truncate text-heading-sm text-navy hover:text-cyan"
             >
               {supplier.name}
             </Link>
             {supplier.verified && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
+              <span className="inline-flex items-center gap-1 rounded-xl bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
                 <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                 Verified
               </span>
@@ -44,7 +44,7 @@ export default function ProductSupplierBox({
               {supplier.city}, {supplier.country}
             </span>
             <span className="inline-flex items-center gap-1 font-semibold text-ink">
-              <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+              <Star className="h-4 w-4 fill-cyan text-cyan" aria-hidden />
               {supplier.rating.toFixed(1)}
               <span className="font-normal text-ink-dim">
                 ({supplier.reviewCount.toLocaleString()})

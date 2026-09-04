@@ -68,7 +68,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           className="absolute inset-0 h-full w-full object-cover"
         />
         {s.verified && (
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
+          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-xl bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-card">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
             {tCommon("verified")}
           </span>
@@ -90,7 +90,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
       <div className="flex flex-1 flex-col gap-4 px-5 pb-5 pt-9">
         {/* Identity */}
         <div>
-          <h3 className="text-base font-bold leading-tight text-ink">{s.name}</h3>
+          <h3 className="font-display text-heading-sm text-navy">{s.name}</h3>
           <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
             <span className="inline-flex items-center gap-1 text-ink-muted">
               <span aria-hidden>{s.flag}</span>
@@ -100,7 +100,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
               className="inline-flex items-center gap-1 font-semibold text-ink"
               aria-label={tCommon("starsRating", { rating: s.rating.toFixed(1) })}
             >
-              <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
+              <Star className="h-3.5 w-3.5 fill-cyan text-cyan" aria-hidden />
               {s.rating.toFixed(1)}/5
             </span>
             <span className="text-ink-dim">({s.reviewCount} reviews)</span>

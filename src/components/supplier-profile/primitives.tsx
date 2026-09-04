@@ -32,14 +32,8 @@ export function SectionHeading({
         </span>
       )}
       <div>
-        {eyebrow && (
-          <p className="text-xs font-semibold uppercase tracking-wider text-cyan">
-            {eyebrow}
-          </p>
-        )}
-        <h2 className="text-xl font-bold tracking-tight text-ink sm:text-2xl">
-          {title}
-        </h2>
+        {eyebrow && <p className="eyebrow text-cyan">{eyebrow}</p>}
+        <h2 className="font-display text-heading-lg text-ink">{title}</h2>
         {description && (
           <p className="mt-1 max-w-2xl text-sm text-ink-muted">{description}</p>
         )}
@@ -142,7 +136,7 @@ export function StarRating({
           key={i}
           className={`${size} ${
             i <= Math.round(rating)
-              ? "fill-mustard text-mustard"
+              ? "fill-cyan text-cyan"
               : "fill-slate-200 text-slate-200"
           }`}
           aria-hidden

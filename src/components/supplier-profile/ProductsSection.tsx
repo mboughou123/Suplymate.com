@@ -89,10 +89,10 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
           <button
             key={c}
             onClick={() => setCategory(c)}
-            className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
+            className={`cursor-pointer rounded-xl px-3.5 py-1.5 text-xs font-semibold transition duration-200 ease-cinema ${
               category === c
-                ? "bg-cyan text-white shadow-glow"
-                : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40"
+                ? "bg-navy text-white shadow-card"
+                : "border border-slate-200 bg-white text-ink-muted hover:border-slate-300 hover:bg-slate-50 hover:text-ink"
             }`}
           >
             {c === ALL_CATEGORY ? common("all") : c}
@@ -124,7 +124,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 </span>
               )}
               <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-ink">
-                <Star className="h-3 w-3 fill-mustard text-mustard" aria-hidden /> {p.rating}
+                <Star className="h-3 w-3 fill-cyan text-cyan" aria-hidden /> {p.rating}
               </span>
             </div>
             <div className="flex flex-1 flex-col gap-3 p-4">
@@ -162,7 +162,7 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
       </div>
 
       {visible.length === 0 && (
-        <p className="rounded-xl border border-dashed border-slate-200 py-10 text-center text-sm text-ink-dim">
+        <p className="glass-card py-10 text-center text-sm text-ink-dim">
           {t("noProductsMatch")}
         </p>
       )}

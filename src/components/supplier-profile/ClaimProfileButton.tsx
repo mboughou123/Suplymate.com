@@ -53,7 +53,7 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
       <button
         type="button"
         onClick={onOpen}
-        className="inline-flex items-center gap-1.5 rounded-lg border border-cyan/40 bg-cyan/5 px-3 py-1.5 text-xs font-semibold text-cyan transition hover:bg-cyan/10"
+        className="btn-ghost !px-3 !py-1.5 text-xs"
       >
         <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
         {t("claimThisProfile")}
@@ -62,7 +62,7 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
       {open && (
         <div className="fixed inset-0 z-[70] flex items-center justify-center p-4" role="dialog" aria-modal="true">
           <button type="button" aria-label={common("close")} className="absolute inset-0 bg-ink/40" onClick={() => setOpen(false)} />
-          <div className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="glass-card relative w-full max-w-md p-6 shadow-cardHover">
             <button type="button" onClick={() => setOpen(false)} className="absolute right-4 top-4 text-ink-dim hover:text-ink" aria-label={common("close")}>
               <X className="h-5 w-5" />
             </button>
@@ -73,7 +73,7 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
                 <p className="mt-1 text-sm text-ink-muted">
                   {t("claimSubmittedText", { name: supplierName })}
                 </p>
-                <button type="button" onClick={() => setOpen(false)} className="mt-4 rounded-lg bg-cyan px-4 py-2 text-sm font-semibold text-white hover:bg-cyan/90">
+                <button type="button" onClick={() => setOpen(false)} className="btn-primary mt-4">
                   {t("done")}
                 </button>
               </div>
@@ -84,14 +84,14 @@ export default function ClaimProfileButton({ supplierId, supplierName }: Props) 
                   {t("claimDescription")}
                 </p>
                 <div className="mt-4 space-y-3">
-                  <input value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })} placeholder={t("rolePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.workEmail} onChange={(e) => setForm({ ...form, workEmail: e.target.value })} placeholder={t("workEmailPlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={t("phonePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <input value={form.evidenceUrl} onChange={(e) => setForm({ ...form, evidenceUrl: e.target.value })} placeholder={t("evidencePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
-                  <textarea value={form.note} onChange={(e) => setForm({ ...form, note: e.target.value })} rows={2} placeholder={t("notePlaceholder")} className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm" />
+                  <input value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })} placeholder={t("rolePlaceholder")} className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20" />
+                  <input value={form.workEmail} onChange={(e) => setForm({ ...form, workEmail: e.target.value })} placeholder={t("workEmailPlaceholder")} className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20" />
+                  <input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={t("phonePlaceholder")} className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20" />
+                  <input value={form.evidenceUrl} onChange={(e) => setForm({ ...form, evidenceUrl: e.target.value })} placeholder={t("evidencePlaceholder")} className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20" />
+                  <textarea value={form.note} onChange={(e) => setForm({ ...form, note: e.target.value })} rows={2} placeholder={t("notePlaceholder")} className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20" />
                 </div>
                 {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
-                <button type="button" onClick={submit} disabled={submitting} className="mt-4 w-full rounded-lg bg-cyan px-4 py-2.5 text-sm font-semibold text-white hover:bg-cyan/90 disabled:opacity-60">
+                <button type="button" onClick={submit} disabled={submitting} className="btn-primary mt-4 w-full disabled:opacity-60">
                   {submitting ? t("submitting") : t("submitClaim")}
                 </button>
               </>

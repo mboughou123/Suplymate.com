@@ -141,26 +141,23 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
 
   return (
     <>
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      <div className="mb-5 flex flex-wrap items-center gap-3">
         <button
           type="button"
           onClick={() => {
             setCompareMode((m) => !m);
             if (compareMode) setCompareIds([]);
           }}
-          className={`rounded-lg border px-3 py-1.5 text-sm font-medium ${
+          className={
             compareMode
-              ? "border-cyan bg-cyan/10 text-cyan"
-              : "border-slate-200 text-ink-muted hover:border-cyan/40"
-          }`}
+              ? "btn-accent !px-4 !py-2 text-sm"
+              : "btn-secondary !px-4 !py-2 text-sm"
+          }
         >
           {compareMode ? t("exitCompareMode") : t("compareSuppliers")}
         </button>
         {compareMode && compareIds.length >= 2 && (
-          <Link
-            href={compareHref}
-            className="rounded-lg bg-cyan px-4 py-1.5 text-sm font-semibold text-white hover:bg-cyan/90"
-          >
+          <Link href={compareHref} className="btn-primary !px-4 !py-2 text-sm">
             {t("compareSelected", { count: compareIds.length })}
           </Link>
         )}
@@ -185,10 +182,10 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
           ))}
         </div>
       ) : filtered.length === 0 ? (
-        <div className="mt-16 flex flex-col items-center text-center text-ink-dim">
+        <div className="glass-card mt-10 flex flex-col items-center px-6 py-16 text-center">
           <SearchX className="mb-3 h-10 w-10 text-slate-300" aria-hidden />
-          <p className="font-semibold text-ink">{t("noMatchTitle")}</p>
-          <p className="mt-1 text-sm">{t("noMatchSubtitle")}</p>
+          <p className="font-display text-heading-sm text-ink">{t("noMatchTitle")}</p>
+          <p className="mt-1 text-sm text-ink-muted">{t("noMatchSubtitle")}</p>
         </div>
       ) : (
         <>
@@ -196,7 +193,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
             {pageItems.map((supplier) => (
               <div key={supplier.id} id={supplier.id} className="relative">
                 {compareMode && (
-                  <label className="absolute right-3 top-3 z-10 flex items-center gap-1 rounded-lg bg-white/95 px-2 py-1 text-xs shadow-sm">
+                  <label className="absolute right-3 top-3 z-10 flex cursor-pointer items-center gap-1.5 rounded-xl border border-slate-200 bg-white/95 px-2.5 py-1.5 text-xs font-medium shadow-card">
                     <input
                       type="checkbox"
                       checked={compareIds.includes(supplier.id)}
@@ -217,7 +214,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 type="button"
                 disabled={safePage === 1}
                 onClick={() => goToPage(safePage - 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
+                className="btn-ghost !h-9 !px-3 text-sm disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden />
                 {tCommon("prev")}
@@ -244,10 +241,10 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                     key={n}
                     type="button"
                     onClick={() => goToPage(n)}
-                    className={`h-9 w-9 rounded-lg text-sm font-semibold transition ${
+                    className={`h-9 w-9 cursor-pointer rounded-xl text-sm font-semibold transition ${
                       n === safePage
-                        ? "bg-navy text-white"
-                        : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40 hover:text-ink"
+                        ? "bg-navy text-white shadow-card"
+                        : "border border-slate-200 bg-white text-ink-muted hover:border-slate-300 hover:bg-slate-50 hover:text-ink"
                     }`}
                   >
                     {n}
@@ -259,7 +256,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                 type="button"
                 disabled={safePage === totalPages}
                 onClick={() => goToPage(safePage + 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
+                className="btn-ghost !h-9 !px-3 text-sm disabled:cursor-not-allowed disabled:opacity-40"
               >
                 {tCommon("next")}
                 <ChevronRight className="h-4 w-4" aria-hidden />

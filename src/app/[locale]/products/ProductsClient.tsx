@@ -50,15 +50,15 @@ function buildQuery(f: Filters, page: number, pageSize: number): string {
 
 function CardSkeleton() {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
-      <div className="h-44 w-full animate-pulse bg-slate-200" />
+    <div className="glass-card flex h-full flex-col overflow-hidden p-0">
+      <div className="shimmer h-44 w-full bg-slate-100" />
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <div className="h-4 w-3/4 animate-pulse rounded bg-slate-200" />
-        <div className="h-3 w-1/2 animate-pulse rounded bg-slate-100" />
-        <div className="mt-2 h-12 w-full animate-pulse rounded-xl bg-slate-100" />
+        <div className="shimmer h-4 w-3/4 rounded bg-slate-100" />
+        <div className="shimmer h-3 w-1/2 rounded bg-slate-100" />
+        <div className="shimmer mt-2 h-12 w-full rounded-xl bg-slate-100" />
         <div className="mt-auto flex gap-2">
-          <div className="h-10 flex-1 animate-pulse rounded-xl bg-slate-100" />
-          <div className="h-10 flex-1 animate-pulse rounded-xl bg-slate-100" />
+          <div className="shimmer h-10 flex-1 rounded-xl bg-slate-100" />
+          <div className="shimmer h-10 flex-1 rounded-xl bg-slate-100" />
         </div>
       </div>
     </div>
@@ -152,7 +152,6 @@ export default function ProductsClient({
 
   return (
     <>
-      {/* Search */}
       <div className="mb-8 max-w-2xl">
         <div className="relative">
           <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim" />
@@ -161,15 +160,14 @@ export default function ProductsClient({
             placeholder={t("searchPlaceholder")}
             value={filters.search}
             onChange={(e) => update("search", e.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm shadow-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            className="w-full rounded-xl border border-slate-200 bg-white py-3.5 pl-11 pr-4 text-sm shadow-card placeholder:text-ink-dim focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
           />
         </div>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
-        {/* Filters */}
-        <aside className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-card lg:self-start">
-          <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-ink-dim">
+        <aside className="glass-card p-6 lg:self-start">
+          <h2 className="eyebrow flex items-center gap-2 text-cyan">
             <SlidersHorizontal className="h-4 w-4" /> {t("filters")}
           </h2>
 
@@ -179,7 +177,7 @@ export default function ProductsClient({
               <select
                 value={filters.category}
                 onChange={(e) => update("category", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
               >
                 <option value="">{t("allCategories")}</option>
                 {facets.categories.map((c) => (
@@ -195,7 +193,7 @@ export default function ProductsClient({
               <select
                 value={filters.supplierId}
                 onChange={(e) => update("supplierId", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
               >
                 <option value="">{t("allSuppliers")}</option>
                 {facets.suppliers.map((s) => (
@@ -211,7 +209,7 @@ export default function ProductsClient({
               <select
                 value={filters.country}
                 onChange={(e) => update("country", e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-mustard focus:outline-none"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20"
               >
                 <option value="">{t("anyCountry")}</option>
                 {facets.countries.map((c) => (
@@ -222,7 +220,7 @@ export default function ProductsClient({
               </select>
             </div>
 
-            <label className="flex items-center gap-2 text-sm text-ink">
+            <label className="flex cursor-pointer items-center gap-2 text-sm text-ink">
               <input
                 type="checkbox"
                 checked={filters.verifiedOnly}
@@ -232,7 +230,7 @@ export default function ProductsClient({
               {t("verifiedSuppliersOnly")}
             </label>
 
-            <label className="flex items-center gap-2 text-sm text-ink">
+            <label className="flex cursor-pointer items-center gap-2 text-sm text-ink">
               <input
                 type="checkbox"
                 checked={filters.hasPrice}
@@ -243,11 +241,7 @@ export default function ProductsClient({
             </label>
 
             {(activeFilterCount > 0 || filters.search) && (
-              <button
-                type="button"
-                onClick={() => setFilters(EMPTY_FILTERS)}
-                className="w-full rounded-lg border border-slate-200 py-2 text-sm font-medium text-ink-muted hover:bg-white"
-              >
+              <button type="button" onClick={() => setFilters(EMPTY_FILTERS)} className="btn-ghost w-full !py-2">
                 {t("resetFilters")}
               </button>
             )}
@@ -262,11 +256,12 @@ export default function ProductsClient({
           </p>
 
           {error && (
-            <div className="mb-6 flex items-center justify-between rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">
+            <div className="mb-6 flex items-center justify-between rounded-xl border border-down/20 bg-down-bg px-4 py-3 text-sm text-down">
               <span>{error}</span>
               <button
+                type="button"
                 onClick={() => fetchPage(activeFiltersRef.current, 1, true)}
-                className="font-semibold underline"
+                className="cursor-pointer font-semibold text-down underline-offset-2 hover:underline"
               >
                 {t("retry")}
               </button>
@@ -280,9 +275,9 @@ export default function ProductsClient({
               ))}
             </div>
           ) : items.length === 0 ? (
-            <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white py-20 text-center">
+            <div className="glass-card flex flex-col items-center justify-center px-6 py-20 text-center">
               <PackageX className="h-10 w-10 text-slate-300" aria-hidden />
-              <p className="mt-3 font-semibold text-ink">{t("noProductsTitle")}</p>
+              <p className="mt-3 font-display text-heading-sm text-ink">{t("noProductsTitle")}</p>
               <p className="mt-1 text-sm text-ink-muted">{t("noProductsSubtitle")}</p>
             </div>
           ) : (

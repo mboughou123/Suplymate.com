@@ -40,30 +40,24 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Dark glass banner */}
-      <div className="relative h-56 sm:h-64" style={{ backgroundImage: base.bannerGradient }}>
+      <div className="relative h-44 sm:h-52 overflow-hidden bg-navy">
         {base.imageUrl && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={base.imageUrl}
             alt={`${base.name} facility`}
-            className="absolute inset-0 h-full w-full object-cover opacity-60"
+            className="absolute inset-0 h-full w-full object-cover opacity-70"
           />
         )}
-        <div className="absolute inset-0 ai-grid-bg opacity-30" />
-        <div
-          className="absolute -right-16 -top-16 h-72 w-72 rounded-full opacity-40 blur-3xl"
-          style={{ background: "radial-gradient(circle, rgba(96,165,250,0.5), transparent 70%)" }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy/40 to-transparent" />
         <div className="container-page relative flex h-full items-end pb-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          <span className="inline-flex items-center gap-1.5 rounded-xl bg-white/90 px-3 py-1 text-xs font-semibold text-navy shadow-card">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
             {t("verifiedSupplierProfile")}
           </span>
         </div>
       </div>
 
-      {/* Identity card overlapping the banner */}
       <div className="container-page relative -mt-16 pb-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -89,11 +83,11 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
 
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+                    <h1 className="font-display text-heading-lg text-navy sm:text-display">
                       {base.name}
                     </h1>
                     {base.verified && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
+                      <span className="inline-flex items-center gap-1 rounded-xl bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">
                         <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
                         {common("verified")}
                       </span>
@@ -106,7 +100,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                       {base.city}, {base.country}
                     </span>
                     <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                      <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                      <Star className="h-4 w-4 fill-cyan text-cyan" aria-hidden />
                       {base.rating.toFixed(1)}
                       <span className="font-normal text-ink-dim">
                         {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
@@ -133,7 +127,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
               </div>
 
               {/* AI company summary */}
-              <div className="rounded-xl border border-ai-glow/20 bg-ai-mist/60 p-4">
+              <div className="rounded-xl border border-cyan/15 bg-cyan-soft p-4">
                 <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-cyan">
                   <Sparkles className="h-3.5 w-3.5" aria-hidden />
                   {t("aiCompanySummary")}
@@ -146,7 +140,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                 {indicators.map((ind) => (
                   <span
                     key={ind.label}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-muted"
                   >
                     <ind.icon
                       className={`h-3.5 w-3.5 ${ind.ok ? "text-emerald-600" : "text-ink-dim"}`}
