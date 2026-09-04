@@ -9,6 +9,11 @@ import {
 } from "@/lib/auth-session-token";
 
 const getTokenMock = vi.mocked(getToken);
+const fakeJwt = {
+  id: "user_1",
+  name: "Demo",
+  email: "demo@suplymate.com",
+} as Awaited<ReturnType<typeof getToken>>;
 
 vi.mock("next-auth/jwt", () => ({
   getToken: vi.fn(),
@@ -151,7 +156,7 @@ describe("getSessionJwt", () => {
     delete process.env.NEXTAUTH_SECRET;
     delete process.env.AUTH_URL;
     delete process.env.NEXTAUTH_URL;
-    getTokenMock.mockResolvedValueOnce({ email: "demo@suplymate.com" });
+    getTokenMock.mockResolvedValueOnce(fakeJwt);
 
     const req = new NextRequest("https://preview.example.com/en/dashboard", {
       headers: {
@@ -160,9 +165,7 @@ describe("getSessionJwt", () => {
       },
     });
 
-    await expect(getSessionJwt(req)).resolves.toEqual({
-      email: "demo@suplymate.com",
-    });
+    await expect(getSessionJwt(req)).resolves.toEqual(fakeJwt);
     expect(getTokenMock).toHaveBeenCalledWith(
       expect.objectContaining({
         secret: "preview-secret",
@@ -176,17 +179,13 @@ describe("getSessionJwt", () => {
     process.env.AUTH_SECRET = "preview-secret";
     delete process.env.AUTH_URL;
     delete process.env.NEXTAUTH_URL;
-    getTokenMock
-      .mockResolvedValueOnce(null)
-      .mockResolvedValueOnce({ email: "demo@suplymate.com" });
+    getTokenMock.mockResolvedValueOnce(null).mockResolvedValueOnce(fakeJwt);
 
     const req = new NextRequest("https://preview.example.com/en/dashboard", {
       headers: { "x-forwarded-proto": "https" },
     });
 
-    await expect(getSessionJwt(req)).resolves.toEqual({
-      email: "demo@suplymate.com",
-    });
+    await expect(getSessionJwt(req)).resolves.toEqual(fakeJwt);
     expect(getTokenMock).toHaveBeenNthCalledWith(
       1,
       expect.objectContaining({ secureCookie: true }),

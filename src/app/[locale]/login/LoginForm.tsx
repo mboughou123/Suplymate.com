@@ -10,7 +10,11 @@ import {
   normalizeCallbackUrl,
   postAuthAssignHref,
 } from "@/lib/auth-post-login";
+import { homeForRole, normalizeRole, type AccountRole } from "@/lib/roles";
 import AuthFormLayout from "@/components/AuthFormLayout";
+import RoleSelector from "@/components/auth/RoleSelector";
+
+type SelectableRole = Exclude<AccountRole, "admin">;
 
 export default function LoginForm() {
   const t = useTranslations("authentication");
@@ -19,7 +23,13 @@ export default function LoginForm() {
   const searchParams = useSearchParams();
   const params = useParams();
   const locale = typeof params?.locale === "string" ? params.locale : "en";
-  const callbackUrl = normalizeCallbackUrl(searchParams.get("callbackUrl"));
+  const rawCallback = searchParams.get("callbackUrl");
+  const callbackUrl = normalizeCallbackUrl(rawCallback);
+  const hasExplicitCallback = Boolean(rawCallback) && callbackUrl !== "/dashboard";
+  const initialRole = normalizeRole(searchParams.get("role"));
+  const [role, setRole] = useState<SelectableRole>(
+    initialRole === "supplier" ? "supplier" : "buyer",
+  );
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -58,19 +68,37 @@ export default function LoginForm() {
       return;
     }
 
+    // The account's stored role decides the workspace; the selector is a hint
+    // (and the fallback when the identity lookup is unavailable).
+    let accountRole: AccountRole = role;
+    try {
+      const me = await fetch("/api/account/me", { cache: "no-store" });
+      if (me.ok) {
+        const data = (await me.json()) as { role?: string };
+        accountRole = normalizeRole(data.role);
+      }
+    } catch {
+      /* keep selector hint */
+    }
+
+    const destination = hasExplicitCallback ? callbackUrl : homeForRole(accountRole);
+
     // Hard navigation so the session cookie is visible to the next server
     // render — soft router.push + refresh races auth() and bounces back to login.
-    window.location.assign(postAuthAssignHref(locale, callbackUrl));
+    window.location.assign(postAuthAssignHref(locale, destination));
   }
 
   return (
     <AuthFormLayout
       title={t("signIn")}
-      subtitle={t("signInSubtitle")}
+      subtitle={role === "supplier" ? t("signInAsSupplierSubtitle") : t("signInAsBuyerSubtitle")}
       footer={
         <>
           <span className="text-ink-muted">{t("noAccount")} </span>
-          <Link href="/signup" className="font-semibold text-ink hover:text-gold">
+          <Link
+            href={role === "supplier" ? "/signup?role=supplier" : "/signup"}
+            className="font-semibold text-cyan hover:text-navy"
+          >
             {t("signUp")}
           </Link>
         </>
@@ -82,7 +110,9 @@ export default function LoginForm() {
           {error}
         </p>
       )}
-      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+        <RoleSelector value={role} onChange={setRole} disabled={loading} />
+
         <div>
           <label htmlFor="email" className="text-xs font-medium text-ink-muted">
             {tForms("email")}
@@ -95,7 +125,7 @@ export default function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={t("emailPlaceholder")}
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/20"
+            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-cyan/60 focus:outline-none focus:ring-2 focus:ring-cyan/20"
           />
         </div>
         <div>
@@ -110,12 +140,12 @@ export default function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-lg border border-slate-200 px-3 py-2.5 pr-10 text-sm focus:border-gold/60 focus:outline-none focus:ring-2 focus:ring-gold/20"
+              className="w-full rounded-lg border border-slate-200 px-3 py-2.5 pr-10 text-sm focus:border-cyan/60 focus:outline-none focus:ring-2 focus:ring-cyan/20"
             />
             <button
               type="button"
               onClick={() => setShowPassword((s) => !s)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-ink-dim transition hover:text-ink"
+              className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer rounded p-1 text-ink-dim transition hover:text-ink"
               aria-label={showPassword ? t("hidePassword") : t("showPassword")}
             >
               {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -123,7 +153,7 @@ export default function LoginForm() {
           </div>
           <Link
             href="/forgot-password"
-            className="mt-2 inline-block text-xs font-medium text-ink-muted hover:text-gold hover:underline"
+            className="mt-2 inline-block text-xs font-medium text-ink-muted hover:text-cyan hover:underline"
           >
             {t("forgotPassword")}
           </Link>
@@ -131,7 +161,7 @@ export default function LoginForm() {
         <button
           type="submit"
           disabled={loading}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold py-3 text-sm font-semibold text-ink transition hover:bg-gold-light disabled:opacity-60"
+          className="btn-primary flex w-full items-center justify-center gap-2 py-3 disabled:opacity-60"
         >
           {loading && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
           {loading ? t("signingIn") : t("signIn")}
