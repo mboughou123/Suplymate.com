@@ -135,7 +135,7 @@ export default function DashboardClient({
                 value={String(stats.alertCount)}
                 sub={stats.alertCount > 0 ? t("monitoringMarkets") : t("noAlertsSet")}
                 icon={Bell}
-                href="/price-charts"
+                href="/materials"
               />
               <StatCard
                 label={t("aiRecommendations")}
@@ -154,7 +154,7 @@ export default function DashboardClient({
                     : t("notEnoughData")
                 }
                 icon={TrendingUp}
-                href="/price-charts"
+                href="/materials"
                 empty={materials.length === 0}
               />
               <StatCard

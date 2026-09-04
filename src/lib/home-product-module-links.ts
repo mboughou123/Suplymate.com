@@ -8,7 +8,7 @@ export const HOME_PRODUCT_MODULE_LINKS = {
   /** Compare — sourcing catalogue to browse and compare offers */
   compare: "/products",
   /** Watch — material price charts & rate signals */
-  watch: "/price-charts",
+  watch: "/materials",
 } as const;
 
 export type HomeProductModuleKey = keyof typeof HOME_PRODUCT_MODULE_LINKS;
@@ -20,5 +20,5 @@ export const HOME_PRODUCT_MODULE_PAGE_FILES: Record<
 > = {
   scout: "src/app/[locale]/suppliers/page.tsx",
   compare: "src/app/[locale]/products/page.tsx",
-  watch: "src/app/[locale]/price-charts/page.tsx",
+  watch: "src/app/[locale]/materials/page.tsx",
 };

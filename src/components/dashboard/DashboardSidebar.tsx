@@ -45,10 +45,10 @@ export default function DashboardSidebar({
     { href: "/dashboard", label: nav("dashboard"), icon: LayoutDashboard },
     { href: "/suppliers", label: nav("suppliers"), icon: Factory },
     { href: "/products", label: nav("products"), icon: Package },
+    { href: "/materials", label: nav("materials"), icon: TrendingUp },
     { href: "/ai-assistant", label: nav("aiAssistant"), icon: Sparkles },
     { href: "/messages", label: nav("messages"), icon: MessageSquare },
-    { href: "/price-charts", label: nav("priceCharts"), icon: TrendingUp },
-    { href: "/suppliers", label: nav("suppliers"), icon: Heart },
+    { href: "/saved", label: nav("saved"), icon: Heart },
     { href: "/settings", label: settings("title"), icon: Settings },
   ];
 
