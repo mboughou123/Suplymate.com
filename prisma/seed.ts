@@ -76,6 +76,8 @@ async function main() {
         yearlyChange: m.yearlyChange,
         signal: m.signal,
         history: JSON.stringify(m.history),
+        category: m.category ?? null,
+        source: m.source ?? "seed",
       },
     });
   }

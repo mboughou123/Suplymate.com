@@ -58,6 +58,9 @@ type DbMaterial = {
   yearlyChange: number;
   signal: string;
   history: string;
+  category?: string | null;
+  source?: string | null;
+  lastUpdatedAt?: Date | null;
 };
 
 export function mapSupplier(row: DbSupplier): Supplier {
@@ -142,5 +145,8 @@ export function mapMaterial(row: DbMaterial): Material {
     yearlyChange: row.yearlyChange,
     signal: row.signal as Material["signal"],
     history: JSON.parse(row.history) as number[],
+    category: row.category ?? undefined,
+    source: row.source ?? "seed",
+    lastUpdatedAt: row.lastUpdatedAt?.toISOString() ?? null,
   };
 }

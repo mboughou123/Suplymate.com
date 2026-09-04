@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { mapSupplier, mapProduct, mapMaterial } from "@/lib/db-mappers";
 import { products as staticProducts, type Product } from "@/data/products";
 import { materials as staticMaterials } from "@/data/materials";
+import { isCatalogMaterial } from "@/data/material-catalog";
 import {
   listApprovedScrapedProducts,
   scrapedToProduct,
@@ -148,11 +149,12 @@ export async function getProductByIdAsync(id: string): Promise<Product | null> {
   return null;
 }
 
+// Only catalog materials are ever surfaced (see src/data/material-catalog.ts).
 export async function getMaterialsFromDb() {
   try {
     const rows = await prisma.material.findMany({ orderBy: { name: "asc" } });
     if (rows.length === 0) return staticMaterials;
-    return rows.map(mapMaterial);
+    return rows.filter((r) => isCatalogMaterial(r.id)).map(mapMaterial);
   } catch {
     return staticMaterials;
   }

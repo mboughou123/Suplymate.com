@@ -19,8 +19,11 @@ export function explainSignal(material: Material): SignalExplanation {
     label: material.signal,
     tone: material.signal === "Buy now" ? "info" : material.signal === "Wait" ? "warn" : "neutral",
     reason: reasons[material.signal],
-    source: "Suplymate market data (seed/demo series until live feeds are connected)",
-    lastUpdated: new Date().toISOString().slice(0, 10),
+    source:
+      !material.source || material.source === "seed"
+        ? "Reference series (seed data — not live). Connect a pricing provider for live quotes."
+        : `Pricing provider: ${material.source}`,
+    lastUpdated: (material.lastUpdatedAt ?? new Date().toISOString()).slice(0, 10),
   };
 }
 
