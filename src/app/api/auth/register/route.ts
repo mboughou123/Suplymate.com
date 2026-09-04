@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { hashPassword, validatePasswordStrength } from "@/lib/password";
+import { normalizeRole } from "@/lib/roles";
 
 export async function POST(request: Request) {
   try {
@@ -9,6 +10,10 @@ export async function POST(request: Request) {
     const email = (body.email as string)?.trim().toLowerCase();
     const password = body.password as string;
     const company = (body.company as string)?.trim() || null;
+    const role = normalizeRole(body.role);
+    if (role === "admin") {
+      return NextResponse.json({ error: "Invalid account type." }, { status: 400 });
+    }
 
     if (!name || !email || !password) {
       return NextResponse.json(
@@ -33,6 +38,8 @@ export async function POST(request: Request) {
       );
     }
 
+    // The account type is chosen at signup, so the user is considered onboarded
+    // and lands directly on their workspace instead of bouncing through /onboarding.
     const user = await prisma.user.create({
       data: {
         name,
@@ -41,12 +48,14 @@ export async function POST(request: Request) {
         email,
         passwordHash: await hashPassword(password),
         company,
+        role,
+        onboardedAt: new Date(),
       },
     });
 
     return NextResponse.json({
       ok: true,
-      user: { id: user.id, email: user.email, name: user.name },
+      user: { id: user.id, email: user.email, name: user.name, role: user.role },
     });
   } catch {
     return NextResponse.json(

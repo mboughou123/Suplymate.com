@@ -27,7 +27,12 @@ export default function OnboardingPage() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to save");
-      router.push(role === "supplier" ? "/supplier-dashboard" : "/dashboard");
+      // Hard navigation: the role may have changed and the workspace is chosen
+      // server-side from the stored account role.
+      const locale = window.location.pathname.split("/")[1] || "en";
+      window.location.assign(
+        `/${locale}${role === "supplier" ? "/supplier-dashboard" : "/dashboard"}`,
+      );
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to save");
       setBusy(false);

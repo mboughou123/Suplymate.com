@@ -11,7 +11,7 @@ describe("home product module Read more links", () => {
     expect(HOME_PRODUCT_MODULE_LINKS).toEqual({
       scout: "/suppliers",
       compare: "/products",
-      watch: "/price-charts",
+      watch: "/materials",
     });
   });
 

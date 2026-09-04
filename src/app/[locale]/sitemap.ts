@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getFallbackSupplierIds } from "@/lib/data-service";
 import { locales } from "@/i18n/routing";
+import { BLOG_POSTS } from "@/data/blog";
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://suplymate.com"
@@ -10,9 +11,10 @@ const STATIC_PATHS = [
   "",
   "/suppliers",
   "/products",
-  "/price-charts",
+  "/materials",
   "/ai-assistant",
   "/pricing",
+  "/blog",
   "/about",
   "/contact",
   "/faq",
@@ -54,5 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticRoutes, ...supplierRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = locales.flatMap((locale) =>
+    BLOG_POSTS.map((post) => ({
+      url: localeUrl(locale, `/blog/${post.slug}`),
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }))
+  );
+
+  return [...staticRoutes, ...supplierRoutes, ...blogRoutes];
 }

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getStripe, siteUrl } from "@/lib/stripe";
-import { isStripeConfigured, stripePriceIdFor, type PlanId } from "@/lib/billing";
+import { getPlanById, isStripeConfigured, stripePriceIdFor, type PlanId } from "@/lib/billing";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +30,7 @@ export async function POST(request: Request) {
   if (!priceId) {
     return NextResponse.json({ error: "Unknown or unconfigured plan." }, { status: 400 });
   }
+  const trialDays = getPlanById(plan).trialDays;
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
@@ -54,7 +55,10 @@ export async function POST(request: Request) {
     customer: customerId,
     line_items: [{ price: priceId, quantity: 1 }],
     allow_promotion_codes: true,
-    subscription_data: { trial_period_days: 14, metadata: { userId: session.user.id } },
+    subscription_data: {
+      ...(trialDays > 0 ? { trial_period_days: trialDays } : {}),
+      metadata: { userId: session.user.id },
+    },
     success_url: `${siteUrl()}/settings/subscription?checkout=success`,
     cancel_url: `${siteUrl()}/settings/subscription?checkout=cancelled`,
     metadata: { userId: session.user.id, plan },

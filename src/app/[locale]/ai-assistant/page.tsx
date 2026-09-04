@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import AiProcurementDashboard from "@/components/ai-dashboard/AiProcurementDashboard";
+import AiWorkspace from "@/components/ai-workspace/AiWorkspace";
 
 export async function generateMetadata({
   params,
@@ -18,8 +18,8 @@ export async function generateMetadata({
 
 export default function AiAssistantPage() {
   return (
-    <Suspense fallback={null}>
-      <AiProcurementDashboard />
+    <Suspense fallback={<div className="min-h-screen bg-[#050B12]" />}>
+      <AiWorkspace />
     </Suspense>
   );
 }

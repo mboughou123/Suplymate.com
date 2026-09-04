@@ -9,6 +9,8 @@ export type UserPreferences = {
   priceAlerts: boolean;
   supplierMessages: boolean;
   productUpdates: boolean;
+  aiRecommendations: boolean;
+  supplierMatches: boolean;
   language: string;
 };
 
@@ -23,6 +25,8 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   priceAlerts: true,
   supplierMessages: true,
   productUpdates: false,
+  aiRecommendations: true,
+  supplierMatches: true,
   language: "en",
 };
 
@@ -51,6 +55,14 @@ export function parsePreferences(raw: string | null | undefined): UserPreference
         typeof parsed.productUpdates === "boolean"
           ? parsed.productUpdates
           : DEFAULT_PREFERENCES.productUpdates,
+      aiRecommendations:
+        typeof parsed.aiRecommendations === "boolean"
+          ? parsed.aiRecommendations
+          : DEFAULT_PREFERENCES.aiRecommendations,
+      supplierMatches:
+        typeof parsed.supplierMatches === "boolean"
+          ? parsed.supplierMatches
+          : DEFAULT_PREFERENCES.supplierMatches,
       language:
         typeof parsed.language === "string" && parsed.language.trim()
           ? parsed.language

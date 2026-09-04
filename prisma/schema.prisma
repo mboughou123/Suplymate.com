@@ -33,6 +33,15 @@ model User {
   role       String   @default("buyer")
   // Onboarding completion timestamp (null = not yet onboarded).
   onboardedAt DateTime?
+  // ----- Business owner profile (additive; all optional) -----
+  username            String?  @unique
+  companyType         String?
+  industry            String?
+  location            String?
+  bio                 String?
+  // JSON string[] of procurement interests / preferred materials.
+  procurementInterests String  @default("[]")
+  preferredMaterials   String  @default("[]")
   // ----- Stripe billing (webhook-managed; never set from the browser) -----
   stripeCustomerId     String?
   stripeSubscriptionId String?
@@ -138,6 +147,19 @@ model Supplier {
   // Admin email/id that performed manual verification.
   verifiedBy          String?
   statusNote          String?
+
+  // ----- Supplier-managed profile fields (additive; edited from the supplier
+  // dashboard by the account that owns the profile) -----
+  // JSON string[] of industry ids from src/data/industries.ts.
+  industriesServed    String   @default("[]")
+  // JSON string[] of materials / product families offered.
+  materials           String   @default("[]")
+  // Free-text pricing guidance, e.g. "From $610/ton FOB, volume tiers available".
+  pricingNotes        String?
+  // Typical lead time as supplier-stated text, e.g. "2–4 weeks".
+  leadTime            String?
+  yearsInBusiness     Int?
+  employees           String?
 
   createdAt           DateTime @default(now())
   updatedAt           DateTime @default(now()) @updatedAt
@@ -328,6 +350,28 @@ model Material {
   yearlyChange   Float
   signal         String
   history        String
+  // ----- Pricing provenance (additive; see lib/pricing/pricingService) -----
+  // Catalog category id (metals | construction | packaging | plastics | ...).
+  category       String?
+  // Where the current price came from: "seed" | provider id (e.g. "metals-api").
+  source         String?
+  lastUpdatedAt  DateTime?
+  pricePoints    MaterialPricePoint[]
+}
+
+// Normalised, provider-agnostic price history. Every row records its source so
+// the UI can attribute data honestly (never "live" unless a provider wrote it).
+model MaterialPricePoint {
+  id         String   @id @default(cuid())
+  materialId String
+  material   Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  price      Float
+  currency   String   @default("USD")
+  unit       String
+  source     String
+  recordedAt DateTime @default(now())
+
+  @@index([materialId, recordedAt])
 }
 
 model PriceAlert {

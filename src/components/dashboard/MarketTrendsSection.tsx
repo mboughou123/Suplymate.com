@@ -22,7 +22,7 @@ export default function MarketTrendsSection({ materials }: Props) {
           <p className="text-[11px] text-ink-dim">{nav("priceChartsDescription")}</p>
         </div>
         <Link
-          href="/price-charts"
+          href="/materials"
           className="text-[11px] font-semibold text-ink-muted transition hover:text-gold"
         >
           {common("viewAll")}

@@ -23,6 +23,11 @@ const OPTIONAL = [
   "OPENAI_API_KEY",
   "OUTSCRAPER_API_KEY",
   "ADMIN_EMAILS",
+  "STRIPE_SECRET_KEY",
+  "STRIPE_WEBHOOK_SECRET",
+  "STRIPE_PRICE_BASIC",
+  "STRIPE_PRICE_PREMIUM",
+  "PRICING_API_KEY",
 ] as const;
 
 function present(name: string): boolean {

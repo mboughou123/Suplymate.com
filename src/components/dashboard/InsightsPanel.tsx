@@ -85,7 +85,7 @@ export default function InsightsPanel({ materials, topSuppliers }: Props) {
             {topMaterial.dailyChange}% · {topMaterial.signal}
           </p>
           <Link
-            href="/price-charts"
+            href="/materials"
             className="mt-3 block text-[11px] font-semibold text-ink-muted transition hover:text-gold"
           >
             {nav("priceCharts")}

@@ -8,6 +8,7 @@ import { Check, AlertCircle, User as UserIcon } from "lucide-react";
 type Initial = {
   firstName: string;
   lastName: string;
+  username: string;
   email: string;
   company: string;
   jobTitle: string;
@@ -45,6 +46,7 @@ export default function AccountForm({ initial }: { initial: Initial }) {
         body: JSON.stringify({
           firstName: form.firstName,
           lastName: form.lastName,
+          username: form.username,
           company: form.company,
           jobTitle: form.jobTitle,
           phone: form.phone,
@@ -82,7 +84,7 @@ export default function AccountForm({ initial }: { initial: Initial }) {
       </p>
 
       <div className="mt-5 flex items-center gap-4">
-        <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-gold/15 text-lg font-bold text-ink">
+        <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-navy text-lg font-bold text-white">
           {form.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={form.image} alt="" className="h-full w-full object-cover" />
@@ -104,7 +106,7 @@ export default function AccountForm({ initial }: { initial: Initial }) {
             value={form.image}
             onChange={(e) => set("image", e.target.value)}
             placeholder="https://…"
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/15"
+            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan/60 focus:outline-none focus:ring-2 focus:ring-cyan/20"
           />
         </div>
       </div>
@@ -123,6 +125,23 @@ export default function AccountForm({ initial }: { initial: Initial }) {
           value={form.lastName}
           onChange={(v) => set("lastName", v)}
         />
+        <div className="sm:col-span-2">
+          <label htmlFor="username" className="text-xs font-medium text-ink-muted">
+            Username
+          </label>
+          <div className="mt-1.5 flex items-center rounded-lg border border-slate-200 focus-within:border-cyan/60 focus-within:ring-2 focus-within:ring-cyan/20">
+            <span className="pl-3 text-sm text-ink-dim">@</span>
+            <input
+              id="username"
+              value={form.username}
+              onChange={(e) => set("username", e.target.value.toLowerCase())}
+              placeholder="yourname"
+              pattern="[a-z0-9._]{3,40}"
+              className="w-full rounded-lg bg-transparent px-2 py-2 text-sm focus:outline-none"
+            />
+          </div>
+          <p className="mt-1 text-[11px] text-ink-dim">Letters, numbers, dots and underscores.</p>
+        </div>
         <div className="sm:col-span-2">
           <label htmlFor="email" className="text-xs font-medium text-ink-muted">
             Email
@@ -173,7 +192,7 @@ export default function AccountForm({ initial }: { initial: Initial }) {
         <button
           type="submit"
           disabled={status === "saving"}
-          className="rounded-xl bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-gold-light disabled:opacity-60"
+          className="btn-primary disabled:opacity-60"
         >
           {status === "saving" ? "Saving…" : "Save changes"}
         </button>
@@ -208,7 +227,7 @@ function Field({
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/15"
+        className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan/60 focus:outline-none focus:ring-2 focus:ring-cyan/20"
       />
     </div>
   );

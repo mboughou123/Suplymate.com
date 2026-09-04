@@ -29,10 +29,24 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const valid = await verifyPassword(password, user.passwordHash);
         if (!valid) return null;
 
+        // Role is read separately so sign-in still succeeds on a database that
+        // predates the column.
+        let role: string | undefined;
+        try {
+          const extra = await prisma.user.findUnique({
+            where: { id: user.id },
+            select: { role: true },
+          });
+          role = extra?.role ?? undefined;
+        } catch {
+          role = undefined;
+        }
+
         return {
           id: user.id,
           email: user.email,
           name: user.name,
+          role,
         };
       },
     }),

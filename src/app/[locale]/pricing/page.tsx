@@ -1,6 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { BadgeCheck } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
+import { auth } from "@/auth";
+import { PLANS, isBillingProviderConfigured, TRIAL_DAYS } from "@/lib/billing";
+import PlanCta from "@/components/pricing/PlanCta";
+import Beam from "@/components/fx/Beam";
 
 export async function generateMetadata({
   params,
@@ -15,85 +19,156 @@ export async function generateMetadata({
   };
 }
 
-const PLANS = [
-  { key: "starter" as const, highlighted: false },
-  { key: "growth" as const, highlighted: true },
-  { key: "enterprise" as const, highlighted: false },
+const COMPARE_ROWS: { label: string; free: string; basic: string; premium: string; enterprise: string }[] = [
+  { label: "Supplier browsing", free: "Limited searches", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Supplier comparisons", free: "Basic", basic: "More", premium: "Advanced", enterprise: "Advanced" },
+  { label: "Supplier messaging & RFQs", free: "—", basic: "Included", premium: "Included", enterprise: "Workflows" },
+  { label: "AI sourcing assistant", free: "Limited questions", basic: "Included", premium: "Unlimited conversations", enterprise: "Custom knowledge" },
+  { label: "Supplier matching", free: "—", basic: "Standard", premium: "Advanced + priority", enterprise: "Advanced + priority" },
+  { label: "Price data", free: "Limited charts", basic: "More data", premium: "Historical + alerts", enterprise: "Historical + alerts" },
+  { label: "Material intelligence", free: "Basic", basic: "Research", premium: "Advanced", enterprise: "Advanced" },
+  { label: "Quote comparison & reports", free: "—", basic: "—", premium: "Included", enterprise: "Included + API" },
+  { label: "Users", free: "1", basic: "1", premium: "1", enterprise: "Multiple + team management" },
+  { label: "Support", free: "Community", basic: "Email", premium: "Priority", enterprise: "Dedicated" },
 ];
 
 export default async function PricingPage() {
   const t = await getTranslations("pricing");
+  const session = await auth();
+  const signedIn = Boolean(session?.user?.id);
+  const configured = isBillingProviderConfigured();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-base/60 to-white">
-      <div className="bg-navy-gradient section-y-tight text-center text-white">
-        <div className="container-page relative">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(36rem_18rem_at_50%_0%,rgba(56,189,248,0.16),transparent_70%)]"
-          />
-          <h1 className="relative font-display text-display text-white sm:text-display-lg">
+    <div className="bg-white">
+      {/* Dark hero */}
+      <section className="relative overflow-hidden bg-[#050B12] pb-28 pt-20 text-white sm:pt-24">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute left-1/2 top-[-30%] h-[50vh] w-[70vw] -translate-x-1/2 rounded-full bg-cyan/20 blur-[140px]" />
+        </div>
+        <div className="container-page relative text-center">
+          <p className="eyebrow text-cyan-glow">{t("pageEyebrow")}</p>
+          <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             {t("pageTitle")}
           </h1>
-          <p className="relative mx-auto mt-4 max-w-xl text-body-lg text-white/75">
-            {t("pageSubtitle")}
-          </p>
-          <p className="relative mt-3 text-sm font-medium text-cyan-glow">{t("annualNote")}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-base text-white/65 sm:text-lg">{t("pageSubtitle")}</p>
+          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-cyan-glow/40 bg-cyan/15 px-4 py-1.5 text-sm font-semibold text-cyan-glow">
+            <Sparkles className="h-4 w-4" aria-hidden />
+            {t("trialBadge")}
+          </span>
         </div>
-      </div>
+      </section>
 
-      <div className="container-page section-y-tight">
-        <p className="mx-auto mb-block max-w-2xl rounded-xl border border-amber-200/70 bg-amber-50/90 px-4 py-3 text-center text-sm text-amber-950">
-          {t("stubNotice")}
-        </p>
-
-        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
-          {PLANS.map(({ key: plan, highlighted }) => (
-            <article
-              key={plan}
-              className={`panel-glass flex flex-col p-6 sm:p-8 ${
-                highlighted ? "shadow-glow-panel ring-1 ring-cyan/20 lg:-translate-y-1" : ""
-              }`}
-            >
-              {highlighted && (
-                <span className="mb-4 inline-flex w-fit rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">
-                  {t("mostPopular")}
-                </span>
-              )}
-              <h2 className="text-heading-sm text-ink">{t(plan)}</h2>
-              <p className="mt-2 text-sm text-ink-muted">{t(`${plan}Blurb`)}</p>
-              <p className="mt-6">
-                <span className="font-display text-display font-bold tabular-nums text-ink">
-                  {t(`${plan}Price`)}
-                </span>
-                <span className="text-ink-dim">{t(`${plan}Period`)}</span>
-              </p>
-              <div className="mt-6 flex-1 rounded-xl border border-slate-100 bg-slate-50/80 px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-ink-dim">
-                  {t("featuresLabel")}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{t("featuresTbd")}</p>
-              </div>
-              <button
-                type="button"
-                disabled
-                className={`mt-8 w-full cursor-not-allowed rounded-xl py-3 text-sm font-semibold opacity-70 ${
-                  highlighted
-                    ? "bg-cyan text-white"
-                    : "border border-slate-200 bg-white text-ink"
+      {/* Plans */}
+      <section className="container-page -mt-16 pb-16">
+        {!configured && (
+          <p className="mx-auto mb-6 max-w-2xl rounded-xl border border-amber-200/70 bg-amber-50/90 px-4 py-3 text-center text-sm text-amber-950">
+            {t("billingUnavailable")}
+          </p>
+        )}
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {PLANS.map((plan) => {
+            const card = (
+              <article
+                className={`flex h-full flex-col rounded-2xl border bg-white p-6 shadow-card ${
+                  plan.highlighted ? "border-navy/40" : "border-slate-200"
                 }`}
               >
-                {t("ctaComingSoon")}
-              </button>
-            </article>
-          ))}
+                <div className="flex items-center justify-between">
+                  <h2 className="text-heading-sm text-ink">{plan.name}</h2>
+                  {plan.highlighted && (
+                    <span className="rounded-full bg-navy px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                      {t("mostPopular")}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 text-sm text-ink-muted">{plan.audience}</p>
+                <p className="mt-5">
+                  <span className="font-display text-4xl font-bold tabular-nums tracking-tight text-ink">
+                    {plan.monthlyPrice === null ? t("custom") : plan.priceLabel}
+                  </span>
+                  {plan.monthlyPrice !== null && (
+                    <span className="text-sm text-ink-dim"> {plan.monthlyPrice === 0 ? t("forever") : t("perMonth")}</span>
+                  )}
+                </p>
+                {plan.trialDays > 0 && (
+                  <p className="mt-1 text-xs font-semibold text-cyan">{TRIAL_DAYS}-day free trial</p>
+                )}
+                <p className="mt-3 text-sm leading-relaxed text-ink-muted">{plan.description}</p>
+                <ul className="mt-5 flex-1 space-y-2">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-ink-muted">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan" aria-hidden />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6">
+                  <PlanCta
+                    plan={plan.id}
+                    cta={plan.cta}
+                    highlighted={Boolean(plan.highlighted)}
+                    signedIn={signedIn}
+                    labels={{ free: t("ctaFree"), trial: t("ctaTrial"), sales: t("ctaSales") }}
+                  />
+                </div>
+              </article>
+            );
+            return plan.highlighted ? (
+              <Beam key={plan.id} size="md" colorVariant="ocean" strength={0.55} theme="light" className="h-full">
+                {card}
+              </Beam>
+            ) : (
+              <div key={plan.id} className="h-full">
+                {card}
+              </div>
+            );
+          })}
         </div>
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-ink-dim">{t("billingNote")}</p>
+      </section>
 
-        <p className="mx-auto mt-block flex max-w-lg items-start justify-center gap-2 text-center text-sm text-ink-muted">
-          <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-cyan" aria-hidden />
-          {t("comingSoon")}
-        </p>
-      </div>
+      {/* Comparison */}
+      <section className="container-page pb-16">
+        <h2 className="text-heading-lg text-ink">{t("compareTitle")}</h2>
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 shadow-card">
+          <table className="w-full min-w-[720px] text-left text-sm">
+            <thead className="bg-slate-50 text-xs uppercase tracking-wide text-ink-dim">
+              <tr>
+                <th className="px-4 py-3 font-semibold">&nbsp;</th>
+                {PLANS.map((p) => (
+                  <th key={p.id} className={`px-4 py-3 font-semibold ${p.highlighted ? "text-navy" : ""}`}>
+                    {p.name}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 bg-white">
+              {COMPARE_ROWS.map((row) => (
+                <tr key={row.label}>
+                  <td className="px-4 py-3 font-medium text-ink">{row.label}</td>
+                  <td className="px-4 py-3 text-ink-muted">{row.free}</td>
+                  <td className="px-4 py-3 text-ink-muted">{row.basic}</td>
+                  <td className="px-4 py-3 font-medium text-ink">{row.premium}</td>
+                  <td className="px-4 py-3 text-ink-muted">{row.enterprise}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="container-page pb-24">
+        <h2 className="text-heading-lg text-ink">{t("faqTitle")}</h2>
+        <dl className="mt-6 grid gap-4 md:grid-cols-2">
+          {(["faq1", "faq2", "faq3", "faq4"] as const).map((k) => (
+            <div key={k} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+              <dt className="text-sm font-semibold text-ink">{t(`${k}q`)}</dt>
+              <dd className="mt-2 text-sm leading-relaxed text-ink-muted">{t(`${k}a`)}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </div>
   );
 }

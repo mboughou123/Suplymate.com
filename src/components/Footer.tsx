@@ -30,7 +30,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
               <li><Link href="/suppliers" className={linkClass}>{nav("suppliers")}</Link></li>
               <li><Link href="/products" className={linkClass}>{nav("products")}</Link></li>
-              <li><Link href="/price-charts" className={linkClass}>{nav("priceCharts")}</Link></li>
+              <li><Link href="/materials" className={linkClass}>{nav("materials")}</Link></li>
               <li><Link href="/ai-assistant" className={linkClass}>{nav("aiAssistant")}</Link></li>
             </ul>
           </div>
@@ -41,6 +41,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
               <li><Link href="/pricing" className={linkClass}>{nav("pricing")}</Link></li>
               <li><Link href="/about" className={linkClass}>{t("about")}</Link></li>
+              <li><Link href="/blog" className={linkClass}>{nav("blog")}</Link></li>
               <li><Link href="/contact" className={linkClass}>{t("contact")}</Link></li>
               <li><Link href="/help" className={linkClass}>{t("help")}</Link></li>
               <li><Link href="/faq" className={linkClass}>{t("faq")}</Link></li>

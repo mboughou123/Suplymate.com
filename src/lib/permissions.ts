@@ -3,7 +3,7 @@
 // Plan checks and team-role checks live HERE so they are not scattered across
 // routes. Server code calls these helpers; the browser is never trusted.
 
-import type { PlanId } from "@/lib/billing";
+import { normalizePlanId, type PlanId } from "@/lib/billing";
 
 export type TeamRole =
   | "OWNER"
@@ -82,8 +82,8 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     prioritizedAi: false,
     exportReporting: false,
   },
-  starter: {
-    plan: "starter",
+  basic: {
+    plan: "basic",
     savedSuppliersLimit: null,
     priceAlerts: true,
     watchlists: true,
@@ -92,8 +92,8 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     prioritizedAi: true,
     exportReporting: false,
   },
-  pro: {
-    plan: "pro",
+  premium: {
+    plan: "premium",
     savedSuppliersLimit: null,
     priceAlerts: true,
     watchlists: true,
@@ -102,9 +102,19 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     prioritizedAi: true,
     exportReporting: true,
   },
+  enterprise: {
+    plan: "enterprise",
+    savedSuppliersLimit: null,
+    priceAlerts: true,
+    watchlists: true,
+    teamSeats: 100,
+    rfqManagement: true,
+    prioritizedAi: true,
+    exportReporting: true,
+  },
 };
 
 export function entitlementsFor(plan: string | null | undefined): Entitlements {
-  const p = (plan as PlanId) ?? "free";
+  const p = normalizePlanId(plan);
   return ENTITLEMENTS[p] ?? ENTITLEMENTS.free;
 }

@@ -5,6 +5,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getMaterialsFromDb, getSuppliersFromDb } from "@/lib/data-service";
 import DashboardClient from "@/components/dashboard/DashboardClient";
+import { isSupplierRole } from "@/lib/roles";
 
 export async function generateMetadata({
   params,
@@ -74,12 +75,13 @@ export default async function DashboardPage() {
   const dbUser = await prisma.user
     .findUnique({
       where: { id: userId },
-      select: { company: true, firstName: true, onboardedAt: true },
+      select: { company: true, firstName: true, role: true },
     })
     .catch(() => null);
 
-  if (!dbUser?.onboardedAt) {
-    return await localeRedirect("/onboarding");
+  // Suppliers have their own workspace.
+  if (isSupplierRole(dbUser?.role ?? session.user.role)) {
+    return await localeRedirect("/supplier-dashboard");
   }
 
   return (

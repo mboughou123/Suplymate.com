@@ -49,6 +49,14 @@ export async function PATCH(request: Request) {
         typeof body.productUpdates === "boolean"
           ? body.productUpdates
           : current.productUpdates,
+      aiRecommendations:
+        typeof body.aiRecommendations === "boolean"
+          ? body.aiRecommendations
+          : current.aiRecommendations,
+      supplierMatches:
+        typeof body.supplierMatches === "boolean"
+          ? body.supplierMatches
+          : current.supplierMatches,
       language: SUPPORTED_LANGUAGES.some((l) => l.value === body.language)
         ? (body.language as string)
         : current.language,
