@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
@@ -22,7 +22,13 @@ const SECTIONS = [
   { titleKey: "priceAlertsGuide", textKey: "priceAlertsGuideText" },
 ] as const;
 
-export default async function HelpPage() {
+export default async function HelpPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("help");
   const footer = await getTranslations("footer");
 
