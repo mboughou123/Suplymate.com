@@ -3,8 +3,7 @@ import HomeTopNav from "@/components/home/HomeTopNav";
 import HomeHero from "@/components/home/HomeHero";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
-import HomeAiDemoSection from "@/components/HomeAiDemoSection";
-import HomeProductModules from "@/components/home/HomeProductModules";
+import HomeOrchestratorSection from "@/components/home/HomeOrchestratorSection";
 import HomeStatsRow from "@/components/home/HomeStatsRow";
 import HomeCloseSection from "@/components/HomeCloseSection";
 import { getSuppliersFromDb } from "@/lib/data-service";
@@ -19,8 +18,7 @@ export default async function HomePage() {
       <HomeHero supplierCount={suppliers.length} />
       <HomeTrustStrip />
       <HomeSuppliersBand />
-      <HomeAiDemoSection />
-      <HomeProductModules />
+      <HomeOrchestratorSection />
       <HomeStatsRow />
       <HomeCloseSection
         title={t("ctaTitle")}
