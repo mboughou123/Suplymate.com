@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { prisma } from "@/lib/prisma";
 import { mapSupplier, mapProduct, mapMaterial } from "@/lib/db-mappers";
 import { products as staticProducts, type Product } from "@/data/products";
@@ -65,7 +66,42 @@ function isPubliclyVisible(s: Supplier): boolean {
   return !status || status === "verified";
 }
 
-export async function getSuppliersFromDb() {
+/**
+ * Short-lived in-memory cache for the whole-table catalogue reads below.
+ *
+ * `getSuppliersFromDb` / `getProductsFromDb` pull EVERY row (hundreds of
+ * suppliers with descriptions and photo galleries) and were re-executed on
+ * every homepage render, every directory render and every AI request. The
+ * catalogue changes rarely (admin approvals / imports), so serving a copy that
+ * is at most `CATALOG_TTL_MS` old is indistinguishable to visitors while
+ * removing a full-table scan + JSON mapping from the hot path. Concurrent
+ * callers share one in-flight promise. Per process — on serverless each warm
+ * instance keeps its own copy; a cold start simply refetches.
+ */
+const CATALOG_TTL_MS = 60_000;
+
+type MemoEntry = { value: Promise<unknown>; expiresAt: number };
+const catalogMemo = new Map<string, MemoEntry>();
+
+function memoize<T>(key: string, load: () => Promise<T>): Promise<T> {
+  const now = Date.now();
+  const hit = catalogMemo.get(key);
+  if (hit && hit.expiresAt > now) return hit.value as Promise<T>;
+  const value = load();
+  catalogMemo.set(key, { value, expiresAt: now + CATALOG_TTL_MS });
+  // Never pin a rejected promise (the loaders below swallow errors, but be safe).
+  value.catch(() => {
+    if (catalogMemo.get(key)?.value === value) catalogMemo.delete(key);
+  });
+  return value;
+}
+
+/** Drop the catalogue cache (tests / after admin mutations). */
+export function invalidateCatalogCache(): void {
+  catalogMemo.clear();
+}
+
+async function loadSuppliers(): Promise<Supplier[]> {
   try {
     const rows = await prisma.supplier.findMany({
       orderBy: [{ score: "desc" }, { name: "asc" }],
@@ -83,31 +119,42 @@ export async function getSuppliersFromDb() {
   }
 }
 
+export async function getSuppliersFromDb(): Promise<Supplier[]> {
+  // Callers historically received a fresh array (and some sort it in place),
+  // so hand out a shallow copy of the cached list.
+  return [...(await memoize("suppliers", loadSuppliers))];
+}
+
 // Look up a single supplier by id (the id IS the slug, e.g.
 // "rotterdam-steel-works"). Tries the DB first, then falls back to the
 // deterministic dataset — so profile pages render with NO database.
-export async function getSupplierById(id: string): Promise<Supplier | null> {
-  const slug = (id ?? "").trim().toLowerCase();
-  if (!slug) return null;
-  try {
-    const row = await prisma.supplier.findUnique({ where: { id: slug } });
-    if (row) {
-      const mapped = mapSupplier(row);
-      // Pending/rejected/needs_info imports must not be reachable by slug.
-      return isPubliclyVisible(mapped) ? mapped : null;
+//
+// Wrapped in React `cache` so `generateMetadata` and the page component of the
+// supplier profile share ONE lookup per request instead of two DB round-trips.
+export const getSupplierById = cache(
+  async (id: string): Promise<Supplier | null> => {
+    const slug = (id ?? "").trim().toLowerCase();
+    if (!slug) return null;
+    try {
+      const row = await prisma.supplier.findUnique({ where: { id: slug } });
+      if (row) {
+        const mapped = mapSupplier(row);
+        // Pending/rejected/needs_info imports must not be reachable by slug.
+        return isPubliclyVisible(mapped) ? mapped : null;
+      }
+    } catch {
+      // ignore — fall through to the deterministic dataset
     }
-  } catch {
-    // ignore — fall through to the deterministic dataset
-  }
-  return allFallbackSuppliers().find((s) => s.id === slug) ?? null;
-}
+    return allFallbackSuppliers().find((s) => s.id === slug) ?? null;
+  },
+);
 
 // Alias: slugs and ids are the same thing in this data model.
 export async function getSupplierBySlug(slug: string): Promise<Supplier | null> {
   return getSupplierById(slug);
 }
 
-async function getBaseProducts(): Promise<Product[]> {
+async function loadBaseProducts(): Promise<Product[]> {
   try {
     const rows = await prisma.product.findMany({ orderBy: { name: "asc" } });
     if (rows.length === 0) return staticProducts;
@@ -117,9 +164,11 @@ async function getBaseProducts(): Promise<Product[]> {
   }
 }
 
-// Public catalogue = base products + ADMIN-APPROVED scraped products.
-// Pending/rejected scraped products are never returned here.
-export async function getProductsFromDb(): Promise<Product[]> {
+function getBaseProducts(): Promise<Product[]> {
+  return memoize("products:base", loadBaseProducts);
+}
+
+async function loadProducts(): Promise<Product[]> {
   const base = await getBaseProducts();
   try {
     const approved = await listApprovedScrapedProducts();
@@ -129,6 +178,12 @@ export async function getProductsFromDb(): Promise<Product[]> {
   } catch {
     return base;
   }
+}
+
+// Public catalogue = base products + ADMIN-APPROVED scraped products.
+// Pending/rejected scraped products are never returned here.
+export async function getProductsFromDb(): Promise<Product[]> {
+  return [...(await memoize("products:public", loadProducts))];
 }
 
 // Resolve a single catalogue product by id for the detail page: base products

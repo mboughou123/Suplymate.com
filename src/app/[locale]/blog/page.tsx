@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { sortedPosts, BLOG_CATEGORIES } from "@/data/blog";
 import BlogCard from "@/components/blog/BlogCard";
 
@@ -17,7 +17,13 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const posts = sortedPosts();
   const [featured, ...rest] = posts;
 

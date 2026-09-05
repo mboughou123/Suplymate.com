@@ -15,6 +15,7 @@ const LINKS = [
   { href: "/pricing", key: "pricing" as const },
   { href: "/blog", key: "blog" as const },
   { href: "/about", key: "about" as const },
+  { href: "/careers", key: "careers" as const },
 ];
 
 export default function HomeTopNav() {

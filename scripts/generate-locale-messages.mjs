@@ -7,6 +7,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createRequire } from "module";
+import { protectIcuPlaceholders } from "./lib/icu-placeholders.mjs";
 
 const require = createRequire(import.meta.url);
 
@@ -724,10 +725,34 @@ const TRANSLATIONS = {
 
 const MAPS_DIR = path.join(__dirname, "translation-maps");
 
-function walkTranslate(obj, map) {
-  const out = {};
+/**
+ * Translate one English string through the locale map. ICU placeholders are
+ * protected: the argument names / format keywords / plural selectors of the
+ * English source are restored onto the translated value, so a mechanical
+ * translation can never rewrite `{value}` into `{vaمقروءe}` or `plural` into
+ * `p已读ral`. If the translation lost or gained a placeholder we keep the
+ * English string rather than ship a message next-intl cannot format.
+ */
+function translateString(en, map, locale, keyPath) {
+  const translated = map[en] ?? en;
+  const { value, fellBack } = protectIcuPlaceholders(en, translated);
+  if (fellBack) {
+    console.warn(
+      `Warning: ${locale} "${keyPath}" translation has incompatible ICU placeholders — using English`,
+    );
+  }
+  return value;
+}
+
+function walkTranslate(obj, map, locale, prefix = "") {
+  // Arrays (e.g. about.problemList) must stay arrays — `t.raw()` callers map over them.
+  const out = Array.isArray(obj) ? [] : {};
   for (const [k, v] of Object.entries(obj)) {
-    out[k] = typeof v === "string" ? (map[v] ?? v) : walkTranslate(v, map);
+    const keyPath = prefix ? `${prefix}.${k}` : k;
+    out[k] =
+      typeof v === "string"
+        ? translateString(v, map, locale, keyPath)
+        : walkTranslate(v, map, locale, keyPath);
   }
   return out;
 }
@@ -756,7 +781,7 @@ function main() {
       merged = deepMerge(en, TRANSLATIONS.fr);
     } else {
       const map = loadStringMap(locale);
-      merged = walkTranslate(en, map);
+      merged = walkTranslate(en, map, locale);
     }
     const outPath = path.join(MESSAGES_DIR, `${locale}.json`);
     fs.writeFileSync(outPath, JSON.stringify(merged, null, 2) + "\n", "utf8");

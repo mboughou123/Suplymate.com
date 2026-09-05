@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { rateLimit } from "@/lib/rate-limit";
-import { isOpenAiConfigured, type ChatMessage } from "@/lib/openai";
+import { isOpenAiConfigured, logOpenAiError, type ChatMessage } from "@/lib/openai";
 import {
   demoReply,
   getAiReply,
@@ -12,6 +12,8 @@ import {
 } from "@/lib/ai-assistant";
 
 export const dynamic = "force-dynamic";
+// Vercel function timeout; the OpenAI client aborts after 40s.
+export const maxDuration = 60;
 
 type HistoryItem = { role: "user" | "assistant"; content: string };
 
@@ -169,14 +171,16 @@ export async function POST(request: Request) {
           full += delta;
           controller.enqueue(encoder.encode(delta));
         }
-      } catch {
+      } catch (err) {
         // OpenAI failed mid/before stream → degrade to a safe template reply.
+        logOpenAiError("chat-stream", err);
         if (!full) {
           try {
             const fallback = await getAiReply({ message, history });
             full = fallback.reply;
             controller.enqueue(encoder.encode(full));
-          } catch {
+          } catch (retryErr) {
+            logOpenAiError("chat-fallback", retryErr);
             full =
               "Sorry — the AI service is temporarily unavailable. Please try again in a moment.";
             controller.enqueue(encoder.encode(full));

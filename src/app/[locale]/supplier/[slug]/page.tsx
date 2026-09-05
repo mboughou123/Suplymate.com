@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { ChevronRight } from "lucide-react";
@@ -80,21 +80,38 @@ export default async function SupplierProfilePage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const t = await getTranslations("supplierProfile");
-  const nav = await getTranslations("navigation");
-  const supplier = await getSupplierById(slug);
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+  const [t, nav, supplier] = await Promise.all([
+    getTranslations("supplierProfile"),
+    getTranslations("navigation"),
+    getSupplierById(slug),
+  ]);
   if (!supplier) notFound();
 
-  // Published Media takes priority over the legacy logoUrl/imageUrl/images
-  // fields; we merge them into the supplier object so the deterministic profile
-  // generator (and the media section below) surface admin-curated media first.
-  // Unpublished media is never fetched here.
-  const pubMedia = await getPublishedSupplierMedia(supplier.id).catch(() => null);
+  // The four supplementary lookups below only depend on the supplier id, so
+  // they run concurrently instead of as a waterfall of sequential round-trips.
+  const [pubMedia, mediaCertImages, statusRow, relationalCertsRaw] = await Promise.all([
+    // Published Media takes priority over the legacy logoUrl/imageUrl/images
+    // fields; we merge them into the supplier object so the deterministic profile
+    // generator (and the media section below) surface admin-curated media first.
+    // Unpublished media is never fetched here.
+    getPublishedSupplierMedia(supplier.id).catch(() => null),
+    getSupplierCertificationImages(supplier.id).catch(() => []),
+    // Marketplace lifecycle status + claim state (DB-backed suppliers only).
+    prisma.supplier
+      .findUnique({
+        where: { id: supplier.id },
+        select: { marketplaceStatus: true, claimedByUserId: true, sourceUrl: true, createdAt: true },
+      })
+      .catch(() => null), // fallback dataset supplier — claiming unavailable
+    // Relational certifications with their admin-controlled verification status.
+    listCertifications(supplier.id).catch(() => []),
+  ]);
+
   const mediaPhotoUrls = pubMedia
     ? [pubMedia.cover, ...pubMedia.factory, ...pubMedia.gallery].filter(Boolean).map((m) => m!.url)
     : [];
-  const mediaCertImages = await getSupplierCertificationImages(supplier.id).catch(() => []);
   if (pubMedia) {
     if (pubMedia.logo) supplier.logoUrl = pubMedia.logo.url;
     if (pubMedia.cover) supplier.imageUrl = pubMedia.cover.url;
@@ -109,28 +126,19 @@ export default async function SupplierProfilePage({
   const { base, trust } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
-  // Marketplace lifecycle status + claim state (DB-backed suppliers only).
   let marketplaceStatus = "LISTED";
   let claimed = false;
   let provenance: { sourceUrl: string | null; collectedAt: string | null } = {
     sourceUrl: supplier.sourceUrl ?? null,
     collectedAt: null,
   };
-  try {
-    const row = await prisma.supplier.findUnique({
-      where: { id: supplier.id },
-      select: { marketplaceStatus: true, claimedByUserId: true, sourceUrl: true, createdAt: true },
-    });
-    if (row) {
-      marketplaceStatus = normalizeMarketplaceStatus(row.marketplaceStatus);
-      claimed = !!row.claimedByUserId;
-      provenance = {
-        sourceUrl: row.sourceUrl ?? supplier.sourceUrl ?? null,
-        collectedAt: row.createdAt ? row.createdAt.toISOString() : null,
-      };
-    }
-  } catch {
-    // fallback dataset supplier — claiming unavailable
+  if (statusRow) {
+    marketplaceStatus = normalizeMarketplaceStatus(statusRow.marketplaceStatus);
+    claimed = !!statusRow.claimedByUserId;
+    provenance = {
+      sourceUrl: statusRow.sourceUrl ?? supplier.sourceUrl ?? null,
+      collectedAt: statusRow.createdAt ? statusRow.createdAt.toISOString() : null,
+    };
   }
   const statusMeta = STATUS_META[normalizeMarketplaceStatus(marketplaceStatus)];
   const isDbSupplier = provenance.collectedAt !== null;
@@ -141,11 +149,9 @@ export default async function SupplierProfilePage({
   const realCertImages = [
     ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
   ];
-  // Relational certifications with their admin-controlled verification status.
   // Never shown if rejected. A certification is NOT verified just because an
   // image exists — status is set by an admin.
-  const relationalCerts = (await listCertifications(supplier.id).catch(() => []))
-    .filter((c) => c.status !== "rejected");
+  const relationalCerts = relationalCertsRaw.filter((c) => c.status !== "rejected");
   const realCertDetails = supplier.certificationsDetailed ?? [];
   const realSupplierImages = supplier.supplierImages ?? [];
   const hasRealMedia =

@@ -7,12 +7,16 @@ import { ArrowRight, Check, Factory, TrendingUp, Atom } from "lucide-react";
 import AiOrb from "@/components/fx/AiOrb";
 import Beam from "@/components/fx/Beam";
 import MetalButton from "@/components/fx/MetalButton";
-import { INDUSTRIES } from "@/data/industries";
-import { MATERIAL_CATALOG } from "@/data/material-catalog";
 
 const STEP_INTERVAL = 1400;
 
-export default function HomeHero({ supplierCount }: { supplierCount: number }) {
+type Props = {
+  supplierCount: number;
+  industryCount: number;
+  materialCount: number;
+};
+
+export default function HomeHero({ supplierCount, industryCount, materialCount }: Props) {
   const t = useTranslations("hero");
   const [step, setStep] = useState(0);
 
@@ -90,8 +94,8 @@ export default function HomeHero({ supplierCount }: { supplierCount: number }) {
 
           <dl className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 text-left animate-fade-up" style={{ animationDelay: "240ms" }}>
             <Stat icon={Factory} value={supplierCount.toLocaleString()} label={t("statSuppliers")} />
-            <Stat icon={TrendingUp} value={String(INDUSTRIES.length)} label={t("statIndustries")} />
-            <Stat icon={Atom} value={String(MATERIAL_CATALOG.length)} label={t("statMaterials")} />
+            <Stat icon={TrendingUp} value={String(industryCount)} label={t("statIndustries")} />
+            <Stat icon={Atom} value={String(materialCount)} label={t("statMaterials")} />
           </dl>
         </div>
 

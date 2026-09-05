@@ -27,7 +27,7 @@ describe("messages/en.json", () => {
       "languageSelector",
       "common",
       "home",
-      "homeAiDemo",
+      "homeOrchestrator",
       "homeTopNav",
       "homeStats",
       "homeModules",
