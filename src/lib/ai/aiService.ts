@@ -384,8 +384,10 @@ export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
   messages.push({ role: "user", content: input.message });
 
   try {
-    const reply = await chatCompletion({ messages, temperature: 0.35, max_tokens: 600 });
+    const raw = await chatCompletion({ messages, temperature: 0.35, max_tokens: 600 });
     lastOpenAiFailure = null;
+    // The UI renders plain text; drop markdown emphasis the model still emits.
+    const reply = raw.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^#{1,3}\s+/gm, "");
     return { reply, source: "openai", engineNote: `OpenAI ${openAiModel()} + Suplymate data`, ...base };
   } catch (err) {
     // Log status / code so a misconfigured deployment (401 bad key, 429 quota,
