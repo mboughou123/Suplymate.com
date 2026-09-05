@@ -277,7 +277,39 @@
     "sidePoint1": "Supplier discovery and match scoring",
     "sidePoint2": "Material intelligence and price context",
     "sidePoint3": "Direct supplier messaging and RFQs",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "confirmPassword": "Confirm password",
+    "passwordsMatch": "Passwords match",
+    "passwordRuleMinLength": "At least 8 characters",
+    "passwordRuleLetter": "Contains a letter",
+    "passwordRuleNumber": "Contains a number",
+    "passwordStrength": "Password strength",
+    "strengthWeak": "Weak",
+    "strengthFair": "Fair",
+    "strengthGood": "Good",
+    "strengthStrong": "Strong",
+    "acceptTerms": "I agree to the <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+    "fixHighlightedFields": "Please fix the highlighted fields.",
+    "goToSignIn": "Go to sign in",
+    "validation": {
+      "nameRequired": "Please enter your full name.",
+      "nameTooShort": "Name must be at least 2 characters.",
+      "nameTooLong": "Name must be at most 80 characters.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "emailTaken": "An account with this email already exists.",
+      "passwordRequired": "Please choose a password.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "passwordTooLong": "Password must be at most 128 characters.",
+      "passwordNeedsLetter": "Password must include at least one letter.",
+      "passwordNeedsNumber": "Password must include at least one number.",
+      "confirmRequired": "Please confirm your password.",
+      "confirmMismatch": "Passwords do not match.",
+      "termsRequired": "Please accept the Terms of Service and Privacy Policy.",
+      "roleInvalid": "Please choose a valid account type.",
+      "companyRequired": "Company name is required for supplier accounts.",
+      "companyTooLong": "Company name must be at most 120 characters."
+    }
   },
   "supplierDashboard": {
     "title": "Supplier workspace",
@@ -404,7 +436,8 @@
     "savePreferencesFailed": "Could not save preferences.",
     "notFoundTitle": "Page not found",
     "notFoundDescription": "The page you are looking for doesn't exist or may have been moved.",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "dbUnavailable": "We can't reach our database right now. Please try again in a moment."
   },
   "suppliers": {
     "pageTitle": "Find verified suppliers worldwide",
@@ -490,6 +523,9 @@
     "pageSubtitle": "Every material in the Suplymate catalog with its price series, source, signal and engineering notes. Only catalog materials are shown — nothing is invented.",
     "provenanceNotice": "Prices marked “reference” are indicative seed series, not live market data. Connect a pricing provider to replace them with live quotes.",
     "liveNotice": "Live prices from {provider}. Cached for up to {minutes} minutes.",
+    "liveNoticeMonthly": "Live benchmarks from {provider}. The underlying series is published monthly; Suplymate re-checks it {refresh}.",
+    "refreshDaily": "daily",
+    "refreshEveryHours": "every {hours} hours",
     "searchPlaceholder": "Search materials: steel, aluminum, cement…",
     "materials": "Materials",
     "allCategories": "All categories",
@@ -548,7 +584,91 @@
     "procurementSavings": "Procurement savings",
     "supplierResponseRate": "Supplier response rate",
     "conversations": "{count, plural, one {# conversation} other {# conversations}}",
-    "noConversationsYet": "No conversations yet"
+    "noConversationsYet": "No conversations yet",
+    "quotesToReview": "{count, plural, one {# RFQ has new quotes to review.} other {# RFQs have new quotes to review.}}",
+    "newRfq": "New RFQ",
+    "askMate": "Ask Mate",
+    "unavailable": "Unavailable right now",
+    "kpiSectionLabel": "Key metrics",
+    "kpiSavedSuppliers": "Saved suppliers",
+    "kpiSavedSuppliersSub": "In your shortlist",
+    "kpiSavedSuppliersEmpty": "Save suppliers while you scout",
+    "kpiOpenRfqs": "Open RFQs",
+    "kpiOpenRfqsSub": "{total, plural, one {# request in total} other {# requests in total}}",
+    "kpiPriceAlerts": "Price alerts",
+    "kpiUnread": "Unread updates",
+    "kpiUnreadSub": "Messages, quotes and alerts",
+    "kpiUnreadEmpty": "You're all caught up",
+    "recentRfqsTitle": "Recent RFQs",
+    "recentRfqsDescription": "{count, plural, =0 {No requests yet} one {# request for quote} other {# requests for quote}}",
+    "viewAllRfqs": "View all RFQs",
+    "anySupplier": "Any supplier",
+    "quotesReceived": "{count, plural, one {# quote} other {# quotes}}",
+    "noRfqsTitle": "No RFQs yet",
+    "noRfqsBody": "Add products to your cart and request quotes — suppliers reply here and in your inbox.",
+    "browseProducts": "Browse products",
+    "findSuppliers": "Find suppliers",
+    "rfqStatus": {
+      "open": "Open",
+      "submitted": "Sent",
+      "quoted": "Quoted",
+      "closed": "Closed",
+      "expired": "Expired",
+      "cancelled": "Cancelled"
+    },
+    "recentConversationsTitle": "Supplier conversations",
+    "recentConversationsDescription": "Latest replies from suppliers you've contacted",
+    "openInbox": "Open inbox",
+    "unreadBadge": "Unread",
+    "noSubject": "No subject",
+    "noConversationsTitle": "No conversations yet",
+    "noConversationsBody": "Contact a supplier from their profile to start negotiating.",
+    "conversationStatus": {
+      "inquiry": "Inquiry",
+      "negotiation": "Negotiating",
+      "sample_sent": "Sample sent",
+      "order_in_progress": "Order in progress",
+      "completed": "Completed"
+    },
+    "mate": {
+      "eyebrow": "Mate",
+      "title": "Quick ask",
+      "body": "Your procurement copilot. Ask about suppliers, prices or specs — or start from a prompt.",
+      "open": "Open assistant",
+      "prompt1": "Find verified stainless steel suppliers in Turkey with MOQ under 5 tons",
+      "prompt2": "Compare copper prices this month — should I buy now or wait?",
+      "prompt3": "Draft an RFQ for 2,000 aluminium extrusion profiles, 6063-T5",
+      "inputLabel": "Ask Mate",
+      "placeholder": "Ask anything about sourcing…",
+      "ask": "Ask"
+    },
+    "priceMoversTitle": "Watch · price movers",
+    "priceMoversDescription": "Biggest moves across tracked materials today",
+    "openWatch": "Open Watch",
+    "quickLinks": {
+      "title": "Quick links",
+      "description": "Jump straight into a workflow",
+      "scout": {
+        "label": "Scout",
+        "hint": "Find verified suppliers"
+      },
+      "compare": {
+        "label": "Compare",
+        "hint": "Browse and compare offers"
+      },
+      "watch": {
+        "label": "Watch",
+        "hint": "Material price charts"
+      },
+      "settings": {
+        "label": "Settings",
+        "hint": "Account, team and billing"
+      }
+    },
+    "topSuppliersTitle": "Top-ranked suppliers",
+    "topSuppliersDescription": "Highest scored in the directory",
+    "scoutSuppliers": "Scout suppliers",
+    "matchScore": "Supplier score"
   },
   "settings": {
     "title": "Settings",
