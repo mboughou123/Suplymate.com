@@ -807,15 +807,15 @@
     "problemEyebrow": "The problem",
     "problemTitle": "Finding a supplier still means a dozen tabs and a spreadsheet",
     "problemText": "Ask anyone who has sourced steel, packaging or components: the search starts on Google, moves to Alibaba and a few directories, spills into email threads and phone calls, and ends in a spreadsheet that is out of date before it is finished. Prices are opaque, delivery promises are unverified, and trust is guesswork.",
-    "problemList": {
-      "0": "Google",
-      "1": "Alibaba",
-      "2": "Supplier directories",
-      "3": "Email threads",
-      "4": "Spreadsheets",
-      "5": "Industry websites",
-      "6": "Phone calls"
-    },
+    "problemList": [
+      "Google",
+      "Alibaba",
+      "Supplier directories",
+      "Email threads",
+      "Spreadsheets",
+      "Industry websites",
+      "Phone calls"
+    ],
     "solutionEyebrow": "The solution",
     "solutionTitle": "Supplier discovery + price comparison + material intelligence + AI + communication",
     "solutionText": "Suplymate brings the whole sourcing journey into one place. Discover listed and verified suppliers, compare them on price, delivery, location and trust, understand the materials you are buying, ask an AI trained for industrial procurement, and message suppliers or send RFQs — all from the same workspace.",
@@ -918,12 +918,12 @@
     "applyEyebrow": "Apply",
     "applyTitle": "Tell us about yourself",
     "applyBody": "Share a little about your background and the role you're interested in. Your application goes straight to the founding team's inbox.",
-    "applySteps": {
-      "0": "We review every application within a week.",
-      "1": "A short intro call with a founder.",
-      "2": "A practical exercise or portfolio walkthrough.",
-      "3": "Offer — usually within two to three weeks."
-    },
+    "applySteps": [
+      "We review every application within a week.",
+      "A short intro call with a founder.",
+      "A practical exercise or portfolio walkthrough.",
+      "Offer — usually within two to three weeks."
+    ],
     "orEmail": "Prefer email? Write to",
     "form": {
       "name": "Vollständiger Name",
