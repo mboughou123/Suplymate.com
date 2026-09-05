@@ -28,6 +28,9 @@ const OPTIONAL = [
   "STRIPE_PRICE_BASIC",
   "STRIPE_PRICE_PREMIUM",
   "PRICING_API_KEY",
+  "WPI_API_KEY",
+  "RESEND_API_KEY",
+  "CAREERS_TO_EMAIL",
 ] as const;
 
 function present(name: string): boolean {

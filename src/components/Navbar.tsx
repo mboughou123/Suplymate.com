@@ -24,7 +24,10 @@ import CartButton from "@/components/cart/CartButton";
 import LanguageSelector from "@/components/LanguageSelector";
 import { isSupplierRole } from "@/lib/roles";
 
-type PublicLink = { href: string; key: "suppliers" | "materials" | "aiAssistant" | "pricing" | "blog" | "about" };
+type PublicLink = {
+  href: string;
+  key: "suppliers" | "materials" | "aiAssistant" | "pricing" | "blog" | "about" | "careers";
+};
 
 const PUBLIC_LINKS: PublicLink[] = [
   { href: "/suppliers", key: "suppliers" },
@@ -33,6 +36,7 @@ const PUBLIC_LINKS: PublicLink[] = [
   { href: "/pricing", key: "pricing" },
   { href: "/blog", key: "blog" },
   { href: "/about", key: "about" },
+  { href: "/careers", key: "careers" },
 ];
 
 type MenuItem = { href: string; label: string; icon: LucideIcon };
