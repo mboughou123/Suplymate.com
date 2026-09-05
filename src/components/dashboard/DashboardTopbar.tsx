@@ -60,7 +60,7 @@ export default function DashboardTopbar({
   }
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-slate-200 bg-white px-4 py-3 sm:px-6">
+    <header className="sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-slate-200/80 bg-white/80 px-4 py-3 backdrop-blur-xl sm:px-6">
       <div className="flex min-w-0 flex-1 items-center gap-3">
         <button
           type="button"
@@ -81,7 +81,7 @@ export default function DashboardTopbar({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t("search")}
-            className="w-56 rounded-lg border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim transition focus:border-gold/50 focus:outline-none focus:ring-2 focus:ring-gold/15 lg:w-72"
+            className="w-56 rounded-lg border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim transition focus:border-cyan/50 focus:outline-none focus:ring-2 focus:ring-cyan/15 lg:w-72"
           />
         </form>
       </div>
@@ -89,7 +89,7 @@ export default function DashboardTopbar({
       <div className="flex shrink-0 items-center gap-2 sm:gap-3">
         <Link
           href="/ai-assistant"
-          className="hidden items-center gap-1.5 rounded-lg bg-gold px-3 py-2 text-xs font-semibold text-ink transition hover:bg-gold-light sm:inline-flex"
+          className="hidden items-center gap-1.5 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-white transition hover:bg-navy-mid sm:inline-flex"
         >
           <Plus className="h-3.5 w-3.5" aria-hidden />
           {nav("aiAssistant")}
@@ -102,7 +102,7 @@ export default function DashboardTopbar({
         >
           <Bell className="h-5 w-5" />
           {unreadNotifications > 0 && (
-            <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] font-bold text-ink">
+            <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-cyan px-1 text-[9px] font-bold text-white">
               {unreadNotifications > 9 ? "9+" : unreadNotifications}
             </span>
           )}
@@ -114,7 +114,7 @@ export default function DashboardTopbar({
             onClick={() => setMenuOpen((o) => !o)}
             className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-2 py-1.5 transition hover:bg-slate-50"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold/20 text-xs font-bold text-ink">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-soft text-xs font-bold text-cyan">
               {initials}
             </span>
             <div className="hidden text-left sm:block">
