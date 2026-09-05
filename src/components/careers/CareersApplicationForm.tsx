@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { Suspense, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import {
@@ -17,7 +18,33 @@ const inputClass =
   "mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-ink shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition placeholder:text-ink-dim/70 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20";
 const errorInputClass = "border-red-300 focus:border-red-400 focus:ring-red-100";
 
-export default function CareersApplicationForm({
+function toRoleKey(value: string | null): CareerRoleKey | undefined {
+  return value && CAREER_ROLE_KEYS.includes(value as CareerRoleKey)
+    ? (value as CareerRoleKey)
+    : undefined;
+}
+
+/**
+ * Reads `?role=` on the client so the page itself can stay fully static.
+ * `useSearchParams()` suspends during prerender, hence the Suspense boundary
+ * whose fallback is the same form without a preselected role.
+ */
+export default function CareersApplicationForm({ fallbackEmail }: { fallbackEmail: string }) {
+  return (
+    <Suspense fallback={<ApplicationForm fallbackEmail={fallbackEmail} />}>
+      <ApplicationFormWithRoleParam fallbackEmail={fallbackEmail} />
+    </Suspense>
+  );
+}
+
+function ApplicationFormWithRoleParam({ fallbackEmail }: { fallbackEmail: string }) {
+  const searchParams = useSearchParams();
+  return (
+    <ApplicationForm defaultRole={toRoleKey(searchParams.get("role"))} fallbackEmail={fallbackEmail} />
+  );
+}
+
+function ApplicationForm({
   defaultRole,
   fallbackEmail,
 }: {

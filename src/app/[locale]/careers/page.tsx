@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ArrowDown,
   Globe2,
@@ -9,7 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import CareersApplicationForm from "@/components/careers/CareersApplicationForm";
-import { CAREER_ROLE_KEYS, type CareerRoleKey } from "@/lib/careers";
+import { CAREER_ROLE_KEYS } from "@/lib/careers";
 
 export async function generateMetadata({
   params,
@@ -34,16 +34,14 @@ const VALUES = [
 ] as const;
 
 export default async function CareersPage({
-  searchParams,
+  params,
 }: {
-  searchParams: Promise<{ role?: string }>;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("careers");
   const contact = await getTranslations("contact");
-  const { role } = await searchParams;
-  const defaultRole = CAREER_ROLE_KEYS.includes(role as CareerRoleKey)
-    ? (role as CareerRoleKey)
-    : undefined;
 
   return (
     <div className="bg-base">
@@ -162,7 +160,7 @@ export default async function CareersPage({
             </p>
           </div>
           <div className="panel-glass p-6 sm:p-8">
-            <CareersApplicationForm defaultRole={defaultRole} fallbackEmail={contact("email")} />
+            <CareersApplicationForm fallbackEmail={contact("email")} />
           </div>
         </div>
       </section>

@@ -92,17 +92,22 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
 
   const rangeChange = ranged ? pct(ranged.history[0], ranged.history[ranged.history.length - 1]) : 0;
 
+  // Only advertise live benchmarks when at least one material actually carries
+  // provider data — a configured provider whose quotes could not be stored
+  // (e.g. no database) must not be presented as live.
+  const hasLiveData = pricing.configured && initialMaterials.some((m) => m.isLive);
+
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
       <div className="space-y-6">
         <div
           className={`flex items-start gap-2 rounded-xl border px-4 py-3 text-xs ${
-            pricing.configured ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-cyan/20 bg-cyan-soft text-cyan"
+            hasLiveData ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-cyan/20 bg-cyan-soft text-cyan"
           }`}
         >
           <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
           <p>
-            {!pricing.configured
+            {!hasLiveData
               ? t("provenanceNotice")
               : pricing.cadence === "monthly"
                 ? t("liveNoticeMonthly", {
