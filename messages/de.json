@@ -204,6 +204,19 @@
     "watchDescription": "Track price windows and rate signals so you know when to lock volume or wait a week.",
     "readMore": "Lire la suite"
   },
+  "homeAdvantages": {
+    "eyebrow": "Why Suplymate",
+    "title": "Outcomes that compound",
+    "subtitle": "From verified mills to market timing — the same Scout, Compare, and Watch workflow your team already runs, with less friction at every step.",
+    "verifiedNetworkTitle": "Réseau de Lieferanten vérifiés",
+    "verifiedNetworkDescription": "Factory-checked profiles across the UAE, India, and beyond — so shortlists start with mills you can trust, not random directories.",
+    "fasterShortlistsTitle": "Faster Scout shortlists",
+    "fasterShortlistsDescription": "Match on spec, region, and lead time in minutes. Scout surfaces ranked mills instead of spreadsheet trawling.",
+    "offerCompareTitle": "Side-by-side offer compare",
+    "offerCompareDescription": "Line up price, MOQ, and lead time RFQ-style — Compare keeps offers in one view so buyers pick with confidence.",
+    "priceWindowsTitle": "Price windows that matter",
+    "priceWindowsDescription": "Watch tracks index moves and wait-window signals so you lock volume when the market gives you room."
+  },
   "homeSuppliers": {
     "eyebrow": "Verifiziertes Netzwerk",
     "title": "Suppliers around the world",

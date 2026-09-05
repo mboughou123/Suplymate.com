@@ -5,6 +5,7 @@ import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
 import HomeAiDemoSection from "@/components/HomeAiDemoSection";
 import HomeProductModules from "@/components/home/HomeProductModules";
+import HomeAdvantagesSection from "@/components/home/HomeAdvantagesSection";
 import HomeStatsRow from "@/components/home/HomeStatsRow";
 import HomeCloseSection from "@/components/HomeCloseSection";
 import { getSuppliersFromDb } from "@/lib/data-service";
@@ -21,6 +22,7 @@ export default async function HomePage() {
       <HomeSuppliersBand />
       <HomeAiDemoSection />
       <HomeProductModules />
+      <HomeAdvantagesSection />
       <HomeStatsRow />
       <HomeCloseSection
         title={t("ctaTitle")}
