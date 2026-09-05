@@ -3,9 +3,11 @@
 import { useTranslations } from "next-intl";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 import type { Material } from "@/data/materials";
+import type { PriceCadence } from "@/lib/pricing/types";
 
 type MarketSummaryCardProps = {
-  material: Material;
+  /** `cadence` is optional so plain seed materials still render. */
+  material: Material & { cadence?: PriceCadence };
   selected?: boolean;
   onClick?: () => void;
 };
@@ -74,7 +76,13 @@ export default function MarketSummaryCard({
       <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
         <div>
           <p className="text-ink-muted">{t("daily")}</p>
-          <ChangeValue value={material.dailyChange} />
+          {material.cadence === "monthly" ? (
+            <span className="font-semibold text-ink-dim" title="Monthly benchmark — no daily quote">
+              —
+            </span>
+          ) : (
+            <ChangeValue value={material.dailyChange} />
+          )}
         </div>
         <div>
           <p className="text-ink-muted">{t("monthly")}</p>
