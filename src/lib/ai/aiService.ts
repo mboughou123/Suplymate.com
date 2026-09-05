@@ -11,7 +11,7 @@
 // materials come from Suplymate data and are rendered as cards by the UI. When
 // OpenAI is not configured the narrative is composed deterministically.
 
-import { chatCompletion, isOpenAiConfigured, type ChatMessage } from "@/lib/openai";
+import { chatCompletion, describeOpenAiError, isOpenAiConfigured, logOpenAiError, openAiModel, type ChatMessage } from "@/lib/openai";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { getMaterialsWithPricing, type MaterialWithProvenance } from "@/lib/pricing/pricingService";
 import { getCatalogMaterial, type MaterialCatalogEntry } from "@/data/material-catalog";
@@ -45,7 +45,11 @@ export type PriceRow = {
   source: string;
   sourceLabel: string;
   isLive: boolean;
+  /** "monthly" series carry no 24h change (dailyChange is 0). */
+  cadence: "daily" | "monthly";
   lastUpdatedAt: string | null;
+  /** Newest provider observation date (ISO); null for seed data. */
+  observedAt: string | null;
 };
 
 export type MaterialIntel = {
@@ -76,9 +80,19 @@ export type RequirementSummary = {
   beginner: boolean;
 };
 
+/**
+ * Which engine produced the narrative:
+ *   openai   – live model reply grounded on Suplymate data
+ *   demo     – no OPENAI_API_KEY configured; rule-based narrative
+ *   fallback – key configured but the OpenAI call failed; rule-based narrative
+ */
+export type AiSource = "openai" | "demo" | "fallback";
+
 export type AiResponse = {
   reply: string;
-  source: "openai" | "demo";
+  source: AiSource;
+  /** Short, secret-free status for the UI, e.g. "OpenAI key missing". */
+  engineNote: string;
   state: OrbState;
   stage: WorkflowStageId;
   requirement: RequirementSummary;
@@ -98,7 +112,9 @@ function toPriceRow(m: MaterialWithProvenance): PriceRow {
     source: m.source,
     sourceLabel: m.sourceLabel,
     isLive: m.isLive,
+    cadence: m.cadence,
     lastUpdatedAt: m.lastUpdatedAt,
+    observedAt: m.observedAt,
   };
 }
 
@@ -218,7 +234,10 @@ function describeBlocksForModel(blocks: AiBlock[]): string {
     if (b.type === "price_comparison") {
       lines.push("MATERIAL PRICES (shown as a table):");
       for (const r of b.rows) {
-        lines.push(`- ${r.name}: ${r.price} ${r.unit} (${r.isLive ? "provider data" : "REFERENCE seed value, not live"}; 30d ${r.monthlyChange > 0 ? "+" : ""}${r.monthlyChange}%)`);
+        const provenance = r.isLive
+          ? `${r.sourceLabel}${r.cadence === "monthly" ? "; monthly benchmark, no daily quote" : ""}`
+          : "REFERENCE seed value, not live";
+        lines.push(`- ${r.name}: ${r.price} ${r.unit} (${provenance}; ${r.cadence === "monthly" ? "month-over-month" : "30d"} ${r.monthlyChange > 0 ? "+" : ""}${r.monthlyChange}%)`);
       }
     }
     if (b.type === "material_intel") {
@@ -309,6 +328,32 @@ function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
   return parts.join("\n\n");
 }
 
+export const ENGINE_NOTE_DEMO = "OpenAI key missing — demo narrative, real Suplymate data";
+
+/** Last OpenAI failure seen by this server instance (diagnostics for GET /api/ai). */
+let lastOpenAiFailure: { note: string; at: Date } | null = null;
+
+export type EngineStatus = {
+  engine: "openai" | "demo";
+  model: string | null;
+  engineNote: string;
+  lastFailureAt: string | null;
+};
+
+/** Engine status for the workspace bootstrap. Never includes secrets. */
+export function engineStatus(): EngineStatus {
+  if (!isOpenAiConfigured()) {
+    return { engine: "demo", model: null, engineNote: ENGINE_NOTE_DEMO, lastFailureAt: null };
+  }
+  const recent = lastOpenAiFailure && Date.now() - lastOpenAiFailure.at.getTime() < 15 * 60_000 ? lastOpenAiFailure : null;
+  return {
+    engine: "openai",
+    model: openAiModel(),
+    engineNote: recent ? `${recent.note} — replies fall back to rule-based narrative` : `OpenAI ${openAiModel()} + Suplymate data`,
+    lastFailureAt: lastOpenAiFailure?.at.toISOString() ?? null,
+  };
+}
+
 export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
   const req = parseRequirement(input.message);
   const { blocks, matches } = await gatherBlocks(req);
@@ -321,9 +366,10 @@ export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
     location: req.location,
     beginner: req.beginner,
   };
+  const base = { state: stateFor(req), stage, requirement, blocks };
 
   if (!isOpenAiConfigured()) {
-    return { reply: composeDemoReply(req, blocks), source: "demo", state: stateFor(req), stage, requirement, blocks };
+    return { reply: composeDemoReply(req, blocks), source: "demo", engineNote: ENGINE_NOTE_DEMO, ...base };
   }
 
   const messages: ChatMessage[] = [{ role: "system", content: SYSTEM_PROMPT }];
@@ -339,8 +385,19 @@ export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
 
   try {
     const reply = await chatCompletion({ messages, temperature: 0.35, max_tokens: 600 });
-    return { reply, source: "openai", state: stateFor(req), stage, requirement, blocks };
-  } catch {
-    return { reply: composeDemoReply(req, blocks), source: "demo", state: stateFor(req), stage, requirement, blocks };
+    lastOpenAiFailure = null;
+    return { reply, source: "openai", engineNote: `OpenAI ${openAiModel()} + Suplymate data`, ...base };
+  } catch (err) {
+    // Log status / code so a misconfigured deployment (401 bad key, 429 quota,
+    // 404 model) is diagnosable from the server logs. Never logs the key.
+    logOpenAiError("assistant", err);
+    const note = describeOpenAiError(err);
+    lastOpenAiFailure = { note, at: new Date() };
+    return {
+      reply: `${composeDemoReply(req, blocks)}\n\n(Live AI narrative unavailable right now — this answer was composed from Suplymate data only.)`,
+      source: "fallback",
+      engineNote: note,
+      ...base,
+    };
   }
 }

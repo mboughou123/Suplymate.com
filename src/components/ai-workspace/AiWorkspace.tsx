@@ -16,6 +16,7 @@ import {
   type AiBlock,
   type AiResponse,
   type ChatTurn,
+  type EngineState,
   type OrbState,
   type PanelTab,
   type WorkflowStageId,
@@ -58,9 +59,11 @@ export default function AiWorkspace() {
   const [busy, setBusy] = useState(false);
   const [orb, setOrb] = useState<OrbState>("breathing");
   const [stage, setStage] = useState<WorkflowStageId | null>(null);
-  const [engine, setEngine] = useState<"openai" | "demo" | null>(null);
+  const [engine, setEngine] = useState<EngineState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [needsAuth, setNeedsAuth] = useState(false);
+  const [guestLimitHit, setGuestLimitHit] = useState(false);
+  const [guestRemaining, setGuestRemaining] = useState<number | null>(null);
   const [tab, setTab] = useState<PanelTab>("matches");
   const conversationId = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -83,7 +86,10 @@ export default function AiWorkspace() {
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (cancelled || !data) return;
-        setEngine(data.engine === "openai" ? "openai" : "demo");
+        setEngine({
+          source: data.engine === "openai" ? "openai" : "demo",
+          note: typeof data.engineNote === "string" ? data.engineNote : null,
+        });
         if (data.conversationId) conversationId.current = data.conversationId;
         if (Array.isArray(data.messages) && data.messages.length) {
           setMessages(
@@ -95,7 +101,7 @@ export default function AiWorkspace() {
           );
         }
       })
-      .catch(() => setEngine("demo"));
+      .catch(() => setEngine({ source: "demo", note: null }));
     return () => {
       cancelled = true;
     };
@@ -111,6 +117,7 @@ export default function AiWorkspace() {
       if (!trimmed || busy) return;
       setError(null);
       setNeedsAuth(false);
+      setGuestLimitHit(false);
       setInput("");
 
       const history = messages.slice(-12).map((m) => ({ role: m.role, content: m.content }));
@@ -128,16 +135,21 @@ export default function AiWorkspace() {
           body: JSON.stringify({ message: trimmed, history, conversationId: conversationId.current }),
           signal: controller.signal,
         });
-        const data = (await res.json().catch(() => null)) as (AiResponse & { conversationId?: string; error?: string }) | null;
+        const data = (await res.json().catch(() => null)) as
+          | (AiResponse & { conversationId?: string | null; error?: string; code?: string; guest?: boolean; guestRemaining?: number | null })
+          | null;
         if (res.status === 401) {
           setNeedsAuth(true);
+          setGuestLimitHit(data?.code === "guest_limit");
+          if (data?.code === "guest_limit") setGuestRemaining(0);
           setMessages((m) => m.filter((x) => x.id !== userTurn.id));
           setInput(trimmed);
           return;
         }
         if (!res.ok || !data) throw new Error(data?.error || "The assistant is unavailable. Please try again.");
         if (data.conversationId) conversationId.current = data.conversationId;
-        setEngine(data.source);
+        setGuestRemaining(data.guest && typeof data.guestRemaining === "number" ? data.guestRemaining : null);
+        setEngine({ source: data.source, note: data.engineNote ?? null });
         setStage(data.stage);
         setOrb(data.state);
         setMessages((m) => [
@@ -258,7 +270,7 @@ export default function AiWorkspace() {
                 </div>
               </div>
 
-              {needsAuth && <AuthPrompt />}
+              {needsAuth && <AuthPrompt limitReached={guestLimitHit} />}
               {error && <ErrorBanner error={error} onRetry={retry} />}
 
               <div className="mt-14">
@@ -356,7 +368,7 @@ export default function AiWorkspace() {
                         </p>
                       </div>
                     )}
-                    {needsAuth && <AuthPrompt />}
+                    {needsAuth && <AuthPrompt limitReached={guestLimitHit} />}
                     {error && <ErrorBanner error={error} onRetry={retry} />}
                     <div ref={bottomRef} />
                   </div>
@@ -370,6 +382,15 @@ export default function AiWorkspace() {
                       busy={busy}
                       placeholder="Ask a follow-up — refine location, quantity, certifications…"
                     />
+                    {guestRemaining !== null && status !== "authenticated" && (
+                      <p className="mt-2 text-center text-[11px] text-cyan-glow/80">
+                        Guest mode · {guestRemaining} free {guestRemaining === 1 ? "question" : "questions"} left ·{" "}
+                        <Link href="/login?callbackUrl=/ai-assistant" className="underline underline-offset-2 hover:text-white">
+                          Sign in
+                        </Link>{" "}
+                        to save your conversation
+                      </p>
+                    )}
                     <p className="mt-2 text-center text-[11px] text-white/40">
                       Mate uses Suplymate data for suppliers and prices. Verify important decisions.
                     </p>
@@ -389,15 +410,21 @@ export default function AiWorkspace() {
   );
 }
 
-function AuthPrompt() {
+function AuthPrompt({ limitReached = false }: { limitReached?: boolean }) {
   return (
     <div className={`${glass} mx-auto mt-6 flex max-w-xl flex-col items-center gap-3 p-5 text-center sm:flex-row sm:text-left`}>
       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan/15 text-cyan-glow">
         <LogIn className="h-5 w-5" aria-hidden />
       </span>
       <div className="flex-1">
-        <p className="text-sm font-semibold text-white">Sign in to ask Mate</p>
-        <p className="text-xs text-white/60">Free accounts include AI questions, supplier matching and material intelligence.</p>
+        <p className="text-sm font-semibold text-white">
+          {limitReached ? "You've used your 3 free questions — sign in to keep asking Mate" : "Sign in to ask Mate"}
+        </p>
+        <p className="text-xs text-white/60">
+          {limitReached
+            ? "Free accounts include unlimited AI questions, saved conversations, supplier matching and material intelligence."
+            : "Free accounts include AI questions, supplier matching and material intelligence."}
+        </p>
       </div>
       <Link href="/login?callbackUrl=/ai-assistant" className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow">
         Sign in

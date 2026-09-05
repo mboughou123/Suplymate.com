@@ -5,11 +5,19 @@ import { useSession, signOut } from "next-auth/react";
 import { Link } from "@/i18n/navigation";
 import { LayoutDashboard, Factory, Atom, LogOut } from "lucide-react";
 import { homeForRole } from "@/lib/roles";
+import type { EngineState } from "@/components/ai-workspace/types";
 
-export default function WorkspaceTopBar({ engine }: { engine: "openai" | "demo" | null }) {
+const ENGINE_LABEL: Record<EngineState["source"], string> = {
+  openai: "Live AI + Suplymate data",
+  demo: "Demo narrative · real data",
+  fallback: "AI offline · real data",
+};
+
+export default function WorkspaceTopBar({ engine }: { engine: EngineState | null }) {
   const nav = useTranslations("navigation");
   const { data: session, status } = useSession();
   const home = homeForRole(session?.user?.role);
+  const dot = engine?.source === "openai" ? "bg-emerald-400" : engine?.source === "fallback" ? "bg-red-400" : "bg-amber-300";
 
   return (
     <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#050B12]/80 backdrop-blur-xl">
@@ -19,9 +27,12 @@ export default function WorkspaceTopBar({ engine }: { engine: "openai" | "demo" 
             {nav("brandSuply")}
             <span className="gradient-text-light">{nav("brandMate")}</span>
           </Link>
-          <span className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-white/60 sm:inline-flex">
-            <span className={`h-1.5 w-1.5 rounded-full ${engine === "openai" ? "bg-emerald-400" : "bg-amber-300"}`} />
-            {engine === "openai" ? "Live AI + Suplymate data" : engine === "demo" ? "Demo narrative · real data" : "Connecting…"}
+          <span
+            className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-white/60 sm:inline-flex"
+            title={engine?.note ?? undefined}
+          >
+            <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
+            {engine ? ENGINE_LABEL[engine.source] : "Connecting…"}
           </span>
         </div>
 
