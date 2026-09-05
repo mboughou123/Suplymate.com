@@ -89,6 +89,14 @@ describe("validateSignup", () => {
     ).toBe(true);
   });
 
+  it("change-password uses the same rule as sign-up", async () => {
+    const { validatePasswordStrength } = await import("@/lib/password");
+    expect(validatePasswordStrength("password1")).toBeNull();
+    expect(validatePasswordStrength("abc1")).toBe(SIGNUP_ERROR_MESSAGES.passwordTooShort);
+    expect(validatePasswordStrength("12345678")).toBe(SIGNUP_ERROR_MESSAGES.passwordNeedsLetter);
+    expect(validatePasswordStrength("abcdefgh")).toBe(SIGNUP_ERROR_MESSAGES.passwordNeedsNumber);
+  });
+
   it("requires the confirmation to match", () => {
     expect(validateSignup({ ...valid, confirmPassword: "engine1843" })).toMatchObject({
       ok: false,
