@@ -10,6 +10,7 @@ import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { phase1Suppliers } from "@/data/phase1-suppliers";
 import { daily20260902Suppliers } from "@/lib/daily-2026-09-02-suppliers";
+import { daily20260903Suppliers } from "@/lib/daily-2026-09-03-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
 import { compareForDirectory } from "@/lib/supplier-directory-sort";
 
@@ -42,7 +43,8 @@ function allFallbackSuppliers(): Supplier[] {
     verifiedSuppliers,
     legacySuppliers,
     phase1Suppliers,
-    daily20260902Suppliers
+    daily20260902Suppliers,
+    daily20260903Suppliers,
   );
 }
 
@@ -79,18 +81,23 @@ export async function getSuppliersFromDb() {
         directoryFallback,
         phase1Suppliers,
         daily20260902Suppliers,
+        daily20260903Suppliers,
       ).sort(compareForDirectory);
     }
     // Never surface pending/rejected/needs_info imports on public surfaces.
     const fromDb = rows.map(mapSupplier).filter(isPubliclyVisible);
-    return mergeSuppliersById(fromDb, phase1Suppliers, daily20260902Suppliers).sort(
-      compareForDirectory,
-    );
+    return mergeSuppliersById(
+      fromDb,
+      phase1Suppliers,
+      daily20260902Suppliers,
+      daily20260903Suppliers,
+    ).sort(compareForDirectory);
   } catch {
     return mergeSuppliersById(
       directoryFallback,
       phase1Suppliers,
       daily20260902Suppliers,
+      daily20260903Suppliers,
     ).sort(compareForDirectory);
   }
 }

@@ -1,6 +1,7 @@
 import type { Supplier } from "@/data/suppliers";
 import { isPhase1Supplier } from "@/lib/phase1";
 import { isDaily20260902Supplier } from "@/lib/daily-2026-09-02-ids";
+import { isDaily20260903Supplier } from "@/lib/daily-2026-09-03-ids";
 
 function supplierHasImage(s: Supplier): boolean {
   return (
@@ -13,7 +14,11 @@ function supplierHasImage(s: Supplier): boolean {
 export function isCuratedDirectoryMill(
   supplier: Pick<Supplier, "id"> | string | null | undefined,
 ): boolean {
-  return isPhase1Supplier(supplier) || isDaily20260902Supplier(supplier);
+  return (
+    isPhase1Supplier(supplier) ||
+    isDaily20260902Supplier(supplier) ||
+    isDaily20260903Supplier(supplier)
+  );
 }
 
 /**
