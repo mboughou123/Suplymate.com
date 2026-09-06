@@ -15,7 +15,9 @@
     "pricingDescription": "Free, Basic ($19), Premium ($49) and Enterprise plans for AI-powered industrial sourcing. 3-day free trial on paid plans.",
     "aiAssistantTitle": "AI Procurement Assistant · Suplymate",
     "aiAssistantDescription": "Source smarter with AI-powered supplier intelligence, pricing analysis, and procurement recommendations.",
-    "adminTitle": "Admin | Suplymate"
+    "adminTitle": "Admin | Suplymate",
+    "careersTitle": "Careers | Suplymate",
+    "careersDescription": "Join the Suplymate team. Help build the AI procurement platform for industrial buyers across the UAE, India, and beyond."
   },
   "navigation": {
     "brand": "Suplymate",
@@ -49,7 +51,8 @@
     "supplierWorkspace": "Supplier workspace",
     "myProducts": "My products",
     "rfqs": "RFQs",
-    "account": "Account"
+    "account": "Account",
+    "careers": "Careers"
   },
   "footer": {
     "tagline": "Your AI procurement friend. Smarter sourcing for modern businesses.",
@@ -68,7 +71,8 @@
     "reviewPolicy": "Review Policy",
     "imageRemoval": "Image Removal",
     "refundAndProtection": "Refund & Protection",
-    "copyright": "© {year} Suplymate. All rights reserved."
+    "copyright": "© {year} Suplymate. All rights reserved.",
+    "careers": "Careers"
   },
   "languageSelector": {
     "label": "Language",
@@ -162,37 +166,21 @@
     "exploreSuppliers": "Explore suppliers",
     "viewPricing": "View pricing"
   },
-  "homeAiDemo": {
-    "eyebrow": "Example walkthrough",
-    "title": "Three AI agents, one sourcing workflow",
-    "subtitle": "Scout finds verified mills, Compare lines up offers, and Watch flags price windows — built for industrial procurement, not generic chat.",
-    "walkthroughDisclaimer": "Walkthrough · Example scenario. Supplier names are from the Suplymate verified network; prices and signals shown are illustrative.",
-    "agentScout": "Scout",
-    "agentCompare": "Compare",
-    "agentWatch": "Watch",
-    "runWalkthrough": "Run walkthrough",
-    "replayWalkthrough": "Replay",
-    "reset": "Reset",
-    "youLabel": "You",
-    "userQuery": "HDPE pipe DN110, 270 meters, UAE or India, verified, 14-day lead.",
-    "scoutIntro": "Shortlisted verified mills that can meet your lead time in UAE & India.",
-    "scoutFootnote": "Real supplier profiles on Suplymate — tap a name to view verification details.",
-    "compareIntro": "Side-by-side indicative offers for your quantity (example values).",
-    "comparePrice": "Price",
-    "compareMoq": "MOQ",
-    "compareLead": "Lead",
-    "leadDays": "{days} days",
-    "compareFootnote": "Example pricing for demo purposes — request quotes for live numbers.",
-    "watchIntro": "HDPE / plastics index movement this week.",
-    "watchSignal": "HDPE index {change}% this week",
-    "waitWindow": "Wait window",
-    "watchDetail": "A short softening week suggests holding RFQs briefly before locking volume — confirm with your category lead.",
-    "watchFootnote": "Indicative market signal · not trading advice.",
-    "verified": "Verified",
-    "idleHint": "Press Run walkthrough to see Scout → Compare → Watch in action.",
-    "ctaHint": "Ready to run your own ask? Open the full AI assistant.",
-    "openAssistant": "Open AI assistant",
-    "consoleLabel": "Agent console"
+  "homeOrchestrator": {
+    "eyebrow": "How it works",
+    "title": "One orchestrator, three specialist agents",
+    "subtitle": "Tell Mate what you need to source. It routes the ask to Scout, Compare, or Watch — and hands back a shortlist, an offer table, or a price window.",
+    "cardTitlePrefix": "Mate, your",
+    "cardTitleAccent": "AI orchestrator",
+    "cardTitleSuffix": "in Suplymate",
+    "learnMore": "Learn more",
+    "askWhat": "What do you want to source?",
+    "userAsk": "HDPE pipe DN110, 270 meters, UAE or India, verified, 14-day lead.",
+    "recommend": "I recommend the Scout agent — it shortlists verified mills by spec and lead time.",
+    "agentChip": "Scout agent",
+    "inputHint": "Can you compare offers from the three verified mills?",
+    "ghostLeft": "RFQ agent",
+    "ghostRight": "Spot quote agent"
   },
   "homeTopNav": {
     "mainNav": "Main navigation",
@@ -289,7 +277,39 @@
     "sidePoint1": "Supplier discovery and match scoring",
     "sidePoint2": "Material intelligence and price context",
     "sidePoint3": "Direct supplier messaging and RFQs",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "confirmPassword": "Confirm password",
+    "passwordsMatch": "Passwords match",
+    "passwordRuleMinLength": "At least 8 characters",
+    "passwordRuleLetter": "Contains a letter",
+    "passwordRuleNumber": "Contains a number",
+    "passwordStrength": "Password strength",
+    "strengthWeak": "Weak",
+    "strengthFair": "Fair",
+    "strengthGood": "Good",
+    "strengthStrong": "Strong",
+    "acceptTerms": "I agree to the <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+    "fixHighlightedFields": "Please fix the highlighted fields.",
+    "goToSignIn": "Go to sign in",
+    "validation": {
+      "nameRequired": "Please enter your full name.",
+      "nameTooShort": "Name must be at least 2 characters.",
+      "nameTooLong": "Name must be at most 80 characters.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "emailTaken": "An account with this email already exists.",
+      "passwordRequired": "Please choose a password.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "passwordTooLong": "Password must be at most 128 characters.",
+      "passwordNeedsLetter": "Password must include at least one letter.",
+      "passwordNeedsNumber": "Password must include at least one number.",
+      "confirmRequired": "Please confirm your password.",
+      "confirmMismatch": "Passwords do not match.",
+      "termsRequired": "Please accept the Terms of Service and Privacy Policy.",
+      "roleInvalid": "Please choose a valid account type.",
+      "companyRequired": "Company name is required for supplier accounts.",
+      "companyTooLong": "Company name must be at most 120 characters."
+    }
   },
   "supplierDashboard": {
     "title": "Supplier workspace",
@@ -416,7 +436,8 @@
     "savePreferencesFailed": "Could not save preferences.",
     "notFoundTitle": "Page not found",
     "notFoundDescription": "The page you are looking for doesn't exist or may have been moved.",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "dbUnavailable": "We can't reach our database right now. Please try again in a moment."
   },
   "suppliers": {
     "pageTitle": "Find verified suppliers worldwide",
@@ -502,6 +523,9 @@
     "pageSubtitle": "Every material in the Suplymate catalog with its price series, source, signal and engineering notes. Only catalog materials are shown — nothing is invented.",
     "provenanceNotice": "Prices marked “reference” are indicative seed series, not live market data. Connect a pricing provider to replace them with live quotes.",
     "liveNotice": "Live prices from {provider}. Cached for up to {minutes} minutes.",
+    "liveNoticeMonthly": "Live benchmarks from {provider}. The underlying series is published monthly; Suplymate re-checks it {refresh}.",
+    "refreshDaily": "daily",
+    "refreshEveryHours": "every {hours} hours",
     "searchPlaceholder": "Search materials: steel, aluminum, cement…",
     "materials": "Materials",
     "allCategories": "All categories",
@@ -560,7 +584,91 @@
     "procurementSavings": "Procurement savings",
     "supplierResponseRate": "Supplier response rate",
     "conversations": "{count, plural, one {# conversation} other {# conversations}}",
-    "noConversationsYet": "No conversations yet"
+    "noConversationsYet": "No conversations yet",
+    "quotesToReview": "{count, plural, one {# RFQ has new quotes to review.} other {# RFQs have new quotes to review.}}",
+    "newRfq": "New RFQ",
+    "askMate": "Ask Mate",
+    "unavailable": "Unavailable right now",
+    "kpiSectionLabel": "Key metrics",
+    "kpiSavedSuppliers": "Saved suppliers",
+    "kpiSavedSuppliersSub": "In your shortlist",
+    "kpiSavedSuppliersEmpty": "Save suppliers while you scout",
+    "kpiOpenRfqs": "Open RFQs",
+    "kpiOpenRfqsSub": "{total, plural, one {# request in total} other {# requests in total}}",
+    "kpiPriceAlerts": "Price alerts",
+    "kpiUnread": "Unread updates",
+    "kpiUnreadSub": "Messages, quotes and alerts",
+    "kpiUnreadEmpty": "You're all caught up",
+    "recentRfqsTitle": "Recent RFQs",
+    "recentRfqsDescription": "{count, plural, =0 {No requests yet} one {# request for quote} other {# requests for quote}}",
+    "viewAllRfqs": "View all RFQs",
+    "anySupplier": "Any supplier",
+    "quotesReceived": "{count, plural, one {# quote} other {# quotes}}",
+    "noRfqsTitle": "No RFQs yet",
+    "noRfqsBody": "Add products to your cart and request quotes — suppliers reply here and in your inbox.",
+    "browseProducts": "Browse products",
+    "findSuppliers": "Find suppliers",
+    "rfqStatus": {
+      "open": "Open",
+      "submitted": "Sent",
+      "quoted": "Quoted",
+      "closed": "Closed",
+      "expired": "Expired",
+      "cancelled": "Cancelled"
+    },
+    "recentConversationsTitle": "Supplier conversations",
+    "recentConversationsDescription": "Latest replies from suppliers you've contacted",
+    "openInbox": "Open inbox",
+    "unreadBadge": "Unread",
+    "noSubject": "No subject",
+    "noConversationsTitle": "No conversations yet",
+    "noConversationsBody": "Contact a supplier from their profile to start negotiating.",
+    "conversationStatus": {
+      "inquiry": "Inquiry",
+      "negotiation": "Negotiating",
+      "sample_sent": "Sample sent",
+      "order_in_progress": "Order in progress",
+      "completed": "Completed"
+    },
+    "mate": {
+      "eyebrow": "Mate",
+      "title": "Quick ask",
+      "body": "Your procurement copilot. Ask about suppliers, prices or specs — or start from a prompt.",
+      "open": "Open assistant",
+      "prompt1": "Find verified stainless steel suppliers in Turkey with MOQ under 5 tons",
+      "prompt2": "Compare copper prices this month — should I buy now or wait?",
+      "prompt3": "Draft an RFQ for 2,000 aluminium extrusion profiles, 6063-T5",
+      "inputLabel": "Ask Mate",
+      "placeholder": "Ask anything about sourcing…",
+      "ask": "Ask"
+    },
+    "priceMoversTitle": "Watch · price movers",
+    "priceMoversDescription": "Biggest moves across tracked materials today",
+    "openWatch": "Open Watch",
+    "quickLinks": {
+      "title": "Quick links",
+      "description": "Jump straight into a workflow",
+      "scout": {
+        "label": "Scout",
+        "hint": "Find verified suppliers"
+      },
+      "compare": {
+        "label": "Compare",
+        "hint": "Browse and compare offers"
+      },
+      "watch": {
+        "label": "Watch",
+        "hint": "Material price charts"
+      },
+      "settings": {
+        "label": "Settings",
+        "hint": "Account, team and billing"
+      }
+    },
+    "topSuppliersTitle": "Top-ranked suppliers",
+    "topSuppliersDescription": "Highest scored in the directory",
+    "scoutSuppliers": "Scout suppliers",
+    "matchScore": "Supplier score"
   },
   "settings": {
     "title": "Settings",
@@ -699,7 +807,15 @@
     "problemEyebrow": "The problem",
     "problemTitle": "Finding a supplier still means a dozen tabs and a spreadsheet",
     "problemText": "Ask anyone who has sourced steel, packaging or components: the search starts on Google, moves to Alibaba and a few directories, spills into email threads and phone calls, and ends in a spreadsheet that is out of date before it is finished. Prices are opaque, delivery promises are unverified, and trust is guesswork.",
-    "problemList": ["Google", "Alibaba", "Supplier directories", "Email threads", "Spreadsheets", "Industry websites", "Phone calls"],
+    "problemList": [
+      "Google",
+      "Alibaba",
+      "Supplier directories",
+      "Email threads",
+      "Spreadsheets",
+      "Industry websites",
+      "Phone calls"
+    ],
     "solutionEyebrow": "The solution",
     "solutionTitle": "Supplier discovery + price comparison + material intelligence + AI + communication",
     "solutionText": "Suplymate brings the whole sourcing journey into one place. Discover listed and verified suppliers, compare them on price, delivery, location and trust, understand the materials you are buying, ask an AI trained for industrial procurement, and message suppliers or send RFQs — all from the same workspace.",
@@ -735,6 +851,109 @@
     "includeAccountEmail": "The email address associated with your account, if you have one.",
     "includeSupplierLink": "A link to the supplier or product listing, if your question is about a specific entry.",
     "includeScreenshots": "Screenshots or error messages, if you are reporting a technical issue."
+  },
+  "careers": {
+    "eyebrow": "Careers",
+    "title": "Build the future of industrial sourcing",
+    "intro": "We're a small, fast-moving team connecting industrial buyers with verified mills and AI-driven market intelligence. If you want your work to change how factories buy, we'd love to talk.",
+    "viewRoles": "View open roles",
+    "applyNow": "Apply now",
+    "valuesTitle": "Why join Suplymate",
+    "valuesSubtitle": "Early-stage ownership, real customers, and a product that touches steel, plastics, and everything in between.",
+    "values": {
+      "impact": {
+        "title": "Real impact, early",
+        "body": "You'll ship to buyers and mills within weeks, not quarters — and see it change how they source."
+      },
+      "ai": {
+        "title": "AI with a purpose",
+        "body": "Scout, Compare, and Watch are agents built for procurement — not chat wrappers. You'll shape how they reason."
+      },
+      "global": {
+        "title": "UAE, India & beyond",
+        "body": "Our network spans the Gulf and South Asia. Expect a multilingual team and a global customer base from day one."
+      },
+      "team": {
+        "title": "Small team, big trust",
+        "body": "Remote-friendly, low ceremony, high ownership. We hire people we'd trust to run a project alone."
+      }
+    },
+    "rolesEyebrow": "Open roles",
+    "rolesTitle": "Where we're hiring",
+    "rolesSubtitle": "Roles are remote-first with a preference for candidates in the UAE or India time zones.",
+    "roles": {
+      "foundingEngineer": {
+        "title": "Founding Full-Stack Engineer",
+        "summary": "Own features end to end across our Next.js, Prisma, and AI stack — from supplier data pipelines to the Scout / Compare / Watch agents.",
+        "location": "Remote · UAE / India",
+        "type": "Full-time"
+      },
+      "dataAnalyst": {
+        "title": "Procurement Data Analyst",
+        "summary": "Curate and verify mill data, build price-index datasets, and turn market signals into insights buyers can act on.",
+        "location": "Remote · UAE",
+        "type": "Full-time"
+      },
+      "growthPartnerships": {
+        "title": "Growth & Supplier Partnerships",
+        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the Gulf and South Asia.",
+        "location": "Dubai / Abu Dhabi",
+        "type": "Full-time"
+      },
+      "supplierSuccess": {
+        "title": "Supplier Success Associate",
+        "summary": "Help mills complete verification, publish products, and respond to RFQs quickly — the human side of a verified network.",
+        "location": "Remote · India",
+        "type": "Contract"
+      },
+      "general": {
+        "title": "General application",
+        "summary": "Don't see a match? Tell us what you'd build.",
+        "location": "Remote",
+        "type": "Open"
+      }
+    },
+    "apply": "Apply",
+    "noFit": "Don't see the right role? Send a general application — we read every one.",
+    "applyEyebrow": "Apply",
+    "applyTitle": "Tell us about yourself",
+    "applyBody": "Share a little about your background and the role you're interested in. Your application goes straight to the founding team's inbox.",
+    "applySteps": [
+      "We review every application within a week.",
+      "A short intro call with a founder.",
+      "A practical exercise or portfolio walkthrough.",
+      "Offer — usually within two to three weeks."
+    ],
+    "orEmail": "Prefer email? Write to",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "locationPlaceholder": "Dubai, UAE",
+      "role": "Role you're applying for",
+      "linkedin": "LinkedIn or portfolio",
+      "cvUrl": "CV / résumé link",
+      "cvHint": "Google Drive, Dropbox, or a public URL",
+      "message": "Why Suplymate?",
+      "messageHint": "At least {min} characters",
+      "optional": "Optional",
+      "privacyNote": "We only use your details to review your application and get back to you.",
+      "submit": "Send application",
+      "submitting": "Sending…",
+      "sentTitle": "Application sent",
+      "sentBody": "Thanks — we've received your application and will reply by email.",
+      "sendAnother": "Send another"
+    },
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Enter a valid email address.",
+      "invalidUrl": "Enter a full URL starting with https://.",
+      "tooShort": "Please write a bit more so we can understand your fit.",
+      "rateLimited": "Too many submissions — please try again in a few minutes.",
+      "deliveryFailed": "We couldn't deliver your application right now. Please email it to {email} instead.",
+      "generic": "Something went wrong. Please try again or email us directly."
+    }
   },
   "faq": {
     "title": "Frequently asked questions",

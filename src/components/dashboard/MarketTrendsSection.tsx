@@ -1,97 +1,73 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { TrendingUp, TrendingDown } from "lucide-react";
+import { TrendingDown, TrendingUp } from "lucide-react";
+import DashboardCard from "./DashboardCard";
+import Sparkline from "./Sparkline";
 import type { MaterialSummary } from "./types";
 
 type Props = {
   materials: MaterialSummary[];
+  limit?: number;
 };
 
-export default function MarketTrendsSection({ materials }: Props) {
-  const t = useTranslations("dashboard");
-  const nav = useTranslations("navigation");
-  const common = useTranslations("common");
+export default async function MarketTrendsSection({ materials, limit = 6 }: Props) {
+  const t = await getTranslations("dashboard");
+  const shown = materials.slice(0, limit);
+  const buySignals = materials.filter((m) => m.signal === "Buy now").length;
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-sm font-bold text-ink">{t("marketTrends")}</h2>
-          <p className="text-[11px] text-ink-dim">{nav("priceChartsDescription")}</p>
-        </div>
-        <Link
-          href="/materials"
-          className="text-[11px] font-semibold text-ink-muted transition hover:text-gold"
-        >
-          {common("viewAll")}
-        </Link>
-      </div>
-
-      {materials.length > 0 ? (
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {materials.slice(0, 6).map((m) => {
+    <DashboardCard
+      title={t("marketTrends")}
+      description={
+        materials.length > 0 ? t("buyNowSignals", { count: buySignals }) : t("notEnoughData")
+      }
+      icon={TrendingUp}
+      action={shown.length > 0 ? { label: t("openWatch"), href: "/materials" } : undefined}
+    >
+      {shown.length > 0 ? (
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {shown.map((m) => {
             const up = m.dailyChange >= 0;
-            const spark = m.history.slice(-8);
-            const min = Math.min(...spark);
-            const max = Math.max(...spark);
-            const range = max - min || 1;
-            const points = spark
-              .map((v, idx) => {
-                const x = (idx / (spark.length - 1 || 1)) * 40;
-                const y = 18 - ((v - min) / range) * 14;
-                return `${x},${y}`;
-              })
-              .join(" ");
-
             return (
-              <div
+              <Link
                 key={m.id}
-                className="rounded-xl border border-slate-200 bg-white p-3 transition hover:border-gold/40"
+                href="/materials"
+                className="group rounded-xl border border-slate-200 bg-white p-3.5 shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan/30 hover:shadow-cardHover"
               >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-xs font-semibold text-ink">{m.name}</p>
-                    <p className="text-[10px] text-ink-dim">{m.symbol}</p>
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-ink">{m.name}</p>
+                    <p className="text-[11px] text-ink-dim">{m.symbol}</p>
                   </div>
-                  <svg viewBox="0 0 40 20" className="h-5 w-12" aria-hidden>
-                    <polyline
-                      fill="none"
-                      stroke={up ? "#059669" : "#DC2626"}
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      points={points}
-                    />
-                  </svg>
+                  <Sparkline uid={m.id} values={m.history} up={up} className="h-6 w-14 shrink-0" />
                 </div>
-                <p className="mt-2 text-sm font-bold text-ink">
-                  {m.currentPrice}{" "}
-                  <span className="text-[10px] font-normal text-ink-dim">{m.unit}</span>
+                <p className="mt-3 font-display text-heading-sm text-ink">
+                  {m.currentPrice.toLocaleString()}{" "}
+                  <span className="text-xs font-normal text-ink-dim">{m.unit}</span>
                 </p>
-                <div className="mt-1 flex items-center gap-1">
-                  {up ? (
-                    <TrendingUp className="h-3 w-3 text-emerald-600" aria-hidden />
-                  ) : (
-                    <TrendingDown className="h-3 w-3 text-red-600" aria-hidden />
-                  )}
+                <div className="mt-1.5 flex items-center gap-1.5">
                   <span
-                    className={`text-[11px] font-semibold ${
-                      up ? "text-emerald-600" : "text-red-600"
+                    className={`inline-flex items-center gap-1 text-xs font-semibold tabular-nums ${
+                      up ? "text-up" : "text-down"
                     }`}
                   >
+                    {up ? (
+                      <TrendingUp className="h-3.5 w-3.5" aria-hidden />
+                    ) : (
+                      <TrendingDown className="h-3.5 w-3.5" aria-hidden />
+                    )}
                     {up ? "+" : ""}
-                    {m.dailyChange}%
+                    {m.dailyChange.toFixed(1)}%
                   </span>
-                  <span className="text-[10px] text-ink-dim">· {m.signal}</span>
+                  <span className="truncate text-[11px] text-ink-dim">· {m.signal}</span>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
       ) : (
-        <p className="mt-4 text-xs text-ink-dim">{t("notEnoughData")}</p>
+        <p className="text-xs text-ink-dim">{t("notEnoughData")}</p>
       )}
-    </section>
+    </DashboardCard>
   );
 }

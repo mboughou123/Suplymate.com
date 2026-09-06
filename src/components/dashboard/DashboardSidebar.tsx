@@ -56,13 +56,13 @@ export default function DashboardSidebar({
     <div className="flex h-full flex-col bg-white">
       <div className="flex items-center justify-between border-b border-slate-100 px-4 py-4">
         <Link href="/" className="flex items-center gap-2.5 overflow-hidden">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gold text-sm font-bold text-ink">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-sm font-bold text-white">
             S
           </span>
           {!collapsed && (
             <span className="font-display text-sm font-bold text-ink">
               {nav("brandSuply")}
-              <span className="text-gold">{nav("brandMate")}</span>
+              <span className="gradient-text">{nav("brandMate")}</span>
             </span>
           )}
         </Link>
@@ -101,15 +101,15 @@ export default function DashboardSidebar({
               title={item.label}
               className={`group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                 active
-                  ? "bg-gold/10 text-ink"
+                  ? "bg-cyan-soft text-ink"
                   : "text-ink-muted hover:bg-slate-100 hover:text-ink"
               }`}
             >
               {active && (
-                <span className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-gold" />
+                <span className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-cyan" />
               )}
               <item.icon
-                className={`h-4 w-4 shrink-0 ${active ? "text-gold" : "text-ink-dim"}`}
+                className={`h-4 w-4 shrink-0 ${active ? "text-cyan" : "text-ink-dim"}`}
                 aria-hidden
               />
               {!collapsed && <span className="truncate">{item.label}</span>}
@@ -123,7 +123,7 @@ export default function DashboardSidebar({
           <Link
             href="/settings/subscription"
             onClick={onClose}
-            className="block rounded-lg border border-slate-200 bg-white px-3 py-2.5 transition hover:border-gold/40 hover:bg-gold/5"
+            className="block rounded-lg border border-slate-200 bg-white px-3 py-2.5 transition hover:border-cyan/30 hover:bg-cyan-soft"
           >
             <p className="text-[11px] font-semibold text-ink">{nav("pricing")}</p>
             <p className="text-[10px] text-ink-dim">{common("learnMore")}</p>
@@ -136,7 +136,7 @@ export default function DashboardSidebar({
   return (
     <>
       <aside
-        className={`hidden h-screen shrink-0 border-r border-slate-200 bg-white transition-all duration-300 lg:block ${
+        className={`sticky top-0 hidden h-screen shrink-0 border-r border-slate-200 bg-white transition-all duration-300 lg:block ${
           collapsed ? "w-[72px]" : "w-64"
         }`}
       >

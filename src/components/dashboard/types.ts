@@ -1,9 +1,13 @@
+/** `null` means the underlying query failed (e.g. DB unavailable) — render "—". */
+export type Count = number | null;
+
 export type DashboardStats = {
-  alertCount: number;
-  conversationCount: number;
-  rfqCount: number;
-  favoriteCount: number;
-  unreadNotifications: number;
+  alertCount: Count;
+  conversationCount: Count;
+  rfqCount: Count;
+  openRfqCount: Count;
+  favoriteCount: Count;
+  unreadNotifications: Count;
   supplierCount: number;
   verifiedSuppliers: number;
 };
@@ -34,10 +38,31 @@ export type TopSupplier = {
   verified: boolean;
 };
 
-export type ActivityItem = {
+export type RfqStatus = "open" | "submitted" | "quoted" | "closed" | "expired" | "cancelled";
+
+export type RecentRfq = {
   id: string;
-  type: "quote" | "price" | "shipping" | "ai" | "supplier";
-  title: string;
-  detail: string;
-  status?: "success" | "warning" | "info";
+  publicRef: string | null;
+  productName: string;
+  quantity: string;
+  supplierName: string | null;
+  status: RfqStatus;
+  quoteCount: number;
+  createdAt: string;
+};
+
+export type ConversationStatus =
+  | "inquiry"
+  | "negotiation"
+  | "sample_sent"
+  | "order_in_progress"
+  | "completed";
+
+export type RecentConversation = {
+  id: string;
+  supplierName: string;
+  subject: string | null;
+  status: ConversationStatus;
+  lastMessageAt: string;
+  unread: boolean;
 };

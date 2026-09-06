@@ -92,19 +92,35 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
 
   const rangeChange = ranged ? pct(ranged.history[0], ranged.history[ranged.history.length - 1]) : 0;
 
+  // Only advertise live benchmarks when at least one material actually carries
+  // provider data — a configured provider whose quotes could not be stored
+  // (e.g. no database) must not be presented as live.
+  const hasLiveData = pricing.configured && initialMaterials.some((m) => m.isLive);
+
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
       <div className="space-y-6">
         <div
           className={`flex items-start gap-2 rounded-xl border px-4 py-3 text-xs ${
-            pricing.configured ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-cyan/20 bg-cyan-soft text-cyan"
+            hasLiveData ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-cyan/20 bg-cyan-soft text-cyan"
           }`}
         >
           <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
           <p>
-            {pricing.configured
-              ? t("liveNotice", { provider: pricing.providerName ?? pricing.provider ?? "provider", minutes: 60 })
-              : t("provenanceNotice")}
+            {!hasLiveData
+              ? t("provenanceNotice")
+              : pricing.cadence === "monthly"
+                ? t("liveNoticeMonthly", {
+                    provider: pricing.providerName ?? pricing.provider ?? "provider",
+                    refresh:
+                      (pricing.refreshIntervalMinutes ?? 1440) === 1440
+                        ? t("refreshDaily")
+                        : t("refreshEveryHours", { hours: Math.round((pricing.refreshIntervalMinutes ?? 1440) / 60) }),
+                  })
+                : t("liveNotice", {
+                    provider: pricing.providerName ?? pricing.provider ?? "provider",
+                    minutes: pricing.refreshIntervalMinutes ?? 60,
+                  })}
             {pricing.lastError && <span className="block text-amber-800"> Provider error: {pricing.lastError}</span>}
           </p>
         </div>
@@ -145,8 +161,18 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
           <>
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Stat label={t("currentPrice")} value={`${selected.currency === "USD" ? "$" : selected.currency + " "}${selected.currentPrice.toLocaleString(undefined, { maximumFractionDigits: selected.currentPrice < 10 ? 3 : 0 })}`} sub={selected.unit} />
-              <Stat label={t("change24h")} value={`${selected.dailyChange > 0 ? "+" : ""}${selected.dailyChange.toFixed(1)}%`} tone={selected.dailyChange} />
-              <Stat label={t("change30d")} value={`${selected.monthlyChange > 0 ? "+" : ""}${selected.monthlyChange.toFixed(1)}%`} tone={selected.monthlyChange} />
+              {selected.cadence === "monthly" ? (
+                <>
+                  {/* Monthly benchmark series: no 24h figure exists, show month-over-month + yearly instead. */}
+                  <Stat label={t("monthly")} value={`${selected.monthlyChange > 0 ? "+" : ""}${selected.monthlyChange.toFixed(1)}%`} tone={selected.monthlyChange} />
+                  <Stat label={t("yearly")} value={`${selected.yearlyChange > 0 ? "+" : ""}${selected.yearlyChange.toFixed(1)}%`} tone={selected.yearlyChange} />
+                </>
+              ) : (
+                <>
+                  <Stat label={t("change24h")} value={`${selected.dailyChange > 0 ? "+" : ""}${selected.dailyChange.toFixed(1)}%`} tone={selected.dailyChange} />
+                  <Stat label={t("change30d")} value={`${selected.monthlyChange > 0 ? "+" : ""}${selected.monthlyChange.toFixed(1)}%`} tone={selected.monthlyChange} />
+                </>
+              )}
               <Stat label={`${t("changeRange")} (${range}M)`} value={`${rangeChange > 0 ? "+" : ""}${rangeChange.toFixed(1)}%`} tone={rangeChange} />
             </div>
 
@@ -170,7 +196,7 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
                   }`}
                 >
                   <Database className="h-3 w-3" aria-hidden />
-                  {selected.isLive ? `${t("live")} · ${selected.source}` : t("reference")}
+                  {selected.isLive ? selected.sourceLabel : t("reference")}
                 </span>
                 <span className="text-ink-dim">
                   {t("lastUpdated")}: {selected.lastUpdatedAt ? new Date(selected.lastUpdatedAt).toLocaleString() : t("notAvailable")}

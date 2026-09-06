@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { Factory, TrendingUp, Atom, Sparkles, MessageSquare, ArrowRight, X } from "lucide-react";
@@ -18,7 +18,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("about");
   const footer = await getTranslations("footer");
   const problemList = t.raw("problemList") as string[];

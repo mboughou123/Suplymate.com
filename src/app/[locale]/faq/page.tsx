@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
@@ -17,7 +17,13 @@ export async function generateMetadata({
 
 const FAQ_KEYS = [1, 2, 3, 4, 5, 6, 7, 8] as const;
 
-export default async function FaqPage() {
+export default async function FaqPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("faq");
   const footer = await getTranslations("footer");
 

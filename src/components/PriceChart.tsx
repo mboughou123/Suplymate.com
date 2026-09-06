@@ -6,7 +6,12 @@ import { TrendingDown, TrendingUp } from "lucide-react";
 import type { Material } from "@/data/materials";
 
 type PriceChartProps = {
-  material: Material;
+  /**
+   * `observedAt` (newest provider observation) anchors the month labels so
+   * lagged benchmark series (e.g. IMF monthly data) aren't shifted to "now".
+   * Plain seed materials omit it and label backwards from the current month.
+   */
+  material: Material & { observedAt?: string | null };
 };
 
 const WIDTH = 640;
@@ -19,13 +24,23 @@ const CHART_H = HEIGHT - PAD.top - PAD.bottom;
 const UP = "#047857";
 const DOWN = "#B91C1C";
 
-function monthLabels(count: number): string[] {
+/** Month labels for `count` points, the last one being the month of `end`. */
+function monthLabels(count: number, end: Date): string[] {
   const fmt = new Intl.DateTimeFormat("en-US", { month: "short" });
-  const now = new Date();
   return Array.from({ length: count }, (_, i) => {
-    const d = new Date(now.getFullYear(), now.getMonth() - (count - 1 - i), 1);
+    const d = new Date(end.getFullYear(), end.getMonth() - (count - 1 - i), 1);
     return fmt.format(d);
   });
+}
+
+/** Last observation date when known and valid; otherwise "now" (seed data). */
+function seriesEnd(observedAt: string | null | undefined, source: string | undefined, lastUpdatedAt: string | null | undefined): Date {
+  const iso = observedAt ?? (source && source !== "seed" ? lastUpdatedAt : null);
+  if (iso) {
+    const d = new Date(iso);
+    if (!Number.isNaN(d.getTime())) return d;
+  }
+  return new Date();
 }
 
 function formatPrice(v: number, currency: string): string {
@@ -49,6 +64,7 @@ export default function PriceChart({ material }: PriceChartProps) {
   const data = material.history;
   const svgRef = useRef<SVGSVGElement>(null);
   const [hover, setHover] = useState<number | null>(null);
+  const { observedAt, source, lastUpdatedAt } = material;
 
   const { min, max, range, points, labels, trendUp, periodChange } = useMemo(() => {
     const lo = Math.min(...data);
@@ -70,11 +86,11 @@ export default function PriceChart({ material }: PriceChartProps) {
       max: maxV,
       range: rangeV,
       points: pts,
-      labels: monthLabels(data.length),
+      labels: monthLabels(data.length, seriesEnd(observedAt, source, lastUpdatedAt)),
       trendUp: last >= first,
       periodChange: first ? ((last - first) / first) * 100 : 0,
     };
-  }, [data]);
+  }, [data, observedAt, source, lastUpdatedAt]);
 
   const color = trendUp ? UP : DOWN;
   const line = points.map((p) => `${p.x},${p.y}`).join(" ");

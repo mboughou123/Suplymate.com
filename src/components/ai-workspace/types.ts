@@ -1,7 +1,7 @@
-import type { AiBlock, AiResponse, OrbState, RequirementSummary } from "@/lib/ai/aiService";
+import type { AiBlock, AiResponse, AiSource, OrbState, RequirementSummary } from "@/lib/ai/aiService";
 import type { WorkflowStageId } from "@/lib/ai/sourcing-plan";
 
-export type { AiBlock, AiResponse, OrbState, RequirementSummary, WorkflowStageId };
+export type { AiBlock, AiResponse, AiSource, OrbState, RequirementSummary, WorkflowStageId };
 
 export type ChatTurn = {
   id: string;
@@ -9,8 +9,11 @@ export type ChatTurn = {
   content: string;
   blocks?: AiBlock[];
   requirement?: RequirementSummary;
-  source?: "openai" | "demo";
+  source?: AiSource;
 };
+
+/** Engine status shown in the top bar. `note` is a short, secret-free reason. */
+export type EngineState = { source: AiSource; note: string | null };
 
 export type PanelTab = "matches" | "prices" | "materials" | "strategy";
 

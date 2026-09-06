@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link href="/pricing" className={linkClass}>{nav("pricing")}</Link></li>
               <li><Link href="/about" className={linkClass}>{t("about")}</Link></li>
               <li><Link href="/blog" className={linkClass}>{nav("blog")}</Link></li>
+              <li><Link href="/careers" className={linkClass}>{t("careers")}</Link></li>
               <li><Link href="/contact" className={linkClass}>{t("contact")}</Link></li>
               <li><Link href="/help" className={linkClass}>{t("help")}</Link></li>
               <li><Link href="/faq" className={linkClass}>{t("faq")}</Link></li>

@@ -38,7 +38,7 @@ export default function MaterialIntelCard({ material }: { material: MaterialInte
             <p className="text-sm font-semibold tabular-nums text-white">
               ${material.price.price.toLocaleString(undefined, { maximumFractionDigits: material.price.price < 10 ? 3 : 0 })}
             </p>
-            <p className="text-[10px] text-white/45">
+            <p className="text-[10px] text-white/45" title={material.price.sourceLabel}>
               {material.price.unit} · {material.price.isLive ? material.price.source : "reference"}
             </p>
           </div>

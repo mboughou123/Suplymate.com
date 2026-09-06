@@ -47,7 +47,11 @@ export default function PriceComparisonTable({ rows }: { rows: PriceRow[] }) {
                   <span className="text-xs text-white/45"> {r.unit.replace(/^USD\//, "/")}</span>
                 </td>
                 <td className="px-4 py-3">
-                  <Change value={r.dailyChange} />
+                  {r.cadence === "monthly" ? (
+                    <span className="text-white/35" title="Monthly benchmark — no daily quote">—</span>
+                  ) : (
+                    <Change value={r.dailyChange} />
+                  )}
                 </td>
                 <td className="px-4 py-3">
                   <Change value={r.monthlyChange} />
@@ -66,7 +70,9 @@ export default function PriceComparisonTable({ rows }: { rows: PriceRow[] }) {
                   </span>
                 </td>
                 <td className="px-4 py-3 text-xs">
-                  <span className={r.isLive ? "text-cyan-glow" : "text-white/45"}>{r.isLive ? r.source : "reference"}</span>
+                  <span className={r.isLive ? "text-cyan-glow" : "text-white/45"} title={r.sourceLabel}>
+                    {r.isLive ? r.source : "reference"}
+                  </span>
                 </td>
               </tr>
             ))}

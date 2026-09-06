@@ -78,9 +78,9 @@ function parseQuantity(text: string): Quantity | null {
 }
 
 function parseLocation(text: string): string | null {
-  // "in California", "to San Diego", "delivered to Rotterdam, Netherlands", "from Turkey"
+  // "in California", "to San Diego", "delivered to Rotterdam, Netherlands", "from Turkey", "in the UAE"
   const re =
-    /\b(?:in|to|near|from|within|around)\s+((?:[A-Z][\w'-]+)(?:\s+(?:[A-Z][\w'-]+|of|the|and|&))*(?:,\s*[A-Z][\w'-]+(?:\s+[A-Z][\w'-]+)*)?)/g;
+    /\b(?:in|to|near|from|within|around)\s+(?:the\s+)?((?:[A-Z][\w'-]+)(?:\s+(?:[A-Z][\w'-]+|of|the|and|&))*(?:,\s*[A-Z][\w'-]+(?:\s+[A-Z][\w'-]+)*)?)/g;
   let best: string | null = null;
   for (const m of text.matchAll(re)) {
     const candidate = m[1].trim();
