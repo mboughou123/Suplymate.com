@@ -234,11 +234,6 @@
     "logIn": "Log in",
     "requestDemo": "Request a demo"
   },
-  "homeStats": {
-    "verifiedSuppliers": "الموردون vérifiés",
-    "countries": "الدول مغطىs",
-    "buyerRating": "Buyer rating"
-  },
   "homeModules": {
     "title": "Three agents, three advantages",
     "subtitle": "Scout, Compare, and Watch map to how procurement teams actually work — from shortlist to RFQ to market timing.",
@@ -304,6 +299,33 @@
         "question": "How much does it cost?",
         "answer": "Browsing suppliers, products and material prices is free with an account. Paid plans unlock more of the sourcing workspace for teams — see the pricing page for what each plan includes.",
         "linkLabel": "See pricing"
+      }
+    }
+  },
+  "homeBenefits": {
+    "eyebrow": "Outcomes",
+    "title": "What Suplymate adds to your business",
+    "subtitle": "Not projections — these are the rules and coverage you get from day one.",
+    "items": {
+      "heldFunds": {
+        "label": "Payments held by Suplymate",
+        "note": "You pay the supplier directly. We never process or hold your funds."
+      },
+      "countries": {
+        "label": "Countries you can source from",
+        "note": "Domestic and international mills side by side — filter by country or region."
+      },
+      "materials": {
+        "label": "Materials with live price charts",
+        "note": "Track price windows and rate signals so you lock volume at the right time."
+      },
+      "guestQuestions": {
+        "label": "Free questions for Mate, no card",
+        "note": "Try the AI orchestrator before you sign up — every plan starts free."
+      },
+      "alwaysOn": {
+        "label": "AI orchestrator on call",
+        "note": "Mate routes requests to Scout, Compare or Watch whenever your team is working."
       }
     }
   },

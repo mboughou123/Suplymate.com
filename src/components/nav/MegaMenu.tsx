@@ -80,7 +80,7 @@ function isCurrent(pathname: string, hrefs: string[]): boolean {
 
 function triggerClass(tone: NavTone, open: boolean, current: boolean): string {
   const base =
-    "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2";
+    "inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 xl:px-3";
   if (tone === "dark") {
     const state = open
       ? "bg-white/10 text-white"

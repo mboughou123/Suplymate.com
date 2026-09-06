@@ -113,7 +113,7 @@ export default function Navbar() {
             <span className="ml-1 inline-block h-1.5 w-1.5 rounded-full bg-cyan-glow align-middle animate-glow-pulse" />
           </span>
           <span
-            className="rounded-md border border-cyan-glow/35 bg-cyan/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-glow"
+            className="rounded-md border border-cyan-glow/35 bg-cyan/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-glow lg:hidden xl:inline-block"
             aria-label="Beta"
           >
             Beta
@@ -126,9 +126,9 @@ export default function Navbar() {
           panelClassName="inset-x-4 top-full mt-1.5 sm:inset-x-6 lg:inset-x-8"
         />
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <div className="hidden md:block">
-            <LanguageSelector />
+            <LanguageSelector compactLabel />
           </div>
           {status === "loading" ? (
             <span className="hidden h-9 w-24 sm:block" />
@@ -196,13 +196,13 @@ export default function Navbar() {
             <>
               <Link
                 href="/login"
-                className="hidden rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10 sm:inline-block"
+                className="hidden whitespace-nowrap rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10 sm:inline-block"
               >
                 {t("login")}
               </Link>
               <Link
                 href="/signup"
-                className="hidden rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow sm:inline-block"
+                className="hidden whitespace-nowrap rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow sm:inline-block"
               >
                 {t("getStarted")}
               </Link>

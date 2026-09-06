@@ -26,11 +26,11 @@ export default function HomeTopNav() {
   const home = homeForRole(session?.user?.role);
 
   const solidButton = scrolled
-    ? "btn-primary px-4 py-2 text-sm"
-    : "inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow";
+    ? "btn-primary whitespace-nowrap px-4 py-2 text-sm"
+    : "inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow";
   const ghostButton = scrolled
-    ? "inline-flex items-center justify-center rounded-xl border border-slate-200/90 bg-white/80 px-3.5 py-2 text-sm font-semibold text-ink-muted transition hover:border-cyan/30 hover:text-ink"
-    : "inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10";
+    ? "inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-slate-200/90 bg-white/80 px-3.5 py-2 text-sm font-semibold text-ink-muted transition hover:border-cyan/30 hover:text-ink"
+    : "inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10";
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
@@ -47,7 +47,7 @@ export default function HomeTopNav() {
             <span className={scrolled ? "gradient-text" : "gradient-text-light"}>{nav("brandMate")}</span>
           </span>
           <span
-            className={`rounded-md border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
+            className={`rounded-md border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider lg:hidden xl:inline-block ${
               scrolled ? "border-cyan/25 bg-cyan-soft text-cyan" : "border-cyan-glow/35 bg-cyan/15 text-cyan-glow"
             }`}
             aria-label="Beta"
@@ -58,8 +58,8 @@ export default function HomeTopNav() {
 
         <MegaMenu tone={scrolled ? "light" : "dark"} className="hidden lg:flex" panelClassName="inset-x-0 top-full mt-2" />
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <LanguageSelector variant={scrolled ? "inline" : "navbar"} />
+        <div className="hidden shrink-0 items-center gap-2 lg:flex">
+          <LanguageSelector variant={scrolled ? "inline" : "navbar"} compactLabel />
           {signedIn ? (
             <Link href={home} className={solidButton}>
               {nav("dashboard")}
