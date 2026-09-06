@@ -11,13 +11,11 @@
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { buildQueries } from "./queries";
+import { fetchOutscraperQuery } from "../../src/lib/import/outscraper/client";
+import type { CacheEntry, RawPlace } from "./normalize";
 
-const API = "https://api.outscraper.com/maps/search-v3";
 const CACHE_DIR = join(process.cwd(), "scripts", "outscraper", "cache");
 const CACHE_FILE = join(CACHE_DIR, "raw.json");
-
-type RawPlace = Record<string, unknown>;
-type CacheEntry = { category: string; query: string; places: RawPlace[] };
 
 function arg(name: string, fallback: string): string {
   const hit = process.argv.find((a) => a.startsWith(`--${name}=`));
@@ -28,26 +26,9 @@ function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-async function fetchQuery(
-  apiKey: string,
-  query: string,
-  limit: number
-): Promise<RawPlace[]> {
-  const url =
-    `${API}?query=${encodeURIComponent(query)}` +
-    `&limit=${limit}&async=false&dropDuplicates=true&language=en`;
-
-  const res = await fetch(url, { headers: { "X-API-KEY": apiKey } });
-  if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`Outscraper ${res.status}: ${body.slice(0, 200)}`);
-  }
-  const json = (await res.json()) as { data?: unknown };
-  const data = (json.data ?? []) as unknown[];
-  // v3 returns array-of-arrays for multi-query requests, but a flat array of
-  // place objects for a single query. Handle both.
-  if (Array.isArray(data[0])) return data[0] as RawPlace[];
-  return data as RawPlace[];
+// Shared with the daily import job (src/lib/import/outscraper/client.ts).
+function fetchQuery(apiKey: string, query: string, limit: number): Promise<RawPlace[]> {
+  return fetchOutscraperQuery(apiKey, query, limit);
 }
 
 async function main() {

@@ -31,6 +31,18 @@ const OPTIONAL = [
   "WPI_API_KEY",
   "RESEND_API_KEY",
   "CAREERS_TO_EMAIL",
+  // Daily import / Grok (see docs/daily-import.md)
+  "CRON_SECRET",
+  "XAI_API_KEY",
+  "XAI_MODEL",
+  "XAI_VISION_MODEL",
+  "IMPORT_BUNDLE_URL",
+  "IMPORT_DAILY_LIMIT",
+  "IMPORT_PUBLIC_BASE_URL",
+  "IMAGE_ENHANCER_URL",
+  "IMAGE_ENHANCER_KEY",
+  "IMAGE_ENHANCE_WITH_OPENAI",
+  "BLOB_READ_WRITE_TOKEN",
 ] as const;
 
 function present(name: string): boolean {
