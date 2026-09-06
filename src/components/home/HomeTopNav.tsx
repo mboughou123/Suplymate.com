@@ -6,17 +6,8 @@ import { useSession } from "next-auth/react";
 import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
+import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
 import { homeForRole } from "@/lib/roles";
-
-const LINKS = [
-  { href: "/suppliers", key: "suppliers" as const },
-  { href: "/materials", key: "materials" as const },
-  { href: "/ai-assistant", key: "aiAssistant" as const },
-  { href: "/pricing", key: "pricing" as const },
-  { href: "/blog", key: "blog" as const },
-  { href: "/about", key: "about" as const },
-  { href: "/careers", key: "careers" as const },
-];
 
 export default function HomeTopNav() {
   const nav = useTranslations("navigation");
@@ -34,52 +25,51 @@ export default function HomeTopNav() {
   const signedIn = status === "authenticated" && Boolean(session?.user);
   const home = homeForRole(session?.user?.role);
 
+  const solidButton = scrolled
+    ? "btn-primary px-4 py-2 text-sm"
+    : "inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow";
+  const ghostButton = scrolled
+    ? "inline-flex items-center justify-center rounded-xl border border-slate-200/90 bg-white/80 px-3.5 py-2 text-sm font-semibold text-ink-muted transition hover:border-cyan/30 hover:text-ink"
+    : "inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10";
+
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <div
-        className={`pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-2xl border px-4 py-2.5 backdrop-blur-xl transition-all duration-300 sm:px-5 ${
+        className={`pointer-events-auto relative mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-2xl border px-4 py-2.5 backdrop-blur-xl transition-all duration-300 sm:px-5 ${
           scrolled
             ? "border-white/70 bg-white/85 text-ink shadow-glass"
             : "border-white/10 bg-white/[0.06] text-white shadow-[0_8px_40px_-12px_rgba(0,0,0,0.5)]"
         }`}
       >
-        <Link href="/" className="font-display text-lg font-bold tracking-tight">
-          {nav("brandSuply")}
-          <span className={scrolled ? "gradient-text" : "gradient-text-light"}>{nav("brandMate")}</span>
+        <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-lg font-bold tracking-tight">
+          <span>
+            {nav("brandSuply")}
+            <span className={scrolled ? "gradient-text" : "gradient-text-light"}>{nav("brandMate")}</span>
+          </span>
+          <span
+            className={`rounded-md border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
+              scrolled ? "border-cyan/25 bg-cyan-soft text-cyan" : "border-cyan-glow/35 bg-cyan/15 text-cyan-glow"
+            }`}
+            aria-label="Beta"
+          >
+            Beta
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">
-          {LINKS.map(({ href, key }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
-                scrolled ? "text-ink-muted hover:bg-slate-50 hover:text-ink" : "text-white/75 hover:bg-white/10 hover:text-white"
-              }`}
-            >
-              {nav(key)}
-            </Link>
-          ))}
-        </nav>
+        <MegaMenu tone={scrolled ? "light" : "dark"} className="hidden lg:flex" panelClassName="inset-x-0 top-full mt-2" />
 
         <div className="hidden items-center gap-2 lg:flex">
           <LanguageSelector variant={scrolled ? "inline" : "navbar"} />
           {signedIn ? (
-            <Link href={home} className={scrolled ? "btn-primary px-4 py-2 text-sm" : "rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow"}>
+            <Link href={home} className={solidButton}>
               {nav("dashboard")}
             </Link>
           ) : (
             <>
-              <Link
-                href="/login"
-                className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${scrolled ? "text-ink-muted hover:text-ink" : "text-white/80 hover:text-white"}`}
-              >
+              <Link href="/login" className={ghostButton}>
                 {nav("login")}
               </Link>
-              <Link
-                href="/signup"
-                className={scrolled ? "btn-primary px-4 py-2 text-sm" : "rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow"}
-              >
+              <Link href="/signup" className={solidButton}>
                 {nav("getStarted")}
               </Link>
             </>
@@ -98,16 +88,10 @@ export default function HomeTopNav() {
       </div>
 
       {open && (
-        <div className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-2xl border border-white/80 bg-white/95 p-4 shadow-glass backdrop-blur-xl lg:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Mobile">
-            {LINKS.map(({ href, key }) => (
-              <Link key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink">
-                {nav(key)}
-              </Link>
-            ))}
-          </nav>
+        <div className="pointer-events-auto mx-auto mt-2 max-h-[calc(100vh-6rem)] max-w-6xl overflow-y-auto rounded-2xl border border-white/80 bg-white/95 p-4 shadow-glass backdrop-blur-xl lg:hidden">
+          <MegaMenuMobile tone="light" onNavigate={() => setOpen(false)} />
           <div className="mt-3 flex flex-col gap-2 border-t border-slate-100 pt-3">
-            <LanguageSelector />
+            <LanguageSelector variant="inline" className="w-full" />
             {signedIn ? (
               <Link href={home} onClick={() => setOpen(false)} className="btn-primary justify-center py-2.5 text-sm">
                 {nav("dashboard")}

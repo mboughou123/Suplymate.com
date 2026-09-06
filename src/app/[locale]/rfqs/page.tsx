@@ -48,7 +48,6 @@ export default async function RfqsPage({
   if (!session?.user?.id) return await localeRedirect("/login?callbackUrl=/rfqs");
   const { submitted } = await searchParams;
   const t = await getTranslations("rfqs");
-  const cart = await getTranslations("cart");
 
   const rfqs = await prisma.rfq.findMany({
     where: { buyerId: session.user.id },
@@ -75,7 +74,7 @@ export default async function RfqsPage({
           <FileText className="h-10 w-10 text-slate-300" aria-hidden />
           <p className="text-ink-muted">{t("noRfqsTitle")}</p>
           <Link href="/products" className="rounded-lg bg-cyan px-4 py-2 text-sm font-semibold text-white hover:bg-cyan/90">
-            {cart("browseProducts")}
+            {t("browseProducts")}
           </Link>
         </div>
       ) : (

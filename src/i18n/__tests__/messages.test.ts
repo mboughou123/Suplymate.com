@@ -32,6 +32,8 @@ describe("messages/en.json", () => {
       "homeStats",
       "homeModules",
       "homeSuppliers",
+      "homeFaq",
+      "megaMenu",
       "authentication",
       "errors",
       "suppliers",

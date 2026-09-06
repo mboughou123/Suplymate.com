@@ -40,7 +40,6 @@
     "messages": "Mensajes",
     "notifications": "Notificaciones",
     "toggleMenu": "Ouvrir/fermer le menu",
-    "openCart": "Ouvrir le panier",
     "home": "Home",
     "materials": "Matières",
     "blog": "Blog",
@@ -53,6 +52,54 @@
     "rfqs": "RFQs",
     "account": "Account",
     "careers": "Careers"
+  },
+  "megaMenu": {
+    "menuLabel": "Main",
+    "mobileMenuLabel": "Mobile",
+    "top": {
+      "products": "Prodotti",
+      "solutions": "Solutions",
+      "suppliers": "Fornitori",
+      "materials": "Matières",
+      "pricing": "Precios",
+      "company": "Empresa"
+    },
+    "products": {
+      "heading": "Suplymate sourcing platform",
+      "body": "A verified supplier network with the tools to shortlist, compare and time every purchase.",
+      "explore": "Explore products",
+      "howItWorks": "Comment ça marche",
+      "featuredPrefix": "Mate, your",
+      "featuredAccent": "AI orchestrator",
+      "featuredSuffix": "in Suplymate",
+      "featuredBlurb": "Describe what you need to source in plain language. Mate routes it to Scout, Compare or Watch and hands back the answer.",
+      "readMore": "Lire la suite",
+      "scout": "Scout",
+      "scoutDescription": "Find verified suppliers and build a shortlist by spec, region and lead time.",
+      "compare": "Comparar",
+      "compareDescription": "Browse products and line up offers side by side — price, MOQ, lead time.",
+      "watch": "Watch",
+      "watchDescription": "Track material prices and rate signals to time your purchase."
+    },
+    "solutions": {
+      "byIndustry": "By industry",
+      "byMaterial": "By material",
+      "byGoal": "By goal",
+      "goals": {
+        "findVerified": "Find verified suppliers",
+        "compareOffers": "Compare offers",
+        "timePurchase": "Time your purchase",
+        "sourceInternationally": "Source internationally",
+        "sourceDomestically": "Source in your country",
+        "askMate": "Ask Mate"
+      }
+    },
+    "company": {
+      "about": "À propos",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contacto"
+    }
   },
   "footer": {
     "tagline": "Votre assistant d'approvisionnement IA. Un sourcing plus intelligent para les entreprises modernes.",
@@ -221,6 +268,44 @@
     "foliflexName": "Foliflex Wires & Cables",
     "foliflexLocation": "Delhi, India (Jhilmil)",
     "foliflexCaption": "Foliflex cable warehouse aisles, Jhilmil"
+  },
+  "homeFaq": {
+    "eyebrow": "FAQ",
+    "title": "Preguntas frecuentes",
+    "intro": "Straight answers about how Suplymate works — with or without the AI.",
+    "allFaqs": "See all FAQs",
+    "contact": "Talk to us",
+    "items": {
+      "whatIs": {
+        "question": "Qu'est-ce que Suplymate ?",
+        "answer": "Suplymate is a verified industrial supplier network with a sourcing workspace built on top. Browse mills and manufacturers, read product descriptions, compare offers side by side, track material prices and send RFQs — all from one place."
+      },
+      "ownCountry": {
+        "question": "Can I find suppliers in my own country as well as internationally?",
+        "answer": "Yes. Filter the directory by country or region to see domestic and international suppliers side by side. Source locally when lead time matters and globally when price does — the same profiles, verification badges and compare tools apply to both."
+      },
+      "easier": {
+        "question": "How does Suplymate make sourcing easier?",
+        "answer": "Every supplier has a structured, verified profile, so you stop trawling spreadsheets and supplier websites. Line up offers by price, MOQ and lead time, watch price windows for the materials you buy, and keep every RFQ and conversation in one workspace."
+      },
+      "aiOptional": {
+        "question": "Do I have to use the AI assistant?",
+        "answer": "No. The supplier directory, product catalogue, compare tools and material price charts all work without it. Mate, our AI orchestrator, simply speeds things up — it routes your request to the right agent and hands back a shortlist, an offer table or a price window."
+      },
+      "verified": {
+        "question": "Are suppliers verified?",
+        "answer": "Listed suppliers come from public directories and are labelled as such. A supplier is only shown as Verified after our team has manually checked company registration, contact details and product claims. You can filter to verified suppliers only, and our Supplier Verification Policy describes the full process."
+      },
+      "marketplace": {
+        "question": "Is Suplymate a marketplace? Do I buy through you?",
+        "answer": "No. Suplymate shows you what you need and the right company to get it from — you contact and buy from the supplier directly. We don't take payment, hold funds or sit in the middle of your order."
+      },
+      "cost": {
+        "question": "How much does it cost?",
+        "answer": "Browsing suppliers, products and material prices is free with an account. Paid plans unlock more of the sourcing workspace for teams — see the pricing page for what each plan includes.",
+        "linkLabel": "See pricing"
+      }
+    }
   },
   "hero": {
     "badge": "AI-native industrial sourcing",
@@ -484,14 +569,14 @@
   },
   "products": {
     "pageTitle": "Parcourir les produits",
-    "pageSubtitle": "Comparez matériaux y pièces auprès de fornitori vérifiés.",
+    "pageSubtitle": "Browse products and their descriptions from verified suppliers — and find the right company for each one.",
     "searchPlaceholder": "Cerca par nom, catégorie ou matériau…",
     "noProductsTitle": "Ningún produit trouvé",
     "noProductsSubtitle": "Essayez d'ajuster su recherche ou vos filtres.",
     "compareProducts": "Comparar les produits",
-    "addToCart": "Ajouter au panier",
     "viewDetails": "Voir les détails",
     "viewProduct": "View product",
+    "viewSupplier": "View supplier",
     "bulkPrice": "Bulk price",
     "price": "Price",
     "suppliersPlus": "{count}+ suppliers",
@@ -744,19 +829,6 @@
     "savePreferences": "Salva les préférences",
     "preferencesSaved": "Préférences enregistrées."
   },
-  "cart": {
-    "title": "Carrello d'approvisionnement",
-    "ariaLabel": "Carrello",
-    "closeCart": "Fermer le panier",
-    "empty": "Su carrito está vacío.",
-    "browseProducts": "Parcourir les produits",
-    "itemsSummary": "{itemCount, plural, one {# article} other {# articles}} de {supplierCount, plural, one {# fournisseur} other {# fornitori}}. Une RFQ par fournisseur.",
-    "removeItem": "Retirer l'article",
-    "decreaseQuantity": "Diminuer la quantité",
-    "increaseQuantity": "Augmenter la quantité",
-    "reviewAndRequestQuotes": "Vérifier le panier y demander des cotizaciones",
-    "noPaymentNote": "Ningún paiement n'est effectué. Les fornitori répondent avec des cotizaciones formels."
-  },
   "rfqs": {
     "title": "Demandes de cotizaciones",
     "createRfq": "Crear une RFQ",
@@ -766,7 +838,8 @@
     "statusQuoted": "Devis reçu",
     "statusClosed": "Clôturée",
     "noRfqsTitle": "Pas encore de RFQ",
-    "noRfqsSubtitle": "Ajoutez des produits au panier y demandez des cotizaciones aux fornitori."
+    "noRfqsSubtitle": "Ajoutez des produits au panier y demandez des cotizaciones aux fornitori.",
+    "browseProducts": "Parcourir les produits"
   },
   "notifications": {
     "title": "Notificaciones",
@@ -870,8 +943,8 @@
         "body": "Scout, Compare, and Watch are agents built for procurement — not chat wrappers. You'll shape how they reason."
       },
       "global": {
-        "title": "UAE, India & beyond",
-        "body": "Our network spans the Gulf and South Asia. Expect a multilingual team and a global customer base from day one."
+        "title": "A global network, built from the US",
+        "body": "We're a US-based team serving buyers and mills across the UAE, India and beyond. Expect a multilingual product and an international customer base from day one."
       },
       "team": {
         "title": "Small team, big trust",
@@ -880,36 +953,36 @@
     },
     "rolesEyebrow": "Open roles",
     "rolesTitle": "Where we're hiring",
-    "rolesSubtitle": "Roles are remote-first with a preference for candidates in the UAE or India time zones.",
+    "rolesSubtitle": "Roles are remote-first within the United States. We work across US time zones, with occasional in-person days in New York.",
     "roles": {
       "foundingEngineer": {
         "title": "Founding Full-Stack Engineer",
         "summary": "Own features end to end across our Next.js, Prisma, and AI stack — from supplier data pipelines to the Scout / Compare / Watch agents.",
-        "location": "Remote · UAE / India",
+        "location": "Remote · United States",
         "type": "Full-time"
       },
       "dataAnalyst": {
         "title": "Procurement Data Analyst",
         "summary": "Curate and verify mill data, build price-index datasets, and turn market signals into insights buyers can act on.",
-        "location": "Remote · UAE",
+        "location": "Remote · United States",
         "type": "Full-time"
       },
       "growthPartnerships": {
         "title": "Growth & Supplier Partnerships",
-        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the Gulf and South Asia.",
-        "location": "Dubai / Abu Dhabi",
+        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the US, the Gulf and South Asia.",
+        "location": "New York, NY",
         "type": "Full-time"
       },
       "supplierSuccess": {
         "title": "Supplier Success Associate",
         "summary": "Help mills complete verification, publish products, and respond to RFQs quickly — the human side of a verified network.",
-        "location": "Remote · India",
+        "location": "Remote · United States",
         "type": "Contract"
       },
       "general": {
         "title": "General application",
         "summary": "Don't see a match? Tell us what you'd build.",
-        "location": "Remote",
+        "location": "Remote · United States",
         "type": "Open"
       }
     },
@@ -930,7 +1003,7 @@
       "email": "E-mail",
       "phone": "Phone",
       "location": "Location",
-      "locationPlaceholder": "Dubai, UAE",
+      "locationPlaceholder": "Austin, TX",
       "role": "Role you're applying for",
       "linkedin": "LinkedIn or portfolio",
       "cvUrl": "CV / résumé link",

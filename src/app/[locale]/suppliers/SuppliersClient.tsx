@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Supplier } from "@/data/suppliers";
+import { INDUSTRIES } from "@/data/industries";
 import SupplierCard from "@/components/SupplierCard";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
 import SupplierFilters, {
@@ -99,6 +100,19 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         return a.name.localeCompare(b.name);
       });
   }, [filters, initialSuppliers]);
+
+  // Deep link from the Solutions menu: `/suppliers?industry=<id>` pre-selects
+  // the matching directory category (or falls back to a text search). Read from
+  // window.location so this statically rendered page needs no Suspense boundary.
+  useEffect(() => {
+    const industryId = new URLSearchParams(window.location.search).get("industry");
+    if (!industryId) return;
+    const industry = INDUSTRIES.find((i) => i.id === industryId);
+    if (!industry) return;
+    const category = industry.legacyCategories.find((c) => categories.includes(c));
+    setFilters((f) => (category ? { ...f, category } : { ...f, search: industry.name }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Reset to page 1 and show a brief loading state whenever filters change.
   useEffect(() => {

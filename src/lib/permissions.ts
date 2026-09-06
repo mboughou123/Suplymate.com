@@ -27,7 +27,6 @@ export type TeamCapability =
   | "rfq.create"
   | "rfq.manage"
   | "quote.accept"
-  | "cart.manage"
   | "view";
 
 const ROLE_CAPS: Record<TeamRole, TeamCapability[]> = {
@@ -37,7 +36,6 @@ const ROLE_CAPS: Record<TeamRole, TeamCapability[]> = {
     "rfq.create",
     "rfq.manage",
     "quote.accept",
-    "cart.manage",
     "view",
   ],
   ADMIN: [
@@ -45,11 +43,10 @@ const ROLE_CAPS: Record<TeamRole, TeamCapability[]> = {
     "rfq.create",
     "rfq.manage",
     "quote.accept",
-    "cart.manage",
     "view",
   ],
-  PROCUREMENT_MANAGER: ["rfq.create", "rfq.manage", "quote.accept", "cart.manage", "view"],
-  BUYER: ["rfq.create", "cart.manage", "view"],
+  PROCUREMENT_MANAGER: ["rfq.create", "rfq.manage", "quote.accept", "view"],
+  BUYER: ["rfq.create", "view"],
   VIEWER: ["view"],
 };
 

@@ -20,24 +20,9 @@ import {
   FileText,
   type LucideIcon,
 } from "lucide-react";
-import CartButton from "@/components/cart/CartButton";
 import LanguageSelector from "@/components/LanguageSelector";
+import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
 import { isSupplierRole } from "@/lib/roles";
-
-type PublicLink = {
-  href: string;
-  key: "suppliers" | "materials" | "aiAssistant" | "pricing" | "blog" | "about" | "careers";
-};
-
-const PUBLIC_LINKS: PublicLink[] = [
-  { href: "/suppliers", key: "suppliers" },
-  { href: "/materials", key: "materials" },
-  { href: "/ai-assistant", key: "aiAssistant" },
-  { href: "/pricing", key: "pricing" },
-  { href: "/blog", key: "blog" },
-  { href: "/about", key: "about" },
-  { href: "/careers", key: "careers" },
-];
 
 type MenuItem = { href: string; label: string; icon: LucideIcon };
 
@@ -118,11 +103,9 @@ export default function Navbar() {
       .slice(0, 2)
       .toUpperCase() || "U";
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
-
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071521]/95 text-white shadow-sm backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-xl font-bold">
           <span>
             <span className="text-white">{t("brandSuply")}</span>
@@ -137,25 +120,16 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">
-          {PUBLIC_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                isActive(link.href) ? "bg-white/10 text-cyan-glow" : "text-white/75 hover:bg-white/5 hover:text-white"
-              }`}
-            >
-              {t(link.key)}
-            </Link>
-          ))}
-        </nav>
+        <MegaMenu
+          tone="dark"
+          className="hidden lg:flex"
+          panelClassName="inset-x-4 top-full mt-1.5 sm:inset-x-6 lg:inset-x-8"
+        />
 
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="hidden md:block">
             <LanguageSelector />
           </div>
-          {!supplier && <CartButton />}
           {status === "loading" ? (
             <span className="hidden h-9 w-24 sm:block" />
           ) : session?.user ? (
@@ -220,12 +194,15 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link href="/login" className="hidden rounded-lg px-3 py-2 text-sm font-medium text-white/80 hover:text-white sm:inline-block">
+              <Link
+                href="/login"
+                className="hidden rounded-xl border border-white/20 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white/90 transition hover:border-white/35 hover:bg-white/10 sm:inline-block"
+              >
                 {t("login")}
               </Link>
               <Link
                 href="/signup"
-                className="hidden rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow sm:inline-block"
+                className="hidden rounded-xl bg-white px-4 py-2 text-sm font-semibold text-navy-dark transition hover:bg-cyan-glow sm:inline-block"
               >
                 {t("getStarted")}
               </Link>
@@ -244,17 +221,8 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <nav className="border-t border-white/10 bg-[#071521] px-4 py-4 lg:hidden" aria-label="Mobile">
-          {PUBLIC_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className={`block rounded-lg px-3 py-2.5 text-sm font-medium ${isActive(link.href) ? "text-cyan-glow" : "text-white/85 hover:bg-white/5"}`}
-            >
-              {t(link.key)}
-            </Link>
-          ))}
+        <nav className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-white/10 bg-[#071521] px-4 py-4 lg:hidden" aria-label="Mobile">
+          <MegaMenuMobile tone="dark" onNavigate={() => setMobileOpen(false)} />
 
           <div className="mt-3 border-t border-white/10 pt-3">
             <div className="mb-3 px-1">

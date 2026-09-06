@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BadgeCheck, Star, ChevronRight, Layers, Wrench, Tag } from "lucide-react";
+import { BadgeCheck, Star, ChevronRight, Layers, Wrench, Tag, ArrowUpRight } from "lucide-react";
 import { products } from "@/data/products";
 import { getProductByIdAsync } from "@/lib/data-service";
 import { getProductDetail } from "@/lib/product-detail";
@@ -11,10 +11,9 @@ import ProductPurchasePanel from "@/components/product/ProductPurchasePanel";
 import ProductSupplierBox from "@/components/product/ProductSupplierBox";
 import ProductDescription from "@/components/product/ProductDescription";
 import RecommendedProducts from "@/components/product/RecommendedProducts";
-import AddToCartButton from "@/components/cart/AddToCartButton";
+import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import SaveProductButton from "@/components/SaveProductButton";
 import ReportButton from "@/components/ReportButton";
-import { parseMoq } from "@/lib/moq";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -31,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const detail = getProductDetail(product);
   return {
     title: `${product.name} · ${detail.supplier.name} | Suplymate`,
-    description: `Buy ${product.name} from ${detail.supplier.name}. ${detail.displayFromLabel} per ${product.unit}, MOQ ${detail.moq}, ships in ${detail.leadTime}. Tiered bulk pricing, specs & reviews on Suplymate.`,
+    description: `${product.name} by ${detail.supplier.name}. ${detail.displayFromLabel} per ${product.unit}, MOQ ${detail.moq}, ships in ${detail.leadTime}. Product description, specs and the supplier to request it from on Suplymate.`,
   };
 }
 
@@ -136,7 +135,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
                 <p className="text-base font-semibold text-ink">Contact supplier for pricing</p>
                 <p className="mt-1 text-xs text-ink-dim">
-                  No public price is listed. Add this product to your cart and request a quote.
+                  No public price is listed. Request a quote and the supplier will respond directly.
                   {detail.moq ? <> MOQ: <span className="font-semibold text-ink">{detail.moq}</span></> : null}
                 </p>
               </div>
@@ -144,21 +143,22 @@ export default async function ProductDetailPage({ params }: Props) {
 
             {/* Procurement actions */}
             <div className="mt-4 flex flex-wrap gap-2">
-              <AddToCartButton
+              <ContactSupplierButton
+                supplierId={product.supplierId ?? detail.supplier.id}
+                supplierName={product.supplierName ?? detail.supplier.name}
+                productName={product.name}
+                productId={product.id}
+                label="Request quote"
+                quote
                 className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-cyan px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan/90"
-                item={{
-                  productId: product.id,
-                  productName: product.name,
-                  supplierId: product.supplierId ?? detail.supplier.id,
-                  supplierName: product.supplierName ?? detail.supplier.name,
-                  imageUrl: product.images?.[0] ?? null,
-                  unit: product.priceUnit ?? product.unit ?? null,
-                  moq: parseMoq(product.moq),
-                  basePrice: hasPublicPrice ? product.basePrice ?? null : null,
-                  currency: product.currency,
-                  sourceUrl: product.productUrl ?? null,
-                }}
               />
+              <Link
+                href={detail.supplier.href}
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:border-cyan/50 hover:text-cyan"
+              >
+                View supplier
+                <ArrowUpRight className="h-4 w-4" aria-hidden />
+              </Link>
               <SaveProductButton
                 item={{
                   productId: product.id,
@@ -271,8 +271,8 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-8 text-center">
             <p className="text-sm font-medium text-ink">No side-by-side offers yet</p>
             <p className="mx-auto mt-1 max-w-lg text-xs text-ink-dim">
-              Suplymate does not fabricate competitor pricing or reliability scores. Add this
-              product to your cart, submit an RFQ, and compare real supplier quotes on your{" "}
+              Suplymate does not fabricate competitor pricing or reliability scores. Request a
+              quote for this product, then compare real supplier quotes on your{" "}
               <Link href="/rfqs" className="text-cyan hover:underline">
                 RFQ dashboard
               </Link>

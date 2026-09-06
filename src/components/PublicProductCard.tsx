@@ -2,12 +2,10 @@
 
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { BadgeCheck, MapPin, Truck, ArrowRight, PackageCheck } from "lucide-react";
+import { BadgeCheck, MapPin, Truck, ArrowRight, ArrowUpRight, PackageCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
-import AddToCartButton from "@/components/cart/AddToCartButton";
 import { getProductFallbackImage } from "@/lib/image-fallback";
-import { parseMoq } from "@/lib/moq";
 import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
 
 type Props = { data: PublicProduct };
@@ -119,20 +117,14 @@ export default function PublicProductCard({ data: d }: Props) {
               className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
             />
           </div>
-          {d.supplierId && (
-            <AddToCartButton
+          {d.supplierVisible && d.supplierId && (
+            <Link
+              href={`/supplier/${d.supplierId}`}
               className="inline-flex w-full items-center justify-center gap-1.5 rounded-xl border border-cyan/40 bg-cyan/5 px-3 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/10"
-              item={{
-                productId: d.id,
-                productName: d.name,
-                supplierId: d.supplierId,
-                supplierName: d.supplierName,
-                imageUrl: d.imageUrl,
-                unit: d.priceUnit,
-                moq: parseMoq(d.moq),
-                sourceUrl: d.productUrl,
-              }}
-            />
+            >
+              {t("viewSupplier")}
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
           )}
         </div>
       </div>
