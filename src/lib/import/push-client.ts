@@ -12,6 +12,7 @@
 
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { isSealCandidatePath, parseSeal } from "./seal-format";
 
 export const DEFAULT_CHUNK_BYTES = 3_500_000;
 const IMAGE_EXT_RE = /\.(jpe?g|png|webp|gif|avif)$/i;
@@ -49,18 +50,67 @@ function firstExisting(dir: string, names: string[]): string | null {
   return null;
 }
 
-/** Locate the seal: seal.json | seals.json | seals (file) | seals/<day>.json | seals/*.json. */
-export function findSeal(dir: string, day: string): string | null {
-  const direct = firstExisting(dir, ["seal.json", "seals.json", "seal", "seals", `seal-${day}.json`, `${day}.seal.json`]);
-  if (direct) return direct;
-  const sealsDir = join(dir, "seals");
-  if (existsSync(sealsDir) && statSync(sealsDir).isDirectory()) {
-    const inDir = firstExisting(sealsDir, [`${day}.json`, "seal.json", "researcher-ok.json"]);
-    if (inDir) return inDir;
-    const anyJson = readdirSync(sealsDir).filter((f) => f.endsWith(".json")).sort();
-    if (anyJson.length) return join(sealsDir, anyJson[0]);
+/** JSON files (pack-relative) in `dir`, at most `depth` levels deep. */
+function jsonFilesIn(root: string, base: string, depth: number, out: string[]) {
+  if (depth < 0 || !existsSync(root) || !statSync(root).isDirectory()) return;
+  for (const entry of readdirSync(root, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+    const abs = join(root, entry.name);
+    if (entry.isDirectory()) jsonFilesIn(abs, base, depth - 1, out);
+    else if (entry.isFile() && /\.json$/i.test(entry.name)) out.push(relative(base, abs).split(sep).join("/"));
   }
-  return null;
+}
+
+/**
+ * Every file in the day folder that could be a seal, in preference order:
+ * `seal.json` / `seals.json` / `seal-<day>.json` at the root, then everything
+ * under `seals/` and under any `_…/` directory (`_seals/`, `_qa/`,
+ * `_research/`, …) — the bot keeps its QA artefacts in `_`-prefixed dirs.
+ */
+export function sealCandidates(dir: string, day: string): string[] {
+  const out: string[] = [];
+  const push = (rel: string) => {
+    if (!out.includes(rel) && existsSync(join(dir, rel)) && statSync(join(dir, rel)).isFile()) out.push(rel);
+  };
+  for (const n of ["seal.json", "seals.json", "seal", "seals", `seal-${day}.json`, `${day}.seal.json`, `${day}.json`]) push(n);
+  const dirs = readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isDirectory() && (e.name === "seals" || e.name.startsWith("_")))
+    .map((e) => e.name)
+    .sort((a, b) => (a === "seals" ? -1 : b === "seals" ? 1 : a.localeCompare(b)));
+  for (const d of dirs) {
+    const found: string[] = [];
+    jsonFilesIn(join(dir, d), dir, 3, found);
+    for (const rel of found) push(rel);
+  }
+  return out;
+}
+
+/**
+ * Locate the seal for `day`: the first candidate (see sealCandidates) that
+ * parses as a seal for that day, else the first that parses at all, else a
+ * root `seal.json`/`seals.json` if present (so the server can report why it is
+ * malformed). Returns an absolute path or null.
+ */
+export function findSeal(dir: string, day: string): string | null {
+  const candidates = sealCandidates(dir, day);
+  let fallback: string | null = null;
+  for (const rel of candidates) {
+    const abs = join(dir, rel);
+    let parsed: ReturnType<typeof parseSeal> = null;
+    try {
+      parsed = parseSeal(readFileSync(abs, "utf8"));
+    } catch {
+      parsed = null;
+    }
+    if (parsed?.day === day) return abs;
+    if (parsed && !fallback) fallback = abs;
+  }
+  if (fallback) return fallback;
+  const direct = firstExisting(dir, ["seal.json", "seals.json"]);
+  if (direct) return direct;
+  // A file literally named seal*.json that does not parse: still hand it over
+  // so the server's 422 names the problem.
+  const named = candidates.find((rel) => isSealCandidatePath(rel) && /seal/i.test(rel.split("/").pop() ?? ""));
+  return named ? join(dir, named) : null;
 }
 
 export function readDayFolder(dir: string, day: string, opts: { includeOriginals?: boolean } = {}): DayFolder {
@@ -78,7 +128,7 @@ export function readDayFolder(dir: string, day: string, opts: { includeOriginals
 
   const sealPath = findSeal(dir, day);
   const seal = sealPath ? readFileSync(sealPath) : null;
-  if (!seal) warnings.push("No seal found (seal.json / seals/) — the server will refuse the import unless IMPORT_REQUIRE_SEAL=false.");
+  if (!seal) warnings.push("No seal found (seal.json / seals/ / _*/ *.json) — the server will refuse the import unless IMPORT_REQUIRE_SEAL=false.");
 
   const manifests = readdirSync(dir)
     .filter((f) => /manifest.*\.json$/i.test(f))
@@ -132,7 +182,10 @@ export function buildChunkForm(folder: DayFolder, chunk: Chunk, of: number, opti
   form.set("day", folder.day);
   form.set("part", String(chunk.part));
   form.set("of", String(of));
-  if (folder.seal) form.set("seal", new Blob([new Uint8Array(folder.seal)], { type: "application/json" }), "seal.json");
+  if (folder.seal) {
+    const sealName = folder.sealPath ? relative(folder.dir, folder.sealPath).split(sep).join("/") : "seal.json";
+    form.set("seal", new Blob([new Uint8Array(folder.seal)], { type: "application/json" }), sealName);
+  }
   if (folder.suppliers) form.set("suppliers.json", new Blob([new Uint8Array(folder.suppliers)], { type: "application/json" }), "suppliers.json");
   if (folder.products) form.set("products.json", new Blob([new Uint8Array(folder.products)], { type: "application/json" }), "products.json");
   for (const m of folder.manifests) form.append("manifest", new Blob([new Uint8Array(m.data)], { type: "application/json" }), m.name);

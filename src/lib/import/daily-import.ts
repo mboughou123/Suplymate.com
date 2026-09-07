@@ -51,7 +51,9 @@ import {
 import { enhancerStatus } from "./enhance-image";
 import { existingMediaKeys, ingestRemoteImage, IMPORT_ACTOR, type IngestResult } from "./media-ingest";
 import { isIngestableRef, isPackFileRef, packFileRelative, type PackFiles } from "./pack-files";
-import type { Seal } from "./seal";
+import { dayStatus, recordDayPart, type Seal } from "./seal";
+import { applyHolds, type HeldEntry } from "./hold";
+import { loadGithubPack, type GithubPackSpec } from "./github-pack";
 
 /* ------------------------------------------------------------------ */
 /* Options + summary                                                   */
@@ -84,6 +86,10 @@ export type DailyImportOptions = {
   bundleUrls?: string[];
   /** Override OUTSCRAPER usage (default: when OUTSCRAPER_API_KEY is set). */
   useOutscraper?: boolean;
+  /** Override IMPORT_GITHUB_PACK (null disables it for this run). */
+  githubPack?: GithubPackSpec | null;
+  /** Pin the GitHub source to one day instead of the newest sealed one. */
+  githubDay?: string | null;
   deadlineMs?: number;
   now?: Date;
   fetchImpl?: typeof fetch;
@@ -103,7 +109,7 @@ export type Counts = { seen: number; created: number; updated: number; skipped: 
 
 export type DailyImportSummary = {
   ok: boolean;
-  skipped?: "no_source_configured" | "unsealed" | "already_imported";
+  skipped?: "no_source_configured" | "unsealed" | "already_imported" | "no_pack";
   trigger: DailyImportTrigger;
   actor: string;
   started: string;
@@ -118,9 +124,25 @@ export type DailyImportSummary = {
   /** Push mode: which day / chunk this run covered and the seal it was gated by. */
   day?: string | null;
   chunk?: { part: number; of: number };
-  seal?: { day: string; digest: string; researcherOk: boolean; approvedBy: string | null; approvedAt: string | null; hashedFiles: string[] };
+  seal?: {
+    day: string;
+    digest: string;
+    researcherOk: boolean;
+    approvedBy: string | null;
+    approvedAt: string | null;
+    hashedFiles: string[];
+    /** Mill-seal allowlist size (0 = whole pack sealed) and hold-list size. */
+    sealed: number;
+    holds: number;
+    /** GitHub source: tree path of the seal that gated this run. */
+    path?: string;
+  };
   /** Push mode: files uploaded with this request. */
   uploads?: { files: number; bytes: number };
+  /** GitHub source: which days were considered and why they were (not) taken. */
+  github?: { source: string; days: { day: string; sealed: boolean; reason: string | null }[] };
+  /** HOLD / soft-hold / not-in-allowlist records — reported, never written. */
+  held: HeldEntry[];
   suppliers: Counts;
   products: Counts;
   media: {
@@ -369,7 +391,8 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   const enhance = opts.enhance ?? true;
   const actor = opts.actor ?? IMPORT_ACTOR;
   const fetchImpl = opts.fetchImpl;
-  const files = opts.files ?? null;
+  let files: PackFiles | null = opts.files ?? null;
+  let seal: Seal | null = opts.seal ?? null;
 
   const enh = enhancerStatus();
   const store = storageProviderStatus();
@@ -385,6 +408,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     partial: false,
     sources: [],
     limit,
+    held: [],
     suppliers: emptyCounts(),
     products: emptyCounts(),
     media: { candidates: 0, imported: 0, enhanced: 0, skipped: 0, failed: 0, deferred: 0 },
@@ -406,16 +430,20 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   if (!useGrok) summary.grok.notes.push(opts.grok === false ? "Grok disabled for this run." : "XAI_API_KEY not set — Grok steps skipped.");
   if (opts.day) summary.day = opts.day;
   if (opts.chunk) summary.chunk = { part: opts.chunk.part, of: opts.chunk.of };
-  if (opts.seal) {
+  const describeSeal = (s: Seal, path?: string) => {
     summary.seal = {
-      day: opts.seal.day,
-      digest: opts.seal.digest,
-      researcherOk: opts.seal.researcherOk,
-      approvedBy: opts.seal.approvedBy,
-      approvedAt: opts.seal.approvedAt,
-      hashedFiles: Object.keys(opts.seal.sha256),
+      day: s.day,
+      digest: s.digest,
+      researcherOk: s.researcherOk,
+      approvedBy: s.approvedBy,
+      approvedAt: s.approvedAt,
+      hashedFiles: Object.keys(s.sha256),
+      sealed: s.sealed.length,
+      holds: s.held.length,
+      ...(path ? { path } : {}),
     };
-  }
+  };
+  if (seal) describeSeal(seal);
   if (files) summary.uploads = { files: files.size, bytes: files.totalBytes };
   const timeLeft = () => Date.now() < deadline;
 
@@ -469,6 +497,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
       skipped: summary.skipped,
       partial: summary.partial,
       durationMs: summary.durationMs,
+      held: summary.held.length,
       suppliers: summary.suppliers,
       products: summary.products,
       media: summary.media,
@@ -492,14 +521,63 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   const cfg = configuredSources();
   const bundleUrls = opts.bundleUrls ?? cfg.bundleUrls;
   const useOutscraper = opts.useOutscraper ?? cfg.outscraper;
-  if (!hasAnySource({ bundleUrls, outscraper: useOutscraper }, opts.inline)) {
+  // The GitHub sealed-pack source is a cron/CLI fallback: never mixed into a
+  // pushed pack (which carries its own seal).
+  const githubSpec = opts.inline ? null : opts.githubPack === undefined ? cfg.githubPack : opts.githubPack;
+  if (!hasAnySource({ bundleUrls, outscraper: useOutscraper, githubPack: githubSpec }, opts.inline)) {
     summary.skipped = "no_source_configured";
-    summary.warnings.push("No import source configured (IMPORT_BUNDLE_URL / OUTSCRAPER_API_KEY) and no inline pack provided.");
+    summary.warnings.push("No import source configured (IMPORT_GITHUB_PACK / IMPORT_BUNDLE_URL / OUTSCRAPER_API_KEY) and no inline pack provided.");
     return finish();
   }
 
+  // GitHub: newest day with a verified seal, gated by the same per-day ledger
+  // as the push hook. An already-imported / unsealed day is a clean no-op
+  // unless another source is configured.
+  let inline = opts.inline ?? null;
+  let ledger: { day: string; digest: string } | null = null;
+  const otherSources = bundleUrls.length > 0 || useOutscraper;
+  if (githubSpec) {
+    try {
+      const gh = await loadGithubPack(githubSpec, { token: process.env.GITHUB_TOKEN, fetchImpl, day: opts.githubDay ?? null, baseUrl: opts.publicBaseUrl });
+      summary.warnings.push(...gh.warnings.slice(0, 20));
+      if (gh.ok) {
+        summary.github = { source: gh.source, days: gh.days.map((d) => ({ day: d.day, sealed: d.sealed, reason: d.reason })) };
+        const status = await dayStatus(gh.day, gh.seal.digest);
+        if (status.complete) {
+          summary.warnings.push(`GitHub pack ${gh.day} already imported at seal ${gh.seal.digest.slice(0, 12)} (${status.lastImportedAt ?? "?"}).`);
+          if (!otherSources) {
+            summary.skipped = "already_imported";
+            summary.day = gh.day;
+            describeSeal(gh.seal, gh.sealPath);
+            return finish();
+          }
+        } else {
+          inline = gh.pack;
+          files = gh.files;
+          seal = gh.seal;
+          summary.day = gh.day;
+          describeSeal(gh.seal, gh.sealPath);
+          if (!dryRun) ledger = { day: gh.day, digest: gh.seal.digest };
+        }
+      } else {
+        summary.github = { source: `github:${githubSpec.owner}/${githubSpec.repo}@${githubSpec.ref}:${githubSpec.path}`, days: gh.days.map((d) => ({ day: d.day, sealed: d.sealed, reason: d.reason })) };
+        summary.warnings.push(`GitHub pack: ${gh.reason}`);
+        if (!otherSources) {
+          summary.skipped = gh.skipped;
+          return finish();
+        }
+      }
+    } catch (err) {
+      summary.errors.push(`GitHub pack: ${errMsg(err)}`);
+      if (!otherSources) {
+        fatal = true;
+        return finish();
+      }
+    }
+  }
+
   const loaded = await loadSources({
-    inline: opts.inline,
+    inline,
     bundleUrls,
     useOutscraper,
     fetchImpl,
@@ -510,14 +588,20 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   summary.sources = loaded.sources;
   summary.errors.push(...loaded.errors);
   summary.warnings.push(...loaded.pack.warnings.slice(0, 50));
-  const pack = loaded.pack;
   summary.pack = {
-    label: pack.label,
-    format: pack.format,
-    generatedAt: pack.generatedAt,
-    suppliers: pack.suppliers.length,
-    products: pack.products.length,
+    label: loaded.pack.label,
+    format: loaded.pack.format,
+    generatedAt: loaded.pack.generatedAt,
+    suppliers: loaded.pack.suppliers.length,
+    products: loaded.pack.products.length,
   };
+
+  // HOLD / soft-hold / mill-seal allowlist: held records are reported, never written.
+  const holds = applyHolds(loaded.pack, seal);
+  const pack = holds.pack;
+  summary.held = holds.held.slice(0, 500);
+  if (holds.held.length > 500) summary.warnings.push(`${holds.held.length} held records — list truncated to 500.`);
+
   if (pack.suppliers.length === 0 && pack.products.length === 0) {
     if (loaded.sources.length === 0 && loaded.errors.length > 0) fatal = true;
     return finish();
@@ -661,6 +745,12 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     const sup = supplierCache.get(supplierId);
     const candidates = s.photoUrls.filter((u) => u !== s.logoUrl);
     summary.media.candidates += candidates.length + (s.logoUrl ? 1 : 0);
+    if (files) {
+      // Lazy sources (GitHub tree) download this supplier's stills now.
+      await files.prefetch(
+        [s.logoUrl ?? "", ...candidates, ...s.certifications.map((c) => c.imageUrl ?? "")].filter((u) => u && isPackFileRef(u))
+      );
+    }
 
     let existing: Set<string>;
     try {
@@ -835,6 +925,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
       continue;
     }
     try {
+      if (files) await files.prefetch(p.imageUrls.slice(0, mediaPerProduct).filter(isPackFileRef));
       // Resolve the owning supplier: processed this run → existing in DB (by id,
       // then by name) → create a minimal pending one.
       let supplierId = idMap.get(p.supplierExternalId);
@@ -959,7 +1050,31 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     }
   }
 
-  return finish();
+  const result = await finish();
+  if (ledger) {
+    if (importLanded(result)) {
+      await recordDayPart({
+        day: ledger.day,
+        digest: ledger.digest,
+        part: 1,
+        of: 1,
+        actor,
+        summary: { source: "github", suppliers: result.suppliers, products: result.products, media: result.media, held: result.held.length },
+      });
+    } else {
+      result.warnings.push("GitHub day not recorded in the import ledger (failed media or partial run) — the next run retries it.");
+    }
+  }
+  return result;
+}
+
+/**
+ * Did this run fully land (nothing skipped, no failed media, not cut off)?
+ * Only then is a sealed day / chunk recorded in the ledger — every write dedupes,
+ * so retrying an incomplete run is cheap and safe.
+ */
+export function importLanded(summary: DailyImportSummary): boolean {
+  return summary.ok && !summary.skipped && !summary.dryRun && !summary.partial && summary.media.failed === 0;
 }
 
 /** Parse the JSON body accepted by the admin/cron routes into run options. */
@@ -986,6 +1101,12 @@ export function optionsFromBody(body: Record<string, unknown> | null | undefined
   if (outscraper !== undefined) out.useOutscraper = outscraper;
   if (typeof body.bundleUrl === "string" && body.bundleUrl.trim()) out.bundleUrls = [body.bundleUrl.trim()];
   if (Array.isArray(body.bundleUrls)) out.bundleUrls = body.bundleUrls.filter((u): u is string => typeof u === "string" && u.trim().length > 0);
+  // Cron / CLI: pin the GitHub sealed-pack source to one day (?day=2026-09-03).
+  // Pushed packs never reach here with `day` (the request parser consumes it).
+  const day = body.githubDay ?? body.day;
+  if (typeof day === "string" && /^\d{4}-\d{2}-\d{2}$/.test(day.trim())) out.githubDay = day.trim();
+  const github = bool(body.github);
+  if (github === false) out.githubPack = null;
   return out;
 }
 

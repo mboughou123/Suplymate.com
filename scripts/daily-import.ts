@@ -7,6 +7,10 @@
 //   npx tsx scripts/daily-import.ts --file=scripts/import/examples/metalworks-china.json --dry-run
 //   flags: --dry-run  --no-enhance  --no-grok  --no-outscraper  --limit=N  --product-limit=N  --base-url=https://suplymate.com
 //
+// Sealed pack from the PR #15 branch (same as IMPORT_GITHUB_PACK on the cron):
+//   npx tsx scripts/daily-import.ts --github mboughou123/suplymate.com@cursor/amine-review-nav-mate-ctas-83a7:data [--day 2026-09-03] --dry-run
+//   (needs GITHUB_TOKEN for private repos / rate limits; refuses days without a seal)
+//
 // Push mode (run ON the Grok machine — uploads a sealed day to the site):
 //   npx tsx scripts/daily-import.ts --push https://suplymate.com --secret $CRON_SECRET \
 //       --day 2026-09-02 --dir /workspace/suppliers-phase1/daily/2026-09-02 [--dry-run] [--chunk-bytes 3500000]
@@ -88,6 +92,15 @@ async function main() {
 
   const { runDailyImport } = await import("../src/lib/import/daily-import");
   const { parseImportPayload, mergePacks } = await import("../src/lib/import/pack-formats");
+  const { parseGithubPackSpec } = await import("../src/lib/import/github-pack");
+
+  const githubArg = args("github")[0];
+  const githubPack = githubArg ? parseGithubPackSpec(githubArg) : flag("no-github") ? null : undefined;
+  if (githubArg && !githubPack) {
+    console.error(`--github expects owner/repo@branch:path (got "${githubArg}").`);
+    process.exit(1);
+  }
+  const githubDay = args("day")[0] ?? null;
 
   const files = args("file");
   const urls = args("url");
@@ -110,6 +123,8 @@ async function main() {
     inline,
     bundleUrls: urls.length ? urls : undefined,
     useOutscraper: flag("no-outscraper") ? false : undefined,
+    githubPack,
+    githubDay,
     limit,
     productLimit,
     dryRun: flag("dry-run"),

@@ -10,10 +10,14 @@
 //                        pack (suppliers.json / products.json), a SupplierBundle
 //                        JSON or a supplier CSV. Point this at the Grok Bot's
 //                        output (raw GitHub URL, Blob, Drive export…).
+//   • IMPORT_GITHUB_PACK — `owner/repo@branch:data`: the sealed daily packs the
+//                        Grok machine commits onto the PR #15 branch. Only a day
+//                        with a verified seal is ever imported (github-pack.ts).
 //   • OUTSCRAPER_API_KEY — live Google-Maps business listings via Outscraper;
 //                        a small rotating slice of the query matrix per day.
 
 import { validateRemoteUrl } from "@/lib/media-fetch";
+import { parseGithubPackSpec, type GithubPackSpec } from "./github-pack";
 import { parseImportPayload, mergePacks, type ImportPack, type PackSupplier } from "./pack-formats";
 import {
   isOutscraperConfigured,
@@ -27,6 +31,8 @@ export const MAX_BUNDLE_BYTES = 25 * 1024 * 1024; // 25 MB
 export type SourceConfig = {
   bundleUrls: string[];
   outscraper: boolean;
+  /** Parsed IMPORT_GITHUB_PACK, or null when unset / malformed. */
+  githubPack: GithubPackSpec | null;
 };
 
 export function parseBundleUrlList(v: string | undefined | null): string[] {
@@ -40,11 +46,12 @@ export function configuredSources(env: NodeJS.ProcessEnv = process.env): SourceC
   return {
     bundleUrls: parseBundleUrlList(env.IMPORT_BUNDLE_URL),
     outscraper: Boolean(env.OUTSCRAPER_API_KEY?.trim()),
+    githubPack: parseGithubPackSpec(env.IMPORT_GITHUB_PACK),
   };
 }
 
-export function hasAnySource(cfg: SourceConfig, inline?: ImportPack | null): boolean {
-  return Boolean(inline) || cfg.bundleUrls.length > 0 || cfg.outscraper;
+export function hasAnySource(cfg: Pick<SourceConfig, "bundleUrls" | "outscraper"> & { githubPack?: GithubPackSpec | null }, inline?: ImportPack | null): boolean {
+  return Boolean(inline) || cfg.bundleUrls.length > 0 || cfg.outscraper || Boolean(cfg.githubPack);
 }
 
 /* ------------------------------------------------------------------ */

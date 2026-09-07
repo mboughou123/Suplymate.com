@@ -139,6 +139,33 @@ export class PackFiles {
     return n;
   }
 
+  remove(path: string): boolean {
+    const rel = toPackRelative(path);
+    return rel ? this.files.delete(rel) : false;
+  }
+
+  /** Image Enhancer output path registered for `src`, if any. */
+  manifestFor(src: string): string | null {
+    const rel = toPackRelative(src);
+    return rel ? this.manifest.get(rel) ?? null : null;
+  }
+
+  /** Is `path` an Image Enhancer output (`dst`) according to the manifest? */
+  isManifestDst(path: string): boolean {
+    const rel = toPackRelative(path);
+    if (!rel) return false;
+    for (const dst of this.manifest.values()) if (dst === rel) return true;
+    return false;
+  }
+
+  /**
+   * Make the bytes for `refs` resolvable before ingest. Uploaded packs already
+   * hold everything in memory (no-op); lazy sources (GitHub tree) override it.
+   */
+  async prefetch(_refs: string[]): Promise<void> {
+    void _refs;
+  }
+
   has(ref: string): boolean {
     return this.resolve(ref) !== null;
   }

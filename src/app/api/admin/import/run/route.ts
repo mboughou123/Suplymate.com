@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { adminGuard, checkAdmin } from "@/lib/admin";
-import { runDailyImport, optionsFromBody, type DailyImportOptions } from "@/lib/import/daily-import";
+import { importLanded, runDailyImport, optionsFromBody, type DailyImportOptions } from "@/lib/import/daily-import";
 import { mergePacks, parseImportPayload, type ImportPack } from "@/lib/import/pack-formats";
 import { isAuthorizedCron } from "@/lib/import/cron-auth";
 import { hasPackContent, parsePushRequest, pushMaxBytes, type PushPayload } from "@/lib/import/push-request";
@@ -131,7 +131,7 @@ export async function POST(request: Request) {
     // Only a chunk that fully landed is recorded; a chunk with failed uploads
     // (e.g. no Blob token yet) or a deadline cut-off stays re-pushable — every
     // write dedupes, so retrying is cheap and safe.
-    const landed = summary.ok && !summary.skipped && !summary.dryRun && !summary.partial && summary.media.failed === 0;
+    const landed = importLanded(summary);
     if (!landed && seal && !summary.dryRun && !summary.skipped) {
       summary.warnings.push("Chunk not recorded in the import ledger (failed media or partial run) — push it again once fixed.");
     }
@@ -147,6 +147,7 @@ export async function POST(request: Request) {
           products: summary.products,
           media: summary.media,
           partial: summary.partial,
+          held: summary.held.length,
         },
       });
     }
@@ -193,6 +194,8 @@ export async function GET(request: Request) {
         }
       }),
       outscraper: cfg.outscraper,
+      githubPack: cfg.githubPack ? `${cfg.githubPack.owner}/${cfg.githubPack.repo}@${cfg.githubPack.ref}:${cfg.githubPack.path}` : null,
+      githubTokenSet: Boolean(process.env.GITHUB_TOKEN?.trim()),
     },
     grok: { configured: isXaiConfigured(), model: isXaiConfigured() ? xaiModel() : null, visionModel: isXaiConfigured() ? xaiVisionModel() : null },
     enhancer: enhancerStatus(),

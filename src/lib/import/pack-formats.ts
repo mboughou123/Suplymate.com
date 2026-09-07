@@ -29,6 +29,7 @@ import {
 } from "@/lib/supplier-normalize";
 import { supplierCategories, type SupplierCategory } from "@/data/suppliers";
 import { isPackFileRef, packFileRef, toPackRelative } from "./pack-files";
+import { recordHoldReason } from "./hold";
 
 export type PackFormat = "lister" | "bundle" | "csv" | "outscraper";
 
@@ -50,6 +51,8 @@ export type PackSupplier = {
   certifications: PackCertification[];
   productLines: string[];
   sourceFormat: PackFormat;
+  /** Per-record HOLD / soft-hold flag from the pack (reason), see hold.ts. */
+  hold?: string | null;
 };
 
 export type PackProduct = {
@@ -73,6 +76,8 @@ export type PackProduct = {
   productUrl: string | null;
   sku: string | null;
   status: "pending";
+  /** Per-record HOLD / QA-hold flag from the pack (reason), see hold.ts. */
+  hold?: string | null;
 };
 
 export type ImportPack = {
@@ -332,6 +337,7 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null, localFiles =
     certifications: certs,
     productLines,
     sourceFormat: "lister",
+    hold: recordHoldReason(s),
   };
 }
 
@@ -394,6 +400,7 @@ function listerProduct(
     productUrl: str(p.product_url) ?? null,
     sku: str(p.sku) ?? str(p.model),
     status: "pending",
+    hold: recordHoldReason(p),
   };
 }
 

@@ -4,7 +4,8 @@
 //
 //  multipart/form-data (whole day or one chunk of it)
 //    day=2026-09-02  part=1  of=3            chunk protocol (see docs/daily-import.md)
-//    seal=<seal.json>                        file or JSON string
+//    seal=<seal.json>                        file or JSON string — or the raw
+//    _seals/2026-09-03.json=<file>           `_…/` QA files; the seal for `day` wins
 //    suppliers.json=<file>  products.json=<file>
 //    manifest=<*manifest*.json>              optional, repeatable ([{src,dst}])
 //    options={"dryRun":true,"limit":50}      optional JSON string
@@ -20,6 +21,7 @@
 // (IMPORT_PUSH_MAX_BYTES, default 4 MB — Vercel rejects > 4.5 MB) → 413.
 
 import { PackFiles } from "./pack-files";
+import { isSealCandidatePath, parseSeal, pickSeal } from "./seal-format";
 
 export const DEFAULT_PUSH_MAX_BYTES = 4_000_000;
 const IMAGE_EXT_RE = /\.(jpe?g|png|webp|gif|avif|svg)$/i;
@@ -148,6 +150,9 @@ async function parseMultipart(request: Request, max: number): Promise<PushParseR
   }
   const p = emptyPayload("multipart");
   const isFile = (v: FormDataEntryValue): v is File => typeof v !== "string";
+  // Seals may arrive as `seal`, or as the raw pack files under `_seals/…json`
+  // / `_qa/…json`; the one for `day` wins (see pickSeal).
+  const sealCandidates: string[] = [];
 
   for (const [field, value] of form.entries()) {
     const filename = isFile(value) ? value.name || null : null;
@@ -160,7 +165,7 @@ async function parseMultipart(request: Request, max: number): Promise<PushParseR
       const text = isFile(value) ? Buffer.from(await value.arrayBuffer()).toString("utf8") : value;
       if (jsonKind === "suppliers") p.suppliersText = text;
       else if (jsonKind === "products") p.productsText = text;
-      else if (jsonKind === "seal") p.seal = text;
+      else if (jsonKind === "seal") sealCandidates.push(text);
       else {
         try {
           p.manifests.push(JSON.parse(text));
@@ -168,6 +173,21 @@ async function parseMultipart(request: Request, max: number): Promise<PushParseR
           p.warnings.push(`manifest "${field}" is not valid JSON — ignored`);
         }
       }
+      continue;
+    }
+
+    // Any other JSON part (typically `_seals/2026-09-03.json`, `_qa/ok.json`)
+    // is a seal if it parses as one; other `_…/` files are QA scratch — skipped.
+    if (isFile(value) && /\.json$/i.test(filename ?? field)) {
+      const text = Buffer.from(await value.arrayBuffer()).toString("utf8");
+      if (parseSeal(text)) sealCandidates.push(text);
+      else if (isSealCandidatePath(field) || isSealCandidatePath(filename ?? "")) p.warnings.push(`"${field}" looks like a seal but does not parse as one — ignored`);
+      else p.warnings.push(`JSON part "${field}" is not a pack file — ignored`);
+      continue;
+    }
+    if (isFile(value) && !IMAGE_EXT_RE.test(field) && !IMAGE_EXT_RE.test(filename ?? "")) {
+      // `_exclude_names.txt`, summary.md, … — QA scratch, nothing to ingest.
+      if (!/^\.?\/?_/.test(field)) p.warnings.push(`file "${field}" is not an image — ignored`);
       continue;
     }
 
@@ -215,6 +235,7 @@ async function parseMultipart(request: Request, max: number): Promise<PushParseR
     }
   }
   if (p.part > p.of) return { ok: false, status: 400, error: `"part" (${p.part}) exceeds "of" (${p.of}).` };
+  p.seal = pickSeal(sealCandidates, p.day) ?? sealCandidates[0] ?? null;
   return { ok: true, payload: p };
 }
 
@@ -260,7 +281,21 @@ async function parseJson(request: Request, max: number): Promise<PushParseResult
   p.part = intField(part, 1);
   p.of = intField(of, 1);
   if (p.part > p.of) return { ok: false, status: 400, error: `"part" (${p.part}) exceeds "of" (${p.of}).` };
-  p.seal = seal ?? seals ?? null;
+  // `seal`, `seals` (object, array of seals, or {seals:[…]}) and any
+  // `files["_seals/…json"]` data: URL are all seal candidates.
+  const sealCandidates: unknown[] = [];
+  if (seal != null) sealCandidates.push(seal);
+  if (Array.isArray(seals)) sealCandidates.push(...seals);
+  else if (seals != null) sealCandidates.push(seals);
+  if (files && typeof files === "object" && !Array.isArray(files)) {
+    for (const [path, v] of Object.entries(files as Record<string, unknown>)) {
+      if (typeof v !== "string" || !/\.json$/i.test(path)) continue;
+      const decoded = decodeDataUrl(v);
+      const text = decoded ? decoded.buffer.toString("utf8") : v;
+      if (parseSeal(text)) sealCandidates.push(text);
+    }
+  }
+  p.seal = pickSeal(sealCandidates, p.day) ?? sealCandidates[0] ?? null;
 
   if (typeof suppliers === "string") p.suppliersText = suppliers;
   else if (suppliers != null) p.suppliersObj = suppliers;
@@ -272,7 +307,7 @@ async function parseJson(request: Request, max: number): Promise<PushParseResult
 
   if (files && typeof files === "object" && !Array.isArray(files)) {
     for (const [path, v] of Object.entries(files as Record<string, unknown>)) {
-      if (typeof v !== "string") continue;
+      if (typeof v !== "string" || /\.json$/i.test(path)) continue;
       const decoded = decodeDataUrl(v);
       if (!decoded) {
         p.warnings.push(`files["${path}"] is not a data: URL — ignored`);
