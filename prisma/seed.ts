@@ -1,11 +1,21 @@
 import { PrismaClient } from "@prisma/client";
 import { verifiedSuppliers } from "../src/data/verified-suppliers";
 import { outscraperSuppliers } from "../src/data/outscraper-suppliers";
+import { phase1Suppliers } from "../src/data/phase1-suppliers";
 import { products } from "../src/data/products";
 import { materials } from "../src/data/materials";
 import { hash } from "bcryptjs";
+import type { Supplier } from "../src/data/suppliers";
 
 const prisma = new PrismaClient();
+
+function mergeById(...lists: Supplier[][]): Supplier[] {
+  const byId = new Map<string, Supplier>();
+  for (const list of lists) {
+    for (const s of list) byId.set(s.id, s);
+  }
+  return [...byId.values()];
+}
 
 async function main() {
   await prisma.priceAlert.deleteMany();
@@ -13,8 +23,10 @@ async function main() {
   await prisma.product.deleteMany();
   await prisma.material.deleteMany();
 
-  const seedSuppliers =
+  const base =
     outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers;
+  // Phase-1 overlays Outscraper for matching ids (richer factory photos).
+  const seedSuppliers = mergeById(base, phase1Suppliers);
 
   for (const s of seedSuppliers) {
     await prisma.supplier.create({
@@ -30,6 +42,8 @@ async function main() {
         phone: s.phone ?? null,
         email: s.email ?? null,
         imageUrl: s.imageUrl ?? null,
+        logoUrl: s.logoUrl ?? null,
+        images: JSON.stringify(s.supplierImages ?? []),
         googleRating: s.googleRating ?? null,
         googleReviews: s.googleReviews ?? null,
         description: s.description ?? null,

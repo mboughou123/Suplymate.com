@@ -27,7 +27,9 @@ describe("home suppliers band", () => {
     expect(getSupplierBandHref(HOME_SUPPLIERS_BAND[0])).toBe(
       "/supplier/al-gharbia-pipe-company-llc-ae",
     );
-    expect(getSupplierBandHref(HOME_SUPPLIERS_BAND[1])).toBe("/suppliers");
+    expect(getSupplierBandHref(HOME_SUPPLIERS_BAND[1])).toBe(
+      "/supplier/emsteel-building-materials-pjsc-emsteel-ae",
+    );
     expect(getSupplierBandHref(HOME_SUPPLIERS_BAND[2])).toBe(
       "/supplier/ferrite-structural-steels-pvt-ltd-panvel",
     );

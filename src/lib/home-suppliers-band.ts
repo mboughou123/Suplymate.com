@@ -29,6 +29,7 @@ export const HOME_SUPPLIERS_BAND: HomeSupplierBandEntry[] = [
     image: "/images/suppliers/band/02-emsteel.jpg",
     imageWidth: 1920,
     imageHeight: 628,
+    supplierId: "emsteel-building-materials-pjsc-emsteel-ae",
     fallbackHref: "/suppliers",
   },
   {

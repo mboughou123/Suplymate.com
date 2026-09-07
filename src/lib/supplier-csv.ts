@@ -92,6 +92,7 @@ export function mapRowsToSupplierInputs(parsed: CsvParseResult): CsvImportResult
     const rating = v.rating ? Number(v.rating) : undefined;
     const reviewCount = v.reviewCount ? parseInt(v.reviewCount.replace(/[^\d]/g, ""), 10) : undefined;
 
+    const images = v.images ? splitList(v.images) : [];
     const input: SupplierInput = {
       name,
       industry: v.industry || null,
@@ -105,8 +106,9 @@ export function mapRowsToSupplierInputs(parsed: CsvParseResult): CsvImportResult
       email: v.email || null,
       description: v.description || null,
       logoUrl: v.logoUrl || null,
-      imageUrl: v.imageUrl || null,
-      images: v.images ? splitList(v.images) : [],
+      // When CSV only has photoUrls/images, use the first gallery URL as hero.
+      imageUrl: v.imageUrl || images[0] || null,
+      images,
       certificationImages: v.certificationImages ? splitList(v.certificationImages) : [],
       certifications: v.certifications ? parseCertifications(v.certifications) : [],
       products: v.products ? splitList(v.products) : [],

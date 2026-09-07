@@ -14,6 +14,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { products as staticProducts } from "@/data/products";
+import { phase1Products } from "@/data/phase1-products";
 import {
   listApprovedScrapedProducts,
   scrapedToProduct,
@@ -305,6 +306,10 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
 export async function getPublicProductsPage(
   q: PublicProductsQuery
 ): Promise<PublicProductsResult> {
+  // When the phase-1 factory pack is present, use the memory path so curated
+  // products (merged via listApprovedScrapedProducts) appear without a
+  // production DB import. Otherwise prefer DB-level pagination.
+  if (phase1Products.length > 0) return fromMemory(q);
   const db = await fromDb(q);
   if (db) return db;
   return fromMemory(q);
