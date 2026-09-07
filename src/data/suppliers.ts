@@ -73,6 +73,10 @@ export type Supplier = {
   verificationStatus?: "pending" | "verified" | "rejected" | "needs_info";
   /** 0–100 data-completeness trust score. */
   trustScore?: number;
+  /** "Manufacturer" | "Distributor" | … — distributors never get the mill badge. */
+  businessType?: string;
+  /** Photo-bearing catalogue products used for directory-card thumbnails. */
+  featuredProducts?: { id: string; name: string; image?: string }[];
 };
 
 export const industries: Industry[] = [

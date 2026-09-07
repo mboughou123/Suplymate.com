@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Play, Maximize2 } from "lucide-react";
 import type { GalleryImage } from "@/lib/product-detail";
 import { PRODUCT_ICONS } from "@/components/product/productIcons";
+
+// Local raster photos (curated packs under /images/**) go through the Next.js
+// image optimizer; SVG tiles and third-party hosts render as plain <img>.
+function isOptimizable(src: string): boolean {
+  return src.startsWith("/") && !src.toLowerCase().endsWith(".svg");
+}
 
 function GallerySlide({
   image,
@@ -21,7 +28,18 @@ function GallerySlide({
 
   return (
     <>
-      {showImage && (
+      {showImage && image.url && isOptimizable(image.url) && (
+        <Image
+          src={image.url}
+          alt={image.label}
+          fill
+          priority={size === "main"}
+          sizes={size === "main" ? "(max-width: 1024px) 100vw, 50vw" : "64px"}
+          className="absolute inset-0 h-full w-full object-cover"
+          onError={() => setImgFailed(true)}
+        />
+      )}
+      {showImage && image.url && !isOptimizable(image.url) && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={image.url}

@@ -116,13 +116,18 @@ export function getProductFallbackImage(
 }
 
 /**
- * True only for a REAL remote photo (http/https). Local branded SVG fallbacks
- * (under `/images/...`) and empty values are NOT real photos. This is the
- * single source of truth used by homepage gating and catalogue scoring to tell
- * a genuine photograph apart from a generated category tile.
+ * True only for a REAL photograph: a remote http(s) photo, or a local raster
+ * asset (`/images/**.jpg|png|webp` — the curated supplier / product / certificate
+ * packs committed under `public/images`). Local branded SVG fallbacks and empty
+ * values are NOT real photos. This is the single source of truth used by
+ * homepage gating and catalogue scoring to tell a genuine photograph apart
+ * from a generated category tile.
  */
 export function isRealImageUrl(url?: string | null): boolean {
-  return typeof url === "string" && /^https?:\/\//i.test(url.trim());
+  if (typeof url !== "string") return false;
+  const value = url.trim();
+  if (/^https?:\/\//i.test(value)) return true;
+  return /^\/images\/.+\.(jpe?g|png|webp)$/i.test(value);
 }
 
 export type ProductImageInput = {

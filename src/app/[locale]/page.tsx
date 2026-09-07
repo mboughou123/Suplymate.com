@@ -3,17 +3,19 @@ import HomeTopNav from "@/components/home/HomeTopNav";
 import HomeHero from "@/components/home/HomeHero";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
+import HomeProductsSection from "@/components/home/HomeProductsSection";
 import HomeOrchestratorSection from "@/components/home/HomeOrchestratorSection";
 import HomeBenefitsBand from "@/components/home/HomeBenefitsBand";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 import HomeCloseSection from "@/components/HomeCloseSection";
-import { getSuppliersFromDb } from "@/lib/data-service";
+import { getProductsFromDb, getSuppliersFromDb } from "@/lib/data-service";
 import { INDUSTRIES } from "@/data/industries";
 import { MATERIAL_CATALOG } from "@/data/material-catalog";
 import { countSupplierCountries } from "@/lib/home-benefits";
 
-// Static + ISR: the only per-request data is the supplier count, which only
-// needs to be fresh to the minute. Everything else is translated copy.
+// Static + ISR: the per-request data is the supplier count and the product
+// grid picks, which only need to be fresh to the minute (both come from the
+// memoised catalogue reads). Everything else is translated copy.
 export const revalidate = 300;
 
 export default async function HomePage({
@@ -23,9 +25,10 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [t, suppliers] = await Promise.all([
+  const [t, suppliers, products] = await Promise.all([
     getTranslations("home"),
     getSuppliersFromDb().catch(() => []),
+    getProductsFromDb().catch(() => []),
   ]);
 
   return (
@@ -38,6 +41,9 @@ export default async function HomePage({
       />
       <HomeTrustStrip />
       <HomeSuppliersBand />
+      {/* Who is on the network (suppliers) → what they make (products) → how
+          Mate helps you buy it (orchestrator). */}
+      <HomeProductsSection products={products} />
       <HomeOrchestratorSection />
       <HomeBenefitsBand
         countryCount={countSupplierCountries(suppliers)}

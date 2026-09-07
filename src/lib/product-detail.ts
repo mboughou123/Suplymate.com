@@ -11,10 +11,12 @@ import { products as allProducts } from "@/data/products";
 import type { Supplier } from "@/data/suppliers";
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
+import { getPackSupplier, toDirectorySupplier } from "@/data/pack-catalog";
 import { toDisplaySupplier } from "@/lib/supplier-display";
 import {
   getRealProductImage,
   hasRealProductImage,
+  isRealImageUrl,
 } from "@/lib/image-fallback";
 import { calculateSupplierCompletenessScore } from "@/lib/supplier-completeness";
 import {
@@ -249,26 +251,38 @@ function flagFor(country: string): string {
 
 /* ----------------------------- Linkage --------------------------------- */
 
-// A supplier "has a real photo" if it carries a remote banner or gallery image
-// (Google Maps / website media). Used to prefer image-bearing suppliers so the
-// products they back can show a genuine photograph rather than a category tile.
+// A supplier "has a real photo" if it carries a banner or gallery photograph
+// (Google Maps / website media, or a local curated pack photo). Used to prefer
+// image-bearing suppliers so the products they back can show a genuine
+// photograph rather than a category tile.
 function supplierHasRealPhoto(s: Supplier): boolean {
-  const isReal = (u?: string | null) => Boolean(u && /^https?:\/\//i.test(u));
-  return isReal(s.imageUrl) || Boolean(s.supplierImages?.some(isReal));
+  return isRealImageUrl(s.imageUrl) || Boolean(s.supplierImages?.some(isRealImageUrl));
 }
 
 // Real photos linked to a supplier record (banner + gallery), de-duplicated.
 function supplierPhotos(s: Supplier): string[] {
-  return [s.imageUrl, ...(s.supplierImages ?? [])].filter(
-    (u): u is string => Boolean(u && /^https?:\/\//i.test(u))
-  );
+  return [
+    ...new Set(
+      [s.imageUrl, ...(s.supplierImages ?? [])].filter((u): u is string => isRealImageUrl(u))
+    ),
+  ];
 }
 
-// Deterministically link a catalogue product to a REAL supplier, preferring the
-// public Outscraper directory (which carries genuine Google Maps photos) so the
-// product card can surface a real photo. Falls back to the generated verified
-// directory only when no image-bearing supplier exists for the category.
+// Link a catalogue product to a REAL supplier. Products that carry a
+// `supplierId` (imported / pack products) resolve to that exact supplier — the
+// curated pack first, then the directory. Legacy demo products without one are
+// deterministically linked to an image-bearing Outscraper supplier so the card
+// can surface a real photo, falling back to the generated verified directory
+// only when no image-bearing supplier exists for the category.
 function linkedSupplier(product: Product): Supplier {
+  if (product.supplierId) {
+    const pack = getPackSupplier(product.supplierId);
+    if (pack) return toDirectorySupplier(pack);
+    const known =
+      outscraperSuppliers.find((s) => s.id === product.supplierId) ??
+      verifiedSuppliers.find((s) => s.id === product.supplierId);
+    if (known) return known;
+  }
   const seed = hashString(product.id || product.name);
 
   const sameCatWithPhoto = outscraperSuppliers.filter(
@@ -433,7 +447,8 @@ export function getProductDetail(product: Product): ProductDetail {
   if (product.images?.length) {
     gallery = product.images.map((url, i) => ({
       id: `${product.id}-img-${i}`,
-      label: galleryLabels[i] ?? `Image ${i + 1}`,
+      // Real photographs are labelled by product, not by an invented "view".
+      label: `${product.name} — photo ${i + 1}`,
       gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
       icon,
       url,

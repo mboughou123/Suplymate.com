@@ -146,14 +146,26 @@ export default async function SupplierProfilePage({
   // Real certification/media collected via import or the website scraper. Shown
   // alongside the generated profile content only when present. Published
   // certificate Media is merged ahead of the legacy image URLs.
+  // Whatever the profile's compliance section already renders as real
+  // certificate cards (with thumbnails + lightbox) is not repeated below —
+  // the collected-info block only shows the remainder (e.g. published Media
+  // scans without a matching certification record).
+  const profileCertImages = new Set(
+    profile.certifications.filter((c) => c.isReal && c.imageUrl).map((c) => c.imageUrl as string)
+  );
+  const profileShowsRealCerts = profile.certifications.some((c) => c.isReal);
   const realCertImages = [
     ...new Set([...mediaCertImages, ...(supplier.certificationImages ?? [])]),
-  ];
+  ].filter((u) => !profileCertImages.has(u));
   // Never shown if rejected. A certification is NOT verified just because an
   // image exists — status is set by an admin.
   const relationalCerts = relationalCertsRaw.filter((c) => c.status !== "rejected");
-  const realCertDetails = supplier.certificationsDetailed ?? [];
-  const realSupplierImages = supplier.supplierImages ?? [];
+  const realCertDetails = profileShowsRealCerts ? [] : (supplier.certificationsDetailed ?? []);
+  // Real factory photos already fill the media gallery (with lightbox); only
+  // repeat them here when the gallery had nothing real to show.
+  const realSupplierImages = profile.media.some((m) => m.isReal)
+    ? []
+    : (supplier.supplierImages ?? []);
   const hasRealMedia =
     realCertImages.length > 0 || realCertDetails.length > 0 || realSupplierImages.length > 0;
 

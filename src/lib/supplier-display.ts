@@ -5,6 +5,12 @@ export type DisplayProduct = {
   price: string;
   moq: string;
   gradient: string;
+  /** Local product photo (curated packs) — cards render it instead of the icon tile. */
+  image?: string;
+  /** Catalogue detail page for a real listed SKU. */
+  href?: string;
+  /** True when this is a real catalogue product (no illustrative price / MOQ). */
+  isReal?: boolean;
 };
 
 export type DisplaySupplier = {
@@ -154,12 +160,30 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
   const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
 
   const moqList = [s.moq];
-  const products: DisplayProduct[] = s.products.slice(0, 3).map((name, i) => ({
-    name,
-    price: priceFor(seed + i * 7, s.industry),
-    moq: moqList[i] ?? `${seeded(seed + i, 1, 500)} pcs`,
-    gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
-  }));
+  // Real photo-bearing catalogue SKUs (curated packs) take the card slots
+  // first; illustrative product lines only fill what remains.
+  const featured: DisplayProduct[] = (s.featuredProducts ?? [])
+    .filter((p) => p.image)
+    .slice(0, 3)
+    .map((p, i) => ({
+      name: p.name,
+      price: "",
+      moq: "",
+      gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+      image: p.image,
+      href: `/products/${p.id}`,
+      isReal: true,
+    }));
+  const illustrative: DisplayProduct[] = s.products
+    .filter((name) => !featured.some((f) => f.name.toLowerCase() === name.toLowerCase()))
+    .slice(0, Math.max(0, 3 - featured.length))
+    .map((name, i) => ({
+      name,
+      price: priceFor(seed + i * 7, s.industry),
+      moq: moqList[i] ?? `${seeded(seed + i, 1, 500)} pcs`,
+      gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
+    }));
+  const products: DisplayProduct[] = [...featured, ...illustrative];
 
   return {
     id: s.id,

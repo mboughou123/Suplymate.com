@@ -79,7 +79,9 @@
       "compare": "Karşılaştır",
       "compareDescription": "Browse products and line up offers side by side — price, MOQ, lead time.",
       "watch": "Watch",
-      "watchDescription": "Track material prices and rate signals to time your purchase."
+      "watchDescription": "Track material prices and rate signals to time your purchase.",
+      "catalogue": "Product catalogue",
+      "catalogueDescription": "Listed products with supplier photos — steel, cables, pipes, packaging and more."
     },
     "solutions": {
       "byIndustry": "By industry",
@@ -263,6 +265,24 @@
     "foliflexName": "Foliflex Wires & Cables",
     "foliflexLocation": "Delhi, India (Jhilmil)",
     "foliflexCaption": "Foliflex cable warehouse aisles, Jhilmil"
+  },
+  "homeProducts": {
+    "eyebrow": "Ürünler",
+    "title": "Browse products from verified suppliers",
+    "subtitle": "Real catalogue items with supplier photos — rebar, cables, pipes, packaging and industrial parts, each linked to the mill that makes it.",
+    "all": "Tous",
+    "filterLabel": "Filter products by category",
+    "viewProduct": "View product",
+    "browseAll": "Parcourir tous les ürünler",
+    "empty": "No products in this category yet.",
+    "categories": {
+      "steelAndMetals": "Steel & metals",
+      "cablesAndElectrical": "Cables & electrical",
+      "tubesAndPipes": "Tubes & pipes",
+      "packaging": "Packaging",
+      "construction": "Construction",
+      "industrialParts": "Industrial parts"
+    }
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -571,6 +591,8 @@
     "viewProfile": "View profile",
     "contactSupplier": "Contact supplier",
     "viewSupplier": "View Supplier",
+    "viewProduct": "View product",
+    "distributor": "Distributor",
     "noMatchTitle": "Yok tedarikçi ne eşleş à vos filtreler",
     "noMatchSubtitle": "Élargissez sizin arama ou effacez les filtreler.",
     "pageInfo": "Page {current} sur {total} · {shown} sur {totalResults} gösterilen",
@@ -1318,6 +1340,15 @@
     "validUntil": "Valid until",
     "certificateOnRequest": "Certificate available on request",
     "download": "Download",
+    "viewCertificate": "View certificate",
+    "certificateSource": "Source page",
+    "displayedBySupplier": "Displayed by the supplier — not independently verified by Suplymate.",
+    "certificateImageAlt": "{name} certificate — {authority}",
+    "closeCertificate": "Close certificate preview",
+    "realCertificationsDescription": "Certificates and accreditations published by the supplier, collected from its website.",
+    "sortName": "Name (A–Z)",
+    "viewProduct": "View product",
+    "listedCatalogueDescription": "Listed catalogue products with supplier photos. Prices shown include the Suplymate service fee; RFQ items are quoted per order.",
     "facilityEyebrow": "Facility",
     "factoryMediaTitle": "Factory & media gallery",
     "factoryMediaDescription": "Production floor, QC labs and logistics — tap any tile for a fullscreen preview.",

@@ -130,6 +130,13 @@ export const PRODUCTS_MENU: ProductsMenu = {
       labelKey: "products.watch",
       descriptionKey: "products.watchDescription",
     },
+    {
+      // Homepage "Products" band (photo grid of listed catalogue SKUs).
+      href: "/#products",
+      icon: "boxes",
+      labelKey: "products.catalogue",
+      descriptionKey: "products.catalogueDescription",
+    },
   ],
 };
 

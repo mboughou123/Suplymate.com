@@ -21,6 +21,39 @@ import {
   mediaQualityFor,
   type MediaQuality,
 } from "@/lib/supplier-completeness";
+import { packProductsForSupplier } from "@/data/pack-catalog";
+import { COMMISSION_RATE, applyCommission, formatPrice } from "@/config/commerce";
+
+/* ------------------------------------------------------------------ */
+/* Real-certification labelling                                        */
+/* ------------------------------------------------------------------ */
+
+/** Short badge code for a collected certification ("ISO 9001", "API 5L", "CE"). */
+export function certificationCode(name: string, type?: string | null): string {
+  const m = name.match(
+    /\b(API(?:\s?(?:Spec\s?)?[A-Z0-9]{1,4})?|ISO(?:\/IEC)?\s?\d{4,5}|IATF\s?\d+|OHSAS\s?\d+|EN\s?\d{4,5}|ASTM\s?[A-Z]\d+|BIS|CARES|ACRS|PED|RoHS|CE|UL|FM|SASO|ADNOC)\b/i
+  );
+  if (m) return m[1].replace(/\s+/g, " ").toUpperCase().replace("SPEC ", "Spec ");
+  if (type) return type.replace(/_/g, " ");
+  return name.length > 18 ? `${name.slice(0, 16).trim()}…` : name;
+}
+
+/** Issuing body family for a collected certification (display only). */
+export function certificationAuthority(name: string, type?: string | null): string {
+  const n = `${name} ${type ?? ""}`.toLowerCase();
+  if (/\bapi\b/.test(n)) return "American Petroleum Institute";
+  if (/\biatf\b/.test(n)) return "IATF";
+  if (/\bcares\b/.test(n)) return "UK CARES";
+  if (/\bacrs\b/.test(n)) return "ACRS";
+  if (/\bbis\b/.test(n)) return "Bureau of Indian Standards";
+  if (/\bul\b/.test(n)) return "UL Solutions";
+  if (/\bfm\b/.test(n)) return "FM Approvals";
+  if (/\badnoc\b/.test(n)) return "ADNOC";
+  if (/\bsaso\b/.test(n)) return "SASO";
+  if (/\bce\b|\bcpr\b|\bped\b|\ben\s?\d/.test(n)) return "EU notified body";
+  if (/\biso\b|\biec\b|\bohsas\b/.test(n)) return "Accredited certification body";
+  return "Supplier-declared";
+}
 
 /* ------------------------------------------------------------------ */
 /* Seeded deterministic randomness                                     */
@@ -163,6 +196,16 @@ export type Certification = {
   issued: string;
   expiry: string;
   verified: boolean;
+  /** Local / hosted scan of the certificate when the supplier published one. */
+  imageUrl?: string | null;
+  /** Mill page the certificate was collected from (attribution link). */
+  sourceUrl?: string | null;
+  /**
+   * True when this entry is REAL collected data (pack / import / scrape) rather
+   * than the deterministic placeholder set — real entries never show invented
+   * issue/expiry dates or a verified badge.
+   */
+  isReal: boolean;
 };
 
 export type MediaItem = {
@@ -198,6 +241,10 @@ export type ProfileProduct = {
   shipping: string;
   aiRecommended: boolean;
   rating: number;
+  /** Catalogue detail page when the product is a real listed SKU. */
+  href?: string;
+  /** True for real catalogue products (no invented rating / AI pick / specs). */
+  isReal: boolean;
 };
 
 export type Review = {
@@ -441,7 +488,9 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   const company: CompanyProfile = {
     registrationDate: `${["Jan", "Mar", "Apr", "Jun", "Sep", "Nov"][seed % 6]} ${regYear}`,
     yearsInBusiness: years,
-    businessType: pick(rng, BUSINESS_TYPES),
+    // A declared business type (e.g. "Distributor" for soft-hold identities
+    // such as Bossard) always beats the illustrative pick.
+    businessType: s.businessType ?? pick(rng, BUSINESS_TYPES),
     factorySize: `${(intBetween(rng, 8, 85) * 1000).toLocaleString()} m²`,
     employeeCount: base.employees,
     productionLines: intBetween(rng, 4, 24),
@@ -454,19 +503,37 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   };
 
   /* --- Certifications --- */
+  // Real collected certifications (curated packs / imports) replace the
+  // deterministic placeholder set entirely. They are "displayed by the
+  // supplier" — never marked verified here; that is an admin decision.
+  const realCerts = (s.certificationsDetailed ?? []).filter((c) => c.name && c.name.trim());
   const certPool = pickSome(rng, CERT_POOL, 4, 6);
-  const certifications: Certification[] = certPool.map((c, i) => {
-    const issuedYear = intBetween(rng, 2019, 2024);
-    return {
-      id: `${base.id}-cert-${i}`,
-      code: c.code,
-      name: c.name,
-      authority: c.authority,
-      issued: `${issuedYear}`,
-      expiry: `${issuedYear + 3}`,
-      verified: rng() > 0.18,
-    };
-  });
+  const certifications: Certification[] = realCerts.length
+    ? realCerts.map((c, i) => ({
+        id: `${base.id}-cert-${i}`,
+        code: certificationCode(c.name, c.type),
+        name: c.name.trim(),
+        authority: certificationAuthority(c.name, c.type),
+        issued: "",
+        expiry: "",
+        verified: false,
+        imageUrl: c.imageUrl ?? null,
+        sourceUrl: c.certificateUrl ?? c.sourceUrl ?? null,
+        isReal: true,
+      }))
+    : certPool.map((c, i) => {
+        const issuedYear = intBetween(rng, 2019, 2024);
+        return {
+          id: `${base.id}-cert-${i}`,
+          code: c.code,
+          name: c.name,
+          authority: c.authority,
+          issued: `${issuedYear}`,
+          expiry: `${issuedYear + 3}`,
+          verified: rng() > 0.18,
+          isReal: false,
+        };
+      });
 
   /* --- Media gallery --- */
   // Image priority: supplier website/Google Places photos (s.imageUrl +
@@ -489,15 +556,26 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     "Factory exterior",
     "Material inspection",
   ];
-  const media: MediaItem[] = mediaTitles.map((title, i) => {
+  // Always at least 6 tiles; show every real photo when the pack has more
+  // (capped so the gallery stays a gallery, not a dump).
+  const tileCount = Math.min(12, Math.max(mediaTitles.length, realSupplierPhotos.length));
+  const media: MediaItem[] = Array.from({ length: tileCount }, (_, i) => {
     const real = realSupplierPhotos[i];
+    // Real photographs are captioned neutrally — we do not know whether a
+    // collected photo shows the warehouse or the QC lab, so we never claim it.
+    // The rotating sourcing captions only label the illustrative tiles.
+    const title = real
+      ? `Photo ${i + 1}`
+      : i < mediaTitles.length
+        ? mediaTitles[i]
+        : `${base.name} — photo ${i + 1}`;
     return {
       id: `${base.id}-media-${i}`,
       // Only mark a tile as video when we have no real still to show for it
       // (keeps the lightbox honest about which tiles are genuine photos).
       type: i === 3 && realSupplierPhotos.length === 0 ? "video" : "image",
       title,
-      caption: `${base.name} — ${title.toLowerCase()}`,
+      caption: real ? `${base.name} — photo ${i + 1}` : `${base.name} — ${title.toLowerCase()}`,
       gradient: MEDIA_GRADIENTS[(seed + i) % MEDIA_GRADIENTS.length],
       url: real ?? categoryMediaFallback,
       fallback: categoryMediaFallback,
@@ -506,6 +584,9 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   });
 
   /* --- Products --- */
+  // Real catalogue SKUs (curated packs with local photos) take over the grid
+  // entirely — no padding with invented "Series" variants, no fake ratings.
+  const realProducts = packProductsForSupplier(s.id);
   const productCats = ["Featured", "Best seller", "New", "Bulk", "Custom"];
   const baseProducts = s.products.length ? s.products : base.products.map((p) => p.name);
   const expanded = [...baseProducts];
@@ -513,7 +594,36 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   while (expanded.length < 6) {
     expanded.push(`${baseProducts[expanded.length % baseProducts.length]} — Series ${expanded.length}`);
   }
-  const products: ProfileProduct[] = expanded.slice(0, 8).map((name, i) => {
+  const products: ProfileProduct[] = realProducts.length
+    ? realProducts.map((p) => {
+        const imageFallback = getProductFallbackImage(p.name, p.category);
+        const hasPhoto = p.images.length > 0;
+        return {
+          id: p.id,
+          name: p.name,
+          category: p.category,
+          gradient: PRODUCT_GRADIENTS[hashString(p.id) % PRODUCT_GRADIENTS.length],
+          image: hasPhoto ? p.images[0] : imageFallback,
+          imageFallback,
+          hasRealPhoto: hasPhoto,
+          priceRange:
+            p.basePrice != null
+              ? `${formatPrice(applyCommission(p.basePrice, p.commissionRate ?? COMMISSION_RATE), p.currency)}${
+                  p.priceUnit ? ` / ${p.priceUnit}` : ""
+                }`
+              : "Contact supplier for pricing",
+          moq: p.moq ?? base.moq,
+          leadTime: "Quoted per order",
+          material: p.category,
+          certifications: [],
+          shipping: "Quoted per order",
+          aiRecommended: false,
+          rating: 0,
+          href: `/products/${p.id}`,
+          isReal: true,
+        };
+      })
+    : expanded.slice(0, 8).map((name, i) => {
     const pr = makeRng(hashString(`${s.id}-product-${i}`));
     const lo = intBetween(pr, 8, 480);
     const hi = lo + intBetween(pr, 12, 600);
@@ -539,6 +649,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
       shipping: pick(pr, SHIPPING_TERMS),
       aiRecommended: pr() > 0.62,
       rating: Math.min(5, Math.round((4.2 + pr() * 0.8) * 10) / 10),
+      isReal: false,
     };
   });
 
