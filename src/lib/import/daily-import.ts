@@ -40,9 +40,18 @@ import { isXaiConfigured, xaiModel, xaiVisionModel } from "@/lib/xai";
 import { dedupeStrings } from "@/lib/supplier-normalize";
 import type { ImportPack, PackProduct, PackSupplier, PackCertification } from "./pack-formats";
 import { configuredSources, hasAnySource, loadSources } from "./sources";
-import { curateSupplierPhotos, generateProductDescription, summarizeSupplier, type PhotoKind } from "./grok-curation";
+import {
+  curateSupplierPhotos,
+  generateProductDescription,
+  heuristicPhotoKind,
+  summarizeSupplier,
+  type CurationResult,
+  type PhotoKind,
+} from "./grok-curation";
 import { enhancerStatus } from "./enhance-image";
-import { existingMediaKeys, ingestRemoteImage, IMPORT_ACTOR } from "./media-ingest";
+import { existingMediaKeys, ingestRemoteImage, IMPORT_ACTOR, type IngestResult } from "./media-ingest";
+import { isIngestableRef, isPackFileRef, packFileRelative, type PackFiles } from "./pack-files";
+import type { Seal } from "./seal";
 
 /* ------------------------------------------------------------------ */
 /* Options + summary                                                   */
@@ -81,14 +90,22 @@ export type DailyImportOptions = {
   actor?: string | null;
   /** Base URL for site-relative image paths in packs (IMPORT_PUBLIC_BASE_URL). */
   publicBaseUrl?: string | null;
+  /** Uploaded pack files (push mode) that `packfile:` refs resolve against. */
+  files?: PackFiles | null;
+  /** Verified seal of the pushed day (push mode). */
+  seal?: Seal | null;
+  /** Pack day + chunk position (push mode). */
+  day?: string | null;
+  chunk?: { part: number; of: number } | null;
 };
 
 export type Counts = { seen: number; created: number; updated: number; skipped: number; failed: number; remaining: number };
 
 export type DailyImportSummary = {
   ok: boolean;
-  skipped?: "no_source_configured";
+  skipped?: "no_source_configured" | "unsealed" | "already_imported";
   trigger: DailyImportTrigger;
+  actor: string;
   started: string;
   finished: string;
   durationMs: number;
@@ -98,9 +115,23 @@ export type DailyImportSummary = {
   sources: string[];
   limit: number;
   pack?: { label: string; format: string; generatedAt: string | null; suppliers: number; products: number };
+  /** Push mode: which day / chunk this run covered and the seal it was gated by. */
+  day?: string | null;
+  chunk?: { part: number; of: number };
+  seal?: { day: string; digest: string; researcherOk: boolean; approvedBy: string | null; approvedAt: string | null; hashedFiles: string[] };
+  /** Push mode: files uploaded with this request. */
+  uploads?: { files: number; bytes: number };
   suppliers: Counts;
   products: Counts;
-  media: { candidates: number; imported: number; enhanced: number; skipped: number; failed: number };
+  media: {
+    candidates: number;
+    imported: number;
+    enhanced: number;
+    skipped: number;
+    failed: number;
+    /** packfile: refs whose bytes were not in this chunk (expected in another one). */
+    deferred: number;
+  };
   certifications: { created: number; skipped: number; failed: number };
   grok: {
     configured: boolean;
@@ -304,6 +335,27 @@ const KIND_TO_MEDIA: Record<PhotoKind, "SUPPLIER_FACTORY" | "SUPPLIER_GALLERY" |
   irrelevant: null,
 };
 
+/**
+ * Uploaded `enhanced/` stills were already curated by the bot (and Grok vision
+ * cannot fetch them), so they are classified from their pack path only and kept
+ * first: `enhanced/suppliers/<slug>/…` → factory unless the file name says
+ * product; `enhanced/products/…` → product.
+ */
+function localCuration(refs: string[], keep: number): CurationResult {
+  let kept = 0;
+  const photos = refs.map((url) => {
+    const rel = packFileRelative(url) ?? url;
+    let kind = heuristicPhotoKind(rel);
+    const file = rel.split("/").pop() ?? rel;
+    if (kind === "product" && /(^|\/)suppliers\//i.test(rel) && !/prod|product/i.test(file)) kind = "factory_exterior";
+    const importable = kind !== "logo" && kind !== "irrelevant";
+    const keepIt = importable && (kind === "certificate" || kept < keep);
+    if (keepIt && kind !== "certificate") kept++;
+    return { url, kind, quality: 4, keep: keepIt };
+  });
+  return { photos, source: "heuristic", note: refs.length ? "uploaded enhanced stills kept as pre-curated by the bot" : undefined };
+}
+
 export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImportSummary> {
   const startedAt = opts.now ?? new Date();
   const t0 = Date.now();
@@ -317,6 +369,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   const enhance = opts.enhance ?? true;
   const actor = opts.actor ?? IMPORT_ACTOR;
   const fetchImpl = opts.fetchImpl;
+  const files = opts.files ?? null;
 
   const enh = enhancerStatus();
   const store = storageProviderStatus();
@@ -324,6 +377,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
   const summary: DailyImportSummary = {
     ok: true,
     trigger: opts.trigger,
+    actor,
     started: startedAt.toISOString(),
     finished: startedAt.toISOString(),
     durationMs: 0,
@@ -333,7 +387,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     limit,
     suppliers: emptyCounts(),
     products: emptyCounts(),
-    media: { candidates: 0, imported: 0, enhanced: 0, skipped: 0, failed: 0 },
+    media: { candidates: 0, imported: 0, enhanced: 0, skipped: 0, failed: 0, deferred: 0 },
     certifications: { created: 0, skipped: 0, failed: 0 },
     grok: {
       configured: isXaiConfigured(),
@@ -350,7 +404,48 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     warnings: [],
   };
   if (!useGrok) summary.grok.notes.push(opts.grok === false ? "Grok disabled for this run." : "XAI_API_KEY not set — Grok steps skipped.");
+  if (opts.day) summary.day = opts.day;
+  if (opts.chunk) summary.chunk = { part: opts.chunk.part, of: opts.chunk.of };
+  if (opts.seal) {
+    summary.seal = {
+      day: opts.seal.day,
+      digest: opts.seal.digest,
+      researcherOk: opts.seal.researcherOk,
+      approvedBy: opts.seal.approvedBy,
+      approvedAt: opts.seal.approvedAt,
+      hashedFiles: Object.keys(opts.seal.sha256),
+    };
+  }
+  if (files) summary.uploads = { files: files.size, bytes: files.totalBytes };
   const timeLeft = () => Date.now() < deadline;
+
+  // Dry-run accounting: what ingest WOULD do with this ref.
+  const dryIngest = (url: string) => {
+    if (isPackFileRef(url)) {
+      const res = files?.resolve(url) ?? null;
+      if (!res) {
+        summary.media.deferred++;
+        return;
+      }
+      summary.media.imported++;
+      if (res.preEnhanced) summary.media.enhanced++;
+      return;
+    }
+    summary.media.imported++;
+  };
+
+  // Shared accounting for one ingest result.
+  const account = (r: IngestResult, label: string) => {
+    if (r.status === "imported") {
+      summary.media.imported++;
+      if (r.enhanced) summary.media.enhanced++;
+    } else if (r.status === "skipped") summary.media.skipped++;
+    else if (r.status === "deferred") summary.media.deferred++;
+    else {
+      summary.media.failed++;
+      if (summary.errors.length < 50) summary.errors.push(`${label}: ${r.reason}`);
+    }
+  };
   // Set when the run could not do its job at all (no source loadable, or every
   // record failed). Individual media failures are reported in `errors` but do
   // not flip `ok`, so a permanently broken image never fails the cron.
@@ -367,6 +462,10 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     const line = {
       ok: summary.ok,
       trigger: summary.trigger,
+      actor,
+      day: summary.day,
+      chunk: summary.chunk,
+      sealDigest: summary.seal?.digest,
       skipped: summary.skipped,
       partial: summary.partial,
       durationMs: summary.durationMs,
@@ -571,11 +670,13 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
     }
 
     // Logo
-    if (s.logoUrl && /^https?:\/\//i.test(s.logoUrl) && !existing.has(s.logoUrl)) {
-      if (dryRun) summary.media.imported++;
-      else {
+    if (s.logoUrl && isIngestableRef(s.logoUrl) && !existing.has(s.logoUrl)) {
+      if (dryRun) {
+        dryIngest(s.logoUrl);
+      } else {
         const r = await ingestRemoteImage({
           url: s.logoUrl,
+          files,
           entityType: "SUPPLIER",
           entityId: supplierId,
           mediaType: "SUPPLIER_LOGO",
@@ -586,26 +687,30 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
           uploadedBy: actor,
           enhance: false,
         });
-        if (r.status === "imported") summary.media.imported++;
-        else if (r.status === "skipped") summary.media.skipped++;
-        else {
-          summary.media.failed++;
-          if (summary.errors.length < 50) summary.errors.push(`logo ${s.externalId}: ${r.reason}`);
-        }
+        account(r, `logo ${s.externalId}`);
       }
     } else if (s.logoUrl) summary.media.skipped++;
 
-    // Curate photos (Grok vision or URL heuristics).
+    // Curate photos: uploaded enhanced stills first (pre-curated, path-based
+    // kinds), then remote URLs through Grok vision / URL heuristics with the
+    // remaining budget.
     const fresh = candidates.filter((u) => !existing.has(u));
     summary.media.skipped += candidates.length - fresh.length;
-    const curation = fresh.length
-      ? await curateSupplierPhotos(
-          fresh,
-          { supplierName: s.input.name, category: s.input.category, country: s.input.country },
-          { keep: mediaPerSupplier, fetchImpl }
-        )
-      : { photos: [], source: "heuristic" as const };
-    if (curation.source === "grok") summary.grok.photosClassified += curation.photos.length;
+    const localRefs = fresh.filter(isPackFileRef);
+    const remoteRefs = fresh.filter((u) => !isPackFileRef(u));
+    const local = localCuration(localRefs, mediaPerSupplier);
+    const localKept = local.photos.filter((p) => p.keep && p.kind !== "certificate").length;
+    const remoteBudget = Math.max(0, mediaPerSupplier - localKept);
+    const remote: CurationResult =
+      remoteRefs.length && remoteBudget > 0
+        ? await curateSupplierPhotos(
+            remoteRefs,
+            { supplierName: s.input.name, category: s.input.category, country: s.input.country },
+            { keep: remoteBudget, fetchImpl }
+          )
+        : { photos: remoteRefs.map((url) => ({ url, kind: heuristicPhotoKind(url), quality: 3, keep: false })), source: "heuristic" as const };
+    const curation: CurationResult = { photos: [...local.photos, ...remote.photos], source: remote.source, note: remote.note ?? local.note };
+    if (curation.source === "grok") summary.grok.photosClassified += remote.photos.length;
     if (curation.note && summary.grok.notes.length < 10) summary.grok.notes.push(`${s.externalId}: ${curation.note}`);
 
     // Certification candidates = pack certs with images + photos Grok flagged as certificates.
@@ -628,12 +733,13 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
       const mediaType = KIND_TO_MEDIA[p.kind];
       if (!mediaType || mediaType === "CERTIFICATION") continue;
       if (dryRun) {
-        summary.media.imported++;
+        dryIngest(p.url);
         continue;
       }
       const sortOrder = order++;
       const r = await ingestRemoteImage({
         url: p.url,
+        files,
         entityType: "SUPPLIER",
         entityId: supplierId,
         mediaType,
@@ -646,14 +752,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
         uploadedBy: actor,
         enhance,
       });
-      if (r.status === "imported") {
-        summary.media.imported++;
-        if (r.enhanced) summary.media.enhanced++;
-      } else if (r.status === "skipped") summary.media.skipped++;
-      else {
-        summary.media.failed++;
-        if (summary.errors.length < 50) summary.errors.push(`photo ${s.externalId}: ${r.reason}`);
-      }
+      account(r, `photo ${s.externalId}`);
     }
 
     // Certification rows + scans.
@@ -665,15 +764,16 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
         if (!row) continue;
         if (row.created) summary.certifications.created++;
         else summary.certifications.skipped++;
-        if (!cert.imageUrl || !/^https?:\/\//i.test(cert.imageUrl)) continue;
-        legacyCertUrls.push(cert.imageUrl);
+        if (!isIngestableRef(cert.imageUrl)) continue;
+        if (!isPackFileRef(cert.imageUrl)) legacyCertUrls.push(cert.imageUrl);
         if (dryRun) {
-          summary.media.imported++;
+          dryIngest(cert.imageUrl);
           continue;
         }
         const certExisting = await existingMediaKeys("CERTIFICATION", row.id);
         const r = await ingestRemoteImage({
           url: cert.imageUrl,
+          files,
           entityType: "CERTIFICATION",
           entityId: row.id,
           mediaType: "CERTIFICATION",
@@ -684,14 +784,10 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
           uploadedBy: actor,
           enhance,
         });
-        if (r.status === "imported") {
-          summary.media.imported++;
-          if (r.enhanced) summary.media.enhanced++;
-        } else if (r.status === "skipped") summary.media.skipped++;
-        else {
-          summary.media.failed++;
-          if (summary.errors.length < 50) summary.errors.push(`cert ${s.externalId}: ${r.reason}`);
-        }
+        account(r, `cert ${s.externalId}`);
+        // The legacy JSON field needs a servable URL — for uploaded scans that
+        // is the stored Blob URL.
+        if (isPackFileRef(cert.imageUrl) && r.status === "imported" && r.media?.url) legacyCertUrls.push(r.media.url);
       } catch (err) {
         summary.certifications.failed++;
         if (summary.errors.length < 50) summary.errors.push(`certification ${s.externalId}/${cert.name}: ${errMsg(err)}`);
@@ -837,12 +933,13 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
           continue;
         }
         if (dryRun) {
-          summary.media.imported++;
+          dryIngest(url);
           first = false;
           continue;
         }
         const r = await ingestRemoteImage({
           url,
+          files,
           entityType: "PRODUCT",
           entityId: up.id,
           mediaType: first ? "PRODUCT_PRIMARY" : "PRODUCT_GALLERY",
@@ -854,14 +951,7 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
           enhance,
         });
         first = false;
-        if (r.status === "imported") {
-          summary.media.imported++;
-          if (r.enhanced) summary.media.enhanced++;
-        } else if (r.status === "skipped") summary.media.skipped++;
-        else {
-          summary.media.failed++;
-          if (summary.errors.length < 50) summary.errors.push(`product image ${p.externalId}: ${r.reason}`);
-        }
+        account(r, `product image ${p.externalId}`);
       }
     } catch (err) {
       summary.products.failed++;
@@ -876,7 +966,11 @@ export async function runDailyImport(opts: DailyImportOptions): Promise<DailyImp
 export function optionsFromBody(body: Record<string, unknown> | null | undefined): Partial<DailyImportOptions> {
   const out: Partial<DailyImportOptions> = {};
   if (!body) return out;
-  const int = (v: unknown) => (typeof v === "number" && Number.isFinite(v) && v > 0 ? Math.floor(v) : undefined);
+  // Multipart pushes deliver every option as a string.
+  const int = (v: unknown) => {
+    const n = typeof v === "number" ? v : typeof v === "string" && v.trim() ? Number(v) : NaN;
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : undefined;
+  };
   const bool = (v: unknown) => (typeof v === "boolean" ? v : typeof v === "string" ? /^(1|true|yes)$/i.test(v) : undefined);
   const limit = int(body.limit);
   if (limit) out.limit = Math.min(limit, 500);

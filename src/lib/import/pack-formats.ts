@@ -28,6 +28,7 @@ import {
   type CertificationDetail,
 } from "@/lib/supplier-normalize";
 import { supplierCategories, type SupplierCategory } from "@/data/suppliers";
+import { isPackFileRef, packFileRef, toPackRelative } from "./pack-files";
 
 export type PackFormat = "lister" | "bundle" | "csv" | "outscraper";
 
@@ -138,25 +139,47 @@ export function normalizeCategory(v: unknown): SupplierCategory | null {
  *  - Bot-VM filesystem paths ("/workspace/…", "C:\…") are dropped: they are only
  *    meaningful on the machine that produced the pack.
  */
-export function resolvePackImageUrl(ref: string, baseUrl?: string | null): string | null {
+export function resolvePackImageUrl(ref: string, baseUrl?: string | null, localFiles = false): string | null {
   const v = ref.trim();
   if (!v) return null;
   if (/^https?:\/\//i.test(v)) return v;
-  if (/^\/workspace\//i.test(v) || /^[a-z]:\\/i.test(v) || /^file:/i.test(v)) return null;
+  if (isPackFileRef(v)) return localFiles ? v : null;
+  const vmPath = /^\/workspace\//i.test(v) || /^[a-z]:\\/i.test(v) || /^file:/i.test(v);
+  if (vmPath) {
+    // Bot-VM paths are only meaningful when the bot uploaded the files with the
+    // pack (push mode) — then they become packfile: refs resolved at ingest.
+    if (!localFiles) return null;
+    const rel = toPackRelative(v.replace(/^file:\/\//i, ""));
+    return rel ? packFileRef(rel) : null;
+  }
   if (v.startsWith("/")) {
     const base = (baseUrl ?? process.env.IMPORT_PUBLIC_BASE_URL ?? process.env.NEXTAUTH_URL ?? "").trim();
-    if (!/^https?:\/\//i.test(base)) return null;
-    try {
-      return new URL(v, base).toString();
-    } catch {
-      return null;
+    if (/^https?:\/\//i.test(base)) {
+      try {
+        return new URL(v, base).toString();
+      } catch {
+        return null;
+      }
     }
+    if (!localFiles) return null;
+  }
+  if (localFiles) {
+    const rel = toPackRelative(v);
+    return rel && /\.(jpe?g|png|webp|gif|avif|svg)$/i.test(rel) ? packFileRef(rel) : null;
   }
   return null;
 }
 
-function resolveAll(refs: string[], baseUrl?: string | null): string[] {
-  return dedupeStrings(refs.map((r) => resolvePackImageUrl(r, baseUrl) ?? "").filter(Boolean));
+/** Options shared by every pack parser. */
+export type ResolveOptions = {
+  label?: string;
+  baseUrl?: string | null;
+  /** Turn bot-VM / relative image paths into `packfile:` refs (push mode). */
+  localFiles?: boolean;
+};
+
+function resolveAll(refs: string[], baseUrl?: string | null, localFiles = false): string[] {
+  return dedupeStrings(refs.map((r) => resolvePackImageUrl(r, baseUrl, localFiles) ?? "").filter(Boolean));
 }
 
 /* ------------------------------------------------------------------ */
@@ -195,7 +218,7 @@ export function detectPackFormat(raw: unknown): PackFormat | null {
 type ListerSupplier = Record<string, unknown>;
 type ListerProduct = Record<string, unknown>;
 
-function listerCertifications(v: unknown, fallbackSource: string | null): PackCertification[] {
+function listerCertifications(v: unknown, fallbackSource: string | null, baseUrl?: string | null, localFiles = false): PackCertification[] {
   if (!Array.isArray(v)) return [];
   const out: PackCertification[] = [];
   for (const item of v) {
@@ -210,7 +233,9 @@ function listerCertifications(v: unknown, fallbackSource: string | null): PackCe
     out.push({
       name,
       type: str(c.type),
-      imageUrl: resolvePackImageUrl(str(c.image_url) ?? str(c.imageUrl) ?? str(c.image) ?? "") ?? null,
+      imageUrl:
+        resolvePackImageUrl(str(c.image_url) ?? str(c.imageUrl) ?? str(c.image) ?? str(c.local_image) ?? str(c.local_path) ?? "", baseUrl, localFiles) ??
+        null,
       certificateUrl: str(c.certificate_url) ?? str(c.certificateUrl) ?? str(c.pdf) ?? null,
       sourceUrl: str(c.source) ?? str(c.source_url) ?? str(c.sourceUrl) ?? fallbackSource,
     });
@@ -218,7 +243,7 @@ function listerCertifications(v: unknown, fallbackSource: string | null): PackCe
   return out;
 }
 
-function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplier | null {
+function listerSupplier(s: ListerSupplier, baseUrl?: string | null, localFiles = false): PackSupplier | null {
   const name = str(s.company_name) ?? str(s.name) ?? str(s.supplier_name);
   if (!name) return null;
   const slug = str(s.slug) ?? slugifySupplierId(name);
@@ -227,7 +252,7 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplie
   const category = normalizeCategory(s.primary_category ?? s.category);
   const productLines = strList(s.product_lines ?? s.products);
 
-  const certs = listerCertifications(s.certifications, website);
+  const certs = listerCertifications(s.certifications, website, baseUrl, localFiles);
   // Separate certificate scans (e.g. cert_image_urls from the certs index) so
   // they never land in the factory gallery.
   const certImages = resolveAll(
@@ -236,8 +261,11 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplie
       ...strList(s.certification_images),
       ...strList(s.certificationImages),
       ...strList(s.certification_image_urls),
+      ...strList(s.local_cert_images),
+      ...strList(s.seal_images),
     ],
-    baseUrl
+    baseUrl,
+    localFiles
   );
   certImages.forEach((url, i) => {
     const target = certs[i];
@@ -245,10 +273,14 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplie
     else certs.push({ name: certs[i]?.name ?? `Certificate ${i + 1}`, imageUrl: url, sourceUrl: website });
   });
 
-  // Photo candidates: remote photo_urls + any hosted/enhanced URLs the bot
-  // provides. `local_images` are VM paths unless a public base URL resolves them.
+  // Photo candidates: the bot's enhanced stills first (push mode turns the VM
+  // paths into packfile: refs), then remote photo_urls. Without uploaded files
+  // `local_images` are VM paths and are dropped unless a public base URL
+  // resolves them.
   const photoUrls = resolveAll(
     [
+      ...strList(s.enhanced_images),
+      ...strList(s.local_images),
       ...strList(s.enhanced_image_urls),
       ...strList(s.enhanced_urls),
       ...strList(s.hosted_images),
@@ -256,12 +288,12 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplie
       ...strList(s.photo_urls),
       ...strList(s.photoUrls),
       ...strList(s.images),
-      ...strList(s.local_images),
     ],
-    baseUrl
+    baseUrl,
+    localFiles
   );
 
-  const logoUrl = resolvePackImageUrl(str(s.logo) ?? str(s.logo_url) ?? str(s.logoUrl) ?? "", baseUrl);
+  const logoUrl = resolvePackImageUrl(str(s.logo) ?? str(s.logo_url) ?? str(s.logoUrl) ?? "", baseUrl, localFiles);
   const certDetails: CertificationDetail[] = certs.map((c) => ({
     name: c.name,
     type: c.type ?? null,
@@ -306,7 +338,8 @@ function listerSupplier(s: ListerSupplier, baseUrl?: string | null): PackSupplie
 function listerProduct(
   p: ListerProduct,
   supplierByName: Map<string, PackSupplier>,
-  baseUrl?: string | null
+  baseUrl?: string | null,
+  localFiles = false
 ): PackProduct | null {
   const name = str(p.product_name) ?? str(p.name);
   if (!name) return null;
@@ -341,13 +374,15 @@ function listerProduct(
     description: str(p.description) ?? str(p.summary),
     imageUrls: resolveAll(
       [
+        ...strList(p.enhanced_images),
+        ...strList(p.local_images),
         ...strList(p.enhanced_image_urls),
         ...strList(p.hosted_images),
         ...strList(p.image_urls),
         ...strList(p.images),
-        ...strList(p.local_images),
       ],
-      baseUrl
+      baseUrl,
+      localFiles
     ),
     price: num(p.unit_price ?? p.price ?? p.base_price),
     currency: str(p.currency),
@@ -362,7 +397,7 @@ function listerProduct(
   };
 }
 
-export function parseListerPack(raw: unknown, opts: { label?: string; baseUrl?: string | null } = {}): ImportPack {
+export function parseListerPack(raw: unknown, opts: ResolveOptions = {}): ImportPack {
   const warnings: string[] = [];
   const obj: Record<string, unknown> = Array.isArray(raw)
     ? raw[0] && typeof raw[0] === "object" && "product_name" in (raw[0] as object)
@@ -374,7 +409,7 @@ export function parseListerPack(raw: unknown, opts: { label?: string; baseUrl?: 
   const byName = new Map<string, PackSupplier>();
   for (const s of Array.isArray(obj.suppliers) ? obj.suppliers : []) {
     if (!s || typeof s !== "object") continue;
-    const ps = listerSupplier(s as ListerSupplier, opts.baseUrl);
+    const ps = listerSupplier(s as ListerSupplier, opts.baseUrl, opts.localFiles);
     if (!ps) {
       warnings.push("Skipped a supplier entry without company_name.");
       continue;
@@ -387,7 +422,7 @@ export function parseListerPack(raw: unknown, opts: { label?: string; baseUrl?: 
   const products: PackProduct[] = [];
   for (const p of Array.isArray(obj.products) ? obj.products : []) {
     if (!p || typeof p !== "object") continue;
-    const pp = listerProduct(p as ListerProduct, byName, opts.baseUrl);
+    const pp = listerProduct(p as ListerProduct, byName, opts.baseUrl, opts.localFiles);
     if (!pp) {
       warnings.push("Skipped a product entry without product_name.");
       continue;
@@ -468,7 +503,7 @@ function bundleToPack(bundle: SupplierBundle, baseUrl?: string | null): { suppli
   return { supplier, products };
 }
 
-export function parseBundlePack(raw: unknown, opts: { label?: string; baseUrl?: string | null } = {}): ImportPack {
+export function parseBundlePack(raw: unknown, opts: ResolveOptions = {}): ImportPack {
   const warnings: string[] = [];
   const list: unknown[] = Array.isArray(raw)
     ? raw
@@ -518,7 +553,7 @@ export function normalizeCsvHeader(text: string): string {
   return fixed + rest;
 }
 
-export function parseCsvPack(text: string, opts: { label?: string; baseUrl?: string | null } = {}): ImportPack {
+export function parseCsvPack(text: string, opts: ResolveOptions = {}): ImportPack {
   const parsed = importSuppliersFromCsv(normalizeCsvHeader(text));
   const warnings = [
     ...parsed.errors.map((e) => `line ${e.line}: ${e.message}`),
@@ -526,8 +561,8 @@ export function parseCsvPack(text: string, opts: { label?: string; baseUrl?: str
   ];
   const suppliers: PackSupplier[] = parsed.valid.map((input) => {
     const externalId = input.id?.trim() || slugifySupplierId(input.name);
-    const photoUrls = resolveAll(input.images ?? [], opts.baseUrl);
-    const certImages = resolveAll(input.certificationImages ?? [], opts.baseUrl);
+    const photoUrls = resolveAll(input.images ?? [], opts.baseUrl, opts.localFiles);
+    const certImages = resolveAll(input.certificationImages ?? [], opts.baseUrl, opts.localFiles);
     const certs: PackCertification[] = (input.certifications ?? []).map((c) => ({ ...c }));
     certImages.forEach((url, i) => {
       if (certs[i] && !certs[i].imageUrl) certs[i].imageUrl = url;
@@ -537,7 +572,7 @@ export function parseCsvPack(text: string, opts: { label?: string; baseUrl?: str
       externalId,
       input: { ...input, id: externalId, images: photoUrls, verificationStatus: "pending" },
       photoUrls,
-      logoUrl: input.logoUrl ? resolvePackImageUrl(input.logoUrl, opts.baseUrl) : null,
+      logoUrl: input.logoUrl ? resolvePackImageUrl(input.logoUrl, opts.baseUrl, opts.localFiles) : null,
       certifications: certs,
       productLines: input.products ?? [],
       sourceFormat: "csv",
@@ -563,7 +598,7 @@ export function parseCsvPack(text: string, opts: { label?: string; baseUrl?: str
  */
 export function parseImportPayload(
   payload: unknown,
-  opts: { label?: string; baseUrl?: string | null; contentType?: string | null } = {}
+  opts: ResolveOptions & { contentType?: string | null } = {}
 ): ImportPack {
   let raw: unknown = payload;
   if (typeof payload === "string") {

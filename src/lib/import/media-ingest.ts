@@ -14,15 +14,23 @@
 // Every imported row is created UNPUBLISHED for admin review.
 
 import { createHash } from "node:crypto";
-import { processImportUrl } from "@/lib/media-upload";
+import { processImportUrl, processUploadedBuffer } from "@/lib/media-upload";
 import { uploadBuffer } from "@/lib/image-storage";
 import { createMedia, listMedia, logMediaAudit, type Media, type MediaType, type EntityType } from "@/lib/media-store";
 import { enhanceImage, type EnhanceKind, type EnhanceResult } from "./enhance-image";
+import { isPackFileRef, type PackFiles } from "./pack-files";
 
 export const IMPORT_ACTOR = "daily-import";
+/** Actor recorded for pushes authenticated with CRON_SECRET (the Grok machine). */
+export const GROK_BOT_ACTOR = "grok-bot";
+/** `provider` written to the audit log for stills the Image Enhancer produced upstream. */
+export const PRE_ENHANCED_PROVIDER = "grok-bot-image-enhancer";
 
 export type IngestInput = {
+  /** Public http(s) URL, or a `packfile:<relative>` ref resolved via `files`. */
   url: string;
+  /** Uploaded pack files (push mode); required to resolve packfile: refs. */
+  files?: PackFiles | null;
   entityType: EntityType;
   entityId: string;
   mediaType: MediaType;
@@ -40,10 +48,11 @@ export type IngestInput = {
 
 export type IngestResult = {
   url: string;
-  status: "imported" | "skipped" | "failed";
+  /** "deferred": a packfile: ref whose bytes were not part of this upload (another chunk carries it). */
+  status: "imported" | "skipped" | "failed" | "deferred";
   media?: Media;
   enhanced: boolean;
-  enhancer?: EnhanceResult["provider"];
+  enhancer?: EnhanceResult["provider"] | typeof PRE_ENHANCED_PROVIDER;
   reason?: string;
 };
 
@@ -86,8 +95,9 @@ export async function existingMediaKeys(entityType: EntityType, entityId: string
  */
 export async function ingestRemoteImage(input: IngestInput): Promise<IngestResult> {
   const url = input.url.trim();
-  if (!/^https?:\/\//i.test(url)) return { url, status: "failed", enhanced: false, reason: "not a public http(s) url" };
   if (input.existing?.has(url)) return { url, status: "skipped", enhanced: false, reason: "already imported" };
+  if (isPackFileRef(url)) return ingestUploadedImage(input, url);
+  if (!/^https?:\/\//i.test(url)) return { url, status: "failed", enhanced: false, reason: "not a public http(s) url" };
 
   const prefix = prefixForEntity(input.entityType);
   const kind: EnhanceKind = input.kind ?? (input.mediaType === "CERTIFICATION" ? "certificate" : input.mediaType === "SUPPLIER_LOGO" ? "logo" : "photo");
@@ -179,4 +189,67 @@ export async function ingestRemoteImage(input: IngestInput): Promise<IngestResul
   input.existing?.add(url);
   if (servingUrl) input.existing?.add(servingUrl);
   return { url, status: "imported", media, enhanced, enhancer, reason: enhanceNote };
+}
+
+/**
+ * Bytes source: the image was uploaded with the pack (multipart part or data:
+ * URL) instead of being fetched. No enhancer runs — the Grok machine's
+ * `enhanced/` stills are already the enhanced output, so they are stored under
+ * the `enhanced/` prefix and logged as enhanced with the pre-enhanced provider.
+ * The `packfile:` ref is kept as `originalUrl` so re-posting the same day (or
+ * the same file in another chunk) dedupes on it.
+ */
+async function ingestUploadedImage(input: IngestInput, ref: string): Promise<IngestResult> {
+  const resolved = input.files?.resolve(ref) ?? null;
+  if (!resolved) {
+    return { url: ref, status: "deferred", enhanced: false, reason: "file not included in this upload" };
+  }
+  const { file, preEnhanced } = resolved;
+  const prefix = prefixForEntity(input.entityType);
+  const allowSvg = input.mediaType === "SUPPLIER_LOGO";
+  const dir = preEnhanced ? `${prefix}/enhanced/${input.entityId}` : `${prefix}/${input.entityId}`;
+
+  const stored = await processUploadedBuffer(file.buffer, `${urlHash(ref)}-${file.filename}`, { prefix: dir.slice(0, 120), allowSvg });
+  if (!stored.ok) return { url: ref, status: "failed", enhanced: false, reason: `${file.path}: ${stored.error}` };
+  if (stored.stored.provider === "passthrough") {
+    // Nowhere to persist bytes (no Blob token): a data: URL in the DB would be
+    // useless for the site, so report instead of storing.
+    return { url: ref, status: "failed", enhanced: false, reason: "no storage provider configured for uploaded files" };
+  }
+
+  const media = await createMedia(
+    {
+      url: stored.stored.url,
+      storageKey: stored.stored.storageKey,
+      originalUrl: ref,
+      originalFilename: file.filename,
+      mimeType: stored.mimeType,
+      fileSize: stored.fileSize,
+      mediaType: input.mediaType,
+      entityType: input.entityType,
+      entityId: input.entityId,
+      altText: input.altText ?? null,
+      caption: input.caption ?? null,
+      sortOrder: input.sortOrder,
+      isPrimary: input.isPrimary ?? false,
+      status: "unpublished",
+      uploadedBy: input.uploadedBy ?? IMPORT_ACTOR,
+    },
+    input.uploadedBy ?? IMPORT_ACTOR
+  );
+
+  if (preEnhanced) {
+    await logMediaAudit({
+      adminUser: input.uploadedBy ?? IMPORT_ACTOR,
+      action: "enhance",
+      mediaId: media.id,
+      entityType: input.entityType,
+      entityId: input.entityId,
+      detail: { enhanced: true, preEnhanced: true, provider: PRE_ENHANCED_PROVIDER, packFile: file.path, requested: resolved.requested },
+    });
+  }
+
+  input.existing?.add(ref);
+  input.existing?.add(stored.stored.url);
+  return { url: ref, status: "imported", media, enhanced: preEnhanced, enhancer: preEnhanced ? PRE_ENHANCED_PROVIDER : undefined };
 }

@@ -12,7 +12,7 @@ import {
 
 // Magic-byte signatures so we reject files whose real content doesn't match a
 // supported image type (fake extensions, executables, HTML disguised as PNG…).
-function sniffMime(buf: Buffer): string | null {
+export function sniffMime(buf: Buffer): string | null {
   if (buf.length < 4) return null;
   // JPEG
   if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return "image/jpeg";
@@ -54,8 +54,19 @@ export async function processUploadedFile(file: File, opts: ProcessOptions): Pro
   if (file.size === 0) {
     return { ok: false, error: "File is empty.", status: 400 };
   }
+  return processUploadedBuffer(Buffer.from(await file.arrayBuffer()), filename, opts);
+}
 
-  let buffer = Buffer.from(await file.arrayBuffer());
+/**
+ * Validate + store raw image bytes that were already received (multipart part,
+ * decoded data: URL, …). Same magic-byte / SVG rules as `processUploadedFile`.
+ */
+export async function processUploadedBuffer(input: Buffer, name: string, opts: ProcessOptions): Promise<ProcessResult> {
+  const filename = (name || "upload").replace(/[\r\n]/g, "").slice(0, 200);
+  let buffer = input;
+  if (buffer.byteLength === 0) {
+    return { ok: false, error: "File is empty.", status: 400 };
+  }
   if (buffer.byteLength > MAX_IMAGE_BYTES) {
     return { ok: false, error: "File exceeds the 12 MB size limit.", status: 413 };
   }
