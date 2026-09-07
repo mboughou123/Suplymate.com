@@ -2,24 +2,24 @@
   "generated_at_utc": "2026-09-07T17:03:55Z",
   "generated_at_pt": "2026-09-07 10:03 PT",
   "phase": "suplymate-phase1",
-  "task": "Daily expansion 2026-09-07 — NEW suppliers batch (~50 mills) with photos + ~50 NEW RFQ products",
+  "task": "Daily expansion 2026-09-07 \u2014 NEW suppliers batch (~50 mills) with photos + ~50 NEW RFQ products",
   "pricing_policy": "No invented prices. MOQ is unpublished mill RFQ. Product unit_price only if publicly listed.",
-  "selection_policy": "New mills only — none of these names/slugs appear in daily/2026-09-07/_exclude_names.txt. Mapped from research/mill_index.json + wiki_summaries.json + Commons plant photos. Prefer mills/factories over traders. No AI mill yards.",
+  "selection_policy": "New mills only \u2014 none of these names/slugs appear in daily/2026-09-07/_exclude_names.txt. Mapped from research/mill_index.json + wiki_summaries.json + Commons plant photos. Prefer mills/factories over traders. No AI mill yards.",
   "exclude_csv": "/workspace/suppliers-phase1/daily/2026-09-07/_exclude_names.txt",
   "counts": {
-    "suppliers_total": 48,
-    "with_local_images": 48,
-    "with_any_photo": 48,
-    "local_image_files": 155,
+    "suppliers_total": 50,
+    "with_local_images": 50,
+    "with_any_photo": 50,
+    "local_image_files": 157,
     "remote_photo_urls": 364,
     "products_total": 0,
     "by_category": {
-      "Industrial Parts": 12,
+      "Tube & Pipes": 11,
       "Packaging": 10,
-      "Tube & Pipes": 9,
+      "Industrial Parts": 12,
       "Hardware & Motion": 6,
-      "Steel & Metals": 6,
       "Cables & Electrical": 3,
+      "Steel & Metals": 6,
       "Construction": 2
     }
   },
@@ -47,7 +47,7 @@
           "source": "https://www.tubacex.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.tubacex.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Llodio_-_Tubacex_1.jpg/1280px-Llodio_-_Tubacex_1.jpg",
@@ -93,7 +93,7 @@
           "source": "https://www.sappi.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sappi.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Kangas_paper_mill.jpg/1280px-Kangas_paper_mill.jpg",
@@ -130,7 +130,7 @@
       "country": "Luxembourg",
       "city": "Luxembourg",
       "website": "https://www.ardaghgroup.com/",
-      "description": "Ardagh Group is a producer of glass and metal products founded in Ireland and now based in Luxembourg, which has \"grown in the past two decades into one of the world’s largest metal and glass packaging companies\".",
+      "description": "Ardagh Group is a producer of glass and metal products founded in Ireland and now based in Luxembourg, which has \"grown in the past two decades into one of the world\u2019s largest metal and glass packaging companies\".",
       "product_lines": [
         "Metal beverage cans",
         "Glass containers",
@@ -147,7 +147,7 @@
           "source": "https://www.ardaghgroup.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.ardaghgroup.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ardagh%2C_Nienburg%2C_Einfahrt_Ostseite.JPG/3840px-Ardagh%2C_Nienburg%2C_Einfahrt_Ostseite.JPG",
@@ -194,7 +194,7 @@
           "source": "https://www.o-i.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.o-i.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/GlashuettenwerkHolzminden.jpg/1280px-GlashuettenwerkHolzminden.jpg",
@@ -218,7 +218,7 @@
       "country": "Sweden",
       "city": "Stockholm",
       "website": "https://www.sandvik.com/",
-      "description": "Sandvik AB is a Swedish multinational engineering company specializing in products and services for mining, rock excavation, rock drilling, rock processing, metal cutting and machining. The company was founded in Gävleborg County, Sweden, in 1862. In 2024, it had approximately 41,000 employees and a revenue of 123 billion SEK, with sales in around 150 countries.",
+      "description": "Sandvik AB is a Swedish multinational engineering company specializing in products and services for mining, rock excavation, rock drilling, rock processing, metal cutting and machining. The company was founded in G\u00e4vleborg County, Sweden, in 1862. In 2024, it had approximately 41,000 employees and a revenue of 123 billion SEK, with sales in around 150 countries.",
       "product_lines": [
         "Rock tools",
         "Mining equipment",
@@ -235,7 +235,7 @@
           "source": "https://www.sandvik.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sandvik.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/0/00/Sandvik_LH517_LHD.JPG",
@@ -289,7 +289,7 @@
           "source": "https://www.metso.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.metso.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/f/f0/Metso_Rautpohja_factory.jpg",
@@ -339,7 +339,7 @@
           "source": "https://www.fanuc.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.fanuc.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/f/f6/231029_FANUC_Oshino_Yamanashi_pref_Japan01s3.jpg",
@@ -389,7 +389,7 @@
           "source": "https://www.andritz.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.andritz.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/6/60/Andritz_Fa.jpg",
@@ -442,7 +442,7 @@
           "source": "https://www.sick.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sick.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/6/63/SICK_Headquarter.jpg",
@@ -483,7 +483,7 @@
           "source": "https://www.phoenixcontact.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.phoenixcontact.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Aerial_view_of_Blomberg%2C_Germany.jpg/1280px-Aerial_view_of_Blomberg%2C_Germany.jpg",
@@ -536,7 +536,7 @@
           "source": "https://www.furukawa.co.jp/en/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.furukawa.co.jp/en/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Furukawa_AS%2C_Kora.jpg/1280px-Furukawa_AS%2C_Kora.jpg",
@@ -578,7 +578,7 @@
           "source": "https://www.thyssenkrupp.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.thyssenkrupp.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Carbon2Chem_%2810%29.jpg/1280px-Carbon2Chem_%2810%29.jpg",
@@ -631,7 +631,7 @@
           "source": "https://www.nachi-fujikoshi.co.jp/eng/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.nachi-fujikoshi.co.jp/eng/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/8/83/Founder_of_Nachi-Fujikoshi%2C_Kohki_Imura.jpg",
@@ -673,7 +673,7 @@
           "source": "https://www.jfe-steel.co.jp/en/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.jfe-steel.co.jp/en/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Hibiya_International_Building_%282018-05-04%29_01.jpg/1920px-Hibiya_International_Building_%282018-05-04%29_01.jpg",
@@ -726,7 +726,7 @@
           "source": "https://www.upm.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.upm.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Alfred_William_Finch_-_Night_View_of_a_Factory.jpg/1280px-Alfred_William_Finch_-_Night_View_of_a_Factory.jpg",
@@ -779,7 +779,7 @@
           "source": "https://www.sika.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sika.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/A_sketcher%27s_tour_round_the_world_%281854%29_%2814788422393%29.jpg/1280px-A_sketcher%27s_tour_round_the_world_%281854%29_%2814788422393%29.jpg",
@@ -829,7 +829,7 @@
           "source": "https://www.sig.biz/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sig.biz/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Bieler_Tram_Ce_2_2_Nr._5.jpg/1280px-Bieler_Tram_Ce_2_2_Nr._5.jpg",
@@ -877,7 +877,7 @@
           "source": "https://www.ojiholdings.co.jp/english/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.ojiholdings.co.jp/english/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/2/2c/Oji_Paper_%28headquarters_1%29.jpg",
@@ -922,7 +922,7 @@
           "source": "https://www.nipponpapergroup.com/english/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.nipponpapergroup.com/english/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/6/6a/Solacity.jpg",
@@ -975,7 +975,7 @@
           "source": "https://www.sealedair.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sealedair.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/4/4d/D77A2496-1920x1920.jpg",
@@ -1018,7 +1018,7 @@
           "source": "https://www.emerson.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.emerson.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/0/03/EmersonElectricCanada2.jpg",
@@ -1067,7 +1067,7 @@
           "source": "https://www.eaton.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.eaton.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/a/ae/Eaton_Corporation_thumbnail_IMG_1534.jpg",
@@ -1119,7 +1119,7 @@
           "source": "https://www.alfalaval.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.alfalaval.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Alfa_Laval%2C_Gunnesbo.jpg/3840px-Alfa_Laval%2C_Gunnesbo.jpg",
@@ -1172,7 +1172,7 @@
           "source": "https://www.minebeamitsumi.com/english/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.minebeamitsumi.com/english/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/2/29/MinebeaMitsumi_Tokyo.jpg",
@@ -1207,7 +1207,7 @@
       "country": "Japan",
       "city": "Kyoto",
       "website": "https://www.omron.com/",
-      "description": "Omron Corporation , styled as OMRON, is a Japanese electronics company based in Kyoto, Japan. Omron was established by Kazuma Tateishi (立石一真) in 1933 and incorporated in 1948.",
+      "description": "Omron Corporation , styled as OMRON, is a Japanese electronics company based in Kyoto, Japan. Omron was established by Kazuma Tateishi (\u7acb\u77f3\u4e00\u771f) in 1933 and incorporated in 1948.",
       "product_lines": [
         "Industrial automation",
         "Sensors",
@@ -1224,7 +1224,7 @@
           "source": "https://www.omron.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.omron.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/9/9f/Omron_Kyoto_01.jpg",
@@ -1276,7 +1276,7 @@
           "source": "https://www.nabtesco.com/en/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.nabtesco.com/en/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/7/7c/Midori_court_hirakawacho_tokyo_2015.jpg",
@@ -1321,7 +1321,7 @@
           "source": "https://www.ussteel.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.ussteel.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/0013TIARA_P1000433.JPG/1280px-0013TIARA_P1000433.JPG",
@@ -1373,7 +1373,7 @@
           "source": "https://www.ingersollrand.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.ingersollrand.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/1930_ARQUITECTURA_38.jpg/1280px-1930_ARQUITECTURA_38.jpg",
@@ -1408,7 +1408,7 @@
       "country": "South Korea",
       "city": "Seoul",
       "website": "https://www.dongkuk.com/eng/",
-      "description": "Dongkuk Steel Mill Co, Ltd. (Korean: 동국제강) is a steel company with its headquarters in the city of Seoul, South Korea. Founded on 7 July 1951, its manufacturing plants are located in Pohang, Incheon, Dangjin, and Busan. Its main products are steel plates mainly for shipbuilding, beams, sections, and bars mainly for construction. Dongkuk Steel Mill is Korea's second largest EAF steel producer behind Hyundai Steel. Dongkuk Steel is the parent company of the Dongkuk Steel Group with several subsidiaries, including Union Steel.",
+      "description": "Dongkuk Steel Mill Co, Ltd. (Korean: \ub3d9\uad6d\uc81c\uac15) is a steel company with its headquarters in the city of Seoul, South Korea. Founded on 7 July 1951, its manufacturing plants are located in Pohang, Incheon, Dangjin, and Busan. Its main products are steel plates mainly for shipbuilding, beams, sections, and bars mainly for construction. Dongkuk Steel Mill is Korea's second largest EAF steel producer behind Hyundai Steel. Dongkuk Steel is the parent company of the Dongkuk Steel Group with several subsidiaries, including Union Steel.",
       "product_lines": [
         "Plate",
         "Cold-rolled steel",
@@ -1425,7 +1425,7 @@
           "source": "https://www.dongkuk.com/eng/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.dongkuk.com/eng/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/4/42/Gears_large.jpg"
@@ -1464,7 +1464,7 @@
           "source": "https://www.yaskawa-global.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.yaskawa-global.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/c/ce/Headquarters_of_Yaskawa_Electric_Corporation_20160429-resized.JPG",
@@ -1500,7 +1500,7 @@
       "country": "France",
       "city": "Courbevoie",
       "website": "https://www.saint-gobain.com/",
-      "description": "Compagnie de Saint-Gobain S.A. is a French multinational corporation, founded in 1665 in Paris as the Manufacture royale de glaces de miroirs, and today headquartered on the outskirts of Paris, at La Défense and in Courbevoie. Originally a mirror manufacturer, it also produces a variety of construction, high-performance, moderate-performance, lower-performance and other materials. Saint-Gobain is present in 76 countries and as of 2022 employs more than 170,000 people.",
+      "description": "Compagnie de Saint-Gobain S.A. is a French multinational corporation, founded in 1665 in Paris as the Manufacture royale de glaces de miroirs, and today headquartered on the outskirts of Paris, at La D\u00e9fense and in Courbevoie. Originally a mirror manufacturer, it also produces a variety of construction, high-performance, moderate-performance, lower-performance and other materials. Saint-Gobain is present in 76 countries and as of 2022 employs more than 170,000 people.",
       "product_lines": [
         "Gypsum",
         "Insulation",
@@ -1517,7 +1517,7 @@
           "source": "https://www.saint-gobain.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.saint-gobain.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Ancien_site_Saint-Gobain-V%C3%A9trotex_en_2014.JPG/1280px-Ancien_site_Saint-Gobain-V%C3%A9trotex_en_2014.JPG",
@@ -1570,7 +1570,7 @@
           "source": "https://www.bergpipe.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.bergpipe.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Collectie_Wereldmuseum%2C_TM-514-11%2C_Pijp%2C_%27Tabakspijp_met_een_kop_gemaakt_van_een_notendop_en_een_steel_van_suikerriet%27%2C_voor_1926.jpg/1280px-Collectie_Wereldmuseum%2C_TM-514-11%2C_Pijp%2C_%27Tabakspijp_met_een_kop_gemaakt_van_een_notendop_en_een_steel_van_suikerriet%27%2C_voor_1926.jpg",
@@ -1612,7 +1612,7 @@
           "source": "https://www.sspipe.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.sspipe.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Assassin_bug_%28Rhynocoris_iracundus%29_with_bee_%28Apis_ssp%29_prey.jpg/1280px-Assassin_bug_%28Rhynocoris_iracundus%29_with_bee_%28Apis_ssp%29_prey.jpg",
@@ -1663,7 +1663,7 @@
           "source": "https://www.alleima.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.alleima.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/3/3f/Heat_exchanger.jpg",
@@ -1709,7 +1709,7 @@
           "source": "https://www.webcoindustries.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.webcoindustries.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/2/28/23_0060766_Convair_Negative_Image_-_Pressure_control_unit_with_attached_tubing_%2854052591569%29.jpg",
@@ -1750,7 +1750,7 @@
           "source": "https://www.cpw.gr/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.cpw.gr/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/9/9a/2011_Dimos_Thiveon.png",
@@ -1788,11 +1788,11 @@
           "source": "https://www.tpco.cn/"
         },
         {
-          "name": "API 5CT / API 5L (OCTG and line pipe — confirm current licenses)",
+          "name": "API 5CT / API 5L (OCTG and line pipe \u2014 confirm current licenses)",
           "source": "https://www.tpco.cn/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.tpco.cn/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/en/6/63/Tianjin_Pipe.png",
@@ -1845,7 +1845,7 @@
           "source": "https://www.encorewire.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.encorewire.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Bonsai_branch_silver%2C_copper%2C_crystal_gem_-_Flickr_-_subarcticmike.jpg/1280px-Bonsai_branch_silver%2C_copper%2C_crystal_gem_-_Flickr_-_subarcticmike.jpg",
@@ -1866,7 +1866,7 @@
       "company_name": "NKT A/S",
       "primary_category": "Cables & Electrical",
       "country": "Denmark",
-      "city": "Brøndby",
+      "city": "Br\u00f8ndby",
       "website": "https://www.nkt.com/",
       "description": "NKT A/S is a Danish power cable producer and accessory manufacturer based in Copenhagen. The company is listed on the Nasdaq Copenhagen and has approximately 6000 employees with production facilities in 10 European countries.",
       "product_lines": [
@@ -1885,7 +1885,7 @@
           "source": "https://www.nkt.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.nkt.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/H._P._Prior_%281866%29.jpg/1280px-H._P._Prior_%281866%29.jpg",
@@ -1926,7 +1926,7 @@
           "source": "https://www.packagingcorp.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.packagingcorp.com/",
       "photo_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/a/a2/Abandoned_Smith_Kendon_Altoids_factory_-_geograph.org.uk_-_862578.jpg",
@@ -1975,7 +1975,7 @@
           "source": "https://www.flsmidth.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.flsmidth.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Constantin_Hansen%2C_Parti_fra_Villa_Albanis_have%2C_Rom%2C_1841%2C_KMS3843a%2C_Statens_Museum_for_Kunst_%28new%29.jpg/1280px-Constantin_Hansen%2C_Parti_fra_Villa_Albanis_have%2C_Rom%2C_1841%2C_KMS3843a%2C_Statens_Museum_for_Kunst_%28new%29.jpg",
@@ -2005,12 +2005,12 @@
       ]
     },
     {
-      "company_name": "Wärtsilä Oyj",
+      "company_name": "W\u00e4rtsil\u00e4 Oyj",
       "primary_category": "Industrial Parts",
       "country": "Finland",
       "city": "Helsinki",
       "website": "https://www.wartsila.com/",
-      "description": "Wärtsilä Oyj Abp, trading internationally as Wärtsilä Corporation, is a Finnish company which manufactures and services power sources and other equipment in the marine and energy markets. The core products of Wärtsilä include technologies for the energy sector, including gas, multi-fuel, liquid fuel and biofuel power plants and energy storage systems; and technologies for the marine sector, including cruise ships, ferries, fishing vessels, merchant ships, navy ships, special vessels, tugs, yachts and offshore vessels. Ship design capabilities include ferries, tugs, and vessels for the fishing, merchant, offshore and special segments. Services offerings include online services, underwater services, turbocharger services, and also services for the marine, energy, and oil and gas markets. At the end of December 2023, the company employed 17,800 workers.",
+      "description": "W\u00e4rtsil\u00e4 Oyj Abp, trading internationally as W\u00e4rtsil\u00e4 Corporation, is a Finnish company which manufactures and services power sources and other equipment in the marine and energy markets. The core products of W\u00e4rtsil\u00e4 include technologies for the energy sector, including gas, multi-fuel, liquid fuel and biofuel power plants and energy storage systems; and technologies for the marine sector, including cruise ships, ferries, fishing vessels, merchant ships, navy ships, special vessels, tugs, yachts and offshore vessels. Ship design capabilities include ferries, tugs, and vessels for the fishing, merchant, offshore and special segments. Services offerings include online services, underwater services, turbocharger services, and also services for the marine, energy, and oil and gas markets. At the end of December 2023, the company employed 17,800 workers.",
       "product_lines": [
         "Marine engines",
         "Energy systems",
@@ -2027,7 +2027,7 @@
           "source": "https://www.wartsila.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.wartsila.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Carnival_Dream_departing_Port_Canaveral_%282010%29_%E2%80%93_Bow.png/1280px-Carnival_Dream_departing_Port_Canaveral_%282010%29_%E2%80%93_Bow.png",
@@ -2081,7 +2081,7 @@
           "source": "https://global.abb/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://global.abb/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/2023-04-23_Motorsport%2C_ABB_FIA_Formula_E_World_Championship%2C_Berlin_E-Prix_2023_1DX_1379_by_Stepro.jpg/1280px-2023-04-23_Motorsport%2C_ABB_FIA_Formula_E_World_Championship%2C_Berlin_E-Prix_2023_1DX_1379_by_Stepro.jpg",
@@ -2131,11 +2131,11 @@
           "source": "https://www.severstal.com/"
         },
         {
-          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm)",
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE \u2014 confirm)",
           "source": "https://www.severstal.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.severstal.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/HC_Spartak_Moscow_vs._HC_Severstal_Cherepovets_29.11.2018_%2805%29.jpg/1280px-HC_Spartak_Moscow_vs._HC_Severstal_Cherepovets_29.11.2018_%2805%29.jpg",
@@ -2189,7 +2189,7 @@
           "source": "https://www.muellerindustries.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.muellerindustries.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Copper_alloy_pipe_%28smoking%29_%28FindID_859430%29.jpg/1280px-Copper_alloy_pipe_%28smoking%29_%28FindID_859430%29.jpg",
@@ -2231,7 +2231,7 @@
           "source": "https://www.american-usa.com/products/spiral-welded-steel-pipe"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.american-usa.com/products/spiral-welded-steel-pipe",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Armco_welded_spirally_wound_and_welded_pipe_piles_-_DPLA_-_cc9ad72fa08f3edf9aa8356478fa812f.jpg/1280px-Armco_welded_spirally_wound_and_welded_pipe_piles_-_DPLA_-_cc9ad72fa08f3edf9aa8356478fa812f.jpg",
@@ -2256,7 +2256,7 @@
       "country": "United States",
       "city": "Crystal Lake",
       "website": "https://www.aptar.com/",
-      "description": "AptarGroup, Inc., also known as Aptar, is a United States–based global manufacturer of consumer dispensing packaging and drug delivery devices. The group has manufacturing operations in 18 countries.",
+      "description": "AptarGroup, Inc., also known as Aptar, is a United States\u2013based global manufacturer of consumer dispensing packaging and drug delivery devices. The group has manufacturing operations in 18 countries.",
       "product_lines": [
         "Dispensing closures",
         "Pumps and valves",
@@ -2273,7 +2273,7 @@
           "source": "https://www.aptar.com/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.aptar.com/",
       "photo_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/AV_Nackawic_pulp_and_paper_mill.jpg/1280px-AV_Nackawic_pulp_and_paper_mill.jpg",
@@ -2310,11 +2310,11 @@
           "source": "https://www.shougang.com.cn/"
         },
         {
-          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm)",
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE \u2014 confirm)",
           "source": "https://www.shougang.com.cn/"
         }
       ],
-      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
       "source_url": "https://www.shougang.com.cn/",
       "photo_urls": [],
       "local_images": [
@@ -2327,10 +2327,84 @@
         "Americas",
         "Middle East"
       ]
+    },
+    {
+      "company_name": "Stupp Corporation",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Baton Rouge",
+      "website": "https://www.stuppcorp.com/",
+      "description": "Stupp Corporation is a U.S. steel-pipe manufacturer producing DSAW and spiral-weld line pipe for oil and gas transmission projects from domestic pipe-mill facilities.",
+      "product_lines": [
+        "DSAW line pipe",
+        "Spiral-weld pipe",
+        "Oil and gas transmission pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.stuppcorp.com/"
+        },
+        {
+          "name": "API 5L DSAW line-pipe specs (confirm current licenses)",
+          "source": "https://www.stuppcorp.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.stuppcorp.com/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/stupp/stupp_01.jpg"
+      ],
+      "slug": "stupp",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ]
+    },
+    {
+      "company_name": "Interpipe",
+      "primary_category": "Tube & Pipes",
+      "country": "Ukraine",
+      "city": "Dnipro",
+      "website": "https://interpipe.biz/",
+      "description": "Interpipe Group, or simply Interpipe, is a Ukrainian industrial company, a global producer of steel pipes and railway wheels. Interpipe headquarters and production facilities are located in Nikopol, Ukraine. The network of sales offices covers the key markets of Ukraine, CIS, Middle East, North America, and Europe.",
+      "product_lines": [
+        "Seamless OCTG",
+        "Line pipe",
+        "Railway wheels",
+        "Industrial pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://interpipe.biz/"
+        },
+        {
+          "name": "API 5CT / API 5L (OCTG and line pipe \u2014 confirm current licenses)",
+          "source": "https://interpipe.biz/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://interpipe.biz/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/interpipe/interpipe_01.jpg"
+      ],
+      "slug": "interpipe",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "Europe",
+        "Middle East",
+        "Americas",
+        "CIS"
+      ]
     }
   ],
-  "notes": "PARTIAL+HOLD19 OK-PARTIAL + Shougang Researcher-OK appended 2026-09-07: prior sealed+soft 31 + Researcher OK 13 + SOFT 3 + Shougang live Jingtang coil-warehouse still (shougang_01 only; park heritage _02/_03/_04 quarantined) = 48. Remaining HOLD = stupp + interpipe (blocked_skipped). Seal: data/daily-2026-09-07-researcher-shougang-live-seal.json.",
-  "wire_full_pack": false,
-  "wire_slug_count": 48,
-  "hold_omitted_count": 2
+  "notes": "FULL wire 2026-09-07: 50/50 mills. Prior 48 + Researcher OK Stupp (FBE API 5L X60M) + Interpipe (NMPP mill interior). Seal: data/daily-2026-09-07-researcher-stupp-interpipe-seal.json.",
+  "wire_full_pack": true,
+  "wire_slug_count": 50,
+  "hold_omitted_count": 0
 }
