@@ -2,14 +2,7 @@
   "generated_at_utc": "2026-09-07T17:04:59Z",
   "generated_at_pt": "2026-09-07 10:04 PT",
   "date": "2026-09-07",
-  "notes": [
-    "Exactly 50 NEW products paired 1:1 with today's mill_index mills.",
-    "All unit_price null / price_source_type=rfq — no invented prices.",
-    "Product photos from Wikimedia Commons product-type stills and/or today's mill local stills.",
-    "needs_ai_generate only when no usable local photo could be saved.",
-    "No overnight products.json existed for this date — built from scratch.",
-    "PARTIAL V2 wire-now only (9 SKUs). HOLD product stills fail + soft campus beyond oi-glass/jfe-steel omitted."
-  ],
+  "notes": "Daily 2026-09-07 products: Preferred-9 (V2 wire-now) + HOLD pack Researcher OK-PARTIAL 27 (25 OK + webco/sika SOFT). SIG SlimlineBloc + COMBIBLOC XS. Stupp product SKU included; stupp/interpipe mill cards still out.",
   "products": [
     {
       "product_name": "JFE Steel Line Pipe and Structural Steel Pipe",
@@ -20,7 +13,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — JFE Steel Corporation mill/product page for steel line pipe / structural pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 JFE Steel Corporation mill/product page for steel line pipe / structural pipe. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -41,7 +34,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Interpipe mill/product page for seamless OCTG and line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Interpipe mill/product page for seamless OCTG and line pipe. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -62,7 +55,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Corinth Pipeworks S.A. mill/product page for HSAW, LSAW and ERW steel pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Corinth Pipeworks S.A. mill/product page for HSAW, LSAW and ERW steel pipe. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -83,7 +76,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Mueller Industries, Inc. mill/product page for copper tube and brass fittings. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Mueller Industries, Inc. mill/product page for copper tube and brass fittings. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Copper_water_pipes.jpg/1280px-Copper_water_pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -104,7 +97,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Saudi Steel Pipe Company mill/product page for ERW / API line pipe and galvanized pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Saudi Steel Pipe Company mill/product page for ERW / API line pipe and galvanized pipe. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -125,7 +118,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — O-I Glass, Inc. mill/product page for food and beverage glass containers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 O-I Glass, Inc. mill/product page for food and beverage glass containers. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
@@ -145,7 +138,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Sandvik AB mill/product page for rock tools / metal-cutting tooling. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Sandvik AB mill/product page for rock tools / metal-cutting tooling. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [],
       "local_images": [
@@ -163,7 +156,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Ingersoll Rand mill/product page for air compressors / vacuum systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Ingersoll Rand mill/product page for air compressors / vacuum systems. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
@@ -183,7 +176,7 @@
       "unit_price": null,
       "currency": null,
       "unit": null,
-      "price_note": "RFQ — Sick AG mill/product page for industrial sensors / safety / machine vision. No public mill unit/FOB list captured; do not invent prices.",
+      "price_note": "RFQ \u2014 Sick AG mill/product page for industrial sensors / safety / machine vision. No public mill unit/FOB list captured; do not invent prices.",
       "price_source_type": "rfq",
       "image_urls": [
         "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
@@ -193,6 +186,564 @@
         "/workspace/suppliers-phase1/daily/2026-09-07/images/products/sick/sick-safety.jpg"
       ],
       "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tubacex Seamless Stainless and Nickel-Alloy Tube",
+      "supplier_name": "Tubacex S.A.",
+      "supplier_slug_guess": "tubacex",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tubacex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tubacex S.A. mill/product page for seamless stainless / nickel-alloy tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/tubacex/tubacex-nickel.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/tubacex/tubacex-ss-tube.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Alleima Advanced Stainless Umbilical and Heat-Exchanger Tube",
+      "supplier_name": "Alleima AB",
+      "supplier_slug_guess": "alleima",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.alleima.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Alleima AB mill/product page for advanced stainless umbilical / HX tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Heat_exchanger.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/alleima/alleima-hx-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/alleima/alleima-umbilical.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "American SpiralWeld AWWA C200 Spiral-Welded Water Pipe",
+      "supplier_name": "American SpiralWeld Pipe Company",
+      "supplier_slug_guess": "american-spiralweld",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.american-usa.com/products/spiral-welded-steel-pipe",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 American SpiralWeld Pipe Company mill/product page for AWWA C200 spiral-welded water transmission pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/american-spiralweld/asw-awwa-c200.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/american-spiralweld/asw-spiral.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Stupp DSAW / Spiral-Weld Oil & Gas Line Pipe",
+      "supplier_name": "Stupp Corporation",
+      "supplier_slug_guess": "stupp",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.stuppcorp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Stupp Corporation mill/product page for DSAW / spiral-weld transmission line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/stupp/stupp-dsaw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/stupp/stupp-line.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Berg Pipe Large-Diameter DSAW Line Pipe",
+      "supplier_name": "Berg Pipe",
+      "supplier_slug_guess": "berg-pipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.bergpipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Berg Pipe mill/product page for large-diameter DSAW line / offshore pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/berg-pipe/berg-dsaw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/berg-pipe/berg-offshore.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Webco Carbon / Alloy / Stainless Pressure and Heat-Exchanger Tubing",
+      "supplier_name": "Webco Industries",
+      "supplier_slug_guess": "webco",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.webcoindustries.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Webco Industries mill/product page for pressure and heat-exchanger tubing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.webcotube.com/wp-content/uploads/slider2.webp",
+        "https://www.webcotube.com/wp-content/uploads/slider_alloy.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/webco/webco-hx.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/webco/webco-pressure-tube.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "TPCO Seamless OCTG and Industrial Seamless Pipe",
+      "supplier_name": "Tianjin Pipe Corporation (TPCO)",
+      "supplier_slug_guess": "tpco",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tpco.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tianjin Pipe Corporation (TPCO) mill/product page for seamless OCTG and industrial seamless pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/tpco/tpco-octg.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/tpco/tpco-seamless.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "PCA Corrugated Containers and Containerboard",
+      "supplier_name": "Packaging Corporation of America",
+      "supplier_slug_guess": "pca",
+      "category": "Packaging",
+      "source_url": "https://www.packagingcorp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Packaging Corporation of America mill/product page for corrugated containers / containerboard. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.packagingcorp.com/wp-content/uploads/2022/08/Assortment-of-Shipping-Containers.jpg",
+        "https://www.packagingcorp.com/wp-content/uploads/2022/08/Assortment-of-Heavyh-Duty-Packaging.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/pca/mill-fallback-1.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/pca/pca-containerboard.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nippon Paper Packaging and Containerboard Grades",
+      "supplier_name": "Nippon Paper Industries",
+      "supplier_slug_guess": "nippon-paper",
+      "category": "Packaging",
+      "source_url": "https://www.nipponpapergroup.com/english/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nippon Paper Industries mill/product page for paper packaging / containerboard. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nipponpapergroup.com/products/paper_pak/mt_images/20141007_NP_All.jpg",
+        "https://www.tokan.co.jp/wp/wp-content/uploads/2019/02/bib-1.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nippon-paper/nippon-board.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nippon-paper/nippon-paper-pack.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "UPM Specialty Papers and Label Materials",
+      "supplier_name": "UPM-Kymmene Oyj",
+      "supplier_slug_guess": "upm",
+      "category": "Packaging",
+      "source_url": "https://www.upm.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 UPM-Kymmene Oyj mill/product page for specialty papers and label materials. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.upmspecialtymaterials.com/siteassets/images/spec-upm-confidio-pro.jpg",
+        "https://www.labelmaterials.upm.com/siteassets/images/labels-by-industry/food/upm-raflatac-food-yoghurt.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/upm/upm-label.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/upm/upm-specialty-paper.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Sappi Packaging and Specialty Papers",
+      "supplier_name": "Sappi Limited",
+      "supplier_slug_guess": "sappi",
+      "category": "Packaging",
+      "source_url": "https://www.sappi.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sappi Limited mill/product page for packaging and specialty papers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://mediahub.sappi.com/transform/cc9537f3-bf0f-47e4-96df-cec02c1ce6ea/Flexible-Packaging-White-Sweep-Tea-Bag-Tea-Bag-w-Flag?io=transform:fit,width:1919&format=jpg",
+        "https://mediahub.sappi.com/transform/c4dbc2ac-c073-43d0-bf71-a4631d92edfc/Sappi_Packaging_Spectro_Brand_Page?io=transform:fit,width:1919&format=jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sappi/sappi-packaging-paper.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sappi/sappi-specialty.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Aptar Dispensing Closures, Pumps and Pharma Packaging Components",
+      "supplier_name": "AptarGroup, Inc.",
+      "supplier_slug_guess": "aptar",
+      "category": "Packaging",
+      "source_url": "https://www.aptar.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 AptarGroup, Inc. mill/product page for dispensing closures / pumps / pharma components. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cms.aptar-prod.dotcms.cloud/dA/a7a8ba652f4fa9a9487b078186258d66/fileAsset/Aptar-Beauty-GS-Iconic-High-Performing-Dispensing-Pump-Full-Packaging-K2-Actuator.jpg",
+        "https://cms.aptar-prod.dotcms.cloud/dA/b703cbbb2c8225609f88931776bd8d4a/fileAsset/Square_3Packshot_future_Fully.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/aptar/aptar-pumps.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/aptar/mill-fallback-1.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SIG Aseptic Carton Packaging and Filling Systems",
+      "supplier_name": "SIG Group AG",
+      "supplier_slug_guess": "sig-group",
+      "category": "Packaging",
+      "source_url": "https://www.sig.biz/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SIG Group AG mill/product page for aseptic carton packaging / filling machines. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://api.sig.biz/media/022dtqz1/sig-slimlinebloc1000.png",
+        "https://api.sig.biz/media/g5kcviwd/sig_maschine-312.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sig-group/sig-aseptic-carton.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sig-group/sig-filling.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ABB Industrial Robots, Drives and Electrification Equipment",
+      "supplier_name": "ABB Ltd",
+      "supplier_slug_guess": "abb",
+      "category": "Industrial Parts",
+      "source_url": "https://global.abb/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ABB Ltd mill/product page for industrial robots / drives / electrification. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/abb/abb-drives.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/abb/abb-robots.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Andritz Pulp & Paper and Metals Processing Equipment",
+      "supplier_name": "Andritz AG",
+      "supplier_slug_guess": "andritz",
+      "category": "Industrial Parts",
+      "source_url": "https://www.andritz.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Andritz AG mill/product page for pulp/paper and metals processing equipment. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.andritz.com/resource/blob/408402/45199a9b824829e7847c6c44140ca206/pp-andritz-twinfloprime-lcrefiner-01-data.jpg",
+        "https://www.andritz.com/resource/image/681722/stage-image-highres/lg/1/20-high-cold-rolling-mill-from-andritz-copyright-andritz.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/andritz/andritz-metals.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/andritz/andritz-pulp.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Alfa Laval Heat Exchangers, Separators and Fluid Handling",
+      "supplier_name": "Alfa Laval AB",
+      "supplier_slug_guess": "alfalaval",
+      "category": "Industrial Parts",
+      "source_url": "https://www.alfalaval.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Alfa Laval AB mill/product page for heat exchangers / separators / pumps. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.alfalaval.ca/globalassets/documents/media/news/press-images/technologies-and-products/heat_exchanger_1063x1455.zip",
+        "https://www.alfalaval.ca/globalassets/documents/media/news/press-images/technologies-and-products/separator_1063x1259.zip"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/alfalaval/alfa-heat-exchangers.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/alfalaval/alfa-separators.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "FLSmidth Mining and Cement Plant Equipment",
+      "supplier_name": "FLSmidth A/S",
+      "supplier_slug_guess": "flsmidth",
+      "category": "Industrial Parts",
+      "source_url": "https://www.flsmidth.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 FLSmidth A/S mill/product page for mining / cement plant equipment. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/flsmidth/fls-cement.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/flsmidth/fls-mining.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "W\u00e4rtsil\u00e4 Marine Engines and Energy Systems",
+      "supplier_name": "W\u00e4rtsil\u00e4 Oyj",
+      "supplier_slug_guess": "wartsila",
+      "category": "Industrial Parts",
+      "source_url": "https://www.wartsila.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 W\u00e4rtsil\u00e4 Oyj mill/product page for marine engines / energy systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/wartsila/wartsila-energy.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/wartsila/wartsila-engines.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "MinebeaMitsumi Miniature Ball Bearings and Precision Motors",
+      "supplier_name": "MinebeaMitsumi Inc.",
+      "supplier_slug_guess": "minebeamitsumi",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.minebeamitsumi.com/english/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 MinebeaMitsumi Inc. mill/product page for miniature ball bearings / precision motors. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://product.minebeamitsumi.com/en/product/category/bearing/miniature_small/__icsFiles/afieldfile/2026/01/14/file_23.png",
+        "https://cdn.nmbtc.com/uploads/2020/10/standard-hybrid-e1608771488598.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/minebeamitsumi/minebea-bearings.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/minebeamitsumi/minebea-motors.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nachi-Fujikoshi Bearings, Cutting Tools and Hydraulic Equipment",
+      "supplier_name": "Nachi-Fujikoshi Corp.",
+      "supplier_slug_guess": "nachi",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nachi-fujikoshi.co.jp/eng/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nachi-Fujikoshi Corp. mill/product page for bearings / cutting tools / hydraulics. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nachi-fujikoshi.co.jp/dcms_media/image/products03.jpg",
+        "https://www.nachi-fujikoshi.co.jp/dcms_media/image/products01.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nachi/nachi-bearings.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nachi/nachi-tools.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shougang Flat Steel, Plate and Automotive Sheet",
+      "supplier_name": "Shougang Group",
+      "supplier_slug_guess": "shougang",
+      "category": "Steel & Metals",
+      "source_url": "https://www.shougang.com.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shougang Group mill/product page for flat steel / plate / automotive sheet. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/shougang/mill-fallback-1.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/shougang/shougang-auto-sheet.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Severstal Hot-Rolled, Cold-Rolled and Galvanized Steel",
+      "supplier_name": "Severstal",
+      "supplier_slug_guess": "severstal",
+      "category": "Steel & Metals",
+      "source_url": "https://www.severstal.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Severstal mill/product page for HRC / CRC / galvanized steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/severstal/mill-fallback-1.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/severstal/severstal-gi.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Encore Wire Building Wire, Copper/Aluminum Wire and MC Cable",
+      "supplier_name": "Encore Wire Corporation",
+      "supplier_slug_guess": "encore-wire",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.encorewire.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Encore Wire Corporation mill/product page for building wire / MC cable. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Wide_Field_Infrared_Explorer_module.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kabel.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/encore-wire/encore-building-wire.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/encore-wire/encore-mc.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Furukawa Electric Optical Fiber, Power Cable and Automotive Wire",
+      "supplier_name": "Furukawa Electric Co., Ltd.",
+      "supplier_slug_guess": "furukawa-electric",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.furukawa.co.jp/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Furukawa Electric Co., Ltd. mill/product page for optical fiber / power / automotive cable. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://lightera.com/wp-content/uploads/2025/08/BlackSpool-Generic-3-NAR.png",
+        "https://www.furukawaelectric.com/review/fr032/fr32_02.pdf"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/furukawa-electric/furukawa-fiber.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/furukawa-electric/furukawa-power-cable.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "NKT HV and Medium-Voltage Power Cables and Accessories",
+      "supplier_name": "NKT A/S",
+      "supplier_slug_guess": "nkt",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.nkt.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 NKT A/S mill/product page for HV / MV power cables and accessories. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kabel.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Wide_Field_Infrared_Explorer_module.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nkt/nkt-hv-cable.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/nkt/nkt-mv-cable.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Saint-Gobain Gypsum, Insulation and Building Glass",
+      "supplier_name": "Saint-Gobain",
+      "supplier_slug_guess": "saint-gobain",
+      "category": "Construction",
+      "source_url": "https://www.saint-gobain.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Saint-Gobain mill/product page for gypsum / insulation / building glass. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://certainteed.widen.net/content/mtiti0kj4m/web/glasroc-tile-backer-board-stack",
+        "https://certainteed.widen.net/content/wmxx1z4omp/web/insulpure-product-family.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/saint-gobain/sg-gypsum.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/saint-gobain/sg-insulation.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Sika Concrete Admixtures, Sealants and Flooring Systems",
+      "supplier_name": "Sika AG",
+      "supplier_slug_guess": "sika",
+      "category": "Construction",
+      "source_url": "https://www.sika.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sika AG mill/product page for concrete admixtures / sealants / flooring. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Gypsum.jpg/1280px-Gypsum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sika/mill-fallback-1.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/products/sika/sika-flooring.jpg"
+      ],
+      "needs_ai_generate": false
     }
-  ]
+  ],
+  "preferred9_count": 9,
+  "hold27_count": 27,
+  "wire_slug_count": 36
 }
