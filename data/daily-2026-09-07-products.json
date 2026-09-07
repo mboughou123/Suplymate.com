@@ -1,0 +1,198 @@
+{
+  "generated_at_utc": "2026-09-07T17:04:59Z",
+  "generated_at_pt": "2026-09-07 10:04 PT",
+  "date": "2026-09-07",
+  "notes": [
+    "Exactly 50 NEW products paired 1:1 with today's mill_index mills.",
+    "All unit_price null / price_source_type=rfq — no invented prices.",
+    "Product photos from Wikimedia Commons product-type stills and/or today's mill local stills.",
+    "needs_ai_generate only when no usable local photo could be saved.",
+    "No overnight products.json existed for this date — built from scratch.",
+    "PARTIAL V2 wire-now only (9 SKUs). HOLD product stills fail + soft campus beyond oi-glass/jfe-steel omitted."
+  ],
+  "products": [
+    {
+      "product_name": "JFE Steel Line Pipe and Structural Steel Pipe",
+      "supplier_name": "JFE Steel Corporation",
+      "supplier_slug_guess": "jfe-steel",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.jfe-steel.co.jp/en/products/pipes/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — JFE Steel Corporation mill/product page for steel line pipe / structural pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/jfe-steel/jfe-line-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/jfe-steel/jfe-structural-pipe.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Interpipe Seamless OCTG and Line Pipe",
+      "supplier_name": "Interpipe",
+      "supplier_slug_guess": "interpipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://interpipe.biz/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Interpipe mill/product page for seamless OCTG and line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/interpipe/interpipe-octg.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/interpipe/interpipe-line.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Corinth Pipeworks HSAW / LSAW / ERW Steel Pipe",
+      "supplier_name": "Corinth Pipeworks S.A.",
+      "supplier_slug_guess": "corinth-pipeworks",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.cpw.gr/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Corinth Pipeworks S.A. mill/product page for HSAW, LSAW and ERW steel pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/corinth-pipeworks/cpw-hsaw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/corinth-pipeworks/cpw-lsaw.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Mueller Industries Copper Tube and Brass Fittings",
+      "supplier_name": "Mueller Industries, Inc.",
+      "supplier_slug_guess": "mueller-industries",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.muellerindustries.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Mueller Industries, Inc. mill/product page for copper tube and brass fittings. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Copper_water_pipes.jpg/1280px-Copper_water_pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/mueller-industries/mueller-copper-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/mueller-industries/mueller-brass.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Saudi Steel Pipe ERW / API Line Pipe and Galvanized Pipe",
+      "supplier_name": "Saudi Steel Pipe Company",
+      "supplier_slug_guess": "saudi-steel-pipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.sspipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Saudi Steel Pipe Company mill/product page for ERW / API line pipe and galvanized pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/saudi-steel-pipe/ssp-erw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/saudi-steel-pipe/ssp-gi.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "O-I Glass Food and Beverage Glass Containers",
+      "supplier_name": "O-I Glass, Inc.",
+      "supplier_slug_guess": "oi-glass",
+      "category": "Packaging",
+      "source_url": "https://www.o-i.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — O-I Glass, Inc. mill/product page for food and beverage glass containers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/oi-glass/oi-glass-containers.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/oi-glass/oi-beverage-glass.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Sandvik Rock Tools and Metal-Cutting Tooling",
+      "supplier_name": "Sandvik AB",
+      "supplier_slug_guess": "sandvik",
+      "category": "Industrial Parts",
+      "source_url": "https://www.sandvik.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Sandvik AB mill/product page for rock tools / metal-cutting tooling. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/sandvik/sandvik-rock-tools.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/sandvik/sandvik-cutting.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Ingersoll Rand Industrial Air Compressors and Vacuum Systems",
+      "supplier_name": "Ingersoll Rand",
+      "supplier_slug_guess": "ingersoll-rand",
+      "category": "Industrial Parts",
+      "source_url": "https://www.ingersollrand.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Ingersoll Rand mill/product page for air compressors / vacuum systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/ingersoll-rand/ir-compressors.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/ingersoll-rand/ir-vacuum.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SICK Industrial Sensors, Safety Systems and Machine Vision",
+      "supplier_name": "Sick AG",
+      "supplier_slug_guess": "sick",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.sick.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Sick AG mill/product page for industrial sensors / safety / machine vision. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/sick/sick-sensors.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-07/images/products/sick/sick-safety.jpg"
+      ],
+      "needs_ai_generate": false
+    }
+  ]
+}
