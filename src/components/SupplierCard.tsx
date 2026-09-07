@@ -73,6 +73,12 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
             {tCommon("verified")}
           </span>
         )}
+        {!s.verified && supplier.businessType === "Distributor" && (
+          <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-ink-muted shadow-sm">
+            <Building2 className="h-3.5 w-3.5" aria-hidden />
+            {t("distributor")}
+          </span>
+        )}
         <FavoriteButton
           supplierId={s.id}
           supplierName={s.name}
@@ -154,24 +160,48 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
             Featured products
           </p>
           <div className="grid grid-cols-3 gap-2">
-            {s.products.map((p, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-slate-200 p-1.5"
-              >
-                <div
-                  className="mb-1.5 flex h-14 items-center justify-center rounded-md"
-                  style={{ backgroundImage: p.gradient }}
-                >
-                  <Package className="h-5 w-5 text-cyan" aria-hidden />
+            {s.products.map((p, i) => {
+              const tile = (
+                <>
+                  <div
+                    className="relative mb-1.5 flex h-14 items-center justify-center overflow-hidden rounded-md"
+                    style={{ backgroundImage: p.gradient }}
+                  >
+                    {p.image ? (
+                      <ImageWithFallback
+                        src={p.image}
+                        alt={p.name}
+                        sizes="120px"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : (
+                      <Package className="h-5 w-5 text-cyan" aria-hidden />
+                    )}
+                  </div>
+                  <p className="truncate text-[11px] font-semibold text-ink" title={p.name}>
+                    {p.name}
+                  </p>
+                  {p.isReal ? (
+                    <p className="text-[10px] font-semibold text-cyan">{t("viewProduct")}</p>
+                  ) : (
+                    <>
+                      <p className="text-[11px] font-bold text-cyan">{p.price}</p>
+                      <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
+                    </>
+                  )}
+                </>
+              );
+              const cls = "rounded-lg border border-slate-200 p-1.5";
+              return p.href ? (
+                <Link key={i} href={p.href} className={`${cls} transition hover:border-cyan/40`}>
+                  {tile}
+                </Link>
+              ) : (
+                <div key={i} className={cls}>
+                  {tile}
                 </div>
-                <p className="truncate text-[11px] font-semibold text-ink" title={p.name}>
-                  {p.name}
-                </p>
-                <p className="text-[11px] font-bold text-cyan">{p.price}</p>
-                <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

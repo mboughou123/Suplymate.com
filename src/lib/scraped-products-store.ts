@@ -4,6 +4,7 @@ import {
   type ScrapedProduct,
 } from "@/data/scraped-products";
 import type { Product, ProductCategory } from "@/data/products";
+import { packProducts } from "@/data/pack-catalog";
 import { persistProductImage } from "@/lib/image-storage";
 
 /* ------------------------------------------------------------------ */
@@ -18,7 +19,10 @@ let seeded = false;
 
 function ensureSeed() {
   if (seeded) return;
-  for (const p of sampleScrapedProducts) {
+  // Curated pack products (already approved, local photos) lead so the public
+  // catalogue is photo-first in the no-DB path; the demo review-queue sample
+  // (pending) follows.
+  for (const p of [...packProducts, ...sampleScrapedProducts]) {
     if (!overlay.has(p.id)) overlay.set(p.id, { ...p });
   }
   seeded = true;

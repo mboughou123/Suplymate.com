@@ -1,0 +1,519 @@
+{
+  "steel": [
+    {
+      "product_name": "EMSTEEL Reinforcing Bar (straight bar / coil)",
+      "product_slug": null,
+      "supplier_name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+      "supplier_slug_guess": "emsteel",
+      "source_url": "https://www.emsteel.com/about-emirates-steel/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public unit price on emsteel.com (site often 403 to crawlers); mill quotes by project/export RFQ.",
+      "image_urls": [
+        "https://ar2024.emsteel.com/images/components/custom-pages/images/our-products/img-1.png"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "EMSTEEL Heavy / Jumbo Structural Sections",
+      "product_slug": null,
+      "supplier_name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+      "supplier_slug_guess": "emsteel",
+      "source_url": "https://ar2024.emsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 heavy/jumbo sections are project-priced; no public mill list price found.",
+      "image_urls": [
+        "https://ar2024.emsteel.com/images/components/custom-pages/images/our-products/img-2.png"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "EMSTEEL Continuous-Cast Billets (Made in UAE)",
+      "product_slug": null,
+      "supplier_name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+      "supplier_slug_guess": "emsteel",
+      "source_url": "https://ar2024.emsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 billet/semi-finished not publicly unit-priced on mill site.",
+      "image_urls": [
+        "https://ar2024.emsteel.com/images/components/custom-pages/images/our-products/img-1.png"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Ferrite Equal / Mild Steel Angles",
+      "product_slug": null,
+      "supplier_name": "Ferrite Structural Steels Private Limited",
+      "supplier_slug_guess": "ferrite-structural-steels",
+      "source_url": "https://www.ferritesteel.com/",
+      "unit_price": 58.0,
+      "currency": "INR",
+      "unit": "per kg",
+      "price_note": "Public listing on ferritesteel.com (Ferrite IndiaMART-style storefront) as of fetch: Equal Steel Angle Price \u20b958 / Kg. Approx./indicative; confirm with RFQ (taxes/freight not stated).",
+      "image_urls": [
+        "https://ferrite.in/wp-content/uploads/2024/05/home1.jpg",
+        "https://ferrite.in/mild-steel-angles/"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Ferrite Mild Steel I-Beams / H-Beams",
+      "product_slug": null,
+      "supplier_name": "Ferrite Structural Steels Private Limited",
+      "supplier_slug_guess": "ferrite-structural-steels",
+      "source_url": "https://www.ferritesteel.com/",
+      "unit_price": 68.0,
+      "currency": "INR",
+      "unit": "per kg",
+      "price_note": "Public listing on ferritesteel.com as of fetch: Mild Steel I Beams Price \u20b968 / Kg. Approx./indicative; confirm with RFQ.",
+      "image_urls": [
+        "https://ferrite.in/ms-beams/",
+        "https://ferrite.in/wp-content/uploads/2024/05/home2.jpg"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Ferrite Mild Steel Plates / Sheets",
+      "product_slug": null,
+      "supplier_name": "Ferrite Structural Steels Private Limited",
+      "supplier_slug_guess": "ferrite-structural-steels",
+      "source_url": "https://www.ferritesteel.com/",
+      "unit_price": 78.0,
+      "currency": "INR",
+      "unit": "per kg",
+      "price_note": "Public listing on ferritesteel.com as of fetch: Mild Steel Plate Price \u20b978 / Kg. Approx./indicative; confirm with RFQ.",
+      "image_urls": [
+        "https://ferrite.in/wp-content/uploads/2024/06/Ferrite-Structural-Steels-1520_600-scaled.jpg"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Hadeed Concrete Reinforcing Bars (straight rebar)",
+      "product_slug": null,
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug_guess": "hadeed",
+      "source_url": "https://hadeed.com.sa/products",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 hadeed.com.sa products page has no public unit prices; GCC mill project/export RFQ only.",
+      "image_urls": [
+        "https://backend.rajhisteel.com/img/asset/YXNzZXRzL3N0cmFpZ2h0ZW5yZWJhci1taW4tMTcxNzY3NTM2My5qcGVn/straightenrebar-min-1717675363.jpeg?w=1866&h=2800&s=b374db4631858a0296dcf0f44948b56c",
+        "https://backend.rajhisteel.com/img/asset/YXNzZXRzL3JlYmFyaW5jb2lsLmpwZw/rebarincoil.jpg?w=445&h=258&fm=webp&fit=crop-50-50&s=3e93e93c5d4378f3a46c4605b223d6e7"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Hadeed Wire Rod",
+      "product_slug": null,
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug_guess": "hadeed",
+      "source_url": "https://hadeed.com.sa/products",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public wire-rod unit price on hadeed.com.sa.",
+      "image_urls": [
+        "https://backend.rajhisteel.com/img/asset/YXNzZXRzL3dpcmVyb2QuanBlZw/wirerod.jpeg?w=445&h=258&fm=webp&fit=crop-50-50&s=1e5b828eb11117758bad93a4f89427fa",
+        "https://www.midrex.com/wp-content/uploads/FIGURE-3-2.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Hadeed Hot-Rolled Coil (HRC) / Flat Products",
+      "product_slug": null,
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug_guess": "hadeed",
+      "source_url": "https://hadeed.com.sa/products",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 HRC/CRC/galvanized coil project-priced; no public unit list on mill site.",
+      "image_urls": [
+        "https://backend.rajhisteel.com/img/asset/YXNzZXRzL2hyYy1taW4tMTcyNDYwMDIzMS5qcGc/hrc-min-1724600231.jpg?w=445&h=258&fm=webp&fit=crop-50-50&s=ecc4d54eba4a778c28000c06d5be5667",
+        "https://backend.rajhisteel.com/img/asset/YXNzZXRzL2ZsYXRjYXRlLmpwZWc/flatcate.jpeg?w=2800&h=1569&s=9eeeed45efc2498c50a17443e7cfd80e"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Qatar Steel Reinforcing Bars (rebar 8\u201340 mm)",
+      "product_slug": null,
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug_guess": "qatar-steel",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 qatarsteel.com.qa product pages show specs/certifications only; no public unit prices.",
+      "image_urls": [
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2022/01/construction-bars-1.jpg",
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2025/08/rebar_specification_product-scaled.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Qatar Steel Continuous-Cast Billets",
+      "product_slug": null,
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug_guess": "qatar-steel",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 billets not publicly unit-priced on mill site.",
+      "image_urls": [
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2022/01/billets.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Qatar Steel DRI / Hot Briquetted Iron (HBI)",
+      "product_slug": null,
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug_guess": "qatar-steel",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 DRI/HBI feedstock sold under commercial contracts; no public unit list.",
+      "image_urls": [
+        "https://www.qatarsteel.com.qa/wp-content/uploads/2016/06/cold-direct-reduced-iron.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Jingye Hot-Rolled Ribbed Bar / Rebar (HRB400 / B500B / ASTM Gr.60)",
+      "product_slug": null,
+      "supplier_name": "Jingye Steel (Jingye Group)",
+      "supplier_slug_guess": "jingye-steel",
+      "source_url": "https://www.made-in-china.com/showroom/jingyesteelrebar/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jingye mill/MIC showroom pages reviewed do not publish a fixed FOB unit price for rebar (market indices paywalled/blank). Quote by RFQ.",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2025112709483949130/cms/image/615cfba6-3843-45fb-931c-7490446d6440.jpg?vf=B7gH3s"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Jingye Medium / Thick Steel Plate",
+      "product_slug": null,
+      "supplier_name": "Jingye Steel (Jingye Group)",
+      "supplier_slug_guess": "jingye-steel",
+      "source_url": "https://www.jingyesteel.com.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public plate FOB unit price on official/MIC pages reviewed.",
+      "image_urls": [
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2025112709483949130/cms/image/4dfdb5c7-e47c-4522-b286-9863e693e1d8.jpg?vf=B7gH3s"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Jingye Hot Rolled Coil (HRC)",
+      "product_slug": null,
+      "supplier_name": "Jingye Steel (Jingye Group)",
+      "supplier_slug_guess": "jingye-steel",
+      "source_url": "https://www.jingyesteel.com.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 HRC not publicly unit-priced on mill pages reviewed.",
+      "image_urls": [],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Vizag TMT Rebars (RINL)",
+      "product_slug": null,
+      "supplier_name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+      "supplier_slug_guess": "rinl-vizag-steel",
+      "source_url": "https://www.vizagsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 vizagsteel.com has no public retail/export unit price list for TMT; dealer/project RFQ.",
+      "image_urls": [
+        "https://www.vizagsteel.com/images/LMMM.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Vizag Ukku Structurals (beams, channels, angles)",
+      "product_slug": null,
+      "supplier_name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+      "supplier_slug_guess": "rinl-vizag-steel",
+      "source_url": "https://www.vizagsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Medium Merchant & Structural Mill products; no public unit list.",
+      "image_urls": [
+        "https://www.vizagsteel.com/images/MMSM.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Vizag Plain Wire Rod Coils",
+      "product_slug": null,
+      "supplier_name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+      "supplier_slug_guess": "rinl-vizag-steel",
+      "source_url": "https://www.vizagsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 wire-rod mill product; no public unit list on vizagsteel.com.",
+      "image_urls": [
+        "https://www.vizagsteel.com/images/sp.jpg"
+      ],
+      "price_source_type": "rfq"
+    }
+  ],
+  "cables": [
+    {
+      "product_name": "Foliflex 1.5 mm PVC Housing Wire (90 m coil)",
+      "product_slug": null,
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug_guess": "foliflex-cables",
+      "source_url": "https://www.foliflexcables.co.in/pvc-housing-wire.html",
+      "unit_price": 11.0,
+      "currency": "INR",
+      "unit": "per meter",
+      "price_note": "Public Approx. Price on foliflexcables.co.in PVC Housing Wire page as of fetch: Rs 11 / Meter for Foliflex 1.5 mm PVC Housing Wire (90 m coil). Indicative; copper-linked \u2014 confirm current rate.",
+      "image_urls": [
+        "https://5.imimg.com/data5/GLADMIN/Default/2022/12/GL/LE/BI/26908440/fr-housing-wire-500x500.jpg",
+        "https://foliflexcables.in/img/products/wires/housing-wire-range.webp"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Foliflex 2.5 sq mm PVC Housing Wire (FRLS / 90 m)",
+      "product_slug": null,
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug_guess": "foliflex-cables",
+      "source_url": "https://www.foliflexcables.co.in/pvc-housing-wire.html",
+      "unit_price": 25.0,
+      "currency": "INR",
+      "unit": "per meter",
+      "price_note": "Public Approx. Price on foliflexcables.co.in as of fetch: Rs 25 / Meter for Foliflex 2.5sq mm PVC Housing Wire (FRLS insulation listed).",
+      "image_urls": [
+        "https://foliflexcables.in/img/products/wires/housing-wire-range.webp"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Foliflex 2.5 mm Aluminum Cable (90 m)",
+      "product_slug": null,
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug_guess": "foliflex-cables",
+      "source_url": "https://www.foliflexcables.co.in/aluminum-cables.html",
+      "unit_price": 16.0,
+      "currency": "INR",
+      "unit": "per meter",
+      "price_note": "Public Approx. Price on foliflexcables.co.in Aluminum Cables page / IndiaMART mirror as of fetch: Rs 16 / Meter for Foliflex 2.5 mm Aluminum Cables (90 m).",
+      "image_urls": [
+        "https://5.imimg.com/data5/SELLER/Default/2025/11/563183696/TA/JK/NL/26908440/foliflex-50-mm-aluminum-cables-500x500.jpg"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Foliflex 3 Core Submersible Flat Cable",
+      "product_slug": null,
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug_guess": "foliflex-cables",
+      "source_url": "https://www.foliflexcables.co.in/submersible-flat-cable.html",
+      "unit_price": 45.0,
+      "currency": "INR",
+      "unit": "per meter",
+      "price_note": "Public Approx. Price on foliflexcables.co.in Submersible Flat Cable page as of fetch: Rs 45 / Meter for Foliflex 3 Core Submersible Cable.",
+      "image_urls": [
+        "https://foliflexcables.in/img/products/cables/submersible-flat-cable.webp"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Yuhui XLPE Insulated PVC Sheathed 35 kV MV Power Cable",
+      "product_slug": null,
+      "supplier_name": "Jiangsu Yuhui Cable Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-yuhui-cable",
+      "source_url": "https://yuhuicable.en.made-in-china.com/product/gaLrhVxKYcYd/China-Low-Capacitance-High-Efficiency-XLPE-Insulated-PVC-Sheathed-35kv-Medium-Voltage-Power-Cable-for-Long-Distance-Transmission.html",
+      "unit_price": 4.8,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$4.80\u20136.20 / Meter; MOQ 100 Meters. unit_price = low bound.",
+      "image_urls": [
+        "https://image.made-in-china.com/155f0j00LEevgwZqCBuT/Low-Capacitance-High-Efficiency-XLPE-Insulated-PVC-Sheathed-35kv-Medium-Voltage-Power-Cable-for-Long-Distance-Transmission.webp"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Yuhui Double-Insulated XLPE/PVC 0.6/1 kV LV Power Cable",
+      "product_slug": null,
+      "supplier_name": "Jiangsu Yuhui Cable Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-yuhui-cable",
+      "source_url": "https://yuhuicable.en.made-in-china.com/product/wTORBHhUbDYf/China-Double-Insulated-XLPE-PVC-Power-Cable-1kv-Low-Voltage-Cable-with-Solid-Copper-Conductor-for-Permanent-Wiring-in-Commercial-Building-Construction.html",
+      "unit_price": 4.8,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$4.80\u20136.20 / Meter; MOQ 100 Meters. unit_price = low bound.",
+      "image_urls": [
+        "https://image.made-in-china.com/43f0j00eQqMCvgGbczB/Double-Insulated-XLPE-PVC-Power-Cable-1kv-Low-Voltage-Cable-with-Solid-Copper-Conductor-for-Permanent-Wiring-in-Commercial-Building-Construction.webp"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Yuhui PVC Control Cable (multi-core)",
+      "product_slug": null,
+      "supplier_name": "Jiangsu Yuhui Cable Co., Ltd.",
+      "supplier_slug_guess": "jiangsu-yuhui-cable",
+      "source_url": "https://yuhuicable.en.made-in-china.com/product-list-1.html",
+      "unit_price": 0.5,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China category/list FOB as of fetch: Control Cable US$0.50\u20131.30 / Meter. unit_price = low bound.",
+      "image_urls": [],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Huadong Factory Price 1\u00d710 mm ABC Aerial Bundled Cable (0.6/1 kV)",
+      "product_slug": null,
+      "supplier_name": "Henan Huadong Cable Co., Ltd.",
+      "supplier_slug_guess": "henan-huadong-cable",
+      "source_url": "https://huadongcable.en.made-in-china.com/product/BmgUwacxHKhW/China-Factory-Price-1-10mm-ABC-Cable-Aerial-Bundled-Electrical-Cable.html",
+      "unit_price": 0.3,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$0.30\u20132.00 / Meter; MOQ 1,000 Meters. unit_price = low bound.",
+      "image_urls": [
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Overhead-Cable.png"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Huadong Underground XLPE Copper Power Cable 5\u00d716 mm\u00b2 (0.6/1 kV)",
+      "product_slug": null,
+      "supplier_name": "Henan Huadong Cable Co., Ltd.",
+      "supplier_slug_guess": "henan-huadong-cable",
+      "source_url": "https://huadongcable.en.made-in-china.com/product/VncUYbJlqKkx/China-Underground-XLPE-Insulated-Copper-Core-PVC-Sheathed-5X16-mm2-Power-Cable.html",
+      "unit_price": 2.0,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$2.00\u201310.00 / Meter; MOQ 100 Meters. unit_price = low bound.",
+      "image_urls": [
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Power-Cable-1.png"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "Huadong Overhead / Communication Cable Range",
+      "product_slug": null,
+      "supplier_name": "Henan Huadong Cable Co., Ltd.",
+      "supplier_slug_guess": "henan-huadong-cable",
+      "source_url": "https://huadongcablegroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill site category imagery for overhead/communication cable; specific FOB not confirmed on this SKU (use ABC/power MIC listings for priced lines).",
+      "image_urls": [
+        "https://huadongcablegroup.com/wp-content/uploads/2023/11/Communication-Cable.png"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "RMJT XLPE Insulated Aerial Bundled Cable (ABC) 1\u201315 kV",
+      "product_slug": null,
+      "supplier_name": "People's Cable Group Co., Ltd.",
+      "supplier_slug_guess": "peoples-cable-group",
+      "source_url": "https://renmincable.en.made-in-china.com/product/GZDAdjiVLfks/China-1kv-10kv-15kv-ACSR-AAAC-AAC-Conductor-XLPE-Insulated-Aerial-Bundled-Cable-ABC-Cable.html",
+      "unit_price": 1.0,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$1.00\u20131,000.00 / Meter; MOQ 5,000 Meters. Wide placeholder range \u2014 unit_price = published low bound; treat as indicative and RFQ for real size.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f1j00LUNqRnFYnubB/N2xby-N2xfy-Ry-Nyy-N2xy-Copper-Aluminium-Standard-PVC-XLPE-Power-Cable.jpg"
+      ],
+      "price_source_type": "public_listing"
+    },
+    {
+      "product_name": "RMJT PVC Building Wire / RVV Flexible Cord",
+      "product_slug": null,
+      "supplier_name": "People's Cable Group Co., Ltd.",
+      "supplier_slug_guess": "peoples-cable-group",
+      "source_url": "https://renmincable.en.made-in-china.com/product/tvixeSKJbdVm/China-BV-Blv-BVV-PVC-Sheath-Electrical-Aluminum-Copper-Conductor-Housing-Wire.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 MIC BV/RVV housing-wire page reviewed does not show a fixed numeric FOB (quote on inquiry).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f1j00IcufSJLjMAqb/300-500V-Flexible-Rvv-2-1-5-mm2-Building-Copper-Wire-Electrical-Cable.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "RMJT PVC/XLPE Power Cable (up to 35 kV)",
+      "product_slug": null,
+      "supplier_name": "People's Cable Group Co., Ltd.",
+      "supplier_slug_guess": "peoples-cable-group",
+      "source_url": "https://www.rmjtcable.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill/MIC power-cable pages invite inquiry; placeholder USD1/m third-party mirrors not treated as firm mill FOB.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f1j00LUNqRnFYnubB/N2xby-N2xfy-Ry-Nyy-N2xy-Copper-Aluminium-Standard-PVC-XLPE-Power-Cable.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "XWA LV Power Cable (0.6/1 kV XLPE/PVC)",
+      "product_slug": null,
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug_guess": "xwa-power-cable",
+      "source_url": "https://www.xwacable.com/lv-power-cable/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 xwacable.com LV product pages invite quote; no static public FOB unit price as of fetch.",
+      "image_urls": [
+        "https://www.xwacable.com/wp-content/uploads/2026/03/XWA-Medium-Voltage-Cable.webp"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "XWA MV Power Cable (3.6\u201335 kV XLPE)",
+      "product_slug": null,
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug_guess": "xwa-power-cable",
+      "source_url": "https://www.xwacable.com/mv-power-cable/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 mill MV page has construction tables but no public unit price.",
+      "image_urls": [
+        "https://www.xwacable.com/wp-content/uploads/2026/03/XWA-Medium-Voltage-Cable.webp"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "XWA Control Cable",
+      "product_slug": null,
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug_guess": "xwa-power-cable",
+      "source_url": "https://www.xwacable.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 no public control-cable unit price on xwacable.com.",
+      "image_urls": [
+        "https://www.xwacable.com/wp-content/uploads/2026/01/XWA-control-cable.webp"
+      ],
+      "price_source_type": "rfq"
+    }
+  ]
+}

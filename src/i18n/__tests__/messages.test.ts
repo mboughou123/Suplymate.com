@@ -29,9 +29,12 @@ describe("messages/en.json", () => {
       "home",
       "homeOrchestrator",
       "homeTopNav",
-      "homeStats",
       "homeModules",
       "homeSuppliers",
+      "homeProducts",
+      "homeFaq",
+      "homeBenefits",
+      "megaMenu",
       "authentication",
       "errors",
       "suppliers",
@@ -55,6 +58,20 @@ describe("messages/en.json", () => {
       return typeof cur === "string" && cur.trim() === "";
     });
     expect(empty).toEqual([]);
+  });
+
+  it("labels every homepage product category chip", () => {
+    const cats = en.homeProducts.categories as Record<string, string>;
+    for (const key of [
+      "steelAndMetals",
+      "cablesAndElectrical",
+      "tubesAndPipes",
+      "packaging",
+      "construction",
+      "industrialParts",
+    ]) {
+      expect(typeof cats[key], key).toBe("string");
+    }
   });
 
   it("uses ICU placeholders for pluralization examples", () => {

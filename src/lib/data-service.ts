@@ -11,6 +11,12 @@ import {
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
+import {
+  getPackProduct,
+  getPackSupplier,
+  mergePackSuppliers,
+  overlayPackSupplier,
+} from "@/data/pack-catalog";
 
 // A supplier "has an image" if it carries a primary photo or any gallery image.
 // Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
@@ -31,9 +37,13 @@ export function compareForDirectory(a: Supplier, b: Supplier): number {
 }
 
 // Prefer the real Outscraper dataset (public Google Maps data); fall back to the
-// generated directory only if it's somehow empty.
-const directoryFallback =
-  outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers;
+// generated directory only if it's somehow empty. The curated media packs
+// (phase-1 mills + daily expansions, all with local factory photos / logos /
+// certificate scans) are overlaid on top: matching ids get the pack media,
+// pack-only mills are appended.
+const directoryFallback = mergePackSuppliers(
+  outscraperSuppliers.length > 0 ? outscraperSuppliers : verifiedSuppliers
+);
 
 // Every supplier known to the deterministic (DB-less) fallback path. The union
 // powers profile lookups and static params so links resolve whether the slug
@@ -110,8 +120,10 @@ async function loadSuppliers(): Promise<Supplier[]> {
     // (or only has the legacy seed rows).
     if (rows.length < 50) return [...directoryFallback].sort(compareForDirectory);
     // Never surface pending/rejected/needs_info imports on public surfaces.
-    return rows
-      .map(mapSupplier)
+    // Pack mills missing from the DB (not yet seeded) are appended; DB rows
+    // that lack local media receive the pack photos. Rows an admin has
+    // moderated away keep their DB state — the pack never re-adds them.
+    return mergePackSuppliers(rows.map(mapSupplier))
       .filter(isPubliclyVisible)
       .sort(compareForDirectory);
   } catch {
@@ -140,7 +152,9 @@ export const getSupplierById = cache(
       if (row) {
         const mapped = mapSupplier(row);
         // Pending/rejected/needs_info imports must not be reachable by slug.
-        return isPubliclyVisible(mapped) ? mapped : null;
+        if (!isPubliclyVisible(mapped)) return null;
+        const pack = getPackSupplier(mapped.id);
+        return pack ? overlayPackSupplier(mapped, pack) : mapped;
       }
     } catch {
       // ignore — fall through to the deterministic dataset
@@ -201,6 +215,10 @@ export async function getProductByIdAsync(id: string): Promise<Product | null> {
   } catch {
     // ignore
   }
+  // Curated pack products resolve even when the DB holds other scraped rows
+  // but has not been seeded with the packs yet (see scripts/seed-pack-media.ts).
+  const pack = getPackProduct(slug);
+  if (pack && pack.status === "approved") return scrapedToProduct(pack);
   return null;
 }
 

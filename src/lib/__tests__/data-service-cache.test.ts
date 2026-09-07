@@ -60,7 +60,10 @@ describe("data-service catalogue cache", () => {
     const [a, b] = await Promise.all([getSuppliersFromDb(), getSuppliersFromDb()]);
     await getSuppliersFromDb();
     expect(supplierQueries).toBe(1);
-    expect(a).toHaveLength(ROW_COUNT);
+    // Every DB row is served; curated pack mills missing from the DB are
+    // appended on top (see mergePackSuppliers), so the list is never shorter.
+    expect(a.length).toBeGreaterThanOrEqual(ROW_COUNT);
+    expect(a.filter((s) => s.id.startsWith("sup-"))).toHaveLength(ROW_COUNT);
     expect(a).toEqual(b);
   });
 

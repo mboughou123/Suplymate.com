@@ -1,0 +1,829 @@
+{
+  "product_gaps": [
+    {
+      "product_name": "JSW Neosteel TMT Bars (Fe 550D / 600)",
+      "product_slug": "jsw-neosteel-tmt-bars-fe-550d-600",
+      "supplier_name": "JSW Steel Limited",
+      "supplier_slug_guess": "jsw-steel",
+      "source_url": "https://www.jswsteel.in/product/tmt-bars/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — mill/Neosteel pages describe Fe 550D/600 HYQST TMT; no public unit list on jswsteel.in (distributor/project quotes).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2025/12/JSW-Neosteel-550D.jpg",
+        "https://www.jswneosteel.in/"
+      ]
+    },
+    {
+      "product_name": "JSW Hot Rolled Coils, Plates and Sheets",
+      "product_slug": "jsw-hot-rolled-coils-plates-and-sheets",
+      "supplier_name": "JSW Steel Limited",
+      "supplier_slug_guess": "jsw-steel",
+      "source_url": "https://www.jswsteel.in/facility/vijayanagar-works",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Vijayanagar hot-strip mill flats; mill/export coil pricing is contract/RFQ, not a public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/01/vijaynagarworksimg.jpg"
+      ]
+    },
+    {
+      "product_name": "JSW Cold Rolled and Galvanised / Galvalume Coils",
+      "product_slug": "jsw-cold-rolled-and-galvanised-galvalume-coils",
+      "supplier_name": "JSW Steel Limited",
+      "supplier_slug_guess": "jsw-steel",
+      "source_url": "https://www.jswsteel.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — cold-rolled and coated coils from Vijayanagar/Dolvi; no public mill unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2025/11/cold-rolled-products-1.webp"
+      ]
+    },
+    {
+      "product_name": "Tata Tiscon TMT Rebars",
+      "product_slug": "tata-tiscon-tmt-rebars",
+      "supplier_name": "Tata Steel Limited",
+      "supplier_slug_guess": "tata-steel",
+      "source_url": "https://www.tatasteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Tata Tiscon rebars sold via dealer network; no public mill unit list on tatasteel.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-10.jpg"
+      ]
+    },
+    {
+      "product_name": "Tata Steel Hot Rolled Coils",
+      "product_slug": "tata-steel-hot-rolled-coils",
+      "supplier_name": "Tata Steel Limited",
+      "supplier_slug_guess": "tata-steel",
+      "source_url": "https://www.tatasteel.com/tata-steel-brochure/inside-tata-steel.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Jamshedpur/Kalinganagar HRC; project/export priced, no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-6.jpg",
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-10.jpg"
+      ]
+    },
+    {
+      "product_name": "Tata Steel Cold Rolled Coils",
+      "product_slug": "tata-steel-cold-rolled-coils",
+      "supplier_name": "Tata Steel Limited",
+      "supplier_slug_guess": "tata-steel",
+      "source_url": "https://www.tatasteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — cold-rolled coils from Indian works; no public mill unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tatasteel.com/tata-steel-brochure/images/inside-7.jpg"
+      ]
+    },
+    {
+      "product_name": "Jindal Panther TMT Rebars",
+      "product_slug": "jindal-panther-tmt-rebars",
+      "supplier_name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+      "supplier_slug_guess": "jindal-steel",
+      "source_url": "https://www.jindalsteel.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Angul ~1.4 Mtpa TMT (Jindal Panther); mill quotes by project/dealer RFQ, no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://5.imimg.com/data5/SELLER/Default/2021/6/MT/YK/XI/8999366/tmt-rebars-500x500.jpg"
+      ]
+    },
+    {
+      "product_name": "Jindal Wide Steel Plates (Rockhard / Structural / API)",
+      "product_slug": "jindal-wide-steel-plates-rockhard-structural-api",
+      "supplier_name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+      "supplier_slug_guess": "jindal-steel",
+      "source_url": "https://www.jindalsteel.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Angul plate mill (plates up to ~5 m wide); plate/API grades are project-priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://docs.jindalsteel.in/document/124/1770874007_1758972428_NJ2.png"
+      ]
+    },
+    {
+      "product_name": "Jindal Parallel Flange Beams",
+      "product_slug": "jindal-parallel-flange-beams",
+      "supplier_name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+      "supplier_slug_guess": "jindal-steel",
+      "source_url": "https://www.jindalsteel.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — parallel-flange beams from Angul/Raigarh/Patratu long-product mills; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://5.imimg.com/data5/SELLER/Default/2021/6/NP/HX/HR/8999366/parallel-flange-beam-500x500.jpg"
+      ]
+    },
+    {
+      "product_name": "Ezz Deformed Rebar (10–40 mm)",
+      "product_slug": "ezz-deformed-rebar-10-40-mm",
+      "supplier_name": "Ezz Steel",
+      "supplier_slug_guess": "ezz-steel",
+      "source_url": "https://www.ezzsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Ezz Suez/Alexandria/Sadat rebar mills; Egyptian/export rebar is mill-quoted, no public unit list on ezzsteel.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ezzsteel.com/"
+      ]
+    },
+    {
+      "product_name": "Ezz Wire Rod",
+      "product_slug": "ezz-wire-rod",
+      "supplier_name": "Ezz Steel",
+      "supplier_slug_guess": "ezz-steel",
+      "source_url": "https://www.ezzsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — wire rod from Ezz long-product mills; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ezzsteel.com/"
+      ]
+    },
+    {
+      "product_name": "Ezz Hot Rolled Coil (Flat Steel)",
+      "product_slug": "ezz-hot-rolled-coil-flat-steel",
+      "supplier_name": "Ezz Steel",
+      "supplier_slug_guess": "ezz-steel",
+      "source_url": "https://www.ezzsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Suez thin-slab HSM HRC (~1.2 Mt); flat steel is contract/RFQ priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.ezzsteel.com/"
+      ]
+    },
+    {
+      "product_name": "KEI House Wire (HomeCab FR)",
+      "product_slug": "kei-house-wire-homecab-fr",
+      "supplier_name": "KEI Industries Limited",
+      "supplier_slug_guess": "kei-industries",
+      "source_url": "https://www.kei-ind.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — KEI HomeCab FR / Conflame / Banfire house-wire range (catalogues on kei-ind.com); channel MRP varies by city — no single public mill unit list scraped.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.kei-ind.com/wp-content/uploads/2026/06/house-wire-menu.jpg",
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/House-Wire-Catalogue-8118_bk.pdf"
+      ]
+    },
+    {
+      "product_name": "KEI HT / High Voltage Power Cables (up to 33 kV)",
+      "product_slug": "kei-ht-high-voltage-power-cables-up-to-33-kv",
+      "supplier_name": "KEI Industries Limited",
+      "supplier_slug_guess": "kei-industries",
+      "source_url": "https://www.kei-ind.com/cables-and-wires/high-voltage-cable/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — HT XLPE power cables (IS 7098 Part-2 / IEC); project-priced, no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/ht-cables.jpg",
+        "https://www.kei-ind.com/cables-and-wires/high-voltage-cable/"
+      ]
+    },
+    {
+      "product_name": "KEI EHV Power Cables (up to 400 kV)",
+      "product_slug": "kei-ehv-power-cables-up-to-400-kv",
+      "supplier_name": "KEI Industries Limited",
+      "supplier_slug_guess": "kei-industries",
+      "source_url": "https://www.kei-ind.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — EHV cables up to 400 kV; utility/project RFQ only.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.kei-ind.com/wp-content/uploads/2018/04/ehv-cable.jpg"
+      ]
+    },
+    {
+      "product_name": "Polycab Green Wire+ (1.5 sq mm, 90 m coil)",
+      "product_slug": "polycab-green-wire-1-5-sq-mm-90-m-coil",
+      "supplier_name": "Polycab India Limited",
+      "supplier_slug_guess": "polycab",
+      "source_url": "https://polycab.com/polycab-green-wireplus-15-sq-mm-90-meters-2/c-63240/p-63471",
+      "unit_price": 6550.0,
+      "currency": "INR",
+      "unit": "per 90 m coil",
+      "price_note": "Official Polycab e-commerce MRP (inclusive of all taxes) as of fetch: Rs. 6550 for Green Wire+ 1.5 Sq.MM × 90 m (HR FR-LSH LF). MRP is printed/list ceiling — confirm dealer rate before PO.",
+      "price_source_type": "printed_mrp",
+      "image_urls": [
+        "https://polycab.com/polycab-green-wireplus-15-sq-mm-90-meters-2/c-63240/p-63471",
+        "https://cms.polycab.com/media/3jrg1q4r/ishw00112_ds_01.pdf"
+      ]
+    },
+    {
+      "product_name": "Polycab Suprema House Wires",
+      "product_slug": "polycab-suprema-house-wires",
+      "supplier_name": "Polycab India Limited",
+      "supplier_slug_guess": "polycab",
+      "source_url": "https://polycab.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Suprema house-wire SKU on polycab.com product media; no stable public unit MRP captured for this SKU in this pass (Green Wire+ priced separately).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://polycab.com/"
+      ]
+    },
+    {
+      "product_name": "Polycab Primma / Optima Plus House Wires",
+      "product_slug": "polycab-primma-optima-plus-house-wires",
+      "supplier_name": "Polycab India Limited",
+      "supplier_slug_guess": "polycab",
+      "source_url": "https://polycab.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Primma / Optima Plus house-wire lines; channel pricing varies — left null (no invented price).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://polycab.com/"
+      ]
+    },
+    {
+      "product_name": "RR Kabel Future Ready House Wires (Flamex / Superex Green / Firex)",
+      "product_slug": "rr-kabel-future-ready-house-wires-flamex-superex-green-firex",
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug_guess": "rr-kabel",
+      "source_url": "https://www.rrkabel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Future Ready series (Flamex HR+FR, Superex Green HR+FR, Firex LS0H-EBXL) announced Aug 2025; mill pricelist PDF exists for partners but no public unit figure used here.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.rrkabel.com/wp-content/uploads/2025/08/RR-Kabel-Launches-a-Series-of-Future-Ready-Wires.pdf",
+        "https://www.rrkabel.com/"
+      ]
+    },
+    {
+      "product_name": "RR Kabel HT Power Cables",
+      "product_slug": "rr-kabel-ht-power-cables",
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug_guess": "rr-kabel",
+      "source_url": "https://www.rrkabel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — HT power cables (Silvassa/Waghodia mills); project-priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.rrkabel.com/"
+      ]
+    },
+    {
+      "product_name": "RR Kabel EHV Power Cables",
+      "product_slug": "rr-kabel-ehv-power-cables",
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug_guess": "rr-kabel",
+      "source_url": "https://www.rrkabel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — EHV power cables; utility/project RFQ only.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.rrkabel.com/"
+      ]
+    },
+    {
+      "product_name": "Shenghua XLPE SWA Armoured Power Cable",
+      "product_slug": "shenghua-xlpe-swa-armoured-power-cable",
+      "supplier_name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+      "supplier_slug_guess": "shanghai-shenghua-cable",
+      "source_url": "https://www.shanpowercable.com/sale-11002527-medium-voltage-armoured-electrical-cable-three-cores-armoured-power-cable.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — SHANCABLE YJV32 SWA armoured XLPE; mill pages list Price: Negotiable. Broad GoldSupplier US$0.5–125/m bands are placeholders — not used as unit_price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.shanpowercable.com/sale-11002527-medium-voltage-armoured-electrical-cable-three-cores-armoured-power-cable.html",
+        "https://www.shenghuacablegroup.com/"
+      ]
+    },
+    {
+      "product_name": "Shenghua MV XLPE Unarmoured Power Cable",
+      "product_slug": "shenghua-mv-xlpe-unarmoured-power-cable",
+      "supplier_name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+      "supplier_slug_guess": "shanghai-shenghua-cable",
+      "source_url": "https://www.shenghuacablegroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — MV XLPE insulated power cable (SHANCABLE); negotiable FOB, no fixed public unit list used.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.shenghuacablegroup.com/"
+      ]
+    },
+    {
+      "product_name": "Shenghua LV XLPE Insulated Power Cable (0.6/1 kV)",
+      "product_slug": "shenghua-lv-xlpe-insulated-power-cable-0-6-1-kv",
+      "supplier_name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+      "supplier_slug_guess": "shanghai-shenghua-cable",
+      "source_url": "https://www.shanpowercable.com/sale-53556068-shanghai-shenghua-cable-xlpe-insulation-pvc-sheath-copper-conductor-cable.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — LV CU/XLPE/PVC YJV 0.6/1 kV; mill Price: Negotiable.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.shanpowercable.com/sale-53556068-shanghai-shenghua-cable-xlpe-insulation-pvc-sheath-copper-conductor-cable.html"
+      ]
+    },
+    {
+      "product_name": "IEC60227 450/750V PVC Insulated Single Core Wire",
+      "product_slug": "iec60227-450-750v-pvc-insulated-single-core-wire",
+      "supplier_name": "Shandong New Luxing Cable Co., Ltd.",
+      "supplier_slug_guess": "shandong-new-luxing-cable",
+      "source_url": "https://luxingcable.en.made-in-china.com/product/jCImTBNyyLhs/China-IEC60227-Cable-450-750V-PVC-Insulated-Single-Core-Wire-and-Cable.html",
+      "unit_price": 0.1,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$0.10–1.00 / Meter; MOQ 100 Meters. unit_price = listed low bound. Trademark Luxing / Chang Qing Teng on MIC.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00ITHUKZLqbeob/IEC60227-Cable-450-750V-PVC-Insulated-Single-Core-Wire-and-Cable.jpg"
+      ]
+    },
+    {
+      "product_name": "Cu/XLPE/SWA/PVC Armoured Power Cable",
+      "product_slug": "cu-xlpe-swa-pvc-armoured-power-cable",
+      "supplier_name": "Shandong New Luxing Cable Co., Ltd.",
+      "supplier_slug_guess": "shandong-new-luxing-cable",
+      "source_url": "https://luxingcable.en.made-in-china.com/product/RKanSLXrOgUV/China-Cu-XLPE-Swa-PVC-Cable.html",
+      "unit_price": 0.3,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$0.30–1.00 / Meter. unit_price = listed low bound.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00kniTVINEOprg/Cu-XLPE-Swa-PVC-Cable.jpg",
+        "https://image.made-in-china.com/2f0j00QFhEBvSsfruA/0-6-1kv-Yjv22-XLPE-Armoured-Power-Cable.jpg"
+      ]
+    },
+    {
+      "product_name": "House Wiring Eco PVC Flexible Electric Wire (H05VV-F / RVV)",
+      "product_slug": "house-wiring-eco-pvc-flexible-electric-wire-h05vv-f-rvv",
+      "supplier_name": "Shandong New Luxing Cable Co., Ltd.",
+      "supplier_slug_guess": "shandong-new-luxing-cable",
+      "source_url": "https://luxingcable.en.made-in-china.com/product/ZsCEnKGYhHka/China-Hot-Sale-Single-Core-or-Multi-Core-House-Wiring-Eco-PVC-Insulated-Flexible-Electric-Wire-Cable.html",
+      "unit_price": 0.5,
+      "currency": "USD",
+      "unit": "per meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$0.50–10.00 / Meter; MOQ 100 Meters. unit_price = listed low bound.",
+      "price_source_type": "listed_fob",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00dYrRPWzkHicK/Hot-Sale-Single-Core-or-Multi-Core-House-Wiring-Eco-PVC-Insulated-Flexible-Electric-Wire-Cable.jpg"
+      ]
+    },
+    {
+      "product_name": "CEMEX Portland Cement",
+      "product_slug": "cemex-portland-cement",
+      "supplier_name": "CEMEX, S.A.B. de C.V.",
+      "supplier_slug_guess": "cemex",
+      "source_url": "https://www.cemex.com/en/products-solutions",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CEMEX portland cement (bulk/bag by market); no global public unit list on cemex.com (regional dealer quotes).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.cemex.com/en/products-solutions",
+        "https://www.cemexusa.com/documents/1858684/3063656/cemex-portland-cement-data-sheet.pdf"
+      ]
+    },
+    {
+      "product_name": "CEMEX Ready-Mix Concrete",
+      "product_slug": "cemex-ready-mix-concrete",
+      "supplier_name": "CEMEX, S.A.B. de C.V.",
+      "supplier_slug_guess": "cemex",
+      "source_url": "https://www.cemexusa.com/products/ready-mix-concrete",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — ready-mix is plant/project priced by volume and mix design; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.cemexusa.com/products/ready-mix-concrete"
+      ]
+    },
+    {
+      "product_name": "CEMEX Aggregates (Crushed Stone, Sand, Gravel)",
+      "product_slug": "cemex-aggregates-crushed-stone-sand-gravel",
+      "supplier_name": "CEMEX, S.A.B. de C.V.",
+      "supplier_slug_guess": "cemex",
+      "source_url": "https://www.cemex.com/en/products-solutions/aggregates",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — quarry aggregates priced by market/haul; no public global unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.cemex.com/en/products-solutions/aggregates"
+      ]
+    },
+    {
+      "product_name": "Conch Ordinary Portland Cement",
+      "product_slug": "conch-ordinary-portland-cement",
+      "supplier_name": "Anhui Conch Cement Company Limited",
+      "supplier_slug_guess": "anhui-conch-cement",
+      "source_url": "https://www.conch.cn/en/cpjs/index.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Conch brand OPC / portland cement (32.5/42.5/52.5 grades); mill product intro page, no public FOB unit list used.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.conch.cn/en/cpjs/index.html",
+        "https://www.conch.cn/cpjs/index.html"
+      ]
+    },
+    {
+      "product_name": "Conch Portland Cement Clinker",
+      "product_slug": "conch-portland-cement-clinker",
+      "supplier_name": "Anhui Conch Cement Company Limited",
+      "supplier_slug_guess": "anhui-conch-cement",
+      "source_url": "https://www.conch.cn/en/cpjs/index.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Conch brand portland cement clinker from new dry-process lines; export/contract RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.conch.cn/en/cpjs/index.html"
+      ]
+    },
+    {
+      "product_name": "Conch Specialty Cement (Sulfate-Resistant / Oil-Well / Nuclear / White)",
+      "product_slug": "conch-specialty-cement-sulfate-resistant-oil-well-nuclear-white",
+      "supplier_name": "Anhui Conch Cement Company Limited",
+      "supplier_slug_guess": "anhui-conch-cement",
+      "source_url": "https://www.conch.cn/en/cpjs/index.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — specialty cement portfolio (sulfate-resistant, oil-well, nuclear-station, white, etc.); project-priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.conch.cn/en/cpjs/index.html"
+      ]
+    },
+    {
+      "product_name": "Heidelberg Materials Cement",
+      "product_slug": "heidelberg-materials-cement",
+      "supplier_name": "Heidelberg Materials AG",
+      "supplier_slug_guess": "heidelberg-materials",
+      "source_url": "https://www.heidelbergmaterials.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — cement from German/global works (Burglengenfeld, Ennigerloh, etc.); regional dealer quotes, no public global unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/1c/HeidelbergCement_Hannover-Misburg.jpg",
+        "https://www.heidelbergmaterials.com/en"
+      ]
+    },
+    {
+      "product_name": "Heidelberg Materials Aggregates (Sand, Gravel, Crushed Stone)",
+      "product_slug": "heidelberg-materials-aggregates-sand-gravel-crushed-stone",
+      "supplier_name": "Heidelberg Materials AG",
+      "supplier_slug_guess": "heidelberg-materials",
+      "source_url": "https://www.heidelbergmaterials.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — aggregates (sand, gravel, crushed stone); quarry/haul priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.heidelbergmaterials.com/en"
+      ]
+    },
+    {
+      "product_name": "Heidelberg Materials Ready-Mixed Concrete",
+      "product_slug": "heidelberg-materials-ready-mixed-concrete",
+      "supplier_name": "Heidelberg Materials AG",
+      "supplier_slug_guess": "heidelberg-materials",
+      "source_url": "https://www.heidelbergmaterials.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — ready-mixed concrete / asphalt adjacent; plant and project priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.heidelbergmaterials.com/en"
+      ]
+    },
+    {
+      "product_name": "Vulcan Crushed Stone, Sand and Gravel (Construction Aggregates)",
+      "product_slug": "vulcan-crushed-stone-sand-and-gravel-construction-aggregates",
+      "supplier_name": "Vulcan Materials Company",
+      "supplier_slug_guess": "vulcan-materials",
+      "source_url": "https://www.vulcanmaterials.com/construction-materials",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — 423 active aggregates facilities (2024 AR); crushed stone/sand/gravel priced by quarry and haul — no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/blta9f9d5126bba7cce/68caf82948d330540b41bf0c/HERO_Miami_Quarry-1628_Cropped.png"
+      ]
+    },
+    {
+      "product_name": "Vulcan Asphalt Mix",
+      "product_slug": "vulcan-asphalt-mix",
+      "supplier_name": "Vulcan Materials Company",
+      "supplier_slug_guess": "vulcan-materials",
+      "source_url": "https://www.vulcanmaterials.com/construction-materials",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — asphalt mix from ~70 asphalt facilities; project/plant priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.contentstack.io/v3/assets/bltfd7cf707acd5b8e3/bltbca9f929c6c3b97f/68e9491890fcab4a8fccc6e4/Medina_02.jpg"
+      ]
+    },
+    {
+      "product_name": "Vulcan Ready-Mixed Concrete",
+      "product_slug": "vulcan-ready-mixed-concrete",
+      "supplier_name": "Vulcan Materials Company",
+      "supplier_slug_guess": "vulcan-materials",
+      "source_url": "https://www.vulcanmaterials.com/construction-materials",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — ready-mixed concrete from ~74 concrete facilities; plant priced.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.vulcanmaterials.com/construction-materials"
+      ]
+    },
+    {
+      "product_name": "Neway Ball Valves",
+      "product_slug": "neway-ball-valves",
+      "supplier_name": "Neway Valve (Suzhou) Co., Ltd.",
+      "supplier_slug_guess": "neway-valve",
+      "source_url": "https://www.newayvalve.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Neway ball valves (API 6D etc.); mill/project quotes only — no public FOB unit list on newayvalve.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.newayvalve.com/upload/jpg/202211/img1.jpg",
+        "https://www.newayvalve.com/upload/jpg/202401/%E8%BD%AE%E6%92%AD%E5%9B%BE--1--%E8%8B%B1%E6%96%87_01.jpg"
+      ]
+    },
+    {
+      "product_name": "Neway Butterfly Valves",
+      "product_slug": "neway-butterfly-valves",
+      "supplier_name": "Neway Valve (Suzhou) Co., Ltd.",
+      "supplier_slug_guess": "neway-valve",
+      "source_url": "https://www.newayvalve.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — butterfly valves from Taishan plant; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.newayvalve.com"
+      ]
+    },
+    {
+      "product_name": "Neway Gate Valves",
+      "product_slug": "neway-gate-valves",
+      "supplier_name": "Neway Valve (Suzhou) Co., Ltd.",
+      "supplier_slug_guess": "neway-valve",
+      "source_url": "https://www.newayvalve.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — gate valves (cast/forged); mill RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.newayvalve.com"
+      ]
+    },
+    {
+      "product_name": "CNP CDL Stainless Steel Vertical Multistage Centrifugal Pump",
+      "product_slug": "cnp-cdl-stainless-steel-vertical-multistage-centrifugal-pump",
+      "supplier_name": "Nanfang Pump Industry Co., Ltd.",
+      "supplier_slug_guess": "nanfang-pump",
+      "source_url": "https://cnppump.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CNP CDL/CDLF stainless vertical multistage (Hangzhou smart factory); distributor Alibaba figures exist but are not mill FOB — unit_price left null.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://usimg.bjyyb.net/sites/51500/51534/20200421104726979.jpg",
+        "https://cnppump.com/ABOUT_CNP.html"
+      ]
+    },
+    {
+      "product_name": "CNP End-Suction Pumps",
+      "product_slug": "cnp-end-suction-pumps",
+      "supplier_name": "Nanfang Pump Industry Co., Ltd.",
+      "supplier_slug_guess": "nanfang-pump",
+      "source_url": "https://cnppump.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CNP end-suction centrifugal pumps; no public mill FOB used.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cnppump.com"
+      ]
+    },
+    {
+      "product_name": "CNP Inline / Split-Case Pumps",
+      "product_slug": "cnp-inline-split-case-pumps",
+      "supplier_name": "Nanfang Pump Industry Co., Ltd.",
+      "supplier_slug_guess": "nanfang-pump",
+      "source_url": "https://cnppump.com",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — inline and split-case pump families; project/distributor RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cnppump.com"
+      ]
+    },
+    {
+      "product_name": "ZWZ Deep Groove Ball Bearings",
+      "product_slug": "zwz-deep-groove-ball-bearings",
+      "supplier_name": "Wafangdian Bearing Group Corp., Ltd.",
+      "supplier_slug_guess": "wafangdian-bearing",
+      "source_url": "https://zwz-bearing.com/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — ZWZ deep-groove ball bearings (20+k specs); mill/authorized-distributor quote by part number — no public mill unit list used.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210926/163262643829c35cdd9e09e547.jpg"
+      ]
+    },
+    {
+      "product_name": "ZWZ Spherical Roller Bearings",
+      "product_slug": "zwz-spherical-roller-bearings",
+      "supplier_name": "Wafangdian Bearing Group Corp., Ltd.",
+      "supplier_slug_guess": "wafangdian-bearing",
+      "source_url": "https://zwz-bearing.com/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — spherical roller bearings; part-number RFQ. Third-party GoldSupplier US$600–900 for 23284 is a reseller listing, not mill FOB — not used.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.zwz-bearing.com/en/Public/Upload/image/20210926/163262644172d0db2c498a2a52.jpg"
+      ]
+    },
+    {
+      "product_name": "ZWZ Tapered Roller Bearings",
+      "product_slug": "zwz-tapered-roller-bearings",
+      "supplier_name": "Wafangdian Bearing Group Corp., Ltd.",
+      "supplier_slug_guess": "wafangdian-bearing",
+      "source_url": "https://zwz-bearing.com/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — tapered roller bearings; mill RFQ by model.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://zwz-bearing.com/en/"
+      ]
+    },
+    {
+      "product_name": "CHG Rolling Mill Bearings",
+      "product_slug": "chg-rolling-mill-bearings",
+      "supplier_name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+      "supplier_slug_guess": "luoyang-huigong-bearing",
+      "source_url": "https://www.chgbearings.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CHG rolling-mill bearings (four-row cylindrical/tapered, ID 90–1400 mm); mill quote only (FOB negotiable on trade portals).",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.chgbearings.com/en",
+        "https://www.lyhgbearing.com/tapered-roller-bearings/"
+      ]
+    },
+    {
+      "product_name": "CHG Slewing Bearings",
+      "product_slug": "chg-slewing-bearings",
+      "supplier_name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+      "supplier_slug_guess": "luoyang-huigong-bearing",
+      "source_url": "https://www.chgbearings.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CHG slewing bearings; project/OEM RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.chgbearings.com/en"
+      ]
+    },
+    {
+      "product_name": "CHG Thin-Section Bearings",
+      "product_slug": "chg-thin-section-bearings",
+      "supplier_name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+      "supplier_slug_guess": "luoyang-huigong-bearing",
+      "source_url": "https://www.chgbearings.com/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — precision thin-section bearings (1–40 in, accuracy to P2); mill RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.chgbearings.com/en"
+      ]
+    },
+    {
+      "product_name": "Sundram High-Tensile Fasteners (M3–M80)",
+      "product_slug": "sundram-high-tensile-fasteners-m3-m80",
+      "supplier_name": "Sundram Fasteners Limited",
+      "supplier_slug_guess": "sundram-fasteners",
+      "source_url": "https://sundram.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — TVS Sundram high-tensile fasteners (~M3–M80); OEM/contract priced, no public mill unit list on sundram.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://sundram.com/images/row-1/fasteners-one.jpg",
+        "https://sundram.com/images/row-1/fasteners-two.jpg"
+      ]
+    },
+    {
+      "product_name": "Sundram Hot-Forged Parts",
+      "product_slug": "sundram-hot-forged-parts",
+      "supplier_name": "Sundram Fasteners Limited",
+      "supplier_slug_guess": "sundram-fasteners",
+      "source_url": "https://sundram.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — hot-forged precision components; OEM RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://sundram.com/"
+      ]
+    },
+    {
+      "product_name": "Sundram Radiator Caps",
+      "product_slug": "sundram-radiator-caps",
+      "supplier_name": "Sundram Fasteners Limited",
+      "supplier_slug_guess": "sundram-fasteners",
+      "source_url": "https://sundram.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — radiator caps (automotive); OEM/aftermarket RFQ.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://sundram.com/"
+      ]
+    }
+  ]
+}

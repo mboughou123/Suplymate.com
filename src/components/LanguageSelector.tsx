@@ -14,11 +14,14 @@ type LanguageSelectorProps = {
   /** Compact styling for the dark navbar */
   variant?: "navbar" | "mobile" | "inline";
   className?: string;
+  /** Hide the language name between lg and xl, where the desktop header row is tight. */
+  compactLabel?: boolean;
 };
 
 export default function LanguageSelector({
   variant = "navbar",
   className = "",
+  compactLabel = false,
 }: LanguageSelectorProps) {
   const t = useTranslations("languageSelector");
   const locale = useLocale() as Locale;
@@ -94,10 +97,12 @@ export default function LanguageSelector({
 
   const isNavbar = variant === "navbar";
   const isInline = variant === "inline";
+  // Navbar / inline triggers share the pill geometry of the Login / Get started
+  // buttons next to them (rounded-xl, py-2, semibold) so the header reads as one row.
   const triggerClass = isNavbar
-    ? "inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-2.5 py-2 text-sm font-medium text-white/90 transition-colors hover:border-white/35 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow/60"
+    ? "inline-flex items-center gap-1.5 rounded-xl border border-white/20 bg-white/5 px-3 py-2 text-sm font-semibold text-white/90 transition-colors hover:border-white/35 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-glow/60"
     : isInline
-      ? "inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/80 px-2.5 py-2 text-sm font-medium text-ink-muted transition-colors hover:border-cyan/30 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/40"
+      ? "inline-flex items-center gap-1.5 rounded-xl border border-slate-200/90 bg-white/80 px-3 py-2 text-sm font-semibold text-ink-muted transition-colors hover:border-cyan/30 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan/40"
       : "flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm font-medium text-white";
 
   const panelClass = isNavbar || isInline
@@ -129,7 +134,9 @@ export default function LanguageSelector({
         onKeyDown={onTriggerKeyDown}
       >
         <Globe className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
-        <span className="max-w-[7rem] truncate">{localeNames[locale]}</span>
+        <span className={`max-w-[7rem] truncate ${compactLabel ? "lg:hidden xl:inline" : ""}`}>
+          {localeNames[locale]}
+        </span>
         <ChevronDown
           className={`h-3.5 w-3.5 shrink-0 opacity-70 transition-transform ${open ? "rotate-180" : ""}`}
           aria-hidden

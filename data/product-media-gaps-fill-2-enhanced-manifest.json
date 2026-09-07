@@ -1,0 +1,2018 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/deformed-rebar-10-40-mm-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/deformed-rebar-10-40-mm-2.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/deformed-rebar-10-40-mm.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/deformed-rebar-10-40-mm.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/hot-rolled-coil-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/hot-rolled-coil-2.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/hot-rolled-coil.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/hot-rolled-coil.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/hrc-og.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/hrc-og.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/rebar-og.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/rebar-og.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/rebar.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/rebar.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/suez-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/suez-mill.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/suez.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/suez.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/wire-rod-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/wire-rod-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/wire-rod-og.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/wire-rod-og.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ezz-steel/wire-rod.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/ezz-steel/wire-rod.jpg",
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/global-ops.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/global-ops.jpg",
+    "out_size": [
+      1600,
+      797
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/jindal-panther-tmt-rebars-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/jindal-panther-tmt-rebars-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/jindal-panther-tmt-rebars.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/jindal-panther-tmt-rebars.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/nj2-plates.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/nj2-plates.jpg",
+    "out_size": [
+      1200,
+      1560
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/parallel-flange-beam-orig.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/parallel-flange-beam-orig.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/parallel-flange-beam.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/parallel-flange-beam.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/parallel-flange-beams-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/parallel-flange-beams-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/parallel-flange-beams.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/parallel-flange-beams.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/tmt-rebars-orig.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/tmt-rebars-orig.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/tmt-rebars.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/tmt-rebars.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/wide-steel-plates-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/wide-steel-plates-2.jpg",
+    "out_size": [
+      1600,
+      797
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/wide-steel-plates.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/wide-steel-plates.jpg",
+    "out_size": [
+      1200,
+      1560
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/wire-rod-orig.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/wire-rod-orig.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jindal-steel/wire-rod.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jindal-steel/wire-rod.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-coils-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-coils-2.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-coils.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-coils.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-galvanised-coils-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-galvanised-coils-2.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-galvanised-coils-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-galvanised-coils-3.jpg",
+    "out_size": [
+      1200,
+      1446
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-galvanised-coils.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-galvanised-coils.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/cold-rolled-products.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/cold-rolled-products.jpg",
+    "out_size": [
+      1200,
+      1446
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/hot-rolled-coils-plates-sheets-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/hot-rolled-coils-plates-sheets-2.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/hot-rolled-coils-plates-sheets.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/hot-rolled-coils-plates-sheets.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/hot-rolled-coils.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/hot-rolled-coils.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/hot-rolled-sheets.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/hot-rolled-sheets.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/jsw-neosteel-tmt-bars-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/jsw-neosteel-tmt-bars-2.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/jsw-neosteel-tmt-bars-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/jsw-neosteel-tmt-bars-3.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/jsw-neosteel-tmt-bars.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/jsw-neosteel-tmt-bars.jpg",
+    "out_size": [
+      1600,
+      623
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/neosteel-550d.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/neosteel-550d.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/neosteel-600.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/neosteel-600.jpg",
+    "out_size": [
+      1200,
+      1443
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/neosteel-product-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/neosteel-product-banner.jpg",
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/neosteel-rect.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/neosteel-rect.jpg",
+    "out_size": [
+      1200,
+      755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/vijayanagar-works-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/vijayanagar-works-banner.jpg",
+    "out_size": [
+      1600,
+      623
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jsw-steel/vijayanagar-works.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/jsw-steel/vijayanagar-works.jpg",
+    "out_size": [
+      1600,
+      750
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/cold-rolled-coils-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/cold-rolled-coils-2.jpg",
+    "out_size": [
+      1200,
+      909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/cold-rolled-coils.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/cold-rolled-coils.jpg",
+    "out_size": [
+      1200,
+      931
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/hot-rolled-coils-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/hot-rolled-coils-2.jpg",
+    "out_size": [
+      1200,
+      909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/hot-rolled-coils.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/hot-rolled-coils.jpg",
+    "out_size": [
+      1200,
+      1706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/inside-10.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/inside-10.jpg",
+    "out_size": [
+      1200,
+      1706
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/inside-6.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/inside-6.jpg",
+    "out_size": [
+      1200,
+      909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/inside-7.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/inside-7.jpg",
+    "out_size": [
+      1200,
+      931
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/tata-tiscon-mobile.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/tata-tiscon-mobile.jpg",
+    "out_size": [
+      1200,
+      1875
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/tata-tiscon-tmt-rebars-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/tata-tiscon-tmt-rebars-2.jpg",
+    "out_size": [
+      1200,
+      1875
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/tata-tiscon-tmt-rebars.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/tata-tiscon-tmt-rebars.jpg",
+    "out_size": [
+      1400,
+      790
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/tata-steel/tata-tiscon.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/steel/tata-steel/tata-tiscon.jpg",
+    "out_size": [
+      1400,
+      790
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/ehv-cable-pro.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/ehv-cable-pro.jpg",
+    "out_size": [
+      1200,
+      786
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/ehv-power-cables-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/ehv-power-cables-2.jpg",
+    "out_size": [
+      1600,
+      541
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/ehv-power-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/ehv-power-cables.jpg",
+    "out_size": [
+      1200,
+      786
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/head-product.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/head-product.jpg",
+    "out_size": [
+      1600,
+      541
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/home-banner-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/home-banner-1.jpg",
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/house-wire-homecab-fr-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/house-wire-homecab-fr-2.jpg",
+    "out_size": [
+      1200,
+      632
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/house-wire-homecab-fr.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/house-wire-homecab-fr.jpg",
+    "out_size": [
+      1200,
+      632
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/house-wiring-types.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/house-wiring-types.jpg",
+    "out_size": [
+      1200,
+      632
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/house-wiring.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/house-wiring.jpg",
+    "out_size": [
+      1200,
+      632
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/ht-high-voltage-power-cables-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/ht-high-voltage-power-cables-2.jpg",
+    "out_size": [
+      1600,
+      541
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/ht-high-voltage-power-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/ht-high-voltage-power-cables.jpg",
+    "out_size": [
+      1200,
+      764
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/hv-cables-pro.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/hv-cables-pro.jpg",
+    "out_size": [
+      1200,
+      764
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/kei-industries/product-slide01.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/kei-industries/product-slide01.jpg",
+    "out_size": [
+      1600,
+      541
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/about-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/about-4.jpg",
+    "out_size": [
+      1200,
+      1021
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/about-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/about-banner.jpg",
+    "out_size": [
+      1600,
+      558
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/etira-house-wire.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/etira-house-wire.jpg",
+    "out_size": [
+      1200,
+      2433
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/greenwire-plus.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/greenwire-plus.jpg",
+    "out_size": [
+      1563,
+      1553
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/optima-plus.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/optima-plus.jpg",
+    "out_size": [
+      1200,
+      2433
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-green-wire-plus-1-5-sqmm-90m-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-green-wire-plus-1-5-sqmm-90m-2.jpg",
+    "out_size": [
+      1200,
+      1333
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-green-wire-plus-1-5-sqmm-90m.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-green-wire-plus-1-5-sqmm-90m.jpg",
+    "out_size": [
+      1563,
+      1553
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-primma-house-wires-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-primma-house-wires-2.jpg",
+    "out_size": [
+      1200,
+      2433
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-primma-house-wires.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-primma-house-wires.jpg",
+    "out_size": [
+      1563,
+      876
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-suprema-house-wires-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-suprema-house-wires-2.jpg",
+    "out_size": [
+      1600,
+      558
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/polycab-suprema-house-wires.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/polycab-suprema-house-wires.jpg",
+    "out_size": [
+      1563,
+      886
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/primma-house-wire.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/primma-house-wire.jpg",
+    "out_size": [
+      1563,
+      876
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/suprema.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/suprema.jpg",
+    "out_size": [
+      1563,
+      886
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/wires-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/wires-hero.jpg",
+    "out_size": [
+      1600,
+      558
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/wires-wcp-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/wires-wcp-1.jpg",
+    "out_size": [
+      1200,
+      1333
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/polycab/wires-wcp-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/polycab/wires-wcp-2.jpg",
+    "out_size": [
+      1200,
+      1333
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ehv-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ehv-power-cable.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ehv-power-cables-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ehv-power-cables-2.jpg",
+    "out_size": [
+      1600,
+      380
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ehv-power-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ehv-power-cables.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/factories-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/factories-banner.jpg",
+    "out_size": [
+      1600,
+      380
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/future-ready-house-wires-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/future-ready-house-wires-2.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/future-ready-house-wires-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/future-ready-house-wires-3.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/future-ready-house-wires.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/future-ready-house-wires.jpg",
+    "out_size": [
+      1600,
+      380
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/futureready-wires.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/futureready-wires.jpg",
+    "out_size": [
+      1600,
+      380
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ht-3core.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ht-3core.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ht-power-cables-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ht-power-cables-2.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ht-power-cables.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ht-power-cables.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ht-singlecore-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ht-singlecore-2.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/ht-singlecore.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/ht-singlecore.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/wire-1-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/wire-1-2.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/wire-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/wire-1.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/rr-kabel/wire-2-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/rr-kabel/wire-2-1.jpg",
+    "out_size": [
+      1200,
+      450
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/building-wire-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/building-wire-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/building-wire-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/building-wire-3.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/building-wire.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/building-wire.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/cu-xlpe-swa-pvc-armoured-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/cu-xlpe-swa-pvc-armoured-power-cable.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/house-wiring-eco-pvc-flexible-electric-wire-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/house-wiring-eco-pvc-flexible-electric-wire-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/house-wiring-eco-pvc-flexible-electric-wire.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/house-wiring-eco-pvc-flexible-electric-wire.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/iec60227-450-750v-pvc-single-core-wire-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/iec60227-450-750v-pvc-single-core-wire-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/iec60227-450-750v-pvc-single-core-wire.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/iec60227-450-750v-pvc-single-core-wire.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/iec60227-rigid-single-core-non-sheathed.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/iec60227-rigid-single-core-non-sheathed.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/mill-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/mill-1.jpg",
+    "out_size": [
+      1200,
+      958
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/mill-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/mill-2.jpg",
+    "out_size": [
+      1200,
+      987
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shandong-new-luxing-cable/yjv22-0-6-1kv-xlpe-armoured-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shandong-new-luxing-cable/yjv22-0-6-1kv-xlpe-armoured-power-cable.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/armored-xlpe-swa-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/armored-xlpe-swa-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/armored-xlpe-swa.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/armored-xlpe-swa.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/lv-xlpe-power-cable-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/lv-xlpe-power-cable-2.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/lv-xlpe-power-cable-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/lv-xlpe-power-cable-3.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/lv-xlpe-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/lv-xlpe-power-cable.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-1.jpg",
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-2.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-3.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-product-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-product-1.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-product-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-product-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mill-product-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mill-product-3.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mv-xlpe-unarmored-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mv-xlpe-unarmored-2.jpg",
+    "out_size": [
+      1200,
+      1202
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mv-xlpe-unarmored.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mv-xlpe-unarmored.jpg",
+    "out_size": [
+      1200,
+      1201
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mv-xlpe-unarmoured-power-cable-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mv-xlpe-unarmoured-power-cable-2.jpg",
+    "out_size": [
+      1200,
+      1202
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/mv-xlpe-unarmoured-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/mv-xlpe-unarmoured-power-cable.jpg",
+    "out_size": [
+      1200,
+      1201
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/product-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/product-4.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/product-5.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/product-5.jpg",
+    "out_size": [
+      1200,
+      856
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/xlpe-swa-armoured-power-cable-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/xlpe-swa-armoured-power-cable-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/shanghai-shenghua-cable/xlpe-swa-armoured-power-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/cables/shanghai-shenghua-cable/xlpe-swa-armoured-power-cable.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-ordinary-portland-cement-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-ordinary-portland-cement-2.jpg",
+    "out_size": [
+      1280,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-ordinary-portland-cement.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-ordinary-portland-cement.jpg",
+    "out_size": [
+      1600,
+      887
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-portland-cement-clinker-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-portland-cement-clinker-2.jpg",
+    "out_size": [
+      1280,
+      854
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-portland-cement-clinker.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-portland-cement-clinker.jpg",
+    "out_size": [
+      1280,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-specialty-cement-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-specialty-cement-2.jpg",
+    "out_size": [
+      1600,
+      887
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/conch-specialty-cement.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/conch-specialty-cement.jpg",
+    "out_size": [
+      1280,
+      854
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/qixia-factory-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/qixia-factory-1.jpg",
+    "out_size": [
+      1600,
+      887
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/qixia-factory-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/qixia-factory-2.jpg",
+    "out_size": [
+      1280,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/anhui-conch-cement/qixia-factory-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/anhui-conch-cement/qixia-factory-3.jpg",
+    "out_size": [
+      1280,
+      854
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/aggregates-crushed-stone-sand-gravel-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/aggregates-crushed-stone-sand-gravel-2.jpg",
+    "out_size": [
+      1200,
+      763
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/aggregates-crushed-stone-sand-gravel.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/aggregates-crushed-stone-sand-gravel.jpg",
+    "out_size": [
+      1600,
+      571
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/cement-l2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/cement-l2.jpg",
+    "out_size": [
+      1200,
+      763
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/cement.png.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/cement.png.jpg",
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/concrete-l2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/concrete-l2.jpg",
+    "out_size": [
+      1200,
+      763
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/crafting-concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/crafting-concrete.jpg",
+    "out_size": [
+      1600,
+      634
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/portland-cement-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/portland-cement-2.jpg",
+    "out_size": [
+      1200,
+      763
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/portland-cement.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/portland-cement.jpg",
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/ready-mix-concrete-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/ready-mix-concrete-2.jpg",
+    "out_size": [
+      1600,
+      634
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/ready-mix-concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/ready-mix-concrete.jpg",
+    "out_size": [
+      1200,
+      763
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/cemex/rugby-cement-works.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/cemex/rugby-cement-works.jpg",
+    "out_size": [
+      1600,
+      571
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/aggregates-kieswerk.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/aggregates-kieswerk.jpg",
+    "out_size": [
+      1600,
+      847
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/aggregates-sand-gravel-crushed-stone-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/aggregates-sand-gravel-crushed-stone-2.jpg",
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/aggregates-sand-gravel-crushed-stone.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/aggregates-sand-gravel-crushed-stone.jpg",
+    "out_size": [
+      1600,
+      847
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/asphalt.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/asphalt.jpg",
+    "out_size": [
+      1600,
+      1062
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/cement-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/cement-2.jpg",
+    "out_size": [
+      1600,
+      533
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/cement-plant.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/cement-plant.jpg",
+    "out_size": [
+      1600,
+      533
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/cement-tanker.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/cement-tanker.jpg",
+    "out_size": [
+      1600,
+      1366
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/cement.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/cement.jpg",
+    "out_size": [
+      1600,
+      1366
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/concrete.jpg",
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/ready-mixed-concrete-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/ready-mixed-concrete-2.jpg",
+    "out_size": [
+      1600,
+      1062
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/ready-mixed-concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/ready-mixed-concrete.jpg",
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/heidelberg-materials/unsplash-ref.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/heidelberg-materials/unsplash-ref.jpg",
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/asphalt-mix-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/asphalt-mix-2.jpg",
+    "out_size": [
+      1600,
+      591
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/asphalt-mix.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/asphalt-mix.jpg",
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/crushed-stone-sand-gravel-aggregates-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/crushed-stone-sand-gravel-aggregates-2.jpg",
+    "out_size": [
+      1600,
+      591
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/crushed-stone-sand-gravel-aggregates.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/crushed-stone-sand-gravel-aggregates.jpg",
+    "out_size": [
+      1600,
+      733
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/medina-quarry.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/medina-quarry.jpg",
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/miami-quarry-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/miami-quarry-2.jpg",
+    "out_size": [
+      1600,
+      591
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/miami-quarry.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/miami-quarry.jpg",
+    "out_size": [
+      1600,
+      733
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/ready-mixed-concrete-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/ready-mixed-concrete-2.jpg",
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/vulcan-materials/ready-mixed-concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/vulcan-materials/ready-mixed-concrete.jpg",
+    "out_size": [
+      1600,
+      733
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-4.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-5.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-5.jpg",
+    "out_size": [
+      1200,
+      998
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-6.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-6.jpg",
+    "out_size": [
+      1200,
+      996
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-7.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-7.jpg",
+    "out_size": [
+      1200,
+      996
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-8.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-8.jpg",
+    "out_size": [
+      1200,
+      996
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/chg-content.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/chg-content.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/rolling-mill-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/rolling-mill-1.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/rolling-mill-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/rolling-mill-bearings-2.jpg",
+    "out_size": [
+      1200,
+      998
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/rolling-mill-bearings-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/rolling-mill-bearings-3.jpg",
+    "out_size": [
+      1200,
+      996
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/rolling-mill-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/rolling-mill-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/slewing-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/slewing-1.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/slewing-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/slewing-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/slewing-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/slewing-bearings-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/slewing-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/slewing-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/thin-section-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/thin-section-bearings-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/thin-section-bearings-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/thin-section-bearings-3.jpg",
+    "out_size": [
+      1200,
+      996
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/thin-section-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/thin-section-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/luoyang-huigong-bearing/upfile-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/luoyang-huigong-bearing/upfile-1.jpg",
+    "out_size": [
+      1200,
+      833
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-1.jpg",
+    "out_size": [
+      1600,
+      2444
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-2.jpg",
+    "out_size": [
+      1600,
+      389
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-3.jpg",
+    "out_size": [
+      1200,
+      871
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump-2.jpg",
+    "out_size": [
+      1600,
+      389
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump-3.jpg",
+    "out_size": [
+      1200,
+      871
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/cdl-stainless-steel-vertical-multistage-pump.jpg",
+    "out_size": [
+      1600,
+      2444
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/end-suction-pumps-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/end-suction-pumps-2.jpg",
+    "out_size": [
+      1600,
+      490
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/end-suction-pumps.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/end-suction-pumps.jpg",
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/inline-split-case-pumps-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/inline-split-case-pumps-2.jpg",
+    "out_size": [
+      1303,
+      816
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/inline-split-case-pumps.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/inline-split-case-pumps.jpg",
+    "out_size": [
+      1200,
+      713
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/pump-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/pump-1.jpg",
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/pump-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/pump-2.jpg",
+    "out_size": [
+      1600,
+      490
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/pump-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/pump-3.jpg",
+    "out_size": [
+      1200,
+      713
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/nanfang-pump/pump-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/nanfang-pump/pump-4.jpg",
+    "out_size": [
+      1303,
+      816
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/ball-valves-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/ball-valves-2.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/ball-valves-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/ball-valves-3.jpg",
+    "out_size": [
+      1200,
+      952
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/ball-valves.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/ball-valves.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/butterfly-valves-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/butterfly-valves-2.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/butterfly-valves.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/butterfly-valves.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/carousel-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/carousel-1.jpg",
+    "out_size": [
+      1200,
+      952
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/carousel-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/carousel-2.jpg",
+    "out_size": [
+      1200,
+      952
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/gate-valves-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/gate-valves-2.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/gate-valves-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/gate-valves-3.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/gate-valves.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/gate-valves.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-1.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-2.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-3.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-4.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-5.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-5.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-6.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-6.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/neway-valve/valve-7.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/neway-valve/valve-7.jpg",
+    "out_size": [
+      1200,
+      1104
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/cold-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/cold-banner.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/fasteners-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/fasteners-banner.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/high-tensile-fasteners-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/high-tensile-fasteners-2.jpg",
+    "out_size": [
+      1200,
+      743
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/high-tensile-fasteners.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/high-tensile-fasteners.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/hot-forged-parts-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/hot-forged-parts-2.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/hot-forged-parts.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/hot-forged-parts.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/hotforged-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/hotforged-banner.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/ipu.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/ipu.jpg",
+    "out_size": [
+      1200,
+      743
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/pumps-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/pumps-banner.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/radiator-banner-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/radiator-banner-2.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/radiator-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/radiator-banner.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/radiator-caps-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/radiator-caps-2.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/sundram-fasteners/radiator-caps.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/sundram-fasteners/radiator-caps.jpg",
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/16316715443af078cc406b9f38.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/16316715443af078cc406b9f38.jpg",
+    "out_size": [
+      1200,
+      832
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/bearing-catalog-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/bearing-catalog-2.jpg",
+    "out_size": [
+      1200,
+      832
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/deep-groove-ball-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/deep-groove-ball-bearings-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/deep-groove-ball-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/deep-groove-ball-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/mill-banner-1920.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/mill-banner-1920.jpg",
+    "out_size": [
+      1600,
+      783
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-500-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-500-1.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-500-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-500-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-500-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-500-3.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-500-4.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-500-4.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-500-5.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-500-5.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/product-banner-1920.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/product-banner-1920.jpg",
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/spherical-roller-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/spherical-roller-bearings-2.jpg",
+    "out_size": [
+      1200,
+      832
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/spherical-roller-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/spherical-roller-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/strip-banner.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/strip-banner.jpg",
+    "out_size": [
+      1440,
+      340
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/tapered-roller-bearings-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/tapered-roller-bearings-2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/wafangdian-bearing/tapered-roller-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/wafangdian-bearing/tapered-roller-bearings.jpg",
+    "out_size": [
+      1200,
+      1200
+    ]
+  }
+]

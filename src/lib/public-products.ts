@@ -241,7 +241,10 @@ function staticToCard(p: Product): PublicProductCard {
     productName: p.name,
     category: p.category,
   };
-  const base = p.basePrice ?? p.priceMin;
+  // RFQ-only listings (mill quotes, no public price) come through
+  // scrapedToProduct with basePrice undefined and a legacy priceMin of 0 —
+  // that is "no price", never "$0.00".
+  const base = p.basePrice ?? (p.priceMin > 0 ? p.priceMin : null);
   return {
     id: p.id,
     name: p.name,

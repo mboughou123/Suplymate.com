@@ -40,7 +40,6 @@
     "messages": "消息",
     "notifications": "通知",
     "toggleMenu": "Ouvrir/关闭 le menu",
-    "openCart": "Ouvrir le panier",
     "home": "Home",
     "materials": "Matières",
     "blog": "Blog",
@@ -53,6 +52,56 @@
     "rfqs": "RFQs",
     "account": "Account",
     "careers": "Careers"
+  },
+  "megaMenu": {
+    "menuLabel": "Main",
+    "mobileMenuLabel": "Mobile",
+    "top": {
+      "products": "产品",
+      "solutions": "Solutions",
+      "suppliers": "供应商",
+      "materials": "Matières",
+      "pricing": "定价",
+      "company": "公司"
+    },
+    "products": {
+      "heading": "Suplymate sourcing platform",
+      "body": "A verified supplier network with the tools to shortlist, compare and time every purchase.",
+      "explore": "Explore products",
+      "howItWorks": "如何运作",
+      "featuredPrefix": "Mate, your",
+      "featuredAccent": "AI orchestrator",
+      "featuredSuffix": "in Suplymate",
+      "featuredBlurb": "Describe what you need to source in plain language. Mate routes it to Scout, Compare or Watch and hands back the answer.",
+      "readMore": "Lire la suite",
+      "scout": "Scout",
+      "scoutDescription": "Find verified suppliers and build a shortlist by spec, region and lead time.",
+      "compare": "比较",
+      "compareDescription": "Browse products and line up offers side by side — price, MOQ, lead time.",
+      "watch": "Watch",
+      "watchDescription": "Track material prices and rate signals to time your purchase.",
+      "catalogue": "Product catalogue",
+      "catalogueDescription": "Listed products with supplier photos — steel, cables, pipes, packaging and more."
+    },
+    "solutions": {
+      "byIndustry": "By industry",
+      "byMaterial": "By material",
+      "byGoal": "By goal",
+      "goals": {
+        "findVerified": "Find verified suppliers",
+        "compareOffers": "Compare offers",
+        "timePurchase": "Time your purchase",
+        "sourceInternationally": "Source internationally",
+        "sourceDomestically": "Source in your country",
+        "askMate": "Ask Mate"
+      }
+    },
+    "company": {
+      "about": "À propos",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "联系"
+    }
   },
   "footer": {
     "tagline": "您的 AI 采购伙伴. Un sourcing p已读s intelligent用于les entreprises 模式rnes.",
@@ -187,11 +236,6 @@
     "logIn": "Log in",
     "requestDemo": "Request a demo"
   },
-  "homeStats": {
-    "verifiedSuppliers": "供应商 已验证s",
-    "countries": "国家 覆盖s",
-    "buyerRating": "Buyer rating"
-  },
   "homeModules": {
     "title": "Three agents, three advantages",
     "subtitle": "Scout, Compare, and Watch map to how procurement teams actually work — from shortlist to RFQ to market timing.",
@@ -221,6 +265,89 @@
     "foliflexName": "Foliflex Wires & Cables",
     "foliflexLocation": "Delhi, India (Jhilmil)",
     "foliflexCaption": "Foliflex cable warehouse aisles, Jhilmil"
+  },
+  "homeProducts": {
+    "eyebrow": "产品",
+    "title": "Browse products from verified suppliers",
+    "subtitle": "Real catalogue items with supplier photos — rebar, cables, pipes, packaging and industrial parts, each linked to the mill that makes it.",
+    "all": "Tous",
+    "filterLabel": "Filter products by category",
+    "viewProduct": "View product",
+    "browseAll": "Parcourir tous les 产品",
+    "empty": "No products in this category yet.",
+    "categories": {
+      "steelAndMetals": "Steel & metals",
+      "cablesAndElectrical": "Cables & electrical",
+      "tubesAndPipes": "Tubes & pipes",
+      "packaging": "Packaging",
+      "construction": "Construction",
+      "industrialParts": "Industrial parts"
+    }
+  },
+  "homeFaq": {
+    "eyebrow": "FAQ",
+    "title": "常见问题",
+    "intro": "Straight answers about how Suplymate works — with or without the AI.",
+    "allFaqs": "See all FAQs",
+    "contact": "Talk to us",
+    "items": {
+      "whatIs": {
+        "question": "什么是 Suplymate？",
+        "answer": "Suplymate is a verified industrial supplier network with a sourcing workspace built on top. Browse mills and manufacturers, read product descriptions, compare offers side by side, track material prices and send RFQs — all from one place."
+      },
+      "ownCountry": {
+        "question": "Can I find suppliers in my own country as well as internationally?",
+        "answer": "Yes. Filter the directory by country or region to see domestic and international suppliers side by side. Source locally when lead time matters and globally when price does — the same profiles, verification badges and compare tools apply to both."
+      },
+      "easier": {
+        "question": "How does Suplymate make sourcing easier?",
+        "answer": "Every supplier has a structured, verified profile, so you stop trawling spreadsheets and supplier websites. Line up offers by price, MOQ and lead time, watch price windows for the materials you buy, and keep every RFQ and conversation in one workspace."
+      },
+      "aiOptional": {
+        "question": "Do I have to use the AI assistant?",
+        "answer": "No. The supplier directory, product catalogue, compare tools and material price charts all work without it. Mate, our AI orchestrator, simply speeds things up — it routes your request to the right agent and hands back a shortlist, an offer table or a price window."
+      },
+      "verified": {
+        "question": "Are suppliers verified?",
+        "answer": "Listed suppliers come from public directories and are labelled as such. A supplier is only shown as Verified after our team has manually checked company registration, contact details and product claims. You can filter to verified suppliers only, and our Supplier Verification Policy describes the full process."
+      },
+      "marketplace": {
+        "question": "Is Suplymate a marketplace? Do I buy through you?",
+        "answer": "No. Suplymate shows you what you need and the right company to get it from — you contact and buy from the supplier directly. We don't take payment, hold funds or sit in the middle of your order."
+      },
+      "cost": {
+        "question": "How much does it cost?",
+        "answer": "Browsing suppliers, products and material prices is free with an account. Paid plans unlock more of the sourcing workspace for teams — see the pricing page for what each plan includes.",
+        "linkLabel": "See pricing"
+      }
+    }
+  },
+  "homeBenefits": {
+    "eyebrow": "Outcomes",
+    "title": "What Suplymate adds to your business",
+    "subtitle": "Not projections — these are the rules and coverage you get from day one.",
+    "items": {
+      "heldFunds": {
+        "label": "Payments held by Suplymate",
+        "note": "You pay the supplier directly. We never process or hold your funds."
+      },
+      "countries": {
+        "label": "Countries you can source from",
+        "note": "Domestic and international mills side by side — filter by country or region."
+      },
+      "materials": {
+        "label": "Materials with live price charts",
+        "note": "Track price windows and rate signals so you lock volume at the right time."
+      },
+      "guestQuestions": {
+        "label": "Free questions for Mate, no card",
+        "note": "Try the AI orchestrator before you sign up — every plan starts free."
+      },
+      "alwaysOn": {
+        "label": "AI orchestrator on call",
+        "note": "Mate routes requests to Scout, Compare or Watch whenever your team is working."
+      }
+    }
   },
   "hero": {
     "badge": "AI-native industrial sourcing",
@@ -464,6 +591,8 @@
     "viewProfile": "View profile",
     "contactSupplier": "Contact supplier",
     "viewSupplier": "View Supplier",
+    "viewProduct": "View product",
+    "distributor": "Distributor",
     "noMatchTitle": "无 供应商 ne 匹配 à vos 筛选",
     "noMatchSubtitle": "Élargissez 您的搜索 ou effacez les 筛选.",
     "pageInfo": "Page {current} sur {total} · {shown} sur {totalResults} 显示",
@@ -484,14 +613,14 @@
   },
   "products": {
     "pageTitle": "Parcourir les 产品",
-    "pageSubtitle": "Comparez 材料x和pièces auprès de 供应商 已验证s.",
+    "pageSubtitle": "Browse products and their descriptions from verified suppliers — and find the right company for each one.",
     "searchPlaceholder": "搜索 par nom, catégorie ou 材料…",
     "noProductsTitle": "无 produit trouvé",
     "noProductsSubtitle": "Essayez d'调整 您的搜索 ou vos 筛选.",
     "compareProducts": "比较 les 产品",
-    "addToCart": "Ajouter au panier",
     "viewDetails": "Voir les détails",
     "viewProduct": "View product",
+    "viewSupplier": "View supplier",
     "bulkPrice": "Bulk price",
     "price": "Price",
     "suppliersPlus": "{count}+ suppliers",
@@ -744,19 +873,6 @@
     "savePreferences": "保存 les 偏好",
     "preferencesSaved": "偏好设置 已保存."
   },
-  "cart": {
-    "title": "购物车 d'approvisionnement",
-    "ariaLabel": "购物车",
-    "closeCart": "Fermer le panier",
-    "empty": "您的购物车是空的。.",
-    "browseProducts": "Parcourir les 产品",
-    "itemsSummary": "{itemCount, plural, one {# article} other {# 商品}} de {supplierCount, plural, one {# 供应商} other {# 供应商}}. Une RFQ par 供应商.",
-    "removeItem": "Retirer l'article",
-    "decreaseQuantity": "Diminuer la 数量",
-    "increaseQuantity": "Augmenter la 数量",
-    "reviewAndRequestQuotes": "Vérifier le panier和请求 des 报价",
-    "noPaymentNote": "无 付款 n'est 进行. Les 供应商 回复ent avec des 报价 正式."
-  },
   "rfqs": {
     "title": "Demandes de 报价",
     "createRfq": "创建 une RFQ",
@@ -766,7 +882,8 @@
     "statusQuoted": "Devis 已收到",
     "statusClosed": "已关闭",
     "noRfqsTitle": "Pas 尚无 de RFQ",
-    "noRfqsSubtitle": "Ajoutez des 产品 au panier和请向 des 报价 aux 供应商."
+    "noRfqsSubtitle": "Ajoutez des 产品 au panier和请向 des 报价 aux 供应商.",
+    "browseProducts": "Parcourir les 产品"
   },
   "notifications": {
     "title": "通知",
@@ -870,8 +987,8 @@
         "body": "Scout, Compare, and Watch are agents built for procurement — not chat wrappers. You'll shape how they reason."
       },
       "global": {
-        "title": "UAE, India & beyond",
-        "body": "Our network spans the Gulf and South Asia. Expect a multilingual team and a global customer base from day one."
+        "title": "A global network, built from the US",
+        "body": "We're a US-based team serving buyers and mills across the UAE, India and beyond. Expect a multilingual product and an international customer base from day one."
       },
       "team": {
         "title": "Small team, big trust",
@@ -880,36 +997,36 @@
     },
     "rolesEyebrow": "Open roles",
     "rolesTitle": "Where we're hiring",
-    "rolesSubtitle": "Roles are remote-first with a preference for candidates in the UAE or India time zones.",
+    "rolesSubtitle": "Roles are remote-first within the United States. We work across US time zones, with occasional in-person days in New York.",
     "roles": {
       "foundingEngineer": {
         "title": "Founding Full-Stack Engineer",
         "summary": "Own features end to end across our Next.js, Prisma, and AI stack — from supplier data pipelines to the Scout / Compare / Watch agents.",
-        "location": "Remote · UAE / India",
+        "location": "Remote · United States",
         "type": "Full-time"
       },
       "dataAnalyst": {
         "title": "Procurement Data Analyst",
         "summary": "Curate and verify mill data, build price-index datasets, and turn market signals into insights buyers can act on.",
-        "location": "Remote · UAE",
+        "location": "Remote · United States",
         "type": "Full-time"
       },
       "growthPartnerships": {
         "title": "Growth & Supplier Partnerships",
-        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the Gulf and South Asia.",
-        "location": "Dubai / Abu Dhabi",
+        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the US, the Gulf and South Asia.",
+        "location": "New York, NY",
         "type": "Full-time"
       },
       "supplierSuccess": {
         "title": "Supplier Success Associate",
         "summary": "Help mills complete verification, publish products, and respond to RFQs quickly — the human side of a verified network.",
-        "location": "Remote · India",
+        "location": "Remote · United States",
         "type": "Contract"
       },
       "general": {
         "title": "General application",
         "summary": "Don't see a match? Tell us what you'd build.",
-        "location": "Remote",
+        "location": "Remote · United States",
         "type": "Open"
       }
     },
@@ -930,7 +1047,7 @@
       "email": "E-mail",
       "phone": "Phone",
       "location": "Location",
-      "locationPlaceholder": "Dubai, UAE",
+      "locationPlaceholder": "Austin, TX",
       "role": "Role you're applying for",
       "linkedin": "LinkedIn or portfolio",
       "cvUrl": "CV / résumé link",
@@ -1223,6 +1340,15 @@
     "validUntil": "Valid until",
     "certificateOnRequest": "Certificate available on request",
     "download": "Download",
+    "viewCertificate": "View certificate",
+    "certificateSource": "Source page",
+    "displayedBySupplier": "Displayed by the supplier — not independently verified by Suplymate.",
+    "certificateImageAlt": "{name} certificate — {authority}",
+    "closeCertificate": "Close certificate preview",
+    "realCertificationsDescription": "Certificates and accreditations published by the supplier, collected from its website.",
+    "sortName": "Name (A–Z)",
+    "viewProduct": "View product",
+    "listedCatalogueDescription": "Listed catalogue products with supplier photos. Prices shown include the Suplymate service fee; RFQ items are quoted per order.",
     "facilityEyebrow": "Facility",
     "factoryMediaTitle": "Factory & media gallery",
     "factoryMediaDescription": "Production floor, QC labs and logistics — tap any tile for a fullscreen preview.",
