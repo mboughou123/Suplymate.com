@@ -1,14 +1,14 @@
 /**
- * Daily expansion 2026-09-07 — 48 sealed + soft + HOLD19 OK/SOFT + Shougang
- * mills for /suppliers.
+ * Daily expansion 2026-09-07 — full 50/50 mill pack for /suppliers.
  *
  * Metadata: data/daily-2026-09-07-suppliers.json
  * Factory stills: public/images/suppliers/<slug>/*.jpg
  *
- * Partial pack: remaining HOLD/blocked (stupp, interpipe) omitted.
- * Shougang uses shougang_01 only (Jingtang live mill). Park siblings quarantined.
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
  *          never invent FOB.
+ * Stupp still is yard inventory / stenciled FBE API 5L X60M pipe (not a
+ * mill-gate interior). Interpipe still is NMPP mill interior.
+ * Shougang uses shougang_01 only (Jingtang live mill). Park siblings quarantined.
  */
 
 import { existsSync, readdirSync } from "node:fs";

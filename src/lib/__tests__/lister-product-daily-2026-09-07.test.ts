@@ -63,6 +63,8 @@ const WIRED_MILL_WITH_PRODUCTS = [
   "saudi-steel-pipe",
   "corinth-pipeworks",
   "mueller-industries",
+  "stupp",
+  "interpipe",
 ] as const;
 
 function expectedCategoryCounts(): Record<ProductCategory, number> {
@@ -141,15 +143,23 @@ describe("Lister daily expansion 2026-09-07 (Preferred-9 + HOLD-27)", () => {
     }
   });
 
-  it("wires Interpipe and Stupp onto slug ids without inventing mill cards", () => {
+  it("attaches Stupp + Interpipe product SKUs to their mill cards", () => {
     const millIds = new Set(daily20260907Suppliers.map((s) => s.id));
-    expect(DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS).toEqual(["interpipe", "stupp"]);
-    for (const slug of DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS) {
-      expect(DAILY_20260907_HOLD_SLUGS).toContain(slug);
-      expect(millIds.has(slug), slug).toBe(false);
+    expect(DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS).toEqual([]);
+    expect(DAILY_20260907_HOLD_SLUGS).toEqual([]);
+    for (const slug of ["interpipe", "stupp"] as const) {
+      expect(millIds.has(slug), slug).toBe(true);
       expect(daily20260907ProductSupplierId(slug)).toBe(slug);
-      expect(listerDaily20260907ForSupplier(slug)).toHaveLength(1);
-      expect(listerDaily20260907ForSupplier(slug)[0].status).toBe("approved");
+      expect(daily20260907ProductSupplierId(slug)).toBe(
+        dailySupplierIdForSlug20260907(slug),
+      );
+      const skus = listerDaily20260907ForSupplier(slug);
+      expect(skus, slug).toHaveLength(1);
+      expect(skus[0].status).toBe("approved");
+      expect(skus[0].supplierId).toBe(slug);
+      expect(listerProductsForSupplier(slug).some((p) => p.id.startsWith("lister-b7-"))).toBe(
+        true,
+      );
     }
   });
 

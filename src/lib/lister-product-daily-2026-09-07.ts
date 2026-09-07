@@ -11,11 +11,10 @@
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
  * SIG is SlimlineBloc carton + COMBIBLOC XS filler — not Tetra Pak.
  *
- * Mill / product split: attach to daily-2026-09-07 mill ids when that mill
- * is already in daily20260907Suppliers (48, including Shougang). Remaining
- * HOLD mill cards (stupp / interpipe) stay out of the directory.
- * Interpipe and Stupp product SKUs still wire onto supplier_slug_guess ids
- * (do not invent mill cards).
+ * Mill / product split: attach to daily-2026-09-07 mill ids
+ * (`dailySupplierIdForSlug20260907`) — full 50/50 mill pack, no remaining
+ * HOLD mill cards and no product-only exceptions. Stupp and Interpipe
+ * products attach to their mill ids.
  *
  * O-I Glass still is plant campus — researcher soft-OK.
  */
@@ -63,11 +62,8 @@ const CATEGORY_ALIASES: Record<string, ProductCategory> = {
   Packaging: "Packaging",
 };
 
-/** HOLD mill slugs whose product SKUs may still wire (no mill card). */
-export const DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS = [
-  "interpipe",
-  "stupp",
-] as const;
+/** HOLD mill slugs whose product SKUs may still wire without a mill card. Empty — full 50/50. */
+export const DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS = [] as const;
 
 /**
  * Prior V2 hold_product_stills_fail — now empty.
