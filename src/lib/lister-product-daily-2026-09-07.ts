@@ -9,8 +9,8 @@
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
  *
  * Mill / product split: attach to daily-2026-09-07 mill ids when that mill
- * is already in daily20260907Suppliers (47 sealed+soft+cleared). Remaining
- * HOLD mill cards (shougang / stupp / interpipe) stay out of the directory.
+ * is already in daily20260907Suppliers (48, including Shougang). Remaining
+ * HOLD mill cards (stupp / interpipe) stay out of the directory.
  * Interpipe's product SKU still wires onto its supplier_slug_guess id
  * (does not invent a mill card). Saudi / Corinth / Mueller attach to their
  * now-wired mill ids.

@@ -1,8 +1,8 @@
 /**
- * Daily 2026-09-07 mill ids — sealed + soft + HOLD19 OK/SOFT (47).
+ * Daily 2026-09-07 mill ids — sealed + soft + HOLD19 OK/SOFT + Shougang (48).
  * Kept free of Node fs so client sort can import it.
  * Prefer the slug when unused by phase-1 / 09-02 / 09-03; otherwise
- * `daily-20260907-<slug>`. Remaining HOLD/blocked (shougang, stupp, interpipe)
+ * `daily-20260907-<slug>`. Remaining HOLD/blocked (stupp, interpipe)
  * are not in this list.
  */
 
@@ -64,11 +64,11 @@ export const DAILY_20260907_SLUGS = [
   "mueller-industries",
   "american-spiralweld",
   "aptar",
+  "shougang",
 ] as const;
 
 /** Remaining researcher HOLD / blocked — do not wire. */
 export const DAILY_20260907_HOLD_SLUGS = [
-  "shougang",
   "stupp",
   "interpipe",
 ] as const;

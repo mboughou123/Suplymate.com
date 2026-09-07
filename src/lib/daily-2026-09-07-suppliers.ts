@@ -1,10 +1,12 @@
 /**
- * Daily expansion 2026-09-07 — 47 sealed + soft + HOLD19 OK/SOFT mills for /suppliers.
+ * Daily expansion 2026-09-07 — 48 sealed + soft + HOLD19 OK/SOFT + Shougang
+ * mills for /suppliers.
  *
  * Metadata: data/daily-2026-09-07-suppliers.json
  * Factory stills: public/images/suppliers/<slug>/*.jpg
  *
- * Partial pack: remaining HOLD/blocked (shougang, stupp, interpipe) omitted.
+ * Partial pack: remaining HOLD/blocked (stupp, interpipe) omitted.
+ * Shougang uses shougang_01 only (Jingtang live mill). Park siblings quarantined.
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
  *          never invent FOB.
  */

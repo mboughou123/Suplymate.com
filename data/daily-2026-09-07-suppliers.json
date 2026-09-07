@@ -7,10 +7,10 @@
   "selection_policy": "New mills only — none of these names/slugs appear in daily/2026-09-07/_exclude_names.txt. Mapped from research/mill_index.json + wiki_summaries.json + Commons plant photos. Prefer mills/factories over traders. No AI mill yards.",
   "exclude_csv": "/workspace/suppliers-phase1/daily/2026-09-07/_exclude_names.txt",
   "counts": {
-    "suppliers_total": 47,
-    "with_local_images": 47,
-    "with_any_photo": 47,
-    "local_image_files": 154,
+    "suppliers_total": 48,
+    "with_local_images": 48,
+    "with_any_photo": 48,
+    "local_image_files": 155,
     "remote_photo_urls": 364,
     "products_total": 0,
     "by_category": {
@@ -18,7 +18,7 @@
       "Packaging": 10,
       "Tube & Pipes": 9,
       "Hardware & Motion": 6,
-      "Steel & Metals": 5,
+      "Steel & Metals": 6,
       "Cables & Electrical": 3,
       "Construction": 2
     }
@@ -2290,10 +2290,47 @@
         "Europe",
         "Asia"
       ]
+    },
+    {
+      "company_name": "Shougang Group",
+      "primary_category": "Steel & Metals",
+      "country": "China",
+      "city": "Beijing",
+      "website": "https://www.shougang.com.cn/",
+      "description": "Shougang Group Co., Ltd., formerly known as Shougang Corporation, is a major state-owned enterprise based in Beijing, China. Founded in 1919, it is one of China's oldest and most prominent steel producers. Over the years, Shougang has diversified into mining, real estate, environmental services, and technology-related industries.",
+      "product_lines": [
+        "Flat steel",
+        "Plate",
+        "Construction steel",
+        "Automotive sheet"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.shougang.com.cn/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm)",
+          "source": "https://www.shougang.com.cn/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.shougang.com.cn/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/shougang/shougang_01.jpg"
+      ],
+      "slug": "shougang",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Middle East"
+      ]
     }
   ],
-  "notes": "PARTIAL+HOLD19 OK-PARTIAL wire 2026-09-07: prior sealed+soft 31 + Researcher OK 13 + SOFT 3 (berg-pipe ,saudi-steel-pipe ,alleima ,webco ,corinth-pipeworks ,tpco ,encore-wire ,nkt ,pca ,flsmidth ,wartsila ,abb ,severstal ,mueller-industries ,american-spiralweld ,aptar) after Lister plant swaps + Enhancer seal = 47. EXCLUDE shougang (HOLD), stupp + interpipe (blocked_skipped). Seal: data/daily-2026-09-07-researcher-hold19-plants-seal.json.",
+  "notes": "PARTIAL+HOLD19 OK-PARTIAL + Shougang Researcher-OK appended 2026-09-07: prior sealed+soft 31 + Researcher OK 13 + SOFT 3 + Shougang live Jingtang coil-warehouse still (shougang_01 only; park heritage _02/_03/_04 quarantined) = 48. Remaining HOLD = stupp + interpipe (blocked_skipped). Seal: data/daily-2026-09-07-researcher-shougang-live-seal.json.",
   "wire_full_pack": false,
-  "wire_slug_count": 47,
-  "hold_omitted_count": 3
+  "wire_slug_count": 48,
+  "hold_omitted_count": 2
 }
