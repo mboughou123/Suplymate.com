@@ -10,7 +10,7 @@
     "suppliers_total": 31,
     "with_local_images": 31,
     "with_any_photo": 31,
-    "local_image_files": 107,
+    "local_image_files": 106,
     "remote_photo_urls": 263,
     "products_total": 0,
     "by_category": {
@@ -640,8 +640,7 @@
       ],
       "local_images": [
         "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/nachi/nachi_02.jpg",
-        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/nachi/nachi_03.jpg",
-        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/nachi/nachi_01.jpg"
+        "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/nachi/nachi_03.jpg"
       ],
       "slug": "nachi",
       "source_platform": "Company site (factual description)",
