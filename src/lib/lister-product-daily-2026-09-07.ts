@@ -1,21 +1,22 @@
 /**
- * Daily expansion 2026-09-07 V2 product pack (9 SKUs) → catalogue ScrapedProduct[].
+ * Daily expansion 2026-09-07 product pack — Preferred-9 + HOLD-27 = 36 RFQ SKUs.
  *
  * Metadata: data/daily-2026-09-07-products.json
  * Photos:   public/images/products/{supplier-slug}/…
- * Seal:     data/daily-2026-09-07-researcher-products-seal.json (V2)
+ * Seals:    data/daily-2026-09-07-researcher-products-seal.json (V2 Preferred-9)
+ *           data/daily-2026-09-07-researcher-hold-products-seal.json
+ *             (QA-HOLD-PRODUCTS-RESEARCHER-OK-PARTIAL — 25 OK + webco/sika SOFT)
  *
- * Honesty: all 9 SKUs are mill RFQ (never invent FOB / unit prices).
+ * Honesty: all 36 SKUs are mill RFQ (never invent FOB / unit prices).
  * Photos: real local JPGs only — no remote/stock fallbacks, no AI badges.
+ * SIG is SlimlineBloc carton + COMBIBLOC XS filler — not Tetra Pak.
  *
  * Mill / product split: attach to daily-2026-09-07 mill ids when that mill
  * is already in daily20260907Suppliers (48, including Shougang). Remaining
  * HOLD mill cards (stupp / interpipe) stay out of the directory.
- * Interpipe's product SKU still wires onto its supplier_slug_guess id
- * (does not invent a mill card). Saudi / Corinth / Mueller attach to their
- * now-wired mill ids.
+ * Interpipe and Stupp product SKUs still wire onto supplier_slug_guess ids
+ * (do not invent mill cards).
  *
- * HOLD product-stills-fail slugs (berg-pipe, abb, …) are not in this JSON.
  * O-I Glass still is plant campus — researcher soft-OK.
  */
 
@@ -64,38 +65,45 @@ const CATEGORY_ALIASES: Record<string, ProductCategory> = {
 
 /** HOLD mill slugs whose product SKUs may still wire (no mill card). */
 export const DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS = [
-  "saudi-steel-pipe",
   "interpipe",
-  "corinth-pipeworks",
-  "mueller-industries",
+  "stupp",
 ] as const;
 
-/** V2 hold_product_stills_fail — must never appear in this pack. */
-export const DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS = [
-  "berg-pipe",
-  "stupp",
+/**
+ * Prior V2 hold_product_stills_fail — now empty.
+ * HOLD-27 pack cleared every previous fail slug (OK+SOFT; HOLD empty).
+ */
+export const DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS = [] as const;
+
+/** Researcher-cleared HOLD product slugs (25 OK + webco/sika SOFT). */
+export const DAILY_20260907_HOLD_PRODUCT_WIRE_SLUGS = [
+  "abb",
+  "alfalaval",
   "alleima",
-  "webco",
+  "american-spiralweld",
+  "andritz",
   "aptar",
+  "berg-pipe",
   "encore-wire",
   "flsmidth",
-  "wartsila",
-  "abb",
-  "shougang",
-  "severstal",
-  "nkt",
-  "pca",
-  "alfalaval",
-  "nachi",
-  "sig-group",
-  "saint-gobain",
-  "sika",
   "furukawa-electric",
   "minebeamitsumi",
-  "sappi",
+  "nachi",
   "nippon-paper",
+  "nkt",
+  "pca",
+  "saint-gobain",
+  "sappi",
+  "severstal",
+  "shougang",
+  "sig-group",
+  "sika",
+  "stupp",
+  "tpco",
+  "tubacex",
   "upm",
-  "andritz",
+  "wartsila",
+  "webco",
 ] as const;
 
 const WIRED_MILL_SLUGS = new Set<string>(DAILY_20260907_SLUGS);
@@ -126,7 +134,7 @@ export function daily20260907ProductSupplierId(slug: string): string {
 
 /**
  * Stable Research QA holds: `supplier_slug_guess|product_slug`.
- * Empty — V2 wire-now 9 are all approved.
+ * Empty — Preferred-9 + HOLD-27 are all approved.
  */
 export const DAILY_20260907_QA_HELD_KEYS = new Set<string>([]);
 

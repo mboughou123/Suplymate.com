@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS,
   DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS,
+  DAILY_20260907_HOLD_PRODUCT_WIRE_SLUGS,
   daily20260907ProductSupplierId,
   isDaily20260907QaHeld,
   listerDaily20260907Count,
@@ -26,35 +27,84 @@ import { isListerProductId } from "@/lib/lister-media";
 import { isRealImageUrl } from "@/lib/image-fallback";
 import { listerProductsForSupplier } from "@/lib/lister-catalogue";
 import { scrapedToProduct } from "@/lib/scraped-products-store";
+import type { ProductCategory } from "@/data/products";
 import rawDaily from "../../../data/daily-2026-09-07-products.json";
-import rawSeal from "../../../data/daily-2026-09-07-researcher-products-seal.json";
+import rawHoldSeal from "../../../data/daily-2026-09-07-researcher-hold-products-seal.json";
 
-const WIRED_MILL_SLUGS = [
+const CATEGORY_ALIASES: Record<string, ProductCategory> = {
+  "Steel & Metals": "Steel & Metals",
+  "Tubes & Pipes": "Tubes & Pipes",
+  "Tube & Pipes": "Tubes & Pipes",
+  "Cables & Electrical": "Cables & Electrical",
+  Construction: "Construction",
+  "Industrial Parts": "Industrial Parts",
+  "Hardware & Motion": "Industrial Parts",
+  Packaging: "Packaging",
+};
+
+const PREFERRED_9 = [
+  "jfe-steel",
+  "interpipe",
+  "corinth-pipeworks",
+  "mueller-industries",
+  "saudi-steel-pipe",
+  "oi-glass",
+  "sandvik",
+  "ingersoll-rand",
+  "sick",
+] as const;
+
+const WIRED_MILL_WITH_PRODUCTS = [
   "jfe-steel",
   "sick",
   "ingersoll-rand",
   "sandvik",
   "oi-glass",
+  "saudi-steel-pipe",
+  "corinth-pipeworks",
+  "mueller-industries",
 ] as const;
 
-describe("Lister daily expansion 2026-09-07 V2 (9 SKUs)", () => {
-  it("loads exactly 9 RFQ SKUs — all approved, none held", () => {
-    expect(listerDaily20260907Count()).toBe(9);
-    expect(listerDaily20260907PublicCount()).toBe(9);
+function expectedCategoryCounts(): Record<ProductCategory, number> {
+  const counts: Record<string, number> = {};
+  for (const sku of (rawDaily as { products: { category?: string }[] }).products) {
+    const cat = CATEGORY_ALIASES[sku.category?.trim() ?? ""];
+    if (!cat) continue;
+    counts[cat] = (counts[cat] ?? 0) + 1;
+  }
+  return counts as Record<ProductCategory, number>;
+}
+
+describe("Lister daily expansion 2026-09-07 (Preferred-9 + HOLD-27)", () => {
+  it("loads exactly 36 RFQ SKUs — all approved, none held", () => {
+    expect(listerDaily20260907Count()).toBe(36);
+    expect(listerDaily20260907PublicCount()).toBe(36);
     expect(listerDaily20260907HeldCount()).toBe(0);
     expect(listerDaily20260907HeldProducts()).toHaveLength(0);
     expect(listerDaily20260907Products.every((p) => p.status === "approved")).toBe(
       true,
     );
+    expect((rawDaily as { products: unknown[] }).products).toHaveLength(36);
+
+    const expected = expectedCategoryCounts();
     expect(
       listerDaily20260907Products.filter((p) => p.category === "Tubes & Pipes"),
-    ).toHaveLength(5);
+    ).toHaveLength(expected["Tubes & Pipes"]);
     expect(
       listerDaily20260907Products.filter((p) => p.category === "Packaging"),
-    ).toHaveLength(1);
+    ).toHaveLength(expected.Packaging);
     expect(
       listerDaily20260907Products.filter((p) => p.category === "Industrial Parts"),
-    ).toHaveLength(3);
+    ).toHaveLength(expected["Industrial Parts"]);
+    expect(
+      listerDaily20260907Products.filter((p) => p.category === "Steel & Metals"),
+    ).toHaveLength(expected["Steel & Metals"]);
+    expect(
+      listerDaily20260907Products.filter((p) => p.category === "Cables & Electrical"),
+    ).toHaveLength(expected["Cables & Electrical"]);
+    expect(
+      listerDaily20260907Products.filter((p) => p.category === "Construction"),
+    ).toHaveLength(expected.Construction);
   });
 
   it("maps Hardware & Motion onto Industrial Parts and keeps SICK approved", () => {
@@ -67,46 +117,45 @@ describe("Lister daily expansion 2026-09-07 V2 (9 SKUs)", () => {
     );
   });
 
-  it("does not wire HOLD product-stills-fail slugs (berg-pipe, abb, …)", () => {
-    const slugs = new Set(
-      (rawDaily as { products: { supplier_slug_guess: string }[] }).products.map(
-        (p) => p.supplier_slug_guess,
-      ),
+  it("wires all 27 HOLD OK+SOFT slugs and keeps the fail list empty", () => {
+    expect(DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS).toEqual([]);
+    expect(DAILY_20260907_HOLD_PRODUCT_WIRE_SLUGS).toHaveLength(27);
+    expect((rawHoldSeal as { hold: string[] }).hold).toEqual([]);
+    expect((rawHoldSeal as { wireable_slugs: string[] }).wireable_slugs).toEqual(
+      [...DAILY_20260907_HOLD_PRODUCT_WIRE_SLUGS],
     );
-    const ids = listerDaily20260907Products.map((p) => p.id).join(" ");
-    const supplierIds = new Set(listerDaily20260907Products.map((p) => p.supplierId));
-    expect((rawSeal as { hold_product_stills_fail: string[] }).hold_product_stills_fail)
-      .toEqual([...DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS]);
-    for (const fail of DAILY_20260907_HOLD_PRODUCT_FAIL_SLUGS) {
-      expect(slugs.has(fail), fail).toBe(false);
-      expect(supplierIds.has(fail), fail).toBe(false);
-      expect(ids.includes(fail), fail).toBe(false);
+
+    const bySupplier = new Map(
+      listerDaily20260907Products.map((p) => [p.supplierId, p]),
+    );
+    for (const slug of DAILY_20260907_HOLD_PRODUCT_WIRE_SLUGS) {
+      const id = daily20260907ProductSupplierId(slug);
+      const sku = bySupplier.get(id) ?? listerDaily20260907ForSupplier(id)[0];
+      expect(sku, slug).toBeTruthy();
+      expect(sku.status, slug).toBe("approved");
     }
-    expect(slugs.has("berg-pipe")).toBe(false);
-    expect(slugs.has("abb")).toBe(false);
-    expect(slugs.has("american-spiralweld")).toBe(false);
-    expect(slugs.has("tpco")).toBe(false);
+
+    for (const slug of PREFERRED_9) {
+      const id = daily20260907ProductSupplierId(slug);
+      expect(listerDaily20260907ForSupplier(id).length, slug).toBe(1);
+    }
   });
 
-  it("wires Interpipe onto a slug id without inventing a mill card", () => {
+  it("wires Interpipe and Stupp onto slug ids without inventing mill cards", () => {
     const millIds = new Set(daily20260907Suppliers.map((s) => s.id));
-    expect(DAILY_20260907_HOLD_SLUGS).toContain("interpipe");
-    expect(millIds.has("interpipe")).toBe(false);
-    expect(daily20260907ProductSupplierId("interpipe")).toBe("interpipe");
-    expect(listerDaily20260907ForSupplier("interpipe")).toHaveLength(1);
-    expect(listerDaily20260907ForSupplier("interpipe")[0].status).toBe("approved");
-    expect(DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS).toContain("interpipe");
+    expect(DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS).toEqual(["interpipe", "stupp"]);
+    for (const slug of DAILY_20260907_HOLD_MILL_PRODUCT_OK_SLUGS) {
+      expect(DAILY_20260907_HOLD_SLUGS).toContain(slug);
+      expect(millIds.has(slug), slug).toBe(false);
+      expect(daily20260907ProductSupplierId(slug)).toBe(slug);
+      expect(listerDaily20260907ForSupplier(slug)).toHaveLength(1);
+      expect(listerDaily20260907ForSupplier(slug)[0].status).toBe("approved");
+    }
   });
 
   it("attaches wired-mill SKUs (incl. cleared Saudi/Corinth/Mueller) to directory ids", () => {
     const millIds = new Set(daily20260907Suppliers.map((s) => s.id));
-    const wiredWithProducts = [
-      ...WIRED_MILL_SLUGS,
-      "saudi-steel-pipe",
-      "corinth-pipeworks",
-      "mueller-industries",
-    ] as const;
-    for (const slug of wiredWithProducts) {
+    for (const slug of WIRED_MILL_WITH_PRODUCTS) {
       const id = dailySupplierIdForSlug20260907(slug);
       expect(millIds.has(id), slug).toBe(true);
       expect(daily20260907ProductSupplierId(slug)).toBe(id);
@@ -119,32 +168,61 @@ describe("Lister daily expansion 2026-09-07 V2 (9 SKUs)", () => {
     }
   });
 
-  it("adds a soft campus note on the O-I Glass SKU", () => {
+  it("keeps webco and sika approved (SOFT, not held) and notes O-I campus", () => {
+    const webco = listerDaily20260907ForSupplier(
+      daily20260907ProductSupplierId("webco"),
+    )[0];
+    const sika = listerDaily20260907ForSupplier(
+      daily20260907ProductSupplierId("sika"),
+    )[0];
+    expect(webco?.status).toBe("approved");
+    expect(sika?.status).toBe("approved");
+
     const oi = listerDaily20260907Products.find((p) => p.supplierId === "oi-glass");
     expect(oi).toBeTruthy();
     expect(oi?.description).toMatch(/plant campus/i);
     expect(String(oi?.specifications?.["Campus still"] ?? "")).toMatch(/soft-OK/i);
   });
 
-  it("surfaces the 9 SKUs on the public products overlay", async () => {
-    const page = await getPublicProductsPage({ page: 1, pageSize: 50, search: "JFE Steel Line" });
-    expect(
-      page.items.some((i) => i.id.startsWith("lister-b7-jfe-steel-")),
-    ).toBe(true);
-    const oi = await getPublicProductsPage({
+  it("keeps SIG as SlimlineBloc / COMBIBLOC — not Tetra Pak", () => {
+    const sig = listerDaily20260907ForSupplier(
+      daily20260907ProductSupplierId("sig-group"),
+    )[0];
+    expect(sig).toBeTruthy();
+    const blob = `${sig.name} ${sig.description} ${JSON.stringify(sig.specifications)}`;
+    expect(blob.toLowerCase()).not.toMatch(/tetra\s*pak/);
+    const rawSig = (rawDaily as { products: { supplier_slug_guess: string; product_name: string; price_note: string | null }[] }).products.find(
+      (p) => p.supplier_slug_guess === "sig-group",
+    );
+    const rawBlob = `${rawSig?.product_name ?? ""} ${rawSig?.price_note ?? ""}`;
+    if (/slimlinebloc|combibloc/i.test(rawBlob)) {
+      expect(blob).toMatch(/SlimlineBloc|COMBIBLOC/i);
+    }
+    expect((rawHoldSeal as { sig_check: string }).sig_check).toMatch(/PASS/i);
+    expect((rawHoldSeal as { sig_check: string }).sig_check).toMatch(/SlimlineBloc|COMBIBLOC/i);
+  });
+
+  it("surfaces Preferred-9 and HOLD SKUs on the public products overlay", async () => {
+    const jfe = await getPublicProductsPage({
       page: 1,
       pageSize: 50,
-      search: "O-I Glass Food",
+      search: "JFE Steel Line",
     });
-    expect(oi.items.some((i) => i.id.startsWith("lister-b7-oi-glass-"))).toBe(true);
+    expect(jfe.items.some((i) => i.id.startsWith("lister-b7-jfe-steel-"))).toBe(true);
+    const stupp = await getPublicProductsPage({
+      page: 1,
+      pageSize: 50,
+      search: "Stupp DSAW",
+    });
+    expect(stupp.items.some((i) => i.id.startsWith("lister-b7-stupp-"))).toBe(true);
     const interpipe = await getPublicProductsPage({
       page: 1,
       pageSize: 50,
       search: "Interpipe Seamless",
     });
-    expect(
-      interpipe.items.some((i) => i.id.startsWith("lister-b7-interpipe-")),
-    ).toBe(true);
+    expect(interpipe.items.some((i) => i.id.startsWith("lister-b7-interpipe-"))).toBe(
+      true,
+    );
   });
 
   it("uses lister-b7 ids and keeps every SKU RFQ with null prices", () => {
@@ -162,16 +240,27 @@ describe("Lister daily expansion 2026-09-07 V2 (9 SKUs)", () => {
       );
     }
     const raw = (rawDaily as { products: { unit_price: number | null }[] }).products;
-    expect(raw).toHaveLength(9);
+    expect(raw).toHaveLength(36);
     expect(raw.every((p) => p.unit_price == null)).toBe(true);
     expect(isDaily20260907QaHeld("jfe-steel", "anything")).toBe(false);
+    expect(isDaily20260907QaHeld("stupp", "anything")).toBe(false);
   });
 
   it("uses on-disk local JPGs only (no remotes, no stock, no AI badges)", () => {
+    const rawBySlug = new Map(
+      (rawDaily as { products: { supplier_slug_guess: string }[] }).products.map(
+        (p) => [p.supplier_slug_guess, p],
+      ),
+    );
     for (const p of listerDaily20260907Products) {
       expect(p.images.length, p.name).toBeGreaterThan(0);
       expect(p.aiGeneratedImage).toBe(false);
       expect(scrapedToProduct(p).aiGeneratedImage).toBeFalsy();
+      const guess =
+        [...rawBySlug.keys()].find((slug) => p.id.includes(`lister-b7-${slug}-`)) ??
+        p.supplierId;
+      const dir = join(process.cwd(), "public", "images", "products", guess);
+      expect(existsSync(dir), dir).toBe(true);
       for (const url of p.images) {
         expect(url.toLowerCase()).not.toContain(".pdf");
         expect(/^https?:\/\//i.test(url), url).toBe(false);
@@ -189,13 +278,8 @@ describe("Lister daily expansion 2026-09-07 V2 (9 SKUs)", () => {
         "/images/products/jfe-steel/jfe-structural-pipe.jpg",
       ]),
     );
-    expect(
-      byName.get("O-I Glass Food and Beverage Glass Containers")?.images,
-    ).toEqual(
-      expect.arrayContaining([
-        "/images/products/oi-glass/oi-glass-containers.jpg",
-        "/images/products/oi-glass/oi-beverage-glass.jpg",
-      ]),
+    expect(byName.get("Stupp DSAW / Spiral-Weld Oil & Gas Line Pipe")?.images.length).toBeGreaterThan(
+      0,
     );
   });
 
