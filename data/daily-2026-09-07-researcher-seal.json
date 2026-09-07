@@ -1,0 +1,182 @@
+{
+  "label": "QA-DAILY-2026-09-07-RESEARCHER",
+  "sealed_at_utc": "2026-09-07T17:07:07.711516+00:00",
+  "sealed_at_pt": "2026-09-07 ~10:06 PT",
+  "wire_full_pack": false,
+  "counts": {
+    "Tube & Pipes": 12,
+    "Industrial Parts": 12,
+    "Packaging": 10,
+    "Hardware & Motion": 6,
+    "Steel & Metals": 5,
+    "Cables & Electrical": 3,
+    "Construction": 2,
+    "total": 50
+  },
+  "duplicates_vs_exclude": [],
+  "traders": [],
+  "hold_do_not_wire": [
+    {
+      "slug": "berg-pipe",
+      "reason": "tobacco/smoking pipe stills + unrelated archive plates \u2014 not Berg Pipe mill"
+    },
+    {
+      "slug": "mueller-industries",
+      "reason": "archaeological clay pipe artifact \u2014 not Mueller copper tube mill"
+    },
+    {
+      "slug": "saudi-steel-pipe",
+      "reason": "nature macro (assassin bug) \u2014 not SSP plant"
+    },
+    {
+      "slug": "stupp",
+      "reason": "hillside village/terraces \u2014 not Stupp pipe mill"
+    },
+    {
+      "slug": "alleima",
+      "reason": "HVAC heat-exchanger diagram (paul-lueftung.de) \u2014 not Alleima"
+    },
+    {
+      "slug": "webco",
+      "reason": "same HVAC diagram as Alleima \u2014 not Webco"
+    },
+    {
+      "slug": "interpipe",
+      "reason": "abstract rust artwork \u2014 no plant"
+    },
+    {
+      "slug": "corinth-pipeworks",
+      "reason": "Greece admin map only"
+    },
+    {
+      "slug": "american-spiralweld",
+      "reason": "1950 Armco archive forms \u2014 wrong company"
+    },
+    {
+      "slug": "tpco",
+      "reason": "metro/train stills only \u2014 no TPCO mill"
+    },
+    {
+      "slug": "aptar",
+      "reason": "pulp/wood mill aerials \u2014 wrong entity for Aptar dispensing"
+    },
+    {
+      "slug": "encore-wire",
+      "reason": "framed mineral artwork / unrelated cable macro \u2014 no Encore plant"
+    },
+    {
+      "slug": "flsmidth",
+      "reason": "oil painting \u2014 not FLSmidth plant"
+    },
+    {
+      "slug": "wartsila",
+      "reason": "cruise ship (Carnival Dream) \u2014 not W\u00e4rtsil\u00e4 works"
+    },
+    {
+      "slug": "abb",
+      "reason": "Formula E / trains sponsor stills \u2014 not ABB plant"
+    },
+    {
+      "slug": "shougang",
+      "reason": "CCTV news van / park \u2014 not Shougang mill"
+    },
+    {
+      "slug": "severstal",
+      "reason": "hockey rink only"
+    },
+    {
+      "slug": "nkt",
+      "reason": "vintage portrait + illustration \u2014 no NKT cable plant"
+    },
+    {
+      "slug": "pca",
+      "reason": "wrong campus (multi-tenant / Altoids-style UK park) \u2014 not Packaging Corp of America"
+    }
+  ],
+  "soft_wire_ok_improve_later": [
+    {
+      "slug": "jfe-steel",
+      "note": "drop HQ _01; promote blast-furnace _02+; category soft\u2192Steel & Metals"
+    },
+    {
+      "slug": "upm",
+      "note": "promote Blandin mill sibling over HQ"
+    },
+    {
+      "slug": "sika",
+      "note": "drop lithograph _01; use IBC warehouse _02"
+    },
+    {
+      "slug": "sig-group",
+      "note": "promote Industrieareal plant over vintage tram"
+    },
+    {
+      "slug": "oji",
+      "note": "HQ tower branded \u2014 OK soft"
+    },
+    {
+      "slug": "nippon-paper",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "sealed-air",
+      "note": "HQ campus soft"
+    },
+    {
+      "slug": "emerson",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "eaton",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "alfalaval",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "minebeamitsumi",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "omron",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "nabtesco",
+      "note": "HQ soft"
+    },
+    {
+      "slug": "us-steel",
+      "note": "drop skyscraper _01; promote mill _02"
+    },
+    {
+      "slug": "ingersoll-rand",
+      "note": "1930 ad soft"
+    },
+    {
+      "slug": "dongkuk-steel",
+      "note": "gear macro soft"
+    }
+  ],
+  "sealed_wire_ok": [
+    "tubacex",
+    "sappi",
+    "ardagh",
+    "oi-glass",
+    "sandvik",
+    "metso",
+    "fanuc",
+    "andritz",
+    "sick",
+    "phoenix-contact",
+    "furukawa-electric",
+    "thyssenkrupp",
+    "nachi"
+  ],
+  "notes": [
+    "Mill identities OK (no pure traders; no exclude dupes).",
+    "Commons wrong-entity scrape poisoned Tube & Pipes (~9/12 HOLD) plus several packaging/cables/steel primaries.",
+    "Do NOT wire full 50. Wire sealed + soft only; Lister re-fetch plant stills for HOLD list before append."
+  ]
+}
