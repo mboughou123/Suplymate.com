@@ -1,10 +1,10 @@
 /**
- * Daily expansion 2026-09-07 — 31 sealed + soft mills for /suppliers.
+ * Daily expansion 2026-09-07 — 47 sealed + soft + HOLD19 OK/SOFT mills for /suppliers.
  *
  * Metadata: data/daily-2026-09-07-suppliers.json
  * Factory stills: public/images/suppliers/<slug>/*.jpg
  *
- * Partial pack: researcher HOLD 19 are omitted (no folders, not in JSON).
+ * Partial pack: remaining HOLD/blocked (shougang, stupp, interpipe) omitted.
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
  *          never invent FOB.
  */

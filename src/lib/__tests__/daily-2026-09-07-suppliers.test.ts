@@ -11,11 +11,30 @@ import { collectFactoryPhotoUrls } from "@/lib/phase1";
 import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getFallbackSupplierIds } from "@/lib/data-service";
 
+const CLEARED_HOLD19 = [
+  "berg-pipe",
+  "saudi-steel-pipe",
+  "alleima",
+  "webco",
+  "corinth-pipeworks",
+  "tpco",
+  "encore-wire",
+  "nkt",
+  "pca",
+  "flsmidth",
+  "wartsila",
+  "abb",
+  "severstal",
+  "mueller-industries",
+  "american-spiralweld",
+  "aptar",
+] as const;
+
 describe("daily 2026-09-07 partial mill directory", () => {
-  it("loads 31 sealed+soft mills with unique unused-slug ids", () => {
-    expect(daily20260907Suppliers).toHaveLength(31);
-    expect(new Set(daily20260907Suppliers.map((s) => s.id)).size).toBe(31);
-    expect(DAILY_20260907_SLUGS).toHaveLength(31);
+  it("loads 47 sealed+soft+HOLD19 OK/SOFT mills with unique unused-slug ids", () => {
+    expect(daily20260907Suppliers).toHaveLength(47);
+    expect(new Set(daily20260907Suppliers.map((s) => s.id)).size).toBe(47);
+    expect(DAILY_20260907_SLUGS).toHaveLength(47);
     for (const slug of DAILY_20260907_SLUGS) {
       expect(dailySupplierIdForSlug20260907(slug)).toBe(slug);
     }
@@ -25,9 +44,23 @@ describe("daily 2026-09-07 partial mill directory", () => {
     );
   });
 
-  it("omits the 19 researcher HOLD slugs", () => {
+  it("includes the 16 Researcher-cleared HOLD19 OK+SOFT mills", () => {
     const ids = new Set(daily20260907Suppliers.map((s) => s.id));
-    expect(DAILY_20260907_HOLD_SLUGS).toHaveLength(19);
+    expect(CLEARED_HOLD19).toHaveLength(16);
+    for (const slug of CLEARED_HOLD19) {
+      expect(ids.has(slug), slug).toBe(true);
+      expect(
+        existsSync(join(process.cwd(), "public", "images", "suppliers", slug)),
+        slug,
+      ).toBe(true);
+    }
+    expect(ids.has("berg-pipe")).toBe(true);
+    expect(ids.has("aptar")).toBe(true);
+  });
+
+  it("omits remaining HOLD/blocked (shougang, stupp, interpipe)", () => {
+    const ids = new Set(daily20260907Suppliers.map((s) => s.id));
+    expect(DAILY_20260907_HOLD_SLUGS).toHaveLength(3);
     for (const slug of DAILY_20260907_HOLD_SLUGS) {
       expect(ids.has(slug), slug).toBe(false);
       expect(
@@ -35,10 +68,12 @@ describe("daily 2026-09-07 partial mill directory", () => {
         slug,
       ).toBe(false);
     }
-    expect(ids.has("berg-pipe")).toBe(false);
+    expect(ids.has("shougang")).toBe(false);
+    expect(ids.has("stupp")).toBe(false);
+    expect(ids.has("interpipe")).toBe(false);
   });
 
-  it("uses local factory stills for all 31 mills", () => {
+  it("uses local factory stills for all 47 mills", () => {
     expect(daily20260907Suppliers.every((s) => (s.supplierImages?.length ?? 0) > 0)).toBe(
       true,
     );
@@ -94,6 +129,10 @@ describe("daily 2026-09-07 partial mill directory", () => {
     expect(ids.has("jfe-steel")).toBe(true);
     expect(ids.has("nachi")).toBe(true);
     expect(ids.has("saint-gobain")).toBe(true);
-    expect(ids.has("berg-pipe")).toBe(false);
+    expect(ids.has("berg-pipe")).toBe(true);
+    expect(ids.has("aptar")).toBe(true);
+    expect(ids.has("shougang")).toBe(false);
+    expect(ids.has("stupp")).toBe(false);
+    expect(ids.has("interpipe")).toBe(false);
   });
 });

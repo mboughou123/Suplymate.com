@@ -1,8 +1,9 @@
 /**
- * Daily 2026-09-07 partial mill ids — sealed + soft only (31).
+ * Daily 2026-09-07 mill ids — sealed + soft + HOLD19 OK/SOFT (47).
  * Kept free of Node fs so client sort can import it.
  * Prefer the slug when unused by phase-1 / 09-02 / 09-03; otherwise
- * `daily-20260907-<slug>`. HOLD 19 are not in this list.
+ * `daily-20260907-<slug>`. Remaining HOLD/blocked (shougang, stupp, interpipe)
+ * are not in this list.
  */
 
 import { PHASE1_SUPPLIER_IDS } from "@/lib/phase1";
@@ -47,29 +48,29 @@ export const DAILY_20260907_SLUGS = [
   "dongkuk-steel",
   "yaskawa",
   "saint-gobain",
-] as const;
-
-/** Researcher HOLD slugs — do not wire. */
-export const DAILY_20260907_HOLD_SLUGS = [
   "berg-pipe",
-  "mueller-industries",
   "saudi-steel-pipe",
-  "stupp",
   "alleima",
   "webco",
-  "interpipe",
   "corinth-pipeworks",
-  "american-spiralweld",
   "tpco",
-  "aptar",
   "encore-wire",
+  "nkt",
+  "pca",
   "flsmidth",
   "wartsila",
   "abb",
-  "shougang",
   "severstal",
-  "nkt",
-  "pca",
+  "mueller-industries",
+  "american-spiralweld",
+  "aptar",
+] as const;
+
+/** Remaining researcher HOLD / blocked — do not wire. */
+export const DAILY_20260907_HOLD_SLUGS = [
+  "shougang",
+  "stupp",
+  "interpipe",
 ] as const;
 
 const RESERVED_IDS: ReadonlySet<string> = new Set<string>([
