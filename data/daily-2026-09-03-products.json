@@ -1,0 +1,1441 @@
+{
+  "generated_at_utc": "2026-09-03T05:21:59Z",
+  "generated_at_pt": "2026-09-02 22:21 PT",
+  "date": "2026-09-03",
+  "notes": [
+    "NEW SKUs vs phase-1 product-media + product-gaps-fill*.json + daily/2026-09-02/products.json.",
+    "Prefer existing mills (phase-1 + 2026-09-02). Zero new mills in this pack.",
+    "Bias: Tube & Pipes, Packaging, Industrial Parts; also fill empty/thin 2026-09-02 mills.",
+    "Prices only from public mill listings \u2014 none captured; all RFQ. Never invent.",
+    "needs_ai_generate is true only when no real local photo exists.",
+    "Post-pass: YUTO local images reordered to mill packaging product photography (rigid/consumer packs); Ball campus/wind-turbine mill photos demoted in favor of aluminum can product photos."
+  ],
+  "products": [
+    {
+      "product_name": "Youfa Hot-Dip Galvanized ERW Steel Pipe (DN15\u2013DN300)",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/15.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill product page for hot-dip galvanized steel pipe (DN15\u2013DN300, water/gas/steam). No public mill unit/FOB list captured; do not invent GI pipe prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/72f55679-9daa-43d5-86ac-12a654fddbaf.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/58aec34e-f12b-4c4e-b859-8e02ae3b1a0b.jpg",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/33e3fa94-52e9-4e7b-bb5e-57b11e6d7760.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-erw-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/youfa-yard.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-pipe-73.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Straight-Seam High-Frequency Welded (ERW/HFW) Steel Pipe",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/75.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill page for straight-seam HFW/ERW pipe (DN15\u2013DN300, fluids and mechanical). Distinct from HDG SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/d867a6cf-03a9-4076-8423-b35252c766a1.jpg",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/f56ef96b-d6ba-443f-945a-486bad45c5b6.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/erw-hfw-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/erw-pipe-17.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Square and Rectangular Welded Hollow Sections",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/69.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill SHS/RHS welded hollow sections (25\u2013400 mm). Structural mill quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/30cd0059-f641-454e-a86c-031620935eb4.jpg",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/264f0dc5-f45b-46f0-9e9f-942e9dd142cb.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/shs-rhs-welded.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/youfa-hollow.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Hot-Dip Galvanized Rectangular / Square Tube",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/72.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill HDG rectangular/square tube (curtain wall, PV, steel structure). Distinct from black SHS SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/f2e42758-0539-48ea-ad9f-a412fea6e2ba.jpg",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/7dd0976a-e0d9-44fa-a4bf-3fd335c4137f.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-rectangular-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-rhs-14.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Spiral Seam Double-Sided SAW (SSAW) Steel Pipe",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/71.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill SSAW/spiral double-sided SAW pipe. Project-quoted; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/fe0c5016-e278-4c02-81e4-7840cb867d7b.jpg",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/31bcd69b-ff69-4988-b25e-9678f13649a8.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/ssaw-spiral-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/ssaw-13.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Plastic-Coated Composite Steel Pipe",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/16.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill plastic-coated composite steel pipe. Distinct from HDG/ERW/SSAW SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/0600f90b-f871-44bd-ba97-0726c8279822.png",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/20c28647-201e-4845-a7c3-70c27327625a.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/plastic-coated-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/coated-74.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Steel Pipe Fittings",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/70.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill pipe-fittings page. Quoted with pipe lots; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/59316ac6-5cff-40e7-b42f-7e831895fd0d.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/pipe-fittings.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/pipe-fittings-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Youfa Firefighting Steel Pipe",
+      "supplier_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "supplier_slug_guess": "youfa",
+      "category": "Tube & Pipes",
+      "source_url": "https://en.yfgg.com/prodetails/76.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Youfa mill firefighting pipe page. Distinct from general HDG/ERW SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/05aadd05-7ff2-4081-8341-dbf991e5d6f5.jpg",
+        "https://omo-oss-image1.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/4e99caab-1ada-4f39-af43-42ee4d4ef8f5.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/firefighting-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/gas-pipeline.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli Austenitic Stainless Steel Seamless Pipe / Tube (ASTM A312 / A269)",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/668.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill austenitic SS pipe/tube page (ASTM A312/A269/A249 and GB equivalents). Project-quoted; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606457916_4867.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606457938_1449.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/austenitic-ss-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/jiuli-ss-mill.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli (Super) Duplex Stainless Steel Pipe / Tube (ASTM A789 / A790)",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/670.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill duplex/super-duplex pipe page (S31803/S32750, ASTM A789/A790). Distinct from austenitic SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606457970_4981.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606381776_6361.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/duplex-ss-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/duplex-mill.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli Corrosion and High-Temperature Resistant Alloy Pipe",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/671.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill nickel/CRA high-temperature alloy pipe page. Distinct from SS SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606381752_3933.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606381731_5974.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/cra-alloy-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/nickel-alloy-pipe.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli Titanium Alloy Tube",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/674.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill titanium-alloy tube page. Distinct from SS/CRA SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606381662_1640.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606457916_4867.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/titanium-alloy-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/ti-mill.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli Bimetal Composite Pipe",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/672.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill bimetal composite (clad/lined) pipe page. Distinct from solid-alloy SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606457938_1449.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606381776_6361.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/bimetal-composite-pipe.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/clad-pipe.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Jiuli Non-Standard Butt-Weld Pipe Fittings",
+      "supplier_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "supplier_slug_guess": "jiuli",
+      "category": "Tube & Pipes",
+      "source_url": "http://en.jiuli.com/en/product/675.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiuli mill non-standard pipe-fitting series. Quoted with CRA/SS pipe lots; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.jiuli.com/upload/image/2020/11/1606457970_4981.jpg",
+        "http://en.jiuli.com/upload/image/2020/11/1606381752_3933.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/butt-weld-fittings.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/jiuli-fittings.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tenaris Seamless Line Pipe (Onshore / Offshore)",
+      "supplier_name": "Tenaris S.A.",
+      "supplier_slug_guess": "tenaris",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tenaris.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tenaris pipeline solutions / line pipe (distinct from existing OCTG casing/tubing and TenarisHydril Blue SKUs). Project-quoted; no public mill unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tenaris.com/media/5fdbw5d3/animated-hero-static.jpg?v=1db50eb566b4990",
+        "https://www.tenaris.com/media/vrzpjauc/aboutus_hero.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/line-pipe-hero.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/aboutus-hero.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tenaris Coiled Tubing and Industrial Pipe",
+      "supplier_name": "Tenaris S.A.",
+      "supplier_slug_guess": "tenaris",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tenaris.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tenaris coiled tubing / industrial pipe line (mill_index product line). Distinct from OCTG and line-pipe SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tenaris.com/media/w0ocw23c/perforating-guns.jpg?v=1d5ecc146dd9e30",
+        "https://www.tenaris.com/media/iy3eumdl/hero-22.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/coiled-tubing.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/industrial-pipe.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Vallourec Industrial and Mechanical Seamless Tubes",
+      "supplier_name": "Vallourec S.A.",
+      "supplier_slug_guess": "vallourec",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.vallourec.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Vallourec industry-market seamless tubes (mechanical/industrial), distinct from existing VAM OCTG and O&G line-pipe SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.vallourec.com/app/uploads/2025/04/homepage-vallourec-markets-industry.jpg",
+        "https://www.vallourec.com/app/uploads/2023/09/corp-solutions-oil-gas-filetage-de-VAM.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/industrial-seamless.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/vam-thread.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Vallourec New-Energy / Hydrogen Seamless Tubulars",
+      "supplier_name": "Vallourec S.A.",
+      "supplier_slug_guess": "vallourec",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.vallourec.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Vallourec new-energy and hydrogen tubulars (mill homepage market). Distinct from OCTG and line-pipe SKUs. Project-quoted; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.vallourec.com/app/uploads/2025/04/homepage-vallourec-markets-new-energy-hydrogen.jpg",
+        "https://www.vallourec.com/app/uploads/2025/04/homepage-vallourec-markets-oil-and-gas.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/hydrogen-tubulars.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/og-market.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "YUTO Custom Rigid Gift and Consumer Packaging Boxes",
+      "supplier_name": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "supplier_slug_guess": "yuto",
+      "category": "Packaging",
+      "source_url": "https://weben.szyuto.com/product.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 YUTO mill packaging (rigid gift/consumer boxes for brand programs). Custom converting quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://weben.szyuto.com/file/pic/20240820161253657340.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-rigid-packaging-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/rigid-gift-boxes.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "YUTO Folding Cartons and Corrugated Packaging",
+      "supplier_name": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "supplier_slug_guess": "yuto",
+      "category": "Packaging",
+      "source_url": "https://weben.szyuto.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 YUTO folding cartons and corrugated (mill product lines). Distinct from rigid-box SKU. Custom quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://weben.szyuto.com/file/pic/20240820161105103060.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-rigid-packaging-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/folding-cartons.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "YUTO Electronics and Consumer-Electronics Packaging",
+      "supplier_name": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "supplier_slug_guess": "yuto",
+      "category": "Packaging",
+      "source_url": "https://weben.szyuto.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 YUTO electronics/CE packaging programs (mill site photography). Distinct from gift-box and carton SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://weben.szyuto.com/file/pic/20241026022316713341.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-rigid-packaging-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/electronics-packaging.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "YUTO Plant-Fibre / Sustainable Packaging",
+      "supplier_name": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "supplier_slug_guess": "yuto",
+      "category": "Packaging",
+      "source_url": "https://weben.szyuto.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 YUTO plant-fibre packaging line (mill product lines). Distinct from rigid/carton/CE SKUs. Custom quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://weben.szyuto.com/file/pic/20260430092433354942.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-rigid-packaging-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-2026.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Greif Tight-Head and Open-Head Steel Drums",
+      "supplier_name": "Greif, Inc.",
+      "supplier_slug_guess": "greif",
+      "category": "Packaging",
+      "source_url": "https://www.greif.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Greif industrial packaging: steel drums (tight-head/open-head). Mill/project quote; no public unit/FOB list on greif.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.greif.com/wp-content/uploads/2021/11/market-commodity-chemicals-1.jpg",
+        "https://www.greif.com/wp-content/uploads/2021/11/market-lubricants-petrochemicals-1.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Drum_(container).jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drums-chemicals.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drums-lubes.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drum-commons.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Greif Intermediate Bulk Containers (IBC)",
+      "supplier_name": "Greif, Inc.",
+      "supplier_slug_guess": "greif",
+      "category": "Packaging",
+      "source_url": "https://www.greif.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Greif IBC line (mill industrial packaging). Distinct from steel-drum SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.greif.com/wp-content/uploads/2024/03/iStock-1275786906-scaled.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Empty_IBC.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/1000L_Powder_IBCs.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/ibc-industrial.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/empty-ibc.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/powder-ibc.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Greif Fibre Drums, Tubes and Cores",
+      "supplier_name": "Greif, Inc.",
+      "supplier_slug_guess": "greif",
+      "category": "Packaging",
+      "source_url": "https://www.greif.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Greif fibre drums / tubes / cores (mill product lines). Distinct from steel drums and IBCs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.greif.com/wp-content/uploads/2021/11/market-paints-coatings-ink-1.jpg",
+        "https://www.greif.com/wp-content/uploads/2021/11/health-beauty-compress.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/fibre-drums-paints.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/fibre-health.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Ball Aluminum Beverage Cans",
+      "supplier_name": "Ball Corporation",
+      "supplier_slug_guess": "ball",
+      "category": "Packaging",
+      "source_url": "https://www.ball.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Ball aluminum beverage cans (mill packaging). Brand-owner programs; no public mill unit/FOB list. Commons photos are generic aluminum cans, not a competing beverage brand SKU.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/ff/Drinking_can_ring-pull_tab.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/can-tab.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Ball Aluminum Aerosol Cans",
+      "supplier_name": "Ball Corporation",
+      "supplier_slug_guess": "ball",
+      "category": "Packaging",
+      "source_url": "https://www.ball.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Ball aerosol aluminum packaging (company packaging portfolio). Distinct from beverage-can SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/ff/Drinking_can_ring-pull_tab.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/aerosol-cans.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/aerosol-aluminum-secondary.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tetra Pak Tetra Brik Aseptic Carton Packages",
+      "supplier_name": "Tetra Pak International S.A.",
+      "supplier_slug_guess": "tetra-pak",
+      "category": "Packaging",
+      "source_url": "https://www.tetrapak.com/solutions/packaging/packages/aseptic-packages/tetra-brik-aseptic",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tetra Brik Aseptic (80\u20132000 ml) is sold as a packaging system with filling machines; no public per-carton mill list price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Tetra_Pak_FamilyPortfolio_NaturesPaperDesign2010.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-brik-family.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-brik-family-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Tetra Pak Tetra Prisma Aseptic Carton Packages",
+      "supplier_name": "Tetra Pak International S.A.",
+      "supplier_slug_guess": "tetra-pak",
+      "category": "Packaging",
+      "source_url": "https://www.tetrapak.com/solutions/packaging",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tetra Prisma Aseptic is a distinct carton family vs Tetra Brik. System/project quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Tetra_Pak_FamilyPortfolio_NaturesPaperDesign2010.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-prisma-family.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Huhtamaki Moulded-Fibre Packaging (Egg / Tableware / Foodservice)",
+      "supplier_name": "Huhtam\u00e4ki Oyj",
+      "supplier_slug_guess": "huhtamaki",
+      "category": "Packaging",
+      "source_url": "https://www.huhtamaki.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Huhtamaki moulded-fibre packaging (mill product line). Distinct from existing foodservice paper/fiber SKU (cups/lids). Custom quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huhtamaki.com/globalassets/global/home/hero-home-picnic-mobile.jpg",
+        "https://www.huhtamaki.com/contentassets/06895f2a9ce749068740d043bddb1847/huhtamaki_safety_hml26_0038~3.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/moulded-fibre-picnic.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/huhtamaki-safety.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Huhtamaki Flexible Food Packaging Films and Pouches",
+      "supplier_name": "Huhtam\u00e4ki Oyj",
+      "supplier_slug_guess": "huhtamaki",
+      "category": "Packaging",
+      "source_url": "https://www.huhtamaki.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Huhtamaki flexible food packaging (mill product line). Distinct from foodservice paper and moulded-fibre SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.huhtamaki.com/contentassets/2cd29019a3f74f8cbb69a75778638720/website.jpg",
+        "https://www.huhtamaki.com/globalassets/global/home/hero-home-picnic-mobile.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/flexible-food-pack.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/picnic-flex.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Amcor Healthcare and Medical Flexible Packaging",
+      "supplier_name": "Amcor plc",
+      "supplier_slug_guess": "amcor",
+      "category": "Packaging",
+      "source_url": "https://www.amcor.com/products",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Amcor healthcare/medical flexible packaging (distinct from existing rigid custom and general flexible films/pouches SKUs). Program quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.ctfassets.net/f7tuyt85vtoa/5QCB3Oy84nSZq8ZlQTMBh8/f3e1844d1a0e79a37a67bf72a3ebdf03/AmLite-FB0015-HeatReady-RR_01.Hero__1_.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amlite-heatready.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/healthcare-packaging-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amlite-heatready-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Amcor AmPrima Recycle-Ready Paper Packaging",
+      "supplier_name": "Amcor plc",
+      "supplier_slug_guess": "amcor",
+      "category": "Packaging",
+      "source_url": "https://www.amcor.com/products",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Amcor AmPrima / performance-paper packaging (mill Contentful product photography). Distinct from rigid and healthcare SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://images.ctfassets.net/f7tuyt85vtoa/7g8YLwREtULb25lO9Hvlpu/fd90c8c98415fb2da94ed4583790b3a3/FB0058-main-1-Performance-paper.png",
+        "https://images.ctfassets.net/f7tuyt85vtoa/5qLtQY0WU1LKs8Mlo5L9Pd/8f6658a2e74871bf63fcb1dc2bf4aa79/AmPrima-FB0057-pillow-bag-chips__1_.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amprima-paper.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amprima-pillow.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Mondi Corrugated Packaging and Containerboard Solutions",
+      "supplier_name": "Mondi plc",
+      "supplier_slug_guess": "mondi",
+      "category": "Packaging",
+      "source_url": "https://www.mondigroup.com/products-and-solutions/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mondi corrugated / containerboard solutions (distinct from existing SmartKraft White kraft and FlexiBag SKUs). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/mondi/corrugated-fibre-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/mondi/smartkraft-board-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "International Paper Containerboard and Corrugated Solutions",
+      "supplier_name": "International Paper Company",
+      "supplier_slug_guess": "international-paper",
+      "category": "Packaging",
+      "source_url": "https://www.internationalpaper.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 IP containerboard/corrugated converting (homepage packaging solutions). Distinct extra vs existing leak-resistant corrugated SKU emphasis. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.internationalpaper.com/sites/default/files/styles/x_large_hq/public/image/2023-02/Homepage%20Hero%20Fav%20Complete.jpg",
+        "https://www.internationalpaper.com/sites/default/files/styles/small_hq/public/image/2023-02/Packaging%20Solutions%20Teaser%20Complete.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/international-paper/ip-hero.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/international-paper/ip-packaging-teaser.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Smurfit Westrock Sustainable Packaging Design and Containerboard",
+      "supplier_name": "Smurfit Westrock plc",
+      "supplier_slug_guess": "smurfit-westrock",
+      "category": "Packaging",
+      "source_url": "https://www.smurfitwestrock.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Smurfit Westrock containerboard / sustainable packaging design (distinct extra vs existing corrugated+paper-bags SKU). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.smurfitwestrock.com/-/m/images/smurfit-westrock/image-text-teaser-680-x-450/sustainable-packaging-design.jpg",
+        "https://www.smurfitwestrock.com/-/m/images/smurfit-westrock/hero-banner-740x740/experience-center-discussion.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/smurfit-westrock/sw-sustainable-design.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/smurfit-westrock/sw-experience.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SKF Explorer Deep Groove Ball Bearings",
+      "supplier_name": "AB SKF",
+      "supplier_slug_guess": "skf",
+      "category": "Industrial Parts",
+      "source_url": "https://www.skf.com/group/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SKF Explorer deep groove ball bearings. Catalogue/application quote via SKF; no public mill unit list on skf.com product pages.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/1950s_ball_bearing_129_HA_by_Swedish_company_SKF_made_in_Sweden.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/skf-dgbb-1950s.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/skf-dgbb-1950s-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/kugellager-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SKF Explorer Spherical Roller Bearings",
+      "supplier_name": "AB SKF",
+      "supplier_slug_guess": "skf",
+      "category": "Industrial Parts",
+      "source_url": "https://www.skf.com/group/products/rolling-bearings/roller-bearings/spherical-roller-bearings",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SKF Explorer spherical roller bearings (invented by SKF; Wingquist design). Distinct from DGBB SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/spherical-cutaway-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "LYC Deep Groove Ball Bearings",
+      "supplier_name": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "supplier_slug_guess": "lyc-bearing",
+      "category": "Industrial Parts",
+      "source_url": "https://www.lycbearing.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 LYC (Luoyang Bearing Group) deep groove ball bearings. Mill catalogue quote; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-dgbb-1-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-dgbb-2-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "LYC Spherical Roller Bearings",
+      "supplier_name": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "supplier_slug_guess": "lyc-bearing",
+      "category": "Industrial Parts",
+      "source_url": "https://www.lycbearing.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 LYC spherical roller bearings (mill product banners). Distinct from DGBB SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-spherical-2-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-spherical-2-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "LYC Large Industrial / Rolling-Mill Bearings",
+      "supplier_name": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "supplier_slug_guess": "lyc-bearing",
+      "category": "Industrial Parts",
+      "source_url": "https://www.lycbearing.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 LYC large industrial and rolling-mill bearings (mill banners). Distinct from DGBB/spherical SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://res.lycbearing.com/upload/blockBanner/20161018/2016JROtwhpXYR.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20210730/2021GdLjgcGkaC.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20161018/2016JRPf2GANab.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-mill-bearings.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-large-2.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-large-3.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shakti Solar Pumping Systems (Surface and Submersible)",
+      "supplier_name": "Shakti Pumps (India) Limited",
+      "supplier_slug_guess": "shakti-pumps",
+      "category": "Industrial Parts",
+      "source_url": "https://shaktipumps.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shakti solar pumping systems (mill products page). Project/MNRE-style quote; no public mill unit list captured.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shaktipumps.com/products/img/Shakti_Solar_Bunch_with_simha_Kalpavriksha.png",
+        "https://shaktipumps.com/wp-content/uploads/2025/08/solar-series-1.webp",
+        "https://shaktipumps.com/wp-content/uploads/2025/08/solar-series-2.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-bunch.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-series-1.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-series-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shakti Submersible Pumps and Motors",
+      "supplier_name": "Shakti Pumps (India) Limited",
+      "supplier_slug_guess": "shakti-pumps",
+      "category": "Industrial Parts",
+      "source_url": "https://shaktipumps.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shakti submersible pumps/motors (mill products page). Distinct from solar-system SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shaktipumps.com/products/img/submersible-pump.png",
+        "https://shaktipumps.com/products/img/submersible-motor.png",
+        "https://shaktipumps.com/products/img/submersible-pump.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-pump.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-motor.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-jpg.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shakti Vertical and Industrial Centrifugal Pumps",
+      "supplier_name": "Shakti Pumps (India) Limited",
+      "supplier_slug_guess": "shakti-pumps",
+      "category": "Industrial Parts",
+      "source_url": "https://shaktipumps.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shakti vertical / industrial centrifugal pumps (mill products + industry-pro photography). Distinct from solar and borehole SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://shaktipumps.com/products/img/verticle-pumps.jpg",
+        "https://shaktipumps.com/products/img/50hz-SRN-pumps.png",
+        "https://shaktipumps.com/wp-content/uploads/2025/08/industry-pro-1.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/vertical-pumps.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/srn-50hz.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/industry-pro.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "KSB Etanorm Standardized Water Pumps",
+      "supplier_name": "KSB SE & Co. KGaA",
+      "supplier_slug_guess": "ksb",
+      "category": "Industrial Parts",
+      "source_url": "https://www.ksb.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 KSB Etanorm / standardized water pumps (distinct from existing generic 'standard water and process pumps' SKU \u2014 named Etanorm line). Factory quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/etanorm-commons-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/etanorm-commons-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "KSB Industrial Valves (Globe / Butterfly / Gate)",
+      "supplier_name": "KSB SE & Co. KGaA",
+      "supplier_slug_guess": "ksb",
+      "category": "Industrial Parts",
+      "source_url": "https://www.ksb.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 KSB industrial valves (mill product line, distinct from pump SKUs). Project quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/ksb-valves-fallback-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Timken Spherical Roller Bearings",
+      "supplier_name": "The Timken Company",
+      "supplier_slug_guess": "timken",
+      "category": "Industrial Parts",
+      "source_url": "https://www.timken.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Timken spherical roller bearings (distinct from existing tapered-roller SKU). Catalogue quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/envirospexx-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/bearing-cutaway-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Timken Housed / Mounted Bearing Units",
+      "supplier_name": "The Timken Company",
+      "supplier_slug_guess": "timken",
+      "category": "Industrial Parts",
+      "source_url": "https://www.timken.com/products/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Timken mounted/housed bearing units (mill product lines). Distinct from tapered and spherical SKUs. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.timken.com/wp-content/uploads/2021/11/engineeredl_portfolio-1.jpg",
+        "https://www.timken.com/wp-content/uploads/2026/05/Automation-and-Robotics-Box-Image.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/mounted-units.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/automation-bearings.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "WILO Stratos High-Efficiency Circulator Pumps",
+      "supplier_name": "WILO SE",
+      "supplier_slug_guess": "wilo",
+      "category": "Industrial Parts",
+      "source_url": "https://wilo.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 WILO Stratos / building-services circulators (distinct from existing Helix vertical multistage SKU). No public unit price on wilo.com.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cms.media.wilo.com/cdnpic/wilo741209/10338783/wilo741209_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo744990/10338740/wilo744990_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo108932/1224271/wilo108932_696x625.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/stratos-circulator.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-building-2.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-helix-alt.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "WILO Wastewater and Sewage Pumps",
+      "supplier_name": "WILO SE",
+      "supplier_slug_guess": "wilo",
+      "category": "Industrial Parts",
+      "source_url": "https://wilo.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 WILO wastewater/sewage pumps (distinct from Helix and Stratos SKUs). Project quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://cms.media.wilo.com/cdnpic/wilo744995/10338773/wilo744995_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo251879/4192184/wilo251879_696x625.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/sewage-pump.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-wastewater.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "NSK Spherical Roller Bearings",
+      "supplier_name": "NSK Ltd.",
+      "supplier_slug_guess": "nsk",
+      "category": "Industrial Parts",
+      "source_url": "https://www.nsk.com/products/ballbearing/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 NSK spherical roller bearings (distinct from existing DGBB and angular-contact SKUs). Catalogue quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--2292c030-e770-4696-8721-f3996235baf4/p-acbb-2comp.jpg?quality=85",
+        "https://www.nsk.com/adobe/dynamicmedia/deliver/dm-aid--5f7ec27e-bd92-4328-8cfa-4b789ba4288d/p-bb-sa-cut.jpg?quality=85"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nsk/nsk-spherical-comp.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nsk/nsk-cutaway.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Flowserve Butterfly Valves",
+      "supplier_name": "Flowserve Corporation",
+      "supplier_slug_guess": "flowserve",
+      "category": "Industrial Parts",
+      "source_url": "https://www.flowserve.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Flowserve butterfly valves (distinct from existing Argus trunnion ball, Mark 3 pump, and Limitorque actuator SKUs). Project quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/flowserve/butterfly-fallback-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/flowserve/butterfly-fallback-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "POSCO Hot-Rolled Steel Coil and Sheet",
+      "supplier_name": "POSCO",
+      "supplier_slug_guess": "posco",
+      "category": "Steel & Metals",
+      "source_url": "https://www.posco.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 POSCO HRC/sheet (mill product lines). Integrated-mill quote; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-hrc-newsroom-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/gwangyang-works-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "POSCO Electrical Steel (GO / NGO)",
+      "supplier_name": "POSCO",
+      "supplier_slug_guess": "posco",
+      "category": "Steel & Metals",
+      "source_url": "https://www.posco.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 POSCO electrical steel (grain-oriented / non-oriented). Distinct from HRC SKU. No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-commons-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-commons-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "BlueScope COLORBOND Pre-Painted Steel",
+      "supplier_name": "BlueScope Steel Limited",
+      "supplier_slug_guess": "bluescope",
+      "category": "Steel & Metals",
+      "source_url": "https://www.bluescope.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 BlueScope COLORBOND / pre-painted steel. Coil programs quoted by BlueScope; no public unit list captured.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.bluescope.com/adobe/dynamicmedia/deliver/dm-aid--31d8573d-6272-4b2e-bcc0-07758aad5704/how-we-work.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Outokumpu Stainless Steel Coil, Plate and Bar",
+      "supplier_name": "Outokumpu Oyj",
+      "supplier_slug_guess": "outokumpu",
+      "category": "Steel & Metals",
+      "source_url": "https://www.outokumpu.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Outokumpu stainless coil/plate/bar. Mill quote; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://media.ffycdn.net/eu/outokumpu/3Li1woev6CYk5hSW9c9C.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SAIL Rails, Plates and Structural Steel",
+      "supplier_name": "Steel Authority of India Limited (SAIL)",
+      "supplier_slug_guess": "sail",
+      "category": "Steel & Metals",
+      "source_url": "https://www.sail.co.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SAIL rails/plates/structurals from integrated Indian plants. No public mill unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/sail/sail-plate-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/sail/sail-rebar-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Gerdau Merchant Bar and Wire Rod",
+      "supplier_name": "Gerdau S.A.",
+      "supplier_slug_guess": "gerdau",
+      "category": "Steel & Metals",
+      "source_url": "https://www2.gerdau.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Gerdau merchant bar / wire rod (distinct from existing ASTM A615/A706 straight rebar SKU). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www2.gerdau.com/sites/gln_gerdau/files/rebar_banner.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/gerdau/gerdau-bar-rod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/gerdau/gerdau-bar-rod-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nippon Steel Sheets and Coils (Hot / Cold Rolled)",
+      "supplier_name": "Nippon Steel Corporation",
+      "supplier_slug_guess": "nippon-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.nipponsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nippon Steel HR/CR sheet and coil (distinct from existing heavy-plate SKU). No public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.nipponsteel.com/product/plate/__icsFiles/metafile/2025/08/25/plate_im01.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ArcelorMittal Hot-Rolled Coil and Plate",
+      "supplier_name": "ArcelorMittal",
+      "supplier_slug_guess": "arcelormittal",
+      "category": "Steel & Metals",
+      "source_url": "https://corporate.arcelormittal.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ArcelorMittal HRC/plate (distinct from existing IPE sections and UPE channels SKUs). Mill quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/arcelormittal/am-hrc-mill-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/arcelormittal/am-hrc-mill-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Prysmian Energy and Power Cables",
+      "supplier_name": "Prysmian S.p.A.",
+      "supplier_slug_guess": "prysmian",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.prysmian.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Prysmian energy/power cables (empty 0902 mill). Project/utility quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-power-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-power-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Prysmian Optical Fibre and Telecom Cables",
+      "supplier_name": "Prysmian S.p.A.",
+      "supplier_slug_guess": "prysmian",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.prysmian.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Prysmian optical-fibre / telecom cables (distinct from energy-cable SKU). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-optical-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Far East Cable LV / MV Power Cables",
+      "supplier_name": "Far East Cable Co., Ltd.",
+      "supplier_slug_guess": "far-east-cable",
+      "category": "Cables & Electrical",
+      "source_url": "http://en.fe-cable.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Far East Cable LV/MV power cables (empty 0902 mill). No public unit/FOB list captured.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "http://en.fe-cable.com/Upload/image/202208/20220824171345_6760.jpeg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Hengtong Optical Fibre and Power Cable Systems",
+      "supplier_name": "Hengtong Group Co., Ltd.",
+      "supplier_slug_guess": "hengtong",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.hengtonggroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Hengtong optical and power cable systems (empty 0902 mill). No public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.hengtonggroup.com/en/public/upload/file/20230823/8c921366d026f8177fff1c2418787a17.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/hengtong/hengtong-cable.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/hengtong/hengtong-cable-local.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Oman Cables LV / MV Power Cables",
+      "supplier_name": "Oman Cables Industry SAOG",
+      "supplier_slug_guess": "oman-cables",
+      "category": "Cables & Electrical",
+      "source_url": "https://omancables.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Oman Cables LV/MV power cables (empty 0902 mill). GCC project quote; no public unit list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://omancables.com/wp-content/uploads/2026/07/about-us-header.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Finolex Power and Communication Cables",
+      "supplier_name": "Finolex Cables Limited",
+      "supplier_slug_guess": "finolex-cables",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.finolex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Finolex power/communication cables (distinct from existing IS 694 FR PVC house-wire SKU). No public unit price captured for this line.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/finolex-cables/finolex-power-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/finolex-cables/finolex-power-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Interarch Pre-Engineered Steel Building Systems",
+      "supplier_name": "Interarch Building Solutions Limited",
+      "supplier_slug_guess": "interarch",
+      "category": "Construction",
+      "source_url": "https://www.interarchbuildings.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Interarch PEB systems (empty 0902 mill). Project-quoted buildings; no public unit/FOB list.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.interarchbuildings.com/public/frontend/images/pantnagar-banner1.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Holcim ECOPact Low-Carbon Concrete",
+      "supplier_name": "Holcim Ltd",
+      "supplier_slug_guess": "holcim",
+      "category": "Construction",
+      "source_url": "https://www.holcim.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Holcim ECOPact low-carbon concrete (distinct from existing Portland/blended/ECOPlanet cement SKU). Project quote; no public unit price.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.holcim.com/sites/holcim/files/2022-08/holcim_2021_gettyimages_1200044574_isocv2.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shree Cement OPC / PPC Cement",
+      "supplier_name": "Shree Cement Limited",
+      "supplier_slug_guess": "shree-cement",
+      "category": "Construction",
+      "source_url": "https://www.shreecement.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shree Cement OPC/PPC (empty 0902 mill). No public mill bag/unit list captured.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.shreecement.com/uploads/about-us-page/aboutus-banner-lead.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "JSW Cement OPC / Slag Cement",
+      "supplier_name": "JSW Cement Limited",
+      "supplier_slug_guess": "jsw-cement",
+      "category": "Construction",
+      "source_url": "https://www.jswcement.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 JSW Cement OPC / slag cement (empty 0902 mill). No public unit price captured.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jsw-cement/jsw-cement-opc-local.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jsw-cement/jsw-cement-opc-local-2.jpg"
+      ],
+      "needs_ai_generate": false
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/jiangsu-jieyuan-container/1000l-food-grade-ibc-tank-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/jiangsu-jieyuan-container/1000l-food-grade-ibc-tank-2.jpg",
+    "in_size": [
+      1000,
+      293
+    ],
+    "out_size": [
+      1200,
+      351
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/jiangsu-jieyuan-container/1000l-food-grade-ibc-tank.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/jiangsu-jieyuan-container/1000l-food-grade-ibc-tank.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/jiangsu-jieyuan-container/1000l-ibc-tank-for-chemical-transportation-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/jiangsu-jieyuan-container/1000l-ibc-tank-for-chemical-transportation-2.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/jiangsu-jieyuan-container/1000l-ibc-tank-for-chemical-transportation.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/jiangsu-jieyuan-container/1000l-ibc-tank-for-chemical-transportation.jpg",
+    "in_size": [
+      1464,
+      2196
+    ],
+    "out_size": [
+      1464,
+      2196
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/jiangsu-jieyuan-container/500l-horizontal-ibc-tank-fertilizer-storage.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/jiangsu-jieyuan-container/500l-horizontal-ibc-tank-fertilizer-storage.jpg",
+    "in_size": [
+      1806,
+      1369
+    ],
+    "out_size": [
+      1600,
+      1212
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shandong-dingsheng-container/1000l-ibc-tank-container-for-chemical-storage-and-industrial-use-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shandong-dingsheng-container/1000l-ibc-tank-container-for-chemical-storage-and-industrial-use-2.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shandong-dingsheng-container/1000l-ibc-tank-container-for-chemical-storage-and-industrial-use.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shandong-dingsheng-container/1000l-ibc-tank-container-for-chemical-storage-and-industrial-use.jpg",
+    "in_size": [
+      1000,
+      1000
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shandong-dingsheng-container/white-1000l-plastic-ibc-tank-with-steel-cage.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shandong-dingsheng-container/white-1000l-plastic-ibc-tank-with-steel-cage.jpg",
+    "in_size": [
+      1000,
+      1000
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shandong-dingsheng-container/white-anti-static-1000l-ibc-tank-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shandong-dingsheng-container/white-anti-static-1000l-ibc-tank-2.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shandong-dingsheng-container/white-anti-static-1000l-ibc-tank.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shandong-dingsheng-container/white-anti-static-1000l-ibc-tank.jpg",
+    "in_size": [
+      730,
+      730
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/30-up-laser-inkjet-address-labels-avery-5160-template-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/30-up-laser-inkjet-address-labels-avery-5160-template-2.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/30-up-laser-inkjet-address-labels-avery-5160-template.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/30-up-laser-inkjet-address-labels-avery-5160-template.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/4x6-direct-thermal-shipping-label-dymo-4xl-1744907-compatible-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/4x6-direct-thermal-shipping-label-dymo-4xl-1744907-compatible-2.jpg",
+    "in_size": [
+      1500,
+      1500
+    ],
+    "out_size": [
+      1500,
+      1500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/4x6-direct-thermal-shipping-label-dymo-4xl-1744907-compatible.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/4x6-direct-thermal-shipping-label-dymo-4xl-1744907-compatible.jpg",
+    "in_size": [
+      640,
+      640
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/zebra-compatible-blank-thermal-shipping-labels-4x6-250-labels-roll-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/zebra-compatible-blank-thermal-shipping-labels-4x6-250-labels-roll-2.jpg",
+    "in_size": [
+      712,
+      450
+    ],
+    "out_size": [
+      1200,
+      758
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/shangyue-shanghai-printing/zebra-compatible-blank-thermal-shipping-labels-4x6-250-labels-roll.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/shangyue-shanghai-printing/zebra-compatible-blank-thermal-shipping-labels-4x6-250-labels-roll.jpg",
+    "in_size": [
+      1500,
+      1500
+    ],
+    "out_size": [
+      1500,
+      1500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/asepto-aseptic-liquid-packaging-cartons-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/asepto-aseptic-liquid-packaging-cartons-2.jpg",
+    "in_size": [
+      1300,
+      462
+    ],
+    "out_size": [
+      1300,
+      462
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/asepto-aseptic-liquid-packaging-cartons.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/asepto-aseptic-liquid-packaging-cartons.jpg",
+    "in_size": [
+      1300,
+      462
+    ],
+    "out_size": [
+      1300,
+      462
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/flexpet-bopet-packaging-films-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/flexpet-bopet-packaging-films-2.jpg",
+    "in_size": [
+      1300,
+      462
+    ],
+    "out_size": [
+      1300,
+      462
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/flexpet-bopet-packaging-films.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/flexpet-bopet-packaging-films.jpg",
+    "in_size": [
+      400,
+      200
+    ],
+    "out_size": [
+      1200,
+      600
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/pre-formed-flexible-pouches-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/pre-formed-flexible-pouches-2.jpg",
+    "in_size": [
+      1000,
+      667
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/uflex/pre-formed-flexible-pouches.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/uflex/pre-formed-flexible-pouches.jpg",
+    "in_size": [
+      1000,
+      667
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/wuxi-sifang-youxin/200l-205l-210l-230l-mouth-open-metal-barrels.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/wuxi-sifang-youxin/200l-205l-210l-230l-mouth-open-metal-barrels.jpg",
+    "in_size": [
+      1151,
+      1151
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/wuxi-sifang-youxin/200l-210l-230l-mouth-closed-metal-barrels-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/wuxi-sifang-youxin/200l-210l-230l-mouth-closed-metal-barrels-2.jpg",
+    "in_size": [
+      936,
+      936
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/wuxi-sifang-youxin/200l-210l-230l-mouth-closed-metal-barrels.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/wuxi-sifang-youxin/200l-210l-230l-mouth-closed-metal-barrels.jpg",
+    "in_size": [
+      742,
+      742
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/wuxi-sifang-youxin/ici-composite-steel-drums-50-230l-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/wuxi-sifang-youxin/ici-composite-steel-drums-50-230l-2.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/packaging/wuxi-sifang-youxin/ici-composite-steel-drums-50-230l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/packaging/wuxi-sifang-youxin/ici-composite-steel-drums-50-230l.jpg",
+    "in_size": [
+      1008,
+      1008
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/astm-a53-erw-steel-pipes-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/astm-a53-erw-steel-pipes-2.jpg",
+    "in_size": [
+      700,
+      479
+    ],
+    "out_size": [
+      1200,
+      821
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/astm-a53-erw-steel-pipes.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/astm-a53-erw-steel-pipes.jpg",
+    "in_size": [
+      631,
+      730
+    ],
+    "out_size": [
+      1200,
+      1388
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/en-10219-structural-hollow-sections-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/en-10219-structural-hollow-sections-2.jpg",
+    "in_size": [
+      631,
+      730
+    ],
+    "out_size": [
+      1200,
+      1388
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/en-10219-structural-hollow-sections.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/en-10219-structural-hollow-sections.jpg",
+    "in_size": [
+      700,
+      479
+    ],
+    "out_size": [
+      1200,
+      821
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/iso-65-erw-pipes-black-galvanized-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/iso-65-erw-pipes-black-galvanized-2.jpg",
+    "in_size": [
+      376,
+      349
+    ],
+    "out_size": [
+      1200,
+      1113
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/al-jazeera-steel/iso-65-erw-pipes-black-galvanized.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/al-jazeera-steel/iso-65-erw-pipes-black-galvanized.jpg",
+    "in_size": [
+      376,
+      349
+    ],
+    "out_size": [
+      1200,
+      1113
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/hebei-huayang-steel-pipe/3pp-coated-lsaw-welded-steel-pipe-api-5l-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/hebei-huayang-steel-pipe/3pp-coated-lsaw-welded-steel-pipe-api-5l-2.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/hebei-huayang-steel-pipe/3pp-coated-lsaw-welded-steel-pipe-api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/hebei-huayang-steel-pipe/3pp-coated-lsaw-welded-steel-pipe-api-5l.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/hebei-huayang-steel-pipe/api-5l-psl1-erw-steel-gas-pipe-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/hebei-huayang-steel-pipe/api-5l-psl1-erw-steel-gas-pipe-2.jpg",
+    "in_size": [
+      1920,
+      700
+    ],
+    "out_size": [
+      1600,
+      583
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/hebei-huayang-steel-pipe/api-5l-psl1-erw-steel-gas-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/hebei-huayang-steel-pipe/api-5l-psl1-erw-steel-gas-pipe.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/hebei-huayang-steel-pipe/astm-a53-lsaw-steel-fluid-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/hebei-huayang-steel-pipe/astm-a53-lsaw-steel-fluid-pipe.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/erw-hfw-line-pipe-api-5l-4-18-in-nb-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/erw-hfw-line-pipe-api-5l-4-18-in-nb-2.jpg",
+    "in_size": [
+      768,
+      512
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/erw-hfw-line-pipe-api-5l-4-18-in-nb.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/erw-hfw-line-pipe-api-5l-4-18-in-nb.jpg",
+    "in_size": [
+      1024,
+      683
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/hsaw-spiral-line-pipe-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/hsaw-spiral-line-pipe-2.jpg",
+    "in_size": [
+      768,
+      511
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/hsaw-spiral-line-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/hsaw-spiral-line-pipe.jpg",
+    "in_size": [
+      1024,
+      681
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/lsaw-line-pipe-api-5l-api-2b-16-56-in-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/lsaw-line-pipe-api-5l-api-2b-16-56-in-2.jpg",
+    "in_size": [
+      1600,
+      1067
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/man-industries/lsaw-line-pipe-api-5l-api-2b-16-56-in.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/man-industries/lsaw-line-pipe-api-5l-api-2b-16-56-in.jpg",
+    "in_size": [
+      1024,
+      683
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/carbon-steel-hf-erw-pipes-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/carbon-steel-hf-erw-pipes-2.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/carbon-steel-hf-erw-pipes.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/carbon-steel-hf-erw-pipes.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/carbon-steel-lsaw-hsaw-saw-line-pipe-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/carbon-steel-lsaw-hsaw-saw-line-pipe-2.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/carbon-steel-lsaw-hsaw-saw-line-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/carbon-steel-lsaw-hsaw-saw-line-pipe.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/stainless-steel-seamless-and-welded-tubes-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/stainless-steel-seamless-and-welded-tubes-2.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/tubes/ratnamani-metals-tubes/stainless-steel-seamless-and-welded-tubes.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/tubes/ratnamani-metals-tubes/stainless-steel-seamless-and-welded-tubes.jpg",
+    "in_size": [
+      870,
+      580
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  }
+]

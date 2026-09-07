@@ -1,0 +1,1028 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/abu-dhabi-mill.jpeg",
+    "dst_rel": "steel/emsteel/abu-dhabi-mill.jpg",
+    "out_size": [
+      1600,
+      762
+    ],
+    "out_bytes": 392466
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/billets.jpg",
+    "dst_rel": "steel/emsteel/billets.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 272000
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-3.jpg",
+    "dst_rel": "steel/emsteel/img-3.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 331867
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-3.png",
+    "dst_rel": "steel/emsteel/img-3-png.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 349635
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-4.jpg",
+    "dst_rel": "steel/emsteel/img-4.jpg",
+    "out_size": [
+      1200,
+      846
+    ],
+    "out_bytes": 559901
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-4.png",
+    "dst_rel": "steel/emsteel/img-4-png.jpg",
+    "out_size": [
+      1200,
+      846
+    ],
+    "out_bytes": 563210
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-5.jpg",
+    "dst_rel": "steel/emsteel/img-5.jpg",
+    "out_size": [
+      1200,
+      786
+    ],
+    "out_bytes": 199971
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/img-5.png",
+    "dst_rel": "steel/emsteel/img-5-png.jpg",
+    "out_size": [
+      1200,
+      786
+    ],
+    "out_bytes": 212240
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/mill-aerial.jpg",
+    "dst_rel": "steel/emsteel/mill-aerial.jpg",
+    "out_size": [
+      1600,
+      762
+    ],
+    "out_bytes": 378216
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/rebar-annual-report.png",
+    "dst_rel": "steel/emsteel/rebar-annual-report-png.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 364744
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/rebar.jpg",
+    "dst_rel": "steel/emsteel/rebar.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 345881
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/emsteel/sections-annual-report.png",
+    "dst_rel": "steel/emsteel/sections-annual-report-png.jpg",
+    "out_size": [
+      1200,
+      847
+    ],
+    "out_bytes": 299729
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/equal-angle-500.png",
+    "dst_rel": "steel/ferrite-structural-steels/equal-angle-500-png.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 195264
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/home1.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/home1.jpg",
+    "out_size": [
+      1420,
+      500
+    ],
+    "out_bytes": 262470
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/home2.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/home2.jpg",
+    "out_size": [
+      1420,
+      500
+    ],
+    "out_bytes": 164739
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/mill-yard.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/mill-yard.jpg",
+    "out_size": [
+      1600,
+      631
+    ],
+    "out_bytes": 268470
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/ms-angles-1000.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/ms-angles-1000.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 210663
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/ms-angles-500.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/ms-angles-500.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 148477
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/ms-angles.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/ms-angles.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 205324
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/ms-beams.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/ms-beams.jpg",
+    "out_size": [
+      1200,
+      800
+    ],
+    "out_bytes": 177270
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/ms-plates.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/ms-plates.jpg",
+    "out_size": [
+      1200,
+      800
+    ],
+    "out_bytes": 167943
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/steel-beams-1.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/steel-beams-1.jpg",
+    "out_size": [
+      1200,
+      800
+    ],
+    "out_bytes": 175976
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/ferrite-structural-steels/steel-plates-1.jpg",
+    "dst_rel": "steel/ferrite-structural-steels/steel-plates-1.jpg",
+    "out_size": [
+      1200,
+      800
+    ],
+    "out_bytes": 167930
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/color-coated-coil.jpg",
+    "dst_rel": "steel/hadeed/color-coated-coil.jpg",
+    "out_size": [
+      1200,
+      695
+    ],
+    "out_bytes": 138980
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/flat-cate.jpg",
+    "dst_rel": "steel/hadeed/flat-cate.jpg",
+    "out_size": [
+      1500,
+      841
+    ],
+    "out_bytes": 302393
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/flat-products.jpg",
+    "dst_rel": "steel/hadeed/flat-products.jpg",
+    "out_size": [
+      1500,
+      841
+    ],
+    "out_bytes": 302393
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/hrc.jpg",
+    "dst_rel": "steel/hadeed/hrc.jpg",
+    "out_size": [
+      1600,
+      1066
+    ],
+    "out_bytes": 473132
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/midrex.jpg",
+    "dst_rel": "steel/hadeed/midrex.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 352741
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/midrex2.jpg",
+    "dst_rel": "steel/hadeed/midrex2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 352763
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/plant.jpg",
+    "dst_rel": "steel/hadeed/plant.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 366266
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/plant2.jpg",
+    "dst_rel": "steel/hadeed/plant2.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 335758
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/product-s3a.jpg",
+    "dst_rel": "steel/hadeed/product-s3a.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 56009
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/rebar-in-coil.jpg",
+    "dst_rel": "steel/hadeed/rebar-in-coil.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 521989
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/rebar-straight.jpg",
+    "dst_rel": "steel/hadeed/rebar-straight.jpg",
+    "out_size": [
+      1600,
+      2399
+    ],
+    "out_bytes": 752749
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/s3a.jpeg",
+    "dst_rel": "steel/hadeed/s3a.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 50764
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/s3b.jpeg",
+    "dst_rel": "steel/hadeed/s3b.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 29332
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/hadeed/wire-rod.jpg",
+    "dst_rel": "steel/hadeed/wire-rod.jpg",
+    "out_size": [
+      1600,
+      2260
+    ],
+    "out_bytes": 1235598
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/hero.jpg",
+    "dst_rel": "steel/jingye-steel/hero.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 425463
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/hrc-canon.jpg",
+    "dst_rel": "steel/jingye-steel/hrc-canon.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 272271
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/hrc.jpg",
+    "dst_rel": "steel/jingye-steel/hrc.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 285229
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/plate-canon.jpg",
+    "dst_rel": "steel/jingye-steel/plate-canon.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 240541
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/plate.jpg",
+    "dst_rel": "steel/jingye-steel/plate.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 245760
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/rebar-canon.jpg",
+    "dst_rel": "steel/jingye-steel/rebar-canon.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 442165
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/jingye-steel/rebar.jpg",
+    "dst_rel": "steel/jingye-steel/rebar.jpg",
+    "out_size": [
+      1200,
+      900
+    ],
+    "out_bytes": 461879
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/billets-canon.jpg",
+    "dst_rel": "steel/qatar-steel/billets-canon.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 129668
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/billets.jpg",
+    "dst_rel": "steel/qatar-steel/billets.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 129103
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/construction-bars.jpg",
+    "dst_rel": "steel/qatar-steel/construction-bars.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 132837
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/dri-hbi.jpg",
+    "dst_rel": "steel/qatar-steel/dri-hbi.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 134366
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/dri.jpg",
+    "dst_rel": "steel/qatar-steel/dri.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 132884
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/hot-iron.jpg",
+    "dst_rel": "steel/qatar-steel/hot-iron.jpg",
+    "out_size": [
+      1200,
+      389
+    ],
+    "out_bytes": 167386
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/rebar-spec.jpg",
+    "dst_rel": "steel/qatar-steel/rebar-spec.jpg",
+    "out_size": [
+      1600,
+      1079
+    ],
+    "out_bytes": 824966
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/qatar-steel/rebar.jpg",
+    "dst_rel": "steel/qatar-steel/rebar.jpg",
+    "out_size": [
+      1600,
+      1079
+    ],
+    "out_bytes": 811145
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/lmmm.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/lmmm.jpg",
+    "out_size": [
+      1200,
+      945
+    ],
+    "out_bytes": 420208
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/mmsm.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/mmsm.jpg",
+    "out_size": [
+      1200,
+      774
+    ],
+    "out_bytes": 355960
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/pylon.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/pylon.jpg",
+    "out_size": [
+      1280,
+      909
+    ],
+    "out_bytes": 295585
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/sp.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/sp.jpg",
+    "out_size": [
+      1497,
+      1101
+    ],
+    "out_bytes": 252287
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/structurals-mill.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/structurals-mill.jpg",
+    "out_size": [
+      1497,
+      1101
+    ],
+    "out_bytes": 252342
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/tmt-mill.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/tmt-mill.jpg",
+    "out_size": [
+      1200,
+      945
+    ],
+    "out_bytes": 418837
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/steel/rinl-vizag-steel/wire-rod-mill.jpg",
+    "dst_rel": "steel/rinl-vizag-steel/wire-rod-mill.jpg",
+    "out_size": [
+      1200,
+      774
+    ],
+    "out_bytes": 353947
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/al-2p5-500.jpg",
+    "dst_rel": "cables/foliflex-cables/al-2p5-500.jpg",
+    "out_size": [
+      1200,
+      1204
+    ],
+    "out_bytes": 38181
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/al-50mm-500.jpg",
+    "dst_rel": "cables/foliflex-cables/al-50mm-500.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 156469
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/aluminum-1mm.jpg",
+    "dst_rel": "cables/foliflex-cables/aluminum-1mm.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 157213
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/copper-90m-500.jpg",
+    "dst_rel": "cables/foliflex-cables/copper-90m-500.jpg",
+    "out_size": [
+      1200,
+      674
+    ],
+    "out_bytes": 124364
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/eb-zhfr.webp",
+    "dst_rel": "cables/foliflex-cables/eb-zhfr-webp.jpg",
+    "out_size": [
+      1600,
+      1067
+    ],
+    "out_bytes": 207706
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/electrical-wire.webp",
+    "dst_rel": "cables/foliflex-cables/electrical-wire-webp.jpg",
+    "out_size": [
+      1200,
+      887
+    ],
+    "out_bytes": 220867
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/fr-housing-1000.jpg",
+    "dst_rel": "cables/foliflex-cables/fr-housing-1000.jpg",
+    "out_size": [
+      1200,
+      1593
+    ],
+    "out_bytes": 289639
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/fr-housing-500.jpg",
+    "dst_rel": "cables/foliflex-cables/fr-housing-500.jpg",
+    "out_size": [
+      1200,
+      674
+    ],
+    "out_bytes": 125015
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/gold-fr-lsh.webp",
+    "dst_rel": "cables/foliflex-cables/gold-fr-lsh-webp.jpg",
+    "out_size": [
+      1200,
+      1205
+    ],
+    "out_bytes": 318285
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/housing-range.webp",
+    "dst_rel": "cables/foliflex-cables/housing-range-webp.jpg",
+    "out_size": [
+      1200,
+      994
+    ],
+    "out_bytes": 161681
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/housing-wire-gold.jpg",
+    "dst_rel": "cables/foliflex-cables/housing-wire-gold.jpg",
+    "out_size": [
+      1200,
+      1205
+    ],
+    "out_bytes": 343081
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/industrial-copper-500.jpg",
+    "dst_rel": "cables/foliflex-cables/industrial-copper-500.jpg",
+    "out_size": [
+      1200,
+      674
+    ],
+    "out_bytes": 125015
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/multi-strand-wire.jpg",
+    "dst_rel": "cables/foliflex-cables/multi-strand-wire.jpg",
+    "out_size": [
+      1200,
+      887
+    ],
+    "out_bytes": 225551
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/pvc-sheathed-2core.jpg",
+    "dst_rel": "cables/foliflex-cables/pvc-sheathed-2core.jpg",
+    "out_size": [
+      1200,
+      736
+    ],
+    "out_bytes": 82339
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/sheathed-500.jpeg",
+    "dst_rel": "cables/foliflex-cables/sheathed-500.jpg",
+    "out_size": [
+      1200,
+      736
+    ],
+    "out_bytes": 81500
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/submersible-flat.jpg",
+    "dst_rel": "cables/foliflex-cables/submersible-flat.jpg",
+    "out_size": [
+      1200,
+      699
+    ],
+    "out_bytes": 98301
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/submersible.webp",
+    "dst_rel": "cables/foliflex-cables/submersible-webp.jpg",
+    "out_size": [
+      1200,
+      699
+    ],
+    "out_bytes": 95988
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/foliflex-cables/testing.webp",
+    "dst_rel": "cables/foliflex-cables/testing-webp.jpg",
+    "out_size": [
+      1500,
+      780
+    ],
+    "out_bytes": 132453
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/abc-1x10.jpg",
+    "dst_rel": "cables/henan-huadong-cable/abc-1x10.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 81376
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/abc-lv.jpg",
+    "dst_rel": "cables/henan-huadong-cable/abc-lv.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 81305
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/abc-overhead.jpg",
+    "dst_rel": "cables/henan-huadong-cable/abc-overhead.jpg",
+    "out_size": [
+      1200,
+      815
+    ],
+    "out_bytes": 74107
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/communication.png",
+    "dst_rel": "cables/henan-huadong-cable/communication-png.jpg",
+    "out_size": [
+      1200,
+      815
+    ],
+    "out_bytes": 79746
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/overhead.png",
+    "dst_rel": "cables/henan-huadong-cable/overhead-png.jpg",
+    "out_size": [
+      1200,
+      815
+    ],
+    "out_bytes": 71769
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/power-cable.png",
+    "dst_rel": "cables/henan-huadong-cable/power-cable-png.jpg",
+    "out_size": [
+      1200,
+      815
+    ],
+    "out_bytes": 120530
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/power.jpg",
+    "dst_rel": "cables/henan-huadong-cable/power.jpg",
+    "out_size": [
+      1200,
+      815
+    ],
+    "out_bytes": 122521
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/swa-06-1kv.jpg",
+    "dst_rel": "cables/henan-huadong-cable/swa-06-1kv.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 20714
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/henan-huadong-cable/swa-155.webp",
+    "dst_rel": "cables/henan-huadong-cable/swa-155-webp.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 19288
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/1kv-43.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/1kv-43.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 76572
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/1kv-lv-xlpe.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/1kv-lv-xlpe.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 93871
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/1kv-xlpe.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/1kv-xlpe.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 91667
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/35kv-155.webp",
+    "dst_rel": "cables/jiangsu-yuhui-cable/35kv-155-webp.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 81040
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/35kv-mv-xlpe.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/35kv-mv-xlpe.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 117934
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/35kv-xlpe.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/35kv-xlpe.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 116075
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/control-cable.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/control-cable.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 52391
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/jiangsu-yuhui-cable/control.jpg",
+    "dst_rel": "cables/jiangsu-yuhui-cable/control.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 54014
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/abc-canon.jpg",
+    "dst_rel": "cables/peoples-cable-group/abc-canon.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 113220
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/abc.jpg",
+    "dst_rel": "cables/peoples-cable-group/abc.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 110526
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/building-wire-rvv.jpg",
+    "dst_rel": "cables/peoples-cable-group/building-wire-rvv.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 115083
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/factory-dsc5549.jpg",
+    "dst_rel": "cables/peoples-cable-group/factory-dsc5549.jpg",
+    "out_size": [
+      1600,
+      1068
+    ],
+    "out_bytes": 546906
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/factory-dsc5554.jpg",
+    "dst_rel": "cables/peoples-cable-group/factory-dsc5554.jpg",
+    "out_size": [
+      1600,
+      1068
+    ],
+    "out_bytes": 654609
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/factory.jpg",
+    "dst_rel": "cables/peoples-cable-group/factory.jpg",
+    "out_size": [
+      1600,
+      1067
+    ],
+    "out_bytes": 517845
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/rvv.jpg",
+    "dst_rel": "cables/peoples-cable-group/rvv.jpg",
+    "out_size": [
+      1200,
+      1200
+    ],
+    "out_bytes": 116593
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/xlpe-n2xby.jpg",
+    "dst_rel": "cables/peoples-cable-group/xlpe-n2xby.jpg",
+    "out_size": [
+      1500,
+      1500
+    ],
+    "out_bytes": 127965
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/peoples-cable-group/xlpe-power.jpg",
+    "dst_rel": "cables/peoples-cable-group/xlpe-power.jpg",
+    "out_size": [
+      1500,
+      1500
+    ],
+    "out_bytes": 121111
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/control-cable.jpg",
+    "dst_rel": "cables/xwa-power-cable/control-cable.jpg",
+    "out_size": [
+      1200,
+      961
+    ],
+    "out_bytes": 145927
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/control.jpg",
+    "dst_rel": "cables/xwa-power-cable/control.jpg",
+    "out_size": [
+      1200,
+      961
+    ],
+    "out_bytes": 145114
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/control.webp",
+    "dst_rel": "cables/xwa-power-cable/control-webp.jpg",
+    "out_size": [
+      1200,
+      961
+    ],
+    "out_bytes": 145114
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/factory-1024.webp",
+    "dst_rel": "cables/xwa-power-cable/factory-1024-webp.jpg",
+    "out_size": [
+      1200,
+      675
+    ],
+    "out_bytes": 251655
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/factory.jpg",
+    "dst_rel": "cables/xwa-power-cable/factory.jpg",
+    "out_size": [
+      1600,
+      900
+    ],
+    "out_bytes": 349577
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/factory.webp",
+    "dst_rel": "cables/xwa-power-cable/factory-webp.jpg",
+    "out_size": [
+      1600,
+      900
+    ],
+    "out_bytes": 400229
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/lv-aerial.jpg",
+    "dst_rel": "cables/xwa-power-cable/lv-aerial.jpg",
+    "out_size": [
+      1300,
+      149
+    ],
+    "out_bytes": 88530
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/lv-cover.webp",
+    "dst_rel": "cables/xwa-power-cable/lv-cover-webp.jpg",
+    "out_size": [
+      1200,
+      961
+    ],
+    "out_bytes": 149603
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/lv-power.jpg",
+    "dst_rel": "cables/xwa-power-cable/lv-power.jpg",
+    "out_size": [
+      1200,
+      961
+    ],
+    "out_bytes": 150120
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/mv-power.jpg",
+    "dst_rel": "cables/xwa-power-cable/mv-power.jpg",
+    "out_size": [
+      1200,
+      960
+    ],
+    "out_bytes": 149130
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/cables/xwa-power-cable/mv.webp",
+    "dst_rel": "cables/xwa-power-cable/mv-webp.jpg",
+    "out_size": [
+      1200,
+      960
+    ],
+    "out_bytes": 145728
+  }
+]

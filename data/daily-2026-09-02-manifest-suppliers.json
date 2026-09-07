@@ -1,0 +1,2069 @@
+[
+  {
+    "slug": "amcor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/amcor/02-prod.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "slug": "amcor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/amcor/02.jpg",
+    "in_size": [
+      980,
+      654
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "amcor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/03-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/amcor/03-prod.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "slug": "arcelormittal",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/arcelormittal/01.jpg",
+    "in_size": [
+      1280,
+      1863
+    ],
+    "out_size": [
+      1280,
+      1863
+    ]
+  },
+  {
+    "slug": "arcelormittal",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/arcelormittal/02.jpg",
+    "in_size": [
+      500,
+      339
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "slug": "arcelormittal",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/commons-cleveland.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/arcelormittal/commons-cleveland.jpg",
+    "in_size": [
+      1280,
+      1863
+    ],
+    "out_size": [
+      1280,
+      1863
+    ]
+  },
+  {
+    "slug": "bluescope",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/bluescope/04.jpg",
+    "in_size": [
+      590,
+      400
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "slug": "bluescope",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/bluescope/05.jpg",
+    "in_size": [
+      590,
+      400
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "slug": "china-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/china-steel/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/china-steel/01.jpg",
+    "in_size": [
+      1280,
+      853
+    ],
+    "out_size": [
+      1280,
+      853
+    ]
+  },
+  {
+    "slug": "china-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/china-steel/commons-locomotive.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/china-steel/commons-locomotive.jpg",
+    "in_size": [
+      1280,
+      960
+    ],
+    "out_size": [
+      1280,
+      960
+    ]
+  },
+  {
+    "slug": "dalmia-bharat",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/dalmia-bharat/01.jpg",
+    "in_size": [
+      690,
+      637
+    ],
+    "out_size": [
+      1200,
+      1107
+    ]
+  },
+  {
+    "slug": "dalmia-bharat",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/dalmia-bharat/02.jpg",
+    "in_size": [
+      2160,
+      1056
+    ],
+    "out_size": [
+      1600,
+      782
+    ]
+  },
+  {
+    "slug": "dalmia-bharat",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/dalmia-bharat/03.jpg",
+    "in_size": [
+      1600,
+      813
+    ],
+    "out_size": [
+      1600,
+      813
+    ]
+  },
+  {
+    "slug": "dangote-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dangote-cement/09.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/dangote-cement/09.jpg",
+    "in_size": [
+      1001,
+      432
+    ],
+    "out_size": [
+      1200,
+      517
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/01.jpg",
+    "in_size": [
+      784,
+      1146
+    ],
+    "out_size": [
+      1200,
+      1754
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/01.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/01-webp.jpg",
+    "in_size": [
+      784,
+      1146
+    ],
+    "out_size": [
+      1200,
+      1754
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/02.jpg",
+    "in_size": [
+      1800,
+      675
+    ],
+    "out_size": [
+      1600,
+      600
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/02.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/02-webp.jpg",
+    "in_size": [
+      1800,
+      675
+    ],
+    "out_size": [
+      1600,
+      600
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/03.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/03.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/03-webp.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/04.jpg",
+    "in_size": [
+      2070,
+      1380
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/04.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/04-webp.jpg",
+    "in_size": [
+      2070,
+      1380
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b09.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/b09.jpg",
+    "in_size": [
+      784,
+      1146
+    ],
+    "out_size": [
+      1200,
+      1754
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b09.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/b09-webp.jpg",
+    "in_size": [
+      784,
+      1146
+    ],
+    "out_size": [
+      1200,
+      1754
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b10.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/b10.jpg",
+    "in_size": [
+      1800,
+      675
+    ],
+    "out_size": [
+      1600,
+      600
+    ]
+  },
+  {
+    "slug": "ducab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b10.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ducab/b10-webp.jpg",
+    "in_size": [
+      1800,
+      675
+    ],
+    "out_size": [
+      1600,
+      600
+    ]
+  },
+  {
+    "slug": "far-east-cable",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/01.jpeg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/far-east-cable/01.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "slug": "far-east-cable",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/02.jpeg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/far-east-cable/02.jpg",
+    "in_size": [
+      500,
+      320
+    ],
+    "out_size": [
+      1200,
+      768
+    ]
+  },
+  {
+    "slug": "far-east-cable",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/b03.jpeg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/far-east-cable/b03.jpg",
+    "in_size": [
+      500,
+      320
+    ],
+    "out_size": [
+      1200,
+      768
+    ]
+  },
+  {
+    "slug": "finolex-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/finolex-cables/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/finolex-cables/01-prod.jpg",
+    "in_size": [
+      1600,
+      750
+    ],
+    "out_size": [
+      1600,
+      750
+    ]
+  },
+  {
+    "slug": "finolex-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/finolex-cables/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/finolex-cables/02-prod.jpg",
+    "in_size": [
+      372,
+      372
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "flowserve",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/flowserve/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/flowserve/01-prod.jpg",
+    "in_size": [
+      2048,
+      1365
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "flowserve",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/flowserve/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/flowserve/02-prod.jpg",
+    "in_size": [
+      2048,
+      1614
+    ],
+    "out_size": [
+      1600,
+      1260
+    ]
+  },
+  {
+    "slug": "gerdau",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/gerdau/01-prod.jpg",
+    "in_size": [
+      2560,
+      860
+    ],
+    "out_size": [
+      1600,
+      537
+    ]
+  },
+  {
+    "slug": "greif",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/greif/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/greif/01.jpg",
+    "in_size": [
+      844,
+      511
+    ],
+    "out_size": [
+      1200,
+      726
+    ]
+  },
+  {
+    "slug": "greif",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/greif/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/greif/02.jpg",
+    "in_size": [
+      825,
+      572
+    ],
+    "out_size": [
+      1200,
+      832
+    ]
+  },
+  {
+    "slug": "havells",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/havells/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/havells/01-prod.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "havells",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/havells/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/havells/02-prod.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "hengtong",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/hengtong/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/hengtong/05.jpg",
+    "in_size": [
+      1920,
+      522
+    ],
+    "out_size": [
+      1600,
+      435
+    ]
+  },
+  {
+    "slug": "holcim",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/holcim/01.jpg",
+    "in_size": [
+      2048,
+      1347
+    ],
+    "out_size": [
+      1600,
+      1052
+    ]
+  },
+  {
+    "slug": "holcim",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/holcim/02.jpg",
+    "in_size": [
+      2506,
+      1673
+    ],
+    "out_size": [
+      1600,
+      1068
+    ]
+  },
+  {
+    "slug": "holcim",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/03-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/holcim/03-prod.jpg",
+    "in_size": [
+      2048,
+      1347
+    ],
+    "out_size": [
+      1600,
+      1052
+    ]
+  },
+  {
+    "slug": "holcim",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/04-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/holcim/04-prod.jpg",
+    "in_size": [
+      2506,
+      1673
+    ],
+    "out_size": [
+      1600,
+      1068
+    ]
+  },
+  {
+    "slug": "huhtamaki",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/huhtamaki/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/huhtamaki/01-prod.jpg",
+    "in_size": [
+      5944,
+      3963
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "huhtamaki",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/huhtamaki/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/huhtamaki/02-prod.jpg",
+    "in_size": [
+      3864,
+      2576
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/01.jpg",
+    "in_size": [
+      1640,
+      798
+    ],
+    "out_size": [
+      1600,
+      778
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/02.jpg",
+    "in_size": [
+      820,
+      695
+    ],
+    "out_size": [
+      1200,
+      1017
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/03.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/04.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/05.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "slug": "interarch",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/interarch/06.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "slug": "jiuli",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jiuli/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jiuli/01.jpg",
+    "in_size": [
+      1920,
+      490
+    ],
+    "out_size": [
+      1600,
+      408
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b01.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b02.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b03.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b04.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b05.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b06.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b07.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b07.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b08.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b08.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jk-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b08.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jk-cement/b08-webp.jpg",
+    "in_size": [
+      696,
+      683
+    ],
+    "out_size": [
+      1200,
+      1177
+    ]
+  },
+  {
+    "slug": "jsw-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jsw-cement/b01.jpg",
+    "in_size": [
+      1902,
+      811
+    ],
+    "out_size": [
+      1600,
+      682
+    ]
+  },
+  {
+    "slug": "jsw-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jsw-cement/x02.jpg",
+    "in_size": [
+      2480,
+      3508
+    ],
+    "out_size": [
+      1600,
+      2263
+    ]
+  },
+  {
+    "slug": "jsw-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jsw-cement/x03.jpg",
+    "in_size": [
+      716,
+      350
+    ],
+    "out_size": [
+      1200,
+      586
+    ]
+  },
+  {
+    "slug": "jsw-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/jsw-cement/x04.jpg",
+    "in_size": [
+      400,
+      400
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "ksb",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ksb/02-prod.jpg",
+    "in_size": [
+      4000,
+      3307
+    ],
+    "out_size": [
+      1600,
+      1322
+    ]
+  },
+  {
+    "slug": "ksb",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/03-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ksb/03-prod.jpg",
+    "in_size": [
+      1200,
+      992
+    ],
+    "out_size": [
+      1200,
+      992
+    ]
+  },
+  {
+    "slug": "ksb",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ksb/b01.jpg",
+    "in_size": [
+      4000,
+      2669
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "slug": "ls-cable",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ls-cable/wiki.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ls-cable/wiki.jpg",
+    "in_size": [
+      330,
+      440
+    ],
+    "out_size": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "lyc-bearing",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/lyc-bearing/01.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "lyc-bearing",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/lyc-bearing/02.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "lyc-bearing",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/lyc-bearing/03.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "lyc-bearing",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/lyc-bearing/04.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "mondi",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/mondi/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/mondi/01-prod.jpg",
+    "in_size": [
+      2100,
+      2506
+    ],
+    "out_size": [
+      1600,
+      1909
+    ]
+  },
+  {
+    "slug": "mondi",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/mondi/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/mondi/02-prod.jpg",
+    "in_size": [
+      1600,
+      1066
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "nexans",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/04-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nexans/04-prod.jpg",
+    "in_size": [
+      2560,
+      1707
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "slug": "nexans",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/05-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nexans/05-prod.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "nexans",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nexans/b01.jpg",
+    "in_size": [
+      800,
+      416
+    ],
+    "out_size": [
+      1200,
+      624
+    ]
+  },
+  {
+    "slug": "nexans",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nexans/b02.jpg",
+    "in_size": [
+      550,
+      737
+    ],
+    "out_size": [
+      1200,
+      1608
+    ]
+  },
+  {
+    "slug": "nexans",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nexans/b03.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "nippon-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nippon-steel/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nippon-steel/01-prod.jpg",
+    "in_size": [
+      699,
+      388
+    ],
+    "out_size": [
+      1200,
+      666
+    ]
+  },
+  {
+    "slug": "nippon-steel",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nippon-steel/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nippon-steel/02-prod.jpg",
+    "in_size": [
+      557,
+      378
+    ],
+    "out_size": [
+      1200,
+      814
+    ]
+  },
+  {
+    "slug": "nsk",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nsk/01.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "nsk",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nsk/02.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "nsk",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nsk/03.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "nsk",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nsk/04.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "nsk",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nsk/05.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "slug": "nucor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nucor/b01.jpg",
+    "in_size": [
+      2000,
+      1500
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "nucor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nucor/b02.jpg",
+    "in_size": [
+      1440,
+      700
+    ],
+    "out_size": [
+      1440,
+      700
+    ]
+  },
+  {
+    "slug": "nucor",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/nucor/b03.jpg",
+    "in_size": [
+      1280,
+      1120
+    ],
+    "out_size": [
+      1280,
+      1120
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/01.jpg",
+    "in_size": [
+      1120,
+      928
+    ],
+    "out_size": [
+      1200,
+      994
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/02.jpg",
+    "in_size": [
+      1056,
+      992
+    ],
+    "out_size": [
+      1200,
+      1127
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/03.jpg",
+    "in_size": [
+      1152,
+      896
+    ],
+    "out_size": [
+      1200,
+      933
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/b04.jpg",
+    "in_size": [
+      1056,
+      992
+    ],
+    "out_size": [
+      1200,
+      1127
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/b05.jpg",
+    "in_size": [
+      1152,
+      896
+    ],
+    "out_size": [
+      1200,
+      933
+    ]
+  },
+  {
+    "slug": "oman-cables",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/oman-cables/b06.jpg",
+    "in_size": [
+      1120,
+      928
+    ],
+    "out_size": [
+      1200,
+      994
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/01.jpg",
+    "in_size": [
+      1200,
+      630
+    ],
+    "out_size": [
+      1200,
+      630
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/03.jpg",
+    "in_size": [
+      3840,
+      2160
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/04.jpg",
+    "in_size": [
+      4096,
+      3067
+    ],
+    "out_size": [
+      1600,
+      1198
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/05.jpg",
+    "in_size": [
+      4096,
+      2733
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/06.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "slug": "outokumpu",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/07.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/outokumpu/07.jpg",
+    "in_size": [
+      1195,
+      747
+    ],
+    "out_size": [
+      1200,
+      750
+    ]
+  },
+  {
+    "slug": "posco",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/posco/05.jpg",
+    "in_size": [
+      1024,
+      575
+    ],
+    "out_size": [
+      1200,
+      673
+    ]
+  },
+  {
+    "slug": "posco",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/posco/06.jpg",
+    "in_size": [
+      1024,
+      582
+    ],
+    "out_size": [
+      1200,
+      682
+    ]
+  },
+  {
+    "slug": "posco",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/commons-gwangyang.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/posco/commons-gwangyang.jpg",
+    "in_size": [
+      1280,
+      1707
+    ],
+    "out_size": [
+      1280,
+      1707
+    ]
+  },
+  {
+    "slug": "posco",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/commons-posco.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/posco/commons-posco.jpg",
+    "in_size": [
+      1280,
+      960
+    ],
+    "out_size": [
+      1280,
+      960
+    ]
+  },
+  {
+    "slug": "salzgitter",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/salzgitter/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/salzgitter/01.jpg",
+    "in_size": [
+      1280,
+      720
+    ],
+    "out_size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "slug": "scg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/scg/b01.jpg",
+    "in_size": [
+      2160,
+      990
+    ],
+    "out_size": [
+      1600,
+      733
+    ]
+  },
+  {
+    "slug": "scg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/scg/b02.jpg",
+    "in_size": [
+      600,
+      342
+    ],
+    "out_size": [
+      1200,
+      684
+    ]
+  },
+  {
+    "slug": "scg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/scg/b03.jpg",
+    "in_size": [
+      600,
+      342
+    ],
+    "out_size": [
+      1200,
+      684
+    ]
+  },
+  {
+    "slug": "scg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/scg/b04.jpg",
+    "in_size": [
+      600,
+      342
+    ],
+    "out_size": [
+      1200,
+      684
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/01.jpg",
+    "in_size": [
+      1920,
+      1211
+    ],
+    "out_size": [
+      1600,
+      1009
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/01.webp",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/01-webp.jpg",
+    "in_size": [
+      1920,
+      1211
+    ],
+    "out_size": [
+      1600,
+      1009
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/03.jpg",
+    "in_size": [
+      1705,
+      2127
+    ],
+    "out_size": [
+      1600,
+      1996
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/04.jpg",
+    "in_size": [
+      1707,
+      2560
+    ],
+    "out_size": [
+      1600,
+      2399
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/05.jpg",
+    "in_size": [
+      1707,
+      2560
+    ],
+    "out_size": [
+      1600,
+      2399
+    ]
+  },
+  {
+    "slug": "shakti-pumps",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shakti-pumps/06.jpg",
+    "in_size": [
+      2013,
+      2560
+    ],
+    "out_size": [
+      1600,
+      2034
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/01.jpg",
+    "in_size": [
+      1500,
+      772
+    ],
+    "out_size": [
+      1500,
+      772
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/02.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/03.jpg",
+    "in_size": [
+      507,
+      355
+    ],
+    "out_size": [
+      1200,
+      840
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/04.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/05.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b06.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b07.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b07.jpg",
+    "in_size": [
+      507,
+      355
+    ],
+    "out_size": [
+      1200,
+      840
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b08.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b08.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b09.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b09.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b10.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b10.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "shree-cement",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b11.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/shree-cement/b11.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "slug": "ssab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ssab/01.jpg",
+    "in_size": [
+      1280,
+      907
+    ],
+    "out_size": [
+      1280,
+      907
+    ]
+  },
+  {
+    "slug": "ssab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ssab/02-prod.jpg",
+    "in_size": [
+      1280,
+      720
+    ],
+    "out_size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "slug": "ssab",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/03-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/ssab/03-prod.jpg",
+    "in_size": [
+      1920,
+      570
+    ],
+    "out_size": [
+      1600,
+      475
+    ]
+  },
+  {
+    "slug": "tenaris",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tenaris/01.jpg",
+    "in_size": [
+      1920,
+      850
+    ],
+    "out_size": [
+      1600,
+      708
+    ]
+  },
+  {
+    "slug": "tenaris",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tenaris/02.jpg",
+    "in_size": [
+      768,
+      1024
+    ],
+    "out_size": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "tenaris",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tenaris/03.jpg",
+    "in_size": [
+      768,
+      1024
+    ],
+    "out_size": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "tenaris",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tenaris/04.jpg",
+    "in_size": [
+      768,
+      1024
+    ],
+    "out_size": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "tenaris",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tenaris/05.jpg",
+    "in_size": [
+      768,
+      1024
+    ],
+    "out_size": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "tetra-pak",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tetra-pak/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/tetra-pak/01.jpg",
+    "in_size": [
+      1280,
+      853
+    ],
+    "out_size": [
+      1280,
+      853
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/01.jpg",
+    "in_size": [
+      1600,
+      640
+    ],
+    "out_size": [
+      1600,
+      640
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/02.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/03.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/04.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/05.jpg",
+    "in_size": [
+      1600,
+      1211
+    ],
+    "out_size": [
+      1600,
+      1211
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/06-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/06-prod.jpg",
+    "in_size": [
+      1536,
+      1024
+    ],
+    "out_size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "slug": "timken",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/07-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/timken/07-prod.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "slug": "vallourec",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/vallourec/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/vallourec/01-prod.jpg",
+    "in_size": [
+      1597,
+      1277
+    ],
+    "out_size": [
+      1597,
+      1277
+    ]
+  },
+  {
+    "slug": "vallourec",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/vallourec/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/vallourec/02-prod.jpg",
+    "in_size": [
+      1500,
+      1000
+    ],
+    "out_size": [
+      1500,
+      1000
+    ]
+  },
+  {
+    "slug": "voestalpine",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/voestalpine/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/voestalpine/01.jpg",
+    "in_size": [
+      1500,
+      889
+    ],
+    "out_size": [
+      1500,
+      889
+    ]
+  },
+  {
+    "slug": "wilo",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/wilo/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/wilo/01-prod.jpg",
+    "in_size": [
+      1416,
+      350
+    ],
+    "out_size": [
+      1416,
+      350
+    ]
+  },
+  {
+    "slug": "wilo",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/wilo/02-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/wilo/02-prod.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "slug": "youfa",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/youfa/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/youfa/01.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/01.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/01.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/02.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/02.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/03.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/03.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/04.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/04.jpg",
+    "in_size": [
+      607,
+      328
+    ],
+    "out_size": [
+      1200,
+      648
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/05.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b06.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/b06.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b07.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/b07.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b08.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/b08.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "slug": "yuto",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b09.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/yuto/b09.jpg",
+    "in_size": [
+      607,
+      328
+    ],
+    "out_size": [
+      1200,
+      648
+    ]
+  }
+]
