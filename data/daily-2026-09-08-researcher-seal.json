@@ -1,0 +1,260 @@
+{
+  "label": "QA-DAILY-2026-09-08-RESEARCHER",
+  "sealed_at_utc": "2026-09-08T18:43:12Z",
+  "sealed_at_pt": "2026-09-08 ~11:43 AM PT",
+  "scope": "mills only — 50 enhanced supplier primaries visually read; products not sealed",
+  "wire_full_pack": false,
+  "counts": {
+    "suppliers": 50,
+    "visual_primaries_read": 50,
+    "hold_do_not_wire": 26,
+    "soft": 17,
+    "sealed_wire_ok": 7,
+    "traders": 1,
+    "exclude_overlap": 0,
+    "unit_price_set": 0,
+    "rfq_products": 50,
+    "by_category": {
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Industrial Parts": 12,
+      "Hardware & Motion": 6,
+      "Steel & Metals": 5,
+      "Cables & Electrical": 3,
+      "Construction": 2
+    }
+  },
+  "duplicates_vs_exclude": [],
+  "traders": [
+    {
+      "slug": "misumi",
+      "note": "catalog distributor — not a mill; HOLD mill card"
+    }
+  ],
+  "invented_fob_prices": false,
+  "cert_image_mislabels": [],
+  "cert_policy": "soft text only — ISO/API/EN claims say confirm on mill page; no badge images treated as certificates",
+  "nlmk_tiny_skip": "images/suppliers/nlmk/nlmk_01.jpg not enhanced (tiny banner). Reviewed enhanced nlmk_02.jpg; did not use the thumb.",
+  "hold_do_not_wire": [
+    {
+      "slug": "eew",
+      "reason": "primary = c.1910 portrait of a man smoking a pipe in a lumber yard — not EEW pipe mill"
+    },
+    {
+      "slug": "eisenbau-kramer",
+      "reason": "primary = 1911 Porter, Indiana asbestos-factory postcard — wrong mill"
+    },
+    {
+      "slug": "hengyang-valin",
+      "reason": "primary = HAER PA-380-A-6 U.S. Steel National Tube Works blast-cleaning machine — wrong brand; shared hash 8a88d4ac with panyu-chu-kong / erciyas / cangzhou-spiral"
+    },
+    {
+      "slug": "changbao",
+      "reason": "primary = Bancroft Mill museum Cornish boiler — not Changbao tube mill"
+    },
+    {
+      "slug": "panyu-chu-kong",
+      "reason": "primary = same USS National Tube Works HAER still (hash 8a88d4ac) — not PCK mill"
+    },
+    {
+      "slug": "borusan-mannesmann",
+      "reason": "primary = 1939 Lock Joint Pipe Co. Natick plate-welding tables — wrong company archive"
+    },
+    {
+      "slug": "erciyas",
+      "reason": "no enhanced _01; reviewed erciyas_02 = same USS HAER still (hash 8a88d4ac) — not Erciyas mill"
+    },
+    {
+      "slug": "toscelik",
+      "reason": "primary = Heron corn-mill museum machine — not Tosçelik"
+    },
+    {
+      "slug": "cangzhou-spiral",
+      "reason": "primary = same USS National Tube Works HAER still (hash 8a88d4ac) — not Cangzhou spiral mill"
+    },
+    {
+      "slug": "vidrala",
+      "reason": "primary = AV Nackawic pulp-and-paper mill — wrong company and category; shared hash 909f370c with schuetz"
+    },
+    {
+      "slug": "gerresheimer",
+      "reason": "primary = derelict Gerresheimer glassworks roof — not an operating packaging plant; siblings are the same abandoned site / a railway"
+    },
+    {
+      "slug": "can-pack",
+      "reason": "primary = former Addspace furniture factory, Bolton upon Dearne — not Can-Pack; can-pack_02 is unsigned dusk sheds, not enough to clear"
+    },
+    {
+      "slug": "mayr-melnhof",
+      "reason": "primary = Mayr von Melnhof coat of arms — not a board mill"
+    },
+    {
+      "slug": "constantia-flexibles",
+      "reason": "primary = foil-wrapped trout on a grill — not a flexible-packaging plant"
+    },
+    {
+      "slug": "rengo",
+      "reason": "primary = Correo Rengo, Chile street scene — not Rengo Co.; do not wire until primary is rengo_03 Kanazu / rengo_04 Shiga"
+    },
+    {
+      "slug": "nine-dragons",
+      "reason": "primary = Beijing Paper Mill No.1 gate (北京造纸一厂) — wrong mill"
+    },
+    {
+      "slug": "schuetz",
+      "reason": "primary = same AV Nackawic pulp mill (hash 909f370c) — not Schütz IBC plant"
+    },
+    {
+      "slug": "mauser",
+      "reason": "primary = Austin-Healey sports car — not Mauser Packaging"
+    },
+    {
+      "slug": "volvo-ce",
+      "reason": "primary = Quattro rental CAT dozer + excavator on a Volvo truck — wrong brand, not a Volvo CE plant"
+    },
+    {
+      "slug": "misumi",
+      "reason": "catalog distributor — not a mill; primary is Ube Industries townscape (宇部興産), not Misumi"
+    },
+    {
+      "slug": "nvent",
+      "reason": "primary = rooftop building vents, Gotland — HVAC wrong-entity, not nVent"
+    },
+    {
+      "slug": "legrand",
+      "reason": "primary = 19th-c barn engraving (Jenny Legrand) — not Legrand"
+    },
+    {
+      "slug": "harmonic-drive",
+      "reason": "primary = CGI harmonic-drive gear diagram — not a plant; siblings are diagrams/gifs"
+    },
+    {
+      "slug": "fujikura",
+      "reason": "primary = Helsinki Cable Factory museum ticket hall — not Fujikura"
+    },
+    {
+      "slug": "belden",
+      "reason": "primary = 1918 Fortress Monroe mobile searchlight with cable — not Belden"
+    },
+    {
+      "slug": "rittal",
+      "reason": "primary = generic unbranded operator panel — not Rittal plant; rittal_02 Herborn is branded campus only (soft if swapped)"
+    }
+  ],
+  "soft": [
+    {
+      "slug": "schneider-electric",
+      "note": "branded Rueil HQ campus — not a plant"
+    },
+    {
+      "slug": "siemens",
+      "note": "The Wings Munich HQ with SIEMENS sign; do not promote Bangkok Skytrain sibling"
+    },
+    {
+      "slug": "rockwell-automation",
+      "note": "Milwaukee Global Headquarters clocktower — branded campus"
+    },
+    {
+      "slug": "honeywell",
+      "note": "Charlotte HQ tower with Honeywell sign"
+    },
+    {
+      "slug": "spirax-sarco",
+      "note": "Charlton House, Cheltenham — Spirax Group HQ manor, not a plant"
+    },
+    {
+      "slug": "komatsu",
+      "note": "Tokyo Komatsu Building HQ"
+    },
+    {
+      "slug": "caterpillar",
+      "note": "Peoria headquarters"
+    },
+    {
+      "slug": "acerinox",
+      "note": "Madrid offices with Acerinox logo — HQ, not the stainless mill"
+    },
+    {
+      "slug": "putzmeister",
+      "note": "Aichtal HQ admin block, branded — not a yard"
+    },
+    {
+      "slug": "liebherr",
+      "note": "Liebherr-branded Gillette building — not an equipment yard"
+    },
+    {
+      "slug": "rotork",
+      "note": "Rotork Bath campus frontage, branded — not a yard"
+    },
+    {
+      "slug": "hitachi-cm",
+      "note": "unbranded orange wheeled excavator on a UK road job; prefer hitachi-cm_04 Kasumigaura / HCME Amsterdam if a plant card is required"
+    },
+    {
+      "slug": "carpenter",
+      "note": "1890s projectile/armor test credited to Carpenter — not a mill; Reading sibling is 1893 distant archive"
+    },
+    {
+      "slug": "nlmk",
+      "note": "tiny nlmk_01 skipped; reviewed nlmk_02 distant Lipetsk works skyline (unsigned, likely NLMK). Do not use tram siblings nlmk_03/_04"
+    },
+    {
+      "slug": "sumitomo-electric",
+      "note": "Sumitomo Building office block (住友ビル) — not a cable plant; SEWS Hungary sibling is a plant front"
+    },
+    {
+      "slug": "owens-corning",
+      "note": "unsigned wartime stack; OC-titled siblings also unsigned brick/stack — not a branded yard"
+    },
+    {
+      "slug": "aperam",
+      "note": "Predlice warehouse — Aperam mark not readable; aperam_04 is a distant Timóteo mill vista, not a close yard"
+    }
+  ],
+  "sealed_wire_ok": [
+    "butting",
+    "dura-bond",
+    "chelpipe",
+    "verallia",
+    "oriental-motor",
+    "algoma",
+    "knauf"
+  ],
+  "sealed_notes": [
+    {
+      "slug": "butting",
+      "note": "Luftbild BUTTING aerial of the Knesebeck pipe works"
+    },
+    {
+      "slug": "dura-bond",
+      "note": "Turtle Creek pipe yard; do not promote dura-bond_02 caboose"
+    },
+    {
+      "slug": "chelpipe",
+      "note": "no enhanced _01 (gif skipped); reviewed chelpipe_02 PNTZ aerial — ChelPipe group pipe plant. Do not promote rail-wagon siblings"
+    },
+    {
+      "slug": "verallia",
+      "note": "Burgos glass plant; do not promote verallia_02 Saint-Gobain Cognac"
+    },
+    {
+      "slug": "oriental-motor",
+      "note": "Noshiro plant with Oriental Motor sign"
+    },
+    {
+      "slug": "algoma",
+      "note": "Algoma Steel, Sault Ste. Marie ore yard / mill (1997)"
+    },
+    {
+      "slug": "knauf",
+      "note": "Knauf-Werk Iphofen with Knauf marks"
+    }
+  ],
+  "wire_recommendation": "Do not wire the full 50. Wire sealed_wire_ok (7) plus soft HQ/campus (17) only. Do not wire any hold_do_not_wire slug. Misumi stays off the mill wire (catalog distributor, not a mill, and wrong-entity still). Do not promote poisoned siblings (NLMK trams, Dura-Bond caboose, Siemens Skytrain, Saint-Gobain Cognac, shared USS HAER hash 8a88d4ac, shared Nackawic hash 909f370c). Rengo and Rittal stay HOLD until primary is swapped (rengo_03 Kanazu would be a real plant; rittal_02 Herborn would be soft campus only).",
+  "notes": [
+    "Identity OK otherwise — no _exclude_names.txt overlap; no invented FOB (50/50 product unit_price null, RFQ).",
+    "Certs are soft text only.",
+    "Mills only. Product stills were not visually sealed in this pass.",
+    "Shared wrong-entity hashes: 8a88d4ac (hengyang-valin, panyu-chu-kong, erciyas, cangzhou-spiral); 909f370c (vidrala, schuetz)."
+  ]
+}
