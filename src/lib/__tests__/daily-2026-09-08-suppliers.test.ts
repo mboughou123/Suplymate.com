@@ -171,7 +171,7 @@ describe("daily 2026-09-08 mill directory", () => {
     expect(text("mauser").toLowerCase()).toMatch(/ibc/);
     expect(text("rittal").toLowerCase()).toMatch(/haiger/);
     expect(text("rengo").toLowerCase()).toMatch(/japan/);
-    expect(text("rengo").toLowerCase()).not.toMatch(/chile/);
+    expect(text("rengo").toLowerCase()).toMatch(/not chilean/);
     expect(text("borusan-mannesmann").toLowerCase()).toMatch(/borusan boru/);
     expect(text("rengo")).toMatch(/Japan/);
   });
