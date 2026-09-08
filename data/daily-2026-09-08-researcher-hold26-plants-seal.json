@@ -1,0 +1,52 @@
+{
+  "label": "QA-HOLD26-MILL-PLANTS-RESEARCHER-OK",
+  "sealed_at_utc": "2026-09-08T19:24:34Z",
+  "sealed_at_pt": "2026-09-08 12:24 PM PT",
+  "scope": "HOLD26 mill plant re-fetch \u2014 24 enhanced primaries visually read",
+  "nlmk": "untouched \u2014 ignored",
+  "pr_15": "not touched",
+  "counts": {
+    "visual_primaries_read": 24,
+    "ok": 21,
+    "soft": 3,
+    "hold": 0,
+    "blocked_skipped": 1,
+    "distributor_off": 1
+  },
+  "ok": [
+    "eew",
+    "eisenbau-kramer",
+    "hengyang-valin",
+    "changbao",
+    "panyu-chu-kong",
+    "borusan-mannesmann",
+    "erciyas",
+    "toscelik",
+    "cangzhou-spiral",
+    "vidrala",
+    "gerresheimer",
+    "can-pack",
+    "mayr-melnhof",
+    "constantia-flexibles",
+    "rengo",
+    "nine-dragons",
+    "schuetz",
+    "volvo-ce",
+    "legrand",
+    "fujikura",
+    "belden"
+  ],
+  "soft": [
+    "harmonic-drive",
+    "mauser",
+    "rittal"
+  ],
+  "hold": [],
+  "blocked_skipped": [
+    "nvent"
+  ],
+  "distributor_off": [
+    "misumi"
+  ],
+  "wire_recommendation": "OK to append the 24 mill primaries. Wire 21 ok as plant/yard cards. Wire 3 soft (harmonic-drive, mauser, rittal) only as product/line stills, not mill-exterior captions. Do not wire nvent. Do not wire misumi as a mill. NLMK untouched. Do not promote *.BAD.jpg siblings. PR #15 not edited by this QA."
+}
