@@ -5,6 +5,7 @@ import { phase1Suppliers } from "@/data/phase1-suppliers";
 import { daily20260902Suppliers } from "@/lib/daily-2026-09-02-suppliers";
 import { daily20260903Suppliers } from "@/lib/daily-2026-09-03-suppliers";
 import { daily20260907Suppliers } from "@/lib/daily-2026-09-07-suppliers";
+import { daily20260908Suppliers } from "@/lib/daily-2026-09-08-suppliers";
 import type { Supplier } from "@/data/suppliers";
 
 function stub(partial: Partial<Supplier> & Pick<Supplier, "id" | "name">): Supplier {
@@ -76,12 +77,14 @@ describe("compareForDirectory", () => {
       ...daily20260902Suppliers,
       ...daily20260903Suppliers,
       ...daily20260907Suppliers,
+      ...daily20260908Suppliers,
     ].sort(compareForDirectory);
     const curatedCount =
       59 +
       daily20260902Suppliers.length +
       daily20260903Suppliers.length +
-      daily20260907Suppliers.length;
+      daily20260907Suppliers.length +
+      daily20260908Suppliers.length;
     const first = mixed.slice(0, curatedCount);
     expect(first.every((s) => isCuratedDirectoryMill(s))).toBe(true);
     expect(mixed.slice(curatedCount).some((s) => isCuratedDirectoryMill(s))).toBe(
@@ -94,6 +97,8 @@ describe("compareForDirectory", () => {
     expect(mixed.findIndex((s) => s.id === "nucor")).toBeLessThan(curatedCount);
     expect(mixed.findIndex((s) => s.id === "tmk")).toBeLessThan(curatedCount);
     expect(mixed.findIndex((s) => s.id === "tubacex")).toBeLessThan(curatedCount);
+    expect(mixed.findIndex((s) => s.id === "butting")).toBeLessThan(curatedCount);
+    expect(mixed.findIndex((s) => s.id === "nlmk")).toBeLessThan(curatedCount);
 
     for (const leftover of NOT_IN_PACK) {
       expect(mixed.findIndex((s) => s.id === leftover.id)).toBeGreaterThanOrEqual(

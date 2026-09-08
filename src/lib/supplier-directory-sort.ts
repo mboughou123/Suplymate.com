@@ -3,6 +3,7 @@ import { isPhase1Supplier } from "@/lib/phase1";
 import { isDaily20260902Supplier } from "@/lib/daily-2026-09-02-ids";
 import { isDaily20260903Supplier } from "@/lib/daily-2026-09-03-ids";
 import { isDaily20260907Supplier } from "@/lib/daily-2026-09-07-ids";
+import { isDaily20260908Supplier } from "@/lib/daily-2026-09-08-ids";
 
 function supplierHasImage(s: Supplier): boolean {
   return (
@@ -19,7 +20,8 @@ export function isCuratedDirectoryMill(
     isPhase1Supplier(supplier) ||
     isDaily20260902Supplier(supplier) ||
     isDaily20260903Supplier(supplier) ||
-    isDaily20260907Supplier(supplier)
+    isDaily20260907Supplier(supplier) ||
+    isDaily20260908Supplier(supplier)
   );
 }
 
