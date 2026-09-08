@@ -1,14 +1,18 @@
 /**
- * Daily expansion 2026-09-08 — PARTIAL mill pack for /suppliers (24).
+ * Daily expansion 2026-09-08 — mill pack for /suppliers (48).
  *
  * Metadata: data/daily-2026-09-08-suppliers.json
  * Factory stills: public/images/suppliers/<slug>/*.jpg
  *
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
- *          never invent FOB. Soft mills are HQ/campus — keep JSON
- *          description / honesty_note text. HOLD 26 omitted. No products.
+ *          never invent FOB. Keep JSON description / honesty_note text.
+ *          HOLD remaining: nvent (blocked) + misumi (distributor). No products.
  * ChelPipe uses chelpipe_02 only. NLMK uses nlmk_02 only.
- * Hitachi CM uses hitachi-cm_04 only.
+ * Hitachi CM uses hitachi-cm_04 only. HOLD26 plants use `_01` only.
+ * Soft captions already in JSON: harmonic-drive HFUC gear (not Hotaka
+ * exterior), mauser IBC lineup (not mill exterior), rittal Haiger line
+ * (not mill-exterior caption). Rengo is Japan, not Chile. Borusan
+ * Mannesmann is Borusan Boru, not Berg.
  */
 
 import { existsSync, readdirSync } from "node:fs";

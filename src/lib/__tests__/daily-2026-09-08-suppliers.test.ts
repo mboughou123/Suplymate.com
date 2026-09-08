@@ -41,12 +41,38 @@ const SOFT17 = [
   "aperam",
 ] as const;
 
-describe("daily 2026-09-08 partial mill directory", () => {
-  it("loads 24 mills with unique unused-slug ids", () => {
-    expect(daily20260908Suppliers).toHaveLength(24);
-    expect(new Set(daily20260908Suppliers.map((s) => s.id)).size).toBe(24);
-    expect(DAILY_20260908_SLUGS).toHaveLength(24);
-    expect(DAILY_20260908_HOLD_SLUGS).toHaveLength(26);
+const HOLD26_OK21 = [
+  "eew",
+  "eisenbau-kramer",
+  "hengyang-valin",
+  "changbao",
+  "panyu-chu-kong",
+  "borusan-mannesmann",
+  "erciyas",
+  "toscelik",
+  "cangzhou-spiral",
+  "vidrala",
+  "gerresheimer",
+  "can-pack",
+  "mayr-melnhof",
+  "constantia-flexibles",
+  "rengo",
+  "nine-dragons",
+  "schuetz",
+  "volvo-ce",
+  "legrand",
+  "fujikura",
+  "belden",
+] as const;
+
+const HOLD26_SOFT3 = ["harmonic-drive", "mauser", "rittal"] as const;
+
+describe("daily 2026-09-08 mill directory", () => {
+  it("loads 48 mills with unique unused-slug ids", () => {
+    expect(daily20260908Suppliers).toHaveLength(48);
+    expect(new Set(daily20260908Suppliers.map((s) => s.id)).size).toBe(48);
+    expect(DAILY_20260908_SLUGS).toHaveLength(48);
+    expect(DAILY_20260908_HOLD_SLUGS).toEqual(["nvent", "misumi"]);
     for (const slug of DAILY_20260908_SLUGS) {
       expect(dailySupplierIdForSlug20260908(slug)).toBe(slug);
     }
@@ -55,7 +81,7 @@ describe("daily 2026-09-08 partial mill directory", () => {
     );
   });
 
-  it("wires each sealed+soft slug and keeps every HOLD slug absent", () => {
+  it("wires prior 24 + HOLD26 plants and keeps nvent + misumi absent", () => {
     const ids = new Set(daily20260908Suppliers.map((s) => s.id));
     for (const slug of SEALED7) {
       expect(ids.has(slug), slug).toBe(true);
@@ -63,16 +89,33 @@ describe("daily 2026-09-08 partial mill directory", () => {
     for (const slug of SOFT17) {
       expect(ids.has(slug), slug).toBe(true);
     }
-    for (const slug of DAILY_20260908_HOLD_SLUGS) {
-      expect(ids.has(slug), slug).toBe(false);
-      expect(ids.has(`daily-20260908-${slug}`), `prefixed ${slug}`).toBe(false);
+    for (const slug of HOLD26_OK21) {
+      expect(ids.has(slug), slug).toBe(true);
     }
+    for (const slug of HOLD26_SOFT3) {
+      expect(ids.has(slug), slug).toBe(true);
+    }
+    expect(ids.has("nvent")).toBe(false);
+    expect(ids.has("misumi")).toBe(false);
+    expect(ids.has("daily-20260908-nvent")).toBe(false);
+    expect(ids.has("daily-20260908-misumi")).toBe(false);
   });
 
-  it("does not add HOLD public image directories from this pack", () => {
+  it("does not add nvent or misumi public image directories", () => {
     const root = join(process.cwd(), "public", "images", "suppliers");
-    for (const slug of DAILY_20260908_HOLD_SLUGS) {
-      expect(existsSync(join(root, slug)), slug).toBe(false);
+    expect(existsSync(join(root, "nvent"))).toBe(false);
+    expect(existsSync(join(root, "misumi"))).toBe(false);
+  });
+
+  it("HOLD26 plant primaries each have exactly one _01.jpg still", () => {
+    for (const slug of [...HOLD26_OK21, ...HOLD26_SOFT3]) {
+      const mill = daily20260908Suppliers.find((s) => s.id === slug);
+      expect(mill, slug).toBeTruthy();
+      expect(mill?.supplierImages).toHaveLength(1);
+      expect(mill?.supplierImages?.[0].endsWith(`${slug}_01.jpg`), slug).toBe(true);
+      const dir = join(process.cwd(), "public", "images", "suppliers", slug);
+      const siblings = readdirSync(dir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
+      expect(siblings, slug).toEqual([`${slug}_01.jpg`]);
     }
   });
 
@@ -120,6 +163,19 @@ describe("daily 2026-09-08 partial mill directory", () => {
     }
   });
 
+  it("keeps HOLD26 honesty notes on description text", () => {
+    const text = (id: string) =>
+      daily20260908Suppliers.find((s) => s.id === id)?.description ?? "";
+    expect(text("harmonic-drive").toLowerCase()).toMatch(/hfuc|gear/);
+    expect(text("harmonic-drive").toLowerCase()).toMatch(/hotaka/);
+    expect(text("mauser").toLowerCase()).toMatch(/ibc/);
+    expect(text("rittal").toLowerCase()).toMatch(/haiger/);
+    expect(text("rengo").toLowerCase()).toMatch(/japan/);
+    expect(text("rengo").toLowerCase()).not.toMatch(/chile/);
+    expect(text("borusan-mannesmann").toLowerCase()).toMatch(/borusan boru/);
+    expect(text("rengo")).toMatch(/Japan/);
+  });
+
   it("maps Hardware & Motion → Industrial Parts and Tube & Pipes → Tubes & Pipes", () => {
     const oriental = daily20260908Suppliers.find((s) => s.id === "oriental-motor");
     expect(oriental?.category).toBe("Industrial Parts");
@@ -160,6 +216,11 @@ describe("daily 2026-09-08 partial mill directory", () => {
     expect(ids.has("nlmk")).toBe(true);
     expect(ids.has("hitachi-cm")).toBe(true);
     expect(ids.has("siemens")).toBe(true);
+    expect(ids.has("eew")).toBe(true);
+    expect(ids.has("harmonic-drive")).toBe(true);
+    expect(ids.has("rittal")).toBe(true);
+    expect(ids.has("nvent")).toBe(false);
+    expect(ids.has("misumi")).toBe(false);
     expect(ids.has("tubacex")).toBe(true);
     expect(ids.has("stupp")).toBe(true);
     expect(ids.has("interpipe")).toBe(true);

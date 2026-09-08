@@ -1,6 +1,6 @@
 /**
- * Daily 2026-09-08 mill ids — PARTIAL pack (sealed 7 + soft 17 = 24).
- * HOLD 26 stay unwired.
+ * Daily 2026-09-08 mill ids — 48 mills (prior 24 + HOLD26 plant primaries).
+ * Remaining HOLD: nvent (blocked) + misumi (distributor, not a mill).
  * Kept free of Node fs so client sort can import it.
  * Prefer the slug when unused by phase-1 / 09-02 / 09-03 / 09-07; otherwise
  * `daily-20260908-<slug>`.
@@ -20,7 +20,7 @@ import {
   DAILY_20260907_SUPPLIER_IDS,
 } from "@/lib/daily-2026-09-07-ids";
 
-/** Sealed 7 + soft HQ/campus 17. */
+/** Prior sealed 7 + soft 17, plus HOLD26 OK 21 + soft 3 plant primaries. */
 export const DAILY_20260908_SLUGS = [
   "butting",
   "dura-bond",
@@ -46,10 +46,6 @@ export const DAILY_20260908_SLUGS = [
   "sumitomo-electric",
   "owens-corning",
   "aperam",
-] as const;
-
-/** Researcher HOLD / blocked — not wired this pack. */
-export const DAILY_20260908_HOLD_SLUGS = [
   "eew",
   "eisenbau-kramer",
   "hengyang-valin",
@@ -67,16 +63,17 @@ export const DAILY_20260908_HOLD_SLUGS = [
   "rengo",
   "nine-dragons",
   "schuetz",
-  "mauser",
   "volvo-ce",
-  "misumi",
-  "nvent",
   "legrand",
-  "harmonic-drive",
   "fujikura",
   "belden",
+  "harmonic-drive",
+  "mauser",
   "rittal",
 ] as const;
+
+/** Remaining Researcher HOLD — nvent blocked; misumi is a distributor, not a mill. */
+export const DAILY_20260908_HOLD_SLUGS = ["nvent", "misumi"] as const;
 
 const RESERVED_IDS: ReadonlySet<string> = new Set<string>([
   ...PHASE1_SUPPLIER_IDS,
