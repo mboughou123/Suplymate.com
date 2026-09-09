@@ -6,6 +6,7 @@ import { listerGapsFill2Products } from "@/lib/lister-product-gaps-fill-2";
 import { listerDaily20260902Products } from "@/lib/lister-product-daily-2026-09-02";
 import { listerDaily20260903Products } from "@/lib/lister-product-daily-2026-09-03";
 import { listerDaily20260907Products } from "@/lib/lister-product-daily-2026-09-07";
+import { listerDaily20260908Products } from "@/lib/lister-product-daily-2026-09-08";
 import type { ScrapedProduct } from "@/data/scraped-products";
 
 export const listerCatalogueProducts: ScrapedProduct[] = [
@@ -17,6 +18,7 @@ export const listerCatalogueProducts: ScrapedProduct[] = [
   ...listerDaily20260902Products,
   ...listerDaily20260903Products,
   ...listerDaily20260907Products,
+  ...listerDaily20260908Products,
 ];
 
 /** Public-facing Lister SKUs for a mill (excludes Research QA holds / non-approved). */
