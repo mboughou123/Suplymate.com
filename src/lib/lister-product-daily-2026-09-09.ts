@@ -1,15 +1,19 @@
 /**
- * Daily expansion 2026-09-09 product pack — OK 1 + soft 15 = 16 RFQ SKUs.
+ * Daily expansion 2026-09-09 product pack — prior OK 1 + soft 15, plus
+ * HOLD34 Researcher OK 23 + soft 8 = 47 RFQ SKUs.
  *
  * Metadata: data/daily-2026-09-09-products.json
  * Photos:   public/images/products/{supplier-slug}/…
- * Seal:     data/daily-2026-09-09-researcher-products-seal.json
- *             (QA-DAILY-2026-09-09-PRODUCTS-RESEARCHER-PARTIAL)
+ * Seal:     data/daily-2026-09-09-researcher-hold34-products-seal.json
+ *             (QA-HOLD34-PRODUCTS-RESEARCHER-OK)
  *
- * Honesty: all 16 SKUs are mill RFQ (never invent FOB / unit prices).
+ * Honesty: all 47 SKUs are mill RFQ (never invent FOB / unit prices).
  * Photos: on-disk local JPGs only — no remote/stock fallbacks, no AI badges.
- * HOLD 34 omitted (including pepperl-fuchs product). Soft SKUs attach by
- * slug to a wired mill card when one exists (marcegaglia / ternium now do).
+ * HOLD out: helukabel, lisi, sfs (blocked, no stills).
+ * Bonfiglioli + usiminas SKUs attach by slug without mill cards.
+ * Greatview / Elopak are on-brand (not Tetra Pak). Soft stills are
+ * category/type-match — do not claim branded OE heroes.
+ * Never promote `*.BAD.*` siblings.
  */
 
 import rawDaily from "../../data/daily-2026-09-09-products.json";
@@ -76,47 +80,57 @@ export const DAILY_20260909_PRODUCT_SOFT_SLUGS = [
   "daido-steel",
 ] as const;
 
-/** Researcher HOLD — not in the JSON and must not appear in the catalogue. */
-export const DAILY_20260909_HOLD_PRODUCT_SLUGS = [
-  "tubacero",
-  "umran",
-  "noksel",
-  "npc",
-  "nexteel",
-  "vetropack",
-  "toyo-seikan",
-  "elopak",
+/** HOLD34 Researcher OK — appended after the locked 1+15 set. */
+export const DAILY_20260909_HOLD34_OK_SLUGS = [
   "alpla",
-  "novelis",
   "billerud",
-  "coveris",
-  "greatview",
-  "kitz",
-  "velan",
-  "gea",
-  "endress-hauser",
-  "lincoln-electric",
-  "donaldson",
-  "howden",
-  "pepperl-fuchs",
   "bonfiglioli",
-  "wittenstein",
-  "gates",
-  "sfs",
-  "lisi",
   "british-steel",
-  "usiminas",
+  "coveris",
+  "donaldson",
+  "elopak",
+  "endress-hauser",
+  "gates",
+  "gea",
+  "greatview",
+  "james-hardie",
+  "kitz",
   "kobe-steel",
   "leoni",
-  "helukabel",
+  "lincoln-electric",
+  "noksel",
+  "novelis",
+  "pepperl-fuchs",
+  "umran",
+  "velan",
+  "vetropack",
+  "wittenstein",
+] as const;
+
+/** HOLD34 Researcher soft — category/type-match stills, not branded OE heroes. */
+export const DAILY_20260909_HOLD34_SOFT_SLUGS = [
+  "howden",
   "lapp",
+  "nexteel",
+  "npc",
   "rockwool",
-  "james-hardie",
+  "toyo-seikan",
+  "tubacero",
+  "usiminas",
+] as const;
+
+/** Researcher HOLD — blocked, no stills. */
+export const DAILY_20260909_HOLD_PRODUCT_SLUGS = [
+  "helukabel",
+  "lisi",
+  "sfs",
 ] as const;
 
 const WIRED_PRODUCT_SLUGS = new Set<string>([
   ...DAILY_20260909_PRODUCT_OK_SLUGS,
   ...DAILY_20260909_PRODUCT_SOFT_SLUGS,
+  ...DAILY_20260909_HOLD34_OK_SLUGS,
+  ...DAILY_20260909_HOLD34_SOFT_SLUGS,
 ]);
 
 const WIRED_MILL_SLUGS = new Set<string>(DAILY_20260909_SLUGS);
