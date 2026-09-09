@@ -11,6 +11,7 @@ import {
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
+import { supplierHasUsableCardImage } from "@/lib/image-fallback";
 import {
   getPackProduct,
   getPackSupplier,
@@ -22,7 +23,7 @@ import {
 // Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
 // lead the directory.
 function supplierHasImage(s: Supplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
+  return supplierHasUsableCardImage(s);
 }
 
 // Public directory ordering: image-bearing first, then by Suplymate score

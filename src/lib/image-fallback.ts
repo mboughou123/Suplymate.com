@@ -13,11 +13,14 @@
 // We deliberately avoid hotlinking fragile/random endpoints (e.g. the
 // deprecated `source.unsplash.com`): local SVGs are zero-dependency,
 // build-safe, never 404, render instantly, and look intentional (gradient +
-// industrial glyph + category label + wordmark). Real photos from the DB /
-// CDN (e.g. lh3.googleusercontent.com Google Maps photos) always take priority
-// and are tried first; only when they are missing or fail to load does the
-// branded fallback show. Swap in preferred photos any time by replacing the
-// SVGs or pointing these maps at curated CDN URLs.
+// industrial glyph + category label + wordmark).
+//
+// Card photos prefer committed local stills under `/images/suppliers/…` and
+// `/images/products/…`. Google Maps / googleusercontent URLs 403 and make
+// `/_next/image` 502 on prod — they are never treated as usable card photos.
+// Other remotes (Vercel Blob, mill sites) are used only when no local still
+// exists. Swap in preferred photos any time by replacing the SVGs or pointing
+// these maps at curated CDN URLs.
 
 export type FallbackCategoryKey =
   | "steel"
@@ -116,18 +119,69 @@ export function getProductFallbackImage(
 }
 
 /**
- * True only for a REAL photograph: a remote http(s) photo, or a local raster
- * asset (`/images/**.jpg|png|webp` — the curated supplier / product / certificate
- * packs committed under `public/images`). Local branded SVG fallbacks and empty
- * values are NOT real photos. This is the single source of truth used by
- * homepage gating and catalogue scoring to tell a genuine photograph apart
- * from a generated category tile.
+ * Google Maps / Places / Street View photo hosts. These URLs 403 for anonymous
+ * `/_next/image` fetches and must never be passed to next/image on cards.
+ */
+export function isGoogleMapsImageUrl(url?: string | null): boolean {
+  if (typeof url !== "string") return false;
+  const value = url.trim();
+  if (!/^https?:\/\//i.test(value)) return false;
+  try {
+    const host = new URL(value).hostname.toLowerCase();
+    return (
+      host === "googleusercontent.com" ||
+      host.endsWith(".googleusercontent.com") ||
+      host === "streetviewpixels-pa.googleapis.com" ||
+      host.endsWith(".ggpht.com") ||
+      host === "maps.gstatic.com" ||
+      host === "maps.googleapis.com"
+    );
+  } catch {
+    return /googleusercontent\.com|streetviewpixels-pa\.googleapis\.com|maps\.gstatic\.com|maps\.googleapis\.com|\.ggpht\.com/i.test(
+      value,
+    );
+  }
+}
+
+/** Curated mill/product stills checked into `public/images/{suppliers,products}/`. */
+export function isLocalStillUrl(url?: string | null): boolean {
+  if (typeof url !== "string") return false;
+  return /^\/images\/(suppliers|products)\/.+\.(jpe?g|png|webp)$/i.test(url.trim());
+}
+
+/**
+ * True only for a REAL photograph we can render on a card: a local raster
+ * still, or a non-Maps remote http(s) photo. Google Maps / googleusercontent
+ * URLs, local branded SVG tiles, and empty values are NOT real photos.
  */
 export function isRealImageUrl(url?: string | null): boolean {
   if (typeof url !== "string") return false;
   const value = url.trim();
+  if (isGoogleMapsImageUrl(value)) return false;
   if (/^https?:\/\//i.test(value)) return true;
   return /^\/images\/.+\.(jpe?g|png|webp)$/i.test(value);
+}
+
+/**
+ * Prefer a local mill/product still; otherwise the first non-Maps real photo.
+ * Returns undefined when only Maps URLs / empty values are present.
+ */
+export function pickPreferredCardImage(
+  urls?: (string | null | undefined)[] | null,
+): string | undefined {
+  const list = (urls ?? [])
+    .filter((u): u is string => typeof u === "string" && Boolean(u.trim()))
+    .map((u) => u.trim());
+  const local = list.find((u) => isLocalStillUrl(u));
+  if (local) return local;
+  return list.find((u) => isRealImageUrl(u));
+}
+
+export function supplierHasUsableCardImage(s: {
+  imageUrl?: string | null;
+  supplierImages?: (string | null | undefined)[] | null;
+}): boolean {
+  return Boolean(pickPreferredCardImage([s.imageUrl, ...(s.supplierImages ?? [])]));
 }
 
 export type ProductImageInput = {
@@ -149,11 +203,10 @@ export type ProductImageInput = {
  * can distinguish "has a real photo" from "needs a generated tile".
  */
 export function getRealProductImage(input: ProductImageInput): string | undefined {
-  const fromProduct = (input.images ?? []).find((u) => isRealImageUrl(u));
-  if (fromProduct) return fromProduct as string;
-  const fromSupplier = (input.supplierImages ?? []).find((u) => isRealImageUrl(u));
-  if (fromSupplier) return fromSupplier as string;
-  return undefined;
+  return pickPreferredCardImage([
+    ...(input.images ?? []),
+    ...(input.supplierImages ?? []),
+  ]);
 }
 
 /**

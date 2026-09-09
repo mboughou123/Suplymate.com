@@ -11,6 +11,7 @@ import SupplierFilters, {
   type SupplierFilterState,
 } from "@/components/SupplierFilters";
 import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
+import { supplierHasUsableCardImage } from "@/lib/image-fallback";
 
 type Props = {
   initialSuppliers: Supplier[];
@@ -90,8 +91,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       .sort((a, b) => {
         // Image-bearing suppliers first (empty cards look untrustworthy),
         // then by Suplymate score, then alphabetically.
-        const hasImg = (s: Supplier) =>
-          s.imageUrl || (s.supplierImages && s.supplierImages.length > 0) ? 1 : 0;
+        const hasImg = (s: Supplier) => (supplierHasUsableCardImage(s) ? 1 : 0);
         const img = hasImg(b) - hasImg(a);
         if (img) return img;
         const score =
