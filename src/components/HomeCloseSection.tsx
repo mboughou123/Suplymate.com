@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 
 type Props = {
   title: string;
@@ -10,12 +10,15 @@ type Props = {
 };
 
 export default function HomeCloseSection({ title, subtitle, tryLabel, plansLabel }: Props) {
+  const router = useRouter();
   const scrollToDemo = () => {
-    document.getElementById("ai-demo-walkthrough")?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-    window.setTimeout(() => document.getElementById("ai-demo-run")?.focus(), 450);
+    const demo = document.getElementById("ai-demo-walkthrough");
+    if (demo) {
+      demo.scrollIntoView({ behavior: "smooth", block: "center" });
+      window.setTimeout(() => document.getElementById("ai-demo-run")?.focus(), 450);
+      return;
+    }
+    router.push("/ai-assistant");
   };
 
   return (

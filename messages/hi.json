@@ -38,7 +38,19 @@
     "messages": "संदेश",
     "notifications": "सूचनाएँ",
     "toggleMenu": "Ouvrir/बंद करें le menu",
-    "openCart": "Ouvrir le panier"
+    "openCart": "Ouvrir le panier",
+    "home": "Home",
+    "materials": "Matières",
+    "blog": "Blog",
+    "about": "À propos",
+    "getStarted": "Commencer",
+    "saved": "Saved",
+    "settings": "सेटिंग्स",
+    "supplierWorkspace": "Supplier workspace",
+    "myProducts": "My products",
+    "rfqs": "RFQs",
+    "account": "Account",
+    "careers": "Careers"
   },
   "footer": {
     "tagline": "Votre सहायक d'approvisionnement IA. Un sourcing pपढ़ाs intelligent के लिएles entreprises मोडrnes.",
@@ -231,7 +243,21 @@
     "titleRest": "fine-tuned for industry.",
     "subtitle": "Shortlist verified mills, compare offers side by side, and watch material price windows — Scout, Compare, and Watch agents built for industrial procurement.",
     "tryWalkthrough": "Try the walkthrough",
-    "seePlans": "See plans"
+    "seePlans": "See plans",
+    "title1": "Source Smarter.",
+    "title2": "Build Better.",
+    "ctaStart": "Start sourcing",
+    "ctaExplore": "खोजें les आपूर्तिकर्ता",
+    "consoleLabel": "Mate · AI sourcing expert",
+    "consolePrompt": "Find aluminum suppliers in California with ISO 9001.",
+    "consoleStep1": "Parsed: aluminum · California · ISO 9001",
+    "consoleStep2": "Scanning listed suppliers",
+    "consoleStep3": "Scoring price · delivery · quality · location · trust",
+    "consoleResult": "3 matches · top match 91%",
+    "statSuppliers": "Listed suppliers",
+    "statIndustries": "Industries",
+    "statMaterials": "Catalog materials",
+    "trustNote": "Supplier facts come from Suplymate data. Verification is manual — never assumed."
   },
   "authentication": {
     "signIn": "Se connecter",
@@ -904,5 +930,257 @@
     "saving": "Enregistrement…",
     "signingIn": "लॉग इन…",
     "creatingAccount": "Création du खाता…"
+  },
+  "homeBenefits": {
+    "eyebrow": "Outcomes",
+    "title": "What Suplymate adds to your business",
+    "subtitle": "Not projections — these are the rules and coverage you get from day one.",
+    "items": {
+      "heldFunds": {
+        "label": "Payments held by Suplymate",
+        "note": "You pay the supplier directly. We never process or hold your funds."
+      },
+      "countries": {
+        "label": "Countries you can source from",
+        "note": "Domestic and international mills side by side — filter by country or region."
+      },
+      "materials": {
+        "label": "Materials with live price charts",
+        "note": "Track price windows and rate signals so you lock volume at the right time."
+      },
+      "guestQuestions": {
+        "label": "Free questions for Mate, no card",
+        "note": "Try the AI orchestrator before you sign up — every plan starts free."
+      },
+      "alwaysOn": {
+        "label": "AI orchestrator on call",
+        "note": "Mate routes requests to Scout, Compare or Watch whenever your team is working."
+      }
+    }
+  },
+  "homeFaq": {
+    "eyebrow": "FAQ",
+    "title": "अक्सर पूछे जाने वाले प्रश्न",
+    "intro": "Straight answers about how Suplymate works — with or without the AI.",
+    "allFaqs": "See all FAQs",
+    "contact": "Talk to us",
+    "items": {
+      "whatIs": {
+        "question": "Qu'est-ce que Suplymate ?",
+        "answer": "Suplymate is a verified industrial supplier network with a sourcing workspace built on top. Browse mills and manufacturers, read product descriptions, compare offers side by side, track material prices and send RFQs — all from one place."
+      },
+      "ownCountry": {
+        "question": "Can I find suppliers in my own country as well as internationally?",
+        "answer": "Yes. Filter the directory by country or region to see domestic and international suppliers side by side. Source locally when lead time matters and globally when price does — the same profiles, verification badges and compare tools apply to both."
+      },
+      "easier": {
+        "question": "How does Suplymate make sourcing easier?",
+        "answer": "Every supplier has a structured, verified profile, so you stop trawling spreadsheets and supplier websites. Line up offers by price, MOQ and lead time, watch price windows for the materials you buy, and keep every RFQ and conversation in one workspace."
+      },
+      "aiOptional": {
+        "question": "Do I have to use the AI assistant?",
+        "answer": "No. The supplier directory, product catalogue, compare tools and material price charts all work without it. Mate, our AI orchestrator, simply speeds things up — it routes your request to the right agent and hands back a shortlist, an offer table or a price window."
+      },
+      "verified": {
+        "question": "Are suppliers verified?",
+        "answer": "Listed suppliers come from public directories and are labelled as such. A supplier is only shown as Verified after our team has manually checked company registration, contact details and product claims. You can filter to verified suppliers only, and our Supplier Verification Policy describes the full process."
+      },
+      "marketplace": {
+        "question": "Is Suplymate a marketplace? Do I buy through you?",
+        "answer": "No. Suplymate shows you what you need and the right company to get it from — you contact and buy from the supplier directly. We don't take payment, hold funds or sit in the middle of your order."
+      },
+      "cost": {
+        "question": "How much does it cost?",
+        "answer": "Browsing suppliers, products and material prices is free with an account. Paid plans unlock more of the sourcing workspace for teams — see the pricing page for what each plan includes.",
+        "linkLabel": "See pricing"
+      }
+    }
+  },
+  "homeOrchestrator": {
+    "eyebrow": "Comment ça marche",
+    "title": "One orchestrator, three specialist agents",
+    "subtitle": "Tell Mate what you need to source. It routes the ask to Scout, Compare, or Watch — and hands back a shortlist, an offer table, or a price window.",
+    "cardTitlePrefix": "Mate, your",
+    "cardTitleAccent": "AI orchestrator",
+    "cardTitleSuffix": "in Suplymate",
+    "learnMore": "En savoir pपढ़ाs",
+    "askWhat": "What do you want to source?",
+    "userAsk": "HDPE pipe DN110, 270 meters, UAE or India, verified, 14-day lead.",
+    "recommend": "I recommend the Scout agent — it shortlists verified mills by spec and lead time.",
+    "agentChip": "Scout agent",
+    "inputHint": "Can you compare offers from the three verified mills?",
+    "ghostLeft": "RFQ agent",
+    "ghostRight": "Spot quote agent"
+  },
+  "homeProducts": {
+    "eyebrow": "उत्पाद",
+    "title": "Browse products from verified suppliers",
+    "subtitle": "Real catalogue items with supplier photos — rebar, cables, pipes, packaging and industrial parts, each linked to the mill that makes it.",
+    "all": "Tous",
+    "filterLabel": "Filter products by category",
+    "viewProduct": "View product",
+    "browseAll": "Parcourir tous les उत्पाद",
+    "empty": "No products in this category yet.",
+    "categories": {
+      "steelAndMetals": "Steel & metals",
+      "cablesAndElectrical": "Cables & electrical",
+      "tubesAndPipes": "Tubes & pipes",
+      "packaging": "Packaging",
+      "construction": "Construction",
+      "industrialParts": "Industrial parts"
+    }
+  },
+  "megaMenu": {
+    "menuLabel": "Main",
+    "mobileMenuLabel": "Mobile",
+    "top": {
+      "products": "उत्पाद",
+      "solutions": "Solutions",
+      "suppliers": "आपूर्तिकर्ता",
+      "materials": "Matières",
+      "pricing": "मूल्य निर्धारण",
+      "company": "कंपनी"
+    },
+    "products": {
+      "heading": "Suplymate sourcing platform",
+      "body": "A verified supplier network with the tools to shortlist, compare and time every purchase.",
+      "explore": "Explore products",
+      "howItWorks": "Comment ça marche",
+      "featuredPrefix": "Mate, your",
+      "featuredAccent": "AI orchestrator",
+      "featuredSuffix": "in Suplymate",
+      "featuredBlurb": "Describe what you need to source in plain language. Mate routes it to Scout, Compare or Watch and hands back the answer.",
+      "readMore": "Lire la suite",
+      "scout": "Scout",
+      "scoutDescription": "Find verified suppliers and build a shortlist by spec, region and lead time.",
+      "compare": "तुलना करें",
+      "compareDescription": "Browse products and line up offers side by side — price, MOQ, lead time.",
+      "watch": "Watch",
+      "watchDescription": "Track material prices and rate signals to time your purchase.",
+      "catalogue": "Product catalogue",
+      "catalogueDescription": "Listed products with supplier photos — steel, cables, pipes, packaging and more."
+    },
+    "solutions": {
+      "byIndustry": "By industry",
+      "byMaterial": "By material",
+      "byGoal": "By goal",
+      "goals": {
+        "findVerified": "Find verified suppliers",
+        "compareOffers": "Compare offers",
+        "timePurchase": "Time your purchase",
+        "sourceInternationally": "Source internationally",
+        "sourceDomestically": "Source in your country",
+        "askMate": "Ask Mate"
+      }
+    },
+    "company": {
+      "about": "À propos",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "संपर्क"
+    }
+  },
+  "careers": {
+    "eyebrow": "Careers",
+    "title": "Build the future of industrial sourcing",
+    "intro": "We're a small, fast-moving team connecting industrial buyers with verified mills and AI-driven market intelligence. If you want your work to change how factories buy, we'd love to talk.",
+    "viewRoles": "View open roles",
+    "applyNow": "Apply now",
+    "valuesTitle": "Why join Suplymate",
+    "valuesSubtitle": "Early-stage ownership, real customers, and a product that touches steel, plastics, and everything in between.",
+    "values": {
+      "impact": {
+        "title": "Real impact, early",
+        "body": "You'll ship to buyers and mills within weeks, not quarters — and see it change how they source."
+      },
+      "ai": {
+        "title": "AI with a purpose",
+        "body": "Scout, Compare, and Watch are agents built for procurement — not chat wrappers. You'll shape how they reason."
+      },
+      "global": {
+        "title": "A global network, built from the US",
+        "body": "We're a US-based team serving buyers and mills across the UAE, India and beyond. Expect a multilingual product and an international customer base from day one."
+      },
+      "team": {
+        "title": "Small team, big trust",
+        "body": "Remote-friendly, low ceremony, high ownership. We hire people we'd trust to run a project alone."
+      }
+    },
+    "rolesEyebrow": "Open roles",
+    "rolesTitle": "Where we're hiring",
+    "rolesSubtitle": "Roles are remote-first within the United States. We work across US time zones, with occasional in-person days in New York.",
+    "roles": {
+      "foundingEngineer": {
+        "title": "Founding Full-Stack Engineer",
+        "summary": "Own features end to end across our Next.js, Prisma, and AI stack — from supplier data pipelines to the Scout / Compare / Watch agents.",
+        "location": "Remote · United States",
+        "type": "Full-time"
+      },
+      "dataAnalyst": {
+        "title": "Procurement Data Analyst",
+        "summary": "Curate and verify mill data, build price-index datasets, and turn market signals into insights buyers can act on.",
+        "location": "Remote · United States",
+        "type": "Full-time"
+      },
+      "growthPartnerships": {
+        "title": "Growth & Supplier Partnerships",
+        "summary": "Onboard verified manufacturers, run buyer pilots, and grow the network across the US, the Gulf and South Asia.",
+        "location": "New York, NY",
+        "type": "Full-time"
+      },
+      "supplierSuccess": {
+        "title": "Supplier Success Associate",
+        "summary": "Help mills complete verification, publish products, and respond to RFQs quickly — the human side of a verified network.",
+        "location": "Remote · United States",
+        "type": "Contract"
+      },
+      "general": {
+        "title": "General application",
+        "summary": "Don't see a match? Tell us what you'd build.",
+        "location": "Remote · United States",
+        "type": "Open"
+      }
+    },
+    "apply": "Apply",
+    "noFit": "Don't see the right role? Send a general application — we read every one.",
+    "applyEyebrow": "Apply",
+    "applyTitle": "Tell us about yourself",
+    "applyBody": "Share a little about your background and the role you're interested in. Your application goes straight to the founding team's inbox.",
+    "applySteps": [
+      "We review every application within a week.",
+      "A short intro call with a founder.",
+      "A practical exercise or portfolio walkthrough.",
+      "Offer — usually within two to three weeks."
+    ],
+    "orEmail": "Prefer email? Write to",
+    "form": {
+      "name": "पूरा नाम",
+      "email": "E-mail",
+      "phone": "Phone",
+      "location": "Location",
+      "locationPlaceholder": "Austin, TX",
+      "role": "Role you're applying for",
+      "linkedin": "LinkedIn or portfolio",
+      "cvUrl": "CV / résumé link",
+      "cvHint": "Google Drive, Dropbox, or a public URL",
+      "message": "Why Suplymate?",
+      "messageHint": "At least {min} characters",
+      "optional": "Optional",
+      "privacyNote": "We only use your details to review your application and get back to you.",
+      "submit": "Send application",
+      "submitting": "Sending…",
+      "sentTitle": "Application sent",
+      "sentBody": "Thanks — we've received your application and will reply by email.",
+      "sendAnother": "Send another"
+    },
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Enter a valid email address.",
+      "invalidUrl": "Enter a full URL starting with https://.",
+      "tooShort": "Please write a bit more so we can understand your fit.",
+      "rateLimited": "Too many submissions — please try again in a few minutes.",
+      "deliveryFailed": "We couldn't deliver your application right now. Please email it to {email} instead.",
+      "generic": "Something went wrong. Please try again or email us directly."
+    }
   }
 }

@@ -14,11 +14,14 @@ type LanguageSelectorProps = {
   /** Compact styling for the dark navbar */
   variant?: "navbar" | "mobile" | "inline";
   className?: string;
+  /** Hide the language name between lg and xl, where the desktop header row is tight. */
+  compactLabel?: boolean;
 };
 
 export default function LanguageSelector({
   variant = "navbar",
   className = "",
+  compactLabel = false,
 }: LanguageSelectorProps) {
   const t = useTranslations("languageSelector");
   const locale = useLocale() as Locale;
@@ -129,7 +132,9 @@ export default function LanguageSelector({
         onKeyDown={onTriggerKeyDown}
       >
         <Globe className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
-        <span className="max-w-[7rem] truncate">{localeNames[locale]}</span>
+        <span className={`max-w-[7rem] truncate ${compactLabel ? "hidden xl:inline" : ""}`}>
+          {localeNames[locale]}
+        </span>
         <ChevronDown
           className={`h-3.5 w-3.5 shrink-0 opacity-70 transition-transform ${open ? "rotate-180" : ""}`}
           aria-hidden

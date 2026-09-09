@@ -3,8 +3,9 @@
 import { usePathname } from "@/i18n/navigation";
 import SiteNav from "./SiteNav";
 
-/** Routes that use their own chrome (auth forms, app shells). */
+/** Routes that use their own chrome (homepage has HomeTopNav; auth/app shells). */
 const HIDE_SITE_NAV = [
+  "/",
   "/login",
   "/signup",
   "/forgot-password",
