@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { isGoogleMapsImageUrl } from "@/lib/image-fallback";
 
 // Kept in sync with `images.remotePatterns` in next.config.ts.
-const OPTIMIZED_HOST = /(\.googleusercontent\.com|^streetviewpixels-pa\.googleapis\.com$|\.public\.blob\.vercel-storage\.com)$/i;
+// Do not send Google Maps / googleusercontent URLs through next/image.
+const OPTIMIZED_HOST = /(\.public\.blob\.vercel-storage\.com)$/i;
 
 function canOptimize(src: string): boolean {
   try {
@@ -39,16 +41,17 @@ export default function SupplierLogo({
   className = "h-16 w-16 rounded-2xl text-base ring-4 ring-white shadow-glow",
 }: SupplierLogoProps) {
   const [failed, setFailed] = useState(false);
-  const showImage = Boolean(logoUrl) && !failed;
+  const usableLogo = logoUrl && !isGoogleMapsImageUrl(logoUrl) ? logoUrl : null;
+  const showImage = Boolean(usableLogo) && !failed;
   return (
     <div
       className={`relative flex items-center justify-center overflow-hidden font-bold tracking-wide text-white ${className}`}
       style={{ backgroundImage: gradient }}
     >
       {showImage ? (
-        canOptimize(logoUrl as string) ? (
+        canOptimize(usableLogo as string) ? (
           <Image
-            src={logoUrl as string}
+            src={usableLogo as string}
             alt={`${name} logo`}
             fill
             sizes="64px"
@@ -58,7 +61,7 @@ export default function SupplierLogo({
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={logoUrl as string}
+            src={usableLogo as string}
             alt={`${name} logo`}
             loading="lazy"
             decoding="async"

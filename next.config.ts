@@ -5,13 +5,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   images: {
-    // Remote supplier/product photos are proxied and optimized through the
-    // Next.js image optimizer (resized, converted to WebP/AVIF, cached on our
-    // edge) instead of hotlinking third-party hosts directly.
+    // Only allow hosts we will actually send through next/image.
+    // Google Maps / googleusercontent URLs 403 and 502 `/_next/image` on
+    // prod — cards prefer local stills or branded fallbacks instead.
     remotePatterns: [
-      // Google Maps / Google Photos supplier imagery (lh3–lh6, etc.)
-      { protocol: "https", hostname: "**.googleusercontent.com" },
-      { protocol: "https", hostname: "streetviewpixels-pa.googleapis.com" },
       // Uploaded media (Vercel Blob)
       { protocol: "https", hostname: "**.public.blob.vercel-storage.com" },
     ],

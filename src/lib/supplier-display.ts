@@ -1,4 +1,5 @@
 import type { Supplier } from "@/data/suppliers";
+import { pickPreferredCardImage } from "@/lib/image-fallback";
 
 export type DisplayProduct = {
   name: string;
@@ -204,7 +205,7 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
     bannerGradient: BANNER_GRADIENTS[seed % BANNER_GRADIENTS.length],
     logoUrl: s.logoUrl,
-    imageUrl: s.imageUrl,
+    imageUrl: pickPreferredCardImage([s.imageUrl, ...(s.supplierImages ?? [])]),
     rating,
     reviewCount,
     verified,
