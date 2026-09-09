@@ -147,7 +147,7 @@ describe("Lister daily expansion 2026-09-09 (OK 1 + soft 15)", () => {
     ).toBe("/images/products/sew-eurodrive/sew-gearmotor.jpg");
   });
 
-  it("leaves the 09-08 product pack at 38 approved SKUs", () => {
-    expect(listerDaily20260908PublicCount()).toBe(38);
+  it("leaves the 09-08 product pack at 50 approved SKUs", () => {
+    expect(listerDaily20260908PublicCount()).toBe(50);
   });
 });

@@ -2,13 +2,22 @@
   "generated_at_utc": "2026-09-09T17:06:17Z",
   "generated_at_pt": "2026-09-09 10:06 AM PT",
   "date": "2026-09-08",
-  "notes": "PARTIAL product wire 2026-09-08: Researcher OK 4 + soft 34 = 38 RFQ SKUs. HOLD 12 omitted. Poison siblings omitted (village, Tetra Pak, Nackawic pulp drums, Skytrain, Quattro CAT, etc.). One safe still per SKU. Seal: data/daily-2026-09-08-researcher-products-seal.json.",
-  "wire_full_pack": false,
+  "notes": "Product wire 2026-09-08: prior OK 4 + soft 34, plus HOLD12 Researcher OK 9 + soft 3 = 50 RFQ SKUs. HOLD=[]. One still per SKU (preferred primary). Fujikura power still quarantined. Rengo is Japan. Seal: data/daily-2026-09-08-researcher-hold12-products-seal.json.",
+  "wire_full_pack": true,
   "ok_slugs": [
     "schuetz",
     "komatsu",
     "hitachi-cm",
-    "volvo-ce"
+    "volvo-ce",
+    "can-pack",
+    "mayr-melnhof",
+    "constantia-flexibles",
+    "rengo",
+    "misumi",
+    "legrand",
+    "harmonic-drive",
+    "fujikura",
+    "belden"
   ],
   "soft_slugs": [
     "eew",
@@ -44,23 +53,13 @@
     "nlmk",
     "algoma",
     "knauf",
-    "owens-corning"
-  ],
-  "hold_omitted_slugs": [
-    "can-pack",
-    "mayr-melnhof",
-    "constantia-flexibles",
-    "rengo",
+    "owens-corning",
     "nine-dragons",
     "mauser",
-    "misumi",
-    "legrand",
-    "harmonic-drive",
-    "sumitomo-electric",
-    "fujikura",
-    "belden"
+    "sumitomo-electric"
   ],
-  "wire_slug_count": 38,
+  "hold_omitted_slugs": [],
+  "wire_slug_count": 50,
   "products": [
     {
       "product_name": "Sch\u00fctz IBC Intermediate Bulk Containers and Plastic Drums",
@@ -856,6 +855,234 @@
       ],
       "needs_ai_generate": false,
       "honesty_note": "owens-insulation = same museum gypsum soft (shared d4c0793c); owens-roofing = smokestack/campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Can Pack Beverage Cans, Food Cans and Can Ends",
+      "supplier_name": "Can Pack S.A.",
+      "supplier_slug_guess": "can-pack",
+      "category": "Packaging",
+      "source_url": "https://www.canpack.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Can Pack S.A. mill/product page for beverage cans / food cans / can ends. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/can-pack/canpack-food.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary canpack-food.jpg. mill-fallback-2 sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Mayr-Melnhof Cartonboard, Folding Carton and Packaging Board",
+      "supplier_name": "Mayr-Melnhof Karton AG",
+      "supplier_slug_guess": "mayr-melnhof",
+      "category": "Packaging",
+      "source_url": "https://www.mayr-melnhof.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mayr-Melnhof Karton AG mill/product page for cartonboard / folding carton / packaging board. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/mayr-melnhof/img3.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary img3.jpg. mm-cartonboard sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Constantia Flexibles Flexible Packaging, Foil Laminates and Pharma Packaging",
+      "supplier_name": "Constantia Flexibles",
+      "supplier_slug_guess": "constantia-flexibles",
+      "category": "Packaging",
+      "source_url": "https://www.cflex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Constantia Flexibles mill/product page for flexible packaging / foil laminates / pharma packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/constantia-flexibles/cflex-pharma.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary cflex-pharma.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Rengo Corrugated Board and Paperboard Packaging",
+      "supplier_name": "Rengo Co., Ltd.",
+      "supplier_slug_guess": "rengo",
+      "category": "Packaging",
+      "source_url": "https://www.rengo.co.jp/english/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rengo Co., Ltd. mill/product page for corrugated board / paperboard packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/rengo/rengo-paperboard.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Japan mill (\u30ec\u30f3\u30b4\u30fc). Not Chilean Rengo. Primary rengo-paperboard.jpg; mill-fallback-2 sibling not wired.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "MISUMI Factory Automation Mechanical Components",
+      "supplier_name": "MISUMI Group Inc.",
+      "supplier_slug_guess": "misumi",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.misumi-ec.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 MISUMI Group Inc. product page for factory-automation mechanical components. No public unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/misumi/misumi-fa.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary misumi-fa.jpg. Catalog distributor \u2014 SKU attaches by slug without a mill card.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Legrand Electrical Infrastructure and Cable Management",
+      "supplier_name": "Legrand SA",
+      "supplier_slug_guess": "legrand",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.legrand.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Legrand SA mill/product page for electrical infrastructure / cable management. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/legrand/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary mill-fallback-2.jpg. legrand-cable-mgmt sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Harmonic Drive Precision Strain Wave Gears and Servo Actuators",
+      "supplier_name": "Harmonic Drive Systems Inc.",
+      "supplier_slug_guess": "harmonic-drive",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.harmonicdrive.net/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Harmonic Drive Systems Inc. mill/product page for strain-wave gears / servo actuators. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/harmonic-drive/harmonic-gears.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary harmonic-gears.jpg. harmonic-actuators sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Fujikura Optical Fiber Cable",
+      "supplier_name": "Fujikura Ltd.",
+      "supplier_slug_guess": "fujikura",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.fujikura.co.jp/eng/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Fujikura Ltd. mill/product page for optical fiber cable. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/fujikura/fujikura-fiber.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. fujikura-fiber.jpg ONLY. Power still blocked/quarantined \u2014 never wire.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Belden Industrial Networking Cable, Signal Cable and Connectivity Solutions",
+      "supplier_name": "Belden Inc.",
+      "supplier_slug_guess": "belden",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.belden.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Belden Inc. mill/product page for industrial networking cable / signal cable / connectivity. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/belden/belden-networking.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary belden-networking.jpg. belden-signal sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Nine Dragons Containerboard and Packaging Paper",
+      "supplier_name": "Nine Dragons Paper Holdings Limited",
+      "supplier_slug_guess": "nine-dragons",
+      "category": "Packaging",
+      "source_url": "https://www.ndpaper.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nine Dragons Paper Holdings Limited mill/product page for containerboard / packaging paper. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/nine-dragons/nd-containerboard.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary nd-containerboard.jpg. nd-packaging-paper sibling not wired.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Mauser Steel Drums, IBCs and Plastic Industrial Packaging",
+      "supplier_name": "Mauser Packaging Solutions",
+      "supplier_slug_guess": "mauser",
+      "category": "Packaging",
+      "source_url": "https://www.mauserpackaging.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mauser Packaging Solutions mill/product page for steel drums / IBCs / plastic industrial packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/mauser/mauser-drums.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary mauser-drums.jpg. mauser-ibc sibling not wired.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Sumitomo Electric Power Cables, Optical Fiber and Automotive Wiring Harnesses",
+      "supplier_name": "Sumitomo Electric Industries, Ltd.",
+      "supplier_slug_guess": "sumitomo-electric",
+      "category": "Cables & Electrical",
+      "source_url": "https://sumitomoelectric.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sumitomo Electric Industries, Ltd. mill/product page for power cables / optical fiber / automotive wiring harnesses. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/sumitomo-electric/sei-power-cable.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary sei-power-cable.jpg. sei-fiber sibling not wired.",
       "researcher_verdict": "soft"
     }
   ]

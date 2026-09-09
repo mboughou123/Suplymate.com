@@ -1,14 +1,16 @@
 /**
- * Daily expansion 2026-09-08 product pack — OK 4 + soft 34 = 38 RFQ SKUs.
+ * Daily expansion 2026-09-08 product pack — prior OK 4 + soft 34, plus
+ * HOLD12 Researcher OK 9 + soft 3 = 50 RFQ SKUs (HOLD=[]).
  *
  * Metadata: data/daily-2026-09-08-products.json
  * Photos:   public/images/products/{supplier-slug}/…
- * Seal:     data/daily-2026-09-08-researcher-products-seal.json
- *             (QA-DAILY-2026-09-08-PRODUCTS-RESEARCHER-PARTIAL)
+ * Seal:     data/daily-2026-09-08-researcher-hold12-products-seal.json
+ *             (QA-HOLD12-PRODUCTS-RESEARCHER-OK)
  *
- * Honesty: all 38 SKUs are mill RFQ (never invent FOB / unit prices).
+ * Honesty: all 50 SKUs are mill RFQ (never invent FOB / unit prices).
  * Photos: on-disk local JPGs only — no remote/stock fallbacks, no AI badges.
- * HOLD 12 omitted. nVent SKU wires without a mill card (mill stays HOLD).
+ * Fujikura wires fiber only (power quarantined). misumi SKU attaches by slug
+ * without a mill card (mill stays HOLD distributor).
  */
 
 import rawDaily from "../../data/daily-2026-09-08-products.json";
@@ -99,21 +101,28 @@ export const DAILY_20260908_PRODUCT_SOFT_SLUGS = [
   "owens-corning",
 ] as const;
 
-/** Researcher HOLD — not in the JSON and must not appear in the catalogue. */
-export const DAILY_20260908_HOLD_PRODUCT_SLUGS = [
+/** HOLD12 Researcher OK — appended after the locked 4+34 set. */
+export const DAILY_20260908_HOLD12_OK_SLUGS = [
   "can-pack",
   "mayr-melnhof",
   "constantia-flexibles",
   "rengo",
-  "nine-dragons",
-  "mauser",
   "misumi",
   "legrand",
   "harmonic-drive",
-  "sumitomo-electric",
   "fujikura",
   "belden",
 ] as const;
+
+/** HOLD12 Researcher soft category generics. */
+export const DAILY_20260908_HOLD12_SOFT_SLUGS = [
+  "nine-dragons",
+  "mauser",
+  "sumitomo-electric",
+] as const;
+
+/** Researcher HOLD — empty after HOLD12 seal (QA-HOLD12-PRODUCTS-RESEARCHER-OK). */
+export const DAILY_20260908_HOLD_PRODUCT_SLUGS = [] as const;
 
 const WIRED_MILL_SLUGS = new Set<string>(DAILY_20260908_SLUGS);
 

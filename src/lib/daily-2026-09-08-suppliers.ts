@@ -6,7 +6,8 @@
  *
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
  *          never invent FOB. Keep JSON description / honesty_note text.
- *          HOLD remaining: nvent (blocked) + misumi (distributor). No products.
+ *          HOLD remaining: nvent (blocked) + misumi (distributor).
+ *          misumi has a HOLD12 product SKU without a mill card.
  * ChelPipe uses chelpipe_02 only. NLMK uses nlmk_02 only.
  * Hitachi CM uses hitachi-cm_04 only. HOLD26 plants use `_01` only.
  * Soft captions already in JSON: harmonic-drive HFUC gear (not Hotaka

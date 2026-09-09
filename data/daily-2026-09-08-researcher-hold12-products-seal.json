@@ -1,0 +1,36 @@
+{
+  "label": "QA-HOLD12-PRODUCTS-RESEARCHER-OK",
+  "sealed_at_utc": "2026-09-09T19:00:00Z",
+  "scope": "HOLD12 products only — append onto daily-2026-09-08 catalogue. Cleared prior 38 locked. HOLD=[].",
+  "pr_15": "wired",
+  "needs_ai_generate": 0,
+  "unit_price_null": 12,
+  "rfq_products": 12,
+  "counts": {
+    "hold12": 12,
+    "ok": 9,
+    "soft": 3,
+    "hold": 0,
+    "catalogue_after": 50
+  },
+  "ok": [
+    { "slug": "can-pack", "still": "canpack-food.jpg", "sibling_omitted": "mill-fallback-2.jpg" },
+    { "slug": "mayr-melnhof", "still": "img3.jpg", "sibling_omitted": "mm-cartonboard.jpg" },
+    { "slug": "constantia-flexibles", "still": "cflex-pharma.jpg" },
+    { "slug": "rengo", "still": "rengo-paperboard.jpg", "note": "Japan mill; not Chilean Rengo", "sibling_omitted": "mill-fallback-2.jpg" },
+    { "slug": "misumi", "still": "misumi-fa.jpg", "note": "SKU attaches by slug; mill card stays HOLD distributor" },
+    { "slug": "legrand", "still": "mill-fallback-2.jpg", "sibling_omitted": "legrand-cable-mgmt.jpg" },
+    { "slug": "harmonic-drive", "still": "harmonic-gears.jpg", "sibling_omitted": "harmonic-actuators.jpg" },
+    { "slug": "fujikura", "still": "fujikura-fiber.jpg", "note": "fiber ONLY; power blocked/quarantined" },
+    { "slug": "belden", "still": "belden-networking.jpg", "sibling_omitted": "belden-signal.jpg" }
+  ],
+  "soft": [
+    { "slug": "nine-dragons", "still": "nd-containerboard.jpg", "sibling_omitted": "nd-packaging-paper.jpg" },
+    { "slug": "mauser", "still": "mauser-drums.jpg", "sibling_omitted": "mauser-ibc.jpg" },
+    { "slug": "sumitomo-electric", "still": "sei-power-cable.jpg", "sibling_omitted": "sei-fiber.jpg" }
+  ],
+  "hold": [],
+  "invented_fob_prices": false,
+  "stills_source": "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/<slug>/",
+  "stills_note": "Preferred filenames wired in JSON. Enhancer pack was not present on this VM; stills were not invented or substituted from mill _01.jpg."
+}
