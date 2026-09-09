@@ -1,4 +1,5 @@
 import type { Supplier } from "@/data/suppliers";
+import { supplierHasUsableCardImage } from "@/lib/image-fallback";
 import { isPhase1Supplier } from "@/lib/phase1";
 import { isDaily20260902Supplier } from "@/lib/daily-2026-09-02-ids";
 import { isDaily20260903Supplier } from "@/lib/daily-2026-09-03-ids";
@@ -7,10 +8,7 @@ import { isDaily20260908Supplier } from "@/lib/daily-2026-09-08-ids";
 import { isDaily20260909Supplier } from "@/lib/daily-2026-09-09-ids";
 
 function supplierHasImage(s: Supplier): boolean {
-  return (
-    Boolean(s.imageUrl) ||
-    Boolean(s.supplierImages && s.supplierImages.length > 0)
-  );
+  return supplierHasUsableCardImage(s);
 }
 
 /** Phase-1 pack + daily expansion mills — keep them at the front of /suppliers. */

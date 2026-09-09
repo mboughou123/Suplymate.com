@@ -6,6 +6,7 @@ import {
   logoNeedsDarkChip,
 } from "@/lib/phase1";
 import { listerProductsForSupplier } from "@/lib/lister-catalogue";
+import { pickPreferredCardImage } from "@/lib/image-fallback";
 import { formatPrice } from "@/config/commerce";
 import { priceSourceBadgeLabel } from "@/lib/price-source";
 
@@ -193,7 +194,7 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
               : "RFQ",
             moq: realMoq,
             gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
-            imageUrl: p.images[0],
+            imageUrl: pickPreferredCardImage(p.images),
             hasRealPrice: priced,
             hasRealMoq: Boolean(realMoq),
             priceSourceLabel: priceSourceBadgeLabel(

@@ -338,10 +338,10 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   );
 
   /* --- Media gallery --- */
-  // Image priority: supplier website/Google Places photos (s.imageUrl +
+  // Image priority: local mill stills, then non-Maps remotes (s.imageUrl +
   // s.supplierImages) → category-based factory/warehouse fallback → branded
-  // placeholder. Never an empty gallery. Suppliers with no website rely on the
-  // Google Places photos (collected at import); we never scrape their site.
+  // placeholder. Never an empty gallery. Google Maps / googleusercontent
+  // URLs are dropped — they 403 and 502 `/_next/image` on prod.
   const realSupplierPhotos = collectFactoryPhotoUrls(s);
   const categoryMediaFallback = getSupplierFallbackImage(
     s.category ?? s.industry,

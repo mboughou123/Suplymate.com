@@ -15,6 +15,9 @@ import { toDisplaySupplier } from "@/lib/supplier-display";
 import {
   getRealProductImage,
   hasRealProductImage,
+  isLocalStillUrl,
+  isRealImageUrl,
+  supplierHasUsableCardImage,
 } from "@/lib/image-fallback";
 import { calculateSupplierCompletenessScore } from "@/lib/supplier-completeness";
 import {
@@ -275,19 +278,21 @@ function flagFor(country: string): string {
 
 /* ----------------------------- Linkage --------------------------------- */
 
-// A supplier "has a real photo" if it carries a remote banner or gallery image
-// (Google Maps / website media). Used to prefer image-bearing suppliers so the
-// products they back can show a genuine photograph rather than a category tile.
+// A supplier "has a real photo" if it carries a usable local still or a
+// non-Maps remote. Google Maps / googleusercontent URLs 403 and are ignored.
 function supplierHasRealPhoto(s: Supplier): boolean {
-  const isReal = (u?: string | null) => Boolean(u && /^https?:\/\//i.test(u));
-  return isReal(s.imageUrl) || Boolean(s.supplierImages?.some(isReal));
+  return supplierHasUsableCardImage(s);
 }
 
-// Real photos linked to a supplier record (banner + gallery), de-duplicated.
+// Usable photos linked to a supplier record (banner + gallery). Local stills
+// first — never prefer Google Maps URLs over `/images/suppliers|products/…`.
 function supplierPhotos(s: Supplier): string[] {
-  return [s.imageUrl, ...(s.supplierImages ?? [])].filter(
-    (u): u is string => Boolean(u && /^https?:\/\//i.test(u))
+  const list = [s.imageUrl, ...(s.supplierImages ?? [])].filter(
+    (u): u is string => Boolean(u && isRealImageUrl(u))
   );
+  const local = list.filter((u) => isLocalStillUrl(u));
+  const rest = list.filter((u) => !isLocalStillUrl(u));
+  return [...local, ...rest];
 }
 
 // Deterministically link a catalogue product to a REAL supplier, preferring the

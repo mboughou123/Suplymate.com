@@ -4,7 +4,7 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { toDisplaySupplier } from "@/lib/supplier-display";
-import { getSupplierFallbackImage } from "@/lib/image-fallback";
+import { getSupplierFallbackImage, supplierHasUsableCardImage } from "@/lib/image-fallback";
 import type { Supplier } from "@/data/suppliers";
 import HomepageSupplierCard, {
   type HomepageSupplierCardProps,
@@ -13,7 +13,7 @@ import HomepageSupplierCard, {
 const MAX_CARDS = 6;
 
 function hasRealImage(s: Supplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.supplierImages && s.supplierImages.length > 0);
+  return supplierHasUsableCardImage(s);
 }
 
 function toCardProps(s: Supplier): HomepageSupplierCardProps {

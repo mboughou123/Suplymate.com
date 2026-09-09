@@ -1,0 +1,161 @@
+import { describe, expect, it } from "vitest";
+import {
+  getBestProductImage,
+  getProductFallbackImage,
+  getRealProductImage,
+  isGoogleMapsImageUrl,
+  isLocalStillUrl,
+  isRealImageUrl,
+  pickPreferredCardImage,
+  supplierHasUsableCardImage,
+} from "@/lib/image-fallback";
+import { collectFactoryPhotoUrls, getFactoryPhotoUrl } from "@/lib/phase1";
+
+const MAPS_LH3 =
+  "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGe4FB1KEoUkEXe2bH0-Be16nU3IdB9TT-M2DZ-T9Rv4e_B38K7Dyo0vzBbC08RA1j6U2DsiuNCSeeRx8LEcQ211Jw8WWJEmn-DEWaEfr_2MzehtpvE8SuMoP0Wh_BdPI3okrQkTQ=w800-h500-k-no";
+const MAPS_STREETVIEW =
+  "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=abc&w=800";
+const LOCAL_MILL = "/images/suppliers/ansteel/ansteel_01.jpg";
+const LOCAL_PRODUCT = "/images/products/steel-coil/steel-coil_01.jpg";
+const BLOB =
+  "https://abc123.public.blob.vercel-storage.com/mills/photo.jpg";
+const MILL_SITE = "https://www.arcelormittal.com/media/plant.jpg";
+
+describe("isGoogleMapsImageUrl", () => {
+  it("flags googleusercontent, Street View, and Maps hosts", () => {
+    expect(isGoogleMapsImageUrl(MAPS_LH3)).toBe(true);
+    expect(isGoogleMapsImageUrl(MAPS_STREETVIEW)).toBe(true);
+    expect(isGoogleMapsImageUrl("https://maps.gstatic.com/mapfiles/place.png")).toBe(
+      true,
+    );
+    expect(isGoogleMapsImageUrl("https://lh5.googleusercontent.com/photo.jpg")).toBe(
+      true,
+    );
+  });
+
+  it("leaves Blob, mill sites, and local stills alone", () => {
+    expect(isGoogleMapsImageUrl(BLOB)).toBe(false);
+    expect(isGoogleMapsImageUrl(MILL_SITE)).toBe(false);
+    expect(isGoogleMapsImageUrl(LOCAL_MILL)).toBe(false);
+  });
+});
+
+describe("isRealImageUrl / isLocalStillUrl", () => {
+  it("treats Maps URLs as not real card photos", () => {
+    expect(isRealImageUrl(MAPS_LH3)).toBe(false);
+    expect(isRealImageUrl(MAPS_STREETVIEW)).toBe(false);
+  });
+
+  it("accepts local mill and product rasters", () => {
+    expect(isLocalStillUrl(LOCAL_MILL)).toBe(true);
+    expect(isLocalStillUrl(LOCAL_PRODUCT)).toBe(true);
+    expect(isRealImageUrl(LOCAL_MILL)).toBe(true);
+    expect(isRealImageUrl(LOCAL_PRODUCT)).toBe(true);
+    expect(isRealImageUrl("/images/products/x/y.jpg")).toBe(true);
+  });
+
+  it("rejects branded SVG tiles and logo wordmarks as card stills", () => {
+    expect(isRealImageUrl("/images/products/steel.svg")).toBe(false);
+    expect(isLocalStillUrl("/images/products/steel.svg")).toBe(false);
+    expect(isLocalStillUrl("/images/suppliers/logos/logo-ansteel.png")).toBe(false);
+  });
+});
+
+describe("pickPreferredCardImage", () => {
+  // Never prefer Google Maps URLs over local stills — Maps hosts 403 and
+  // 502 `/_next/image` on production (verified on https://suplymate.com).
+  it("prefers a local mill still over a Maps URL listed first", () => {
+    expect(pickPreferredCardImage([MAPS_LH3, LOCAL_MILL])).toBe(LOCAL_MILL);
+  });
+
+  it("prefers a local product still over a third-party hotlink", () => {
+    expect(pickPreferredCardImage([MILL_SITE, LOCAL_PRODUCT])).toBe(LOCAL_PRODUCT);
+  });
+
+  it("returns undefined when only Maps URLs exist", () => {
+    expect(pickPreferredCardImage([MAPS_LH3, MAPS_STREETVIEW])).toBeUndefined();
+  });
+
+  it("falls back to Blob or mill-site remotes when no local still exists", () => {
+    expect(pickPreferredCardImage([MAPS_LH3, BLOB])).toBe(BLOB);
+    expect(pickPreferredCardImage([MILL_SITE])).toBe(MILL_SITE);
+  });
+});
+
+describe("supplierHasUsableCardImage", () => {
+  it("is false for Maps-only supplier records", () => {
+    expect(
+      supplierHasUsableCardImage({
+        imageUrl: MAPS_LH3,
+        supplierImages: [MAPS_STREETVIEW],
+      }),
+    ).toBe(false);
+  });
+
+  it("is true when a local still is present alongside Maps URLs", () => {
+    expect(
+      supplierHasUsableCardImage({
+        imageUrl: MAPS_LH3,
+        supplierImages: [LOCAL_MILL],
+      }),
+    ).toBe(true);
+  });
+});
+
+describe("getBestProductImage / getRealProductImage", () => {
+  it("uses the local product still instead of Maps or hotlinks", () => {
+    expect(
+      getRealProductImage({
+        images: [MAPS_LH3, LOCAL_PRODUCT],
+        supplierImages: [MILL_SITE],
+        productName: "Hot-rolled coil",
+        category: "Steel & Metals",
+      }),
+    ).toBe(LOCAL_PRODUCT);
+  });
+
+  it("uses a branded category fallback when only Maps URLs exist", () => {
+    const fallback = getProductFallbackImage("Hot-rolled coil", "Steel & Metals");
+    expect(
+      getBestProductImage({
+        images: [MAPS_LH3],
+        supplierImages: [MAPS_STREETVIEW],
+        productName: "Hot-rolled coil",
+        category: "Steel & Metals",
+      }),
+    ).toBe(fallback);
+    expect(fallback).toMatch(/^\/images\/products\/.+\.svg$/);
+    expect(
+      getRealProductImage({
+        images: [MAPS_LH3],
+        supplierImages: [MAPS_STREETVIEW],
+      }),
+    ).toBeUndefined();
+  });
+});
+
+describe("collectFactoryPhotoUrls / getFactoryPhotoUrl", () => {
+  it("never prefers Google Maps URLs over local stills", () => {
+    const mill = {
+      id: "ansteel",
+      imageUrl: MAPS_LH3,
+      supplierImages: [MAPS_STREETVIEW, LOCAL_MILL],
+    };
+    const photos = collectFactoryPhotoUrls(mill);
+    expect(photos[0]).toBe(LOCAL_MILL);
+    expect(photos.every((u) => !/googleusercontent|streetviewpixels/i.test(u))).toBe(
+      true,
+    );
+    expect(getFactoryPhotoUrl(mill)).toBe(LOCAL_MILL);
+  });
+
+  it("drops Maps-only galleries so cards fall through to branded SVGs", () => {
+    expect(
+      collectFactoryPhotoUrls({
+        id: "maps-only",
+        imageUrl: MAPS_LH3,
+        supplierImages: [MAPS_STREETVIEW],
+      }),
+    ).toEqual([]);
+  });
+});

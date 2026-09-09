@@ -1,6 +1,10 @@
 import { phase1Suppliers } from "@/data/phase1-suppliers";
 import type { Supplier } from "@/data/suppliers";
 import {
+  isGoogleMapsImageUrl,
+  isLocalStillUrl,
+} from "@/lib/image-fallback";
+import {
   localLogoPathForSupplierId,
   logoNeedsDarkChip,
 } from "@/lib/local-supplier-logos";
@@ -53,6 +57,8 @@ export function isUsableFactoryPhotoUrl(
   if (trimmed.startsWith("/")) return true;
 
   if (/^https?:\/\//i.test(trimmed)) {
+    // Google Maps / googleusercontent 403 and 502 `/_next/image` on prod.
+    if (isGoogleMapsImageUrl(trimmed)) return false;
     if (/imimg\.com/i.test(trimmed) && /120x120|logo/i.test(trimmed)) {
       return false;
     }
@@ -80,7 +86,10 @@ export function collectFactoryPhotoUrls(supplier: PhotoSupplier): string[] {
     seen.add(trimmed);
     out.push(trimmed);
   }
-  return out;
+  // Never prefer Google Maps URLs over local stills — locals first.
+  const local = out.filter((u) => isLocalStillUrl(u));
+  const rest = out.filter((u) => !isLocalStillUrl(u));
+  return [...local, ...rest];
 }
 
 /**
