@@ -4,6 +4,7 @@ import { isDaily20260902Supplier } from "@/lib/daily-2026-09-02-ids";
 import { isDaily20260903Supplier } from "@/lib/daily-2026-09-03-ids";
 import { isDaily20260907Supplier } from "@/lib/daily-2026-09-07-ids";
 import { isDaily20260908Supplier } from "@/lib/daily-2026-09-08-ids";
+import { isDaily20260909Supplier } from "@/lib/daily-2026-09-09-ids";
 
 function supplierHasImage(s: Supplier): boolean {
   return (
@@ -21,7 +22,8 @@ export function isCuratedDirectoryMill(
     isDaily20260902Supplier(supplier) ||
     isDaily20260903Supplier(supplier) ||
     isDaily20260907Supplier(supplier) ||
-    isDaily20260908Supplier(supplier)
+    isDaily20260908Supplier(supplier) ||
+    isDaily20260909Supplier(supplier)
   );
 }
 

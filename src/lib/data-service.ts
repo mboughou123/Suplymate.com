@@ -13,6 +13,7 @@ import { daily20260902Suppliers } from "@/lib/daily-2026-09-02-suppliers";
 import { daily20260903Suppliers } from "@/lib/daily-2026-09-03-suppliers";
 import { daily20260907Suppliers } from "@/lib/daily-2026-09-07-suppliers";
 import { daily20260908Suppliers } from "@/lib/daily-2026-09-08-suppliers";
+import { daily20260909Suppliers } from "@/lib/daily-2026-09-09-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
 import { compareForDirectory } from "@/lib/supplier-directory-sort";
 
@@ -49,6 +50,7 @@ function allFallbackSuppliers(): Supplier[] {
     daily20260903Suppliers,
     daily20260907Suppliers,
     daily20260908Suppliers,
+    daily20260909Suppliers,
   );
 }
 
@@ -88,6 +90,7 @@ export async function getSuppliersFromDb() {
         daily20260903Suppliers,
         daily20260907Suppliers,
         daily20260908Suppliers,
+        daily20260909Suppliers,
       ).sort(compareForDirectory);
     }
     // Never surface pending/rejected/needs_info imports on public surfaces.
@@ -99,6 +102,7 @@ export async function getSuppliersFromDb() {
       daily20260903Suppliers,
       daily20260907Suppliers,
       daily20260908Suppliers,
+      daily20260909Suppliers,
     ).sort(compareForDirectory);
   } catch {
     return mergeSuppliersById(
@@ -108,6 +112,7 @@ export async function getSuppliersFromDb() {
       daily20260903Suppliers,
       daily20260907Suppliers,
       daily20260908Suppliers,
+      daily20260909Suppliers,
     ).sort(compareForDirectory);
   }
 }
