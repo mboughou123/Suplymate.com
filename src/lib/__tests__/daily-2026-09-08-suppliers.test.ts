@@ -1,4 +1,4 @@
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
@@ -197,16 +197,18 @@ describe("daily 2026-09-08 mill directory", () => {
     }
   });
 
-  it("adds no 09-08 product pack", () => {
-    expect(existsSync(join(process.cwd(), "data", "daily-2026-09-08-products.json"))).toBe(
-      false,
-    );
+  it("does not wire a 09-08 product loader into the catalogue", () => {
     expect(
       existsSync(join(process.cwd(), "src", "lib", "lister-product-daily-2026-09-08.ts")),
     ).toBe(false);
     expect(
       existsSync(join(process.cwd(), "src", "lib", "daily-2026-09-08-products.ts")),
     ).toBe(false);
+    const catalogue = readFileSync(
+      join(process.cwd(), "src", "lib", "lister-catalogue.ts"),
+      "utf8",
+    );
+    expect(catalogue).not.toMatch(/2026-09-08/);
   });
 
   it("is reachable from the public supplier fallback set (09-07 still present)", () => {
