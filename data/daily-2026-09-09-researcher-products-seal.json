@@ -1,0 +1,211 @@
+{
+  "label": "QA-DAILY-2026-09-09-PRODUCTS-RESEARCHER-PARTIAL",
+  "source_enhancer_label": "DAILY-2026-09-09-MILL-PRODUCTS-ENHANCED",
+  "sealed_at_utc": "2026-09-09T17:15:42.041113+00:00",
+  "sealed_at_pt": "2026-09-09 ~10:15 PT",
+  "sku_count": 50,
+  "stills_read": 99,
+  "unique_content_hashes": 53,
+  "ok": [
+    "sew-eurodrive"
+  ],
+  "soft": [
+    "marcegaglia",
+    "arvedi",
+    "cayirova",
+    "choo-bee",
+    "procarsa",
+    "rama",
+    "zenith",
+    "constellium",
+    "orora",
+    "kaeser",
+    "swagelok",
+    "yokogawa",
+    "esab",
+    "ternium",
+    "daido-steel"
+  ],
+  "hold": [
+    {
+      "slug": "tubacero",
+      "reason": "tubacero-line = terraced hillside village \u2014 not ERW/line pipe"
+    },
+    {
+      "slug": "umran",
+      "reason": "umran-spiral = same village landscape \u2014 not spiral welded pipe"
+    },
+    {
+      "slug": "noksel",
+      "reason": "noksel-ssaw = same village landscape \u2014 not SSAW pile/line pipe"
+    },
+    {
+      "slug": "npc",
+      "reason": "npc-erw = same village landscape \u2014 not ERW/coated line pipe"
+    },
+    {
+      "slug": "nexteel",
+      "reason": "nexteel-line = same village landscape \u2014 not OCTG/line pipe"
+    },
+    {
+      "slug": "vetropack",
+      "reason": "vetropack-jars = Tetra Brik Aseptic / Tetra Pak branding \u2014 wrong brand for glass bottles/jars"
+    },
+    {
+      "slug": "toyo-seikan",
+      "reason": "toyoseikan-aseptic = Tetra Pak carton technical panel \u2014 wrong brand"
+    },
+    {
+      "slug": "elopak",
+      "reason": "elopak-carton = Tetra Pak branding \u2014 wrong brand for Elopak cartons"
+    },
+    {
+      "slug": "alpla",
+      "reason": "alpla-closures = Tetra Pak panel; mill-fallback-2 = handball sports match (ALPLA jersey) \u2014 not PET bottles/closures"
+    },
+    {
+      "slug": "novelis",
+      "reason": "novelis-cansheet + novelis-coil = Class 66 freight trains \u2014 not aluminum can sheet/coil"
+    },
+    {
+      "slug": "billerud",
+      "reason": "billerud-board = abandoned hillside building/village ruin \u2014 not packaging paper/board"
+    },
+    {
+      "slug": "coveris",
+      "reason": "coveris-food = Tetra Pak carton panel \u2014 wrong brand for flexible films"
+    },
+    {
+      "slug": "greatview",
+      "reason": "greatview-aseptic = Tetra Pak; greatview-carton = railroad tracks/switch \u2014 not aseptic cartons"
+    },
+    {
+      "slug": "kitz",
+      "reason": "kitz-butterfly = paul-lueftung.de counter-current HVAC heat-exchanger diagram \u2014 not valves"
+    },
+    {
+      "slug": "velan",
+      "reason": "velan-severe = same paul-lueftung HVAC diagram \u2014 not severe-service valves"
+    },
+    {
+      "slug": "gea",
+      "reason": "gea-process = same paul-lueftung HVAC diagram \u2014 not separators/homogenizers"
+    },
+    {
+      "slug": "endress-hauser",
+      "reason": "endress-level = classic EJ Holden sedan car show \u2014 not level/flow instruments"
+    },
+    {
+      "slug": "lincoln-electric",
+      "reason": "lincoln-welder = historic railroad depot/station still \u2014 not welding equipment"
+    },
+    {
+      "slug": "donaldson",
+      "reason": "donaldson-dust = vintage Donaldson's Glass Block Minneapolis postcard (art/archive) \u2014 not filtration"
+    },
+    {
+      "slug": "howden",
+      "reason": "howden-compressor = paul-lueftung HVAC diagram \u2014 not industrial fans/compressors"
+    },
+    {
+      "slug": "pepperl-fuchs",
+      "reason": "pepperl-is = aerial Tetra Pak campus (roof logo) \u2014 wrong brand"
+    },
+    {
+      "slug": "bonfiglioli",
+      "reason": "bonfiglioli-gear = village landscape with brick chimney/church \u2014 not gearboxes"
+    },
+    {
+      "slug": "wittenstein",
+      "reason": "wittenstein-rack = campus lawn with abstract metal sculpture (art poison) \u2014 not servo gearheads"
+    },
+    {
+      "slug": "gates",
+      "reason": "mill-fallback-2 = Taiwan Sugar Corporation biotech campus \u2014 wrong campus; gates-hose = residential copper plumbing"
+    },
+    {
+      "slug": "sfs",
+      "reason": "sfs-auto = historical portrait trio; sfs-fastener = large historical workforce group portrait \u2014 not fasteners"
+    },
+    {
+      "slug": "lisi",
+      "reason": "lisi-aero = 1918 U.S. Navy archival Liberty reduction-gear parts \u2014 not modern aerospace fasteners"
+    },
+    {
+      "slug": "british-steel",
+      "reason": "britishsteel-sections = Class 66 freight train \u2014 not rail/structural sections"
+    },
+    {
+      "slug": "usiminas",
+      "reason": "mill-fallback-2 = hydroelectric dam/powerhouse \u2014 wrong entity for flat steel coil"
+    },
+    {
+      "slug": "kobe-steel",
+      "reason": "kobelco-weld = paul-lueftung HVAC diagram \u2014 not specialty steel/welding materials"
+    },
+    {
+      "slug": "leoni",
+      "reason": "leoni-cable = WWI Fernsprech-Abteilung postcard; leoni-harness = spacecraft/satellite assembly \u2014 not automotive wiring"
+    },
+    {
+      "slug": "helukabel",
+      "reason": "helukabel-power = same WWI Fernsprech postcard; helukabel-data = spacecraft \u2014 not industrial cables"
+    },
+    {
+      "slug": "lapp",
+      "reason": "lapp-olflex = same WWI Fernsprech postcard \u2014 not \u00d6LFLEX cables (campus gland soft only)"
+    },
+    {
+      "slug": "rockwool",
+      "reason": "rockwool-board = museum gypsum-with-sulfur mineral specimen (Cianciana) \u2014 not stone wool board"
+    },
+    {
+      "slug": "james-hardie",
+      "reason": "jameshardie-siding = same museum gypsum mineral specimen \u2014 not fiber cement siding"
+    }
+  ],
+  "counts": {
+    "ok": 1,
+    "soft": 15,
+    "hold": 34,
+    "stills": 99,
+    "skus": 50
+  },
+  "needs_ai_generate": 0,
+  "unit_price": null,
+  "wire_recommendation": "Do not wire the full 50-SKU product pack. Block all 34 HOLD slugs (villages, Tetra Pak on wrong brands, paul-lueftung HVAC diagrams, trains, sports, portraits, art/archive, spacecraft, WWI Fernsprech, wrong campus). Wire-eligible now: 1 OK (sew-eurodrive) + 15 SOFT (generic pipe-bundle/glycol tubes, campus, category-adjacent). Prefer sew-eurodrive first; SOFT tubes are shared Commons pipe stock \u2014 type-match only, not mill-specific. needs_ai_generate stays 0.",
+  "wireable_slugs": [
+    "sew-eurodrive",
+    "marcegaglia",
+    "arvedi",
+    "cayirova",
+    "choo-bee",
+    "procarsa",
+    "rama",
+    "zenith",
+    "constellium",
+    "orora",
+    "kaeser",
+    "swagelok",
+    "yokogawa",
+    "esab",
+    "ternium",
+    "daido-steel"
+  ],
+  "shared_poison_hashes": {
+    "c2a17f182e6a9755": "pipe-bundle Commons \u00d710 tube SKUs \u2014 soft type-match",
+    "74ae20a42cea3d61": "glycol HVAC install pipes \u00d79 \u2014 soft pipes-not-mill-stock",
+    "71fdcc84ae44b493": "terraced village \u00d75 \u2014 HOLD",
+    "3aad30766b854d5b": "Tetra Pak carton panel \u00d76 \u2014 HOLD wrong brand",
+    "7f30120f044e6884": "paul-lueftung HVAC diagram \u00d75 \u2014 HOLD",
+    "148871fbfd0ab22e": "WWI Fernsprech-Abteilung \u00d73 cables \u2014 HOLD",
+    "109665df276a6219": "spacecraft/satellite \u00d72 cables \u2014 HOLD",
+    "0edae7658218f6f9": "street rebar staging \u00d74 steel \u2014 soft category",
+    "ee73d35de873c3f3": "museum gypsum mineral \u00d72 construction \u2014 HOLD"
+  },
+  "notes": [
+    "Full visual pass: all 99 enhanced product JPGs Read.",
+    "Pack not sealed for full wire \u2014 label PARTIAL.",
+    "Did not touch PR #15. Did not message agents."
+  ]
+}
