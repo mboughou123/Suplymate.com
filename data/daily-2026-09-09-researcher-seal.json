@@ -1,0 +1,311 @@
+{
+  "label": "QA-DAILY-2026-09-09-RESEARCHER",
+  "sealed_at_utc": "2026-09-09T17:10:10Z",
+  "sealed_at_pt": "2026-09-09 ~10:10 AM PT",
+  "scope": "mills only — 50 enhanced supplier primaries visually read under enhanced/suppliers/; products not sealed",
+  "enhancer_seal": {
+    "label": "DAILY-2026-09-09-MILL-PRODUCTS-ENHANCED",
+    "sealed_utc": "2026-09-09T17:03:54Z",
+    "sealed_pt": "2026-09-09 ~10:05 AM PT",
+    "mill_stills": 139,
+    "mill_slugs": 50,
+    "skipped": 0,
+    "path": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/ENHANCER-SEAL.txt"
+  },
+  "stills_basis": "enhanced/suppliers/ only (enhancer-sealed). HoW waits on this researcher seal; re-spot only if future re-enhance changes hashes.",
+  "wire_full_pack": false,
+  "counts": {
+    "suppliers": 50,
+    "visual_primaries_read": 50,
+    "enhanced_jpg_count": 139,
+    "hold_do_not_wire": 36,
+    "soft": 11,
+    "sealed_wire_ok": 3,
+    "traders": 0,
+    "exclude_overlap": 0,
+    "unit_price_set": 0,
+    "rfq_products": 50,
+    "needs_ai_generate": 0,
+    "ai_mill_yards": 0,
+    "by_category": {
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Industrial Parts": 12,
+      "Hardware & Motion": 6,
+      "Steel & Metals": 5,
+      "Cables & Electrical": 3,
+      "Construction": 2
+    }
+  },
+  "duplicates_vs_exclude": [],
+  "traders": [],
+  "invented_fob_prices": false,
+  "cert_image_mislabels": [],
+  "cert_policy": "soft text only — ISO/API/EN claims say confirm on mill page; no badge images treated as certificates",
+  "hold_do_not_wire": [
+    {
+      "slug": "marcegaglia",
+      "reason": "primary = Silvretta Bielerhöhe dam penstock (alpine hydro) — not Marcegaglia mill; shared enhanced hash c2b16ad6 with tubacero/umran/noksel/cayirova/choo-bee/procarsa/nexteel (category-fill)"
+    },
+    {
+      "slug": "arvedi",
+      "reason": "primary = Acciai Speciali Terni (AST) panorama — not Acciaieria Arvedi Cremona tube/flat works; siblings are 1913 Terni archive"
+    },
+    {
+      "slug": "tubacero",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Tubacero Monterrey"
+    },
+    {
+      "slug": "umran",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Umran"
+    },
+    {
+      "slug": "noksel",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Noksel"
+    },
+    {
+      "slug": "cayirova",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Çayırova"
+    },
+    {
+      "slug": "npc",
+      "reason": "primary = HAER Hawaii Volcanoes National Park Overhead Pipe Details blueprint — diagram, not NPC Jubail mill"
+    },
+    {
+      "slug": "rama",
+      "reason": "primary = Algoma Steel Sault Ste. Marie panorama — wrong mill (not Rama Steel Tubes India); siblings are Coney Island"
+    },
+    {
+      "slug": "choo-bee",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Choo Bee"
+    },
+    {
+      "slug": "procarsa",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not Procarsa"
+    },
+    {
+      "slug": "zenith",
+      "reason": "primary = Capt. H.C. Gray balloon basket museum exhibit — not Zenith Steel Pipes"
+    },
+    {
+      "slug": "nexteel",
+      "reason": "primary = same Silvretta dam penstock (hash c2b16ad6) — not NEXTEEL"
+    },
+    {
+      "slug": "vetropack",
+      "reason": "primary = AV Nackawic pulp-and-paper mill — wrong company/category; shared enhanced hash 909f370c with elopak/orora (and prior-pack vidrala/schuetz)"
+    },
+    {
+      "slug": "elopak",
+      "reason": "primary = same AV Nackawic pulp mill (hash 909f370c) — not Elopak carton plant"
+    },
+    {
+      "slug": "alpla",
+      "reason": "primary = Alpla HC Hard handball match (sports jersey sponsor) — not ALPLA packaging plant"
+    },
+    {
+      "slug": "novelis",
+      "reason": "primary = Class 66 freight train (Dollands Moor / urban rail) — trains, not Novelis"
+    },
+    {
+      "slug": "constellium",
+      "reason": "primary = Abbey Corrugated / Allied Carpets warehouse entrance — wrong brand; shared hash d6ac7312 with coveris"
+    },
+    {
+      "slug": "orora",
+      "reason": "primary = same AV Nackawic pulp mill (hash 909f370c) — not Orora"
+    },
+    {
+      "slug": "coveris",
+      "reason": "primary = same Abbey Corrugated entrance (hash d6ac7312) — not Coveris"
+    },
+    {
+      "slug": "kitz",
+      "reason": "primary = empty abandoned factory floor (unsigned) — not KITZ; shared hash 58800989 with velan; wiki extract was wrong-entity radio station"
+    },
+    {
+      "slug": "velan",
+      "reason": "primary = same empty abandoned factory floor (hash 58800989) — not Velan"
+    },
+    {
+      "slug": "swagelok",
+      "reason": "primary = brass fitting product macro — not a plant/yard"
+    },
+    {
+      "slug": "endress-hauser",
+      "reason": "primary = classic Holden EH sedan at a car show — wrong-entity (filename confused EH Premier)"
+    },
+    {
+      "slug": "lincoln-electric",
+      "reason": "primary = archival Lincoln Park streetcar/depot still — trains/archive, not Lincoln Electric"
+    },
+    {
+      "slug": "esab",
+      "reason": "primary = world map of ESAB manufacturing sites — map/diagram, not a plant"
+    },
+    {
+      "slug": "donaldson",
+      "reason": "primary = L.S. Donaldson Glass Block department-store postcard (Minneapolis) — wrong-entity retail archive, not Donaldson filtration"
+    },
+    {
+      "slug": "howden",
+      "reason": "primary = Howden Minster Gothic church — wrong-entity town church; wiki extract was the market town"
+    },
+    {
+      "slug": "bonfiglioli",
+      "reason": "primary = Diósd village chimney with cell antennas — villages, not Bonfiglioli; wiki extract was a surname page"
+    },
+    {
+      "slug": "gates",
+      "reason": "primary = Taiwan Sugar Corporation Dalin Biotechnology Factory — wrong brand"
+    },
+    {
+      "slug": "sfs",
+      "reason": "primary = 1920s Aktiebolaget Diesels Motorer workforce group portrait — wrong brand archive / portrait"
+    },
+    {
+      "slug": "lisi",
+      "reason": "primary = 1918 U.S. Navy Liberty reduction-gear parts card (Naval Aircraft Factory) — wrong brand archive"
+    },
+    {
+      "slug": "british-steel",
+      "reason": "primary = Class 66 #66162 freight train Margam–Dollands Moor — trains; prefer british-steel_02/_03 Scunthorpe siblings if swapped"
+    },
+    {
+      "slug": "ternium",
+      "reason": "primary = BlueScope Steel Port Kembla steelworks — wrong brand (not Ternium)"
+    },
+    {
+      "slug": "usiminas",
+      "reason": "primary = Fierza Hydroelectric Power Station, Albania — dam/infrastructure, not Usiminas; siblings are also wrong dams/mills"
+    },
+    {
+      "slug": "leoni",
+      "reason": "primary = LEONI Tunisie “4 SITES” corporate infographic slide — diagram/composite, not a plant primary"
+    },
+    {
+      "slug": "rockwool",
+      "reason": "primary = hand-held mineral-wool product macro — not a plant; wiki extract was the generic mineral-wool article"
+    }
+  ],
+  "soft": [
+    {
+      "slug": "toyo-seikan",
+      "note": "Toyo Seikan Group Holdings office tower — branded HQ, not a packaging plant"
+    },
+    {
+      "slug": "billerud",
+      "note": "archival Säffle/Edsvalla Billeruds Smörpapper greaseproof-paper mill postcard — right brand but historical archive, not a modern yard"
+    },
+    {
+      "slug": "greatview",
+      "note": "Industriebahn Halle-Queis rail switch titled for Greatview Aseptic Packaging — plant is distant unsigned backdrop, rail-first card"
+    },
+    {
+      "slug": "kaeser",
+      "note": "branded Coburg KAESER campus with Carl Kaeser marks and Werkstor — HQ/campus, not a heavy yard"
+    },
+    {
+      "slug": "gea",
+      "note": "Luftbild GEA Center Bochum — branded HQ/campus aerial, not a plant yard"
+    },
+    {
+      "slug": "yokogawa",
+      "note": "Yokogawa Electric Corporation Musashino branded HQ signage — campus, not a plant"
+    },
+    {
+      "slug": "wittenstein",
+      "note": "distant unsigned Harthausen (Igersheim) industrial vista; prefer branded wittenstein_02/_03 Innovationsfabrik siblings if a plant card is required"
+    },
+    {
+      "slug": "kobe-steel",
+      "note": "Tokyo HQ tower with 神戸製鋼 mark — branded HQ, not a mill"
+    },
+    {
+      "slug": "helukabel",
+      "note": "HELUKABEL Hemmingen Hauptsitz campus — branded HQ"
+    },
+    {
+      "slug": "lapp",
+      "note": "LAPP Stuttgart-Vaihingen branded campus entrance (Herzlich Willkommen bei LAPP) — HQ/campus"
+    },
+    {
+      "slug": "james-hardie",
+      "note": "1938 Hardie Rubber Co Ltd Thirroul aerial — historical Hardie-group rubber works, not a modern fibre-cement plant"
+    }
+  ],
+  "sealed_wire_ok": [
+    "pepperl-fuchs",
+    "sew-eurodrive",
+    "daido-steel"
+  ],
+  "sealed_notes": [
+    {
+      "slug": "pepperl-fuchs",
+      "note": "aerial Pepperl+Fuchs Mannheim campus with PEPPERL+FUCHS roof mark and production halls"
+    },
+    {
+      "slug": "sew-eurodrive",
+      "note": "no enhanced _01 (gif skipped); reviewed sew-eurodrive_02 Luftbild SEW Graben plant aerial — real SEW works"
+    },
+    {
+      "slug": "daido-steel",
+      "note": "Daido Steel Plant night waterfront works (Commons-titled Daido Steel Plant)"
+    }
+  ],
+  "shared_wrong_entity_hashes": {
+    "c2b16ad6": [
+      "marcegaglia",
+      "tubacero",
+      "umran",
+      "noksel",
+      "cayirova",
+      "choo-bee",
+      "procarsa",
+      "nexteel"
+    ],
+    "909f370c": [
+      "vetropack",
+      "elopak",
+      "orora"
+    ],
+    "d6ac7312": [
+      "constellium",
+      "coveris"
+    ],
+    "58800989": [
+      "kitz",
+      "velan"
+    ]
+  },
+  "identity_honesty": [
+    {
+      "slug": "howden",
+      "note": "wiki extract was Howden market town — not Howden Group fans"
+    },
+    {
+      "slug": "kitz",
+      "note": "wiki extract was KITZ radio station — not KITZ Corporation valves"
+    },
+    {
+      "slug": "bonfiglioli",
+      "note": "wiki extract was Bonfiglioli surname disambiguation"
+    },
+    {
+      "slug": "rockwool",
+      "note": "wiki extract was generic mineral-wool article"
+    },
+    {
+      "slug": "sfs",
+      "note": "SFS Group is a fastener manufacturer (also lists procurement solutions) — not flagged as pure trader; visual still HOLD"
+    }
+  ],
+  "wire_recommendation": "Do not wire the full 50. Wire sealed_wire_ok (3) plus soft HQ/campus/archive (11) only. Do not wire any hold_do_not_wire slug. Prefer sibling swaps only where noted (british-steel_02/_03 Scunthorpe; wittenstein_02/_03 branded Innovationsfabrik) — those swaps are not auto-cleared here. Shared poisoned hashes: Silvretta c2b16ad6 (8 tube mills), Nackawic 909f370c (3 packaging), Abbey Corrugated d6ac7312 (2), empty factory 58800989 (kitz/velan).",
+  "notes": [
+    "Identity: no prior-pack slug overlap vs 2026-09-02/03/07/08; daily _exclude_names.txt already appends today's names post-build (not treated as dupes).",
+    "No invented FOB — 50/50 product unit_price null, price_source_type rfq. needs_ai 0; no AI mill yards.",
+    "Mills only. Product stills not visually sealed in this pass.",
+    "QA read enhanced primaries (_01 preferred; sew-eurodrive used _02). Enhancer seal DAILY-2026-09-09-MILL-PRODUCTS-ENHANCED already present.",
+    "Nackawic hash 909f370c matches prior-day HOLD shared with vidrala/schuetz."
+  ]
+}

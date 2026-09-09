@@ -1,0 +1,611 @@
+{
+  "generated_at_utc": "2026-09-09T17:10:10Z",
+  "generated_at_pt": "2026-09-09 ~10:10 AM PT",
+  "phase": "suplymate-phase1",
+  "task": "Daily expansion 2026-09-09 \u2014 partial mill wire (sealed 3 + soft 11)",
+  "pricing_policy": "No invented prices. MOQ is unpublished mill RFQ.",
+  "notes": "PARTIAL mill wire 2026-09-09: Researcher sealed 3 + soft HQ/campus/archive 11 = 14. HOLD 36 omitted. Products not sealed. sew-eurodrive_02 and wittenstein_02 used. Seal: data/daily-2026-09-09-researcher-seal.json.",
+  "wire_full_pack": false,
+  "wire_slug_count": 14,
+  "hold_omitted_count": 36,
+  "sealed_slugs": [
+    "pepperl-fuchs",
+    "sew-eurodrive",
+    "daido-steel"
+  ],
+  "soft_slugs": [
+    "toyo-seikan",
+    "billerud",
+    "greatview",
+    "kaeser",
+    "gea",
+    "yokogawa",
+    "wittenstein",
+    "kobe-steel",
+    "helukabel",
+    "lapp",
+    "james-hardie"
+  ],
+  "hold_omitted_slugs": [
+    "marcegaglia",
+    "arvedi",
+    "tubacero",
+    "umran",
+    "noksel",
+    "cayirova",
+    "npc",
+    "rama",
+    "choo-bee",
+    "procarsa",
+    "zenith",
+    "nexteel",
+    "vetropack",
+    "elopak",
+    "alpla",
+    "novelis",
+    "constellium",
+    "orora",
+    "coveris",
+    "kitz",
+    "velan",
+    "swagelok",
+    "endress-hauser",
+    "lincoln-electric",
+    "esab",
+    "donaldson",
+    "howden",
+    "bonfiglioli",
+    "gates",
+    "sfs",
+    "lisi",
+    "british-steel",
+    "ternium",
+    "usiminas",
+    "leoni",
+    "rockwool"
+  ],
+  "counts": {
+    "suppliers_total": 14,
+    "with_local_images": 14,
+    "with_any_photo": 14,
+    "local_image_files": 14,
+    "products_total": 0,
+    "by_category": {
+      "Industrial Parts": 4,
+      "Hardware & Motion": 2,
+      "Steel & Metals": 2,
+      "Packaging": 3,
+      "Cables & Electrical": 2,
+      "Construction": 1
+    }
+  },
+  "suppliers": [
+    {
+      "company_name": "Pepperl+Fuchs SE",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Mannheim",
+      "website": "https://www.pepperl-fuchs.com/",
+      "description": "Pepperl+Fuchs SE is a German multinational company headquartered in Mannheim, Germany. The company manufactures electronic products for fabrication and process automation. It specializes in sensor manufacturing, such as sensors used in automatic doors in elevators, encoders, AS interfaces, RFID systems, barcode solutions, and explosion protection, as well as components for the automotive industry, and plant engineering. Pepperl+Fuchs Mannheim campus aerial with roof mark.",
+      "product_lines": [
+        "Industrial sensors",
+        "Intrinsic safety interfaces",
+        "Explosion protection equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.pepperl-fuchs.com/"
+        },
+        {
+          "name": "ISO 14001; ATEX / IECEx sensor certifications (confirm on product)",
+          "source": "https://www.pepperl-fuchs.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.pepperl-fuchs.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/pepperl-fuchs/pepperl-fuchs_01.jpg"
+      ],
+      "slug": "pepperl-fuchs",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Pepperl+Fuchs Mannheim campus aerial with roof mark."
+    },
+    {
+      "company_name": "SEW-EURODRIVE GmbH & Co KG",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Bruchsal",
+      "website": "https://www.sew-eurodrive.com/",
+      "description": "SEW-EURODRIVE GmbH & Co. KG is a German manufacturing company located in Bruchsal, Germany. SEW Graben plant aerial (sew-eurodrive_02; gif _01 skipped).",
+      "product_lines": [
+        "Gearmotors",
+        "Frequency inverters",
+        "Servo drive systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sew-eurodrive.com/"
+        },
+        {
+          "name": "ISO 14001; CE for gearmotors/drives (confirm on product)",
+          "source": "https://www.sew-eurodrive.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.sew-eurodrive.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/sew-eurodrive/sew-eurodrive_02.jpg"
+      ],
+      "slug": "sew-eurodrive",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "SEW Graben plant aerial (sew-eurodrive_02; gif _01 skipped)."
+    },
+    {
+      "company_name": "Daido Steel Co., Ltd.",
+      "primary_category": "Steel & Metals",
+      "country": "Japan",
+      "city": "Nagoya",
+      "website": "https://www.daido.co.jp/",
+      "description": "Daido Steel is a Japanese specialty-steel manufacturer producing tool steel, stainless and alloy steel for automotive and industrial customers. Daido Steel Plant night waterfront works.",
+      "product_lines": [
+        "Specialty steel",
+        "Tool steel",
+        "Stainless and alloy steel"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.daido.co.jp/"
+        },
+        {
+          "name": "ISO 14001; specialty / tool steel specs (confirm)",
+          "source": "https://www.daido.co.jp/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.daido.co.jp/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/daido-steel/daido-steel_01.jpg"
+      ],
+      "slug": "daido-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Daido Steel Plant night waterfront works."
+    },
+    {
+      "company_name": "Toyo Seikan Group Holdings, Ltd.",
+      "primary_category": "Packaging",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.toyo-seikan.co.jp/",
+      "description": "Toyo Seikan Group Holdings, Ltd. is a Japan-based packaging container manufacturing company. Soft/honesty: Toyo Seikan Group Holdings office tower \u2014 branded HQ, not a packaging plant",
+      "product_lines": [
+        "Metal cans",
+        "Plastic containers",
+        "Aseptic packaging systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.toyo-seikan.co.jp/"
+        },
+        {
+          "name": "Food-contact metal/plastic packaging QMS (confirm per plant)",
+          "source": "https://www.toyo-seikan.co.jp/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.toyo-seikan.co.jp/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/toyo-seikan/toyo-seikan_01.jpg"
+      ],
+      "slug": "toyo-seikan",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Toyo Seikan Group Holdings office tower \u2014 branded HQ, not a packaging plant"
+    },
+    {
+      "company_name": "Billerud AB",
+      "primary_category": "Packaging",
+      "country": "Sweden",
+      "city": "Solna",
+      "website": "https://www.billerud.com/",
+      "description": "Billerud AB is a Swedish pulp and paper manufacturer with headquarters in Solna, Sweden. The company simplified its name from BillerudKorsn\u00e4s to Billerud after the acquisition of Verso 2022, an American producer of coated paper. Billerud has nine production facilities in Sweden, Finland and the USA with around 5,800 employees in over 13 countries. Soft/honesty: archival S\u00e4ffle/Edsvalla Billeruds Sm\u00f6rpapper greaseproof-paper mill postcard \u2014 right brand but historical archive, not a modern yard",
+      "product_lines": [
+        "Packaging paper",
+        "Containerboard",
+        "Liquid packaging board"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.billerud.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.billerud.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.billerud.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/billerud/billerud_01.jpg"
+      ],
+      "slug": "billerud",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "archival S\u00e4ffle/Edsvalla Billeruds Sm\u00f6rpapper greaseproof-paper mill postcard \u2014 right brand but historical archive, not a modern yard"
+    },
+    {
+      "company_name": "Greatview Aseptic Packaging Company Ltd.",
+      "primary_category": "Packaging",
+      "country": "China",
+      "city": "Beijing",
+      "website": "https://www.greatviewpack.com/",
+      "description": "Greatview Aseptic Packaging is a Chinese aseptic carton manufacturer producing liquid-food carton packaging for Asian and export dairy and beverage customers. Soft/honesty: Industriebahn Halle-Queis rail switch titled for Greatview Aseptic Packaging \u2014 plant is distant unsigned backdrop, rail-first card",
+      "product_lines": [
+        "Aseptic carton packaging",
+        "Liquid food cartons",
+        "Filling equipment support"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.greatviewpack.com/"
+        },
+        {
+          "name": "Food-contact aseptic carton QMS (confirm per plant)",
+          "source": "https://www.greatviewpack.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.greatviewpack.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/greatview/greatview_01.jpg"
+      ],
+      "slug": "greatview",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Europe",
+        "Americas",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Industriebahn Halle-Queis rail switch titled for Greatview Aseptic Packaging \u2014 plant is distant unsigned backdrop, rail-first card"
+    },
+    {
+      "company_name": "Kaeser Kompressoren SE",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Coburg",
+      "website": "https://www.kaeser.com/",
+      "description": "Kaeser Kompressoren is a German manufacturer of rotary screw compressors, compressed-air systems and blowers for industrial customers worldwide. Soft/honesty: branded Coburg KAESER campus with Carl Kaeser marks and Werkstor \u2014 HQ/campus, not a heavy yard",
+      "product_lines": [
+        "Rotary screw compressors",
+        "Compressed-air systems",
+        "Blowers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.kaeser.com/"
+        },
+        {
+          "name": "ISO 14001; CE for compressors (confirm on product)",
+          "source": "https://www.kaeser.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.kaeser.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/kaeser/kaeser_01.jpg"
+      ],
+      "slug": "kaeser",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "branded Coburg KAESER campus with Carl Kaeser marks and Werkstor \u2014 HQ/campus, not a heavy yard"
+    },
+    {
+      "company_name": "GEA Group AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "D\u00fcsseldorf",
+      "website": "https://www.gea.com/",
+      "description": "GEA Group AG is a German corporation, mostly active in the food and beverages sector, headquartered in D\u00fcsseldorf, Germany. As of 2019, it was one of the world's largest suppliers of process technology and components in the food and beverages industry and several other industries, employing almost 18,000 people globally as of 2017. The company is listed on the DAX. Soft/honesty: Luftbild GEA Center Bochum \u2014 branded HQ/campus aerial, not a plant yard",
+      "product_lines": [
+        "Process equipment",
+        "Separators and homogenizers",
+        "Food and dairy processing systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.gea.com/"
+        },
+        {
+          "name": "ISO 14001; CE for process equipment (confirm on product)",
+          "source": "https://www.gea.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.gea.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/gea/gea_01.jpg"
+      ],
+      "slug": "gea",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Luftbild GEA Center Bochum \u2014 branded HQ/campus aerial, not a plant yard"
+    },
+    {
+      "company_name": "Yokogawa Electric Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.yokogawa.com/",
+      "description": "Yokogawa Electric Corporation is a Japanese multinational electrical engineering and software company, with businesses based on its measurement, control, and information technologies. Soft/honesty: Yokogawa Electric Corporation Musashino branded HQ signage \u2014 campus, not a plant",
+      "product_lines": [
+        "Distributed control systems",
+        "Process analyzers",
+        "Industrial automation"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.yokogawa.com/"
+        },
+        {
+          "name": "ISO 14001; process automation product certifications (confirm)",
+          "source": "https://www.yokogawa.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.yokogawa.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/yokogawa/yokogawa_01.jpg"
+      ],
+      "slug": "yokogawa",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Yokogawa Electric Corporation Musashino branded HQ signage \u2014 campus, not a plant"
+    },
+    {
+      "company_name": "WITTENSTEIN SE",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Igersheim",
+      "website": "https://www.wittenstein.de/",
+      "description": "Wittenstein SE is a German manufacturer of planetary gearheads, gearing technology, complete electromechanical drive systems and AC servo systems and motors. These products are used, for example, in robotic systems, machine tools, packaging, conveyor systems and process technology, defence equipment, Formula One racing, paper and printing presses, nano technology, stage and lifting technology, the aerospace sector and offshore gas and oil extraction. The company's global headquarters is in Igersheim, Germany with North American headquarters in Bartlett, Illinois. Soft/honesty: Soft: branded Innovationsfabrik (wittenstein_02). Distant unsigned vista not used.",
+      "product_lines": [
+        "Servo gearheads",
+        "Mechatronic drive systems",
+        "Rack-and-pinion systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.wittenstein.de/"
+        },
+        {
+          "name": "ISO 14001; precision drive QMS (confirm on site)",
+          "source": "https://www.wittenstein.de/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.wittenstein.de/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/wittenstein/wittenstein_02.jpg"
+      ],
+      "slug": "wittenstein",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: branded Innovationsfabrik (wittenstein_02). Distant unsigned vista not used."
+    },
+    {
+      "company_name": "Kobe Steel, Ltd.",
+      "primary_category": "Steel & Metals",
+      "country": "Japan",
+      "city": "Kobe",
+      "website": "https://www.kobelco.co.jp/",
+      "description": "Kobe Steel, Ltd. is a major Japanese steel manufacturer headquartered in Ch\u016b\u014d-ku, Kobe. Kobelco is the unified brand name of the Kobe Steel Group. Soft/honesty: Tokyo HQ tower with \u795e\u6238\u88fd\u92fc mark \u2014 branded HQ, not a mill",
+      "product_lines": [
+        "Specialty steel",
+        "Aluminum products",
+        "Welding materials"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.kobelco.co.jp/"
+        },
+        {
+          "name": "ISO 14001; specialty steel / JIS specs (confirm)",
+          "source": "https://www.kobelco.co.jp/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.kobelco.co.jp/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/kobe-steel/kobe-steel_01.jpg"
+      ],
+      "slug": "kobe-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Tokyo HQ tower with \u795e\u6238\u88fd\u92fc mark \u2014 branded HQ, not a mill"
+    },
+    {
+      "company_name": "HELUKABEL GmbH",
+      "primary_category": "Cables & Electrical",
+      "country": "Germany",
+      "city": "Hemmingen",
+      "website": "https://www.helukabel.de/",
+      "description": "HELUKABEL is a German industrial-cable manufacturer producing power, control and data cables and cable accessories for automation and machine building. Soft/honesty: HELUKABEL Hemmingen Hauptsitz campus \u2014 branded HQ",
+      "product_lines": [
+        "Industrial cables",
+        "Data cables",
+        "Cable accessories"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.helukabel.de/"
+        },
+        {
+          "name": "ISO 14001; industrial cable CE / UL listings (confirm per product)",
+          "source": "https://www.helukabel.de/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.helukabel.de/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/helukabel/helukabel_01.jpg"
+      ],
+      "slug": "helukabel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HELUKABEL Hemmingen Hauptsitz campus \u2014 branded HQ"
+    },
+    {
+      "company_name": "U.I. Lapp GmbH",
+      "primary_category": "Cables & Electrical",
+      "country": "Germany",
+      "city": "Stuttgart",
+      "website": "https://www.lapp.com/",
+      "description": "LAPP is a German corporate group based in Stuttgart in the cable and optical fibre industry. The holding company of the group is Lapp Holding SE. The LAPP Group employs approximately 5,700 people. Soft/honesty: LAPP Stuttgart-Vaihingen branded campus entrance (Herzlich Willkommen bei LAPP) \u2014 HQ/campus",
+      "product_lines": [
+        "Industrial connection cables",
+        "\u00d6LFLEX cables",
+        "Cable glands and connectors"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.lapp.com/"
+        },
+        {
+          "name": "ISO 14001; industrial cable CE / UL listings (confirm per product)",
+          "source": "https://www.lapp.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.lapp.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/lapp/lapp_01.jpg"
+      ],
+      "slug": "lapp",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "LAPP Stuttgart-Vaihingen branded campus entrance (Herzlich Willkommen bei LAPP) \u2014 HQ/campus"
+    },
+    {
+      "company_name": "James Hardie Industries plc",
+      "primary_category": "Construction",
+      "country": "Ireland",
+      "city": "Dublin",
+      "website": "https://www.jameshardie.com/",
+      "description": "James Hardie Industries plc is an American-Irish global building materials company and the largest global manufacturer of fibre cement products. Headquartered in Ireland, it is cross-listed on the Australian and New York Stock Exchanges. Its management team currently sits in Chicago, Illinois, United States. James Hardie was plagued by several asbestos-related scandals in the 20th century. Soft/honesty: 1938 Hardie Rubber Co Ltd Thirroul aerial \u2014 historical Hardie-group rubber works, not a modern fibre-cement plant",
+      "product_lines": [
+        "Fiber cement siding",
+        "Fiber cement boards",
+        "Building facade systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jameshardie.com/"
+        },
+        {
+          "name": "ISO 14001; building-product local approvals (confirm)",
+          "source": "https://www.jameshardie.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.jameshardie.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/james-hardie/james-hardie_01.jpg"
+      ],
+      "slug": "james-hardie",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Oceania",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "1938 Hardie Rubber Co Ltd Thirroul aerial \u2014 historical Hardie-group rubber works, not a modern fibre-cement plant"
+    }
+  ]
+}
