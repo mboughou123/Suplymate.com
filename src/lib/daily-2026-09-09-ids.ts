@@ -1,6 +1,7 @@
 /**
- * Daily 2026-09-09 mill ids — 14 mills (sealed 3 + soft 11).
- * HOLD 36 remain out (wrong-entity / poisoned stills).
+ * Daily 2026-09-09 mill ids — 48 plants (14 prior + 34 HOLD36).
+ * HOLD out: bonfiglioli (CGI) + usiminas (rail tank cars primary).
+ * Prior 14 stay locked at the front of DAILY_20260909_SLUGS.
  * Kept free of Node fs so client sort can import it.
  * Prefer the slug when unused by phase-1 / 09-02 / 09-03 / 09-07 / 09-08;
  * otherwise `daily-20260909-<slug>`.
@@ -24,7 +25,7 @@ import {
   DAILY_20260908_SUPPLIER_IDS,
 } from "@/lib/daily-2026-09-08-ids";
 
-/** Sealed 3 + soft HQ/campus/archive 11. */
+/** Prior sealed 3 + soft 11, plus HOLD36 OK 24 + soft 10 plant primaries. */
 export const DAILY_20260909_SLUGS = [
   "pepperl-fuchs",
   "sew-eurodrive",
@@ -40,14 +41,9 @@ export const DAILY_20260909_SLUGS = [
   "helukabel",
   "lapp",
   "james-hardie",
-] as const;
-
-/** Researcher HOLD — do not wire mill cards. */
-export const DAILY_20260909_HOLD_SLUGS = [
   "marcegaglia",
   "arvedi",
   "tubacero",
-  "umran",
   "noksel",
   "cayirova",
   "npc",
@@ -55,32 +51,74 @@ export const DAILY_20260909_HOLD_SLUGS = [
   "choo-bee",
   "procarsa",
   "zenith",
-  "nexteel",
   "vetropack",
   "elopak",
-  "alpla",
   "novelis",
   "constellium",
   "orora",
   "coveris",
   "kitz",
-  "velan",
-  "swagelok",
-  "endress-hauser",
   "lincoln-electric",
   "esab",
-  "donaldson",
   "howden",
-  "bonfiglioli",
-  "gates",
-  "sfs",
   "lisi",
   "british-steel",
   "ternium",
-  "usiminas",
-  "leoni",
   "rockwool",
+  "alpla",
+  "donaldson",
+  "endress-hauser",
+  "gates",
+  "leoni",
+  "nexteel",
+  "sfs",
+  "swagelok",
+  "umran",
+  "velan",
 ] as const;
+
+export const DAILY_20260909_HOLD36_OK_SLUGS = [
+  "arvedi",
+  "british-steel",
+  "cayirova",
+  "choo-bee",
+  "constellium",
+  "coveris",
+  "elopak",
+  "esab",
+  "howden",
+  "kitz",
+  "lincoln-electric",
+  "lisi",
+  "marcegaglia",
+  "noksel",
+  "novelis",
+  "npc",
+  "orora",
+  "procarsa",
+  "rama",
+  "rockwool",
+  "ternium",
+  "tubacero",
+  "vetropack",
+  "zenith",
+] as const;
+
+export const DAILY_20260909_HOLD36_SOFT_SLUGS = [
+  "alpla",
+  "donaldson",
+  "endress-hauser",
+  "gates",
+  "leoni",
+  "nexteel",
+  "sfs",
+  "swagelok",
+  "umran",
+  "velan",
+] as const;
+
+/** HOLD36 researcher omissions — CGI / wrong-entity stills. */
+export const DAILY_20260909_HOLD_SLUGS = ["bonfiglioli", "usiminas"] as const;
 
 const RESERVED_IDS: ReadonlySet<string> = new Set<string>([
   ...PHASE1_SUPPLIER_IDS,
@@ -112,3 +150,5 @@ export function isDaily20260909Supplier(
   const id = typeof supplier === "string" ? supplier : supplier.id;
   return DAILY_20260909_SUPPLIER_IDS.has(id);
 }
+
+export type Daily20260909Slug = (typeof DAILY_20260909_SLUGS)[number];

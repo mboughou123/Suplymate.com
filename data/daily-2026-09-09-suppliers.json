@@ -2,12 +2,12 @@
   "generated_at_utc": "2026-09-09T17:10:10Z",
   "generated_at_pt": "2026-09-09 ~10:10 AM PT",
   "phase": "suplymate-phase1",
-  "task": "Daily expansion 2026-09-09 \u2014 partial mill wire (sealed 3 + soft 11)",
+  "task": "Daily expansion 2026-09-09 \u2014 HOLD36 plant primaries (14 + 34 = 48; bonfiglioli+usiminas out)",
   "pricing_policy": "No invented prices. MOQ is unpublished mill RFQ.",
-  "notes": "PARTIAL mill wire 2026-09-09: Researcher sealed 3 + soft HQ/campus/archive 11 = 14. HOLD 36 omitted. Products not sealed. sew-eurodrive_02 and wittenstein_02 used. Seal: data/daily-2026-09-09-researcher-seal.json.",
+  "notes": "HOLD36 mill wire 2026-09-09: prior sealed 3 + soft 11 stay locked. Append Researcher OK 24 + soft 10 = 34 plant primaries (_01 only). HOLD out bonfiglioli (CGI) + usiminas (rail tank cars). Elopak is Pure-Pak, not Tetra Pak. Cayirova is \u00c7ay\u0131rova Boru Dar\u0131ca. Never promote *.BAD.* siblings. Seal: data/daily-2026-09-09-researcher-hold36-plants-seal.json.",
   "wire_full_pack": false,
-  "wire_slug_count": 14,
-  "hold_omitted_count": 36,
+  "wire_slug_count": 48,
+  "hold_omitted_count": 2,
   "sealed_slugs": [
     "pepperl-fuchs",
     "sew-eurodrive",
@@ -26,57 +26,62 @@
     "lapp",
     "james-hardie"
   ],
-  "hold_omitted_slugs": [
-    "marcegaglia",
+  "hold36_ok_slugs": [
     "arvedi",
-    "tubacero",
-    "umran",
-    "noksel",
-    "cayirova",
-    "npc",
-    "rama",
-    "choo-bee",
-    "procarsa",
-    "zenith",
-    "nexteel",
-    "vetropack",
-    "elopak",
-    "alpla",
-    "novelis",
-    "constellium",
-    "orora",
-    "coveris",
-    "kitz",
-    "velan",
-    "swagelok",
-    "endress-hauser",
-    "lincoln-electric",
-    "esab",
-    "donaldson",
-    "howden",
-    "bonfiglioli",
-    "gates",
-    "sfs",
-    "lisi",
     "british-steel",
+    "cayirova",
+    "choo-bee",
+    "constellium",
+    "coveris",
+    "elopak",
+    "esab",
+    "howden",
+    "kitz",
+    "lincoln-electric",
+    "lisi",
+    "marcegaglia",
+    "noksel",
+    "novelis",
+    "npc",
+    "orora",
+    "procarsa",
+    "rama",
+    "rockwool",
     "ternium",
-    "usiminas",
+    "tubacero",
+    "vetropack",
+    "zenith"
+  ],
+  "hold36_soft_slugs": [
+    "alpla",
+    "donaldson",
+    "endress-hauser",
+    "gates",
     "leoni",
-    "rockwool"
+    "nexteel",
+    "sfs",
+    "swagelok",
+    "umran",
+    "velan"
+  ],
+  "hold_omitted_slugs": [
+    "bonfiglioli",
+    "usiminas"
   ],
   "counts": {
-    "suppliers_total": 14,
-    "with_local_images": 14,
-    "with_any_photo": 14,
-    "local_image_files": 14,
+    "suppliers_total": 48,
+    "with_local_images": 48,
+    "with_any_photo": 48,
+    "local_image_files": 48,
     "products_total": 0,
     "by_category": {
-      "Industrial Parts": 4,
-      "Hardware & Motion": 2,
-      "Steel & Metals": 2,
-      "Packaging": 3,
-      "Cables & Electrical": 2,
-      "Construction": 1
+      "Industrial Parts": 12,
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Hardware & Motion": 5,
+      "Steel & Metals": 4,
+      "Cables & Electrical": 3,
+      "Construction": 2
     }
   },
   "suppliers": [
@@ -606,6 +611,1299 @@
       ],
       "photo_urls": [],
       "honesty_note": "1938 Hardie Rubber Co Ltd Thirroul aerial \u2014 historical Hardie-group rubber works, not a modern fibre-cement plant"
+    },
+    {
+      "company_name": "Marcegaglia Carbon Steel",
+      "primary_category": "Tube & Pipes",
+      "country": "Italy",
+      "city": "Gazoldo degli Ippoliti",
+      "website": "https://www.marcegaglia.com/",
+      "description": "Marcegaglia Carbon Steel is an Italian welded-tube and hollow-section manufacturer in the Marcegaglia group, with carbon-steel tube mills in northern Italy.",
+      "product_lines": [
+        "Welded carbon steel tube",
+        "Hollow sections",
+        "Structural tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.marcegaglia.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.marcegaglia.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.marcegaglia.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/marcegaglia/marcegaglia_01.jpg"
+      ],
+      "slug": "marcegaglia",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Acciaieria Arvedi S.p.A.",
+      "primary_category": "Tube & Pipes",
+      "country": "Italy",
+      "city": "Cremona",
+      "website": "https://www.arvedi.it/",
+      "description": "Acciaieria Arvedi S.p.A. is an Italian steelmaker producing welded steel tube and hollow sections from the Cremona works.",
+      "product_lines": [
+        "Welded steel tube",
+        "Hollow sections",
+        "Carbon steel pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.arvedi.it/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.arvedi.it/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.arvedi.it/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/arvedi/arvedi_01.jpg"
+      ],
+      "slug": "arvedi",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Tubacero, S.A. de C.V.",
+      "primary_category": "Tube & Pipes",
+      "country": "Mexico",
+      "city": "Monterrey",
+      "website": "https://www.tubacero.com/",
+      "description": "Tubacero is a Mexican steel-pipe manufacturer producing line pipe and structural tubulars from mills in the Monterrey area.",
+      "product_lines": [
+        "Line pipe",
+        "Structural steel pipe",
+        "ERW / SAW pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tubacero.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.tubacero.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tubacero.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/tubacero/tubacero_01.jpg"
+      ],
+      "slug": "tubacero",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Noksel \u00c7elik Boru Sanayi A.\u015e.",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Iskenderun",
+      "website": "https://www.noksel.com/",
+      "description": "Noksel \u00c7elik Boru Sanayi A.\u015e. is a Turkish steel-pipe mill producing SAW and ERW line and water pipe.",
+      "product_lines": [
+        "SAW steel pipe",
+        "ERW steel pipe",
+        "Water / line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.noksel.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.noksel.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.noksel.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/noksel/noksel_01.jpg"
+      ],
+      "slug": "noksel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "\u00c7ay\u0131rova Boru Sanayi ve Ticaret A.\u015e.",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Dar\u0131ca",
+      "website": "https://cayirova.com.tr/",
+      "description": "\u00c7ay\u0131rova Boru Sanayi ve Ticaret A.\u015e. is a Turkish ERW steel-pipe mill at Dar\u0131ca (\u00c7ay\u0131rova Boru Dar\u0131ca), producing galvanized pipe and hollow sections.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Galvanized pipe",
+        "Hollow sections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://cayirova.com.tr/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://cayirova.com.tr/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://cayirova.com.tr/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/cayirova/cayirova_01.jpg"
+      ],
+      "slug": "cayirova",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK. \u00c7ay\u0131rova Boru Dar\u0131ca mill \u2014 plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "National Pipe Company Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "Saudi Arabia",
+      "city": "Jubail",
+      "website": "https://www.npc.com.sa/",
+      "description": "National Pipe Company Ltd. (NPC) is a Saudi steel-pipe manufacturer producing SAW and related line pipe from the Jubail mill.",
+      "product_lines": [
+        "SAW line pipe",
+        "Water pipe",
+        "Oil and gas tubulars"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.npc.com.sa/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.npc.com.sa/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.npc.com.sa/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/npc/npc_01.jpg"
+      ],
+      "slug": "npc",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Middle East",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Rama Steel Tubes Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://www.ramasteel.com/",
+      "description": "Rama Steel Tubes Ltd. is an Indian ERW steel-tube manufacturer producing scaffolding and hollow sections.",
+      "product_lines": [
+        "ERW steel tubes",
+        "Scaffolding tube",
+        "Hollow sections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ramasteel.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.ramasteel.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ramasteel.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/rama/rama_01.jpg"
+      ],
+      "slug": "rama",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Choo Bee Metal Industries Berhad",
+      "primary_category": "Tube & Pipes",
+      "country": "Malaysia",
+      "city": "Ipoh",
+      "website": "https://www.choobee.com.my/",
+      "description": "Choo Bee Metal Industries Berhad is a Malaysian ERW steel-pipe and tube mill.",
+      "product_lines": [
+        "ERW steel pipes",
+        "Steel tubes",
+        "Galvanized pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.choobee.com.my/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.choobee.com.my/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.choobee.com.my/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/choo-bee/choo-bee_01.jpg"
+      ],
+      "slug": "choo-bee",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Procarsa S.A. de C.V.",
+      "primary_category": "Tube & Pipes",
+      "country": "Mexico",
+      "city": "Monterrey",
+      "website": "https://www.procarsa.com.mx/",
+      "description": "Procarsa S.A. de C.V. is a Mexican ERW structural-tubing and conduit-pipe manufacturer.",
+      "product_lines": [
+        "ERW structural tubing",
+        "Conduit pipe",
+        "Mechanical tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.procarsa.com.mx/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.procarsa.com.mx/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.procarsa.com.mx/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/procarsa/procarsa_01.jpg"
+      ],
+      "slug": "procarsa",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Zenith Steel Pipes & Industries Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Khopoli",
+      "website": "https://www.zenithsteelpipes.com/",
+      "description": "Zenith Steel Pipes & Industries Ltd. is an Indian ERW mill producing galvanized and black steel pipes and hollow sections.",
+      "product_lines": [
+        "ERW galvanized pipe",
+        "Black steel pipe",
+        "Hollow sections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.zenithsteelpipes.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.zenithsteelpipes.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.zenithsteelpipes.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/zenith/zenith_01.jpg"
+      ],
+      "slug": "zenith",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Africa",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Vetropack Holding Ltd",
+      "primary_category": "Packaging",
+      "country": "Switzerland",
+      "city": "B\u00fclach",
+      "website": "https://www.vetropack.com/",
+      "description": "Vetropack Holding Ltd is a Swiss glass-container manufacturer producing beverage and food glass packaging from European glassworks.",
+      "product_lines": [
+        "Glass containers",
+        "Beverage bottles",
+        "Food jars"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.vetropack.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.vetropack.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.vetropack.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/vetropack/vetropack_01.jpg"
+      ],
+      "slug": "vetropack",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Elopak ASA",
+      "primary_category": "Packaging",
+      "country": "Norway",
+      "city": "Oslo",
+      "website": "https://www.elopak.com/",
+      "description": "Elopak ASA is a Norwegian carton-packaging manufacturer of Pure-Pak carton systems for beverages and liquid foods. Not Tetra Pak.",
+      "product_lines": [
+        "Pure-Pak cartons",
+        "Aseptic carton systems",
+        "Liquid-food packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.elopak.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.elopak.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.elopak.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/elopak/elopak_01.jpg"
+      ],
+      "slug": "elopak",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK. Elopak Pure-Pak \u2014 not Tetra Pak. Plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Novelis Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Atlanta",
+      "website": "https://www.novelis.com/",
+      "description": "Novelis Inc. is an aluminum rolled-products manufacturer producing beverage-can sheet and specialty aluminum from recycling-led mills.",
+      "product_lines": [
+        "Beverage can sheet",
+        "Aluminum rolled products",
+        "Recycled aluminum"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.novelis.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.novelis.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.novelis.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/novelis/novelis_01.jpg"
+      ],
+      "slug": "novelis",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Constellium SE",
+      "primary_category": "Packaging",
+      "country": "France",
+      "city": "Paris",
+      "website": "https://www.constellium.com/",
+      "description": "Constellium SE is an aluminum products company producing packaging sheet and automotive aluminum from European and North American plants.",
+      "product_lines": [
+        "Aluminum packaging sheet",
+        "Automotive aluminum",
+        "Rolled aluminum"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.constellium.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.constellium.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.constellium.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/constellium/constellium_01.jpg"
+      ],
+      "slug": "constellium",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Orora Limited",
+      "primary_category": "Packaging",
+      "country": "Australia",
+      "city": "Melbourne",
+      "website": "https://www.orora.com/",
+      "description": "Orora Limited is an Australian packaging manufacturer producing glass containers, beverage cans and corrugated packaging.",
+      "product_lines": [
+        "Glass containers",
+        "Beverage cans",
+        "Corrugated packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.orora.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.orora.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.orora.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/orora/orora_01.jpg"
+      ],
+      "slug": "orora",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Oceania",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Coveris Holdings S.A.",
+      "primary_category": "Packaging",
+      "country": "Austria",
+      "city": "Vienna",
+      "website": "https://www.coveris.com/",
+      "description": "Coveris Holdings S.A. is a flexible-packaging manufacturer producing films and converted packaging from European plants.",
+      "product_lines": [
+        "Flexible packaging",
+        "Packaging films",
+        "Converted packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.coveris.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.coveris.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.coveris.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/coveris/coveris_01.jpg"
+      ],
+      "slug": "coveris",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "KITZ Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Chiba",
+      "website": "https://www.kitz.com/",
+      "description": "KITZ Corporation is a Japanese industrial-valve manufacturer producing bronze, steel and alloy valves for process and building services.",
+      "product_lines": [
+        "Industrial valves",
+        "Bronze and steel valves",
+        "Flow-control products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.kitz.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.kitz.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.kitz.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/kitz/kitz_01.jpg"
+      ],
+      "slug": "kitz",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Lincoln Electric Holdings, Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Cleveland",
+      "website": "https://www.lincolnelectric.com/",
+      "description": "Lincoln Electric Holdings, Inc. is a U.S. welding-equipment and filler-metal manufacturer headquartered in Cleveland, Ohio.",
+      "product_lines": [
+        "Welding equipment",
+        "Filler metals",
+        "Automation welding systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.lincolnelectric.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.lincolnelectric.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.lincolnelectric.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/lincoln-electric/lincoln-electric_01.jpg"
+      ],
+      "slug": "lincoln-electric",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "ESAB Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "North Bethesda",
+      "website": "https://www.esab.com/",
+      "description": "ESAB Corporation manufactures welding and cutting equipment and filler metals for fabrication and process industries.",
+      "product_lines": [
+        "Welding equipment",
+        "Cutting equipment",
+        "Filler metals"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.esab.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.esab.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.esab.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/esab/esab_01.jpg"
+      ],
+      "slug": "esab",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Howden Group",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Renfrew",
+      "website": "https://www.howden.com/",
+      "description": "Howden Group manufactures industrial fans, compressors and rotary heat exchangers for process, power and infrastructure customers.",
+      "product_lines": [
+        "Industrial fans",
+        "Compressors",
+        "Rotary heat exchangers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.howden.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.howden.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.howden.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/howden/howden_01.jpg"
+      ],
+      "slug": "howden",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "LISI S.A.",
+      "primary_category": "Hardware & Motion",
+      "country": "France",
+      "city": "Belfort",
+      "website": "https://www.lisi-group.com/",
+      "description": "LISI S.A. is a French fastener and assembly-components manufacturer for aerospace, automotive and medical markets.",
+      "product_lines": [
+        "Aerospace fasteners",
+        "Automotive fasteners",
+        "Assembly components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.lisi-group.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.lisi-group.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.lisi-group.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/lisi/lisi_01.jpg"
+      ],
+      "slug": "lisi",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "British Steel Limited",
+      "primary_category": "Steel & Metals",
+      "country": "United Kingdom",
+      "city": "Scunthorpe",
+      "website": "https://britishsteel.co.uk/",
+      "description": "British Steel Limited is a UK long-products steelmaker producing sections, rail and wire rod from the Scunthorpe works.",
+      "product_lines": [
+        "Steel sections",
+        "Rail",
+        "Wire rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://britishsteel.co.uk/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://britishsteel.co.uk/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://britishsteel.co.uk/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/british-steel/british-steel_01.jpg"
+      ],
+      "slug": "british-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "Ternium S.A.",
+      "primary_category": "Steel & Metals",
+      "country": "Mexico",
+      "city": "San Nicol\u00e1s de los Garza",
+      "website": "https://www.ternium.com/",
+      "description": "Ternium S.A. is a flat-steel producer in the Americas manufacturing hot-rolled, cold-rolled and coated steel.",
+      "product_lines": [
+        "Hot-rolled flat steel",
+        "Cold-rolled flat steel",
+        "Coated steel"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ternium.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.ternium.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ternium.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/ternium/ternium_01.jpg"
+      ],
+      "slug": "ternium",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "ROCKWOOL A/S",
+      "primary_category": "Construction",
+      "country": "Denmark",
+      "city": "Hedehusene",
+      "website": "https://www.rockwool.com/",
+      "description": "ROCKWOOL A/S is a Danish stone-wool insulation manufacturer producing building and technical insulation from European plants.",
+      "product_lines": [
+        "Stone wool insulation",
+        "Building insulation",
+        "Technical insulation"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rockwool.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.rockwool.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rockwool.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/rockwool/rockwool_01.jpg"
+      ],
+      "slug": "rockwool",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher OK plant/yard primary (_01).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "company_name": "ALPLA Werke Alwin Lehner GmbH & Co KG",
+      "primary_category": "Packaging",
+      "country": "Austria",
+      "city": "Hard",
+      "website": "https://www.alpla.com/",
+      "description": "ALPLA is an Austrian plastics-packaging manufacturer of bottles, caps and recycling-based packaging systems.",
+      "product_lines": [
+        "Plastic bottles",
+        "Caps and closures",
+        "Recycled packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.alpla.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.alpla.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.alpla.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/alpla/alpla_01.jpg"
+      ],
+      "slug": "alpla",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Donaldson Company, Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Bloomington",
+      "website": "https://www.donaldson.com/",
+      "description": "Donaldson Company, Inc. manufactures filtration systems and replacement filters for engines, industrial dust collection and process air.",
+      "product_lines": [
+        "Engine filtration",
+        "Industrial dust collection",
+        "Process filters"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.donaldson.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.donaldson.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.donaldson.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/donaldson/donaldson_01.jpg"
+      ],
+      "slug": "donaldson",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Endress+Hauser Group",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Reinach",
+      "website": "https://www.endress.com/",
+      "description": "Endress+Hauser Group manufactures process instrumentation and analyzers for flow, level, pressure, temperature and liquid analysis.",
+      "product_lines": [
+        "Process instrumentation",
+        "Flow and level meters",
+        "Process analyzers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.endress.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.endress.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.endress.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/endress-hauser/endress-hauser_01.jpg"
+      ],
+      "slug": "endress-hauser",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Gates Corporation",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Denver",
+      "website": "https://www.gates.com/",
+      "description": "Gates Corporation manufactures power-transmission belts, hydraulic hose and fluid-power components.",
+      "product_lines": [
+        "Power-transmission belts",
+        "Hydraulic hose",
+        "Fluid-power components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.gates.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.gates.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.gates.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/gates/gates_01.jpg"
+      ],
+      "slug": "gates",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "LEONI AG",
+      "primary_category": "Cables & Electrical",
+      "country": "Germany",
+      "city": "Nuremberg",
+      "website": "https://www.leoni.com/",
+      "description": "LEONI AG manufactures wiring systems and cable solutions for automotive and industrial applications.",
+      "product_lines": [
+        "Automotive wiring systems",
+        "Industrial cables",
+        "Special cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.leoni.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.leoni.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.leoni.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/leoni/leoni_01.jpg"
+      ],
+      "slug": "leoni",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "NEXTEEL Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "South Korea",
+      "city": "Pohang",
+      "website": "https://www.nexteel.com/",
+      "description": "NEXTEEL Co., Ltd. is a Korean steel-pipe manufacturer producing ERW and related tubular products.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Line pipe",
+        "Structural tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nexteel.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.nexteel.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nexteel.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/nexteel/nexteel_01.jpg"
+      ],
+      "slug": "nexteel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "SFS Group AG",
+      "primary_category": "Hardware & Motion",
+      "country": "Switzerland",
+      "city": "Heerbrugg",
+      "website": "https://www.sfs.com/",
+      "description": "SFS Group AG is a Swiss fastening-systems manufacturer producing engineered fasteners and assembly components.",
+      "product_lines": [
+        "Engineered fasteners",
+        "Assembly systems",
+        "Building fasteners"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sfs.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.sfs.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.sfs.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/sfs/sfs_01.jpg"
+      ],
+      "slug": "sfs",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Swagelok Company",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Solon",
+      "website": "https://www.swagelok.com/",
+      "description": "Swagelok Company manufactures tube fittings, valves and fluid-system components for industrial and process applications.",
+      "product_lines": [
+        "Tube fittings",
+        "Ball valves",
+        "Fluid-system components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.swagelok.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.swagelok.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.swagelok.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/swagelok/swagelok_01.jpg"
+      ],
+      "slug": "swagelok",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Umran \u00c7elik Boru Sanayi A.\u015e.",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Ankara",
+      "website": "https://www.umran.com/",
+      "description": "Umran \u00c7elik Boru Sanayi A.\u015e. is a Turkish steel-pipe manufacturer producing SAW and ERW line and water pipe.",
+      "product_lines": [
+        "SAW steel pipe",
+        "ERW steel pipe",
+        "Water / line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.umran.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.umran.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.umran.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/umran/umran_01.jpg"
+      ],
+      "slug": "umran",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "company_name": "Velan Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "Canada",
+      "city": "Montreal",
+      "website": "https://www.velan.com/",
+      "description": "Velan Inc. is a Canadian industrial-valve manufacturer producing gate, globe, check and ball valves for process industries.",
+      "product_lines": [
+        "Gate and globe valves",
+        "Check valves",
+        "Ball valves"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.velan.com/"
+        },
+        {
+          "name": "Plant / product QMS (confirm current certificate on mill quality page)",
+          "source": "https://www.velan.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.velan.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/velan/velan_01.jpg"
+      ],
+      "slug": "velan",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "HOLD36 Researcher soft \u2014 HQ/line still, not a mill-exterior caption.",
+      "researcher_verdict": "soft"
     }
   ]
 }

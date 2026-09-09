@@ -81,8 +81,8 @@ describe("Lister daily expansion 2026-09-09 (OK 1 + soft 15)", () => {
     ).toBe(true);
   });
 
-  it("wires HOLD-mill soft SKUs by slug without inventing a mill card", () => {
-    expect(DAILY_20260909_SLUGS).not.toContain("marcegaglia");
+  it("attaches marcegaglia SKU to the wired HOLD36 mill card", () => {
+    expect(DAILY_20260909_SLUGS).toContain("marcegaglia");
     expect(daily20260909ProductSupplierId("marcegaglia")).toBe("marcegaglia");
     const sku = listerDaily20260909ForSupplier("marcegaglia")[0];
     expect(sku).toBeTruthy();

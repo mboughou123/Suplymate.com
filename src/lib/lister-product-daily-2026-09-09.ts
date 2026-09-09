@@ -8,8 +8,8 @@
  *
  * Honesty: all 16 SKUs are mill RFQ (never invent FOB / unit prices).
  * Photos: on-disk local JPGs only — no remote/stock fallbacks, no AI badges.
- * HOLD 34 omitted (including pepperl-fuchs product). Soft SKUs may attach
- * by slug when the mill card is HOLD (e.g. marcegaglia).
+ * HOLD 34 omitted (including pepperl-fuchs product). Soft SKUs attach by
+ * slug to a wired mill card when one exists (marcegaglia / ternium now do).
  */
 
 import rawDaily from "../../data/daily-2026-09-09-products.json";
@@ -136,7 +136,7 @@ for (const mill of (rawDailyMills as {
 /**
  * Prefer the 09-09 mill-pack id when that mill is already in
  * daily20260909Suppliers; otherwise keep supplier_slug_guess so
- * product-only SKUs (marcegaglia, ternium, …) attach without a mill card.
+ * product-only SKUs (mill HOLD out) attach without a mill card.
  */
 export function daily20260909ProductSupplierId(slug: string): string {
   if (WIRED_MILL_SLUGS.has(slug)) {

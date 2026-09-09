@@ -1,16 +1,20 @@
 /**
- * Daily expansion 2026-09-09 — mill pack for /suppliers (14).
+ * Daily expansion 2026-09-09 — mill pack for /suppliers (48).
  *
  * Metadata: data/daily-2026-09-09-suppliers.json
  * Factory stills: public/images/suppliers/<slug>/*.jpg
  * Seal: data/daily-2026-09-09-researcher-seal.json
  *         (QA-DAILY-2026-09-09-RESEARCHER)
+ * HOLD36: data/daily-2026-09-09-researcher-hold36-plants-seal.json
+ *         (QA-HOLD36-MILL-PLANTS-RESEARCHER-PARTIAL)
  *
  * Honesty: on-disk stills only; no ISO badges; RFQ / unpublished MOQ;
  *          never invent FOB. Keep JSON description / honesty_note text.
- *          HOLD 36 omitted. sew-eurodrive uses sew-eurodrive_02 only.
- *          wittenstein uses wittenstein_02 only. pepperl-fuchs / daido-steel
- *          and the soft 11 use `_01` except those two `_02` cards.
+ *          Prior 14 stay locked (pepperl-fuchs `_01`; sew-eurodrive +
+ *          wittenstein `_02`; daido-steel `_01`; 11 soft `_01` HQ/line).
+ *          HOLD36 OK 24 + soft 10 use `<slug>_01.jpg` only.
+ *          HOLD out: bonfiglioli (CGI), usiminas (rail tank cars).
+ *          Never promote `*.BAD.*` siblings.
  */
 
 import { existsSync, readdirSync } from "node:fs";
@@ -23,6 +27,8 @@ import {
 } from "@/lib/daily-2026-09-09-ids";
 
 export {
+  DAILY_20260909_HOLD36_OK_SLUGS,
+  DAILY_20260909_HOLD36_SOFT_SLUGS,
   DAILY_20260909_HOLD_SLUGS,
   DAILY_20260909_SLUGS,
   DAILY_20260909_SUPPLIER_IDS,

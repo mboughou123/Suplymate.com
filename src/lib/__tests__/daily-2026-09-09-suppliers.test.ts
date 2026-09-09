@@ -2,6 +2,8 @@ import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  DAILY_20260909_HOLD36_OK_SLUGS,
+  DAILY_20260909_HOLD36_SOFT_SLUGS,
   DAILY_20260909_HOLD_SLUGS,
   DAILY_20260909_SLUGS,
   daily20260909Suppliers,
@@ -28,12 +30,17 @@ const SOFT11 = [
   "james-hardie",
 ] as const;
 
+const PRIOR14 = [...SEALED3, ...SOFT11] as const;
+
 describe("daily 2026-09-09 mill directory", () => {
-  it("loads 14 mills with unique unused-slug ids", () => {
-    expect(daily20260909Suppliers).toHaveLength(14);
-    expect(new Set(daily20260909Suppliers.map((s) => s.id)).size).toBe(14);
-    expect(DAILY_20260909_SLUGS).toHaveLength(14);
-    expect(DAILY_20260909_HOLD_SLUGS).toHaveLength(36);
+  it("loads 48 mills with unique unused-slug ids", () => {
+    expect(daily20260909Suppliers).toHaveLength(48);
+    expect(new Set(daily20260909Suppliers.map((s) => s.id)).size).toBe(48);
+    expect(DAILY_20260909_SLUGS).toHaveLength(48);
+    expect(DAILY_20260909_HOLD36_OK_SLUGS).toHaveLength(24);
+    expect(DAILY_20260909_HOLD36_SOFT_SLUGS).toHaveLength(10);
+    expect(DAILY_20260909_HOLD_SLUGS).toEqual(["bonfiglioli", "usiminas"]);
+    expect(DAILY_20260909_SLUGS.slice(0, 14)).toEqual([...PRIOR14]);
     for (const slug of DAILY_20260909_SLUGS) {
       expect(dailySupplierIdForSlug20260909(slug)).toBe(slug);
     }
@@ -42,17 +49,42 @@ describe("daily 2026-09-09 mill directory", () => {
     );
   });
 
-  it("wires sealed 3 + soft 11 and keeps HOLD 36 absent", () => {
+  it("wires prior 14 + HOLD36 34 and keeps bonfiglioli + usiminas absent", () => {
     const ids = new Set(daily20260909Suppliers.map((s) => s.id));
-    for (const slug of SEALED3) {
+    for (const slug of PRIOR14) {
       expect(ids.has(slug), slug).toBe(true);
     }
-    for (const slug of SOFT11) {
+    for (const slug of DAILY_20260909_HOLD36_OK_SLUGS) {
+      expect(ids.has(slug), slug).toBe(true);
+    }
+    for (const slug of DAILY_20260909_HOLD36_SOFT_SLUGS) {
       expect(ids.has(slug), slug).toBe(true);
     }
     for (const slug of DAILY_20260909_HOLD_SLUGS) {
       expect(ids.has(slug), slug).toBe(false);
       expect(ids.has(`daily-20260909-${slug}`), slug).toBe(false);
+    }
+  });
+
+  it("does not add bonfiglioli or usiminas public image directories", () => {
+    const root = join(process.cwd(), "public", "images", "suppliers");
+    expect(existsSync(join(root, "bonfiglioli"))).toBe(false);
+    expect(existsSync(join(root, "usiminas"))).toBe(false);
+  });
+
+  it("HOLD36 plant primaries each have exactly one _01.jpg still", () => {
+    for (const slug of [
+      ...DAILY_20260909_HOLD36_OK_SLUGS,
+      ...DAILY_20260909_HOLD36_SOFT_SLUGS,
+    ]) {
+      const mill = daily20260909Suppliers.find((s) => s.id === slug);
+      expect(mill, slug).toBeTruthy();
+      expect(mill?.supplierImages).toHaveLength(1);
+      expect(mill?.supplierImages?.[0].endsWith(`${slug}_01.jpg`), slug).toBe(true);
+      const dir = join(process.cwd(), "public", "images", "suppliers", slug);
+      const siblings = readdirSync(dir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
+      expect(siblings, slug).toEqual([`${slug}_01.jpg`]);
+      expect(siblings.some((f) => /\.BAD\./i.test(f)), slug).toBe(false);
     }
   });
 
@@ -99,6 +131,13 @@ describe("daily 2026-09-09 mill directory", () => {
     expect(text("wittenstein").toLowerCase()).toMatch(/innovationsfabrik|wittenstein_02/);
     expect(text("toyo-seikan").toLowerCase()).toMatch(/office tower|hq/);
     expect(text("pepperl-fuchs").toLowerCase()).toMatch(/mannheim/);
+    expect(text("elopak").toLowerCase()).toMatch(/pure-pak/);
+    expect(text("elopak").toLowerCase()).not.toMatch(/tetra pak carton/);
+    expect(text("elopak")).toMatch(/Not Tetra Pak/);
+    expect(text("cayirova").toLowerCase()).toMatch(/darıca|darica|çayırova boru/);
+    expect(text("alpla").toLowerCase()).toMatch(/hq\/line|not a mill-exterior/);
+    expect(text("donaldson").toLowerCase()).toMatch(/hq\/line|not a mill-exterior/);
+    expect(text("velan").toLowerCase()).toMatch(/hq\/line|not a mill-exterior/);
   });
 
   it("maps Hardware & Motion → Industrial Parts", () => {
@@ -106,6 +145,10 @@ describe("daily 2026-09-09 mill directory", () => {
     expect(sew?.category).toBe("Industrial Parts");
     const wittenstein = daily20260909Suppliers.find((s) => s.id === "wittenstein");
     expect(wittenstein?.category).toBe("Industrial Parts");
+    const arvedi = daily20260909Suppliers.find((s) => s.id === "arvedi");
+    expect(arvedi?.category).toBe("Tubes & Pipes");
+    const elopak = daily20260909Suppliers.find((s) => s.id === "elopak");
+    expect(elopak?.category).toBe("Packaging");
   });
 
   it("does not invent ISO badges and keeps RFQ MOQ", () => {
@@ -129,8 +172,11 @@ describe("daily 2026-09-09 mill directory", () => {
     expect(ids.has("daido-steel")).toBe(true);
     expect(ids.has("wittenstein")).toBe(true);
     expect(ids.has("butting")).toBe(true);
-    expect(ids.has("marcegaglia")).toBe(false);
-    expect(ids.has("ternium")).toBe(false);
+    expect(ids.has("marcegaglia")).toBe(true);
+    expect(ids.has("ternium")).toBe(true);
+    expect(ids.has("elopak")).toBe(true);
+    expect(ids.has("bonfiglioli")).toBe(false);
+    expect(ids.has("usiminas")).toBe(false);
     for (const slug of DAILY_20260909_HOLD_SLUGS) {
       expect(ids.has(slug), slug).toBe(false);
     }
