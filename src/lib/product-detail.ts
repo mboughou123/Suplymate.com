@@ -645,6 +645,7 @@ export function getProductDetail(product: Product): ProductDetail {
     }));
 
   /* --- supplier card --- */
+  const packHost = product.supplierId ? getPackSupplier(product.supplierId) : undefined;
   const supplier: ProductSupplierCard = {
     id: sd.id,
     name: sd.name,
@@ -660,7 +661,7 @@ export function getProductDetail(product: Product): ProductDetail {
     yearsInBusiness: sd.yearsInBusiness,
     onTimeDelivery: sd.onTimeDelivery,
     reorderRate: sd.reorderRate,
-    href: `/supplier/${sd.id}`,
+    href: packHost?.productHostOnly ? "" : `/supplier/${sd.id}`,
   };
 
   return {

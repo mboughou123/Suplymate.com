@@ -440,8 +440,19 @@
     "flat-products.jpg"
   ],
   "descriptionNotes": {
-    "maharashtra-seamless": "Photo is branded yard inventory (Vijay Sales), not the mill gate."
+    "maharashtra-seamless": "Photo is branded yard inventory (Vijay Sales), not the mill gate.",
+    "hi-tech-pipes": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
+    "bull-moose-tube": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
+    "searing-industries": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
+    "shandong-molong": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim."
   },
+  "softTubeProductSlugs": [
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries"
+  ],
   "productImageExcludes": [
     "amcor/amcor-pack-1.jpg",
     "amcor/amcor-pack-2.jpg",
