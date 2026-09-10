@@ -453,7 +453,8 @@
     "ifm": "Photo is the Glückaufhaus Essen HQ/campus exterior — official campus, not a production floor or yard.",
     "kennametal": "Photo is a Latrobe-style tech/campus glass exterior without a Kennametal facade mark — plausible campus, not a brand-confirmed mill header.",
     "lenze": "Photo is the Lenze-branded Aerzen/Groß Berkel HQ campus exterior — HQ/campus, not a production mill yard.",
-    "nb-corporation": "Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant."
+    "nb-corporation": "Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant.",
+    "regal-rexnord": "Photo is the Milwaukee HQ campus with a RegalRexnord rooftop sign — branded HQ/campus, not a production mill yard."
   },
   "softTubeProductSlugs": [
     "plymouth-tube",

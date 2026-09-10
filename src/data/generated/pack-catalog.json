@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 205,
-    "suppliersWithPhotos": 189,
+    "suppliers": 208,
+    "suppliersWithPhotos": 192,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 339,
+    "supplierPhotos": 342,
     "suppliersOverlayingDirectory": 9,
     "distributors": [
       "bossard"
@@ -9468,6 +9468,115 @@
       "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.kingspangroup.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "winpak",
+      "packSlug": "winpak",
+      "pack": "hold30-2026-09-10",
+      "name": "Winpak Ltd.",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Winnipeg, Canada",
+      "country": "Canada",
+      "city": "Winnipeg",
+      "website": "https://www.winpak.com/",
+      "imageUrl": "/images/suppliers/winpak/winpak_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/winpak/winpak_01.jpg"
+      ],
+      "description": "Winpak Ltd. is a Canadian packaging manufacturer producing flexible barrier films and rigid lidding for food and healthcare customers.",
+      "products": [
+        "Flexible barrier films",
+        "Rigid lidding"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.winpak.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "superior-tube",
+      "packSlug": "superior-tube",
+      "pack": "hold30-2026-09-10",
+      "name": "Superior Tube Company",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Collegeville, United States",
+      "country": "United States",
+      "city": "Collegeville",
+      "website": "https://www.superiortube.com/",
+      "imageUrl": "/images/suppliers/superior-tube/superior-tube_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/superior-tube/superior-tube_01.jpg"
+      ],
+      "description": "Superior Tube Company is a U.S. specialty-tube manufacturer producing precision small-diameter alloy tubing for industrial and energy markets.",
+      "products": [
+        "Precision specialty alloy tubing",
+        "Small-diameter seamless tube"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.superiortube.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "regal-rexnord",
+      "packSlug": "regal-rexnord",
+      "pack": "hold30-2026-09-10",
+      "name": "Regal Rexnord Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Milwaukee, United States",
+      "country": "United States",
+      "city": "Milwaukee",
+      "website": "https://www.regalrexnord.com/",
+      "imageUrl": "/images/suppliers/regal-rexnord/regal-rexnord_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/regal-rexnord/regal-rexnord_01.jpg"
+      ],
+      "description": "Regal Rexnord Corporation is a U.S. manufacturer of power-transmission components and industrial motors. Photo is the Milwaukee HQ campus with a RegalRexnord rooftop sign — branded HQ/campus, not a production mill yard.",
+      "products": [
+        "Power transmission components",
+        "Industrial motors"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.regalrexnord.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-10",

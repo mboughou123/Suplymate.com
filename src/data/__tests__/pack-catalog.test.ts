@@ -221,7 +221,7 @@ describe("daily 2026-09-10 cleared wire", () => {
     "erdemir",
     "worthington-steel",
   ];
-  const millHolds = ["regal-rexnord", "rr-kabel", "superior-tube", "winpak"];
+  const millHolds = ["rr-kabel"];
   const productHolds = [
     "tubos-reunidos",
     "suraj",
@@ -344,7 +344,9 @@ describe("HOLD30 cleared mill wire", () => {
     "spx-flow",
     "tubos-reunidos",
     "weg",
+    "superior-tube",
     "welded-tube-canada",
+    "winpak",
   ];
   const millsSoft = [
     "hepcomotion",
@@ -354,10 +356,11 @@ describe("HOLD30 cleared mill wire", () => {
     "lenze",
     "michigan-seamless-tube",
     "nb-corporation",
+    "regal-rexnord",
     "suraj",
     "visy",
   ];
-  const foreverOut = ["regal-rexnord", "rr-kabel", "superior-tube", "winpak"];
+  const foreverOut = ["rr-kabel"];
   const lockedDaily20 = [
     "beckhoff",
     "bull-moose-tube",
@@ -384,7 +387,7 @@ describe("HOLD30 cleared mill wire", () => {
 
   const hold30 = packSuppliers.filter((s) => s.pack === "hold30-2026-09-10");
 
-  it("appends the 26 cleared mills without rewriting the locked daily 20", () => {
+  it("appends the 29 cleared mills without rewriting the locked daily 20", () => {
     expect(hold30.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
     const dailyMills = packSuppliers.filter((s) => s.pack === "daily-2026-09-10" && !s.productHostOnly);
     expect(dailyMills.map((s) => s.packSlug).sort()).toEqual([...lockedDaily20].sort());
@@ -413,7 +416,7 @@ describe("HOLD30 cleared mill wire", () => {
     }
   });
 
-  it("soft-captions the SOFT nine and keeps forever-HOLD slugs out", () => {
+  it("soft-captions the SOFT set and keeps rr-kabel out forever", () => {
     for (const slug of millsSoft) {
       const mill = hold30.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();

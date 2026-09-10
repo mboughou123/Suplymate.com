@@ -6,5 +6,77 @@
   ],
   "soft": [
     "regal-rexnord"
+  ],
+  "suppliers": [
+    {
+      "company_name": "Winpak Ltd.",
+      "primary_category": "Packaging",
+      "country": "Canada",
+      "city": "Winnipeg",
+      "website": "https://www.winpak.com/",
+      "description": "Winpak Ltd. is a Canadian packaging manufacturer producing flexible barrier films and rigid lidding for food and healthcare customers.",
+      "product_lines": [
+        "Flexible barrier films",
+        "Rigid lidding"
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.winpak.com/",
+      "local_images": [
+        "/images/suppliers/winpak/winpak_01.jpg"
+      ],
+      "slug": "winpak",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Superior Tube Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Collegeville",
+      "website": "https://www.superiortube.com/",
+      "description": "Superior Tube Company is a U.S. specialty-tube manufacturer producing precision small-diameter alloy tubing for industrial and energy markets.",
+      "product_lines": [
+        "Precision specialty alloy tubing",
+        "Small-diameter seamless tube"
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.superiortube.com/",
+      "local_images": [
+        "/images/suppliers/superior-tube/superior-tube_01.jpg"
+      ],
+      "slug": "superior-tube",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Regal Rexnord Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Milwaukee",
+      "website": "https://www.regalrexnord.com/",
+      "description": "Regal Rexnord Corporation is a U.S. manufacturer of power-transmission components and industrial motors.",
+      "product_lines": [
+        "Power transmission components",
+        "Industrial motors"
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.regalrexnord.com/",
+      "local_images": [
+        "/images/suppliers/regal-rexnord/regal-rexnord_01.jpg"
+      ],
+      "slug": "regal-rexnord",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Europe",
+        "Asia"
+      ]
+    }
   ]
 }

@@ -7,6 +7,7 @@
  *   data/daily-2026-09-0{2,3}-suppliers.json (+ *-manifest-suppliers*.json)
  *   data/daily-2026-09-10-cleared.json (+ docs/researcher-*-2026-09-10.json)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
+ *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/product-media-batch{1,2,3}.json, data/product-gaps-fill*.json,
  *   data/daily-2026-09-0{2,3}-products.json (+ *enhanced-manifest*.json)
  *   data/certifications.json, data/certs-seed.tsv, data/*certs*manifest*.json
@@ -252,7 +253,7 @@ const SOFT_TUBE_IMAGE_CREDIT =
   "Type-match Wikimedia Commons stock — not a mill-specific product still.";
 const HOLD30_SOFT_CAPTION =
   "Photo is a Researcher-soft still — not a confirmed plant-exterior claim.";
-const HOLD30_FOREVER_OUT = new Set(["winpak", "superior-tube", "regal-rexnord", "rr-kabel"]);
+const HOLD30_FOREVER_OUT = new Set(["rr-kabel"]);
 
 function isHeld(supplierSlug, productSlug) {
   return HOLD_KEYS.has(supplierSlug) || HOLD_KEYS.has(`${supplierSlug}|${productSlug}`);
@@ -557,43 +558,60 @@ function buildClearedProductHosts(dateTag, wiredSlugs, report) {
 }
 
 /**
- * HOLD30 re-QA mill pack (`data/hold30-mills-cleared.json`).
- * Gated by `docs/researcher-hold30-mills-2026-09-10.json`. Appends the
- * Researcher-cleared 26 (OK + soft) without rewriting the locked daily
- * 2026-09-10 twenty. winpak / superior-tube / regal-rexnord stay HOLD;
- * rr-kabel stays out forever.
+ * HOLD30 re-QA mill pack (`data/hold30-mills-cleared.json`) plus refetch3
+ * (`data/hold30-refetch3-cleared.json`). Gated by the matching Researcher
+ * seals. Appends the cleared 29 (OK + soft) without rewriting the locked
+ * daily 2026-09-10 twenty. rr-kabel stays out forever.
  */
 function loadHold30Seals() {
   const mills = readJsonIfExists(path.join(ROOT, "docs", "researcher-hold30-mills-2026-09-10.json"));
   const pack = readJsonIfExists(path.join(DATA_DIR, "hold30-mills-cleared.json"));
+  const refetch = readJsonIfExists(path.join(DATA_DIR, "hold30-refetch3-cleared.json"));
+  const refetchSeal = readJsonIfExists(path.join(ROOT, "docs", "researcher-hold30-refetch3-2026-09-10.json"));
+  const refetchWire = new Set(
+    [
+      ...(refetch?.ok ?? []),
+      ...(refetch?.soft ?? []),
+      ...(refetchSeal?.sealed_wire_ok ?? []),
+      ...(refetchSeal?.soft ?? []).map(slugOf),
+    ].filter(Boolean)
+  );
   const millHolds = new Set([
     ...HOLD30_FOREVER_OUT,
     ...(pack?.hold_out ?? []),
     ...(mills?.hold_do_not_wire ?? []).map(slugOf).filter(Boolean),
     ...(mills?.blocked_skipped ?? []),
+    ...(refetchSeal?.blocked_skipped ?? []),
   ]);
+  for (const slug of refetchWire) millHolds.delete(slug);
   const millWire = new Set(
     [
       ...(pack?.mills_ok ?? []),
       ...(pack?.mills_soft ?? []),
       ...(mills?.sealed_wire_ok ?? []),
       ...(mills?.soft ?? []).map(slugOf),
+      ...refetchWire,
     ].filter((slug) => slug && !millHolds.has(slug))
   );
   const softSlugs = new Set(
-    [...(pack?.mills_soft ?? []), ...(mills?.soft ?? []).map(slugOf)].filter(
-      (slug) => slug && millWire.has(slug)
-    )
+    [
+      ...(pack?.mills_soft ?? []),
+      ...(mills?.soft ?? []).map(slugOf),
+      ...(refetch?.soft ?? []),
+      ...(refetchSeal?.soft ?? []).map(slugOf),
+    ].filter((slug) => slug && millWire.has(slug))
   );
   return { millHolds, millWire, softSlugs };
 }
 
 function buildHold30Suppliers(report) {
   const raw = readJsonIfExists(path.join(DATA_DIR, "hold30-mills-cleared.json"));
-  if (!raw) return [];
+  const refetch = readJsonIfExists(path.join(DATA_DIR, "hold30-refetch3-cleared.json"));
+  const listed = [...(raw?.suppliers ?? []), ...(refetch?.suppliers ?? [])];
+  if (!listed.length) return [];
   const seals = loadHold30Seals();
   const rows = [];
-  for (const m of raw.suppliers ?? []) {
+  for (const m of listed) {
     const slug = m.slug || slugify(m.company_name);
     if (seals.millHolds.has(slug)) continue;
     if (seals.millWire.size && !seals.millWire.has(slug)) continue;
