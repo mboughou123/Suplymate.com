@@ -1,0 +1,50 @@
+{
+  "label": "HOLD35-REFETCH2-CLEARED",
+  "source_seal": "daily/2026-09-10/_qa_hold35_refetch2/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD35-REFETCH2-RESEARCHER-OK",
+  "wire_ok": [
+    "tfkable"
+  ],
+  "soft": [
+    {
+      "slug": "visy",
+      "reason": "Stylized blue recycling/packaging tiles \u2014 category-correct, not branded SKU"
+    }
+  ],
+  "hold_out": [],
+  "wired_33_locked": true,
+  "stills": [
+    {
+      "slug": "tfkable",
+      "path": "/images/products/tfkable/tfkable-power.jpg",
+      "filename": "tfkable-power.jpg",
+      "grade": "ok",
+      "sha256": "a0e1e3e81343732442e5d2f7ca43a3e33c66c36d4d9c5d3021c8e7426122a41f",
+      "bytes": 306175
+    },
+    {
+      "slug": "tfkable",
+      "path": "/images/products/tfkable/tfkable-lab.jpg",
+      "filename": "tfkable-lab.jpg",
+      "grade": "ok",
+      "sha256": "918ac293ff44c160a61baf5a590d9573200e0cceccff161630449d82454a7376",
+      "bytes": 226870
+    },
+    {
+      "slug": "visy",
+      "path": "/images/products/visy/visy-glass.jpg",
+      "filename": "visy-glass.jpg",
+      "grade": "soft",
+      "sha256": "06955644f6d1b741f43cfb47ec5f67c1ea8c371141669208118820337979d11e",
+      "bytes": 202724
+    },
+    {
+      "slug": "visy",
+      "path": "/images/products/visy/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "fbe4bfb22afdcf60264147cd79d311e03f49b5e330ba9756c7d92e0e89f477e2",
+      "bytes": 344846
+    }
+  ]
+}
