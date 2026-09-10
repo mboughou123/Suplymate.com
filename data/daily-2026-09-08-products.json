@@ -1,0 +1,1089 @@
+{
+  "generated_at_utc": "2026-09-09T17:06:17Z",
+  "generated_at_pt": "2026-09-09 10:06 AM PT",
+  "date": "2026-09-08",
+  "notes": "Product wire 2026-09-08: prior OK 4 + soft 34, plus HOLD12 Researcher OK 9 + soft 3 = 50 RFQ SKUs. HOLD=[]. One still per SKU (preferred primary). Fujikura power still quarantined. Rengo is Japan. Seal: data/daily-2026-09-08-researcher-hold12-products-seal.json.",
+  "wire_full_pack": true,
+  "ok_slugs": [
+    "schuetz",
+    "komatsu",
+    "hitachi-cm",
+    "volvo-ce",
+    "can-pack",
+    "mayr-melnhof",
+    "constantia-flexibles",
+    "rengo",
+    "misumi",
+    "legrand",
+    "harmonic-drive",
+    "fujikura",
+    "belden"
+  ],
+  "soft_slugs": [
+    "eew",
+    "butting",
+    "eisenbau-kramer",
+    "hengyang-valin",
+    "changbao",
+    "dura-bond",
+    "chelpipe",
+    "panyu-chu-kong",
+    "borusan-mannesmann",
+    "erciyas",
+    "toscelik",
+    "cangzhou-spiral",
+    "verallia",
+    "vidrala",
+    "gerresheimer",
+    "schneider-electric",
+    "siemens",
+    "rockwell-automation",
+    "honeywell",
+    "spirax-sarco",
+    "rotork",
+    "liebherr",
+    "putzmeister",
+    "caterpillar",
+    "rittal",
+    "nvent",
+    "oriental-motor",
+    "acerinox",
+    "aperam",
+    "carpenter",
+    "nlmk",
+    "algoma",
+    "knauf",
+    "owens-corning",
+    "nine-dragons",
+    "mauser",
+    "sumitomo-electric"
+  ],
+  "hold_omitted_slugs": [],
+  "wire_slug_count": 50,
+  "products": [
+    {
+      "product_name": "Sch\u00fctz IBC Intermediate Bulk Containers and Plastic Drums",
+      "supplier_name": "Sch\u00fctz GmbH & Co. KGaA",
+      "supplier_slug_guess": "schuetz",
+      "category": "Packaging",
+      "source_url": "https://www.schuetz.net/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sch\u00fctz GmbH & Co. KGaA mill/product page for IBC intermediate bulk containers / plastic drums. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Empty_IBC.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/schuetz/schuetz-ibc.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "schuetz-ibc.jpg = SCH\u00dcTZ-branded IBC totes (OK). Do not wire schuetz-drums.jpg = AV Nackawic pulp/woodchip mill (hash f7e4873f, shared with vidrala-bottles).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Komatsu Construction Machinery, Mining Equipment and Industrial Engines",
+      "supplier_name": "Komatsu Ltd.",
+      "supplier_slug_guess": "komatsu",
+      "category": "Industrial Parts",
+      "source_url": "https://www.komatsu.jp/en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Komatsu Ltd. mill/product page for construction machinery / mining equipment / engines. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/komatsu/komatsu-mining.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "komatsu-mining.jpg = Komatsu excavator on demolition site (OK). komatsu-construction.jpg = Tokyo Komatsu Building HQ (soft campus).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Hitachi Construction Machinery Hydraulic Excavators and Mining Equipment",
+      "supplier_name": "Hitachi Construction Machinery Co., Ltd.",
+      "supplier_slug_guess": "hitachi-cm",
+      "category": "Industrial Parts",
+      "source_url": "https://www.hitachicm.com/global/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Hitachi Construction Machinery Co., Ltd. mill/product page for hydraulic excavators / mining / construction equipment. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/hitachi-cm/hitachi-cm-excavators.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "hitachi-cm-excavators.jpg = Hitachi ZAXIS wheeled excavator (OK; boom logo masked). hitachi-cm-mining.jpg = industrial campus aerial (soft).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Volvo CE Wheel Loaders, Excavators and Articulated Haulers",
+      "supplier_name": "Volvo Construction Equipment",
+      "supplier_slug_guess": "volvo-ce",
+      "category": "Industrial Parts",
+      "source_url": "https://www.volvoce.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Volvo Construction Equipment mill/product page for wheel loaders / excavators / articulated haulers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/volvo-ce/volvo-ce-excavators.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "volvo-ce-excavators.jpg = Volvo A25D articulated hauler (OK; also shows Komatsu excavator). Do not wire volvo-ce-loaders.jpg = Quattro plant-hire truck with CAT excavators (wrong brand for Volvo CE loaders).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "EEW Longitudinally Welded Large-Diameter and Offshore Pipe",
+      "supplier_name": "EEW Group",
+      "supplier_slug_guess": "eew",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.eew-group.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 EEW Group mill/product page for LSAW large-diameter / offshore structural / line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/eew/eew-lsaw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "shared galvanized pipe-bundle (607191f2) + glycol HVAC elbows (26ceb685) \u2014 category-correct/soft; prefer eew-lsaw.jpg; glycol is not mill LSAW stock",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "BUTTING Stainless Longitudinally Welded and Clad Pipe",
+      "supplier_name": "BUTTING Group",
+      "supplier_slug_guess": "butting",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.butting.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 BUTTING Group mill/product page for stainless longitudinally welded / clad pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/butting/butting-clad.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "same pipe-bundle + glycol pair \u2014 soft; prefer butting-clad.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Eisenbau Kr\u00e4mer Large-Diameter SAW Structural and Offshore Pipe",
+      "supplier_name": "Eisenbau Kr\u00e4mer GmbH",
+      "supplier_slug_guess": "eisenbau-kramer",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.ebkpipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Eisenbau Kr\u00e4mer GmbH mill/product page for large-diameter SAW structural / offshore pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/eisenbau-kramer/ebk-offshore.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "ebk-offshore = pipe-bundle soft; ebk-saw = terraced hillside village HOLD poison (27f08af0). Wireable: ebk-offshore.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Hengyang Valin Seamless OCTG and Line Pipe",
+      "supplier_name": "Hengyang Valin Steel Tube Co., Ltd.",
+      "supplier_slug_guess": "hengyang-valin",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.valin.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Hengyang Valin Steel Tube Co., Ltd. mill/product page for seamless OCTG and line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/hengyang-valin/valin-line.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pipe-bundle + glycol soft; not mill-specific OCTG",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Changbao Seamless OCTG, Boiler Tube and Industrial Seamless Pipe",
+      "supplier_name": "Jiangsu Changbao Steel Tube Co., Ltd.",
+      "supplier_slug_guess": "changbao",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.cbsteeltube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Jiangsu Changbao Steel Tube Co., Ltd. mill/product page for seamless OCTG / boiler / industrial tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/changbao/changbao-boiler.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pipe-bundle + glycol soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Dura-Bond Steel Line Pipe, Coatings and Fabricated Pipe",
+      "supplier_name": "Dura-Bond Industries",
+      "supplier_slug_guess": "dura-bond",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.dura-bond.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Dura-Bond Industries mill/product page for steel line pipe / coatings / fabricated pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/dura-bond/durabond-coat.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "durabond-coat = pipe-bundle soft; durabond-line = village HOLD (27f08af0). Wireable: durabond-coat.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "ChelPipe Large-Diameter Pipe, OCTG and Line Pipe",
+      "supplier_name": "ChelPipe Group",
+      "supplier_slug_guess": "chelpipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://chelpipegroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ChelPipe Group mill/product page for large-diameter pipe / OCTG / line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/chelpipe/chelpipe-ld.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pipe-bundle + glycol soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Panyu Chu Kong LSAW / SSAW Coated Line Pipe",
+      "supplier_name": "Panyu Chu Kong Steel Pipe Co., Ltd.",
+      "supplier_slug_guess": "panyu-chu-kong",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.pck.com.cn/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Panyu Chu Kong Steel Pipe Co., Ltd. mill/product page for LSAW / SSAW coated line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/panyu-chu-kong/pck-ssaw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pck-ssaw = glycol soft; pck-lsaw = village HOLD. Wireable: pck-ssaw.jpg only",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Borusan Mannesmann ERW Line Pipe and OCTG",
+      "supplier_name": "Borusan Mannesmann",
+      "supplier_slug_guess": "borusan-mannesmann",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.borusanmannesmann.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Borusan Mannesmann mill/product page for ERW steel pipe / line pipe / OCTG. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/borusan-mannesmann/borusan-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pipe-bundle + glycol soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Erciyas Spiral Welded Line Pipe and Water Pipe",
+      "supplier_name": "Erciyas Steel Pipe Co.",
+      "supplier_slug_guess": "erciyas",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.erciyas.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Erciyas Steel Pipe Co. mill/product page for spiral welded line / water pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/erciyas/erciyas-water.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "erciyas-water = pipe-bundle soft; erciyas-spiral = village HOLD. Wireable: erciyas-water.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Tos\u00e7elik ERW Pipe, Hollow Sections and Steel Profiles",
+      "supplier_name": "Tos\u00e7elik Profil ve Sac End\u00fcstrisi A.\u015e.",
+      "supplier_slug_guess": "toscelik",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.toscelik.com.tr/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tos\u00e7elik Profil ve Sac End\u00fcstrisi A.\u015e. mill/product page for ERW pipe / hollow sections / steel profiles. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/toscelik/toscelik-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "pipe-bundle + glycol soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Cangzhou Spiral SSAW Line Pipe and Piling Pipe",
+      "supplier_name": "Cangzhou Spiral Steel Pipes Group Co., Ltd.",
+      "supplier_slug_guess": "cangzhou-spiral",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.cangzhouspiral.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Cangzhou Spiral Steel Pipes Group Co., Ltd. mill/product page for SSAW line pipe / piling pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pipeline.jpg/1280px-Pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/cangzhou-spiral/cangzhou-piling.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "cangzhou-piling = glycol soft; cangzhou-ssaw = village HOLD. Wireable: cangzhou-piling.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Verallia Food and Beverage Glass Bottles and Jars",
+      "supplier_name": "Verallia",
+      "supplier_slug_guess": "verallia",
+      "category": "Packaging",
+      "source_url": "https://www.verallia.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Verallia mill/product page for glass bottles and jars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/verallia/verallia-bottles.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "verallia-bottles = shrink-wrapped glass bottle pallets soft/OK category; verallia-jars = tetra5 CONSTRUCCIONES industrial campus HOLD. Wireable: verallia-bottles.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Vidrala Glass Containers, Bottles and Jars",
+      "supplier_name": "Vidrala, S.A.",
+      "supplier_slug_guess": "vidrala",
+      "category": "Packaging",
+      "source_url": "https://www.vidrala.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Vidrala, S.A. mill/product page for glass containers / bottles / jars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/vidrala/vidrala-containers.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "vidrala-containers = glass bottle pallets soft (shared e780c731); vidrala-bottles = pulp mill HOLD (f7e4873f). Wireable: vidrala-containers.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Gerresheimer Pharma Glass Packaging and Drug-Delivery Systems",
+      "supplier_name": "Gerresheimer AG",
+      "supplier_slug_guess": "gerresheimer",
+      "category": "Packaging",
+      "source_url": "https://www.gerresheimer.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Gerresheimer AG mill/product page for pharma glass / primary packaging / drug delivery. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/gerresheimer/gerresheimer-glass.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "gerresheimer-pharma = beverage bottle pallets soft (not pharma glass); gerresheimer-glass = roof/campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Schneider Electric Industrial Automation and Motor Control",
+      "supplier_name": "Schneider Electric SE",
+      "supplier_slug_guess": "schneider-electric",
+      "category": "Industrial Parts",
+      "source_url": "https://www.se.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Schneider Electric SE mill/product page for industrial automation / power management / motor control. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/schneider-electric/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "se-motor-control = generic conveyor/sensor rig soft (shared 6dfff455); mill-fallback-2 = Schneider Electric HQ campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Siemens Industrial Automation, Drives and Digital Industries Equipment",
+      "supplier_name": "Siemens AG",
+      "supplier_slug_guess": "siemens",
+      "category": "Industrial Parts",
+      "source_url": "https://www.siemens.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Siemens AG mill/product page for industrial automation / drives / digital industries. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/siemens/siemens-automation.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "siemens-automation = SIEMENS courtyard campus soft; siemens-drives = Bangkok BTS Skytrain HOLD. Wireable: siemens-automation.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Rockwell Automation PLCs and Factory Automation Control Systems",
+      "supplier_name": "Rockwell Automation, Inc.",
+      "supplier_slug_guess": "rockwell-automation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.rockwellautomation.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rockwell Automation, Inc. mill/product page for PLCs / industrial control / factory automation. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/rockwell-automation/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "rockwell-control = shared sensor rig soft; mill-fallback-2 = Rockwell Automation Global HQ campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Honeywell Process Control and Industrial Sensing Systems",
+      "supplier_name": "Honeywell International Inc.",
+      "supplier_slug_guess": "honeywell",
+      "category": "Industrial Parts",
+      "source_url": "https://www.honeywell.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Honeywell International Inc. mill/product page for process control / industrial automation / sensing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/honeywell/honeywell-sensing.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "honeywell-process = shared sensor rig soft; honeywell-sensing = Charlotte Honeywell HQ campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Spirax-Sarco Steam Systems and Thermal Energy Solutions",
+      "supplier_name": "Spirax-Sarco Engineering plc",
+      "supplier_slug_guess": "spirax-sarco",
+      "category": "Industrial Parts",
+      "source_url": "https://www.spiraxsarcoengineering.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Spirax-Sarco Engineering plc mill/product page for steam systems / thermal energy solutions. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Heat_exchanger.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/spirax-sarco/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "mill-fallback-2 = manor/estate campus soft; spirax-thermal = paul-lueftung.de HVAC heat-exchanger diagram HOLD. Wireable: mill-fallback-2.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Rotork Valve Actuators, Flow Control and Gearboxes",
+      "supplier_name": "Rotork plc",
+      "supplier_slug_guess": "rotork",
+      "category": "Industrial Parts",
+      "source_url": "https://www.rotork.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rotork plc mill/product page for valve actuators / flow control / gearboxes. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/rotork/rotork-flow.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "rotork-actuators = Rotork campus soft; rotork-flow = technician with motorized valve actuators soft/category-correct. Prefer rotork-flow.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Liebherr Cranes, Construction Machinery and Mining Equipment",
+      "supplier_name": "Liebherr-International AG",
+      "supplier_slug_guess": "liebherr",
+      "category": "Industrial Parts",
+      "source_url": "https://www.liebherr.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Liebherr-International AG mill/product page for cranes / construction machinery / mining equipment. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/liebherr/liebherr-cranes.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "liebherr-cranes = LIEBHERR-branded building soft campus; liebherr-mining = generic coastal construction site soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Putzmeister Concrete Pumps and Industrial Pumping Systems",
+      "supplier_name": "Putzmeister Holding GmbH",
+      "supplier_slug_guess": "putzmeister",
+      "category": "Industrial Parts",
+      "source_url": "https://www.putzmeister.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Putzmeister Holding GmbH mill/product page for concrete pumps / mortar machines / industrial pumping. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/putzmeister/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "mill-fallback-2 = Putzmeister HQ campus soft; putzmeister-pumping = used Daikin air compressor HOLD. Wireable: mill-fallback-2.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Caterpillar Construction Machinery, Engines and Industrial Power Systems",
+      "supplier_name": "Caterpillar Inc.",
+      "supplier_slug_guess": "caterpillar",
+      "category": "Industrial Parts",
+      "source_url": "https://www.caterpillar.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Caterpillar Inc. mill/product page for construction machinery / engines / industrial power. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/caterpillar/cat-construction.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "cat-construction = Caterpillar HQ campus soft; cat-engines = sepia portrait of a man HOLD. Wireable: cat-construction.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Rittal Industrial Enclosures, Power Distribution and Climate Control",
+      "supplier_name": "Rittal GmbH & Co. KG",
+      "supplier_slug_guess": "rittal",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.rittal.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rittal GmbH & Co. KG mill/product page for industrial enclosures / power distribution / climate control. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/rittal/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "mill-fallback-2 = grey industrial control-panel enclosure soft/category; rittal-climate = shared sensor rig soft. Prefer mill-fallback-2.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "nVent Electrical Enclosures, Connections and Thermal Management",
+      "supplier_name": "nVent Electric plc",
+      "supplier_slug_guess": "nvent",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nvent.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 nVent Electric plc mill/product page for electrical enclosures / grounding / thermal management. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/nvent/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "nvent-thermal = shared sensor soft; mill-fallback-2 = rooftop stainless exhaust vents soft/weak thermal-adjacent",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Oriental Motor Stepper Motors, AC Motors and Motion Control Systems",
+      "supplier_name": "Oriental Motor Co., Ltd.",
+      "supplier_slug_guess": "oriental-motor",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.orientalmotor.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Oriental Motor Co., Ltd. mill/product page for stepper motors / AC motors / motion control. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/oriental-motor/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "mill-fallback-2 = Oriental Motor plant exterior soft; oriental-ac = shared sensor soft. Prefer mill-fallback-2.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Acerinox Stainless Steel Flat and Long Products",
+      "supplier_name": "Acerinox, S.A.",
+      "supplier_slug_guess": "acerinox",
+      "category": "Steel & Metals",
+      "source_url": "https://www.acerinox.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Acerinox, S.A. mill/product page for stainless flat / long products / alloys. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/acerinox/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "acerinox-long = rebar sidewalk soft (shared 027b3ce7); mill-fallback-2 = Acerinox HQ campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Aperam Stainless, Electrical Steel and Specialty Alloys",
+      "supplier_name": "Aperam S.A.",
+      "supplier_slug_guess": "aperam",
+      "category": "Steel & Metals",
+      "source_url": "https://www.aperam.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Aperam S.A. mill/product page for stainless / electrical steel / specialty alloys. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/aperam/aperam-electrical.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "aperam-electrical = shared rebar soft; mill-fallback-2 = aprolam plant HOLD wrong brand. Wireable: aperam-electrical.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Carpenter Technology Specialty Alloys, Stainless Bar and AM Powders",
+      "supplier_name": "Carpenter Technology Corporation",
+      "supplier_slug_guess": "carpenter",
+      "category": "Steel & Metals",
+      "source_url": "https://www.carpentertechnology.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Carpenter Technology Corporation mill/product page for specialty alloys / stainless bar / AM powders. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/carpenter/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "carpenter-bar = shared rebar soft; mill-fallback-2 = Carpenter Technology archival armor-test still soft historical",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "NLMK Flat Steel, Electrical Steel and Slabs",
+      "supplier_name": "NLMK Group",
+      "supplier_slug_guess": "nlmk",
+      "category": "Steel & Metals",
+      "source_url": "https://nlmk.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 NLMK Group mill/product page for flat steel / electrical steel / slabs. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/nlmk/nlmk-electrical.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "nlmk-electrical = shared rebar soft only. Skipped images/products/nlmk/mill-fallback-2.jpg (tiny unenhanced, not in enhanced/)",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Algoma Steel Plate and Hot-Rolled Sheet",
+      "supplier_name": "Algoma Steel Inc.",
+      "supplier_slug_guess": "algoma",
+      "category": "Steel & Metals",
+      "source_url": "https://www.algoma.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Algoma Steel Inc. mill/product page for plate steel / hot-rolled sheet. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/algoma/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "algoma-hrs = shared rebar soft; mill-fallback-2 = steel mill/ore-yard waterfront campus soft. Prefer mill-fallback-2.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Knauf Gypsum Boards, Plasters and Insulation Systems",
+      "supplier_name": "Knauf Gips KG",
+      "supplier_slug_guess": "knauf",
+      "category": "Construction",
+      "source_url": "https://www.knauf.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Knauf Gips KG mill/product page for gypsum boards / plasters / insulation systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Gypsum.jpg/1280px-Gypsum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/knauf/knauf-gypsum.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "knauf-gypsum = museum gypsum mineral specimen soft/weak; knauf-insulation = BAUER rail-yard campus HOLD wrong brand. Wireable: knauf-gypsum.jpg",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Owens Corning Insulation, Roofing and Composites",
+      "supplier_name": "Owens Corning",
+      "supplier_slug_guess": "owens-corning",
+      "category": "Construction",
+      "source_url": "https://www.owenscorning.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Owens Corning mill/product page for insulation / roofing / composites. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Gypsum.jpg/1280px-Gypsum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/owens-corning/owens-roofing.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "owens-insulation = same museum gypsum soft (shared d4c0793c); owens-roofing = smokestack/campus soft",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Can Pack Beverage Cans, Food Cans and Can Ends",
+      "supplier_name": "Can Pack S.A.",
+      "supplier_slug_guess": "can-pack",
+      "category": "Packaging",
+      "source_url": "https://www.canpack.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Can Pack S.A. mill/product page for beverage cans / food cans / can ends. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/can-pack/canpack-food.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary canpack-food.jpg. mill-fallback-2 sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Mayr-Melnhof Cartonboard, Folding Carton and Packaging Board",
+      "supplier_name": "Mayr-Melnhof Karton AG",
+      "supplier_slug_guess": "mayr-melnhof",
+      "category": "Packaging",
+      "source_url": "https://www.mayr-melnhof.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mayr-Melnhof Karton AG mill/product page for cartonboard / folding carton / packaging board. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/mayr-melnhof/img3.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary img3.jpg. mm-cartonboard sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Constantia Flexibles Flexible Packaging, Foil Laminates and Pharma Packaging",
+      "supplier_name": "Constantia Flexibles",
+      "supplier_slug_guess": "constantia-flexibles",
+      "category": "Packaging",
+      "source_url": "https://www.cflex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Constantia Flexibles mill/product page for flexible packaging / foil laminates / pharma packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/constantia-flexibles/cflex-pharma.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary cflex-pharma.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Rengo Corrugated Board and Paperboard Packaging",
+      "supplier_name": "Rengo Co., Ltd.",
+      "supplier_slug_guess": "rengo",
+      "category": "Packaging",
+      "source_url": "https://www.rengo.co.jp/english/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rengo Co., Ltd. mill/product page for corrugated board / paperboard packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/rengo/rengo-paperboard.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Japan mill (\u30ec\u30f3\u30b4\u30fc). Not Chilean Rengo. Primary rengo-paperboard.jpg; mill-fallback-2 sibling not wired.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "MISUMI Factory Automation Mechanical Components",
+      "supplier_name": "MISUMI Group Inc.",
+      "supplier_slug_guess": "misumi",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.misumi-ec.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 MISUMI Group Inc. product page for factory-automation mechanical components. No public unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/misumi/misumi-fa.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary misumi-fa.jpg. Catalog distributor \u2014 SKU attaches by slug without a mill card.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Legrand Electrical Infrastructure and Cable Management",
+      "supplier_name": "Legrand SA",
+      "supplier_slug_guess": "legrand",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.legrand.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Legrand SA mill/product page for electrical infrastructure / cable management. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/legrand/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary mill-fallback-2.jpg. legrand-cable-mgmt sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Harmonic Drive Precision Strain Wave Gears and Servo Actuators",
+      "supplier_name": "Harmonic Drive Systems Inc.",
+      "supplier_slug_guess": "harmonic-drive",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.harmonicdrive.net/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Harmonic Drive Systems Inc. mill/product page for strain-wave gears / servo actuators. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/harmonic-drive/harmonic-gears.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary harmonic-gears.jpg. harmonic-actuators sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Fujikura Optical Fiber Cable",
+      "supplier_name": "Fujikura Ltd.",
+      "supplier_slug_guess": "fujikura",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.fujikura.co.jp/eng/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Fujikura Ltd. mill/product page for optical fiber cable. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/fujikura/fujikura-fiber.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. fujikura-fiber.jpg ONLY. Power still blocked/quarantined \u2014 never wire.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Belden Industrial Networking Cable, Signal Cable and Connectivity Solutions",
+      "supplier_name": "Belden Inc.",
+      "supplier_slug_guess": "belden",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.belden.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Belden Inc. mill/product page for industrial networking cable / signal cable / connectivity. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/belden/belden-networking.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher OK. Primary belden-networking.jpg. belden-signal sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Nine Dragons Containerboard and Packaging Paper",
+      "supplier_name": "Nine Dragons Paper Holdings Limited",
+      "supplier_slug_guess": "nine-dragons",
+      "category": "Packaging",
+      "source_url": "https://www.ndpaper.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nine Dragons Paper Holdings Limited mill/product page for containerboard / packaging paper. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/nine-dragons/nd-containerboard.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary nd-containerboard.jpg. nd-packaging-paper sibling not wired.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Mauser Steel Drums, IBCs and Plastic Industrial Packaging",
+      "supplier_name": "Mauser Packaging Solutions",
+      "supplier_slug_guess": "mauser",
+      "category": "Packaging",
+      "source_url": "https://www.mauserpackaging.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mauser Packaging Solutions mill/product page for steel drums / IBCs / plastic industrial packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/mauser/mauser-drums.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary mauser-drums.jpg. mauser-ibc sibling not wired.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Sumitomo Electric Power Cables, Optical Fiber and Automotive Wiring Harnesses",
+      "supplier_name": "Sumitomo Electric Industries, Ltd.",
+      "supplier_slug_guess": "sumitomo-electric",
+      "category": "Cables & Electrical",
+      "source_url": "https://sumitomoelectric.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sumitomo Electric Industries, Ltd. mill/product page for power cables / optical fiber / automotive wiring harnesses. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/products/sumitomo-electric/sei-power-cable.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD12 Researcher soft category generic. Primary sei-power-cable.jpg. sei-fiber sibling not wired.",
+      "researcher_verdict": "soft"
+    }
+  ]
+}

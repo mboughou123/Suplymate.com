@@ -1,0 +1,1832 @@
+{
+  "generated_at_utc": "2026-09-08T18:43:12Z",
+  "generated_at_pt": "2026-09-08 ~11:43 AM PT",
+  "phase": "suplymate-phase1",
+  "task": "Daily expansion 2026-09-08 \u2014 partial mill wire (sealed 7 + soft 17)",
+  "pricing_policy": "No invented prices. MOQ is unpublished mill RFQ.",
+  "sealed_slugs": [
+    "butting",
+    "dura-bond",
+    "chelpipe",
+    "verallia",
+    "oriental-motor",
+    "algoma",
+    "knauf"
+  ],
+  "soft_slugs": [
+    "schneider-electric",
+    "siemens",
+    "rockwell-automation",
+    "honeywell",
+    "spirax-sarco",
+    "komatsu",
+    "caterpillar",
+    "acerinox",
+    "putzmeister",
+    "liebherr",
+    "rotork",
+    "hitachi-cm",
+    "carpenter",
+    "nlmk",
+    "sumitomo-electric",
+    "owens-corning",
+    "aperam"
+  ],
+  "notes": "PARTIAL+HOLD26 wire 2026-09-08: prior sealed 7 + soft 17, plus Researcher OK 21 + soft 3 HOLD26 plant primaries (_01 only). nvent blocked and misumi distributor stay off. Soft captions: harmonic-drive gear, mauser IBC lineup, rittal Haiger line. Rengo is Japan. Borusan is Borusan Boru. Products not sealed. Seal: data/daily-2026-09-08-researcher-hold26-plants-seal.json.",
+  "wire_full_pack": false,
+  "wire_slug_count": 48,
+  "hold_omitted_count": 2,
+  "hold_omitted_slugs": [
+    "nvent",
+    "misumi"
+  ],
+  "counts": {
+    "suppliers_total": 48,
+    "with_local_images": 48,
+    "with_any_photo": 48,
+    "local_image_files": 48,
+    "products_total": 0,
+    "by_category": {
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Hardware & Motion": 4,
+      "Steel & Metals": 5,
+      "Construction": 2,
+      "Industrial Parts": 12,
+      "Cables & Electrical": 3
+    }
+  },
+  "suppliers": [
+    {
+      "company_name": "BUTTING Group",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Knesebeck",
+      "website": "https://www.butting.com/",
+      "description": "The Butting Group is a German manufacturer of longitudinally welded stainless-steel pipes, clad pipes, customized components and related engineered products. The company is headquartered in Wittingen-Knesebeck, Lower Saxony, and operates production and engineering facilities in Europe, Asia, and North America.",
+      "product_lines": [
+        "Stainless longitudinally welded pipe",
+        "Clad pipe",
+        "Piping components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.butting.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME stainless and clad pipe specs (confirm on mill site)",
+          "source": "https://www.butting.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.butting.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/butting/butting_01.jpg"
+      ],
+      "slug": "butting",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Dura-Bond Industries",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Export, PA",
+      "website": "https://www.dura-bond.com/",
+      "description": "Dura-Bond Industries is a U.S. steel line-pipe and pipe-coating manufacturer producing welded steel pipe, fabricated pipe and protective coatings for North American energy and infrastructure projects. Turtle Creek pipe yard. Caboose sibling omitted.",
+      "product_lines": [
+        "Steel line pipe",
+        "Pipe coatings",
+        "Fabricated pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.dura-bond.com/"
+        },
+        {
+          "name": "API 5L line-pipe / coating specs (confirm per project)",
+          "source": "https://www.dura-bond.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.dura-bond.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/dura-bond/dura-bond_01.jpg"
+      ],
+      "slug": "dura-bond",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Turtle Creek pipe yard. Caboose sibling omitted."
+    },
+    {
+      "company_name": "ChelPipe Group",
+      "primary_category": "Tube & Pipes",
+      "country": "Russia",
+      "city": "Chelyabinsk",
+      "website": "https://chelpipegroup.com/",
+      "description": "Chelyabinsk Tube Rolling Plant manufactures every kind of steel pipe, including pipes used for the construction of petroleum, natural gas and water pipelines; and pipes used in manufacturing processes. PNTZ aerial (chelpipe_02). Rail-wagon siblings omitted.",
+      "product_lines": [
+        "Large-diameter pipe",
+        "OCTG",
+        "Line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://chelpipegroup.com/"
+        },
+        {
+          "name": "API 5L / API 5CT pipe specs (confirm current licenses)",
+          "source": "https://chelpipegroup.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://chelpipegroup.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/chelpipe/chelpipe_02.jpg"
+      ],
+      "slug": "chelpipe",
+      "source_platform": "Company site",
+      "export_markets": [
+        "CIS",
+        "Middle East",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "PNTZ aerial (chelpipe_02). Rail-wagon siblings omitted."
+    },
+    {
+      "company_name": "Verallia",
+      "primary_category": "Packaging",
+      "country": "France",
+      "city": "Courbevoie",
+      "website": "https://www.verallia.com/",
+      "description": "Verallia is a French glass-packaging manufacturer producing glass bottles and jars for food and beverage customers across Europe, the Americas and Asia. Burgos glass plant. Cognac sibling omitted.",
+      "product_lines": [
+        "Glass bottles",
+        "Glass jars",
+        "Food and beverage glass packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.verallia.com/"
+        },
+        {
+          "name": "Food-contact glass packaging QMS (confirm per plant)",
+          "source": "https://www.verallia.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.verallia.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/verallia/verallia_01.jpg"
+      ],
+      "slug": "verallia",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Burgos glass plant. Cognac sibling omitted."
+    },
+    {
+      "company_name": "Oriental Motor Co., Ltd.",
+      "primary_category": "Hardware & Motion",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.orientalmotor.com/",
+      "description": "Oriental Motor is a Japanese motion-control manufacturer producing stepper motors, AC motors and motion systems for factory automation.",
+      "product_lines": [
+        "Stepper motors",
+        "AC motors",
+        "Motion control systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.orientalmotor.com/"
+        },
+        {
+          "name": "ISO 14001; CE for motors/motion systems (confirm on product)",
+          "source": "https://www.orientalmotor.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.orientalmotor.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/oriental-motor/oriental-motor_01.jpg"
+      ],
+      "slug": "oriental-motor",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Algoma Steel Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "Canada",
+      "city": "Sault Ste. Marie",
+      "website": "https://www.algoma.com/",
+      "description": "Algoma Steel Inc. is an integrated primary steel producer located on the St. Marys River in Sault Ste. Marie, Ontario, Canada. Algoma Steel was founded in 1901 by Francis Clergue, an American entrepreneur who had settled in Sault Ste. Marie. The company is a traditional blast furnace based steel maker that is building an electric arc furnace to produce steel with a lower carbon footprint.",
+      "product_lines": [
+        "Plate steel",
+        "Hot-rolled sheet",
+        "Discrete plate"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.algoma.com/"
+        },
+        {
+          "name": "ISO 14001; ASTM plate / sheet specs (confirm per mill)",
+          "source": "https://www.algoma.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.algoma.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/algoma/algoma_01.jpg"
+      ],
+      "slug": "algoma",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Knauf Gips KG",
+      "primary_category": "Construction",
+      "country": "Germany",
+      "city": "Iphofen",
+      "website": "https://www.knauf.com/",
+      "description": "Knauf Group is a multinational, family-owned company based in Iphofen, Germany, well known for drywall gypsum boards, founded in 1932. The company is a producer of building materials and construction systems comprising construction materials for drywall construction, plasterboard, cement boards, mineral fibre acoustic boards, dry mortars with gypsum for internal plaster and cement-based external plaster and insulating materials; glass wool, stone wool and other insulation materials under the company Knauf Insulation.",
+      "product_lines": [
+        "Gypsum boards",
+        "Plasters",
+        "Insulation systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.knauf.com/"
+        },
+        {
+          "name": "ISO 14001; building-product CE / local approvals (confirm)",
+          "source": "https://www.knauf.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.knauf.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/knauf/knauf_01.jpg"
+      ],
+      "slug": "knauf",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Schneider Electric SE",
+      "primary_category": "Industrial Parts",
+      "country": "France",
+      "city": "Rueil-Malmaison",
+      "website": "https://www.se.com/",
+      "description": "Schneider Electric SE is a French multinational corporation that specializes in energy technology, covering electrification, automation, and digitalization for industry and homes. Soft: branded Rueil HQ campus, not a plant.",
+      "product_lines": [
+        "Industrial automation",
+        "Power management",
+        "Motor control"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.se.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL for automation components (confirm on product)",
+          "source": "https://www.se.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.se.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/schneider-electric/schneider-electric_01.jpg"
+      ],
+      "slug": "schneider-electric",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: branded Rueil HQ campus, not a plant."
+    },
+    {
+      "company_name": "Siemens AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Munich",
+      "website": "https://www.siemens.com/",
+      "description": "Siemens AG is a German multinational company. It is focused on industrial automation, building automation, rail transport and health technology. Siemens is the largest engineering company in Europe, and holds the position of global market leader in industrial AI, automation, and industrial software. Soft: The Wings Munich HQ. Skytrain sibling not used.",
+      "product_lines": [
+        "Industrial automation",
+        "Drives",
+        "Digital industries"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.siemens.com/"
+        },
+        {
+          "name": "ISO 14001; CE for drives/automation (confirm on product)",
+          "source": "https://www.siemens.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.siemens.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/siemens/siemens_01.jpg"
+      ],
+      "slug": "siemens",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: The Wings Munich HQ. Skytrain sibling not used."
+    },
+    {
+      "company_name": "Rockwell Automation, Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Milwaukee",
+      "website": "https://www.rockwellautomation.com/",
+      "description": "Rockwell Automation, Inc. is an American provider of industrial automation and digital transformation technologies headquartered in Milwaukee, Wisconsin. Its brands include Allen-Bradley, FactoryTalk software and LifecycleIQ Services. Rockwell Automation employs approximately 27,000 people and has customers in more than 100 countries worldwide. Soft: Milwaukee Global Headquarters campus, not a plant.",
+      "product_lines": [
+        "PLCs",
+        "Industrial control systems",
+        "Factory automation"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rockwellautomation.com/"
+        },
+        {
+          "name": "ISO 14001; UL / CE for industrial control (confirm on product)",
+          "source": "https://www.rockwellautomation.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rockwellautomation.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/rockwell-automation/rockwell-automation_01.jpg"
+      ],
+      "slug": "rockwell-automation",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Milwaukee Global Headquarters campus, not a plant."
+    },
+    {
+      "company_name": "Honeywell International Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Charlotte",
+      "website": "https://www.honeywell.com/",
+      "description": "Honeywell International Inc. is an American publicly traded, multinational conglomerate corporation headquartered in Charlotte, North Carolina. It primarily operates in three areas of business: building automation, industrial automation, and energy and sustainability solutions (ESS). Honeywell also operates Sandia National Laboratories under contract with the U.S. Department of Energy. Honeywell is a Fortune 500 company, ranked 115th in 2023. In 2025, the corporation had a global workforce of approximately 101,000 employees. As of 2025, its chairman and chief executive officer was Vimal Kapur. Soft: Charlotte HQ tower, not a plant.",
+      "product_lines": [
+        "Process control",
+        "Industrial automation",
+        "Sensing and safety"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.honeywell.com/"
+        },
+        {
+          "name": "ISO 14001; process automation product certifications (confirm)",
+          "source": "https://www.honeywell.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.honeywell.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/honeywell/honeywell_01.jpg"
+      ],
+      "slug": "honeywell",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Charlotte HQ tower, not a plant."
+    },
+    {
+      "company_name": "Spirax-Sarco Engineering plc",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Cheltenham",
+      "website": "https://www.spiraxsarcoengineering.com/",
+      "description": "Spirax Group plc, formerly Spirax-Sarco Engineering plc, is a British manufacturer of steam management systems and peristaltic pumps and associated fluid path technologies. It is headquartered in Cheltenham, England. It is listed on the London Stock Exchange and is a constituent of the FTSE 100 Index. Soft: Charlton House Cheltenham HQ, not a plant.",
+      "product_lines": [
+        "Steam systems",
+        "Thermal energy solutions",
+        "Electric thermal solutions"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.spiraxsarcoengineering.com/"
+        },
+        {
+          "name": "ISO 14001; PED / CE for steam equipment (confirm on product)",
+          "source": "https://www.spiraxsarcoengineering.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.spiraxsarcoengineering.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/spirax-sarco/spirax-sarco_01.jpg"
+      ],
+      "slug": "spirax-sarco",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Charlton House Cheltenham HQ, not a plant."
+    },
+    {
+      "company_name": "Komatsu Ltd.",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.komatsu.jp/en",
+      "description": "Komatsu Ltd. or Komatsu (\u30b3\u30de\u30c4) is a Japanese multinational corporation that manufactures construction, mining, forestry and military heavy equipment, as well as diesel engines and industrial equipment like press machines, lasers and thermoelectric generators. Its headquarters are in Minato, Tokyo, Japan. The corporation was named after the city of Komatsu, Ishikawa Prefecture, where the company was founded in 1921. The word ko-matsu itself means \"small pine tree\" in Japanese. Worldwide, the Komatsu Group consists of Komatsu Ltd. and 258 other companies. Soft: Tokyo Komatsu Building HQ, not a plant.",
+      "product_lines": [
+        "Construction machinery",
+        "Mining equipment",
+        "Industrial engines"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.komatsu.jp/en"
+        },
+        {
+          "name": "ISO 14001; construction equipment QMS (confirm on product)",
+          "source": "https://www.komatsu.jp/en"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.komatsu.jp/en",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/komatsu/komatsu_01.jpg"
+      ],
+      "slug": "komatsu",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Tokyo Komatsu Building HQ, not a plant."
+    },
+    {
+      "company_name": "Caterpillar Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Irving",
+      "website": "https://www.caterpillar.com/",
+      "description": "Caterpillar Inc. is an American construction, mining, and other engineering equipment manufacturer. The company is the world's largest manufacturer of construction equipment. In 2018, Caterpillar was ranked number 73 on the Fortune 500 list and number 265 on the Global Fortune 500 list. Caterpillar stock is a component of the Dow Jones Industrial Average. Soft: Peoria headquarters, not a plant.",
+      "product_lines": [
+        "Construction machinery",
+        "Engines",
+        "Industrial power systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.caterpillar.com/"
+        },
+        {
+          "name": "ISO 14001; construction equipment QMS (confirm on product)",
+          "source": "https://www.caterpillar.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.caterpillar.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/caterpillar/caterpillar_01.jpg"
+      ],
+      "slug": "caterpillar",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Peoria headquarters, not a plant."
+    },
+    {
+      "company_name": "Acerinox, S.A.",
+      "primary_category": "Steel & Metals",
+      "country": "Spain",
+      "city": "Madrid",
+      "website": "https://www.acerinox.com/",
+      "description": "Acerinox, S.A., headquartered in Madrid, is a manufacturer of steel and related products. In 2022, it was the 4th largest producer of stainless steel worldwide. It has operations in Europe, Asia, the U.S., and South Africa. It has fifteen factories including five in its stainless steel division. The company has been focused on increasing production in the U.S. Soft: Madrid offices, not the stainless mill.",
+      "product_lines": [
+        "Stainless steel flat products",
+        "Long products",
+        "Alloys"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.acerinox.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; stainless steel product specs (confirm)",
+          "source": "https://www.acerinox.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.acerinox.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/acerinox/acerinox_01.jpg"
+      ],
+      "slug": "acerinox",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Madrid offices, not the stainless mill."
+    },
+    {
+      "company_name": "Putzmeister Holding GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Aichtal",
+      "website": "https://www.putzmeister.com/",
+      "description": "Putzmeister Holding GmbH is a German manufacturer of concrete pumps and other equipment for pumping, distributing and placing concrete, mortar and other high-density solids, and for preparing, temporarily storing, processing and transporting these materials. The firm is headquartered at Aichtal, and is the largest in its field. It also provides pumps for a wide range of different materials, for example slurries, fly ash, sewage, compost and water. Soft: Aichtal HQ admin block, not a yard.",
+      "product_lines": [
+        "Concrete pumps",
+        "Mortar machines",
+        "Industrial pumping systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.putzmeister.com/"
+        },
+        {
+          "name": "ISO 14001; CE for concrete pumps (confirm on product)",
+          "source": "https://www.putzmeister.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.putzmeister.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/putzmeister/putzmeister_01.jpg"
+      ],
+      "slug": "putzmeister",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Aichtal HQ admin block, not a yard."
+    },
+    {
+      "company_name": "Liebherr-International AG",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Bulle",
+      "website": "https://www.liebherr.com/",
+      "description": "Liebherr is a German-Swiss multinational equipment manufacturer based in Bulle, Switzerland, with its main production facilities and origins in Germany. Soft: branded building, not an equipment yard.",
+      "product_lines": [
+        "Cranes",
+        "Construction machinery",
+        "Mining equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.liebherr.com/"
+        },
+        {
+          "name": "ISO 14001; crane/construction equipment QMS (confirm on product)",
+          "source": "https://www.liebherr.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.liebherr.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/liebherr/liebherr_01.jpg"
+      ],
+      "slug": "liebherr",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: branded building, not an equipment yard."
+    },
+    {
+      "company_name": "Rotork plc",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Bath",
+      "website": "https://www.rotork.com/",
+      "description": "Rotork plc is a British-based company manufacturing industrial flow control equipment. It is listed on the London Stock Exchange and is a constituent of the FTSE 250 Index. Soft: Bath campus frontage, not a yard.",
+      "product_lines": [
+        "Valve actuators",
+        "Flow control",
+        "Gearboxes"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rotork.com/"
+        },
+        {
+          "name": "ISO 14001; ATEX / IECEx actuator certifications (confirm on product)",
+          "source": "https://www.rotork.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rotork.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/rotork/rotork_01.jpg"
+      ],
+      "slug": "rotork",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Bath campus frontage, not a yard."
+    },
+    {
+      "company_name": "Hitachi Construction Machinery Co., Ltd.",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.hitachicm.com/global/en/",
+      "description": "Hitachi Construction Machinery Co., Ltd. (\u65e5\u7acb\u5efa\u6a5f\u682a\u5f0f\u4f1a\u793e) is a Japanese construction equipment company which is into the manufacturing, sales and service of construction machinery, transportation machinery, and other machines and devices. As of August 2022, Hitachi, from which the company was spun off in 1970, owns 25.4% of the total shares. In April 2027, the company plans to change its corporate name and brand to LANDCROS. Using hitachi-cm_04 (Kasumigaura / HCME). Road-job excavator not used.",
+      "product_lines": [
+        "Hydraulic excavators",
+        "Mining machinery",
+        "Construction equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hitachicm.com/global/en/"
+        },
+        {
+          "name": "ISO 14001; construction equipment QMS (confirm on product)",
+          "source": "https://www.hitachicm.com/global/en/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.hitachicm.com/global/en/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/hitachi-cm/hitachi-cm_04.jpg"
+      ],
+      "slug": "hitachi-cm",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Using hitachi-cm_04 (Kasumigaura / HCME). Road-job excavator not used."
+    },
+    {
+      "company_name": "Carpenter Technology Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Philadelphia",
+      "website": "https://www.carpentertechnology.com/",
+      "description": "Carpenter Technology Corporation develops, manufactures, and distributes stainless steels and corrosion-resistant nickel, copper and titanium alloys as well as powdered alloys for 3D additive manufacturing. In fiscal year 2018, the company's revenues were derived from the aerospace and defense industry (55%), the industrial and consumer industry (17%), the medical industry (8%), the transportation industry (7%), the energy industry (7%), and the distribution industry (6%). The company's products are used in landing gear, shaft collars, safety wires, electricity generation products, intervertebral disc arthroplasty, and engine valves and weldings. Soft: 1890s archive still credited to Carpenter, not a live mill.",
+      "product_lines": [
+        "Specialty alloys",
+        "Stainless bar",
+        "Additive manufacturing powders"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.carpentertechnology.com/"
+        },
+        {
+          "name": "ISO 14001; specialty alloy / AMS specs (confirm per product)",
+          "source": "https://www.carpentertechnology.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.carpentertechnology.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/carpenter/carpenter_01.jpg"
+      ],
+      "slug": "carpenter",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: 1890s archive still credited to Carpenter, not a live mill."
+    },
+    {
+      "company_name": "NLMK Group",
+      "primary_category": "Steel & Metals",
+      "country": "Russia",
+      "city": "Moscow",
+      "website": "https://nlmk.com/",
+      "description": "Novolipetsk Steel, or NLMK, is one of the four largest steel companies in Russia. NLMK's share of domestic crude steel production is about 21%. It primarily produces flat steel products, semi-finished steel products, and electrical steels. NLMK also produces specialty coated steels, as well as high-ductility and micro-alloyed steels. It is the 21st-largest steel maker in the world. The larger NLMK group owns several other steel and mining companies, primarily in Russia. Soft: distant Lipetsk works skyline (nlmk_02 only). Tiny banner and tram siblings omitted.",
+      "product_lines": [
+        "Flat steel",
+        "Electrical steel",
+        "Slabs"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://nlmk.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE \u2014 confirm)",
+          "source": "https://nlmk.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://nlmk.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/nlmk/nlmk_02.jpg"
+      ],
+      "slug": "nlmk",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "CIS",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: distant Lipetsk works skyline (nlmk_02 only). Tiny banner and tram siblings omitted."
+    },
+    {
+      "company_name": "Sumitomo Electric Industries, Ltd.",
+      "primary_category": "Cables & Electrical",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://sumitomoelectric.com/",
+      "description": "Sumitomo Electric Industries, Ltd. is a manufacturer of electric wire and optical fiber cables. Its headquarters are in Ch\u016b\u014d-ku, Osaka, Japan. The company's shares are listed in the first section of the Tokyo, Nagoya Stock Exchanges, and the Fukuoka Stock Exchange. In the period ending March 2021, the company reported consolidated sales of US$26,5 billion. Soft: Sumitomo Building office block, not a cable plant.",
+      "product_lines": [
+        "Power cables",
+        "Optical fiber",
+        "Automotive wiring harnesses"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://sumitomoelectric.com/"
+        },
+        {
+          "name": "IEC cable / fiber standards; ISO 14001 (confirm on site)",
+          "source": "https://sumitomoelectric.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://sumitomoelectric.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/sumitomo-electric/sumitomo-electric_01.jpg"
+      ],
+      "slug": "sumitomo-electric",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Sumitomo Building office block, not a cable plant."
+    },
+    {
+      "company_name": "Owens Corning",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Toledo",
+      "website": "https://www.owenscorning.com/",
+      "description": "Owens Corning is an American company that develops and produces insulation, roofing, and fiberglass composites and related products. It is the world's largest manufacturer of fiberglass composites. It was formed in 1935 as a partnership between two major American glassworks, Corning Glass Works and Owens-Illinois. The company employs approximately 19,000 people around the world. Owens Corning has been a Fortune 500 company every year since the list was created in 1955. The Pink Panther is the company's mascot and appears in most of their advertisements. Soft: unsigned wartime stack, not a branded yard.",
+      "product_lines": [
+        "Insulation",
+        "Roofing",
+        "Composites"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.owenscorning.com/"
+        },
+        {
+          "name": "ISO 14001; insulation / roofing product approvals (confirm)",
+          "source": "https://www.owenscorning.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.owenscorning.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/owens-corning/owens-corning_01.jpg"
+      ],
+      "slug": "owens-corning",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: unsigned wartime stack, not a branded yard."
+    },
+    {
+      "company_name": "Aperam S.A.",
+      "primary_category": "Steel & Metals",
+      "country": "Luxembourg",
+      "city": "Luxembourg",
+      "website": "https://www.aperam.com/",
+      "description": "Aperam S.A. is a global leader in stainless, electrical, alloy and specialty steels, with recycling activities and customers across more than 40 countries. The company is listed on the Amsterdam, Brussels, Paris, Madrid and Luxembourg stock exchanges with facilities in Brazil, Belgium and France, which concentrates on the production of stainless steel and speciality steel. Soft: Predlice warehouse; mill mark not readable.",
+      "product_lines": [
+        "Stainless steel",
+        "Electrical steel",
+        "Specialty alloys"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.aperam.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; stainless / electrical steel specs (confirm)",
+          "source": "https://www.aperam.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.aperam.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/aperam/aperam_01.jpg"
+      ],
+      "slug": "aperam",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Predlice warehouse; mill mark not readable."
+    },
+    {
+      "company_name": "EEW Group",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Erndtebr\u00fcck",
+      "website": "https://www.eew-group.com/",
+      "description": "EEW Group is a German family-run manufacturing company that specializing in the manufacture of longitudinally welded steel pipes and prefabricated pipe components. Its headquarters are in Erndtebr\u00fcck. The company manufactures pipes for the oil and gas industry and structures for wind turbines.",
+      "product_lines": [
+        "Longitudinally welded large-diameter pipe",
+        "Offshore structural pipe",
+        "Line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.eew-group.com/"
+        },
+        {
+          "name": "API / EN / ASTM large-diameter pipe specs (confirm on mill site)",
+          "source": "https://www.eew-group.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.eew-group.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/eew/eew_01.jpg"
+      ],
+      "slug": "eew",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Middle East",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Eisenbau Kr\u00e4mer GmbH",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Kreuztal",
+      "website": "https://www.ebkpipe.com/",
+      "description": "Eisenbau Kr\u00e4mer GmbH is a German large-diameter SAW pipe mill in Kreuztal producing structural, offshore and line pipe for energy and infrastructure projects.",
+      "product_lines": [
+        "Large-diameter SAW pipe",
+        "Structural pipe",
+        "Offshore pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ebkpipe.com/"
+        },
+        {
+          "name": "API / EN / ASTM SAW pipe specs (confirm on mill site)",
+          "source": "https://www.ebkpipe.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ebkpipe.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/eisenbau-kramer/eisenbau-kramer_01.jpg"
+      ],
+      "slug": "eisenbau-kramer",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Middle East"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Hengyang Valin Steel Tube Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Hengyang",
+      "website": "https://www.valin.cn/",
+      "description": "Hengyang Valin Steel Tube is a Chinese seamless steel-tube manufacturer (Valin Group) producing OCTG, line pipe and industrial seamless tube for domestic and export markets.",
+      "product_lines": [
+        "Seamless steel tube",
+        "OCTG",
+        "Line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.valin.cn/"
+        },
+        {
+          "name": "API 5CT / API 5L seamless tube specs (confirm current licenses)",
+          "source": "https://www.valin.cn/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.valin.cn/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/hengyang-valin/hengyang-valin_01.jpg"
+      ],
+      "slug": "hengyang-valin",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Africa",
+        "Americas"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Jiangsu Changbao Steel Tube Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Changzhou",
+      "website": "https://www.cbsteeltube.com/",
+      "description": "Jiangsu Changbao Steel Tube is a Chinese seamless steel-tube manufacturer producing OCTG, boiler tube and industrial seamless pipe from mills in Changzhou.",
+      "product_lines": [
+        "Seamless steel tube",
+        "OCTG",
+        "Boiler tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.cbsteeltube.com/"
+        },
+        {
+          "name": "API 5CT / API 5L / ASTM seamless tube specs (confirm current licenses)",
+          "source": "https://www.cbsteeltube.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.cbsteeltube.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/changbao/changbao_01.jpg"
+      ],
+      "slug": "changbao",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Panyu Chu Kong Steel Pipe Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Guangzhou",
+      "website": "https://www.pck.com.cn/",
+      "description": "Panyu Chu Kong Steel Pipe is a Chinese LSAW and SSAW pipe manufacturer producing coated line pipe and large-diameter welded pipe for energy and infrastructure projects.",
+      "product_lines": [
+        "LSAW pipe",
+        "SSAW pipe",
+        "Coated line pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.pck.com.cn/"
+        },
+        {
+          "name": "API 5L LSAW/SSAW line-pipe specs (confirm current licenses)",
+          "source": "https://www.pck.com.cn/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.pck.com.cn/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/panyu-chu-kong/panyu-chu-kong_01.jpg"
+      ],
+      "slug": "panyu-chu-kong",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Africa",
+        "Americas"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Borusan Mannesmann (Borusan Boru)",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Istanbul",
+      "website": "https://www.borusanmannesmann.com/",
+      "description": "Borusan Mannesmann is a Turkish steel-pipe manufacturer producing ERW pipe, line pipe and OCTG for European, Middle East and Americas markets. Halkal\u0131 mill. Borusan Boru, not Berg.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Line pipe",
+        "OCTG"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.borusanmannesmann.com/"
+        },
+        {
+          "name": "API 5L / API 5CT ERW pipe specs (confirm current licenses)",
+          "source": "https://www.borusanmannesmann.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.borusanmannesmann.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/borusan-mannesmann/borusan-mannesmann_01.jpg"
+      ],
+      "slug": "borusan-mannesmann",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Middle East",
+        "Americas",
+        "Africa"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Halkal\u0131 mill. Borusan Boru, not Berg."
+    },
+    {
+      "company_name": "Erciyas Steel Pipe Co.",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Ankara",
+      "website": "https://www.erciyas.com/",
+      "description": "Erciyas Steel Pipe is a Turkish spiral-welded steel-pipe manufacturer producing line pipe and water transmission pipe for European, Middle East and African projects.",
+      "product_lines": [
+        "Spiral welded pipe",
+        "Line pipe",
+        "Water pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.erciyas.com/"
+        },
+        {
+          "name": "API 5L / EN spiral pipe specs (confirm current licenses)",
+          "source": "https://www.erciyas.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.erciyas.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/erciyas/erciyas_01.jpg"
+      ],
+      "slug": "erciyas",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Middle East",
+        "Africa",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Tos\u00e7elik Profil ve Sac End\u00fcstrisi A.\u015e.",
+      "primary_category": "Tube & Pipes",
+      "country": "Turkey",
+      "city": "Osmaniye",
+      "website": "https://www.toscelik.com.tr/",
+      "description": "Tos\u00e7elik is a Turkish ERW pipe and hollow-sections manufacturer (Tosyali Holding) producing steel pipe, profiles and structural sections for domestic and export markets.",
+      "product_lines": [
+        "ERW pipe",
+        "Hollow sections",
+        "Steel profiles"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.toscelik.com.tr/"
+        },
+        {
+          "name": "EN / ASTM ERW pipe and hollow-section specs (confirm on mill site)",
+          "source": "https://www.toscelik.com.tr/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.toscelik.com.tr/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/toscelik/toscelik_01.jpg"
+      ],
+      "slug": "toscelik",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Middle East",
+        "Africa",
+        "Americas"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Cangzhou Spiral Steel Pipes Group Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Cangzhou",
+      "website": "https://www.cangzhouspiral.com/",
+      "description": "Cangzhou Spiral Steel Pipes Group is a Chinese SSAW pipe manufacturer producing spiral submerged-arc welded line pipe and piling pipe for energy and infrastructure customers.",
+      "product_lines": [
+        "Spiral submerged arc welded pipe",
+        "Line pipe",
+        "Piling pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.cangzhouspiral.com/"
+        },
+        {
+          "name": "API 5L SSAW line-pipe specs (confirm current licenses)",
+          "source": "https://www.cangzhouspiral.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.cangzhouspiral.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/cangzhou-spiral/cangzhou-spiral_01.jpg"
+      ],
+      "slug": "cangzhou-spiral",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Africa",
+        "Americas"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Vidrala, S.A.",
+      "primary_category": "Packaging",
+      "country": "Spain",
+      "city": "\u00c1lava",
+      "website": "https://www.vidrala.com/",
+      "description": "Vidrala is a Spanish glass-container manufacturer producing bottles and jars for beverage and food customers mainly in Europe and the United Kingdom.",
+      "product_lines": [
+        "Glass containers",
+        "Bottles",
+        "Jars"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.vidrala.com/"
+        },
+        {
+          "name": "Food-contact glass packaging QMS (confirm per plant)",
+          "source": "https://www.vidrala.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.vidrala.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/vidrala/vidrala_01.jpg"
+      ],
+      "slug": "vidrala",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "United Kingdom"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Gerresheimer AG",
+      "primary_category": "Packaging",
+      "country": "Germany",
+      "city": "D\u00fcsseldorf",
+      "website": "https://www.gerresheimer.com/",
+      "description": "Gerresheimer AG is a German manufacturer of primary packaging products for medication and drug delivery devices made of special-purpose glass and plastics with headquarters in D\u00fcsseldorf for the pharmaceutical and cosmetics industries. The company has production operations in Europe, the Americas and Asia.",
+      "product_lines": [
+        "Pharma glass packaging",
+        "Primary packaging",
+        "Drug-delivery systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.gerresheimer.com/"
+        },
+        {
+          "name": "ISO 15378 / pharma primary packaging QMS (confirm per plant)",
+          "source": "https://www.gerresheimer.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.gerresheimer.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/gerresheimer/gerresheimer_01.jpg"
+      ],
+      "slug": "gerresheimer",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Can Pack S.A.",
+      "primary_category": "Packaging",
+      "country": "Poland",
+      "city": "Krak\u00f3w",
+      "website": "https://www.canpack.com/",
+      "description": "Can Pack S.A. is a Polish metal-packaging manufacturer producing beverage cans, food cans and can ends for European and global beverage and food customers.",
+      "product_lines": [
+        "Beverage cans",
+        "Food cans",
+        "Can ends"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.canpack.com/"
+        },
+        {
+          "name": "Food-contact metal packaging QMS (confirm per plant)",
+          "source": "https://www.canpack.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.canpack.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/can-pack/can-pack_01.jpg"
+      ],
+      "slug": "can-pack",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Mayr-Melnhof Karton AG",
+      "primary_category": "Packaging",
+      "country": "Austria",
+      "city": "Vienna",
+      "website": "https://www.mayr-melnhof.com/",
+      "description": "Mayr-Melnhof Karton AG is a manufacturer in the paper and packaging industry, based in Vienna, Austria. The company is 65% family owned, with the rest free-float, and is listed on the Vienna Stock Exchange.",
+      "product_lines": [
+        "Cartonboard",
+        "Folding carton",
+        "Packaging board"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.mayr-melnhof.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.mayr-melnhof.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.mayr-melnhof.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/mayr-melnhof/mayr-melnhof_01.jpg"
+      ],
+      "slug": "mayr-melnhof",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Constantia Flexibles",
+      "primary_category": "Packaging",
+      "country": "Austria",
+      "city": "Vienna",
+      "website": "https://www.cflex.com/",
+      "description": "Constantia Flexibles is an Austrian manufacturer of flexible packaging, headquartered in Vienna. Constantia Flexibles employs around 8,500 people, at approximately 37 production sites in 18 countries, predominantly in Europe, North America, Africa and Asia.",
+      "product_lines": [
+        "Flexible packaging",
+        "Foil laminates",
+        "Pharma packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.cflex.com/"
+        },
+        {
+          "name": "ISO 15378 / flexible packaging QMS (confirm per plant)",
+          "source": "https://www.cflex.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.cflex.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/constantia-flexibles/constantia-flexibles_01.jpg"
+      ],
+      "slug": "constantia-flexibles",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Rengo Co., Ltd.",
+      "primary_category": "Packaging",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.rengo.co.jp/english/",
+      "description": "Rengo Co., Ltd. is a Japanese packaging manufacturer headquartered in Osaka, producing corrugated board, paperboard and related packaging from mills and plants in Japan, including the Kanazu paperboard mill in Fukui. Japan mill (\u30ec\u30f3\u30b4\u30fc). Not Chilean Rengo.",
+      "product_lines": [
+        "Corrugated board",
+        "Paperboard packaging",
+        "Flexible packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rengo.co.jp/english/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.rengo.co.jp/english/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rengo.co.jp/english/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/rengo/rengo_01.jpg"
+      ],
+      "slug": "rengo",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Japan mill (\u30ec\u30f3\u30b4\u30fc). Not Chilean Rengo."
+    },
+    {
+      "company_name": "Nine Dragons Paper Holdings Limited",
+      "primary_category": "Packaging",
+      "country": "China",
+      "city": "Dongguan",
+      "website": "https://www.ndpaper.com/",
+      "description": "Nine Dragons Paper (Holdings) Limited, operating as ND Paper in the United States is a publicly listed paper manufacturing company in Mainland China, engaging in the manufacturing of containerboard products which include linerboard, duplex board as well as pulp. Its CEO and largest shareholder is Mrs. Zhang Yin.",
+      "product_lines": [
+        "Containerboard",
+        "Packaging paper",
+        "Recycled fiber paper"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ndpaper.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.ndpaper.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ndpaper.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/nine-dragons/nine-dragons_01.jpg"
+      ],
+      "slug": "nine-dragons",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Sch\u00fctz GmbH & Co. KGaA",
+      "primary_category": "Packaging",
+      "country": "Germany",
+      "city": "Selters",
+      "website": "https://www.schuetz.net/",
+      "description": "Sch\u00fctz GmbH & Co. KGaA is a German industrial packaging manufacturer known for IBC intermediate bulk containers, plastic drums and composite packaging systems.",
+      "product_lines": [
+        "IBC intermediate bulk containers",
+        "Plastic drums",
+        "Composite packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.schuetz.net/"
+        },
+        {
+          "name": "UN / ADR industrial packaging approvals (confirm per product)",
+          "source": "https://www.schuetz.net/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.schuetz.net/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/schuetz/schuetz_01.jpg"
+      ],
+      "slug": "schuetz",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Volvo Construction Equipment",
+      "primary_category": "Industrial Parts",
+      "country": "Sweden",
+      "city": "Gothenburg",
+      "website": "https://www.volvoce.com/",
+      "description": "Volvo Construction Equipment - Volvo CE - is a major international company which develops, manufactures, and markets equipment for construction and related industries. It is a subsidiary and business of the Volvo Group.",
+      "product_lines": [
+        "Wheel loaders",
+        "Excavators",
+        "Articulated haulers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.volvoce.com/"
+        },
+        {
+          "name": "ISO 14001; construction equipment QMS (confirm on product)",
+          "source": "https://www.volvoce.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.volvoce.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/volvo-ce/volvo-ce_01.jpg"
+      ],
+      "slug": "volvo-ce",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Legrand SA",
+      "primary_category": "Hardware & Motion",
+      "country": "France",
+      "city": "Limoges",
+      "website": "https://www.legrand.com/",
+      "description": "Legrand S.A. is a French industrial group historically based in Limoges in the Nouvelle-Aquitaine region.",
+      "product_lines": [
+        "Electrical infrastructure",
+        "Cable management",
+        "Industrial electrical products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.legrand.com/"
+        },
+        {
+          "name": "ISO 14001; CE for electrical infrastructure (confirm on product)",
+          "source": "https://www.legrand.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.legrand.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/legrand/legrand_01.jpg"
+      ],
+      "slug": "legrand",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Fujikura Ltd.",
+      "primary_category": "Cables & Electrical",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.fujikura.co.jp/eng/",
+      "description": "Fujikura Ltd. is a global, Tokyo-based electrical equipment manufacturing company, developing and manufacturing power and telecommunication systems products, including devices for optical fibers, such as cutters and splicers.",
+      "product_lines": [
+        "Optical fiber cable",
+        "Power cable",
+        "Electronics wire"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.fujikura.co.jp/eng/"
+        },
+        {
+          "name": "IEC cable / fiber standards; ISO 14001 (confirm on site)",
+          "source": "https://www.fujikura.co.jp/eng/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.fujikura.co.jp/eng/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/fujikura/fujikura_01.jpg"
+      ],
+      "slug": "fujikura",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Belden Inc.",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "St. Louis",
+      "website": "https://www.belden.com/",
+      "description": "Belden Inc. is an American multinational company that designs, manufactures, and distributes networking, connectivity, cable, and security products. Headquartered in St. Louis, Missouri, the company is publicly traded on the New York Stock Exchange under the ticker symbol BDC and is a component of the S&P 400. Belden serves industrial automation, enterprise, smart-building, and broadband markets.",
+      "product_lines": [
+        "Industrial networking cable",
+        "Signal cable",
+        "Connectivity solutions"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.belden.com/"
+        },
+        {
+          "name": "UL / IEC industrial cable listings (confirm per product)",
+          "source": "https://www.belden.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.belden.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/belden/belden_01.jpg"
+      ],
+      "slug": "belden",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": []
+    },
+    {
+      "company_name": "Harmonic Drive Systems Inc.",
+      "primary_category": "Hardware & Motion",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.harmonicdrive.net/",
+      "description": "Harmonic Drive Systems Inc. is a Japanese precision-motion manufacturer producing strain-wave gears, servo actuators and motion units for robotics and automation. Soft: HFUC strain-wave gear product still, not a Hotaka plant exterior.",
+      "product_lines": [
+        "Precision strain wave gears",
+        "Servo actuators",
+        "Motion units"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.harmonicdrive.net/"
+        },
+        {
+          "name": "ISO 14001; precision gear QMS (confirm on site)",
+          "source": "https://www.harmonicdrive.net/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.harmonicdrive.net/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/harmonic-drive/harmonic-drive_01.jpg"
+      ],
+      "slug": "harmonic-drive",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: HFUC strain-wave gear product still, not a Hotaka plant exterior."
+    },
+    {
+      "company_name": "Mauser Packaging Solutions",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Oak Brook",
+      "website": "https://www.mauserpackaging.com/",
+      "description": "Mauser Packaging Solutions is a global industrial packaging manufacturer producing steel drums, IBCs and plastic industrial containers for chemicals and other bulk products. Soft: composite-IBC product lineup, not a mill exterior.",
+      "product_lines": [
+        "Steel drums",
+        "IBCs",
+        "Plastic industrial packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.mauserpackaging.com/"
+        },
+        {
+          "name": "UN / ADR industrial packaging approvals (confirm per product)",
+          "source": "https://www.mauserpackaging.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.mauserpackaging.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/mauser/mauser_01.jpg"
+      ],
+      "slug": "mauser",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: composite-IBC product lineup, not a mill exterior."
+    },
+    {
+      "company_name": "Rittal GmbH & Co. KG",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Herborn",
+      "website": "https://www.rittal.com/",
+      "description": "Rittal is a German manufacturer of electrical enclosures for use in industrial settings. Founded in 1961, Rittal is a subsidiary of the Friedhelm Loh Group. The name Rittal is derived from the place where the company was founded \u2013 Rittershausen in Dietzh\u00f6lztal. The company headquarters is in Herborn. Soft: Haiger enclosure line (product/line still), not a mill-exterior caption.",
+      "product_lines": [
+        "Industrial enclosures",
+        "Power distribution",
+        "Climate control"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rittal.com/"
+        },
+        {
+          "name": "ISO 14001; UL / CE for industrial enclosures (confirm on product)",
+          "source": "https://www.rittal.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rittal.com/",
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-08/enhanced/suppliers/rittal/rittal_01.jpg"
+      ],
+      "slug": "rittal",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "photo_urls": [],
+      "honesty_note": "Soft: Haiger enclosure line (product/line still), not a mill-exterior caption."
+    }
+  ]
+}

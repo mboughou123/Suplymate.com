@@ -1,0 +1,16 @@
+{
+  "label": "QA-MILL-SHOUGANG-LIVE-RESEARCHER-OK",
+  "amends": "QA-HOLD19-MILL-PLANTS-RESEARCHER-OK-PARTIAL",
+  "sealed_at_utc": "2026-09-07T17:52:00+00:00",
+  "sealed_at_pt": "2026-09-07 ~10:52 PT",
+  "slug": "shougang",
+  "still": "shougang_01.jpg",
+  "still_note": "Jingtang coil warehouse + loading — live mill OK. Park heritage siblings _02/_03/_04 quarantined; do not commit under public/images/suppliers/shougang/.",
+  "photo_urls": [],
+  "photo_urls_note": "Park Commons URLs are heritage tourism — poison. Prefer empty photo_urls.",
+  "wire": true,
+  "remaining_hold": ["stupp", "interpipe"],
+  "do_not_wire": ["stupp", "interpipe"],
+  "wire_slug_count": 48,
+  "hold_omitted_count": 2
+}

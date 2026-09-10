@@ -1,0 +1,2195 @@
+{
+  "generated_at_utc": "2026-09-02T18:55:41Z",
+  "generated_at_pt": "2026-09-02 11:55 PT",
+  "phase": "suplymate-phase1",
+  "task": "Daily expansion 2026-09-02 — NEW suppliers batch (~50 mills) with photos",
+  "pricing_policy": "No prices. MOQ is unpublished mill RFQ. Never invent prices.",
+  "selection_policy": "New mills only — none of these names appear in suppliers-phase1-merged-59.csv. Mapped from images/suppliers/<slug>/ + research/mill_index.json + wiki_summaries*.json.",
+  "exclude_csv": "/workspace/suppliers-phase1/suppliers-phase1-merged-59.csv",
+  "counts": {
+    "suppliers_total": 50,
+    "with_local_images": 44,
+    "with_any_photo": 47,
+    "local_image_files": 159,
+    "remote_photo_urls": 259,
+    "products_total": 51,
+    "by_category": {
+      "Steel & Metals": 13,
+      "Tube & Pipes": 4,
+      "Cables & Electrical": 9,
+      "Construction": 9,
+      "Industrial Parts": 8,
+      "Packaging": 7
+    }
+  },
+  "suppliers": [
+    {
+      "company_name": "POSCO",
+      "primary_category": "Steel & Metals",
+      "country": "South Korea",
+      "city": "Pohang",
+      "website": "https://www.posco.com/",
+      "description": "POSCO is a South Korean steel manufacturer headquartered in Pohang, South Korea. It had an output of 42,000,000 metric tons of crude steel in 2015, making it the world's Seventh-largest steelmaker by this measure. In 2010, it was the world's largest steel manufacturing company by market value. Also, in 2024, it was named as the world's 233rd-largest corporation by the Fortune Global 500.",
+      "product_lines": [
+        "Hot-rolled and cold-rolled coil and sheet",
+        "Heavy plate",
+        "Electrical steel",
+        "Automotive and shipbuilding steels"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.posco.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; IATF 16949 (automotive steel)",
+          "source": "https://www.posco.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/POSCO",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a9/GwangyangIronworks.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/52/POSCO.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/da/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_1.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/14-1024x576.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/16-1024x575.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/17-1024x582.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/10-1024x578.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/110-1024x571.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/111-1024x576.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/121-1024x576.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/131-1024x574.jpg",
+        "https://newsroom.posco.com/en/wp-content/uploads/2014/03/15-1024x576.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/06.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/commons-gwangyang.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/posco/commons-posco.jpg"
+      ],
+      "slug": "posco",
+      "source_platform": "Wikipedia / company newsroom",
+      "export_markets": [
+        "South Korea",
+        "Asia",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Nucor Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Charlotte, North Carolina",
+      "website": "https://nucor.com/",
+      "description": "Nucor Corporation is an American company based in Charlotte, North Carolina, that produces steel and related products. It is the largest steel producer in the United States and the largest recycler of scrap in North America. Nucor is the 16th-largest steel producer in the world. Along with Commercial Metals Company, it is one of two primary suppliers of rebar used to reinforce concrete in buildings, bridges, roads, and infrastructure in the U.S.",
+      "product_lines": [
+        "Hot-rolled SBQ bar (rounds, squares, hexes, flats)",
+        "EAF hot-rolled sheet and coil",
+        "Plate and structural steel",
+        "Rebar"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://nucor.com/"
+        },
+        {
+          "name": "ISO 14001; mill product specs ASTM / AISI (confirm per mill)",
+          "source": "https://nucor.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://nucor.com/",
+      "photo_urls": [
+        "https://nucor.com/wp-content/uploads/nucor-menu-automotive-solutions.jpg",
+        "https://nucor.com/wp-content/uploads/nucor-menu-construction-solutions.jpg",
+        "https://nucor.com/wp-content/uploads/nucor-menu-energy-solutions.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nucor/b03.jpg"
+      ],
+      "slug": "nucor",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United States",
+        "North America"
+      ]
+    },
+    {
+      "company_name": "voestalpine AG",
+      "primary_category": "Steel & Metals",
+      "country": "Austria",
+      "city": "Linz",
+      "website": "https://www.voestalpine.com/group/en/",
+      "description": "Voestalpine AG – stylized as voestalpine – is an Austrian steel-based technology and capital goods group based in Linz, Austria. The company is active in steel, automotive, railway systems, profilform and tool steel industries. As of 2017, it is one of the few profitable steel companies in Europe.",
+      "product_lines": [
+        "Quality steel strip and plate",
+        "Rail and turnout systems",
+        "Wire and special steel",
+        "Automotive steel components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.voestalpine.com/group/en/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www.voestalpine.com/group/en/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.voestalpine.com/group/en/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/Voestalpine_2009.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/85/2003-10-08_VOEST_102.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065799/Open_CMS_Tile_1_1_XS/voestalpine_brand_campaign_linz.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1063592/Open_CMS_Tile_1_2_XS/voestalpine_brand_campaign_railway.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1063592/Open_CMS_Tile_XXS/voestalpine_brand_campaign_railway.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1063608/Open_CMS_Tile_1_2_XS/Mitarbeiter_Joyce_F.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1063608/Open_CMS_Tile_XXS/Mitarbeiter_Joyce_F.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065156/fullstage_lg/voestalpine_Slider_Website_1342x578_Allgemein.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065156/fullstage_xxs/voestalpine_Slider_Website_1342x578_Allgemein.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065799/Open_CMS_Tile_XXS/voestalpine_brand_campaign_linz.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065820/Open_CMS_Tile_1_2_XS/VOE_RGB_Sadef_10_02728_V01.jpg",
+        "https://cdnstoreapp.blob.core.windows.net/image-container/1065820/Open_CMS_Tile_XXS/VOE_RGB_Sadef_10_02728_V01.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/voestalpine/01.jpg"
+      ],
+      "slug": "voestalpine",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Austria",
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "SSAB AB",
+      "primary_category": "Steel & Metals",
+      "country": "Sweden",
+      "city": "Stockholm / Oxelösund",
+      "website": "https://www.ssab.com/",
+      "description": "SSAB AB, earlier Svenskt Stål AB, is a Swedish company, formed in 1978, that specialises in producing steel. The largest shareholders are the Swedish state-owned mining company LKAB, and the Government of Finland.",
+      "product_lines": [
+        "Hardox wear plate",
+        "Strenx high-strength structural steel",
+        "Hot-rolled and coated strip",
+        "GreenCoat building sheet"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ssab.com/"
+        },
+        {
+          "name": "EN 10025 / mill Hardox–Strenx product approvals; ISO 14001",
+          "source": "https://www.ssab.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ssab.com/en/company",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/58/SSAB_Oxel%C3%B6sund.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/02-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ssab/03-prod.jpg"
+      ],
+      "slug": "ssab",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Sweden",
+        "Nordics",
+        "Europe",
+        "North America"
+      ]
+    },
+    {
+      "company_name": "China Steel Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "Taiwan",
+      "city": "Kaohsiung (Siaogang)",
+      "website": "https://www.csc.com.tw/",
+      "description": "China Steel Corporation is the largest integrated steel maker in Taiwan. Its main steel mill is located in Siaogang District, Kaohsiung. The corporation and its sister companies are administrated under the CSC Group. According to the International Iron and Steel Institute (IISI), China Steel is the 23rd largest steel producer in the world in 2016.",
+      "product_lines": [
+        "Hot-rolled coil and plate",
+        "Cold-rolled and coated steel",
+        "Bars and wire rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.csc.com.tw/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www.csc.com.tw/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/China_Steel",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2f/Facilities_of_China_Steel_in_Siaogang.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a2/Locomotive_in_the_factory_of_China_Steel_2014-11-21.jpg",
+        "https://www.csc.com.tw/images/site.png",
+        "https://www.csc.com.tw/images_new/csc_foot_btn_top.png",
+        "https://www.csc.com.tw/images_new/mascot_sad.png",
+        "https://upload.wikimedia.org/wikipedia/commons/2/2c/Kaohsiung_Taiwan_China-Steel-Building-01.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/china-steel/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/china-steel/commons-locomotive.jpg"
+      ],
+      "slug": "china-steel",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "Taiwan",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "BlueScope Steel Limited",
+      "primary_category": "Steel & Metals",
+      "country": "Australia",
+      "city": "Melbourne / Port Kembla",
+      "website": "https://www.bluescope.com/",
+      "description": "BlueScope Steel Limited is an Australian flat product steel producer that was spun-off from BHP Billiton in 2002.",
+      "product_lines": [
+        "Hot-rolled coil",
+        "Metallic-coated and painted steel (COLORBOND / ZINCALUME)",
+        "Building components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bluescope.com/"
+        },
+        {
+          "name": "AS/NZS coated-steel product standards (COLORBOND / ZINCALUME)",
+          "source": "https://www.bluescope.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.bluescope.com/our-company",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d5/13_Industry_of_Australia_-_Steelworks_of_BlueScope_Steel_Limited_company_in_Port_Kembla%2C_Australia.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/14_Steelworks_of_BlueScope_Steel_Limited_company_in_Port_Kembla%2C_Australia_-_%E8%A3%BD%E9%89%84%E6%89%80.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/55/2020-06-06_Steelworks_of_BlueScope_Steel_Limited_company_in_Port_Kembla%2C_Australia.jpg",
+        "https://www.bluescope.com/adobe/dynamicmedia/deliver/dm-aid--31d8573d-6272-4b2e-bcc0-07758aad5704/how-we-work.jpg",
+        "https://www.bluescope.com/adobe/dynamicmedia/deliver/dm-aid--f0e6f245-57b7-4fdd-9a5c-1855df4a7322/who-we-are.jpg",
+        "https://www.bluescope.com/content/dam/bluescope/corporate/bluescope-com/global/assets/blueflex-container-mobile.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/05.jpg"
+      ],
+      "slug": "bluescope",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Australia",
+        "New Zealand",
+        "ASEAN",
+        "China",
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Outokumpu Oyj",
+      "primary_category": "Steel & Metals",
+      "country": "Finland",
+      "city": "Helsinki / Tornio",
+      "website": "https://www.outokumpu.com/",
+      "description": "Outokumpu Oyj is a group of international companies headquartered in Helsinki, Finland, with 10,600 employees in more than 30 countries. Outokumpu is the largest producer of stainless steel in Europe and the second largest producer in the Americas. Outokumpu also has a long history as a mining company, and still mines chromium ore in Keminmaa for use as ferrochrome in stainless steel. The largest shareholder of Outokumpu is the Government of Finland, with 26.6% ownership, including the shares controlled by Solidium, The Social Insurance Institution of Finland, Finnish State Pension Fund and Municipality Pension Agency.",
+      "product_lines": [
+        "Stainless cold-rolled coil, strip and sheet",
+        "Hot-rolled stainless coil and plate",
+        "Duplex and high-strength stainless (Forta)",
+        "Ferrochrome"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.outokumpu.com/"
+        },
+        {
+          "name": "EN 10088 stainless; ISO 14001 / ISO 45001",
+          "source": "https://www.outokumpu.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.outokumpu.com/en/about",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9e/Degerfors_huta_2.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/06.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/outokumpu/07.jpg"
+      ],
+      "slug": "outokumpu",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Finland",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Gerdau S.A.",
+      "primary_category": "Steel & Metals",
+      "country": "Brazil",
+      "city": "Porto Alegre / São Paulo",
+      "website": "https://www2.gerdau.com/",
+      "description": "Gerdau S.A. is the largest producer of long steel in the Americas, and the 33rd largest steelmaker worldwide, with approximately 13 million tons of production in 2023. Gerdau uses mini mills, integrated mills, and direct reduced iron plants; 71% of the steel manufactured by the company is made from recycled scrap. In 2023, 39% of sales were to Brazil and 39% of sales were to North America.",
+      "product_lines": [
+        "Straight concrete reinforcing bar (ASTM A615 / A706)",
+        "Merchant bar and shapes",
+        "Special bar quality",
+        "Wire rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www2.gerdau.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www2.gerdau.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www2.gerdau.com/products/rebar",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/01-prod.jpg"
+      ],
+      "slug": "gerdau",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Brazil",
+        "North America",
+        "Latin America"
+      ]
+    },
+    {
+      "company_name": "Hyundai Steel Co., Ltd.",
+      "primary_category": "Steel & Metals",
+      "country": "South Korea",
+      "city": "Incheon",
+      "website": "https://www.hyundai-steel.com/",
+      "description": "Hyundai Steel Co., Ltd, or HSC is a steel making company headquartered in Incheon and Seoul, South Korea, and a member of the Hyundai Motor Group. It manufactures a wide variety of products ranging from H-beams, rail and reinforcing bars, to hot coil, cold-rolled steel, and stainless cold-rolled sheet.",
+      "product_lines": [
+        "H-beams and sections",
+        "Reinforcing bar and rail",
+        "Hot-rolled coil",
+        "Cold-rolled and stainless sheet"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hyundai-steel.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www.hyundai-steel.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Hyundai_Steel",
+      "photo_urls": [],
+      "local_images": [],
+      "slug": "hyundai-steel",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "South Korea",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Nippon Steel Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "Japan",
+      "city": "Tokyo (Marunouchi)",
+      "website": "https://www.nipponsteel.com/",
+      "description": "Nippon Steel Corporation is a Japanese steel manufacturing company, headquartered in Marunouchi, Chiyoda, Tokyo. The company has four business segments, which are steelmaking, engineering, chemicals, and systems solutions. It is the largest producer of crude steel in Japan and the fourth largest in the world.",
+      "product_lines": [
+        "Heavy plate (ship, bridge, offshore, power)",
+        "Automotive sheet",
+        "Pipes and tubes",
+        "Specialty steels"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nipponsteel.com/"
+        },
+        {
+          "name": "JIS / IACS ship plate approvals; ISO 14001",
+          "source": "https://www.nipponsteel.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nipponsteel.com/product/plate/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nippon-steel/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nippon-steel/02-prod.jpg"
+      ],
+      "slug": "nippon-steel",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "ArcelorMittal",
+      "primary_category": "Steel & Metals",
+      "country": "Luxembourg",
+      "city": "Luxembourg",
+      "website": "https://corporate.arcelormittal.com/",
+      "description": "ArcelorMittal is a steel & metals manufacturer based in Luxembourg, Luxembourg. Product lines include European IPE I-sections (EN 10365); UPE/UPN parallel-flange channels; HISTAR structural grades; Flat products.",
+      "product_lines": [
+        "European IPE I-sections (EN 10365)",
+        "UPE/UPN parallel-flange channels",
+        "HISTAR structural grades",
+        "Flat products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://corporate.arcelormittal.com/"
+        },
+        {
+          "name": "EN 10025 / EN 10365 structural sections; ISO 14001",
+          "source": "https://corporate.arcelormittal.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://constructalia.arcelormittal.com/en/products/i-sections",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/6/64/ArcelorMittal_steel_mill%2C_Cleveland_%27Industrial_Valley%27.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/71/Aci%C3%A9rie_ArcelorMittal_S%C3%A9r%C3%A9mange.JPG"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/arcelormittal/commons-cleveland.jpg"
+      ],
+      "slug": "arcelormittal",
+      "source_platform": "Company website (Constructalia)",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Africa",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Salzgitter AG",
+      "primary_category": "Steel & Metals",
+      "country": "Germany",
+      "city": "Salzgitter",
+      "website": "https://www.salzgitter-ag.com/",
+      "description": "Salzgitter AG is a German steel group based in Salzgitter, Lower Saxony. The group produces hot-rolled strip and plate, beams and sections, and steel tubes through group mills, serving German and European industrial customers.",
+      "product_lines": [
+        "Hot-rolled strip and plate",
+        "Beams and sections",
+        "Steel tubes (group mills)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.salzgitter-ag.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www.salzgitter-ag.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Salzgitter_AG",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/97/20160109_Salzgitter_Stahlwerk_silhouette_DSC07176_a_BW_PtrQs.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/salzgitter/01.jpg"
+      ],
+      "slug": "salzgitter",
+      "source_platform": "Wikipedia / Wikimedia Commons",
+      "export_markets": [
+        "Germany",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Steel Authority of India Limited (SAIL)",
+      "primary_category": "Steel & Metals",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://www.sail.co.in/",
+      "description": "Steel Authority of India Limited (SAIL) is an Indian public sector steel manufacturing corporation based in New Delhi designated as Maharatna CPSE. It is the largest government-owned steel producer, with an annual production of 18.29 million metric tons. Incorporated on 24 January 1973, SAIL has 50,001 employees and is under the administrative control of the Ministry of Steel.",
+      "product_lines": [
+        "Rails and structurals",
+        "Plates and hot-rolled coil",
+        "TMT bars",
+        "Wire rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sail.co.in/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm on mill page)",
+          "source": "https://www.sail.co.in/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Steel_Authority_of_India_Limited",
+      "photo_urls": [],
+      "local_images": [],
+      "slug": "sail",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "India",
+        "Neighbouring markets"
+      ]
+    },
+    {
+      "company_name": "Tenaris S.A.",
+      "primary_category": "Tube & Pipes",
+      "country": "Luxembourg",
+      "city": "Luxembourg",
+      "website": "https://www.tenaris.com/",
+      "description": "Tenaris S.A., organized in Luxembourg, is a manufacturer and supplier of steel pipes and related services for the petroleum industry. The company produces and ships over 4 million tons of pipes annually. In 2024, sales to customers in North America accounted for 46% of sales, compared with 19% in South America, 26% in Asia-Pacific, and 10% in Europe.",
+      "product_lines": [
+        "Seamless OCTG casing and tubing",
+        "TenarisHydril Blue / Wedge premium connections",
+        "Line pipe",
+        "Coiled tubing and industrial pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tenaris.com/"
+        },
+        {
+          "name": "API 5CT (OCTG casing and tubing)",
+          "source": "https://www.tenaris.com/"
+        },
+        {
+          "name": "API 5L (line pipe)",
+          "source": "https://www.tenaris.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (group HSE systems)",
+          "source": "https://www.tenaris.com/en/about-us"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tenaris.com/en/about-us",
+      "photo_urls": [
+        "https://www.tenaris.com/media/vrzpjauc/aboutus_hero.jpg",
+        "https://www.tenaris.com/media/i41ouu2d/navigation-01.jpg",
+        "https://www.tenaris.com/media/zspgij5l/navigation-02.jpg",
+        "https://www.tenaris.com/media/e5bf2lg3/navigation-03.jpg",
+        "https://www.tenaris.com/media/moxfa4zo/navigation-04.jpg",
+        "https://www.tenaris.com/media/dpdnwbup/community-card.jpg",
+        "https://www.tenaris.com/media/fv2esvjo/economicindicator.jpg",
+        "https://www.tenaris.com/media/kgtpdsrf/navigation-05.jpg",
+        "https://www.tenaris.com/media/l5rnzivz/navigation-06.jpg",
+        "https://www.tenaris.com/media/z4gdw2e2/navigation-07.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tenaris/05.jpg"
+      ],
+      "slug": "tenaris",
+      "source_platform": "Company website",
+      "export_markets": [
+        "North America",
+        "South America",
+        "Asia-Pacific",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Vallourec S.A.",
+      "primary_category": "Tube & Pipes",
+      "country": "France",
+      "city": "Meudon",
+      "website": "https://www.vallourec.com/",
+      "description": "Vallourec S.A. is a multinational manufacturing company headquartered in Meudon, France. Vallourec specializes in hot rolled seamless steel tubes, expandable tubular technology, automotive parts, and stainless steel, which it provides to energy, construction, automotive, and mechanical industries. Vallourec shares are listed on Euronext Paris.",
+      "product_lines": [
+        "VAM premium connections and OCTG",
+        "Seamless line pipe",
+        "Geothermal and industrial seamless tubes"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.vallourec.com/"
+        },
+        {
+          "name": "API 5CT / VAM premium connections",
+          "source": "https://www.vallourec.com/en/our-offers/oil-and-gas/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (group HSE systems)",
+          "source": "https://www.vallourec.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.vallourec.com/en/our-offers/oil-and-gas/",
+      "photo_urls": [
+        "https://www.vallourec.com/app/themes/vallourec/public/images/spinner/spinner-dark.7af7ac.png",
+        "https://www.vallourec.com/app/themes/vallourec/public/images/spinner/spinner-light.a35021.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/vallourec/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/vallourec/02-prod.jpg"
+      ],
+      "slug": "vallourec",
+      "source_platform": "Company website",
+      "export_markets": [
+        "France",
+        "Europe",
+        "Americas",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Tianjin (Jinghai / Daqiuzhuang)",
+      "website": "https://en.yfgg.com/",
+      "description": "Tianjin Youfa Steel Pipe Group Co., Ltd. is one of China's largest welded-pipe producers, based in Jinghai / Daqiuzhuang, Tianjin. The group manufactures ERW/HFW straight-seam welded pipe, hot-dip galvanized steel pipe, square and rectangular hollow sections, and spiral submerged-arc welded pipe for construction, infrastructure and fluid conveyance, and exports from China.",
+      "product_lines": [
+        "ERW / HFW straight-seam welded pipe",
+        "Hot-dip galvanized steel pipe",
+        "Square and rectangular hollow sections",
+        "Spiral submerged-arc welded pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://en.yfgg.com/"
+        },
+        {
+          "name": "API 5L (welded pipe — confirm current license on mill site)",
+          "source": "https://en.yfgg.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.yfgg.com/About.html",
+      "photo_urls": [
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/58aec34e-f12b-4c4e-b859-8e02ae3b1a0b.jpg",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/cbf4240b-ba71-445b-b209-069aad17172d.jpg",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/d4686be1-4ab1-4db8-91d5-fab96c783b9a.png",
+        "https://en.yfgg.com/npublic/img/s.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/43163ac0-6321-491c-94cc-35d29ebec8bf.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/67ce52ca-8914-465c-bbc7-3119c007ab76.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/a8f6bbbd-215d-4f8c-921d-10682ea3e37b.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/bb4a314e-8e3d-4228-8c46-b36acf7b89a1.png",
+        "https://omo-oss-image.thefastimg.com/portal-saas/pg2024030608295509076/cms/image/d9006c65-a098-4445-81c9-cb2a4f55aea9.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/youfa/01.jpg"
+      ],
+      "slug": "youfa",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Export markets"
+      ]
+    },
+    {
+      "company_name": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Huzhou, Zhejiang",
+      "website": "https://www.jiuli.com/",
+      "description": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd. (SSE: 002531) is a Huzhou, Zhejiang mill specialising in stainless-steel and special-alloy seamless pipe and tube, plus bars, wires, bimetal composite pipes and fittings for energy, chemical, power and industrial projects worldwide.",
+      "product_lines": [
+        "Stainless and special-alloy seamless pipe and tube",
+        "Bars and wires",
+        "Bimetal composite pipes",
+        "Pipe fittings"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jiuli.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; PED / ASME for alloy pipe (confirm on mill site)",
+          "source": "https://www.jiuli.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.jiuli.com/",
+      "photo_urls": [
+        "https://jiuli0235.oss-cn-hangzhou.aliyuncs.com/static/img/about-banner.jpg",
+        "https://www.jiuli.com/static/img/fx-top.png",
+        "https://www.jiuli.com/static/img/fx-top1.png",
+        "https://www.jiuli.com/static/img/home.png",
+        "https://www.jiuli.com/static/img/if.png",
+        "https://www.jiuli.com/static/img/jiuli-2.png",
+        "https://www.jiuli.com/static/img/jiuli.png",
+        "https://www.jiuli.com/static/img/jja1.png",
+        "https://www.jiuli.com/static/img/jja2-2.jpg",
+        "https://www.jiuli.com/static/img/jja2.jpg",
+        "https://www.jiuli.com/static/img/jja3.png",
+        "https://www.jiuli.com/static/img/jja4.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jiuli/01.jpg"
+      ],
+      "slug": "jiuli",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Global industrial projects"
+      ]
+    },
+    {
+      "company_name": "Dubai Cable Company (Private) Limited (Ducab)",
+      "primary_category": "Cables & Electrical",
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "website": "https://ducab.com/",
+      "description": "Dubai Cable Company (Private) Limited (Ducab) is the UAE's principal cable manufacturer, established in 1979 and headquartered in Dubai. It produces LV XLPE/PVC power cables, MV/HV/EHV power cables (to 400 kV) and specialty oil, gas and marine cables from plants in the UAE and India, supplying GCC and export projects.",
+      "product_lines": [
+        "LV XLPE / PVC power cables (0.6/1 kV)",
+        "MV / HV / EHV power cables (to 400 kV)",
+        "Specialty oil, gas and marine cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://ducab.com/"
+        },
+        {
+          "name": "IEC / BS power-cable product standards; ISO 14001 / ISO 45001",
+          "source": "https://ducab.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://ducab.com/",
+      "photo_urls": [
+        "https://ducab.com/wp-content/themes/ducab/assets/images/hm-about-image_.webp",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/ducab_india_01.webp",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/banner_fallback____.webp",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/about_ncf.webp",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/across_the_world.webp",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/aj.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/al-shamali-waris.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/cleveland-cable.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/electricway.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/electromec.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/hcc.png",
+        "https://ducab.com/wp-content/themes/ducab/assets/images/location_bahrain.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/01.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/02.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/03.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/04.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b09.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b09.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b10.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ducab/b10.webp"
+      ],
+      "slug": "ducab",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United Arab Emirates",
+        "GCC",
+        "India",
+        "Export projects"
+      ]
+    },
+    {
+      "company_name": "Nexans S.A.",
+      "primary_category": "Cables & Electrical",
+      "country": "France",
+      "city": "Paris",
+      "website": "https://www.nexans.com/",
+      "description": "Nexans S.A. is a global company in the cable and optical fibre industry headquartered in Paris, France.",
+      "product_lines": [
+        "Building and power cables",
+        "Subsea / offshore power cables",
+        "Fire-performance cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nexans.com/"
+        },
+        {
+          "name": "IEC cable systems; ISO 14001 / ISO 45001",
+          "source": "https://www.nexans.com/en"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nexans.com/en",
+      "photo_urls": [
+        "https://www.nexans.com/app/uploads/2024/01/banner-mobile-etudiants-nexans.jpg",
+        "https://www.nexans.com/app/uploads/2024/03/cable-wiring-portrait.jpg",
+        "https://www.nexans.com/app/uploads/2025/05/thumbnail-innovation-summit-2025-menu.jpg",
+        "https://www.nexans.com/app/uploads/2026/03/2025-sustainability-highlights-banner.jpg",
+        "https://www.nexans.com/app/uploads/2026/04/2025-nexans-urd-banner.jpg",
+        "https://www.nexans.com/app/uploads/2026/06/nexans-electra-sea-trial-banner-2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/24/NexansCanada2.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/04-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/05-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nexans/b03.jpg"
+      ],
+      "slug": "nexans",
+      "source_platform": "Company website",
+      "export_markets": [
+        "France",
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Prysmian S.p.A.",
+      "primary_category": "Cables & Electrical",
+      "country": "Italy",
+      "city": "Milan",
+      "website": "https://www.prysmian.com/",
+      "description": "Prysmian S.p.A. is a multinational company with headquarters in Milan, Italy, specializing in the production of electrical cables for use in the energy and telecom sectors and for optical fibres. Prysmian is in Europe with 48 plants, 23 in North America, 13 in LATAM, 13 APAC, 7 MEAT.",
+      "product_lines": [
+        "Energy and power cables",
+        "Submarine cables",
+        "Telecom and optical-fibre cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.prysmian.com/"
+        },
+        {
+          "name": "IEC / IEEE cable systems; ISO 14001 / ISO 45001",
+          "source": "https://www.prysmian.com/en"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.prysmian.com/en",
+      "photo_urls": [
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/PRYS-ICO-Trasmission-0.5x.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/digital-solutions.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/eletrification.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/environmental-performance-500x500.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/finance.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/governance.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/group-annual-report-cta-1600x480.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/lens.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/markets.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/people.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/power-grids.png",
+        "https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/sustainability.png"
+      ],
+      "local_images": [],
+      "slug": "prysmian",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Italy",
+        "Europe",
+        "North America",
+        "APAC"
+      ]
+    },
+    {
+      "company_name": "Havells India Limited",
+      "primary_category": "Cables & Electrical",
+      "country": "India",
+      "city": "Noida",
+      "website": "https://havells.com/",
+      "description": "Havells India Limited is an Indian multinational electrical equipment company, based in Noida. The company manufactures home appliances, lighting for domestic, commercial and industrial applications, LED lighting, fans, modular switches and wiring accessories, water heaters, industrial and domestic circuit protection switchgear, industrial and domestic cables and wires, induction motors, and capacitors among others. Havells owns brands like Havells, Lloyd, Crabtree, Standard Electric, Reo and Promptec.",
+      "product_lines": [
+        "FR-LSH and FR PVC house wires (IS 694)",
+        "Industrial and domestic cables",
+        "Switchgear and wiring accessories"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://havells.com/"
+        },
+        {
+          "name": "IS 694 (house wires); ISO 14001 / ISO 45001",
+          "source": "https://havells.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://havells.com/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/havells/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/havells/02-prod.jpg"
+      ],
+      "slug": "havells",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India",
+        "Export via Havells subsidiaries"
+      ]
+    },
+    {
+      "company_name": "Finolex Cables Limited",
+      "primary_category": "Cables & Electrical",
+      "country": "India",
+      "city": "Pune",
+      "website": "https://www.finolex.com/",
+      "description": "Finolex Group is an Indian conglomerate company based in Pune, India. The Finolex Group comprises Finolex Cables Ltd., Finolex Industries Ltd., Finolex J-Power Systems Ltd. and Finolex Plasson Industries Ltd. The group was founded in 1958 by P. P. Chhabria and K. P. Chhabria. The Finolex brand was intuitive from “Fine” and “Flexibles” and “O” with an electric arc across it – suggesting the electrical cable business the company was in.",
+      "product_lines": [
+        "FR PVC house wires and cables (IS 694)",
+        "Power and control cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.finolex.com/"
+        },
+        {
+          "name": "IS 694 (FR PVC house wires)",
+          "source": "https://www.finolex.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.finolex.com/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/finolex-cables/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/finolex-cables/02-prod.jpg"
+      ],
+      "slug": "finolex-cables",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India"
+      ]
+    },
+    {
+      "company_name": "Far East Cable Co., Ltd.",
+      "primary_category": "Cables & Electrical",
+      "country": "China",
+      "city": "Yixing, Jiangsu",
+      "website": "http://en.fe-cable.com/",
+      "description": "Far East Cable Co., Ltd. (Far East Smarter Energy group) is a Yixing, Jiangsu power-cable manufacturer. Product lines cover power and smart-grid cables, marine and engineering cables, and communications cables for domestic Chinese and export infrastructure projects.",
+      "product_lines": [
+        "Power and smart-grid cables",
+        "Marine and engineering cables",
+        "Communications cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "http://en.fe-cable.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "http://en.fe-cable.com/",
+      "photo_urls": [
+        "http://en.fe-cable.com/Upload/image/202208/20220824171345_6760.jpeg",
+        "http://en.fe-cable.com/Upload/image/202209/20220927162715_2481.jpeg",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191530_7902.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191621_3832.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191708_2372.png",
+        "http://en.fe-cable.com/Upload/image/202208/20220824165850_4488.png",
+        "http://en.fe-cable.com/Upload/image/202208/20220824165850_4528.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410151855_4680.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191457_0638.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191544_5690.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191636_9327.png",
+        "http://en.fe-cable.com/Upload/image/202604/20260410191748_4141.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/01.jpeg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/02.jpeg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/far-east-cable/b03.jpeg"
+      ],
+      "slug": "far-east-cable",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Export projects"
+      ]
+    },
+    {
+      "company_name": "Hengtong Group Co., Ltd.",
+      "primary_category": "Cables & Electrical",
+      "country": "China",
+      "city": "Suzhou, Jiangsu",
+      "website": "https://www.hengtonggroup.com/",
+      "description": "Hengtong Group Co., Ltd. is a Suzhou, Jiangsu cable and optical-fibre group. It manufactures optical communication cables, power transmission and distribution cables, and submarine cable systems, with project delivery across China, Europe, Africa and Southeast Asia.",
+      "product_lines": [
+        "Optical communication cables",
+        "Power transmission and distribution cables",
+        "Submarine cable systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hengtonggroup.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.hengtonggroup.com/en/",
+      "photo_urls": [
+        "https://www.hengtonggroup.com/en/public/static/home/images/upload/e8d1585c54e74e819d396626cd2172bb.jpg",
+        "https://www.hengtonggroup.com/en/public/static/home/images/upload/74b16081b0044c70b7fa6c164157d97d.jpg",
+        "https://www.hengtonggroup.com/en/public/static/home/images/upload/8bd53112982b4871aa1d1224b7fcdb83.jpg",
+        "https://www.hengtonggroup.com/en/public/static/home/images/upload/c7a0adf4ef7d479d94d972823c2d0ee0.jpg",
+        "https://www.hengtonggroup.com/en/public/upload/file/20230823/8c921366d026f8177fff1c2418787a17.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/hengtong/05.jpg"
+      ],
+      "slug": "hengtong",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Europe",
+        "Africa",
+        "Southeast Asia"
+      ]
+    },
+    {
+      "company_name": "Oman Cables Industry SAOG",
+      "primary_category": "Cables & Electrical",
+      "country": "Oman",
+      "city": "Muscat",
+      "website": "https://omancables.com/",
+      "description": "Oman Cables Industry SAOG is a Muscat-listed LV and MV power-cable manufacturer serving Oman and the GCC. The company produces industrial and infrastructure cables and is part of the broader Ducab group of cable businesses in the region.",
+      "product_lines": [
+        "LV and MV power cables",
+        "Industrial and infrastructure cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://omancables.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://omancables.com/about-us/",
+      "photo_urls": [
+        "https://omancables.com/wp-content/uploads/2026/07/about-us-header.jpg",
+        "https://omancables.com/wp-content/uploads/2026/01/OCI-who-we-are.jpg",
+        "https://omancables.com/wp-content/uploads/2026/01/OCI-excellence.jpg",
+        "https://omancables.com/wp-content/uploads/2026/01/innovation-oci.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/oman-cables/b06.jpg"
+      ],
+      "slug": "oman-cables",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Oman",
+        "GCC"
+      ]
+    },
+    {
+      "company_name": "LS Cable & System Ltd.",
+      "primary_category": "Cables & Electrical",
+      "country": "South Korea",
+      "city": "Anyang / Seoul",
+      "website": "https://www.lscns.com/",
+      "description": "LS Cable & System is a South Korea-based industrial corporation with global operations and one of the biggest cable manufacturers worldwide. Its products comprise power and telecommunication cables and systems, as well as integrated modules and other related industrial materials. LS Cable & System furthermore provides engineering services, installation and commissioning of high voltage and extra high voltage landlines as well as turnkey submarine cabling project execution.",
+      "product_lines": [
+        "Power cables and systems",
+        "Telecom cables",
+        "HV / EHV land and submarine cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.lscns.com/"
+        },
+        {
+          "name": "IEC HV/EHV land and submarine cable systems",
+          "source": "https://www.lscns.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/LS_Cable_%26_System",
+      "photo_urls": [
+        "https://www.lscns.com/images/ico/common-ico-narrow.png",
+        "https://www.lscns.com/images/ico/common-ico.png",
+        "https://upload.wikimedia.org/wikipedia/en/c/c7/LS_Tower_in_May_2012.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ls-cable/wiki.jpg"
+      ],
+      "slug": "ls-cable",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "South Korea",
+        "Global projects"
+      ]
+    },
+    {
+      "company_name": "Holcim Ltd",
+      "primary_category": "Construction",
+      "country": "Switzerland",
+      "city": "Zug / Holderbank",
+      "website": "https://www.holcim.com/",
+      "description": "Holcim is a Swiss-based global building materials and aggregates flagship division of the Holcim Group. The original company was merged on 10 July 2015 with Lafarge to form LafargeHolcim as the new company and renamed to Holcim Group in 2021. The Holcim brand remained active within the group when the merger was completed.",
+      "product_lines": [
+        "Portland and blended cement",
+        "ECOPlanet lower-carbon cement",
+        "Aggregates and ready-mix (group)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.holcim.com/"
+        },
+        {
+          "name": "EN 197 cement; ISO 14001 (group plants — confirm locally)",
+          "source": "https://www.holcim.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.holcim.com/who-we-are",
+      "photo_urls": [
+        "https://www.holcim.com/sites/holcim/files/styles/box_slider_small/public/img/-hero.jpg.webp",
+        "https://www.holcim.com/sites/holcim/files/styles/box_slider_small/public/img/20210614_122910.jpg.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/03-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/holcim/04-prod.jpg"
+      ],
+      "slug": "holcim",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Switzerland",
+        "Europe",
+        "Americas",
+        "Africa",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Shree Cement Limited",
+      "primary_category": "Construction",
+      "country": "India",
+      "city": "Kolkata / Beawar, Rajasthan",
+      "website": "https://www.shreecement.com/",
+      "description": "Shree Cement is an Indian cement manufacturer, founded in Beawar, Rajasthan, in 1979. Headquartered in Kolkata, it is India's third largest cement producer group by capacity and third largest cement company by market capitalisation. Shree Cement has an installed cement production capacity of 66.8 mtpa including overseas operations. It also produces and sells power under the name Shree Power and Shree Mega Power.",
+      "product_lines": [
+        "Ordinary Portland and blended cement (Bangur)",
+        "Captive power (thermal and renewable)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.shreecement.com/"
+        },
+        {
+          "name": "BIS (ISI) for OPC / blended cement",
+          "source": "https://www.shreecement.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.shreecement.com/",
+      "photo_urls": [
+        "https://www.shreecement.com/uploads/about-us-page/aboutus-banner-lead.jpg",
+        "https://www.shreecement.com/uploads/lists/13Suratagarh.jpg",
+        "https://www.shreecement.com/uploads/lists/1.jpg",
+        "https://www.shreecement.com/uploads/lists/10.jpg",
+        "https://www.shreecement.com/uploads/lists/14.jpg",
+        "https://www.shreecement.com/./uploads/about-us-page/aboutus-banner-lead.jpg",
+        "https://www.shreecement.com/./uploads/cleanupload/171767446363464879.png",
+        "https://www.shreecement.com/./uploads/lists/1.jpg",
+        "https://www.shreecement.com/./uploads/lists/10.jpg",
+        "https://www.shreecement.com/./uploads/lists/11.jpg",
+        "https://www.shreecement.com/./uploads/lists/12.jpg",
+        "https://www.shreecement.com/./uploads/lists/13Suratagarh.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b06.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b07.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b08.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b09.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b10.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shree-cement/b11.jpg"
+      ],
+      "slug": "shree-cement",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India",
+        "Neighbouring markets"
+      ]
+    },
+    {
+      "company_name": "Dangote Cement Plc",
+      "primary_category": "Construction",
+      "country": "Nigeria",
+      "city": "Lagos",
+      "website": "https://dangotecement.com/",
+      "description": "Dangote Cement Plc is a Nigerian publicly traded multinational cement manufacturer headquartered in Lagos. The company is engaged in the manufacture, preparation, import, packaging, and distribution of cement and related products in Nigeria, and has plants or import terminals in nine other African countries.",
+      "product_lines": [
+        "Portland cement (bag and bulk)",
+        "Blended cement"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://dangotecement.com/"
+        },
+        {
+          "name": "NIS / plant QMS for Portland cement (confirm locally)",
+          "source": "https://dangotecement.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://dangotecement.com/about-us/",
+      "photo_urls": [
+        "https://dangotecement.com/wp-content/uploads/2021/05/Header-about-us.jpg",
+        "https://dangotecement.com/wp-content/uploads/2021/05/Our-story.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dangote-cement/09.jpg"
+      ],
+      "slug": "dangote-cement",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Nigeria",
+        "West Africa",
+        "Other African markets"
+      ]
+    },
+    {
+      "company_name": "JSW Cement Limited",
+      "primary_category": "Construction",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "https://www.jswcement.in/",
+      "description": "JSW Group is an Indian multinational conglomerate, based in Mumbai. It is led by Sajjan Jindal and founded by Om Prakash Jindal. The group's diverse businesses include steel, energy, infrastructure, cement, automotive and paints, across India, the United States, South America, and Africa.",
+      "product_lines": [
+        "Ordinary Portland cement",
+        "Portland slag cement / Concreel HD",
+        "Construction chemicals"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jswcement.in/"
+        },
+        {
+          "name": "BIS (ISI) for OPC / PSC",
+          "source": "https://www.jswcement.in/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.jswcement.in/about-us",
+      "photo_urls": [
+        "https://www.jswcement.in/images/Hamburger.png",
+        "https://www.jswcement.in/images/abt-brand-pic.jpg",
+        "https://www.jswcement.in/images/journey-2009-pic.jpg",
+        "https://www.jswcement.in/images/journey-2012-pic.jpg",
+        "https://www.jswcement.in/images/journey-2013-pic.jpg",
+        "https://www.jswcement.in/images/journey-2016-pic.jpg",
+        "https://www.jswcement.in/images/leader-pic.jpg",
+        "https://www.jswcement.in/images/overview-of-our-business.jpg",
+        "https://www.jswcement.in/images/search-inner.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/b01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jsw-cement/x04.jpg"
+      ],
+      "slug": "jsw-cement",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India"
+      ]
+    },
+    {
+      "company_name": "Dalmia Bharat Limited",
+      "primary_category": "Construction",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://www.dalmiacement.com/",
+      "description": "Dalmia Bharat Limited is one of India's large cement groups, headquartered in New Delhi, operating under the Dalmia Cement brand. It produces Portland and blended cement plus construction chemicals (tile adhesives, repair mortars) for the Indian market.",
+      "product_lines": [
+        "Portland and blended cement",
+        "Construction chemicals (tile adhesives, repair)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.dalmiacement.com/"
+        },
+        {
+          "name": "BIS (ISI) for Portland / blended cement",
+          "source": "https://www.dalmiacement.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.dalmiacement.com/about-us",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/dalmia-bharat/03.jpg"
+      ],
+      "slug": "dalmia-bharat",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India"
+      ]
+    },
+    {
+      "company_name": "J.K. Cement Ltd.",
+      "primary_category": "Construction",
+      "country": "India",
+      "city": "Kanpur / Delhi NCR",
+      "website": "https://www.jkcement.com/",
+      "description": "J.K. Cement Ltd. is an Indian cement manufacturer headquartered in Kanpur / Delhi NCR. The company produces grey cement (OPC/PPC), white cement and wall putty, with white-cement export alongside domestic grey-cement sales.",
+      "product_lines": [
+        "Grey cement (OPC / PPC)",
+        "White cement",
+        "Wall putty"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jkcement.com/"
+        },
+        {
+          "name": "BIS (ISI) for grey and white cement",
+          "source": "https://www.jkcement.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.jkcement.com/",
+      "photo_urls": [
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/about-us\\/images\\/about-us\\/director-bg.jpg",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/about-us\\/images\\/about-us\\/pattern-milestone.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/images\\/category\\/leftarrow.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/images\\/category\\/rightarrow.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/images\\/product\\/aboutusbg.webp",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/about-us\\/director-bg.jpg",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/about-us\\/pattern-milestone.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/architech\\/desktopbanner.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/category\\/banner.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/category\\/categorybanner2.png",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/category\\/cement-mobile-banner.webp",
+        "https://www.jkcement.com/about-us/\\/\\/www.jkcement.com\\/wp-content\\/themes\\/jkcement\\/images\\/category\\/leftarrow.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b06.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b07.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b08.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/jk-cement/b08.webp"
+      ],
+      "slug": "jk-cement",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India",
+        "Export white cement"
+      ]
+    },
+    {
+      "company_name": "The Siam Cement Public Company Limited (SCG)",
+      "primary_category": "Construction",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "website": "https://www.scg.com/",
+      "description": "The Siam Cement Public Company Limited is the largest and oldest cement and building material company in Thailand and Southeast Asia. In 2016, SCG was also ranked as the second largest company in Thailand and the 604th largest public company in the world by Forbes. The company is SET50 and SETHD-listed and an industry benchmark. The company's major shareholder is King Vajiralongkorn, which owns 30 percent of Siam Cement's shares.",
+      "product_lines": [
+        "Cement and concrete",
+        "Building materials",
+        "Packaging paper (group)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.scg.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Siam_Cement_Group",
+      "photo_urls": [
+        "https://static.scg.com/uploads/images/brand-image-1734517569.png",
+        "https://static.scg.com/uploads/images/brand-image-1734517598.png",
+        "https://static.scg.com/uploads/images/brand-image-1734517610.png",
+        "https://static.scg.com/uploads/images/brand-image-1781244814.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1783062807.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1786441351.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1787555393.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1787730502.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1787815391.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1788165478.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1788257778.jpg",
+        "https://static.scg.com/uploads/images/brand-image-1788336909.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/scg/b04.jpg"
+      ],
+      "slug": "scg",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Thailand",
+        "ASEAN"
+      ]
+    },
+    {
+      "company_name": "Interarch Building Solutions Limited",
+      "primary_category": "Construction",
+      "country": "India",
+      "city": "Noida / Greater Noida",
+      "website": "https://www.interarchbuildings.com/",
+      "description": "Interarch Building Solutions Limited is an Indian pre-engineered building (PEB) company based in Noida / Greater Noida. It designs and fabricates pre-engineered steel buildings, roof and wall sheeting systems and structural steel for industrial and commercial projects in India.",
+      "product_lines": [
+        "Pre-engineered steel buildings",
+        "Roof and wall sheeting systems",
+        "Structural steel fabrication"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.interarchbuildings.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.interarchbuildings.com/",
+      "photo_urls": [
+        "https://www.interarchbuildings.com/public/frontend/images/banner-about.jpg",
+        "https://www.interarchbuildings.com/public/frontend/images/about-img1.jpg",
+        "https://www.interarchbuildings.com/public/frontend/images/gn-banner.jpg",
+        "https://www.interarchbuildings.com/public/frontend/images/pantnagar-banner1.jpg",
+        "https://www.interarchbuildings.com/public/frontend/images/tamil-banner1.jpg",
+        "https://www.interarchbuildings.com/public/frontend/images/kichha-banner1.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/interarch/06.jpg"
+      ],
+      "slug": "interarch",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India"
+      ]
+    },
+    {
+      "company_name": "CRH plc",
+      "primary_category": "Construction",
+      "country": "Ireland",
+      "city": "Dublin",
+      "website": "https://www.crh.com/",
+      "description": "CRH plc is an Irish building-materials group headquartered in Dublin. It produces cement, aggregates and asphalt, readymix concrete and building products, with primary operations in North America and Europe.",
+      "product_lines": [
+        "Cement",
+        "Aggregates and asphalt",
+        "Readymix concrete and building products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.crh.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.crh.com/who-we-are/",
+      "photo_urls": [
+        "https://www.crh.com/wp-content/uploads/2025/03/LI-In-Bug1.png",
+        "https://www.crh.com/wp-content/uploads/2025/09/Vector-102.jpg",
+        "https://www.crh.com/wp-content/uploads/2025/09/Vector-103.jpg",
+        "https://www.crh.com/wp-content/uploads/2025/09/Vector-104.jpg",
+        "https://www.crh.com/wp-content/uploads/2026/05/Rectangle-1-1.png",
+        "https://www.crh.com/wp-content/uploads/2026/05/Rectangle-1.png",
+        "https://www.crh.com/wp-content/uploads/2026/05/Rectangle-2.png",
+        "https://www.crh.com/wp-content/uploads/2026/06/Rectangle-1-1.png",
+        "https://www.crh.com/wp-content/uploads/2026/06/Rectangle-1.png",
+        "https://www.crh.com/wp-content/uploads/2026/06/Rectangle-2.png",
+        "https://www.crh.com/wp-content/uploads/2026/06/Rectangle-3.png",
+        "https://www.crh.com/wp-content/uploads/2026/06/Screenshot-2025-05-21-at-09.23.06-1.jpg"
+      ],
+      "local_images": [],
+      "slug": "crh",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Ireland",
+        "North America",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "The Timken Company",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "North Canton, Ohio",
+      "website": "https://www.timken.com/",
+      "description": "The Timken Company is a global manufacturer of engineered bearings and industrial motion products. Headquartered in North Canton, Ohio, the company operates from 45 countries.",
+      "product_lines": [
+        "Tapered roller bearings",
+        "Ball and precision bearings",
+        "Mounted bearings",
+        "Industrial gearing and motion products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.timken.com/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings); ISO 14001",
+          "source": "https://www.timken.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.timken.com/about/",
+      "photo_urls": [
+        "https://www.timken.com/wp-content/uploads/2025/03/About-Banner_RT.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR18070040-CSR.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR23080031-CSR.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR24100048-CSR.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/02/Global-Team.jpg",
+        "https://www.timken.com/wp-content/uploads/2020/08/The-Timken-Company-About-Us-1200x630-1.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/03/upscalemedia-transformed-1-1.png",
+        "https://www.timken.com/wp-content/uploads/2025/03/upscalemedia-transformed-2.png",
+        "https://www.timken.com/wp-content/uploads/2025/08/GettyImages-1139901707-CSR-1.jpg",
+        "https://www.timken.com/wp-content/uploads/2025/08/TKR24100092-CSR-PRODUCT-REVISED.jpg",
+        "https://www.timken.com/wp-content/uploads/2026/05/Construction-Banner-comp.jpg",
+        "https://www.timken.com/wp-content/uploads/2026/08/Envirospexx-bearing-300x200-1.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/06-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/timken/07-prod.jpg"
+      ],
+      "slug": "timken",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United States",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "NSK Ltd.",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.nsk.com/",
+      "description": "NSK Ltd. , also known in some markets as NSK Automation, is a large manufacturer of bearings globally and the largest in Japan. The company produces industrial machinery bearings, precision machinery and parts, and automotive bearings and components.",
+      "product_lines": [
+        "Deep groove ball bearings",
+        "Angular contact ball bearings",
+        "Automotive bearings and precision parts"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nsk.com/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings); ISO 14001",
+          "source": "https://www.nsk.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nsk.com/company/",
+      "photo_urls": [
+        "https://www.nsk.com/content/dam/nsk/common/img/header/Mood-Content-Company-1600x230.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/nsk/05.jpg"
+      ],
+      "slug": "nsk",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Japan",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "KSB SE & Co. KGaA",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Frankenthal",
+      "website": "https://www.ksb.com/",
+      "description": "KSB SE & Co. KGaA is a German manufacturer of pumps and industrial valves, headquartered in Frankenthal. Founded in 1871, the group supplies water and process pumps, valves and foundry castings to building-services, water, energy and industrial customers worldwide.",
+      "product_lines": [
+        "Water and process pumps",
+        "Industrial valves",
+        "Foundry castings (group)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ksb.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; CE / PED for pumps and valves (confirm on product)",
+          "source": "https://www.ksb.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ksb.com/en-global/company",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/02-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/03-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/ksb/b01.jpg"
+      ],
+      "slug": "ksb",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "WILO SE",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Dortmund",
+      "website": "https://wilo.com/",
+      "description": "WILO SE is a German manufacturer of pumps and pump systems for the building technology, water and industrial sectors with headquarters in Dortmund, Germany. Founded in 1872 as copper and brass factory by Louis Opländer, the company has over 90 production facitlities in more than 50 countries and employs around 9000 people worldwide.",
+      "product_lines": [
+        "Helix vertical multistage pumps",
+        "Building-services pumps",
+        "Water and industrial pump systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://wilo.com/"
+        },
+        {
+          "name": "ISO 14001; CE for building-services pumps",
+          "source": "https://wilo.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Wilo",
+      "photo_urls": [
+        "https://cms.media.wilo.com/cdnpic/wilo108932/1224271/wilo108932_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo166272/1237127/wilo166272_1416x350.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo251879/4192184/wilo251879_696x625.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo369707/10000982/wilo369707__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo653159/10000970/wilo653159__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo724540/10000914/wilo724540__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo734516/10000940/wilo734516__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo734685/9985081/wilo734685__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo760235/10667312/wilo760235__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo798144/11537412/wilo798144__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo798146/11532119/wilo798146__1x62.jpg",
+        "https://cms.media.wilo.com/cdnpic/wilo798147/11532123/wilo798147__1x62.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/wilo/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/wilo/02-prod.jpg"
+      ],
+      "slug": "wilo",
+      "source_platform": "Wikipedia / company media",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "primary_category": "Industrial Parts",
+      "country": "China",
+      "city": "Luoyang, Henan",
+      "website": "https://www.lycbearing.com/",
+      "description": "Luoyang Bearing Group Co., Ltd. (LYC) is a large Chinese bearing manufacturer based in Luoyang, Henan. It produces deep-groove ball bearings, spherical and cylindrical roller bearings and large industrial bearings for OEM and MRO customers in China and export markets.",
+      "product_lines": [
+        "Deep groove ball bearings",
+        "Spherical and cylindrical roller bearings",
+        "Large industrial bearings"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.lycbearing.com/"
+        },
+        {
+          "name": "ISO 14001; automotive / industrial bearing QMS (confirm on mill site)",
+          "source": "https://www.lycbearing.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.lycbearing.com/",
+      "photo_urls": [
+        "https://res.lycbearing.com/upload/blockBanner/20161018/2016JROtwhpXYR.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20161018/2016JRPf2GANab.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20161018/2016JRPvdpZNcF.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20210730/2021GdLjgcGkaC.jpg",
+        "https://res.lycbearing.com/upload/blockBanner/20161019/2016JSOSNfElNv.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/lyc-bearing/04.jpg"
+      ],
+      "slug": "lyc-bearing",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Global OEM/MRO"
+      ]
+    },
+    {
+      "company_name": "Shakti Pumps (India) Limited",
+      "primary_category": "Industrial Parts",
+      "country": "India",
+      "city": "Pithampur, Madhya Pradesh",
+      "website": "https://shaktipumps.com/",
+      "description": "Shakti Pumps (India) Limited is a listed Indian pump manufacturer based in Pithampur, Madhya Pradesh. It manufactures submersible pumps, solar pumping systems and industrial pumps for domestic irrigation/water-supply and export solar-pump markets.",
+      "product_lines": [
+        "Submersible pumps",
+        "Solar pumping systems",
+        "Industrial pumps"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://shaktipumps.com/"
+        },
+        {
+          "name": "ISO 14001; BIS / MNRE listings for solar pumps (confirm on mill site)",
+          "source": "https://shaktipumps.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://shaktipumps.com/about-us/",
+      "photo_urls": [
+        "https://shaktipumps.com/wp-content/uploads/2025/08/worker-image.webp",
+        "https://shaktipumps.com/wp-content/uploads/2025/08/about-us.webp",
+        "https://shaktipumps.com/wp-content/uploads/2025/06/3U7A6653-min-scaled-1-1.jpg",
+        "https://shaktipumps.com/wp-content/uploads/2025/05/3U7A7287-min-scaled.jpg",
+        "https://shaktipumps.com/wp-content/uploads/2025/05/3U7A7689-min-scaled.jpg",
+        "https://shaktipumps.com/wp-content/uploads/2025/07/ASM_6208-scaled.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/01.webp",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/shakti-pumps/06.jpg"
+      ],
+      "slug": "shakti-pumps",
+      "source_platform": "Company website",
+      "export_markets": [
+        "India",
+        "Export solar-pump markets"
+      ]
+    },
+    {
+      "company_name": "Flowserve Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Irving, Texas",
+      "website": "https://www.flowserve.com/",
+      "description": "The Flowserve Corporation is an American multinational corporation and one of the largest suppliers of industrial and environmental machinery such as pumps, valves, end face mechanical seals, automation, and services to the power, oil, gas, chemical and other industries. Headquartered in Irving, Texas, which is in the Dallas–Fort Worth Metroplex, Flowserve employs close to 16,000 employees in more than 50 countries. Flowserve sells products and offers aftermarket services to engineering and construction firms, original equipment manufacturers, distributors, and end users. The Flowserve brand name originated in 1997 with a merger of BW/IP and Durco International.",
+      "product_lines": [
+        "Trunnion-mounted ball valves (Argus FK76M)",
+        "ANSI process pumps (Mark 3)",
+        "Limitorque electric actuators"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.flowserve.com/"
+        },
+        {
+          "name": "API / ASME for process pumps and valves (confirm on product)",
+          "source": "https://www.flowserve.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.flowserve.com/en/products/",
+      "photo_urls": [
+        "https://example.com/sites/default/files/2025-08/Rectangle%205992.png",
+        "https://example.com/sites/default/files/2025-08/Rectangle%205993.png",
+        "https://example.com/sites/default/files/2025-08/Untitled%20design%20%2832%29_0.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2821%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2822%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2825%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2826%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2829%29_1.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2832%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2833%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2835%29.png",
+        "https://example.com/sites/default/files/2025-08/image%20%2836%29.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/flowserve/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/flowserve/02-prod.jpg"
+      ],
+      "slug": "flowserve",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United States",
+        "Global energy and process"
+      ]
+    },
+    {
+      "company_name": "AB SKF",
+      "primary_category": "Industrial Parts",
+      "country": "Sweden",
+      "city": "Gothenburg",
+      "website": "https://www.skf.com/",
+      "description": "Aktiebolaget SKF is a Swedish bearing and seal manufacturing company founded in Gothenburg, in 1907. The company manufactures and supplies bearings, seals, lubrication and lubrication systems, maintenance products, mechatronics products, power transmission products, condition monitoring systems and related services globally.",
+      "product_lines": [
+        "Rolling bearings",
+        "Seals and lubrication systems",
+        "Condition monitoring"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.skf.com/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings); ISO 14001",
+          "source": "https://www.skf.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/SKF",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c6/Gotaholm.png"
+      ],
+      "local_images": [],
+      "slug": "skf",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "Sweden",
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Amcor plc",
+      "primary_category": "Packaging",
+      "country": "Switzerland",
+      "city": "Zürich",
+      "website": "https://www.amcor.com/",
+      "description": "Amcor plc is a multinational packaging company founded in Australia that develops and produces flexible packaging, rigid containers, specialty cartons, closures and services for food, beverage, pharmaceutical, medical-device, home and personal-care, and other products.",
+      "product_lines": [
+        "Rigid custom bottles, jars and tubs",
+        "Flexible packaging films and pouches"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.amcor.com/"
+        },
+        {
+          "name": "BRC / FSSC 22000 food-packaging sites (confirm per plant)",
+          "source": "https://www.amcor.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.amcor.com/about",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Amcor_Fibre_Packaging_Australasia_factory_-_panoramio.jpg",
+        "https://images.ctfassets.net/f7tuyt85vtoa/1MtbCNCZVKpWwCbDpGBLOd/5105c63b4400d1de016385d0866129b7/GettyImages-638870064__2_.jpg",
+        "https://images.ctfassets.net/f7tuyt85vtoa/4SXVix0eDlZ2XBvJ1fNyzm/ffec5424efcd247276f3b39874bdc19c/SR23_divider_imgs_no_title_1200x627px_2__1___2___1_.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/02-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/amcor/03-prod.jpg"
+      ],
+      "slug": "amcor",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Global brand owners"
+      ]
+    },
+    {
+      "company_name": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "primary_category": "Packaging",
+      "country": "China",
+      "city": "Shenzhen",
+      "website": "https://weben.szyuto.com/",
+      "description": "Shenzhen YUTO Packaging Technology Co., Ltd. (SZSE: 002831) is a Shenzhen packaging converter specialising in rigid gift and consumer boxes, folding cartons and corrugated, plus labels and plant-fibre packaging for global brand programmes.",
+      "product_lines": [
+        "Rigid gift and consumer boxes",
+        "Folding cartons and corrugated",
+        "Labels and plant-fibre packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://weben.szyuto.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "http://www.szyuto.com/",
+      "photo_urls": [
+        "https://weben.szyuto.com/file/pic/20240820161253657340.jpg",
+        "https://weben.szyuto.com/file/pic/20241011081503420964.jpg",
+        "https://weben.szyuto.com/file/pic/20240820161105103060.jpg",
+        "https://weben.szyuto.com/file/pic/20241024083038464461.jpg",
+        "https://weben.szyuto.com/file/pic/20241026022316713341.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/04.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/05.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b06.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b07.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b08.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/yuto/b09.jpg"
+      ],
+      "slug": "yuto",
+      "source_platform": "Company website",
+      "export_markets": [
+        "China",
+        "Global brand programmes"
+      ]
+    },
+    {
+      "company_name": "Mondi plc",
+      "primary_category": "Packaging",
+      "country": "United Kingdom",
+      "city": "Weybridge",
+      "website": "https://www.mondigroup.com/",
+      "description": "Mondi plc is a multinational packaging and paper group. The company is based in Weybridge, England. It has listings on the Johannesburg Stock Exchange and the London Stock Exchange as a constituent of the FTSE 250 Index.",
+      "product_lines": [
+        "ProVantage SmartKraft White containerboard",
+        "Kraft paper",
+        "Recycle-ready FlexiBag / bag-in-box"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.mondigroup.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (paper packaging — confirm per mill)",
+          "source": "https://www.mondigroup.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.mondigroup.com/products-and-solutions/containerboard/appearance/",
+      "photo_urls": [
+        "https://example.com/ui/gfx/404.png",
+        "https://upload.wikimedia.org/wikipedia/commons/c/cc/%C5%9Awiecie_-_Zak%C5%82ady_Papiernicze._-_panoramio_%286%29_%28cropped%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/mondi/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/mondi/02-prod.jpg"
+      ],
+      "slug": "mondi",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United Kingdom",
+        "Europe",
+        "Global converters"
+      ]
+    },
+    {
+      "company_name": "Huhtamäki Oyj",
+      "primary_category": "Packaging",
+      "country": "Finland",
+      "city": "Espoo",
+      "website": "https://www.huhtamaki.com/",
+      "description": "Huhtamäki Oyj is a Finnish food-packaging company headquartered in Espoo. It manufactures foodservice paper cups and lids, moulded-fibre packaging and flexible food packaging for European and global foodservice and brand-owner customers.",
+      "product_lines": [
+        "Foodservice paper cups and lids",
+        "Moulded-fibre packaging",
+        "Flexible food packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.huhtamaki.com/"
+        },
+        {
+          "name": "BRC / FSSC 22000 foodservice packaging (confirm per plant)",
+          "source": "https://www.huhtamaki.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.huhtamaki.com/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/huhtamaki/01-prod.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/huhtamaki/02-prod.jpg"
+      ],
+      "slug": "huhtamaki",
+      "source_platform": "Company website",
+      "export_markets": [
+        "Finland",
+        "Europe",
+        "Global foodservice"
+      ]
+    },
+    {
+      "company_name": "Greif, Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Delaware, Ohio",
+      "website": "https://www.greif.com/",
+      "description": "Greif, Inc. is a US industrial-packaging manufacturer headquartered in Delaware, Ohio. It produces steel and plastic drums, intermediate bulk containers, and fibre drums, tubes and cores for global industrial packaging customers.",
+      "product_lines": [
+        "Steel and plastic drums",
+        "Intermediate bulk containers",
+        "Fibre drums, tubes and cores"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.greif.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.greif.com/about/",
+      "photo_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/greif/01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/greif/02.jpg"
+      ],
+      "slug": "greif",
+      "source_platform": "Company website",
+      "export_markets": [
+        "United States",
+        "Global industrial packaging"
+      ]
+    },
+    {
+      "company_name": "Ball Corporation",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Westminster, Colorado",
+      "website": "https://www.ball.com/",
+      "description": "Ball Corporation is an American aluminum manufacturing company headquartered in Westminster, Colorado, United States. It is best known for its early production of glass jars, lids, and related products used for home canning. Since its founding in Buffalo, New York, in 1880, when it was known as the Wooden Jacket Can Company, the Ball company has expanded and diversified into other business ventures, including aerospace technology. It eventually became the world's largest manufacturer of recyclable aluminum packaging for a variety of beverage, home and personal care applications.",
+      "product_lines": [
+        "Aluminum beverage cans",
+        "Aluminum cups and related packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ball.com/"
+        },
+        {
+          "name": "Food-contact aluminum packaging QMS (confirm per plant)",
+          "source": "https://www.ball.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Ball_Corporation",
+      "photo_urls": [],
+      "local_images": [],
+      "slug": "ball",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "United States",
+        "Global beverage fillers"
+      ]
+    },
+    {
+      "company_name": "Tetra Pak International S.A.",
+      "primary_category": "Packaging",
+      "country": "Switzerland",
+      "city": "Pully / Lausanne",
+      "website": "https://www.tetrapak.com/",
+      "description": "Tetra Pak is a Swedish multinational food packaging and processing company headquartered in Switzerland. The company offers packaging, filling machines and processing for dairy, beverages, cheese, ice cream and prepared food, including distribution tools like accumulators, cap applicators, conveyors, crate packers, film wrappers, line controllers and straw applicators.",
+      "product_lines": [
+        "Aseptic carton packages",
+        "Filling machines",
+        "Food processing equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tetrapak.com/"
+        },
+        {
+          "name": "FSSC 22000 / food-contact packaging (confirm per plant)",
+          "source": "https://www.tetrapak.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Tetra_Pak",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/20201101_Lund_Tetra_Pak_Domkyrka_1853_%2850558046818%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/tetra-pak/01.jpg"
+      ],
+      "slug": "tetra-pak",
+      "source_platform": "Wikipedia",
+      "export_markets": [
+        "Switzerland",
+        "Sweden",
+        "Global dairy and beverage"
+      ]
+    }
+  ]
+}

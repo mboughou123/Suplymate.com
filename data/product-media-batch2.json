@@ -1,0 +1,463 @@
+{
+  "construction": [
+    {
+      "product_name": "UltraTech OPC 53 Grade Cement (50 kg bag)",
+      "product_slug": null,
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug_guess": "ultratech-cement",
+      "source_url": "https://www.ultratechcement.com/for-homebuilders/products/overview/opc",
+      "unit_price": 570.0,
+      "currency": "INR",
+      "unit": "per 50 kg bag",
+      "price_note": "Official UltraTech network MRP (incl. taxes), All-India excl. Chhattisgarh/J&K/North East/Himachal, wef 22 Sep 2025 \u2014 GST advisory PDF https://www.ultratechcement.com/content/dam/ultratechcement/en/gst-advisory-to-network.pdf (OPC 53 New MRP Rs.570/bag). MRP is printed ceiling, not a dealer quote.",
+      "image_urls": [
+        "https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/products/overview/opc/_jcr_content/root/container/container/container_copy_copy/teaser.coreimg.png/1786966901000/opc.png",
+        "https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/products/overview/opc/_jcr_content/root/container/container/container_267731970_/teaser.coreimg.png/1786966921830/yellwobioy.png"
+      ],
+      "price_source_type": "printed_mrp"
+    },
+    {
+      "product_name": "UltraTech Super Cement (PPC Super / 50 kg bag)",
+      "product_slug": null,
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug_guess": "ultratech-cement",
+      "source_url": "https://www.ultratechcement.com/for-homebuilders/products/overview/ultratech-super",
+      "unit_price": 550.0,
+      "currency": "INR",
+      "unit": "per 50 kg bag",
+      "price_note": "Official UltraTech network MRP (incl. taxes), All-India excl. special regions, wef 22 Sep 2025 \u2014 GST advisory lists PPC Super HDPE New MRP Rs.550/bag. Mill product page shows Super bag artwork; no separate e-commerce unit price.",
+      "image_urls": [
+        "https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/products/overview/ultratech-super/_jcr_content/root/container/container_copy/container_copy/teaser.coreimg.png/1707274353526/cement-card-banner.png",
+        "https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/products/overview/ultratech-super/_jcr_content/root/container/container_copy/container_267731970_/teaser.coreimg.png/1707274350397/super.png"
+      ],
+      "price_source_type": "printed_mrp"
+    },
+    {
+      "product_name": "UltraTech PPC Portland Pozzolana Cement (50 kg bag)",
+      "product_slug": null,
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug_guess": "ultratech-cement",
+      "source_url": "https://www.ultratechcement.com/for-homebuilders/products/overview/ppc",
+      "unit_price": 500.0,
+      "currency": "INR",
+      "unit": "per 50 kg bag",
+      "price_note": "Official UltraTech network MRP (incl. taxes), All-India excl. special regions, wef 22 Sep 2025 \u2014 GST advisory lists PPC New MRP Rs.500/bag.",
+      "image_urls": [
+        "https://www.ultratechcement.com/content/ultratechcement/in/en/home/for-homebuilders/products/overview/ppc/_jcr_content/root/container/container/container_copy_copy/teaser.coreimg.png/1786966981369/cement-card.png"
+      ],
+      "price_source_type": "printed_mrp"
+    },
+    {
+      "product_name": "Magic Blox Eco Friendly AAC Blocks",
+      "product_slug": null,
+      "supplier_name": "Magicrete Building Solutions Private Limited",
+      "supplier_slug_guess": "magicrete-building-solutions",
+      "source_url": "https://www.magicreteaac.com/cellular-concrete-block.html",
+      "unit_price": 4500.0,
+      "currency": "INR",
+      "unit": "per cubic meter",
+      "price_note": "Magicrete IndiaMART catalog mill storefront (magicreteaac.com) Approx. Price Rs 4,500 / Cubic Meter; MOQ 24 cubic meter listed on page. Excluding taxes. Confirmed on fetch of cellular-concrete-block.html.",
+      "image_urls": [
+        "https://5.imimg.com/data5/SELLER/Default/2023/3/295174455/QL/NC/QD/2511554/magic-blox-eco-friendly-aac-blocks-1000x1000.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2023/3/295174452/FJ/KE/JG/2511554/magic-blox-eco-friendly-aac-blocks-1000x1000.jpg",
+        "https://www.magicrete.in/assets/uploads/2026/04/productlist/aac-blocks_1776938904.png"
+      ],
+      "price_source_type": "mill_list"
+    },
+    {
+      "product_name": "Magicrete AAC Wall Panels (steel-reinforced)",
+      "product_slug": null,
+      "supplier_name": "Magicrete Building Solutions Private Limited",
+      "supplier_slug_guess": "magicrete-building-solutions",
+      "source_url": "https://www.magicrete.in/walling-solutions/aac-products/aac-wall-panels",
+      "unit_price": 270.0,
+      "currency": "INR",
+      "unit": "per sq ft",
+      "price_note": "Mill site schema.org Offer on product page: price 270 INR, unitText SQFT, priceType Estimate (not a firm cart price). Treat as indicative; RFQ for project quote.",
+      "image_urls": [
+        "https://www.magicrete.in/assets/uploads/2026/04/productdetil/untitled--672-x-536-px---1-_1776249493.png",
+        "https://www.magicrete.in/assets/uploads/2026/01/brochure/magicrete-wall-panel-brochure-web_1769679662.pdf"
+      ],
+      "price_source_type": "mill_estimate"
+    },
+    {
+      "product_name": "Magicrete Superflex 2K PU Tile Adhesive (4 kg bucket)",
+      "product_slug": null,
+      "supplier_name": "Magicrete Building Solutions Private Limited",
+      "supplier_slug_guess": "magicrete-building-solutions",
+      "source_url": "https://www.magicrete.in/tile-stone-fixing-solutions/tile-adhesive/superflex-2k",
+      "unit_price": 3200.0,
+      "currency": "INR",
+      "unit": "per 4 kg bucket",
+      "price_note": "Mill site schema.org Offer as of fetch: price 3200 INR, unitText BUCKET for Magicrete Superflex 2K Tile Adhesive (4kg).",
+      "image_urls": [
+        "https://www.magicrete.in/assets/uploads/2026/04/productdetil/superflex--672-x-536-px---2-_1776936889.png",
+        "https://www.magicrete.in/assets/uploads/2026/04/productlist/superflex--282-x-300px-_1776938252.png"
+      ],
+      "price_source_type": "mill_list"
+    },
+    {
+      "product_name": "Durable Steel Structure Prefabricated Warehouse for Commercial Use",
+      "product_slug": null,
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug_guess": "hangxiao-steel-structure-shandong",
+      "source_url": "https://hxsssd.en.made-in-china.com/product/DExYdkRCCNpj/China-Durable-Steel-Structure-Prefabricated-Warehouse-for-Commercial-Use.html",
+      "unit_price": 15.0,
+      "currency": "USD",
+      "unit": "per square meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$15.00\u201345.00 / Square Meter; MOQ 100 Square Meters. unit_price = low bound (schema.org price 15.00).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00LcdbEOotACre/Durable-Steel-Structure-Prefabricated-Warehouse-for-Commercial-Use.jpg",
+        "https://image.made-in-china.com/2f0j00VkJcTEqrhCzM/Durable-Steel-Structure-Prefabricated-Warehouse-for-Commercial-Use.webp",
+        "https://image.made-in-china.com/2f0j00hqdoTucmLepB/Durable-Steel-Structure-Prefabricated-Warehouse-for-Commercial-Use.webp"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Versatile Heavy Duty Prefab Steel Structure Buildings for Factories and Warehouses",
+      "product_slug": null,
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug_guess": "hangxiao-steel-structure-shandong",
+      "source_url": "https://hxsssd.en.made-in-china.com/product/BxPphlwOLdRk/China-Versatile-Heavy-Duty-Prefab-Steel-Structure-Buildings-for-Factories-and-Warehouses.html",
+      "unit_price": 19.0,
+      "currency": "USD",
+      "unit": "per square meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$19.00\u201359.00 / Square Meter; MOQ 100 Square Meters. unit_price = low bound.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00OMgkAoNBcmuq/Versatile-Heavy-Duty-Prefab-Steel-Structure-Buildings-for-Factories-and-Warehouses.jpg",
+        "https://image.made-in-china.com/2f0j00OMrcAZFKNdzb/Versatile-Heavy-Duty-Prefab-Steel-Structure-Buildings-for-Factories-and-Warehouses.webp",
+        "https://image.made-in-china.com/2f0j00OBgcdANHewrq/Versatile-Heavy-Duty-Prefab-Steel-Structure-Buildings-for-Factories-and-Warehouses.webp"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Prefabricated Heavy Duty PEB Steel Structural Warehouse (Hangar / Industrial)",
+      "product_slug": null,
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug_guess": "hangxiao-steel-structure-shandong",
+      "source_url": "https://hxsssd.en.made-in-china.com/product/nQIpoNHvgeUl/China-Prefabricated-Heavy-Duty-Business-Commercial-Modular-Metal-Framing-Peb-Steel-Structural-Warehouse-for-Industrial-Use-Roof-Hangar-Hall-Farm-House-Villa-Church.html",
+      "unit_price": 15.0,
+      "currency": "USD",
+      "unit": "per square meter",
+      "price_note": "Made-in-China FOB listing as of fetch: US$15.00\u201345.00 / Square Meter; MOQ 100 Square Meters. unit_price = low bound (schema.org price 15.00).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00RcgoDQAKJqpE/Prefabricated-Heavy-Duty-Business-Commercial-Modular-Metal-Framing-Peb-Steel-Structural-Warehouse-for-Industrial-Use-Roof-Hangar-Hall-Farm-House-Villa-Church.jpg",
+        "https://image.made-in-china.com/2f0j00jqAkfVisfluP/Prefabricated-Heavy-Duty-Business-Commercial-Modular-Metal-Framing-Peb-Steel-Structural-Warehouse-for-Industrial-Use-Roof-Hangar-Hall-Farm-House-Villa-Church.webp"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Zamil Steel Pre-Engineered Building (PEB) System",
+      "product_slug": null,
+      "supplier_name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "supplier_slug_guess": "zamil-steel-peb",
+      "source_url": "https://www.zamilsteel.com/peb/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 engineered PEB quoted per project on mill site; no public unit price.",
+      "image_urls": [
+        "https://www.zamilsteel.com/peb/en/img/slides/bg-1.jpg",
+        "https://www.zamilsteel.com/peb/en/img/slides/bg-2.jpg",
+        "https://zamilsteel.com/peb/en/img/manufacturing.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Zamil Tempcon / Insulated Sandwich Wall & Roof Panels",
+      "product_slug": null,
+      "supplier_name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "supplier_slug_guess": "zamil-steel-peb",
+      "source_url": "https://www.zamilsteel.com/peb/en/insulated-panels",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill insulated-panels page (Tempcon TCSQ / Temparch) has no public unit price.",
+      "image_urls": [
+        "https://www.zamilsteel.com/peb/en/img/panels/bcoms/products-sw-panel.jpg",
+        "https://www.zamilsteel.com/peb/en/img/panels/bcoms/tempcon-thermal.jpg",
+        "https://www.zamilsteel.com/peb/en/img/applications.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Zamil Fabricated PEB Structural Steel Members",
+      "product_slug": null,
+      "supplier_name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "supplier_slug_guess": "zamil-steel-peb",
+      "source_url": "https://www.zamilsteel.com/peb/en/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill fabrication-line product photo (primary/secondary beams); project pricing only.",
+      "image_urls": [
+        "https://zamilsteel.com/peb/en/img/manufacturing.jpg",
+        "https://www.zamilsteel.com/peb/en/img/slides/bg-3.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "CMC Steel Reinforcing Bar (ASTM A615 / A706 mill rebar)",
+      "product_slug": null,
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug_guess": "commercial-metals-company",
+      "source_url": "https://www.cmc.com/en-us/what-we-do/america/mill-products/rebar",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 CMC mill products page invites quote; no public unit price for rebar.",
+      "image_urls": [
+        "https://www.cmc.com/getmedia/82be22bb-99e5-4adb-baa2-94cf8475c8a5/CMC_Mill_Rebar_Thumbnail.png"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "CMC Fabricated Rebar / Construction Products",
+      "product_slug": null,
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug_guess": "commercial-metals-company",
+      "source_url": "https://www.cmc.com/en-us/what-we-do/america/mill-products/rebar",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 fabrication shop product photo from official CMC media; pricing by RFQ.",
+      "image_urls": [
+        "https://www.cmc.com/getmedia/4bfa8be1-1d30-462b-b177-3e497888de9a/repurposed-bonus-fab.jpg"
+      ],
+      "price_source_type": "rfq"
+    }
+  ],
+  "industrial": [
+    {
+      "product_name": "API Casting Steel Trunnion Ball Valves",
+      "product_slug": null,
+      "supplier_name": "Chaoda Valves Group Co., Ltd.",
+      "supplier_slug_guess": "chaoda-valves",
+      "source_url": "https://chaodavalves.en.made-in-china.com/product/QspnYTIJUxhE/China-API-Casting-Steel-Trunnion-Ball-Valves.html",
+      "unit_price": 49.99,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$49.99\u20134,999.99 / Piece; MOQ 1 Piece. unit_price = low bound (schema.org 49.99).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00RQEYcZDtufbw/API-Casting-Steel-Trunnion-Ball-Valves.jpg",
+        "https://chaodausa.com/wp-content/uploads/2023/05/BAllValve2-1024x956-1.jpg"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "1500lb High Pressure Forged Floating Ball Valve",
+      "product_slug": null,
+      "supplier_name": "Chaoda Valves Group Co., Ltd.",
+      "supplier_slug_guess": "chaoda-valves",
+      "source_url": "https://chaodavalves.en.made-in-china.com/product/fNaxzwGjgrWV/China-1500lb-High-Pressure-Forged-Floating-Ball-Valve.html",
+      "unit_price": 499.99,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$499.99\u201349,999.99 / Piece. unit_price = low bound (schema.org 499.99).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00DdvTzhicfOob/1500lb-High-Pressure-Forged-Floating-Ball-Valve.jpg",
+        "https://chaodausa.com/wp-content/uploads/2023/05/SSBVFloat_Shadow2.png"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Metal Seated High Temperature Ball Valve",
+      "product_slug": null,
+      "supplier_name": "Chaoda Valves Group Co., Ltd.",
+      "supplier_slug_guess": "chaoda-valves",
+      "source_url": "https://chaodavalves.en.made-in-china.com/product/lSWnXwbYnRpe/China-Metal-Seated-High-Temperature-Ball-Valve.html",
+      "unit_price": 499.99,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$499.99\u201349,999.99 / Piece. unit_price = low bound (schema.org 499.99).",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00RZwTlsYBANzh/Metal-Seated-High-Temperature-Ball-Valve.jpg"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Stainless Steel Hexagon Head Bolts (DIN933 / DIN931 / GB5782/5783)",
+      "product_slug": null,
+      "supplier_name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "tong-ming-enterprise",
+      "source_url": "http://www.tongming.com.cn/product/showproduct.php?id=220&lang=en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill product page (materials 304/316, M4\u2013M33). No public FOB on tongming.com.cn; B2B shop tongming.biz requires login.",
+      "image_urls": [
+        "http://www.tongming.com.cn/upload/201904/1554345817.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Stainless Steel Hexagon Nuts (DIN934 / GB6170 etc.)",
+      "product_slug": null,
+      "supplier_name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "tong-ming-enterprise",
+      "source_url": "http://www.tongming.com.cn/product/showproduct.php?id=222&lang=en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill nuts catalog page; no public unit price.",
+      "image_urls": [
+        "http://www.tongming.com.cn/upload/201904/1554346019.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Stainless Steel Self-Tapping Screws (GB845 / GB846)",
+      "product_slug": null,
+      "supplier_name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "tong-ming-enterprise",
+      "source_url": "http://www.tongming.com.cn/product/showproduct.php?id=223&lang=en",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill self-tapping screws page (ST2.9\u2013ST6.3, 304); no public unit price.",
+      "image_urls": [
+        "http://www.tongming.com.cn/upload/201904/1554345635.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "Monobloc Pump KDI-520++ 5 HP Three Phase 415 V",
+      "product_slug": null,
+      "supplier_name": "Kirloskar Brothers Limited",
+      "supplier_slug_guess": "kirloskar-brothers",
+      "source_url": "https://eshop.kirloskarpumps.com/monobloc-pump-kdi-520-5-hp-three-phase-415-volts.html",
+      "unit_price": 53513.0,
+      "currency": "INR",
+      "unit": "per pumpset",
+      "price_note": "Official Kirloskar e-shop special price as of fetch: \u20b953,513.00 (MRP \u20b969,340.00), incl. of all taxes. schema.org price 53513.",
+      "image_urls": [
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kdi-01_1_20_1_2.jpg"
+      ],
+      "price_source_type": "retail_eshop"
+    },
+    {
+      "product_name": "Monobloc Pump KDS-225++ 2 HP Single Phase 230 V (50\u00d750 mm)",
+      "product_slug": null,
+      "supplier_name": "Kirloskar Brothers Limited",
+      "supplier_slug_guess": "kirloskar-brothers",
+      "source_url": "https://eshop.kirloskarpumps.com/monobloc-pump-kds-225-2-hp-single-phase-230-volts-size-50-mm-x-50-mm.html",
+      "unit_price": 20602.8,
+      "currency": "INR",
+      "unit": "per pumpset",
+      "price_note": "Official Kirloskar e-shop special price as of fetch: \u20b920,602.80 (MRP \u20b926,700.00), incl. of all taxes. schema.org price 20602.8.",
+      "image_urls": [
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kds-06_22_2.jpg"
+      ],
+      "price_source_type": "retail_eshop"
+    },
+    {
+      "product_name": "Vertical Inline Pump KCIL 64-6 50 HP Three Phase 415 V",
+      "product_slug": null,
+      "supplier_name": "Kirloskar Brothers Limited",
+      "supplier_slug_guess": "kirloskar-brothers",
+      "source_url": "https://eshop.kirloskarpumps.com/vertical-inline-pump-kcil-64-6-50-hp-three-phase-415-volts.html",
+      "unit_price": 412952.8,
+      "currency": "INR",
+      "unit": "per pumpset",
+      "price_note": "Official Kirloskar e-shop special price as of fetch: \u20b9412,952.80 (MRP \u20b9535,080.00), incl. of all taxes. schema.org price 412952.8.",
+      "image_urls": [
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/p/_/p_1.jpg",
+        "https://media-eshop.kirloskarpumps.com/media/catalog/product/w/e/web_banner_ord_10782_kcil-05_4_1.jpg"
+      ],
+      "price_source_type": "retail_eshop"
+    },
+    {
+      "product_name": "Equal Tee ASTM A403 TP304/304L",
+      "product_slug": null,
+      "supplier_name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+      "supplier_slug_guess": "zhejiang-zhiju-pipeline",
+      "source_url": "https://zhiju123.en.made-in-china.com/product/CwgQdktJnicb/China-Equal-Tee-ASTM-A403-TP304-304L.html",
+      "unit_price": 37.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$37 / Piece; MOQ 100 Pieces. schema.org price 37.00.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00cjiGthNaJTko/Equal-Tee-ASTM-A403-TP304-304L.jpg"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "90deg Elbow LR TP304/304L",
+      "product_slug": null,
+      "supplier_name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+      "supplier_slug_guess": "zhejiang-zhiju-pipeline",
+      "source_url": "https://zhiju123.en.made-in-china.com/product/fZPnwLabXHce/China-90deg-Elbow-Lr-TP304-304L.html",
+      "unit_price": 20.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$20 / Piece. schema.org price 20.00.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00LKhfTNFastqR/90deg-Elbow-Lr-TP304-304L.jpg"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "Stainless Steel Butt-Welding Slip-on Flange",
+      "product_slug": null,
+      "supplier_name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+      "supplier_slug_guess": "zhejiang-zhiju-pipeline",
+      "source_url": "https://zhiju123.en.made-in-china.com/product/ksNnvOHUEpcr/China-Stainless-Steel-Butt-Welding-Slip-on-Flange.html",
+      "unit_price": 83.0,
+      "currency": "USD",
+      "unit": "per piece",
+      "price_note": "Made-in-China FOB listing as of fetch: US$83 / Piece. schema.org price 83.00.",
+      "image_urls": [
+        "https://image.made-in-china.com/2f0j00jeOUhgaECioA/Stainless-Steel-Butt-Welding-Slip-on-Flange.jpg"
+      ],
+      "price_source_type": "listed_fob"
+    },
+    {
+      "product_name": "LEO XST Standard Centrifugal Pump",
+      "product_slug": null,
+      "supplier_name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "leo-group-pump-zhejiang",
+      "source_url": "https://www.leopump.com/en/products/standard-centrifugal-pump-xst.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill product page (no public FOB). Alibaba storefront historically bot-blocked; skipped.",
+      "image_urls": [
+        "https://www.leopump.com/en/bocupload/2023/07/18/XST-standard-centrifugal-pump.png",
+        "https://leopump.com/en/bocupload/at/image/20231118/1700286706761987tKiv.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "LEO XSTP Horizontal Single-Stage Centrifugal Pump",
+      "product_slug": null,
+      "supplier_name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "leo-group-pump-zhejiang",
+      "source_url": "https://www.leopump.com/en/products/horizontal-single-stage-centrifugal-pump-xstp.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill product page; contact for order/dealer quote.",
+      "image_urls": [
+        "https://www.leopump.com/en/bocupload/2023/11/18/XSTP-Horizontal-Single-stage-Centrifugal-Pump.png",
+        "https://leopump.com/en/bocupload/at/image/20231118/1700287074803825eYSG.jpg"
+      ],
+      "price_source_type": "rfq"
+    },
+    {
+      "product_name": "LEO XZS Stainless Steel Standard Centrifugal Pump",
+      "product_slug": null,
+      "supplier_name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+      "supplier_slug_guess": "leo-group-pump-zhejiang",
+      "source_url": "https://www.leopump.com/en/products/stainless-steel-centrifugal-pump-xzs.html",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ / not listed \u2014 mill product page; no public unit price.",
+      "image_urls": [
+        "https://www.leopump.com/en/bocupload/2023/07/18/XZS-stainless-steel-standard-centrifugal-pump.png",
+        "https://leopump.com/en/bocupload/at/image/20231106/1699262590447252f7Yg.jpg"
+      ],
+      "price_source_type": "rfq"
+    }
+  ]
+}

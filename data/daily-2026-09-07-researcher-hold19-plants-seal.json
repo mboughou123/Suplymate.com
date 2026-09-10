@@ -1,0 +1,43 @@
+{
+  "label": "QA-HOLD19-MILL-PLANTS-RESEARCHER-OK-PARTIAL",
+  "qa_at_pt": "2026-09-07 ~10:35 PT",
+  "qa_at_utc": "2026-09-07T17:35:00+00:00",
+  "source_enhancer_seal": "QA-HOLD19-MILL-PLANTS-ENHANCER-SEALED",
+  "ok": [
+    "berg-pipe",
+    "saudi-steel-pipe",
+    "alleima",
+    "webco",
+    "corinth-pipeworks",
+    "tpco",
+    "encore-wire",
+    "nkt",
+    "pca",
+    "flsmidth",
+    "wartsila",
+    "abb",
+    "severstal"
+  ],
+  "soft": [
+    "mueller-industries",
+    "american-spiralweld",
+    "aptar"
+  ],
+  "hold": [
+    {
+      "slug": "shougang",
+      "reason": "Heritage/tourism park reuse (visitor-glazed base, landscaped public plaza), not operating steel mill"
+    }
+  ],
+  "blocked_skipped": [
+    "stupp",
+    "interpipe"
+  ],
+  "counts": {
+    "ok": 13,
+    "soft": 3,
+    "hold": 1,
+    "blocked_skipped": 2
+  },
+  "wire_recommendation": "HoW may append OK+SOFT (16) to PR #15; exclude shougang HOLD; keep stupp+interpipe blocked/out of mill-seal."
+}

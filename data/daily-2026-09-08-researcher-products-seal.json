@@ -1,0 +1,255 @@
+{
+  "label": "QA-DAILY-2026-09-08-PRODUCTS-RESEARCHER-PARTIAL",
+  "sealed_at_utc": "2026-09-09T17:06:17Z",
+  "sealed_at_pt": "2026-09-09 10:06 AM PT",
+  "scope": "products only \u2014 50 RFQ SKUs; mills already wired; SKUs parked. Visually read all unique enhanced product JPGs (98 files / 54 hashes). Skipped images/products/nlmk/mill-fallback-2.jpg (tiny unenhanced).",
+  "pr_15": "not touched",
+  "needs_ai_generate": 0,
+  "unit_price_null": 50,
+  "rfq_products": 50,
+  "counts": {
+    "products": 50,
+    "enhanced_jpgs": 98,
+    "unique_hashes": 54,
+    "ok": 4,
+    "soft": 34,
+    "hold": 12,
+    "by_category": {
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Industrial Parts": 12,
+      "Hardware & Motion": 6,
+      "Steel & Metals": 5,
+      "Cables & Electrical": 3,
+      "Construction": 2
+    }
+  },
+  "ok": [
+    {
+      "slug": "schuetz",
+      "note": "schuetz-ibc.jpg = SCH\u00dcTZ-branded IBC totes (OK). Do not wire schuetz-drums.jpg = AV Nackawic pulp/woodchip mill (hash f7e4873f, shared with vidrala-bottles)."
+    },
+    {
+      "slug": "komatsu",
+      "note": "komatsu-mining.jpg = Komatsu excavator on demolition site (OK). komatsu-construction.jpg = Tokyo Komatsu Building HQ (soft campus)."
+    },
+    {
+      "slug": "hitachi-cm",
+      "note": "hitachi-cm-excavators.jpg = Hitachi ZAXIS wheeled excavator (OK; boom logo masked). hitachi-cm-mining.jpg = industrial campus aerial (soft)."
+    },
+    {
+      "slug": "volvo-ce",
+      "note": "volvo-ce-excavators.jpg = Volvo A25D articulated hauler (OK; also shows Komatsu excavator). Do not wire volvo-ce-loaders.jpg = Quattro plant-hire truck with CAT excavators (wrong brand for Volvo CE loaders)."
+    }
+  ],
+  "soft": [
+    {
+      "slug": "eew",
+      "note": "shared galvanized pipe-bundle (607191f2) + glycol HVAC elbows (26ceb685) \u2014 category-correct/soft; prefer eew-lsaw.jpg; glycol is not mill LSAW stock"
+    },
+    {
+      "slug": "butting",
+      "note": "same pipe-bundle + glycol pair \u2014 soft; prefer butting-clad.jpg"
+    },
+    {
+      "slug": "eisenbau-kramer",
+      "note": "ebk-offshore = pipe-bundle soft; ebk-saw = terraced hillside village HOLD poison (27f08af0). Wireable: ebk-offshore.jpg"
+    },
+    {
+      "slug": "hengyang-valin",
+      "note": "pipe-bundle + glycol soft; not mill-specific OCTG"
+    },
+    {
+      "slug": "changbao",
+      "note": "pipe-bundle + glycol soft"
+    },
+    {
+      "slug": "dura-bond",
+      "note": "durabond-coat = pipe-bundle soft; durabond-line = village HOLD (27f08af0). Wireable: durabond-coat.jpg"
+    },
+    {
+      "slug": "chelpipe",
+      "note": "pipe-bundle + glycol soft"
+    },
+    {
+      "slug": "panyu-chu-kong",
+      "note": "pck-ssaw = glycol soft; pck-lsaw = village HOLD. Wireable: pck-ssaw.jpg only"
+    },
+    {
+      "slug": "borusan-mannesmann",
+      "note": "pipe-bundle + glycol soft"
+    },
+    {
+      "slug": "erciyas",
+      "note": "erciyas-water = pipe-bundle soft; erciyas-spiral = village HOLD. Wireable: erciyas-water.jpg"
+    },
+    {
+      "slug": "toscelik",
+      "note": "pipe-bundle + glycol soft"
+    },
+    {
+      "slug": "cangzhou-spiral",
+      "note": "cangzhou-piling = glycol soft; cangzhou-ssaw = village HOLD. Wireable: cangzhou-piling.jpg"
+    },
+    {
+      "slug": "verallia",
+      "note": "verallia-bottles = shrink-wrapped glass bottle pallets soft/OK category; verallia-jars = tetra5 CONSTRUCCIONES industrial campus HOLD. Wireable: verallia-bottles.jpg"
+    },
+    {
+      "slug": "vidrala",
+      "note": "vidrala-containers = glass bottle pallets soft (shared e780c731); vidrala-bottles = pulp mill HOLD (f7e4873f). Wireable: vidrala-containers.jpg"
+    },
+    {
+      "slug": "gerresheimer",
+      "note": "gerresheimer-pharma = beverage bottle pallets soft (not pharma glass); gerresheimer-glass = roof/campus soft"
+    },
+    {
+      "slug": "schneider-electric",
+      "note": "se-motor-control = generic conveyor/sensor rig soft (shared 6dfff455); mill-fallback-2 = Schneider Electric HQ campus soft"
+    },
+    {
+      "slug": "siemens",
+      "note": "siemens-automation = SIEMENS courtyard campus soft; siemens-drives = Bangkok BTS Skytrain HOLD. Wireable: siemens-automation.jpg"
+    },
+    {
+      "slug": "rockwell-automation",
+      "note": "rockwell-control = shared sensor rig soft; mill-fallback-2 = Rockwell Automation Global HQ campus soft"
+    },
+    {
+      "slug": "honeywell",
+      "note": "honeywell-process = shared sensor rig soft; honeywell-sensing = Charlotte Honeywell HQ campus soft"
+    },
+    {
+      "slug": "spirax-sarco",
+      "note": "mill-fallback-2 = manor/estate campus soft; spirax-thermal = paul-lueftung.de HVAC heat-exchanger diagram HOLD. Wireable: mill-fallback-2.jpg"
+    },
+    {
+      "slug": "rotork",
+      "note": "rotork-actuators = Rotork campus soft; rotork-flow = technician with motorized valve actuators soft/category-correct. Prefer rotork-flow.jpg"
+    },
+    {
+      "slug": "liebherr",
+      "note": "liebherr-cranes = LIEBHERR-branded building soft campus; liebherr-mining = generic coastal construction site soft"
+    },
+    {
+      "slug": "putzmeister",
+      "note": "mill-fallback-2 = Putzmeister HQ campus soft; putzmeister-pumping = used Daikin air compressor HOLD. Wireable: mill-fallback-2.jpg"
+    },
+    {
+      "slug": "caterpillar",
+      "note": "cat-construction = Caterpillar HQ campus soft; cat-engines = sepia portrait of a man HOLD. Wireable: cat-construction.jpg"
+    },
+    {
+      "slug": "rittal",
+      "note": "mill-fallback-2 = grey industrial control-panel enclosure soft/category; rittal-climate = shared sensor rig soft. Prefer mill-fallback-2.jpg"
+    },
+    {
+      "slug": "nvent",
+      "note": "nvent-thermal = shared sensor soft; mill-fallback-2 = rooftop stainless exhaust vents soft/weak thermal-adjacent"
+    },
+    {
+      "slug": "oriental-motor",
+      "note": "mill-fallback-2 = Oriental Motor plant exterior soft; oriental-ac = shared sensor soft. Prefer mill-fallback-2.jpg"
+    },
+    {
+      "slug": "acerinox",
+      "note": "acerinox-long = rebar sidewalk soft (shared 027b3ce7); mill-fallback-2 = Acerinox HQ campus soft"
+    },
+    {
+      "slug": "aperam",
+      "note": "aperam-electrical = shared rebar soft; mill-fallback-2 = aprolam plant HOLD wrong brand. Wireable: aperam-electrical.jpg"
+    },
+    {
+      "slug": "carpenter",
+      "note": "carpenter-bar = shared rebar soft; mill-fallback-2 = Carpenter Technology archival armor-test still soft historical"
+    },
+    {
+      "slug": "nlmk",
+      "note": "nlmk-electrical = shared rebar soft only. Skipped images/products/nlmk/mill-fallback-2.jpg (tiny unenhanced, not in enhanced/)"
+    },
+    {
+      "slug": "algoma",
+      "note": "algoma-hrs = shared rebar soft; mill-fallback-2 = steel mill/ore-yard waterfront campus soft. Prefer mill-fallback-2.jpg"
+    },
+    {
+      "slug": "knauf",
+      "note": "knauf-gypsum = museum gypsum mineral specimen soft/weak; knauf-insulation = BAUER rail-yard campus HOLD wrong brand. Wireable: knauf-gypsum.jpg"
+    },
+    {
+      "slug": "owens-corning",
+      "note": "owens-insulation = same museum gypsum soft (shared d4c0793c); owens-roofing = smokestack/campus soft"
+    }
+  ],
+  "hold": [
+    {
+      "slug": "can-pack",
+      "reason": "canpack-food = shrink-wrapped glass bottles (not beverage/food cans); mill-fallback-2 = derelict abandoned factory \u2014 both wrong-entity"
+    },
+    {
+      "slug": "mayr-melnhof",
+      "reason": "mm-cartonboard = Tetra Brik/Tetra Pak carton (wrong brand); img3 = abandoned stone ruin mill \u2014 not cartonboard product"
+    },
+    {
+      "slug": "constantia-flexibles",
+      "reason": "cflex-pharma = same Tetra Pak carton (wrong brand); mill-fallback-2 = foil-wrapped food on backyard grill \u2014 not industrial flexible packaging"
+    },
+    {
+      "slug": "rengo",
+      "reason": "rengo-paperboard = abandoned stone ruin (shared 10d45532); mill-fallback-2 = Chilean plaza (Coopeuch/PARE) \u2014 not Rengo corrugated product"
+    },
+    {
+      "slug": "nine-dragons",
+      "reason": "nd-containerboard = same abandoned ruin; nd-packaging-paper = Beijing No.2 Paper Mill gate (\u5317\u4eac\u9020\u7eb8\u4e8c\u5382) \u2014 wrong mill"
+    },
+    {
+      "slug": "mauser",
+      "reason": "mauser-drums = SCH\u00dcTZ-branded IBCs (wrong brand, shared 477d88ff); mauser-ibc = Austin-Healey sports car \u2014 both poison"
+    },
+    {
+      "slug": "misumi",
+      "reason": "misumi-fa = Japanese residential/industrial townscape (not FA mechanical components); catalog distributor, no product still"
+    },
+    {
+      "slug": "legrand",
+      "reason": "legrand-cable-mgmt = satellite/spacecraft assembly (shared 208682b6); mill-fallback-2 = 19th-c barn butter-churn engraving \u2014 both poison"
+    },
+    {
+      "slug": "harmonic-drive",
+      "reason": "harmonic-gears = flat CGI gear icon; harmonic-actuators = START-button UI graphic \u2014 not product photography"
+    },
+    {
+      "slug": "sumitomo-electric",
+      "reason": "sei-fiber = satellite assembly; sei-power-cable = WWI Fernsprech-Abteilung field telephone wagon \u2014 both poison (shared with fujikura/belden/legrand)"
+    },
+    {
+      "slug": "fujikura",
+      "reason": "fujikura-fiber = WWI Fernsprech still; fujikura-power = satellite assembly \u2014 both poison"
+    },
+    {
+      "slug": "belden",
+      "reason": "belden-networking = satellite; belden-signal = WWI Fernsprech \u2014 both poison"
+    }
+  ],
+  "shared_hashes": {
+    "607191f2": "galvanized pipe-bundle \u2014 10 Tube SKUs (soft category)",
+    "26ceb685": "glycol HVAC insulated elbows \u2014 9 Tube SKUs (soft/weak, not mill stock)",
+    "27f08af0": "terraced hillside village \u2014 5 Tube SKUs (HOLD poison sibling)",
+    "6dfff455": "conveyor/sensor rig \u2014 SE/Rockwell/Honeywell/Rittal/nVent/Oriental Motor",
+    "027b3ce7": "rebar sidewalk \u2014 Acerinox/Aperam/Carpenter/NLMK/Algoma",
+    "208682b6": "satellite assembly \u2014 Legrand/Sumitomo fiber/Fujikura power/Belden networking",
+    "e6629835": "WWI Fernsprech-Abteilung \u2014 Sumitomo power/Fujikura fiber/Belden signal",
+    "e780c731": "glass bottle pallets \u2014 Verallia/Vidrala containers/Gerresheimer pharma/Can-Pack food",
+    "10d45532": "abandoned stone ruin \u2014 Mayr img3/Rengo paperboard/Nine Dragons containerboard",
+    "caeb0f78": "Tetra Pak carton \u2014 Mayr cartonboard/Constantia pharma",
+    "477d88ff": "SCH\u00dcTZ IBCs \u2014 Sch\u00fctz ibc (OK) / Mauser drums (HOLD wrong brand)",
+    "f7e4873f": "pulp/woodchip mill aerial \u2014 Vidrala bottles / Sch\u00fctz drums (HOLD)",
+    "d4c0793c": "museum gypsum mineral \u2014 Knauf gypsum / Owens insulation"
+  },
+  "wire_recommendation": "Do not wire the full 50-SKU product pack. Wire ok (4): schuetz (schuetz-ibc only), komatsu (prefer komatsu-mining), hitachi-cm (excavators), volvo-ce (excavators/A25D only). Wire soft (34) only as generic category/campus stills \u2014 never promote poison siblings (village hash 27f08af0, glycol as mill OCTG, Tetra Pak, abandoned ruin, satellite, WWI Fernsprech, Bangkok Skytrain, Austin-Healey, Daikin compressor, portrait cat-engines, aprolam, BAUER, Quattro CAT loaders, Nackawic pulp for glass/drums). Do not wire any hold slug (12). needs_ai_generate remains 0; all unit_price null/RFQ. Mills already wired; product SKUs stay parked pending replacements for HOLD. Do not message agents. Do not touch PR #15.",
+  "nlmk_tiny_skip": "images/products/nlmk/mill-fallback-2.jpg not enhanced (tiny). Reviewed enhanced nlmk-electrical.jpg only.",
+  "notes": [
+    "Identity/price OK otherwise \u2014 50/50 unit_price null, needs_ai_generate 0.",
+    "Mills sealed separately; this pass is product stills only.",
+    "Shared wrong-entity clusters dominate Tube, Cables, and several Packaging SKUs."
+  ]
+}

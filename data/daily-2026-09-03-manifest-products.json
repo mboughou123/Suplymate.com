@@ -1,0 +1,1910 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amlite-heatready-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/amcor/amlite-heatready-local.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amlite-heatready.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/amcor/amlite-heatready.jpg",
+    "in_size": [
+      600,
+      642
+    ],
+    "out_size": [
+      1200,
+      1284
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amprima-paper.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/amcor/amprima-paper.jpg",
+    "in_size": [
+      800,
+      393
+    ],
+    "out_size": [
+      1200,
+      589
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/amprima-pillow.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/amcor/amprima-pillow.jpg",
+    "in_size": [
+      600,
+      849
+    ],
+    "out_size": [
+      1200,
+      1698
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/amcor/healthcare-packaging-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/amcor/healthcare-packaging-local.jpg",
+    "in_size": [
+      2000,
+      850
+    ],
+    "out_size": [
+      1600,
+      680
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/arcelormittal/am-hrc-mill-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/arcelormittal/am-hrc-mill-local-2.jpg",
+    "in_size": [
+      1280,
+      1863
+    ],
+    "out_size": [
+      1280,
+      1863
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/arcelormittal/am-hrc-mill-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/arcelormittal/am-hrc-mill-local.jpg",
+    "in_size": [
+      1280,
+      1863
+    ],
+    "out_size": [
+      1280,
+      1863
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/aerosol-tab-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ball/aerosol-tab-local.jpg",
+    "in_size": [
+      1204,
+      670
+    ],
+    "out_size": [
+      1204,
+      670
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/aerosol-tab.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ball/aerosol-tab.jpg",
+    "in_size": [
+      800,
+      532
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/aluminum-can-model-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ball/aluminum-can-model-local.jpg",
+    "in_size": [
+      4943,
+      3041
+    ],
+    "out_size": [
+      1600,
+      984
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/can-tab-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ball/can-tab-local.jpg",
+    "in_size": [
+      1920,
+      1152
+    ],
+    "out_size": [
+      1600,
+      960
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ball/can-tab.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ball/can-tab.jpg",
+    "in_size": [
+      800,
+      532
+    ],
+    "out_size": [
+      1200,
+      798
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/bluescope/colorbond-mill-local-2.jpg",
+    "in_size": [
+      590,
+      400
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/bluescope/colorbond-mill-local.jpg",
+    "in_size": [
+      590,
+      400
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/bluescope/colorbond-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/bluescope/colorbond-mill.jpg",
+    "in_size": [
+      590,
+      400
+    ],
+    "out_size": [
+      1200,
+      813
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/far-east-cable/fecable-power-local-2.jpg",
+    "in_size": [
+      500,
+      320
+    ],
+    "out_size": [
+      1200,
+      768
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/far-east-cable/fecable-power-local.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/far-east-cable/fecable-power.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/far-east-cable/fecable-power.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/finolex-cables/finolex-power-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/finolex-cables/finolex-power-local-2.jpg",
+    "in_size": [
+      372,
+      372
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/finolex-cables/finolex-power-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/finolex-cables/finolex-power-local.jpg",
+    "in_size": [
+      1600,
+      750
+    ],
+    "out_size": [
+      1600,
+      750
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/flowserve/butterfly-fallback-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/flowserve/butterfly-fallback-local-2.jpg",
+    "in_size": [
+      2048,
+      1614
+    ],
+    "out_size": [
+      1600,
+      1260
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/flowserve/butterfly-fallback-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/flowserve/butterfly-fallback-local.jpg",
+    "in_size": [
+      2048,
+      1365
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/gerdau/gerdau-bar-rod-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/gerdau/gerdau-bar-rod-local.jpg",
+    "in_size": [
+      2560,
+      860
+    ],
+    "out_size": [
+      1600,
+      537
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/gerdau/gerdau-bar-rod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/gerdau/gerdau-bar-rod.jpg",
+    "in_size": [
+      2400,
+      806
+    ],
+    "out_size": [
+      1600,
+      537
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/empty-ibc.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/empty-ibc.jpg",
+    "in_size": [
+      1872,
+      1360
+    ],
+    "out_size": [
+      1600,
+      1162
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/fibre-drums-paints.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/fibre-drums-paints.jpg",
+    "in_size": [
+      380,
+      494
+    ],
+    "out_size": [
+      1200,
+      1560
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/fibre-health.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/fibre-health.jpg",
+    "in_size": [
+      1170,
+      780
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/ibc-industrial.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/ibc-industrial.jpg",
+    "in_size": [
+      2400,
+      1287
+    ],
+    "out_size": [
+      1600,
+      858
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/powder-ibc.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/powder-ibc.jpg",
+    "in_size": [
+      1112,
+      720
+    ],
+    "out_size": [
+      1200,
+      776
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drum-commons.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/steel-drum-commons.jpg",
+    "in_size": [
+      800,
+      986
+    ],
+    "out_size": [
+      1200,
+      1479
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drums-chemicals.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/steel-drums-chemicals.jpg",
+    "in_size": [
+      380,
+      494
+    ],
+    "out_size": [
+      1200,
+      1560
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/greif/steel-drums-lubes.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/greif/steel-drums-lubes.jpg",
+    "in_size": [
+      380,
+      494
+    ],
+    "out_size": [
+      1200,
+      1560
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/hengtong/hengtong-cable-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/hengtong/hengtong-cable-local.jpg",
+    "in_size": [
+      1920,
+      522
+    ],
+    "out_size": [
+      1600,
+      435
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/hengtong/hengtong-cable.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/hengtong/hengtong-cable.jpg",
+    "in_size": [
+      1920,
+      522
+    ],
+    "out_size": [
+      1600,
+      435
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/holcim/ecopact-concrete-local-2.jpg",
+    "in_size": [
+      2506,
+      1673
+    ],
+    "out_size": [
+      1600,
+      1068
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/holcim/ecopact-concrete-local.jpg",
+    "in_size": [
+      2048,
+      1347
+    ],
+    "out_size": [
+      1600,
+      1052
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/holcim/ecopact-concrete.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/holcim/ecopact-concrete.jpg",
+    "in_size": [
+      2048,
+      1347
+    ],
+    "out_size": [
+      1600,
+      1052
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/flexible-food-pack.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/huhtamaki/flexible-food-pack.jpg",
+    "in_size": [
+      2400,
+      1600
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/huhtamaki-safety.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/huhtamaki/huhtamaki-safety.jpg",
+    "in_size": [
+      2400,
+      1600
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/moulded-fibre-picnic.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/huhtamaki/moulded-fibre-picnic.jpg",
+    "in_size": [
+      750,
+      500
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/huhtamaki/picnic-flex.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/huhtamaki/picnic-flex.jpg",
+    "in_size": [
+      750,
+      500
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/interarch/interarch-peb-local-2.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/interarch/interarch-peb-local.jpg",
+    "in_size": [
+      1640,
+      798
+    ],
+    "out_size": [
+      1600,
+      778
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/interarch/interarch-peb.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/interarch/interarch-peb.jpg",
+    "in_size": [
+      1634,
+      668
+    ],
+    "out_size": [
+      1600,
+      654
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/international-paper/ip-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/international-paper/ip-hero.jpg",
+    "in_size": [
+      1920,
+      1376
+    ],
+    "out_size": [
+      1600,
+      1146
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/international-paper/ip-packaging-teaser.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/international-paper/ip-packaging-teaser.jpg",
+    "in_size": [
+      640,
+      427
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/austenitic-ss-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/austenitic-ss-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/bimetal-composite-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/bimetal-composite-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/butt-weld-fittings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/butt-weld-fittings.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/clad-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/clad-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/cra-alloy-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/cra-alloy-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/duplex-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/duplex-mill.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/duplex-ss-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/duplex-ss-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/jiuli-fittings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/jiuli-fittings.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/jiuli-ss-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/jiuli-ss-mill.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/nickel-alloy-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/nickel-alloy-pipe.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/ti-mill.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/ti-mill.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jiuli/titanium-alloy-tube.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jiuli/titanium-alloy-tube.jpg",
+    "in_size": [
+      400,
+      300
+    ],
+    "out_size": [
+      1200,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jsw-cement/jsw-cement-opc-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jsw-cement/jsw-cement-opc-local-2.jpg",
+    "in_size": [
+      1902,
+      811
+    ],
+    "out_size": [
+      1600,
+      682
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/jsw-cement/jsw-cement-opc-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/jsw-cement/jsw-cement-opc-local.jpg",
+    "in_size": [
+      2480,
+      3508
+    ],
+    "out_size": [
+      1600,
+      2263
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/etanorm-commons-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ksb/etanorm-commons-local-2.jpg",
+    "in_size": [
+      4000,
+      3307
+    ],
+    "out_size": [
+      1600,
+      1322
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/etanorm-commons-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ksb/etanorm-commons-local.jpg",
+    "in_size": [
+      4000,
+      2669
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/ksb/ksb-valves-fallback-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/ksb/ksb-valves-fallback-local.jpg",
+    "in_size": [
+      1200,
+      992
+    ],
+    "out_size": [
+      1200,
+      992
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-dgbb-1-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-dgbb-1-local.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-dgbb-2-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-dgbb-2-local.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-large-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-large-2.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-large-3.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-large-3.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-mill-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-mill-bearings.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-spherical-2-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-spherical-2-local-2.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/lyc-bearing/lyc-spherical-2-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/lyc-bearing/lyc-spherical-2-local.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/mondi/corrugated-fibre-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/mondi/corrugated-fibre-local.jpg",
+    "in_size": [
+      2100,
+      2506
+    ],
+    "out_size": [
+      1600,
+      1909
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/mondi/smartkraft-board-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/mondi/smartkraft-board-local.jpg",
+    "in_size": [
+      1600,
+      1066
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/nippon-steel/nippon-sheet-coil-local-2.jpg",
+    "in_size": [
+      557,
+      378
+    ],
+    "out_size": [
+      1200,
+      814
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/nippon-steel/nippon-sheet-coil-local.jpg",
+    "in_size": [
+      699,
+      388
+    ],
+    "out_size": [
+      1200,
+      666
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nippon-steel/nippon-sheet-coil.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/nippon-steel/nippon-sheet-coil.jpg",
+    "in_size": [
+      699,
+      388
+    ],
+    "out_size": [
+      1200,
+      666
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nsk/nsk-cutaway.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/nsk/nsk-cutaway.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/nsk/nsk-spherical-comp.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/nsk/nsk-spherical-comp.jpg",
+    "in_size": [
+      500,
+      500
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/oman-cables/oman-cables-lv-mv-local-2.jpg",
+    "in_size": [
+      1120,
+      928
+    ],
+    "out_size": [
+      1200,
+      994
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/oman-cables/oman-cables-lv-mv-local.jpg",
+    "in_size": [
+      1120,
+      928
+    ],
+    "out_size": [
+      1200,
+      994
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/oman-cables/oman-cables-lv-mv.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/oman-cables/oman-cables-lv-mv.jpg",
+    "in_size": [
+      1120,
+      928
+    ],
+    "out_size": [
+      1200,
+      994
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/outokumpu/outokumpu-stainless-local-2.jpg",
+    "in_size": [
+      4096,
+      2733
+    ],
+    "out_size": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/outokumpu/outokumpu-stainless-local.jpg",
+    "in_size": [
+      4096,
+      3067
+    ],
+    "out_size": [
+      1600,
+      1198
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/outokumpu/outokumpu-stainless.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/outokumpu/outokumpu-stainless.jpg",
+    "in_size": [
+      2400,
+      1350
+    ],
+    "out_size": [
+      1600,
+      900
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/gwangyang-works-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/posco/gwangyang-works-local.jpg",
+    "in_size": [
+      1280,
+      960
+    ],
+    "out_size": [
+      1280,
+      960
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-commons-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/posco/posco-commons-local-2.jpg",
+    "in_size": [
+      1024,
+      582
+    ],
+    "out_size": [
+      1200,
+      682
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-commons-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/posco/posco-commons-local.jpg",
+    "in_size": [
+      1024,
+      575
+    ],
+    "out_size": [
+      1200,
+      673
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/posco/posco-hrc-newsroom-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/posco/posco-hrc-newsroom-local.jpg",
+    "in_size": [
+      1280,
+      1707
+    ],
+    "out_size": [
+      1280,
+      1707
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-optical-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/prysmian/prysmian-optical-local.jpg",
+    "in_size": [
+      1280,
+      2819
+    ],
+    "out_size": [
+      1280,
+      2819
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-power-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/prysmian/prysmian-power-local-2.jpg",
+    "in_size": [
+      1280,
+      2276
+    ],
+    "out_size": [
+      1280,
+      2276
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/prysmian/prysmian-power-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/prysmian/prysmian-power-local.jpg",
+    "in_size": [
+      4000,
+      3000
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/sail/sail-plate-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/sail/sail-plate-local.jpg",
+    "in_size": [
+      5184,
+      3456
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/sail/sail-rebar-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/sail/sail-rebar-local.jpg",
+    "in_size": [
+      3888,
+      2592
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/industry-pro.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/industry-pro.jpg",
+    "in_size": [
+      399,
+      315
+    ],
+    "out_size": [
+      1200,
+      947
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-bunch.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/solar-bunch.jpg",
+    "in_size": [
+      1763,
+      2400
+    ],
+    "out_size": [
+      1600,
+      2178
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-series-1.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/solar-series-1.jpg",
+    "in_size": [
+      1536,
+      1024
+    ],
+    "out_size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/solar-series-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/solar-series-2.jpg",
+    "in_size": [
+      1536,
+      1024
+    ],
+    "out_size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/srn-50hz.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/srn-50hz.jpg",
+    "in_size": [
+      553,
+      426
+    ],
+    "out_size": [
+      1200,
+      924
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-jpg.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/submersible-jpg.jpg",
+    "in_size": [
+      444,
+      260
+    ],
+    "out_size": [
+      1200,
+      702
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-motor.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/submersible-motor.jpg",
+    "in_size": [
+      474,
+      426
+    ],
+    "out_size": [
+      1200,
+      1078
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/submersible-pump.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/submersible-pump.jpg",
+    "in_size": [
+      444,
+      260
+    ],
+    "out_size": [
+      1200,
+      702
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shakti-pumps/vertical-pumps.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shakti-pumps/vertical-pumps.jpg",
+    "in_size": [
+      444,
+      261
+    ],
+    "out_size": [
+      1200,
+      705
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc-local-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shree-cement/shree-opc-ppc-local-2.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shree-cement/shree-opc-ppc-local.jpg",
+    "in_size": [
+      600,
+      400
+    ],
+    "out_size": [
+      1200,
+      800
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/shree-cement/shree-opc-ppc.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/shree-cement/shree-opc-ppc.jpg",
+    "in_size": [
+      1500,
+      772
+    ],
+    "out_size": [
+      1500,
+      772
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/kugellager-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/skf/kugellager-local.jpg",
+    "in_size": [
+      2048,
+      1536
+    ],
+    "out_size": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/skf-dgbb-1950s-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/skf/skf-dgbb-1950s-local.jpg",
+    "in_size": [
+      6000,
+      4000
+    ],
+    "out_size": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/skf-dgbb-1950s.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/skf/skf-dgbb-1950s.jpg",
+    "in_size": [
+      2396,
+      2400
+    ],
+    "out_size": [
+      1600,
+      1602
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/skf/spherical-cutaway-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/skf/spherical-cutaway-local.jpg",
+    "in_size": [
+      1280,
+      821
+    ],
+    "out_size": [
+      1280,
+      821
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/smurfit-westrock/sw-experience.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/smurfit-westrock/sw-experience.jpg",
+    "in_size": [
+      740,
+      740
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/smurfit-westrock/sw-sustainable-design.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/smurfit-westrock/sw-sustainable-design.jpg",
+    "in_size": [
+      680,
+      450
+    ],
+    "out_size": [
+      1200,
+      794
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/aboutus-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tenaris/aboutus-hero.jpg",
+    "in_size": [
+      1920,
+      850
+    ],
+    "out_size": [
+      1600,
+      708
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/coiled-tubing.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tenaris/coiled-tubing.jpg",
+    "in_size": [
+      980,
+      650
+    ],
+    "out_size": [
+      1200,
+      795
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/industrial-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tenaris/industrial-pipe.jpg",
+    "in_size": [
+      1919,
+      851
+    ],
+    "out_size": [
+      1600,
+      709
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tenaris/line-pipe-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tenaris/line-pipe-hero.jpg",
+    "in_size": [
+      1920,
+      860
+    ],
+    "out_size": [
+      1600,
+      716
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-brik-family-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tetra-pak/tetra-brik-family-local.jpg",
+    "in_size": [
+      1280,
+      853
+    ],
+    "out_size": [
+      1280,
+      853
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-brik-family.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tetra-pak/tetra-brik-family.jpg",
+    "in_size": [
+      500,
+      341
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/tetra-pak/tetra-prisma-family.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/tetra-pak/tetra-prisma-family.jpg",
+    "in_size": [
+      500,
+      341
+    ],
+    "out_size": [
+      1200,
+      818
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/automation-bearings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/timken/automation-bearings.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/bearing-cutaway-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/timken/bearing-cutaway-local.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/envirospexx-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/timken/envirospexx-local.jpg",
+    "in_size": [
+      550,
+      625
+    ],
+    "out_size": [
+      1200,
+      1363
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/timken/mounted-units.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/timken/mounted-units.jpg",
+    "in_size": [
+      900,
+      654
+    ],
+    "out_size": [
+      1200,
+      872
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/hydrogen-tubulars.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/vallourec/hydrogen-tubulars.jpg",
+    "in_size": [
+      1044,
+      600
+    ],
+    "out_size": [
+      1200,
+      689
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/industrial-seamless.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/vallourec/industrial-seamless.jpg",
+    "in_size": [
+      1044,
+      600
+    ],
+    "out_size": [
+      1200,
+      689
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/og-market.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/vallourec/og-market.jpg",
+    "in_size": [
+      1044,
+      600
+    ],
+    "out_size": [
+      1200,
+      689
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/vallourec/vam-thread.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/vallourec/vam-thread.jpg",
+    "in_size": [
+      1597,
+      1277
+    ],
+    "out_size": [
+      1597,
+      1277
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/sewage-pump.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/wilo/sewage-pump.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/stratos-circulator.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/wilo/stratos-circulator.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-building-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/wilo/wilo-building-2.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-helix-alt.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/wilo/wilo-helix-alt.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/wilo/wilo-wastewater.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/wilo/wilo-wastewater.jpg",
+    "in_size": [
+      696,
+      625
+    ],
+    "out_size": [
+      1200,
+      1077
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/coated-74.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/coated-74.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/erw-hfw-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/erw-hfw-pipe.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/erw-pipe-17.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/erw-pipe-17.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/firefighting-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/firefighting-pipe.jpg",
+    "in_size": [
+      1000,
+      511
+    ],
+    "out_size": [
+      1200,
+      613
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/gas-pipeline.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/gas-pipeline.jpg",
+    "in_size": [
+      1000,
+      511
+    ],
+    "out_size": [
+      1200,
+      613
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-erw-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/hdg-erw-pipe.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-pipe-73.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/hdg-pipe-73.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-rectangular-tube.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/hdg-rectangular-tube.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/hdg-rhs-14.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/hdg-rhs-14.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/pipe-fittings-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/pipe-fittings-local.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/pipe-fittings.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/pipe-fittings.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/plastic-coated-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/plastic-coated-pipe.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/shs-rhs-welded.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/shs-rhs-welded.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/ssaw-13.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/ssaw-13.jpg",
+    "in_size": [
+      1000,
+      600
+    ],
+    "out_size": [
+      1200,
+      720
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/ssaw-spiral-pipe.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/ssaw-spiral-pipe.jpg",
+    "in_size": [
+      552,
+      311
+    ],
+    "out_size": [
+      1200,
+      676
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/youfa-hollow.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/youfa-hollow.jpg",
+    "in_size": [
+      1110,
+      1507
+    ],
+    "out_size": [
+      1200,
+      1629
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/youfa/youfa-yard.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/youfa/youfa-yard.jpg",
+    "in_size": [
+      1920,
+      600
+    ],
+    "out_size": [
+      1600,
+      500
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/electronics-packaging-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/electronics-packaging-local.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/electronics-packaging.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/electronics-packaging.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/folding-cartons.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/folding-cartons.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/rigid-gift-boxes.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/rigid-gift-boxes.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-2026-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-2026-local.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-2026.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-2026.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-ce-1-local.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-ce-1-local.jpg",
+    "in_size": [
+      607,
+      328
+    ],
+    "out_size": [
+      1200,
+      648
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-consumer-packaging-flatlay.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-corrugated.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-corrugated.jpg",
+    "in_size": [
+      607,
+      328
+    ],
+    "out_size": [
+      1200,
+      648
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-hero.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-hero.jpg",
+    "in_size": [
+      2400,
+      281
+    ],
+    "out_size": [
+      1600,
+      187
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-pack-2.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-pack-2.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/daily/2026-09-03/images/products/yuto/yuto-rigid-packaging-product.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-03/enhanced/products/yuto/yuto-rigid-packaging-product.jpg",
+    "in_size": [
+      646,
+      350
+    ],
+    "out_size": [
+      1200,
+      650
+    ]
+  }
+]

@@ -1,0 +1,2246 @@
+{
+  "generated_at_utc": "2026-09-03T18:08:52.841481+00:00",
+  "generated_at_pt": "2026-09-03 11:08 PT",
+  "phase": "suplymate-phase1",
+  "task": "Daily expansion 2026-09-03 — NEW suppliers batch (~50 mills) with photos; products overnight sealed at 70",
+  "pricing_policy": "No prices. MOQ is unpublished mill RFQ. Never invent prices.",
+  "selection_policy": "New mills only — none of these names/slugs appear in daily/2026-09-03/_exclude_names.txt (merged-59 + daily/2026-09-02 + category JSONs). Mapped from images/suppliers/<slug>/ + research/mill_index.json + wiki_summaries.json. Prefer mills/factories over traders. No AI mill yards.",
+  "exclude_csv": "/workspace/suppliers-phase1/daily/2026-09-03/_exclude_names.txt",
+  "counts": {
+    "suppliers_total": 50,
+    "with_local_images": 50,
+    "with_any_photo": 50,
+    "local_image_files": 165,
+    "remote_photo_urls": 287,
+    "products_total": 70,
+    "by_category": {
+      "Tube & Pipes": 12,
+      "Packaging": 10,
+      "Industrial Parts": 14,
+      "Hardware & Motion": 6,
+      "Steel & Metals": 5,
+      "Cables & Electrical": 2,
+      "Construction": 1
+    }
+  },
+  "suppliers": [
+    {
+      "company_name": "TMK",
+      "primary_category": "Tube & Pipes",
+      "country": "Russia",
+      "city": "Moscow",
+      "website": "https://www.tmk-group.com/",
+      "description": "TMK (Pipe Metallurgical Company / OAO TMK) is a major Russian pipe manufacturer headquartered in Moscow. It produces seamless OCTG, line pipe, industrial seamless and welded tube and premium connections for oil and gas and industrial customers in Russia, CIS and export markets.",
+      "product_lines": [
+        "Seamless OCTG pipe",
+        "Line pipe",
+        "Industrial seamless and welded tube",
+        "Premium connections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tmk-group.com/"
+        },
+        {
+          "name": "API 5CT / API 5L (OCTG and line pipe — confirm current licenses)",
+          "source": "https://www.tmk-group.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tmk-group.com/",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/File:Seversky_Pipe_Plant_(August_2022",
+        "https://www.tmk-group.com/photogallery/162/tmk-took-first-prize-at-a-corporate-championship-of-professional-skills",
+        "https://www.tmk-group.com/photogallery/159/tmks-plants-held-an-open-doors-event-as-part-of-the-professionalism-federal-project"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/tmk/tmk_01.jpg"
+      ],
+      "slug": "tmk",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "Russia",
+        "CIS",
+        "Middle East",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "SeAH Steel Corporation",
+      "primary_category": "Tube & Pipes",
+      "country": "South Korea",
+      "city": "Seoul",
+      "website": "https://www.seahsteel.co.kr/eng/",
+      "description": "SeAh Steel Holdings is a South Korean holding company located in Seoul, South Korea. It was founded as a steel manufacturer in 1960 by Lee Jong-Deok with the name of Pusan Steel Pipe Industry Corporation.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Seamless pipe",
+        "Stainless steel pipe",
+        "Structural hollow sections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.seahsteel.co.kr/eng/"
+        },
+        {
+          "name": "API / ASTM pipe product specs (confirm on mill site)",
+          "source": "https://www.seahsteel.co.kr/eng/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/SeAh_Steel_Holdings",
+      "photo_urls": [
+        "https://cdn.steeldaily.co.kr/news/photo/202510/195690_184999_4556.jpg",
+        "https://seahsteelusa.com/wp-content/uploads/2017/07/SeahHomepage_FullSize_Processes.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/seah-steel/seah-steel_01.jpg"
+      ],
+      "slug": "seah-steel",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "South Korea",
+        "Asia",
+        "Americas",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Benteler Steel/Tube",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Paderborn",
+      "website": "https://www.benteler.com/en/products-services/steel-tube/",
+      "description": "Benteler International Austria GmbH (BENTELER) is a holding company in German family ownership. The Group companies operate worldwide in the fields of automotive technology, steel and tube production, engineering, and autonomous mobility. The headquarters of Benteler International Austria GmbH is in Salzburg (Austria), as of 2010. The company is owned by the Benteler family.",
+      "product_lines": [
+        "Seamless steel tube",
+        "Welded precision tube",
+        "Automotive tube",
+        "Energy and industrial tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.benteler.com/en/products-services/steel-tube/"
+        },
+        {
+          "name": "IATF 16949 (automotive tube); PED (confirm on mill site)",
+          "source": "https://www.benteler.com/en/products-services/steel-tube/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Benteler_International",
+      "photo_urls": [
+        "https://www.benteler.com/",
+        "https://www.benteler.com/fileadmin/user_upload/06-News-and-Media/Latest-News/2023/20230918_BENTELER_celebrates_100th_anniversary_of_its_Schloss_Neuhaus_site/Kuehlbett_Schloss_Neuhaus.jpg",
+        "https://www.benteler.com/fileadmin/user_upload/06-News-and-Media/Media/03-BENTELER_Steel-Tube/BENTELER_SteelTube_Image.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/benteler-steel-tube/benteler-steel-tube_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/benteler-steel-tube/benteler-steel-tube_02.jpg"
+      ],
+      "slug": "benteler-steel-tube",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Maruichi Steel Tube Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.maruichikokan.co.jp/en/",
+      "description": "Maruichi Steel Tube Ltd. (Maruichi Kokan) is a Japanese steel-pipe manufacturer headquartered in Osaka. The company produces ERW steel pipe, structural hollow sections, mechanical tube and galvanized pipe for domestic Japanese and export construction and industrial markets.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Structural steel tube",
+        "Mechanical tube",
+        "Galvanized pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.maruichikokan.co.jp/en/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.maruichikokan.co.jp/en/",
+      "photo_urls": [
+        "https://www.maruichikokan.co.jp/assets/img/top/mv-3.jpg",
+        "https://voltage21.hitachi-ies.co.jp/_ct/17756549",
+        "https://voltage21.hitachi-ies.co.jp/_ct/17756549"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/maruichi-steel-tube/maruichi-steel-tube_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/maruichi-steel-tube/maruichi-steel-tube_02.jpg"
+      ],
+      "slug": "maruichi-steel-tube",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Maharashtra Seamless Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Gurugram",
+      "website": "https://www.jindal.com/msl/",
+      "description": "Maharashtra Seamless Limited (MSL) is an Indian seamless and ERW pipe manufacturer in the Jindal group, headquartered in Gurugram. It produces seamless carbon-steel pipe, OCTG, boiler tubes and ERW pipe for energy and industrial customers in India and export markets.",
+      "product_lines": [
+        "Seamless carbon steel pipe",
+        "OCTG",
+        "Boiler tubes",
+        "ERW pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jindal.com/msl/"
+        },
+        {
+          "name": "API 5CT / 5L (confirm current licenses on mill site)",
+          "source": "https://www.jindal.com/msl/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.jindal.com/msl/",
+      "photo_urls": [
+        "https://images.squarespace-cdn.com/content/v1/60656b033797a34db2ec1462/14ad390e-b474-4fb6-815f-e7b2fab1f159/Maharashtra+Seamless+Pipes.JPG",
+        "https://images.squarespace-cdn.com/content/v1/60656b033797a34db2ec1462/794cd720-7e48-4418-9d8a-543964c6c4fa/buy+seamless+boiler+tubes+in+India.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/maharashtra-seamless/maharashtra-seamless_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/maharashtra-seamless/maharashtra-seamless_02.jpg"
+      ],
+      "slug": "maharashtra-seamless",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "India",
+        "Middle East",
+        "Africa",
+        "Southeast Asia"
+      ]
+    },
+    {
+      "company_name": "ISMT Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Pune",
+      "website": "https://www.ismt.co.in/",
+      "description": "ISMT Limited (formerly Indian Seamless Metal Tubes) is a Pune-based Indian manufacturer of seamless tubes and alloy tubes. Product lines include bearing tubes, precision tubes and specialty seamless tubular products for automotive and industrial OEMs in India and export markets.",
+      "product_lines": [
+        "Seamless tubes",
+        "Alloy tubes",
+        "Bearing tubes",
+        "Precision tubes"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ismt.co.in/"
+        },
+        {
+          "name": "ISO / automotive tube QMS (confirm on mill site)",
+          "source": "https://www.ismt.co.in/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ismt.co.in/",
+      "photo_urls": [
+        "https://www.kirloskarferrous.com/en/web/ismt-limited/infrastructure/tube-plant",
+        "https://www.kirloskarferrous.com/web/ismt-limited/infrastructure/tube-plant",
+        "https://www.kirloskarferrous.com/en/tubesplant"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ismt/ismt_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ismt/ismt_02.jpg"
+      ],
+      "slug": "ismt",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "India",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Zekelman Industries (Wheatland Tube)",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.zekelman.com/",
+      "description": "Zekelman Industries is a Canadian company owned by the Zekelman family, including billionaires Barry, Clayton, and Alan Zekelman. They own Atlas Tube, a steel tubing manufacturer in Canada and the US.",
+      "product_lines": [
+        "ERW steel pipe",
+        "Standard and line pipe",
+        "Electrical conduit",
+        "Hollow structural sections"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.zekelman.com/"
+        },
+        {
+          "name": "ASTM / UL conduit and pipe specs (confirm per product)",
+          "source": "https://www.zekelman.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Zekelman_Industries",
+      "photo_urls": [
+        "https://www.wheatland.com/wp-content/uploads/2024/08/made-in-usa-hero-full-original-image.jpg",
+        "https://www.zekelman.com/wp-content/uploads/2025/11/A94I0164-scaled.jpg",
+        "https://www.zekelman.com/wp-content/uploads/2025/12/LowRes-JPG-DSCF8454-scaled.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/zekelman/zekelman_01.jpg"
+      ],
+      "slug": "zekelman",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ]
+    },
+    {
+      "company_name": "Northwest Pipe Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Vancouver, WA",
+      "website": "https://www.nwpipe.com/",
+      "description": "Northwest Pipe Company (NWPX) is a US manufacturer of engineered steel water transmission pipe headquartered in Vancouver, Washington. It produces pressure pipe, fabricated steel pipe and related pipeline products for municipal water and industrial infrastructure projects primarily in North America.",
+      "product_lines": [
+        "Engineered steel water pipe",
+        "Pressure pipe",
+        "Pipeline products",
+        "Fabricated steel pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nwpipe.com/"
+        },
+        {
+          "name": "AWWA steel water-pipe specs (confirm per project)",
+          "source": "https://www.nwpipe.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nwpipe.com/",
+      "photo_urls": [
+        "https://www.nwpipe.com/app/uploads/2025/12/Adelanto-Drone-01-WEB.jpg",
+        "https://www.nwpipe.com/app/uploads/2023/08/Tracy-Verticast-Drone.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/northwest-pipe/northwest-pipe_01.jpg"
+      ],
+      "slug": "northwest-pipe",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "United States",
+        "Canada"
+      ]
+    },
+    {
+      "company_name": "American Cast Iron Pipe Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Birmingham, AL",
+      "website": "https://www.american-usa.com/",
+      "description": "American Cast Iron Pipe Company is a manufacturer of ductile iron pipe, spiral-welded steel pipe, fire hydrants, and valves for the waterworks industry, and electric-resistance-welded steel pipe for the oil and natural gas industry. Headquartered in Birmingham, Alabama, American's diversified product line also includes static castings and high performance fire pumps.",
+      "product_lines": [
+        "Ductile iron pipe",
+        "Steel pipe",
+        "Fire hydrants",
+        "Valves and fittings"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.american-usa.com/"
+        },
+        {
+          "name": "AWWA ductile-iron pipe specs; NSF (confirm per product)",
+          "source": "https://www.american-usa.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/American_Cast_Iron_Pipe_Company",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/AERIAL_OVERVIEW._-_American_Cast_Iron_Pipe_Company%2C_1501_Thirty-first_Avenue%2C_North%2C_Birmingham%2C_Jefferson_County%2C_AL_HAER_ALA%2C37-BIRM%2C27-2.tif/lossy-page1-1280px-AERIAL_OVERVIEW._-_American_Cast_Iron_Pipe_Company%2C_1501_Thirty-first_Avenue%2C_North%2C_Birmingham%2C_Jefferson_County%2C_AL_HAER_ALA%2C37-BIRM%2C27-2.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/AERIAL_VIEW_SHOWING_PIPE_STORAGE_YARD._-_American_Cast_Iron_Pipe_Company%2C_1501_Thirty-first_Avenue%2C_North%2C_Birmingham%2C_Jefferson_County%2C_AL_HAER_ALA%2C37-BIRM%2C27-1.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/GENERAL_INTERIOR_VIEW%2C_LOOKING_NORTH%2C_TOWARD_THE_CUPOLA_FROM_THE_DIVERTER_AREA%2C_WITH_IRON_POUR_IN_PROCESS._-_American_Cast_Iron_Pipe_Company%2C_Cupola_Area%2C_1501_Thirty-first_HAER_ALA%2C37-BIRM%2C27A-2.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/INTERIOR_VIEW%2C_LOOKING_EAST%2C_WITH_CRANE_OPERATOR%2C_LUKE_WALKER%2C_FILLING_AN_ELECTRIC_HOLDING_FURNACE_%28MIXER%29._-_American_Cast_Iron_Pipe_Company%2C_Mixer_Building%2C_1501_Thirty-first_HAER_ALA%2C37-BIRM%2C27C-6.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/INTERIOR_VIEW%2C_LOOKING_EAST%2C_WITH_CRANE_OPERATOR%2C_LUKE_WALKER%2C_FILLING_AN_ELECTRIC_HOLDING_FURNACE_%28MIXER%29._-_American_Cast_Iron_Pipe_Company%2C_Mixer_Building%2C_1501_Thirty-first_HAER_ALA%2C37-BIRM%2C27C-7.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/INTERIOR_VIEW%2C_LOOKING_EAST%2C_WITH_CRANE_OPERATOR%2C_LUKE_WALKER%2C_FILLING_AN_ELECTRIC_HOLDING_FURNACE_%28MIXER%29._-_American_Cast_Iron_Pipe_Company%2C_Mixer_Building%2C_1501_Thirty-first_HAER_ALA%2C37-BIRM%2C27C-8.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/INTERIOR_VIEW%2C_LOOKING_EAST_WITH_CRANE_OPERATOR%2C_LUKE_WALKER%2C_TAPPING_IRON_FROM_THE_MIXER._-_American_Cast_Iron_Pipe_Company%2C_Mixer_Building%2C_1501_Thirty-first_Avenue_North%2C_HAER_ALA%2C37-BIRM%2C27C-5.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/INTERIOR_VIEW%2C_LOOKING_WEST%2C_WITH_MIXER_TO_LADLE_TRANSFER._-_American_Cast_Iron_Pipe_Company%2C_Mixer_Building%2C_1501_Thirty-first_Avenue_North%2C_Birmingham%2C_Jefferson_County%2C_AL_HAER_ALA%2C37-BIRM%2C27C-2.tif/lossy-page1-1280px-thumbnail.tif.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/acipco/acipco_01.png",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/acipco/acipco_02.png",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/acipco/acipco_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/acipco/acipco_04.jpg"
+      ],
+      "slug": "acipco",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Surya Roshni Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://www.surya.co.in/",
+      "description": "Surya Roshni Limited is an Indian electrical equipment company based in Delhi. The company has lighting and electrical consumer durables including LED lighting, fans, pumps, and household appliances. It also produces plumbing equipments like PVC pipes and steel.",
+      "product_lines": [
+        "ERW steel pipes",
+        "GI pipes",
+        "Hollow sections",
+        "Lighting products (group)"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.surya.co.in/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Surya_Roshni",
+      "photo_urls": [
+        "https://www.surya.co.in/img/steel-pipes-cr-strips/ERW-Pipe.jpg",
+        "https://www.surya.co.in/img/steel-pipes-cr-strips/Hindupur-Plant.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/surya-roshni/surya-roshni_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/surya-roshni/surya-roshni_02.jpg"
+      ],
+      "slug": "surya-roshni",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "India",
+        "Middle East",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Goodluck India Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Ghaziabad",
+      "website": "https://www.goodluckindia.com/",
+      "description": "Goodluck India Limited is an Indian steel-tube and forgings manufacturer based in Ghaziabad, Uttar Pradesh. It produces ERW pipes, precision tubes, forgings and structural steel products for domestic infrastructure and export markets.",
+      "product_lines": [
+        "ERW pipes",
+        "Precision tubes",
+        "Forgings",
+        "Structural steel products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.goodluckindia.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.goodluckindia.com/",
+      "photo_urls": [
+        "https://www.goodluckindia.com/assets/PipesAndTubes/banner/plant.jpg",
+        "https://www.goodluckindia.com/assets/cwdpipe/banner/bg4.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/goodluck-india/goodluck-india_01.jpg"
+      ],
+      "slug": "goodluck-india",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "India",
+        "Middle East",
+        "Europe",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Husteel Co., Ltd.",
+      "primary_category": "Tube & Pipes",
+      "country": "South Korea",
+      "city": "Seoul",
+      "website": "https://www.husteel.com/eng/",
+      "description": "Husteel Co., Ltd. is a South Korean steel-pipe manufacturer based in Seoul. The company produces carbon, stainless and alloy steel pipe for energy, construction and industrial customers in Korea and export markets.",
+      "product_lines": [
+        "Carbon steel pipe",
+        "Stainless steel pipe",
+        "Alloy pipe",
+        "Special pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.husteel.com/eng/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.husteel.com/eng/",
+      "photo_urls": [
+        "https://www.husteel.com/common/images/slide02.jpg",
+        "https://www.husteel.com/common/images/slide05.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/husteel/husteel_01.jpg"
+      ],
+      "slug": "husteel",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "South Korea",
+        "Asia",
+        "Middle East",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Smurfit Westrock plc",
+      "primary_category": "Packaging",
+      "country": "Ireland",
+      "city": "Dublin",
+      "website": "https://www.smurfitwestrock.com/",
+      "description": "Smurfit Westrock plc is an Irish company based in Dublin, Ireland, that manufactures corrugated and paper-based packaging. Its stock is listed on the New York Stock Exchange and the London Stock Exchange.",
+      "product_lines": [
+        "Corrugated packaging",
+        "Containerboard",
+        "Paperboard packaging",
+        "Consumer packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.smurfitwestrock.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (paper packaging — confirm per mill)",
+          "source": "https://www.smurfitwestrock.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Smurfit_Westrock",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/File:Smurfit_Westrock_Covington_Mill_(Virginia_paper_mill).jpg",
+        "https://commons.wikimedia.org/wiki/File:Paper_Mill_-_geograph.org.uk_-_355610.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smurfit-westrock/smurfit-westrock_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smurfit-westrock/smurfit-westrock_02.jpg"
+      ],
+      "slug": "smurfit-westrock",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "International Paper Company",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Memphis, TN",
+      "website": "https://www.internationalpaper.com/",
+      "description": "The International Paper Company is an American pulp and paper company, the largest such company in the world. It has approximately 39,000 employees, and is headquartered in Memphis, Tennessee.",
+      "product_lines": [
+        "Corrugated packaging",
+        "Containerboard",
+        "Uncoated freesheet paper",
+        "Pulp"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.internationalpaper.com/"
+        },
+        {
+          "name": "FSC / SFI chain-of-custody (confirm per mill)",
+          "source": "https://www.internationalpaper.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/International_Paper",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG/3840px-International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG/330px-International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fb/Canadian_International_Paper_%28CIP%29_Trois-Rivi%C3%A8res_1930.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Georgetown_-_International_Paper_Mill.jpg/1280px-Georgetown_-_International_Paper_Mill.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/INTERNATIONAL_PAPER_COMPANY_MILL_AT_JAY_ON_THE_ANDROSCOGGIN_RIVER_-_NARA_-_550716.jpg/1280px-INTERNATIONAL_PAPER_COMPANY_MILL_AT_JAY_ON_THE_ANDROSCOGGIN_RIVER_-_NARA_-_550716.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG/1280px-International_Paper_Co.%2C_Cullen%2C_LA_IMG_5138.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/NIE_1905_Paper_machine_at_mill_of_International_Paper_Co.%2C_Rumford_Falls%2C_Maine.png/1280px-NIE_1905_Paper_machine_at_mill_of_International_Paper_Co.%2C_Rumford_Falls%2C_Maine.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Pejebscot_Paper_Mill%2C_Topsham%2C_ME.jpg/1280px-Pejebscot_Paper_Mill%2C_Topsham%2C_ME.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Smurfit_Westrock_Covington_Mill_%28Virginia_paper_mill%29.jpg/1280px-Smurfit_Westrock_Covington_Mill_%28Virginia_paper_mill%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Terri_Sewell_touring_International_Paper_Riverdale_Mill.jpg/1280px-Terri_Sewell_touring_International_Paper_Riverdale_Mill.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/international-paper/international-paper_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/international-paper/international-paper_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/international-paper/international-paper_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/international-paper/international-paper_04.jpg"
+      ],
+      "slug": "international-paper",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Americas",
+        "Europe",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "DS Smith plc",
+      "primary_category": "Packaging",
+      "country": "United Kingdom",
+      "city": "London",
+      "website": "https://www.dssmith.com/",
+      "description": "DS Smith plc is a British multinational packaging business, headquartered in London. It was listed on the London Stock Exchange until it was acquired by International Paper in February 2025.",
+      "product_lines": [
+        "Corrugated packaging",
+        "Recycling",
+        "Paper packaging",
+        "Display packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.dssmith.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.dssmith.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/DS_Smith",
+      "photo_urls": [
+        "https://www.dssmith.com/globalassets/paper/images/paper-mill-images/kemsley-2022.jpg",
+        "https://commons.wikimedia.org/wiki/File:Entrance_to_Abbey_Corrugated_Ltd_-_geograph.org.uk_-_597956.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ds-smith/ds-smith_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ds-smith/ds-smith_02.jpg"
+      ],
+      "slug": "ds-smith",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United Kingdom",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Crown Holdings, Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Yardley, PA",
+      "website": "https://www.crowncork.com/",
+      "description": "Crown Holdings, Inc. is an American multinational packaging company headquartered in Tampa, Florida, that designs and manufactures rigid-metal packaging including aluminum beverage cans, metal food cans, aerosol cans, and specialty packaging. Founded in 1892, as the Crown Cork & Seal Company, the company is ranked No. 359 in the Fortune 500 list for 2025. As of 2024, Crown employs over 23,000 people at 189 plants in 39 countries.",
+      "product_lines": [
+        "Metal beverage cans",
+        "Food cans",
+        "Aerosol packaging",
+        "Metal closures"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.crowncork.com/"
+        },
+        {
+          "name": "Food-contact metal packaging QMS (confirm per plant)",
+          "source": "https://www.crowncork.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Crown_Holdings",
+      "photo_urls": [
+        "https://www.blrck.com/wp-content/uploads/2019/04/4580-21-small.jpg",
+        "https://www.blrck.com/wp-content/uploads/2019/04/4580-07-small.jpg",
+        "https://mvprogress.com/wp-content/uploads/2024/01/Crown-plant-3.gif",
+        "https://mvprogress.com/wp-content/uploads/2024/01/Crown-plant-1.gif"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/crown-holdings/crown-holdings_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/crown-holdings/crown-holdings_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/crown-holdings/crown-holdings_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/crown-holdings/crown-holdings_04.jpg"
+      ],
+      "slug": "crown-holdings",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Silgan Holdings Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Stamford, CT",
+      "website": "https://www.silganholdings.com/",
+      "description": "Silgan Holdings Inc. is an American manufacturing company based in Connecticut that produces consumer goods packaging. The company was founded in 1987 by two former executives of Continental Can, Phil Silver and Greg Horrigan – their names contributing to the company name.",
+      "product_lines": [
+        "Metal containers",
+        "Closures",
+        "Plastic packaging",
+        "Custom containers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.silganholdings.com/"
+        },
+        {
+          "name": "Food-contact packaging QMS (confirm per plant)",
+          "source": "https://www.silganholdings.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Silgan_Holdings",
+      "photo_urls": [
+        "https://www.silgancontainers.com/wp-content/uploads/2021/01/Ft-Dodge-IA-Brochure.pdf",
+        "https://www.silgancontainers.com/wp-content/uploads/2021/01/Ft-Dodge-IA-Brochure.pdf",
+        "https://www.silgancontainers.com/wp-content/uploads/2021/01/Ft-Dodge-IA-Brochure.pdf",
+        "https://highlinestudios.com/wp-content/uploads/2026/03/Silgan-corporate-video.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/silgan/silgan_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/silgan/silgan_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/silgan/silgan_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/silgan/silgan_04.jpg"
+      ],
+      "slug": "silgan",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Berry Global Group, Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Evansville, IN",
+      "website": "https://www.berryglobal.com/",
+      "description": "Berry Global Group, Inc. was a Fortune 500 global manufacturer and marketer of plastic packaging products. Headquartered in Evansville, Indiana, it had over 265 facilities across the globe and more than 46,000 employees",
+      "product_lines": [
+        "Rigid plastic packaging",
+        "Flexible packaging",
+        "Nonwoven materials",
+        "Industrial films"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.berryglobal.com/"
+        },
+        {
+          "name": "BRC / FSSC 22000 food packaging (confirm per plant)",
+          "source": "https://www.berryglobal.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Berry_Global",
+      "photo_urls": [
+        "https://public-assets-prod.pubgen.ai/brand_9663c318-8556-4b3e-aa17-33bf5d7ebaea/asset_ba388574-1b7f-582c-8233-0d04d4b9fdc2.jpg",
+        "https://edclawrence.com/wp-content/uploads/2025/03/Berry-Image.webp"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/berry-global/berry-global_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/berry-global/berry-global_02.jpg"
+      ],
+      "slug": "berry-global",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Sonoco Products Company",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Hartsville, SC",
+      "website": "https://www.sonoco.com/",
+      "description": "Sonoco Products Company is an American provider of diversified consumer packaging, industrial products, protective packaging, and packaging supply chain services and the world's largest producer of composite cans, tubes, and cores. The company was founded in 1889 as Southern Novelty Company with annualized net sales of approximately $7.3 billion. Sonoco has 19,900 employees in more than 335 operations in 33 countries, serving more than 85 nations. The company is headquartered in Hartsville, South Carolina, and is South Carolina's largest corporation in terms of sales.",
+      "product_lines": [
+        "Consumer packaging",
+        "Industrial tubes and cores",
+        "Flexible packaging",
+        "Protective packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sonoco.com/"
+        },
+        {
+          "name": "Food-contact / industrial packaging QMS (confirm per plant)",
+          "source": "https://www.sonoco.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Sonoco",
+      "photo_urls": [
+        "https://www.sonoco.com/sites/default/files/2025-08/Hartsville%20Plant.jpeg",
+        "https://www.sonoco.com/sites/default/files/2025-08/Inside%20HP.jpeg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/sonoco/sonoco_01.jpg"
+      ],
+      "slug": "sonoco",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Americas",
+        "Europe",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Graphic Packaging Holding Company",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Atlanta, GA",
+      "website": "https://www.graphicpkg.com/",
+      "description": "Graphic Packaging International is a Fortune 500 corporation based in Atlanta, Georgia, United States. It designs and manufactures packaging solutions for commercial products. GPI manufactures paperboard and folding cartons for a wide range of popular consumer goods, particularly beverages and packaged food. The company operates paperboard mills in Kalamazoo, Michigan; Macon, Georgia; Middletown, Ohio; Prosperity, South Carolina; Texarkana, Texas; and West Monroe, Louisiana, that use recycled municipal wastewater in the manufacture of food grade cardboard and coated paperboard. Its President and Chief Executive Officer is Robbert Rietbroek.",
+      "product_lines": [
+        "Paperboard packaging",
+        "Cartons",
+        "Foodservice packaging",
+        "Coated recycled board"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.graphicpkg.com/"
+        },
+        {
+          "name": "FSSC 22000 / BRC (confirm per plant)",
+          "source": "https://www.graphicpkg.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Graphic_Packaging",
+      "photo_urls": [
+        "https://www.arconational.com/ (Monroe, GA GPI plant hero from QA8 gpi_monroe_hero.jpg)",
+        "QA8 raw gpi_monroe_3.jpg (Graphic Packaging Monroe converting line)",
+        "https://kalamazoorecycles.com/wp-content/uploads/2022/02/Kzoophoto1.png",
+        "https://kalamazoorecycles.com/wp-content/uploads/2022/02/droneshot11.2021.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/graphic-packaging/graphic-packaging_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/graphic-packaging/graphic-packaging_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/graphic-packaging/graphic-packaging_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/graphic-packaging/graphic-packaging_04.jpg"
+      ],
+      "slug": "graphic-packaging",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Cascades Inc.",
+      "primary_category": "Packaging",
+      "country": "Canada",
+      "city": "Kingsey Falls, QC",
+      "website": "https://www.cascades.com/",
+      "description": "Cascades Inc. is a Canadian company that produces, converts, and markets packaging and tissue products composed mainly of recycled fibres. Cascades employs around 10,000 people in more than 70 operating units in North America. It was founded in 1964.",
+      "product_lines": [
+        "Containerboard",
+        "Corrugated packaging",
+        "Tissue products",
+        "Specialty papers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.cascades.com/"
+        },
+        {
+          "name": "FSC chain-of-custody (confirm per mill)",
+          "source": "https://www.cascades.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Cascades_(company)",
+      "photo_urls": [
+        "https://www.cascades.com/sites/default/files/cnw-en/IMG-press-investissements-kf.jpg",
+        "https://www.cascades.com/sites/default/files/2020-07/Kingsey-Falls-Cascades_0.jpg",
+        "https://www.cascades.com/sites/default/files/cnw-en/peinture-mural-Kingsey-Falls-Nicolas-Lareau.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/cascades/cascades_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/cascades/cascades_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/cascades/cascades_03.jpg"
+      ],
+      "slug": "cascades",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Canada",
+        "United States",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Stora Enso Oyj",
+      "primary_category": "Packaging",
+      "country": "Finland",
+      "city": "Helsinki",
+      "website": "https://www.storaenso.com/",
+      "description": "Stora Enso Oyj is a Finnish and Swedish forest industry company. It develops and produces various materials, mostly based on wood, for a range of industries and applications worldwide.",
+      "product_lines": [
+        "Packaging materials",
+        "Biomaterials",
+        "Wood products",
+        "Paper"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.storaenso.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.storaenso.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Stora_Enso",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Stora_Enso_Oulu_20241110.jpg/1280px-Stora_Enso_Oulu_20241110.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Stora_Enso_Oulu_20250112.jpg/1280px-Stora_Enso_Oulu_20250112.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Stora_Enso_Oulu_20250319.jpg/1280px-Stora_Enso_Oulu_20250319.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Stora_Enso_Oulu_20260125.jpg/1280px-Stora_Enso_Oulu_20260125.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Stora_Enso_Oulu_20260301_01.jpg/1280px-Stora_Enso_Oulu_20260301_01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Stora_Enso_Oulu_20260301_02.jpg/1280px-Stora_Enso_Oulu_20260301_02.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Stora_Enso_Oulu_20260308.jpg/1280px-Stora_Enso_Oulu_20260308.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Stora_Enso_mill_in_Oulu_May2009.jpg/1280px-Stora_Enso_mill_in_Oulu_May2009.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/stora-enso/stora-enso_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/stora-enso/stora-enso_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/stora-enso/stora-enso_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/stora-enso/stora-enso_04.jpg"
+      ],
+      "slug": "stora-enso",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Asia",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Grundfos",
+      "primary_category": "Industrial Parts",
+      "country": "Denmark",
+      "city": "Bjerringbro",
+      "website": "https://www.grundfos.com/",
+      "description": "Grundfos is the largest pump manufacturer in the world, based in Denmark, with more than 19,000 employees globally.",
+      "product_lines": [
+        "Circulator pumps",
+        "Submersible pumps",
+        "Industrial pumps",
+        "Water treatment systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.grundfos.com/"
+        },
+        {
+          "name": "ISO 14001; CE for pumps (confirm on product)",
+          "source": "https://www.grundfos.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Grundfos",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/BjerringbroR%C3%A5dhus.jpg/1280px-BjerringbroR%C3%A5dhus.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Grundfos_-_Bjerringbro.jpg/1280px-Grundfos_-_Bjerringbro.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Virksomheden_Grundfos.jpg/1280px-Virksomheden_Grundfos.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/grundfos/grundfos_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/grundfos/grundfos_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/grundfos/grundfos_03.jpg"
+      ],
+      "slug": "grundfos",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Sulzer Ltd",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Winterthur",
+      "website": "https://www.sulzer.com/",
+      "description": "Sulzer Ltd. is a Swiss industrial engineering and manufacturing firm, founded by Salomon Sulzer-Bernet in 1775 and established as Sulzer Brothers Ltd. in 1834 in Winterthur, Switzerland. Today it is a publicly traded company with some 180 manufacturing facilities and service centers around the world. The company's shares are listed on the Swiss Stock Exchange.",
+      "product_lines": [
+        "Pumps and agitators",
+        "Compressors",
+        "Separation technology",
+        "Rotating equipment services"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sulzer.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; API pump specs (confirm on product)",
+          "source": "https://www.sulzer.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Sulzer_(manufacturer)",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Wintower_Sulzer_Headquarter.jpg/3840px-Wintower_Sulzer_Headquarter.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Wintower_Sulzer_Headquarter.jpg/330px-Wintower_Sulzer_Headquarter.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/Johann_Jakob_Sulzer-Neuffert.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Katharina-Sulzer-Platz_in_Winterthur_%2802-2022%29.jpg/1280px-Katharina-Sulzer-Platz_in_Winterthur_%2802-2022%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Katharina-Sulzer-Platz_in_Winterthur_%282022%29.jpg/1280px-Katharina-Sulzer-Platz_in_Winterthur_%282022%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Katharina_Sulzer-Platz_10_in_Winterthur_%282022%29.jpg/1280px-Katharina_Sulzer-Platz_10_in_Winterthur_%282022%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Katharina_Sulzer-Platz_mit_Stuhlkreis_%28Winterthur%2C_2022%29.jpg/1280px-Katharina_Sulzer-Platz_mit_Stuhlkreis_%28Winterthur%2C_2022%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Stuhlkreis%3F_Katharina-Sulzer-Platz_in_Winterthur_%282022%29.jpg/1280px-Stuhlkreis%3F_Katharina-Sulzer-Platz_in_Winterthur_%282022%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Winterthurer_Bibliotheken_172783_Johann_Rudolf_Jeannot_Sulzer_1749-1828_Stadtpraesident_von_Winterthur_Pfarrer_1826.tif/lossy-page1-1280px-Winterthurer_Bibliotheken_172783_Johann_Rudolf_Jeannot_Sulzer_1749-1828_Stadtpraesident_von_Winterthur_Pfarrer_1826.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Wintower_Sulzer_Headquarter.jpg/1280px-Wintower_Sulzer_Headquarter.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/sulzer/sulzer_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/sulzer/sulzer_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/sulzer/sulzer_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/sulzer/sulzer_04.jpg"
+      ],
+      "slug": "sulzer",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Ebara Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.ebara.co.jp/en/",
+      "description": "Ebara Corporation is a publicly traded manufacturing company based in Tokyo, Japan which makes environmental and industrial machinery such as pumps and turbines. It is the owner of the Elliott Company in the United States and Sumoto S.r.l. in Italy. Ebara also operates through its \"WaterKiosk\" partnership to supply clean drinking water in Kenya.",
+      "product_lines": [
+        "Industrial pumps",
+        "Compressors",
+        "Chillers",
+        "Semiconductor equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ebara.co.jp/en/"
+        },
+        {
+          "name": "ISO 14001; pump product standards (confirm on product)",
+          "source": "https://www.ebara.co.jp/en/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Ebara_Corporation",
+      "photo_urls": [
+        "https://www.shimz.co.jp/works/images/2020/jp_fac_202007_ebara_main_01.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bc/Ebara_Corporation_Headquarters_-01.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ebara/ebara_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ebara/ebara_02.jpg"
+      ],
+      "slug": "ebara",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "The Weir Group PLC",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Glasgow",
+      "website": "https://www.global.weir/",
+      "description": "Weir plc is a Scottish multinational engineering company headquartered in Glasgow, Scotland. It is listed on the London Stock Exchange and is a constituent of the FTSE 100 Index.",
+      "product_lines": [
+        "Mining pumps",
+        "Slurry equipment",
+        "Industrial valves",
+        "Aftermarket parts"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.global.weir/"
+        },
+        {
+          "name": "ISO 14001; mining equipment QMS (confirm on product)",
+          "source": "https://www.global.weir/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Weir_Group",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/41/Banner-Montage_Geho.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/71/G_%26_J_Weir_Ltd_advertisement_Brasseys_1923.jpeg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Old_blue_Geho_pump.JPG/1280px-Old_blue_Geho_pump.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Weir_boiler_feed_water_pump.jpg/1280px-Weir_boiler_feed_water_pump.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/weir-group/weir-group_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/weir-group/weir-group_02.jpeg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/weir-group/weir-group_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/weir-group/weir-group_04.jpg"
+      ],
+      "slug": "weir-group",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United Kingdom",
+        "Americas",
+        "Australia",
+        "Africa",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Xylem Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Washington, DC",
+      "website": "https://www.xylem.com/",
+      "description": "Xylem Inc. is a large American water technology provider, in public utility, industrial, commercial, agricultural and residential settings. The company does business in more than 150 countries. Launched in 2011 as the spinoff of the water-related businesses of ITT Corporation, Xylem is headquartered in Washington, DC, with 2024 revenues of $8.6 billion and 23,000 employees worldwide.",
+      "product_lines": [
+        "Water pumps",
+        "Treatment systems",
+        "Analytics",
+        "Applied water systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.xylem.com/"
+        },
+        {
+          "name": "ISO 14001; drinking-water product listings (confirm on product)",
+          "source": "https://www.xylem.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Xylem_Inc.",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Centrifugal_pumps_%28IA_cu31924003963661%29.pdf/page1-500px-Centrifugal_pumps_%28IA_cu31924003963661%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Lantern_Slide_-_Tangyes_Ltd%2C_BX_Type_Centrifugal_Pump%2C_circa_1910.jpg/1280px-Lantern_Slide_-_Tangyes_Ltd%2C_BX_Type_Centrifugal_Pump%2C_circa_1910.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Lantern_Slide_-_Tangyes_Ltd%2C_C_Type_7-inch_Electric_Centrifugal_Pump%2C_circa_1910.jpg/1280px-Lantern_Slide_-_Tangyes_Ltd%2C_C_Type_7-inch_Electric_Centrifugal_Pump%2C_circa_1910.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Lantern_Slide_-_Tangyes_Ltd%2C_C_Type_Centrifugal_Pump%2C_circa_1910.jpg/1280px-Lantern_Slide_-_Tangyes_Ltd%2C_C_Type_Centrifugal_Pump%2C_circa_1910.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Lantern_Slide_-_Tangyes_Ltd%2C_Centrifugal_Pump_Impellers%2C_circa_1910.jpg/1280px-Lantern_Slide_-_Tangyes_Ltd%2C_Centrifugal_Pump_Impellers%2C_circa_1910.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Lantern_Slide_-_Tangyes_Ltd%2C_Steam_Pump%2C_circa_1910.jpg/1280px-Lantern_Slide_-_Tangyes_Ltd%2C_Steam_Pump%2C_circa_1910.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/New_type_%22SS%22_centrifugal_pump_by_Allis_Chalmers_Manufacture_Company%2C_1914.jpg/1280px-New_type_%22SS%22_centrifugal_pump_by_Allis_Chalmers_Manufacture_Company%2C_1914.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/New_type_%22SS%22_centrifugal_pump_by_Allis_Chalmers_Manufacture_Company_%281914%29.jpg/1280px-New_type_%22SS%22_centrifugal_pump_by_Allis_Chalmers_Manufacture_Company_%281914%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/xylem/xylem_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/xylem/xylem_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/xylem/xylem_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/xylem/xylem_04.jpg"
+      ],
+      "slug": "xylem",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Danfoss A/S",
+      "primary_category": "Industrial Parts",
+      "country": "Denmark",
+      "city": "Nordborg",
+      "website": "https://www.danfoss.com/",
+      "description": "Danfoss is a Danish multinational company, based in Denmark, with more than 41,928 employees globally. Danfoss was founded in 1933 by engineer Mads Clausen.",
+      "product_lines": [
+        "Drives and motors",
+        "Hydraulics",
+        "Climate solutions",
+        "Industrial refrigeration"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.danfoss.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL for drives and components (confirm on product)",
+          "source": "https://www.danfoss.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Danfoss",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/19/Danfoss_Hauptgeb%C3%A4ude_in_Nordborg.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Danfoss_Hauptgeb%C3%A4ude_in_Nordborg.jpg/330px-Danfoss_Hauptgeb%C3%A4ude_in_Nordborg.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Danfoss_Hauptgeb%C3%A4ude_in_Nordborg.jpg/1280px-Danfoss_Hauptgeb%C3%A4ude_in_Nordborg.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Danfoss_Universe_in_Nordborg.jpg/1280px-Danfoss_Universe_in_Nordborg.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f3/Island_Pavillon_in_Danfoss_Universe.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/danfoss/danfoss_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/danfoss/danfoss_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/danfoss/danfoss_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/danfoss/danfoss_04.jpg"
+      ],
+      "slug": "danfoss",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Atlas Copco AB",
+      "primary_category": "Industrial Parts",
+      "country": "Sweden",
+      "city": "Nacka",
+      "website": "https://www.atlascopco.com/",
+      "description": "Atlas Copco Group is a Swedish multinational industrial company. It manufactures compressors, vacuum equipment, pumps, generators, assembly tools, quality assurance equipment and other products and systems for industrial applications and mobile power generation. The products are sold in around 180 countries.",
+      "product_lines": [
+        "Compressors",
+        "Vacuum solutions",
+        "Industrial tools",
+        "Power and flow equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.atlascopco.com/"
+        },
+        {
+          "name": "ISO 14001; CE for compressors (confirm on product)",
+          "source": "https://www.atlascopco.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Atlas_Copco",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Atlas_Copco_Group_headquarter_office_in_Nacka.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Atlas_Copco_Group_headquarter_office_in_Nacka.jpg/330px-Atlas_Copco_Group_headquarter_office_in_Nacka.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Atlas_Copco_Group_headquarter_office_in_Nacka.jpg/1280px-Atlas_Copco_Group_headquarter_office_in_Nacka.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Atlas_Copco_huvudkontor_jan_2014.jpg/1280px-Atlas_Copco_huvudkontor_jan_2014.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Atlas_Copco_huvudkontor_skylt.jpg/1280px-Atlas_Copco_huvudkontor_skylt.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Atlas_Copco_i_Sickla.jpg/1280px-Atlas_Copco_i_Sickla.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5d/Atlas_Copco_testgruva_1950.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/Atlas_Copco_testgruva_1966.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Sickla_K%C3%B6pkvarter_2014a.jpg/1280px-Sickla_K%C3%B6pkvarter_2014a.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Stora_Sickla_Lilla_Sickla_1901.JPG"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/atlas-copco/atlas-copco_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/atlas-copco/atlas-copco_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/atlas-copco/atlas-copco_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/atlas-copco/atlas-copco_04.jpg"
+      ],
+      "slug": "atlas-copco",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Parker Hannifin Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Cleveland, OH",
+      "website": "https://www.parker.com/",
+      "description": "Parker-Hannifin Corporation, originally Parker Appliance Company, is an American multinational industrial manufacturing company specializing in motion and control technologies. Its corporate headquarters are in Mayfield Heights, Ohio, in Greater Cleveland. The company was founded in 1917 and has been publicly traded on the New York Stock Exchange since 1964. The firm is one of the largest companies in the world in motion control technologies, including aerospace, climate control, electromechanical, filtration, fluid and gas handling, hydraulics, pneumatics, process control, and sealing and shielding. Parker employs about 61,000 people globally. In 2024, Parker-Hannifin ranked #216 in the Fortune 500.",
+      "product_lines": [
+        "Motion and control",
+        "Hydraulics",
+        "Pneumatics",
+        "Filtration"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.parker.com/"
+        },
+        {
+          "name": "ISO 14001; product certifications per division (confirm)",
+          "source": "https://www.parker.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Parker_Hannifin",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/Parker_Hannifin%27s_Global_Headquarters.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Parker_Hannifin%27s_Global_Headquarters.jpg/330px-Parker_Hannifin%27s_Global_Headquarters.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Copy_of_early_20th_century_photograph%2C_an_aerial_view%2C_showing_the_plant_from_the_south_looking_north._Photo_owned_by_the_Parker-_Hannifin_Corporation._-_Cleveland-Chandler_HAER_OHIO%2C18-CLEV%2C25G-11.tif/lossy-page1-1280px-thumbnail.tif.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Copy_of_early_20th_century_photograph_showing_facade%2C_looking_west._Photograph_owned_by_Parker-Hannifin_Corporation._-_Cleveland-Chandler_Motors_Corporation%2C_300_East_131st_HAER_OHIO%2C18-CLEV%2C25G-12.tif/lossy-page1-1280px-thumbnail.tif.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/parker-hannifin/parker-hannifin_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/parker-hannifin/parker-hannifin_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/parker-hannifin/parker-hannifin_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/parker-hannifin/parker-hannifin_04.jpg"
+      ],
+      "slug": "parker-hannifin",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Europe",
+        "Asia",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Festo SE & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Esslingen",
+      "website": "https://www.festo.com/",
+      "description": "Festo SE & Co. KG is a German automation technology company headquartered in Esslingen am Neckar, Baden-Württemberg. It is part of the Festo Group, a family-owned group of companies active in pneumatic and electric automation technology as well as technical education through Festo Didactic.",
+      "product_lines": [
+        "Pneumatic components",
+        "Electric drives",
+        "Industrial automation",
+        "Process automation"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.festo.com/"
+        },
+        {
+          "name": "ISO 14001; CE for automation components",
+          "source": "https://www.festo.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Festo",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Festo-zentrale-esslingen-luftbild.jpg/1280px-Festo-zentrale-esslingen-luftbild.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Festo_-_panoramio.jpg/1280px-Festo_-_panoramio.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Festo_-_panoramio_%281%29.jpg/1280px-Festo_-_panoramio_%281%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/95/Festo_History_Berkheim.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Festo_History_Founding.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Festo_Hochhaus_Esslingen1.jpg/1280px-Festo_Hochhaus_Esslingen1.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4d/Ger%C3%A4temodell_f%C3%BCr_Libellenflug_%28Festo_BionicOpter%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/festo/festo_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/festo/festo_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/festo/festo_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/festo/festo_04.jpg"
+      ],
+      "slug": "festo",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "SMC Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.smcworld.com/",
+      "description": "SMC Corporation is a Japanese TOPIX Large 70 company founded in 1959 as Sintered Metal Corporation, which specializes in pneumatic control engineering to support industrial automation. SMC develops a broad range of control systems and equipment, such as directional control valves, actuators, and air line equipment, to support diverse applications. SMC's head office is located in Sotokanda, Chiyoda-ku, Tokyo, Japan. The company has a global engineering network, with technical facilities in the United States, Europe, and China, as well as Japan. Key production facilities are located in China and Singapore, and local production facilities are in United States, Mexico, Brazil, Europe, India, South Korea, and Australia.",
+      "product_lines": [
+        "Pneumatic cylinders",
+        "Valves",
+        "Air preparation",
+        "Electric actuators"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.smcworld.com/"
+        },
+        {
+          "name": "ISO 14001; CE for pneumatic components",
+          "source": "https://www.smcworld.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/SMC_Corporation",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/A_practical_treatise_on_compressed_air_and_pneumatic_machinery%3B_%28IA_practicaltreatis00rixe%29.pdf/page1-500px-A_practical_treatise_on_compressed_air_and_pneumatic_machinery%3B_%28IA_practicaltreatis00rixe%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/A_practical_treatise_on_compressed_air_and_pneumatic_machinery%3B_%28IA_practicaltreatis00rixerich%29.pdf/page1-500px-A_practical_treatise_on_compressed_air_and_pneumatic_machinery%3B_%28IA_practicaltreatis00rixerich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cylinder_boring%2C_%28IA_cylinderboring00jone%29.pdf/page1-1280px-Cylinder_boring%2C_%28IA_cylinderboring00jone%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Factory_and_industrial_management_%28IA_factoryindustria15newy%29.pdf/page1-960px-Factory_and_industrial_management_%28IA_factoryindustria15newy%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/TM_5-4004_Portable_circular_saw%2C_Model_2127%2C_Pneumatic%2C_Hand_1942_%28IA_TM5-4004%29.pdf/page1-960px-TM_5-4004_Portable_circular_saw%2C_Model_2127%2C_Pneumatic%2C_Hand_1942_%28IA_TM5-4004%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/TM_5-4020_Drill%2C_Pneumatic%2C_Rock%2C_55_Pound_Class%2C_With_Drill_Bits%2C_And_Drill_Steel%2C_Independent_Pneumatic%2C_Model%2C_Thor%2C_No._75_-_Maintenance_Instructions_And_Parts_Catalog%2C_1943_%28IA_TM5-4020%29.pdf/page1-960px-thumbnail.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/The_pneumatic_despatch_tube_system_of_the_Batcheller_Pneumatic_Tube_Co._-_also_facts_and_general_information_relating_to_pneumatic_despatch_tubes_%28IA_cu31924022810943%29.pdf/page1-500px-thumbnail.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/The_pneumatic_player%2C_the_regulation_and_repair_of_some_modern_types_%28IA_pneumaticplayerr00drakrich%29.pdf/page1-960px-The_pneumatic_player%2C_the_regulation_and_repair_of_some_modern_types_%28IA_pneumaticplayerr00drakrich%29.pdf.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smc-corporation/smc-corporation_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smc-corporation/smc-corporation_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smc-corporation/smc-corporation_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/smc-corporation/smc-corporation_04.jpg"
+      ],
+      "slug": "smc-corporation",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Bosch Rexroth AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Lohr am Main",
+      "website": "https://www.boschrexroth.com/",
+      "description": "Bosch Rexroth AG is an engineering firm based in Lohr am Main in Germany. It is the result of a merger on 1 May 2001, between Mannesmann Rexroth AG and the Automation Technology Business Unit of Robert Bosch GmbH, and is a wholly owned subsidiary of Robert Bosch GmbH. Bosch Rexroth employs over 31,000 people worldwide, and achieved total revenue of 6.2 billion euro in 2021.",
+      "product_lines": [
+        "Industrial hydraulics",
+        "Electric drives and controls",
+        "Linear motion",
+        "Assembly technology"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.boschrexroth.com/"
+        },
+        {
+          "name": "ISO 14001; CE for hydraulics and drives",
+          "source": "https://www.boschrexroth.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Bosch_Rexroth",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/6/69/EXCON_2025%2C_Bangalore_International_Exhibition_Centre_%28505%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/EXCON_2025%2C_Bangalore_International_Exhibition_Centre_%28505%29.jpg/330px-EXCON_2025%2C_Bangalore_International_Exhibition_Centre_%28505%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Bosch_Rexroth_Lohr_am_Main.JPG/1280px-Bosch_Rexroth_Lohr_am_Main.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ein_Standort_von_Bosch_Rexroth_in_Lohr_am_Main.png/1280px-Ein_Standort_von_Bosch_Rexroth_in_Lohr_am_Main.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bosch-rexroth/bosch-rexroth_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bosch-rexroth/bosch-rexroth_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bosch-rexroth/bosch-rexroth_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bosch-rexroth/bosch-rexroth_04.png"
+      ],
+      "slug": "bosch-rexroth",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Schaeffler AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Herzogenaurach",
+      "website": "https://www.schaeffler.com/",
+      "description": "Schaeffler Technologies AG & Co. KG, also known as the Schaeffler Group, is a German manufacturer of rolling element bearings for automotive, aerospace and industrial uses, including the FAG brand. It was founded in 1946 by brothers Dr. Wilhelm and Dr.-Ing. E. h. Georg Schaeffler.",
+      "product_lines": [
+        "Rolling bearings",
+        "Linear guidance",
+        "Engine components",
+        "Industrial drive systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.schaeffler.com/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings); ISO 14001",
+          "source": "https://www.schaeffler.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Schaeffler_Group",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/Schaeffler_stammsitz_herzogenaurach.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Schaeffler_stammsitz_herzogenaurach.jpg/330px-Schaeffler_stammsitz_herzogenaurach.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/schaeffler/schaeffler_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/schaeffler/schaeffler_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/schaeffler/schaeffler_03.jpg"
+      ],
+      "slug": "schaeffler",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "NTN Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.ntnglobal.com/",
+      "description": "NTN Corporation , also known historically as Niwa, Tomoe, and Nishizono, is a Japanese manufacturer of bearings and related components. The company produces bearings and friction-reducing products such as constant-velocity joints for automotive, industrial, and other applications.",
+      "product_lines": [
+        "Ball bearings",
+        "Roller bearings",
+        "Constant-velocity joints",
+        "Precision machinery"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ntnglobal.com/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings); ISO 14001",
+          "source": "https://www.ntnglobal.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/NTN_Corporation",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/Daibiru_Honkan_Building_20130503-001.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Daibiru_Honkan_Building_20130503-001.jpg/330px-Daibiru_Honkan_Building_20130503-001.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ntn/ntn_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ntn/ntn_02.jpg"
+      ],
+      "slug": "ntn",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "JTEKT Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.jtekt.co.jp/e/",
+      "description": "JTEKT Corporation TYO: 6473.T is a Japanese corporation created in January 2006 upon the merger of two companies: Koyo Seiko Co. and Toyoda Machine Works.",
+      "product_lines": [
+        "Koyo bearings",
+        "Steering systems",
+        "Driveline components",
+        "Machine tools"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.jtekt.co.jp/e/"
+        },
+        {
+          "name": "IATF 16949 (automotive bearings/steering); ISO 14001",
+          "source": "https://www.jtekt.co.jp/e/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/JTEKT",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Analysis_of_the_China-Japanese_treaties%3B_their_bearing_on_American_interests_by_Geo._Bronson_Rea_.._%28IA_analysisofchinaj00reagrich%29.pdf/page1-500px-Analysis_of_the_China-Japanese_treaties%3B_their_bearing_on_American_interests_by_Geo._Bronson_Rea_.._%28IA_analysisofchinaj00reagrich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/China%2C_Japan_and_the_U.S.A._-_present-day_conditions_in_the_Far_East_and_their_bearing_on_the_Washington_conference_%28IA_chinajapanusapre00dewe%29.pdf/page1-500px-China%2C_Japan_and_the_U.S.A._-_present-day_conditions_in_the_Far_East_and_their_bearing_on_the_Washington_conference_%28IA_chinajapanusapre00dewe%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Enemy_Japan._%28IA_enemyjapan00unit%29.pdf/page1-960px-Enemy_Japan._%28IA_enemyjapan00unit%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Fur-bearing_animals_in_nature_and_in_commerce_%28IA_cu31924002947251%29.pdf/page1-500px-Fur-bearing_animals_in_nature_and_in_commerce_%28IA_cu31924002947251%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00pola%29.pdf/page1-500px-Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00pola%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00polarich%29.pdf/page1-500px-Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00polarich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00polauoft%29.pdf/page1-500px-Fur-bearing_animals_in_nature_and_in_commerce_%28IA_furbearinganimal00polauoft%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Hildreth%27s_%22Japan_as_it_was_and_is%22_-_a_handbook_of_old_Japan_%28IA_hildrethsjapanas02hild%29.pdf/page1-500px-Hildreth%27s_%22Japan_as_it_was_and_is%22_-_a_handbook_of_old_Japan_%28IA_hildrethsjapanas02hild%29.pdf.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/jtekt/jtekt_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/jtekt/jtekt_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/jtekt/jtekt_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/jtekt/jtekt_04.jpg"
+      ],
+      "slug": "jtekt",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "THK Co., Ltd.",
+      "primary_category": "Hardware & Motion",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.thk.com/",
+      "description": "THK Co., Ltd. is a Japanese company that offers machine elements and modules in the field of mechanical engineering, robotics and automation. The headquarters are in Tokyo. Since it was founded in April 1971, the company has developed into an international company. THK shares have been listed on the Tokyo Stock Exchange's first segment since 2001.",
+      "product_lines": [
+        "Linear motion guides",
+        "Ball screws",
+        "Actuators",
+        "Seismic isolation systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.thk.com/"
+        },
+        {
+          "name": "ISO 14001; linear-motion product QMS (confirm on site)",
+          "source": "https://www.thk.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/THK_(company)",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Announcing_regal_ladino_clover_featuring_ball_clover_%28IA_announcingregall1964rela%29.pdf/page1-500px-Announcing_regal_ladino_clover_featuring_ball_clover_%28IA_announcingregall1964rela%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Handbook_of_shoe_factory_engineering_.._%28IA_handbookofshoefa00unit%29.pdf/page1-500px-Handbook_of_shoe_factory_engineering_.._%28IA_handbookofshoefa00unit%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Instruction_Book_For_12-20_The_Yuba_Ball_Tread_Tractor_%28IA_cua_000132%29.pdf/page1-500px-Instruction_Book_For_12-20_The_Yuba_Ball_Tread_Tractor_%28IA_cua_000132%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Outlines_of_factory_operation_%28IA_outlinesoffactor00chicrich%29.pdf/page1-500px-Outlines_of_factory_operation_%28IA_outlinesoffactor00chicrich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Picture_of_a_factory_village-_to_which_are_annexed%2C_remarks_on_lotteries_%28IA_picturefactory00tmanrich%29.pdf/page1-500px-Picture_of_a_factory_village-_to_which_are_annexed%2C_remarks_on_lotteries_%28IA_picturefactory00tmanrich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Practical_ball_playing_%28IA_practicalballpla00irwi%29.pdf/page1-500px-Practical_ball_playing_%28IA_practicalballpla00irwi%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/The_evolution_of_the_steel_ball_industry_%28IA_evolutionofsteel00hoovrich%29.pdf/page1-500px-The_evolution_of_the_steel_ball_industry_%28IA_evolutionofsteel00hoovrich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_modernfactorysaf00pricrich%29.pdf/page1-500px-The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_modernfactorysaf00pricrich%29.pdf.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/thk/thk_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/thk/thk_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/thk/thk_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/thk/thk_04.jpg"
+      ],
+      "slug": "thk",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Japan",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "HIWIN Technologies Corp.",
+      "primary_category": "Hardware & Motion",
+      "country": "Taiwan",
+      "city": "Taichung",
+      "website": "https://www.hiwin.com/",
+      "description": "HIWIN is a major Taiwanese company which manufactures machinery components. It was founded in 1989 and is based in Taichung, Taiwan.",
+      "product_lines": [
+        "Linear guideways",
+        "Ball screws",
+        "Industrial robots",
+        "Torque motors"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hiwin.com/"
+        },
+        {
+          "name": "ISO 14001; linear-motion product QMS (confirm on site)",
+          "source": "https://www.hiwin.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/HIWIN",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/HIWIN.jpg/1280px-HIWIN.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/HIWIN_-_Standort_Offenburg.jpg/1280px-HIWIN_-_Standort_Offenburg.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0d/Hiwin.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Hiwin_MTG-H100_20190706.jpg/1280px-Hiwin_MTG-H100_20190706.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Ma_Ying-jeou%27s_speech_at_Hiwin_Technologies_20151108.jpg/1280px-Ma_Ying-jeou%27s_speech_at_Hiwin_Technologies_20151108.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Ma_Ying-jeou_visits_Hiwin_Technologies_20151108.jpg/1280px-Ma_Ying-jeou_visits_Hiwin_Technologies_20151108.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hiwin/hiwin_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hiwin/hiwin_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hiwin/hiwin_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hiwin/hiwin_04.jpg"
+      ],
+      "slug": "hiwin",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Taiwan",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "igus GmbH",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Cologne",
+      "website": "https://www.igus.com/",
+      "description": "igus is a German manufacturer and distributor of technical products made of high-performance plastics, including plastic plain bearings, flexible cables, energy chains, connectors, robotic components, 3D-printed products and ball bearings.",
+      "product_lines": [
+        "Polymer plain bearings",
+        "Energy chains",
+        "Cable carriers",
+        "Linear systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.igus.com/"
+        },
+        {
+          "name": "ISO 14001; polymer bearing product testing (confirm on site)",
+          "source": "https://www.igus.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Igus",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/A_cable_carrier_FM_telephone_system._%28IA_cablecarrierfmte00heat%29.pdf/page1-960px-A_cable_carrier_FM_telephone_system._%28IA_cablecarrierfmte00heat%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Carrier_Air_Group_Four_Combat_Action_Report%2C_1953-7-30.pdf/page1-960px-Carrier_Air_Group_Four_Combat_Action_Report%2C_1953-7-30.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Effectiveness_of_the_factory_reset_on_a_mobile_device_%28IA_effectivenessoff1094541441%29.pdf/page1-960px-Effectiveness_of_the_factory_reset_on_a_mobile_device_%28IA_effectivenessoff1094541441%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Factory_and_industrial_management_%28IA_factoryindustria15newy%29.pdf/page1-960px-Factory_and_industrial_management_%28IA_factoryindustria15newy%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Power_sytem_communications_-_guide_specification_for_power_line_carrier_system._-_%28IA_CAT81754314%29.pdf/page1-960px-Power_sytem_communications_-_guide_specification_for_power_line_carrier_system._-_%28IA_CAT81754314%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_cu31924002617599%29.pdf/page1-500px-The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_cu31924002617599%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_modernfactorysaf00pricrich%29.pdf/page1-500px-The_modern_factory%3B_safety%2C_sanitation_and_welfare%3B_%28IA_modernfactorysaf00pricrich%29.pdf.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/The_story_of_the_Atlantic_cable_%28IA_storyofatlanticc00brigrich%29.pdf/page1-500px-The_story_of_the_Atlantic_cable_%28IA_storyofatlanticc00brigrich%29.pdf.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/igus/igus_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/igus/igus_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/igus/igus_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/igus/igus_04.jpg"
+      ],
+      "slug": "igus",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "ContiTech (Continental AG)",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Hanover",
+      "website": "https://www.contitech.de/",
+      "description": "ContiTech is the industrial technology group of Continental AG, headquartered in Hanover, Germany. ContiTech manufactures industrial belts, hoses, conveyor belts, air springs and related rubber and plastics components for automotive and industrial customers worldwide.",
+      "product_lines": [
+        "Industrial belts",
+        "Hoses",
+        "Conveyor belts",
+        "Air springs"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.contitech.de/"
+        },
+        {
+          "name": "ISO 14001; automotive / industrial belting QMS (confirm)",
+          "source": "https://www.contitech.de/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Continental_AG",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Contitech_factory.jpg/1280px-Contitech_factory.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/contitech/contitech_01.jpg"
+      ],
+      "slug": "contitech",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Germany",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Habasit AG",
+      "primary_category": "Hardware & Motion",
+      "country": "Switzerland",
+      "city": "Reinach",
+      "website": "https://www.habasit.com/",
+      "description": "Habasit AG is a Swiss manufacturer of conveyor and power-transmission belting headquartered in Reinach, Basel-Landschaft. It produces fabric conveyor belts, modular plastic belts, timing belts and related belting systems for industrial automation and food processing worldwide.",
+      "product_lines": [
+        "Conveyor belts",
+        "Power transmission belts",
+        "Modular belts",
+        "Timing belts"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.habasit.com/"
+        },
+        {
+          "name": "ISO 14001; food-contact belting (confirm per product)",
+          "source": "https://www.habasit.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.habasit.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Habasit_Holding.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Reinach_Building.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/habasit/habasit_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/habasit/habasit_02.jpg"
+      ],
+      "slug": "habasit",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "Switzerland",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Bossard Group",
+      "primary_category": "Hardware & Motion",
+      "country": "Switzerland",
+      "city": "Zug",
+      "website": "https://www.bossard.com/",
+      "description": "Bossard Group is a Swiss multinational fastener technology and logistics company with its headquarters in Zug. Their activities include worldwide sales, technical consulting and inventory management.",
+      "product_lines": [
+        "Industrial fasteners",
+        "Assembly technology",
+        "Smart factory logistics",
+        "Engineered fastening solutions"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bossard.com/"
+        },
+        {
+          "name": "ISO 14001; fastener product standards (confirm per line)",
+          "source": "https://www.bossard.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Bossard_Group",
+      "photo_urls": [
+        "https://images.eu.ctfassets.net/0vp0u5uh75zd/2IobuESdrUal0VIINHNnnx/5eae00053e53af8afa1cfd235a9ae5da/FrontTLZ4.JPG",
+        "https://images.eu.ctfassets.net/0vp0u5uh75zd/6DkxD9StSOTNrdEVADLHxL/8bdc035f8a65506fbea17a4954ded7ff/SFL_key_visual.jpg",
+        "https://www.fastener-world.com/data/article/Bossard_new_plant_8488_0.jpg",
+        "https://www.fastener-world.com/data/article/Bossard_new_plant5_8488_4.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bossard/bossard_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bossard/bossard_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bossard/bossard_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/bossard/bossard_04.jpg"
+      ],
+      "slug": "bossard",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Switzerland",
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "China Baowu Steel Group",
+      "primary_category": "Steel & Metals",
+      "country": "China",
+      "city": "Shanghai",
+      "website": "https://www.baowugroup.com/",
+      "description": "China Baowu Steel Group Corp., Ltd., commonly known as Baowu, is a state-owned iron and steel company headquartered in the Baosteel Tower in Pudong, Shanghai, China. The company was formed by Baosteel Group absorbing its smaller state-owned peer, Wuhan Iron and Steel Corporation in 2016. It is the world's largest steel producer.",
+      "product_lines": [
+        "Hot-rolled and cold-rolled steel",
+        "Automotive steel",
+        "Silicon steel",
+        "Heavy plate"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.baowugroup.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; automotive steel approvals (confirm)",
+          "source": "https://www.baowugroup.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/China_Baowu_Steel_Group",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/File:Baosteel_Group_(宝钢",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise_at_Baosteel_America_-_panoramio.jpg?width=1600",
+        "https://commons.wikimedia.org/wiki/File:%22Hot%22_Rolling_Some_Steel_(2267617927).jpg",
+        "https://commons.wikimedia.org/wiki/File:宝钢梅山钢铁厂区正门.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/china-baowu/china-baowu_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/china-baowu/china-baowu_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/china-baowu/china-baowu_03.jpg"
+      ],
+      "slug": "china-baowu",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "China",
+        "Asia",
+        "Europe",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "HBIS Group Co., Ltd.",
+      "primary_category": "Steel & Metals",
+      "country": "China",
+      "city": "Shijiazhuang",
+      "website": "https://www.hbisco.com/",
+      "description": "Hesteel Group Company Limited is a Chinese iron and steel manufacturing conglomerate, also known as Hesteel Group or its pinyin shortname Hegang. The company was also known as Hebei Iron and Steel Group Co., Ltd. or HBIS until 2016.",
+      "product_lines": [
+        "Carbon steel flat products",
+        "Long products",
+        "Special steel",
+        "Vanadium products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hbisco.com/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm)",
+          "source": "https://www.hbisco.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Hesteel_Group",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/File:Ralja,_Železara_Smederevo,_01.jpg",
+        "https://www.viktormacha.com/photos/hbis-group-zelezara-smederevo-2545.jpg",
+        "https://www.viktormacha.com/photos/zelezara-smederevo-vysoka-pec-c2-2543.jpg",
+        "https://www.viktormacha.com/photos/zelezara-smederevo-valcovna-pasu-2523.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hbis/hbis_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hbis/hbis_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hbis/hbis_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/hbis/hbis_04.jpg"
+      ],
+      "slug": "hbis",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "China",
+        "Asia",
+        "Europe",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Ansteel Group Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "China",
+      "city": "Anshan",
+      "website": "https://www.ansteel.cn/",
+      "description": "Anshan Iron and Steel Group Corporation is a Chinese state-owned steel maker. The corporation is under the supervision of State-owned Assets Supervision and Administration Commission of the State Council. It is headquartered in Anshan, Liaoning. According to the World Steel Association in 2015, the corporation was the 7th largest manufacturer of steel in the world by production volume.",
+      "product_lines": [
+        "Hot-rolled coil and plate",
+        "Cold-rolled sheet",
+        "Rails",
+        "Wire rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ansteel.cn/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001 (typical integrated-mill HSE — confirm)",
+          "source": "https://www.ansteel.cn/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Ansteel_Group",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Pangang_2020A.jpg/3840px-Pangang_2020A.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Pangang_2020A.jpg/330px-Pangang_2020A.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/1950-07-Anshan.png",
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/Coal_tar_distillation_plant_at_Manchuria_Iron_and_Steel_Company%2C_Anshan%2C_Manchuria.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Dinkey_Anshan_Iron_and_Steel_Group_%2811772842173%29.jpg/1280px-Dinkey_Anshan_Iron_and_Steel_Group_%2811772842173%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Dorr_Thickener_at_Concentration_Plant_at_Manchuria_Iron_and_Steel_Company%2C_Anshan%2C_Manchuria%2C_plundered_by_USSR_Army_-_1946.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Railway_Of_Anshan_Iron_and_Steel_Group_%2811772594445%29.jpg/1280px-Railway_Of_Anshan_Iron_and_Steel_Group_%2811772594445%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5e/Rolling_mill_of_No.2_Steel_Works_of_Manchuria_Iron_And_Steel_Co.%2C_Anshan%2C_pillated_by_USSR_Army_-_1946.png",
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/Rolling_mill_of_No.2_Steel_Works_of_Manchuria_Iron_And_Steel_Co.%2C_Anshan%2C_pillated_by_USSR_Army_-_2_-_1946.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/%E5%9B%BD%E6%B0%91%E6%94%BF%E5%BA%9C%E6%8E%A5%E7%AE%A1%E9%9E%8D%E9%92%A2%E5%90%8E%E7%9A%84%E5%95%86%E6%A0%87.jpg/1280px-%E5%9B%BD%E6%B0%91%E6%94%BF%E5%BA%9C%E6%8E%A5%E7%AE%A1%E9%9E%8D%E9%92%A2%E5%90%8E%E7%9A%84%E5%95%86%E6%A0%87.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ansteel/ansteel_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ansteel/ansteel_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ansteel/ansteel_03.png",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/ansteel/ansteel_04.jpg"
+      ],
+      "slug": "ansteel",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "China",
+        "Asia",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Cleveland-Cliffs Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Cleveland, OH",
+      "website": "https://www.clevelandcliffs.com/",
+      "description": "Cleveland-Cliffs Inc. is an American steel manufacturer based in Cleveland, Ohio. It specializes in the mining, beneficiation, and pelletizing of iron ore, as well as steelmaking, including stamping and tooling. The company is ranked 23rd on the list of steel producers and is the second-largest steel producer in the United States after Nucor. It is the largest flat-rolled steel producer in North America. The company is ranked 221st on the Fortune 500 and 1511th on the Forbes Global 2000.",
+      "product_lines": [
+        "Flat-rolled steel",
+        "Automotive steel",
+        "Stainless and electrical steel",
+        "Iron ore pellets"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.clevelandcliffs.com/"
+        },
+        {
+          "name": "ISO 14001; automotive steel specs (confirm per mill)",
+          "source": "https://www.clevelandcliffs.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Cleveland-Cliffs",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/File:Cleveland_Cliffs_Steel_Mill.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Cleveland_Cliffs_Steel_Mill.jpg?width=1600",
+        "https://commons.wikimedia.org/wiki/File:Cleveland-Cliffs_HBI_Plant_Toledo,_Ohio,_January_2021.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/cleveland-cliffs/cleveland-cliffs_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/cleveland-cliffs/cleveland-cliffs_02.jpg"
+      ],
+      "slug": "cleveland-cliffs",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ]
+    },
+    {
+      "company_name": "Steel Dynamics, Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Fort Wayne, IN",
+      "website": "https://www.steeldynamics.com/",
+      "description": "Steel Dynamics, Inc. (SDI) is an American steel producer based in Fort Wayne, Indiana. With a production capacity of 13 million tons of steel, the company is the third largest producer of carbon steel products in the United States. It is among the most profitable American steel companies in terms of profit margins and operating margin per ton. Based on its 2021 revenue, the company ranked 196th on the 2022 edition of the Fortune 500.",
+      "product_lines": [
+        "Flat-rolled steel",
+        "Structural steel",
+        "Steel fabrication",
+        "Scrap recycling"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.steeldynamics.com/"
+        },
+        {
+          "name": "ISO 14001; ASTM / AISI mill product specs (confirm)",
+          "source": "https://www.steeldynamics.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Steel_Dynamics",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Steel_Dynamics_Steel_Mill%2C_Pittsboro%2C_Indiana.jpg/1280px-Steel_Dynamics_Steel_Mill%2C_Pittsboro%2C_Indiana.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/steel-dynamics/steel-dynamics_01.jpg"
+      ],
+      "slug": "steel-dynamics",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ]
+    },
+    {
+      "company_name": "Southwire Company, LLC",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Carrollton, GA",
+      "website": "https://www.southwire.com/",
+      "description": "Southwire Company, LLC is a US wire and cable manufacturer headquartered in Carrollton, Georgia. It produces building wire, utility cable, industrial power cable and copper rod for electrical construction and utility customers primarily in North America.",
+      "product_lines": [
+        "Building wire",
+        "Utility cable",
+        "Industrial power cable",
+        "Copper rod"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.southwire.com/"
+        },
+        {
+          "name": "UL / NEC building-wire listings (confirm per product)",
+          "source": "https://www.southwire.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.southwire.com/",
+      "photo_urls": [
+        "https://media.bizj.us/view/img/12242694/southwire-rod-plant-bs8*1600xx8256-4644-0-430.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/southwire/southwire_01.jpg"
+      ],
+      "slug": "southwire",
+      "source_platform": "Company site (factual description)",
+      "export_markets": [
+        "United States",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Elsewedy Electric",
+      "primary_category": "Cables & Electrical",
+      "country": "Egypt",
+      "city": "Cairo",
+      "website": "https://www.elsewedyelectric.com/",
+      "description": "Elsewedy Electric Co S.A.E. is an Egyptian multinational electrical company. It was founded in 1938 by the Elsewedy family.",
+      "product_lines": [
+        "Power cables",
+        "Transformers",
+        "Electrical products",
+        "Energy infrastructure"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.elsewedyelectric.com/"
+        },
+        {
+          "name": "IEC cable standards; ISO 14001 (confirm on site)",
+          "source": "https://www.elsewedyelectric.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Elsewedy_Electric",
+      "photo_urls": [
+        "https://images.dailynewsegypt.com/2025/02/WhatsApp-Image-2025-02-05-at-10.55.13-AM.jpeg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/elsewedy-electric/elsewedy-electric_01.jpg"
+      ],
+      "slug": "elsewedy-electric",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Egypt",
+        "Africa",
+        "Middle East",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Kirby Building Systems",
+      "primary_category": "Construction",
+      "country": "Kuwait",
+      "city": "Kuwait City",
+      "website": "https://www.kirbyinternational.com/",
+      "description": "Kirby Building Systems is a manufacturing company specialising in pre-engineered buildings. It was established in 1976 and is a wholly owned subsidiary of Alghanim Industries. Kirby has manufacturing facilities in Kuwait, Ras Al Khaimah, Hyderabad, Haridwar and Vietnam with a production capacity of over 400,000 MT per year. It has sales offices in 70 countries.",
+      "product_lines": [
+        "Pre-engineered steel buildings",
+        "Metal roofing and cladding",
+        "Structural steel buildings",
+        "Building accessories"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.kirbyinternational.com/"
+        },
+        {
+          "name": "PEB design codes / local structural approvals (confirm per project)",
+          "source": "https://www.kirbyinternational.com/"
+        }
+      ],
+      "moq": "Not published — mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://en.wikipedia.org/wiki/Kirby_Building_Systems",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Kirby_Haridwar.jpg?width=1600",
+        "https://commons.wikimedia.org/wiki/File:Kirby_Haridwar.jpg",
+        "https://commons.wikimedia.org/wiki/File:Kirby_Hyderabad.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/kirby-building-systems/kirby-building-systems_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/kirby-building-systems/kirby-building-systems_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/kirby-building-systems/kirby-building-systems_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-03/images/suppliers/kirby-building-systems/kirby-building-systems_04.jpg"
+      ],
+      "slug": "kirby-building-systems",
+      "source_platform": "Wikipedia / company site",
+      "export_markets": [
+        "Middle East",
+        "India",
+        "Africa",
+        "Southeast Asia"
+      ]
+    }
+  ],
+  "notes": "mill_soft_cleanup_2026-09-03: berry/sonoco/ebara logos→plant; kirby drop Arwa/Jazeera; cleveland/baowu drop HQ towers"
+}

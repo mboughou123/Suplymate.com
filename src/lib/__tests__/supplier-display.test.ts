@@ -27,6 +27,18 @@ function stub(partial: Partial<Supplier> & Pick<Supplier, "id" | "name">): Suppl
 }
 
 describe("toDisplaySupplier commercial honesty", () => {
+  it("labels APL Apollo featured prices as Dealer list, not mill FOB", () => {
+    const apollo = phase1Suppliers.find((s) => s.id === "apl-apollo-tubes-limited-in");
+    expect(apollo).toBeDefined();
+    const d = toDisplaySupplier(apollo!);
+    const priced = d.products.filter((p) => p.hasRealPrice);
+    expect(priced.length).toBeGreaterThan(0);
+    for (const p of priced) {
+      expect(p.priceSourceLabel).toBe("Dealer list");
+      expect(p.price.toLowerCase()).not.toContain("fob");
+    }
+  });
+
   it("shows RFQ instead of invented price bands", () => {
     const d = toDisplaySupplier(
       stub({ id: "demo-mill", name: "Demo Mill", products: ["Coil", "Plate", "Pipe"] })

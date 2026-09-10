@@ -23,6 +23,17 @@ import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
+import { priceSourceBadgeLabel } from "@/lib/price-source";
+import { isListerProductId } from "@/lib/lister-media";
+import { getFallbackSupplierIds } from "@/lib/data-service";
+
+let cachedPublicSupplierIds: Set<string> | null = null;
+function publicSupplierIdSet(): Set<string> {
+  if (!cachedPublicSupplierIds) {
+    cachedPublicSupplierIds = new Set(getFallbackSupplierIds());
+  }
+  return cachedPublicSupplierIds;
+}
 
 export type PublicProductCard = {
   id: string;
@@ -40,9 +51,17 @@ export type PublicProductCard = {
   /** Commissioned price label, or null when no public price is available. */
   priceLabel: string | null;
   priceUnit: string | null;
+  /** Sourced price footnote / provenance (e.g. Lister price_note). */
+  priceNote: string | null;
+  /** Honesty badge, e.g. "Dealer list" — never mill FOB for dealer lists. */
+  priceSourceLabel: string | null;
   moq: string | null;
   shippingTime: string | null;
   productUrl: string | null;
+  /** Higher = show earlier in the default catalogue (Lister photos first). */
+  rankBoost: number;
+  /** Small caption on the card photo — Magicrete mortar only, for now. */
+  aiGeneratedImage?: boolean;
 };
 
 export type PublicProductsQuery = {
@@ -82,14 +101,30 @@ function clampSize(n: number | undefined): number {
   return Math.min(Math.max(v, 1), 60);
 }
 
+/** True only for a real, positive sourced price — never treat 0 as public. */
+export function hasSourcedPrice(basePrice: number | null | undefined): boolean {
+  return typeof basePrice === "number" && Number.isFinite(basePrice) && basePrice > 0;
+}
+
+/** Catalogue / detail gate: RFQ when there is no sourced unit price. */
+export function productHasPublicPrice(
+  product: Pick<Product, "basePrice" | "priceMin" | "hasPublicPrice">
+): boolean {
+  if (hasSourcedPrice(product.basePrice)) return true;
+  return Boolean(product.hasPublicPrice) && hasSourcedPrice(product.priceMin);
+}
+
 function priceLabelFor(
   basePrice: number | null | undefined,
   currency: string,
   unit: string | null | undefined,
   rate?: number | null
 ): string | null {
-  if (basePrice == null) return null;
-  const label = formatPrice(applyCommission(basePrice, rate ?? COMMISSION_RATE), currency);
+  if (!hasSourcedPrice(basePrice)) return null;
+  const label = formatPrice(
+    applyCommission(basePrice as number, rate ?? COMMISSION_RATE),
+    currency
+  );
   return unit ? `${label} / ${unit}` : label;
 }
 
@@ -156,6 +191,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         productName: r.name,
         category: r.category,
       };
+      const specs = safeObject(r.specifications);
       return {
         id: r.id,
         name: r.name,
@@ -169,9 +205,16 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         hasRealPhoto: hasRealProductImage(imageInput),
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
+        priceNote: typeof specs["Price note"] === "string" ? specs["Price note"] : null,
+        priceSourceLabel: priceSourceBadgeLabel(
+          typeof specs["Price source type"] === "string" ? specs["Price source type"] : null,
+          hasSourcedPrice(r.basePrice)
+        ),
         moq: r.moq ?? null,
         shippingTime: r.shippingTime ?? null,
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
+        rankBoost: isListerProductId(r.id) ? 100 : hasRealProductImage(imageInput) ? 10 : 0,
+        aiGeneratedImage: specs["Image note"] === "AI-generated image",
       };
     });
 
@@ -196,6 +239,18 @@ function safeArray(value: string | null | undefined): string[] {
     return Array.isArray(v) ? v : [];
   } catch {
     return [];
+  }
+}
+
+function safeObject(value: string | null | undefined): Record<string, string> {
+  if (!value) return {};
+  try {
+    const v = JSON.parse(value);
+    return v && typeof v === "object" && !Array.isArray(v)
+      ? (v as Record<string, string>)
+      : {};
+  } catch {
+    return {};
   }
 }
 
@@ -242,7 +297,18 @@ function staticToCard(p: Product): PublicProductCard {
     productName: p.name,
     category: p.category,
   };
-  const base = p.basePrice ?? p.priceMin;
+  // Prefer explicit basePrice; never fall back to a zeroed priceMin placeholder.
+  const base =
+    hasSourcedPrice(p.basePrice)
+      ? p.basePrice
+      : p.hasPublicPrice && hasSourcedPrice(p.priceMin)
+        ? p.priceMin
+        : null;
+  const priceNote =
+    typeof p.specifications?.["Price note"] === "string"
+      ? p.specifications["Price note"]
+      : null;
+  const hasPhoto = hasRealProductImage(imageInput);
   return {
     id: p.id,
     name: p.name,
@@ -250,15 +316,27 @@ function staticToCard(p: Product): PublicProductCard {
     supplierId: p.supplierId ?? "",
     supplierName: p.supplierName ?? "Suplymate catalogue",
     supplierCountry: p.supplierCountry ?? null,
-    supplierVisible: Boolean(p.supplierId),
+    supplierVisible: Boolean(p.supplierId) && publicSupplierIdSet().has(p.supplierId ?? ""),
     verified: false,
     imageUrl: getBestProductImage(imageInput),
-    hasRealPhoto: hasRealProductImage(imageInput),
-    priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
+    hasRealPhoto: hasPhoto,
+    priceLabel: priceLabelFor(base, p.currency, p.unit ?? p.priceUnit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
+    priceNote,
+    priceSourceLabel: priceSourceBadgeLabel(
+      p.priceSourceType ??
+        (typeof p.specifications?.["Price source type"] === "string"
+          ? p.specifications["Price source type"]
+          : null),
+      hasSourcedPrice(base)
+    ),
     moq: p.moq ?? null,
     shippingTime: p.shippingTime ?? null,
     productUrl: p.productUrl ?? null,
+    rankBoost: isListerProductId(p.id) ? 100 : hasPhoto ? 10 : 0,
+    aiGeneratedImage:
+      p.aiGeneratedImage === true ||
+      p.specifications?.["Image note"] === "AI-generated image",
   };
 }
 
@@ -282,6 +360,12 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     if (q.verifiedOnly && !c.verified) return false;
     if (q.hasPrice && !c.priceLabel) return false;
     return true;
+  });
+
+  // Lister batch + real-photo SKUs first so the grid opens with photos, not icons.
+  cards.sort((a, b) => {
+    if (b.rankBoost !== a.rankBoost) return b.rankBoost - a.rankBoost;
+    return a.name.localeCompare(b.name);
   });
 
   const total = cards.length;

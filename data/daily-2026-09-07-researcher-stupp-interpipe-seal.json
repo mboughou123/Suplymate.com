@@ -1,0 +1,21 @@
+{
+  "label": "QA-MILL-STUPP-INTERPIPE-RESEARCHER-OK",
+  "sealed_at_utc": "2026-09-07T18:37:51.042825+00:00",
+  "sealed_at_pt": "2026-09-07 ~11:37 PT",
+  "source_enhancer_seal": "QA-MILL-STUPP-INTERPIPE-ENHANCER-SEALED",
+  "ok": [
+    {
+      "slug": "stupp",
+      "path": "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/stupp/stupp_01.jpg",
+      "reason": "STUPP-stenciled FBE API 5L X60M coated line pipe stock \u2014 clear mill identity (yard inventory, not CGI)"
+    },
+    {
+      "slug": "interpipe",
+      "path": "/workspace/suppliers-phase1/daily/2026-09-07/enhanced/suppliers/interpipe/interpipe_01.jpg",
+      "reason": "NMPP welded-pipe mill interior \u2014 large-diameter pipes on line, yellow safety rails, worker"
+    }
+  ],
+  "soft": [],
+  "hold": [],
+  "wire_recommendation": "HoW may append both mill cards on PR #15 using stupp_01 + interpipe_01 \u2192 50/50 mills for 9/7 pack."
+}

@@ -1,0 +1,995 @@
+{
+  "generated_at_utc": "2026-09-09T17:15:42.041113+00:00",
+  "generated_at_pt": "2026-09-09 ~10:15 PT",
+  "date": "2026-09-09",
+  "notes": "Product wire 2026-09-09: prior OK 1 + soft 15 stay locked, plus HOLD34 Researcher OK 23 + soft 8 = 47 RFQ SKUs. HOLD out helukabel / lisi / sfs (blocked, no stills). Bonfiglioli + usiminas SKUs attach by slug without mill cards. Greatview / Elopak on-brand (not Tetra Pak). Soft stills are category/type-match. Never promote *.BAD.* siblings. Seal: data/daily-2026-09-09-researcher-hold34-products-seal.json.",
+  "wire_full_pack": false,
+  "ok_slugs": [
+    "sew-eurodrive"
+  ],
+  "soft_slugs": [
+    "marcegaglia",
+    "arvedi",
+    "cayirova",
+    "choo-bee",
+    "procarsa",
+    "rama",
+    "zenith",
+    "constellium",
+    "orora",
+    "kaeser",
+    "swagelok",
+    "yokogawa",
+    "esab",
+    "ternium",
+    "daido-steel"
+  ],
+  "hold34_ok_slugs": [
+    "alpla",
+    "billerud",
+    "bonfiglioli",
+    "british-steel",
+    "coveris",
+    "donaldson",
+    "elopak",
+    "endress-hauser",
+    "gates",
+    "gea",
+    "greatview",
+    "james-hardie",
+    "kitz",
+    "kobe-steel",
+    "leoni",
+    "lincoln-electric",
+    "noksel",
+    "novelis",
+    "pepperl-fuchs",
+    "umran",
+    "velan",
+    "vetropack",
+    "wittenstein"
+  ],
+  "hold34_soft_slugs": [
+    "howden",
+    "lapp",
+    "nexteel",
+    "npc",
+    "rockwool",
+    "toyo-seikan",
+    "tubacero",
+    "usiminas"
+  ],
+  "hold_omitted_slugs": [
+    "helukabel",
+    "lisi",
+    "sfs"
+  ],
+  "wire_slug_count": 47,
+  "products": [
+    {
+      "product_name": "SEW-EURODRIVE Gearmotors Frequency Inverters and Servo Drives",
+      "supplier_name": "SEW-EURODRIVE GmbH & Co KG",
+      "supplier_slug_guess": "sew-eurodrive",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.sew-eurodrive.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SEW-EURODRIVE GmbH & Co KG mill/product page for gearmotors / frequency inverters / servo drives. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/sew-eurodrive/sew-gearmotor.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Marcegaglia Welded Carbon Steel Tube and Hollow Sections",
+      "supplier_name": "Marcegaglia Carbon Steel",
+      "supplier_slug_guess": "marcegaglia",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.marcegaglia.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Marcegaglia Carbon Steel mill/product page for welded carbon steel tube / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/marcegaglia/marcegaglia-tube.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Arvedi Welded Steel Tube and Hollow Sections",
+      "supplier_name": "Acciaieria Arvedi S.p.A.",
+      "supplier_slug_guess": "arvedi",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.arvedi.it/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Acciaieria Arvedi S.p.A. mill/product page for welded steel tube / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/arvedi/arvedi-tube.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "\u00c7ay\u0131rova ERW Steel Pipe and Hollow Sections",
+      "supplier_name": "\u00c7ay\u0131rova Boru Sanayi ve Ticaret A.\u015e.",
+      "supplier_slug_guess": "cayirova",
+      "category": "Tube & Pipes",
+      "source_url": "https://cayirova.com.tr/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 \u00c7ay\u0131rova Boru Sanayi ve Ticaret A.\u015e. mill/product page for ERW steel pipe / galvanized pipe / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/cayirova/cayirova-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Choo Bee ERW Steel Pipes and Tubes",
+      "supplier_name": "Choo Bee Metal Industries Berhad",
+      "supplier_slug_guess": "choo-bee",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.choobee.com.my/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Choo Bee Metal Industries Berhad mill/product page for ERW steel pipes / tubes. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/choo-bee/choobee-tube.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Procarsa ERW Structural Tubing and Conduit Pipe",
+      "supplier_name": "Procarsa S.A. de C.V.",
+      "supplier_slug_guess": "procarsa",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.procarsa.com.mx/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Procarsa S.A. de C.V. mill/product page for ERW structural tubing / conduit pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/procarsa/procarsa-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Rama Steel ERW Tubes and Scaffolding Hollow Sections",
+      "supplier_name": "Rama Steel Tubes Ltd.",
+      "supplier_slug_guess": "rama",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.ramasteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rama Steel Tubes Ltd. mill/product page for ERW steel tubes / scaffolding / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/rama/rama-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Zenith ERW Galvanized and Black Steel Pipes",
+      "supplier_name": "Zenith Steel Pipes & Industries Ltd.",
+      "supplier_slug_guess": "zenith",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.zenithsteelpipes.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Zenith Steel Pipes & Industries Ltd. mill/product page for ERW galvanized / black pipes / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/zenith/zenith-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Constellium Aluminum Packaging and Automotive Sheet",
+      "supplier_name": "Constellium SE",
+      "supplier_slug_guess": "constellium",
+      "category": "Packaging",
+      "source_url": "https://www.constellium.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Constellium SE mill/product page for aluminum packaging sheet / automotive aluminum. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/constellium/constellium-pack.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Orora Glass Containers Beverage Cans and Corrugated Packaging",
+      "supplier_name": "Orora Limited",
+      "supplier_slug_guess": "orora",
+      "category": "Packaging",
+      "source_url": "https://www.orora.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Orora Limited mill/product page for glass containers / beverage cans / corrugated packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Glass_bottles.jpg/1280px-Glass_bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/orora/orora-glass.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Kaeser Rotary Screw Compressors and Compressed-Air Systems",
+      "supplier_name": "Kaeser Kompressoren SE",
+      "supplier_slug_guess": "kaeser",
+      "category": "Industrial Parts",
+      "source_url": "https://www.kaeser.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kaeser Kompressoren SE mill/product page for rotary screw compressors / compressed-air systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/kaeser/kaeser-air.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Swagelok Tube Fittings Ball Valves and Fluid-System Components",
+      "supplier_name": "Swagelok Company",
+      "supplier_slug_guess": "swagelok",
+      "category": "Industrial Parts",
+      "source_url": "https://www.swagelok.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Swagelok Company mill/product page for tube fittings / ball valves / fluid-system components. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Copper_water_pipes.jpg/1280px-Copper_water_pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/swagelok/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Yokogawa Distributed Control Systems and Process Analyzers",
+      "supplier_name": "Yokogawa Electric Corporation",
+      "supplier_slug_guess": "yokogawa",
+      "category": "Industrial Parts",
+      "source_url": "https://www.yokogawa.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Yokogawa Electric Corporation mill/product page for DCS / process analyzers / industrial automation. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/yokogawa/yokogawa-dcs.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "ESAB Welding Cutting Equipment and Filler Metals",
+      "supplier_name": "ESAB Corporation",
+      "supplier_slug_guess": "esab",
+      "category": "Industrial Parts",
+      "source_url": "https://www.esab.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ESAB Corporation mill/product page for welding and cutting equipment / filler metals. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/esab/esab-welder.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Ternium Hot-Rolled Cold-Rolled and Coated Flat Steel",
+      "supplier_name": "Ternium S.A.",
+      "supplier_slug_guess": "ternium",
+      "category": "Steel & Metals",
+      "source_url": "https://www.ternium.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Ternium S.A. mill/product page for hot-rolled / cold-rolled / galvanized flat steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/ternium/ternium-coated.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "Daido Steel Specialty Tool and Alloy Steel Products",
+      "supplier_name": "Daido Steel Co., Ltd.",
+      "supplier_slug_guess": "daido-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.daido.co.jp/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Daido Steel Co., Ltd. mill/product page for specialty steel / tool steel / stainless and alloy steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/daido-steel/daido-alloy.jpg"
+      ],
+      "needs_ai_generate": false,
+      "researcher_verdict": "soft",
+      "honesty_note": "Researcher soft \u2014 category/campus still; not mill-specific product hero."
+    },
+    {
+      "product_name": "ALPLA Plastic Bottles Caps and Closures",
+      "supplier_name": "ALPLA Werke Alwin Lehner GmbH & Co KG",
+      "supplier_slug_guess": "alpla",
+      "category": "Packaging",
+      "source_url": "https://www.alpla.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ALPLA Werke Alwin Lehner GmbH & Co KG mill/product page for plastic bottles / caps and closures / recycled packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/alpla/alpla-closures.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary alpla-closures.jpg. mill-fallback-2 sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Billerud Packaging Paper Containerboard and Liquid Packaging Board",
+      "supplier_name": "Billerud AB",
+      "supplier_slug_guess": "billerud",
+      "category": "Packaging",
+      "source_url": "https://www.billerud.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Billerud AB mill/product page for packaging paper / containerboard / liquid packaging board. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/billerud/billerud-board.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary billerud-board.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Bonfiglioli Gearboxes Planetary and Helical Drives",
+      "supplier_name": "Bonfiglioli S.p.A.",
+      "supplier_slug_guess": "bonfiglioli",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.bonfiglioli.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Bonfiglioli S.p.A. mill/product page for gearboxes / planetary drives / helical bevel units. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/bonfiglioli/bonfiglioli-gear.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary bonfiglioli-gear.jpg. SKU attaches by slug without a mill card (mill HOLD out \u2014 CGI plant still).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "British Steel Sections Rail and Wire Rod",
+      "supplier_name": "British Steel Limited",
+      "supplier_slug_guess": "british-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://britishsteel.co.uk/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 British Steel Limited mill/product page for steel sections / rail / wire rod. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/british-steel/britishsteel-sections.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary britishsteel-sections.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Coveris Flexible Packaging Films and Converted Packaging",
+      "supplier_name": "Coveris Holdings S.A.",
+      "supplier_slug_guess": "coveris",
+      "category": "Packaging",
+      "source_url": "https://www.coveris.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Coveris Holdings S.A. mill/product page for flexible packaging / packaging films / converted packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/coveris/coveris-food.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary coveris-food.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Donaldson Engine and Industrial Filtration Systems",
+      "supplier_name": "Donaldson Company, Inc.",
+      "supplier_slug_guess": "donaldson",
+      "category": "Industrial Parts",
+      "source_url": "https://www.donaldson.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Donaldson Company, Inc. mill/product page for engine filtration / industrial dust collection / process filters. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/donaldson/donaldson-dust.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary donaldson-dust.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Elopak Pure-Pak Carton Systems",
+      "supplier_name": "Elopak ASA",
+      "supplier_slug_guess": "elopak",
+      "category": "Packaging",
+      "source_url": "https://www.elopak.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Elopak ASA mill/product page for Pure-Pak carton systems / aseptic cartons / liquid-food packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/elopak/elopak-carton.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Elopak Pure-Pak \u2014 on-brand, not Tetra Pak. Primary elopak-carton.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Endress+Hauser Process Instrumentation Flow and Level Meters",
+      "supplier_name": "Endress+Hauser Group",
+      "supplier_slug_guess": "endress-hauser",
+      "category": "Industrial Parts",
+      "source_url": "https://www.endress.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Endress+Hauser Group mill/product page for process instrumentation / flow and level meters / process analyzers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/endress-hauser/endress-level.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary endress-level.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Gates Power-Transmission Belts and Hydraulic Hose",
+      "supplier_name": "Gates Corporation",
+      "supplier_slug_guess": "gates",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.gates.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Gates Corporation mill/product page for power-transmission belts / hydraulic hose / fluid-power components. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/gates/gates-hose.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary gates-hose.jpg. mill-fallback-2 sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "GEA Separators Homogenizers and Process Equipment",
+      "supplier_name": "GEA Group AG",
+      "supplier_slug_guess": "gea",
+      "category": "Industrial Parts",
+      "source_url": "https://www.gea.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 GEA Group AG mill/product page for separators / homogenizers / food and dairy process equipment. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/gea/gea-process.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary gea-process.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Greatview Aseptic Carton Packaging",
+      "supplier_name": "Greatview Aseptic Packaging Company Ltd.",
+      "supplier_slug_guess": "greatview",
+      "category": "Packaging",
+      "source_url": "https://www.greatviewpack.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Greatview Aseptic Packaging Company Ltd. mill/product page for aseptic carton packaging / liquid food cartons. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/greatview/greatview-aseptic.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Greatview aseptic cartons \u2014 on-brand, not Tetra Pak. Primary greatview-aseptic.jpg. greatview-carton sibling not wired.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "James Hardie Fiber Cement Siding and Boards",
+      "supplier_name": "James Hardie Industries plc",
+      "supplier_slug_guess": "james-hardie",
+      "category": "Construction",
+      "source_url": "https://www.jameshardie.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 James Hardie Industries plc mill/product page for fiber cement siding / fiber cement boards / facade systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/james-hardie/jameshardie-siding.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary jameshardie-siding.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "KITZ Industrial Valves and Flow-Control Products",
+      "supplier_name": "KITZ Corporation",
+      "supplier_slug_guess": "kitz",
+      "category": "Industrial Parts",
+      "source_url": "https://www.kitz.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 KITZ Corporation mill/product page for industrial valves / bronze and steel valves / flow-control products. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/kitz/kitz-butterfly.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary kitz-butterfly.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Kobe Steel Specialty Steel and Welding Materials",
+      "supplier_name": "Kobe Steel, Ltd.",
+      "supplier_slug_guess": "kobe-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.kobelco.co.jp/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kobe Steel, Ltd. mill/product page for specialty steel / aluminum products / welding materials. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/kobe-steel/kobelco-weld.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary kobelco-weld.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "LEONI Automotive Wiring Systems and Industrial Cables",
+      "supplier_name": "LEONI AG",
+      "supplier_slug_guess": "leoni",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.leoni.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 LEONI AG mill/product page for automotive wiring systems / industrial cables / special cables. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/leoni/leoni-cable.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary leoni-cable.jpg. leoni-harness sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Lincoln Electric Welding Equipment and Filler Metals",
+      "supplier_name": "Lincoln Electric Holdings, Inc.",
+      "supplier_slug_guess": "lincoln-electric",
+      "category": "Industrial Parts",
+      "source_url": "https://www.lincolnelectric.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Lincoln Electric Holdings, Inc. mill/product page for welding equipment / filler metals / automation welding systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/lincoln-electric/lincoln-welder.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary lincoln-welder.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Noksel SAW and ERW Steel Pipe",
+      "supplier_name": "Noksel \u00c7elik Boru Sanayi A.\u015e.",
+      "supplier_slug_guess": "noksel",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.noksel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Noksel \u00c7elik Boru Sanayi A.\u015e. mill/product page for SAW steel pipe / ERW steel pipe / water and line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/noksel/noksel-ssaw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary noksel-ssaw.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Novelis Aluminum Beverage Can Sheet",
+      "supplier_name": "Novelis Inc.",
+      "supplier_slug_guess": "novelis",
+      "category": "Packaging",
+      "source_url": "https://www.novelis.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Novelis Inc. mill/product page for beverage can sheet / aluminum rolled products / recycled aluminum. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/novelis/novelis-cansheet.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary novelis-cansheet.jpg. novelis-coil sibling not wired (one still per SKU).",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Pepperl+Fuchs Industrial Sensors and Intrinsic Safety Interfaces",
+      "supplier_name": "Pepperl+Fuchs SE",
+      "supplier_slug_guess": "pepperl-fuchs",
+      "category": "Industrial Parts",
+      "source_url": "https://www.pepperl-fuchs.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Pepperl+Fuchs SE mill/product page for industrial sensors / intrinsic safety interfaces / explosion protection. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/pepperl-fuchs/pepperl-is.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary pepperl-is.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Umran SAW and ERW Steel Pipe",
+      "supplier_name": "Umran \u00c7elik Boru Sanayi A.\u015e.",
+      "supplier_slug_guess": "umran",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.umran.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Umran \u00c7elik Boru Sanayi A.\u015e. mill/product page for SAW steel pipe / ERW steel pipe / water and line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/umran/umran-spiral.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary umran-spiral.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Velan Severe-Service Gate Globe and Ball Valves",
+      "supplier_name": "Velan Inc.",
+      "supplier_slug_guess": "velan",
+      "category": "Industrial Parts",
+      "source_url": "https://www.velan.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Velan Inc. mill/product page for gate and globe valves / check valves / ball valves. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/velan/velan-severe.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary velan-severe.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Vetropack Glass Containers Beverage Bottles and Food Jars",
+      "supplier_name": "Vetropack Holding Ltd",
+      "supplier_slug_guess": "vetropack",
+      "category": "Packaging",
+      "source_url": "https://www.vetropack.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Vetropack Holding Ltd mill/product page for glass containers / beverage bottles / food jars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/vetropack/vetropack-jars.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary vetropack-jars.jpg. Glass bottles/jars \u2014 not Tetra Pak cartons.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "WITTENSTEIN Servo Gearheads and Rack-and-Pinion Systems",
+      "supplier_name": "WITTENSTEIN SE",
+      "supplier_slug_guess": "wittenstein",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.wittenstein.de/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 WITTENSTEIN SE mill/product page for servo gearheads / mechatronic drive systems / rack-and-pinion. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/wittenstein/wittenstein-rack.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher OK. Primary wittenstein-rack.jpg.",
+      "researcher_verdict": "ok"
+    },
+    {
+      "product_name": "Howden Industrial Fans and Compressors",
+      "supplier_name": "Howden Group",
+      "supplier_slug_guess": "howden",
+      "category": "Industrial Parts",
+      "source_url": "https://www.howden.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Howden Group mill/product page for industrial fans / compressors / rotary heat exchangers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/howden/howden-compressor.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary howden-compressor.jpg.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "LAPP Industrial Connection Cables and Cable Glands",
+      "supplier_name": "U.I. Lapp GmbH",
+      "supplier_slug_guess": "lapp",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.lapp.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 U.I. Lapp GmbH mill/product page for industrial connection cables / cable glands and connectors. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/lapp/lapp-olflex.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary lapp-olflex.jpg. Type-match cable/gland still \u2014 not a branded \u00d6LFLEX OE hero.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "NEXTEEL ERW Line Pipe and Structural Tube",
+      "supplier_name": "NEXTEEL Co., Ltd.",
+      "supplier_slug_guess": "nexteel",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.nexteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 NEXTEEL Co., Ltd. mill/product page for ERW steel pipe / line pipe / structural tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/nexteel/nexteel-line.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary nexteel-line.jpg.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "NPC SAW Line Pipe and Water Pipe",
+      "supplier_name": "National Pipe Company Ltd.",
+      "supplier_slug_guess": "npc",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.npc.com.sa/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 National Pipe Company Ltd. mill/product page for SAW line pipe / water pipe / oil and gas tubulars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/npc/npc-erw.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary npc-erw.jpg.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "ROCKWOOL Stone Wool Building Insulation",
+      "supplier_name": "ROCKWOOL A/S",
+      "supplier_slug_guess": "rockwool",
+      "category": "Construction",
+      "source_url": "https://www.rockwool.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ROCKWOOL A/S mill/product page for stone wool insulation / building insulation / technical insulation. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/rockwool/rockwool-board.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary rockwool-board.jpg.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Toyo Seikan Metal Cans Plastic Containers and Aseptic Packaging",
+      "supplier_name": "Toyo Seikan Group Holdings, Ltd.",
+      "supplier_slug_guess": "toyo-seikan",
+      "category": "Packaging",
+      "source_url": "https://www.toyo-seikan.co.jp/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Toyo Seikan Group Holdings, Ltd. mill/product page for metal cans / plastic containers / aseptic packaging systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/toyo-seikan/toyoseikan-aseptic.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary toyoseikan-aseptic.jpg. Type-match packaging still \u2014 not a branded Tetra Pak or OE carton hero.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Tubacero Line Pipe and Structural Steel Pipe",
+      "supplier_name": "Tubacero, S.A. de C.V.",
+      "supplier_slug_guess": "tubacero",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tubacero.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tubacero, S.A. de C.V. mill/product page for line pipe / structural steel pipe / ERW and SAW pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/tubacero/tubacero-line.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary tubacero-line.jpg.",
+      "researcher_verdict": "soft"
+    },
+    {
+      "product_name": "Usiminas Hot-Rolled Cold-Rolled and Coated Flat Steel",
+      "supplier_name": "Usinas Sider\u00fargicas de Minas Gerais S.A.",
+      "supplier_slug_guess": "usiminas",
+      "category": "Steel & Metals",
+      "source_url": "https://www.usiminas.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Usinas Sider\u00fargicas de Minas Gerais S.A. mill/product page for hot-rolled / cold-rolled / coated flat steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/usiminas/usiminas-coil.jpg"
+      ],
+      "needs_ai_generate": false,
+      "honesty_note": "HOLD34 Researcher soft \u2014 category/type-match still; not a branded OE product hero. Do not claim mill-specific branded stills. Primary usiminas-coil.jpg. SKU attaches by slug without a mill card (mill HOLD out \u2014 rail tank cars). mill-fallback-2 sibling not wired.",
+      "researcher_verdict": "soft"
+    }
+  ]
+}

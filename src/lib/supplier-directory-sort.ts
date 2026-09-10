@@ -1,16 +1,33 @@
 import type { Supplier } from "@/data/suppliers";
+import { supplierHasUsableCardImage } from "@/lib/image-fallback";
 import { isPhase1Supplier } from "@/lib/phase1";
+import { isDaily20260902Supplier } from "@/lib/daily-2026-09-02-ids";
+import { isDaily20260903Supplier } from "@/lib/daily-2026-09-03-ids";
+import { isDaily20260907Supplier } from "@/lib/daily-2026-09-07-ids";
+import { isDaily20260908Supplier } from "@/lib/daily-2026-09-08-ids";
+import { isDaily20260909Supplier } from "@/lib/daily-2026-09-09-ids";
 
 function supplierHasImage(s: Supplier): boolean {
+  return supplierHasUsableCardImage(s);
+}
+
+/** Phase-1 pack + daily expansion mills — keep them at the front of /suppliers. */
+export function isCuratedDirectoryMill(
+  supplier: Pick<Supplier, "id"> | string | null | undefined,
+): boolean {
   return (
-    Boolean(s.imageUrl) ||
-    Boolean(s.supplierImages && s.supplierImages.length > 0)
+    isPhase1Supplier(supplier) ||
+    isDaily20260902Supplier(supplier) ||
+    isDaily20260903Supplier(supplier) ||
+    isDaily20260907Supplier(supplier) ||
+    isDaily20260908Supplier(supplier) ||
+    isDaily20260909Supplier(supplier)
   );
 }
 
 /**
  * Public directory ordering:
- *   1. Phase-1 curated mills first
+ *   1. Curated mills (phase-1 pack + daily expansion)
  *   2. Image-bearing suppliers
  *   3. Suplymate score (or reliabilityScore) desc
  *   4. Name A–Z
@@ -20,7 +37,7 @@ function supplierHasImage(s: Supplier): boolean {
  * import it safely.
  */
 export function compareForDirectory(a: Supplier, b: Supplier): number {
-  const phase = Number(isPhase1Supplier(b)) - Number(isPhase1Supplier(a));
+  const phase = Number(isCuratedDirectoryMill(b)) - Number(isCuratedDirectoryMill(a));
   if (phase) return phase;
   const img = Number(supplierHasImage(b)) - Number(supplierHasImage(a));
   if (img) return img;

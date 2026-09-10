@@ -35,7 +35,7 @@ describe("Kokonut background adapters", () => {
 });
 
 describe("homepage agent orb", () => {
-  it("lazy-loads beside the console and strips the source debug strings", () => {
+  it("uses translucent particles behind the console and strips source debug strings", () => {
     const section = readFileSync(
       resolve(process.cwd(), "src/components/HomeAiDemoSection.tsx"),
       "utf8"
@@ -46,12 +46,35 @@ describe("homepage agent orb", () => {
     );
     expect(section).toMatch("next/dynamic");
     expect(section).toMatch("ssr: false");
-    expect(section).toMatch("lg:grid-cols-12");
+    expect(section).toMatch('variant="background"');
+    expect(section).toMatch("backdrop-blur");
     expect(orb).not.toMatch("setInfo");
     expect(orb).not.toMatch("annotate");
     expect(orb).not.toMatch("Siri");
     expect(orb).toMatch("enableRotate={false}");
-    expect(orb).toMatch("7000");
-    expect(orb).toMatch("14000");
+    expect(orb).toMatch('variant?: "card" | "background"');
+    expect(orb).toMatch("transparent");
+  });
+});
+
+describe("AI assistant Mate atmosphere", () => {
+  it("mounts the background orb behind a translucent chat (not covered / not opacity-0)", () => {
+    const dash = readFileSync(
+      resolve(process.cwd(), "src/components/ai-dashboard/AiProcurementDashboard.tsx"),
+      "utf8"
+    );
+    const orb = readFileSync(
+      resolve(process.cwd(), "src/components/home/HomeAgentOrb.tsx"),
+      "utf8"
+    );
+    expect(dash).toMatch(/<HomeAgentOrb\s+variant="background"/);
+    expect(dash).toMatch("opacity-85");
+    expect(dash).toMatch("-z-10");
+    expect(dash).toMatch("relative isolate");
+    expect(dash).toMatch("bg-white/80");
+    expect(dash).toMatch("backdrop-blur");
+    expect(dash).not.toMatch("opacity-0");
+    expect(orb).toMatch("absolute inset-0 -z-10");
+    expect(orb).not.toMatch("opacity-55");
   });
 });

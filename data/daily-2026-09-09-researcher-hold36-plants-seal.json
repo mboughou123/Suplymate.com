@@ -1,0 +1,60 @@
+{
+  "label": "QA-HOLD36-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "packDate": "2026-09-09",
+  "sourceSeal": "/workspace/suppliers-phase1/daily/2026-09-09/_qa/researcher-hold36-plants-seal.json",
+  "wiredOkPlantYard": [
+    "arvedi",
+    "british-steel",
+    "cayirova",
+    "choo-bee",
+    "constellium",
+    "coveris",
+    "elopak",
+    "esab",
+    "howden",
+    "kitz",
+    "lincoln-electric",
+    "lisi",
+    "marcegaglia",
+    "noksel",
+    "novelis",
+    "npc",
+    "orora",
+    "procarsa",
+    "rama",
+    "rockwool",
+    "ternium",
+    "tubacero",
+    "vetropack",
+    "zenith"
+  ],
+  "wiredSoftHqLine": [
+    "alpla",
+    "donaldson",
+    "endress-hauser",
+    "gates",
+    "leoni",
+    "nexteel",
+    "sfs",
+    "swagelok",
+    "umran",
+    "velan"
+  ],
+  "holdOmitted": [
+    {
+      "slug": "bonfiglioli",
+      "reason": "CGI — not a photograph"
+    },
+    {
+      "slug": "usiminas",
+      "reason": "rail tank cars primary — not mill/yard"
+    }
+  ],
+  "notes": [
+    "Append onto daily-2026-09-09 suppliers. Prior cleared 14 stay locked.",
+    "After this: 14 prior + 34 = 48 mills. HOLD 2 out.",
+    "Elopak Pure-Pak (not Tetra Pak). Cayirova = Çayırova Boru Darıca.",
+    "HOLD36 stills are <slug>_01.jpg only. Never promote *.BAD.* siblings.",
+    "Enhancer stills live under suppliers-phase1/daily/2026-09-09/enhanced/suppliers/<slug>/."
+  ]
+}

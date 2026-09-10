@@ -1,0 +1,954 @@
+{
+  "label": "PR15-HOLD12-34-36-MEDIA-HANDOFF-PLUS-REFETCH2",
+  "created_at_utc": "2026-09-09T20:24:31.615010+00:00",
+  "branch": "cursor/amine-review-nav-mate-ctas-83a7",
+  "pr": 15,
+  "repo": "mboughou123/Suplymate.com",
+  "rules": "no BAD, no invent; mill outs none (bonfiglioli+usiminas folded after REFETCH2 OK); skip product outs helukabel/lisi/sfs",
+  "products": [
+    {
+      "pack": "HOLD12",
+      "slug": "can-pack",
+      "repo_path": "public/images/products/can-pack/canpack-food.jpg",
+      "bytes": 238116,
+      "sha16": "c6180eeb0b533096"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "can-pack",
+      "repo_path": "public/images/products/can-pack/mill-fallback-2.jpg",
+      "bytes": 46125,
+      "sha16": "0ba6b9ab9a9960ac"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "mayr-melnhof",
+      "repo_path": "public/images/products/mayr-melnhof/mm-cartonboard.jpg",
+      "bytes": 71421,
+      "sha16": "9a6eba0e6f572461"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "mayr-melnhof",
+      "repo_path": "public/images/products/mayr-melnhof/img3.jpg",
+      "bytes": 127336,
+      "sha16": "fb69ea3155268582"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "constantia-flexibles",
+      "repo_path": "public/images/products/constantia-flexibles/cflex-pharma.jpg",
+      "bytes": 163029,
+      "sha16": "c80a848b509fe121"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "constantia-flexibles",
+      "repo_path": "public/images/products/constantia-flexibles/mill-fallback-2.jpg",
+      "bytes": 159496,
+      "sha16": "bd24aef29a96a56b"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "rengo",
+      "repo_path": "public/images/products/rengo/rengo-paperboard.jpg",
+      "bytes": 196928,
+      "sha16": "152c54c7bbae4e8d"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "rengo",
+      "repo_path": "public/images/products/rengo/mill-fallback-2.jpg",
+      "bytes": 124119,
+      "sha16": "7c7a63fc040b7b45"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "nine-dragons",
+      "repo_path": "public/images/products/nine-dragons/nd-containerboard.jpg",
+      "bytes": 238548,
+      "sha16": "965d89698df78416"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "nine-dragons",
+      "repo_path": "public/images/products/nine-dragons/nd-packaging-paper.jpg",
+      "bytes": 277221,
+      "sha16": "3472a7c540024a82"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "mauser",
+      "repo_path": "public/images/products/mauser/mauser-drums.jpg",
+      "bytes": 77387,
+      "sha16": "15624b6161dd3d2f"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "mauser",
+      "repo_path": "public/images/products/mauser/mauser-ibc.jpg",
+      "bytes": 152814,
+      "sha16": "96122b5ab3fdbc6f"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "misumi",
+      "repo_path": "public/images/products/misumi/misumi-fa.jpg",
+      "bytes": 67849,
+      "sha16": "48e1ab1e90392f52"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "legrand",
+      "repo_path": "public/images/products/legrand/legrand-cable-mgmt.jpg",
+      "bytes": 116647,
+      "sha16": "90079d814d1c07f5"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "legrand",
+      "repo_path": "public/images/products/legrand/mill-fallback-2.jpg",
+      "bytes": 342804,
+      "sha16": "2dcb710fc413e0d9"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "harmonic-drive",
+      "repo_path": "public/images/products/harmonic-drive/harmonic-gears.jpg",
+      "bytes": 339716,
+      "sha16": "6d4308c4014f4e16"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "harmonic-drive",
+      "repo_path": "public/images/products/harmonic-drive/harmonic-actuators.jpg",
+      "bytes": 55176,
+      "sha16": "9b96ce3cfb90a1fd"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "sumitomo-electric",
+      "repo_path": "public/images/products/sumitomo-electric/sei-power-cable.jpg",
+      "bytes": 163540,
+      "sha16": "551e174e0ae5e166"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "sumitomo-electric",
+      "repo_path": "public/images/products/sumitomo-electric/sei-fiber.jpg",
+      "bytes": 128351,
+      "sha16": "f0adb872fbfb094f"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "fujikura",
+      "repo_path": "public/images/products/fujikura/fujikura-fiber.jpg",
+      "bytes": 897011,
+      "sha16": "e40c7a61c9652e70"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "belden",
+      "repo_path": "public/images/products/belden/belden-networking.jpg",
+      "bytes": 303585,
+      "sha16": "7c8b68ac5f752ae3"
+    },
+    {
+      "pack": "HOLD12",
+      "slug": "belden",
+      "repo_path": "public/images/products/belden/belden-signal.jpg",
+      "bytes": 357926,
+      "sha16": "578b2cf25dce822d"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "alpla",
+      "repo_path": "public/images/products/alpla/alpla-closures.jpg",
+      "bytes": 78530,
+      "sha16": "49bf1d69d2a69a59"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "alpla",
+      "repo_path": "public/images/products/alpla/mill-fallback-2.jpg",
+      "bytes": 457780,
+      "sha16": "f0ea60d9196ff222"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "billerud",
+      "repo_path": "public/images/products/billerud/billerud-board.jpg",
+      "bytes": 689819,
+      "sha16": "3b5eafb591479452"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "billerud",
+      "repo_path": "public/images/products/billerud/billerud-kraft.jpg",
+      "bytes": 135248,
+      "sha16": "0cc40c0e10a23812"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "bonfiglioli",
+      "repo_path": "public/images/products/bonfiglioli/bonfiglioli-gear.jpg",
+      "bytes": 70731,
+      "sha16": "0a6547455ab353fe"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "bonfiglioli",
+      "repo_path": "public/images/products/bonfiglioli/bonfiglioli-planetary.jpg",
+      "bytes": 69800,
+      "sha16": "5827d50bfdf2e09b"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "british-steel",
+      "repo_path": "public/images/products/british-steel/britishsteel-rail.jpg",
+      "bytes": 315107,
+      "sha16": "09405a27ee8a34d2"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "british-steel",
+      "repo_path": "public/images/products/british-steel/britishsteel-sections.jpg",
+      "bytes": 151665,
+      "sha16": "d01dc60c84ab1704"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "coveris",
+      "repo_path": "public/images/products/coveris/coveris-food.jpg",
+      "bytes": 50696,
+      "sha16": "3933e0f5655b3fe6"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "coveris",
+      "repo_path": "public/images/products/coveris/mill-fallback-2.jpg",
+      "bytes": 60066,
+      "sha16": "50dbd63de5d5d453"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "donaldson",
+      "repo_path": "public/images/products/donaldson/donaldson-dust.jpg",
+      "bytes": 55766,
+      "sha16": "8d5b4d1f9f21836f"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "donaldson",
+      "repo_path": "public/images/products/donaldson/donaldson-filter.jpg",
+      "bytes": 89248,
+      "sha16": "d3cefd609e650403"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "elopak",
+      "repo_path": "public/images/products/elopak/elopak-aseptic.jpg",
+      "bytes": 101313,
+      "sha16": "4c23d8bb4135319b"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "elopak",
+      "repo_path": "public/images/products/elopak/elopak-carton.jpg",
+      "bytes": 649128,
+      "sha16": "e38226527e9ecdfb"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "endress-hauser",
+      "repo_path": "public/images/products/endress-hauser/endress-flow.jpg",
+      "bytes": 685841,
+      "sha16": "7194dc1a27c2db13"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "endress-hauser",
+      "repo_path": "public/images/products/endress-hauser/endress-level.jpg",
+      "bytes": 86974,
+      "sha16": "e3f70b719024b0b6"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "gates",
+      "repo_path": "public/images/products/gates/gates-hose.jpg",
+      "bytes": 155089,
+      "sha16": "14e68243c0b85494"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "gates",
+      "repo_path": "public/images/products/gates/mill-fallback-2.jpg",
+      "bytes": 201153,
+      "sha16": "9f55173113e67f52"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "gea",
+      "repo_path": "public/images/products/gea/gea-process.jpg",
+      "bytes": 181601,
+      "sha16": "8b1ef5a7daa2934e"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "gea",
+      "repo_path": "public/images/products/gea/mill-fallback-2.jpg",
+      "bytes": 72701,
+      "sha16": "36803c01137d4e85"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "greatview",
+      "repo_path": "public/images/products/greatview/greatview-aseptic.jpg",
+      "bytes": 29907,
+      "sha16": "1aa8694547be05a3"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "greatview",
+      "repo_path": "public/images/products/greatview/greatview-carton.jpg",
+      "bytes": 36545,
+      "sha16": "b00e07fa8e65034e"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "howden",
+      "repo_path": "public/images/products/howden/howden-compressor.jpg",
+      "bytes": 152526,
+      "sha16": "d83b50e676e02862"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "howden",
+      "repo_path": "public/images/products/howden/howden-fan.jpg",
+      "bytes": 104447,
+      "sha16": "473d6ef1457016e3"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "james-hardie",
+      "repo_path": "public/images/products/james-hardie/jameshardie-board.jpg",
+      "bytes": 220409,
+      "sha16": "3a11f218a1d20d97"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "james-hardie",
+      "repo_path": "public/images/products/james-hardie/jameshardie-siding.jpg",
+      "bytes": 203277,
+      "sha16": "b1c49d021d133eba"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "kitz",
+      "repo_path": "public/images/products/kitz/kitz-butterfly.jpg",
+      "bytes": 142776,
+      "sha16": "a56eb362e7b3462c"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "kitz",
+      "repo_path": "public/images/products/kitz/mill-fallback-2.jpg",
+      "bytes": 191034,
+      "sha16": "47c0d630a4509307"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "kobe-steel",
+      "repo_path": "public/images/products/kobe-steel/kobelco-weld.jpg",
+      "bytes": 156800,
+      "sha16": "2a6b48ee7b572151"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "kobe-steel",
+      "repo_path": "public/images/products/kobe-steel/mill-fallback-2.jpg",
+      "bytes": 428854,
+      "sha16": "e4459e22c08eae60"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "lapp",
+      "repo_path": "public/images/products/lapp/lapp-gland.jpg",
+      "bytes": 170652,
+      "sha16": "e06d84d6ab692a5d"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "lapp",
+      "repo_path": "public/images/products/lapp/lapp-olflex.jpg",
+      "bytes": 170489,
+      "sha16": "20bba59a33dfa4ae"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "leoni",
+      "repo_path": "public/images/products/leoni/leoni-cable.jpg",
+      "bytes": 188057,
+      "sha16": "af0f3288a49fef60"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "leoni",
+      "repo_path": "public/images/products/leoni/leoni-harness.jpg",
+      "bytes": 288325,
+      "sha16": "0826a230ea05189e"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "lincoln-electric",
+      "repo_path": "public/images/products/lincoln-electric/lincoln-welder.jpg",
+      "bytes": 244557,
+      "sha16": "833511c2574acb8f"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "nexteel",
+      "repo_path": "public/images/products/nexteel/nexteel-line.jpg",
+      "bytes": 350781,
+      "sha16": "dc9c464a8c7a3d55"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "nexteel",
+      "repo_path": "public/images/products/nexteel/nexteel-octg.jpg",
+      "bytes": 279154,
+      "sha16": "1c86cd8381f955f9"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "noksel",
+      "repo_path": "public/images/products/noksel/noksel-pile.jpg",
+      "bytes": 233898,
+      "sha16": "d2ad8239e92265c7"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "noksel",
+      "repo_path": "public/images/products/noksel/noksel-ssaw.jpg",
+      "bytes": 455843,
+      "sha16": "bea0b51e4f7f415c"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "novelis",
+      "repo_path": "public/images/products/novelis/novelis-cansheet.jpg",
+      "bytes": 712184,
+      "sha16": "d99c5eb3c9d811b7"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "novelis",
+      "repo_path": "public/images/products/novelis/novelis-coil.jpg",
+      "bytes": 427511,
+      "sha16": "2ec3a395bf1404a3"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "npc",
+      "repo_path": "public/images/products/npc/npc-coated.jpg",
+      "bytes": 234392,
+      "sha16": "494dad284c72d034"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "npc",
+      "repo_path": "public/images/products/npc/npc-erw.jpg",
+      "bytes": 1039931,
+      "sha16": "3e6f16655e97d03d"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "pepperl-fuchs",
+      "repo_path": "public/images/products/pepperl-fuchs/pepperl-is.jpg",
+      "bytes": 80465,
+      "sha16": "cb62b936b5001a03"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "pepperl-fuchs",
+      "repo_path": "public/images/products/pepperl-fuchs/pepperl-sensor.jpg",
+      "bytes": 65158,
+      "sha16": "578e54bedd3092c5"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "rockwool",
+      "repo_path": "public/images/products/rockwool/rockwool-board.jpg",
+      "bytes": 173699,
+      "sha16": "d7ae4ee5423a671a"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "rockwool",
+      "repo_path": "public/images/products/rockwool/rockwool-industrial.jpg",
+      "bytes": 173699,
+      "sha16": "d7ae4ee5423a671a"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "toyo-seikan",
+      "repo_path": "public/images/products/toyo-seikan/mill-fallback-2.jpg",
+      "bytes": 157075,
+      "sha16": "31e87d7f4f4fb664"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "toyo-seikan",
+      "repo_path": "public/images/products/toyo-seikan/toyoseikan-aseptic.jpg",
+      "bytes": 712184,
+      "sha16": "d99c5eb3c9d811b7"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "tubacero",
+      "repo_path": "public/images/products/tubacero/tubacero-erw.jpg",
+      "bytes": 1039931,
+      "sha16": "3e6f16655e97d03d"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "tubacero",
+      "repo_path": "public/images/products/tubacero/tubacero-line.jpg",
+      "bytes": 234392,
+      "sha16": "494dad284c72d034"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "umran",
+      "repo_path": "public/images/products/umran/umran-line.jpg",
+      "bytes": 392124,
+      "sha16": "907a441612985262"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "umran",
+      "repo_path": "public/images/products/umran/umran-spiral.jpg",
+      "bytes": 490945,
+      "sha16": "771e0f798baea908"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "usiminas",
+      "repo_path": "public/images/products/usiminas/mill-fallback-2.jpg",
+      "bytes": 370368,
+      "sha16": "ff085278c4287b56"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "usiminas",
+      "repo_path": "public/images/products/usiminas/usiminas-coil.jpg",
+      "bytes": 403493,
+      "sha16": "b0ccf2bab1612808"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "velan",
+      "repo_path": "public/images/products/velan/mill-fallback-2.jpg",
+      "bytes": 548492,
+      "sha16": "38f06c94985c3691"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "velan",
+      "repo_path": "public/images/products/velan/velan-severe.jpg",
+      "bytes": 64194,
+      "sha16": "c4ce05436a72a4bd"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "vetropack",
+      "repo_path": "public/images/products/vetropack/vetropack-bottles.jpg",
+      "bytes": 423807,
+      "sha16": "25a8aafeb00f3d86"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "vetropack",
+      "repo_path": "public/images/products/vetropack/vetropack-jars.jpg",
+      "bytes": 110628,
+      "sha16": "a17625f633f1b953"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "wittenstein",
+      "repo_path": "public/images/products/wittenstein/wittenstein-rack.jpg",
+      "bytes": 196439,
+      "sha16": "cad3a4417c8415f6"
+    },
+    {
+      "pack": "HOLD34",
+      "slug": "wittenstein",
+      "repo_path": "public/images/products/wittenstein/wittenstein-servo.jpg",
+      "bytes": 108311,
+      "sha16": "634bd0919f3ed7fe"
+    }
+  ],
+  "suppliers": [
+    {
+      "pack": "HOLD36",
+      "slug": "vetropack",
+      "repo_path": "public/images/suppliers/vetropack/vetropack_01.jpg",
+      "bytes": 579760,
+      "sha16": "3a4b64d72b65b6e6"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "elopak",
+      "repo_path": "public/images/suppliers/elopak/elopak_01.jpg",
+      "bytes": 793822,
+      "sha16": "b32af2c9fb754549"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "alpla",
+      "repo_path": "public/images/suppliers/alpla/alpla_01.jpg",
+      "bytes": 1068049,
+      "sha16": "1bd36d5e26302691"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "novelis",
+      "repo_path": "public/images/suppliers/novelis/novelis_01.jpg",
+      "bytes": 644473,
+      "sha16": "d54bbcfb67c2498e"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "constellium",
+      "repo_path": "public/images/suppliers/constellium/constellium_01.jpg",
+      "bytes": 1152164,
+      "sha16": "4afb1d2e616101ee"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "orora",
+      "repo_path": "public/images/suppliers/orora/orora_01.jpg",
+      "bytes": 841584,
+      "sha16": "bd43b9192194fe30"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "coveris",
+      "repo_path": "public/images/suppliers/coveris/coveris_01.jpg",
+      "bytes": 620946,
+      "sha16": "2053fc03dafc4870"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "rockwool",
+      "repo_path": "public/images/suppliers/rockwool/rockwool_01.jpg",
+      "bytes": 293209,
+      "sha16": "4a2c5f4543b6287f"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "marcegaglia",
+      "repo_path": "public/images/suppliers/marcegaglia/marcegaglia_01.jpg",
+      "bytes": 394602,
+      "sha16": "bb9aa87a27ff8f6f"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "arvedi",
+      "repo_path": "public/images/suppliers/arvedi/arvedi_01.jpg",
+      "bytes": 421031,
+      "sha16": "c5c4362cdcf17d52"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "tubacero",
+      "repo_path": "public/images/suppliers/tubacero/tubacero_01.jpg",
+      "bytes": 1174288,
+      "sha16": "6378505eb7fd72d5"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "umran",
+      "repo_path": "public/images/suppliers/umran/umran_01.jpg",
+      "bytes": 392124,
+      "sha16": "907a441612985262"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "noksel",
+      "repo_path": "public/images/suppliers/noksel/noksel_01.jpg",
+      "bytes": 255601,
+      "sha16": "a44baa0cd1193f0e"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "cayirova",
+      "repo_path": "public/images/suppliers/cayirova/cayirova_01.jpg",
+      "bytes": 244367,
+      "sha16": "323dbc5b30e2b724"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "npc",
+      "repo_path": "public/images/suppliers/npc/npc_01.jpg",
+      "bytes": 154087,
+      "sha16": "356957ec2cd8c0b6"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "rama",
+      "repo_path": "public/images/suppliers/rama/rama_01.jpg",
+      "bytes": 308086,
+      "sha16": "6a34d7aa3fd2225c"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "choo-bee",
+      "repo_path": "public/images/suppliers/choo-bee/choo-bee_01.jpg",
+      "bytes": 1734493,
+      "sha16": "99eb1693334d6593"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "procarsa",
+      "repo_path": "public/images/suppliers/procarsa/procarsa_01.jpg",
+      "bytes": 808300,
+      "sha16": "e940116b80f5d973"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "zenith",
+      "repo_path": "public/images/suppliers/zenith/zenith_01.jpg",
+      "bytes": 299081,
+      "sha16": "16aaf85ea7978b2f"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "nexteel",
+      "repo_path": "public/images/suppliers/nexteel/nexteel_01.jpg",
+      "bytes": 273079,
+      "sha16": "9a8f745fc8ded55e"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "kitz",
+      "repo_path": "public/images/suppliers/kitz/kitz_01.jpg",
+      "bytes": 472689,
+      "sha16": "3f2d74fc6a99c017"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "velan",
+      "repo_path": "public/images/suppliers/velan/velan_01.jpg",
+      "bytes": 733972,
+      "sha16": "62e57fefb3181f1f"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "swagelok",
+      "repo_path": "public/images/suppliers/swagelok/swagelok_01.jpg",
+      "bytes": 112181,
+      "sha16": "7d721fa05d90c8ca"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "endress-hauser",
+      "repo_path": "public/images/suppliers/endress-hauser/endress-hauser_01.jpg",
+      "bytes": 945210,
+      "sha16": "1838d55b3cdb8b23"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "lincoln-electric",
+      "repo_path": "public/images/suppliers/lincoln-electric/lincoln-electric_01.jpg",
+      "bytes": 303975,
+      "sha16": "41641aa0ab279480"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "esab",
+      "repo_path": "public/images/suppliers/esab/esab_01.jpg",
+      "bytes": 305112,
+      "sha16": "bcea4c4e79a98dc3"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "donaldson",
+      "repo_path": "public/images/suppliers/donaldson/donaldson_01.jpg",
+      "bytes": 293154,
+      "sha16": "c1ed270a2223b2df"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "howden",
+      "repo_path": "public/images/suppliers/howden/howden_01.jpg",
+      "bytes": 291140,
+      "sha16": "aa771c208052d1c3"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "gates",
+      "repo_path": "public/images/suppliers/gates/gates_01.jpg",
+      "bytes": 996012,
+      "sha16": "c8bc27727e3a8d7e"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "sfs",
+      "repo_path": "public/images/suppliers/sfs/sfs_01.jpg",
+      "bytes": 193099,
+      "sha16": "44761ad77775392c"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "lisi",
+      "repo_path": "public/images/suppliers/lisi/lisi_01.jpg",
+      "bytes": 351244,
+      "sha16": "4b3754813001fabb"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "british-steel",
+      "repo_path": "public/images/suppliers/british-steel/british-steel_01.jpg",
+      "bytes": 289677,
+      "sha16": "2221323726963cf3"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "ternium",
+      "repo_path": "public/images/suppliers/ternium/ternium_01.jpg",
+      "bytes": 1017814,
+      "sha16": "165d27decfe11965"
+    },
+    {
+      "pack": "HOLD36",
+      "slug": "leoni",
+      "repo_path": "public/images/suppliers/leoni/leoni_01.jpg",
+      "bytes": 210898,
+      "sha16": "16549823eaf1707a"
+    },
+    {
+      "pack": "HOLD36-REFETCH2",
+      "slug": "bonfiglioli",
+      "repo_path": "public/images/suppliers/bonfiglioli/bonfiglioli_01.jpg",
+      "bytes": 384271,
+      "sha16": "127d51f2307b1930",
+      "source_enhanced": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/bonfiglioli/bonfiglioli_01.jpg"
+    },
+    {
+      "pack": "HOLD36-REFETCH2",
+      "slug": "usiminas",
+      "repo_path": "public/images/suppliers/usiminas/usiminas_01.jpg",
+      "bytes": 601352,
+      "sha16": "836d478d0a69347d",
+      "source_enhanced": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/usiminas/usiminas_01.jpg"
+    }
+  ],
+  "product_count": 83,
+  "supplier_count": 36,
+  "product_skus": [
+    "alpla",
+    "belden",
+    "billerud",
+    "bonfiglioli",
+    "british-steel",
+    "can-pack",
+    "constantia-flexibles",
+    "coveris",
+    "donaldson",
+    "elopak",
+    "endress-hauser",
+    "fujikura",
+    "gates",
+    "gea",
+    "greatview",
+    "harmonic-drive",
+    "howden",
+    "james-hardie",
+    "kitz",
+    "kobe-steel",
+    "lapp",
+    "legrand",
+    "leoni",
+    "lincoln-electric",
+    "mauser",
+    "mayr-melnhof",
+    "misumi",
+    "nexteel",
+    "nine-dragons",
+    "noksel",
+    "novelis",
+    "npc",
+    "pepperl-fuchs",
+    "rengo",
+    "rockwool",
+    "sumitomo-electric",
+    "toyo-seikan",
+    "tubacero",
+    "umran",
+    "usiminas",
+    "velan",
+    "vetropack",
+    "wittenstein"
+  ],
+  "supplier_slugs": [
+    "alpla",
+    "arvedi",
+    "bonfiglioli",
+    "british-steel",
+    "cayirova",
+    "choo-bee",
+    "constellium",
+    "coveris",
+    "donaldson",
+    "elopak",
+    "endress-hauser",
+    "esab",
+    "gates",
+    "howden",
+    "kitz",
+    "leoni",
+    "lincoln-electric",
+    "lisi",
+    "marcegaglia",
+    "nexteel",
+    "noksel",
+    "novelis",
+    "npc",
+    "orora",
+    "procarsa",
+    "rama",
+    "rockwool",
+    "sfs",
+    "swagelok",
+    "ternium",
+    "tubacero",
+    "umran",
+    "usiminas",
+    "velan",
+    "vetropack",
+    "zenith"
+  ],
+  "updated_at_utc": "2026-09-09T21:12:59.754750+00:00",
+  "refetch2": {
+    "researcher_seal": "/workspace/suppliers-phase1/daily/2026-09-09/_qa/researcher-hold36-refetch2-seal.json",
+    "added": [
+      {
+        "pack": "HOLD36-REFETCH2",
+        "slug": "bonfiglioli",
+        "repo_path": "public/images/suppliers/bonfiglioli/bonfiglioli_01.jpg",
+        "bytes": 384271,
+        "sha16": "127d51f2307b1930",
+        "source_enhanced": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/bonfiglioli/bonfiglioli_01.jpg"
+      },
+      {
+        "pack": "HOLD36-REFETCH2",
+        "slug": "usiminas",
+        "repo_path": "public/images/suppliers/usiminas/usiminas_01.jpg",
+        "bytes": 601352,
+        "sha16": "836d478d0a69347d",
+        "source_enhanced": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/suppliers/usiminas/usiminas_01.jpg"
+      }
+    ]
+  }
+}

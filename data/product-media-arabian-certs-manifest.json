@@ -1,0 +1,98 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/api-5b-erw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/api-5b-erw.jpg",
+    "out_size": [
+      2200,
+      1700
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/api-5ct.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/api-5ct.jpg",
+    "out_size": [
+      2200,
+      1700
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/api-5l.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/api-5l.jpg",
+    "out_size": [
+      2200,
+      1700
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/api-lsaw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/api-lsaw.jpg",
+    "out_size": [
+      1650,
+      1275
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-14001-erw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-14001-erw.jpg",
+    "out_size": [
+      1555,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-17025-lsaw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-17025-lsaw.jpg",
+    "out_size": [
+      2200,
+      1700
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-29001-lsaw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-29001-lsaw.jpg",
+    "out_size": [
+      1242,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-45001-erw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-45001-erw.jpg",
+    "out_size": [
+      1555,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-45001-lsaw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-45001-lsaw.jpg",
+    "out_size": [
+      1240,
+      1755
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-9001-coating.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-9001-coating.jpg",
+    "out_size": [
+      1555,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/iso-9001-erw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/iso-9001-erw.jpg",
+    "out_size": [
+      1555,
+      2200
+    ]
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/certs/arabian-pipes/ul-852-erw.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/certs/arabian-pipes/ul-852-erw.jpg",
+    "out_size": [
+      1700,
+      2200
+    ]
+  }
+]

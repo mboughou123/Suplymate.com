@@ -1,0 +1,61 @@
+{
+  "label": "QA-HOLD34-PRODUCTS-RESEARCHER-OK",
+  "sourceSeal": "/workspace/suppliers-phase1/daily/2026-09-09/_qa/researcher-hold34-products-seal.json",
+  "sourceEnhancer": "/workspace/suppliers-phase1/daily/2026-09-09/_qa_hold34_products_pack/enhancer-seal.json",
+  "sealed_at_utc": "2026-09-09T19:45:00Z",
+  "scope": "HOLD34 products only — append onto daily-2026-09-09 catalogue. Cleared prior 16 locked. HOLD=helukabel,lisi,sfs.",
+  "pr_15": "wired",
+  "needs_ai_generate": 0,
+  "unit_price_null": 31,
+  "rfq_products": 31,
+  "counts": {
+    "hold34": 31,
+    "ok": 23,
+    "soft": 8,
+    "hold": 3,
+    "catalogue_after": 47
+  },
+  "ok": [
+    { "slug": "alpla", "still": "alpla-closures.jpg", "sibling_omitted": "mill-fallback-2.jpg" },
+    { "slug": "billerud", "still": "billerud-board.jpg" },
+    { "slug": "bonfiglioli", "still": "bonfiglioli-gear.jpg", "note": "SKU attaches by slug; mill card stays HOLD CGI" },
+    { "slug": "british-steel", "still": "britishsteel-sections.jpg" },
+    { "slug": "coveris", "still": "coveris-food.jpg" },
+    { "slug": "donaldson", "still": "donaldson-dust.jpg" },
+    { "slug": "elopak", "still": "elopak-carton.jpg", "note": "Pure-Pak on-brand; not Tetra Pak" },
+    { "slug": "endress-hauser", "still": "endress-level.jpg" },
+    { "slug": "gates", "still": "gates-hose.jpg", "sibling_omitted": "mill-fallback-2.jpg" },
+    { "slug": "gea", "still": "gea-process.jpg" },
+    { "slug": "greatview", "still": "greatview-aseptic.jpg", "note": "on-brand aseptic carton; not Tetra Pak", "sibling_omitted": "greatview-carton.jpg" },
+    { "slug": "james-hardie", "still": "jameshardie-siding.jpg" },
+    { "slug": "kitz", "still": "kitz-butterfly.jpg" },
+    { "slug": "kobe-steel", "still": "kobelco-weld.jpg" },
+    { "slug": "leoni", "still": "leoni-cable.jpg", "sibling_omitted": "leoni-harness.jpg" },
+    { "slug": "lincoln-electric", "still": "lincoln-welder.jpg" },
+    { "slug": "noksel", "still": "noksel-ssaw.jpg" },
+    { "slug": "novelis", "still": "novelis-cansheet.jpg", "sibling_omitted": "novelis-coil.jpg" },
+    { "slug": "pepperl-fuchs", "still": "pepperl-is.jpg" },
+    { "slug": "umran", "still": "umran-spiral.jpg" },
+    { "slug": "velan", "still": "velan-severe.jpg" },
+    { "slug": "vetropack", "still": "vetropack-jars.jpg", "note": "glass bottles/jars; not Tetra Pak" },
+    { "slug": "wittenstein", "still": "wittenstein-rack.jpg" }
+  ],
+  "soft": [
+    { "slug": "howden", "still": "howden-compressor.jpg" },
+    { "slug": "lapp", "still": "lapp-olflex.jpg", "note": "type-match cable/gland; not branded ÖLFLEX OE hero" },
+    { "slug": "nexteel", "still": "nexteel-line.jpg" },
+    { "slug": "npc", "still": "npc-erw.jpg" },
+    { "slug": "rockwool", "still": "rockwool-board.jpg" },
+    { "slug": "toyo-seikan", "still": "toyoseikan-aseptic.jpg", "note": "type-match packaging; not branded Tetra Pak / OE carton" },
+    { "slug": "tubacero", "still": "tubacero-line.jpg" },
+    { "slug": "usiminas", "still": "usiminas-coil.jpg", "note": "SKU attaches by slug; mill card stays HOLD rail tank cars", "sibling_omitted": "mill-fallback-2.jpg" }
+  ],
+  "hold": [
+    { "slug": "helukabel", "reason": "blocked, no stills" },
+    { "slug": "lisi", "reason": "blocked, no stills" },
+    { "slug": "sfs", "reason": "blocked, no stills" }
+  ],
+  "invented_fob_prices": false,
+  "stills_source": "/workspace/suppliers-phase1/daily/2026-09-09/enhanced/products/<slug>/",
+  "stills_note": "Preferred filenames wired in JSON. Enhancer pack was not present on this VM; stills were not invented or substituted from mill _01.jpg. Never promote *.BAD.* siblings."
+}

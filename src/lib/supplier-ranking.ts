@@ -1,3 +1,5 @@
+import { supplierHasUsableCardImage } from "@/lib/image-fallback";
+
 // Shared supplier scoring used by the import pipeline AND the website, so the
 // score shown to buyers is identical to the one computed at ingest time.
 //
@@ -28,7 +30,10 @@ export type RankableSupplier = {
 // Empty-image cards look untrustworthy, so this is both a scoring signal and the
 // primary sort tiebreaker used across the pipeline and the public directory.
 export function hasSupplierImage(s: RankableSupplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.images && s.images.length > 0);
+  return supplierHasUsableCardImage({
+    imageUrl: s.imageUrl,
+    supplierImages: s.images,
+  });
 }
 
 const KNOWN_CATEGORIES = new Set([

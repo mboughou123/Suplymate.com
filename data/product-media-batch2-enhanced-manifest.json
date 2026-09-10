@@ -1,0 +1,898 @@
+[
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/commercial-metals-company/fabricated-rebar.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/commercial-metals-company/fabricated-rebar.jpg",
+    "in_size": [
+      1920,
+      1080
+    ],
+    "out_size": [
+      1600,
+      900
+    ],
+    "in_bytes": 461520,
+    "out_bytes": 531431
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/commercial-metals-company/mill-rebar.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/commercial-metals-company/mill-rebar.jpg",
+    "in_size": [
+      300,
+      300
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 34611,
+    "out_bytes": 255066
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab-2.jpg",
+    "in_size": [
+      1080,
+      1080
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 218768,
+    "out_bytes": 390400
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab-3.jpg",
+    "in_size": [
+      1080,
+      1080
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 250264,
+    "out_bytes": 458611
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/heavy-duty-prefab.jpg",
+    "in_size": [
+      892,
+      892
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 115342,
+    "out_bytes": 287823
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse-2.jpg",
+    "in_size": [
+      1280,
+      1280
+    ],
+    "out_size": [
+      1280,
+      1280
+    ],
+    "in_bytes": 154594,
+    "out_bytes": 244880
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse-3.jpg",
+    "in_size": [
+      426,
+      426
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 78894,
+    "out_bytes": 399959
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/peb-structural-warehouse.jpg",
+    "in_size": [
+      1280,
+      1280
+    ],
+    "out_size": [
+      1280,
+      1280
+    ],
+    "in_bytes": 308966,
+    "out_bytes": 501781
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/prefab-warehouse-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/prefab-warehouse-2.jpg",
+    "in_size": [
+      1280,
+      1280
+    ],
+    "out_size": [
+      1280,
+      1280
+    ],
+    "in_bytes": 258124,
+    "out_bytes": 379727
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/prefab-warehouse-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/prefab-warehouse-3.jpg",
+    "in_size": [
+      608,
+      608
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 87877,
+    "out_bytes": 328478
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/hangxiao-steel-structure-shandong/prefab-warehouse.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/hangxiao-steel-structure-shandong/prefab-warehouse.jpg",
+    "in_size": [
+      1080,
+      1080
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 303586,
+    "out_bytes": 601546
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/aac-wall-panels-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/aac-wall-panels-2.jpg",
+    "in_size": [
+      282,
+      300
+    ],
+    "out_size": [
+      1200,
+      1277
+    ],
+    "in_bytes": 5183,
+    "out_bytes": 65119
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/aac-wall-panels-blog.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/aac-wall-panels-blog.jpg",
+    "in_size": [
+      896,
+      600
+    ],
+    "out_size": [
+      1200,
+      804
+    ],
+    "in_bytes": 61315,
+    "out_bytes": 134496
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/aac-wall-panels-brochure-cover.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/aac-wall-panels-brochure-cover.jpg",
+    "in_size": [
+      660,
+      960
+    ],
+    "out_size": [
+      1200,
+      1745
+    ],
+    "in_bytes": 54255,
+    "out_bytes": 253480
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/aac-wall-panels-install-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/aac-wall-panels-install-2.jpg",
+    "in_size": [
+      252,
+      200
+    ],
+    "out_size": [
+      1200,
+      952
+    ],
+    "in_bytes": 13389,
+    "out_bytes": 170427
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/aac-wall-panels.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/aac-wall-panels.jpg",
+    "in_size": [
+      672,
+      536
+    ],
+    "out_size": [
+      1200,
+      957
+    ],
+    "in_bytes": 15700,
+    "out_bytes": 64167
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/magic-blox-aac-blocks-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/magic-blox-aac-blocks-2.jpg",
+    "in_size": [
+      1000,
+      750
+    ],
+    "out_size": [
+      1200,
+      900
+    ],
+    "in_bytes": 63784,
+    "out_bytes": 157750
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/magic-blox-aac-blocks-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/magic-blox-aac-blocks-3.jpg",
+    "in_size": [
+      1000,
+      953
+    ],
+    "out_size": [
+      1200,
+      1144
+    ],
+    "in_bytes": 129924,
+    "out_bytes": 291989
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/magic-blox-aac-blocks.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/magic-blox-aac-blocks.jpg",
+    "in_size": [
+      282,
+      300
+    ],
+    "out_size": [
+      1200,
+      1277
+    ],
+    "in_bytes": 8038,
+    "out_bytes": 85249
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/magic-blox-brochure-crop.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/magic-blox-brochure-crop.jpg",
+    "in_size": [
+      237,
+      345
+    ],
+    "out_size": [
+      1200,
+      1747
+    ],
+    "in_bytes": 12494,
+    "out_bytes": 128304
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/superflex-2k-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/superflex-2k-2.jpg",
+    "in_size": [
+      282,
+      300
+    ],
+    "out_size": [
+      1200,
+      1277
+    ],
+    "in_bytes": 17580,
+    "out_bytes": 151429
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/magicrete-building-solutions/superflex-2k.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/magicrete-building-solutions/superflex-2k.jpg",
+    "in_size": [
+      672,
+      536
+    ],
+    "out_size": [
+      1200,
+      957
+    ],
+    "in_bytes": 35888,
+    "out_bytes": 110055
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/opc-53-bag-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/opc-53-bag-2.jpg",
+    "in_size": [
+      1160,
+      600
+    ],
+    "out_size": [
+      1200,
+      621
+    ],
+    "in_bytes": 151282,
+    "out_bytes": 243603
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/opc-53-bag.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/opc-53-bag.jpg",
+    "in_size": [
+      580,
+      500
+    ],
+    "out_size": [
+      1200,
+      1034
+    ],
+    "in_bytes": 21743,
+    "out_bytes": 79983
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/ppc-bag-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/ppc-bag-2.jpg",
+    "in_size": [
+      1160,
+      600
+    ],
+    "out_size": [
+      1200,
+      621
+    ],
+    "in_bytes": 151282,
+    "out_bytes": 243603
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/ppc-bag.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/ppc-bag.jpg",
+    "in_size": [
+      580,
+      500
+    ],
+    "out_size": [
+      1200,
+      1034
+    ],
+    "in_bytes": 21568,
+    "out_bytes": 77099
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/super-bag-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/super-bag-2.jpg",
+    "in_size": [
+      580,
+      500
+    ],
+    "out_size": [
+      1200,
+      1034
+    ],
+    "in_bytes": 24405,
+    "out_bytes": 86497
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/ultratech-cement/super-bag.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/ultratech-cement/super-bag.jpg",
+    "in_size": [
+      600,
+      430
+    ],
+    "out_size": [
+      1200,
+      860
+    ],
+    "in_bytes": 66352,
+    "out_bytes": 222527
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/applications.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/applications.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ],
+    "in_bytes": 186493,
+    "out_bytes": 292498
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/dx-ex-liner-panel.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/dx-ex-liner-panel.jpg",
+    "in_size": [
+      600,
+      300
+    ],
+    "out_size": [
+      1200,
+      600
+    ],
+    "in_bytes": 28051,
+    "out_bytes": 90429
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/factory-aerial.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/factory-aerial.jpg",
+    "in_size": [
+      870,
+      277
+    ],
+    "out_size": [
+      1200,
+      382
+    ],
+    "in_bytes": 85485,
+    "out_bytes": 190139
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/peb-building-slide-1.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/peb-building-slide-1.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ],
+    "in_bytes": 345814,
+    "out_bytes": 442121
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/peb-building-slide-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/peb-building-slide-2.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ],
+    "in_bytes": 305024,
+    "out_bytes": 390324
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/peb-building-slide-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/peb-building-slide-3.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ],
+    "in_bytes": 332056,
+    "out_bytes": 413720
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/peb-fabrication-line.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/peb-fabrication-line.jpg",
+    "in_size": [
+      1900,
+      600
+    ],
+    "out_size": [
+      1600,
+      505
+    ],
+    "in_bytes": 178440,
+    "out_bytes": 280193
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/single-skin-sw-panel.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/single-skin-sw-panel.jpg",
+    "in_size": [
+      1024,
+      274
+    ],
+    "out_size": [
+      1200,
+      321
+    ],
+    "in_bytes": 34609,
+    "out_bytes": 80231
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/temparch-dimensions.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/temparch-dimensions.jpg",
+    "in_size": [
+      870,
+      375
+    ],
+    "out_size": [
+      1200,
+      517
+    ],
+    "in_bytes": 42061,
+    "out_bytes": 111976
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/temparch-thermal.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/temparch-thermal.jpg",
+    "in_size": [
+      870,
+      224
+    ],
+    "out_size": [
+      1200,
+      309
+    ],
+    "in_bytes": 17883,
+    "out_bytes": 48121
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/construction/zamil-steel-peb/tempcon-thermal.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/construction/zamil-steel-peb/tempcon-thermal.jpg",
+    "in_size": [
+      870,
+      420
+    ],
+    "out_size": [
+      1200,
+      579
+    ],
+    "in_bytes": 39179,
+    "out_bytes": 97521
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/api-trunnion-ball-valve.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/api-trunnion-ball-valve.jpg",
+    "in_size": [
+      640,
+      640
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 41683,
+    "out_bytes": 144799
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/forged-floating-ball-valve.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/forged-floating-ball-valve.jpg",
+    "in_size": [
+      800,
+      800
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 79583,
+    "out_bytes": 198791
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/forged-gate-valve-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/forged-gate-valve-2.jpg",
+    "in_size": [
+      866,
+      866
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 48712,
+    "out_bytes": 133860
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/forged-gate-valve.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/forged-gate-valve.jpg",
+    "in_size": [
+      866,
+      866
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 44452,
+    "out_bytes": 126746
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/metal-seated-ht-ball-valve.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/metal-seated-ht-ball-valve.jpg",
+    "in_size": [
+      640,
+      640
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 62793,
+    "out_bytes": 216250
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/soft-seated-floating-ball-valve-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/soft-seated-floating-ball-valve-2.jpg",
+    "in_size": [
+      866,
+      944
+    ],
+    "out_size": [
+      1200,
+      1308
+    ],
+    "in_bytes": 58897,
+    "out_bytes": 140475
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/chaoda-valves/soft-seated-floating-ball-valve.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/chaoda-valves/soft-seated-floating-ball-valve.jpg",
+    "in_size": [
+      1024,
+      956
+    ],
+    "out_size": [
+      1200,
+      1120
+    ],
+    "in_bytes": 159605,
+    "out_bytes": 347233
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/kirloskar-brothers/kcil-64-6-vertical-inline.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/kirloskar-brothers/kcil-64-6-vertical-inline.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 73426,
+    "out_bytes": 87465
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/kirloskar-brothers/kcil-vertical-inline-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/kirloskar-brothers/kcil-vertical-inline-2.jpg",
+    "in_size": [
+      1501,
+      1501
+    ],
+    "out_size": [
+      1501,
+      1501
+    ],
+    "in_bytes": 104892,
+    "out_bytes": 124206
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/kirloskar-brothers/kdi-520-monobloc.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/kirloskar-brothers/kdi-520-monobloc.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 86566,
+    "out_bytes": 105580
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/kirloskar-brothers/kds-225-monobloc.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/kirloskar-brothers/kds-225-monobloc.jpg",
+    "in_size": [
+      1200,
+      1200
+    ],
+    "out_size": [
+      1200,
+      1200
+    ],
+    "in_bytes": 96210,
+    "out_bytes": 118183
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xst-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xst-2.jpg",
+    "in_size": [
+      3126,
+      2473
+    ],
+    "out_size": [
+      1600,
+      1266
+    ],
+    "in_bytes": 434826,
+    "out_bytes": 297006
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xst-3.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xst-3.jpg",
+    "in_size": [
+      3126,
+      840
+    ],
+    "out_size": [
+      1600,
+      430
+    ],
+    "in_bytes": 184360,
+    "out_bytes": 112915
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xst-standard-centrifugal.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xst-standard-centrifugal.jpg",
+    "in_size": [
+      860,
+      573
+    ],
+    "out_size": [
+      1200,
+      800
+    ],
+    "in_bytes": 53726,
+    "out_bytes": 119679
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xstp-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xstp-2.jpg",
+    "in_size": [
+      3126,
+      1861
+    ],
+    "out_size": [
+      1600,
+      953
+    ],
+    "in_bytes": 388733,
+    "out_bytes": 256002
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xstp-horizontal-centrifugal.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xstp-horizontal-centrifugal.jpg",
+    "in_size": [
+      860,
+      573
+    ],
+    "out_size": [
+      1200,
+      800
+    ],
+    "in_bytes": 50019,
+    "out_bytes": 112656
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xzs-2.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xzs-2.jpg",
+    "in_size": [
+      3125,
+      2210
+    ],
+    "out_size": [
+      1600,
+      1132
+    ],
+    "in_bytes": 424237,
+    "out_bytes": 290192
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/leo-group-pump-zhejiang/xzs-ss-centrifugal.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/leo-group-pump-zhejiang/xzs-ss-centrifugal.jpg",
+    "in_size": [
+      860,
+      573
+    ],
+    "out_size": [
+      1200,
+      800
+    ],
+    "in_bytes": 65296,
+    "out_bytes": 150641
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/tong-ming-enterprise/hexagon-head-bolts.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/tong-ming-enterprise/hexagon-head-bolts.jpg",
+    "in_size": [
+      600,
+      398
+    ],
+    "out_size": [
+      1200,
+      796
+    ],
+    "in_bytes": 20980,
+    "out_bytes": 117286
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/tong-ming-enterprise/hexagon-nuts.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/tong-ming-enterprise/hexagon-nuts.jpg",
+    "in_size": [
+      600,
+      398
+    ],
+    "out_size": [
+      1200,
+      796
+    ],
+    "in_bytes": 24867,
+    "out_bytes": 117710
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/tong-ming-enterprise/hexagon-socket-cap-screws.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/tong-ming-enterprise/hexagon-socket-cap-screws.jpg",
+    "in_size": [
+      600,
+      398
+    ],
+    "out_size": [
+      1200,
+      796
+    ],
+    "in_bytes": 26998,
+    "out_bytes": 139015
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/tong-ming-enterprise/self-tapping-screws.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/tong-ming-enterprise/self-tapping-screws.jpg",
+    "in_size": [
+      600,
+      398
+    ],
+    "out_size": [
+      1200,
+      796
+    ],
+    "in_bytes": 20714,
+    "out_bytes": 111542
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/zhejiang-zhiju-pipeline/90deg-elbow-lr.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/zhejiang-zhiju-pipeline/90deg-elbow-lr.jpg",
+    "in_size": [
+      1500,
+      1500
+    ],
+    "out_size": [
+      1500,
+      1500
+    ],
+    "in_bytes": 85554,
+    "out_bytes": 117590
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/zhejiang-zhiju-pipeline/equal-tee-astm-a403.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/zhejiang-zhiju-pipeline/equal-tee-astm-a403.jpg",
+    "in_size": [
+      1500,
+      1500
+    ],
+    "out_size": [
+      1500,
+      1500
+    ],
+    "in_bytes": 77349,
+    "out_bytes": 108651
+  },
+  {
+    "src": "/workspace/suppliers-phase1/product-media/images/industrial/zhejiang-zhiju-pipeline/slip-on-flange.jpg",
+    "dst": "/workspace/suppliers-phase1/product-media/enhanced/industrial/zhejiang-zhiju-pipeline/slip-on-flange.jpg",
+    "in_size": [
+      1500,
+      1500
+    ],
+    "out_size": [
+      1500,
+      1500
+    ],
+    "in_bytes": 104650,
+    "out_bytes": 171149
+  }
+]

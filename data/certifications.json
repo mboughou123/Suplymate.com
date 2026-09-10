@@ -1,0 +1,1331 @@
+{
+  "generated_at_utc": "2026-09-02T18:18:00Z",
+  "generated_at_pt": "2026-09-02 PT",
+  "policy": "Mill-site certificate document/scans only (ISO/API/CE/UL/ASTM/CARES/IATF/BIS/etc). No stock ISO badge PNGs, no generic icons, no fabricated certs. PDFs rendered via pdftoppm first page where needed.",
+  "counts": {
+    "mills_total_in_phase1": 59,
+    "mills_with_real_cert_scans": 12,
+    "mills_not_found": 47,
+    "cert_images_staged": 59
+  },
+  "found": [
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "API 5L License 5L-1170",
+      "cert_type": "API_5L",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-5l.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2022/10/Certificate-5L-1170_20240927120227-PRINT_1.png",
+      "notes": "",
+      "bytes": 417585,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "API 2B License 2B-0193",
+      "cert_type": "API_2B",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-2b.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2022/10/Certificate-2B-0193_20240927120135_Print1_1.png",
+      "notes": "",
+      "bytes": 360226,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "API Spec Q1 Q1-3826",
+      "cert_type": "API_Q1",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/api-q1.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2022/10/Certificate-Q1-3826_20240927120311_Print1_1.png",
+      "notes": "",
+      "bytes": 324088,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "ISO 9001:2015 (APIQR 4628)",
+      "cert_type": "ISO_9001",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-9001.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2022/10/Certificate-ISO-4628_20240927120342_Print1_1.png",
+      "notes": "",
+      "bytes": 437839,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "ISO 14001:2015",
+      "cert_type": "ISO_14001",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-14001.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2026/03/Al-Gharbia-Pipe-Company-LLC-AGPC-14k_1-25-28.png",
+      "notes": "",
+      "bytes": 292728,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "ISO 45001:2018",
+      "cert_type": "ISO_45001",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-45001.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2026/03/Al-Gharbia-Pipe-Company-LLC-AGPC-45k_1-25-28.png",
+      "notes": "",
+      "bytes": 293011,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Al Gharbia Pipe Company LLC",
+      "supplier_slug": "al-gharbia-pipe",
+      "cert_name": "ISO/IEC 17025:2017 laboratory accreditation",
+      "cert_type": "ISO_17025",
+      "source_url": "https://algharbiapipe.com/accreditations/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/al-gharbia-pipe/iso-17025.jpg",
+      "image_url": "https://algharbiapipe.com/wp-content/uploads/2022/10/AC-10.12-Accreditation-certificate-ATL-Garbia_-S_1.png",
+      "notes": "",
+      "bytes": 695681,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "ISO 9001:2015 (Aambitious Assessment QCI37322)",
+      "cert_type": "ISO_9001",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/iso-9001-aap-2022.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-04.webp",
+      "notes": "Issued 2022; expiry on certificate 05/04/2025",
+      "bytes": 287433,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "RoHS Directive 2011/65/EU Certificate of Compliance",
+      "cert_type": "ROHS",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/rohs.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-05.webp",
+      "notes": "",
+      "bytes": 366672,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "CE Low Voltage Directive 2014/35/EU",
+      "cert_type": "CE",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/ce-lvd.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-06.webp",
+      "notes": "",
+      "bytes": 294233,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "BIS Licence CM/L-2612445 IS 694:2010",
+      "cert_type": "BIS",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/bis-is-694.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-08.webp",
+      "notes": "",
+      "bytes": 209181,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "ISO 9001:2015 (MMS 25MEQTG74)",
+      "cert_type": "ISO_9001",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/iso-9001.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-10.webp",
+      "notes": "Current ISO 9001 scan published on mill certifications page",
+      "bytes": 331675,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "RoHS Directive 2015/863/EU Certificate of Compliance",
+      "cert_type": "ROHS",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/rohs-2015-863.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-11.webp",
+      "notes": "",
+      "bytes": 453056,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Foliflex Cables (India) Private Limited",
+      "supplier_slug": "foliflex-cables",
+      "cert_name": "CE LVD 2014/35/EU Certificate No. 300625502",
+      "cert_type": "CE",
+      "source_url": "https://foliflexcables.in/our-certifications",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/foliflex-cables/ce-lvd-300625502.jpg",
+      "image_url": "https://foliflexcables.in/img/certifications/foliflex-certificate-12.webp",
+      "notes": "",
+      "bytes": 485248,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO 9001:2015",
+      "cert_type": "ISO_9001",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-9001.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/notes_250319_095657-1762673900.pdf",
+      "notes": "Rendered first page of mill-hosted PDF; issuer Alcumus ISOQAR on current PDF",
+      "bytes": 218467,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO 14001:2015 (DNV)",
+      "cert_type": "ISO_14001",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-14001.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/cer04-1738053221.pdf",
+      "notes": "",
+      "bytes": 224496,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO 45001:2018 (DNV)",
+      "cert_type": "ISO_45001",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-45001.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/cer03-1738053215.pdf",
+      "notes": "",
+      "bytes": 227036,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO 50001:2018 (Bureau Veritas)",
+      "cert_type": "ISO_50001",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-50001.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/cer06-1738053236.pdf",
+      "notes": "",
+      "bytes": 357484,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO/IEC 17025:2017 (IAS)",
+      "cert_type": "ISO_17025",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-17025.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/cer07-1738053241.pdf",
+      "notes": "",
+      "bytes": 233822,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "UK CARES Product Conformity BS 4449",
+      "cert_type": "CARES",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/cares-bs-4449.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/product_conformity_certification_-_bs_4449_andor_related_products.pdf",
+      "notes": "",
+      "bytes": 310145,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "ISO 22301:2019 BCM",
+      "cert_type": "ISO_22301",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/iso-22301.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/bcm-certification.pdf",
+      "notes": "",
+      "bytes": 246621,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Saudi Iron and Steel Company (Hadeed)",
+      "supplier_slug": "hadeed",
+      "cert_name": "EN 10025-1:2004 Hot Rolled Products FPC",
+      "cert_type": "CE_EN_10025",
+      "source_url": "https://hadeed.com.sa/certificates",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hadeed/en-10025.jpg",
+      "image_url": "https://hadeed-website.s3.eu-central-1.amazonaws.com/en-10025-1_rev.2.0_eng_final-20251104-20251104.pdf",
+      "notes": "",
+      "bytes": 351727,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "CARES ISO 9001:2015 Certificate 1130",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-9001.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2025/02/1130-CARES-QAULITY-MANAGEMENT-SYSTEMS-CERTIFICATE.pdf",
+      "notes": "",
+      "bytes": 267366,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "CARES ISO 14001:2015 Certificate 1667",
+      "cert_type": "ISO_14001",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-14001.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2025/02/1667-ENVIRONMENTAL-MANAGEMENT-SYSTEM-CERTIFICATION.pdf",
+      "notes": "",
+      "bytes": 270198,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "CARES ISO 45001:2018 Certificate 1641",
+      "cert_type": "ISO_45001",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-45001.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2025/02/1641-OCCUPATIONAL-HEALTH-AND-SAFETY-MANAGEMENT-SYSTEM-CERTIFICATION-45001.pdf",
+      "notes": "",
+      "bytes": 276138,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "TURKAK ISO/IEC 17025:2017 AB-1371-T",
+      "cert_type": "ISO_17025",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/iso-17025.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2026/06/AB-1371-T-ISO-17025-2017-TURKISH-Accreditation-Certificate_2026-1.pdf",
+      "notes": "",
+      "bytes": 248218,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "CARES Product Conformity ASTM A615/A615M",
+      "cert_type": "CARES",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/cares-astm-a615.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2026/01/180101-%E2%80%93-CARES-Product-Conformity-Certification-ASTM-A615-A615M.pdf",
+      "notes": "",
+      "bytes": 298211,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Qatar Steel Company (Q.P.S.C.)",
+      "supplier_slug": "qatar-steel",
+      "cert_name": "CARES Product Conformity BS 4449:2005",
+      "cert_type": "CARES",
+      "source_url": "https://www.qatarsteel.com.qa/qatar-steel-main-products/product-quality/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/qatar-steel/cares-bs-4449.jpg",
+      "image_url": "https://www.qatarsteel.com.qa/wp-content/uploads/2026/01/060401-%E2%80%93-CARES-Product-Conformity-Certification-%E2%80%93-BS4449-2005.pdf",
+      "notes": "",
+      "bytes": 298667,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "ISO 9001:2015 (TUV Nord)",
+      "cert_type": "ISO_9001",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-9001.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/ISO_9001_2015_certificate.jpg",
+      "notes": "",
+      "bytes": 76167,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "ISO 14001:2015",
+      "cert_type": "ISO_14001",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-14001.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/ISO_14001_2015_certificate.jpg",
+      "notes": "",
+      "bytes": 77141,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "ISO 45001:2018",
+      "cert_type": "ISO_45001",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iso-45001.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/ISO_45001_2018_certificate.jpg",
+      "notes": "",
+      "bytes": 77820,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "API Q1 CS Kutch",
+      "cert_type": "API_Q1",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-q1-cs-kutch.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/API-Q1-CS-Kutch.jpg",
+      "notes": "",
+      "bytes": 77500,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "API 5L CS Kutch",
+      "cert_type": "API_5L",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-5l-cs-kutch.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/API-5L-CS-Kutch.jpg",
+      "notes": "",
+      "bytes": 90816,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "API 5CT CS Kutch",
+      "cert_type": "API_5CT",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-5ct-cs-kutch.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/API-5CT-CS-Kutch.jpg",
+      "notes": "",
+      "bytes": 81606,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "API 2B CS Kutch",
+      "cert_type": "API_2B",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/api-2b-cs-kutch.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/API-2B-CS-Kutch.jpg",
+      "notes": "",
+      "bytes": 80798,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Ratnamani Metals & Tubes Limited",
+      "supplier_slug": "ratnamani-metals-tubes",
+      "cert_name": "IATF 16949 Indrad SS",
+      "cert_type": "IATF_16949",
+      "source_url": "https://ratnamani.com/quality_certifications.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/ratnamani-metals-tubes/iatf-16949.jpg",
+      "image_url": "https://ratnamani.com/images/certificates/indrad_ss_IATF_16949.jpg",
+      "notes": "",
+      "bytes": 69225,
+      "status": "found"
+    },
+    {
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug": "xwa-power-cable",
+      "cert_name": "ISO 9001:2015 / GB/T 19001-2016",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.xwacable.com/our-factory/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-9001.jpg",
+      "image_url": "https://www.xwacable.com/wp-content/uploads/2026/02/ISO-9001-XWA_01.webp",
+      "notes": "",
+      "bytes": 100859,
+      "status": "found"
+    },
+    {
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug": "xwa-power-cable",
+      "cert_name": "ISO 14001:2015 / GB/T 24001-2016",
+      "cert_type": "ISO_14001",
+      "source_url": "https://www.xwacable.com/our-factory/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-14001.jpg",
+      "image_url": "https://www.xwacable.com/wp-content/uploads/2026/02/ISO14001-XWA_01.webp",
+      "notes": "",
+      "bytes": 136404,
+      "status": "found"
+    },
+    {
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug": "xwa-power-cable",
+      "cert_name": "ISO 45001:2018 / GB/T 45001-2020",
+      "cert_type": "ISO_45001",
+      "source_url": "https://www.xwacable.com/our-factory/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/iso-45001.jpg",
+      "image_url": "https://www.xwacable.com/wp-content/uploads/2026/02/ISO-45001-XWA_01.webp",
+      "notes": "",
+      "bytes": 140879,
+      "status": "found"
+    },
+    {
+      "supplier_name": "XWA Power & Cable Co., Ltd.",
+      "supplier_slug": "xwa-power-cable",
+      "cert_name": "CE LVD 2014/35/EU and EMC 2014/30/EU C143436",
+      "cert_type": "CE",
+      "source_url": "https://www.xwacable.com/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/xwa-power-cable/ce-lvd-emc.jpg",
+      "image_url": "https://www.xwacable.com/wp-content/uploads/2026/07/XWA-Power-Cable-CE-C143436-LVD-EMC-_01.webp",
+      "notes": "",
+      "bytes": 491132,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug": "commercial-metals-company",
+      "cert_name": "ISO 9001:2015 CMC Steel New Jersey",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.cmc.com/en-us/our-company/sustainability-pages/leed",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-9001-new-jersey.jpg",
+      "image_url": "https://www.cmc.com/getmedia/dd5422cb-5baf-4176-ad8f-323fd6506f30/ISO-9001-CMC-Steel-New-Jersey-2024.pdf",
+      "notes": "",
+      "bytes": 252642,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug": "commercial-metals-company",
+      "cert_name": "ISO 14001:2015 CMC Steel New Jersey",
+      "cert_type": "ISO_14001",
+      "source_url": "https://www.cmc.com/en-us/our-company/sustainability-pages/leed",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-14001-new-jersey.jpg",
+      "image_url": "https://www.cmc.com/getmedia/3b370c7b-eb91-43b3-a682-72f7eb0079c1/ISO-14001-CMC-Steel-New-Jersey-2024.pdf",
+      "notes": "",
+      "bytes": 252610,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug": "commercial-metals-company",
+      "cert_name": "ISO CMC Steel Texas 2025-2028",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.cmc.com/en-us/our-company/sustainability-pages/leed",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-texas.jpg",
+      "image_url": "https://www.cmc.com/getmedia/4b7c9849-8051-47af-ac74-f98e3f8fb2bf/ISO-CMC-Steel-Texas-2025-2028.pdf",
+      "notes": "",
+      "bytes": 228526,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Commercial Metals Company",
+      "supplier_slug": "commercial-metals-company",
+      "cert_name": "ISO PRI CMC Steel Alabama 2026-2029",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.cmc.com/en-us/our-company/sustainability-pages/leed",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/commercial-metals-company/iso-alabama.jpg",
+      "image_url": "https://www.cmc.com/getmedia/653529be-414c-4df3-89bc-a1936c40574f/CMCSteel_Alabama_ISO_PRI-2026-2029.pdf",
+      "notes": "",
+      "bytes": 196477,
+      "status": "found"
+    },
+    {
+      "supplier_name": "UFlex Limited",
+      "supplier_slug": "uflex",
+      "cert_name": "ISO 9001:2015 Noida (DNV-GL)",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.uflexltd.com/packaging-awards-and-recognition.php",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/uflex/iso-9001-noida.jpg",
+      "image_url": "https://www.uflexltd.com/pdf/recognition-accreditation/Packaging/DNV-GL_ISO90012015_UFlex_Noida_2020.pdf",
+      "notes": "",
+      "bytes": 251329,
+      "status": "found"
+    },
+    {
+      "supplier_name": "UFlex Limited",
+      "supplier_slug": "uflex",
+      "cert_name": "FSSC 22000 Noida (DNV-GL)",
+      "cert_type": "FSSC_22000",
+      "source_url": "https://www.uflexltd.com/packaging-awards-and-recognition.php",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/uflex/fssc-22000-noida.jpg",
+      "image_url": "https://www.uflexltd.com/pdf/recognition-accreditation/Packaging/DNV-GL_FSSC22000_UFlex_Noida_2020.pdf",
+      "notes": "",
+      "bytes": 313712,
+      "status": "found"
+    },
+    {
+      "supplier_name": "UFlex Limited",
+      "supplier_slug": "uflex",
+      "cert_name": "BRC Packaging Materials Noida",
+      "cert_type": "BRC",
+      "source_url": "https://www.uflexltd.com/packaging-awards-and-recognition.php",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/uflex/brc-noida.jpg",
+      "image_url": "https://www.uflexltd.com/pdf/recognition-accreditation/Packaging/BRC_UFlex_Noida_2020.pdf",
+      "notes": "",
+      "bytes": 328009,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO 10012 / GB/T 19022 measurement management system",
+      "cert_type": "ISO_10012",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-10012.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/17496264537719hzdrb.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 303196,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO/IEC 27001:2022 information security",
+      "cert_type": "ISO_27001",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-27001.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/17496264742632otldg.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 282998,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO 50001 energy management system",
+      "cert_type": "ISO_50001",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-50001.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/174962648741811r80t.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 231156,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO 45001 occupational health and safety",
+      "cert_type": "ISO_45001",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-45001.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/17496265015851t0q3x.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 229428,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO 14001 environmental management system",
+      "cert_type": "ISO_14001",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-14001.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/1749626513099894kak.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 232709,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Hangxiao Steel Structure (Shandong) Co., Ltd.",
+      "supplier_slug": "hangxiao-steel-structure-shandong",
+      "cert_name": "ISO 9001:2015 / GB/T 19001-2016 engineering construction QMS",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.hxss.com.cn/en/certificate.html",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/hangxiao-steel-structure-shandong/iso-9001.jpg",
+      "image_url": "https://www.hxss.com.cn/en/upload/2025/06/11/1749626525219389e0q.jpg",
+      "notes": "Parent Hangxiao Steel Structure Co., Ltd. certificate page (mill is Shandong subsidiary)",
+      "bytes": 235379,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Polycab India Limited",
+      "supplier_slug": "polycab-india",
+      "cert_name": "ISO 9001:2015 TUV 44 100 24395341",
+      "cert_type": "ISO_9001",
+      "source_url": "https://polycab.com/about-us",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/polycab-india/iso-9001.jpg",
+      "image_url": "https://cms.polycab.com/media/5z5b3pzt/pil-iso-9001-2015-certificate-valid-until-09-08-2027-13.pdf",
+      "notes": "",
+      "bytes": 348070,
+      "status": "found"
+    },
+    {
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug": "rr-kabel",
+      "cert_name": "BIS IS 694 Waghodia",
+      "cert_type": "BIS",
+      "source_url": "https://www.rrkabel.com/certifications/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/bis-is-694.jpg",
+      "image_url": "https://www.rrkabel.com/wp-content/uploads/2025/02/BIS-IS-694-Waghodia.pdf",
+      "notes": "",
+      "bytes": 264775,
+      "status": "found"
+    },
+    {
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug": "rr-kabel",
+      "cert_name": "BASEC BS EN 50525-2-11 Waghodia",
+      "cert_type": "BASEC",
+      "source_url": "https://www.rrkabel.com/certifications/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/basec-bs-en-50525-2-11.jpg",
+      "image_url": "https://www.rrkabel.com/wp-content/uploads/2026/07/BS-EN-50525-2-11-2011-Waghodia-H05VV-F-H05VVH2-F.pdf",
+      "notes": "",
+      "bytes": 227101,
+      "status": "found"
+    },
+    {
+      "supplier_name": "R R Kabel Limited",
+      "supplier_slug": "rr-kabel",
+      "cert_name": "TUV EN 50618 Solar Cable Waghodia",
+      "cert_type": "TUV",
+      "source_url": "https://www.rrkabel.com/certifications/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/rr-kabel/tuv-en-50618.jpg",
+      "image_url": "https://www.rrkabel.com/wp-content/uploads/2024/06/TUV-EN-50618-Solar-Cable-Waghodia.pdf",
+      "notes": "",
+      "bytes": 413396,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Heidelberg Materials AG",
+      "supplier_slug": "heidelberg-materials",
+      "cert_name": "DIN EN ISO 50001:2018",
+      "cert_type": "ISO_50001",
+      "source_url": "https://www.heidelbergmaterials.de/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/heidelberg-materials/iso-50001.jpg",
+      "image_url": "https://www.heidelbergmaterials.de/sites/default/files/2025-03/Heidelberg_Materials_Certificate_EM_engl_%C3%84ndReg_01.05.27.pdf",
+      "notes": "",
+      "bytes": 291579,
+      "status": "found"
+    },
+    {
+      "supplier_name": "Heidelberg Materials AG",
+      "supplier_slug": "heidelberg-materials",
+      "cert_name": "DIN EN ISO 9001:2015 and ISO 14001:2015",
+      "cert_type": "ISO_9001",
+      "source_url": "https://www.heidelbergmaterials.de/",
+      "local_path": "/workspace/suppliers-phase1/product-media/certs/heidelberg-materials/iso-9001-14001.jpg",
+      "image_url": "https://www.heidelbergmaterials.de/sites/default/files/assets/document/d5/86/cem_din_en_iso_9001_u._14001_d_u._gb_2021_05_01.pdf",
+      "notes": "",
+      "bytes": 345406,
+      "status": "found"
+    }
+  ],
+  "not_found": [
+    {
+      "supplier_name": "Ajmal Steel Tubes & Pipes Industries LLC (AJ Steel)",
+      "supplier_slug": "aj-steel",
+      "website": "https://www.ajsteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO/IEC 17025 (in-house lab, ICAD-2 branch)",
+        "ISO 14001",
+        "ISO 45001",
+        "CE / CPR EN 10210, EN 10219, EN 10255, EN 10217",
+        "ACRS (AS/NZS 1163 cold-formed hollow sections, cert 230302)"
+      ]
+    },
+    {
+      "supplier_name": "Jindal SAW Limited",
+      "supplier_slug": "jindal-saw",
+      "website": "https://jindalsaw.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "API 5L (historic first Indian API SAW license 1986; current mill licenses listed by plant)",
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018"
+      ]
+    },
+    {
+      "supplier_name": "Welspun Corp Limited",
+      "supplier_slug": "welspun-corp",
+      "website": "https://www.welspuncorp.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "API Spec Q1",
+        "API 5L",
+        "API 5CT (HFW)",
+        "ISO 9001:2015",
+        "ISO 14001",
+        "ISO/TS 29001",
+        "BIS"
+      ]
+    },
+    {
+      "supplier_name": "Arabian Pipes Company",
+      "supplier_slug": "arabian-pipes",
+      "website": "https://www.arabian-pipes.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "API",
+        "ISO 9001",
+        "ISO 29001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 17025"
+      ]
+    },
+    {
+      "supplier_name": "APL Apollo Tubes Limited",
+      "supplier_slug": "apl-apollo",
+      "website": "https://aplapollo.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "BIS (IS 1239 / IS 3589 and related product marks)"
+      ]
+    },
+    {
+      "supplier_name": "Man Industries (India) Limited",
+      "supplier_slug": "man-industries",
+      "website": "https://mangroup.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "API Spec Q1",
+        "API 5L",
+        "API 2B",
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "ISO 3834-2"
+      ]
+    },
+    {
+      "supplier_name": "Hebei Huayang Steel Pipe Co., Ltd.",
+      "supplier_slug": "hebei-huayang-steel-pipe",
+      "website": "https://www.hbhuayang.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "API 5L",
+        "API 2B",
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "CE"
+      ]
+    },
+    {
+      "supplier_name": "Al Jazeera Steel Products Co. SAOG",
+      "supplier_slug": "al-jazeera-steel",
+      "website": "https://www.jazeerasteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "API Q1 (10th edition)",
+        "API 5L monogram (tube mill upgrade, disclosed in 2024 annual report)",
+        "UL product certification (fire-protection pipe)",
+        "FM Approval"
+      ]
+    },
+    {
+      "supplier_name": "EMSTEEL Building Materials PJSC (EMSTEEL)",
+      "supplier_slug": "emsteel",
+      "website": "https://www.emsteel.com/",
+      "status": "not_found",
+      "notes": "Mill hosts CARES/CPR/ACRS PDFs under /wp-content/uploads/2020/03/ but origin WAF returned 403 to downloaders; no local scan staged",
+      "listed_certifications": [
+        "ISO 9001 (UK CARES)",
+        "ISO 14001 (TUV Middle East)",
+        "ISO 45001 (TUV Middle East)",
+        "UK CARES product conformity for rebar",
+        "ASME nuclear-grade rebar (Material Organization QSC 667)"
+      ]
+    },
+    {
+      "supplier_name": "Ferrite Structural Steels Private Limited",
+      "supplier_slug": "ferrite-structural-steels",
+      "website": "https://ferrite.in/",
+      "status": "not_found",
+      "notes": "About-us images are dealer authorization letters, SAIL patronage letter, RINL MOU award, MSME nomination, and MASSMA membership plaque — no ISO/API/CE certificate scan published",
+      "listed_certifications": [
+        "ISO 9001:2015"
+      ]
+    },
+    {
+      "supplier_name": "JSW Steel Limited",
+      "supplier_slug": "jsw-steel",
+      "website": "https://www.jswsteel.in/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "ISO 50001:2018",
+        "ResponsibleSteel"
+      ]
+    },
+    {
+      "supplier_name": "Tata Steel Limited",
+      "supplier_slug": "tata-steel",
+      "website": "https://www.tatasteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015 (key Indian manufacturing sites)",
+        "ISO 14001:2015 (Jamshedpur Steel Works)",
+        "ResponsibleSteel (Jamshedpur)"
+      ]
+    },
+    {
+      "supplier_name": "Jingye Steel (Jingye Group)",
+      "supplier_slug": "jingye-steel",
+      "website": "https://www.jingyesteel.com.cn/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "EU CE",
+        "UK CARES / ACRS (rebar)"
+      ]
+    },
+    {
+      "supplier_name": "Rashtriya Ispat Nigam Limited (RINL / Vizag Steel)",
+      "supplier_slug": "rinl-vizag-steel",
+      "website": "https://www.vizagsteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "ISO 50001:2018"
+      ]
+    },
+    {
+      "supplier_name": "Jindal Steel Limited (formerly Jindal Steel & Power Limited)",
+      "supplier_slug": "jindal-steel",
+      "website": "https://www.jindalsteel.in/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 50001:2018"
+      ]
+    },
+    {
+      "supplier_name": "Ezz Steel",
+      "supplier_slug": "ezz-steel",
+      "website": "https://www.ezzsteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001 (Alexandria, Suez, Sadat City, 10th of Ramadan)",
+        "ISO 14001",
+        "ISO 45001",
+        "UK CARES BS 4449",
+        "CE Mark"
+      ]
+    },
+    {
+      "supplier_name": "KEI Industries Limited",
+      "supplier_slug": "kei-industries",
+      "website": "https://www.kei-ind.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "NABL ISO/IEC 17025:2017 (in-house lab, stated in BRSR)",
+        "CE marking / UL (including UL 1072 MV power cable, stated in BRSR)"
+      ]
+    },
+    {
+      "supplier_name": "Jiangsu Yuhui Cable Co., Ltd.",
+      "supplier_slug": "jiangsu-yuhui-cable",
+      "website": "https://yuhuicable.en.made-in-china.com/",
+      "status": "not_found",
+      "notes": "Made-in-China Certificate*.webp files are 118x167 thumbnails only",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001",
+        "ISO 45001:2018",
+        "CCC"
+      ]
+    },
+    {
+      "supplier_name": "Shanghai Shenghua Cable (Group) Co., Ltd.",
+      "supplier_slug": "shanghai-shenghua-cable",
+      "website": "https://www.shenghuacablegroup.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001 (page text also cites ISO14001:2005)",
+        "ISO 45001:2018",
+        "CCC / 3C; CCS (ship); MA (coal safety); CE; KEMA (claimed)"
+      ]
+    },
+    {
+      "supplier_name": "Henan Huadong Cable Co., Ltd.",
+      "supplier_slug": "henan-huadong-cable",
+      "website": "https://huadongcablegroup.com/",
+      "status": "not_found",
+      "notes": "Only ~210x306 thumbnail certificate JPGs on mill site; too small / not usable full scans",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001",
+        "ISO 45001:2018",
+        "CCC",
+        "CE"
+      ]
+    },
+    {
+      "supplier_name": "Shandong New Luxing Cable Co., Ltd.",
+      "supplier_slug": "shandong-new-luxing-cable",
+      "website": "https://www.luxingcable.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001 (stated on company-introduce)",
+        "ISO 9001/14000, CE, CCC, IEC, BS, EN, VDE (claimed on product pages)"
+      ]
+    },
+    {
+      "supplier_name": "People's Cable Group Co., Ltd.",
+      "supplier_slug": "peoples-cable-group",
+      "website": "https://www.rmjtcable.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "OHSAS / ISO 18001 (MIC); OHSAS 8001 also cited on rmjtcable.com",
+        "CCC",
+        "CE (company about-us)"
+      ]
+    },
+    {
+      "supplier_name": "UltraTech Cement Limited",
+      "supplier_slug": "ultratech-cement",
+      "website": "https://www.ultratechcement.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 50001:2011",
+        "ISO 27001:2013",
+        "NABL ISO/IEC 17025 (quality-control laboratory)"
+      ]
+    },
+    {
+      "supplier_name": "CEMEX, S.A.B. de C.V.",
+      "supplier_slug": "cemex-s-a-b-de-c-v",
+      "website": "https://www.cemex.com/en",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001 (Castillejo cement plant, Spain)",
+        "ISO 14001 (Castillejo cement plant, Spain)",
+        "ISO 45001 (Castillejo cement plant, Spain)",
+        "ISO 50001 (Castillejo cement plant, Spain)"
+      ]
+    },
+    {
+      "supplier_name": "Anhui Conch Cement Company Limited",
+      "supplier_slug": "anhui-conch-cement-company-limited",
+      "website": "https://www.conch.cn/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001 (quality management system for production monitoring)"
+      ]
+    },
+    {
+      "supplier_name": "Vulcan Materials Company",
+      "supplier_slug": "vulcan-materials",
+      "website": "https://www.vulcanmaterials.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": []
+    },
+    {
+      "supplier_name": "Zamil Steel Pre-Engineered Buildings Co. Ltd.",
+      "supplier_slug": "zamil-steel-peb",
+      "website": "https://zamilsteel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001 (design and manufacturing facilities; PEB quality-assurance page cites ISO 9001 procedures)",
+        "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 (Zamil Structural Steel, Saudi Arabia)",
+        "AISC 207 (Zamil Structural Steel, Saudi Arabia)"
+      ]
+    },
+    {
+      "supplier_name": "Magicrete Building Solutions Private Limited",
+      "supplier_slug": "magicrete-building-solutions",
+      "website": "https://www.magicrete.in/",
+      "status": "not_found",
+      "notes": "BIS licence PDF URL returns anti-bot HTML wall, not the PDF",
+      "listed_certifications": [
+        "BIS licence IS 6072:2023 (Navsari factory, CM/L 7100045186)",
+        "IS 2185 Part-3 (AAC blocks)",
+        "ISO 9001 / ISO 14001 / ISO 18001 (as listed on TradeIndia company profile)"
+      ]
+    },
+    {
+      "supplier_name": "Chaoda Valves Group Co., Ltd.",
+      "supplier_slug": "chaoda-valves",
+      "website": "http://www.chinavalve.com",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "OHSAS/OHSMS 18001",
+        "API 6D",
+        "API 600",
+        "API 607",
+        "API 6FA",
+        "CE/PED"
+      ]
+    },
+    {
+      "supplier_name": "Neway Valve (Suzhou) Co., Ltd.",
+      "supplier_slug": "neway-valve",
+      "website": "https://www.newayvalve.com",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "API 6A",
+        "API 6D",
+        "CE/PED",
+        "ASME UV / NBBI",
+        "API 6DSS (subsea)"
+      ]
+    },
+    {
+      "supplier_name": "Leo Group Pump (Zhejiang) Co., Ltd.",
+      "supplier_slug": "leo-group-pump-zhejiang",
+      "website": "https://www.leopump.com/en/",
+      "status": "not_found",
+      "notes": "Only a marketing banner mentioning CNAS lab, not a certificate document scan",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "OHSAS/OHSMS 18001",
+        "ISO 17025"
+      ]
+    },
+    {
+      "supplier_name": "Nanfang Pump Industry Co., Ltd.",
+      "supplier_slug": "nanfang-pump-industry",
+      "website": "https://cnppump.com",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "CNAS laboratory accreditation",
+        "CE"
+      ]
+    },
+    {
+      "supplier_name": "Zhejiang Zhiju Pipeline Industry Co., Ltd.",
+      "supplier_slug": "zhejiang-zhiju-pipeline",
+      "website": "https://www.zhiju-steel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "PED",
+        "BV"
+      ]
+    },
+    {
+      "supplier_name": "Wafangdian Bearing Group Corp., Ltd.",
+      "supplier_slug": "wafangdian-bearing-zwz",
+      "website": "https://zwz-bearing.com/en/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9000 / ISO 9001 family",
+        "ISO 14001",
+        "QS9000",
+        "ISO 18000"
+      ]
+    },
+    {
+      "supplier_name": "Luoyang Huigong Bearing Technology Co., Ltd.",
+      "supplier_slug": "luoyang-huigong-bearing",
+      "website": "https://www.chgbearings.com/en",
+      "status": "not_found",
+      "notes": "URLs previously labeled as cert images are product renders / non-certificate graphics",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018"
+      ]
+    },
+    {
+      "supplier_name": "Tong Ming Enterprise (Zhejiang) Co., Ltd.",
+      "supplier_slug": "tong-ming-enterprise",
+      "website": "https://eng.tonggroup.com.tw/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "CE / PED"
+      ]
+    },
+    {
+      "supplier_name": "Sundram Fasteners Limited",
+      "supplier_slug": "sundram-fasteners",
+      "website": "https://sundram.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "IATF 16949",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO/IEC 17025"
+      ]
+    },
+    {
+      "supplier_name": "Kirloskar Brothers Limited",
+      "supplier_slug": "kirloskar-brothers",
+      "website": "https://www.kirloskarpumps.com/",
+      "status": "not_found",
+      "notes": "IMS-Main-Certificate.pdf URL returns HTTP 503 / bot challenge from mill CDN",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "ISO 50001:2018"
+      ]
+    },
+    {
+      "supplier_name": "Shandong Corruone New Material Co., Ltd.",
+      "supplier_slug": "shandong-corruone-new-material",
+      "website": "https://www.corruone.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "IATF 16949"
+      ]
+    },
+    {
+      "supplier_name": "Dongguan Yalan Packing Materials Co., Ltd.",
+      "supplier_slug": "dongguan-yalan-packing-materials",
+      "website": "https://www.yalanpack.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "SGS (product testing, as stated by company)"
+      ]
+    },
+    {
+      "supplier_name": "Jiangsu Jieyuan Container Co., Ltd.",
+      "supplier_slug": "jiangsu-jieyuan-container",
+      "website": "https://jieyuanpackaging.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "ISO 14001",
+        "FSSC 22000",
+        "UN certification (IBC, as stated by company)"
+      ]
+    },
+    {
+      "supplier_name": "Hangzhou Hansin New Packing Material Co., Ltd.",
+      "supplier_slug": "hangzhou-hansin-new-packing",
+      "website": "https://hansinpacking.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 22000",
+        "FSSC 22000",
+        "BRC (BRCGS, as stated by company)"
+      ]
+    },
+    {
+      "supplier_name": "Dongguan Caicheng Printing Factory",
+      "supplier_slug": "dongguan-caicheng-printing",
+      "website": "https://www.ccprinting.cn/",
+      "status": "not_found",
+      "notes": "packccp.com publishes stock ISO/FSC/BSCI/SEDEX badge icons, not certificate document scans",
+      "listed_certifications": [
+        "ISO 9001",
+        "FSC",
+        "SEDEX",
+        "BSCI"
+      ]
+    },
+    {
+      "supplier_name": "Wuxi Sifang Youxin Co., Ltd.",
+      "supplier_slug": "wuxi-sifang-youxin",
+      "website": "https://www.wxsfgroup.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "UN packaging standards (as stated on product pages)"
+      ]
+    },
+    {
+      "supplier_name": "Meghdoot Packaging (Uttaranchal)",
+      "supplier_slug": "meghdoot-packaging",
+      "website": "https://meghdootpackaging.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001:2015",
+        "FSC-certified materials (as stated by company)"
+      ]
+    },
+    {
+      "supplier_name": "Shangyue (Shanghai) Printing Co., Ltd.",
+      "supplier_slug": "shangyue-shanghai-printing",
+      "website": "https://www.sh-sylabel.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "FSC"
+      ]
+    },
+    {
+      "supplier_name": "Shandong Dingsheng Container Co., Ltd.",
+      "supplier_slug": "shandong-dingsheng-container",
+      "website": "https://www.dsibctank.com/",
+      "status": "not_found",
+      "notes": "No publicly hosted certificate document/scan found on mill own quality/certificate pages after hunt (claims in text only, logos/badges, or blocked/unavailable files)",
+      "listed_certifications": [
+        "ISO 9001",
+        "ISO 14001",
+        "OHSAS 18001",
+        "National industrial product production license (China, as stated by company)"
+      ]
+    }
+  ]
+}
