@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 183,
-    "suppliersWithPhotos": 163,
+    "suppliers": 205,
+    "suppliersWithPhotos": 189,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 313,
+    "supplierPhotos": 339,
     "suppliersOverlayingDirectory": 9,
     "distributors": [
       "bossard"
@@ -8486,105 +8486,993 @@
     {
       "id": "plymouth-tube",
       "packSlug": "plymouth-tube",
-      "pack": "daily-2026-09-10",
+      "pack": "hold30-2026-09-10",
       "name": "Plymouth Tube Company",
       "industry": "Metal",
       "category": "Tubes & Pipes",
+      "location": "Warrenville, United States",
+      "country": "United States",
+      "city": "Warrenville",
       "website": "https://www.plymouth.com/",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Plymouth Tube Carbon Alloy and Stainless Precision Tubing"
+      "imageUrl": "/images/suppliers/plymouth-tube/plymouth-tube_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/plymouth-tube/plymouth-tube_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "Plymouth Tube Company is a U.S. specialty tube manufacturer producing carbon, alloy, stainless and nickel-alloy precision tubing and engineered extruded shapes for industrial and energy markets.",
+      "products": [
+        "Carbon and alloy precision tubing",
+        "Stainless and nickel alloy tubing",
+        "Engineered extruded shapes"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe",
+        "Asia"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.plymouth.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-10",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "tubos-reunidos",
+      "packSlug": "tubos-reunidos",
+      "pack": "hold30-2026-09-10",
+      "name": "Tubos Reunidos Group",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Amurrio, Spain",
+      "country": "Spain",
+      "city": "Amurrio",
+      "website": "https://www.tubosreunidosgroup.com/",
+      "imageUrl": "/images/suppliers/tubos-reunidos/tubos-reunidos_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/tubos-reunidos/tubos-reunidos_01.jpg"
+      ],
+      "description": "Tubos Reunidos Group is a Spanish integrated seamless steel-pipe manufacturer producing carbon, alloy and stainless seamless tubes for energy, industrial and infrastructure customers.",
+      "products": [
+        "Seamless carbon steel pipe",
+        "Alloy and stainless seamless tube",
+        "OCTG and industrial tube"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Middle East",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.tubosreunidosgroup.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "suraj",
+      "packSlug": "suraj",
+      "pack": "hold30-2026-09-10",
+      "name": "Suraj Limited",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Ahmedabad, India",
+      "country": "India",
+      "city": "Ahmedabad",
+      "website": "https://www.surajgroup.com/",
+      "imageUrl": "/images/suppliers/suraj/suraj_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/suraj/suraj_01.jpg"
+      ],
+      "description": "Suraj Limited is an Indian stainless-steel seamless tube manufacturer producing heat-exchanger tubes, U-tubes, instrumentation tubes and fittings for domestic and export markets. Photo is a SURAJ LTD–stenciled fittings studio shot — branded output, not a mill campus.",
+      "products": [
+        "Stainless steel seamless tubes",
+        "Heat exchanger and U-tubes",
+        "Buttweld fittings and flanges"
+      ],
+      "deliveryRegions": [
+        "Asia",
+        "Europe",
+        "Americas",
+        "Middle East"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.surajgroup.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "bri-steel",
+      "packSlug": "bri-steel",
+      "pack": "hold30-2026-09-10",
+      "name": "Bri-Steel Manufacturing",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Edmonton, Canada",
+      "country": "Canada",
+      "city": "Edmonton",
+      "website": "https://www.bri-steel.com/",
+      "imageUrl": "/images/suppliers/bri-steel/bri-steel_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/bri-steel/bri-steel_01.jpg"
+      ],
+      "description": "Bri-Steel Manufacturing is a Canadian large-diameter seamless-pipe producer using thermal pipe expansion for carbon and alloy pipe serving North American energy and industrial markets.",
+      "products": [
+        "Large-diameter seamless pipe",
+        "Thermal pipe expansion products",
+        "Carbon and alloy seamless pipe"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.bri-steel.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "michigan-seamless-tube",
+      "packSlug": "michigan-seamless-tube",
+      "pack": "hold30-2026-09-10",
+      "name": "Michigan Seamless Tube, LLC",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "South Lyon, United States",
+      "country": "United States",
+      "city": "South Lyon",
+      "website": "https://www.mstube.com/",
+      "imageUrl": "/images/suppliers/michigan-seamless-tube/michigan-seamless-tube_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/michigan-seamless-tube/michigan-seamless-tube_01.jpg"
+      ],
+      "description": "Michigan Seamless Tube (MST) is a U.S. cold-drawn seamless tube and pipe manufacturer producing boiler, mechanical and pressure tubing from its South Lyon, Michigan mill. Photo is an official MST branded product-line still (stacked tubes), not a plant or yard exterior.",
+      "products": [
+        "Cold-drawn seamless tube",
+        "Boiler and pressure pipe",
+        "Carbon and alloy mechanical tube"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.mstube.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
       "id": "welded-tube-canada",
       "packSlug": "welded-tube-canada",
-      "pack": "daily-2026-09-10",
+      "pack": "hold30-2026-09-10",
       "name": "Welded Tube of Canada",
       "industry": "Metal",
       "category": "Tubes & Pipes",
+      "location": "Concord, Canada",
+      "country": "Canada",
+      "city": "Concord",
       "website": "https://www.weldedtube.com/",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Welded Tube of Canada ERW Mechanical Tubing and HSS"
+      "imageUrl": "/images/suppliers/welded-tube-canada/welded-tube-canada_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/welded-tube-canada/welded-tube-canada_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "Welded Tube of Canada is a North American ERW steel-pipe and tube producer manufacturing mechanical tubing, hollow structural sections and OCTG energy tubulars.",
+      "products": [
+        "ERW mechanical tubing",
+        "Hollow structural sections",
+        "OCTG energy tubulars"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.weldedtube.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-10",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "proampac",
+      "packSlug": "proampac",
+      "pack": "hold30-2026-09-10",
+      "name": "ProAmpac",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Cincinnati, United States",
+      "country": "United States",
+      "city": "Cincinnati",
+      "website": "https://www.proampac.com/",
+      "imageUrl": "/images/suppliers/proampac/proampac_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/proampac/proampac_01.jpg"
+      ],
+      "description": "ProAmpac is a U.S.-based flexible-packaging manufacturer producing pouches, films and paper/foil laminations for food, consumer and industrial customers.",
+      "products": [
+        "Flexible pouches and films",
+        "Paper and foil laminates",
+        "Sustainable flexible packaging"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Europe",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.proampac.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "visy",
+      "packSlug": "visy",
+      "pack": "hold30-2026-09-10",
+      "name": "Visy Industries",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Melbourne, Australia",
+      "country": "Australia",
+      "city": "Melbourne",
+      "website": "https://www.visy.com/",
+      "imageUrl": "/images/suppliers/visy/visy_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/visy/visy_01.jpg"
+      ],
+      "description": "Visy Industries is an Australian packaging and recycling manufacturer producing corrugated packaging, glass containers and metal cans for Oceania and export markets. Photo is an aerial corrugated/box plant campus without Visy facade branding — category-correct, not a brand-confirmed mill header.",
+      "products": [
+        "Corrugated cardboard packaging",
+        "Glass bottles and jars",
+        "Beverage and food cans"
+      ],
+      "deliveryRegions": [
+        "Oceania",
+        "Asia",
+        "Americas"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.visy.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "kloeckner-pentaplast",
+      "packSlug": "kloeckner-pentaplast",
+      "pack": "hold30-2026-09-10",
+      "name": "Klöckner Pentaplast",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Montabaur, Germany",
+      "country": "Germany",
+      "city": "Montabaur",
+      "website": "https://www.kpfilms.com/",
+      "imageUrl": "/images/suppliers/kloeckner-pentaplast/kloeckner-pentaplast_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/kloeckner-pentaplast/kloeckner-pentaplast_01.jpg"
+      ],
+      "description": "Klöckner Pentaplast is a German rigid and flexible film manufacturer producing packaging films for pharmaceutical, food and specialty applications. Photo is an aerial plastics-plant campus without a confirmed Klöckner Pentaplast facade mark — not a brand-confirmed mill header.",
+      "products": [
+        "Rigid and flexible films",
+        "Pharma blister films",
+        "Food packaging films"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.kpfilms.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "fedrigoni",
+      "packSlug": "fedrigoni",
+      "pack": "hold30-2026-09-10",
+      "name": "Fedrigoni Group",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Verona, Italy",
+      "country": "Italy",
+      "city": "Verona",
+      "website": "https://www.fedrigoni.com/",
+      "imageUrl": "/images/suppliers/fedrigoni/fedrigoni_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/fedrigoni/fedrigoni_01.jpg"
+      ],
+      "description": "Fedrigoni Group is an Italian specialty-paper and self-adhesive materials manufacturer producing premium papers and labels for packaging and publishing markets.",
+      "products": [
+        "Specialty papers",
+        "Self-adhesive labels",
+        "Luxury packaging papers"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.fedrigoni.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "greiner-packaging",
+      "packSlug": "greiner-packaging",
+      "pack": "hold30-2026-09-10",
+      "name": "Greiner Packaging International GmbH",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Kremsmünster, Austria",
+      "country": "Austria",
+      "city": "Kremsmünster",
+      "website": "https://www.greiner-gpi.com/",
+      "imageUrl": "/images/suppliers/greiner-packaging/greiner-packaging_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/greiner-packaging/greiner-packaging_01.jpg"
+      ],
+      "description": "Greiner Packaging International is an Austrian plastic-packaging manufacturer producing cups, containers and food packaging systems for European and international customers.",
+      "products": [
+        "Plastic cups and containers",
+        "Food packaging systems",
+        "Assured carded packaging"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.greiner-gpi.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "pactiv-evergreen",
+      "packSlug": "pactiv-evergreen",
+      "pack": "hold30-2026-09-10",
+      "name": "Pactiv Evergreen Inc.",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Lake Forest, United States",
+      "country": "United States",
+      "city": "Lake Forest",
+      "website": "https://www.pactivevergreen.com/",
+      "imageUrl": "/images/suppliers/pactiv-evergreen/pactiv-evergreen_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/pactiv-evergreen/pactiv-evergreen_01.jpg"
+      ],
+      "description": "Pactiv Evergreen is a U.S. food and beverage packaging manufacturer producing foodservice containers, fresh-food packaging and beverage cartons.",
+      "products": [
+        "Foodservice containers",
+        "Fresh food packaging",
+        "Beverage cartons"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.pactivevergreen.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "albea",
+      "packSlug": "albea",
+      "pack": "hold30-2026-09-10",
+      "name": "Albéa Group",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Gennevilliers, France",
+      "country": "France",
+      "city": "Gennevilliers",
+      "website": "https://www.albea-group.com/",
+      "imageUrl": "/images/suppliers/albea/albea_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/albea/albea_01.jpg"
+      ],
+      "description": "Albéa Group is a French beauty and personal-care packaging manufacturer producing cosmetic tubes, dispensers and related packaging components.",
+      "products": [
+        "Cosmetic tubes",
+        "Beauty and personal-care packaging",
+        "Dispensing systems"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.albea-group.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "lee-man-paper",
+      "packSlug": "lee-man-paper",
+      "pack": "hold30-2026-09-10",
+      "name": "Lee & Man Paper Manufacturing Limited",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Dongguan, China",
+      "country": "China",
+      "city": "Dongguan",
+      "website": "https://www.leemanpaper.com/",
+      "imageUrl": "/images/suppliers/lee-man-paper/lee-man-paper_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/lee-man-paper/lee-man-paper_01.jpg"
+      ],
+      "description": "Lee & Man Paper Manufacturing is a Chinese packaging-paper manufacturer producing containerboard and corrugating medium for Asian and export packaging markets.",
+      "products": [
+        "Containerboard",
+        "Corrugating medium",
+        "Packaging paperboard"
+      ],
+      "deliveryRegions": [
+        "Asia",
+        "Europe",
+        "Americas"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.leemanpaper.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
       "id": "spx-flow",
       "packSlug": "spx-flow",
-      "pack": "daily-2026-09-10",
+      "pack": "hold30-2026-09-10",
       "name": "SPX FLOW, Inc.",
       "industry": "Industrial Equipment",
       "category": "Industrial Parts",
+      "location": "Charlotte, United States",
+      "country": "United States",
+      "city": "Charlotte",
       "website": "https://www.spxflow.com/",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "SPX FLOW Process Pumps Mixers and Homogenizers"
+      "imageUrl": "/images/suppliers/spx-flow/spx-flow_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/spx-flow/spx-flow_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "SPX FLOW is a U.S. process-equipment manufacturer producing pumps, mixers and homogenizers for food, beverage and industrial fluid-handling applications.",
+      "products": [
+        "Process pumps and mixers",
+        "Homogenizers",
+        "Food and industrial fluid handling"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.spxflow.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-10",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "weg",
+      "packSlug": "weg",
+      "pack": "hold30-2026-09-10",
+      "name": "WEG S.A.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Jaraguá do Sul, Brazil",
+      "country": "Brazil",
+      "city": "Jaraguá do Sul",
+      "website": "https://www.weg.net/",
+      "imageUrl": "/images/suppliers/weg/weg_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/weg/weg_01.jpg"
+      ],
+      "description": "WEG S.A. is a Brazilian electric-motor and automation manufacturer producing industrial motors, drives and generators for global markets.",
+      "products": [
+        "Electric motors",
+        "Drives and automation",
+        "Industrial generators"
+      ],
+      "deliveryRegions": [
+        "Latin America",
+        "Americas",
+        "Europe",
+        "Asia",
+        "Africa"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.weg.net/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "ifm",
+      "packSlug": "ifm",
+      "pack": "hold30-2026-09-10",
+      "name": "ifm electronic gmbh",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Essen, Germany",
+      "country": "Germany",
+      "city": "Essen",
+      "website": "https://www.ifm.com/",
+      "imageUrl": "/images/suppliers/ifm/ifm_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/ifm/ifm_01.jpg"
+      ],
+      "description": "ifm electronic is a German industrial-sensor manufacturer producing proximity sensors, condition-monitoring systems and IO-Link automation components. Photo is the Glückaufhaus Essen HQ/campus exterior — official campus, not a production floor or yard.",
+      "products": [
+        "Industrial sensors",
+        "Condition monitoring systems",
+        "IO-Link automation components"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.ifm.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "kennametal",
+      "packSlug": "kennametal",
+      "pack": "hold30-2026-09-10",
+      "name": "Kennametal Inc.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Pittsburgh, United States",
+      "country": "United States",
+      "city": "Pittsburgh",
+      "website": "https://www.kennametal.com/",
+      "imageUrl": "/images/suppliers/kennametal/kennametal_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/kennametal/kennametal_01.jpg"
+      ],
+      "description": "Kennametal Inc. is a U.S. tooling and wear-resistant materials manufacturer producing cutting tools and metalworking tooling systems. Photo is a Latrobe-style tech/campus glass exterior without a Kennametal facade mark — plausible campus, not a brand-confirmed mill header.",
+      "products": [
+        "Cutting tools",
+        "Wear-resistant components",
+        "Metalworking tooling systems"
+      ],
+      "deliveryRegions": [
+        "North America",
+        "Americas",
+        "Europe",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.kennametal.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "hepcomotion",
+      "packSlug": "hepcomotion",
+      "pack": "hold30-2026-09-10",
+      "name": "HepcoMotion",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tiverton, United Kingdom",
+      "country": "United Kingdom",
+      "city": "Tiverton",
+      "website": "https://www.hepcomotion.com/",
+      "imageUrl": "/images/suppliers/hepcomotion/hepcomotion_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/hepcomotion/hepcomotion_01.jpg"
+      ],
+      "description": "HepcoMotion is a UK linear-motion manufacturer producing V-guide systems, ring and track systems and heavy-duty linear slides. Photo is a factory-tour shop-floor still (people-focused interior), not a confirmed plant exterior or yard.",
+      "products": [
+        "V-guide linear motion systems",
+        "Ring and track systems",
+        "Heavy-duty linear slides"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.hepcomotion.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "rollon",
+      "packSlug": "rollon",
+      "pack": "hold30-2026-09-10",
+      "name": "Rollon S.p.A.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Vimercate, Italy",
+      "country": "Italy",
+      "city": "Vimercate",
+      "website": "https://www.rollon.com/",
+      "imageUrl": "/images/suppliers/rollon/rollon_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/rollon/rollon_01.jpg"
+      ],
+      "description": "Rollon S.p.A. is an Italian linear-motion manufacturer producing linear rails, actuators and telescopic slides for industrial automation.",
+      "products": [
+        "Linear rails and actuators",
+        "Telescopic slides",
+        "Linear motion systems"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.rollon.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "schneeberger",
+      "packSlug": "schneeberger",
+      "pack": "hold30-2026-09-10",
+      "name": "Schneeberger AG",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Roggwil, Switzerland",
+      "country": "Switzerland",
+      "city": "Roggwil",
+      "website": "https://www.schneeberger.com/",
+      "imageUrl": "/images/suppliers/schneeberger/schneeberger_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/schneeberger/schneeberger_01.jpg"
+      ],
+      "description": "Schneeberger AG is a Swiss precision linear-motion manufacturer producing guideways, mineral casting bases and linear measuring systems.",
+      "products": [
+        "Precision linear guideways",
+        "Mineral casting bases",
+        "Linear measuring systems"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.schneeberger.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "nb-corporation",
+      "packSlug": "nb-corporation",
+      "pack": "hold30-2026-09-10",
+      "name": "NB Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tokyo, Japan",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.nbcorporation.com/",
+      "imageUrl": "/images/suppliers/nb-corporation/nb-corporation_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/nb-corporation/nb-corporation_01.jpg"
+      ],
+      "description": "NB Corporation is a Japanese linear-motion component manufacturer producing linear bushings, slide guides and ball splines. Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant.",
+      "products": [
+        "Linear bushings",
+        "Slide guides",
+        "Ball splines"
+      ],
+      "deliveryRegions": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.nbcorporation.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
       "id": "lenze",
       "packSlug": "lenze",
-      "pack": "daily-2026-09-10",
+      "pack": "hold30-2026-09-10",
       "name": "Lenze SE",
       "industry": "Industrial Equipment",
       "category": "Industrial Parts",
+      "location": "Aerzen, Germany",
+      "country": "Germany",
+      "city": "Aerzen",
       "website": "https://www.lenze.com/",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Lenze Servo Drives Gearboxes and Motion Automation"
+      "imageUrl": "/images/suppliers/lenze/lenze_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/lenze/lenze_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "Lenze SE is a German drive and automation manufacturer producing servo drives, gearboxes and motion automation systems. Photo is the Lenze-branded Aerzen/Groß Berkel HQ campus exterior — HQ/campus, not a production mill yard.",
+      "products": [
+        "Servo drives",
+        "Gearboxes and motors",
+        "Motion automation systems"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.lenze.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-10",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "ozkan-steel",
+      "packSlug": "ozkan-steel",
+      "pack": "hold30-2026-09-10",
+      "name": "Özkan Steel",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Aliağa, Turkey",
+      "country": "Turkey",
+      "city": "Aliağa",
+      "website": "https://ozkansteel.com/",
+      "imageUrl": "/images/suppliers/ozkan-steel/ozkan-steel_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/ozkan-steel/ozkan-steel_01.jpg"
+      ],
+      "description": "Özkan Steel is a Turkish integrated special-steel manufacturer producing special profiles and quality steel bars for shipbuilding, offshore and industrial markets.",
+      "products": [
+        "Special steel profiles",
+        "Quality steel bars",
+        "Shipbuilding and offshore sections"
+      ],
+      "deliveryRegions": [
+        "MENA",
+        "Europe",
+        "Middle East",
+        "Africa",
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://ozkansteel.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "hellenic-cables",
+      "packSlug": "hellenic-cables",
+      "pack": "hold30-2026-09-10",
+      "name": "Hellenic Cables S.A.",
+      "industry": "Electrotechnical & Cabling",
+      "category": "Cables & Electrical",
+      "location": "Athens, Greece",
+      "country": "Greece",
+      "city": "Athens",
+      "website": "https://www.hellenic-cables.com/",
+      "imageUrl": "/images/suppliers/hellenic-cables/hellenic-cables_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/hellenic-cables/hellenic-cables_01.jpg"
+      ],
+      "description": "Hellenic Cables is a Greek cable manufacturer producing power, submarine and telecommunication cables for European and international energy projects.",
+      "products": [
+        "Power and submarine cables",
+        "Telecom cables",
+        "Cable compounds"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Middle East",
+        "Africa"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.hellenic-cables.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "kingspan",
+      "packSlug": "kingspan",
+      "pack": "hold30-2026-09-10",
+      "name": "Kingspan Group plc",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Kingscourt, Ireland",
+      "country": "Ireland",
+      "city": "Kingscourt",
+      "website": "https://www.kingspangroup.com/",
+      "imageUrl": "/images/suppliers/kingspan/kingspan_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/kingspan/kingspan_01.jpg"
+      ],
+      "description": "Kingspan Group is an Irish building-products manufacturer producing insulated panels, building insulation and high-performance roof and wall systems.",
+      "products": [
+        "Insulated panels",
+        "Building insulation",
+        "Roof and wall systems"
+      ],
+      "deliveryRegions": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Oceania"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.kingspangroup.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-10",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     }
   ],
@@ -22764,7 +23652,7 @@
       "supplierId": "plymouth-tube",
       "supplierName": "Plymouth Tube Company",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Plymouth Tube Carbon Alloy and Stainless Precision Tubing",
       "slug": "plymouth-tube-carbon-alloy-and-stainless-precision-tubing",
       "category": "Tubes & Pipes",
@@ -22797,7 +23685,7 @@
       "productUrl": "https://www.plymouth.com/",
       "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-10T18:10:50.000Z"
     },
@@ -22896,7 +23784,7 @@
       "supplierId": "welded-tube-canada",
       "supplierName": "Welded Tube of Canada",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Canada",
       "name": "Welded Tube of Canada ERW Mechanical Tubing and HSS",
       "slug": "welded-tube-of-canada-erw-mechanical-tubing-and-hss",
       "category": "Tubes & Pipes",
@@ -22929,7 +23817,7 @@
       "productUrl": "https://www.weldedtube.com/",
       "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-10T18:10:50.000Z"
     },
@@ -22984,7 +23872,7 @@
       "supplierId": "spx-flow",
       "supplierName": "SPX FLOW, Inc.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "SPX FLOW Process Pumps Mixers and Homogenizers",
       "slug": "spx-flow-process-pumps-mixers-and-homogenizers",
       "category": "Industrial Parts",
@@ -23016,7 +23904,7 @@
       "productUrl": "https://www.spxflow.com/",
       "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-10T18:10:50.000Z"
     },
@@ -23283,7 +24171,7 @@
       "supplierId": "lenze",
       "supplierName": "Lenze SE",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "Lenze Servo Drives Gearboxes and Motion Automation",
       "slug": "lenze-servo-drives-gearboxes-and-motion-automation",
       "category": "Industrial Parts",
@@ -23315,7 +24203,7 @@
       "productUrl": "https://www.lenze.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-10T18:10:50.000Z"
     },

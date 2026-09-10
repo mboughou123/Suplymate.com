@@ -444,7 +444,16 @@
     "hi-tech-pipes": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
     "bull-moose-tube": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
     "searing-industries": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
-    "shandong-molong": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim."
+    "shandong-molong": "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.",
+    "kloeckner-pentaplast": "Photo is an aerial plastics-plant campus without a confirmed Klöckner Pentaplast facade mark — not a brand-confirmed mill header.",
+    "visy": "Photo is an aerial corrugated/box plant campus without Visy facade branding — category-correct, not a brand-confirmed mill header.",
+    "michigan-seamless-tube": "Photo is an official MST branded product-line still (stacked tubes), not a plant or yard exterior.",
+    "suraj": "Photo is a SURAJ LTD–stenciled fittings studio shot — branded output, not a mill campus.",
+    "hepcomotion": "Photo is a factory-tour shop-floor still (people-focused interior), not a confirmed plant exterior or yard.",
+    "ifm": "Photo is the Glückaufhaus Essen HQ/campus exterior — official campus, not a production floor or yard.",
+    "kennametal": "Photo is a Latrobe-style tech/campus glass exterior without a Kennametal facade mark — plausible campus, not a brand-confirmed mill header.",
+    "lenze": "Photo is the Lenze-branded Aerzen/Groß Berkel HQ campus exterior — HQ/campus, not a production mill yard.",
+    "nb-corporation": "Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant."
   },
   "softTubeProductSlugs": [
     "plymouth-tube",
