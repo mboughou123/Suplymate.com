@@ -1,0 +1,697 @@
+{
+  "label": "QA-HOLD35-PRODUCTS-CLEARED",
+  "ok": [
+    "albea",
+    "bri-steel",
+    "california-steel-industries",
+    "epiroc",
+    "graco",
+    "greiner-packaging",
+    "hellenic-cables",
+    "hepcomotion",
+    "ifm",
+    "kennametal",
+    "kingspan",
+    "lee-man-paper",
+    "mannesmann-line-pipe",
+    "michigan-seamless-tube",
+    "nb-corporation",
+    "ozkan-steel",
+    "pactiv-evergreen",
+    "proampac",
+    "regal-rexnord",
+    "rollon",
+    "rr-kabel",
+    "saica",
+    "sanyo-special-steel",
+    "schneeberger",
+    "suraj",
+    "weg",
+    "winpak"
+  ],
+  "soft": [
+    "fedrigoni",
+    "kloeckner-pentaplast",
+    "martin-marietta",
+    "shandong-molong",
+    "superior-tube",
+    "tubos-reunidos"
+  ],
+  "hold_out": [
+    "tfkable",
+    "visy"
+  ],
+  "products": [
+    {
+      "product_name": "Tubos Reunidos Seamless Carbon Alloy and Stainless Pipe",
+      "supplier_name": "Tubos Reunidos Group",
+      "supplier_slug_guess": "tubos-reunidos",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.tubosreunidosgroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Tubos Reunidos Group mill/product page for seamless carbon/alloy/stainless pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.tubosreunidosgroup.com/uploads/cms/files/markets/tubos.jpg",
+        "https://www.tubosreunidosgroup.com/uploads/cms/files/markets/productos.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/tubos-reunidos/tubos-reunidos-seamless.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/tubos-reunidos/tubos-reunidos-octg.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Suraj Stainless Steel Seamless Heat Exchanger Tubes",
+      "supplier_name": "Suraj Limited",
+      "supplier_slug_guess": "suraj",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.surajgroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Suraj Limited mill/product page for stainless seamless heat-exchanger tubes. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.surajgroup.com/",
+        "https://www.surajgroup.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/suraj/suraj-hx.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/suraj/suraj-seamless.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Bri-Steel Large-Diameter Seamless Carbon and Alloy Pipe",
+      "supplier_name": "Bri-Steel Manufacturing",
+      "supplier_slug_guess": "bri-steel",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.bri-steel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Bri-Steel Manufacturing mill/product page for large-diameter seamless pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.bristeel.com/",
+        "https://www.bristeel.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/bri-steel/bristeel-ld.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/bri-steel/bristeel-seamless.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "MST Cold-Drawn Seamless Boiler and Pressure Tube",
+      "supplier_name": "Michigan Seamless Tube, LLC",
+      "supplier_slug_guess": "michigan-seamless-tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.mstube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Michigan Seamless Tube, LLC mill/product page for cold-drawn seamless boiler/pressure tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.mstube.com/",
+        "https://www.mstube.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/michigan-seamless-tube/mst-boiler.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/michigan-seamless-tube/mst-pressure.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Mannesmann Line Pipe HFI Longitudinally Welded Line Pipe",
+      "supplier_name": "Mannesmann Line Pipe GmbH",
+      "supplier_slug_guess": "mannesmann-line-pipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.mannesmann-linepipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Mannesmann Line Pipe GmbH mill/product page for HFI longitudinally welded line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.mannesmann-linepipe.com/",
+        "https://www.mannesmann-linepipe.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/mannesmann-line-pipe/mlp-hfi.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/mannesmann-line-pipe/mlp-line.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Shandong Molong OCTG Casing Tubing and Line Pipe",
+      "supplier_name": "Shandong Molong Petroleum Machinery Company Limited",
+      "supplier_slug_guess": "shandong-molong",
+      "category": "Tube & Pipes",
+      "source_url": "http://www.molonggroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Shandong Molong Petroleum Machinery Company Limited mill/product page for OCTG casing/tubing / line pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.molonggroup.com/",
+        "https://www.molonggroup.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/shandong-molong/molong-line.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/shandong-molong/molong-octg.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Superior Tube Precision Small-Diameter Specialty Alloy Tubing",
+      "supplier_name": "Superior Tube Company",
+      "supplier_slug_guess": "superior-tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.superiortube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Superior Tube Company mill/product page for precision specialty alloy tubing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.superiortube.com/-/media/ameteksuperiortube/images/a-new-image/mobile-images/seamless_20tubes.jpg",
+        "https://www.superiortube.com/-/media/ameteksuperiortube/images/a-new-image/desktop-images/our_20sizes_201.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/superior-tube/superior-alloy.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/superior-tube/superior-precision.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ProAmpac Flexible Pouches Films and Laminations",
+      "supplier_name": "ProAmpac",
+      "supplier_slug_guess": "proampac",
+      "category": "Packaging",
+      "source_url": "https://www.proampac.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ProAmpac mill/product page for flexible pouches / films / laminations. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.proampac.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/proampac/proampac-flex.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SAICA Recycled Containerboard and Corrugated Packaging",
+      "supplier_name": "SAICA Group",
+      "supplier_slug_guess": "saica",
+      "category": "Packaging",
+      "source_url": "https://www.saica.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SAICA Group mill/product page for recycled containerboard / corrugated packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.saica.com/",
+        "https://www.saica.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/saica/saica-corrugated.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/saica/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Winpak Flexible Barrier Films and Rigid Lidding",
+      "supplier_name": "Winpak Ltd.",
+      "supplier_slug_guess": "winpak",
+      "category": "Packaging",
+      "source_url": "https://www.winpak.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Winpak Ltd. mill/product page for flexible barrier films / rigid lidding. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.winpak.com/",
+        "https://www.winpak.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/winpak/winpak-lidding.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/winpak/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Kl\u00f6ckner Pentaplast Rigid and Flexible Packaging Films",
+      "supplier_name": "Kl\u00f6ckner Pentaplast",
+      "supplier_slug_guess": "kloeckner-pentaplast",
+      "category": "Packaging",
+      "source_url": "https://www.kpfilms.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kl\u00f6ckner Pentaplast mill/product page for rigid/flexible packaging films. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.kpfilms.com/",
+        "https://www.kpfilms.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kloeckner-pentaplast/kp-film.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kloeckner-pentaplast/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Fedrigoni Specialty Papers and Self-Adhesive Labels",
+      "supplier_name": "Fedrigoni Group",
+      "supplier_slug_guess": "fedrigoni",
+      "category": "Packaging",
+      "source_url": "https://www.fedrigoni.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Fedrigoni Group mill/product page for specialty papers / self-adhesive labels. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.fedrigoni.com/",
+        "https://www.fedrigoni.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/fedrigoni/fedrigoni-paper.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/fedrigoni/fedrigoni-label.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Greiner Packaging Plastic Cups and Food Containers",
+      "supplier_name": "Greiner Packaging International GmbH",
+      "supplier_slug_guess": "greiner-packaging",
+      "category": "Packaging",
+      "source_url": "https://www.greiner-gpi.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Greiner Packaging International GmbH mill/product page for plastic cups / food containers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.greiner-gpi.com/",
+        "https://www.greiner-gpi.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/greiner-packaging/greiner-cups.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/greiner-packaging/greiner-containers.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Pactiv Evergreen Foodservice Containers and Beverage Cartons",
+      "supplier_name": "Pactiv Evergreen Inc.",
+      "supplier_slug_guess": "pactiv-evergreen",
+      "category": "Packaging",
+      "source_url": "https://www.pactivevergreen.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Pactiv Evergreen Inc. mill/product page for foodservice containers / beverage cartons. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.pactivevergreen.com/",
+        "https://www.pactivevergreen.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/pactiv-evergreen/pactiv-foodservice.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/pactiv-evergreen/pactiv-carton.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Alb\u00e9a Cosmetic Tubes and Beauty Dispensing Packaging",
+      "supplier_name": "Alb\u00e9a Group",
+      "supplier_slug_guess": "albea",
+      "category": "Packaging",
+      "source_url": "https://www.albea-group.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Alb\u00e9a Group mill/product page for cosmetic tubes / beauty dispensing packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.albea-group.com/sites/default/files/2025-11/2.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/albea/albea-dispenser.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Lee & Man Paper Containerboard and Corrugating Medium",
+      "supplier_name": "Lee & Man Paper Manufacturing Limited",
+      "supplier_slug_guess": "lee-man-paper",
+      "category": "Packaging",
+      "source_url": "https://www.leemanpaper.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Lee & Man Paper Manufacturing Limited mill/product page for containerboard / corrugating medium. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://www.leemanpaper.com/",
+        "https://www.leemanpaper.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/lee-man-paper/leeman-board.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/lee-man-paper/leeman-medium.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Epiroc Rock Drilling Rigs and Underground Loaders",
+      "supplier_name": "Epiroc AB",
+      "supplier_slug_guess": "epiroc",
+      "category": "Industrial Parts",
+      "source_url": "https://www.epiroc.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Epiroc AB mill/product page for rock drilling rigs / underground loaders. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/epiroc/epiroc-drill.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/epiroc/epiroc-loader.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Regal Rexnord Power Transmission and Industrial Motors",
+      "supplier_name": "Regal Rexnord Corporation",
+      "supplier_slug_guess": "regal-rexnord",
+      "category": "Industrial Parts",
+      "source_url": "https://www.regalrexnord.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Regal Rexnord Corporation mill/product page for power transmission / industrial motors. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/regal-rexnord/regal-pt.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/regal-rexnord/regal-motors.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Graco Fluid Handling Pumps and Spray Finishing Equipment",
+      "supplier_name": "Graco Inc.",
+      "supplier_slug_guess": "graco",
+      "category": "Industrial Parts",
+      "source_url": "https://www.graco.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Graco Inc. mill/product page for fluid handling pumps / spray finishing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/graco/graco-spray.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/graco/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "WEG Industrial Electric Motors and Drives",
+      "supplier_name": "WEG S.A.",
+      "supplier_slug_guess": "weg",
+      "category": "Industrial Parts",
+      "source_url": "https://www.weg.net/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 WEG S.A. mill/product page for industrial electric motors / drives. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/weg/weg-motors.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/weg/weg-drives.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ifm Industrial Sensors and Condition Monitoring",
+      "supplier_name": "ifm electronic gmbh",
+      "supplier_slug_guess": "ifm",
+      "category": "Industrial Parts",
+      "source_url": "https://www.ifm.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ifm electronic gmbh mill/product page for industrial sensors / condition monitoring. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/ifm/ifm-sensors.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Kennametal Cutting Tools and Wear-Resistant Components",
+      "supplier_name": "Kennametal Inc.",
+      "supplier_slug_guess": "kennametal",
+      "category": "Industrial Parts",
+      "source_url": "https://www.kennametal.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kennametal Inc. mill/product page for cutting tools / wear-resistant components. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kennametal/kennametal-tools.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kennametal/kennametal-wear.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "HepcoMotion V-Guide Linear Motion and Ring Track Systems",
+      "supplier_name": "HepcoMotion",
+      "supplier_slug_guess": "hepcomotion",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.hepcomotion.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 HepcoMotion mill/product page for V-guide linear motion / ring track systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hepcomotion/hepco-vguide.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Rollon Linear Rails Actuators and Telescopic Slides",
+      "supplier_name": "Rollon S.p.A.",
+      "supplier_slug_guess": "rollon",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.rollon.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Rollon S.p.A. mill/product page for linear rails / actuators / telescopic slides. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/rollon/rollon-rails.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Schneeberger Precision Linear Guideways",
+      "supplier_name": "Schneeberger AG",
+      "supplier_slug_guess": "schneeberger",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.schneeberger.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Schneeberger AG mill/product page for precision linear guideways. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/schneeberger/schneeberger-guides.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "NB Corporation Linear Bushings and Slide Guides",
+      "supplier_name": "NB Corporation",
+      "supplier_slug_guess": "nb-corporation",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nbcorporation.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 NB Corporation mill/product page for linear bushings / slide guides. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nb-corporation/nb-bushings.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "\u00d6zkan Steel Special Profiles and Quality Steel Bars",
+      "supplier_name": "\u00d6zkan Steel",
+      "supplier_slug_guess": "ozkan-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://ozkansteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 \u00d6zkan Steel mill/product page for special profiles / quality steel bars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/ozkan-steel/ozkan-profiles.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/ozkan-steel/ozkan-bars.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Sanyo Special Steel Bearing and Alloy Special Steel Bars",
+      "supplier_name": "Sanyo Special Steel Co., Ltd.",
+      "supplier_slug_guess": "sanyo-special-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.sanyo-steel.co.jp/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Sanyo Special Steel Co., Ltd. mill/product page for bearing / alloy special steel bars. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/sanyo-special-steel/sanyo-bearing.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/sanyo-special-steel/sanyo-alloy.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "California Steel Industries Hot Rolled and Galvanized Sheet",
+      "supplier_name": "California Steel Industries, Inc.",
+      "supplier_slug_guess": "california-steel-industries",
+      "category": "Steel & Metals",
+      "source_url": "https://www.californiasteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 California Steel Industries, Inc. mill/product page for hot rolled / galvanized sheet. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/california-steel-industries/csi-gi.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/california-steel-industries/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Hellenic Cables Power Submarine and Telecom Cables",
+      "supplier_name": "Hellenic Cables S.A.",
+      "supplier_slug_guess": "hellenic-cables",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.hellenic-cables.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Hellenic Cables S.A. mill/product page for power / submarine / telecom cables. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kabel.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Wide_Field_Infrared_Explorer_module.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hellenic-cables/hellenic-power.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hellenic-cables/hellenic-submarine.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "RR Kabel Building Wires and Power Cables",
+      "supplier_name": "RR Kabel Limited",
+      "supplier_slug_guess": "rr-kabel",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.rrkabel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 RR Kabel Limited mill/product page for building wires / power cables. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/09/Wide_Field_Infrared_Explorer_module.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Kabel.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/rr-kabel/rrkabel-building.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/rr-kabel/rrkabel-power.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Kingspan Insulated Panels and Building Insulation Systems",
+      "supplier_name": "Kingspan Group plc",
+      "supplier_slug_guess": "kingspan",
+      "category": "Construction",
+      "source_url": "https://www.kingspangroup.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kingspan Group plc mill/product page for insulated panels / building insulation. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Gypsum.jpg/1280px-Gypsum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kingspan/kingspan-panels.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/kingspan/kingspan-insulation.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Martin Marietta Aggregates Cement and Construction Materials",
+      "supplier_name": "Martin Marietta Materials, Inc.",
+      "supplier_slug_guess": "martin-marietta",
+      "category": "Construction",
+      "source_url": "https://www.martinmarietta.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Martin Marietta Materials, Inc. mill/product page for aggregates / cement / construction materials. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Gypsum.jpg/1280px-Gypsum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/martin-marietta/mm-cement.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/martin-marietta/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    }
+  ]
+}

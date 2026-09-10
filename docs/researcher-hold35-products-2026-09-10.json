@@ -1,0 +1,109 @@
+{
+  "label": "QA-HOLD35-PRODUCTS-RESEARCHER-PARTIAL",
+  "sealed_at_utc": "2026-09-10T19:14:21.040314+00:00",
+  "sealed_at_pt": "2026-09-10 ~12:14 PM PT",
+  "pack": "/workspace/suppliers-phase1/daily/2026-09-10/_qa_hold35_products_pack",
+  "source_enhancer_label": "QA-HOLD35-PRODUCTS-ENHANCER-SEALED",
+  "day": "2026-09-10",
+  "sealed_wire_ok": [
+    "albea",
+    "bri-steel",
+    "california-steel-industries",
+    "epiroc",
+    "graco",
+    "greiner-packaging",
+    "hellenic-cables",
+    "hepcomotion",
+    "ifm",
+    "kennametal",
+    "kingspan",
+    "lee-man-paper",
+    "mannesmann-line-pipe",
+    "michigan-seamless-tube",
+    "nb-corporation",
+    "ozkan-steel",
+    "pactiv-evergreen",
+    "proampac",
+    "regal-rexnord",
+    "rollon",
+    "rr-kabel",
+    "saica",
+    "sanyo-special-steel",
+    "schneeberger",
+    "suraj",
+    "weg",
+    "winpak"
+  ],
+  "soft": [
+    {
+      "slug": "fedrigoni",
+      "reason": "specialty paper/label application shots (Nibbo chocolate packaging; wine bottle labels) \u2014 category-correct for Fedrigoni specialty papers/labels, not mill stock"
+    },
+    {
+      "slug": "kloeckner-pentaplast",
+      "reason": "kp-film = clear rigid meat tray (packaging OK-ish); mill-fallback-2 = PET soda bottles in grocery \u2014 soft packaging category, not KP core films"
+    },
+    {
+      "slug": "martin-marietta",
+      "reason": "aggregates quarry facility / aerial open-pit campus \u2014 category-correct for Martin Marietta aggregates, not bagged cement product; aerial pit map-adjacent caution"
+    },
+    {
+      "slug": "shandong-molong",
+      "reason": "generic pipe-bundle / polished tube stock \u2014 type-match only, not mill-specific"
+    },
+    {
+      "slug": "superior-tube",
+      "reason": "polished specialty-tube catalog / mill-handling type-match \u2014 soft tubes, not mill-branded stock"
+    },
+    {
+      "slug": "tubos-reunidos",
+      "reason": "generic tube-bundle stock \u2014 soft type-match only, not mill-specific"
+    }
+  ],
+  "hold_do_not_wire": [
+    {
+      "slug": "tfkable",
+      "reason": "tfkable-power = stylized CGI/marketing cable cutaway with neon digital smoke effects \u2014 CGI/AI HOLD"
+    },
+    {
+      "slug": "visy",
+      "reason": "mill-fallback-2 = painterly art still-life (glass bottles, ferns, monarch butterfly) \u2014 art/archive poison; visy-glass alone is soft packaging flat-lay"
+    }
+  ],
+  "counts": {
+    "ok": 27,
+    "soft": 6,
+    "hold": 2,
+    "skus_read": 35,
+    "stills_read": 62
+  },
+  "wire_recommendation": "Wire the 27 OK SKUs first (brand-legitimate product stills). Soft 6 optional with caution (Fedrigoni paper/label apps; KP packaging category; Martin Marietta quarry campus; soft generic tubes for shandong-molong/superior-tube/tubos-reunidos). Do NOT wire HOLD: tfkable (CGI neon), visy (art still-life). Wired 15 from daily seal stay LOCKED (nord-drivesystems, nordson, beckhoff OK + soft 12 already wired) \u2014 do not re-judge. needs_ai=0; RFQ; no invented FOB; unit_price=null. Prefer branded stills when SKU has mill-fallback-2.",
+  "needs_ai": 0,
+  "invented_fob_prices": false,
+  "unit_price": null,
+  "wired_15_locked": [
+    "nord-drivesystems",
+    "nordson",
+    "beckhoff",
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "nidec",
+    "hydac",
+    "lenze",
+    "erdemir",
+    "worthington-steel"
+  ],
+  "notes": [
+    "Full visual pass: all 62 enhanced product JPGs Read (vision).",
+    "Re-fetch cleared prior poisons (villages, Tetra Pak, paul-lueftung HVAC, trains, sports, portraits, spacecraft, WWI Fernsprech, aircraft, excavators, dashboards, museum gypsum).",
+    "rr-kabel product stills are real branded cable shots \u2014 OK (distinct from mill-header exclude-list).",
+    "winpak: wire branded winpak-lidding.jpg; mill-fallback-2 is non-packaging green roller \u2014 prefer lidding still.",
+    "greiner-packaging: prefer branded greiner-cups (K3); containers is customer dairy application.",
+    "Wired 15 stay locked. Did not message agents. Did not touch PRs."
+  ]
+}
