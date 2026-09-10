@@ -4,7 +4,7 @@ import {
   type ScrapedProduct,
 } from "@/data/scraped-products";
 import type { Product, ProductCategory } from "@/data/products";
-import { packProducts } from "@/data/pack-catalog";
+import { overlayPackProductImages, packProducts } from "@/data/pack-catalog";
 import { persistProductImage } from "@/lib/image-storage";
 
 /* ------------------------------------------------------------------ */
@@ -121,7 +121,9 @@ export async function listScrapedProducts(): Promise<ScrapedProduct[]> {
     const rows = await prisma.scrapedProduct.findMany({
       orderBy: { scrapedAt: "desc" },
     });
-    if (rows.length) return rows.map((r) => mapRow(r as ScrapedRow));
+    if (rows.length) {
+      return rows.map((r) => overlayPackProductImages(mapRow(r as ScrapedRow)));
+    }
   } catch {
     // table not provisioned — fall back to the in-memory overlay/seed
   }
@@ -136,7 +138,7 @@ export async function getScrapedProduct(
 ): Promise<ScrapedProduct | null> {
   try {
     const row = await prisma.scrapedProduct.findUnique({ where: { id } });
-    if (row) return mapRow(row as ScrapedRow);
+    if (row) return overlayPackProductImages(mapRow(row as ScrapedRow));
   } catch {
     // ignore
   }
@@ -267,6 +269,7 @@ export function scrapedToProduct(sp: ScrapedProduct): Product {
     supplierCount: 1,
     unit: sp.priceUnit ?? "unit",
     supplierId: sp.supplierId,
+    slug: sp.slug ?? undefined,
     supplierName: sp.supplierName,
     supplierCountry: sp.supplierCountry ?? undefined,
     images: sp.images,

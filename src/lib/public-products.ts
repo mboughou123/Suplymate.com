@@ -19,6 +19,7 @@ import {
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
 import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
+import { getPackProduct } from "@/data/pack-catalog";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
@@ -149,9 +150,14 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
       const supplierVisible =
         !sup || !sup.verificationStatus || sup.verificationStatus === "verified";
       const published = mediaMap.get(r.id) ?? [];
-      const images = published.length ? published : safeArray(r.images);
+      const pack = getPackProduct(r.id);
+      const legacy = published.length ? published : safeArray(r.images);
+      const images = [...new Set([...(pack?.images ?? []), ...legacy])];
       const imageInput = {
         images,
+        id: r.id,
+        slug: r.slug ?? pack?.slug ?? pack?.packSlug,
+        supplierId: r.supplierId,
         productName: r.name,
         category: r.category,
       };
@@ -236,8 +242,13 @@ async function dbFacets(): Promise<CatalogueFacets> {
 /* ------------------------------------------------------------------ */
 
 function staticToCard(p: Product): PublicProductCard {
+  const pack = getPackProduct(p.id);
+  const images = [...new Set([...(pack?.images ?? []), ...(p.images ?? [])])];
   const imageInput = {
-    images: p.images,
+    images,
+    id: p.id,
+    slug: p.slug ?? pack?.slug ?? pack?.packSlug,
+    supplierId: p.supplierId,
     productName: p.name,
     category: p.category,
   };
