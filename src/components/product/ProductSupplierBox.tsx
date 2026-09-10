@@ -25,12 +25,16 @@ export default function ProductSupplierBox({
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <Link
-              href={supplier.href}
-              className="truncate text-lg font-bold text-ink hover:text-cyan"
-            >
-              {supplier.name}
-            </Link>
+            {supplier.href ? (
+              <Link
+                href={supplier.href}
+                className="truncate text-lg font-bold text-ink hover:text-cyan"
+              >
+                {supplier.name}
+              </Link>
+            ) : (
+              <span className="truncate text-lg font-bold text-ink">{supplier.name}</span>
+            )}
             {supplier.verified && (
               <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
                 <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
@@ -72,13 +76,15 @@ export default function ProductSupplierBox({
           label="Contact Supplier"
           className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
         />
-        <Link
-          href={supplier.href}
-          className="btn-secondary inline-flex flex-1 items-center justify-center gap-1.5"
-        >
-          View Profile
-          <ArrowUpRight className="h-4 w-4" aria-hidden />
-        </Link>
+        {supplier.href ? (
+          <Link
+            href={supplier.href}
+            className="btn-secondary inline-flex flex-1 items-center justify-center gap-1.5"
+          >
+            View Profile
+            <ArrowUpRight className="h-4 w-4" aria-hidden />
+          </Link>
+        ) : null}
       </div>
     </div>
   );

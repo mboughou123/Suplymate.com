@@ -27,10 +27,15 @@ export type PackCertification = {
 export type PackSupplier = Supplier & {
   /** Folder slug used by the media packs (e.g. `hadeed`, `posco`). */
   packSlug: string;
-  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03`. */
+  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03` | `daily-2026-09-10`. */
   pack: string;
   /** True when the id already exists in the Outscraper directory (overlay, not a new card). */
   overlaysExisting: boolean;
+  /**
+   * RFQ product host whose mill card is Researcher-HOLD. Present so products
+   * can resolve a supplier identity; omitted from the public mill listing.
+   */
+  productHostOnly?: boolean;
 };
 
 /** A pack product: an approved `ScrapedProduct` plus provenance fields. */
@@ -105,6 +110,7 @@ export function mergePackSuppliers(existing: Supplier[]): Supplier[] {
   });
   for (const pack of packSuppliers) {
     if (byId.has(pack.id)) continue;
+    if (pack.productHostOnly) continue;
     merged.push(toDirectorySupplier(pack));
   }
   return merged;
@@ -112,10 +118,17 @@ export function mergePackSuppliers(existing: Supplier[]): Supplier[] {
 
 /** Strip pack bookkeeping so the public `Supplier` shape stays lean. */
 export function toDirectorySupplier(pack: PackSupplier): Supplier {
-  const { packSlug: _slug, pack: _pack, overlaysExisting: _overlay, ...supplier } = pack;
+  const {
+    packSlug: _slug,
+    pack: _pack,
+    overlaysExisting: _overlay,
+    productHostOnly: _host,
+    ...supplier
+  } = pack;
   void _slug;
   void _pack;
   void _overlay;
+  void _host;
   return { ...supplier, featuredProducts: featuredProductsFor(pack.id) };
 }
 

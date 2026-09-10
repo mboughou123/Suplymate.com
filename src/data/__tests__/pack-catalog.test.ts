@@ -93,7 +93,7 @@ describe("supplier de-duplication", () => {
     const merged = mergePackSuppliers(outscraperSuppliers);
     const ids = merged.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
-    const packOnly = packSuppliers.filter((s) => !s.overlaysExisting).length;
+    const packOnly = packSuppliers.filter((s) => !s.overlaysExisting && !s.productHostOnly).length;
     expect(merged.length).toBe(outscraperSuppliers.length + packOnly);
   });
 
@@ -176,6 +176,186 @@ describe("certifications", () => {
     expect(withCerts.length).toBe(packStats.suppliersWithCertImages);
     const alGharbia = getPackSupplier("al-gharbia-pipe-company-llc-ae");
     expect(alGharbia?.certificationsDetailed?.some((c) => /API 5L/i.test(c.name) && c.imageUrl)).toBe(true);
+  });
+});
+
+describe("daily 2026-09-10 cleared wire", () => {
+  const millsOk = [
+    "california-steel-industries",
+    "erdemir",
+    "graco",
+    "hydac",
+    "sanyo-special-steel",
+    "tfkable",
+    "voith",
+  ];
+  const millsSoft = [
+    "beckhoff",
+    "bull-moose-tube",
+    "epiroc",
+    "hi-tech-pipes",
+    "mannesmann-line-pipe",
+    "martin-marietta",
+    "nidec",
+    "nord-drivesystems",
+    "nordson",
+    "saica",
+    "searing-industries",
+    "shandong-molong",
+    "worthington-steel",
+  ];
+  const productsWire = [
+    "nord-drivesystems",
+    "nordson",
+    "beckhoff",
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "nidec",
+    "hydac",
+    "lenze",
+    "erdemir",
+    "worthington-steel",
+  ];
+  const millHolds = [
+    "albea",
+    "bri-steel",
+    "fedrigoni",
+    "greiner-packaging",
+    "hellenic-cables",
+    "hepcomotion",
+    "ifm",
+    "kennametal",
+    "kingspan",
+    "kloeckner-pentaplast",
+    "lee-man-paper",
+    "lenze",
+    "michigan-seamless-tube",
+    "nb-corporation",
+    "ozkan-steel",
+    "pactiv-evergreen",
+    "plymouth-tube",
+    "proampac",
+    "regal-rexnord",
+    "rollon",
+    "rr-kabel",
+    "schneeberger",
+    "spx-flow",
+    "superior-tube",
+    "suraj",
+    "tubos-reunidos",
+    "visy",
+    "weg",
+    "welded-tube-canada",
+    "winpak",
+  ];
+  const productHolds = [
+    "tubos-reunidos",
+    "suraj",
+    "bri-steel",
+    "michigan-seamless-tube",
+    "mannesmann-line-pipe",
+    "shandong-molong",
+    "superior-tube",
+    "proampac",
+    "saica",
+    "visy",
+    "winpak",
+    "kloeckner-pentaplast",
+    "fedrigoni",
+    "greiner-packaging",
+    "pactiv-evergreen",
+    "albea",
+    "lee-man-paper",
+    "epiroc",
+    "regal-rexnord",
+    "graco",
+    "weg",
+    "ifm",
+    "kennametal",
+    "hepcomotion",
+    "rollon",
+    "schneeberger",
+    "nb-corporation",
+    "sanyo-special-steel",
+    "california-steel-industries",
+    "ozkan-steel",
+    "hellenic-cables",
+    "tfkable",
+    "rr-kabel",
+    "kingspan",
+    "martin-marietta",
+  ];
+  const categoryFill = ["hi-tech-pipes", "bull-moose-tube", "searing-industries", "shandong-molong"];
+  const softTubes = [
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+  ];
+
+  const dayMills = packSuppliers.filter((s) => s.pack === "daily-2026-09-10" && !s.productHostOnly);
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-10" && s.productHostOnly);
+  const dayProducts = packProducts.filter((p) => p.pack === "d0910");
+
+  it("wires the 20 cleared mills and 15 RFQ products", () => {
+    expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...productsWire].sort());
+    expect(dayHosts.map((s) => s.packSlug).sort()).toEqual(
+      ["lenze", "plymouth-tube", "spx-flow", "welded-tube-canada"].sort()
+    );
+  });
+
+  it("points cards at local stills and keeps every SKU as RFQ", () => {
+    for (const s of dayMills) {
+      expect(s.imageUrl, s.packSlug).toMatch(/^\/images\/suppliers\//);
+      expect((s.supplierImages ?? []).every((u) => u.startsWith("/images/suppliers/")), s.packSlug).toBe(true);
+    }
+    for (const p of dayProducts) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+    }
+  });
+
+  it("keeps HOLD mills out of the public directory and HOLD products out of the catalogue", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const slug of millHolds) {
+      const wired = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-10");
+      if (wired) {
+        expect(wired.productHostOnly, slug).toBe(true);
+        expect(listed.has(wired.id), slug).toBe(false);
+      }
+    }
+    for (const slug of productHolds) {
+      expect(
+        dayProducts.some((p) => p.packSlug === slug),
+        slug
+      ).toBe(false);
+    }
+  });
+
+  it("soft-captions category-fill mill stills as not plant-exterior claims", () => {
+    for (const slug of categoryFill) {
+      const mill = dayMills.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(/not a plant-exterior claim/i);
+    }
+  });
+
+  it("credits soft tube products as type-match Commons stock", () => {
+    for (const slug of softTubes) {
+      const sku = dayProducts.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(/type-match Wikimedia Commons stock/i);
+    }
   });
 });
 

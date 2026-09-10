@@ -5,6 +5,7 @@
  * Inputs (all committed):
  *   scripts/import/phase1/suppliers-phase1-import.json + media-manifest.json
  *   data/daily-2026-09-0{2,3}-suppliers.json (+ *-manifest-suppliers*.json)
+ *   data/daily-2026-09-10-cleared.json (+ docs/researcher-*-2026-09-10.json)
  *   data/product-media-batch{1,2,3}.json, data/product-gaps-fill*.json,
  *   data/daily-2026-09-0{2,3}-products.json (+ *enhanced-manifest*.json)
  *   data/certifications.json, data/certs-seed.tsv, data/*certs*manifest*.json
@@ -243,9 +244,34 @@ function loadOutscraperSuppliers() {
 
 const DISTRIBUTOR_SLUGS = new Set(config.distributors?.slugs ?? []);
 const HOLD_KEYS = new Set(config.holds?.keys ?? []);
+const SOFT_TUBE_PRODUCT_SLUGS = new Set(config.softTubeProductSlugs ?? []);
+const CATEGORY_FILL_CAPTION =
+  "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.";
+const SOFT_TUBE_IMAGE_CREDIT =
+  "Type-match Wikimedia Commons stock — not a mill-specific product still.";
 
 function isHeld(supplierSlug, productSlug) {
   return HOLD_KEYS.has(supplierSlug) || HOLD_KEYS.has(`${supplierSlug}|${productSlug}`);
+}
+
+/**
+ * Researcher seals for a cleared daily pack. HOLD slugs never enter the
+ * catalogue; wire sets are the union of OK + SOFT. Category-fill mill notes
+ * that start with SOFT get the generic-pipe caption (not a plant-exterior claim).
+ */
+function loadDaySeals(dateTag) {
+  const mills = readJsonIfExists(path.join(ROOT, "docs", `researcher-mills-${dateTag}.json`));
+  const products = readJsonIfExists(path.join(ROOT, "docs", `researcher-products-${dateTag}.json`));
+  const millHolds = new Set(mills?.hold_do_not_wire ?? []);
+  const productHolds = new Set((products?.hold ?? []).map((h) => (typeof h === "string" ? h : h.slug)));
+  const millWire = new Set([...(mills?.sealed_wire_ok ?? []), ...(mills?.soft ?? [])]);
+  const productWire = new Set([...(products?.ok ?? []), ...(products?.soft ?? [])]);
+  const categoryFill = new Set(
+    Object.entries(mills?.category_fill_notes ?? {})
+      .filter(([, note]) => /^SOFT\b/i.test(String(note)))
+      .map(([slug]) => slug)
+  );
+  return { millHolds, productHolds, millWire, productWire, categoryFill };
 }
 
 function localLogoFor(id) {
@@ -403,6 +429,121 @@ function buildDailySuppliers(dateTag, report) {
       reliabilityScore: isDistributor ? 72 : 90,
     };
   });
+}
+
+/**
+ * Researcher-cleared combined daily pack (`data/daily-<date>-cleared.json`).
+ * Mills on the seal HOLD list are omitted from the public directory. Products
+ * whose mill is HOLD still get a product-host identity (no mill stills) so the
+ * RFQ SKU can list without wiring the mill card.
+ */
+function buildClearedDailySuppliers(dateTag, report) {
+  const raw = readJsonIfExists(path.join(DATA_DIR, `daily-${dateTag}-cleared.json`));
+  if (!raw) return [];
+  const seals = loadDaySeals(dateTag);
+  const allow = new Set([...(raw.mills_ok ?? []), ...(raw.mills_soft ?? []), ...seals.millWire]);
+  const rows = [];
+  for (const m of raw.suppliers ?? []) {
+    const slug = m.slug || slugify(m.company_name);
+    if (seals.millHolds.has(slug)) continue;
+    if (allow.size && !allow.has(slug)) continue;
+    rows.push(m);
+  }
+  return rows.map((m) => {
+    const slug = m.slug || slugify(m.company_name);
+    const category = toCategory(m.primary_category) ?? "Industrial Parts";
+    const id = config.supplierIdBySlug?.[slug] ?? slug;
+    const images = preferEnhancedJpegPaths(
+      uniq([
+        ...(m.local_images ?? []).map(publicPathFromPackPath),
+        ...listImageFiles(`images/suppliers/${slug}`),
+      ])
+        .map(verifyPublicPath)
+        .filter(Boolean)
+        .filter(notExcludedSupplierImage)
+    );
+    if (images.length === 0) report.suppliersWithoutPhotos.push(id);
+    const city = String(m.city ?? "").split(",")[0].trim() || undefined;
+    let description = String(m.description ?? "").trim();
+    const note = config.descriptionNotes?.[slug];
+    if (note) description = description ? `${description} ${note}` : note;
+    if (seals.categoryFill.has(slug) && !description.includes("not a plant-exterior")) {
+      description = description ? `${description} ${CATEGORY_FILL_CAPTION}` : CATEGORY_FILL_CAPTION;
+    }
+    return {
+      id,
+      packSlug: slug,
+      pack: `daily-${dateTag}`,
+      name: m.company_name,
+      industry: INDUSTRY_BY_CATEGORY[category],
+      category,
+      location: [city, m.country].filter(Boolean).join(", "),
+      country: m.country ?? undefined,
+      city,
+      website: m.website ?? undefined,
+      logoUrl: localLogoFor(id) ?? undefined,
+      imageUrl: images.includes(config.supplierHeroById?.[id]) ? config.supplierHeroById[id] : images[0],
+      supplierImages: images,
+      description: description || undefined,
+      products: Array.isArray(m.product_lines) ? m.product_lines : [],
+      deliveryRegions: regionsFor(m.country, m.export_markets),
+      moq: /not published/i.test(m.moq ?? "") || !m.moq ? "Not published — mill RFQ" : m.moq,
+      verified: true,
+      verificationStatus: "verified",
+      businessType: "Manufacturer",
+      sourceUrl: m.source_url || m.website || undefined,
+      certificationsDetailed: [],
+      certificationImages: [],
+      lastUpdated: dateTag,
+      score: 90,
+      reliabilityScore: 90,
+    };
+  });
+}
+
+/** Identity-only hosts for RFQ products whose mill card is Researcher-HOLD. */
+function buildClearedProductHosts(dateTag, wiredSlugs, report) {
+  const raw = readJsonIfExists(path.join(DATA_DIR, `daily-${dateTag}-cleared.json`));
+  if (!raw) return [];
+  const seals = loadDaySeals(dateTag);
+  const allow = new Set([...(raw.products_ok ?? []), ...(raw.products_soft ?? []), ...seals.productWire]);
+  const seen = new Set();
+  const hosts = [];
+  for (const sku of raw.products ?? []) {
+    const slug = sku.supplier_slug_guess || slugify(sku.supplier_name);
+    if (seen.has(slug) || wiredSlugs.has(slug)) continue;
+    if (seals.productHolds.has(slug)) continue;
+    if (allow.size && !allow.has(slug)) continue;
+    seen.add(slug);
+    const category = toCategory(sku.category) ?? "Industrial Parts";
+    const id = config.supplierIdBySlug?.[slug] ?? slug;
+    hosts.push({
+      id,
+      packSlug: slug,
+      pack: `daily-${dateTag}`,
+      name: sku.supplier_name,
+      industry: INDUSTRY_BY_CATEGORY[category],
+      category,
+      website: sku.source_url || undefined,
+      description:
+        "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
+      products: [sku.product_name],
+      deliveryRegions: [],
+      moq: "Not published — mill RFQ",
+      verified: false,
+      verificationStatus: "needs_info",
+      businessType: "Manufacturer",
+      sourceUrl: sku.source_url || undefined,
+      certificationsDetailed: [],
+      certificationImages: [],
+      lastUpdated: dateTag,
+      score: 70,
+      reliabilityScore: 70,
+      productHostOnly: true,
+    });
+    report.suppliersWithoutPhotos.push(id);
+  }
+  return hosts;
 }
 
 /* ------------------------------------------------------------------ */
@@ -719,6 +860,22 @@ function loadProductPacks() {
     if (!raw) continue;
     packs.push({ packId, scrapedAt, skus: (raw.products ?? []).map((sku) => ({ raw: sku, bucket: "daily" })) });
   }
+  const cleared = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-10-cleared.json"));
+  if (cleared) {
+    const seals = loadDaySeals("2026-09-10");
+    const allow = new Set([...(cleared.products_ok ?? []), ...(cleared.products_soft ?? []), ...seals.productWire]);
+    const skus = (cleared.products ?? []).filter((sku) => {
+      const slug = sku.supplier_slug_guess || slugify(sku.supplier_name);
+      if (seals.productHolds.has(slug)) return false;
+      if (allow.size && !allow.has(slug)) return false;
+      return true;
+    });
+    packs.push({
+      packId: "d0910",
+      scrapedAt: "2026-09-10T18:10:50.000Z",
+      skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+    });
+  }
   return packs;
 }
 
@@ -835,6 +992,9 @@ function buildProducts(suppliersById, supplierIdBySlug, report) {
           ...(supplierSlug === "hadeed" && images.length
             ? { "Image credit": "Official Hadeed product stills (hadeed.com.sa)" }
             : {}),
+          ...(SOFT_TUBE_PRODUCT_SLUGS.has(supplierSlug)
+            ? { "Image credit": SOFT_TUBE_IMAGE_CREDIT }
+            : {}),
         };
 
         products.push({
@@ -902,10 +1062,14 @@ export function buildCatalog() {
   const existingByName = new Map();
   for (const s of outscraper) existingByName.set(normalizeName(s.name), s.id);
 
+  const clearedMills = buildClearedDailySuppliers("2026-09-10", report);
+  const wiredClearedSlugs = new Set(clearedMills.map((s) => s.packSlug));
   const raw = [
     ...buildPhase1Suppliers(report),
     ...buildDailySuppliers("2026-09-02", report),
     ...buildDailySuppliers("2026-09-03", report),
+    ...clearedMills,
+    ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
   ];
 
   // Dedupe: by id, then by website domain / normalised name against the pack

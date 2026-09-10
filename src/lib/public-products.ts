@@ -22,6 +22,7 @@ import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
+import { getPackSupplier } from "@/data/pack-catalog";
 
 export type PublicProductCard = {
   id: string;
@@ -252,7 +253,7 @@ function staticToCard(p: Product): PublicProductCard {
     supplierId: p.supplierId ?? "",
     supplierName: p.supplierName ?? "Suplymate catalogue",
     supplierCountry: p.supplierCountry ?? null,
-    supplierVisible: Boolean(p.supplierId),
+    supplierVisible: Boolean(p.supplierId) && !getPackSupplier(p.supplierId ?? "")?.productHostOnly,
     verified: false,
     imageUrl: getBestProductImage(imageInput),
     hasRealPhoto: hasRealProductImage(imageInput),
