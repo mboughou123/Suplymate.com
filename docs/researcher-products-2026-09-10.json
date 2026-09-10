@@ -1,0 +1,216 @@
+{
+  "label": "QA-DAILY-2026-09-10-PRODUCTS-RESEARCHER-PARTIAL",
+  "source_enhancer_label": "DAILY-2026-09-10-MILL-PRODUCTS-ENHANCED",
+  "sealed_at_utc": "2026-09-10T18:10:50.590093+00:00",
+  "sealed_at_pt": "2026-09-10 ~11:10 PT",
+  "sku_count": 50,
+  "stills_read": 93,
+  "unique_content_hashes": 55,
+  "ok": [
+    "nord-drivesystems",
+    "nordson",
+    "beckhoff"
+  ],
+  "soft": [
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "nidec",
+    "hydac",
+    "lenze",
+    "erdemir",
+    "worthington-steel"
+  ],
+  "hold": [
+    {
+      "slug": "tubos-reunidos",
+      "reason": "tubos-reunidos-octg = terraced hillside village \u2014 not seamless/OCTG pipe"
+    },
+    {
+      "slug": "suraj",
+      "reason": "suraj-hx = paul-lueftung.de counter-current HVAC heat-exchanger diagram \u2014 not stainless HX tubes"
+    },
+    {
+      "slug": "bri-steel",
+      "reason": "bristeel-seamless = terraced hillside village \u2014 not large-diameter seamless pipe"
+    },
+    {
+      "slug": "michigan-seamless-tube",
+      "reason": "mst-boiler = paul-lueftung HVAC diagram \u2014 not cold-drawn boiler/pressure tube"
+    },
+    {
+      "slug": "mannesmann-line-pipe",
+      "reason": "mlp-hfi = terraced hillside village \u2014 not HFI line pipe"
+    },
+    {
+      "slug": "shandong-molong",
+      "reason": "molong-octg = terraced hillside village \u2014 not OCTG/line pipe"
+    },
+    {
+      "slug": "superior-tube",
+      "reason": "superior-precision = paul-lueftung HVAC diagram \u2014 not precision specialty alloy tubing"
+    },
+    {
+      "slug": "proampac",
+      "reason": "proampac-flex = soccer match stadium (sports) \u2014 not flexible pouches/films"
+    },
+    {
+      "slug": "saica",
+      "reason": "saica-corrugated = abandoned hillside mill/ruin \u2014 not recycled containerboard/corrugated"
+    },
+    {
+      "slug": "visy",
+      "reason": "mill-fallback-2 = portrait of speaker (lime screen) \u2014 not glass/metal containers"
+    },
+    {
+      "slug": "winpak",
+      "reason": "winpak-lidding = Tetra Pak carton panel \u2014 wrong brand; mill-fallback-2 = S&P/TSX chart \u2014 not barrier films/lidding"
+    },
+    {
+      "slug": "kloeckner-pentaplast",
+      "reason": "kp-film = Tetra Pak carton panel \u2014 wrong brand for rigid/flexible packaging films"
+    },
+    {
+      "slug": "fedrigoni",
+      "reason": "fedrigoni-paper = abandoned hillside mill; fedrigoni-label = vintage Rimini race car (sports) \u2014 not specialty papers/labels"
+    },
+    {
+      "slug": "greiner-packaging",
+      "reason": "greiner-cups = Tetra Pak panel; greiner-containers = fashion doll \u2014 not plastic cups/food containers"
+    },
+    {
+      "slug": "pactiv-evergreen",
+      "reason": "pactiv-foodservice = Tetra Pak panel; pactiv-carton = beach trash-bin documentary still \u2014 not foodservice/beverage cartons"
+    },
+    {
+      "slug": "albea",
+      "reason": "albea-dispenser = Tetra Pak panel; mill-fallback-2 = Fiat Albea sedan (vehicle) \u2014 not cosmetic tubes/dispensers"
+    },
+    {
+      "slug": "lee-man-paper",
+      "reason": "leeman-board + leeman-medium = abandoned hillside mill/ruin \u2014 not containerboard/medium"
+    },
+    {
+      "slug": "epiroc",
+      "reason": "epiroc-loader = railroad tracks + brick industrial building \u2014 train poison (drill still is brand-OK)"
+    },
+    {
+      "slug": "regal-rexnord",
+      "reason": "regal-motors = automotive dashboard assembly; regal-pt = auto assembly line \u2014 not industrial motors/PT"
+    },
+    {
+      "slug": "graco",
+      "reason": "mill-fallback-2 = corporate campus with dominant railroad tracks \u2014 train poison; graco-spray = Balma compressor (wrong brand)"
+    },
+    {
+      "slug": "weg",
+      "reason": "weg-motors = manor/village campus; weg-drives = courtyard with abstract metal sculpture (art/village) \u2014 not motors/drives"
+    },
+    {
+      "slug": "ifm",
+      "reason": "ifm-condition = Tunisair Airbus A330 in flight \u2014 aircraft/wrong entity (sensors still soft)"
+    },
+    {
+      "slug": "kennametal",
+      "reason": "kennametal-tools = Vanadium Alloys Steel Company offices (wrong campus); kennametal-wear = Entegris sampling pump \u2014 not cutting tools/wear parts"
+    },
+    {
+      "slug": "hepcomotion",
+      "reason": "hepco-vguide = CAT/Volvo excavators & dump trucks on dig site \u2014 not V-guide linear motion"
+    },
+    {
+      "slug": "rollon",
+      "reason": "rollon-rails = archival lumber-yard crane with railroad tracks (art/archive) \u2014 not linear rails/actuators"
+    },
+    {
+      "slug": "schneeberger",
+      "reason": "schneeberger-guides = IDF military weapons-facility briefing aerial \u2014 not precision linear guideways"
+    },
+    {
+      "slug": "nb-corporation",
+      "reason": "nb-bushings = retired CF-101 Voodoo jet on display \u2014 aircraft/wrong entity not linear bushings"
+    },
+    {
+      "slug": "sanyo-special-steel",
+      "reason": "sanyo-alloy = Erie Malleable Iron water-tower/windmill archival ad (art/archive) \u2014 not bearing/alloy bars"
+    },
+    {
+      "slug": "california-steel-industries",
+      "reason": "mill-fallback-2 = oval speedway racetrack (sports) \u2014 not hot-rolled/GI sheet"
+    },
+    {
+      "slug": "ozkan-steel",
+      "reason": "ozkan-bars = Damascus-pattern blade metalwork (art) \u2014 not special profiles/quality bars"
+    },
+    {
+      "slug": "hellenic-cables",
+      "reason": "hellenic-power = WWI Fernsprech-Abteilung postcard; hellenic-submarine = spacecraft/probe \u2014 not power/submarine cables"
+    },
+    {
+      "slug": "tfkable",
+      "reason": "tfkable-power = same WWI Fernsprech postcard; tfkable-telecom = spacecraft \u2014 not power/telecom cables"
+    },
+    {
+      "slug": "rr-kabel",
+      "reason": "rrkabel-power = same WWI Fernsprech postcard; rrkabel-building = spacecraft \u2014 not building/power cables"
+    },
+    {
+      "slug": "kingspan",
+      "reason": "kingspan-panels = museum gypsum-with-sulfur mineral (Cianciana); kingspan-insulation = decorative cast-iron grille (art) \u2014 not insulated panels"
+    },
+    {
+      "slug": "martin-marietta",
+      "reason": "mm-cement = same museum gypsum mineral specimen \u2014 not aggregates/cement"
+    }
+  ],
+  "counts": {
+    "ok": 3,
+    "soft": 12,
+    "hold": 35,
+    "stills": 93,
+    "skus": 50
+  },
+  "needs_ai_generate": 0,
+  "unit_price": null,
+  "wire_recommendation": "Do not wire the full 50-SKU product pack. Block all 35 HOLD slugs (villages, Tetra Pak on wrong brands, paul-lueftung HVAC diagrams, trains/rail, sports, portraits, art/archive, spacecraft, WWI Fernsprech, aircraft, wrong campus, excavators, auto dashboards, museum gypsum). Wire-eligible now: 3 OK (nord-drivesystems, nordson, beckhoff) + 12 SOFT (generic pipe-bundle/glycol tubes, campus, category-adjacent). Prefer OK first; SOFT tubes are shared Commons pipe stock \u2014 type-match only, not mill-specific. needs_ai_generate stays 0.",
+  "wireable_slugs": [
+    "nord-drivesystems",
+    "nordson",
+    "beckhoff",
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "nidec",
+    "hydac",
+    "lenze",
+    "erdemir",
+    "worthington-steel"
+  ],
+  "shared_poison_hashes": {
+    "607191f2ba6066a5": "galvanized pipe-bundle Commons \u00d711 tube SKUs \u2014 soft type-match",
+    "26ceb68563ceb175": "glycol HVAC install pipes \u00d76 \u2014 soft pipes-not-mill-stock",
+    "caeb0f78591e95e4": "Tetra Pak carton panel \u00d75 \u2014 HOLD wrong brand",
+    "27f08af0faff0479": "terraced village \u00d74 \u2014 HOLD",
+    "6d26ed836da1c148": "paul-lueftung HVAC diagram \u00d73 \u2014 HOLD",
+    "e6629835b30ba8b9": "WWI Fernsprech-Abteilung \u00d73 cables \u2014 HOLD",
+    "208682b6dd4fb9cc": "spacecraft/satellite \u00d73 cables \u2014 HOLD",
+    "027b3ce7e2f4388e": "street rebar staging \u00d74 steel \u2014 soft category",
+    "10d45532f60272ad": "abandoned hillside mill \u00d73 packaging \u2014 HOLD",
+    "8f8f1481e4657b41": "Balma portable compressor \u00d73 fluid/industrial \u2014 soft category",
+    "d4c0793cf10a626b": "museum gypsum mineral \u00d72 construction \u2014 HOLD",
+    "9e1f2dbb94fbe553": "pulp-mill woodchip campus \u00d72 packaging \u2014 soft campus"
+  },
+  "notes": [
+    "Full visual pass: all 93 enhanced product JPGs Read.",
+    "Pack not sealed for full wire \u2014 label PARTIAL.",
+    "Did not touch PR #15. Did not message agents."
+  ]
+}
