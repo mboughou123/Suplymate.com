@@ -13,6 +13,40 @@
   ],
   "hold_out": [],
   "wired_33_locked": true,
+  "products": [
+    {
+      "product_name": "TFKable Power Telecom and Specialty Industrial Cables",
+      "supplier_name": "Tele-Fonika Kable S.A.",
+      "supplier_slug_guess": "tfkable",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.tfkable.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Tele-Fonika Kable S.A. mill/product page for power / telecom / specialty industrial cables. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "local_images": [
+        "/images/products/tfkable/tfkable-power.jpg",
+        "/images/products/tfkable/tfkable-lab.jpg"
+      ]
+    },
+    {
+      "product_name": "Visy Corrugated Glass and Metal Packaging",
+      "supplier_name": "Visy Industries",
+      "supplier_slug_guess": "visy",
+      "category": "Packaging",
+      "source_url": "https://www.visy.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Visy Industries mill/product page for corrugated / glass / metal packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "local_images": [
+        "/images/products/visy/visy-glass.jpg",
+        "/images/products/visy/mill-fallback-2.jpg"
+      ]
+    }
+  ],
   "stills": [
     {
       "slug": "tfkable",

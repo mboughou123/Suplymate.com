@@ -474,7 +474,8 @@ describe("HOLD35 cleared product wire", () => {
     "superior-tube",
     "tubos-reunidos",
   ];
-  const holdOut = ["tfkable", "visy"];
+  const refetch2Ok = ["tfkable"];
+  const refetch2Soft = ["visy"];
   const locked15 = [
     "beckhoff",
     "bull-moose-tube",
@@ -494,6 +495,7 @@ describe("HOLD35 cleared product wire", () => {
   ];
 
   const hold35 = packProducts.filter((p) => p.pack === "d0910-h35");
+  const hold35r2 = packProducts.filter((p) => p.pack === "d0910-h35r2");
   const daily15 = packProducts.filter((p) => p.pack === "d0910");
 
   it("appends the 33 cleared RFQ SKUs without rewriting the locked 15", () => {
@@ -513,9 +515,6 @@ describe("HOLD35 cleared product wire", () => {
       expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
       expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
     }
-    for (const slug of holdOut) {
-      expect(hold35.some((p) => p.packSlug === slug), slug).toBe(false);
-    }
   });
 
   it("soft-credits the SOFT six", () => {
@@ -526,6 +525,24 @@ describe("HOLD35 cleared product wire", () => {
         /not (mill stock|a Klöckner Pentaplast core-film|a bagged-cement|a mill-specific|a mill-branded)/i
       );
     }
+  });
+
+  it("appends refetch2 tfkable + visy without rewriting the locked 33", () => {
+    expect(hold35r2.map((p) => p.packSlug).sort()).toEqual([...refetch2Ok, ...refetch2Soft].sort());
+    for (const slug of [...productsOk, ...productsSoft]) {
+      expect(hold35r2.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+    for (const p of hold35r2) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+    }
+    const visy = hold35r2.find((p) => p.packSlug === "visy");
+    expect(visy?.specifications["Image credit"]).toMatch(/recycling\/packaging tiles/i);
+    expect(visy?.images[0]).toBe("/images/products/visy/visy-glass.jpg");
   });
 });
 

@@ -9,6 +9,7 @@
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
+ *   data/hold35-refetch2-cleared.json
  *   data/product-media-batch{1,2,3}.json, data/product-gaps-fill*.json,
  *   data/daily-2026-09-0{2,3}-products.json (+ *enhanced-manifest*.json)
  *   data/certifications.json, data/certs-seed.tsv, data/*certs*manifest*.json
@@ -1017,7 +1018,36 @@ function loadProductPacks() {
       skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
     });
   }
+  const hold35r2 = readJsonIfExists(path.join(DATA_DIR, "hold35-refetch2-cleared.json"));
+  if (hold35r2) {
+    const seals = loadHold35Refetch2Seals();
+    const allow = new Set([...(hold35r2.wire_ok ?? []), ...(hold35r2.soft ?? []).map(slugOf), ...seals.productWire]);
+    const skus = (hold35r2.products ?? []).filter((sku) => {
+      const slug = sku.supplier_slug_guess || slugify(sku.supplier_name);
+      if (seals.productHolds.has(slug)) return false;
+      if (allow.size && !allow.has(slug)) return false;
+      return true;
+    });
+    if (skus.length) {
+      packs.push({
+        packId: "d0910-h35r2",
+        scrapedAt: "2026-09-10T19:27:37.000Z",
+        skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+      });
+    }
+  }
   return packs;
+}
+
+function loadHold35Refetch2Seals() {
+  const pack = readJsonIfExists(path.join(DATA_DIR, "hold35-refetch2-cleared.json"));
+  const productHolds = new Set((pack?.hold_out ?? []).map(slugOf).filter(Boolean));
+  const productWire = new Set(
+    [...(pack?.wire_ok ?? []), ...(pack?.soft ?? []).map(slugOf)].filter(
+      (slug) => slug && !productHolds.has(slug)
+    )
+  );
+  return { productHolds, productWire };
 }
 
 function loadHold35ProductSeals() {
