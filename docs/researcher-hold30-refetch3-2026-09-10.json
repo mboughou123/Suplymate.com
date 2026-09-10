@@ -1,0 +1,41 @@
+{
+  "label": "QA-HOLD30-REFETCH3-RESEARCHER-OK",
+  "sealed_at_pt": "2026-09-10 12:07 PM PT",
+  "sealed_at_utc": "2026-09-10T19:07:30.027195+00:00",
+  "pack": "daily/2026-09-10/_mill_hold30_refetch3",
+  "enhancer_label": "QA-HOLD30-REFETCH3-ENHANCER-SEALED",
+  "primaries_read": 3,
+  "sealed_wire_ok": [
+    "winpak",
+    "superior-tube"
+  ],
+  "soft": [
+    {
+      "slug": "regal-rexnord",
+      "reason": "Milwaukee HQ with RegalRexnord rooftop sign \u2014 correct entity campus/HQ, not production yard"
+    }
+  ],
+  "hold_do_not_wire": [],
+  "blocked_skipped": [
+    "rr-kabel"
+  ],
+  "counts": {
+    "ok": 2,
+    "soft": 1,
+    "hold": 0,
+    "read": 3
+  },
+  "needs_ai": 0,
+  "invented_fob_prices": false,
+  "prior_hold_cleared": {
+    "winpak": "Maps satellite \u2192 Winnipeg plant facade with WINPAK logo + silos + CA flag",
+    "superior-tube": "aerospace brochure engine \u2192 Collegeville campus aerial with Superior Tube Company sign",
+    "regal-rexnord": "SEAVISION marina \u2192 Milwaukee HQ with RegalRexnord sign"
+  },
+  "wire_recommendation": "OK \u2014 wire sealed_wire_ok 2 (winpak, superior-tube); soft regal-rexnord optional with caution (branded HQ). Wired 26 stay LOCKED. rr-kabel stays out.",
+  "notes": [
+    "winpak_01.jpg: real plant exterior, WINPAK facade branding, industrial silos \u2014 not Maps",
+    "superior-tube_01.jpg: Collegeville aerial, Superior Tube Company lawn sign, plant campus \u2014 not brochure",
+    "regal-rexnord_01.jpg: Milwaukee HQ parking/office with RegalRexnord sign \u2014 not marina; soft HQ"
+  ]
+}
