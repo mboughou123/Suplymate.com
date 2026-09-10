@@ -339,6 +339,9 @@ export function getProductCardData(product: Product): ProductCardData {
   const imageInput = {
     images: product.images,
     supplierImages: photos,
+    id: product.id,
+    slug: product.slug,
+    supplierId: product.supplierId,
     productName: product.name,
     category: product.category,
   };

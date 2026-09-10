@@ -71,7 +71,12 @@ export function pickHomeProducts(
     if (seen.has(p.id)) continue;
     // Only the product's OWN photos qualify here — a supplier's factory shot
     // is not a picture of the product.
-    const image = getRealProductImage({ images: p.images });
+    const image = getRealProductImage({
+      images: p.images,
+      id: p.id,
+      slug: p.slug,
+      supplierId: p.supplierId,
+    });
     if (!image) continue;
     seen.add(p.id);
     candidates.push({

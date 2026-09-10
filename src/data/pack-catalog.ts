@@ -75,6 +75,25 @@ export function getPackProduct(id: string): PackProduct | undefined {
   return productById.get(id);
 }
 
+/**
+ * Prefer the pack's committed local product stills when the live/DB row only
+ * has remote hotlinks. Mirrors `overlayPackSupplier` for catalogue SKUs.
+ */
+export function overlayPackProduct(row: ScrapedProduct, pack: PackProduct): ScrapedProduct {
+  const hasLocal = row.images.some((u) => u.startsWith("/images/"));
+  return {
+    ...row,
+    slug: row.slug ?? pack.slug,
+    images: hasLocal ? row.images : [...new Set([...pack.images, ...row.images])],
+  };
+}
+
+/** Overlay pack stills when a catalogue id matches a pack product. */
+export function overlayPackProductImages(row: ScrapedProduct): ScrapedProduct {
+  const pack = productById.get(row.id);
+  return pack ? overlayPackProduct(row, pack) : row;
+}
+
 /** Publicly visible (approved) pack products. */
 export function approvedPackProducts(): PackProduct[] {
   return packProducts.filter((p) => p.status === "approved");

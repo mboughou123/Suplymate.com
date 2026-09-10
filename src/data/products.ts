@@ -23,6 +23,8 @@ export type Product = {
   unit: string;
   // Rich marketplace fields (optional; derived deterministically when absent).
   supplierId?: string;
+  /** URL-friendly slug (scraped / pack products). */
+  slug?: string | null;
   images?: string[];
   videos?: string[];
   /** Supplier base (wholesale) price before commission. */

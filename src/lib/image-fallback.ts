@@ -1,3 +1,5 @@
+import { localStillsForProduct } from "@/lib/product-stills";
+
 // Centralized image-fallback system for Suplymate.
 //
 // Goal: NO supplier or product card is ever empty or broken. Every card always
@@ -18,9 +20,9 @@
 // Card photos prefer committed local stills under `/images/suppliers/…` and
 // `/images/products/…`. Google Maps / googleusercontent URLs 403 and make
 // `/_next/image` 502 on prod — they are never treated as usable card photos.
-// Other remotes (Vercel Blob, mill sites) are used only when no local still
-// exists. Swap in preferred photos any time by replacing the SVGs or pointing
-// these maps at curated CDN URLs.
+// Product cards also skip third-party mill-site hotlinks (they render as raw
+// `<img>` and break). Vercel Blob remains first-party. Supplier cards may
+// still use a mill-site remote when no local still exists.
 
 export type FallbackCategoryKey =
   | "steel"
@@ -149,6 +151,19 @@ export function isLocalStillUrl(url?: string | null): boolean {
   return /^\/images\/(suppliers|products)\/.+\.(jpe?g|png|webp)$/i.test(url.trim());
 }
 
+/** First-party hosted product photo (local still or Vercel Blob). */
+export function isFirstPartyProductImageUrl(url?: string | null): boolean {
+  if (typeof url !== "string") return false;
+  const value = url.trim();
+  if (isLocalStillUrl(value)) return true;
+  if (!/^https?:\/\//i.test(value)) return false;
+  try {
+    return new URL(value).hostname.toLowerCase().endsWith(".public.blob.vercel-storage.com");
+  } catch {
+    return false;
+  }
+}
+
 /**
  * True only for a REAL photograph we can render on a card: a local raster
  * still, or a non-Maps remote http(s) photo. Google Maps / googleusercontent
@@ -192,21 +207,31 @@ export type ProductImageInput = {
    * media). Used as a secondary real-photo source for product cards.
    */
   supplierImages?: (string | null | undefined)[] | null;
+  /** Catalogue id — used to look up committed `/images/products/<slug>/` stills. */
+  id?: string | null;
+  /** Product slug (and pack slug when that is the folder name on disk). */
+  slug?: string | null;
+  /** Supplier id / pack slug — stills are often filed under the mill folder. */
+  supplierId?: string | null;
   productName?: string;
   category?: string;
 };
 
 /**
  * Return the first REAL product photo if one exists, walking:
- *   product image → linked-supplier photo → (undefined).
- * Returns undefined when only category fallbacks would be available, so callers
- * can distinguish "has a real photo" from "needs a generated tile".
+ *   committed local still (by slug) → product image → linked-supplier photo.
+ * Third-party hotlinks (mill sites, Scene7, …) are never a card primary —
+ * those hosts break as raw `<img>` on `/products`. Returns undefined when only
+ * a category tile would be available.
  */
 export function getRealProductImage(input: ProductImageInput): string | undefined {
-  return pickPreferredCardImage([
+  const preferred = pickPreferredCardImage([
+    ...localStillsForProduct(input),
     ...(input.images ?? []),
     ...(input.supplierImages ?? []),
   ]);
+  if (preferred && isFirstPartyProductImageUrl(preferred)) return preferred;
+  return undefined;
 }
 
 /**
@@ -220,7 +245,7 @@ export function hasRealProductImage(input: ProductImageInput): boolean {
 
 /**
  * Best image for a product, guaranteed never broken/empty. Priority:
- *   real product photo → linked-supplier photo → category fallback → placeholder.
+ *   committed local still → first-party photo → category fallback → placeholder.
  * Always returns a renderable URL (the category fallback is a local SVG).
  */
 export function getBestProductImage(input: ProductImageInput): string {

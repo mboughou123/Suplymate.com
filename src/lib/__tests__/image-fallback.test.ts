@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   getBestProductImage,
@@ -125,6 +127,46 @@ describe("getBestProductImage / getRealProductImage", () => {
       getRealProductImage({
         images: [MAPS_LH3],
         supplierImages: [MAPS_STREETVIEW],
+      }),
+    ).toBeUndefined();
+  });
+
+  it("product cards prefer committed local stills over third-party hosts", () => {
+    const hotlink = "https://www.allmetalindia.in/images/coil.jpg";
+    const resolved = getBestProductImage({
+      images: [hotlink],
+      slug: "alpla",
+      productName: "Alpla closures",
+      category: "Packaging",
+    });
+    expect(resolved).toMatch(/^\/images\/products\/alpla\/.+\.(jpe?g|png|webp)$/i);
+    expect(resolved).not.toContain("allmetalindia");
+    expect(existsSync(resolve("public", resolved.replace(/^\//, "")))).toBe(true);
+    const rockwool = getRealProductImage({
+      images: ["https://cableshouse-me.com/cdn/cable.jpg"],
+      supplierId: "rockwool-intl",
+      productName: "Stone wool board",
+      category: "Construction",
+    });
+    expect(rockwool).toMatch(/^\/images\/products\/rockwool\/.+\.(jpe?g|png|webp)$/i);
+    expect(existsSync(resolve("public", (rockwool ?? "").replace(/^\//, "")))).toBe(true);
+  });
+
+  it("uses a branded category fallback when only a third-party hotlink exists", () => {
+    const hotlink = "https://s7d1.scene7.com/is/image/RockwellAutomation/foo";
+    const fallback = getProductFallbackImage("Mystery gasket", "Industrial Parts");
+    expect(
+      getBestProductImage({
+        images: [hotlink],
+        slug: "no-such-product-slug-xyz",
+        productName: "Mystery gasket",
+        category: "Industrial Parts",
+      }),
+    ).toBe(fallback);
+    expect(
+      getRealProductImage({
+        images: [hotlink],
+        slug: "no-such-product-slug-xyz",
       }),
     ).toBeUndefined();
   });
