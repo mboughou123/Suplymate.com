@@ -1,0 +1,135 @@
+{
+  "label": "QA-HOLD30-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "sealed_at": "2026-09-10 11:53 AM PT",
+  "sealed_at_utc": "2026-09-10T18:53:44Z",
+  "pack_path": "/workspace/suppliers-phase1/daily/2026-09-10/_mill_hold30",
+  "pack_date": "2026-09-10",
+  "role": "Market Researcher mill plant re-QA after Image Enhancer seal",
+  "enhancer_seal": {
+    "label": "QA-HOLD30-MILL-PLANTS-ENHANCER-SEALED",
+    "path": "/workspace/suppliers-phase1/daily/2026-09-10/_mill_hold30/enhancer-seal.json"
+  },
+  "lister_seal": {
+    "label": "QA-HOLD30-MILL-PLANTS-LISTER-READY",
+    "path": "/workspace/suppliers-phase1/daily/2026-09-10/_mill_hold30/seal.json"
+  },
+  "stills_basis": "enhanced",
+  "primaries_read": 29,
+  "sealed_wire_ok": [
+    "albea",
+    "fedrigoni",
+    "greiner-packaging",
+    "lee-man-paper",
+    "pactiv-evergreen",
+    "proampac",
+    "bri-steel",
+    "plymouth-tube",
+    "tubos-reunidos",
+    "welded-tube-canada",
+    "hellenic-cables",
+    "kingspan",
+    "ozkan-steel",
+    "rollon",
+    "schneeberger",
+    "spx-flow",
+    "weg"
+  ],
+  "soft": [
+    {
+      "slug": "kloeckner-pentaplast",
+      "reason": "Aerial of plastics plant campus (Gordonsville-style); no clear Klöckner Pentaplast facade mark in frame — plausible campus, not brand-confirmed mill header."
+    },
+    {
+      "slug": "visy",
+      "reason": "Aerial corrugated/box plant campus with docks; no Visy facade branding visible — category-correct Hemmant-style plant, soft only."
+    },
+    {
+      "slug": "michigan-seamless-tube",
+      "reason": "Official MST branded product-line still (stacked seamless tubes + MST logo overlay); not plant/yard exterior."
+    },
+    {
+      "slug": "suraj",
+      "reason": "SURAJ LTD–stenciled stainless buttweld tees product studio shot; branded output, not mill campus."
+    },
+    {
+      "slug": "hepcomotion",
+      "reason": "Factory-tour shop-floor still with HepcoMotion lanyard; people-focused interior, not confirmed plant exterior/yard."
+    },
+    {
+      "slug": "ifm",
+      "reason": "Glückaufhaus Essen HQ/campus exterior; official campus but not production floor/yard."
+    },
+    {
+      "slug": "kennametal",
+      "reason": "Latrobe-style tech/campus glass exterior; no Kennametal facade mark in frame — plausible HQ/R&D campus, soft."
+    },
+    {
+      "slug": "lenze",
+      "reason": "Lenze-branded Aerzen/Groß Berkel HQ campus exterior; HQ/campus not production mill yard."
+    },
+    {
+      "slug": "nb-corporation",
+      "reason": "NB-branded multi-story campus building; HQ/office campus not confirmed production plant."
+    }
+  ],
+  "hold_do_not_wire": [
+    {
+      "slug": "winpak",
+      "reason": "Google Maps / nadir satellite screenshot of industrial rooftops — Maps-style poison; no Winpak branding or ground-level plant view."
+    },
+    {
+      "slug": "superior-tube",
+      "reason": "Aerospace jet-engine brochure banner ('WHEN FAILURE IS NO OPTION'); application marketing graphic, not Superior Tube plant/mill."
+    },
+    {
+      "slug": "regal-rexnord",
+      "reason": "Milwaukee riverfront marina/waterfront with SEAVISION roof mark and tourist boats (IROQUOIS/VISTA KING); no Rexnord/Regal Rexnord branding — wrong/mismatched entity for mill header."
+    }
+  ],
+  "blocked_skipped": [
+    "rr-kabel"
+  ],
+  "counts": {
+    "ok": 17,
+    "soft": 9,
+    "hold": 3,
+    "read": 29,
+    "blocked_skipped": 1
+  },
+  "wire_recommendation": "PARTIAL — Wire only sealed_wire_ok (17); soft (9) optional with caution; hold_do_not_wire (3: winpak, superior-tube, regal-rexnord) must not wire; rr-kabel blocked forever (exclude-list dupe); do not wholesale; previously wired 20 mills stay LOCKED.",
+  "needs_ai": 0,
+  "invented_fob_prices": false,
+  "ai_yards": 0,
+  "wired_20_locked": true,
+  "mills": [
+    {"slug": "albea", "status": "OK", "primary_still": "enhanced/suppliers/albea/albea_01.jpg", "reason": "ALBÉA-branded Argonne packaging plant exterior with parking lot; real industrial campus."},
+    {"slug": "fedrigoni", "status": "OK", "primary_still": "enhanced/suppliers/fedrigoni/fedrigoni_01.jpg", "reason": "Fedrigoni-logo paper plant exterior with steam plume (Ponte del Gualdo / Fabriano)."},
+    {"slug": "greiner-packaging", "status": "OK", "primary_still": "enhanced/suppliers/greiner-packaging/greiner-packaging_01.jpg", "reason": "Aerial Greiner Packaging International campus with facade branding and solar roof (Sattledt)."},
+    {"slug": "kloeckner-pentaplast", "status": "SOFT", "primary_still": "enhanced/suppliers/kloeckner-pentaplast/kloeckner-pentaplast_01.jpg", "reason": "Aerial plastics plant campus; no clear KP facade mark in frame."},
+    {"slug": "lee-man-paper", "status": "OK", "primary_still": "enhanced/suppliers/lee-man-paper/lee-man-paper_01.jpg", "reason": "Active paper mill campus (woodchip yards, conveyors, red-banded stacks); CPPI tour of Lee & Man Chongqing base."},
+    {"slug": "pactiv-evergreen", "status": "OK", "primary_still": "enhanced/suppliers/pactiv-evergreen/pactiv-evergreen_01.jpg", "reason": "Canton NC paper mill exterior with steam, rail yard, and truck docks (Champion→Evergreen→Pactiv Evergreen)."},
+    {"slug": "proampac", "status": "OK", "primary_still": "enhanced/suppliers/proampac/proampac_01.jpg", "reason": "ProAmpac-branded Rochester/Ogden packaging facility exterior."},
+    {"slug": "visy", "status": "SOFT", "primary_still": "enhanced/suppliers/visy/visy_01.jpg", "reason": "Aerial box/corrugated plant campus; no Visy branding visible."},
+    {"slug": "winpak", "status": "HOLD", "primary_still": "enhanced/suppliers/winpak/winpak_01.jpg", "reason": "Google Maps / satellite nadir rooftop screenshot; Maps poison."},
+    {"slug": "bri-steel", "status": "OK", "primary_still": "enhanced/suppliers/bri-steel/bri-steel_01.jpg", "reason": "Real seamless-pipe mill hall with yellow/black hydraulic forming press and overhead crane."},
+    {"slug": "michigan-seamless-tube", "status": "SOFT", "primary_still": "enhanced/suppliers/michigan-seamless-tube/michigan-seamless-tube_01.jpg", "reason": "MST branded product-line tubes still; not plant exterior."},
+    {"slug": "plymouth-tube", "status": "OK", "primary_still": "enhanced/suppliers/plymouth-tube/plymouth-tube_01.jpg", "reason": "Aerial Eupora MS plant with PLYMOUTH TUBE CO branding overlay."},
+    {"slug": "superior-tube", "status": "HOLD", "primary_still": "enhanced/suppliers/superior-tube/superior-tube_01.jpg", "reason": "Aerospace engine brochure banner; not plant/mill."},
+    {"slug": "suraj", "status": "SOFT", "primary_still": "enhanced/suppliers/suraj/suraj_01.jpg", "reason": "SURAJ LTD stenciled product tees; not mill campus."},
+    {"slug": "tubos-reunidos", "status": "OK", "primary_still": "enhanced/suppliers/tubos-reunidos/tubos-reunidos_01.jpg", "reason": "Amurrio mill shed with TUBOS REUNIDOS GROUP facade signage (correct entity)."},
+    {"slug": "welded-tube-canada", "status": "OK", "primary_still": "enhanced/suppliers/welded-tube-canada/welded-tube-canada_01.jpg", "reason": "Aerial Concord plant with outdoor tube/pipe yard stacks."},
+    {"slug": "hellenic-cables", "status": "OK", "primary_still": "enhanced/suppliers/hellenic-cables/hellenic-cables_01.jpg", "reason": "Corinth subsea-cable plant aerial with carousel yard, pier, and cable-lay vessel."},
+    {"slug": "hepcomotion", "status": "SOFT", "primary_still": "enhanced/suppliers/hepcomotion/hepcomotion_01.jpg", "reason": "Shop-floor factory tour with HepcoMotion lanyard; people-focused, not plant exterior."},
+    {"slug": "ifm", "status": "SOFT", "primary_still": "enhanced/suppliers/ifm/ifm_01.jpg", "reason": "Glückaufhaus Essen ifm HQ campus; not production yard."},
+    {"slug": "kennametal", "status": "SOFT", "primary_still": "enhanced/suppliers/kennametal/kennametal_01.jpg", "reason": "Latrobe tech/campus glass exterior; no Kennametal facade mark."},
+    {"slug": "kingspan", "status": "OK", "primary_still": "enhanced/suppliers/kingspan/kingspan_01.jpg", "reason": "Kingspan-branded campus facade with lion mark and KINGSPAN lettering."},
+    {"slug": "lenze", "status": "SOFT", "primary_still": "enhanced/suppliers/lenze/lenze_01.jpg", "reason": "Lenze-branded HQ campus Groß Berkel; HQ not mill yard."},
+    {"slug": "nb-corporation", "status": "SOFT", "primary_still": "enhanced/suppliers/nb-corporation/nb-corporation_01.jpg", "reason": "NB-branded multi-story campus; HQ/office not confirmed plant."},
+    {"slug": "ozkan-steel", "status": "OK", "primary_still": "enhanced/suppliers/ozkan-steel/ozkan-steel_01.jpg", "reason": "Hot squares/blooms/rectangular shapes on steel mill production line (Aliağa çelikhane)."},
+    {"slug": "regal-rexnord", "status": "HOLD", "primary_still": "enhanced/suppliers/regal-rexnord/regal-rexnord_01.jpg", "reason": "Riverfront marina with SEAVISION / tourist boats; no Rexnord branding — wrong entity."},
+    {"slug": "rollon", "status": "OK", "primary_still": "enhanced/suppliers/rollon/rollon_01.jpg", "reason": "ROLLON BY TIMKEN branded Americas plant/office exterior."},
+    {"slug": "schneeberger", "status": "OK", "primary_still": "enhanced/suppliers/schneeberger/schneeberger_01.jpg", "reason": "SCHNEEBERGER-lettered Roggwil Plant 3 production hall exterior."},
+    {"slug": "spx-flow", "status": "OK", "primary_still": "enhanced/suppliers/spx-flow/spx-flow_01.jpg", "reason": "SPX FLOW–lettered Bydgoszcz plant hall aerial."},
+    {"slug": "weg", "status": "OK", "primary_still": "enhanced/suppliers/weg/weg_01.jpg", "reason": "WEG Parque Fabril II Jaraguá do Sul with blue weg mark on stack."}
+  ]
+}
