@@ -1,0 +1,519 @@
+{
+  "label": "QA-DAILY-2026-09-10-RESEARCHER-PARTIAL",
+  "pack_date": "2026-09-10",
+  "role": "Market Researcher mill identity + visual QA",
+  "stills_basis": "enhanced",
+  "enhancer_seal": {
+    "label": "DAILY-2026-09-10-MILL-PRODUCTS-ENHANCED",
+    "path": "/workspace/suppliers-phase1/daily/2026-09-10/enhanced/enhancer-seal.json",
+    "sealed_at_pt": "2026-09-10 10:58:30 PT",
+    "sealed_at_utc": "2026-09-10T17:58:30Z",
+    "note": "clean enhance only, no AI, needs_ai_generate=0",
+    "mill_file_count": 121,
+    "mill_slug_count": 50
+  },
+  "qa_at_pt": "2026-09-10 11:15 PT",
+  "qa_at_utc": "2026-09-10T18:07:22Z",
+  "counts": {
+    "mills_total": 50,
+    "primaries_read": 50,
+    "hold_do_not_wire": 30,
+    "soft": 13,
+    "sealed_wire_ok": 7,
+    "traders": 0,
+    "exclude_list_dupes": 1,
+    "needs_ai": 0,
+    "ai_yards": 0,
+    "invented_fob_prices": false
+  },
+  "hold_do_not_wire": [
+    "albea",
+    "bri-steel",
+    "fedrigoni",
+    "greiner-packaging",
+    "hellenic-cables",
+    "hepcomotion",
+    "ifm",
+    "kennametal",
+    "kingspan",
+    "kloeckner-pentaplast",
+    "lee-man-paper",
+    "lenze",
+    "michigan-seamless-tube",
+    "nb-corporation",
+    "ozkan-steel",
+    "pactiv-evergreen",
+    "plymouth-tube",
+    "proampac",
+    "regal-rexnord",
+    "rollon",
+    "rr-kabel",
+    "schneeberger",
+    "spx-flow",
+    "superior-tube",
+    "suraj",
+    "tubos-reunidos",
+    "visy",
+    "weg",
+    "welded-tube-canada",
+    "winpak"
+  ],
+  "soft": [
+    "beckhoff",
+    "bull-moose-tube",
+    "epiroc",
+    "hi-tech-pipes",
+    "mannesmann-line-pipe",
+    "martin-marietta",
+    "nidec",
+    "nord-drivesystems",
+    "nordson",
+    "saica",
+    "searing-industries",
+    "shandong-molong",
+    "worthington-steel"
+  ],
+  "sealed_wire_ok": [
+    "california-steel-industries",
+    "erdemir",
+    "graco",
+    "hydac",
+    "sanyo-special-steel",
+    "tfkable",
+    "voith"
+  ],
+  "traders": [],
+  "exclude_list_dupes": [
+    {
+      "slug": "rr-kabel",
+      "company_name": "RR Kabel Limited",
+      "exclude_match": "r r kabel limited"
+    }
+  ],
+  "invented_fob_prices": false,
+  "needs_ai": 0,
+  "ai_yards": 0,
+  "category_fill_notes": {
+    "hi-tech-pipes": "SOFT \u2014 generic Steel_pipe category fill",
+    "bull-moose-tube": "SOFT \u2014 generic Steel_pipe category fill",
+    "searing-industries": "SOFT \u2014 generic Steel_pipe category fill",
+    "shandong-molong": "SOFT \u2014 generic Steel_pipe category fill",
+    "lee-man-paper": "HOLD \u2014 fill claimed Paper_mill but primary is ruined stone village structure",
+    "lenze": "HOLD \u2014 fill is SKF-branded bearing (wrong entity / exclude-adjacent)",
+    "hellenic-cables": "HOLD \u2014 fill claimed Kabel.jpg but primary is WWI Fernsprech postcard",
+    "rr-kabel": "HOLD \u2014 same WWI postcard poison + exclude-list dupe"
+  },
+  "wire_recommendation": {
+    "pack_label": "QA-DAILY-2026-09-10-RESEARCHER-PARTIAL",
+    "recommendation": "PARTIAL_WIRE",
+    "summary": "Do not wholesale-wire the 50-mill pack. Wire only sealed_wire_ok (7). Soft (13) optional soft-wire with caution. hold_do_not_wire (30) must not wire. rr-kabel also blocked as exclude-list dupe. Products remain RFQ/null unit_price; invented_fob_prices=false. HoW may proceed on OK set; enhancer already sealed.",
+    "wire_ok_slugs": [
+      "california-steel-industries",
+      "erdemir",
+      "graco",
+      "hydac",
+      "sanyo-special-steel",
+      "tfkable",
+      "voith"
+    ],
+    "soft_optional_slugs": [
+      "beckhoff",
+      "bull-moose-tube",
+      "epiroc",
+      "hi-tech-pipes",
+      "mannesmann-line-pipe",
+      "martin-marietta",
+      "nidec",
+      "nord-drivesystems",
+      "nordson",
+      "saica",
+      "searing-industries",
+      "shandong-molong",
+      "worthington-steel"
+    ],
+    "block_slugs": [
+      "albea",
+      "bri-steel",
+      "fedrigoni",
+      "greiner-packaging",
+      "hellenic-cables",
+      "hepcomotion",
+      "ifm",
+      "kennametal",
+      "kingspan",
+      "kloeckner-pentaplast",
+      "lee-man-paper",
+      "lenze",
+      "michigan-seamless-tube",
+      "nb-corporation",
+      "ozkan-steel",
+      "pactiv-evergreen",
+      "plymouth-tube",
+      "proampac",
+      "regal-rexnord",
+      "rollon",
+      "rr-kabel",
+      "schneeberger",
+      "spx-flow",
+      "superior-tube",
+      "suraj",
+      "tubos-reunidos",
+      "visy",
+      "weg",
+      "welded-tube-canada",
+      "winpak"
+    ]
+  },
+  "mills": [
+    {
+      "slug": "albea",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/albea/albea_01.jpg",
+      "reason": "Wrong-entity name collision: Fiat Albea sedan (TR plate), not Alb\u00e9a Group packaging plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "beckhoff",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/beckhoff/beckhoff_01.jpg",
+      "reason": "Branded Beckhoff trade-show booth; not plant/yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "bri-steel",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/bri-steel/bri-steel_01.jpg",
+      "reason": "Map poison: China Belt and Road Initiative topographic map (BRI name collision).",
+      "category_fill": false
+    },
+    {
+      "slug": "bull-moose-tube",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/bull-moose-tube/bull-moose-tube_fill01.jpg",
+      "reason": "commons_category_fill: generic galvanized pipe bundles; no company plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "california-steel-industries",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/california-steel-industries/california-steel-industries_01.jpg",
+      "reason": "Real CSI Fontana mill complex north of Auto Club Speedway (authentic co-located aerial).",
+      "category_fill": false
+    },
+    {
+      "slug": "epiroc",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/epiroc/epiroc_01.jpg",
+      "reason": "Branded Epiroc SmartROC C50 drill in quarry; product/equipment not plant campus.",
+      "category_fill": false
+    },
+    {
+      "slug": "erdemir",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/erdemir/erdemir_01.jpg",
+      "reason": "Real Erdemir integrated steel mill; ERDEMIR lettering on stack.",
+      "category_fill": false
+    },
+    {
+      "slug": "fedrigoni",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/fedrigoni/fedrigoni_01.jpg",
+      "reason": "Sports poison: Mille Miglia / Rimini race car #76.",
+      "category_fill": false
+    },
+    {
+      "slug": "graco",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/graco/graco_01.jpg",
+      "reason": "Real Graco industrial campus with GRACO diamond-G logo on building.",
+      "category_fill": false
+    },
+    {
+      "slug": "greiner-packaging",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/greiner-packaging/greiner-packaging_01.jpg",
+      "reason": "Art/toy poison: Bild Lilli / fashion doll studio shot.",
+      "category_fill": false
+    },
+    {
+      "slug": "hellenic-cables",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/hellenic-cables/hellenic-cables_fill01.jpg",
+      "reason": "Category-fill poison: WWI German Fernsprech-Abteilung field postcard; not cable plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "hepcomotion",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/hepcomotion/hepcomotion_01.jpg",
+      "reason": "Wrong-entity yard: Volvo BM / CAT / Liebherr excavators; not HepcoMotion linear motion plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "hi-tech-pipes",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/hi-tech-pipes/hi-tech-pipes_fill01.jpg",
+      "reason": "commons_category_fill: generic galvanized pipe bundles; no company plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "hydac",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/hydac/hydac_01.jpg",
+      "reason": "Real HYDAC branded plant/office campus with logistics yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "ifm",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/ifm/ifm_01.jpg",
+      "reason": "Wrong-entity aircraft: Tunisair A330 registration TS-IFM; not ifm electronic.",
+      "category_fill": false
+    },
+    {
+      "slug": "kennametal",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/kennametal/kennametal_01.jpg",
+      "reason": "Wrong-entity HQ: Vanadium Alloys Steel Company General Offices engraved; not Kennametal brand.",
+      "category_fill": false
+    },
+    {
+      "slug": "kingspan",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/kingspan/kingspan_01.jpg",
+      "reason": "Art poison: Manhattan elevator ornamental cast-iron panel; not Kingspan plant (HQ is secondary only).",
+      "category_fill": false
+    },
+    {
+      "slug": "kloeckner-pentaplast",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/kloeckner-pentaplast/kloeckner-pentaplast_01.jpg",
+      "reason": "Wrong-category plant: pulp/paper woodchip yard; Kl\u00f6ckner Pentaplast is plastics films.",
+      "category_fill": false
+    },
+    {
+      "slug": "lee-man-paper",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/lee-man-paper/lee-man-paper_fill02.jpg",
+      "reason": "Category-fill poison: ruined/ancient stone village mill; not Lee & Man paper plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "lenze",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/lenze/lenze_fill01.jpg",
+      "reason": "Category-fill poison + wrong brand: SKF ball bearing Made in Sweden (SKF on exclude list); not Lenze.",
+      "category_fill": true
+    },
+    {
+      "slug": "mannesmann-line-pipe",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/mannesmann-line-pipe/mannesmann-line-pipe_01.jpg",
+      "reason": "Branded Mannesmann-Rohrbau AG M\u00fcnchen cast plaque; not plant/yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "martin-marietta",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/martin-marietta/martin-marietta_01.jpg",
+      "reason": "Historical unbranded dual-conveyor aggregate gallery; category-correct soft fill.",
+      "category_fill": false
+    },
+    {
+      "slug": "michigan-seamless-tube",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/michigan-seamless-tube/michigan-seamless-tube_01.jpg",
+      "reason": "Wrong-entity: Googleplex HQ glass facade with Google logo.",
+      "category_fill": false
+    },
+    {
+      "slug": "nb-corporation",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/nb-corporation/nb-corporation_01.jpg",
+      "reason": "Wrong-entity: CF-101 Voodoo Canadian fighter on display (NB serial collision).",
+      "category_fill": false
+    },
+    {
+      "slug": "nidec",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/nidec/nidec_01.jpg",
+      "reason": "Branded Nidec HQ tower (Japan); campus/HQ not manufacturing yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "nord-drivesystems",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/nord-drivesystems/nord-drivesystems_01.jpg",
+      "reason": "Branded NORD DRIVESYSTEMS trade-show booth; not plant/yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "nordson",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/nordson/nordson_01.jpg",
+      "reason": "Branded Nordson EFD trade-show booth; not plant/yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "ozkan-steel",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/ozkan-steel/ozkan-steel_01.jpg",
+      "reason": "Art poison: Damascus/watered steel blade macro; not \u00d6zkan Steel plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "pactiv-evergreen",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/pactiv-evergreen/pactiv-evergreen_01.jpg",
+      "reason": "Wrong-entity: Israeli beach trash bin litter-collection photo.",
+      "category_fill": false
+    },
+    {
+      "slug": "plymouth-tube",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/plymouth-tube/plymouth-tube_02.jpg",
+      "reason": "Wrong-entity archival: Youngstown Sheet and Tube Co. 1918 merchant-bar mill (not Plymouth Tube).",
+      "category_fill": false
+    },
+    {
+      "slug": "proampac",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/proampac/proampac_01.jpg",
+      "reason": "Sports poison: Lincoln City FC soccer match at Sincil Bank.",
+      "category_fill": false
+    },
+    {
+      "slug": "regal-rexnord",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/regal-rexnord/regal-rexnord_01.jpg",
+      "reason": "Wrong-entity: Polish Opel/auto assembly line (STREFA signs); not Regal Rexnord plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "rollon",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/rollon/rollon_01.jpg",
+      "reason": "Wrong-entity historical lumber-yard crane print; not Rollon linear-motion plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "rr-kabel",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/rr-kabel/rr-kabel_fill01.jpg",
+      "reason": "EXCLUDE-LIST DUPE (r r kabel limited) + same WWI Fernsprech postcard poison as hellenic-cables.",
+      "category_fill": true
+    },
+    {
+      "slug": "saica",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/saica/saica_01.jpg",
+      "reason": "Unbranded pulp/paper woodchip yard \u2014 category-correct for SAICA paper/corrugated; not SAICA-branded.",
+      "category_fill": false
+    },
+    {
+      "slug": "sanyo-special-steel",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/sanyo-special-steel/sanyo-special-steel_01.jpg",
+      "reason": "Real Sanyo Special Steel plant gate/HQ access road (Commons Sanyo Special Steel HQ).",
+      "category_fill": false
+    },
+    {
+      "slug": "schneeberger",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/schneeberger/schneeberger_01.jpg",
+      "reason": "Map/intel poison: IDF-annotated 'precise weapons' facility briefing; not Schneeberger.",
+      "category_fill": false
+    },
+    {
+      "slug": "searing-industries",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/searing-industries/searing-industries_fill01.jpg",
+      "reason": "commons_category_fill: generic galvanized pipe bundles; no company plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "shandong-molong",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/shandong-molong/shandong-molong_fill01.jpg",
+      "reason": "commons_category_fill: generic galvanized pipe bundles; no company plant.",
+      "category_fill": true
+    },
+    {
+      "slug": "spx-flow",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/spx-flow/spx-flow_01.jpg",
+      "reason": "Wrong-entity: decorative garden hand pump; not SPX FLOW industrial plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "superior-tube",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/superior-tube/superior-tube_01.jpg",
+      "reason": "Wrong-entity art/print: J. Manns & Co. insecticides catalog (insects/art).",
+      "category_fill": false
+    },
+    {
+      "slug": "suraj",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/suraj/suraj_01.jpg",
+      "reason": "Portrait poison: Dr Suraj Yengde at India Conference 2020; not Suraj Limited mill.",
+      "category_fill": false
+    },
+    {
+      "slug": "tfkable",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/tfkable/tfkable_01.jpg",
+      "reason": "Real Tele-Fonika Kable plant with green TF logo and cable-reel yard.",
+      "category_fill": false
+    },
+    {
+      "slug": "tubos-reunidos",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/tubos-reunidos/tubos-reunidos_01.jpg",
+      "reason": "Wrong-entity plant: Sidenor facade/logo at Basauri; not Tubos Reunidos.",
+      "category_fill": false
+    },
+    {
+      "slug": "visy",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/visy/visy_01.jpg",
+      "reason": "Portrait poison: Anthony Pratt speaking; not Visy plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "voith",
+      "status": "OK",
+      "primary_still": "enhanced/suppliers/voith/voith_01.jpg",
+      "reason": "Historical Voith hydro turbine spiral-casing shop (real company plant manufacturing).",
+      "category_fill": false
+    },
+    {
+      "slug": "weg",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/weg/weg_01.jpg",
+      "reason": "Village/residential poison: ivy-covered house (Dresden Weg street collision); not WEG S.A. plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "welded-tube-canada",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/welded-tube-canada/welded-tube-canada_01.jpg",
+      "reason": "Portrait/promo poison: welder with Up in Smoke Welding Apparel patch; not WTC plant.",
+      "category_fill": false
+    },
+    {
+      "slug": "winpak",
+      "status": "HOLD",
+      "primary_still": "enhanced/suppliers/winpak/winpak_01.jpg",
+      "reason": "Chart poison: S&P/TSX Composite Index line graph (Winpak ticker collision).",
+      "category_fill": false
+    },
+    {
+      "slug": "worthington-steel",
+      "status": "SOFT",
+      "primary_still": "enhanced/suppliers/worthington-steel/worthington-steel_01.jpg",
+      "reason": "Historical unbranded annealing/steel mill interior; category-correct soft fill.",
+      "category_fill": false
+    }
+  ]
+}

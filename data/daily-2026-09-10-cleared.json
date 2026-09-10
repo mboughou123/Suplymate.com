@@ -1,0 +1,1210 @@
+{
+  "label": "QA-DAILY-2026-09-10-CLEARED",
+  "mills_ok": [
+    "california-steel-industries",
+    "erdemir",
+    "graco",
+    "hydac",
+    "sanyo-special-steel",
+    "tfkable",
+    "voith"
+  ],
+  "mills_soft": [
+    "beckhoff",
+    "bull-moose-tube",
+    "epiroc",
+    "hi-tech-pipes",
+    "mannesmann-line-pipe",
+    "martin-marietta",
+    "nidec",
+    "nord-drivesystems",
+    "nordson",
+    "saica",
+    "searing-industries",
+    "shandong-molong",
+    "worthington-steel"
+  ],
+  "products_ok": [
+    "nord-drivesystems",
+    "nordson",
+    "beckhoff"
+  ],
+  "products_soft": [
+    "plymouth-tube",
+    "hi-tech-pipes",
+    "bull-moose-tube",
+    "welded-tube-canada",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "nidec",
+    "hydac",
+    "lenze",
+    "erdemir",
+    "worthington-steel"
+  ],
+  "suppliers": [
+    {
+      "company_name": "Hi-Tech Pipes Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://hitechpipes.in/",
+      "description": "Hi-Tech Pipes Limited is an Indian ERW steel-pipe manufacturer producing GI/GP pipes, hollow sections and related tubular products for infrastructure and industrial markets.",
+      "product_lines": [
+        "ERW steel pipes",
+        "GI and GP pipes",
+        "Hollow sections and crash barriers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://hitechpipes.in/"
+        },
+        {
+          "name": "IS / ASTM ERW pipe specs (confirm on mill site)",
+          "source": "https://hitechpipes.in/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://hitechpipes.in/",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/hi-tech-pipes/hi-tech-pipes_fill01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/hi-tech-pipes/hi-tech-pipes_fill02.jpg"
+      ],
+      "slug": "hi-tech-pipes",
+      "source_platform": "Company site",
+      "export_markets": [
+        "India",
+        "Middle East",
+        "Africa",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Bull Moose Tube Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chesterfield",
+      "website": "https://www.bullmoosetube.com/",
+      "description": "Bull Moose Tube Company is a North American steel-tube manufacturer producing hollow structural sections, fire sprinkler pipe and mechanical tubing.",
+      "product_lines": [
+        "Hollow structural sections (HSS)",
+        "Fire sprinkler pipe",
+        "Mechanical tubing"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bullmoosetube.com/"
+        },
+        {
+          "name": "ASTM A500 / A53 HSS and pipe specs (confirm on mill site)",
+          "source": "https://www.bullmoosetube.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.bullmoosetube.com/",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/bull-moose-tube/bull-moose-tube_fill01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/bull-moose-tube/bull-moose-tube_fill02.jpg"
+      ],
+      "slug": "bull-moose-tube",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Mannesmann Line Pipe GmbH",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Siegen",
+      "website": "https://www.mannesmann-linepipe.com/",
+      "description": "Mannesmann Line Pipe GmbH is a German HFI longitudinally welded steel-pipe manufacturer producing line pipe, district-heating pipe and structural pipe from plants in Siegen and Hamm.",
+      "product_lines": [
+        "HFI longitudinally welded line pipe",
+        "District heating pipes",
+        "Structural and OCTG welded pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.mannesmann-linepipe.com/"
+        },
+        {
+          "name": "EN / API HFI line-pipe specs (confirm current licenses)",
+          "source": "https://www.mannesmann-linepipe.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.mannesmann-linepipe.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/be/Messingschild_der_Mannesmann-Rohrbau_AG_-_M%C3%BCnchen.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Deutsch-Oesterreichische_Mannesmannr%C3%B6hren-Werke_1890_Reinhard.JPG/1280px-Deutsch-Oesterreichische_Mannesmannr%C3%B6hren-Werke_1890_Reinhard.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Mannesmann_Luftschutzgitter_-_Rathaus_in_Dresden_-_um_1940.jpg/1280px-Mannesmann_Luftschutzgitter_-_Rathaus_in_Dresden_-_um_1940.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Messingschild_der_Mannesmann-Rohrbau_AG_-_M%C3%BCnchen.jpg/1280px-Messingschild_der_Mannesmann-Rohrbau_AG_-_M%C3%BCnchen.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/mannesmann-line-pipe/mannesmann-line-pipe_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/mannesmann-line-pipe/mannesmann-line-pipe_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/mannesmann-line-pipe/mannesmann-line-pipe_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/mannesmann-line-pipe/mannesmann-line-pipe_04.jpg"
+      ],
+      "slug": "mannesmann-line-pipe",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Middle East",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Searing Industries",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Rancho Cucamonga",
+      "website": "https://www.searingindustries.com/",
+      "description": "Searing Industries is a U.S. ERW steel-tube manufacturer producing hollow structural sections and mechanical/structural tubing for North American construction and industrial markets.",
+      "product_lines": [
+        "ERW steel tubing",
+        "Hollow structural sections",
+        "Mechanical and structural tube"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.searingindustries.com/"
+        },
+        {
+          "name": "ASTM A500 / A513 ERW tube specs (confirm on mill site)",
+          "source": "https://www.searingindustries.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.searingindustries.com/",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/searing-industries/searing-industries_fill01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/searing-industries/searing-industries_fill02.jpg"
+      ],
+      "slug": "searing-industries",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Shandong Molong Petroleum Machinery Company Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "China",
+      "city": "Shouguang",
+      "website": "http://www.molonggroup.com/",
+      "description": "Shandong Molong Petroleum Machinery is a Chinese OCTG and petroleum-tubular manufacturer producing casing, tubing and line pipe for energy markets.",
+      "product_lines": [
+        "OCTG casing and tubing",
+        "Line pipe",
+        "Petroleum machinery tubing"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "http://www.molonggroup.com/"
+        },
+        {
+          "name": "API 5CT / API 5L OCTG specs (confirm current licenses)",
+          "source": "http://www.molonggroup.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "http://www.molonggroup.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/en/a/ad/Molong.png",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/shandong-molong/shandong-molong_fill01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/shandong-molong/shandong-molong_fill02.jpg"
+      ],
+      "slug": "shandong-molong",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Middle East",
+        "Africa",
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "SAICA Group",
+      "primary_category": "Packaging",
+      "country": "Spain",
+      "city": "Zaragoza",
+      "website": "https://www.saica.com/",
+      "description": "SAICA Group is a Spanish recycled-paper and corrugated-packaging manufacturer producing containerboard, corrugated packaging and flexible packaging across Europe and beyond.",
+      "product_lines": [
+        "Recycled containerboard",
+        "Corrugated packaging",
+        "Flexible packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.saica.com/"
+        },
+        {
+          "name": "FSC / PEFC chain-of-custody (confirm per mill)",
+          "source": "https://www.saica.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.saica.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Paper_mill_wood-chip_stockpile.jpg/1280px-Paper_mill_wood-chip_stockpile.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/saica/saica_01.jpg"
+      ],
+      "slug": "saica",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "North America",
+        "Middle East"
+      ]
+    },
+    {
+      "company_name": "Epiroc AB",
+      "primary_category": "Industrial Parts",
+      "country": "Sweden",
+      "city": "Nacka",
+      "website": "https://www.epiroc.com/",
+      "description": "Epiroc AB is a Swedish mining and infrastructure equipment manufacturer producing rock drilling rigs, underground loaders and rock excavation tools.",
+      "product_lines": [
+        "Rock drilling equipment",
+        "Underground mining loaders",
+        "Rock excavation tools"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.epiroc.com/"
+        },
+        {
+          "name": "ISO 14001; CE for mining equipment (confirm on product)",
+          "source": "https://www.epiroc.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.epiroc.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Epiroc_SmartROC_C50_%2853201178079%29.jpg/1280px-Epiroc_SmartROC_C50_%2853201178079%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra1.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra2.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra2.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra3.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra3.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra4.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra4.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra7.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra7.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra9.jpg/1280px-M%C3%A9lyf%C3%BAr%C3%B3_Berendez%C3%A9sek_Gy%C3%A1ra9.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Tecalemit_Factory%28GN15031%29.jpg/1280px-Tecalemit_Factory%28GN15031%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Tecalemit_Factory%28GN15032%29.jpg/1280px-Tecalemit_Factory%28GN15032%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Tecalemit_Factory%28GN15033%29.jpg/1280px-Tecalemit_Factory%28GN15033%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/epiroc/epiroc_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/epiroc/epiroc_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/epiroc/epiroc_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/epiroc/epiroc_04.jpg"
+      ],
+      "slug": "epiroc",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa",
+        "Oceania"
+      ]
+    },
+    {
+      "company_name": "Voith GmbH & Co. KGaA",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Heidenheim",
+      "website": "https://voith.com/",
+      "description": "Voith GmbH & Co. KGaA is a German industrial technology group manufacturing paper machines, hydro turbines and industrial drive systems.",
+      "product_lines": [
+        "Paper machine technology",
+        "Hydro power turbines",
+        "Industrial drive systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://voith.com/"
+        },
+        {
+          "name": "ISO 14001; industrial equipment CE (confirm on product)",
+          "source": "https://voith.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://voith.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/93/Bundesarchiv_Bild_102-06848%2C_Montage_von_Spiralturbinen_f%C3%BCr_Kraftwerk.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/cf/Fa._Voith_um_1910.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Gruvoen_KM7_delivered_by_Voith_in_2019.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Heidenheim_Voith_0.jpg/1280px-Heidenheim_Voith_0.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Heidenheim_Voith_und_Konzerthaus.jpg/1280px-Heidenheim_Voith_und_Konzerthaus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/00/Ostseite_der_Voith-Arena.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Panorama_der_Voith-Arena.jpg/1280px-Panorama_der_Voith-Arena.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Voith-Arena.jpg/1280px-Voith-Arena.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Voith-Arena_2021.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/04/Voith-Arena_2022.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Voith-Arena_Innenraum.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Voith_Arena_Imbiss_im_Stadion.jpg/1280px-Voith_Arena_Imbiss_im_Stadion.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/voith/voith_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/voith/voith_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/voith/voith_03.png",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/voith/voith_04.jpg"
+      ],
+      "slug": "voith",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Nordson Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Westlake",
+      "website": "https://www.nordson.com/",
+      "description": "Nordson Corporation is a U.S. precision dispensing and coating equipment manufacturer producing adhesive applicators and industrial spray systems.",
+      "product_lines": [
+        "Precision dispensing systems",
+        "Adhesive application equipment",
+        "Industrial coating systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nordson.com/"
+        },
+        {
+          "name": "ISO 14001; dispensing equipment CE / UL (confirm on product)",
+          "source": "https://www.nordson.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nordson.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_58.jpg/1280px-Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_58.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/nordson/nordson_01.jpg"
+      ],
+      "slug": "nordson",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Graco Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Minneapolis",
+      "website": "https://www.graco.com/",
+      "description": "Graco Inc. is a U.S. fluid-handling equipment manufacturer producing pumps, spray finishing equipment and sealant/adhesive dispensers.",
+      "product_lines": [
+        "Fluid handling pumps",
+        "Spray finishing equipment",
+        "Sealant and adhesive dispensers"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.graco.com/"
+        },
+        {
+          "name": "ISO 14001; fluid-handling equipment CE / UL (confirm on product)",
+          "source": "https://www.graco.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.graco.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/2012-0907-GracoMPLS.jpg/3840px-2012-0907-GracoMPLS.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/2012-0907-GracoMPLS.jpg/1280px-2012-0907-GracoMPLS.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Canned_motor_pump.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_87.jpg/1280px-Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_87.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Food_Expo_and_Poultry_Expo_2025_%28Bangalore_International_Exhibition_Centre%29_114.jpg/1280px-Food_Expo_and_Poultry_Expo_2025_%28Bangalore_International_Exhibition_Centre%29_114.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/86/Queensland_State_Archives_1807_Rogers_milk_spray_drying_equipment_Pauls_Montague_Road_South_Brisbane_November_1955.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/A_worker_sprays_protective_%289605228043%29.jpg/1280px-A_worker_sprays_protective_%289605228043%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/graco/graco_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/graco/graco_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/graco/graco_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/graco/graco_04.jpg"
+      ],
+      "slug": "graco",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas",
+        "Europe",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Nidec Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Kyoto",
+      "website": "https://www.nidec.com/en/",
+      "description": "Nidec Corporation is a Japanese precision-motor manufacturer producing industrial, automotive and appliance motors and drive systems.",
+      "product_lines": [
+        "Precision motors",
+        "Industrial drive systems",
+        "Appliance and automotive motors"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nidec.com/en/"
+        },
+        {
+          "name": "ISO 14001; motor product QMS (confirm on product)",
+          "source": "https://www.nidec.com/en/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nidec.com/en/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/1a/NIDEC_HQ_and_Central_Lab_20120716-001.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/NIDEC_HQ_and_Central_Lab_20120716-001.jpg/1280px-NIDEC_HQ_and_Central_Lab_20120716-001.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Syncro-Clock.jpg/1280px-Syncro-Clock.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/nidec/nidec_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/nidec/nidec_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/nidec/nidec_03.jpg"
+      ],
+      "slug": "nidec",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Beckhoff Automation GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Verl",
+      "website": "https://www.beckhoff.com/",
+      "description": "Beckhoff Automation is a German PC-based automation manufacturer producing industrial PCs, I/O systems and motion-control technology.",
+      "product_lines": [
+        "PC-based automation",
+        "Industrial PCs and I/O",
+        "Motion control systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.beckhoff.com/"
+        },
+        {
+          "name": "ISO 14001; CE for automation products (confirm on product)",
+          "source": "https://www.beckhoff.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.beckhoff.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_206.jpg/3840px-Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_206.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Beckhoff_Automation_Headquarters.jpg/1280px-Beckhoff_Automation_Headquarters.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_204.jpg/1280px-Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_204.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_206.jpg/1280px-Electronica%2C_Bangalore_International_Exhibition_Centre_%282025%29_206.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Factory_and_industrial_management_%281891%29_%2814577896067%29.jpg/1280px-Factory_and_industrial_management_%281891%29_%2814577896067%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Sportsclub_Verl_team_player_bus_back_in_Copenhagen.jpg/1280px-Sportsclub_Verl_team_player_bus_back_in_Copenhagen.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sportsclub_Verl_team_player_bus_front_in_Copenhagen.jpg/1280px-Sportsclub_Verl_team_player_bus_front_in_Copenhagen.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/beckhoff/beckhoff_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/beckhoff/beckhoff_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/beckhoff/beckhoff_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/beckhoff/beckhoff_04.jpg"
+      ],
+      "slug": "beckhoff",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "HYDAC International GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Sulzbach",
+      "website": "https://www.hydac.com/",
+      "description": "HYDAC International is a German fluid-power manufacturer producing hydraulic filters, accumulators and related hydraulic system components.",
+      "product_lines": [
+        "Hydraulic filters",
+        "Accumulators",
+        "Fluid power components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.hydac.com/"
+        },
+        {
+          "name": "ISO 14001; hydraulic component QMS (confirm on product)",
+          "source": "https://www.hydac.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.hydac.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Hist%C3%B3ria_csm_hydac-unternehmen-stammhaus-sulzbach-stage_bcfaa458dd.jpg/1280px-Hist%C3%B3ria_csm_hydac-unternehmen-stammhaus-sulzbach-stage_bcfaa458dd.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/hydac/hydac_01.jpg"
+      ],
+      "slug": "hydac",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Getriebebau NORD GmbH & Co. KG",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Bargteheide",
+      "website": "https://www.nord.com/",
+      "description": "Getriebebau NORD (NORD Drivesystems) is a German drive-technology manufacturer producing gear motors, industrial gear units and frequency inverters.",
+      "product_lines": [
+        "Gear motors",
+        "Industrial gear units",
+        "Frequency inverters"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nord.com/"
+        },
+        {
+          "name": "ISO 14001; CE for gearmotors/drives (confirm on product)",
+          "source": "https://www.nord.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nord.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/EXCON_2025%2C_Bangalore_International_Exhibition_Centre_%28234%29.jpg/1280px-EXCON_2025%2C_Bangalore_International_Exhibition_Centre_%28234%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/nord-drivesystems/nord-drivesystems_01.jpg"
+      ],
+      "slug": "nord-drivesystems",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Ere\u011fli Demir ve \u00c7elik Fabrikalar\u0131 T.A.\u015e. (Erdemir)",
+      "primary_category": "Steel & Metals",
+      "country": "Turkey",
+      "city": "Ere\u011fli",
+      "website": "https://www.erdemir.com.tr/",
+      "description": "Erdemir (Ere\u011fli Demir ve \u00c7elik) is a Turkish flat-steel producer manufacturing hot-rolled, cold-rolled and coated steel products for domestic and export markets.",
+      "product_lines": [
+        "Flat steel products",
+        "Hot and cold rolled coil",
+        "Tinplate and coated steel"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.erdemir.com.tr/"
+        },
+        {
+          "name": "ISO 14001 / ISO 45001; EN / ASTM flat-steel specs (confirm)",
+          "source": "https://www.erdemir.com.tr/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.erdemir.com.tr/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Erdemir_Demir.jpg/1280px-Erdemir_Demir.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Karadeniz_Ere%C4%9Fli_coast_7681.jpg/1280px-Karadeniz_Ere%C4%9Fli_coast_7681.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Karadeniz_Ere%C4%9Fli_coast_7682.jpg/1280px-Karadeniz_Ere%C4%9Fli_coast_7682.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/erdemir/erdemir_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/erdemir/erdemir_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/erdemir/erdemir_03.jpg"
+      ],
+      "slug": "erdemir",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Middle East",
+        "Africa",
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "Sanyo Special Steel Co., Ltd.",
+      "primary_category": "Steel & Metals",
+      "country": "Japan",
+      "city": "Himeji",
+      "website": "https://www.sanyo-steel.co.jp/",
+      "description": "Sanyo Special Steel is a Japanese specialty-steel manufacturer producing bearing steel, alloy bars and tool steel for automotive and industrial customers.",
+      "product_lines": [
+        "Special steel bars",
+        "Bearing steel",
+        "Alloy and tool steel"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.sanyo-steel.co.jp/"
+        },
+        {
+          "name": "ISO 14001; specialty / bearing steel specs (confirm)",
+          "source": "https://www.sanyo-steel.co.jp/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.sanyo-steel.co.jp/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Sanyo_Special_Steel_HQ.jpg/1280px-Sanyo_Special_Steel_HQ.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/W.E._Caldwell_Co.%2C_Incorporated%2C_manufacturers_of_all_kinds_of_tanks%2C_towers_and_tubs_-_large_water_tanks_a_specialty%2C_high_grade_work._%281905%29_%2814594697757%29.jpg/1280px-W.E._Caldwell_Co.%2C_Incorporated%2C_manufacturers_of_all_kinds_of_tanks%2C_towers_and_tubs_-_large_water_tanks_a_specialty%2C_high_grade_work._%281905%29_%2814594697757%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/sanyo-special-steel/sanyo-special-steel_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/sanyo-special-steel/sanyo-special-steel_02.jpg"
+      ],
+      "slug": "sanyo-special-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Americas",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "California Steel Industries, Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Fontana",
+      "website": "https://www.californiasteel.com/",
+      "description": "California Steel Industries (CSI) is a U.S. flat-steel producer in Fontana, California manufacturing hot-rolled, cold-rolled and galvanized sheet.",
+      "product_lines": [
+        "Hot rolled steel sheet",
+        "Cold rolled and galvanized sheet",
+        "Pipe and tube substrate coil"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.californiasteel.com/"
+        },
+        {
+          "name": "ISO 14001; ASTM flat-steel specs (confirm)",
+          "source": "https://www.californiasteel.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.californiasteel.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/FONTANA2021.jpg/1280px-FONTANA2021.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/california-steel-industries/california-steel-industries_01.jpg"
+      ],
+      "slug": "california-steel-industries",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Worthington Steel, Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Columbus",
+      "website": "https://www.worthingtonsteel.com/",
+      "description": "Worthington Steel is a U.S. flat-rolled steel processor producing custom steel blanks, electrical steel and value-added flat steel products.",
+      "product_lines": [
+        "Flat-rolled steel processing",
+        "Electrical steel",
+        "Custom steel blanks"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.worthingtonsteel.com/"
+        },
+        {
+          "name": "ISO 14001; ASTM flat-steel processing specs (confirm)",
+          "source": "https://www.worthingtonsteel.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.worthingtonsteel.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Annealing_furances_-_Trumbull_Steel_1913.jpg/1280px-Annealing_furances_-_Trumbull_Steel_1913.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Bahnhof%2C_Bank%2C_Worthington_U.S.A.%2C_2026_R%C3%A1calm%C3%A1s.jpg/1280px-Bahnhof%2C_Bank%2C_Worthington_U.S.A.%2C_2026_R%C3%A1calm%C3%A1s.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Bahnhof%2C_Worthington_U.S.A.%2C_2026_R%C3%A1calm%C3%A1s.jpg/1280px-Bahnhof%2C_Worthington_U.S.A.%2C_2026_R%C3%A1calm%C3%A1s.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Coal_pulverizing_plant_-_Trumbull_Steel.jpg/1280px-Coal_pulverizing_plant_-_Trumbull_Steel.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Worthington_Steel_facility_on_Road_10.jpg/1280px-Worthington_Steel_facility_on_Road_10.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Industries_of_War_-_Piping_-_Manufacturing_steel_pipe_for_the_government_at_the_Youngstown_Sheet_and_Tube_Company_plant%2C_Youngstown%2C_Ohio._Method_of_welding_steel_pipe_-_butt-weld_process_-_NARA_-_45488931.jpg/1280px-thumbnail.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Martel_plant%2C_General_Mills.jpg/1280px-Martel_plant%2C_General_Mills.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Navy_-_Equipment_-_Manufacturing_special_steel_lockers_for_the_navy_Department%2C_at_the_General_Fireproofing_Company_Plant%2C_Youngstown%2C_Ohio_-_NARA_-_45510683.jpg/1280px-thumbnail.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/worthington-steel/worthington-steel_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/worthington-steel/worthington-steel_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/worthington-steel/worthington-steel_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/worthington-steel/worthington-steel_04.jpg"
+      ],
+      "slug": "worthington-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Tele-Fonika Kable S.A.",
+      "primary_category": "Cables & Electrical",
+      "country": "Poland",
+      "city": "Krak\u00f3w",
+      "website": "https://www.tfkable.com/",
+      "description": "Tele-Fonika Kable (TFKable) is a Polish cable manufacturer producing power, telecom and specialty industrial cables for European and export markets.",
+      "product_lines": [
+        "Power cables",
+        "Telecom and fibre cables",
+        "Specialty industrial cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tfkable.com/"
+        },
+        {
+          "name": "ISO 14001; cable CE / IEC product listings (confirm per product)",
+          "source": "https://www.tfkable.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tfkable.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Bdg_Telefonika_Kable_4-2015.jpg/1280px-Bdg_Telefonika_Kable_4-2015.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Director_Villa_Zaklad_Bydgoszcz_Kable.jpg/1280px-Director_Villa_Zaklad_Bydgoszcz_Kable.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bd/Kampe.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/49/St-rolbieski.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Statek_pasazerski_%22Pilsudski%22_1937-1939_%28108183734%29.jpg/1280px-Statek_pasazerski_%22Pilsudski%22_1937-1939_%28108183734%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Telefonika_Kable_Bydgoszcz_2025.jpg/1280px-Telefonika_Kable_Bydgoszcz_2025.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/5a/Telefonika_Kable_Bydgoszcz_a.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/48/Telefonika_Kable_Bydgoszcz_b.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/28/Telefonika_Kable_Bydgoszcz_d.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/05/Telefonika_Kable_Bydgoszcz_e.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Telefonika_Kable_Bydgoszcz_f.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/69/Telefonika_Kable_Bydgoszcz_h.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/tfkable/tfkable_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/tfkable/tfkable_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/tfkable/tfkable_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/tfkable/tfkable_04.jpg"
+      ],
+      "slug": "tfkable",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Africa"
+      ]
+    },
+    {
+      "company_name": "Martin Marietta Materials, Inc.",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Raleigh",
+      "website": "https://www.martinmarietta.com/",
+      "description": "Martin Marietta Materials is a U.S. construction-materials company producing aggregates, cement and ready-mix products for North American construction markets.",
+      "product_lines": [
+        "Crushed stone aggregates",
+        "Cement and ready-mix",
+        "Construction materials"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.martinmarietta.com/"
+        },
+        {
+          "name": "ISO 14001; construction-materials QMS (confirm per plant)",
+          "source": "https://www.martinmarietta.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.martinmarietta.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/%22Looking_down_into_aggregate_conveyor_at_Six_Companies%27_low_level_concrete_mixing_plant.%22_-_NARA_-_293644.jpg/1280px-%22Looking_down_into_aggregate_conveyor_at_Six_Companies%27_low_level_concrete_mixing_plant.%22_-_NARA_-_293644.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/%22Raw_aggregate_storage_piles_at_Six_Companies%27_gravel_screening_and_washing_plant.%22_-_NARA_-_293628.jpg/1280px-%22Raw_aggregate_storage_piles_at_Six_Companies%27_gravel_screening_and_washing_plant.%22_-_NARA_-_293628.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/%22View_of_the_west_abutment_showing_the_concrete_plant%2C_placing_trestles%2C_and_suspension_bridge_carrying_the_aggregate..._-_NARA_-_294144.jpg/1280px-%22View_of_the_west_abutment_showing_the_concrete_plant%2C_placing_trestles%2C_and_suspension_bridge_carrying_the_aggregate..._-_NARA_-_294144.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/88c128_Abandoned_quarry_near_Utica%2C_indiana_%2827293548004%29.jpg/1280px-88c128_Abandoned_quarry_near_Utica%2C_indiana_%2827293548004%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/05/Delaware_Limestone_over_Columbus_Limestone_%28Middle_Devonian%3B_Marblecliff_Quarry%2C_Hilliard%2C_Ohio%2C_USA%29_1_%2848384423691%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d5/Delaware_Limestone_over_Columbus_Limestone_%28Middle_Devonian%3B_Marblecliff_Quarry%2C_Hilliard%2C_Ohio%2C_USA%29_2_%2848384574567%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Delaware_Limestone_over_Columbus_Limestone_%28Middle_Devonian%3B_Marblecliff_Quarry%2C_Hilliard%2C_Ohio%2C_USA%29_3_%2848384573057%29.jpg/1280px-Delaware_Limestone_over_Columbus_Limestone_%28Middle_Devonian%3B_Marblecliff_Quarry%2C_Hilliard%2C_Ohio%2C_USA%29_3_%2848384573057%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Drainage_bins_for_sand_at_aggregate_plant_-_NARA_-_294173.jpg/1280px-Drainage_bins_for_sand_at_aggregate_plant_-_NARA_-_294173.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/General_view_of_the_west_side%2C_concrete_mixing_plant_and_placing_trestles_in_foreground%2C_bedrock_below%2C_aggregate..._-_NARA_-_294141.jpg/1280px-General_view_of_the_west_side%2C_concrete_mixing_plant_and_placing_trestles_in_foreground%2C_bedrock_below%2C_aggregate..._-_NARA_-_294141.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Martin_Marietta_Frederick_Quarry_2020.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Megalomoidea_canadensis_%28fossil_bivalve_internal_mold%29_%28Lockport_Dolomite%2C_Middle_Silurian%3B_Martin-Marietta_Quarry%2C_Woodville%2C_Ohio%2C_USA%29.jpg/1280px-Megalomoidea_canadensis_%28fossil_bivalve_internal_mold%29_%28Lockport_Dolomite%2C_Middle_Silurian%3B_Martin-Marietta_Quarry%2C_Woodville%2C_Ohio%2C_USA%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Sand_and_coarse_aggregate_batchers_on_upper_batching_deck_at_Six_Companies%27_low_level_concrete_mixing_plant._-_NARA_-_293629.jpg/1280px-Sand_and_coarse_aggregate_batchers_on_upper_batching_deck_at_Six_Companies%27_low_level_concrete_mixing_plant._-_NARA_-_293629.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/martin-marietta/martin-marietta_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/martin-marietta/martin-marietta_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/martin-marietta/martin-marietta_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/suppliers/martin-marietta/martin-marietta_04.jpg"
+      ],
+      "slug": "martin-marietta",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "product_name": "Plymouth Tube Carbon Alloy and Stainless Precision Tubing",
+      "supplier_name": "Plymouth Tube Company",
+      "supplier_slug_guess": "plymouth-tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.plymouth.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Plymouth Tube Company mill/product page for carbon/alloy/stainless precision tubing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/plymouth-tube/plymouth-precision.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/plymouth-tube/plymouth-stainless.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Hi-Tech Pipes ERW GI/GP Steel Pipe and Hollow Sections",
+      "supplier_name": "Hi-Tech Pipes Limited",
+      "supplier_slug_guess": "hi-tech-pipes",
+      "category": "Tube & Pipes",
+      "source_url": "https://hitechpipes.in/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Hi-Tech Pipes Limited mill/product page for ERW GI/GP pipe / hollow sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hi-tech-pipes/hitech-erw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hi-tech-pipes/hitech-hollow.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Bull Moose Tube HSS and Fire Sprinkler Pipe",
+      "supplier_name": "Bull Moose Tube Company",
+      "supplier_slug_guess": "bull-moose-tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.bullmoosetube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Bull Moose Tube Company mill/product page for HSS / fire sprinkler pipe. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/bull-moose-tube/bullmoose-hss.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/bull-moose-tube/bullmoose-sprinkler.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Welded Tube of Canada ERW Mechanical Tubing and HSS",
+      "supplier_name": "Welded Tube of Canada",
+      "supplier_slug_guess": "welded-tube-canada",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.weldedtube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Welded Tube of Canada mill/product page for ERW mechanical tubing / HSS. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/welded-tube-canada/wtc-erw.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/welded-tube-canada/wtc-hss.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Searing Industries ERW Structural and Mechanical Tubing",
+      "supplier_name": "Searing Industries",
+      "supplier_slug_guess": "searing-industries",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.searingindustries.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Searing Industries mill/product page for ERW structural/mechanical tubing. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pipes.jpg/1280px-Pipes.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Steel_pipe.jpg/1280px-Steel_pipe.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/searing-industries/searing-hss.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/searing-industries/searing-mech.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "SPX FLOW Process Pumps Mixers and Homogenizers",
+      "supplier_name": "SPX FLOW, Inc.",
+      "supplier_slug_guess": "spx-flow",
+      "category": "Industrial Parts",
+      "source_url": "https://www.spxflow.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SPX FLOW, Inc. mill/product page for process pumps / mixers / homogenizers. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/spx-flow/spxflow-mixer.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/spx-flow/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Voith Paper Machines Hydro Turbines and Industrial Drives",
+      "supplier_name": "Voith GmbH & Co. KGaA",
+      "supplier_slug_guess": "voith",
+      "category": "Industrial Parts",
+      "source_url": "https://voith.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Voith GmbH & Co. KGaA mill/product page for paper machines / hydro turbines / drives. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/voith/voith-paper.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/voith/voith-hydro.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nordson Precision Dispensing and Coating Systems",
+      "supplier_name": "Nordson Corporation",
+      "supplier_slug_guess": "nordson",
+      "category": "Industrial Parts",
+      "source_url": "https://www.nordson.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nordson Corporation mill/product page for precision dispensing / coating systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a0/Air_compressor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nordson/nordson-coat.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nordson/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Nidec Precision and Industrial Motors",
+      "supplier_name": "Nidec Corporation",
+      "supplier_slug_guess": "nidec",
+      "category": "Industrial Parts",
+      "source_url": "https://www.nidec.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nidec Corporation mill/product page for precision / industrial motors. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nidec/nidec-precision.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nidec/nidec-industrial.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Beckhoff PC-Based Automation and Motion Control",
+      "supplier_name": "Beckhoff Automation GmbH & Co. KG",
+      "supplier_slug_guess": "beckhoff",
+      "category": "Industrial Parts",
+      "source_url": "https://www.beckhoff.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Beckhoff Automation GmbH & Co. KG mill/product page for PC-based automation / motion control. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Proximity_sensor.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/beckhoff/beckhoff-ipc.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/beckhoff/beckhoff-motion.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "HYDAC Hydraulic Filters Accumulators and Fluid Power",
+      "supplier_name": "HYDAC International GmbH",
+      "supplier_slug_guess": "hydac",
+      "category": "Industrial Parts",
+      "source_url": "https://www.hydac.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 HYDAC International GmbH mill/product page for hydraulic filters / accumulators. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/hydac/hydac-filters.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "NORD Drivesystems Gear Motors and Frequency Inverters",
+      "supplier_name": "Getriebebau NORD GmbH & Co. KG",
+      "supplier_slug_guess": "nord-drivesystems",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nord.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Getriebebau NORD GmbH & Co. KG mill/product page for gear motors / frequency inverters. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/nord-drivesystems/nord-gearmotor.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Lenze Servo Drives Gearboxes and Motion Automation",
+      "supplier_name": "Lenze SE",
+      "supplier_slug_guess": "lenze",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.lenze.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Lenze SE mill/product page for servo drives / gearboxes / motion automation. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/lenze/lenze-servo.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/lenze/lenze-gearbox.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Erdemir Hot Rolled Cold Rolled and Coated Flat Steel",
+      "supplier_name": "Ere\u011fli Demir ve \u00c7elik Fabrikalar\u0131 T.A.\u015e. (Erdemir)",
+      "supplier_slug_guess": "erdemir",
+      "category": "Steel & Metals",
+      "source_url": "https://www.erdemir.com.tr/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Ere\u011fli Demir ve \u00c7elik Fabrikalar\u0131 T.A.\u015e. (Erdemir) mill/product page for hot/cold rolled and coated flat steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/erdemir/erdemir-coated.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/erdemir/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Worthington Steel Flat-Rolled Processing and Electrical Steel",
+      "supplier_name": "Worthington Steel, Inc.",
+      "supplier_slug_guess": "worthington-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.worthingtonsteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Worthington Steel, Inc. mill/product page for flat-rolled processing / electrical steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Rebar.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/worthington-steel/worthington-electrical.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-10/images/products/worthington-steel/mill-fallback-2.jpg"
+      ],
+      "needs_ai_generate": false
+    }
+  ]
+}
