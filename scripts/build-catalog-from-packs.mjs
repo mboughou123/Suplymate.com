@@ -8,6 +8,8 @@
  *   data/daily-2026-09-10-cleared.json (+ docs/researcher-*-2026-09-10.json)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
+ *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
+ *   data/hold35-refetch2-cleared.json
  *   data/product-media-batch{1,2,3}.json, data/product-gaps-fill*.json,
  *   data/daily-2026-09-0{2,3}-products.json (+ *enhanced-manifest*.json)
  *   data/certifications.json, data/certs-seed.tsv, data/*certs*manifest*.json
@@ -247,6 +249,7 @@ function loadOutscraperSuppliers() {
 const DISTRIBUTOR_SLUGS = new Set(config.distributors?.slugs ?? []);
 const HOLD_KEYS = new Set(config.holds?.keys ?? []);
 const SOFT_TUBE_PRODUCT_SLUGS = new Set(config.softTubeProductSlugs ?? []);
+const SOFT_PRODUCT_IMAGE_CREDITS = config.softProductImageCredits ?? {};
 const CATEGORY_FILL_CAPTION =
   "Photo is a generic Commons steel-pipe category fill — not a plant-exterior claim.";
 const SOFT_TUBE_IMAGE_CREDIT =
@@ -999,7 +1002,79 @@ function loadProductPacks() {
       skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
     });
   }
+  const hold35 = readJsonIfExists(path.join(DATA_DIR, "hold35-products-cleared.json"));
+  if (hold35) {
+    const seals = loadHold35ProductSeals();
+    const allow = new Set([...(hold35.ok ?? []), ...(hold35.soft ?? []), ...seals.productWire]);
+    const skus = (hold35.products ?? []).filter((sku) => {
+      const slug = sku.supplier_slug_guess || slugify(sku.supplier_name);
+      if (seals.productHolds.has(slug)) return false;
+      if (allow.size && !allow.has(slug)) return false;
+      return true;
+    });
+    packs.push({
+      packId: "d0910-h35",
+      scrapedAt: "2026-09-10T19:14:21.000Z",
+      skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+    });
+  }
+  const hold35r2 = readJsonIfExists(path.join(DATA_DIR, "hold35-refetch2-cleared.json"));
+  if (hold35r2) {
+    const seals = loadHold35Refetch2Seals();
+    const allow = new Set([...(hold35r2.wire_ok ?? []), ...(hold35r2.soft ?? []).map(slugOf), ...seals.productWire]);
+    const skus = (hold35r2.products ?? []).filter((sku) => {
+      const slug = sku.supplier_slug_guess || slugify(sku.supplier_name);
+      if (seals.productHolds.has(slug)) return false;
+      if (allow.size && !allow.has(slug)) return false;
+      return true;
+    });
+    if (skus.length) {
+      packs.push({
+        packId: "d0910-h35r2",
+        scrapedAt: "2026-09-10T19:27:37.000Z",
+        skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+      });
+    }
+  }
   return packs;
+}
+
+function loadHold35Refetch2Seals() {
+  const pack = readJsonIfExists(path.join(DATA_DIR, "hold35-refetch2-cleared.json"));
+  const productHolds = new Set((pack?.hold_out ?? []).map(slugOf).filter(Boolean));
+  const productWire = new Set(
+    [...(pack?.wire_ok ?? []), ...(pack?.soft ?? []).map(slugOf)].filter(
+      (slug) => slug && !productHolds.has(slug)
+    )
+  );
+  return { productHolds, productWire };
+}
+
+function loadHold35ProductSeals() {
+  const products = readJsonIfExists(path.join(ROOT, "docs", "researcher-hold35-products-2026-09-10.json"));
+  const pack = readJsonIfExists(path.join(DATA_DIR, "hold35-products-cleared.json"));
+  const productHolds = new Set(
+    [
+      ...(pack?.hold_out ?? []),
+      ...(products?.hold_do_not_wire ?? []).map(slugOf),
+    ].filter(Boolean)
+  );
+  const productWire = new Set(
+    [
+      ...(pack?.ok ?? []),
+      ...(pack?.soft ?? []),
+      ...(products?.sealed_wire_ok ?? []),
+      ...(products?.soft ?? []).map(slugOf),
+    ].filter((slug) => slug && !productHolds.has(slug))
+  );
+  return { productHolds, productWire };
+}
+
+/** Lead with branded SKU stills; mill-fallback extras trail. */
+function preferBrandedProductStills(paths) {
+  const branded = paths.filter((p) => !/mill-fallback/i.test(p));
+  const fallbacks = paths.filter((p) => /mill-fallback/i.test(p));
+  return branded.length ? [...branded, ...fallbacks] : paths;
 }
 
 /** Skips (HTML stubs) minus files later re-verified as official stills AND valid images. */
@@ -1098,7 +1173,7 @@ function buildProducts(suppliersById, supplierIdBySlug, report) {
         const declared = (raw.local_images ?? []).map(publicPathFromPackPath).filter(Boolean);
         let images = uniq(declared.filter((p) => !skipSet.has(p)).map(verifyPublicPath));
         if (images.length === 0 && declared.length === 0) images = assigned.get(row.id) ?? [];
-        images = preferEnhancedJpegPaths(uniq(images));
+        images = preferBrandedProductStills(preferEnhancedJpegPaths(uniq(images)));
         if (supplierSlug === "hadeed") images = orderHadeed(images);
         if (images.length === 0) report.productsWithoutPhotos.push(row.id);
 
@@ -1117,6 +1192,9 @@ function buildProducts(suppliersById, supplierIdBySlug, report) {
             : {}),
           ...(SOFT_TUBE_PRODUCT_SLUGS.has(supplierSlug)
             ? { "Image credit": SOFT_TUBE_IMAGE_CREDIT }
+            : {}),
+          ...(SOFT_PRODUCT_IMAGE_CREDITS[supplierSlug]
+            ? { "Image credit": SOFT_PRODUCT_IMAGE_CREDITS[supplierSlug] }
             : {}),
         };
 

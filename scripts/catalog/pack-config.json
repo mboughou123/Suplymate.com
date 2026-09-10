@@ -456,6 +456,15 @@
     "nb-corporation": "Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant.",
     "regal-rexnord": "Photo is the Milwaukee HQ campus with a RegalRexnord rooftop sign — branded HQ/campus, not a production mill yard."
   },
+  "softProductImageCredits": {
+    "fedrigoni": "Specialty paper/label application still — category-correct, not mill stock.",
+    "kloeckner-pentaplast": "Packaging-category still — not a Klöckner Pentaplast core-film product shot.",
+    "martin-marietta": "Aggregates quarry / open-pit campus still — category-correct, not a bagged-cement product still.",
+    "shandong-molong": "Type-match generic tube stock — not a mill-specific product still.",
+    "superior-tube": "Type-match specialty-tube catalog still — not a mill-branded product still.",
+    "tubos-reunidos": "Type-match generic tube-bundle stock — not a mill-specific product still.",
+    "visy": "Category recycling/packaging tiles still — category-correct, not a branded SKU still."
+  },
   "softTubeProductSlugs": [
     "plymouth-tube",
     "hi-tech-pipes",
