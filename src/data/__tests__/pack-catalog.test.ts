@@ -436,6 +436,99 @@ describe("HOLD30 cleared mill wire", () => {
   });
 });
 
+describe("HOLD35 cleared product wire", () => {
+  const productsOk = [
+    "albea",
+    "bri-steel",
+    "california-steel-industries",
+    "epiroc",
+    "graco",
+    "greiner-packaging",
+    "hellenic-cables",
+    "hepcomotion",
+    "ifm",
+    "kennametal",
+    "kingspan",
+    "lee-man-paper",
+    "mannesmann-line-pipe",
+    "michigan-seamless-tube",
+    "nb-corporation",
+    "ozkan-steel",
+    "pactiv-evergreen",
+    "proampac",
+    "regal-rexnord",
+    "rollon",
+    "rr-kabel",
+    "saica",
+    "sanyo-special-steel",
+    "schneeberger",
+    "suraj",
+    "weg",
+    "winpak",
+  ];
+  const productsSoft = [
+    "fedrigoni",
+    "kloeckner-pentaplast",
+    "martin-marietta",
+    "shandong-molong",
+    "superior-tube",
+    "tubos-reunidos",
+  ];
+  const holdOut = ["tfkable", "visy"];
+  const locked15 = [
+    "beckhoff",
+    "bull-moose-tube",
+    "erdemir",
+    "hi-tech-pipes",
+    "hydac",
+    "lenze",
+    "nidec",
+    "nord-drivesystems",
+    "nordson",
+    "plymouth-tube",
+    "searing-industries",
+    "spx-flow",
+    "voith",
+    "welded-tube-canada",
+    "worthington-steel",
+  ];
+
+  const hold35 = packProducts.filter((p) => p.pack === "d0910-h35");
+  const daily15 = packProducts.filter((p) => p.pack === "d0910");
+
+  it("appends the 33 cleared RFQ SKUs without rewriting the locked 15", () => {
+    expect(hold35.map((p) => p.packSlug).sort()).toEqual([...productsOk, ...productsSoft].sort());
+    expect(daily15.map((p) => p.packSlug).sort()).toEqual([...locked15].sort());
+    for (const slug of locked15) {
+      expect(hold35.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+  });
+
+  it("keeps every HOLD35 SKU as RFQ with a local still and prefers branded files", () => {
+    for (const p of hold35) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+    }
+    for (const slug of holdOut) {
+      expect(hold35.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+  });
+
+  it("soft-credits the SOFT six", () => {
+    for (const slug of productsSoft) {
+      const sku = hold35.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(
+        /not (mill stock|a Klöckner Pentaplast core-film|a bagged-cement|a mill-specific|a mill-branded)/i
+      );
+    }
+  });
+});
+
 describe("homepage products picker", () => {
   it("only picks approved products with their own real photo, spread across categories and suppliers", () => {
     const products = packProducts.map(scrapedToProduct);
