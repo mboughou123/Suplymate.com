@@ -27,7 +27,7 @@ export type PackCertification = {
 export type PackSupplier = Supplier & {
   /** Folder slug used by the media packs (e.g. `hadeed`, `posco`). */
   packSlug: string;
-  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03` | `daily-2026-09-10` | `hold30-2026-09-10`. */
+  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03` | `daily-2026-09-10` | `hold30-2026-09-10` | `daily-2026-09-11`. */
   pack: string;
   /** True when the id already exists in the Outscraper directory (overlay, not a new card). */
   overlaysExisting: boolean;

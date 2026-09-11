@@ -546,6 +546,158 @@ describe("HOLD35 cleared product wire", () => {
   });
 });
 
+describe("daily 2026-09-11 cleared wire", () => {
+  const millsOk = ["clearwater-paper", "stelco", "sterlite-technologies", "suedpack"];
+  const millsSoft = ["balluff", "bucher-hydraulics", "hawe", "printpack", "wienerberger"];
+  const productsSoft = [
+    "atlas-tube",
+    "balluff",
+    "metal-matic",
+    "plastipak",
+    "sharon-tube",
+    "stelco",
+    "valmont-tubing",
+    "venus-pipes",
+    "wheatland-tube",
+  ];
+  const productOnlyHosts = [
+    "atlas-tube",
+    "metal-matic",
+    "plastipak",
+    "sharon-tube",
+    "valmont-tubing",
+    "venus-pipes",
+    "wheatland-tube",
+  ];
+  const hardSkip12Hold = [
+    "atlas-tube",
+    "centravis",
+    "cosmo-films",
+    "handytube",
+    "linmot",
+    "metal-matic",
+    "mukand",
+    "pilz",
+    "service-wire",
+    "venus-pipes",
+    "wipak",
+  ];
+  const softTubes = [
+    "atlas-tube",
+    "metal-matic",
+    "sharon-tube",
+    "valmont-tubing",
+    "venus-pipes",
+    "wheatland-tube",
+  ];
+  const lockedDaily20 = [
+    "beckhoff",
+    "bull-moose-tube",
+    "california-steel-industries",
+    "epiroc",
+    "erdemir",
+    "graco",
+    "hi-tech-pipes",
+    "hydac",
+    "mannesmann-line-pipe",
+    "martin-marietta",
+    "nidec",
+    "nord-drivesystems",
+    "nordson",
+    "saica",
+    "sanyo-special-steel",
+    "searing-industries",
+    "shandong-molong",
+    "tfkable",
+    "voith",
+    "worthington-steel",
+  ];
+
+  const dayMills = packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly);
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && s.productHostOnly);
+  const dayProducts = packProducts.filter((p) => p.pack === "d0911");
+
+  it("wires the 9 cleared mills and 9 RFQ products without rewriting locked packs", () => {
+    expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...productsSoft].sort());
+    expect(dayHosts.map((s) => s.packSlug).sort()).toEqual([...productOnlyHosts].sort());
+    const daily10 = packSuppliers.filter((s) => s.pack === "daily-2026-09-10" && !s.productHostOnly);
+    expect(daily10.map((s) => s.packSlug).sort()).toEqual([...lockedDaily20].sort());
+    expect(packProducts.filter((p) => p.pack === "d0910")).toHaveLength(15);
+    expect(packProducts.filter((p) => p.pack === "d0910-h35")).toHaveLength(33);
+    expect(packProducts.filter((p) => p.pack === "d0910-h35r2")).toHaveLength(2);
+    expect(packSuppliers.filter((s) => s.pack === "hold30-2026-09-10")).toHaveLength(29);
+  });
+
+  it("points cards at local stills and keeps every SKU as RFQ", () => {
+    for (const s of dayMills) {
+      expect(s.imageUrl, s.packSlug).toMatch(/^\/images\/suppliers\//);
+      expect((s.supplierImages ?? []).every((u) => u.startsWith("/images/suppliers/")), s.packSlug).toBe(true);
+      expect((s.supplierImages ?? []).length, s.packSlug).toBeGreaterThan(0);
+      expect(s.moq, s.packSlug).toMatch(/RFQ/i);
+      expect(s.certificationsDetailed ?? [], s.packSlug).toEqual([]);
+    }
+    for (const p of dayProducts) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+      expect(JSON.stringify(p), p.id).not.toMatch(/\$0\.00/);
+      expect(p.specifications["Image credit"] ?? "", p.id).not.toMatch(/AI-generated/i);
+    }
+  });
+
+  it("keeps HOLD mills out of the public directory and does not invent a parent zekelman card", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const slug of productOnlyHosts) {
+      const host = dayHosts.find((s) => s.packSlug === slug);
+      expect(host, slug).toBeDefined();
+      expect(host!.productHostOnly, slug).toBe(true);
+      expect(host!.supplierImages ?? [], slug).toEqual([]);
+      expect(listed.has(host!.id), slug).toBe(false);
+    }
+    for (const slug of hardSkip12Hold) {
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-11" && !s.productHostOnly),
+        slug
+      ).toBe(false);
+    }
+    expect(packSuppliers.some((s) => s.packSlug === "zekelman" && s.pack === "daily-2026-09-11")).toBe(
+      false
+    );
+    const lockedZekelman = packSuppliers.find((s) => s.packSlug === "zekelman" && s.pack === "daily-2026-09-03");
+    expect(lockedZekelman).toBeDefined();
+    expect(dayHosts.find((s) => s.packSlug === "wheatland-tube")!.id).not.toBe(lockedZekelman!.id);
+    expect(dayHosts.find((s) => s.packSlug === "atlas-tube")!.id).not.toBe(lockedZekelman!.id);
+  });
+
+  it("soft-captions campus/HQ/booth/museum fills as not plant-exterior claims", () => {
+    for (const slug of millsSoft) {
+      const mill = dayMills.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(/not a plant-exterior claim/i);
+    }
+    const wienerberger = dayMills.find((s) => s.packSlug === "wienerberger");
+    expect(wienerberger!.supplierImages).toEqual(["/images/suppliers/wienerberger/wienerberger_01.jpg"]);
+    expect(wienerberger!.imageUrl).toBe("/images/suppliers/wienerberger/wienerberger_01.jpg");
+  });
+
+  it("credits soft products as type-match Commons stock, not mill-specific plant claims", () => {
+    for (const slug of softTubes) {
+      const sku = dayProducts.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(/type-match Wikimedia Commons stock/i);
+    }
+    for (const slug of ["balluff", "plastipak", "stelco"]) {
+      const sku = dayProducts.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(/not a mill-specific/i);
+    }
+  });
+});
+
 describe("homepage products picker", () => {
   it("only picks approved products with their own real photo, spread across categories and suppliers", () => {
     const products = packProducts.map(scrapedToProduct);
