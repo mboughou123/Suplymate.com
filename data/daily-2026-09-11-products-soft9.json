@@ -1,0 +1,321 @@
+{
+  "label": "DAILY-2026-09-11-PRODUCTS-SOFT9",
+  "source_seal": "daily/2026-09-11/_qa/researcher-products-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-11-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [],
+  "soft": [
+    {
+      "slug": "atlas-tube",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "balluff",
+      "reason": "Balluff HQ campus aerial + generic sensor/conveyor lab \u2014 soft campus / category sensors"
+    },
+    {
+      "slug": "metal-matic",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "plastipak",
+      "reason": "two pulp-mill campus aerials \u2014 soft campus (not PET bottles/preforms close-up)"
+    },
+    {
+      "slug": "sharon-tube",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "stelco",
+      "reason": "street rebar staging + steel-mill-across-water campus \u2014 steel category / campus soft"
+    },
+    {
+      "slug": "valmont-tubing",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "venus-pipes",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "wheatland-tube",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    }
+  ],
+  "hold_out_count": 41,
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "stills": [
+    {
+      "slug": "atlas-tube",
+      "path": "/images/products/atlas-tube/atlas-hss.jpg",
+      "filename": "atlas-hss.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "atlas-tube",
+      "path": "/images/products/atlas-tube/atlas-jumbo.jpg",
+      "filename": "atlas-jumbo.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/products/balluff/balluff-rfid.jpg",
+      "filename": "balluff-rfid.jpg",
+      "sha256": "ddbaa26f34bccd05b8ba8473b35ab0c43ddc152311f902065fe185480c237b8d",
+      "bytes": 270684,
+      "grade": "soft"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/products/balluff/balluff-sensors.jpg",
+      "filename": "balluff-sensors.jpg",
+      "sha256": "b7e43d033b206039ff0b6d42bd2e142dd2c7b6bb7796a6fa5f9c18793b2d2a9f",
+      "bytes": 251331,
+      "grade": "soft"
+    },
+    {
+      "slug": "metal-matic",
+      "path": "/images/products/metal-matic/metalmatic-dom.jpg",
+      "filename": "metalmatic-dom.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    },
+    {
+      "slug": "metal-matic",
+      "path": "/images/products/metal-matic/metalmatic-erw.jpg",
+      "filename": "metalmatic-erw.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "plastipak",
+      "path": "/images/products/plastipak/plastipak-pet.jpg",
+      "filename": "plastipak-pet.jpg",
+      "sha256": "03e5807df4cc80c1282aa6f511d5dae9c35aed4ecfa0054b4e4bd70a3cb5d73e",
+      "bytes": 473787,
+      "grade": "soft"
+    },
+    {
+      "slug": "plastipak",
+      "path": "/images/products/plastipak/plastipak-preforms.jpg",
+      "filename": "plastipak-preforms.jpg",
+      "sha256": "c193a07ce5679e91f1075faa35db9efbf0ac429102b4647a00f45a5f8fb2db47",
+      "bytes": 383091,
+      "grade": "soft"
+    },
+    {
+      "slug": "sharon-tube",
+      "path": "/images/products/sharon-tube/sharon-dom.jpg",
+      "filename": "sharon-dom.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "sharon-tube",
+      "path": "/images/products/sharon-tube/sharon-erw.jpg",
+      "filename": "sharon-erw.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    },
+    {
+      "slug": "stelco",
+      "path": "/images/products/stelco/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "sha256": "b18fdea07f0ea19563128d2a662e163fbcd26bc6701c208346fd643a14d96204",
+      "bytes": 253217,
+      "grade": "soft"
+    },
+    {
+      "slug": "stelco",
+      "path": "/images/products/stelco/stelco-coated.jpg",
+      "filename": "stelco-coated.jpg",
+      "sha256": "0edae7658218f6f9808f9a5791033a1731c41a934cdf2e31d6fc3dcfe0c27891",
+      "bytes": 333689,
+      "grade": "soft"
+    },
+    {
+      "slug": "valmont-tubing",
+      "path": "/images/products/valmont-tubing/valmont-mech.jpg",
+      "filename": "valmont-mech.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "valmont-tubing",
+      "path": "/images/products/valmont-tubing/valmont-struct.jpg",
+      "filename": "valmont-struct.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    },
+    {
+      "slug": "venus-pipes",
+      "path": "/images/products/venus-pipes/venus-seamless.jpg",
+      "filename": "venus-seamless.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    },
+    {
+      "slug": "venus-pipes",
+      "path": "/images/products/venus-pipes/venus-welded.jpg",
+      "filename": "venus-welded.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "wheatland-tube",
+      "path": "/images/products/wheatland-tube/wheatland-sprinkler.jpg",
+      "filename": "wheatland-sprinkler.jpg",
+      "sha256": "74ae20a42cea3d6166afc4e6364d8bebf9b608bc3a79601dbe3e15f8dbc98211",
+      "bytes": 407799,
+      "grade": "soft"
+    },
+    {
+      "slug": "wheatland-tube",
+      "path": "/images/products/wheatland-tube/wheatland-std.jpg",
+      "filename": "wheatland-std.jpg",
+      "sha256": "c2a17f182e6a975516de89aaada80dc820217885c2520c242d8d040bf2ac5785",
+      "bytes": 552475,
+      "grade": "soft"
+    }
+  ],
+  "products": [
+    {
+      "slug": "atlas-tube",
+      "product_name": "Atlas Tube Hollow Structural Sections and Jumbo HSS",
+      "supplier_name": "Atlas Tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.atlastube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/atlas-tube/atlas-hss.jpg",
+        "/images/products/atlas-tube/atlas-jumbo.jpg"
+      ],
+      "soft_reason": "shared galvanized pipe-bundle + glycol HVAC \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "balluff",
+      "product_name": "Balluff Industrial Sensors RFID and Machine Vision Accessories",
+      "supplier_name": "Balluff GmbH",
+      "category": "Industrial Parts",
+      "source_url": "https://www.balluff.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/balluff/balluff-rfid.jpg",
+        "/images/products/balluff/balluff-sensors.jpg"
+      ],
+      "soft_reason": "Balluff HQ campus aerial + generic sensor/conveyor lab \u2014 soft campus / category sensors"
+    },
+    {
+      "slug": "metal-matic",
+      "product_name": "Metal-Matic ERW and DOM Carbon Steel Mechanical Tubing",
+      "supplier_name": "Metal-Matic, LLC",
+      "category": "Tube & Pipes",
+      "source_url": "https://ptcsteel.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/metal-matic/metalmatic-dom.jpg",
+        "/images/products/metal-matic/metalmatic-erw.jpg"
+      ],
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "plastipak",
+      "product_name": "Plastipak PET Bottles Preforms and Rigid Plastic Containers",
+      "supplier_name": "Plastipak Holdings, Inc.",
+      "category": "Packaging",
+      "source_url": "https://www.plastipak.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/plastipak/plastipak-pet.jpg",
+        "/images/products/plastipak/plastipak-preforms.jpg"
+      ],
+      "soft_reason": "two pulp-mill campus aerials \u2014 soft campus (not PET bottles/preforms close-up)"
+    },
+    {
+      "slug": "sharon-tube",
+      "product_name": "Sharon Tube DOM Mechanical and ERW Carbon Steel Tubing",
+      "supplier_name": "Sharon Tube Company",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.sharontube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/sharon-tube/sharon-dom.jpg",
+        "/images/products/sharon-tube/sharon-erw.jpg"
+      ],
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "stelco",
+      "product_name": "Stelco Hot Rolled Cold Rolled and Coated Flat Steel",
+      "supplier_name": "Stelco Holdings Inc.",
+      "category": "Steel & Metals",
+      "source_url": "https://www.stelco.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/stelco/mill-fallback-2.jpg",
+        "/images/products/stelco/stelco-coated.jpg"
+      ],
+      "soft_reason": "street rebar staging + steel-mill-across-water campus \u2014 steel category / campus soft"
+    },
+    {
+      "slug": "valmont-tubing",
+      "product_name": "Valmont Tubing Custom Mechanical and Structural Steel Tube",
+      "supplier_name": "Valmont Tubing",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.valmonttubing.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/valmont-tubing/valmont-mech.jpg",
+        "/images/products/valmont-tubing/valmont-struct.jpg"
+      ],
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "venus-pipes",
+      "product_name": "Venus Pipes Stainless Seamless and Welded Pipes and Tubes",
+      "supplier_name": "Venus Pipes & Tubes Limited",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.venuspipes.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/venus-pipes/venus-seamless.jpg",
+        "/images/products/venus-pipes/venus-welded.jpg"
+      ],
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    },
+    {
+      "slug": "wheatland-tube",
+      "product_name": "Wheatland Tube Standard Pipe Fence Tube and Sprinkler Pipe",
+      "supplier_name": "Wheatland Tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.wheatland.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/wheatland-tube/wheatland-sprinkler.jpg",
+        "/images/products/wheatland-tube/wheatland-std.jpg"
+      ],
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes"
+    }
+  ]
+}
