@@ -1,0 +1,126 @@
+{
+  "label": "DAILY-2026-09-11-HARD-SKIP12-CLEARED",
+  "source_seal": "daily/2026-09-11/_mill_hard_skip12/_qa/researcher-seal.json",
+  "researcher_label": "QA-HARD-SKIP12-MILL-PLANTS-RESEARCHER-OK",
+  "wire_ok": [
+    "cosmo-films",
+    "atlas-tube",
+    "pilz",
+    "handytube",
+    "metal-matic",
+    "venus-pipes",
+    "service-wire",
+    "mukand",
+    "wienerberger",
+    "centravis",
+    "wipak"
+  ],
+  "soft": [
+    {
+      "slug": "linmot",
+      "reason": "NTI AG LinMot Spreitenbach campus exterior \u2014 branded HQ/campus not production floor"
+    }
+  ],
+  "hold_out": [],
+  "prior_pr31_locked": true,
+  "wienerberger_note": "upgrades prior soft HQ showcase to OK Toru\u0144 plant primary; prior soft wire stays locked",
+  "zekelman_note": "atlas-tube OK as distinct brand from wheatland-tube; no parent zekelman card",
+  "stills": [
+    {
+      "slug": "cosmo-films",
+      "path": "/images/suppliers/cosmo-films/cosmo-films_01.jpg",
+      "filename": "cosmo-films_01.jpg",
+      "grade": "ok",
+      "sha256": "691aeee7626252a0cb7e69441bdbbbfbb1fab897170385e256f6d9bd90c7626a",
+      "bytes": 298092
+    },
+    {
+      "slug": "atlas-tube",
+      "path": "/images/suppliers/atlas-tube/atlas-tube_01.jpg",
+      "filename": "atlas-tube_01.jpg",
+      "grade": "ok",
+      "sha256": "bb360dc8866aa79a92b7523006ff7b525f585b2f98399ec1ec025738185b3461",
+      "bytes": 567030
+    },
+    {
+      "slug": "pilz",
+      "path": "/images/suppliers/pilz/pilz_01.jpg",
+      "filename": "pilz_01.jpg",
+      "grade": "ok",
+      "sha256": "012331467ac716909c3943c7d0c1a5c2806729c1deca61a90d480d3a9b96121a",
+      "bytes": 176955
+    },
+    {
+      "slug": "handytube",
+      "path": "/images/suppliers/handytube/handytube_01.jpg",
+      "filename": "handytube_01.jpg",
+      "grade": "ok",
+      "sha256": "4033cb157056171a82b8eafe26345e9fb1244114cb82889dd4b8bfeb0a995fcb",
+      "bytes": 440117
+    },
+    {
+      "slug": "metal-matic",
+      "path": "/images/suppliers/metal-matic/metal-matic_01.jpg",
+      "filename": "metal-matic_01.jpg",
+      "grade": "ok",
+      "sha256": "6a8a226e69463adfafc634e813674e6564db4088eb2b9ed9f15bf319a95c7ec6",
+      "bytes": 995066
+    },
+    {
+      "slug": "venus-pipes",
+      "path": "/images/suppliers/venus-pipes/venus-pipes_01.jpg",
+      "filename": "venus-pipes_01.jpg",
+      "grade": "ok",
+      "sha256": "dc8c9061ee18ea056726fe6597c6787cdd62e888d70b26c8a47b0ae3e4a768a0",
+      "bytes": 987651
+    },
+    {
+      "slug": "service-wire",
+      "path": "/images/suppliers/service-wire/service-wire_01.jpg",
+      "filename": "service-wire_01.jpg",
+      "grade": "ok",
+      "sha256": "aa75d73447a98fb72890e7449f5cf3adbc4d9affca9219caf782665c19c86428",
+      "bytes": 932193
+    },
+    {
+      "slug": "mukand",
+      "path": "/images/suppliers/mukand/mukand_01.jpg",
+      "filename": "mukand_01.jpg",
+      "grade": "ok",
+      "sha256": "e8806e16095c03b04d60e6c1ac12e96d33d32b05496bbcbfd9e96800a579b468",
+      "bytes": 610711
+    },
+    {
+      "slug": "wienerberger",
+      "path": "/images/suppliers/wienerberger/wienerberger_01.jpg",
+      "filename": "wienerberger_01.jpg",
+      "grade": "ok",
+      "sha256": "9510a4f4c65fc982a33ebba8d73b25cfe5b44c2b366764adff6b6e2b7038b9dc",
+      "bytes": 1036566
+    },
+    {
+      "slug": "centravis",
+      "path": "/images/suppliers/centravis/centravis_01.jpg",
+      "filename": "centravis_01.jpg",
+      "grade": "ok",
+      "sha256": "95efc363d58b1e0e2d0a63ecfeaf612c391b1dc7fbd03fc5e7e2d4a4762aa5c7",
+      "bytes": 578565
+    },
+    {
+      "slug": "wipak",
+      "path": "/images/suppliers/wipak/wipak_01.jpg",
+      "filename": "wipak_01.jpg",
+      "grade": "ok",
+      "sha256": "bf966bf4d611ca7b9ed15905bc93dd052237311465e6f7c38ab5269bbb854283",
+      "bytes": 436460
+    },
+    {
+      "slug": "linmot",
+      "path": "/images/suppliers/linmot/linmot_01.jpg",
+      "filename": "linmot_01.jpg",
+      "grade": "soft",
+      "sha256": "837f1161749270fbc0e6bd6d51f8727130d8e095bba04b974bc5b9bc1a8e6660",
+      "bytes": 711185
+    }
+  ]
+}
