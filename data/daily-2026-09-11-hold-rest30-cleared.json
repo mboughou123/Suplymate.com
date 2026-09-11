@@ -1,0 +1,329 @@
+{
+  "label": "DAILY-2026-09-11-HOLD-REST30-CLEARED",
+  "source_seal": "daily/2026-09-11/_mill_hold_rest30/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD-REST30-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "epl-limited",
+    "graham-packaging",
+    "retal",
+    "artrom",
+    "jindal-stainless",
+    "sharon-tube",
+    "thompson-pipe",
+    "valmont-tubing",
+    "wheatland-tube",
+    "bishop-wisecarver",
+    "kalyani-steels",
+    "sber",
+    "thomson-linear",
+    "tratos",
+    "weidmuller"
+  ],
+  "soft": [
+    {
+      "slug": "etex",
+      "reason": "Portbury Dock Etex plasterboard plant aerial \u2014 branding not crisply verified"
+    },
+    {
+      "slug": "logoplaste",
+      "reason": "Logoplaste Cascais Innovation Lab / HQ campus \u2014 not production floor"
+    },
+    {
+      "slug": "plastipak",
+      "reason": "Clean Tech affiliate recycling campus \u2014 real plant, affiliate brand"
+    },
+    {
+      "slug": "columbus-stainless",
+      "reason": "Middelburg stainless mill aerial \u2014 branding not crisply readable"
+    },
+    {
+      "slug": "fine-tubes",
+      "reason": "Fine Tubes Plymouth campus + globe sculpture \u2014 campus not production floor"
+    },
+    {
+      "slug": "banner-engineering",
+      "reason": "Banner Corporate Minneapolis campus \u2014 HQ not production floor"
+    },
+    {
+      "slug": "basler",
+      "reason": "Curved-glass campus consistent with Basler Ahrensburg HQ \u2014 no crisp BASLER lettering"
+    },
+    {
+      "slug": "cognex",
+      "reason": "Cognex Natick HQ campus \u2014 office campus not manufacturing floor"
+    },
+    {
+      "slug": "iko",
+      "reason": "IKO Nippon Thompson campus + flags \u2014 HQ campus not production floor"
+    },
+    {
+      "slug": "murrelektronik",
+      "reason": "Murrelektronik Oppenweiler campus + flags \u2014 HQ campus not production floor"
+    },
+    {
+      "slug": "pbc-linear",
+      "reason": "PBC Linear Roscoe IL HQ brick entrance \u2014 no visible PBC branding"
+    },
+    {
+      "slug": "rbc-bearings",
+      "reason": "RBC Bearings Oxford CT Tribology Center \u2014 R&D/campus not production floor"
+    },
+    {
+      "slug": "sullair",
+      "reason": "Sullair Michigan City campus aerial \u2014 no clear Sullair branding in frame"
+    },
+    {
+      "slug": "turck",
+      "reason": "Turck HQ glass campus + monument \u2014 HQ not production floor"
+    },
+    {
+      "slug": "wago",
+      "reason": "WAGO Minden Stammsitz campus \u2014 green WAGO signage not clearly visible"
+    }
+  ],
+  "hold_out": [],
+  "prior_pr31_pr32_locked": true,
+  "zekelman_note": "wheatland-tube OK as distinct brand from atlas-tube; no parent zekelman card",
+  "stills": [
+    {
+      "slug": "epl-limited",
+      "path": "/images/suppliers/epl-limited/epl-limited_01.jpg",
+      "filename": "epl-limited_01.jpg",
+      "grade": "ok",
+      "sha256": "6ad8a8e955074d55f767be9ad4e66576449523d0dc839572b72799c321ee789a",
+      "bytes": 222806
+    },
+    {
+      "slug": "graham-packaging",
+      "path": "/images/suppliers/graham-packaging/graham-packaging_01.jpg",
+      "filename": "graham-packaging_01.jpg",
+      "grade": "ok",
+      "sha256": "de4eca3d888f32680f368e2e339d7c79e2ffc7582233d5326f6bdeb173e5699c",
+      "bytes": 384921
+    },
+    {
+      "slug": "retal",
+      "path": "/images/suppliers/retal/retal_01.jpg",
+      "filename": "retal_01.jpg",
+      "grade": "ok",
+      "sha256": "d5db7f339ccb6ddf431d996693b2448629f4498d6c53f0e467d0451afbcf1682",
+      "bytes": 169323
+    },
+    {
+      "slug": "artrom",
+      "path": "/images/suppliers/artrom/artrom_01.jpg",
+      "filename": "artrom_01.jpg",
+      "grade": "ok",
+      "sha256": "71b2477324263c1597752157bbeb042ad7eb52bc04d404e983184badad0b19b9",
+      "bytes": 607920
+    },
+    {
+      "slug": "jindal-stainless",
+      "path": "/images/suppliers/jindal-stainless/jindal-stainless_01.jpg",
+      "filename": "jindal-stainless_01.jpg",
+      "grade": "ok",
+      "sha256": "f6841dadd8ce69ece306a14d05d46c01ee9054df9400af0282e72198e202cc6a",
+      "bytes": 221226
+    },
+    {
+      "slug": "sharon-tube",
+      "path": "/images/suppliers/sharon-tube/sharon-tube_01.jpg",
+      "filename": "sharon-tube_01.jpg",
+      "grade": "ok",
+      "sha256": "06d7b1d3cf666570aab13b4d3792108cbbf5db0141af0e295461a868e022a57c",
+      "bytes": 894259
+    },
+    {
+      "slug": "thompson-pipe",
+      "path": "/images/suppliers/thompson-pipe/thompson-pipe_01.jpg",
+      "filename": "thompson-pipe_01.jpg",
+      "grade": "ok",
+      "sha256": "743bf163ce9e5e78c3735fd684398500cee5c92801b14813e9a0f9358aa06ba7",
+      "bytes": 918342
+    },
+    {
+      "slug": "valmont-tubing",
+      "path": "/images/suppliers/valmont-tubing/valmont-tubing_01.jpg",
+      "filename": "valmont-tubing_01.jpg",
+      "grade": "ok",
+      "sha256": "a60a3f1480d10d878083fa6185478760735968278d89c179b596af7a0aa51af7",
+      "bytes": 665455
+    },
+    {
+      "slug": "wheatland-tube",
+      "path": "/images/suppliers/wheatland-tube/wheatland-tube_01.jpg",
+      "filename": "wheatland-tube_01.jpg",
+      "grade": "ok",
+      "sha256": "ea3af122f9b15575711e18e6f532fb4b548ec7d1f96f9bd0a595482f1ac1001e",
+      "bytes": 432965
+    },
+    {
+      "slug": "bishop-wisecarver",
+      "path": "/images/suppliers/bishop-wisecarver/bishop-wisecarver_01.jpg",
+      "filename": "bishop-wisecarver_01.jpg",
+      "grade": "ok",
+      "sha256": "a89dd3adac638d1a6e909abf270437db6a3e957b83825b1ae381a58507dcb996",
+      "bytes": 205271
+    },
+    {
+      "slug": "kalyani-steels",
+      "path": "/images/suppliers/kalyani-steels/kalyani-steels_01.jpg",
+      "filename": "kalyani-steels_01.jpg",
+      "grade": "ok",
+      "sha256": "8e35213aec4c46ea36e31f328b3efac2adc229fead7adeee39343fc966d82059",
+      "bytes": 172679
+    },
+    {
+      "slug": "sber",
+      "path": "/images/suppliers/sber/sber_01.jpg",
+      "filename": "sber_01.jpg",
+      "grade": "ok",
+      "sha256": "d8005b7c9645df14344234e23e88e469d04eb0ba0fdc7ae8551dce13f7c785d4",
+      "bytes": 216182
+    },
+    {
+      "slug": "thomson-linear",
+      "path": "/images/suppliers/thomson-linear/thomson-linear_01.jpg",
+      "filename": "thomson-linear_01.jpg",
+      "grade": "ok",
+      "sha256": "c6affead24460ac35c11508dc673a0bd25142cd83b95c6cf839b0b1698d4d271",
+      "bytes": 335395
+    },
+    {
+      "slug": "tratos",
+      "path": "/images/suppliers/tratos/tratos_01.jpg",
+      "filename": "tratos_01.jpg",
+      "grade": "ok",
+      "sha256": "635702099174cf58f694092bdb69ef38d65194e72bacbd4602c144079f8a08c6",
+      "bytes": 379350
+    },
+    {
+      "slug": "weidmuller",
+      "path": "/images/suppliers/weidmuller/weidmuller_01.jpg",
+      "filename": "weidmuller_01.jpg",
+      "grade": "ok",
+      "sha256": "3552dc26f6fea733bce0d9ae3ae831029a19108ed3a917b266ab47fb9ee2f7d1",
+      "bytes": 510297
+    },
+    {
+      "slug": "etex",
+      "path": "/images/suppliers/etex/etex_01.jpg",
+      "filename": "etex_01.jpg",
+      "grade": "soft",
+      "sha256": "6621ff7aef5db76d16159e13942dc93abde567556dbc156dd3c85e735615d5fc",
+      "bytes": 460930
+    },
+    {
+      "slug": "logoplaste",
+      "path": "/images/suppliers/logoplaste/logoplaste_01.jpg",
+      "filename": "logoplaste_01.jpg",
+      "grade": "soft",
+      "sha256": "c174b432c1ad6d9b70913bd51503725c1bfd38d74e914c8302adaaa4e701c8f8",
+      "bytes": 505547
+    },
+    {
+      "slug": "plastipak",
+      "path": "/images/suppliers/plastipak/plastipak_01.jpg",
+      "filename": "plastipak_01.jpg",
+      "grade": "soft",
+      "sha256": "c5640515a4136c7fb21bf2645a38b442bc691c773bbc3b520ae5815828deeaf5",
+      "bytes": 189482
+    },
+    {
+      "slug": "columbus-stainless",
+      "path": "/images/suppliers/columbus-stainless/columbus-stainless_01.jpg",
+      "filename": "columbus-stainless_01.jpg",
+      "grade": "soft",
+      "sha256": "be0eacb786a14f022fd57c5b85080ebf6eeba80086ebb53e087d3b094bf5e251",
+      "bytes": 112115
+    },
+    {
+      "slug": "fine-tubes",
+      "path": "/images/suppliers/fine-tubes/fine-tubes_01.jpg",
+      "filename": "fine-tubes_01.jpg",
+      "grade": "soft",
+      "sha256": "1037916a6b6a58d701d14f8b49a0fe59dbba6d001812c4d93e01392de4426098",
+      "bytes": 311068
+    },
+    {
+      "slug": "banner-engineering",
+      "path": "/images/suppliers/banner-engineering/banner-engineering_01.jpg",
+      "filename": "banner-engineering_01.jpg",
+      "grade": "soft",
+      "sha256": "6125635be5f92fda56c2a26797c4a3b50ff8891e1eac1330f21aef0cdbd31447",
+      "bytes": 276354
+    },
+    {
+      "slug": "basler",
+      "path": "/images/suppliers/basler/basler_01.jpg",
+      "filename": "basler_01.jpg",
+      "grade": "soft",
+      "sha256": "105bed4919108c36cc5b5fd08a9b55069f1589f90bc527c649be59f0f4c0dea3",
+      "bytes": 430694
+    },
+    {
+      "slug": "cognex",
+      "path": "/images/suppliers/cognex/cognex_01.jpg",
+      "filename": "cognex_01.jpg",
+      "grade": "soft",
+      "sha256": "4c30467cbf00618c9330e1c4c14732ab8acaedeb1d439d6e0ad0919c54cd10fc",
+      "bytes": 748422
+    },
+    {
+      "slug": "iko",
+      "path": "/images/suppliers/iko/iko_01.jpg",
+      "filename": "iko_01.jpg",
+      "grade": "soft",
+      "sha256": "32755cd24cbbabf0ad126fdb48728b9717f9765e4e852e4c99d2bbd09563a9d7",
+      "bytes": 198321
+    },
+    {
+      "slug": "murrelektronik",
+      "path": "/images/suppliers/murrelektronik/murrelektronik_01.jpg",
+      "filename": "murrelektronik_01.jpg",
+      "grade": "soft",
+      "sha256": "6b85021417e1db079d54642a8d1ab80c589e68db9f9a7dab884d9a4bfcdc2a7f",
+      "bytes": 343817
+    },
+    {
+      "slug": "pbc-linear",
+      "path": "/images/suppliers/pbc-linear/pbc-linear_01.jpg",
+      "filename": "pbc-linear_01.jpg",
+      "grade": "soft",
+      "sha256": "4a7bf3414fa11751b72a1015cb367a5aacea7d9f2e2420f2540902a21dbdd7af",
+      "bytes": 192716
+    },
+    {
+      "slug": "rbc-bearings",
+      "path": "/images/suppliers/rbc-bearings/rbc-bearings_01.jpg",
+      "filename": "rbc-bearings_01.jpg",
+      "grade": "soft",
+      "sha256": "bbbc6ec9262a188ecf409477adccd3d392bf73314d69606197ccfb059c8f4517",
+      "bytes": 505124
+    },
+    {
+      "slug": "sullair",
+      "path": "/images/suppliers/sullair/sullair_01.jpg",
+      "filename": "sullair_01.jpg",
+      "grade": "soft",
+      "sha256": "b0b01ca73e2d6444ab14fa3980a17acda90121c2ac3fbccb1fd6494962dc0af9",
+      "bytes": 622735
+    },
+    {
+      "slug": "turck",
+      "path": "/images/suppliers/turck/turck_01.jpg",
+      "filename": "turck_01.jpg",
+      "grade": "soft",
+      "sha256": "b9fcfca257118616081fad514bf2cf27af6efbdd02bf7f78c157f1f7ea77e209",
+      "bytes": 363659
+    },
+    {
+      "slug": "wago",
+      "path": "/images/suppliers/wago/wago_01.jpg",
+      "filename": "wago_01.jpg",
+      "grade": "soft",
+      "sha256": "0c834ab94513a9a4449363701c0971ce19381e9217df5136c6821ea5b236cba6",
+      "bytes": 342229
+    }
+  ]
+}
