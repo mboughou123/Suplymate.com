@@ -1,0 +1,1089 @@
+{
+  "label": "DAILY-2026-09-11-HOLD41-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-11/_qa_hold41_products_pack/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD41-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "banner-engineering",
+    "basler",
+    "bishop-wisecarver",
+    "cognex",
+    "epl-limited",
+    "graham-packaging",
+    "handytube",
+    "hawe",
+    "iko",
+    "pilz",
+    "printpack",
+    "rbc-bearings",
+    "retal",
+    "sullair",
+    "thomson-linear",
+    "wago",
+    "weidmuller",
+    "wienerberger",
+    "wipak"
+  ],
+  "soft": [
+    {
+      "slug": "bucher-hydraulics",
+      "reason": "official Bucher CAD/CGI product renders \u2014 catalog CGI not photo"
+    },
+    {
+      "slug": "centravis",
+      "reason": "tube bundles + HX plant instrumentation \u2014 facility application"
+    },
+    {
+      "slug": "columbus-stainless",
+      "reason": "warehouse stainless coil stacks \u2014 unbranded type-match"
+    },
+    {
+      "slug": "cosmo-films",
+      "reason": "Cosmo marketing banners with overlays \u2014 branded collage"
+    },
+    {
+      "slug": "fine-tubes",
+      "reason": "unbranded precision tube process closeups \u2014 type-match"
+    },
+    {
+      "slug": "jindal-stainless",
+      "reason": "unbranded stainless coil line/stacks \u2014 type-match"
+    },
+    {
+      "slug": "linmot",
+      "reason": "automation application + unbranded linear modules \u2014 type-match"
+    },
+    {
+      "slug": "logoplaste",
+      "reason": "lifestyle/application PET bottles \u2014 not branded product still"
+    },
+    {
+      "slug": "mukand",
+      "reason": "round-bar stack + CGI automotive end-use collage \u2014 soft CGI"
+    },
+    {
+      "slug": "pbc-linear",
+      "reason": "official PBC Linear CGI catalog stills \u2014 not photo"
+    },
+    {
+      "slug": "service-wire",
+      "reason": "official Service Wire catalog CGI cutaways \u2014 diagram soft"
+    },
+    {
+      "slug": "thompson-pipe",
+      "reason": "large-diameter pipe field-install application \u2014 not stock stills"
+    },
+    {
+      "slug": "tratos",
+      "reason": "catalog cable cutaways CGI-ish \u2014 soft catalog"
+    }
+  ],
+  "blocked_skipped": [
+    "artrom",
+    "clearwater-paper",
+    "etex",
+    "kalyani-steels",
+    "murrelektronik",
+    "sber",
+    "sterlite-technologies",
+    "suedpack",
+    "turck"
+  ],
+  "soft_9_locked": true,
+  "rfq_only": true,
+  "stills": [
+    {
+      "slug": "banner-engineering",
+      "path": "/images/products/banner-engineering/banner-photo.jpg",
+      "filename": "banner-photo.jpg",
+      "grade": "ok",
+      "sha256": "069dc910543fa553ec7450fa2404b00542ea32690837948168b48c8bf5b63956",
+      "bytes": 62407
+    },
+    {
+      "slug": "banner-engineering",
+      "path": "/images/products/banner-engineering/banner-safety.jpg",
+      "filename": "banner-safety.jpg",
+      "grade": "ok",
+      "sha256": "86d684989bb73d1bc85db19ccea9798684fd95e9cb0e8ee471a2dca7133d9e50",
+      "bytes": 71371
+    },
+    {
+      "slug": "basler",
+      "path": "/images/products/basler/basler-embedded.jpg",
+      "filename": "basler-embedded.jpg",
+      "grade": "ok",
+      "sha256": "c1278c0f50c3351d4649ba5d532f6e86236dbc24bf95c5f4e65f6a582f8bad78",
+      "bytes": 116409
+    },
+    {
+      "slug": "basler",
+      "path": "/images/products/basler/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "72d85b10803cf64661859d5ee23df1e11c4a9b88a22a5b4ef91ce8fded50a4c7",
+      "bytes": 156912
+    },
+    {
+      "slug": "bishop-wisecarver",
+      "path": "/images/products/bishop-wisecarver/bwc-dualvee.jpg",
+      "filename": "bwc-dualvee.jpg",
+      "grade": "ok",
+      "sha256": "c63a017350f2d3a7aa0d191665d0e04ef2b2b6cb6a89aab2e65eeb07d5cf6503",
+      "bytes": 138719
+    },
+    {
+      "slug": "bishop-wisecarver",
+      "path": "/images/products/bishop-wisecarver/bwc-guides.jpg",
+      "filename": "bwc-guides.jpg",
+      "grade": "ok",
+      "sha256": "a6b084c702d25febeed83cd4a5542b258ce16bcb8b4aa57d3bf2d5722e1b849c",
+      "bytes": 90898
+    },
+    {
+      "slug": "cognex",
+      "path": "/images/products/cognex/cognex-barcode.jpg",
+      "filename": "cognex-barcode.jpg",
+      "grade": "ok",
+      "sha256": "4eddcdea19476fd4ab60bab67e3c9fc926c07e730bcd97a9df2cf9d6d17b961d",
+      "bytes": 93776
+    },
+    {
+      "slug": "cognex",
+      "path": "/images/products/cognex/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "65a34ff2e02f5a94738af50cdc06c1444db3a2a6d2d854536aa5bc8c3a689d73",
+      "bytes": 209503
+    },
+    {
+      "slug": "epl-limited",
+      "path": "/images/products/epl-limited/epl-barrier.jpg",
+      "filename": "epl-barrier.jpg",
+      "grade": "ok",
+      "sha256": "bc8ee1eaa0c078926b40589c99aebc036d5247dd1a57276b22e2af1f4ae98ad0",
+      "bytes": 85556
+    },
+    {
+      "slug": "epl-limited",
+      "path": "/images/products/epl-limited/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "bf9cf2483e8e458e75915b45e0e9a7740c6063024f468dc761161c717b202b78",
+      "bytes": 98247
+    },
+    {
+      "slug": "graham-packaging",
+      "path": "/images/products/graham-packaging/graham-containers.jpg",
+      "filename": "graham-containers.jpg",
+      "grade": "ok",
+      "sha256": "5e327ee88ee34ff32ec464ee3c0d5155d79ea42a7269d41ee82a18ed9ff4b64c",
+      "bytes": 132030
+    },
+    {
+      "slug": "graham-packaging",
+      "path": "/images/products/graham-packaging/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "40d46d39e296a2fb8d29e9a04023ab693f7ff663515ec5486cf6f0c3fb9dc58a",
+      "bytes": 103879
+    },
+    {
+      "slug": "handytube",
+      "path": "/images/products/handytube/handytube-capillary.jpg",
+      "filename": "handytube-capillary.jpg",
+      "grade": "ok",
+      "sha256": "2850046f05398db63e7a3605e9dffb0996ea7f91e8183fc0a8d4438b8ba7ae68",
+      "bytes": 88912
+    },
+    {
+      "slug": "handytube",
+      "path": "/images/products/handytube/handytube-coil.jpg",
+      "filename": "handytube-coil.jpg",
+      "grade": "ok",
+      "sha256": "2c4ca76ffdf90079eb866a35039ffa0718198c5f72cdd21df0e05cc7dc9037ab",
+      "bytes": 91485
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/products/hawe/hawe-pumps.jpg",
+      "filename": "hawe-pumps.jpg",
+      "grade": "ok",
+      "sha256": "ccd1c328a3071edc80c90c2b7f6d204d6f549ca1cffa9f75901463a40258a191",
+      "bytes": 172854
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/products/hawe/hawe-valves.jpg",
+      "filename": "hawe-valves.jpg",
+      "grade": "ok",
+      "sha256": "b7c603c7e907dcb47827777cbe4e54d3f1aa646cc46a459a15eeaf59e6ed7848",
+      "bytes": 132428
+    },
+    {
+      "slug": "iko",
+      "path": "/images/products/iko/iko-linear.jpg",
+      "filename": "iko-linear.jpg",
+      "grade": "ok",
+      "sha256": "e5c52855567c4a6c4d29a42ec2e53366cb78c0fb0eeb813a423cc1c482ee217f",
+      "bytes": 89456
+    },
+    {
+      "slug": "iko",
+      "path": "/images/products/iko/iko-needle.jpg",
+      "filename": "iko-needle.jpg",
+      "grade": "ok",
+      "sha256": "f6b941e22f7c572b3a4984edf3686153bd99520d2655f95fe0e7448dd9732bdc",
+      "bytes": 85975
+    },
+    {
+      "slug": "pilz",
+      "path": "/images/products/pilz/pilz-motion.jpg",
+      "filename": "pilz-motion.jpg",
+      "grade": "ok",
+      "sha256": "c7696d6a45770fcbcb427577b8d70d606797a94a72a3b9b269a20991f9663147",
+      "bytes": 109984
+    },
+    {
+      "slug": "pilz",
+      "path": "/images/products/pilz/pilz-safety.jpg",
+      "filename": "pilz-safety.jpg",
+      "grade": "ok",
+      "sha256": "0e9fb33e528914d12d826c1a52f2287c666fc29eed32663ca9aa91f8a4359bcc",
+      "bytes": 117830
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/products/printpack/printpack-lam.jpg",
+      "filename": "printpack-lam.jpg",
+      "grade": "ok",
+      "sha256": "aa7448b67798746fddf163d1d1a8994ee28a2bfe9f2f11c1417256cbd9f56fd4",
+      "bytes": 261378
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/products/printpack/printpack-rollstock.jpg",
+      "filename": "printpack-rollstock.jpg",
+      "grade": "ok",
+      "sha256": "86fa9cacb8cf54ff43949c09abf0517c1a2c3fb064f7f552e2d926a5fdda4eaf",
+      "bytes": 243065
+    },
+    {
+      "slug": "rbc-bearings",
+      "path": "/images/products/rbc-bearings/rbc-aero.jpg",
+      "filename": "rbc-aero.jpg",
+      "grade": "ok",
+      "sha256": "952426f359973465d6bf4984f898416be0a00a9a7e9f9db961a53720632186bf",
+      "bytes": 167968
+    },
+    {
+      "slug": "rbc-bearings",
+      "path": "/images/products/rbc-bearings/rbc-plain.jpg",
+      "filename": "rbc-plain.jpg",
+      "grade": "ok",
+      "sha256": "6e36aeb66dd62576391213b5d4fea9c93bbcfa9316bb1c745477959fdbbbd405",
+      "bytes": 228696
+    },
+    {
+      "slug": "retal",
+      "path": "/images/products/retal/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "f57e0cc88457df3890b8f31a1ac12d85517c210230cf9c9e81a2968e9e0e283a",
+      "bytes": 121319
+    },
+    {
+      "slug": "retal",
+      "path": "/images/products/retal/retal-closures.jpg",
+      "filename": "retal-closures.jpg",
+      "grade": "ok",
+      "sha256": "20aae70b383a8e45c0d3a39e327e87d25ced8e8db15caa023e72c429988c638a",
+      "bytes": 195967
+    },
+    {
+      "slug": "sullair",
+      "path": "/images/products/sullair/sullair-portable.jpg",
+      "filename": "sullair-portable.jpg",
+      "grade": "ok",
+      "sha256": "ea1dc0dd611341009693044f4d0b545252e8c37d430e83e58c1235993f727722",
+      "bytes": 116527
+    },
+    {
+      "slug": "sullair",
+      "path": "/images/products/sullair/sullair-screw.jpg",
+      "filename": "sullair-screw.jpg",
+      "grade": "ok",
+      "sha256": "4d28f5df77a457772ffcb9e4da22bca6ae6e4ee46a12ef943d7af7e3b82832d0",
+      "bytes": 98897
+    },
+    {
+      "slug": "thomson-linear",
+      "path": "/images/products/thomson-linear/thomson-actuators.jpg",
+      "filename": "thomson-actuators.jpg",
+      "grade": "ok",
+      "sha256": "b8df88b16a6d392a68ac64def10c4749b80e69b23acd2bf74607125fa5963316",
+      "bytes": 51294
+    },
+    {
+      "slug": "thomson-linear",
+      "path": "/images/products/thomson-linear/thomson-screws.jpg",
+      "filename": "thomson-screws.jpg",
+      "grade": "ok",
+      "sha256": "4525c9924b88588a26739331d68dc5b9cc419b9b8773abf85fe895955280db8d",
+      "bytes": 68651
+    },
+    {
+      "slug": "wago",
+      "path": "/images/products/wago/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "02b45cff06e3906e6bc6b98c1be0ce909c7e4369e14e85be2f35041ceebc3f49",
+      "bytes": 231425
+    },
+    {
+      "slug": "wago",
+      "path": "/images/products/wago/wago-io.jpg",
+      "filename": "wago-io.jpg",
+      "grade": "ok",
+      "sha256": "cd14053850bf99aaaf29ccf6f088f50b7e55e49b2fb5add0dba4d9d8dbc0f4e4",
+      "bytes": 356839
+    },
+    {
+      "slug": "weidmuller",
+      "path": "/images/products/weidmuller/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "867505d4cbb3a1027de836669ee7408a0578cee72cbd1a3f2ec03fe7d5001460",
+      "bytes": 190112
+    },
+    {
+      "slug": "weidmuller",
+      "path": "/images/products/weidmuller/weidmuller-connect.jpg",
+      "filename": "weidmuller-connect.jpg",
+      "grade": "ok",
+      "sha256": "16b6701c7e67255d2d55df3d56b03cf858d1bb8fa182d9be1b40d55e1a1e36ec",
+      "bytes": 193543
+    },
+    {
+      "slug": "wienerberger",
+      "path": "/images/products/wienerberger/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "e72c29ed135190f38657d40ccab5da78452ddb35cc3ae0c449c681e027aa58f5",
+      "bytes": 394466
+    },
+    {
+      "slug": "wienerberger",
+      "path": "/images/products/wienerberger/wienerberger-tiles.jpg",
+      "filename": "wienerberger-tiles.jpg",
+      "grade": "ok",
+      "sha256": "ac52c6d73254c37c7801d8b8b2df58b3c23c2c57b71e3b2ea58aeebefff2ab4b",
+      "bytes": 1159003
+    },
+    {
+      "slug": "wipak",
+      "path": "/images/products/wipak/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "98764483ad214bbb84e42ca75eed2a74afafb68f4e91d65bac02d69ef4e98585",
+      "bytes": 283127
+    },
+    {
+      "slug": "wipak",
+      "path": "/images/products/wipak/wipak-food.jpg",
+      "filename": "wipak-food.jpg",
+      "grade": "ok",
+      "sha256": "d9506a057c6e0e30484e31387c899a221ca77b7cd1263604df8364fb8b3f1318",
+      "bytes": 62872
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/products/bucher-hydraulics/bucher-pumps.jpg",
+      "filename": "bucher-pumps.jpg",
+      "grade": "soft",
+      "sha256": "e41816d485d08131f11438f1c9d3adff72f4cb1e9759212abb7e0bb53e50c669",
+      "bytes": 66844
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/products/bucher-hydraulics/bucher-valves.jpg",
+      "filename": "bucher-valves.jpg",
+      "grade": "soft",
+      "sha256": "118039fb33c8f876f077f90d395de494317dcce6cb4e78d0a6608a2adeeed6a9",
+      "bytes": 68761
+    },
+    {
+      "slug": "centravis",
+      "path": "/images/products/centravis/centravis-boiler.jpg",
+      "filename": "centravis-boiler.jpg",
+      "grade": "soft",
+      "sha256": "6355fde85a4472663a9bdb80d269a6dbe95eaa67db3f504435a7567e080c3dc3",
+      "bytes": 244824
+    },
+    {
+      "slug": "centravis",
+      "path": "/images/products/centravis/centravis-hx.jpg",
+      "filename": "centravis-hx.jpg",
+      "grade": "soft",
+      "sha256": "aa40cdfde64fa87218ccbc95ea921547a0853289f8df186754751cb1b0cdb47c",
+      "bytes": 234176
+    },
+    {
+      "slug": "columbus-stainless",
+      "path": "/images/products/columbus-stainless/columbus-austenitic.jpg",
+      "filename": "columbus-austenitic.jpg",
+      "grade": "soft",
+      "sha256": "b0ccf2bab1612808a858772beae361beeafaf6a96d087fc9ecfdfbfd8b2bb29b",
+      "bytes": 403493
+    },
+    {
+      "slug": "columbus-stainless",
+      "path": "/images/products/columbus-stainless/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "ff085278c4287b569569fad6667daac337908b5bae146848e6c099a31915921d",
+      "bytes": 370368
+    },
+    {
+      "slug": "cosmo-films",
+      "path": "/images/products/cosmo-films/cosmo-label.jpg",
+      "filename": "cosmo-label.jpg",
+      "grade": "soft",
+      "sha256": "d1ffca371a9b5ce2603d31bfd17681258c8d99edc2fdb88a1856fbdba1ac8295",
+      "bytes": 226473
+    },
+    {
+      "slug": "cosmo-films",
+      "path": "/images/products/cosmo-films/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "3682460b06fabd251bb9bf49b66d0810b9070367b0e5521a0f442bacc29bb052",
+      "bytes": 216891
+    },
+    {
+      "slug": "fine-tubes",
+      "path": "/images/products/fine-tubes/finetubes-nickel.jpg",
+      "filename": "finetubes-nickel.jpg",
+      "grade": "soft",
+      "sha256": "d4f37afc1d789e6d10ef431777ab97f7fddb9fc4dda2e833b4879738a5ab0841",
+      "bytes": 107125
+    },
+    {
+      "slug": "fine-tubes",
+      "path": "/images/products/fine-tubes/finetubes-stainless.jpg",
+      "filename": "finetubes-stainless.jpg",
+      "grade": "soft",
+      "sha256": "51f0615b2d29fe31fc1fd9e3ca18fd41bbfd6bc5d5e233ace87257f8d80a7ac1",
+      "bytes": 153122
+    },
+    {
+      "slug": "jindal-stainless",
+      "path": "/images/products/jindal-stainless/jindalss-specialty.jpg",
+      "filename": "jindalss-specialty.jpg",
+      "grade": "soft",
+      "sha256": "a26a16eb4016ce9a1631032de097ab1dc09f69b3434d5c9b0e87fa6d556301f5",
+      "bytes": 492912
+    },
+    {
+      "slug": "jindal-stainless",
+      "path": "/images/products/jindal-stainless/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "9fe80ed4c80596cc8e847a40536c7a42455ffd425b621976e6aa796ce255b0e7",
+      "bytes": 151719
+    },
+    {
+      "slug": "linmot",
+      "path": "/images/products/linmot/linmot-drives.jpg",
+      "filename": "linmot-drives.jpg",
+      "grade": "soft",
+      "sha256": "a4520089bc9b443241592fbf1fa857587083b92ad3989a606c2e88ce5456961d",
+      "bytes": 222049
+    },
+    {
+      "slug": "linmot",
+      "path": "/images/products/linmot/linmot-motors.jpg",
+      "filename": "linmot-motors.jpg",
+      "grade": "soft",
+      "sha256": "d92f1dddd7660e6a9d7a527411def0db4ecdfe22ef63d7e677a896f714380b3e",
+      "bytes": 63916
+    },
+    {
+      "slug": "logoplaste",
+      "path": "/images/products/logoplaste/logoplaste-containers.jpg",
+      "filename": "logoplaste-containers.jpg",
+      "grade": "soft",
+      "sha256": "723c85ef67663e3b6981fc8054ae4b08ec1d4a9cbd26de6b072d010677caf526",
+      "bytes": 133009
+    },
+    {
+      "slug": "logoplaste",
+      "path": "/images/products/logoplaste/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "535b4010811b3bb92f2a6bcde0c6262660ff064e5c690d9dbf67e5fad40641b6",
+      "bytes": 252464
+    },
+    {
+      "slug": "mukand",
+      "path": "/images/products/mukand/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "ab09e291dc2fad8a813c4b99561ab5c29c46ec37c6e1188f12b07e255f32f5ac",
+      "bytes": 284819
+    },
+    {
+      "slug": "mukand",
+      "path": "/images/products/mukand/mukand-stainless.jpg",
+      "filename": "mukand-stainless.jpg",
+      "grade": "soft",
+      "sha256": "9924e307d347a906750ab179cd89aaf97cb5b812dcda94e36de8eb883a4c422a",
+      "bytes": 137045
+    },
+    {
+      "slug": "pbc-linear",
+      "path": "/images/products/pbc-linear/pbc-actuators.jpg",
+      "filename": "pbc-actuators.jpg",
+      "grade": "soft",
+      "sha256": "cf6c0947823598af4bd557b748b4b5141604682bb7261eb61878e6c9aeff9442",
+      "bytes": 125409
+    },
+    {
+      "slug": "pbc-linear",
+      "path": "/images/products/pbc-linear/pbc-bearings.jpg",
+      "filename": "pbc-bearings.jpg",
+      "grade": "soft",
+      "sha256": "ac269939dbdc82905368697e20607cf28029986271579198ed2899bb2ac5a1df",
+      "bytes": 168063
+    },
+    {
+      "slug": "service-wire",
+      "path": "/images/products/service-wire/servicewire-building.jpg",
+      "filename": "servicewire-building.jpg",
+      "grade": "soft",
+      "sha256": "2ecae22e2583e215584d47cce0d3a5a24f532ee51520073f3481b52520f8fff3",
+      "bytes": 41934
+    },
+    {
+      "slug": "service-wire",
+      "path": "/images/products/service-wire/servicewire-power.jpg",
+      "filename": "servicewire-power.jpg",
+      "grade": "soft",
+      "sha256": "7c467fcebf9d01d07cec87e7d96a52b99de76edc035e8d7020b1e31809012fe1",
+      "bytes": 83102
+    },
+    {
+      "slug": "thompson-pipe",
+      "path": "/images/products/thompson-pipe/thompson-bwsc.jpg",
+      "filename": "thompson-bwsc.jpg",
+      "grade": "soft",
+      "sha256": "3465c6f9ca5073e80277923d72085787ab9870668ca25266753cacebe9e2cb1a",
+      "bytes": 235532
+    },
+    {
+      "slug": "thompson-pipe",
+      "path": "/images/products/thompson-pipe/thompson-pccp.jpg",
+      "filename": "thompson-pccp.jpg",
+      "grade": "soft",
+      "sha256": "1e1c538c341413109c8057e5d5b2b5c8f32c7c4a91f1a1d603314f9dc18ef89d",
+      "bytes": 364255
+    },
+    {
+      "slug": "tratos",
+      "path": "/images/products/tratos/tratos-fibre.jpg",
+      "filename": "tratos-fibre.jpg",
+      "grade": "soft",
+      "sha256": "941ec6e76f9a27ac643fb0dc8db438da2919b8acf721e7235cf25306077cfee0",
+      "bytes": 57220
+    },
+    {
+      "slug": "tratos",
+      "path": "/images/products/tratos/tratos-power.jpg",
+      "filename": "tratos-power.jpg",
+      "grade": "soft",
+      "sha256": "4339b95003acfb3dbee20e5d837c048a356fe8a1a8592880fd4e2f3f6de91991",
+      "bytes": 167432
+    }
+  ],
+  "products": [
+    {
+      "slug": "banner-engineering",
+      "product_name": "Banner Engineering Photoelectric Sensors and Safety Light Curtains",
+      "supplier_name": "Banner Engineering Corp.",
+      "category": "Industrial Parts",
+      "source_url": "https://www.bannerengineering.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/banner-engineering/banner-photo.jpg",
+        "/images/products/banner-engineering/banner-safety.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "basler",
+      "product_name": "Basler Industrial Cameras and Embedded Vision Modules",
+      "supplier_name": "Basler AG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.baslerweb.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/basler/basler-embedded.jpg",
+        "/images/products/basler/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "bishop-wisecarver",
+      "product_name": "Bishop-Wisecarver DualVee Guide Wheels and Linear Guide Systems",
+      "supplier_name": "Bishop-Wisecarver Corporation",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.bwc.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/bishop-wisecarver/bwc-dualvee.jpg",
+        "/images/products/bishop-wisecarver/bwc-guides.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "cognex",
+      "product_name": "Cognex Machine Vision Systems and Industrial Barcode Readers",
+      "supplier_name": "Cognex Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.cognex.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/cognex/cognex-barcode.jpg",
+        "/images/products/cognex/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "epl-limited",
+      "product_name": "EPL Laminated Plastic Barrier Tubes for Personal Care Packaging",
+      "supplier_name": "EPL Limited",
+      "category": "Packaging",
+      "source_url": "https://www.eplglobal.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/epl-limited/epl-barrier.jpg",
+        "/images/products/epl-limited/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "graham-packaging",
+      "product_name": "Graham Packaging Blow-Molded Plastic Bottles and Containers",
+      "supplier_name": "Graham Packaging Company",
+      "category": "Packaging",
+      "source_url": "https://www.grahampackaging.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/graham-packaging/graham-containers.jpg",
+        "/images/products/graham-packaging/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "handytube",
+      "product_name": "HandyTube Seamless Stainless Coiled and Capillary Tubing",
+      "supplier_name": "HandyTube Corporation",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.handytube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/handytube/handytube-capillary.jpg",
+        "/images/products/handytube/handytube-coil.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "hawe",
+      "product_name": "HAWE Hydraulik Pumps Valves and Compact Power Packs",
+      "supplier_name": "HAWE Hydraulik SE",
+      "category": "Industrial Parts",
+      "source_url": "https://www.hawe.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/hawe/hawe-pumps.jpg",
+        "/images/products/hawe/hawe-valves.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "iko",
+      "product_name": "IKO Needle Roller Bearings and Linear Motion Rolling Guides",
+      "supplier_name": "IKO Nippon Thompson Co., Ltd.",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.ikont.co.jp/eg/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/iko/iko-linear.jpg",
+        "/images/products/iko/iko-needle.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "pilz",
+      "product_name": "Pilz Safety Relays Controllers and Safe Motion Systems",
+      "supplier_name": "Pilz GmbH & Co. KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.pilz.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/pilz/pilz-motion.jpg",
+        "/images/products/pilz/pilz-safety.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "printpack",
+      "product_name": "Printpack Flexible Printed Laminations and Rollstock Packaging",
+      "supplier_name": "Printpack, Inc.",
+      "category": "Packaging",
+      "source_url": "https://www.printpack.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/printpack/printpack-lam.jpg",
+        "/images/products/printpack/printpack-rollstock.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "rbc-bearings",
+      "product_name": "RBC Bearings Plain Aerospace and Precision Mechanical Bearings",
+      "supplier_name": "RBC Bearings Incorporated",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.rbcbearings.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/rbc-bearings/rbc-aero.jpg",
+        "/images/products/rbc-bearings/rbc-plain.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "retal",
+      "product_name": "Retal PET Preforms Closures and Rigid Packaging Containers",
+      "supplier_name": "Retal Industries Ltd.",
+      "category": "Packaging",
+      "source_url": "https://www.retalgroup.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/retal/mill-fallback-2.jpg",
+        "/images/products/retal/retal-closures.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "sullair",
+      "product_name": "Sullair Rotary Screw and Portable Air Compressors",
+      "supplier_name": "Sullair LLC",
+      "category": "Industrial Parts",
+      "source_url": "https://www.sullair.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/sullair/sullair-portable.jpg",
+        "/images/products/sullair/sullair-screw.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "thomson-linear",
+      "product_name": "Thomson Linear Actuators Ball Screws and Linear Bearings",
+      "supplier_name": "Thomson Industries, Inc.",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.thomsonlinear.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/thomson-linear/thomson-actuators.jpg",
+        "/images/products/thomson-linear/thomson-screws.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "wago",
+      "product_name": "WAGO Spring-Clamp Terminal Blocks and I/O Systems",
+      "supplier_name": "WAGO Kontakttechnik GmbH & Co. KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.wago.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/wago/mill-fallback-2.jpg",
+        "/images/products/wago/wago-io.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "weidmuller",
+      "product_name": "Weidm\u00fcller Terminal Blocks and Industrial Connectivity Components",
+      "supplier_name": "Weidm\u00fcller Interface GmbH & Co. KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.weidmueller.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/weidmuller/mill-fallback-2.jpg",
+        "/images/products/weidmuller/weidmuller-connect.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "wienerberger",
+      "product_name": "Wienerberger Clay Blocks Facing Bricks and Roof Tiles",
+      "supplier_name": "Wienerberger AG",
+      "category": "Construction",
+      "source_url": "https://www.wienerberger.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/wienerberger/mill-fallback-2.jpg",
+        "/images/products/wienerberger/wienerberger-tiles.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "wipak",
+      "product_name": "Wipak Medical Sterile Barrier and Food Flexible Packaging Films",
+      "supplier_name": "Wipak Oy",
+      "category": "Packaging",
+      "source_url": "https://www.wipak.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/wipak/mill-fallback-2.jpg",
+        "/images/products/wipak/wipak-food.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "product_name": "Bucher Hydraulics Pumps Motors and Directional Control Valves",
+      "supplier_name": "Bucher Hydraulics GmbH",
+      "category": "Industrial Parts",
+      "source_url": "https://www.bucherhydraulics.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/bucher-hydraulics/bucher-pumps.jpg",
+        "/images/products/bucher-hydraulics/bucher-valves.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "official Bucher CAD/CGI product renders \u2014 catalog CGI not photo"
+    },
+    {
+      "slug": "centravis",
+      "product_name": "Centravis Seamless Stainless Heat Exchanger and Boiler Tubes",
+      "supplier_name": "Centravis Production Ukraine PJSC",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.centravis.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/centravis/centravis-boiler.jpg",
+        "/images/products/centravis/centravis-hx.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "tube bundles + HX plant instrumentation \u2014 facility application"
+    },
+    {
+      "slug": "columbus-stainless",
+      "product_name": "Columbus Stainless Ferritic and Austenitic Flat Stainless Products",
+      "supplier_name": "Columbus Stainless",
+      "category": "Steel & Metals",
+      "source_url": "https://www.columbus.co.za/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/columbus-stainless/columbus-austenitic.jpg",
+        "/images/products/columbus-stainless/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "warehouse stainless coil stacks \u2014 unbranded type-match"
+    },
+    {
+      "slug": "cosmo-films",
+      "product_name": "Cosmo Films BOPP Packaging Lamination and Label Films",
+      "supplier_name": "Cosmo Films Limited",
+      "category": "Packaging",
+      "source_url": "https://www.cosmofilms.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/cosmo-films/cosmo-label.jpg",
+        "/images/products/cosmo-films/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "Cosmo marketing banners with overlays \u2014 branded collage"
+    },
+    {
+      "slug": "fine-tubes",
+      "product_name": "Fine Tubes Seamless Stainless and Nickel Alloy Precision Tubing",
+      "supplier_name": "Fine Tubes Limited",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.finetubes.co.uk/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/fine-tubes/finetubes-nickel.jpg",
+        "/images/products/fine-tubes/finetubes-stainless.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "unbranded precision tube process closeups \u2014 type-match"
+    },
+    {
+      "slug": "jindal-stainless",
+      "product_name": "Jindal Stainless Slabs Coils and Specialty Stainless Steel Grades",
+      "supplier_name": "Jindal Stainless Limited",
+      "category": "Steel & Metals",
+      "source_url": "https://www.jindalstainless.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/jindal-stainless/jindalss-specialty.jpg",
+        "/images/products/jindal-stainless/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "unbranded stainless coil line/stacks \u2014 type-match"
+    },
+    {
+      "slug": "linmot",
+      "product_name": "LinMot Industrial Linear Motors and Servo Drive Modules",
+      "supplier_name": "LinMot AG",
+      "category": "Hardware & Motion",
+      "source_url": "https://linmot.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/linmot/linmot-drives.jpg",
+        "/images/products/linmot/linmot-motors.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "automation application + unbranded linear modules \u2014 type-match"
+    },
+    {
+      "slug": "logoplaste",
+      "product_name": "Logoplaste Rigid Plastic Bottles and Blow-Molded Containers",
+      "supplier_name": "Logoplaste",
+      "category": "Packaging",
+      "source_url": "https://www.logoplaste.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/logoplaste/logoplaste-containers.jpg",
+        "/images/products/logoplaste/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "lifestyle/application PET bottles \u2014 not branded product still"
+    },
+    {
+      "slug": "mukand",
+      "product_name": "Mukand Alloy and Stainless Steel Bars and Long Products",
+      "supplier_name": "Mukand Limited",
+      "category": "Steel & Metals",
+      "source_url": "https://www.mukand.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/mukand/mill-fallback-2.jpg",
+        "/images/products/mukand/mukand-stainless.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "round-bar stack + CGI automotive end-use collage \u2014 soft CGI"
+    },
+    {
+      "slug": "pbc-linear",
+      "product_name": "PBC Linear Bearings Guides and Actuators",
+      "supplier_name": "PBC Linear",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.pbclinear.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/pbc-linear/pbc-actuators.jpg",
+        "/images/products/pbc-linear/pbc-bearings.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "official PBC Linear CGI catalog stills \u2014 not photo"
+    },
+    {
+      "slug": "service-wire",
+      "product_name": "Service Wire Building Wire and Industrial Power Conductors",
+      "supplier_name": "Service Wire Company",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.servicewire.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/service-wire/servicewire-building.jpg",
+        "/images/products/service-wire/servicewire-power.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "official Service Wire catalog CGI cutaways \u2014 diagram soft"
+    },
+    {
+      "slug": "thompson-pipe",
+      "product_name": "Thompson Pipe Group Prestressed Concrete and Steel Cylinder Pipe",
+      "supplier_name": "Thompson Pipe Group",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.thompsonpipegroup.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/thompson-pipe/thompson-bwsc.jpg",
+        "/images/products/thompson-pipe/thompson-pccp.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "large-diameter pipe field-install application \u2014 not stock stills"
+    },
+    {
+      "slug": "tratos",
+      "product_name": "Tratos Power Specialty Industrial and Fibre Optic Cables",
+      "supplier_name": "Tratos Cavi S.p.A.",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.tratosgroup.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/tratos/tratos-fibre.jpg",
+        "/images/products/tratos/tratos-power.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "catalog cable cutaways CGI-ish \u2014 soft catalog"
+    }
+  ]
+}
