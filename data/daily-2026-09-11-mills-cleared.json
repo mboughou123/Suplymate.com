@@ -1,0 +1,254 @@
+{
+  "label": "DAILY-2026-09-11-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-11/_qa/researcher-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-11-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "clearwater-paper",
+    "stelco",
+    "sterlite-technologies",
+    "suedpack"
+  ],
+  "soft": [
+    {
+      "slug": "balluff",
+      "reason": "Branded Balluff Neuhausen campus/HQ exterior \u2014 not heavy mill yard"
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "reason": "Branded BUCHER hydraulics trade-show booth \u2014 not plant/yard"
+    },
+    {
+      "slug": "hawe",
+      "reason": "HAWE HQ Munich glass campus \u2014 HQ not manufacturing yard"
+    },
+    {
+      "slug": "printpack",
+      "reason": "Antique Simplex bag machine museum/lobby \u2014 category packaging, not Printpack plant"
+    },
+    {
+      "slug": "wienerberger",
+      "reason": "Branded Wienerberger HQ/campus brick showcase \u2014 not brickworks; only _01 (no Holodomor secondaries)"
+    }
+  ],
+  "hold_out_count": 41,
+  "wheatland_atlas_note": "Distinct Zekelman-family brands OK in principle; both HOLD on stills this pack; no parent zekelman card.",
+  "prior_wired_locked": true,
+  "stills": [
+    {
+      "slug": "clearwater-paper",
+      "path": "/images/suppliers/clearwater-paper/clearwater-paper_01.jpg",
+      "filename": "clearwater-paper_01.jpg",
+      "sha256": "104f1c56d6f7a0a07df5695ade9063218b75a191979a94cf68dc24e47aa55221",
+      "bytes": 302265,
+      "grade": "ok"
+    },
+    {
+      "slug": "stelco",
+      "path": "/images/suppliers/stelco/stelco_01.jpg",
+      "filename": "stelco_01.jpg",
+      "sha256": "b025697554a4f87fca0d00fa532dc653aa80de7fa4e01a7f39ef09e8478f4bbb",
+      "bytes": 256122,
+      "grade": "ok"
+    },
+    {
+      "slug": "stelco",
+      "path": "/images/suppliers/stelco/stelco_02.jpg",
+      "filename": "stelco_02.jpg",
+      "sha256": "c03e07622c2d6f4ae0f770d6aacafccfc150d35688e2af872e68ce9aaa69406d",
+      "bytes": 606834,
+      "grade": "ok"
+    },
+    {
+      "slug": "sterlite-technologies",
+      "path": "/images/suppliers/sterlite-technologies/sterlite-technologies_01.jpg",
+      "filename": "sterlite-technologies_01.jpg",
+      "sha256": "bdd25490a10ed89053033a1fbc051b3ab1b77a61b0593de5a98b3714d59be49a",
+      "bytes": 287693,
+      "grade": "ok"
+    },
+    {
+      "slug": "sterlite-technologies",
+      "path": "/images/suppliers/sterlite-technologies/sterlite-technologies_02.jpg",
+      "filename": "sterlite-technologies_02.jpg",
+      "sha256": "85f8db83abfbfc6272b160ea50bc05c23ce4f712a82ff3b6ae5469d8757534aa",
+      "bytes": 238561,
+      "grade": "ok"
+    },
+    {
+      "slug": "sterlite-technologies",
+      "path": "/images/suppliers/sterlite-technologies/sterlite-technologies_03.jpg",
+      "filename": "sterlite-technologies_03.jpg",
+      "sha256": "7b95a39b4796d920f743a91431dc6fec0dd9ab6bae66ad6dd14c8cdbd6552b91",
+      "bytes": 37823,
+      "grade": "ok"
+    },
+    {
+      "slug": "suedpack",
+      "path": "/images/suppliers/suedpack/suedpack_01.jpg",
+      "filename": "suedpack_01.jpg",
+      "sha256": "9d59e23c1a3b241ed7ffeb4875ae52ff72cf10de6872a3d7048e52f8e47587cf",
+      "bytes": 276513,
+      "grade": "ok"
+    },
+    {
+      "slug": "suedpack",
+      "path": "/images/suppliers/suedpack/suedpack_02.jpg",
+      "filename": "suedpack_02.jpg",
+      "sha256": "beee49d8abbfc8dd8b85acb1fb589fce7f58c1b2a7f234c083320f5fc98f9514",
+      "bytes": 236484,
+      "grade": "ok"
+    },
+    {
+      "slug": "suedpack",
+      "path": "/images/suppliers/suedpack/suedpack_03.jpg",
+      "filename": "suedpack_03.jpg",
+      "sha256": "b85dc3a0523aa9133f1ab5b5cb0b319e3560b94e1caaeb9dcadd20a9580e8447",
+      "bytes": 236713,
+      "grade": "ok"
+    },
+    {
+      "slug": "suedpack",
+      "path": "/images/suppliers/suedpack/suedpack_04.jpg",
+      "filename": "suedpack_04.jpg",
+      "sha256": "0f003bfaf3ffab62aef968962cc1a6da40527e8bc27163485e17e3e787c16c37",
+      "bytes": 411913,
+      "grade": "ok"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/suppliers/balluff/balluff_01.jpg",
+      "filename": "balluff_01.jpg",
+      "sha256": "3c48411ac1acc2d8b47f546451da976a5eed06474ce7acc09257f2fe2f400104",
+      "bytes": 273595,
+      "grade": "soft"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/suppliers/balluff/balluff_02.jpg",
+      "filename": "balluff_02.jpg",
+      "sha256": "9643e7c3b8c8b4f67a2844b9ddf949ffcba7a936e15b67f52c6cecfad90fbf42",
+      "bytes": 383312,
+      "grade": "soft"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/suppliers/balluff/balluff_03.jpg",
+      "filename": "balluff_03.jpg",
+      "sha256": "c78070e7daf050314985c3dbceb2c8e0aef4cb90380e420881c5a4cfab987497",
+      "bytes": 663539,
+      "grade": "soft"
+    },
+    {
+      "slug": "balluff",
+      "path": "/images/suppliers/balluff/balluff_04.jpg",
+      "filename": "balluff_04.jpg",
+      "sha256": "75c1e85f7dedd81438308b4c1ff35f10a040270b0e98e4b1ddc19def8b5ddf5b",
+      "bytes": 125506,
+      "grade": "soft"
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/suppliers/bucher-hydraulics/bucher-hydraulics_01.jpg",
+      "filename": "bucher-hydraulics_01.jpg",
+      "sha256": "c21acdeef5da25aaea144b387ddf5ce97debb80b81cee353d25c09e6908c9cc1",
+      "bytes": 1017928,
+      "grade": "soft"
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/suppliers/bucher-hydraulics/bucher-hydraulics_02.jpg",
+      "filename": "bucher-hydraulics_02.jpg",
+      "sha256": "c78070e7daf050314985c3dbceb2c8e0aef4cb90380e420881c5a4cfab987497",
+      "bytes": 663539,
+      "grade": "soft"
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/suppliers/bucher-hydraulics/bucher-hydraulics_03.jpg",
+      "filename": "bucher-hydraulics_03.jpg",
+      "sha256": "75c1e85f7dedd81438308b4c1ff35f10a040270b0e98e4b1ddc19def8b5ddf5b",
+      "bytes": 125506,
+      "grade": "soft"
+    },
+    {
+      "slug": "bucher-hydraulics",
+      "path": "/images/suppliers/bucher-hydraulics/bucher-hydraulics_04.jpg",
+      "filename": "bucher-hydraulics_04.jpg",
+      "sha256": "69bcaf59ac99de1c757c08a3084185e319eabfb566b9178341e593a5ca74bdb9",
+      "bytes": 390655,
+      "grade": "soft"
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/suppliers/hawe/hawe_01.jpg",
+      "filename": "hawe_01.jpg",
+      "sha256": "9323dacd6cf9806dda4c79e1fe206ee6740cd265072ec0eb6d950402e3b61fe7",
+      "bytes": 395098,
+      "grade": "soft"
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/suppliers/hawe/hawe_02.jpg",
+      "filename": "hawe_02.jpg",
+      "sha256": "c78070e7daf050314985c3dbceb2c8e0aef4cb90380e420881c5a4cfab987497",
+      "bytes": 663539,
+      "grade": "soft"
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/suppliers/hawe/hawe_03.jpg",
+      "filename": "hawe_03.jpg",
+      "sha256": "75c1e85f7dedd81438308b4c1ff35f10a040270b0e98e4b1ddc19def8b5ddf5b",
+      "bytes": 125506,
+      "grade": "soft"
+    },
+    {
+      "slug": "hawe",
+      "path": "/images/suppliers/hawe/hawe_04.jpg",
+      "filename": "hawe_04.jpg",
+      "sha256": "5ffb09e64c8828ccb62e9a6366a771f9d55fce8ae37c469d82cfc15dbdf1d95e",
+      "bytes": 184474,
+      "grade": "soft"
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/suppliers/printpack/printpack_01.jpg",
+      "filename": "printpack_01.jpg",
+      "sha256": "0227cdb2d4dbad27bf6e6654b178bd5343d9f6771b21b9aa59aff7a054272979",
+      "bytes": 403907,
+      "grade": "soft"
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/suppliers/printpack/printpack_02.jpg",
+      "filename": "printpack_02.jpg",
+      "sha256": "4cdac22c68fba505b7d0a1da7908fd278288d10385830d2e566d7bb86bd3b30e",
+      "bytes": 217106,
+      "grade": "soft"
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/suppliers/printpack/printpack_03.jpg",
+      "filename": "printpack_03.jpg",
+      "sha256": "790f31588f92ab4d6b79c3dd36d446adefb80f14f3e849dccd825948448cce4c",
+      "bytes": 225629,
+      "grade": "soft"
+    },
+    {
+      "slug": "printpack",
+      "path": "/images/suppliers/printpack/printpack_04.jpg",
+      "filename": "printpack_04.jpg",
+      "sha256": "9d3f3d65f56e309fde06b5457aa41733bd505f7a48829cec3ff94395b8bb187d",
+      "bytes": 235286,
+      "grade": "soft"
+    },
+    {
+      "slug": "wienerberger",
+      "path": "/images/suppliers/wienerberger/wienerberger_01.jpg",
+      "filename": "wienerberger_01.jpg",
+      "sha256": "3b44401c907851ed63414494fa1788c23cacb3d8c7d9750d1f4fec292b61ed10",
+      "bytes": 1357337,
+      "grade": "soft"
+    }
+  ]
+}
