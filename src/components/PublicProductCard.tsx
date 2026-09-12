@@ -2,10 +2,9 @@
 
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { BadgeCheck, MapPin, Truck, ArrowRight, ArrowUpRight, PackageCheck } from "lucide-react";
-import ImageWithFallback from "@/components/ImageWithFallback";
+import { MapPin, Truck, ArrowRight, ArrowUpRight, PackageCheck } from "lucide-react";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
-import { getProductFallbackImage } from "@/lib/image-fallback";
+import ProductMedia from "@/components/ProductMedia";
 import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
 
 type Props = { data: PublicProduct };
@@ -17,24 +16,14 @@ export default function PublicProductCard({ data: d }: Props) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow] duration-300 hover:border-cyan/40 hover:shadow-cardHover">
       <Link href={`/products/${d.id}`} className="relative block">
-        <div className="relative flex h-44 items-center justify-center overflow-hidden bg-slate-100">
-          <ImageWithFallback
-            src={d.imageUrl}
-            fallbackSrc={getProductFallbackImage(d.name, d.category)}
-            alt={d.name}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          {d.verified && (
-            <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
-              <BadgeCheck className="h-3.5 w-3.5" aria-hidden />
-              {tc("verified")}
-            </span>
-          )}
-          <span className="absolute right-3 top-3 rounded-md bg-black/35 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur">
-            {d.category}
-          </span>
-        </div>
+        <ProductMedia
+          src={d.imageUrl}
+          kind={d.imageKind}
+          alt={d.name}
+          category={d.category}
+          verified={d.verified}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
       </Link>
 
       <div className="flex flex-1 flex-col p-5">

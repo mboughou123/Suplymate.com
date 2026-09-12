@@ -3,7 +3,7 @@
 // feeds it the same cached `getProductsFromDb()` list the rest of the site uses
 // (no extra DB round-trip).
 import type { Product } from "@/data/products";
-import { getRealProductImage } from "@/lib/image-fallback";
+import { resolveProductImage } from "@/lib/image-fallback";
 
 export type HomeProductItem = {
   id: string;
@@ -33,6 +33,9 @@ export const HOME_PRODUCT_CATEGORIES = [
   "Industrial Parts",
 ] as const;
 
+const SYNTHETIC_SUPPLIER = /all metal|cables house/i;
+const NEXANS_SECTION = /^(nexans\s+)?(transmission|buildings?|distribution)$/i;
+
 /** i18n key (inside `homeProducts.categories`) for a product category label. */
 export function homeCategoryKey(category: string): string {
   return category
@@ -55,10 +58,24 @@ function stableHash(s: string): number {
 }
 
 /**
- * Pick real-photo products for the homepage, spreading picks across
- * categories AND suppliers so the grid is not twelve rebar photos from one
- * mill. Deterministic for a given catalogue (stable hash order, no Math.random)
- * so the ISR'd homepage does not flicker between builds.
+ * Prefer curated local mill/product stills over remote Outscraper photos, and
+ * deprioritize synthetic ALL METAL / CABLES HOUSE SKUs even if a file slipped
+ * through assignment.
+ */
+function homePhotoPreference(image: string, supplierName: string): number {
+  const synthetic = SYNTHETIC_SUPPLIER.test(supplierName) ? -80 : 0;
+  if (/^\/images\/products\//i.test(image) && !/\/ball\/aerosol/i.test(image)) {
+    return 100 + synthetic;
+  }
+  if (/^https?:\/\//i.test(image)) return 10 + synthetic;
+  return synthetic;
+}
+
+/**
+ * Pick real, object-correct product photos for the homepage. Supplier factory
+ * shots, category SVGs, illustrative renders, and stem-mismatched stills
+ * (spray can on a ball, spray gun on a cable) are excluded. Deterministic for
+ * a given catalogue so the ISR'd homepage does not flicker between builds.
  */
 export function pickHomeProducts(
   products: Product[],
@@ -69,29 +86,39 @@ export function pickHomeProducts(
   for (const p of products) {
     if (p.status && p.status !== "approved") continue;
     if (seen.has(p.id)) continue;
-    // Only the product's OWN photos qualify here — a supplier's factory shot
-    // is not a picture of the product.
-    const image = getRealProductImage({
+    const supplierName = p.supplierName ?? "";
+    // Outscraper/ALL METAL synthetic SKUs and Nexans website-section pages
+    // (Transmission / Buildings / Distribution) are not mill product stills.
+    if (SYNTHETIC_SUPPLIER.test(supplierName)) continue;
+    if (/nexans/i.test(supplierName) && NEXANS_SECTION.test(p.name.trim())) continue;
+    const resolved = resolveProductImage({
       images: p.images,
       id: p.id,
       slug: p.slug,
       supplierId: p.supplierId,
+      productName: p.name,
+      category: p.category,
     });
-    if (!image) continue;
+    if (resolved.kind !== "real" || !resolved.url) continue;
     seen.add(p.id);
     candidates.push({
       id: p.id,
       name: p.name,
       category: p.category,
-      image,
+      image: resolved.url,
       supplierId: p.supplierId ?? null,
       supplierName: p.supplierName ?? "Suplymate catalogue",
       supplierCountry: p.supplierCountry ?? null,
     });
   }
 
-  // Stable shuffle, then greedy: one product per supplier per category first.
-  candidates.sort((a, b) => stableHash(a.id) - stableHash(b.id));
+  candidates.sort((a, b) => {
+    const pref =
+      homePhotoPreference(b.image, b.supplierName) -
+      homePhotoPreference(a.image, a.supplierName);
+    if (pref) return pref;
+    return stableHash(a.id) - stableHash(b.id);
+  });
 
   const byCategory = new Map<string, HomeProductItem[]>();
   for (const cat of HOME_PRODUCT_CATEGORIES) byCategory.set(cat, []);

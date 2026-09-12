@@ -667,6 +667,8 @@
     "retry": "Retry",
     "productCount": "{count, plural, one {# product} other {# products}}",
     "moqLabel": "MOQ",
+    "illustrativeBadge": "Illustratif",
+    "noPhoto": "Pas de photo",
     "addToCart": "Ajouter au panier"
   },
   "priceCharts": {

@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
-import LanguageSelector from "@/components/LanguageSelector";
 import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
 import { homeForRole } from "@/lib/roles";
 
@@ -59,7 +58,6 @@ export default function HomeTopNav() {
         <MegaMenu tone={scrolled ? "light" : "dark"} className="hidden lg:flex" panelClassName="inset-x-0 top-full mt-2" />
 
         <div className="hidden shrink-0 items-center gap-2 lg:flex">
-          <LanguageSelector variant={scrolled ? "inline" : "navbar"} compactLabel />
           {signedIn ? (
             <Link href={home} className={solidButton}>
               {nav("dashboard")}
@@ -91,7 +89,6 @@ export default function HomeTopNav() {
         <div className="pointer-events-auto mx-auto mt-2 max-h-[calc(100vh-6rem)] max-w-6xl overflow-y-auto rounded-2xl border border-white/80 bg-white/95 p-4 shadow-glass backdrop-blur-xl lg:hidden">
           <MegaMenuMobile tone="light" onNavigate={() => setOpen(false)} />
           <div className="mt-3 flex flex-col gap-2 border-t border-slate-100 pt-3">
-            <LanguageSelector variant="inline" className="w-full" />
             {signedIn ? (
               <Link href={home} onClick={() => setOpen(false)} className="btn-primary justify-center py-2.5 text-sm">
                 {nav("dashboard")}

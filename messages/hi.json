@@ -644,7 +644,9 @@
     "endOfResults": "You've reached the end · {shown} of {total} shown",
     "retry": "Retry",
     "productCount": "{count, plural, one {# product} other {# products}}",
-    "moqLabel": "MOQ"
+    "moqLabel": "MOQ",
+    "illustrativeBadge": "चित्रण",
+    "noPhoto": "कोई फ़ोटो नहीं"
   },
   "priceCharts": {
     "pageEyebrow": "Matières",

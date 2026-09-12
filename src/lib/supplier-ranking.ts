@@ -6,6 +6,8 @@
 //
 // Result is clamped to 0–100.
 
+import { classifyImageUrl } from "@/lib/image-fallback";
+
 export type RankableSupplier = {
   name?: string | null;
   category?: string | null;
@@ -28,7 +30,10 @@ export type RankableSupplier = {
 // Empty-image cards look untrustworthy, so this is both a scoring signal and the
 // primary sort tiebreaker used across the pipeline and the public directory.
 export function hasSupplierImage(s: RankableSupplier): boolean {
-  return Boolean(s.imageUrl) || Boolean(s.images && s.images.length > 0);
+  return (
+    classifyImageUrl(s.imageUrl) === "real" ||
+    Boolean(s.images?.some((u) => classifyImageUrl(u) === "real"))
+  );
 }
 
 const KNOWN_CATEGORIES = new Set([

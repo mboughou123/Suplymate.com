@@ -20,7 +20,6 @@ import {
   FileText,
   type LucideIcon,
 } from "lucide-react";
-import LanguageSelector from "@/components/LanguageSelector";
 import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
 import { isSupplierRole } from "@/lib/roles";
 
@@ -127,9 +126,6 @@ export default function Navbar() {
         />
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <div className="hidden md:block">
-            <LanguageSelector compactLabel />
-          </div>
           {status === "loading" ? (
             <span className="hidden h-9 w-24 sm:block" />
           ) : session?.user ? (
@@ -225,9 +221,6 @@ export default function Navbar() {
           <MegaMenuMobile tone="dark" onNavigate={() => setMobileOpen(false)} />
 
           <div className="mt-3 border-t border-white/10 pt-3">
-            <div className="mb-3 px-1">
-              <LanguageSelector variant="mobile" />
-            </div>
             {session?.user ? (
               <>
                 {accountItems.map((item) => (

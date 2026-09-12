@@ -11,7 +11,11 @@ import {
 import { verifiedSuppliers } from "@/data/verified-suppliers";
 import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { suppliers as legacySuppliers, type Supplier } from "@/data/suppliers";
-import { supplierHasUsableCardImage } from "@/lib/image-fallback";
+import {
+  classifyImageUrl,
+  photoRankFromKind,
+  supplierHasUsableCardImage,
+} from "@/lib/image-fallback";
 import {
   getPackProduct,
   getPackSupplier,
@@ -19,18 +23,21 @@ import {
   overlayPackSupplier,
 } from "@/data/pack-catalog";
 
-// A supplier "has an image" if it carries a primary photo or any gallery image.
-// Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
-// lead the directory.
-function supplierHasImage(s: Supplier): boolean {
-  return supplierHasUsableCardImage(s);
+function supplierPhotoRank(s: Supplier): number {
+  if (!supplierHasUsableCardImage(s)) return 0;
+  const urls = [s.imageUrl, ...(s.supplierImages ?? [])];
+  let best = 0;
+  for (const url of urls) {
+    best = Math.max(best, photoRankFromKind(classifyImageUrl(url)));
+    if (best >= 2) return best;
+  }
+  return best;
 }
 
-// Public directory ordering: image-bearing first, then by Suplymate score
-// (falling back to reliabilityScore), then alphabetically. Used so the server
-// and the client agree on ordering.
+// Public directory ordering: real hero photos first, then illustrative, then
+// the rest — then by Suplymate score, then alphabetically.
 export function compareForDirectory(a: Supplier, b: Supplier): number {
-  const img = Number(supplierHasImage(b)) - Number(supplierHasImage(a));
+  const img = supplierPhotoRank(b) - supplierPhotoRank(a);
   if (img) return img;
   const score = (b.score ?? b.reliabilityScore ?? 0) - (a.score ?? a.reliabilityScore ?? 0);
   if (score) return score;

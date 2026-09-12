@@ -18,7 +18,7 @@ import {
   listApprovedScrapedProducts,
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
-import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
+import { resolveProductImage } from "@/lib/image-fallback";
 import { getPackProduct } from "@/data/pack-catalog";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
@@ -38,6 +38,8 @@ export type PublicProductCard = {
   verified: boolean;
   imageUrl: string;
   hasRealPhoto: boolean;
+  /** How the hero should render: real photo, labeled illustrative, or no photo. */
+  imageKind: "real" | "illustrative" | "none";
   /** Commissioned price label, or null when no public price is available. */
   priceLabel: string | null;
   priceUnit: string | null;
@@ -73,6 +75,38 @@ export type PublicProductsResult = {
 };
 
 const DEFAULT_PAGE_SIZE = 24;
+
+/** Real hero photos first, then correct-object illustrative, then the rest. */
+export function comparePublicProductCards(
+  a: PublicProductCard,
+  b: PublicProductCard
+): number {
+  const kindRank = (k: PublicProductCard["imageKind"]) => {
+    switch (k) {
+      case "real":
+        return 2;
+      case "illustrative":
+        return 1;
+      case "none":
+        return 0;
+      default: {
+        const _exhaustive: never = k;
+        return _exhaustive;
+      }
+    }
+  };
+  const byKind = kindRank(b.imageKind) - kindRank(a.imageKind);
+  if (byKind) return byKind;
+  const packScore = (c: PublicProductCard) =>
+    /^\/images\/products\//i.test(c.imageUrl) ? 1 : 0;
+  const byPack = packScore(b) - packScore(a);
+  if (byPack) return byPack;
+  const synthetic = (c: PublicProductCard) =>
+    /all metal|cables house/i.test(c.supplierName) ? 1 : 0;
+  const bySupplier = synthetic(a) - synthetic(b);
+  if (bySupplier) return bySupplier;
+  return a.name.localeCompare(b.name);
+}
 
 function clampPage(n: number | undefined): number {
   const v = Math.floor(Number(n) || 1);
@@ -128,9 +162,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
     const pageSize = clampSize(q.pageSize);
     const rows = await prisma.scrapedProduct.findMany({
       where,
-      orderBy: [{ updatedAt: "desc" }, { name: "asc" }],
-      skip: (page - 1) * pageSize,
-      take: pageSize,
+      orderBy: [{ name: "asc" }],
     });
 
     // Resolve live supplier verification + country + visibility in one query.
@@ -162,6 +194,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         productName: r.name,
         category: r.category,
       };
+      const resolved = resolveProductImage(imageInput);
       return {
         id: r.id,
         name: r.name,
@@ -171,8 +204,9 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         supplierCountry: r.supplierCountry ?? sup?.country ?? null,
         supplierVisible,
         verified,
-        imageUrl: getBestProductImage(imageInput),
-        hasRealPhoto: hasRealProductImage(imageInput),
+        imageUrl: resolved.url ?? "",
+        hasRealPhoto: resolved.kind === "real",
+        imageKind: resolved.kind,
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
         moq: r.moq ?? null,
@@ -181,9 +215,12 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
       };
     });
 
+    items.sort(comparePublicProductCards);
+    const pageItems = items.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+
     const facets = await dbFacets();
     return {
-      items,
+      items: pageItems,
       total,
       page,
       pageSize,
@@ -253,6 +290,7 @@ function staticToCard(p: Product): PublicProductCard {
     productName: p.name,
     category: p.category,
   };
+  const resolved = resolveProductImage(imageInput);
   // RFQ-only listings (mill quotes, no public price) come through
   // scrapedToProduct with basePrice undefined and a legacy priceMin of 0 —
   // that is "no price", never "$0.00".
@@ -266,8 +304,9 @@ function staticToCard(p: Product): PublicProductCard {
     supplierCountry: p.supplierCountry ?? null,
     supplierVisible: Boolean(p.supplierId) && !getPackSupplier(p.supplierId ?? "")?.productHostOnly,
     verified: false,
-    imageUrl: getBestProductImage(imageInput),
-    hasRealPhoto: hasRealProductImage(imageInput),
+    imageUrl: resolved.url ?? "",
+    hasRealPhoto: resolved.kind === "real",
+    imageKind: resolved.kind,
     priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
     moq: p.moq ?? null,
@@ -297,6 +336,8 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     if (q.hasPrice && !c.priceLabel) return false;
     return true;
   });
+
+  cards.sort(comparePublicProductCards);
 
   const total = cards.length;
   const page = clampPage(q.page);

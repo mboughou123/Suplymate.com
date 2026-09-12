@@ -1,4 +1,5 @@
 import { localStillsForProduct } from "@/lib/product-stills";
+import { imageFitsProduct } from "@/lib/product-image-fit";
 
 // Centralized image-fallback system for Suplymate.
 //
@@ -164,17 +165,76 @@ export function isFirstPartyProductImageUrl(url?: string | null): boolean {
   }
 }
 
+export type ImageKind = "real" | "illustrative" | "category" | "none";
+
+export type ResolvedProductImage = {
+  url: string | undefined;
+  kind: "real" | "illustrative" | "none";
+};
+
+/**
+ * Classify a URL as a real photograph, a labeled illustrative render, a
+ * category/placeholder SVG, or nothing. Local pack rasters under
+ * `/images/products/**` and `/images/suppliers/**` count as real. Google Maps
+ * hosts stay unusable (they 403 `/_next/image`). `/images/generated/**` is
+ * illustrative. SVGs and dummy slider assets are not photos.
+ */
+export function classifyImageUrl(url?: string | null): ImageKind {
+  if (typeof url !== "string") return "none";
+  const value = url.trim();
+  if (!value) return "none";
+
+  if (
+    /placeholder[-_]?(product|supplier)?\.svg/i.test(value) ||
+    /\.svg(?:$|\?)/i.test(value)
+  ) {
+    return "category";
+  }
+
+  if (isGoogleMapsImageUrl(value)) return "none";
+
+  if (/\/images\/generated\//i.test(value)) return "illustrative";
+
+  const isRaster = /\.(jpe?g|png|webp)(?:$|\?)/i.test(value);
+  if (/^\/images\/(products|suppliers)\//i.test(value) && isRaster) return "real";
+  if (/^https?:\/\//i.test(value)) {
+    if (/dummy|placeholder|1x1\.|spacer|revslider[^/]*\/.*dumm/i.test(value)) {
+      return "none";
+    }
+    return "real";
+  }
+  if (/^\/images\/.+\.(jpe?g|png|webp)$/i.test(value)) return "real";
+  return "none";
+}
+
+export function photoRankFromKind(kind: ImageKind): number {
+  switch (kind) {
+    case "real":
+      return 2;
+    case "illustrative":
+      return 1;
+    case "category":
+    case "none":
+      return 0;
+    default: {
+      const _exhaustive: never = kind;
+      return _exhaustive;
+    }
+  }
+}
+
 /**
  * True only for a REAL photograph we can render on a card: a local raster
  * still, or a non-Maps remote http(s) photo. Google Maps / googleusercontent
- * URLs, local branded SVG tiles, and empty values are NOT real photos.
+ * URLs, generated renders, local branded SVG tiles, and empty values are NOT
+ * real photos.
  */
 export function isRealImageUrl(url?: string | null): boolean {
-  if (typeof url !== "string") return false;
-  const value = url.trim();
-  if (isGoogleMapsImageUrl(value)) return false;
-  if (/^https?:\/\//i.test(value)) return true;
-  return /^\/images\/.+\.(jpe?g|png|webp)$/i.test(value);
+  return classifyImageUrl(url) === "real";
+}
+
+export function isIllustrativeImageUrl(url?: string | null): boolean {
+  return classifyImageUrl(url) === "illustrative";
 }
 
 /**
@@ -203,8 +263,8 @@ export type ProductImageInput = {
   /** Real images attached to the product itself (DB / scraped). */
   images?: (string | null | undefined)[] | null;
   /**
-   * Real photos inherited from the linked supplier (e.g. Google Maps / website
-   * media). Used as a secondary real-photo source for product cards.
+   * Photos inherited from the linked supplier (factory / Maps). Not used as a
+   * product-card hero — a storefront shot is not a picture of the SKU.
    */
   supplierImages?: (string | null | undefined)[] | null;
   /** Catalogue id — used to look up committed `/images/products/<slug>/` stills. */
@@ -217,43 +277,68 @@ export type ProductImageInput = {
   category?: string;
 };
 
+function firstFitting(
+  urls: (string | null | undefined)[] | null | undefined,
+  input: ProductImageInput,
+  kind: "real" | "illustrative"
+): string | undefined {
+  const match = (urls ?? []).find((u) => {
+    if (typeof u !== "string") return false;
+    if (classifyImageUrl(u) !== kind) return false;
+    if (!imageFitsProduct(u, input.productName, input.category)) return false;
+    // Keep this branch's first-party rule for card heroes: mill-site hotlinks
+    // break as raw `<img>` and must not win over a local still / Blob photo.
+    if (kind === "real" && !isFirstPartyProductImageUrl(u)) return false;
+    return true;
+  });
+  return match ?? undefined;
+}
+
 /**
- * Return the first REAL product photo if one exists, walking:
- *   committed local still (by slug) → product image → linked-supplier photo.
- * Third-party hotlinks (mill sites, Scene7, …) are never a card primary —
- * those hosts break as raw `<img>` on `/products`. Returns undefined when only
- * a category tile would be available.
+ * Best catalogue hero for a product: a fitting first-party real photo, else a
+ * fitting illustrative render, else none. Never returns a category SVG, a
+ * Google Maps URL, a supplier factory shot, or a wrong-object still
+ * (spray can on a steel ball, spray gun on a cable).
+ */
+export function resolveProductImage(input: ProductImageInput): ResolvedProductImage {
+  const own = [...localStillsForProduct(input), ...(input.images ?? [])];
+  const real = firstFitting(own, input, "real");
+  if (real) return { url: real, kind: "real" };
+  const illustrative = firstFitting(own, input, "illustrative");
+  if (illustrative) return { url: illustrative, kind: "illustrative" };
+  return { url: undefined, kind: "none" };
+}
+
+export function productPhotoRank(input: ProductImageInput): number {
+  return photoRankFromKind(resolveProductImage(input).kind);
+}
+
+/**
+ * Return the first REAL product photo that depicts this SKU.
+ * Supplier factory shots are ignored — they are not a picture of the product.
  */
 export function getRealProductImage(input: ProductImageInput): string | undefined {
-  const preferred = pickPreferredCardImage([
-    ...localStillsForProduct(input),
-    ...(input.images ?? []),
-    ...(input.supplierImages ?? []),
-  ]);
-  if (preferred && isFirstPartyProductImageUrl(preferred)) return preferred;
-  return undefined;
+  const resolved = resolveProductImage(input);
+  return resolved.kind === "real" ? resolved.url : undefined;
 }
 
 /**
- * Whether a product can be shown with a genuine photograph (its own or its
- * linked supplier's). Drives the homepage real-photo-only rule and ranks
- * photo-bearing products above fallback-only ones in the catalogue.
+ * Whether a product can be shown with a genuine photograph of the right object.
+ * Drives the homepage real-photo-only rule and ranks photo-bearing products
+ * above fallback-only ones in the catalogue.
  */
 export function hasRealProductImage(input: ProductImageInput): boolean {
-  return Boolean(getRealProductImage(input));
+  return resolveProductImage(input).kind === "real";
 }
 
 /**
- * Best image for a product, guaranteed never broken/empty. Priority:
- *   committed local still → first-party photo → category fallback → placeholder.
- * Always returns a renderable URL (the category fallback is a local SVG).
+ * Best image for a product. Prefer a fitting real/illustrative photo; only
+ * fall back to the generic placeholder (not a category glyph) when nothing
+ * depicts the right object. Catalogue cards should use `resolveProductImage`
+ * and show a "No photo" state instead of an SVG tile.
  */
 export function getBestProductImage(input: ProductImageInput): string {
-  return (
-    getRealProductImage(input) ??
-    getProductFallbackImage(input.productName, input.category) ??
-    GENERIC_PRODUCT_PLACEHOLDER
-  );
+  return resolveProductImage(input).url ?? GENERIC_PRODUCT_PLACEHOLDER;
 }
 
 /**

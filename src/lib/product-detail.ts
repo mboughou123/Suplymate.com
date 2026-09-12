@@ -14,10 +14,12 @@ import { outscraperSuppliers } from "@/data/outscraper-suppliers";
 import { getPackSupplier, toDirectorySupplier } from "@/data/pack-catalog";
 import { toDisplaySupplier } from "@/lib/supplier-display";
 import {
-  getRealProductImage,
-  hasRealProductImage,
+  classifyImageUrl,
   isRealImageUrl,
+  resolveProductImage,
+  type ResolvedProductImage,
 } from "@/lib/image-fallback";
+import { imageFitsProduct } from "@/lib/product-image-fit";
 import { calculateSupplierCompletenessScore } from "@/lib/supplier-completeness";
 import {
   COMMISSION_RATE,
@@ -306,10 +308,11 @@ export type ProductCardData = {
   category: ProductCategory;
   icon: IconKey;
   gradient: string;
-  /** Best REAL photo (product's own or linked supplier's), or undefined. */
+  /** Fitting product photo, or undefined when we should show "No photo". */
   imageUrl?: string;
-  /** True when a genuine photograph is available (not just a category tile). */
+  /** True when a genuine photograph of the right object is available. */
   hasRealPhoto: boolean;
+  imageKind: ResolvedProductImage["kind"];
   supplierId: string;
   supplierName: string;
   supplierLocation: string;
@@ -345,7 +348,8 @@ export function getProductCardData(product: Product): ProductCardData {
     productName: product.name,
     category: product.category,
   };
-  const realImage = getRealProductImage(imageInput);
+  const resolved = resolveProductImage(imageInput);
+  const realImage = resolved.kind === "real" ? resolved.url : undefined;
 
   const completenessScore = calculateSupplierCompletenessScore({
     verified: sd.verified,
@@ -368,8 +372,9 @@ export function getProductCardData(product: Product): ProductCardData {
     category: product.category,
     icon: ICONS_BY_CATEGORY[product.category],
     gradient: GALLERY_GRADIENTS[seed % GALLERY_GRADIENTS.length],
-    imageUrl: realImage,
-    hasRealPhoto: hasRealProductImage(imageInput),
+    imageUrl: resolved.url,
+    hasRealPhoto: resolved.kind === "real",
+    imageKind: resolved.kind,
     supplierId: sd.id,
     supplierName: sd.name,
     supplierLocation: [sd.city, sd.country].filter(Boolean).join(", "),
@@ -390,7 +395,21 @@ export function getProductCardData(product: Product): ProductCardData {
  * (this realises the P1→P5 tiering described in the catalogue spec).
  */
 export function productCatalogueRank(card: ProductCardData): number {
-  return card.completenessScore + (card.hasRealPhoto ? 50 : 0);
+  const photoBoost = ((): number => {
+    switch (card.imageKind) {
+      case "real":
+        return 50;
+      case "illustrative":
+        return 20;
+      case "none":
+        return 0;
+      default: {
+        const _exhaustive: never = card.imageKind;
+        return _exhaustive;
+      }
+    }
+  })();
+  return card.completenessScore + photoBoost;
 }
 
 /** Comparator for the public catalogue (highest rank first, stable by name). */
@@ -447,8 +466,14 @@ export function getProductDetail(product: Product): ProductDetail {
   const hasVideos = (product.videos?.length ?? 0) > 0;
   let gallery: GalleryImage[];
 
-  if (product.images?.length) {
-    gallery = product.images.map((url, i) => ({
+  const fittingImages = (product.images ?? []).filter((url) => {
+    const kind = classifyImageUrl(url);
+    if (kind === "none" || kind === "category") return false;
+    return imageFitsProduct(url, product.name, product.category);
+  });
+
+  if (fittingImages.length) {
+    gallery = fittingImages.map((url, i) => ({
       id: `${product.id}-img-${i}`,
       // Real photographs are labelled by product, not by an invented "view".
       label: `${product.name} — photo ${i + 1}`,
