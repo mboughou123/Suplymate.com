@@ -1,0 +1,11 @@
+{
+  "label": "QA-HOLD4-MILL-PLANTS-RESEARCHER-OK",
+  "pack": "daily/2026-09-14/_mill_hold4_refetch",
+  "sealed_at_pt": "2026-09-14 12:01 PM PT",
+  "ok": ["dynamic-cables"],
+  "soft": ["calpipe-industries", "gibson-stainless", "hydraforce"],
+  "hold_out": [],
+  "blocked_out": ["psl-limited"],
+  "prior_locked": "#41 Soft/OK locked",
+  "wire_recommendation": "OK — wire dynamic-cables; soft calpipe/gibson/hydraforce optional. psl-limited stays out."
+}
