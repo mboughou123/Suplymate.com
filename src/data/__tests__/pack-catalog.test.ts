@@ -1094,6 +1094,124 @@ describe("daily 2026-09-14 mill wire", () => {
   });
 });
 
+describe("daily 2026-09-14 HOLD22 product catch-up", () => {
+  const productsOk = [
+    "certainteed",
+    "dart-container",
+    "domtar",
+    "glenroy",
+    "moog",
+    "okonite",
+    "pennengineering",
+    "sun-hydraulics",
+    "syntegon",
+    "taghleef",
+    "usg",
+  ];
+  const productsSoft = [
+    "ariel-corporation",
+    "burgo-group",
+    "dynamic-cables",
+    "electrosteel-castings",
+    "holmen",
+    "hydraforce",
+    "jindal-pipe-usa",
+    "jindal-poly-films",
+    "midal-cables",
+    "psl-limited",
+    "tcpl-packaging",
+  ];
+  const alreadyMills = ["certainteed", "domtar", "holmen", "moog", "okonite", "usg"];
+  const remainingHosts = [...productsOk, ...productsSoft].filter((slug) => !alreadyMills.includes(slug));
+  const lockedD0914 = [
+    "allied-tube-conduit",
+    "ammeraal-beltech",
+    "aubert-duval",
+    "bando-chemical",
+    "calpipe-industries",
+    "dmg-mori",
+    "ejot",
+    "gibson-stainless",
+    "haynes-international",
+    "keyence",
+    "kuka",
+    "maruichi-leavitt",
+    "mazak",
+    "mitsubishi-electric",
+    "nord-lock",
+    "nucor-tubular",
+    "okuma",
+    "optibelt",
+    "ovako",
+    "pregis",
+    "ptc",
+    "schott-ag",
+    "swiss-steel",
+    "vega-grieshaber",
+    "vest-llc",
+    "voestalpine-krems",
+    "western-tube-conduit",
+    "worthington-enterprises",
+  ];
+  const hold22 = packProducts.filter((p) => p.pack === "d0914-h22");
+  const day0914 = packProducts.filter((p) => p.pack === "d0914");
+  const hold22Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold22");
+
+  it("appends the 22 cleared RFQ SKUs without rewriting locked 9/14 products", () => {
+    expect(hold22.map((p) => p.packSlug).sort()).toEqual([...productsOk, ...productsSoft].sort());
+    expect(day0914.map((p) => p.packSlug).sort()).toEqual([...lockedD0914].sort());
+    expect(day0914).toHaveLength(28);
+    for (const slug of lockedD0914) {
+      expect(hold22.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packProducts.filter((p) => p.pack === "d0911-h41")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+  });
+
+  it("keeps every HOLD22 SKU as RFQ with a local still and prefers branded files", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const p of hold22) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+      expect(JSON.stringify(p), p.id).not.toMatch(/\$0\.00/);
+    }
+    for (const slug of alreadyMills) {
+      expect(hold22Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-14" && !s.productHostOnly);
+      expect(mill, slug).toBeDefined();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
+    expect(hold22Hosts.map((s) => s.packSlug).sort()).toEqual([...remainingHosts].sort());
+    for (const host of hold22Hosts) {
+      expect(host.productHostOnly, host.packSlug).toBe(true);
+      expect(listed.has(host.id), host.packSlug).toBe(false);
+    }
+  });
+
+  it("soft-credits the SOFT 11 from the HOLD22 manifest", () => {
+    for (const slug of productsSoft) {
+      const sku = hold22.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(
+        /CGI|type-match|collage|application|marketing|process|showcase|not photo/i
+      );
+    }
+    for (const slug of productsOk) {
+      const sku = hold22.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toBeUndefined();
+    }
+    const dmg = day0914.find((p) => p.packSlug === "dmg-mori");
+    expect(dmg).toBeDefined();
+    expect(dmg!.specifications["Image credit"]).toBeUndefined();
+  });
+});
+
 describe("homepage products picker", () => {
   it("only picks approved products with their own real photo, spread across categories and suppliers", () => {
     const products = packProducts.map(scrapedToProduct);
