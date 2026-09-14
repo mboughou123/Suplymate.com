@@ -258,7 +258,6 @@ const SOFT_PRODUCT_IMAGE_CREDITS = { ...config.softProductImageCredits };
 
 function mergeManifestSoftCredits() {
   for (const file of [
-    "daily-2026-09-11-products-soft9.json",
     "daily-2026-09-11-hold41-products-cleared.json",
     "daily-2026-09-14-products-cleared.json",
   ]) {
