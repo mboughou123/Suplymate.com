@@ -7,6 +7,7 @@ import {
   packStats,
   packSuppliers,
   mergePackSuppliers,
+  mergePackProducts,
   overlayPackSupplier,
   getPackSupplier,
 } from "@/data/pack-catalog";
@@ -95,6 +96,25 @@ describe("supplier de-duplication", () => {
     expect(new Set(ids).size).toBe(ids.length);
     const packOnly = packSuppliers.filter((s) => !s.overlaysExisting && !s.productHostOnly).length;
     expect(merged.length).toBe(outscraperSuppliers.length + packOnly);
+  });
+
+  it("merges pack products onto a leftover scrape without dropping RFQ SKUs", () => {
+    const leftover = [
+      {
+        ...packProducts[0],
+        id: "scraped-leftover",
+        images: ["https://example.test/hotlink.jpg"],
+      },
+    ];
+    const merged = mergePackProducts(leftover);
+    const ids = merged.map((p) => p.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(merged.length).toBe(1 + packProducts.filter((p) => p.status === "approved").length);
+    expect(merged[0].id).toBe("scraped-leftover");
+    const allied = merged.find((p) => p.id.includes("allied-tube-conduit"));
+    expect(allied).toBeDefined();
+    expect(allied!.basePrice).toBeNull();
+    expect(allied!.images[0]).toMatch(/^\/images\/products\//);
   });
 
   it("overlays local media onto a directory row while keeping its contact data", () => {
