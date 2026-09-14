@@ -1,9 +1,12 @@
 // Public product catalogue data layer.
 //
-// Serves ONLY admin-published ("approved") scraped products plus the legacy
-// static catalogue. Performs DB-level pagination + filtering over the
-// ScrapedProduct table (the source of the 100+ catalogue) and falls back to an
-// in-memory path (legacy demo products) when the DB is empty/unavailable.
+// Serves ONLY admin-published ("approved") scraped products plus the curated
+// pack-catalog RFQ SKUs and the legacy static catalogue. DB-level pagination
+// is used only when the ScrapedProduct table already contains every approved
+// pack product (after `db:seed:packs`). A leftover scrape of a handful of
+// rows must not hide the pack catalogue — same rule as `mergePackSuppliers`
+// on /en/suppliers. Falls back to the in-memory merge when the DB is empty,
+// incomplete, or unavailable.
 //
 // Hard rules enforced here:
 //   - pending / rejected / needs_info products are NEVER returned.
@@ -19,11 +22,10 @@ import {
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
 import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
-import { getPackProduct } from "@/data/pack-catalog";
+import { approvedPackProducts, getPackProduct, getPackSupplier } from "@/data/pack-catalog";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
-import { getPackSupplier } from "@/data/pack-catalog";
 
 export type PublicProductCard = {
   id: string;
@@ -120,6 +122,16 @@ function buildWhere(q: PublicProductsQuery): Where {
 
 async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | null> {
   try {
+    const packApproved = approvedPackProducts();
+    if (packApproved.length > 0) {
+      const packIds = packApproved.map((p) => p.id);
+      const packInDb = await prisma.scrapedProduct.count({
+        where: { status: "approved", id: { in: packIds } },
+      });
+      // Incomplete seed (live leftover scrape): do not page a tiny payload.
+      if (packInDb < packApproved.length) return null;
+    }
+
     const where = buildWhere(q);
     const total = await prisma.scrapedProduct.count({ where });
     if (total === 0) return null; // allow the static fallback to populate dev

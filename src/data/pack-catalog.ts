@@ -99,6 +99,21 @@ export function overlayPackProductImages(row: ScrapedProduct): ScrapedProduct {
   return pack ? overlayPackProduct(row, pack) : row;
 }
 
+/**
+ * Overlay pack products onto an existing scraped-product list: matching ids
+ * receive local stills, and approved pack-only RFQ SKUs are appended. Mirrors
+ * `mergePackSuppliers` so a leftover scrape cannot hide the curated catalogue.
+ */
+export function mergePackProducts(existing: ScrapedProduct[]): ScrapedProduct[] {
+  const byId = new Map(existing.map((p) => [p.id, p]));
+  const merged = existing.map((p) => overlayPackProductImages(p));
+  for (const pack of approvedPackProducts()) {
+    if (byId.has(pack.id)) continue;
+    merged.push(pack);
+  }
+  return merged;
+}
+
 /** Publicly visible (approved) pack products. */
 export function approvedPackProducts(): PackProduct[] {
   return packProducts.filter((p) => p.status === "approved");
