@@ -1283,6 +1283,268 @@
       "website": "https://www.schott.com/",
       "description": "SCHOTT manufactures specialty glass, pharma tubing and glass packaging.",
       "product_lines": ["Pharma glass tubing", "Specialty glass", "Glass packaging"]
+    },
+    "ammeraal-beltech": {
+      "company_name": "Ammeraal Beltech",
+      "primary_category": "Hardware & Motion",
+      "country": "Netherlands",
+      "city": "Heerhugowaard",
+      "website": "https://www.ammeraalbeltech.com/",
+      "description": "Ammeraal Beltech manufactures conveyor, process and modular belting.",
+      "product_lines": ["Conveyor belting", "Process belts", "Modular belts"]
+    },
+    "ariel-corporation": {
+      "company_name": "Ariel Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Mount Vernon",
+      "website": "https://www.arielcorp.com/",
+      "description": "Ariel Corporation manufactures reciprocating gas compressors and compression packages.",
+      "product_lines": ["Reciprocating gas compressors", "Compression packages"]
+    },
+    "ejot": {
+      "company_name": "EJOT Holding GmbH & Co. KG",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Bad Berleburg",
+      "website": "https://www.ejot.com/",
+      "description": "EJOT manufactures industrial fasteners and self-tapping screws.",
+      "product_lines": ["Industrial fasteners", "Self-tapping screws"]
+    },
+    "glenroy": {
+      "company_name": "Glenroy Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Menomonee Falls",
+      "website": "https://www.glenroy.com/",
+      "description": "Glenroy manufactures flexible film laminates and high-barrier pouches.",
+      "product_lines": ["Flexible film laminates", "High-barrier pouches"]
+    },
+    "maruichi-leavitt": {
+      "company_name": "Maruichi Leavitt Pipe & Tube",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.leavitt-tube.com/",
+      "description": "Maruichi Leavitt manufactures ERW structural and mechanical steel tube.",
+      "product_lines": ["ERW structural tube", "Mechanical steel tube"]
+    },
+    "nucor-tubular": {
+      "company_name": "Nucor Tubular Products",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://nucortubular.com/",
+      "description": "Nucor Tubular Products manufactures HSS hollow structural sections and ERW pipe.",
+      "product_lines": ["HSS hollow structural sections", "ERW pipe"]
+    },
+    "voestalpine-krems": {
+      "company_name": "Voestalpine Krems GmbH",
+      "primary_category": "Tube & Pipes",
+      "country": "Austria",
+      "city": "Krems",
+      "website": "",
+      "$comment": "Leave website empty so voestalpine.com does not merge Krems into the locked 9/02 voestalpine card.",
+      "description": "Voestalpine Krems manufactures precision welded steel tubes and cold-formed sections.",
+      "product_lines": ["Precision welded steel tubes", "Cold-formed sections"]
+    },
+    "allied-tube-conduit": {
+      "company_name": "Allied Tube & Conduit",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Harvey",
+      "website": "https://www.atkore.com/about-us/brands/allied-tube-conduit",
+      "description": "Allied Tube & Conduit manufactures EMT, IMC, rigid conduit and galvanized mechanical tubing.",
+      "product_lines": ["EMT conduit", "IMC conduit", "Galvanized mechanical tubing"]
+    },
+    "bando-chemical": {
+      "company_name": "Bando Chemical Industries Ltd.",
+      "primary_category": "Hardware & Motion",
+      "country": "Japan",
+      "city": "Kobe",
+      "website": "https://www.bandogrp.com/",
+      "description": "Bando Chemical manufactures power-transmission, conveyor and automotive belts.",
+      "product_lines": ["Power-transmission belts", "Conveyor belts", "Automotive belts"]
+    },
+    "burgo-group": {
+      "company_name": "Burgo Group S.p.A.",
+      "primary_category": "Packaging",
+      "country": "Italy",
+      "city": "Avezzano",
+      "website": "https://www.burgo.com/",
+      "description": "Burgo Group manufactures coated papers and packaging paper grades.",
+      "product_lines": ["Coated papers", "Packaging paper"]
+    },
+    "dart-container": {
+      "company_name": "Dart Container Corporation",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Mason",
+      "website": "https://www.dartcontainer.com/",
+      "description": "Dart Container manufactures foodservice cups, lids and foam containers.",
+      "product_lines": ["Foodservice cups", "Lids", "Foam containers"]
+    },
+    "electrosteel-castings": {
+      "company_name": "Electrosteel Castings Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Khardaha",
+      "website": "https://www.electrosteel.com/",
+      "description": "Electrosteel Castings manufactures ductile iron pipes and fittings.",
+      "product_lines": ["Ductile iron pipes", "DI fittings"]
+    },
+    "jindal-pipe-usa": {
+      "company_name": "Jindal Pipe USA Inc.",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Baytown",
+      "website": "https://jindalpipeusa.com/",
+      "description": "Jindal Pipe USA manufactures API 5L HFERW line pipe and OCTG.",
+      "product_lines": ["API 5L line pipe", "OCTG"]
+    },
+    "jindal-poly-films": {
+      "company_name": "Jindal Poly Films Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Nashik",
+      "website": "https://www.jindalpoly.com/",
+      "description": "Jindal Poly Films manufactures BOPP, PET and metallized packaging films.",
+      "product_lines": ["BOPP films", "PET films", "Metallized packaging films"]
+    },
+    "midal-cables": {
+      "company_name": "Midal Cables B.S.C.",
+      "primary_category": "Cables & Electrical",
+      "country": "Bahrain",
+      "city": "Askar",
+      "website": "https://www.midalcable.com/",
+      "description": "Midal Cables manufactures aluminum overhead conductors, rod and wire.",
+      "product_lines": ["Overhead conductors", "Aluminum rod", "Aluminum wire"]
+    },
+    "nord-lock": {
+      "company_name": "Nord-Lock Group",
+      "primary_category": "Hardware & Motion",
+      "country": "Sweden",
+      "city": "Mattmar",
+      "website": "https://www.nord-lock.com/",
+      "description": "Nord-Lock manufactures wedge-locking washers and bolted-joint solutions.",
+      "product_lines": ["Wedge-locking washers", "Bolted-joint solutions"]
+    },
+    "optibelt": {
+      "company_name": "Optibelt GmbH",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Höxter",
+      "website": "https://www.optibelt.com/",
+      "description": "Optibelt manufactures V-belts, timing belts and ribbed drive belts.",
+      "product_lines": ["V-belts", "Timing belts", "Ribbed drive belts"]
+    },
+    "pennengineering": {
+      "company_name": "PennEngineering",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Danboro",
+      "website": "https://www.pemnet.com/",
+      "description": "PennEngineering manufactures PEM self-clinching fasteners and insertion equipment.",
+      "product_lines": ["Self-clinching fasteners", "Insertion equipment"]
+    },
+    "pregis": {
+      "company_name": "Pregis LLC",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Aurora",
+      "website": "https://www.pregis.com/",
+      "description": "Pregis manufactures protective packaging films and void-fill systems.",
+      "product_lines": ["Protective packaging films", "Void-fill systems"]
+    },
+    "ptc": {
+      "company_name": "PTC Alliance",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Wexford",
+      "website": "https://ptcsteel.com/",
+      "description": "PTC Alliance manufactures drawn-over-mandrel mechanical tubing and cold-drawn pipe.",
+      "product_lines": ["DOM mechanical tubing", "Cold-drawn pipe"]
+    },
+    "sun-hydraulics": {
+      "company_name": "Sun Hydraulics LLC",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Sarasota",
+      "website": "https://www.sunhydraulics.com/",
+      "description": "Sun Hydraulics manufactures cartridge valves and hydraulic manifold blocks.",
+      "product_lines": ["Cartridge valves", "Hydraulic manifold blocks"]
+    },
+    "swiss-steel": {
+      "company_name": "Swiss Steel Group",
+      "primary_category": "Steel & Metals",
+      "country": "Switzerland",
+      "city": "Lucerne",
+      "website": "https://www.swisssteel-group.com/",
+      "description": "Swiss Steel Group manufactures special long steel and tool steels.",
+      "product_lines": ["Special long steel", "Tool steels"]
+    },
+    "syntegon": {
+      "company_name": "Syntegon Technology GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Weert",
+      "website": "https://www.syntegon.com/",
+      "description": "Syntegon manufactures food and pharma packaging machinery.",
+      "product_lines": ["Food packaging machinery", "Pharma packaging machinery"]
+    },
+    "taghleef": {
+      "company_name": "Taghleef Industries",
+      "primary_category": "Packaging",
+      "country": "Spain",
+      "city": "Alcalá la Real",
+      "website": "https://www.ti-films.com/",
+      "description": "Taghleef Industries manufactures BOPP, BOPE, label and specialty packaging films.",
+      "product_lines": ["BOPP films", "BOPE films", "Label films"]
+    },
+    "tcpl-packaging": {
+      "company_name": "TCPL Packaging Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "https://www.tcpl.in/",
+      "description": "TCPL Packaging manufactures folding cartons, flexible laminates and specialty packaging.",
+      "product_lines": ["Folding cartons", "Flexible laminates", "Specialty packaging"]
+    },
+    "vega-grieshaber": {
+      "company_name": "VEGA Grieshaber KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Schiltach",
+      "website": "https://www.vega.com/",
+      "description": "VEGA Grieshaber manufactures level-measurement sensors and pressure transmitters.",
+      "product_lines": ["Level-measurement sensors", "Pressure transmitters"]
+    },
+    "vest-llc": {
+      "company_name": "Vest LLC",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Vernon",
+      "website": "https://vesttubellc.com/",
+      "description": "Vest LLC manufactures welded HSS structural and mechanical steel tubing.",
+      "product_lines": ["Welded HSS", "Mechanical steel tubing"]
+    },
+    "western-tube-conduit": {
+      "company_name": "Western Tube & Conduit",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Rochelle",
+      "website": "https://www.westerntube.com/",
+      "description": "Western Tube & Conduit manufactures EMT, rigid conduit and fence-framework tubing.",
+      "product_lines": ["EMT conduit", "Rigid conduit", "Fence-framework tubing"]
+    },
+    "worthington-enterprises": {
+      "company_name": "Worthington Enterprises",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Columbus",
+      "website": "https://www.worthingtonenterprises.com/",
+      "description": "Worthington Enterprises manufactures pressure cylinders and industrial steel products.",
+      "product_lines": ["Pressure cylinders", "Industrial steel products"]
     }
   }
 }
