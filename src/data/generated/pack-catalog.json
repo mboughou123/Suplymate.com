@@ -3,9 +3,9 @@
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
     "suppliers": 308,
-    "suppliersWithPhotos": 287,
+    "suppliersWithPhotos": 291,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 480,
+    "supplierPhotos": 484,
     "suppliersOverlayingDirectory": 9,
     "distributors": [
       "bossard"
@@ -12977,103 +12977,143 @@
       "overlaysExisting": false
     },
     {
-      "id": "calpipe-industries",
-      "packSlug": "calpipe-industries",
-      "pack": "daily-2026-09-14",
-      "name": "Calpipe Industries",
-      "industry": "Metal",
-      "category": "Tubes & Pipes",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Calpipe Stainless Steel Conduit Systems and PVC-Coated Conduit"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.calpipe.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "gibson-stainless",
-      "packSlug": "gibson-stainless",
-      "pack": "daily-2026-09-14",
-      "name": "Gibson Stainless & Specialty Inc.",
-      "industry": "Metal",
-      "category": "Tubes & Pipes",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Gibson Stainless Rigid Conduit Fittings and Strut"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.gibsonstainless.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
       "id": "dynamic-cables",
       "packSlug": "dynamic-cables",
-      "pack": "daily-2026-09-14-hold22",
+      "pack": "daily-2026-09-14-hold4",
       "name": "Dynamic Cables Limited",
       "industry": "Electrotechnical & Cabling",
       "category": "Cables & Electrical",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Dynamic Cables MV HV Power Cables and Overhead Conductors"
+      "location": "Jaipur, India",
+      "country": "India",
+      "city": "Jaipur",
+      "website": "https://www.dynamiccables.co.in/",
+      "imageUrl": "/images/suppliers/dynamic-cables/dynamic-cables_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/dynamic-cables/dynamic-cables_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "Dynamic Cables Limited manufactures MV/HV power cables and overhead conductors.",
+      "products": [
+        "MV/HV power cables",
+        "Overhead conductors"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.dynamiccables.co.in/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "calpipe-industries",
+      "packSlug": "calpipe-industries",
+      "pack": "daily-2026-09-14-hold4",
+      "name": "Calpipe Industries",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Rancho Dominguez, United States",
+      "country": "United States",
+      "city": "Rancho Dominguez",
+      "website": "https://www.calpipe.com/",
+      "imageUrl": "/images/suppliers/calpipe-industries/calpipe-industries_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/calpipe-industries/calpipe-industries_01.jpg"
+      ],
+      "description": "Calpipe Industries manufactures stainless steel conduit systems and PVC-coated conduit. Photo is a real conduit/pipe factory floor + workstation — still a split collage, not a single plant exterior.",
+      "products": [
+        "Stainless steel conduit",
+        "PVC-coated conduit"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.calpipe.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "gibson-stainless",
+      "packSlug": "gibson-stainless",
+      "pack": "daily-2026-09-14-hold4",
+      "name": "Gibson Stainless & Specialty Inc.",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Greensburg, United States",
+      "country": "United States",
+      "city": "Greensburg",
+      "website": "https://www.gibsonstainless.com/",
+      "imageUrl": "/images/suppliers/gibson-stainless/gibson-stainless_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/gibson-stainless/gibson-stainless_01.jpg"
+      ],
+      "description": "Gibson Stainless & Specialty Inc. manufactures stainless rigid conduit fittings and strut. Photo is a branded Gibson Stainless entrance sign at Greensburg Industrial Park — campus/HQ, not production floor.",
+      "products": [
+        "Stainless rigid conduit fittings",
+        "Strut"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.gibsonstainless.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
       "id": "hydraforce",
       "packSlug": "hydraforce",
-      "pack": "daily-2026-09-14-hold22",
+      "pack": "daily-2026-09-14-hold4",
       "name": "HydraForce Inc.",
       "industry": "Industrial Equipment",
       "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "HydraForce Hydraulic Cartridge Valves and Custom Manifolds"
+      "location": "Lincolnshire, United States",
+      "country": "United States",
+      "city": "Lincolnshire",
+      "website": "https://www.hydraforce.com/",
+      "imageUrl": "/images/suppliers/hydraforce/hydraforce_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/hydraforce/hydraforce_01.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "HydraForce Inc. manufactures hydraulic cartridge valves and custom manifolds. Photo is a warehouse/plant-tour interior with people — correct industrial setting, not a plant exterior.",
+      "products": [
+        "Hydraulic cartridge valves",
+        "Custom manifolds"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.hydraforce.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
@@ -31431,7 +31471,7 @@
       "supplierId": "calpipe-industries",
       "supplierName": "Calpipe Industries",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Calpipe Stainless Steel Conduit Systems and PVC-Coated Conduit",
       "slug": "calpipe-stainless-steel-conduit-systems-and-pvc-coated-conduit",
       "category": "Tubes & Pipes",
@@ -31464,7 +31504,7 @@
       "productUrl": "https://www.calpipe.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -31518,7 +31558,7 @@
       "supplierId": "gibson-stainless",
       "supplierName": "Gibson Stainless & Specialty Inc.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Gibson Stainless Rigid Conduit Fittings and Strut",
       "slug": "gibson-stainless-rigid-conduit-fittings-and-strut",
       "category": "Tubes & Pipes",
@@ -31551,7 +31591,7 @@
       "productUrl": "https://www.gibsonstainless.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -32989,7 +33029,7 @@
       "supplierId": "dynamic-cables",
       "supplierName": "Dynamic Cables Limited",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "India",
       "name": "Dynamic Cables MV HV Power Cables and Overhead Conductors",
       "slug": "dynamic-cables-mv-hv-power-cables-and-overhead-conductors",
       "category": "Cables & Electrical",
@@ -33022,7 +33062,7 @@
       "productUrl": "https://www.dynamiccables.co.in/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T18:35:00.000Z"
     },
@@ -33121,7 +33161,7 @@
       "supplierId": "hydraforce",
       "supplierName": "HydraForce Inc.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "HydraForce Hydraulic Cartridge Valves and Custom Manifolds",
       "slug": "hydraforce-hydraulic-cartridge-valves-and-custom-manifolds",
       "category": "Industrial Parts",
@@ -33154,7 +33194,7 @@
       "productUrl": "https://www.hydraforce.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T18:35:00.000Z"
     },

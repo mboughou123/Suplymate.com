@@ -459,7 +459,10 @@
     "bucher-hydraulics": "Photo is a branded Bucher Hydraulics trade-show booth — booth fill, not a plant-exterior claim.",
     "hawe": "Photo is the HAWE Munich HQ glass campus — HQ/campus, not a plant-exterior claim.",
     "printpack": "Photo is an antique Simplex bag-machine museum/lobby still — category packaging, not a plant-exterior claim.",
-    "wienerberger": "Photo is a branded Wienerberger HQ/campus brick showcase — not a brickworks and not a plant-exterior claim."
+    "wienerberger": "Photo is a branded Wienerberger HQ/campus brick showcase — not a brickworks and not a plant-exterior claim.",
+    "calpipe-industries": "Photo is a real conduit/pipe factory floor + workstation — still a split collage, not a single plant exterior.",
+    "gibson-stainless": "Photo is a branded Gibson Stainless entrance sign at Greensburg Industrial Park — campus/HQ, not production floor.",
+    "hydraforce": "Photo is a warehouse/plant-tour interior with people — correct industrial setting, not a plant exterior."
   },
   "softProductImageCredits": {
     "fedrigoni": "Specialty paper/label application still — category-correct, not mill stock.",
@@ -1545,6 +1548,42 @@
       "website": "https://www.worthingtonenterprises.com/",
       "description": "Worthington Enterprises manufactures pressure cylinders and industrial steel products.",
       "product_lines": ["Pressure cylinders", "Industrial steel products"]
+    },
+    "dynamic-cables": {
+      "company_name": "Dynamic Cables Limited",
+      "primary_category": "Cables & Electrical",
+      "country": "India",
+      "city": "Jaipur",
+      "website": "https://www.dynamiccables.co.in/",
+      "description": "Dynamic Cables Limited manufactures MV/HV power cables and overhead conductors.",
+      "product_lines": ["MV/HV power cables", "Overhead conductors"]
+    },
+    "calpipe-industries": {
+      "company_name": "Calpipe Industries",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Rancho Dominguez",
+      "website": "https://www.calpipe.com/",
+      "description": "Calpipe Industries manufactures stainless steel conduit systems and PVC-coated conduit.",
+      "product_lines": ["Stainless steel conduit", "PVC-coated conduit"]
+    },
+    "gibson-stainless": {
+      "company_name": "Gibson Stainless & Specialty Inc.",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Greensburg",
+      "website": "https://www.gibsonstainless.com/",
+      "description": "Gibson Stainless & Specialty Inc. manufactures stainless rigid conduit fittings and strut.",
+      "product_lines": ["Stainless rigid conduit fittings", "Strut"]
+    },
+    "hydraforce": {
+      "company_name": "HydraForce Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Lincolnshire",
+      "website": "https://www.hydraforce.com/",
+      "description": "HydraForce Inc. manufactures hydraulic cartridge valves and custom manifolds.",
+      "product_lines": ["Hydraulic cartridge valves", "Custom manifolds"]
     }
   }
 }

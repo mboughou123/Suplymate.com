@@ -14,6 +14,7 @@
  *   data/daily-2026-09-14-hold22-products-cleared.json (OK 11 + soft 11; soft 27 + dmg-mori locked)
  *   data/daily-2026-09-14-mills-cleared.json (OK 7 + soft 9; HOLD 34 out incl. category-fills)
  *   data/daily-2026-09-14-hold33-mills-cleared.json (OK 7 + soft 22; HOLD 4 + blocked psl-limited out)
+ *   data/daily-2026-09-14-hold4-mills-cleared.json (OK dynamic-cables + soft 3; blocked psl-limited out)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -914,7 +915,7 @@ function loadStillsMillSeals(file) {
   );
   const millSoft = new Set((pack.soft ?? []).map(slugOf).filter((slug) => slug && !holdOut.has(slug)));
   const millWire = new Set(
-    [...(pack.wire_ok ?? []), ...millSoft].filter((slug) => slug && !holdOut.has(slug))
+    [...(pack.wire_ok ?? []), ...(pack.ok ?? []), ...millSoft].filter((slug) => slug && !holdOut.has(slug))
   );
   return { pack, millWire, millSoft, holdOut };
 }
@@ -1764,6 +1765,19 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const hold4Mills = buildAppendedStillsMills({
+    file: "daily-2026-09-14-hold4-mills-cleared.json",
+    packTag: "daily-2026-09-14-hold4",
+    dateTag: "2026-09-14",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1778,6 +1792,7 @@ export function buildCatalog() {
     ...wired0911Slugs,
     ...day0914Mills.map((s) => s.packSlug),
     ...hold33Mills.map((s) => s.packSlug),
+    ...hold4Mills.map((s) => s.packSlug),
   ]);
   const raw = [
     ...buildPhase1Suppliers(report),
@@ -1790,6 +1805,7 @@ export function buildCatalog() {
     ...rest30Mills,
     ...day0914Mills,
     ...hold33Mills,
+    ...hold4Mills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),
