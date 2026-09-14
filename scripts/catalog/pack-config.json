@@ -454,7 +454,12 @@
     "kennametal": "Photo is a Latrobe-style tech/campus glass exterior without a Kennametal facade mark — plausible campus, not a brand-confirmed mill header.",
     "lenze": "Photo is the Lenze-branded Aerzen/Groß Berkel HQ campus exterior — HQ/campus, not a production mill yard.",
     "nb-corporation": "Photo is an NB-branded multi-story campus building — HQ/office campus, not a confirmed production plant.",
-    "regal-rexnord": "Photo is the Milwaukee HQ campus with a RegalRexnord rooftop sign — branded HQ/campus, not a production mill yard."
+    "regal-rexnord": "Photo is the Milwaukee HQ campus with a RegalRexnord rooftop sign — branded HQ/campus, not a production mill yard.",
+    "balluff": "Photo is the branded Balluff Neuhausen campus/HQ exterior — campus/HQ, not a plant-exterior claim.",
+    "bucher-hydraulics": "Photo is a branded Bucher Hydraulics trade-show booth — booth fill, not a plant-exterior claim.",
+    "hawe": "Photo is the HAWE Munich HQ glass campus — HQ/campus, not a plant-exterior claim.",
+    "printpack": "Photo is an antique Simplex bag-machine museum/lobby still — category packaging, not a plant-exterior claim.",
+    "wienerberger": "Photo is a branded Wienerberger HQ/campus brick showcase — not a brickworks and not a plant-exterior claim."
   },
   "softProductImageCredits": {
     "fedrigoni": "Specialty paper/label application still — category-correct, not mill stock.",
@@ -463,14 +468,23 @@
     "shandong-molong": "Type-match generic tube stock — not a mill-specific product still.",
     "superior-tube": "Type-match specialty-tube catalog still — not a mill-branded product still.",
     "tubos-reunidos": "Type-match generic tube-bundle stock — not a mill-specific product still.",
-    "visy": "Category recycling/packaging tiles still — category-correct, not a branded SKU still."
+    "visy": "Category recycling/packaging tiles still — category-correct, not a branded SKU still.",
+    "balluff": "Category sensor / campus still — type-match Wikimedia Commons stock, not a mill-specific product still.",
+    "plastipak": "Campus aerial still — type-match Wikimedia Commons stock, not a mill-specific PET bottle/preform still.",
+    "stelco": "Steel-category / campus still — type-match Wikimedia Commons stock, not a mill-specific product still."
   },
   "softTubeProductSlugs": [
     "plymouth-tube",
     "hi-tech-pipes",
     "bull-moose-tube",
     "welded-tube-canada",
-    "searing-industries"
+    "searing-industries",
+    "atlas-tube",
+    "metal-matic",
+    "sharon-tube",
+    "valmont-tubing",
+    "venus-pipes",
+    "wheatland-tube"
   ],
   "productImageExcludes": [
     "amcor/amcor-pack-1.jpg",
@@ -673,5 +687,89 @@
   "supplierHeroById": {
     "$comment": "Curated hero photo per supplier id (must be one of its surviving supplierImages). Overrides the phase-1 manifest hero / first image.",
     "al-gharbia-pipe-company-llc-ae": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg"
+  },
+  "millIdentityBySlug": {
+    "$comment": "Field details for Researcher-cleared daily packs whose sealed JSON is stills-only (no suppliers array). Used by scripts/build-catalog-from-packs.mjs.",
+    "clearwater-paper": {
+      "company_name": "Clearwater Paper Corporation",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Spokane",
+      "website": "https://www.clearwaterpaper.com/",
+      "description": "Clearwater Paper Corporation is a U.S. paperboard manufacturer producing solid bleached sulfate board for folding cartons, food-service and liquid packaging.",
+      "product_lines": ["SBS paperboard", "Folding-carton board", "Food-service packaging board"]
+    },
+    "stelco": {
+      "company_name": "Stelco Holdings Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "Canada",
+      "city": "Hamilton",
+      "website": "https://www.stelco.com/",
+      "description": "Stelco Holdings Inc. is a Canadian integrated steelmaker producing hot-rolled, cold-rolled and coated flat steel for construction, automotive and industrial markets.",
+      "product_lines": ["Hot-rolled coil", "Cold-rolled coil", "Coated flat steel"]
+    },
+    "sterlite-technologies": {
+      "company_name": "Sterlite Technologies Limited",
+      "primary_category": "Cables & Electrical",
+      "country": "India",
+      "city": "Pune",
+      "website": "https://www.stl.tech/",
+      "description": "Sterlite Technologies Limited (STL) is an Indian optical-fibre and cable manufacturer serving telecom and data-network infrastructure.",
+      "product_lines": ["Optical fibre", "Optical fibre cable", "Network connectivity"]
+    },
+    "suedpack": {
+      "company_name": "SÜDPACK Verpackungen SE & Co. KG",
+      "primary_category": "Packaging",
+      "country": "Germany",
+      "city": "Ochsenhausen",
+      "website": "https://www.suedpack.com/",
+      "description": "SÜDPACK is a German film and packaging manufacturer producing flexible and rigid films and pouches for food, non-food and medical goods.",
+      "product_lines": ["Flexible films", "Rigid films", "Pouches"]
+    },
+    "balluff": {
+      "company_name": "Balluff GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Neuhausen auf den Fildern",
+      "website": "https://www.balluff.com/",
+      "description": "Balluff GmbH is a German industrial-automation manufacturer of sensors, RFID and machine-vision accessories for factory automation.",
+      "product_lines": ["Industrial sensors", "RFID systems", "Machine-vision accessories"]
+    },
+    "bucher-hydraulics": {
+      "company_name": "Bucher Hydraulics",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Neuheim",
+      "website": "https://www.bucherhydraulics.com/",
+      "description": "Bucher Hydraulics manufactures hydraulic pumps, valves and drive systems for mobile and industrial equipment.",
+      "product_lines": ["Hydraulic pumps", "Hydraulic valves", "Drive systems"]
+    },
+    "hawe": {
+      "company_name": "HAWE Hydraulik SE",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Aschheim",
+      "website": "https://www.hawe.com/",
+      "description": "HAWE Hydraulik SE is a German manufacturer of hydraulic pumps, valves and power packs for industrial and mobile applications.",
+      "product_lines": ["Hydraulic pumps", "Hydraulic valves", "Power packs"]
+    },
+    "printpack": {
+      "company_name": "Printpack, Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Atlanta",
+      "website": "https://www.printpack.com/",
+      "description": "Printpack is a U.S. flexible-packaging converter producing printed films and packaging for food and consumer goods.",
+      "product_lines": ["Flexible packaging", "Printed films", "Consumer-goods packaging"]
+    },
+    "wienerberger": {
+      "company_name": "Wienerberger AG",
+      "primary_category": "Construction",
+      "country": "Austria",
+      "city": "Vienna",
+      "website": "https://www.wienerberger.com/",
+      "description": "Wienerberger AG is an Austrian building-materials manufacturer of clay bricks, roof tiles and pavers.",
+      "product_lines": ["Clay bricks", "Roof tiles", "Pavers"]
+    }
   }
 }
