@@ -10,7 +10,8 @@
  *   data/daily-2026-09-11-hard-skip12-cleared.json (OK 11 + linmot soft; wienerberger already wired)
  *   data/daily-2026-09-11-hold-rest30-cleared.json (OK 15 + soft 15)
  *   data/daily-2026-09-11-hold41-products-cleared.json (OK 19 + soft 13; blocked 9 out)
- *   data/daily-2026-09-14-products-cleared.json (OK 1 + soft 27; HOLD 22 out; no mill wire)
+ *   data/daily-2026-09-14-products-cleared.json (OK 1 + soft 27; HOLD 22 out)
+ *   data/daily-2026-09-14-mills-cleared.json (OK 7 + soft 9; HOLD 34 out incl. category-fills)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -282,6 +283,8 @@ const HOLD30_FOREVER_OUT = new Set(["rr-kabel"]);
 /** Wienerberger: Researcher sealed `_01` only (no Holodomor/portrait secondaries). */
 const SUPPLIER_IMAGE_ALLOW_ONLY = {
   wienerberger: new Set(["wienerberger_01.jpg"]),
+  /** Kuka: Researcher shipped kuka_08 lettering as kuka_01; drop the identical _08 twin. */
+  kuka: new Set(["kuka_01.jpg"]),
 };
 
 function isHeld(supplierSlug, productSlug) {
@@ -821,10 +824,11 @@ function millSoftCaption(slug, reason) {
   const note = config.descriptionNotes?.[slug];
   if (note) return note;
   if (!reason) return CATEGORY_FILL_CAPTION;
-  if (/not a (confirmed )?(plant-exterior|plant or yard|production)/i.test(reason)) {
-    return `Photo is ${reason}.`;
+  const text = String(reason).replace(/^SOFT\s*[—–-]\s*/i, "").trim();
+  if (/not a (confirmed )?(plant-exterior|plant or yard|production)/i.test(text)) {
+    return `Photo is ${text}.`;
   }
-  return `Photo is ${reason} — not a confirmed plant-exterior claim.`;
+  return `Photo is ${text} — not a confirmed plant-exterior claim.`;
 }
 
 function millCardFromRow(m, { packTag, dateTag, millSoft, softReasons, report }) {
@@ -1698,6 +1702,17 @@ export function buildCatalog() {
     skipSlugs: new Set([...locked0911Slugs, ...skip12Mills.map((s) => s.packSlug)]),
     report,
   });
+  const day0914Mills = buildAppendedStillsMills({
+    file: "daily-2026-09-14-mills-cleared.json",
+    packTag: "daily-2026-09-14",
+    dateTag: "2026-09-14",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1708,6 +1723,7 @@ export function buildCatalog() {
     ...skip12Mills.map((s) => s.packSlug),
     ...rest30Mills.map((s) => s.packSlug),
   ]);
+  const wired0914Slugs = new Set([...wired0911Slugs, ...day0914Mills.map((s) => s.packSlug)]);
   const raw = [
     ...buildPhase1Suppliers(report),
     ...buildDailySuppliers("2026-09-02", report),
@@ -1717,9 +1733,10 @@ export function buildCatalog() {
     ...day0911Mills,
     ...skip12Mills,
     ...rest30Mills,
+    ...day0914Mills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
-    ...buildDaily0914ProductHosts(wired0911Slugs, report),
+    ...buildDaily0914ProductHosts(wired0914Slugs, report),
   ];
 
   // Dedupe: by id, then by website domain / normalised name against the pack

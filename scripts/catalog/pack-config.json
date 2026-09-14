@@ -1139,6 +1139,150 @@
       "website": "https://www.wago.com/",
       "description": "WAGO manufactures spring-clamp terminal blocks and I/O systems.",
       "product_lines": ["Terminal blocks", "I/O systems"]
+    },
+    "certainteed": {
+      "company_name": "CertainTeed LLC",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Malvern",
+      "website": "https://www.certainteed.com/",
+      "description": "CertainTeed manufactures gypsum, roofing and insulation building materials.",
+      "product_lines": ["Gypsum board", "Roofing", "Insulation"]
+    },
+    "dmg-mori": {
+      "company_name": "DMG MORI AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Bielefeld",
+      "website": "https://www.dmgmori.com/",
+      "description": "DMG MORI manufactures CNC machining centers and turning machines.",
+      "product_lines": ["CNC machining centers", "Turning machines"]
+    },
+    "kuka": {
+      "company_name": "KUKA AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Augsburg",
+      "website": "https://www.kuka.com/",
+      "description": "KUKA manufactures industrial robots and automation cells.",
+      "product_lines": ["Industrial robots", "Automation cells"]
+    },
+    "mazak": {
+      "company_name": "Yamazaki Mazak Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.mazak.com/",
+      "description": "Mazak manufactures CNC multi-tasking machines and laser processing systems.",
+      "product_lines": ["CNC multi-tasking machines", "Laser processing systems"]
+    },
+    "moog": {
+      "company_name": "Moog Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "East Aurora",
+      "website": "https://www.moog.com/",
+      "description": "Moog manufactures precision motion-control and actuation systems for industrial and aerospace use.",
+      "product_lines": ["Motion-control systems", "Industrial actuators"]
+    },
+    "okuma": {
+      "company_name": "OKUMA Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.okuma.com/",
+      "description": "OKUMA manufactures CNC lathes, machining centers and OSP controls.",
+      "product_lines": ["CNC lathes", "Machining centers", "OSP controls"]
+    },
+    "usg": {
+      "company_name": "USG Corporation",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.usg.com/",
+      "description": "USG manufactures gypsum panels and ceiling systems for construction.",
+      "product_lines": ["Gypsum panels", "Ceiling systems"]
+    },
+    "aubert-duval": {
+      "company_name": "Aubert & Duval",
+      "primary_category": "Steel & Metals",
+      "country": "France",
+      "city": "Pamiers",
+      "website": "https://www.aubertduval.com/",
+      "description": "Aubert & Duval manufactures specialty steels, superalloys and forgings.",
+      "product_lines": ["Specialty steels", "Superalloys", "Forgings"]
+    },
+    "domtar": {
+      "company_name": "Domtar Corporation",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Fort Mill",
+      "website": "https://www.domtar.com/",
+      "description": "Domtar manufactures communication papers and pulp for packaging and print.",
+      "product_lines": ["Communication papers", "Market pulp"]
+    },
+    "haynes-international": {
+      "company_name": "Haynes International Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Kokomo",
+      "website": "https://www.haynesintl.com/",
+      "description": "Haynes International produces nickel and cobalt superalloy flat and long products.",
+      "product_lines": ["Nickel superalloys", "Cobalt superalloys"]
+    },
+    "holmen": {
+      "company_name": "Holmen AB",
+      "primary_category": "Packaging",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.holmen.com/",
+      "description": "Holmen manufactures paperboard, paper and wood products from Swedish forestry.",
+      "product_lines": ["Paperboard", "Paper", "Wood products"]
+    },
+    "keyence": {
+      "company_name": "KEYENCE Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.keyence.com/",
+      "description": "KEYENCE manufactures factory-automation sensors and machine-vision systems.",
+      "product_lines": ["FA sensors", "Machine-vision systems"]
+    },
+    "mitsubishi-electric": {
+      "company_name": "Mitsubishi Electric Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.mitsubishielectric.com/",
+      "description": "Mitsubishi Electric manufactures factory-automation PLCs, drives and servo systems.",
+      "product_lines": ["PLCs", "Drives", "Servo systems"]
+    },
+    "okonite": {
+      "company_name": "The Okonite Company",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Ramsey",
+      "website": "https://www.okonite.com/",
+      "description": "Okonite manufactures insulated power and control cables.",
+      "product_lines": ["Power cables", "Control cables"]
+    },
+    "ovako": {
+      "company_name": "Ovako AB",
+      "primary_category": "Steel & Metals",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.ovako.com/",
+      "description": "Ovako manufactures engineering steel bars, tubes and rings.",
+      "product_lines": ["Engineering steel bars", "Tubes", "Rings"]
+    },
+    "schott-ag": {
+      "company_name": "SCHOTT AG",
+      "primary_category": "Packaging",
+      "country": "Germany",
+      "city": "Mainz",
+      "website": "https://www.schott.com/",
+      "description": "SCHOTT manufactures specialty glass, pharma tubing and glass packaging.",
+      "product_lines": ["Pharma glass tubing", "Specialty glass", "Glass packaging"]
     }
   }
 }

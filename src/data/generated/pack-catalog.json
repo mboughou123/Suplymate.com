@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 286,
-    "suppliersWithPhotos": 242,
+    "suppliers": 292,
+    "suppliersWithPhotos": 258,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 410,
+    "supplierPhotos": 451,
     "suppliersOverlayingDirectory": 9,
     "distributors": [
       "bossard"
@@ -11364,28 +11364,595 @@
       "overlaysExisting": false
     },
     {
+      "id": "certainteed",
+      "packSlug": "certainteed",
+      "pack": "daily-2026-09-14",
+      "name": "CertainTeed LLC",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Malvern, United States",
+      "country": "United States",
+      "city": "Malvern",
+      "website": "https://www.certainteed.com/",
+      "imageUrl": "/images/suppliers/certainteed/certainteed_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/certainteed/certainteed_01.jpg"
+      ],
+      "description": "CertainTeed manufactures gypsum, roofing and insulation building materials.",
+      "products": [
+        "Gypsum board",
+        "Roofing",
+        "Insulation"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.certainteed.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
       "id": "dmg-mori",
       "packSlug": "dmg-mori",
       "pack": "daily-2026-09-14",
       "name": "DMG MORI AG",
       "industry": "Industrial Equipment",
       "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "DMG MORI CNC Machining Centers and Turning Machines"
+      "location": "Bielefeld, Germany",
+      "country": "Germany",
+      "city": "Bielefeld",
+      "website": "https://www.dmgmori.com/",
+      "imageUrl": "/images/suppliers/dmg-mori/dmg-mori_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/dmg-mori/dmg-mori_01.jpg",
+        "/images/suppliers/dmg-mori/dmg-mori_02.jpg",
+        "/images/suppliers/dmg-mori/dmg-mori_03.jpg",
+        "/images/suppliers/dmg-mori/dmg-mori_04.jpg"
       ],
-      "deliveryRegions": [],
+      "description": "DMG MORI manufactures CNC machining centers and turning machines.",
+      "products": [
+        "CNC machining centers",
+        "Turning machines"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
       "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
+      "verified": true,
+      "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.dmgmori.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "kuka",
+      "packSlug": "kuka",
+      "pack": "daily-2026-09-14",
+      "name": "KUKA AG",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Augsburg, Germany",
+      "country": "Germany",
+      "city": "Augsburg",
+      "website": "https://www.kuka.com/",
+      "imageUrl": "/images/suppliers/kuka/kuka_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/kuka/kuka_01.jpg"
+      ],
+      "description": "KUKA manufactures industrial robots and automation cells.",
+      "products": [
+        "Industrial robots",
+        "Automation cells"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.kuka.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "mazak",
+      "packSlug": "mazak",
+      "pack": "daily-2026-09-14",
+      "name": "Yamazaki Mazak Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Oguchi, Japan",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.mazak.com/",
+      "imageUrl": "/images/suppliers/mazak/mazak_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/mazak/mazak_01.jpg",
+        "/images/suppliers/mazak/mazak_02.jpg",
+        "/images/suppliers/mazak/mazak_03.jpg",
+        "/images/suppliers/mazak/mazak_04.jpg"
+      ],
+      "description": "Mazak manufactures CNC multi-tasking machines and laser processing systems.",
+      "products": [
+        "CNC multi-tasking machines",
+        "Laser processing systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.mazak.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "moog",
+      "packSlug": "moog",
+      "pack": "daily-2026-09-14",
+      "name": "Moog Inc.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "East Aurora, United States",
+      "country": "United States",
+      "city": "East Aurora",
+      "website": "https://www.moog.com/",
+      "imageUrl": "/images/suppliers/moog/moog_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/moog/moog_01.jpg",
+        "/images/suppliers/moog/moog_02.jpg",
+        "/images/suppliers/moog/moog_03.jpg",
+        "/images/suppliers/moog/moog_04.jpg"
+      ],
+      "description": "Moog manufactures precision motion-control and actuation systems for industrial and aerospace use.",
+      "products": [
+        "Motion-control systems",
+        "Industrial actuators"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.moog.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "okuma",
+      "packSlug": "okuma",
+      "pack": "daily-2026-09-14",
+      "name": "OKUMA Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Oguchi, Japan",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.okuma.com/",
+      "imageUrl": "/images/suppliers/okuma/okuma_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/okuma/okuma_01.jpg",
+        "/images/suppliers/okuma/okuma_02.jpg",
+        "/images/suppliers/okuma/okuma_03.jpg",
+        "/images/suppliers/okuma/okuma_04.jpg"
+      ],
+      "description": "OKUMA manufactures CNC lathes, machining centers and OSP controls.",
+      "products": [
+        "CNC lathes",
+        "Machining centers",
+        "OSP controls"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.okuma.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "usg",
+      "packSlug": "usg",
+      "pack": "daily-2026-09-14",
+      "name": "USG Corporation",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Chicago, United States",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.usg.com/",
+      "imageUrl": "/images/suppliers/usg/usg_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/usg/usg_01.jpg"
+      ],
+      "description": "USG manufactures gypsum panels and ceiling systems for construction.",
+      "products": [
+        "Gypsum panels",
+        "Ceiling systems"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.usg.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "aubert-duval",
+      "packSlug": "aubert-duval",
+      "pack": "daily-2026-09-14",
+      "name": "Aubert & Duval",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Pamiers, France",
+      "country": "France",
+      "city": "Pamiers",
+      "website": "https://www.aubertduval.com/",
+      "imageUrl": "/images/suppliers/aubert-duval/aubert-duval_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/aubert-duval/aubert-duval_01.jpg"
+      ],
+      "description": "Aubert & Duval manufactures specialty steels, superalloys and forgings. Photo is Branded AUBERT&DUVAL gate with historic BB locomotive display (Pamiers); landmark/museum not active melt shop. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Specialty steels",
+        "Superalloys",
+        "Forgings"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.aubertduval.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "domtar",
+      "packSlug": "domtar",
+      "pack": "daily-2026-09-14",
+      "name": "Domtar Corporation",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Fort Mill, United States",
+      "country": "United States",
+      "city": "Fort Mill",
+      "website": "https://www.domtar.com/",
+      "imageUrl": "/images/suppliers/domtar/domtar_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/domtar/domtar_01.jpg"
+      ],
+      "description": "Domtar manufactures communication papers and pulp for packaging and print. Photo is Maison Domtar Montreal HQ office tower; not paper mill yard. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Communication papers",
+        "Market pulp"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.domtar.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "haynes-international",
+      "packSlug": "haynes-international",
+      "pack": "daily-2026-09-14",
+      "name": "Haynes International Inc.",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Kokomo, United States",
+      "country": "United States",
+      "city": "Kokomo",
+      "website": "https://www.haynesintl.com/",
+      "imageUrl": "/images/suppliers/haynes-international/haynes-international_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/haynes-international/haynes-international_01.jpg",
+        "/images/suppliers/haynes-international/haynes-international_02.jpg"
+      ],
+      "description": "Haynes International produces nickel and cobalt superalloy flat and long products. Photo is HC276 Hastelloy swing-check valve castings product still (correct alloy family); not Haynes plant/yard. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Nickel superalloys",
+        "Cobalt superalloys"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.haynesintl.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "holmen",
+      "packSlug": "holmen",
+      "pack": "daily-2026-09-14",
+      "name": "Holmen AB",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Stockholm, Sweden",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.holmen.com/",
+      "imageUrl": "/images/suppliers/holmen/holmen_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/holmen/holmen_01.jpg",
+        "/images/suppliers/holmen/holmen_02.jpg",
+        "/images/suppliers/holmen/holmen_03.jpg",
+        "/images/suppliers/holmen/holmen_04.jpg"
+      ],
+      "description": "Holmen manufactures paperboard, paper and wood products from Swedish forestry. Photo is Primary Holmens Bruk historical archival (correct entity); modern Husumfabriken exists as holmen_03 — do not promote locomotive secondary. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Paperboard",
+        "Paper",
+        "Wood products"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.holmen.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "keyence",
+      "packSlug": "keyence",
+      "pack": "daily-2026-09-14",
+      "name": "KEYENCE Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Osaka, Japan",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.keyence.com/",
+      "imageUrl": "/images/suppliers/keyence/keyence_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/keyence/keyence_01.jpg",
+        "/images/suppliers/keyence/keyence_02.jpg",
+        "/images/suppliers/keyence/keyence_03.jpg"
+      ],
+      "description": "KEYENCE manufactures factory-automation sensors and machine-vision systems. Photo is Branded KEYENCE Head-Office Osaka HQ tower; not manufacturing plant. — not a confirmed plant-exterior claim.",
+      "products": [
+        "FA sensors",
+        "Machine-vision systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.keyence.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "mitsubishi-electric",
+      "packSlug": "mitsubishi-electric",
+      "pack": "daily-2026-09-14",
+      "name": "Mitsubishi Electric Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tokyo, Japan",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.mitsubishielectric.com/",
+      "imageUrl": "/images/suppliers/mitsubishi-electric/mitsubishi-electric_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/mitsubishi-electric/mitsubishi-electric_01.jpg",
+        "/images/suppliers/mitsubishi-electric/mitsubishi-electric_02.jpg",
+        "/images/suppliers/mitsubishi-electric/mitsubishi-electric_03.jpg",
+        "/images/suppliers/mitsubishi-electric/mitsubishi-electric_04.jpg"
+      ],
+      "description": "Mitsubishi Electric manufactures factory-automation PLCs, drives and servo systems. Photo is Tokyo Building Marunouchi corporate tower (Mitsubishi Estate/group); secondaries include ALMA radio telescope — not MELCO plant. — not a confirmed plant-exterior claim.",
+      "products": [
+        "PLCs",
+        "Drives",
+        "Servo systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.mitsubishielectric.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "okonite",
+      "packSlug": "okonite",
+      "pack": "daily-2026-09-14",
+      "name": "The Okonite Company",
+      "industry": "Electrotechnical & Cabling",
+      "category": "Cables & Electrical",
+      "location": "Ramsey, United States",
+      "country": "United States",
+      "city": "Ramsey",
+      "website": "https://www.okonite.com/",
+      "imageUrl": "/images/suppliers/okonite/okonite_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/okonite/okonite_01.jpg",
+        "/images/suppliers/okonite/okonite_02.jpg"
+      ],
+      "description": "Okonite manufactures insulated power and control cables. Photo is 1893 Park Row NYC multi-tenant office engraving with The Okonite Company signage; historical HQ not cable plant. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Power cables",
+        "Control cables"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.okonite.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "ovako",
+      "packSlug": "ovako",
+      "pack": "daily-2026-09-14",
+      "name": "Ovako AB",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Stockholm, Sweden",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.ovako.com/",
+      "imageUrl": "/images/suppliers/ovako/ovako_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/ovako/ovako_01.jpg"
+      ],
+      "description": "Ovako manufactures engineering steel bars, tubes and rings. Photo is 1937 Oy Vuoksenniska Ab ironworks archival (Ovako predecessor); historical not current Ovako plant. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Engineering steel bars",
+        "Tubes",
+        "Rings"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.ovako.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "schott-ag",
+      "packSlug": "schott-ag",
+      "pack": "daily-2026-09-14",
+      "name": "SCHOTT AG",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Mainz, Germany",
+      "country": "Germany",
+      "city": "Mainz",
+      "website": "https://www.schott.com/",
+      "imageUrl": "/images/suppliers/schott-ag/schott-ag_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/schott-ag/schott-ag_01.jpg",
+        "/images/suppliers/schott-ag/schott-ag_02.jpg",
+        "/images/suppliers/schott-ag/schott-ag_03.jpg",
+        "/images/suppliers/schott-ag/schott-ag_04.jpg"
+      ],
+      "description": "SCHOTT manufactures specialty glass, pharma tubing and glass packaging. Photo is Primary Bilanzpressekonferenz product honeycomb; SCHOTT goes ELT Zerodur handling on _02 is better — HQ/press not Mainz plant aerial. — not a confirmed plant-exterior claim.",
+      "products": [
+        "Pharma glass tubing",
+        "Specialty glass",
+        "Glass packaging"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.schott.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-14",
+      "score": 90,
+      "reliabilityScore": 90,
       "overlaysExisting": false
     },
     {
@@ -11430,31 +11997,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.ammeraalbeltech.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "aubert-duval",
-      "packSlug": "aubert-duval",
-      "pack": "daily-2026-09-14",
-      "name": "Aubert & Duval",
-      "industry": "Metal",
-      "category": "Steel & Metals",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Aubert & Duval Specialty Steels Superalloys and Forgings"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.aubertduval.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
@@ -11564,81 +12106,6 @@
       "overlaysExisting": false
     },
     {
-      "id": "haynes-international",
-      "packSlug": "haynes-international",
-      "pack": "daily-2026-09-14",
-      "name": "Haynes International Inc.",
-      "industry": "Metal",
-      "category": "Steel & Metals",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Haynes Nickel and Cobalt Superalloy Flat and Long Products"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.haynesintl.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "keyence",
-      "packSlug": "keyence",
-      "pack": "daily-2026-09-14",
-      "name": "KEYENCE Corporation",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "KEYENCE Factory Automation Sensors and Machine Vision Systems"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.keyence.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "kuka",
-      "packSlug": "kuka",
-      "pack": "daily-2026-09-14",
-      "name": "KUKA AG",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "KUKA Industrial Robots and Automation Cells"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.kuka.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
       "id": "maruichi-leavitt",
       "packSlug": "maruichi-leavitt",
       "pack": "daily-2026-09-14",
@@ -11655,56 +12122,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.leavitt-tube.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "mazak",
-      "packSlug": "mazak",
-      "pack": "daily-2026-09-14",
-      "name": "Yamazaki Mazak Corporation",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Mazak CNC Multi-Tasking Machines and Laser Processing Systems"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.mazak.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "mitsubishi-electric",
-      "packSlug": "mitsubishi-electric",
-      "pack": "daily-2026-09-14",
-      "name": "Mitsubishi Electric Corporation",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Mitsubishi Electric Factory Automation PLCs Drives and Servo Systems"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.mitsubishielectric.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
@@ -11764,31 +12181,6 @@
       "overlaysExisting": false
     },
     {
-      "id": "okuma",
-      "packSlug": "okuma",
-      "pack": "daily-2026-09-14",
-      "name": "OKUMA Corporation",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "OKUMA CNC Lathes Machining Centers and OSP Controls"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.okuma.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
       "id": "optibelt",
       "packSlug": "optibelt",
       "pack": "daily-2026-09-14",
@@ -11805,31 +12197,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.optibelt.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "ovako",
-      "packSlug": "ovako",
-      "pack": "daily-2026-09-14",
-      "name": "Ovako AB",
-      "industry": "Metal",
-      "category": "Steel & Metals",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Ovako Engineering Steel Bars Tubes and Rings"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.ovako.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
@@ -11880,31 +12247,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://ptcsteel.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "schott-ag",
-      "packSlug": "schott-ag",
-      "pack": "daily-2026-09-14",
-      "name": "SCHOTT AG",
-      "industry": "Plastics & Packaging",
-      "category": "Packaging",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "SCHOTT Pharma Glass Tubing Vials and Specialty Glass Packaging"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.schott.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
@@ -30178,7 +30520,7 @@
       "supplierId": "dmg-mori",
       "supplierName": "DMG MORI AG",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "DMG MORI CNC Machining Centers and Turning Machines",
       "slug": "dmg-mori-cnc-machining-centers-and-turning-machines",
       "category": "Industrial Parts",
@@ -30209,7 +30551,7 @@
       "productUrl": "https://www.dmgmori.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30307,7 +30649,7 @@
       "supplierId": "aubert-duval",
       "supplierName": "Aubert & Duval",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "France",
       "name": "Aubert & Duval Specialty Steels Superalloys and Forgings",
       "slug": "aubert-duval-specialty-steels-superalloys-and-forgings",
       "category": "Steel & Metals",
@@ -30339,7 +30681,7 @@
       "productUrl": "https://www.aubertduval.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30524,7 +30866,7 @@
       "supplierId": "haynes-international",
       "supplierName": "Haynes International Inc.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Haynes Nickel and Cobalt Superalloy Flat and Long Products",
       "slug": "haynes-nickel-and-cobalt-superalloy-flat-and-long-products",
       "category": "Steel & Metals",
@@ -30556,7 +30898,7 @@
       "productUrl": "https://www.haynesintl.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30567,7 +30909,7 @@
       "supplierId": "keyence",
       "supplierName": "KEYENCE Corporation",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Japan",
       "name": "KEYENCE Factory Automation Sensors and Machine Vision Systems",
       "slug": "keyence-factory-automation-sensors-and-machine-vision-systems",
       "category": "Industrial Parts",
@@ -30599,7 +30941,7 @@
       "productUrl": "https://www.keyence.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30610,7 +30952,7 @@
       "supplierId": "kuka",
       "supplierName": "KUKA AG",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "KUKA Industrial Robots and Automation Cells",
       "slug": "kuka-industrial-robots-and-automation-cells",
       "category": "Industrial Parts",
@@ -30642,7 +30984,7 @@
       "productUrl": "https://www.kuka.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30697,7 +31039,7 @@
       "supplierId": "mazak",
       "supplierName": "Yamazaki Mazak Corporation",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Japan",
       "name": "Mazak CNC Multi-Tasking Machines and Laser Processing Systems",
       "slug": "mazak-cnc-multi-tasking-machines-and-laser-processing-systems",
       "category": "Industrial Parts",
@@ -30729,7 +31071,7 @@
       "productUrl": "https://www.mazak.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30740,7 +31082,7 @@
       "supplierId": "mitsubishi-electric",
       "supplierName": "Mitsubishi Electric Corporation",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Japan",
       "name": "Mitsubishi Electric Factory Automation PLCs Drives and Servo Systems",
       "slug": "mitsubishi-electric-factory-automation-plcs-drives-and-servo-systems",
       "category": "Industrial Parts",
@@ -30772,7 +31114,7 @@
       "productUrl": "https://www.mitsubishielectric.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30870,7 +31212,7 @@
       "supplierId": "okuma",
       "supplierName": "OKUMA Corporation",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Japan",
       "name": "OKUMA CNC Lathes Machining Centers and OSP Controls",
       "slug": "okuma-cnc-lathes-machining-centers-and-osp-controls",
       "category": "Industrial Parts",
@@ -30902,7 +31244,7 @@
       "productUrl": "https://www.okuma.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -30956,7 +31298,7 @@
       "supplierId": "ovako",
       "supplierName": "Ovako AB",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Sweden",
       "name": "Ovako Engineering Steel Bars Tubes and Rings",
       "slug": "ovako-engineering-steel-bars-tubes-and-rings",
       "category": "Steel & Metals",
@@ -30988,7 +31330,7 @@
       "productUrl": "https://www.ovako.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
@@ -31086,7 +31428,7 @@
       "supplierId": "schott-ag",
       "supplierName": "SCHOTT AG",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "SCHOTT Pharma Glass Tubing Vials and Specialty Glass Packaging",
       "slug": "schott-pharma-glass-tubing-vials-and-specialty-glass-packaging",
       "category": "Packaging",
@@ -31118,7 +31460,7 @@
       "productUrl": "https://www.schott.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-14T12:00:00.000Z"
     },
