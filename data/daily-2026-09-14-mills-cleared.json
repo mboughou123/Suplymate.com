@@ -1,0 +1,418 @@
+{
+  "label": "DAILY-2026-09-14-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-14/_qa/researcher-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-14-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "certainteed",
+    "dmg-mori",
+    "kuka",
+    "mazak",
+    "moog",
+    "okuma",
+    "usg"
+  ],
+  "soft": [
+    {
+      "slug": "aubert-duval",
+      "reason": "SOFT \u2014 Branded AUBERT&DUVAL gate with historic BB locomotive display (Pamiers); landmark/museum not active melt shop."
+    },
+    {
+      "slug": "domtar",
+      "reason": "SOFT \u2014 Maison Domtar Montreal HQ office tower; not paper mill yard."
+    },
+    {
+      "slug": "haynes-international",
+      "reason": "SOFT \u2014 HC276 Hastelloy swing-check valve castings product still (correct alloy family); not Haynes plant/yard."
+    },
+    {
+      "slug": "holmen",
+      "reason": "SOFT \u2014 Primary Holmens Bruk historical archival (correct entity); modern Husumfabriken exists as holmen_03 \u2014 do not promote locomotive secondary."
+    },
+    {
+      "slug": "keyence",
+      "reason": "SOFT \u2014 Branded KEYENCE Head-Office Osaka HQ tower; not manufacturing plant."
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "reason": "SOFT \u2014 Tokyo Building Marunouchi corporate tower (Mitsubishi Estate/group); secondaries include ALMA radio telescope \u2014 not MELCO plant."
+    },
+    {
+      "slug": "okonite",
+      "reason": "SOFT \u2014 1893 Park Row NYC multi-tenant office engraving with The Okonite Company signage; historical HQ not cable plant."
+    },
+    {
+      "slug": "ovako",
+      "reason": "SOFT \u2014 1937 Oy Vuoksenniska Ab ironworks archival (Ovako predecessor); historical not current Ovako plant."
+    },
+    {
+      "slug": "schott-ag",
+      "reason": "SOFT \u2014 Primary Bilanzpressekonferenz product honeycomb; SCHOTT goes ELT Zerodur handling on _02 is better \u2014 HQ/press not Mainz plant aerial."
+    }
+  ],
+  "hold_out_count": 34,
+  "category_fills_all_hold": true,
+  "kuka_note": "primary is kuka_08 (clear KUKA lettering); shipped as kuka_01 + kuka_08; other secondaries skipped",
+  "prior_wired_locked": true,
+  "stills": [
+    {
+      "slug": "certainteed",
+      "path": "/images/suppliers/certainteed/certainteed_01.jpg",
+      "filename": "certainteed_01.jpg",
+      "grade": "ok",
+      "sha256": "d3eb91dff1f08e220ccb04faaaad20a5417cf710be9295b929ebcdbbec95545f",
+      "bytes": 373521
+    },
+    {
+      "slug": "dmg-mori",
+      "path": "/images/suppliers/dmg-mori/dmg-mori_01.jpg",
+      "filename": "dmg-mori_01.jpg",
+      "grade": "ok",
+      "sha256": "71f1177081ad8b27896c4e3a2dbb3615e0912f7cfdc193ad4901da2cb06681c8",
+      "bytes": 299282
+    },
+    {
+      "slug": "dmg-mori",
+      "path": "/images/suppliers/dmg-mori/dmg-mori_02.jpg",
+      "filename": "dmg-mori_02.jpg",
+      "grade": "ok",
+      "sha256": "6145d88224734bd9d23b57a2ccb0c2a145d00d9da2982d72f928bfc3cf423b0c",
+      "bytes": 208009
+    },
+    {
+      "slug": "dmg-mori",
+      "path": "/images/suppliers/dmg-mori/dmg-mori_03.jpg",
+      "filename": "dmg-mori_03.jpg",
+      "grade": "ok",
+      "sha256": "243e15f084d0ebd8ef369791e28e3ddf33d81d4879d2795a11bb3b7e104007f0",
+      "bytes": 313667
+    },
+    {
+      "slug": "dmg-mori",
+      "path": "/images/suppliers/dmg-mori/dmg-mori_04.jpg",
+      "filename": "dmg-mori_04.jpg",
+      "grade": "ok",
+      "sha256": "c4416d9df90e2b2ae17198127912159a342a1c11c7625624d0585302b4127ef4",
+      "bytes": 256412
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/suppliers/kuka/kuka_01.jpg",
+      "filename": "kuka_01.jpg",
+      "grade": "ok",
+      "sha256": "ab71259a72e5f8ae90534772ed08cc41d53fe2962faf3e534d89be85674a1384",
+      "bytes": 474508
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/suppliers/kuka/kuka_04.jpg",
+      "filename": "kuka_04.jpg",
+      "grade": "ok",
+      "sha256": "d855728cfdbaed165d0c397abe06697571c706dbd818c50d281ead230a5ad9a5",
+      "bytes": 250729
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/suppliers/kuka/kuka_05.jpg",
+      "filename": "kuka_05.jpg",
+      "grade": "ok",
+      "sha256": "5d4dc726cf77418e21fa98f8f7154118aee385a65a2dfe27fc21493fd0ecc933",
+      "bytes": 375443
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/suppliers/kuka/kuka_07.jpg",
+      "filename": "kuka_07.jpg",
+      "grade": "ok",
+      "sha256": "91841ddd0b4ce47be822c1c907cb3c82f0048711512ea97c7688407c41c4f8bb",
+      "bytes": 414726
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/suppliers/kuka/kuka_08.jpg",
+      "filename": "kuka_08.jpg",
+      "grade": "ok",
+      "sha256": "ab71259a72e5f8ae90534772ed08cc41d53fe2962faf3e534d89be85674a1384",
+      "bytes": 474508
+    },
+    {
+      "slug": "mazak",
+      "path": "/images/suppliers/mazak/mazak_01.jpg",
+      "filename": "mazak_01.jpg",
+      "grade": "ok",
+      "sha256": "f2e6ff2c03fc288a5fe1c5672ff7ba2a18059fc65ac37bf2ca3a0b06373c5446",
+      "bytes": 355584
+    },
+    {
+      "slug": "mazak",
+      "path": "/images/suppliers/mazak/mazak_02.jpg",
+      "filename": "mazak_02.jpg",
+      "grade": "ok",
+      "sha256": "449b86de49c76d28259e1da586bf8957d5c0853931075266df2385a7fd8fc120",
+      "bytes": 244571
+    },
+    {
+      "slug": "mazak",
+      "path": "/images/suppliers/mazak/mazak_03.jpg",
+      "filename": "mazak_03.jpg",
+      "grade": "ok",
+      "sha256": "0a08e88f747ba1501a334ae1cc8128951c2c4be37ba29239d9308f947e7a08b7",
+      "bytes": 333484
+    },
+    {
+      "slug": "mazak",
+      "path": "/images/suppliers/mazak/mazak_04.jpg",
+      "filename": "mazak_04.jpg",
+      "grade": "ok",
+      "sha256": "3d0379eeca25c73b237c920337ae10844ca30584d90471d6fb74287483405bd7",
+      "bytes": 432024
+    },
+    {
+      "slug": "moog",
+      "path": "/images/suppliers/moog/moog_01.jpg",
+      "filename": "moog_01.jpg",
+      "grade": "ok",
+      "sha256": "b397d0aeed80962959a571fab5fd64e8c8115e6d88f667f7b4261b8048e747f6",
+      "bytes": 1134340
+    },
+    {
+      "slug": "moog",
+      "path": "/images/suppliers/moog/moog_02.jpg",
+      "filename": "moog_02.jpg",
+      "grade": "ok",
+      "sha256": "0dc2ef7f958fce9c8b3b4b37e43c90b6450ae5d026d84255f249fd67211e9fd4",
+      "bytes": 122962
+    },
+    {
+      "slug": "moog",
+      "path": "/images/suppliers/moog/moog_03.jpg",
+      "filename": "moog_03.jpg",
+      "grade": "ok",
+      "sha256": "b4eaa620e198c09703b0e0a62b09424cc95011d029ee159711bfc3d335d6a932",
+      "bytes": 409984
+    },
+    {
+      "slug": "moog",
+      "path": "/images/suppliers/moog/moog_04.jpg",
+      "filename": "moog_04.jpg",
+      "grade": "ok",
+      "sha256": "db27ff1d246c98432e9faa5b39c6fd495333cbfa70d62614fca6c01b6b41c9e0",
+      "bytes": 440052
+    },
+    {
+      "slug": "okuma",
+      "path": "/images/suppliers/okuma/okuma_01.jpg",
+      "filename": "okuma_01.jpg",
+      "grade": "ok",
+      "sha256": "ef026c47d6adc1170d0e63af3b78ea3196b8d8bf2aec69a7c35c7256090fc527",
+      "bytes": 189430
+    },
+    {
+      "slug": "okuma",
+      "path": "/images/suppliers/okuma/okuma_02.jpg",
+      "filename": "okuma_02.jpg",
+      "grade": "ok",
+      "sha256": "ef026c47d6adc1170d0e63af3b78ea3196b8d8bf2aec69a7c35c7256090fc527",
+      "bytes": 189430
+    },
+    {
+      "slug": "okuma",
+      "path": "/images/suppliers/okuma/okuma_03.jpg",
+      "filename": "okuma_03.jpg",
+      "grade": "ok",
+      "sha256": "df6b3487cf7b3345ed0a43b42d4890aec07cdb23d5b474384ad19a1284d96948",
+      "bytes": 27089
+    },
+    {
+      "slug": "okuma",
+      "path": "/images/suppliers/okuma/okuma_04.jpg",
+      "filename": "okuma_04.jpg",
+      "grade": "ok",
+      "sha256": "ef143c4a6d3e86037dd897b6744f926a9f052ffcf8dcf1fef01891d5a0dba830",
+      "bytes": 252320
+    },
+    {
+      "slug": "usg",
+      "path": "/images/suppliers/usg/usg_01.jpg",
+      "filename": "usg_01.jpg",
+      "grade": "ok",
+      "sha256": "c4b20bae85b8e0c7a409f506bbfe758a9eb5f3a7b7966aefd980fd17d01a6c4b",
+      "bytes": 218069
+    },
+    {
+      "slug": "aubert-duval",
+      "path": "/images/suppliers/aubert-duval/aubert-duval_01.jpg",
+      "filename": "aubert-duval_01.jpg",
+      "grade": "soft",
+      "sha256": "6ed97db4a254b3aada32cbc8be1bba77e8ea4f1faa8e7eca08016009c4ca3fb3",
+      "bytes": 294882
+    },
+    {
+      "slug": "domtar",
+      "path": "/images/suppliers/domtar/domtar_01.jpg",
+      "filename": "domtar_01.jpg",
+      "grade": "soft",
+      "sha256": "12fb30a8702c6fab87cd2b169d68fc49a5259b6908547f9292e3794a9ea65bdb",
+      "bytes": 610017
+    },
+    {
+      "slug": "haynes-international",
+      "path": "/images/suppliers/haynes-international/haynes-international_01.jpg",
+      "filename": "haynes-international_01.jpg",
+      "grade": "soft",
+      "sha256": "8fb1888eb8ff283a6ee24db1e366ae524f392fbaf3b24d3636132d83a528a9f4",
+      "bytes": 318405
+    },
+    {
+      "slug": "haynes-international",
+      "path": "/images/suppliers/haynes-international/haynes-international_02.jpg",
+      "filename": "haynes-international_02.jpg",
+      "grade": "soft",
+      "sha256": "241fd77767d05e08299add7651937cff84f8c03c5da68c3321b7abe2790a4632",
+      "bytes": 240093
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/suppliers/holmen/holmen_01.jpg",
+      "filename": "holmen_01.jpg",
+      "grade": "soft",
+      "sha256": "0d27e28cf036705eef603da2aeee5767cd7ea4e6789c83c51f3fc7657c1bde94",
+      "bytes": 257061
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/suppliers/holmen/holmen_02.jpg",
+      "filename": "holmen_02.jpg",
+      "grade": "soft",
+      "sha256": "e11131f69857d37448999f327eb9e482554c9d523b130444bdeb90bb19a752fb",
+      "bytes": 195870
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/suppliers/holmen/holmen_03.jpg",
+      "filename": "holmen_03.jpg",
+      "grade": "soft",
+      "sha256": "2c3522d05526a1bb25b470055b216d7768f5fd6713c730f7df162006cdf57f66",
+      "bytes": 140751
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/suppliers/holmen/holmen_04.jpg",
+      "filename": "holmen_04.jpg",
+      "grade": "soft",
+      "sha256": "f7f03e0766ccc8dd36181b3aaeefada32987e52856a8bfb83094b3c765ffcf8e",
+      "bytes": 716196
+    },
+    {
+      "slug": "keyence",
+      "path": "/images/suppliers/keyence/keyence_01.jpg",
+      "filename": "keyence_01.jpg",
+      "grade": "soft",
+      "sha256": "81a0f77809e9c43c4eea015df57861fbb1ad6e32ce4b406cca9885f94e13d2cc",
+      "bytes": 400527
+    },
+    {
+      "slug": "keyence",
+      "path": "/images/suppliers/keyence/keyence_02.jpg",
+      "filename": "keyence_02.jpg",
+      "grade": "soft",
+      "sha256": "81a0f77809e9c43c4eea015df57861fbb1ad6e32ce4b406cca9885f94e13d2cc",
+      "bytes": 400527
+    },
+    {
+      "slug": "keyence",
+      "path": "/images/suppliers/keyence/keyence_03.jpg",
+      "filename": "keyence_03.jpg",
+      "grade": "soft",
+      "sha256": "f421323b1a7778c5d14e6cda31f4e619fd46f9893336b8e9b278d240016d84d7",
+      "bytes": 286436
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "path": "/images/suppliers/mitsubishi-electric/mitsubishi-electric_01.jpg",
+      "filename": "mitsubishi-electric_01.jpg",
+      "grade": "soft",
+      "sha256": "5215a461e135e242b13ce575f616b22d5187c6562ce7589f73b1f8827f563bce",
+      "bytes": 1280536
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "path": "/images/suppliers/mitsubishi-electric/mitsubishi-electric_02.jpg",
+      "filename": "mitsubishi-electric_02.jpg",
+      "grade": "soft",
+      "sha256": "ef60a902084ccf4d5c91ce1059ed8735f1443964aae313da9caf40ed989682dc",
+      "bytes": 431282
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "path": "/images/suppliers/mitsubishi-electric/mitsubishi-electric_03.jpg",
+      "filename": "mitsubishi-electric_03.jpg",
+      "grade": "soft",
+      "sha256": "78b083ffe66fa91c18f3054f06866c4c08de4b49f31b0e38b90277a288550369",
+      "bytes": 393091
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "path": "/images/suppliers/mitsubishi-electric/mitsubishi-electric_04.jpg",
+      "filename": "mitsubishi-electric_04.jpg",
+      "grade": "soft",
+      "sha256": "08d5664a39e5fd4a1a2b8aefc71a95d878c21fa27c0e393d043c3eca2cf08fb7",
+      "bytes": 334775
+    },
+    {
+      "slug": "okonite",
+      "path": "/images/suppliers/okonite/okonite_01.jpg",
+      "filename": "okonite_01.jpg",
+      "grade": "soft",
+      "sha256": "5e67e8b166b40a0a745fe2c5390c755dcb54e7e2ccd64abba9dfe3ec34cd2440",
+      "bytes": 279202
+    },
+    {
+      "slug": "okonite",
+      "path": "/images/suppliers/okonite/okonite_02.jpg",
+      "filename": "okonite_02.jpg",
+      "grade": "soft",
+      "sha256": "2eed9a380458f23a887e91988208e86cd276020bb8b2e516f77f061a5b2d91e9",
+      "bytes": 390097
+    },
+    {
+      "slug": "ovako",
+      "path": "/images/suppliers/ovako/ovako_01.jpg",
+      "filename": "ovako_01.jpg",
+      "grade": "soft",
+      "sha256": "6efc70265c5c202c1c2ed1cd613a90c9e8de4b122f2d0ecef9be6a1e13510763",
+      "bytes": 168995
+    },
+    {
+      "slug": "schott-ag",
+      "path": "/images/suppliers/schott-ag/schott-ag_01.jpg",
+      "filename": "schott-ag_01.jpg",
+      "grade": "soft",
+      "sha256": "5d71645c1cb9b514e2db46f217e4f9e84e18ede16ee6b1d2267a6e6a45a0cc5f",
+      "bytes": 147290
+    },
+    {
+      "slug": "schott-ag",
+      "path": "/images/suppliers/schott-ag/schott-ag_02.jpg",
+      "filename": "schott-ag_02.jpg",
+      "grade": "soft",
+      "sha256": "81cf59d0777d09133203e8d15eb23c1efa879674a1eb0d247ba477d471ccbb06",
+      "bytes": 292433
+    },
+    {
+      "slug": "schott-ag",
+      "path": "/images/suppliers/schott-ag/schott-ag_03.jpg",
+      "filename": "schott-ag_03.jpg",
+      "grade": "soft",
+      "sha256": "eae5c2ac03d3119cb9fa160e04ac36c45d6377316bd8fdb6d893689a45e6bb73",
+      "bytes": 418425
+    },
+    {
+      "slug": "schott-ag",
+      "path": "/images/suppliers/schott-ag/schott-ag_04.jpg",
+      "filename": "schott-ag_04.jpg",
+      "grade": "soft",
+      "sha256": "5281b71fd770bc191e541f88c20605e9375af7785ac5d42e75ff0d0fb52ea8a4",
+      "bytes": 227977
+    }
+  ]
+}
