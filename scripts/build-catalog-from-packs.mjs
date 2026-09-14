@@ -11,6 +11,7 @@
  *   data/daily-2026-09-11-hold-rest30-cleared.json (OK 15 + soft 15)
  *   data/daily-2026-09-11-hold41-products-cleared.json (OK 19 + soft 13; blocked 9 out)
  *   data/daily-2026-09-14-products-cleared.json (OK 1 + soft 27; HOLD 22 out)
+ *   data/daily-2026-09-14-hold22-products-cleared.json (OK 11 + soft 11; soft 27 + dmg-mori locked)
  *   data/daily-2026-09-14-mills-cleared.json (OK 7 + soft 9; HOLD 34 out incl. category-fills)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
@@ -261,6 +262,7 @@ function mergeManifestSoftCredits() {
   for (const file of [
     "daily-2026-09-11-hold41-products-cleared.json",
     "daily-2026-09-14-products-cleared.json",
+    "daily-2026-09-14-hold22-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const entry of pack?.soft ?? []) {
@@ -746,6 +748,7 @@ function skuIdentityBySlug() {
     "daily-2026-09-11-products-soft9.json",
     "daily-2026-09-11-hold41-products-cleared.json",
     "daily-2026-09-14-products-cleared.json",
+    "daily-2026-09-14-hold22-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const sku of pack?.products ?? []) {
@@ -1033,6 +1036,24 @@ function loadDaily0914Seals() {
 function loadHold41ProductSeals() {
   const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-11-hold41-products-cleared.json"));
   return { pack, productWire: productWireFromPack(pack) };
+}
+
+function loadHold22ProductSeals() {
+  const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-14-hold22-products-cleared.json"));
+  return { pack, productWire: productWireFromPack(pack) };
+}
+
+function buildDaily0914Hold22ProductHosts(wiredSlugs, report) {
+  const seals = loadHold22ProductSeals();
+  return buildProductHostsFromPack({
+    pack: seals.pack,
+    packTag: "daily-2026-09-14-hold22",
+    dateTag: "2026-09-14",
+    productWire: seals.productWire,
+    wiredSlugs,
+    report,
+    omitWebsite: true,
+  });
 }
 
 function buildDaily0914ProductHosts(wiredSlugs, report) {
@@ -1457,6 +1478,21 @@ function loadProductPacks() {
       });
     }
   }
+  const hold22 = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-14-hold22-products-cleared.json"));
+  if (hold22) {
+    const seals = loadHold22ProductSeals();
+    const skus = (hold22.products ?? []).map(normalizeClearedSku).filter((sku) => {
+      if (seals.productWire.size && !seals.productWire.has(sku.supplier_slug_guess)) return false;
+      return true;
+    });
+    if (skus.length) {
+      packs.push({
+        packId: "d0914-h22",
+        scrapedAt: "2026-09-14T18:35:00.000Z",
+        skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+      });
+    }
+  }
   return packs;
 }
 
@@ -1737,6 +1773,7 @@ export function buildCatalog() {
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),
+    ...buildDaily0914Hold22ProductHosts(wired0914Slugs, report),
   ];
 
   // Dedupe: by id, then by website domain / normalised name against the pack
