@@ -104,30 +104,6 @@
     },
     {
       "slug": "kuka",
-      "path": "/images/suppliers/kuka/kuka_04.jpg",
-      "filename": "kuka_04.jpg",
-      "grade": "ok",
-      "sha256": "d855728cfdbaed165d0c397abe06697571c706dbd818c50d281ead230a5ad9a5",
-      "bytes": 250729
-    },
-    {
-      "slug": "kuka",
-      "path": "/images/suppliers/kuka/kuka_05.jpg",
-      "filename": "kuka_05.jpg",
-      "grade": "ok",
-      "sha256": "5d4dc726cf77418e21fa98f8f7154118aee385a65a2dfe27fc21493fd0ecc933",
-      "bytes": 375443
-    },
-    {
-      "slug": "kuka",
-      "path": "/images/suppliers/kuka/kuka_07.jpg",
-      "filename": "kuka_07.jpg",
-      "grade": "ok",
-      "sha256": "91841ddd0b4ce47be822c1c907cb3c82f0048711512ea97c7688407c41c4f8bb",
-      "bytes": 414726
-    },
-    {
-      "slug": "kuka",
       "path": "/images/suppliers/kuka/kuka_08.jpg",
       "filename": "kuka_08.jpg",
       "grade": "ok",
