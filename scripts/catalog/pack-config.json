@@ -770,6 +770,519 @@
       "website": "https://www.wienerberger.com/",
       "description": "Wienerberger AG is an Austrian building-materials manufacturer of clay bricks, roof tiles and pavers.",
       "product_lines": ["Clay bricks", "Roof tiles", "Pavers"]
+    },
+    "atlas-tube": {
+      "company_name": "Atlas Tube",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.atlastube.com/",
+      "description": "Atlas Tube manufactures hollow structural sections and jumbo HSS for construction and industrial fabrication.",
+      "product_lines": ["Hollow structural sections", "Jumbo HSS"]
+    },
+    "centravis": {
+      "company_name": "Centravis Production Ukraine PJSC",
+      "primary_category": "Tube & Pipes",
+      "country": "Ukraine",
+      "city": "Nikopol",
+      "website": "https://www.centravis.com/",
+      "description": "Centravis is a Ukrainian mill producing seamless stainless heat-exchanger and boiler tubes.",
+      "product_lines": ["Seamless stainless heat-exchanger tubes", "Boiler tubes"]
+    },
+    "cosmo-films": {
+      "company_name": "Cosmo Films Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "New Delhi",
+      "website": "https://www.cosmofilms.com/",
+      "description": "Cosmo Films Limited is an Indian BOPP film manufacturer for packaging, lamination and labels.",
+      "product_lines": ["BOPP packaging films", "Lamination films", "Label films"]
+    },
+    "handytube": {
+      "company_name": "HandyTube Corporation",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Camden",
+      "website": "https://www.handytube.com/",
+      "description": "HandyTube manufactures seamless stainless coiled and capillary tubing for instrumentation and industrial use.",
+      "product_lines": ["Seamless coiled tubing", "Capillary tubing"]
+    },
+    "linmot": {
+      "company_name": "LinMot AG",
+      "primary_category": "Hardware & Motion",
+      "country": "Switzerland",
+      "city": "Spreitenbach",
+      "website": "https://linmot.com/",
+      "description": "LinMot AG (NTI AG) manufactures industrial linear motors and servo drive modules.",
+      "product_lines": ["Linear motors", "Servo drive modules"]
+    },
+    "metal-matic": {
+      "company_name": "Metal-Matic, LLC",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Minneapolis",
+      "website": "https://www.metal-matic.com/",
+      "description": "Metal-Matic manufactures ERW and DOM carbon steel mechanical tubing.",
+      "product_lines": ["ERW mechanical tubing", "DOM mechanical tubing"]
+    },
+    "mukand": {
+      "company_name": "Mukand Limited",
+      "primary_category": "Steel & Metals",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "https://www.mukand.com/",
+      "description": "Mukand Limited is an Indian steelmaker producing alloy and stainless long products.",
+      "product_lines": ["Alloy steel bars", "Stainless long products"]
+    },
+    "pilz": {
+      "company_name": "Pilz GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Ostfildern",
+      "website": "https://www.pilz.com/",
+      "description": "Pilz manufactures safety relays, controllers and safe-motion systems for factory automation.",
+      "product_lines": ["Safety relays", "Safety controllers", "Safe motion"]
+    },
+    "service-wire": {
+      "company_name": "Service Wire Company",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Culloden",
+      "website": "https://www.servicewire.com/",
+      "description": "Service Wire Company manufactures building wire and industrial power conductors.",
+      "product_lines": ["Building wire", "Industrial power conductors"]
+    },
+    "venus-pipes": {
+      "company_name": "Venus Pipes & Tubes Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "India",
+      "city": "Dhaneti",
+      "website": "https://www.venuspipes.com/",
+      "description": "Venus Pipes & Tubes Limited manufactures stainless seamless and welded pipes and tubes.",
+      "product_lines": ["Stainless seamless pipe", "Stainless welded tube"]
+    },
+    "wipak": {
+      "company_name": "Wipak Oy",
+      "primary_category": "Packaging",
+      "country": "Finland",
+      "city": "Nastola",
+      "website": "https://www.wipak.com/",
+      "description": "Wipak manufactures medical sterile-barrier and food flexible packaging films.",
+      "product_lines": ["Medical sterile-barrier films", "Food flexible packaging"]
+    },
+    "epl-limited": {
+      "company_name": "EPL Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "https://www.eplglobal.com/",
+      "description": "EPL Limited manufactures laminated plastic barrier tubes for personal-care packaging.",
+      "product_lines": ["Laminated barrier tubes"]
+    },
+    "graham-packaging": {
+      "company_name": "Graham Packaging Company",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Lancaster",
+      "website": "https://www.grahampackaging.com/",
+      "description": "Graham Packaging blow-molds rigid plastic bottles and containers for food and household goods.",
+      "product_lines": ["Blow-molded bottles", "Rigid plastic containers"]
+    },
+    "retal": {
+      "company_name": "Retal Industries Ltd.",
+      "primary_category": "Packaging",
+      "country": "Lithuania",
+      "city": "Klaipėda",
+      "website": "https://www.retalgroup.com/",
+      "description": "Retal manufactures PET preforms, closures and rigid packaging containers.",
+      "product_lines": ["PET preforms", "Closures", "Rigid containers"]
+    },
+    "artrom": {
+      "company_name": "Artrom Steel Tubes S.A.",
+      "primary_category": "Tube & Pipes",
+      "country": "Romania",
+      "city": "Slatina",
+      "website": "https://www.artrom.com/",
+      "description": "Artrom Steel Tubes is a Romanian mill producing seamless steel tubes for industrial and energy use.",
+      "product_lines": ["Seamless steel tubes", "Line pipe"]
+    },
+    "jindal-stainless": {
+      "company_name": "Jindal Stainless Limited",
+      "primary_category": "Steel & Metals",
+      "country": "India",
+      "city": "Hisar",
+      "website": "https://www.jindalstainless.com/",
+      "description": "Jindal Stainless Limited produces stainless slabs, coils and specialty stainless grades.",
+      "product_lines": ["Stainless slabs", "Stainless coils", "Specialty stainless"]
+    },
+    "sharon-tube": {
+      "company_name": "Sharon Tube Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Sharon",
+      "website": "https://www.sharontube.com/",
+      "description": "Sharon Tube manufactures DOM mechanical and ERW carbon steel tubing.",
+      "product_lines": ["DOM mechanical tubing", "ERW carbon tubing"]
+    },
+    "thompson-pipe": {
+      "company_name": "Thompson Pipe Group",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Grand Prairie",
+      "website": "https://www.thompsonpipegroup.com/",
+      "description": "Thompson Pipe Group manufactures prestressed concrete and steel cylinder pipe for water infrastructure.",
+      "product_lines": ["Prestressed concrete pipe", "Steel cylinder pipe"]
+    },
+    "valmont-tubing": {
+      "company_name": "Valmont Tubing",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Valley",
+      "website": "https://www.valmonttubing.com/",
+      "description": "Valmont Tubing manufactures custom mechanical and structural steel tube.",
+      "product_lines": ["Mechanical steel tube", "Structural steel tube"]
+    },
+    "wheatland-tube": {
+      "company_name": "Wheatland Tube",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.wheatland.com/",
+      "description": "Wheatland Tube manufactures standard pipe, fence tube and sprinkler pipe.",
+      "product_lines": ["Standard pipe", "Fence tube", "Sprinkler pipe"]
+    },
+    "bishop-wisecarver": {
+      "company_name": "Bishop-Wisecarver Corporation",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Pittsburg",
+      "website": "https://www.bwc.com/",
+      "description": "Bishop-Wisecarver manufactures DualVee guide wheels and linear guide systems.",
+      "product_lines": ["DualVee guide wheels", "Linear guide systems"]
+    },
+    "kalyani-steels": {
+      "company_name": "Kalyani Steels Limited",
+      "primary_category": "Steel & Metals",
+      "country": "India",
+      "city": "Pune",
+      "website": "https://www.kalyanisteels.com/",
+      "description": "Kalyani Steels Limited is an Indian mill producing carbon and alloy steel blooms and rounds.",
+      "product_lines": ["Carbon steel blooms", "Alloy steel rounds"]
+    },
+    "sber": {
+      "company_name": "Schoeller-Bleckmann Edelstahlrohr GmbH",
+      "primary_category": "Tube & Pipes",
+      "country": "Austria",
+      "city": "Ternitz",
+      "website": "https://www.sber.co.at/",
+      "description": "SBER (Schoeller-Bleckmann Edelstahlrohr) manufactures seamless stainless and nickel-alloy tubes in Ternitz, Austria.",
+      "product_lines": ["Seamless stainless tubes", "Nickel-alloy tubes"]
+    },
+    "thomson-linear": {
+      "company_name": "Thomson Industries, Inc.",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Radford",
+      "website": "https://www.thomsonlinear.com/",
+      "description": "Thomson manufactures linear actuators, ball screws and linear bearings.",
+      "product_lines": ["Linear actuators", "Ball screws", "Linear bearings"]
+    },
+    "tratos": {
+      "company_name": "Tratos Cavi S.p.A.",
+      "primary_category": "Cables & Electrical",
+      "country": "Italy",
+      "city": "Pieve Santo Stefano",
+      "website": "https://www.tratosgroup.com/",
+      "description": "Tratos manufactures power, specialty industrial and fibre-optic cables.",
+      "product_lines": ["Power cables", "Industrial cables", "Fibre-optic cables"]
+    },
+    "weidmuller": {
+      "company_name": "Weidmüller Interface GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Detmold",
+      "website": "https://www.weidmueller.com/",
+      "description": "Weidmüller manufactures terminal blocks and industrial connectivity components.",
+      "product_lines": ["Terminal blocks", "Industrial connectivity"]
+    },
+    "etex": {
+      "company_name": "Etex NV",
+      "primary_category": "Construction",
+      "country": "Belgium",
+      "city": "Brussels",
+      "website": "https://www.etexgroup.com/",
+      "description": "Etex manufactures plasterboard, fibre-cement and roofing building materials.",
+      "product_lines": ["Plasterboard", "Fibre cement", "Roofing"]
+    },
+    "logoplaste": {
+      "company_name": "Logoplaste",
+      "primary_category": "Packaging",
+      "country": "Portugal",
+      "city": "Cascais",
+      "website": "https://www.logoplaste.com/",
+      "description": "Logoplaste manufactures rigid plastic bottles and blow-molded containers.",
+      "product_lines": ["Rigid plastic bottles", "Blow-molded containers"]
+    },
+    "plastipak": {
+      "company_name": "Plastipak Holdings, Inc.",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Plymouth",
+      "website": "https://www.plastipak.com/",
+      "description": "Plastipak manufactures PET bottles, preforms and rigid plastic containers.",
+      "product_lines": ["PET bottles", "PET preforms", "Rigid containers"]
+    },
+    "columbus-stainless": {
+      "company_name": "Columbus Stainless",
+      "primary_category": "Steel & Metals",
+      "country": "South Africa",
+      "city": "Middelburg",
+      "website": "https://www.columbus.co.za/",
+      "description": "Columbus Stainless produces ferritic and austenitic flat stainless products in Middelburg.",
+      "product_lines": ["Ferritic stainless coil", "Austenitic stainless coil"]
+    },
+    "fine-tubes": {
+      "company_name": "Fine Tubes Limited",
+      "primary_category": "Tube & Pipes",
+      "country": "United Kingdom",
+      "city": "Plymouth",
+      "website": "https://www.finetubes.co.uk/",
+      "description": "Fine Tubes manufactures seamless stainless and nickel-alloy precision tubing.",
+      "product_lines": ["Seamless stainless tubing", "Nickel-alloy precision tubing"]
+    },
+    "banner-engineering": {
+      "company_name": "Banner Engineering Corp.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Minneapolis",
+      "website": "https://www.bannerengineering.com/",
+      "description": "Banner Engineering manufactures photoelectric sensors and safety light curtains.",
+      "product_lines": ["Photoelectric sensors", "Safety light curtains"]
+    },
+    "basler": {
+      "company_name": "Basler AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Ahrensburg",
+      "website": "https://www.baslerweb.com/",
+      "description": "Basler AG manufactures industrial cameras and embedded vision modules.",
+      "product_lines": ["Industrial cameras", "Embedded vision"]
+    },
+    "cognex": {
+      "company_name": "Cognex Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Natick",
+      "website": "https://www.cognex.com/",
+      "description": "Cognex manufactures machine-vision systems and industrial barcode readers.",
+      "product_lines": ["Machine-vision systems", "Industrial barcode readers"]
+    },
+    "iko": {
+      "company_name": "IKO Nippon Thompson Co., Ltd.",
+      "primary_category": "Hardware & Motion",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.ikont.co.jp/eg/",
+      "description": "IKO Nippon Thompson manufactures needle roller bearings and linear motion rolling guides.",
+      "product_lines": ["Needle roller bearings", "Linear motion guides"]
+    },
+    "murrelektronik": {
+      "company_name": "Murrelektronik GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Oppenweiler",
+      "website": "https://www.murrelektronik.com/",
+      "description": "Murrelektronik manufactures decentralized automation, I/O and power-supply components.",
+      "product_lines": ["Decentralized I/O", "Power supplies"]
+    },
+    "pbc-linear": {
+      "company_name": "PBC Linear",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Roscoe",
+      "website": "https://www.pbclinear.com/",
+      "description": "PBC Linear manufactures linear bearings, guides and actuators.",
+      "product_lines": ["Linear bearings", "Linear guides", "Actuators"]
+    },
+    "rbc-bearings": {
+      "company_name": "RBC Bearings Incorporated",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Oxford",
+      "website": "https://www.rbcbearings.com/",
+      "description": "RBC Bearings manufactures plain, aerospace and precision mechanical bearings.",
+      "product_lines": ["Plain bearings", "Aerospace bearings"]
+    },
+    "sullair": {
+      "company_name": "Sullair LLC",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Michigan City",
+      "website": "https://www.sullair.com/",
+      "description": "Sullair manufactures rotary-screw and portable air compressors.",
+      "product_lines": ["Rotary-screw compressors", "Portable air compressors"]
+    },
+    "turck": {
+      "company_name": "Hans Turck GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Mülheim",
+      "website": "https://www.turck.com/",
+      "description": "Turck manufactures industrial sensors, fieldbus and connectivity components.",
+      "product_lines": ["Industrial sensors", "Fieldbus I/O", "Connectivity"]
+    },
+    "wago": {
+      "company_name": "WAGO Kontakttechnik GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Minden",
+      "website": "https://www.wago.com/",
+      "description": "WAGO manufactures spring-clamp terminal blocks and I/O systems.",
+      "product_lines": ["Terminal blocks", "I/O systems"]
+    },
+    "certainteed": {
+      "company_name": "CertainTeed LLC",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Malvern",
+      "website": "https://www.certainteed.com/",
+      "description": "CertainTeed manufactures gypsum, roofing and insulation building materials.",
+      "product_lines": ["Gypsum board", "Roofing", "Insulation"]
+    },
+    "dmg-mori": {
+      "company_name": "DMG MORI AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Bielefeld",
+      "website": "https://www.dmgmori.com/",
+      "description": "DMG MORI manufactures CNC machining centers and turning machines.",
+      "product_lines": ["CNC machining centers", "Turning machines"]
+    },
+    "kuka": {
+      "company_name": "KUKA AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Augsburg",
+      "website": "https://www.kuka.com/",
+      "description": "KUKA manufactures industrial robots and automation cells.",
+      "product_lines": ["Industrial robots", "Automation cells"]
+    },
+    "mazak": {
+      "company_name": "Yamazaki Mazak Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.mazak.com/",
+      "description": "Mazak manufactures CNC multi-tasking machines and laser processing systems.",
+      "product_lines": ["CNC multi-tasking machines", "Laser processing systems"]
+    },
+    "moog": {
+      "company_name": "Moog Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "East Aurora",
+      "website": "https://www.moog.com/",
+      "description": "Moog manufactures precision motion-control and actuation systems for industrial and aerospace use.",
+      "product_lines": ["Motion-control systems", "Industrial actuators"]
+    },
+    "okuma": {
+      "company_name": "OKUMA Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Oguchi",
+      "website": "https://www.okuma.com/",
+      "description": "OKUMA manufactures CNC lathes, machining centers and OSP controls.",
+      "product_lines": ["CNC lathes", "Machining centers", "OSP controls"]
+    },
+    "usg": {
+      "company_name": "USG Corporation",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Chicago",
+      "website": "https://www.usg.com/",
+      "description": "USG manufactures gypsum panels and ceiling systems for construction.",
+      "product_lines": ["Gypsum panels", "Ceiling systems"]
+    },
+    "aubert-duval": {
+      "company_name": "Aubert & Duval",
+      "primary_category": "Steel & Metals",
+      "country": "France",
+      "city": "Pamiers",
+      "website": "https://www.aubertduval.com/",
+      "description": "Aubert & Duval manufactures specialty steels, superalloys and forgings.",
+      "product_lines": ["Specialty steels", "Superalloys", "Forgings"]
+    },
+    "domtar": {
+      "company_name": "Domtar Corporation",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Fort Mill",
+      "website": "https://www.domtar.com/",
+      "description": "Domtar manufactures communication papers and pulp for packaging and print.",
+      "product_lines": ["Communication papers", "Market pulp"]
+    },
+    "haynes-international": {
+      "company_name": "Haynes International Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Kokomo",
+      "website": "https://www.haynesintl.com/",
+      "description": "Haynes International produces nickel and cobalt superalloy flat and long products.",
+      "product_lines": ["Nickel superalloys", "Cobalt superalloys"]
+    },
+    "holmen": {
+      "company_name": "Holmen AB",
+      "primary_category": "Packaging",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.holmen.com/",
+      "description": "Holmen manufactures paperboard, paper and wood products from Swedish forestry.",
+      "product_lines": ["Paperboard", "Paper", "Wood products"]
+    },
+    "keyence": {
+      "company_name": "KEYENCE Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.keyence.com/",
+      "description": "KEYENCE manufactures factory-automation sensors and machine-vision systems.",
+      "product_lines": ["FA sensors", "Machine-vision systems"]
+    },
+    "mitsubishi-electric": {
+      "company_name": "Mitsubishi Electric Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.mitsubishielectric.com/",
+      "description": "Mitsubishi Electric manufactures factory-automation PLCs, drives and servo systems.",
+      "product_lines": ["PLCs", "Drives", "Servo systems"]
+    },
+    "okonite": {
+      "company_name": "The Okonite Company",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Ramsey",
+      "website": "https://www.okonite.com/",
+      "description": "Okonite manufactures insulated power and control cables.",
+      "product_lines": ["Power cables", "Control cables"]
+    },
+    "ovako": {
+      "company_name": "Ovako AB",
+      "primary_category": "Steel & Metals",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "website": "https://www.ovako.com/",
+      "description": "Ovako manufactures engineering steel bars, tubes and rings.",
+      "product_lines": ["Engineering steel bars", "Tubes", "Rings"]
+    },
+    "schott-ag": {
+      "company_name": "SCHOTT AG",
+      "primary_category": "Packaging",
+      "country": "Germany",
+      "city": "Mainz",
+      "website": "https://www.schott.com/",
+      "description": "SCHOTT manufactures specialty glass, pharma tubing and glass packaging.",
+      "product_lines": ["Pharma glass tubing", "Specialty glass", "Glass packaging"]
     }
   }
 }
