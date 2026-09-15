@@ -1,37 +1,124 @@
 {
-  "label": "QA-HOLD33-PRODUCTS-RESEARCHER-PARTIAL",
-  "pack": "daily/2026-09-15/_qa_hold33_products",
+  "label": "DAILY-2026-09-15-HOLD33-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-15/_qa_hold33_products/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD33-PRODUCTS-RESEARCHER-PARTIAL",
   "sealed_at_pt": "2026-09-15 ~11:25 AM PT",
+  "pack": "daily/2026-09-15/_qa_hold33_products",
+  "wire_ok": [],
   "ok": [],
   "soft": [
-    "amiantit",
-    "amiblu",
-    "apar-industries",
-    "brugg-cables",
-    "cerro-wire",
-    "circor",
-    "ckd-corporation",
-    "comau",
-    "dayco",
-    "dorner",
-    "ester-industries",
-    "forbo-siegling",
-    "future-pipe-industries",
-    "haas-automation",
-    "harting",
-    "hobas-pipe-usa",
-    "mapei",
-    "mcwane-ductile",
-    "menasha-packaging",
-    "nedschroef",
-    "olympic-steel",
-    "saha-thai-steel-pipe",
-    "staubli",
-    "stoelzle-glass",
-    "timkensteel",
-    "us-pipe",
-    "vacmet",
-    "zimmer-group"
+    {
+      "slug": "amiantit",
+      "reason": "GRP filament-winding process + FRP pipe-end stills — category GRP/GRE/DI pipe type-match, no Amiantit brand"
+    },
+    {
+      "slug": "amiblu",
+      "reason": "composite pipe process/end stills — category GRP Flowtite/Hobas type-match, no Amiblu brand"
+    },
+    {
+      "slug": "apar-industries",
+      "reason": "RR Kabel branded MV cable cutaway — soft cable category type-match, wrong brand (not APAR conductors)"
+    },
+    {
+      "slug": "brugg-cables",
+      "reason": "unbranded/wrong-brand HV cable cutaway stills — soft power-cable category type-match, no Brugg brand"
+    },
+    {
+      "slug": "cerro-wire",
+      "reason": "Polycab Primma house-wire carton — soft building-wire category type-match, wrong brand (not Cerro THHN)"
+    },
+    {
+      "slug": "circor",
+      "reason": "Maps+BMTF poison stems cleared; generic handwheel ball valve + CGI centrifugal pump — category type-match, no CIRCOR brand"
+    },
+    {
+      "slug": "ckd-corporation",
+      "reason": "unbranded pneumatics/automation stills — category type-match, no CKD brand"
+    },
+    {
+      "slug": "comau",
+      "reason": "yellow robot-arm application lab (guitar handling) — soft robotics application type-match, no Comau brand"
+    },
+    {
+      "slug": "dayco",
+      "reason": "unbranded timing-belt engine-bay stills — soft belt/tensioner application type-match, no Dayco brand"
+    },
+    {
+      "slug": "dorner",
+      "reason": "unbranded conveyor/mill-machinery stills — soft conveyor category type-match, no Dorner brand"
+    },
+    {
+      "slug": "ester-industries",
+      "reason": "unbranded film/warehouse stills — soft polyester-film category type-match, no Ester brand"
+    },
+    {
+      "slug": "forbo-siegling",
+      "reason": "unbranded roller+belt conveyor curve — soft conveyor type-match, no Forbo Siegling brand"
+    },
+    {
+      "slug": "future-pipe-industries",
+      "reason": "unbranded composite/pipe-bundle stills — category GRE/GRP type-match, no Future Pipe brand"
+    },
+    {
+      "slug": "haas-automation",
+      "reason": "DMG DMU 50 Deckel Maho machining center — soft CNC category type-match, wrong brand (not Haas)"
+    },
+    {
+      "slug": "harting",
+      "reason": "unbranded connector/sensor-lab stills — soft industrial-connectivity type-match, no HARTING brand"
+    },
+    {
+      "slug": "hobas-pipe-usa",
+      "reason": "unbranded FRP/pipe stills — category FRPM pipe type-match, no HOBAS brand"
+    },
+    {
+      "slug": "mapei",
+      "reason": "UltraTech Cement bag still — soft construction-bag category type-match, wrong brand (not MAPEI adhesives)"
+    },
+    {
+      "slug": "mcwane-ductile",
+      "reason": "unbranded DI/pipe stills — category ductile-iron pressure pipe type-match, no McWane brand"
+    },
+    {
+      "slug": "menasha-packaging",
+      "reason": "customer corrugated/carton showcase — soft packaging showcase type-match, no Menasha brand"
+    },
+    {
+      "slug": "nedschroef",
+      "reason": "unbranded fastener/mill-machinery stills — soft automotive-fastener type-match, no Nedschroef brand"
+    },
+    {
+      "slug": "olympic-steel",
+      "reason": "unbranded plate/rebar stills — soft flat-rolled/plate category type-match, no Olympic Steel brand"
+    },
+    {
+      "slug": "saha-thai-steel-pipe",
+      "reason": "unbranded ERW/pipe stills — category line-pipe type-match, no Saha Thai brand"
+    },
+    {
+      "slug": "staubli",
+      "reason": "unbranded robot/connector stills — soft robotics/connectivity type-match, no Stäubli brand"
+    },
+    {
+      "slug": "stoelzle-glass",
+      "reason": "unbranded palletized/pharma glass stills — soft glass-packaging type-match, no Stoelzle brand"
+    },
+    {
+      "slug": "timkensteel",
+      "reason": "unbranded SBQ/steel stills — soft special-bar/seamless category type-match, no TimkenSteel brand"
+    },
+    {
+      "slug": "us-pipe",
+      "reason": "unbranded DI pipe-bundle stills — category ductile-iron/RJ type-match, no U.S. Pipe brand"
+    },
+    {
+      "slug": "vacmet",
+      "reason": "unbranded metallized-film/campus stills — soft BOPET film category type-match, no Vacmet brand"
+    },
+    {
+      "slug": "zimmer-group",
+      "reason": "unbranded handling/automation stills — soft robotics-component type-match, no Zimmer Group brand"
+    }
   ],
   "hold_out": [
     "bulten",
@@ -41,6 +128,671 @@
     "tc-transcontinental"
   ],
   "locked": "#48/#49/#50 Soft/OK locked",
-  "circor": "soft \u2014 Maps+BMTF poison cleared",
-  "wire_recommendation": "Wire soft 28 optional; HOLD 5 out. Soft16+krones locked."
+  "circor": "soft — Maps+BMTF poison stems cleared",
+  "wire_recommendation": "Wire soft 28 optional; HOLD 5 out. Soft16+krones locked.",
+  "soft16_krones_locked": true,
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "stills": {
+    "root": "public/images/products",
+    "file_count": 56,
+    "slugs": [
+      "amiantit",
+      "amiblu",
+      "apar-industries",
+      "brugg-cables",
+      "cerro-wire",
+      "circor",
+      "ckd-corporation",
+      "comau",
+      "dayco",
+      "dorner",
+      "ester-industries",
+      "forbo-siegling",
+      "future-pipe-industries",
+      "haas-automation",
+      "harting",
+      "hobas-pipe-usa",
+      "mapei",
+      "mcwane-ductile",
+      "menasha-packaging",
+      "nedschroef",
+      "olympic-steel",
+      "saha-thai-steel-pipe",
+      "staubli",
+      "stoelzle-glass",
+      "timkensteel",
+      "us-pipe",
+      "vacmet",
+      "zimmer-group"
+    ],
+    "files": [
+      "public/images/products/amiantit/amiantit-main.jpg",
+      "public/images/products/amiantit/amiantit-product.jpg",
+      "public/images/products/amiblu/amiblu-main.jpg",
+      "public/images/products/amiblu/amiblu-product.jpg",
+      "public/images/products/apar-industries/apar-industries.jpg",
+      "public/images/products/apar-industries/apar-product.jpg",
+      "public/images/products/brugg-cables/brugg-cables.jpg",
+      "public/images/products/brugg-cables/brugg-product.jpg",
+      "public/images/products/cerro-wire/cerro-product.jpg",
+      "public/images/products/cerro-wire/cerro-wire.jpg",
+      "public/images/products/circor/circor-millfall__from_png.jpg",
+      "public/images/products/circor/circor-millfall.jpg",
+      "public/images/products/ckd-corporation/ckd-corporation-millfall.jpg",
+      "public/images/products/ckd-corporation/ckd-corporation-millfall1.jpg",
+      "public/images/products/comau/comau-product.jpg",
+      "public/images/products/comau/comau-millfall1.jpg",
+      "public/images/products/dayco/dayco-millfall.jpg",
+      "public/images/products/dayco/dayco-millfall1.jpg",
+      "public/images/products/dorner/dorner-millfall.jpg",
+      "public/images/products/dorner/dorner-millfall1.jpg",
+      "public/images/products/ester-industries/ester-product.jpg",
+      "public/images/products/ester-industries/ester-industries-millfall1.jpg",
+      "public/images/products/forbo-siegling/forbo-siegling-millfall.jpg",
+      "public/images/products/forbo-siegling/forbo-siegling-millfall1.jpg",
+      "public/images/products/future-pipe-industries/future-pipe.jpg",
+      "public/images/products/future-pipe-industries/future-product.jpg",
+      "public/images/products/haas-automation/haas-automation-millfall.jpg",
+      "public/images/products/haas-automation/haas-automation-millfall1.jpg",
+      "public/images/products/harting/harting-product.jpg",
+      "public/images/products/harting/harting-millfall1.jpg",
+      "public/images/products/hobas-pipe-usa/hobas-pipe.jpg",
+      "public/images/products/hobas-pipe-usa/hobas-product.jpg",
+      "public/images/products/mapei/mapei-product.jpg",
+      "public/images/products/mapei/mapei-millfall1.jpg",
+      "public/images/products/mcwane-ductile/mcwane-ductile.jpg",
+      "public/images/products/mcwane-ductile/mcwane-product.jpg",
+      "public/images/products/menasha-packaging/menasha-product.jpg",
+      "public/images/products/menasha-packaging/menasha-packaging-millfall1.jpg",
+      "public/images/products/nedschroef/nedschroef-millfall.jpg",
+      "public/images/products/nedschroef/nedschroef-millfall1.jpg",
+      "public/images/products/olympic-steel/olympic-product.jpg",
+      "public/images/products/olympic-steel/olympic-steel-millfall1.jpg",
+      "public/images/products/saha-thai-steel-pipe/saha-thai.jpg",
+      "public/images/products/saha-thai-steel-pipe/sahathai-product.jpg",
+      "public/images/products/staubli/staubli-product.jpg",
+      "public/images/products/staubli/staubli-millfall1.jpg",
+      "public/images/products/stoelzle-glass/stoelzle-glass.jpg",
+      "public/images/products/stoelzle-glass/stoelzle-glass-millfall1.jpg",
+      "public/images/products/timkensteel/timkensteel-product.jpg",
+      "public/images/products/timkensteel/timkensteel-millfall1.jpg",
+      "public/images/products/us-pipe/us-pipe.jpg",
+      "public/images/products/us-pipe/uspipe-product.jpg",
+      "public/images/products/vacmet/vacmet-product.jpg",
+      "public/images/products/vacmet/vacmet-millfall1.jpg",
+      "public/images/products/zimmer-group/zimmer-product.jpg",
+      "public/images/products/zimmer-group/zimmer-group-millfall1.jpg"
+    ]
+  },
+  "products": [
+    {
+      "slug": "amiantit",
+      "product_name": "Amiantit GRP GRE and Ductile Iron Pipe Systems",
+      "supplier_name": "Saudi Arabian Amiantit Company",
+      "supplier_slug_guess": "amiantit",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.amiantit.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Saudi Arabian Amiantit Company mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/amiantit/amiantit-main.jpg",
+        "/images/products/amiantit/amiantit-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "GRP filament-winding process + FRP pipe-end stills — category GRP/GRE/DI pipe type-match, no Amiantit brand"
+    },
+    {
+      "slug": "amiblu",
+      "product_name": "Amiblu Flowtite and Hobas GRP Pipe Systems",
+      "supplier_name": "Amiblu Holding GmbH",
+      "supplier_slug_guess": "amiblu",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.amiblu.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Amiblu Holding GmbH mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/amiblu/amiblu-main.jpg",
+        "/images/products/amiblu/amiblu-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "composite pipe process/end stills — category GRP Flowtite/Hobas type-match, no Amiblu brand"
+    },
+    {
+      "slug": "apar-industries",
+      "product_name": "APAR Conductors Specialty Cables and Transformer Oils",
+      "supplier_name": "APAR Industries Limited",
+      "supplier_slug_guess": "apar-industries",
+      "category": "Cables & Electrical",
+      "source_url": "https://apar.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — APAR Industries Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/apar-industries/apar-industries.jpg",
+        "/images/products/apar-industries/apar-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "RR Kabel branded MV cable cutaway — soft cable category type-match, wrong brand (not APAR conductors)"
+    },
+    {
+      "slug": "brugg-cables",
+      "product_name": "Brugg High-Voltage Power Cables and Accessories",
+      "supplier_name": "Brugg Cables AG",
+      "supplier_slug_guess": "brugg-cables",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.bruggcables.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Brugg Cables AG mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/brugg-cables/brugg-cables.jpg",
+        "/images/products/brugg-cables/brugg-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded/wrong-brand HV cable cutaway stills — soft power-cable category type-match, no Brugg brand"
+    },
+    {
+      "slug": "cerro-wire",
+      "product_name": "Cerro Wire Building Wire THHN and Circuit Conductors",
+      "supplier_name": "Cerro Wire LLC",
+      "supplier_slug_guess": "cerro-wire",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.cerrowire.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Cerro Wire LLC mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/cerro-wire/cerro-product.jpg",
+        "/images/products/cerro-wire/cerro-wire.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "Polycab Primma house-wire carton — soft building-wire category type-match, wrong brand (not Cerro THHN)"
+    },
+    {
+      "slug": "circor",
+      "product_name": "CIRCOR Industrial Valves Pumps and Flow-Control Systems",
+      "supplier_name": "CIRCOR International, Inc.",
+      "supplier_slug_guess": "circor",
+      "category": "Industrial Parts",
+      "source_url": "https://www.circor.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CIRCOR International, Inc. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/circor/circor-millfall__from_png.jpg",
+        "/images/products/circor/circor-millfall.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "Maps+BMTF poison stems cleared; generic handwheel ball valve + CGI centrifugal pump — category type-match, no CIRCOR brand"
+    },
+    {
+      "slug": "ckd-corporation",
+      "product_name": "CKD Pneumatic Valves Cylinders and Automation Components",
+      "supplier_name": "CKD Corporation",
+      "supplier_slug_guess": "ckd-corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.ckd.co.jp/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — CKD Corporation mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ckd-corporation/ckd-corporation-millfall.jpg",
+        "/images/products/ckd-corporation/ckd-corporation-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded pneumatics/automation stills — category type-match, no CKD brand"
+    },
+    {
+      "slug": "comau",
+      "product_name": "Comau Industrial Robots and Automation Systems",
+      "supplier_name": "Comau S.p.A.",
+      "supplier_slug_guess": "comau",
+      "category": "Industrial Parts",
+      "source_url": "https://www.comau.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Comau S.p.A. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/comau/comau-product.jpg",
+        "/images/products/comau/comau-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "yellow robot-arm application lab (guitar handling) — soft robotics application type-match, no Comau brand"
+    },
+    {
+      "slug": "dayco",
+      "product_name": "Dayco Power Transmission Belts Tensioners and Pulleys",
+      "supplier_name": "Dayco Products LLC",
+      "supplier_slug_guess": "dayco",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.dayco.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Dayco Products LLC mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dayco/dayco-millfall.jpg",
+        "/images/products/dayco/dayco-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded timing-belt engine-bay stills — soft belt/tensioner application type-match, no Dayco brand"
+    },
+    {
+      "slug": "dorner",
+      "product_name": "Dorner Precision Conveyors and Material-Handling Belts",
+      "supplier_name": "Dorner Mfg. Corp.",
+      "supplier_slug_guess": "dorner",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.dornerconveyors.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Dorner Mfg. Corp. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dorner/dorner-millfall.jpg",
+        "/images/products/dorner/dorner-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded conveyor/mill-machinery stills — soft conveyor category type-match, no Dorner brand"
+    },
+    {
+      "slug": "ester-industries",
+      "product_name": "Ester Industries Polyester Packaging and Specialty Films",
+      "supplier_name": "Ester Industries Limited",
+      "supplier_slug_guess": "ester-industries",
+      "category": "Packaging",
+      "source_url": "https://www.esterindustries.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Ester Industries Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ester-industries/ester-product.jpg",
+        "/images/products/ester-industries/ester-industries-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded film/warehouse stills — soft polyester-film category type-match, no Ester brand"
+    },
+    {
+      "slug": "forbo-siegling",
+      "product_name": "Forbo Siegling Conveyor Process and Power-Transmission Belts",
+      "supplier_name": "Forbo Siegling GmbH",
+      "supplier_slug_guess": "forbo-siegling",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.forbo.com/movement",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Forbo Siegling GmbH mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/forbo-siegling/forbo-siegling-millfall.jpg",
+        "/images/products/forbo-siegling/forbo-siegling-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded roller+belt conveyor curve — soft conveyor type-match, no Forbo Siegling brand"
+    },
+    {
+      "slug": "future-pipe-industries",
+      "product_name": "Future Pipe Industries GRE and GRP Composite Pipe Systems",
+      "supplier_name": "Future Pipe Industries",
+      "supplier_slug_guess": "future-pipe-industries",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.futurepipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Future Pipe Industries mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/future-pipe-industries/future-pipe.jpg",
+        "/images/products/future-pipe-industries/future-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded composite/pipe-bundle stills — category GRE/GRP type-match, no Future Pipe brand"
+    },
+    {
+      "slug": "haas-automation",
+      "product_name": "Haas CNC Machining Centers Lathes and Rotary Tables",
+      "supplier_name": "Haas Automation, Inc.",
+      "supplier_slug_guess": "haas-automation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.haascnc.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Haas Automation, Inc. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/haas-automation/haas-automation-millfall.jpg",
+        "/images/products/haas-automation/haas-automation-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "DMG DMU 50 Deckel Maho machining center — soft CNC category type-match, wrong brand (not Haas)"
+    },
+    {
+      "slug": "harting",
+      "product_name": "HARTING Industrial Connectors and Connectivity Components",
+      "supplier_name": "HARTING Technology Group",
+      "supplier_slug_guess": "harting",
+      "category": "Industrial Parts",
+      "source_url": "https://www.harting.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — HARTING Technology Group mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/harting/harting-product.jpg",
+        "/images/products/harting/harting-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded connector/sensor-lab stills — soft industrial-connectivity type-match, no HARTING brand"
+    },
+    {
+      "slug": "hobas-pipe-usa",
+      "product_name": "HOBAS Pipe USA FRPM Centrifugally Cast Pipe Systems",
+      "supplier_name": "HOBAS Pipe USA",
+      "supplier_slug_guess": "hobas-pipe-usa",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.hobas.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — HOBAS Pipe USA mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/hobas-pipe-usa/hobas-pipe.jpg",
+        "/images/products/hobas-pipe-usa/hobas-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded FRP/pipe stills — category FRPM pipe type-match, no HOBAS brand"
+    },
+    {
+      "slug": "mapei",
+      "product_name": "MAPEI Construction Adhesives Mortars and Waterproofing",
+      "supplier_name": "MAPEI S.p.A.",
+      "supplier_slug_guess": "mapei",
+      "category": "Construction",
+      "source_url": "https://www.mapei.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — MAPEI S.p.A. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/mapei/mapei-product.jpg",
+        "/images/products/mapei/mapei-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "UltraTech Cement bag still — soft construction-bag category type-match, wrong brand (not MAPEI adhesives)"
+    },
+    {
+      "slug": "mcwane-ductile",
+      "product_name": "McWane Ductile Iron Pressure Pipe and Fittings",
+      "supplier_name": "McWane Ductile",
+      "supplier_slug_guess": "mcwane-ductile",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.mcwaneductile.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — McWane Ductile mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/mcwane-ductile/mcwane-ductile.jpg",
+        "/images/products/mcwane-ductile/mcwane-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded DI/pipe stills — category ductile-iron pressure pipe type-match, no McWane brand"
+    },
+    {
+      "slug": "menasha-packaging",
+      "product_name": "Menasha Packaging Corrugated and Protective Packaging",
+      "supplier_name": "Menasha Packaging Company, LLC",
+      "supplier_slug_guess": "menasha-packaging",
+      "category": "Packaging",
+      "source_url": "https://www.menashapackaging.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Menasha Packaging Company, LLC mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/menasha-packaging/menasha-product.jpg",
+        "/images/products/menasha-packaging/menasha-packaging-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "customer corrugated/carton showcase — soft packaging showcase type-match, no Menasha brand"
+    },
+    {
+      "slug": "nedschroef",
+      "product_name": "Nedschroef Automotive Fasteners and Cold-Formed Parts",
+      "supplier_name": "Koninklijke Nedschroef Holding B.V.",
+      "supplier_slug_guess": "nedschroef",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nedschroef.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Koninklijke Nedschroef Holding B.V. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/nedschroef/nedschroef-millfall.jpg",
+        "/images/products/nedschroef/nedschroef-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded fastener/mill-machinery stills — soft automotive-fastener type-match, no Nedschroef brand"
+    },
+    {
+      "slug": "olympic-steel",
+      "product_name": "Olympic Steel Flat-Rolled Plate and Processed Carbon Steel",
+      "supplier_name": "Olympic Steel, Inc.",
+      "supplier_slug_guess": "olympic-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.olysteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Olympic Steel, Inc. mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/olympic-steel/olympic-product.jpg",
+        "/images/products/olympic-steel/olympic-steel-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded plate/rebar stills — soft flat-rolled/plate category type-match, no Olympic Steel brand"
+    },
+    {
+      "slug": "saha-thai-steel-pipe",
+      "product_name": "Saha Thai Steel Pipe ERW Line Pipe and Carbon Tubes",
+      "supplier_name": "Saha Thai Steel Pipe Public Company Limited",
+      "supplier_slug_guess": "saha-thai-steel-pipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.sahathai.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Saha Thai Steel Pipe Public Company Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/saha-thai-steel-pipe/saha-thai.jpg",
+        "/images/products/saha-thai-steel-pipe/sahathai-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded ERW/pipe stills — category line-pipe type-match, no Saha Thai brand"
+    },
+    {
+      "slug": "staubli",
+      "product_name": "Stäubli Industrial Robots Connectors and Textile Machinery",
+      "supplier_name": "Stäubli International AG",
+      "supplier_slug_guess": "staubli",
+      "category": "Industrial Parts",
+      "source_url": "https://www.staubli.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Stäubli International AG mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/staubli/staubli-product.jpg",
+        "/images/products/staubli/staubli-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded robot/connector stills — soft robotics/connectivity type-match, no Stäubli brand"
+    },
+    {
+      "slug": "stoelzle-glass",
+      "product_name": "Stoelzle Glass Pharma Cosmetic and Specialty Glass Bottles",
+      "supplier_name": "Stoelzle Glass Group",
+      "supplier_slug_guess": "stoelzle-glass",
+      "category": "Packaging",
+      "source_url": "https://www.stoelzle.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Stoelzle Glass Group mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/stoelzle-glass/stoelzle-glass.jpg",
+        "/images/products/stoelzle-glass/stoelzle-glass-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded palletized/pharma glass stills — soft glass-packaging type-match, no Stoelzle brand"
+    },
+    {
+      "slug": "timkensteel",
+      "product_name": "TimkenSteel SBQ Bars Seamless Tubing and Special Bar Quality",
+      "supplier_name": "TimkenSteel Corporation",
+      "supplier_slug_guess": "timkensteel",
+      "category": "Steel & Metals",
+      "source_url": "https://www.timkensteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — TimkenSteel Corporation mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/timkensteel/timkensteel-product.jpg",
+        "/images/products/timkensteel/timkensteel-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded SBQ/steel stills — soft special-bar/seamless category type-match, no TimkenSteel brand"
+    },
+    {
+      "slug": "us-pipe",
+      "product_name": "U.S. Pipe Ductile Iron Pipe and Restrained-Joint Systems",
+      "supplier_name": "U.S. Pipe",
+      "supplier_slug_guess": "us-pipe",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.uspipe.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — U.S. Pipe mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/us-pipe/us-pipe.jpg",
+        "/images/products/us-pipe/uspipe-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded DI pipe-bundle stills — category ductile-iron/RJ type-match, no U.S. Pipe brand"
+    },
+    {
+      "slug": "vacmet",
+      "product_name": "Vacmet Metallized BOPET and Specialty Packaging Films",
+      "supplier_name": "Vacmet India Limited",
+      "supplier_slug_guess": "vacmet",
+      "category": "Packaging",
+      "source_url": "https://www.vacmetindia.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Vacmet India Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/vacmet/vacmet-product.jpg",
+        "/images/products/vacmet/vacmet-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded metallized-film/campus stills — soft BOPET film category type-match, no Vacmet brand"
+    },
+    {
+      "slug": "zimmer-group",
+      "product_name": "Zimmer Group Handling Clamping and Robotic Components",
+      "supplier_name": "Zimmer Group",
+      "supplier_slug_guess": "zimmer-group",
+      "category": "Industrial Parts",
+      "source_url": "https://www.zimmer-group.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Zimmer Group mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/zimmer-group/zimmer-product.jpg",
+        "/images/products/zimmer-group/zimmer-group-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "unbranded handling/automation stills — soft robotics-component type-match, no Zimmer Group brand"
+    }
+  ],
+  "rules": {
+    "no_fake_fob": true,
+    "unit_price_null": true,
+    "price_source_type_rfq": true,
+    "needs_ai_generate": 0,
+    "skip_hold": true,
+    "prefer_ok_then_soft": true
+  }
 }
