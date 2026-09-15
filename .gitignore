@@ -23,6 +23,10 @@
 # secrets / local mcp (contains api key)
 .cursor/mcp.json
 
+# google sheets service account (never commit)
+google-service-account.json
+**/google-service-account*.json
+
 # database
 /prisma/dev.db
 /prisma/dev.db-journal

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp-gsheets": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-gsheets@latest"],
+      "env": {
+        "GOOGLE_PROJECT_ID": "${env:GOOGLE_PROJECT_ID}",
+        "GOOGLE_APPLICATION_CREDENTIALS": "${userHome}/.config/cursor/google-service-account.json"
+      }
+    }
+  }
+}
