@@ -16,6 +16,7 @@
  *   data/daily-2026-09-14-hold33-mills-cleared.json (OK 7 + soft 22; HOLD 4 + blocked psl-limited out)
  *   data/daily-2026-09-14-hold4-mills-cleared.json (OK dynamic-cables + soft 3; blocked psl-limited out)
  *   data/daily-2026-09-15-mills-cleared.json (OK 4 + soft 4; HOLD 42 out incl. category-fills)
+ *   data/daily-2026-09-15-hold39-mills-cleared.json (OK 6 + soft 26; HOLD 7 + blocked 3 out)
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
@@ -1865,6 +1866,21 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const hold39Mills = buildAppendedStillsMills({
+    file: "daily-2026-09-15-hold39-mills-cleared.json",
+    packTag: "daily-2026-09-15-hold39",
+    dateTag: "2026-09-15",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+      ...hold4Mills.map((s) => s.packSlug),
+      ...day0915Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1881,7 +1897,11 @@ export function buildCatalog() {
     ...hold33Mills.map((s) => s.packSlug),
     ...hold4Mills.map((s) => s.packSlug),
   ]);
-  const wired0915Slugs = new Set([...wired0914Slugs, ...day0915Mills.map((s) => s.packSlug)]);
+  const wired0915Slugs = new Set([
+    ...wired0914Slugs,
+    ...day0915Mills.map((s) => s.packSlug),
+    ...hold39Mills.map((s) => s.packSlug),
+  ]);
   const raw = [
     ...buildPhase1Suppliers(report),
     ...buildDailySuppliers("2026-09-02", report),
@@ -1895,6 +1915,7 @@ export function buildCatalog() {
     ...hold33Mills,
     ...hold4Mills,
     ...day0915Mills,
+    ...hold39Mills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),

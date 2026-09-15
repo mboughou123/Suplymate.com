@@ -1589,6 +1589,294 @@
       "website": "https://www.hydraforce.com/",
       "description": "HydraForce Inc. manufactures hydraulic cartridge valves and custom manifolds.",
       "product_lines": ["Hydraulic cartridge valves", "Custom manifolds"]
+    },
+    "amiantit": {
+      "company_name": "Amiantit",
+      "primary_category": "Tubes & Pipes",
+      "country": "Saudi Arabia",
+      "city": "Dammam",
+      "website": "https://www.amiantit.com/",
+      "description": "Amiantit manufactures glass-reinforced polyester and epoxy pipe systems for water and industrial service.",
+      "product_lines": ["GRP pipe", "GRE pipe", "Pipe systems"]
+    },
+    "bobst": {
+      "company_name": "Bobst SA",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Mex",
+      "website": "https://www.bobst.com/",
+      "description": "Bobst SA manufactures packaging converting machinery including folder-gluers and die-cutters.",
+      "product_lines": ["Folder-gluers", "Die-cutters", "Flexible packaging equipment"]
+    },
+    "comau": {
+      "company_name": "Comau S.p.A.",
+      "primary_category": "Industrial Parts",
+      "country": "Italy",
+      "city": "Grugliasco",
+      "website": "https://www.comau.com/",
+      "description": "Comau S.p.A. manufactures industrial robots and automated production systems.",
+      "product_lines": ["Industrial robots", "Automated production systems"]
+    },
+    "nedschroef": {
+      "company_name": "Koninklijke Nedschroef Holding B.V.",
+      "primary_category": "Industrial Parts",
+      "country": "Netherlands",
+      "city": "Helmond",
+      "website": "https://www.nedschroef.com/",
+      "description": "Nedschroef manufactures automotive fasteners and fastener-forming machinery.",
+      "product_lines": ["Automotive fasteners", "Fastener-forming machinery"]
+    },
+    "saha-thai-steel-pipe": {
+      "company_name": "Saha Thai Steel Pipe Public Company Limited",
+      "primary_category": "Tubes & Pipes",
+      "country": "Thailand",
+      "city": "Samut Prakan",
+      "website": "https://www.sahathai.com/",
+      "description": "Saha Thai Steel Pipe manufactures carbon steel pipes for construction and energy service.",
+      "product_lines": ["Carbon steel pipe", "Line pipe"]
+    },
+    "staubli": {
+      "company_name": "Stäubli International AG",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Pfäffikon",
+      "website": "https://www.staubli.com/",
+      "description": "Stäubli manufactures industrial robots, connectors and textile machinery.",
+      "product_lines": ["Industrial robots", "Connectors", "Textile machinery"]
+    },
+    "amiblu": {
+      "company_name": "Amiblu Holding GmbH",
+      "primary_category": "Tubes & Pipes",
+      "country": "Austria",
+      "city": "Klagenfurt",
+      "website": "https://www.amiblu.com/",
+      "description": "Amiblu manufactures FLOWTITE and HOBAS glass-reinforced pipe systems.",
+      "product_lines": ["FLOWTITE GRP pipe", "HOBAS pipe systems"]
+    },
+    "auma": {
+      "company_name": "AUMA Riester GmbH & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Müllheim",
+      "website": "https://www.auma.com/",
+      "description": "AUMA Riester manufactures electric valve actuators and actuator controls.",
+      "product_lines": ["Electric valve actuators", "Actuator controls"]
+    },
+    "big-river-steel": {
+      "company_name": "Big River Steel LLC",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Osceola",
+      "website": "https://bigriversteel.com/",
+      "description": "Big River Steel manufactures flat-rolled carbon and advanced high-strength steels.",
+      "product_lines": ["Flat-rolled carbon steel", "Advanced high-strength steels"]
+    },
+    "brugg-cables": {
+      "company_name": "Brugg Cables AG",
+      "primary_category": "Cables & Electrical",
+      "country": "Switzerland",
+      "city": "Brugg",
+      "website": "https://www.bruggcables.com/",
+      "description": "Brugg Cables manufactures high-voltage power cables and accessories.",
+      "product_lines": ["High-voltage power cables", "Cable accessories"]
+    },
+    "cerro-wire": {
+      "company_name": "Cerro Wire LLC",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Hartselle",
+      "website": "https://www.cerrowire.com/",
+      "description": "Cerro Wire manufactures building wire and THHN conductors.",
+      "product_lines": ["Building wire", "THHN conductors"]
+    },
+    "ckd-corporation": {
+      "company_name": "CKD Corporation",
+      "primary_category": "Industrial Parts",
+      "country": "Japan",
+      "city": "Komaki",
+      "website": "https://www.ckd.co.jp/",
+      "description": "CKD Corporation manufactures pneumatic components and automation equipment.",
+      "product_lines": ["Pneumatic components", "Automation equipment"]
+    },
+    "ester-industries": {
+      "company_name": "Ester Industries Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Gurugram",
+      "website": "https://www.esterindustries.com/",
+      "description": "Ester Industries manufactures polyester films and specialty polymers for packaging.",
+      "product_lines": ["Polyester films", "Specialty polymers"]
+    },
+    "future-pipe-industries": {
+      "company_name": "Future Pipe Industries",
+      "primary_category": "Tubes & Pipes",
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "website": "https://www.futurepipe.com/",
+      "description": "Future Pipe Industries manufactures glass-reinforced pipe systems for water and energy.",
+      "product_lines": ["GRP pipe", "GRE pipe"]
+    },
+    "garware-hitech-films": {
+      "company_name": "Garware Hi-Tech Films Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Aurangabad",
+      "website": "https://www.garwarehitechfilms.com/",
+      "description": "Garware Hi-Tech Films manufactures PET films including solar-control and packaging grades.",
+      "product_lines": ["PET films", "Solar-control films"]
+    },
+    "harting": {
+      "company_name": "HARTING Technology Group",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Espelkamp",
+      "website": "https://www.harting.com/",
+      "description": "HARTING manufactures industrial connectors and connectivity systems.",
+      "product_lines": ["Industrial connectors", "Connectivity systems"]
+    },
+    "hobas-pipe-usa": {
+      "company_name": "HOBAS Pipe USA",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Houston",
+      "website": "https://www.hobaspipe.com/",
+      "description": "HOBAS Pipe USA manufactures centrifugally cast glass-reinforced pipe systems.",
+      "product_lines": ["CC-GRP pipe", "Sewer and water pipe"]
+    },
+    "intertape-polymer": {
+      "company_name": "Intertape Polymer Group",
+      "primary_category": "Packaging",
+      "country": "Canada",
+      "city": "Montreal",
+      "website": "https://www.itape.com/",
+      "description": "Intertape Polymer Group manufactures pressure-sensitive tapes and protective films.",
+      "product_lines": ["Pressure-sensitive tapes", "Stretch and protective films"]
+    },
+    "kumkang-kind": {
+      "company_name": "Kumkang Kind Co., Ltd.",
+      "primary_category": "Tubes & Pipes",
+      "country": "South Korea",
+      "city": "Seoul",
+      "website": "https://www.kumkangkind.com/",
+      "description": "Kumkang Kind manufactures steel pipes, tubes and system formwork steel.",
+      "product_lines": ["Steel pipes and tubes", "Scaffolding and formwork steel"]
+    },
+    "mapei": {
+      "company_name": "MAPEI S.p.A.",
+      "primary_category": "Construction",
+      "country": "Italy",
+      "city": "Milan",
+      "website": "https://www.mapei.com/",
+      "description": "MAPEI manufactures construction chemicals, adhesives and waterproofing products.",
+      "product_lines": ["Construction adhesives", "Waterproofing products"]
+    },
+    "mcwane-ductile": {
+      "company_name": "McWane Ductile",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Coshocton",
+      "website": "https://www.mcwaneductile.com/",
+      "description": "McWane Ductile manufactures ductile-iron pipe for water and wastewater systems.",
+      "product_lines": ["Ductile-iron pipe"]
+    },
+    "menasha-packaging": {
+      "company_name": "Menasha Packaging Company LLC",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Neenah",
+      "website": "https://www.menashapackaging.com/",
+      "description": "Menasha Packaging manufactures corrugated packaging and retail displays.",
+      "product_lines": ["Corrugated packaging", "Retail displays"]
+    },
+    "nova-tube": {
+      "company_name": "Nova Tube Inc.",
+      "primary_category": "Tubes & Pipes",
+      "country": "Canada",
+      "city": "Montreal",
+      "website": "https://www.novasteel.ca/",
+      "description": "Nova Tube manufactures ERW steel tubing and hollow structural sections.",
+      "product_lines": ["ERW steel tubing", "Hollow structural sections"]
+    },
+    "phillips-tube-group": {
+      "company_name": "Phillips Tube Group",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Shelbyville",
+      "website": "https://phillipstube.com/",
+      "description": "Phillips Tube Group manufactures precision welded steel tubing for OEM assemblies.",
+      "product_lines": ["Precision welded tubing", "Automotive and HVAC tube"]
+    },
+    "polyplex": {
+      "company_name": "Polyplex Corporation Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Noida",
+      "website": "https://www.polyplex.com/",
+      "description": "Polyplex manufactures BOPET and other polyester films for packaging and industrial use.",
+      "product_lines": ["BOPET films", "Polyester packaging films"]
+    },
+    "sgd-pharma": {
+      "company_name": "SGD Pharma",
+      "primary_category": "Packaging",
+      "country": "France",
+      "city": "Paris",
+      "website": "https://www.sgd-pharma.com/",
+      "description": "SGD Pharma manufactures Type I, II and III glass vials and injectable packaging.",
+      "product_lines": ["Glass vials", "Injectable glass packaging"]
+    },
+    "stoelzle-glass": {
+      "company_name": "Stoelzle Glass Group",
+      "primary_category": "Packaging",
+      "country": "Austria",
+      "city": "Köflach",
+      "website": "https://www.stoelzle.com/",
+      "description": "Stoelzle Glass manufactures glass containers for spirits, pharma and specialty packaging.",
+      "product_lines": ["Glass containers", "Specialty glass packaging"]
+    },
+    "tc-transcontinental": {
+      "company_name": "TC Transcontinental",
+      "primary_category": "Packaging",
+      "country": "Canada",
+      "city": "Montreal",
+      "website": "https://tctranscontinental.com/",
+      "description": "TC Transcontinental manufactures flexible packaging, labels and printed packaging.",
+      "product_lines": ["Flexible packaging", "Labels"]
+    },
+    "timkensteel": {
+      "company_name": "TimkenSteel Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Canton",
+      "website": "https://www.metallus.com/",
+      "description": "TimkenSteel (Metallus) manufactures special-bar-quality and alloy steel long products.",
+      "product_lines": ["SBQ bar", "Alloy steel long products"]
+    },
+    "universal-stainless": {
+      "company_name": "Universal Stainless & Alloy Products Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Bridgeville",
+      "website": "https://www.univstainless.com/",
+      "description": "Universal Stainless manufactures specialty stainless bar, plate and aerospace alloys.",
+      "product_lines": ["Specialty stainless bar", "Aerospace alloys"]
+    },
+    "us-pipe": {
+      "company_name": "U.S. Pipe",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Birmingham",
+      "website": "https://www.uspipe.com/",
+      "description": "U.S. Pipe manufactures ductile-iron pipe and fittings for water infrastructure.",
+      "product_lines": ["Ductile-iron pipe", "Pipe fittings"]
+    },
+    "vacmet": {
+      "company_name": "Vacmet India Limited",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Agra",
+      "website": "https://www.vacmetindia.com/",
+      "description": "Vacmet India manufactures metallized and coated packaging films.",
+      "product_lines": ["Metallized films", "Coated packaging films"]
     }
   }
 }
