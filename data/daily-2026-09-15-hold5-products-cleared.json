@@ -1,0 +1,17 @@
+{
+  "label": "QA-HOLD5-PRODUCTS-RESEARCHER-PARTIAL",
+  "pack": "daily/2026-09-15/_qa_hold5_products",
+  "sealed_at_pt": "2026-09-15 11:55 AM PT",
+  "ok": [
+    "gaf",
+    "polyplex",
+    "tc-transcontinental"
+  ],
+  "soft": [
+    "bulten",
+    "garware-hitech-films"
+  ],
+  "hold_out": [],
+  "locked": "Soft28 from #51/#53 locked",
+  "wire_recommendation": "Wire OK 3 + soft bulten/garware optional. HOLD 0."
+}
