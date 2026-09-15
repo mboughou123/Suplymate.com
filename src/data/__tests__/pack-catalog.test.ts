@@ -1840,7 +1840,9 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     expect(krones!.specifications["Image credit"]).toBeUndefined();
     for (const slug of holdOut) {
       expect(hold33.some((p) => p.packSlug === slug), slug).toBe(false);
-      expect(packProducts.some((p) => p.packSlug === slug && p.pack.startsWith("d0915")), slug).toBe(false);
+      expect(packProducts.some((p) => p.packSlug === slug && (p.pack === "d0915" || p.pack === "d0915-h33")), slug).toBe(
+        false
+      );
     }
   });
 });
@@ -1941,6 +1943,7 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
     expect(locked0915).toHaveLength(8);
     expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
     expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0915-h5")).toHaveLength(5);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
@@ -2044,6 +2047,7 @@ describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
     expect(lockedHold39).toHaveLength(32);
     expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
     expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0915-h5")).toHaveLength(5);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
@@ -2116,6 +2120,152 @@ describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
       expect(host!.productHostOnly, slug).toBe(true);
       expect(host!.pack, slug).toBe("daily-2026-09-15-hold33");
     }
+  });
+});
+
+describe("daily 2026-09-15 HOLD5 product catch-up", () => {
+  const productsOk = ["gaf", "polyplex", "tc-transcontinental"];
+  const productsSoft = ["bulten", "garware-hitech-films"];
+  const lockedD0915 = [
+    "krones",
+    "anvil-international",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "dillinger",
+    "intertape-polymer",
+    "intralox",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "piramal-glass",
+    "schunk",
+    "sgd-pharma",
+    "universal-stainless",
+  ];
+  const lockedHold33 = [
+    "amiantit",
+    "amiblu",
+    "apar-industries",
+    "brugg-cables",
+    "cerro-wire",
+    "circor",
+    "ckd-corporation",
+    "comau",
+    "dayco",
+    "dorner",
+    "ester-industries",
+    "forbo-siegling",
+    "future-pipe-industries",
+    "haas-automation",
+    "harting",
+    "hobas-pipe-usa",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "olympic-steel",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "stoelzle-glass",
+    "timkensteel",
+    "us-pipe",
+    "vacmet",
+    "zimmer-group",
+  ];
+  const alreadyMills = ["gaf"];
+  const hold39Promoted = ["garware-hitech-films", "polyplex", "tc-transcontinental"];
+  const hold7Promoted = ["bulten"];
+  const remainingHosts = [...productsOk, ...productsSoft].filter(
+    (slug) =>
+      !alreadyMills.includes(slug) && !hold39Promoted.includes(slug) && !hold7Promoted.includes(slug)
+  );
+  const hold5 = packProducts.filter((p) => p.pack === "d0915-h5");
+  const day0915 = packProducts.filter((p) => p.pack === "d0915");
+  const hold33 = packProducts.filter((p) => p.pack === "d0915-h33");
+  const hold5Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold5");
+
+  it("appends the 5 cleared RFQ SKUs without rewriting locked 9/15 products or mills", () => {
+    expect(hold5.map((p) => p.packSlug).sort()).toEqual([...productsOk, ...productsSoft].sort());
+    expect(day0915.map((p) => p.packSlug).sort()).toEqual([...lockedD0915].sort());
+    expect(hold33.map((p) => p.packSlug).sort()).toEqual([...lockedHold33].sort());
+    expect(day0915).toHaveLength(17);
+    expect(hold33).toHaveLength(28);
+    expect(hold5).toHaveLength(5);
+    for (const slug of lockedD0915) {
+      expect(hold5.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+    for (const slug of lockedHold33) {
+      expect(hold5.some((p) => p.packSlug === slug), slug).toBe(false);
+    }
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packProducts.filter((p) => p.pack === "d0911-h41")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold33")).toHaveLength(3);
+  });
+
+  it("keeps every HOLD5 SKU as RFQ with a local still and overlays existing mill cards", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const p of hold5) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+      expect(JSON.stringify(p), p.id).not.toMatch(/\$0\.00/);
+      expect(p.specifications["Image credit"] ?? "", p.id).not.toMatch(/AI-generated/i);
+      expect(p.certifications ?? [], p.id).toEqual([]);
+    }
+    for (const slug of alreadyMills) {
+      expect(hold5Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15" && !s.productHostOnly);
+      expect(mill, slug).toBeDefined();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
+    for (const slug of hold39Promoted) {
+      expect(hold5Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold39");
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
+    for (const slug of hold7Promoted) {
+      expect(hold5Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold7");
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
+    expect(remainingHosts).toEqual([]);
+    expect(hold5Hosts).toEqual([]);
+  });
+
+  it("soft-credits the SOFT 2 from the HOLD5 seal and leaves OK 3 uncaptioned", () => {
+    const bulten = hold5.find((p) => p.packSlug === "bulten");
+    expect(bulten).toBeDefined();
+    expect(bulten!.specifications["Image credit"]).toBe(
+      "hex bolt assortment — soft automotive-fastener type-match, no brand"
+    );
+    const garware = hold5.find((p) => p.packSlug === "garware-hitech-films");
+    expect(garware).toBeDefined();
+    expect(garware!.specifications["Image credit"]).toBe(
+      "BOPET process still — soft BOPET film category type-match, no brand mark"
+    );
+    for (const slug of productsOk) {
+      const sku = hold5.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toBeUndefined();
+    }
+    const krones = day0915.find((p) => p.packSlug === "krones");
+    expect(krones).toBeDefined();
+    expect(krones!.specifications["Image credit"]).toBeUndefined();
   });
 });
 
