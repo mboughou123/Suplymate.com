@@ -1877,6 +1877,60 @@
       "website": "https://www.vacmetindia.com/",
       "description": "Vacmet India manufactures metallized and coated packaging films.",
       "product_lines": ["Metallized films", "Coated packaging films"]
+    },
+    "bulten": {
+      "company_name": "Bulten AB",
+      "primary_category": "Industrial Parts",
+      "country": "Sweden",
+      "city": "Gothenburg",
+      "website": "https://www.bulten.com/",
+      "description": "Bulten AB manufactures automotive fasteners and fastener assemblies.",
+      "product_lines": ["Automotive fasteners", "Fastener assemblies"]
+    },
+    "haas-automation": {
+      "company_name": "Haas Automation, Inc.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Oxnard",
+      "website": "https://www.haascnc.com/",
+      "description": "Haas Automation manufactures CNC machining centers, lathes and rotary tables.",
+      "product_lines": ["CNC machining centers", "CNC lathes", "Rotary tables"]
+    },
+    "koenig-bauer": {
+      "company_name": "Koenig & Bauer AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Würzburg",
+      "website": "https://www.koenig-bauer.com/",
+      "description": "Koenig & Bauer AG manufactures printing presses and packaging print systems.",
+      "product_lines": ["Printing presses", "Packaging print systems"]
+    },
+    "dorner": {
+      "company_name": "Dorner Mfg. Corp.",
+      "primary_category": "Industrial Parts",
+      "country": "United States",
+      "city": "Hartland",
+      "website": "https://www.dornerconveyors.com/",
+      "description": "Dorner Mfg. Corp. manufactures precision conveyors and material-handling belts.",
+      "product_lines": ["Precision conveyors", "Material-handling belts"]
+    },
+    "jtl-industries": {
+      "company_name": "JTL Industries Limited",
+      "primary_category": "Tubes & Pipes",
+      "country": "India",
+      "city": "Chandigarh",
+      "website": "https://www.jtlindustries.com/",
+      "description": "JTL Industries Limited manufactures ERW steel pipes, hollow sections and galvanized tubes.",
+      "product_lines": ["ERW steel pipes", "Hollow sections", "Galvanized tubes"]
+    },
+    "zimmer-group": {
+      "company_name": "Zimmer Group",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Rheinau",
+      "website": "https://www.zimmer-group.com/",
+      "description": "Zimmer Group manufactures handling, clamping and robotic components.",
+      "product_lines": ["Handling components", "Clamping technology", "Robotic components"]
     }
   }
 }

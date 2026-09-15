@@ -1572,8 +1572,16 @@ describe("daily 2026-09-15 cleared wire", () => {
     "us-pipe",
     "vacmet",
   ];
+  const hold7Mills = [
+    "bulten",
+    "haas-automation",
+    "koenig-bauer",
+    "dorner",
+    "jtl-industries",
+    "zimmer-group",
+  ];
   const remainingHosts = [...productsOk, ...productsSoft].filter(
-    (slug) => ![...millsOk, ...millsSoft, ...hold39Mills].includes(slug)
+    (slug) => ![...millsOk, ...millsSoft, ...hold39Mills, ...hold7Mills].includes(slug)
   );
   const softCaptions: Record<string, RegExp> = {
     dayco: /Dayco Birmingham MI HQ|HQ campus|not a manufacturing plant/i,
@@ -1599,6 +1607,7 @@ describe("daily 2026-09-15 cleared wire", () => {
     expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
   });
 
   it("points cards at local stills, keeps RFQ honesty, and skips invented certs", () => {
@@ -1745,8 +1754,10 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     "us-pipe",
     "vacmet",
   ];
+  const hold7Promoted = ["dorner", "haas-automation", "zimmer-group"];
   const remainingHosts = productsSoft.filter(
-    (slug) => !alreadyMills.includes(slug) && !hold39Promoted.includes(slug)
+    (slug) =>
+      !alreadyMills.includes(slug) && !hold39Promoted.includes(slug) && !hold7Promoted.includes(slug)
   );
   const hold33 = packProducts.filter((p) => p.pack === "d0915-h33");
   const day0915 = packProducts.filter((p) => p.pack === "d0915");
@@ -1765,6 +1776,7 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     expect(packProducts.filter((p) => p.pack === "d0911-h41")).toHaveLength(32);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
   });
 
   it("keeps every HOLD33 SKU as RFQ with a local still and prefers branded files", () => {
@@ -1789,6 +1801,13 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     for (const slug of hold39Promoted) {
       expect(hold33Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
       const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold39");
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
+    for (const slug of hold7Promoted) {
+      expect(hold33Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold7");
       expect(mill, slug).toBeDefined();
       expect(mill!.productHostOnly, slug).toBeFalsy();
       expect(listed.has(mill!.id), slug).toBe(true);
@@ -1884,7 +1903,7 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
     "sgd-pharma",
     "universal-stainless",
   ];
-  const leftoverHosts = ["anvil-international", "jtl-industries", "koenig-bauer"];
+  const leftoverHosts = ["anvil-international"];
   const hold39 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39");
   const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
   const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && s.productHostOnly);
@@ -1931,6 +1950,7 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
     expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
     expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
   });
 
   it("points cards at the sealed local plant still, keeps RFQ honesty, and promotes product hosts", () => {
@@ -1980,6 +2000,8 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
         packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-15" && !s.productHostOnly),
         slug
       ).toBe(false);
+    }
+    for (const slug of ["anvil-international", ...blocked]) {
       expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
     }
     for (const slug of leftoverHosts) {
@@ -1987,6 +2009,112 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
       expect(host, slug).toBeDefined();
       expect(host!.productHostOnly, slug).toBe(true);
       expect(host!.pack, slug).toBe("daily-2026-09-15");
+    }
+  });
+});
+
+describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
+  const millsOk = ["bulten", "haas-automation", "koenig-bauer"];
+  const millsSoft = ["dorner", "jtl-industries", "zimmer-group"];
+  const holdOut = ["anvil-international"];
+  const blocked = ["apar-industries", "circor", "olympic-steel"];
+  const promotedHosts = [
+    "dorner",
+    "haas-automation",
+    "jtl-industries",
+    "koenig-bauer",
+    "zimmer-group",
+  ];
+  const leftover0915Hosts = ["anvil-international"];
+  const leftoverHold33Hosts = ["apar-industries", "circor", "olympic-steel"];
+  const hold7 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7");
+  const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
+  const lockedHold39 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39");
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && s.productHostOnly);
+  const hold33Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold33");
+  const softCaptions: Record<string, RegExp> = {
+    dorner: /HQ\/campus|unbranded|not production floor/i,
+    "jtl-industries": /mill interior|no JTL brand|Saha Thai|not a plant exterior/i,
+    "zimmer-group": /industrial exterior|unbranded|not a (confirmed )?plant exterior/i,
+  };
+
+  it("appends the 6 cleared mills without rewriting locked #48–#55 cards", () => {
+    expect(hold7.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(locked0915).toHaveLength(8);
+    expect(lockedHold39).toHaveLength(32);
+    expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
+    expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly)).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-skip12")).toHaveLength(11);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-rest30")).toHaveLength(30);
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+  });
+
+  it("points cards at the sealed local plant still, keeps RFQ honesty, and promotes product hosts", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const s of hold7) {
+      expect(s.imageUrl, s.packSlug).toBe(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      expect(s.supplierImages?.[0], s.packSlug).toBe(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      expect(s.supplierImages, s.packSlug).toContain(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      expect((s.supplierImages ?? []).every((u) => u.startsWith("/images/suppliers/")), s.packSlug).toBe(true);
+      expect((s.supplierImages ?? []).every((u) => !u.includes(".BAD1.")), s.packSlug).toBe(true);
+      expect(s.moq, s.packSlug).toMatch(/RFQ/i);
+      expect(s.productHostOnly, s.packSlug).toBeFalsy();
+      expect(s.certificationsDetailed ?? [], s.packSlug).toEqual([]);
+      expect(listed.has(s.id), s.packSlug).toBe(true);
+    }
+    for (const slug of [...millsOk, ...millsSoft]) {
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-15" && s.productHostOnly),
+        slug
+      ).toBe(false);
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold33"),
+        slug
+      ).toBe(false);
+    }
+    for (const slug of promotedHosts) {
+      const mill = hold7.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+    }
+    expect(dayHosts.map((s) => s.packSlug).sort()).toEqual([...leftover0915Hosts].sort());
+    expect(hold33Hosts.map((s) => s.packSlug).sort()).toEqual([...leftoverHold33Hosts].sort());
+  });
+
+  it("soft-captions the SOFT 3 from the HOLD7 seal and keeps HOLD/blocked mills out", () => {
+    for (const slug of millsSoft) {
+      const mill = hold7.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(softCaptions[slug]);
+    }
+    for (const slug of millsOk) {
+      const mill = hold7.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).not.toMatch(
+        /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior/i
+      );
+    }
+    for (const slug of [...holdOut, ...blocked]) {
+      expect(hold7.some((s) => s.packSlug === slug), slug).toBe(false);
+      expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
+    }
+    for (const slug of leftover0915Hosts) {
+      const host = packSuppliers.find((s) => s.packSlug === slug);
+      expect(host, slug).toBeDefined();
+      expect(host!.productHostOnly, slug).toBe(true);
+      expect(host!.pack, slug).toBe("daily-2026-09-15");
+    }
+    for (const slug of leftoverHold33Hosts) {
+      const host = packSuppliers.find((s) => s.packSlug === slug);
+      expect(host, slug).toBeDefined();
+      expect(host!.productHostOnly, slug).toBe(true);
+      expect(host!.pack, slug).toBe("daily-2026-09-15-hold33");
     }
   });
 });

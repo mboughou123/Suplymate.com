@@ -1,16 +1,27 @@
 {
-  "label": "QA-HOLD7-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "label": "DAILY-2026-09-15-HOLD7-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-15/_mill_hold7_refetch/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD7-MILL-PLANTS-RESEARCHER-PARTIAL",
   "pack": "daily/2026-09-15/_mill_hold7_refetch",
   "sealed_at_pt": "2026-09-15 11:56 AM PT",
-  "ok": [
+  "wire_ok": [
     "bulten",
     "haas-automation",
     "koenig-bauer"
   ],
   "soft": [
-    "dorner",
-    "jtl-industries",
-    "zimmer-group"
+    {
+      "slug": "dorner",
+      "reason": "unbranded HQ/campus exterior — HQ campus, not production floor"
+    },
+    {
+      "slug": "jtl-industries",
+      "reason": "unbranded mill interior, no JTL brand (Saha Thai wrong-entity cleared) — not a plant exterior"
+    },
+    {
+      "slug": "zimmer-group",
+      "reason": "unbranded industrial exterior — not a confirmed plant exterior"
+    }
   ],
   "hold_out": [
     "anvil-international"
@@ -20,6 +31,6 @@
     "circor",
     "olympic-steel"
   ],
-  "locked": "Soft/OK from #51-#54 locked",
-  "wire_recommendation": "Wire OK 3 + soft 3 optional. HOLD anvil (AGC). Blocked apar/circor/olympic out."
+  "locked": "Soft/OK from #48–#55 including HOLD39 mills and HOLD33/HOLD5 products locked",
+  "wire_recommendation": "Wire OK 3 + soft 3 optional. HOLD anvil (AGC wrong entity). Blocked apar/circor/olympic stay out."
 }
