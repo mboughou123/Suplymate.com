@@ -1,17 +1,173 @@
 {
-  "label": "QA-HOLD5-PRODUCTS-RESEARCHER-PARTIAL",
-  "pack": "daily/2026-09-15/_qa_hold5_products",
+  "label": "DAILY-2026-09-15-HOLD5-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-15/_qa_hold5_products/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD5-PRODUCTS-RESEARCHER-PARTIAL",
   "sealed_at_pt": "2026-09-15 11:55 AM PT",
+  "pack": "daily/2026-09-15/_qa_hold5_products",
+  "wire_ok": [
+    "gaf",
+    "polyplex",
+    "tc-transcontinental"
+  ],
   "ok": [
     "gaf",
     "polyplex",
     "tc-transcontinental"
   ],
   "soft": [
-    "bulten",
-    "garware-hitech-films"
+    {
+      "slug": "bulten",
+      "reason": "hex bolt assortment — soft automotive-fastener type-match, no brand"
+    },
+    {
+      "slug": "garware-hitech-films",
+      "reason": "BOPET process still — soft BOPET film category type-match, no brand mark"
+    }
   ],
   "hold_out": [],
-  "locked": "Soft28 from #51/#53 locked",
-  "wire_recommendation": "Wire OK 3 + soft bulten/garware optional. HOLD 0."
+  "locked": "Soft28 from #51/#53 locked; Soft16+krones and mill packs including HOLD39 locked",
+  "wire_recommendation": "Wire OK 3 + soft bulten/garware optional. HOLD 0.",
+  "soft28_locked": true,
+  "soft16_krones_locked": true,
+  "mills_including_hold39_locked": true,
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "stills": {
+    "root": "public/images/products",
+    "file_count": 10,
+    "slugs": [
+      "bulten",
+      "gaf",
+      "garware-hitech-films",
+      "polyplex",
+      "tc-transcontinental"
+    ],
+    "files": [
+      "public/images/products/bulten/bulten-millfall.jpg",
+      "public/images/products/bulten/bulten-millfall1.jpg",
+      "public/images/products/gaf/gaf-millfall1.jpg",
+      "public/images/products/gaf/gaf-product.jpg",
+      "public/images/products/garware-hitech-films/garware-hitech-films-millfall1.jpg",
+      "public/images/products/garware-hitech-films/garware-product.jpg",
+      "public/images/products/polyplex/polyplex-millfall1.jpg",
+      "public/images/products/polyplex/polyplex-product.jpg",
+      "public/images/products/tc-transcontinental/tc-product.jpg",
+      "public/images/products/tc-transcontinental/tc-transcontinental-millfall1.jpg"
+    ]
+  },
+  "products": [
+    {
+      "slug": "gaf",
+      "product_name": "GAF Asphalt Roofing Shingles Commercial Roofing and Underlayment",
+      "supplier_name": "GAF Materials LLC",
+      "supplier_slug_guess": "gaf",
+      "category": "Construction",
+      "source_url": "https://www.gaf.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — GAF Materials LLC mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/gaf/gaf-product.jpg",
+        "/images/products/gaf/gaf-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "polyplex",
+      "product_name": "Polyplex BOPET and Polyester Packaging Films",
+      "supplier_name": "Polyplex Corporation Limited",
+      "supplier_slug_guess": "polyplex",
+      "category": "Packaging",
+      "source_url": "https://www.polyplex.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Polyplex Corporation Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/polyplex/polyplex-product.jpg",
+        "/images/products/polyplex/polyplex-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "tc-transcontinental",
+      "product_name": "TC Transcontinental Flexible Packaging and Labels",
+      "supplier_name": "TC Transcontinental",
+      "supplier_slug_guess": "tc-transcontinental",
+      "category": "Packaging",
+      "source_url": "https://tctranscontinental.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — TC Transcontinental mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/tc-transcontinental/tc-product.jpg",
+        "/images/products/tc-transcontinental/tc-transcontinental-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "bulten",
+      "product_name": "Bulten Automotive Fasteners Hex Bolts and Formed Components",
+      "supplier_name": "Bulten AB",
+      "supplier_slug_guess": "bulten",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.bulten.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Bulten AB mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/bulten/bulten-millfall.jpg",
+        "/images/products/bulten/bulten-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "hex bolt assortment — soft automotive-fastener type-match, no brand"
+    },
+    {
+      "slug": "garware-hitech-films",
+      "product_name": "Garware Hi-Tech Films BOPET PET and Solar-Control Films",
+      "supplier_name": "Garware Hi-Tech Films Limited",
+      "supplier_slug_guess": "garware-hitech-films",
+      "category": "Packaging",
+      "source_url": "https://www.garwarehitechfilms.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ — Garware Hi-Tech Films Limited mill/product page. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/garware-hitech-films/garware-product.jpg",
+        "/images/products/garware-hitech-films/garware-hitech-films-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "grade": "soft",
+      "soft_reason": "BOPET process still — soft BOPET film category type-match, no brand mark"
+    }
+  ],
+  "ok_notes": {
+    "gaf": "brand+product; prior poisons cleared",
+    "polyplex": "brand+product; prior poisons cleared",
+    "tc-transcontinental": "brand+product; prior poisons cleared"
+  },
+  "rules": {
+    "no_fake_fob": true,
+    "unit_price_null": true,
+    "price_source_type_rfq": true,
+    "needs_ai_generate": 0,
+    "skip_hold": true,
+    "prefer_ok_then_soft": true
+  }
 }
