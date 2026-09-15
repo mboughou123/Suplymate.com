@@ -1,8 +1,10 @@
 {
-  "label": "QA-HOLD-ANVIL-RESEARCHER-OK",
+  "label": "DAILY-2026-09-15-ANVIL-MILL-CLEARED",
+  "source_seal": "daily/2026-09-15/_mill_hold_anvil/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD-ANVIL-RESEARCHER-OK",
   "pack": "daily/2026-09-15/_mill_hold_anvil",
   "sealed_at_pt": "2026-09-15 12:20 PM PT",
-  "ok": [
+  "wire_ok": [
     "anvil-international"
   ],
   "soft": [],
@@ -13,5 +15,6 @@
     "olympic-steel"
   ],
   "prior": "AGC careers banner \u2192 Henderson TN aerial with ANVIL branding",
+  "locked": "Soft/OK from #48–#58 including HOLD7 / HOLD39 / HOLD5 products locked",
   "wire_recommendation": "OK \u2014 wire anvil-international. Soft/OK locked. apar/circor/olympic stay out."
 }

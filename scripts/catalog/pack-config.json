@@ -1931,6 +1931,15 @@
       "website": "https://www.zimmer-group.com/",
       "description": "Zimmer Group manufactures handling, clamping and robotic components.",
       "product_lines": ["Handling components", "Clamping technology", "Robotic components"]
+    },
+    "anvil-international": {
+      "company_name": "Anvil International",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Henderson",
+      "website": "https://www.anvilintl.com/",
+      "description": "Anvil International manufactures malleable and cast iron pipe fittings, pipe hangers and grooved piping systems.",
+      "product_lines": ["Malleable and cast iron pipe fittings", "Pipe hangers and supports", "Grooved piping systems"]
     }
   }
 }

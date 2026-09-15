@@ -1580,8 +1580,10 @@ describe("daily 2026-09-15 cleared wire", () => {
     "jtl-industries",
     "zimmer-group",
   ];
+  const anvilMills = ["anvil-international"];
   const remainingHosts = [...productsOk, ...productsSoft].filter(
-    (slug) => ![...millsOk, ...millsSoft, ...hold39Mills, ...hold7Mills].includes(slug)
+    (slug) =>
+      ![...millsOk, ...millsSoft, ...hold39Mills, ...hold7Mills, ...anvilMills].includes(slug)
   );
   const softCaptions: Record<string, RegExp> = {
     dayco: /Dayco Birmingham MI HQ|HQ campus|not a manufacturing plant/i,
@@ -1608,6 +1610,7 @@ describe("daily 2026-09-15 cleared wire", () => {
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
   });
 
   it("points cards at local stills, keeps RFQ honesty, and skips invented certs", () => {
@@ -1777,6 +1780,7 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
   });
 
   it("keeps every HOLD33 SKU as RFQ with a local still and prefers branded files", () => {
@@ -1905,7 +1909,7 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
     "sgd-pharma",
     "universal-stainless",
   ];
-  const leftoverHosts = ["anvil-international"];
+  const leftoverHosts: string[] = [];
   const hold39 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39");
   const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
   const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && s.productHostOnly);
@@ -1954,6 +1958,7 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
     expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
   });
 
   it("points cards at the sealed local plant still, keeps RFQ honesty, and promotes product hosts", () => {
@@ -2004,15 +2009,15 @@ describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
         slug
       ).toBe(false);
     }
-    for (const slug of ["anvil-international", ...blocked]) {
+    for (const slug of blocked) {
       expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
     }
-    for (const slug of leftoverHosts) {
-      const host = packSuppliers.find((s) => s.packSlug === slug);
-      expect(host, slug).toBeDefined();
-      expect(host!.productHostOnly, slug).toBe(true);
-      expect(host!.pack, slug).toBe("daily-2026-09-15");
-    }
+    expect(leftoverHosts).toEqual([]);
+    expect(dayHosts).toEqual([]);
+    const anvil = packSuppliers.find((s) => s.packSlug === "anvil-international");
+    expect(anvil).toBeDefined();
+    expect(anvil!.productHostOnly).toBeFalsy();
+    expect(anvil!.pack).toBe("daily-2026-09-15-anvil");
   });
 });
 
@@ -2028,7 +2033,7 @@ describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
     "koenig-bauer",
     "zimmer-group",
   ];
-  const leftover0915Hosts = ["anvil-international"];
+  const leftover0915Hosts: string[] = [];
   const leftoverHold33Hosts = ["apar-industries", "circor", "olympic-steel"];
   const hold7 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7");
   const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
@@ -2057,6 +2062,7 @@ describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
     expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
     expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
   });
 
   it("points cards at the sealed local plant still, keeps RFQ honesty, and promotes product hosts", () => {
@@ -2106,14 +2112,16 @@ describe("daily 2026-09-15 HOLD7 mill catch-up", () => {
     }
     for (const slug of [...holdOut, ...blocked]) {
       expect(hold7.some((s) => s.packSlug === slug), slug).toBe(false);
+    }
+    for (const slug of blocked) {
       expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
     }
-    for (const slug of leftover0915Hosts) {
-      const host = packSuppliers.find((s) => s.packSlug === slug);
-      expect(host, slug).toBeDefined();
-      expect(host!.productHostOnly, slug).toBe(true);
-      expect(host!.pack, slug).toBe("daily-2026-09-15");
-    }
+    expect(leftover0915Hosts).toEqual([]);
+    expect(dayHosts).toEqual([]);
+    const anvil = packSuppliers.find((s) => s.packSlug === "anvil-international");
+    expect(anvil).toBeDefined();
+    expect(anvil!.productHostOnly).toBeFalsy();
+    expect(anvil!.pack).toBe("daily-2026-09-15-anvil");
     for (const slug of leftoverHold33Hosts) {
       const host = packSuppliers.find((s) => s.packSlug === slug);
       expect(host, slug).toBeDefined();
@@ -2207,6 +2215,7 @@ describe("daily 2026-09-15 HOLD5 product catch-up", () => {
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold33")).toHaveLength(3);
   });
 
@@ -2266,6 +2275,81 @@ describe("daily 2026-09-15 HOLD5 product catch-up", () => {
     const krones = day0915.find((p) => p.packSlug === "krones");
     expect(krones).toBeDefined();
     expect(krones!.specifications["Image credit"]).toBeUndefined();
+  });
+});
+
+describe("daily 2026-09-15 anvil mill catch-up", () => {
+  const millsOk = ["anvil-international"];
+  const blocked = ["apar-industries", "circor", "olympic-steel"];
+  const leftoverHold33Hosts = ["apar-industries", "circor", "olympic-steel"];
+  const anvilPack = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil");
+  const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
+  const lockedHold39 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39");
+  const lockedHold7 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7");
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && s.productHostOnly);
+  const hold33Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold33");
+
+  it("appends the 1 cleared mill without rewriting locked #48–#58 cards", () => {
+    expect(anvilPack.map((s) => s.packSlug)).toEqual(millsOk);
+    expect(locked0915).toHaveLength(8);
+    expect(lockedHold39).toHaveLength(32);
+    expect(lockedHold7).toHaveLength(6);
+    expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
+    expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0915-h5")).toHaveLength(5);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly)).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-skip12")).toHaveLength(11);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-rest30")).toHaveLength(30);
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+  });
+
+  it("promotes leftover anvil-international to a public mill with local _01 leading", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    const mill = anvilPack[0];
+    expect(mill).toBeDefined();
+    expect(mill.packSlug).toBe("anvil-international");
+    expect(mill.imageUrl).toBe("/images/suppliers/anvil-international/anvil-international_01.jpg");
+    expect(mill.supplierImages?.[0]).toBe("/images/suppliers/anvil-international/anvil-international_01.jpg");
+    expect(mill.supplierImages).toEqual(["/images/suppliers/anvil-international/anvil-international_01.jpg"]);
+    expect(mill.moq).toMatch(/RFQ/i);
+    expect(mill.productHostOnly).toBeFalsy();
+    expect(mill.certificationsDetailed ?? []).toEqual([]);
+    expect(mill.verified).toBe(true);
+    expect(listed.has(mill.id)).toBe(true);
+    expect(JSON.stringify(mill)).not.toMatch(/\$0\.00/);
+    expect(
+      packSuppliers.some(
+        (s) => s.packSlug === "anvil-international" && s.pack === "daily-2026-09-15" && s.productHostOnly
+      )
+    ).toBe(false);
+    expect(dayHosts).toEqual([]);
+    expect(hold33Hosts.map((s) => s.packSlug).sort()).toEqual([...leftoverHold33Hosts].sort());
+    const anvilSku = packProducts.find((p) => p.packSlug === "anvil-international" && p.pack === "d0915");
+    expect(anvilSku).toBeDefined();
+    expect(anvilSku!.basePrice).toBeNull();
+    expect(anvilSku!.priceSourceType).toBe("rfq");
+  });
+
+  it("leaves the OK mill uncaptioned and keeps blocked mills out", () => {
+    const mill = anvilPack.find((s) => s.packSlug === "anvil-international");
+    expect(mill).toBeDefined();
+    expect(mill!.description).toMatch(/pipe fittings|hangers|grooved piping/i);
+    expect(mill!.description).not.toMatch(
+      /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior|AGC|careers banner/i
+    );
+    for (const slug of blocked) {
+      expect(anvilPack.some((s) => s.packSlug === slug), slug).toBe(false);
+      expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
+      const host = packSuppliers.find((s) => s.packSlug === slug);
+      expect(host, slug).toBeDefined();
+      expect(host!.productHostOnly, slug).toBe(true);
+      expect(host!.pack, slug).toBe("daily-2026-09-15-hold33");
+    }
   });
 });
 
