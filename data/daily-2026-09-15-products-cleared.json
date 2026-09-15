@@ -1,29 +1,648 @@
 {
-  "label": "QA-DAILY-2026-09-15-PRODUCTS-RESEARCHER-PARTIAL",
-  "pack": "daily/2026-09-15",
-  "sealed_at_pt": "2026-09-15 ~10:39 PT",
-  "ok": [
+  "label": "DAILY-2026-09-15-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-15/_qa/researcher-products-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-15-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
     "krones"
   ],
   "soft": [
-    "anvil-international",
-    "auma",
-    "big-river-steel",
-    "bobst",
-    "dillinger",
-    "intertape-polymer",
-    "intralox",
-    "jtl-industries",
-    "koenig-bauer",
-    "kumkang-kind",
-    "nova-tube",
-    "phillips-tube-group",
-    "piramal-glass",
-    "schunk",
-    "sgd-pharma",
-    "universal-stainless"
+    {
+      "slug": "anvil-international",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC install — category fittings/tubes type-match only"
+    },
+    {
+      "slug": "auma",
+      "reason": "auma-millfall = Yokogawa/JBS valve manifold; auma-millfall1 = Hanbay MDM / Parker block — soft valve-actuator category wrong brand (not AUMA electric actuators)"
+    },
+    {
+      "slug": "big-river-steel",
+      "reason": "big-river HAER archival mill coils + shared street rebar staging — soft steel/mill category"
+    },
+    {
+      "slug": "bobst",
+      "reason": "bobst-millfall / millfall1 = empty dark warehouse interiors — soft empty facility not converting equipment"
+    },
+    {
+      "slug": "dillinger",
+      "reason": "dillinger-millfall1 = FVS mill campus exterior + shared street rebar — soft steel/mill campus"
+    },
+    {
+      "slug": "intertape-polymer",
+      "reason": "intertape-millfall = amber Magnetic Spring bottle; millfall1 = pulp-mill campus — soft wrong-object + campus not tapes/films"
+    },
+    {
+      "slug": "intralox",
+      "reason": "intralox-millfall = parking lot; millfall1 = Intralox campus facade with logo — soft branded campus not modular belts"
+    },
+    {
+      "slug": "jtl-industries",
+      "reason": "shared glycol HVAC install + galvanized pipe-bundle — category ERW tubes type-match only"
+    },
+    {
+      "slug": "koenig-bauer",
+      "reason": "koenig-bauer millfall ×2 = empty dark warehouse (shared bobst cluster) — soft empty facility not presses"
+    },
+    {
+      "slug": "kumkang-kind",
+      "reason": "shared glycol HVAC + galvanized pipe-bundle — category steel pipes/tubes type-match only"
+    },
+    {
+      "slug": "nova-tube",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC — category ERW/HSS tubes type-match only"
+    },
+    {
+      "slug": "phillips-tube-group",
+      "reason": "shared glycol HVAC + galvanized pipe-bundle — category precision welded tubes type-match only"
+    },
+    {
+      "slug": "piramal-glass",
+      "reason": "piramal-glass-millfall1 = aerial factory campus; piramal-glass = shared palletized shrink-wrap glass — soft campus + glass packaging category"
+    },
+    {
+      "slug": "schunk",
+      "reason": "schunk-millfall1 = five-finger robotic gripper hand (no SCHUNK logo) + shared sensor/conveyor lab — soft gripping/automation category"
+    },
+    {
+      "slug": "sgd-pharma",
+      "reason": "sgd-pharma = shared palletized glass bottles + pulp-mill campus — soft glass packaging category (not Type I/II/III vials brand)"
+    },
+    {
+      "slug": "universal-stainless",
+      "reason": "universal-stainless-millfall1 = rusty mill campus exterior + shared street rebar — soft steel/mill campus"
+    }
   ],
   "hold_out_count": 33,
+  "hold_out": [
+    "amiantit",
+    "amiblu",
+    "apar-industries",
+    "brugg-cables",
+    "bulten",
+    "cerro-wire",
+    "circor",
+    "ckd-corporation",
+    "comau",
+    "dayco",
+    "dorner",
+    "ester-industries",
+    "forbo-siegling",
+    "future-pipe-industries",
+    "gaf",
+    "garware-hitech-films",
+    "haas-automation",
+    "harting",
+    "hobas-pipe-usa",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "olympic-steel",
+    "polyplex",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "us-pipe",
+    "vacmet",
+    "zimmer-group"
+  ],
   "hold_note": "33 HOLD out incl circor stem collision (prefer neither)",
-  "wire_recommendation": "Wire OK 1 + soft 16 optional; HOLD 33 out; mill seal still in flight; prior wired locked."
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "ok_notes": {
+    "krones": "krones-millfall / millfall1 = KRONES-branded PET bottling/filling line conveyors — brand+product match"
+  },
+  "wire_recommendation": "Wire OK 1 + soft 16 optional; HOLD 33 out; mill seal still in flight; prior wired locked.",
+  "stills": [
+    {
+      "slug": "krones",
+      "path": "/images/products/krones/krones-millfall.jpg",
+      "filename": "krones-millfall.jpg",
+      "grade": "ok",
+      "sha256": "159746303d37a2ac87c3b0c16db6b5632ced8e5f9098c938ef2a3d1c3b471431",
+      "bytes": 284047
+    },
+    {
+      "slug": "krones",
+      "path": "/images/products/krones/krones-millfall1.jpg",
+      "filename": "krones-millfall1.jpg",
+      "grade": "ok",
+      "sha256": "dda408a0fa7bffcf0fd9a9e2dcc7a5826d43d72aabb76abbc8f2a55268091754",
+      "bytes": 254661
+    },
+    {
+      "slug": "anvil-international",
+      "path": "/images/products/anvil-international/anvil-international.jpg",
+      "filename": "anvil-international.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "anvil-international",
+      "path": "/images/products/anvil-international/anvil-product.jpg",
+      "filename": "anvil-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "auma",
+      "path": "/images/products/auma/auma-millfall.jpg",
+      "filename": "auma-millfall.jpg",
+      "grade": "soft",
+      "sha256": "137964940342c309e1abeb79e43744a45d31959c19b41fe107195beb505f1c80",
+      "bytes": 236532
+    },
+    {
+      "slug": "auma",
+      "path": "/images/products/auma/auma-millfall1.jpg",
+      "filename": "auma-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "1304314a4da2b781fdaec95c78d71ed4734686db1af5a88a42df285a3e4483dd",
+      "bytes": 271561
+    },
+    {
+      "slug": "big-river-steel",
+      "path": "/images/products/big-river-steel/bigriver-product.jpg",
+      "filename": "bigriver-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "big-river-steel",
+      "path": "/images/products/big-river-steel/big-river-steel-millfall1.jpg",
+      "filename": "big-river-steel-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "09416b9c8dab6d0d5d2d5d9600af16f8c8a668ca176e9c835eef604dec2e9b83",
+      "bytes": 322396
+    },
+    {
+      "slug": "bobst",
+      "path": "/images/products/bobst/bobst-millfall.jpg",
+      "filename": "bobst-millfall.jpg",
+      "grade": "soft",
+      "sha256": "e6c58df43a650fbd55d3850a1cdb1d7d408e0ecb0c8e8267b96c432c4b1529f0",
+      "bytes": 278049
+    },
+    {
+      "slug": "bobst",
+      "path": "/images/products/bobst/bobst-millfall1.jpg",
+      "filename": "bobst-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "62f9056a54d9fa181d7179e1444391b7f5f5ab072ce249f7d38157b02de23aac",
+      "bytes": 186394
+    },
+    {
+      "slug": "dillinger",
+      "path": "/images/products/dillinger/dillinger-product.jpg",
+      "filename": "dillinger-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "dillinger",
+      "path": "/images/products/dillinger/dillinger-millfall1.jpg",
+      "filename": "dillinger-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "1e3975cf6c0cc823b6dc4088a881e110e72f3671f9787f857320fa1294cae83b",
+      "bytes": 310641
+    },
+    {
+      "slug": "intertape-polymer",
+      "path": "/images/products/intertape-polymer/intertape-polymer-millfall.jpg",
+      "filename": "intertape-polymer-millfall.jpg",
+      "grade": "soft",
+      "sha256": "da5bf3f968d25e35c07b6784a3f42551f949ff2ce6960df909fcc59b3fd48347",
+      "bytes": 217274
+    },
+    {
+      "slug": "intertape-polymer",
+      "path": "/images/products/intertape-polymer/intertape-polymer-millfall1.jpg",
+      "filename": "intertape-polymer-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "2281bd5874e42b9240a052b98434b875f842931e6c9b14a5407e1418d4fb53e8",
+      "bytes": 115919
+    },
+    {
+      "slug": "intralox",
+      "path": "/images/products/intralox/intralox-millfall.jpg",
+      "filename": "intralox-millfall.jpg",
+      "grade": "soft",
+      "sha256": "490a862723e2247aff1f33fe69c9491a0bfb5bb2ab968af56d0eedd5ce5c4398",
+      "bytes": 158145
+    },
+    {
+      "slug": "intralox",
+      "path": "/images/products/intralox/intralox-millfall1.jpg",
+      "filename": "intralox-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "4928616284d5d8aa206c300570a8c948eb3e6bd4f6d3bcdca4d3c5bd520bfa17",
+      "bytes": 963828
+    },
+    {
+      "slug": "jtl-industries",
+      "path": "/images/products/jtl-industries/jtl-industries.jpg",
+      "filename": "jtl-industries.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "jtl-industries",
+      "path": "/images/products/jtl-industries/jtl-product.jpg",
+      "filename": "jtl-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "koenig-bauer",
+      "path": "/images/products/koenig-bauer/koenig-bauer-millfall.jpg",
+      "filename": "koenig-bauer-millfall.jpg",
+      "grade": "soft",
+      "sha256": "62f9056a54d9fa181d7179e1444391b7f5f5ab072ce249f7d38157b02de23aac",
+      "bytes": 186394
+    },
+    {
+      "slug": "koenig-bauer",
+      "path": "/images/products/koenig-bauer/koenig-bauer-millfall1.jpg",
+      "filename": "koenig-bauer-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "62f9056a54d9fa181d7179e1444391b7f5f5ab072ce249f7d38157b02de23aac",
+      "bytes": 186394
+    },
+    {
+      "slug": "kumkang-kind",
+      "path": "/images/products/kumkang-kind/kumkang-kind.jpg",
+      "filename": "kumkang-kind.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "kumkang-kind",
+      "path": "/images/products/kumkang-kind/kumkang-product.jpg",
+      "filename": "kumkang-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "nova-tube",
+      "path": "/images/products/nova-tube/nova-tube.jpg",
+      "filename": "nova-tube.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "nova-tube",
+      "path": "/images/products/nova-tube/nova-product.jpg",
+      "filename": "nova-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "phillips-tube-group",
+      "path": "/images/products/phillips-tube-group/phillips-tube.jpg",
+      "filename": "phillips-tube.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "phillips-tube-group",
+      "path": "/images/products/phillips-tube-group/phillips-product.jpg",
+      "filename": "phillips-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "piramal-glass",
+      "path": "/images/products/piramal-glass/piramal-glass.jpg",
+      "filename": "piramal-glass.jpg",
+      "grade": "soft",
+      "sha256": "3251ecf0f9ca8781ce9378de2a0c767155479e83deea722e355c4cb5bd249e6d",
+      "bytes": 291371
+    },
+    {
+      "slug": "piramal-glass",
+      "path": "/images/products/piramal-glass/piramal-glass-millfall1.jpg",
+      "filename": "piramal-glass-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "da0857bc232c8f6d34795bc0941627ba1d3bd9822bb33d164a7cfc4984caec94",
+      "bytes": 1005645
+    },
+    {
+      "slug": "schunk",
+      "path": "/images/products/schunk/schunk-product.jpg",
+      "filename": "schunk-product.jpg",
+      "grade": "soft",
+      "sha256": "8b9f6d17c6028ec053de9aec0f4bda58c309dd8f0ffa2418843154674138b42a",
+      "bytes": 255565
+    },
+    {
+      "slug": "schunk",
+      "path": "/images/products/schunk/schunk-millfall1.jpg",
+      "filename": "schunk-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "4ddc3a2f49f2277af2208b95e977530bf8d3d7ccd2d18fd998cf059bb65f1437",
+      "bytes": 186107
+    },
+    {
+      "slug": "sgd-pharma",
+      "path": "/images/products/sgd-pharma/sgd-pharma.jpg",
+      "filename": "sgd-pharma.jpg",
+      "grade": "soft",
+      "sha256": "3251ecf0f9ca8781ce9378de2a0c767155479e83deea722e355c4cb5bd249e6d",
+      "bytes": 291371
+    },
+    {
+      "slug": "sgd-pharma",
+      "path": "/images/products/sgd-pharma/sgd-pharma-millfall1.jpg",
+      "filename": "sgd-pharma-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "2281bd5874e42b9240a052b98434b875f842931e6c9b14a5407e1418d4fb53e8",
+      "bytes": 115919
+    },
+    {
+      "slug": "universal-stainless",
+      "path": "/images/products/universal-stainless/univ-product.jpg",
+      "filename": "univ-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "universal-stainless",
+      "path": "/images/products/universal-stainless/universal-stainless-millfall1.jpg",
+      "filename": "universal-stainless-millfall1.jpg",
+      "grade": "soft",
+      "sha256": "ae76dfaf4ba6d2f1c99a762f98206f5f8485e1baa25d55da6264833928447ca9",
+      "bytes": 194619
+    }
+  ],
+  "products": [
+    {
+      "slug": "krones",
+      "product_name": "Krones Beverage Filling Lines Packaging and Process Technology",
+      "supplier_name": "Krones AG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.krones.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/krones/krones-millfall.jpg",
+        "/images/products/krones/krones-millfall1.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "anvil-international",
+      "product_name": "Anvil International Pipe Fittings Hangers and Grooved Piping Systems",
+      "supplier_name": "Anvil International",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.anvilintl.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/anvil-international/anvil-international.jpg",
+        "/images/products/anvil-international/anvil-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared galvanized pipe-bundle + glycol HVAC install — category fittings/tubes type-match only"
+    },
+    {
+      "slug": "auma",
+      "product_name": "AUMA Electric Valve Actuators and Industrial Valve Automation",
+      "supplier_name": "AUMA Riester GmbH & Co. KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.auma.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/auma/auma-millfall.jpg",
+        "/images/products/auma/auma-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "auma-millfall = Yokogawa/JBS valve manifold; auma-millfall1 = Hanbay MDM / Parker block — soft valve-actuator category wrong brand (not AUMA electric actuators)"
+    },
+    {
+      "slug": "big-river-steel",
+      "product_name": "Big River Steel Flat-Rolled Advanced High-Strength and Coated Coils",
+      "supplier_name": "Big River Steel LLC",
+      "category": "Steel & Metals",
+      "source_url": "https://bigriversteel.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/big-river-steel/bigriver-product.jpg",
+        "/images/products/big-river-steel/big-river-steel-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "big-river HAER archival mill coils + shared street rebar staging — soft steel/mill category"
+    },
+    {
+      "slug": "bobst",
+      "product_name": "Bobst Packaging Converting Folder-Gluers and Flexible Packaging Equipment",
+      "supplier_name": "Bobst SA",
+      "category": "Industrial Parts",
+      "source_url": "https://www.bobst.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/bobst/bobst-millfall.jpg",
+        "/images/products/bobst/bobst-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "bobst-millfall / millfall1 = empty dark warehouse interiors — soft empty facility not converting equipment"
+    },
+    {
+      "slug": "dillinger",
+      "product_name": "Dillinger Heavy Plate Pressure Vessel and Offshore Structural Plate",
+      "supplier_name": "Aktien-Gesellschaft der Dillinger Hüttenwerke",
+      "category": "Steel & Metals",
+      "source_url": "https://www.dillinger.de/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dillinger/dillinger-product.jpg",
+        "/images/products/dillinger/dillinger-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "dillinger-millfall1 = FVS mill campus exterior + shared street rebar — soft steel/mill campus"
+    },
+    {
+      "slug": "intertape-polymer",
+      "product_name": "Intertape Polymer Pressure-Sensitive Tapes Stretch and Protective Films",
+      "supplier_name": "Intertape Polymer Group",
+      "category": "Packaging",
+      "source_url": "https://www.itape.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/intertape-polymer/intertape-polymer-millfall.jpg",
+        "/images/products/intertape-polymer/intertape-polymer-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "intertape-millfall = amber Magnetic Spring bottle; millfall1 = pulp-mill campus — soft wrong-object + campus not tapes/films"
+    },
+    {
+      "slug": "intralox",
+      "product_name": "Intralox Modular Plastic Conveyor Belts and Activated Roller Belt Systems",
+      "supplier_name": "Intralox LLC",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.intralox.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/intralox/intralox-millfall.jpg",
+        "/images/products/intralox/intralox-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "intralox-millfall = parking lot; millfall1 = Intralox campus facade with logo — soft branded campus not modular belts"
+    },
+    {
+      "slug": "jtl-industries",
+      "product_name": "JTL Industries ERW Steel Pipes Hollow Sections and Galvanized Tubes",
+      "supplier_name": "JTL Industries Limited",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.jtlindustries.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/jtl-industries/jtl-industries.jpg",
+        "/images/products/jtl-industries/jtl-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared glycol HVAC install + galvanized pipe-bundle — category ERW tubes type-match only"
+    },
+    {
+      "slug": "koenig-bauer",
+      "product_name": "Koenig & Bauer Printing Presses and Packaging Print Systems",
+      "supplier_name": "Koenig & Bauer AG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.koenig-bauer.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/koenig-bauer/koenig-bauer-millfall.jpg",
+        "/images/products/koenig-bauer/koenig-bauer-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "koenig-bauer millfall ×2 = empty dark warehouse (shared bobst cluster) — soft empty facility not presses"
+    },
+    {
+      "slug": "kumkang-kind",
+      "product_name": "Kumkang Kind Steel Pipes Tubes and Structural Tubular Products",
+      "supplier_name": "Kumkang Kind Co., Ltd.",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.kumkangkind.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/kumkang-kind/kumkang-kind.jpg",
+        "/images/products/kumkang-kind/kumkang-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared glycol HVAC + galvanized pipe-bundle — category steel pipes/tubes type-match only"
+    },
+    {
+      "slug": "nova-tube",
+      "product_name": "Nova Tube ERW Steel Tubing and Hollow Structural Sections",
+      "supplier_name": "Nova Tube Inc.",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.novasteel.ca/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/nova-tube/nova-tube.jpg",
+        "/images/products/nova-tube/nova-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared galvanized pipe-bundle + glycol HVAC — category ERW/HSS tubes type-match only"
+    },
+    {
+      "slug": "phillips-tube-group",
+      "product_name": "Phillips Tube Group Precision Welded Steel Tubing and OEM Tube Assemblies",
+      "supplier_name": "Phillips Tube Group",
+      "category": "Tube & Pipes",
+      "source_url": "https://phillipstube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/phillips-tube-group/phillips-tube.jpg",
+        "/images/products/phillips-tube-group/phillips-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared glycol HVAC + galvanized pipe-bundle — category precision welded tubes type-match only"
+    },
+    {
+      "slug": "piramal-glass",
+      "product_name": "Piramal Glass Pharma Specialty and Cosmetic Glass Containers",
+      "supplier_name": "Piramal Glass",
+      "category": "Packaging",
+      "source_url": "https://www.piramalglass.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/piramal-glass/piramal-glass.jpg",
+        "/images/products/piramal-glass/piramal-glass-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "piramal-glass-millfall1 = aerial factory campus; piramal-glass = shared palletized shrink-wrap glass — soft campus + glass packaging category"
+    },
+    {
+      "slug": "schunk",
+      "product_name": "SCHUNK Gripping Systems Clamping Technology and Automation Components",
+      "supplier_name": "SCHUNK SE & Co. KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.schunk.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/schunk/schunk-product.jpg",
+        "/images/products/schunk/schunk-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "schunk-millfall1 = five-finger robotic gripper hand (no SCHUNK logo) + shared sensor/conveyor lab — soft gripping/automation category"
+    },
+    {
+      "slug": "sgd-pharma",
+      "product_name": "SGD Pharma Type I II III Glass Vials and Injectable Packaging",
+      "supplier_name": "SGD Pharma",
+      "category": "Packaging",
+      "source_url": "https://www.sgd-pharma.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/sgd-pharma/sgd-pharma.jpg",
+        "/images/products/sgd-pharma/sgd-pharma-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "sgd-pharma = shared palletized glass bottles + pulp-mill campus — soft glass packaging category (not Type I/II/III vials brand)"
+    },
+    {
+      "slug": "universal-stainless",
+      "product_name": "Universal Stainless Specialty Stainless Bar Plate and Aerospace Alloys",
+      "supplier_name": "Universal Stainless & Alloy Products Inc.",
+      "category": "Steel & Metals",
+      "source_url": "https://www.univstainless.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/universal-stainless/univ-product.jpg",
+        "/images/products/universal-stainless/universal-stainless-millfall1.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "universal-stainless-millfall1 = rusty mill campus exterior + shared street rebar — soft steel/mill campus"
+    }
+  ]
 }

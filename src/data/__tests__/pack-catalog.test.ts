@@ -1437,6 +1437,136 @@ describe("daily 2026-09-14 HOLD4 mill refetch", () => {
   });
 });
 
+describe("daily 2026-09-15 product catch-up", () => {
+  const productsOk = ["krones"];
+  const productsSoft = [
+    "anvil-international",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "dillinger",
+    "intertape-polymer",
+    "intralox",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "piramal-glass",
+    "schunk",
+    "sgd-pharma",
+    "universal-stainless",
+  ];
+  const holdOut = [
+    "amiantit",
+    "amiblu",
+    "apar-industries",
+    "brugg-cables",
+    "bulten",
+    "cerro-wire",
+    "circor",
+    "ckd-corporation",
+    "comau",
+    "dayco",
+    "dorner",
+    "ester-industries",
+    "forbo-siegling",
+    "future-pipe-industries",
+    "gaf",
+    "garware-hitech-films",
+    "haas-automation",
+    "harting",
+    "hobas-pipe-usa",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "olympic-steel",
+    "polyplex",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "us-pipe",
+    "vacmet",
+    "zimmer-group",
+  ];
+  const softCredits: Record<string, RegExp> = {
+    "anvil-international": /fittings\/tubes type-match only/i,
+    auma: /valve-actuator category wrong brand|not AUMA electric actuators/i,
+    "big-river-steel": /HAER archival mill coils|soft steel\/mill category/i,
+    bobst: /empty dark warehouse|soft empty facility not converting/i,
+    dillinger: /FVS mill campus|soft steel\/mill campus/i,
+    "intertape-polymer": /Magnetic Spring bottle|wrong-object \+ campus not tapes/i,
+    intralox: /Intralox campus facade|soft branded campus not modular belts/i,
+    "jtl-industries": /ERW tubes type-match only/i,
+    "koenig-bauer": /empty dark warehouse|soft empty facility not presses/i,
+    "kumkang-kind": /steel pipes\/tubes type-match only/i,
+    "nova-tube": /ERW\/HSS tubes type-match only/i,
+    "phillips-tube-group": /precision welded tubes type-match only/i,
+    "piramal-glass": /palletized shrink-wrap glass|soft campus \+ glass packaging/i,
+    schunk: /five-finger robotic gripper|soft gripping\/automation category/i,
+    "sgd-pharma": /palletized glass bottles|soft glass packaging category/i,
+    "universal-stainless": /rusty mill campus|soft steel\/mill campus/i,
+  };
+  const day0915 = packProducts.filter((p) => p.pack === "d0915");
+  const day0915Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15");
+
+  it("appends the 17 cleared RFQ SKUs without rewriting locked product or mill packs", () => {
+    expect(day0915.map((p) => p.packSlug).sort()).toEqual([...productsOk, ...productsSoft].sort());
+    expect(day0915).toHaveLength(17);
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packProducts.filter((p) => p.pack === "d0911-h41")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly)).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-skip12")).toHaveLength(11);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-rest30")).toHaveLength(30);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(0);
+  });
+
+  it("keeps every 9/15 SKU as RFQ with a local still and prefers branded files", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const p of day0915) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(p.images[0], p.id).not.toMatch(/mill-fallback/i);
+      expect(JSON.stringify(p), p.id).not.toMatch(/\$0\.00/);
+      expect(p.specifications["Image credit"] ?? "", p.id).not.toMatch(/AI-generated/i);
+      expect(p.certifications ?? [], p.id).toEqual([]);
+    }
+    expect(day0915Hosts.map((s) => s.packSlug).sort()).toEqual([...productsOk, ...productsSoft].sort());
+    for (const host of day0915Hosts) {
+      expect(host.productHostOnly, host.packSlug).toBe(true);
+      expect(listed.has(host.id), host.packSlug).toBe(false);
+    }
+  });
+
+  it("soft-credits the SOFT 16 from the researcher seal and keeps HOLD 33 / circor out", () => {
+    for (const slug of productsSoft) {
+      const sku = day0915.find((p) => p.packSlug === slug);
+      expect(sku, slug).toBeDefined();
+      expect(sku!.specifications["Image credit"], slug).toMatch(softCredits[slug]);
+    }
+    const krones = day0915.find((p) => p.packSlug === "krones");
+    expect(krones).toBeDefined();
+    expect(krones!.specifications["Image credit"]).toBeUndefined();
+    for (const slug of holdOut) {
+      expect(day0915.some((p) => p.packSlug === slug), slug).toBe(false);
+      expect(day0915Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+    }
+    expect(packProducts.some((p) => p.packSlug === "circor")).toBe(false);
+    expect(packSuppliers.some((s) => s.packSlug === "circor")).toBe(false);
+  });
+});
+
 describe("homepage products picker", () => {
   it("only picks approved products with their own real photo, spread across categories and suppliers", () => {
     const products = packProducts.map(scrapedToProduct);
