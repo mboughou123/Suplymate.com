@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 357,
-    "suppliersWithPhotos": 331,
+    "suppliers": 358,
+    "suppliersWithPhotos": 337,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 556,
+    "supplierPhotos": 567,
     "suppliersOverlayingDirectory": 10,
     "distributors": [
       "bossard"
@@ -14567,6 +14567,224 @@
       "overlaysExisting": false
     },
     {
+      "id": "bulten",
+      "packSlug": "bulten",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "Bulten AB",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Gothenburg, Sweden",
+      "country": "Sweden",
+      "city": "Gothenburg",
+      "website": "https://www.bulten.com/",
+      "imageUrl": "/images/suppliers/bulten/bulten_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/bulten/bulten_01.jpg",
+        "/images/suppliers/bulten/bulten_02.jpg"
+      ],
+      "description": "Bulten AB manufactures automotive fasteners and fastener assemblies.",
+      "products": [
+        "Automotive fasteners",
+        "Fastener assemblies"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.bulten.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "haas-automation",
+      "packSlug": "haas-automation",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "Haas Automation, Inc.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Oxnard, United States",
+      "country": "United States",
+      "city": "Oxnard",
+      "website": "https://www.haascnc.com/",
+      "imageUrl": "/images/suppliers/haas-automation/haas-automation_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/haas-automation/haas-automation_01.jpg",
+        "/images/suppliers/haas-automation/haas-automation_02.jpg"
+      ],
+      "description": "Haas Automation manufactures CNC machining centers, lathes and rotary tables.",
+      "products": [
+        "CNC machining centers",
+        "CNC lathes",
+        "Rotary tables"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.haascnc.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "koenig-bauer",
+      "packSlug": "koenig-bauer",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "Koenig & Bauer AG",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Würzburg, Germany",
+      "country": "Germany",
+      "city": "Würzburg",
+      "website": "https://www.koenig-bauer.com/",
+      "imageUrl": "/images/suppliers/koenig-bauer/koenig-bauer_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/koenig-bauer/koenig-bauer_01.jpg"
+      ],
+      "description": "Koenig & Bauer AG manufactures printing presses and packaging print systems.",
+      "products": [
+        "Printing presses",
+        "Packaging print systems"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.koenig-bauer.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "dorner",
+      "packSlug": "dorner",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "Dorner Mfg. Corp.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Hartland, United States",
+      "country": "United States",
+      "city": "Hartland",
+      "website": "https://www.dornerconveyors.com/",
+      "imageUrl": "/images/suppliers/dorner/dorner_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/dorner/dorner_01.jpg",
+        "/images/suppliers/dorner/dorner_02.jpg"
+      ],
+      "description": "Dorner Mfg. Corp. manufactures precision conveyors and material-handling belts. Photo is unbranded HQ/campus exterior — HQ campus, not production floor — not a confirmed plant-exterior claim.",
+      "products": [
+        "Precision conveyors",
+        "Material-handling belts"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.dornerconveyors.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "jtl-industries",
+      "packSlug": "jtl-industries",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "JTL Industries Limited",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Chandigarh, India",
+      "country": "India",
+      "city": "Chandigarh",
+      "website": "https://www.jtlindustries.com/",
+      "imageUrl": "/images/suppliers/jtl-industries/jtl-industries_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/jtl-industries/jtl-industries_01.jpg"
+      ],
+      "description": "JTL Industries Limited manufactures ERW steel pipes, hollow sections and galvanized tubes. Photo is unbranded mill interior, no JTL brand (Saha Thai wrong-entity cleared) — not a plant exterior — not a confirmed plant-exterior claim.",
+      "products": [
+        "ERW steel pipes",
+        "Hollow sections",
+        "Galvanized tubes"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.jtlindustries.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "zimmer-group",
+      "packSlug": "zimmer-group",
+      "pack": "daily-2026-09-15-hold7",
+      "name": "Zimmer Group",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Rheinau, Germany",
+      "country": "Germany",
+      "city": "Rheinau",
+      "website": "https://www.zimmer-group.com/",
+      "imageUrl": "/images/suppliers/zimmer-group/zimmer-group_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/zimmer-group/zimmer-group_01.jpg",
+        "/images/suppliers/zimmer-group/zimmer-group_02.jpg",
+        "/images/suppliers/zimmer-group/zimmer-group_03.jpg"
+      ],
+      "description": "Zimmer Group manufactures handling, clamping and robotic components. Photo is unbranded industrial exterior — not a confirmed plant exterior — not a confirmed plant-exterior claim.",
+      "products": [
+        "Handling components",
+        "Clamping technology",
+        "Robotic components"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.zimmer-group.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
       "id": "psl-limited",
       "packSlug": "psl-limited",
       "pack": "daily-2026-09-14-hold22",
@@ -14608,56 +14826,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.anvilintl.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "jtl-industries",
-      "packSlug": "jtl-industries",
-      "pack": "daily-2026-09-15",
-      "name": "JTL Industries Limited",
-      "industry": "Metal",
-      "category": "Tubes & Pipes",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "JTL Industries ERW Steel Pipes Hollow Sections and Galvanized Tubes"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.jtlindustries.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "koenig-bauer",
-      "packSlug": "koenig-bauer",
-      "pack": "daily-2026-09-15",
-      "name": "Koenig & Bauer AG",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Koenig & Bauer Printing Presses and Packaging Print Systems"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.koenig-bauer.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-15",
@@ -14717,56 +14885,6 @@
       "overlaysExisting": false
     },
     {
-      "id": "dorner",
-      "packSlug": "dorner",
-      "pack": "daily-2026-09-15-hold33",
-      "name": "Dorner Mfg. Corp.",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Dorner Precision Conveyors and Material-Handling Belts"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.dornerconveyors.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "haas-automation",
-      "packSlug": "haas-automation",
-      "pack": "daily-2026-09-15-hold33",
-      "name": "Haas Automation, Inc.",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Haas CNC Machining Centers Lathes and Rotary Tables"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.haascnc.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
       "id": "olympic-steel",
       "packSlug": "olympic-steel",
       "pack": "daily-2026-09-15-hold33",
@@ -14783,31 +14901,6 @@
       "verificationStatus": "needs_info",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.olysteel.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "zimmer-group",
-      "packSlug": "zimmer-group",
-      "pack": "daily-2026-09-15-hold33",
-      "name": "Zimmer Group",
-      "industry": "Industrial Equipment",
-      "category": "Industrial Parts",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Zimmer Group Handling Clamping and Robotic Components"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.zimmer-group.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-15",
@@ -35451,7 +35544,7 @@
       "supplierId": "jtl-industries",
       "supplierName": "JTL Industries Limited",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "India",
       "name": "JTL Industries ERW Steel Pipes Hollow Sections and Galvanized Tubes",
       "slug": "jtl-industries-erw-steel-pipes-hollow-sections-and-galvanized-tubes",
       "category": "Tubes & Pipes",
@@ -35484,7 +35577,7 @@
       "productUrl": "https://www.jtlindustries.com/",
       "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T17:40:00.000Z"
     },
@@ -35495,7 +35588,7 @@
       "supplierId": "koenig-bauer",
       "supplierName": "Koenig & Bauer AG",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "Koenig & Bauer Printing Presses and Packaging Print Systems",
       "slug": "koenig-bauer-printing-presses-and-packaging-print-systems",
       "category": "Industrial Parts",
@@ -35528,7 +35621,7 @@
       "productUrl": "https://www.koenig-bauer.com/",
       "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T17:40:00.000Z"
     },
@@ -36243,7 +36336,7 @@
       "supplierId": "dorner",
       "supplierName": "Dorner Mfg. Corp.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Dorner Precision Conveyors and Material-Handling Belts",
       "slug": "dorner-precision-conveyors-and-material-handling-belts",
       "category": "Industrial Parts",
@@ -36276,7 +36369,7 @@
       "productUrl": "https://www.dornerconveyors.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T18:27:00.000Z"
     },
@@ -36419,7 +36512,7 @@
       "supplierId": "haas-automation",
       "supplierName": "Haas Automation, Inc.",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Haas CNC Machining Centers Lathes and Rotary Tables",
       "slug": "haas-cnc-machining-centers-lathes-and-rotary-tables",
       "category": "Industrial Parts",
@@ -36452,7 +36545,7 @@
       "productUrl": "https://www.haascnc.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T18:27:00.000Z"
     },
@@ -37035,7 +37128,7 @@
       "supplierId": "zimmer-group",
       "supplierName": "Zimmer Group",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "Germany",
       "name": "Zimmer Group Handling Clamping and Robotic Components",
       "slug": "zimmer-group-handling-clamping-and-robotic-components",
       "category": "Industrial Parts",
@@ -37068,7 +37161,7 @@
       "productUrl": "https://www.zimmer-group.com/",
       "imageSourceUrl": null,
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T18:27:00.000Z"
     }
