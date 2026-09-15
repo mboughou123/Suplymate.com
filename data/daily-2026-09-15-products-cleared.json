@@ -1,0 +1,29 @@
+{
+  "label": "QA-DAILY-2026-09-15-PRODUCTS-RESEARCHER-PARTIAL",
+  "pack": "daily/2026-09-15",
+  "sealed_at_pt": "2026-09-15 ~10:39 PT",
+  "ok": [
+    "krones"
+  ],
+  "soft": [
+    "anvil-international",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "dillinger",
+    "intertape-polymer",
+    "intralox",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "piramal-glass",
+    "schunk",
+    "sgd-pharma",
+    "universal-stainless"
+  ],
+  "hold_out_count": 33,
+  "hold_note": "33 HOLD out incl circor stem collision (prefer neither)",
+  "wire_recommendation": "Wire OK 1 + soft 16 optional; HOLD 33 out; mill seal still in flight; prior wired locked."
+}
