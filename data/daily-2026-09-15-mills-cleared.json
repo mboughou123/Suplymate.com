@@ -1,0 +1,27 @@
+{
+  "label": "QA-DAILY-2026-09-15-RESEARCHER-PARTIAL",
+  "pack": "daily/2026-09-15",
+  "sealed_at_pt": "2026-09-15 10:40 PT",
+  "ok": [
+    "dillinger",
+    "forbo-siegling",
+    "krones",
+    "piramal-glass"
+  ],
+  "soft": [
+    "dayco",
+    "gaf",
+    "intralox",
+    "schunk"
+  ],
+  "hold_out_count": 42,
+  "hold_note": "42 HOLD incl all 25 category-fills",
+  "notes": {
+    "forbo-siegling": "primary aerial only; skip Ernst Siegling employee secondary",
+    "dayco": "HQ tower soft \u2014 dayco_01 only (dup)",
+    "gaf": "gaf_01 vapor retarder primary + gaf_03 Tampa facility",
+    "intralox": "HQ campus soft \u2014 intralox_01",
+    "schunk": "product primary + ZEUS exterior schunk_02"
+  },
+  "wire_recommendation": "Wire OK 4 (+ soft 4 optional). HOLD 42 out. Prior wired locked."
+}
