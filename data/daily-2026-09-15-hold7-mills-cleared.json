@@ -1,0 +1,25 @@
+{
+  "label": "QA-HOLD7-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "pack": "daily/2026-09-15/_mill_hold7_refetch",
+  "sealed_at_pt": "2026-09-15 11:56 AM PT",
+  "ok": [
+    "bulten",
+    "haas-automation",
+    "koenig-bauer"
+  ],
+  "soft": [
+    "dorner",
+    "jtl-industries",
+    "zimmer-group"
+  ],
+  "hold_out": [
+    "anvil-international"
+  ],
+  "blocked_out": [
+    "apar-industries",
+    "circor",
+    "olympic-steel"
+  ],
+  "locked": "Soft/OK from #51-#54 locked",
+  "wire_recommendation": "Wire OK 3 + soft 3 optional. HOLD anvil (AGC). Blocked apar/circor/olympic out."
+}
