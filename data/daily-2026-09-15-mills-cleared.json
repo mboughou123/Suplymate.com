@@ -1,27 +1,404 @@
 {
-  "label": "QA-DAILY-2026-09-15-RESEARCHER-PARTIAL",
-  "pack": "daily/2026-09-15",
-  "sealed_at_pt": "2026-09-15 10:40 PT",
-  "ok": [
+  "label": "DAILY-2026-09-15-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-15/_qa/researcher-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-15-RESEARCHER-PARTIAL",
+  "wire_ok": [
     "dillinger",
     "forbo-siegling",
     "krones",
     "piramal-glass"
   ],
   "soft": [
-    "dayco",
-    "gaf",
-    "intralox",
-    "schunk"
+    {
+      "slug": "dayco",
+      "reason": "SOFT \u2014 Dayco Birmingham MI HQ mixed-use office tower (duplicated _01/_02); branded HQ not manufacturing plant."
+    },
+    {
+      "slug": "gaf",
+      "reason": "SOFT \u2014 Primary Commercial_Roofing_Process shows branded GAF SA Vapor Retarder install; Tampa Manufacturing Facility exists only as gaf_03."
+    },
+    {
+      "slug": "intralox",
+      "reason": "SOFT \u2014 Branded Intralox LLC USA Corporate Headquarters street still; HQ campus not conveyor plant floor."
+    },
+    {
+      "slug": "schunk",
+      "reason": "SOFT \u2014 Primary Robotic_Hand_at_Hannover_Messe_2016 product still; SCHUNK Entwicklungszentrum ZEUS branded exterior is schunk_02."
+    }
   ],
   "hold_out_count": 42,
-  "hold_note": "42 HOLD incl all 25 category-fills",
-  "notes": {
-    "forbo-siegling": "primary aerial only; skip Ernst Siegling employee secondary",
-    "dayco": "HQ tower soft \u2014 dayco_01 only (dup)",
-    "gaf": "gaf_01 vapor retarder primary + gaf_03 Tampa facility",
-    "intralox": "HQ campus soft \u2014 intralox_01",
-    "schunk": "product primary + ZEUS exterior schunk_02"
+  "category_fills_all_hold": true,
+  "prior_wired_locked": true,
+  "stills": {
+    "root": "public/images/suppliers",
+    "file_count": 16,
+    "slugs": [
+      "dillinger",
+      "forbo-siegling",
+      "krones",
+      "piramal-glass",
+      "dayco",
+      "gaf",
+      "intralox",
+      "schunk"
+    ],
+    "files": [
+      "public/images/suppliers/dillinger/dillinger_01.jpg",
+      "public/images/suppliers/dillinger/dillinger_02.jpg",
+      "public/images/suppliers/forbo-siegling/forbo-siegling_01.jpg",
+      "public/images/suppliers/krones/krones_01.jpg",
+      "public/images/suppliers/krones/krones_02.jpg",
+      "public/images/suppliers/krones/krones_03.jpg",
+      "public/images/suppliers/krones/krones_04.jpg",
+      "public/images/suppliers/piramal-glass/piramal-glass_01.jpg",
+      "public/images/suppliers/piramal-glass/piramal-glass_02.jpg",
+      "public/images/suppliers/piramal-glass/piramal-glass_03.jpg",
+      "public/images/suppliers/dayco/dayco_01.jpg",
+      "public/images/suppliers/gaf/gaf_01.jpg",
+      "public/images/suppliers/gaf/gaf_03.jpg",
+      "public/images/suppliers/intralox/intralox_01.jpg",
+      "public/images/suppliers/schunk/schunk_01.jpg",
+      "public/images/suppliers/schunk/schunk_02.jpg"
+    ]
   },
-  "wire_recommendation": "Wire OK 4 (+ soft 4 optional). HOLD 42 out. Prior wired locked."
+  "suppliers": [
+    {
+      "company_name": "Aktien-Gesellschaft der Dillinger H\u00fcttenwerke",
+      "primary_category": "Steel & Metals",
+      "country": "Germany",
+      "city": "Dillingen",
+      "website": "https://www.dillinger.de/",
+      "description": "Dillinger H\u00fctte is a steel producer in Dillingen, in the German Federal State of Saarland, and has a history stretching back more than three hundred years. The plant was founded in 1685, and was Germany's first Aktiengesellschaft, or joint stock company (1809).",
+      "product_lines": [
+        "Heavy plate steel",
+        "Pressure vessel plate",
+        "Offshore and structural plate"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.dillinger.de/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.dillinger.de/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.dillinger.de/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b6/DillingerH%C3%BCtte.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/DillingerH%C3%BCtte.jpg/1280px-DillingerH%C3%BCtte.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/dillinger/dillinger_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/dillinger/dillinger_02.jpg"
+      ],
+      "slug": "dillinger",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Forbo Siegling GmbH",
+      "primary_category": "Hardware & Motion",
+      "country": "Germany",
+      "city": "Hanover",
+      "website": "https://www.forbo.com/movement",
+      "description": "The Forbo Siegling Group is a German manufacturing company that makes conveyor and power transmission belts made of synthetic materials. It is headquarters in Hanover. The group has eight production facilities in Europe, Asia and America, as well as warehouses and workshops in over 50 countries. There are Forbo Siegling service points in more than 300 places worldwide.",
+      "product_lines": [
+        "Conveyor and processing belts",
+        "Lightweight conveyor belting",
+        "Power transmission belts"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.forbo.com/movement"
+        },
+        {
+          "name": "ISO 14001; fastener / belt / motion product QMS (confirm on product)",
+          "source": "https://www.forbo.com/movement"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.forbo.com/movement",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Forbo_Siegling_GmbH_Hannover_Luftaufnahme.JPG/3840px-Forbo_Siegling_GmbH_Hannover_Luftaufnahme.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/9/95/Ernst_Siegling_with_his_employees.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Forbo_Siegling_GmbH_Hannover_Luftaufnahme.JPG/1280px-Forbo_Siegling_GmbH_Hannover_Luftaufnahme.JPG"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/forbo-siegling/forbo-siegling_01.jpg"
+      ],
+      "slug": "forbo-siegling",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Krones AG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Neutraubling",
+      "website": "https://www.krones.com/",
+      "description": "Krones AG is a German packaging and bottling machine manufacturer. It produces lines for filling beverages in plastic and glass bottles or beverage cans. The company manufactures stretch blow-moulding machines for producing polyethylene terephthalate (PET) bottles, plus fillers, labellers, bottle washers, pasteurisers, inspectors, packers and palletisers. This product portfolio is complemented by material flow systems and process technology for producing beverages for breweries, dairies and soft-drink companies.",
+      "product_lines": [
+        "Beverage filling lines",
+        "Packaging machinery",
+        "Process technology systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.krones.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.krones.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.krones.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/2010.07.21.144940_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.144940_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/2010.07.21.144955_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.144955_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/2010.07.21.152920_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.152920_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/2010.07.21.153206_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.153206_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/2010.07.21.153911_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.153911_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/2010.07.21.153958_Deckel_Abf%C3%BCllanlage_Gerolstein.jpg/1280px-2010.07.21.153958_Deckel_Abf%C3%BCllanlage_Gerolstein.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Krones_Neutraubling.jpg/1280px-Krones_Neutraubling.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/05/Stamp_1939_DRBM_MiNr007_mt_B002.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a1/Stamp_1939_DRBM_MiNr00P3_mt_B002a.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e8/Stamp_1939_DRBM_MiNr00P9_mt_B002.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Stamp_1940_DRBM_MiNr00P8_mt_B002a.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/krones/krones_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/krones/krones_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/krones/krones_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/krones/krones_04.jpg"
+      ],
+      "slug": "krones",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Piramal Glass",
+      "primary_category": "Packaging",
+      "country": "India",
+      "city": "Mumbai",
+      "website": "https://www.piramalglass.com/",
+      "description": "PGP Glass is an Indian glass packaging company providing packaging for pharmaceutical and perfume industries.",
+      "product_lines": [
+        "Pharma and specialty glass containers",
+        "Flint and amber bottles",
+        "Cosmetic and food glass packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.piramalglass.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.piramalglass.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.piramalglass.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/PGP_Kosamba.jpg/3840px-PGP_Kosamba.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/PGP_Jambusar.jpg/1280px-PGP_Jambusar.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/PGP_Kosamba.jpg/1280px-PGP_Kosamba.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/piramal-glass/piramal-glass_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/piramal-glass/piramal-glass_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/piramal-glass/piramal-glass_03.jpg"
+      ],
+      "slug": "piramal-glass",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Europe",
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Dayco Products LLC",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Roseville",
+      "website": "https://www.dayco.com/",
+      "description": "Dayco Incorporated, formerly known as Dayco Products and Mark IV Industries, is an American parts supplier for construction, automotive, and industrial companies. The companies annual earnings are approximately US$150 million. Its main customers include Caterpillar and General Motors.",
+      "product_lines": [
+        "Power transmission belts",
+        "Tensioners and pulleys",
+        "Automotive and industrial belt systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.dayco.com/"
+        },
+        {
+          "name": "ISO 14001; fastener / belt / motion product QMS (confirm on product)",
+          "source": "https://www.dayco.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.dayco.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d7/Dayco_Birmingham_MI_HQ.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/dayco/dayco_01.jpg"
+      ],
+      "slug": "dayco",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "GAF Materials LLC",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Parsippany",
+      "website": "https://www.gaf.com/",
+      "description": "GAF is an American manufacturing company based in Parsippany, New Jersey. Operating as a subsidiary of Standard Industries, GAF is the leading roofing and waterproofing manufacturer in North America, with 30 locations across the U.S. GAF produces both commercial and residential roofing products, as well as pavement coatings. John Barkhouse is the company\u2019s current CEO.",
+      "product_lines": [
+        "Asphalt roofing shingles",
+        "Commercial roofing systems",
+        "Roofing underlayment and accessories"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.gaf.com/"
+        },
+        {
+          "name": "ISO 14001; construction-product CE / local approvals (confirm)",
+          "source": "https://www.gaf.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.gaf.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Commercial_Roofing_Process.jpg/1280px-Commercial_Roofing_Process.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Residential_Roofing_Process.jpg/1280px-Residential_Roofing_Process.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Tampa_Manufacturing_Facility.jpg/1280px-Tampa_Manufacturing_Facility.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/gaf/gaf_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/gaf/gaf_03.jpg"
+      ],
+      "slug": "gaf",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Intralox LLC",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Harahan",
+      "website": "https://www.intralox.com/",
+      "description": "Intralox, headquartered in the New Orleans, Louisiana, suburb of Harahan is a manufacturer of conveyor belts. Intralox specializes in modular plastic conveyor belts and related services and equipment.",
+      "product_lines": [
+        "Modular plastic conveyor belts",
+        "Activated roller belt systems",
+        "Conveyor equipment"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.intralox.com/"
+        },
+        {
+          "name": "ISO 14001; fastener / belt / motion product QMS (confirm on product)",
+          "source": "https://www.intralox.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.intralox.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Intralox%2C_LLC%2C_USA%2C_Corporate_Headquarters.jpg/3840px-Intralox%2C_LLC%2C_USA%2C_Corporate_Headquarters.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Intralox%2C_L.L.C._USA%2C_Original_Corporate_Headquarters_Building.jpg/1280px-Intralox%2C_L.L.C._USA%2C_Original_Corporate_Headquarters_Building.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Intralox%2C_LLC%2C_USA%2C_Corporate_Headquarters.jpg/1280px-Intralox%2C_LLC%2C_USA%2C_Corporate_Headquarters.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/intralox/intralox_01.jpg"
+      ],
+      "slug": "intralox",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "SCHUNK SE & Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Lauffen am Neckar",
+      "website": "https://www.schunk.com/",
+      "description": "SCHUNK SE & Co. KG is a German company specializing in gripping systems and clamping technology, headquartered in Lauffen am Neckar, Germany.",
+      "product_lines": [
+        "Gripping systems",
+        "Clamping technology",
+        "Automation components"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.schunk.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.schunk.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.schunk.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/95/Robotic_Hand_at_Hannover_Messe_2016.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/SCHUNK_Entwicklungszentrum_ZEUS.jpg/1280px-SCHUNK_Entwicklungszentrum_ZEUS.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/schunk/schunk_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/suppliers/schunk/schunk_02.jpg"
+      ],
+      "slug": "schunk",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    }
+  ],
+  "ok_notes": {
+    "dillinger": "OK \u2014 DillingerH\u00fctte plant exterior with FVS district-heating tower; correct Dillinger steelworks entity.",
+    "forbo-siegling": "OK \u2014 Forbo_Siegling_GmbH_Hannover_Luftaufnahme aerial of Forbo Siegling Hannover plant (skip Ernst Siegling employee secondary).",
+    "krones": "OK \u2014 Gerolstein Abf\u00fcllanlage stills with clear KRONES lettering on filling equipment.",
+    "piramal-glass": "OK \u2014 PGP_Kosamba / PGP_Jambusar aerials of Piramal Glass plants."
+  },
+  "rules": {
+    "no_fake_fob": true,
+    "no_stock_iso_badges": true,
+    "no_ai_mill_yards": true,
+    "skip_no_real_photo": true,
+    "wire_ok_preferred": true,
+    "soft_optional_caution": true
+  }
 }

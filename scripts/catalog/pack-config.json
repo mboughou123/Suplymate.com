@@ -462,7 +462,11 @@
     "wienerberger": "Photo is a branded Wienerberger HQ/campus brick showcase — not a brickworks and not a plant-exterior claim.",
     "calpipe-industries": "Photo is a real conduit/pipe factory floor + workstation — still a split collage, not a single plant exterior.",
     "gibson-stainless": "Photo is a branded Gibson Stainless entrance sign at Greensburg Industrial Park — campus/HQ, not production floor.",
-    "hydraforce": "Photo is a warehouse/plant-tour interior with people — correct industrial setting, not a plant exterior."
+    "hydraforce": "Photo is a warehouse/plant-tour interior with people — correct industrial setting, not a plant exterior.",
+    "dayco": "Photo is the branded Dayco Birmingham MI HQ mixed-use office tower — HQ campus, not a manufacturing plant.",
+    "gaf": "Photo is a branded GAF commercial-roofing install; Tampa plant exists only as gaf_03 — not a confirmed plant-exterior claim.",
+    "intralox": "Photo is the branded Intralox USA Corporate Headquarters street still — HQ campus, not a conveyor plant floor.",
+    "schunk": "Photo is a Hannover Messe robotic-hand product still; SCHUNK Entwicklungszentrum ZEUS is schunk_02 — not a confirmed plant-exterior claim."
   },
   "softProductImageCredits": {
     "fedrigoni": "Specialty paper/label application still — category-correct, not mill stock.",
@@ -685,7 +689,8 @@
     "xylem/xylem_02.jpg",
     "yuto/04.jpg",
     "yuto/05.jpg",
-    "yuto/b09.jpg"
+    "yuto/b09.jpg",
+    "forbo-siegling/forbo-siegling_02.jpg"
   ],
   "supplierHeroById": {
     "$comment": "Curated hero photo per supplier id (must be one of its surviving supplierImages). Overrides the phase-1 manifest hero / first image.",
