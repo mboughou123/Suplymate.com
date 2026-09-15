@@ -18,6 +18,7 @@
  *   data/daily-2026-09-15-mills-cleared.json (OK 4 + soft 4; HOLD 42 out incl. category-fills)
  *   data/daily-2026-09-15-hold39-mills-cleared.json (OK 6 + soft 26; HOLD 7 + blocked 3 out)
  *   data/daily-2026-09-15-hold7-mills-cleared.json (OK 3 + soft 3; HOLD anvil + blocked 3 out)
+ *   data/daily-2026-09-15-anvil-mill-cleared.json (OK anvil-international; blocked apar/circor/olympic stay out)
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/daily-2026-09-15-hold5-products-cleared.json (OK 3 + soft 2; Soft28 + Soft16+krones + mill packs locked)
@@ -1934,6 +1935,23 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const anvilMills = buildAppendedStillsMills({
+    file: "daily-2026-09-15-anvil-mill-cleared.json",
+    packTag: "daily-2026-09-15-anvil",
+    dateTag: "2026-09-15",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+      ...hold4Mills.map((s) => s.packSlug),
+      ...day0915Mills.map((s) => s.packSlug),
+      ...hold39Mills.map((s) => s.packSlug),
+      ...hold7Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1955,6 +1973,7 @@ export function buildCatalog() {
     ...day0915Mills.map((s) => s.packSlug),
     ...hold39Mills.map((s) => s.packSlug),
     ...hold7Mills.map((s) => s.packSlug),
+    ...anvilMills.map((s) => s.packSlug),
   ]);
   const raw = [
     ...buildPhase1Suppliers(report),
@@ -1971,6 +1990,7 @@ export function buildCatalog() {
     ...day0915Mills,
     ...hold39Mills,
     ...hold7Mills,
+    ...anvilMills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),

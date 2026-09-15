@@ -3,9 +3,9 @@
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
     "suppliers": 358,
-    "suppliersWithPhotos": 337,
+    "suppliersWithPhotos": 338,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 567,
+    "supplierPhotos": 568,
     "suppliersOverlayingDirectory": 10,
     "distributors": [
       "bossard"
@@ -14785,6 +14785,42 @@
       "overlaysExisting": false
     },
     {
+      "id": "anvil-international",
+      "packSlug": "anvil-international",
+      "pack": "daily-2026-09-15-anvil",
+      "name": "Anvil International",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Henderson, United States",
+      "country": "United States",
+      "city": "Henderson",
+      "website": "https://www.anvilintl.com/",
+      "imageUrl": "/images/suppliers/anvil-international/anvil-international_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/anvil-international/anvil-international_01.jpg"
+      ],
+      "description": "Anvil International manufactures malleable and cast iron pipe fittings, pipe hangers and grooved piping systems.",
+      "products": [
+        "Malleable and cast iron pipe fittings",
+        "Pipe hangers and supports",
+        "Grooved piping systems"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.anvilintl.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-15",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
       "id": "psl-limited",
       "packSlug": "psl-limited",
       "pack": "daily-2026-09-14-hold22",
@@ -14804,31 +14840,6 @@
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-14",
-      "score": 70,
-      "reliabilityScore": 70,
-      "productHostOnly": true,
-      "overlaysExisting": false
-    },
-    {
-      "id": "anvil-international",
-      "packSlug": "anvil-international",
-      "pack": "daily-2026-09-15",
-      "name": "Anvil International",
-      "industry": "Metal",
-      "category": "Tubes & Pipes",
-      "description": "Listed as an RFQ product host only. The mill still was held by Researcher QA and is not wired as a plant card.",
-      "products": [
-        "Anvil International Pipe Fittings Hangers and Grooved Piping Systems"
-      ],
-      "deliveryRegions": [],
-      "moq": "Not published — mill RFQ",
-      "verified": false,
-      "verificationStatus": "needs_info",
-      "businessType": "Manufacturer",
-      "sourceUrl": "https://www.anvilintl.com/",
-      "certificationsDetailed": [],
-      "certificationImages": [],
-      "lastUpdated": "2026-09-15",
       "score": 70,
       "reliabilityScore": 70,
       "productHostOnly": true,
@@ -35236,7 +35247,7 @@
       "supplierId": "anvil-international",
       "supplierName": "Anvil International",
       "supplierLogo": null,
-      "supplierCountry": null,
+      "supplierCountry": "United States",
       "name": "Anvil International Pipe Fittings Hangers and Grooved Piping Systems",
       "slug": "anvil-international-pipe-fittings-hangers-and-grooved-piping-systems",
       "category": "Tubes & Pipes",
@@ -35269,7 +35280,7 @@
       "productUrl": "https://www.anvilintl.com/",
       "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
       "sku": null,
-      "verifiedSupplier": false,
+      "verifiedSupplier": true,
       "status": "approved",
       "scrapedAt": "2026-09-15T17:40:00.000Z"
     },
