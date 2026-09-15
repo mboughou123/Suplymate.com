@@ -15,6 +15,8 @@
  *   data/daily-2026-09-14-mills-cleared.json (OK 7 + soft 9; HOLD 34 out incl. category-fills)
  *   data/daily-2026-09-14-hold33-mills-cleared.json (OK 7 + soft 22; HOLD 4 + blocked psl-limited out)
  *   data/daily-2026-09-14-hold4-mills-cleared.json (OK dynamic-cables + soft 3; blocked psl-limited out)
+ *   data/daily-2026-09-15-mills-cleared.json (OK 4 + soft 4; HOLD 42 out incl. category-fills)
+ *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -265,6 +267,7 @@ function mergeManifestSoftCredits() {
     "daily-2026-09-11-hold41-products-cleared.json",
     "daily-2026-09-14-products-cleared.json",
     "daily-2026-09-14-hold22-products-cleared.json",
+    "daily-2026-09-15-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const entry of pack?.soft ?? []) {
@@ -751,6 +754,7 @@ function skuIdentityBySlug() {
     "daily-2026-09-11-hold41-products-cleared.json",
     "daily-2026-09-14-products-cleared.json",
     "daily-2026-09-14-hold22-products-cleared.json",
+    "daily-2026-09-15-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const sku of pack?.products ?? []) {
@@ -1066,6 +1070,24 @@ function buildDaily0914ProductHosts(wiredSlugs, report) {
     pack: seals.pack,
     packTag: "daily-2026-09-14",
     dateTag: "2026-09-14",
+    productWire: seals.productWire,
+    wiredSlugs,
+    report,
+    omitWebsite: true,
+  });
+}
+
+function loadDaily0915Seals() {
+  const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-15-products-cleared.json"));
+  return { pack, productWire: productWireFromPack(pack) };
+}
+
+function buildDaily0915ProductHosts(wiredSlugs, report) {
+  const seals = loadDaily0915Seals();
+  return buildProductHostsFromPack({
+    pack: seals.pack,
+    packTag: "daily-2026-09-15",
+    dateTag: "2026-09-15",
     productWire: seals.productWire,
     wiredSlugs,
     report,
@@ -1497,6 +1519,21 @@ function loadProductPacks() {
       });
     }
   }
+  const day0915 = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-15-products-cleared.json"));
+  if (day0915) {
+    const seals = loadDaily0915Seals();
+    const skus = (day0915.products ?? []).map(normalizeClearedSku).filter((sku) => {
+      if (seals.productWire.size && !seals.productWire.has(sku.supplier_slug_guess)) return false;
+      return true;
+    });
+    if (skus.length) {
+      packs.push({
+        packId: "d0915",
+        scrapedAt: "2026-09-15T17:40:00.000Z",
+        skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+      });
+    }
+  }
   return packs;
 }
 
@@ -1778,6 +1815,20 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const day0915Mills = buildAppendedStillsMills({
+    file: "daily-2026-09-15-mills-cleared.json",
+    packTag: "daily-2026-09-15",
+    dateTag: "2026-09-15",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+      ...hold4Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1794,6 +1845,7 @@ export function buildCatalog() {
     ...hold33Mills.map((s) => s.packSlug),
     ...hold4Mills.map((s) => s.packSlug),
   ]);
+  const wired0915Slugs = new Set([...wired0914Slugs, ...day0915Mills.map((s) => s.packSlug)]);
   const raw = [
     ...buildPhase1Suppliers(report),
     ...buildDailySuppliers("2026-09-02", report),
@@ -1806,10 +1858,12 @@ export function buildCatalog() {
     ...day0914Mills,
     ...hold33Mills,
     ...hold4Mills,
+    ...day0915Mills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),
     ...buildDaily0914Hold22ProductHosts(wired0914Slugs, report),
+    ...buildDaily0915ProductHosts(wired0915Slugs, report),
   ];
 
   // Dedupe: by id, then by website domain / normalised name against the pack
