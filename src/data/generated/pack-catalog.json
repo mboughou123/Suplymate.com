@@ -5,7 +5,7 @@
     "suppliers": 328,
     "suppliersWithPhotos": 299,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 505,
+    "supplierPhotos": 500,
     "suppliersOverlayingDirectory": 9,
     "distributors": [
       "bossard"
@@ -13167,8 +13167,7 @@
       "website": "https://www.forbo.com/movement",
       "imageUrl": "/images/suppliers/forbo-siegling/forbo-siegling_01.jpg",
       "supplierImages": [
-        "/images/suppliers/forbo-siegling/forbo-siegling_01.jpg",
-        "/images/suppliers/forbo-siegling/forbo-siegling_03.jpg"
+        "/images/suppliers/forbo-siegling/forbo-siegling_01.jpg"
       ],
       "description": "The Forbo Siegling Group is a German manufacturing company that makes conveyor and power transmission belts made of synthetic materials. It is headquarters in Hanover. The group has eight production facilities in Europe, Asia and America, as well as warehouses and workshops in over 50 countries. There are Forbo Siegling service points in more than 300 places worldwide.",
       "products": [
@@ -13285,8 +13284,7 @@
       "website": "https://www.dayco.com/",
       "imageUrl": "/images/suppliers/dayco/dayco_01.jpg",
       "supplierImages": [
-        "/images/suppliers/dayco/dayco_01.jpg",
-        "/images/suppliers/dayco/dayco_02.jpg"
+        "/images/suppliers/dayco/dayco_01.jpg"
       ],
       "description": "Dayco Incorporated, formerly known as Dayco Products and Mark IV Industries, is an American parts supplier for construction, automotive, and industrial companies. The companies annual earnings are approximately US$150 million. Its main customers include Caterpillar and General Motors. Photo is the branded Dayco Birmingham MI HQ mixed-use office tower — HQ campus, not a manufacturing plant.",
       "products": [
@@ -13324,7 +13322,6 @@
       "imageUrl": "/images/suppliers/gaf/gaf_01.jpg",
       "supplierImages": [
         "/images/suppliers/gaf/gaf_01.jpg",
-        "/images/suppliers/gaf/gaf_02.jpg",
         "/images/suppliers/gaf/gaf_03.jpg"
       ],
       "description": "GAF is an American manufacturing company based in Parsippany, New Jersey. Operating as a subsidiary of Standard Industries, GAF is the leading roofing and waterproofing manufacturer in North America, with 30 locations across the U.S. GAF produces both commercial and residential roofing products, as well as pavement coatings. John Barkhouse is the company’s current CEO. Photo is a branded GAF commercial-roofing install; Tampa plant exists only as gaf_03 — not a confirmed plant-exterior claim.",
@@ -13361,9 +13358,7 @@
       "website": "https://www.intralox.com/",
       "imageUrl": "/images/suppliers/intralox/intralox_01.jpg",
       "supplierImages": [
-        "/images/suppliers/intralox/intralox_01.jpg",
-        "/images/suppliers/intralox/intralox_02.jpg",
-        "/images/suppliers/intralox/intralox_03.jpg"
+        "/images/suppliers/intralox/intralox_01.jpg"
       ],
       "description": "Intralox, headquartered in the New Orleans, Louisiana, suburb of Harahan is a manufacturer of conveyor belts. Intralox specializes in modular plastic conveyor belts and related services and equipment. Photo is the branded Intralox USA Corporate Headquarters street still — HQ campus, not a conveyor plant floor.",
       "products": [

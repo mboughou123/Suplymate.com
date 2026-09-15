@@ -1578,10 +1578,16 @@ describe("daily 2026-09-15 cleared wire", () => {
       expect(listed.has(s.id), s.packSlug).toBe(true);
     }
     const forbo = dayMills.find((s) => s.packSlug === "forbo-siegling");
-    expect(forbo!.supplierImages).toEqual([
-      "/images/suppliers/forbo-siegling/forbo-siegling_01.jpg",
-      "/images/suppliers/forbo-siegling/forbo-siegling_03.jpg",
+    expect(forbo!.supplierImages).toEqual(["/images/suppliers/forbo-siegling/forbo-siegling_01.jpg"]);
+    const dayco = dayMills.find((s) => s.packSlug === "dayco");
+    expect(dayco!.supplierImages).toEqual(["/images/suppliers/dayco/dayco_01.jpg"]);
+    const gaf = dayMills.find((s) => s.packSlug === "gaf");
+    expect(gaf!.supplierImages).toEqual([
+      "/images/suppliers/gaf/gaf_01.jpg",
+      "/images/suppliers/gaf/gaf_03.jpg",
     ]);
+    const intralox = dayMills.find((s) => s.packSlug === "intralox");
+    expect(intralox!.supplierImages).toEqual(["/images/suppliers/intralox/intralox_01.jpg"]);
     for (const p of dayProducts) {
       expect(p.basePrice, p.id).toBeNull();
       expect(p.priceSourceType, p.id).toBe("rfq");

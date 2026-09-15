@@ -1,0 +1,229 @@
+{
+  "label": "QA-DAILY-2026-09-15-RESEARCHER-PARTIAL",
+  "pack_date": "2026-09-15",
+  "role": "Market Researcher mill identity + visual QA",
+  "stills_basis": "enhanced",
+  "enhancer_seal": {
+    "label": "DAILY-2026-09-15-MILL-PRODUCTS-ENHANCED",
+    "path": "/workspace/suppliers-phase1/daily/2026-09-15/enhanced/enhancer-seal.json",
+    "sealed_at_pt": "2026-09-15 10:31:19 PDT",
+    "sealed_at_utc": "2026-09-15T17:31:19.343672+00:00",
+    "note": "clean enhance only, no AI, needs_ai_generate=0",
+    "mill_file_count": 117,
+    "mill_slug_count": 50
+  },
+  "qa_at_pt": "2026-09-15 10:40 PT",
+  "qa_at_utc": "2026-09-15T17:40:31Z",
+  "counts": {
+    "mills_total": 50,
+    "primaries_read": 50,
+    "hold_do_not_wire": 42,
+    "soft": 4,
+    "sealed_wire_ok": 4,
+    "traders": 0,
+    "exclude_list_dupes": 0,
+    "needs_ai": 0,
+    "ai_yards": 0,
+    "invented_fob_prices": false,
+    "category_fill_watch": 25,
+    "category_fill_watch_hold": 25
+  },
+  "hold_do_not_wire": [
+    "amiantit",
+    "amiblu",
+    "anvil-international",
+    "apar-industries",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "brugg-cables",
+    "bulten",
+    "cerro-wire",
+    "circor",
+    "ckd-corporation",
+    "comau",
+    "dorner",
+    "ester-industries",
+    "future-pipe-industries",
+    "garware-hitech-films",
+    "haas-automation",
+    "harting",
+    "hobas-pipe-usa",
+    "intertape-polymer",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "nova-tube",
+    "olympic-steel",
+    "phillips-tube-group",
+    "polyplex",
+    "saha-thai-steel-pipe",
+    "sgd-pharma",
+    "staubli",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "universal-stainless",
+    "us-pipe",
+    "vacmet",
+    "zimmer-group"
+  ],
+  "soft": [
+    "dayco",
+    "gaf",
+    "intralox",
+    "schunk"
+  ],
+  "sealed_wire_ok": [
+    "dillinger",
+    "forbo-siegling",
+    "krones",
+    "piramal-glass"
+  ],
+  "traders": [],
+  "exclude_list_dupes": [],
+  "invented_fob_prices": false,
+  "needs_ai": 0,
+  "ai_yards": 0,
+  "category_fill_notes": {
+    "amiantit": "HOLD \u2014 Commons poison / wrong entity: Architect & Engineer Apr 1947 magazine page + Bethlehem Steel Stacks; not Saudi Amiantit GRP mill.",
+    "anvil-international": "HOLD \u2014 Category-fill / wrong entity: construction scissor-lift copper-pipe install + HAER US Pipe North Birmingham aerial; not Anvil fittings mill.",
+    "apar-industries": "HOLD \u2014 Wrong entity: Helsinki Kaapelitehdas (Nokia Cable Factory) cultural center + Kaukokiito logistics; not Apar Industries India.",
+    "auma": "HOLD \u2014 Wrong entity: Hanbay MDM actuator on Parker valve + Yokogawa/JBS manifold; not AUMA Riester.",
+    "big-river-steel": "HOLD \u2014 Wrong entity category-fill: HAER Trumbull Steel continuous ten-stand strip mill; not Big River Steel Osceola.",
+    "brugg-cables": "HOLD \u2014 Category-fill / wrong entity: Mauthausen Bahnhof cable drums + ABB High Voltage Cables coastal plant; not Brugg Cables.",
+    "bulten": "HOLD \u2014 Category-fill wrong category: Abandoned_Conveyor_Belt + CONVEYOR_TPS; Bulten is fasteners, not conveyors.",
+    "cerro-wire": "HOLD \u2014 Category-fill: generic cable-reel warehouse (Armaz\u00e9m) + barbed wire at abandoned Oupeye steelworks; not Cerro Wire mill.",
+    "comau": "HOLD \u2014 Wrong entity / shared village-hash: Tesla Fremont Idra OL6100CS giga-press + Robotron museum arm (Rechenwerk Halle); not Comau plant.",
+    "ester-industries": "HOLD \u2014 Category-fill wrong entity: Abbey Corrugated Ltd UK entrance (shared with tc-transcontinental) + 1933 Hovilanhaara paper mill; not Ester BOPET plant.",
+    "haas-automation": "HOLD \u2014 Wrong entity / shared village-hash: Robotron museum arm (Rechenwerk Halle, shared with comau/staubli) + Bamailong factory workers; not Haas CNC.",
+    "intertape-polymer": "HOLD \u2014 Category-fill wrong entity/category: Beatson Clark glass factory (shared village-hash with menasha/sgd/polyplex) + museum bottle; Intertape is tape/film.",
+    "jtl-industries": "HOLD \u2014 Commons poison / category-fill: 4X-HSS Savage Cub airplane + generic corrugated steel pipe in concrete; not JTL Industries mill.",
+    "kumkang-kind": "HOLD \u2014 Commons poison: Manchester Cathedral organ scaffolding (pipe organ name collision); not Kumkang Kind tube/scaffold mill.",
+    "mcwane-ductile": "HOLD \u2014 Wrong entity category-fill: HAER American Cast Iron Pipe Company (ACIPCO) Birmingham aerials; not McWane Ductile.",
+    "menasha-packaging": "HOLD \u2014 Category-fill wrong category/entity: Beatson Clark glass factory village-hash (shared with intertape/sgd/polyplex); Menasha is corrugated packaging.",
+    "phillips-tube-group": "HOLD \u2014 Commons poison portrait: Arthur B Pracna lumber-yard smoking a pipe (shared with saha-thai) + UK concrete pipe factory; not Phillips Tube.",
+    "polyplex": "HOLD \u2014 Commons poison / wrong category: pile of 35mm reversal film slide mounts + Beatson Clark glass factory; not Polyplex BOPET plant.",
+    "saha-thai-steel-pipe": "HOLD \u2014 Same pipe-smoker portrait + Bethlehem Steel Stacks village-hash as phillips/amiantit; not Saha Thai Steel Pipe.",
+    "sgd-pharma": "HOLD \u2014 Category-fill wrong entity: Beatson Clark glass factory village-hash (not SGD Pharma); museum bottle secondary.",
+    "staubli": "HOLD \u2014 Same Idra/Tesla giga-press + Robotron Rechenwerk Halle village-hash as comau; not St\u00e4ubli.",
+    "stoelzle-glass": "HOLD \u2014 Commons poison: broken glass pot with electrical heating element demo + 1922 pharmacology manual page; not Stoelzle Glass plant.",
+    "tc-transcontinental": "HOLD \u2014 Category-fill wrong entity: Abbey Corrugated Ltd UK entrance (shared with ester) + Packaging_and_Labeling eras collage; not TC Transcontinental.",
+    "timkensteel": "HOLD \u2014 Category-fill Commons poison: Underwood & Underwood stereograph steel-ingot rolling mill (generic historical); not TimkenSteel.",
+    "universal-stainless": "HOLD \u2014 Wrong entity category-fill: Appleby Frodingham derelict plate mill + Corus Rotherham Bright Bar mill; not Universal Stainless."
+  },
+  "hold_reasons": {
+    "amiantit": "HOLD \u2014 Commons poison / wrong entity: Architect & Engineer Apr 1947 magazine page + Bethlehem Steel Stacks; not Saudi Amiantit GRP mill.",
+    "amiblu": "HOLD \u2014 Logo-only FLOWTITE graphic duplicated as _01/_02; no plant still as primary.",
+    "anvil-international": "HOLD \u2014 Category-fill / wrong entity: construction scissor-lift copper-pipe install + HAER US Pipe North Birmingham aerial; not Anvil fittings mill.",
+    "apar-industries": "HOLD \u2014 Wrong entity: Helsinki Kaapelitehdas (Nokia Cable Factory) cultural center + Kaukokiito logistics; not Apar Industries India.",
+    "auma": "HOLD \u2014 Wrong entity: Hanbay MDM actuator on Parker valve + Yokogawa/JBS manifold; not AUMA Riester.",
+    "big-river-steel": "HOLD \u2014 Wrong entity category-fill: HAER Trumbull Steel continuous ten-stand strip mill; not Big River Steel Osceola.",
+    "bobst": "HOLD \u2014 Commons poison empty derelict Factory_floor urbex shells (shared hash with koenig-bauer); not Bobst plant.",
+    "brugg-cables": "HOLD \u2014 Category-fill / wrong entity: Mauthausen Bahnhof cable drums + ABB High Voltage Cables coastal plant; not Brugg Cables.",
+    "bulten": "HOLD \u2014 Category-fill wrong category: Abandoned_Conveyor_Belt + CONVEYOR_TPS; Bulten is fasteners, not conveyors.",
+    "cerro-wire": "HOLD \u2014 Category-fill: generic cable-reel warehouse (Armaz\u00e9m) + barbed wire at abandoned Oupeye steelworks; not Cerro Wire mill.",
+    "circor": "HOLD \u2014 Commons poison wrong entity: Bangladesh Machine Tools Factory Ltd patch + Beijing No.1 Machine Tool Plant 1967 satellite.",
+    "ckd-corporation": "HOLD \u2014 Wrong entity Commons poison: 1927 \u010ceskomoravsk\u00e1-Kolben-Dan\u011bk stock certificate + Triumph CKD car + 5Y-CKD Boeing + CKD Urology Hospital; not Japanese CKD Corporation.",
+    "comau": "HOLD \u2014 Wrong entity / shared village-hash: Tesla Fremont Idra OL6100CS giga-press + Robotron museum arm (Rechenwerk Halle); not Comau plant.",
+    "dorner": "HOLD \u2014 Commons poison village-hash: Di\u00f3sd Bearing Factory chimney with cell antennas + Rotomax bearing housing (shared with nedschroef); not Dorner conveyors.",
+    "ester-industries": "HOLD \u2014 Category-fill wrong entity: Abbey Corrugated Ltd UK entrance (shared with tc-transcontinental) + 1933 Hovilanhaara paper mill; not Ester BOPET plant.",
+    "future-pipe-industries": "HOLD \u2014 Commons poison: 1911 Asbestos Factory Porter IN postcard + Kapp & Peterson tobacco-pipe making; not Future Pipe GRP.",
+    "garware-hitech-films": "HOLD \u2014 Category-fill wrong category: AV Nackawic pulp mill + Canadian Kraft Paper The Pas (shared with vacmet); Garware is PET films, not pulp.",
+    "haas-automation": "HOLD \u2014 Wrong entity / shared village-hash: Robotron museum arm (Rechenwerk Halle, shared with comau/staubli) + Bamailong factory workers; not Haas CNC.",
+    "harting": "HOLD \u2014 Wrong entity place-name collision: South Harting village landscape (duplicated _01/_02); not HARTING Technology Group.",
+    "hobas-pipe-usa": "HOLD \u2014 Logo-only HOBAS graphic as primary (_01/_02); plant install stills only on _03/_04.",
+    "intertape-polymer": "HOLD \u2014 Category-fill wrong entity/category: Beatson Clark glass factory (shared village-hash with menasha/sgd/polyplex) + museum bottle; Intertape is tape/film.",
+    "jtl-industries": "HOLD \u2014 Commons poison / category-fill: 4X-HSS Savage Cub airplane + generic corrugated steel pipe in concrete; not JTL Industries mill.",
+    "koenig-bauer": "HOLD \u2014 Same empty Factory_floor urbex shell as bobst_01; not Koenig & Bauer press plant.",
+    "kumkang-kind": "HOLD \u2014 Commons poison: Manchester Cathedral organ scaffolding (pipe organ name collision); not Kumkang Kind tube/scaffold mill.",
+    "mapei": "HOLD \u2014 Celebrity/sports portrait primary: Bettini Placci 2001 MAPEI cycling jersey finish; plant (Stabilimento Robbiano) only on _02.",
+    "mcwane-ductile": "HOLD \u2014 Wrong entity category-fill: HAER American Cast Iron Pipe Company (ACIPCO) Birmingham aerials; not McWane Ductile.",
+    "menasha-packaging": "HOLD \u2014 Category-fill wrong category/entity: Beatson Clark glass factory village-hash (shared with intertape/sgd/polyplex); Menasha is corrugated packaging.",
+    "nedschroef": "HOLD \u2014 Same Di\u00f3sd Bearing Factory chimney village-hash as dorner; Nedschroef is fasteners, not bearings.",
+    "nova-tube": "HOLD \u2014 Commons poison wrong entity: Weedhopper JC-24C ultralight aircraft DPLA pages (tube name collision); not Nova Tube mill.",
+    "olympic-steel": "HOLD \u2014 Commons poison: 1933 Architect and engineer magazine scans + 1923 Armco Bulletin; Norton door-closer primary; not Olympic Steel.",
+    "phillips-tube-group": "HOLD \u2014 Commons poison portrait: Arthur B Pracna lumber-yard smoking a pipe (shared with saha-thai) + UK concrete pipe factory; not Phillips Tube.",
+    "polyplex": "HOLD \u2014 Commons poison / wrong category: pile of 35mm reversal film slide mounts + Beatson Clark glass factory; not Polyplex BOPET plant.",
+    "saha-thai-steel-pipe": "HOLD \u2014 Same pipe-smoker portrait + Bethlehem Steel Stacks village-hash as phillips/amiantit; not Saha Thai Steel Pipe.",
+    "sgd-pharma": "HOLD \u2014 Category-fill wrong entity: Beatson Clark glass factory village-hash (not SGD Pharma); museum bottle secondary.",
+    "staubli": "HOLD \u2014 Same Idra/Tesla giga-press + Robotron Rechenwerk Halle village-hash as comau; not St\u00e4ubli.",
+    "stoelzle-glass": "HOLD \u2014 Commons poison: broken glass pot with electrical heating element demo + 1922 pharmacology manual page; not Stoelzle Glass plant.",
+    "tc-transcontinental": "HOLD \u2014 Category-fill wrong entity: Abbey Corrugated Ltd UK entrance (shared with ester) + Packaging_and_Labeling eras collage; not TC Transcontinental.",
+    "timkensteel": "HOLD \u2014 Category-fill Commons poison: Underwood & Underwood stereograph steel-ingot rolling mill (generic historical); not TimkenSteel.",
+    "universal-stainless": "HOLD \u2014 Wrong entity category-fill: Appleby Frodingham derelict plate mill + Corus Rotherham Bright Bar mill; not Universal Stainless.",
+    "us-pipe": "HOLD \u2014 Commons poison primary: Trip-wire_pipe_bomb.jpg IED; remaining stills mismatched/generic; not U.S. Pipe mill.",
+    "vacmet": "HOLD \u2014 Same AV Nackawic pulp + Canadian Kraft Paper fills as garware; Vacmet is films, not pulp.",
+    "zimmer-group": "HOLD \u2014 Celebrity portrait Hans Zimmer + Budapest apartment interiors titled Zimmer (room name collision); not Zimmer Group automation."
+  },
+  "soft_notes": {
+    "dayco": "SOFT \u2014 Dayco Birmingham MI HQ mixed-use office tower (duplicated _01/_02); branded HQ not manufacturing plant.",
+    "gaf": "SOFT \u2014 Primary Commercial_Roofing_Process shows branded GAF SA Vapor Retarder install; Tampa Manufacturing Facility exists only as gaf_03.",
+    "intralox": "SOFT \u2014 Branded Intralox LLC USA Corporate Headquarters street still; HQ campus not conveyor plant floor.",
+    "schunk": "SOFT \u2014 Primary Robotic_Hand_at_Hannover_Messe_2016 product still; SCHUNK Entwicklungszentrum ZEUS branded exterior is schunk_02."
+  },
+  "ok_notes": {
+    "dillinger": "OK \u2014 DillingerH\u00fctte plant exterior with FVS district-heating tower; correct Dillinger steelworks entity.",
+    "forbo-siegling": "OK \u2014 Forbo_Siegling_GmbH_Hannover_Luftaufnahme aerial of Forbo Siegling Hannover plant (skip Ernst Siegling employee secondary).",
+    "krones": "OK \u2014 Gerolstein Abf\u00fcllanlage stills with clear KRONES lettering on filling equipment.",
+    "piramal-glass": "OK \u2014 PGP_Kosamba / PGP_Jambusar aerials of Piramal Glass plants."
+  },
+  "wire_recommendation": "PARTIAL_WIRE \u2014 wire sealed_wire_ok only (dillinger, forbo-siegling, krones, piramal-glass); soft optional with caution; hold_do_not_wire 42 blocked; prior wired sets LOCKED \u2014 only seal today's 50.",
+  "shared_poison_hashes": {
+    "Beatson_Clark_glass_factory": [
+      "intertape-polymer",
+      "menasha-packaging",
+      "polyplex",
+      "sgd-pharma"
+    ],
+    "Rechenwerk_Halle_robotron": [
+      "comau",
+      "haas-automation",
+      "staubli"
+    ],
+    "Idra_Tesla_gigapress": [
+      "comau",
+      "staubli"
+    ],
+    "Bethlehem_Steel_Stacks": [
+      "amiantit",
+      "saha-thai-steel-pipe"
+    ],
+    "Arthur_B_Pracna_pipe_smoker": [
+      "phillips-tube-group",
+      "saha-thai-steel-pipe"
+    ],
+    "Abbey_Corrugated_Ltd": [
+      "ester-industries",
+      "tc-transcontinental"
+    ],
+    "AV_Nackawic_pulp": [
+      "garware-hitech-films",
+      "vacmet"
+    ],
+    "Diosd_Bearing_Factory_chimney": [
+      "dorner",
+      "nedschroef"
+    ],
+    "Factory_floor_urbex": [
+      "bobst",
+      "koenig-bauer"
+    ],
+    "Dayco_HQ_dup": [
+      "dayco"
+    ],
+    "FLOWTITE_logo_dup": [
+      "amiblu"
+    ],
+    "HOBAS_logo_dup": [
+      "hobas-pipe-usa"
+    ],
+    "South_Harting_dup": [
+      "harting"
+    ]
+  }
+}
