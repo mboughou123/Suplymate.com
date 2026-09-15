@@ -1,0 +1,389 @@
+{
+  "label": "QA-DAILY-2026-09-15-PRODUCTS-RESEARCHER-PARTIAL",
+  "source_enhancer_label": "DAILY-2026-09-15-MILL-PRODUCTS-ENHANCED",
+  "sealed_at_utc": "2026-09-15T17:39:16.689862+00:00",
+  "sealed_at_pt": "2026-09-15 ~10:39 PT",
+  "sku_count": 50,
+  "stills_read": 100,
+  "unique_content_hashes": 50,
+  "sealed_wire_ok": [],
+  "ok": [
+    "krones"
+  ],
+  "soft": [
+    "anvil-international",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "dillinger",
+    "intertape-polymer",
+    "intralox",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "piramal-glass",
+    "schunk",
+    "sgd-pharma",
+    "universal-stainless"
+  ],
+  "hold_do_not_wire": [
+    {
+      "slug": "amiantit",
+      "reason": "amiantit-main = terraced hillside village \u2014 not GRP/GRE/DI pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "amiblu",
+      "reason": "amiblu-main = terraced hillside village \u2014 not GRP Flowtite/Hobas pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "apar-industries",
+      "reason": "apar-industries = spacecraft/satellite cleanroom; apar-product = WWI Fernsprech-Abteilung postcard \u2014 not conductors/cables"
+    },
+    {
+      "slug": "brugg-cables",
+      "reason": "brugg-cables = spacecraft/satellite cleanroom; brugg-product = WWI Fernsprech postcard \u2014 not HV power cables"
+    },
+    {
+      "slug": "bulten",
+      "reason": "bulten-millfall1 = portrait of woman on warehouse conveyor tracks \u2014 portraits not automotive fasteners"
+    },
+    {
+      "slug": "cerro-wire",
+      "reason": "cerro-wire = spacecraft/satellite cleanroom; cerro-product = WWI Fernsprech postcard \u2014 not building wire/THHN"
+    },
+    {
+      "slug": "circor",
+      "reason": "circor-millfall = grainy aerial/satellite map (Maps); circor-millfall__from_png = Bangladesh Machine Tools Factory embroidered patch \u2014 both stem-collision stills poison; neither is a legitimate CIRCOR valves/pumps product still"
+    },
+    {
+      "slug": "ckd-corporation",
+      "reason": "ckd-corporation-millfall = Triumph 2500 TC vintage car; millfall1 = 1927 \u010cKD stock certificate with trains/art \u2014 wrong brand/art/trains not pneumatics"
+    },
+    {
+      "slug": "comau",
+      "reason": "comau-millfall1 = IDRA die-cast factory floor (wrong brand) \u2014 not Comau robots (product still soft sensor lab)"
+    },
+    {
+      "slug": "dayco",
+      "reason": "dayco-millfall \u00d72 = urban brick apartment/streetscape \u2014 not power-transmission belts/tensioners"
+    },
+    {
+      "slug": "dorner",
+      "reason": "dorner-millfall1 = hillside village with brick chimney \u2014 not precision conveyors (millfall still soft blue mill machinery)"
+    },
+    {
+      "slug": "ester-industries",
+      "reason": "ester-product = hillside village/old millhouse landscape \u2014 not polyester packaging films (millfall still soft warehouse)"
+    },
+    {
+      "slug": "forbo-siegling",
+      "reason": "forbo-siegling-millfall = vintage group portrait; millfall1 = aerial industrial park with FESTO facade \u2014 portraits/Maps/wrong brand not conveyor belts"
+    },
+    {
+      "slug": "future-pipe-industries",
+      "reason": "future-pipe = terraced hillside village \u2014 not GRE/GRP composite pipe (product still soft pipe-bundle)"
+    },
+    {
+      "slug": "gaf",
+      "reason": "gaf-product = museum gypsum-with-sulfur mineral (Cianciana) \u2014 art/mineral poison (gaf-millfall1 is legitimate GAF SA Vapor Retarder XL but one poison holds)"
+    },
+    {
+      "slug": "garware-hitech-films",
+      "reason": "garware-product = hillside village/old millhouse landscape \u2014 not BOPET packaging films (millfall still soft pulp-mill campus)"
+    },
+    {
+      "slug": "haas-automation",
+      "reason": "haas-automation-millfall = portrait at CRT workstation; millfall1 = Robotron vintage robot arm \u2014 portraits/wrong brand not Haas CNC"
+    },
+    {
+      "slug": "harting",
+      "reason": "harting-millfall1 = elevated valley village landscape \u2014 not industrial connectors (product still soft sensor lab)"
+    },
+    {
+      "slug": "hobas-pipe-usa",
+      "reason": "hobas-pipe = terraced hillside village \u2014 not FRPM pipe systems (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "mapei",
+      "reason": "mapei-millfall1 = MAPEI cycling jersey finish-line portrait; mapei-product = museum gypsum Cianciana \u2014 portraits/art not adhesives/mortars"
+    },
+    {
+      "slug": "mcwane-ductile",
+      "reason": "mcwane-ductile = terraced hillside village \u2014 not ductile iron pressure pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "menasha-packaging",
+      "reason": "menasha-product = Tetra Brik Aseptic / Tetra Pak panel \u2014 wrong brand for corrugated/protective packaging"
+    },
+    {
+      "slug": "nedschroef",
+      "reason": "nedschroef-millfall1 = hillside village with brick chimney \u2014 not automotive fasteners (millfall still soft blue mill machinery)"
+    },
+    {
+      "slug": "olympic-steel",
+      "reason": "olympic-steel-millfall1 = Norton door-closer catalog illustration (wrong brand/art) \u2014 not flat-rolled/plate (product still soft street rebar)"
+    },
+    {
+      "slug": "polyplex",
+      "reason": "polyplex-product = hillside village/old millhouse; polyplex-millfall1 = pile of 35mm film slides \u2014 village/art not BOPET/BOPP films"
+    },
+    {
+      "slug": "saha-thai-steel-pipe",
+      "reason": "saha-thai = terraced hillside village \u2014 not ERW line pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "staubli",
+      "reason": "staubli-millfall1 = IDRA die-cast factory floor (wrong brand) \u2014 not St\u00e4ubli robots/connectors (product still soft sensor lab)"
+    },
+    {
+      "slug": "stoelzle-glass",
+      "reason": "stoelzle-glass-millfall1 = outdoor museum ceramic vat exhibit (art/historical) \u2014 not pharma glass bottles (stoelzle-glass still soft palletized glass)"
+    },
+    {
+      "slug": "tc-transcontinental",
+      "reason": "tc-product = hillside village/old millhouse landscape \u2014 not flexible films/paperboard (millfall still soft warehouse)"
+    },
+    {
+      "slug": "timkensteel",
+      "reason": "timkensteel-millfall1 = Underwood & Underwood stereoview rolling-mill archive (art/historical) \u2014 not SBQ/seamless tubing (product still soft street rebar)"
+    },
+    {
+      "slug": "us-pipe",
+      "reason": "us-pipe = terraced hillside village \u2014 not ductile iron pipe/RJ systems (product still soft pipe-bundle)"
+    },
+    {
+      "slug": "vacmet",
+      "reason": "vacmet-product = hillside village/old millhouse landscape \u2014 not metallized BOPET films (millfall still soft pulp-mill campus)"
+    },
+    {
+      "slug": "zimmer-group",
+      "reason": "zimmer-group-millfall1 = portrait of Hans Zimmer (wrong person/portrait) \u2014 not handling/robotics components (product still soft sensor lab)"
+    }
+  ],
+  "hold": [
+    {
+      "slug": "amiantit",
+      "reason": "amiantit-main = terraced hillside village \u2014 not GRP/GRE/DI pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "amiblu",
+      "reason": "amiblu-main = terraced hillside village \u2014 not GRP Flowtite/Hobas pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "apar-industries",
+      "reason": "apar-industries = spacecraft/satellite cleanroom; apar-product = WWI Fernsprech-Abteilung postcard \u2014 not conductors/cables"
+    },
+    {
+      "slug": "brugg-cables",
+      "reason": "brugg-cables = spacecraft/satellite cleanroom; brugg-product = WWI Fernsprech postcard \u2014 not HV power cables"
+    },
+    {
+      "slug": "bulten",
+      "reason": "bulten-millfall1 = portrait of woman on warehouse conveyor tracks \u2014 portraits not automotive fasteners"
+    },
+    {
+      "slug": "cerro-wire",
+      "reason": "cerro-wire = spacecraft/satellite cleanroom; cerro-product = WWI Fernsprech postcard \u2014 not building wire/THHN"
+    },
+    {
+      "slug": "circor",
+      "reason": "circor-millfall = grainy aerial/satellite map (Maps); circor-millfall__from_png = Bangladesh Machine Tools Factory embroidered patch \u2014 both stem-collision stills poison; neither is a legitimate CIRCOR valves/pumps product still"
+    },
+    {
+      "slug": "ckd-corporation",
+      "reason": "ckd-corporation-millfall = Triumph 2500 TC vintage car; millfall1 = 1927 \u010cKD stock certificate with trains/art \u2014 wrong brand/art/trains not pneumatics"
+    },
+    {
+      "slug": "comau",
+      "reason": "comau-millfall1 = IDRA die-cast factory floor (wrong brand) \u2014 not Comau robots (product still soft sensor lab)"
+    },
+    {
+      "slug": "dayco",
+      "reason": "dayco-millfall \u00d72 = urban brick apartment/streetscape \u2014 not power-transmission belts/tensioners"
+    },
+    {
+      "slug": "dorner",
+      "reason": "dorner-millfall1 = hillside village with brick chimney \u2014 not precision conveyors (millfall still soft blue mill machinery)"
+    },
+    {
+      "slug": "ester-industries",
+      "reason": "ester-product = hillside village/old millhouse landscape \u2014 not polyester packaging films (millfall still soft warehouse)"
+    },
+    {
+      "slug": "forbo-siegling",
+      "reason": "forbo-siegling-millfall = vintage group portrait; millfall1 = aerial industrial park with FESTO facade \u2014 portraits/Maps/wrong brand not conveyor belts"
+    },
+    {
+      "slug": "future-pipe-industries",
+      "reason": "future-pipe = terraced hillside village \u2014 not GRE/GRP composite pipe (product still soft pipe-bundle)"
+    },
+    {
+      "slug": "gaf",
+      "reason": "gaf-product = museum gypsum-with-sulfur mineral (Cianciana) \u2014 art/mineral poison (gaf-millfall1 is legitimate GAF SA Vapor Retarder XL but one poison holds)"
+    },
+    {
+      "slug": "garware-hitech-films",
+      "reason": "garware-product = hillside village/old millhouse landscape \u2014 not BOPET packaging films (millfall still soft pulp-mill campus)"
+    },
+    {
+      "slug": "haas-automation",
+      "reason": "haas-automation-millfall = portrait at CRT workstation; millfall1 = Robotron vintage robot arm \u2014 portraits/wrong brand not Haas CNC"
+    },
+    {
+      "slug": "harting",
+      "reason": "harting-millfall1 = elevated valley village landscape \u2014 not industrial connectors (product still soft sensor lab)"
+    },
+    {
+      "slug": "hobas-pipe-usa",
+      "reason": "hobas-pipe = terraced hillside village \u2014 not FRPM pipe systems (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "mapei",
+      "reason": "mapei-millfall1 = MAPEI cycling jersey finish-line portrait; mapei-product = museum gypsum Cianciana \u2014 portraits/art not adhesives/mortars"
+    },
+    {
+      "slug": "mcwane-ductile",
+      "reason": "mcwane-ductile = terraced hillside village \u2014 not ductile iron pressure pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "menasha-packaging",
+      "reason": "menasha-product = Tetra Brik Aseptic / Tetra Pak panel \u2014 wrong brand for corrugated/protective packaging"
+    },
+    {
+      "slug": "nedschroef",
+      "reason": "nedschroef-millfall1 = hillside village with brick chimney \u2014 not automotive fasteners (millfall still soft blue mill machinery)"
+    },
+    {
+      "slug": "olympic-steel",
+      "reason": "olympic-steel-millfall1 = Norton door-closer catalog illustration (wrong brand/art) \u2014 not flat-rolled/plate (product still soft street rebar)"
+    },
+    {
+      "slug": "polyplex",
+      "reason": "polyplex-product = hillside village/old millhouse; polyplex-millfall1 = pile of 35mm film slides \u2014 village/art not BOPET/BOPP films"
+    },
+    {
+      "slug": "saha-thai-steel-pipe",
+      "reason": "saha-thai = terraced hillside village \u2014 not ERW line pipe (product still soft glycol HVAC pipes)"
+    },
+    {
+      "slug": "staubli",
+      "reason": "staubli-millfall1 = IDRA die-cast factory floor (wrong brand) \u2014 not St\u00e4ubli robots/connectors (product still soft sensor lab)"
+    },
+    {
+      "slug": "stoelzle-glass",
+      "reason": "stoelzle-glass-millfall1 = outdoor museum ceramic vat exhibit (art/historical) \u2014 not pharma glass bottles (stoelzle-glass still soft palletized glass)"
+    },
+    {
+      "slug": "tc-transcontinental",
+      "reason": "tc-product = hillside village/old millhouse landscape \u2014 not flexible films/paperboard (millfall still soft warehouse)"
+    },
+    {
+      "slug": "timkensteel",
+      "reason": "timkensteel-millfall1 = Underwood & Underwood stereoview rolling-mill archive (art/historical) \u2014 not SBQ/seamless tubing (product still soft street rebar)"
+    },
+    {
+      "slug": "us-pipe",
+      "reason": "us-pipe = terraced hillside village \u2014 not ductile iron pipe/RJ systems (product still soft pipe-bundle)"
+    },
+    {
+      "slug": "vacmet",
+      "reason": "vacmet-product = hillside village/old millhouse landscape \u2014 not metallized BOPET films (millfall still soft pulp-mill campus)"
+    },
+    {
+      "slug": "zimmer-group",
+      "reason": "zimmer-group-millfall1 = portrait of Hans Zimmer (wrong person/portrait) \u2014 not handling/robotics components (product still soft sensor lab)"
+    }
+  ],
+  "counts": {
+    "ok": 1,
+    "soft": 16,
+    "hold": 33,
+    "stills": 100,
+    "skus": 50,
+    "unique_hashes": 50
+  },
+  "needs_ai_generate": 0,
+  "unit_price": null,
+  "invented_fob_prices": false,
+  "wire_recommendation": "Do not wire the full 50-SKU product pack. Block all 33 HOLD slugs (villages, Tetra Pak, spacecraft, WWI Fernsprech, Maps/BMTF patch, portraits, art/archive, wrong-brand IDRA/Robotron/Norton/Triumph/\u010cKD, museum gypsum). Wire-eligible now: 1 OK (krones brand bottling) + 16 SOFT (shared pipe-bundle+glycol tubes, rebar/steel campus, empty warehouse, Intralox campus, palletized glass, robotic gripper, pulp-mill campus, wrong-brand valve actuators). Prefer OK first; SOFT are Commons type-match only. Circor stem collision: both stills HOLD (Maps + BMTF patch) \u2014 no clearer legitimate product still. needs_ai_generate stays 0; no invented FOB.",
+  "wireable_slugs": [
+    "krones",
+    "anvil-international",
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "dillinger",
+    "intertape-polymer",
+    "intralox",
+    "jtl-industries",
+    "koenig-bauer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "piramal-glass",
+    "schunk",
+    "sgd-pharma",
+    "universal-stainless"
+  ],
+  "circor_stem_collision": {
+    "files": [
+      "enhanced/products/circor/circor-millfall.jpg",
+      "enhanced/products/circor/circor-millfall__from_png.jpg"
+    ],
+    "preferred": null,
+    "note": "Both inspected; neither is a legitimate CIRCOR product still (Maps vs BMTF patch). No prefer."
+  },
+  "shared_poison_hashes": {
+    "7850454292d269": "glycol chilled/heating HVAC install pipes \u00d710 \u2014 soft pipes-not-mill-stock (tubes)",
+    "9e24fb730aabd2": "terraced hillside village \u00d77 tube \u2014 HOLD village",
+    "43c468fd61bd56": "galvanized pipe-bundle green straps Commons \u00d77 tube \u2014 soft type-match",
+    "f62a54e465944b": "street rebar staging \u00d75 steel \u2014 soft category",
+    "8b9f6d17c6028e": "industrial sensor/conveyor lab \u00d75 automation \u2014 soft category",
+    "e05a7e0a943e43": "hillside village/old millhouse landscape \u00d75 packaging films \u2014 HOLD village",
+    "5c6000445cf99a": "spacecraft/satellite cleanroom \u00d73 cable \u2014 HOLD",
+    "8402d63d7f38f8": "WWI Fernsprech-Abteilung postcard \u00d73 cable \u2014 HOLD art/archive",
+    "62f9056a54d9fa": "empty dark warehouse interior \u00d73 converting/print \u2014 soft empty facility",
+    "2281bd5874e42b": "pulp/paper mill aerial campus \u00d73 packaging \u2014 soft mill campus",
+    "3251ecf0f9ca87": "palletized shrink-wrapped glass bottles \u00d73 glass \u2014 soft glass packaging",
+    "cea40d3a093a40": "IDRA factory floor \u00d72 robots \u2014 HOLD wrong brand",
+    "106f91c7401431": "urban apartment streetscape \u00d72 dayco \u2014 HOLD village/cityscape",
+    "778f47eedd59ff": "blue mill bearing-housing machinery \u00d72 conveyors/fasteners \u2014 soft mill machinery",
+    "207e155a09b0c9": "hillside village brick chimney \u00d72 conveyors/fasteners \u2014 HOLD village",
+    "7fa2796c3c4226": "olive warehouse loading bays \u00d72 films/packaging \u2014 soft facility",
+    "9d8695f0157bba": "museum gypsum-with-sulfur Cianciana \u00d72 construction \u2014 HOLD art/mineral",
+    "198537df91c3a9": "pulp mill forest aerial \u00d72 films \u2014 soft mill campus",
+    "90c53561e7789c": "grainy aerial/satellite map \u00d71 circor \u2014 HOLD Maps",
+    "67086e03dc7739": "Bangladesh Machine Tools Factory embroidered patch \u00d71 circor \u2014 HOLD wrong brand",
+    "d332a9a75d0780": "Tetra Brik Aseptic / Tetra Pak panel \u00d71 menasha \u2014 HOLD wrong brand"
+  },
+  "soft_notes": {
+    "anvil-international": "shared galvanized pipe-bundle + glycol HVAC install \u2014 category fittings/tubes type-match only",
+    "auma": "auma-millfall = Yokogawa/JBS valve manifold; auma-millfall1 = Hanbay MDM / Parker block \u2014 soft valve-actuator category wrong brand (not AUMA electric actuators)",
+    "big-river-steel": "big-river HAER archival mill coils + shared street rebar staging \u2014 soft steel/mill category",
+    "bobst": "bobst-millfall / millfall1 = empty dark warehouse interiors \u2014 soft empty facility not converting equipment",
+    "dillinger": "dillinger-millfall1 = FVS mill campus exterior + shared street rebar \u2014 soft steel/mill campus",
+    "intertape-polymer": "intertape-millfall = amber Magnetic Spring bottle; millfall1 = pulp-mill campus \u2014 soft wrong-object + campus not tapes/films",
+    "intralox": "intralox-millfall = parking lot; millfall1 = Intralox campus facade with logo \u2014 soft branded campus not modular belts",
+    "jtl-industries": "shared glycol HVAC install + galvanized pipe-bundle \u2014 category ERW tubes type-match only",
+    "koenig-bauer": "koenig-bauer millfall \u00d72 = empty dark warehouse (shared bobst cluster) \u2014 soft empty facility not presses",
+    "kumkang-kind": "shared glycol HVAC + galvanized pipe-bundle \u2014 category steel pipes/tubes type-match only",
+    "nova-tube": "shared galvanized pipe-bundle + glycol HVAC \u2014 category ERW/HSS tubes type-match only",
+    "phillips-tube-group": "shared glycol HVAC + galvanized pipe-bundle \u2014 category precision welded tubes type-match only",
+    "piramal-glass": "piramal-glass-millfall1 = aerial factory campus; piramal-glass = shared palletized shrink-wrap glass \u2014 soft campus + glass packaging category",
+    "schunk": "schunk-millfall1 = five-finger robotic gripper hand (no SCHUNK logo) + shared sensor/conveyor lab \u2014 soft gripping/automation category",
+    "sgd-pharma": "sgd-pharma = shared palletized glass bottles + pulp-mill campus \u2014 soft glass packaging category (not Type I/II/III vials brand)",
+    "universal-stainless": "universal-stainless-millfall1 = rusty mill campus exterior + shared street rebar \u2014 soft steel/mill campus"
+  },
+  "ok_notes": {
+    "krones": "krones-millfall / millfall1 = KRONES-branded PET bottling/filling line conveyors \u2014 brand+product match"
+  },
+  "notes": [
+    "Prior wired product sets stay LOCKED \u2014 seal applies only to today's 50.",
+    "Did not message agents; did not wait for mill QA; did not touch PRs.",
+    "products.json: supplier_slug_guess present on all 50; unit_price null RFQ; needs_ai_generate false/0; invented_fob_prices false; price_source_type=rfq.",
+    "Glycol HVAC install treated as soft pipes-not-mill-stock for Tube & Pipes SKUs (same convention as 2026-09-10/11/14); villages/Tetra Pak/spacecraft/WWI/Maps/portraits/art/wrong-brand = HOLD.",
+    "Circor stem collision inspected: circor-millfall.jpg (Maps) vs circor-millfall__from_png.jpg (BMTF patch) \u2014 prefer neither."
+  ]
+}

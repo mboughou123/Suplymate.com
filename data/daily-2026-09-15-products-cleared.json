@@ -1,0 +1,552 @@
+{
+  "label": "DAILY-2026-09-15-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-15/_qa/researcher-products-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-15-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "krones"
+  ],
+  "soft": [
+    {
+      "slug": "anvil-international",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC install \u2014 category fittings/tubes type-match only"
+    },
+    {
+      "slug": "auma",
+      "reason": "auma-millfall = Yokogawa/JBS valve manifold; auma-millfall1 = Hanbay MDM / Parker block \u2014 soft valve-actuator category wrong brand (not AUMA electric actuators)"
+    },
+    {
+      "slug": "big-river-steel",
+      "reason": "big-river HAER archival mill coils + shared street rebar staging \u2014 soft steel/mill category"
+    },
+    {
+      "slug": "bobst",
+      "reason": "bobst-millfall / millfall1 = empty dark warehouse interiors \u2014 soft empty facility not converting equipment"
+    },
+    {
+      "slug": "dillinger",
+      "reason": "dillinger-millfall1 = FVS mill campus exterior + shared street rebar \u2014 soft steel/mill campus"
+    },
+    {
+      "slug": "intertape-polymer",
+      "reason": "intertape-millfall = amber Magnetic Spring bottle; millfall1 = pulp-mill campus \u2014 soft wrong-object + campus not tapes/films"
+    },
+    {
+      "slug": "intralox",
+      "reason": "intralox-millfall = parking lot; millfall1 = Intralox campus facade with logo \u2014 soft branded campus not modular belts"
+    },
+    {
+      "slug": "jtl-industries",
+      "reason": "shared glycol HVAC install + galvanized pipe-bundle \u2014 category ERW tubes type-match only"
+    },
+    {
+      "slug": "koenig-bauer",
+      "reason": "koenig-bauer millfall \u00d72 = empty dark warehouse (shared bobst cluster) \u2014 soft empty facility not presses"
+    },
+    {
+      "slug": "kumkang-kind",
+      "reason": "shared glycol HVAC + galvanized pipe-bundle \u2014 category steel pipes/tubes type-match only"
+    },
+    {
+      "slug": "nova-tube",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC \u2014 category ERW/HSS tubes type-match only"
+    },
+    {
+      "slug": "phillips-tube-group",
+      "reason": "shared glycol HVAC + galvanized pipe-bundle \u2014 category precision welded tubes type-match only"
+    },
+    {
+      "slug": "piramal-glass",
+      "reason": "piramal-glass-millfall1 = aerial factory campus; piramal-glass = shared palletized shrink-wrap glass \u2014 soft campus + glass packaging category"
+    },
+    {
+      "slug": "schunk",
+      "reason": "schunk-millfall1 = five-finger robotic gripper hand (no SCHUNK logo) + shared sensor/conveyor lab \u2014 soft gripping/automation category"
+    },
+    {
+      "slug": "sgd-pharma",
+      "reason": "sgd-pharma = shared palletized glass bottles + pulp-mill campus \u2014 soft glass packaging category (not Type I/II/III vials brand)"
+    },
+    {
+      "slug": "universal-stainless",
+      "reason": "universal-stainless-millfall1 = rusty mill campus exterior + shared street rebar \u2014 soft steel/mill campus"
+    }
+  ],
+  "hold_out_count": 33,
+  "hold_out": [
+    "amiantit",
+    "amiblu",
+    "apar-industries",
+    "brugg-cables",
+    "bulten",
+    "cerro-wire",
+    "circor",
+    "ckd-corporation",
+    "comau",
+    "dayco",
+    "dorner",
+    "ester-industries",
+    "forbo-siegling",
+    "future-pipe-industries",
+    "gaf",
+    "garware-hitech-films",
+    "haas-automation",
+    "harting",
+    "hobas-pipe-usa",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "olympic-steel",
+    "polyplex",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "us-pipe",
+    "vacmet",
+    "zimmer-group"
+  ],
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "stills": {
+    "root": "public/images/products",
+    "file_count": 34,
+    "slugs": [
+      "krones",
+      "anvil-international",
+      "auma",
+      "big-river-steel",
+      "bobst",
+      "dillinger",
+      "intertape-polymer",
+      "intralox",
+      "jtl-industries",
+      "koenig-bauer",
+      "kumkang-kind",
+      "nova-tube",
+      "phillips-tube-group",
+      "piramal-glass",
+      "schunk",
+      "sgd-pharma",
+      "universal-stainless"
+    ],
+    "files": [
+      "public/images/products/krones/krones-millfall.jpg",
+      "public/images/products/krones/krones-millfall1.jpg",
+      "public/images/products/anvil-international/anvil-international.jpg",
+      "public/images/products/anvil-international/anvil-product.jpg",
+      "public/images/products/auma/auma-millfall.jpg",
+      "public/images/products/auma/auma-millfall1.jpg",
+      "public/images/products/big-river-steel/big-river-steel-millfall1.jpg",
+      "public/images/products/big-river-steel/bigriver-product.jpg",
+      "public/images/products/bobst/bobst-millfall.jpg",
+      "public/images/products/bobst/bobst-millfall1.jpg",
+      "public/images/products/dillinger/dillinger-millfall1.jpg",
+      "public/images/products/dillinger/dillinger-product.jpg",
+      "public/images/products/intertape-polymer/intertape-polymer-millfall.jpg",
+      "public/images/products/intertape-polymer/intertape-polymer-millfall1.jpg",
+      "public/images/products/intralox/intralox-millfall.jpg",
+      "public/images/products/intralox/intralox-millfall1.jpg",
+      "public/images/products/jtl-industries/jtl-industries.jpg",
+      "public/images/products/jtl-industries/jtl-product.jpg",
+      "public/images/products/koenig-bauer/koenig-bauer-millfall.jpg",
+      "public/images/products/koenig-bauer/koenig-bauer-millfall1.jpg",
+      "public/images/products/kumkang-kind/kumkang-kind.jpg",
+      "public/images/products/kumkang-kind/kumkang-product.jpg",
+      "public/images/products/nova-tube/nova-product.jpg",
+      "public/images/products/nova-tube/nova-tube.jpg",
+      "public/images/products/phillips-tube-group/phillips-product.jpg",
+      "public/images/products/phillips-tube-group/phillips-tube.jpg",
+      "public/images/products/piramal-glass/piramal-glass-millfall1.jpg",
+      "public/images/products/piramal-glass/piramal-glass.jpg",
+      "public/images/products/schunk/schunk-millfall1.jpg",
+      "public/images/products/schunk/schunk-product.jpg",
+      "public/images/products/sgd-pharma/sgd-pharma-millfall1.jpg",
+      "public/images/products/sgd-pharma/sgd-pharma.jpg",
+      "public/images/products/universal-stainless/univ-product.jpg",
+      "public/images/products/universal-stainless/universal-stainless-millfall1.jpg"
+    ]
+  },
+  "products": [
+    {
+      "product_name": "Krones Beverage Filling Lines Packaging and Process Technology",
+      "supplier_name": "Krones AG",
+      "supplier_slug_guess": "krones",
+      "category": "Industrial Parts",
+      "source_url": "https://www.krones.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Krones AG mill/product page for Beverage filling lines; Packaging machinery. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Jaw_crusher.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/krones/krones-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/krones/krones-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "krones"
+    },
+    {
+      "product_name": "Anvil International Pipe Fittings Hangers and Grooved Piping Systems",
+      "supplier_name": "Anvil International",
+      "supplier_slug_guess": "anvil-international",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.anvilintl.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Anvil International mill/product page for Malleable and cast iron pipe fittings; Pipe hangers and supports. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/anvil-international/anvil-international.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/anvil-international/anvil-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "anvil-international"
+    },
+    {
+      "product_name": "AUMA Electric Valve Actuators and Industrial Valve Automation",
+      "supplier_name": "AUMA Riester GmbH & Co. KG",
+      "supplier_slug_guess": "auma",
+      "category": "Industrial Parts",
+      "source_url": "https://www.auma.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 AUMA Riester GmbH & Co. KG mill/product page for Electric valve actuators; Actuator controls. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_valve.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Centrifugal_pump.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/auma/auma-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/auma/auma-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "auma"
+    },
+    {
+      "product_name": "Big River Steel Flat-Rolled Advanced High-Strength and Coated Coils",
+      "supplier_name": "Big River Steel LLC",
+      "supplier_slug_guess": "big-river-steel",
+      "category": "Steel & Metals",
+      "source_url": "https://bigriversteel.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Big River Steel LLC mill/product page for Flat-rolled carbon steel; Advanced high-strength steels. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rebar.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/big-river-steel/bigriver-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/big-river-steel/big-river-steel-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "big-river-steel"
+    },
+    {
+      "product_name": "Bobst Packaging Converting Folder-Gluers and Flexible Packaging Equipment",
+      "supplier_name": "Bobst SA",
+      "supplier_slug_guess": "bobst",
+      "category": "Industrial Parts",
+      "source_url": "https://www.bobst.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Bobst SA mill/product page for Packaging converting machinery; Folder-gluers and die-cutters. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Jaw_crusher.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/bobst/bobst-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/bobst/bobst-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "bobst"
+    },
+    {
+      "product_name": "Dillinger Heavy Plate Pressure Vessel and Offshore Structural Plate",
+      "supplier_name": "Aktien-Gesellschaft der Dillinger H\u00fcttenwerke",
+      "supplier_slug_guess": "dillinger",
+      "category": "Steel & Metals",
+      "source_url": "https://www.dillinger.de/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Aktien-Gesellschaft der Dillinger H\u00fcttenwerke mill/product page for Heavy plate steel; Pressure vessel plate. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rebar.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/dillinger/dillinger-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/dillinger/dillinger-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "dillinger"
+    },
+    {
+      "product_name": "Intertape Polymer Pressure-Sensitive Tapes Stretch and Protective Films",
+      "supplier_name": "Intertape Polymer Group",
+      "supplier_slug_guess": "intertape-polymer",
+      "category": "Packaging",
+      "source_url": "https://www.itape.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Intertape Polymer Group mill/product page for Pressure-sensitive tapes; Stretch and shrink films. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Bubble_wrap.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Corrugated_cardboard.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/intertape-polymer/intertape-polymer-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/intertape-polymer/intertape-polymer-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "intertape-polymer"
+    },
+    {
+      "product_name": "Intralox Modular Plastic Conveyor Belts and Activated Roller Belt Systems",
+      "supplier_name": "Intralox LLC",
+      "supplier_slug_guess": "intralox",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.intralox.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Intralox LLC mill/product page for Modular plastic conveyor belts; Activated roller belt systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Kugellager.png?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/intralox/intralox-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/intralox/intralox-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "intralox"
+    },
+    {
+      "product_name": "JTL Industries ERW Steel Pipes Hollow Sections and Galvanized Tubes",
+      "supplier_name": "JTL Industries Limited",
+      "supplier_slug_guess": "jtl-industries",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.jtlindustries.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 JTL Industries Limited mill/product page for ERW steel pipes and tubes; Hollow structural sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/jtl-industries/jtl-industries.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/jtl-industries/jtl-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "jtl-industries"
+    },
+    {
+      "product_name": "Koenig & Bauer Printing Presses and Packaging Print Systems",
+      "supplier_name": "Koenig & Bauer AG",
+      "supplier_slug_guess": "koenig-bauer",
+      "category": "Industrial Parts",
+      "source_url": "https://www.koenig-bauer.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Koenig & Bauer AG mill/product page for Printing presses; Packaging print systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Marine_engine.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/koenig-bauer/koenig-bauer-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/koenig-bauer/koenig-bauer-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "koenig-bauer"
+    },
+    {
+      "product_name": "Kumkang Kind Steel Pipes Tubes and Structural Tubular Products",
+      "supplier_name": "Kumkang Kind Co., Ltd.",
+      "supplier_slug_guess": "kumkang-kind",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.kumkangkind.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kumkang Kind Co., Ltd. mill/product page for Steel pipes and tubes; Scaffolding and system formwork steel. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/kumkang-kind/kumkang-kind.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/kumkang-kind/kumkang-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "kumkang-kind"
+    },
+    {
+      "product_name": "Nova Tube ERW Steel Tubing and Hollow Structural Sections",
+      "supplier_name": "Nova Tube Inc.",
+      "supplier_slug_guess": "nova-tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.novasteel.ca/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Nova Tube Inc. mill/product page for ERW steel tubing; Hollow structural sections. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/nova-tube/nova-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/nova-tube/nova-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "nova-tube"
+    },
+    {
+      "product_name": "Phillips Tube Group Precision Welded Steel Tubing and OEM Tube Assemblies",
+      "supplier_name": "Phillips Tube Group",
+      "supplier_slug_guess": "phillips-tube-group",
+      "category": "Tube & Pipes",
+      "source_url": "https://phillipstube.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Phillips Tube Group mill/product page for Precision welded steel tubing; Automotive and HVAC tube. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/phillips-tube-group/phillips-tube.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/phillips-tube-group/phillips-product.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "phillips-tube-group"
+    },
+    {
+      "product_name": "Piramal Glass Pharma Specialty and Cosmetic Glass Containers",
+      "supplier_name": "Piramal Glass",
+      "supplier_slug_guess": "piramal-glass",
+      "category": "Packaging",
+      "source_url": "https://www.piramalglass.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Piramal Glass mill/product page for Pharma and specialty glass containers; Flint and amber bottles. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Glass_bottles.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/piramal-glass/piramal-glass.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/piramal-glass/piramal-glass-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "piramal-glass"
+    },
+    {
+      "product_name": "SCHUNK Gripping Systems Clamping Technology and Automation Components",
+      "supplier_name": "SCHUNK SE & Co. KG",
+      "supplier_slug_guess": "schunk",
+      "category": "Industrial Parts",
+      "source_url": "https://www.schunk.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SCHUNK SE & Co. KG mill/product page for Gripping systems; Clamping technology. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Proximity_sensor.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/schunk/schunk-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/schunk/schunk-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "schunk"
+    },
+    {
+      "product_name": "SGD Pharma Type I II III Glass Vials and Injectable Packaging",
+      "supplier_name": "SGD Pharma",
+      "supplier_slug_guess": "sgd-pharma",
+      "category": "Packaging",
+      "source_url": "https://www.sgd-pharma.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 SGD Pharma mill/product page for Type I II III glass vials and bottles; Injectable glass packaging. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Glass_bottles.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/sgd-pharma/sgd-pharma.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/sgd-pharma/sgd-pharma-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "sgd-pharma"
+    },
+    {
+      "product_name": "Universal Stainless Specialty Stainless Bar Plate and Aerospace Alloys",
+      "supplier_name": "Universal Stainless & Alloy Products Inc.",
+      "supplier_slug_guess": "universal-stainless",
+      "category": "Steel & Metals",
+      "source_url": "https://www.univstainless.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Universal Stainless & Alloy Products Inc. mill/product page for Specialty stainless bar and plate; Aerospace alloys. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rebar.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/universal-stainless/univ-product.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-15/images/products/universal-stainless/universal-stainless-millfall1.jpg"
+      ],
+      "needs_ai_generate": false,
+      "slug": "universal-stainless"
+    }
+  ],
+  "ok_notes": {
+    "krones": "krones-millfall / millfall1 = KRONES-branded PET bottling/filling line conveyors \u2014 brand+product match"
+  },
+  "rules": {
+    "no_fake_fob": true,
+    "unit_price_null": true,
+    "price_source_type_rfq": true,
+    "needs_ai_generate": 0,
+    "skip_hold": true,
+    "prefer_ok_then_soft": true
+  }
+}
