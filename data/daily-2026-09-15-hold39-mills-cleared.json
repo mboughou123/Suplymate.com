@@ -1,8 +1,10 @@
 {
-  "label": "QA-HOLD42-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "label": "DAILY-2026-09-15-HOLD39-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-15/_mill_hold42/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD42-MILL-PLANTS-RESEARCHER-PARTIAL",
   "pack": "daily/2026-09-15/_mill_hold42",
   "sealed_at_pt": "2026-09-15 11:31 AM PT",
-  "ok": [
+  "wire_ok": [
     "amiantit",
     "bobst",
     "comau",
@@ -11,32 +13,110 @@
     "staubli"
   ],
   "soft": [
-    "amiblu",
-    "auma",
-    "big-river-steel",
-    "brugg-cables",
-    "cerro-wire",
-    "ckd-corporation",
-    "ester-industries",
-    "future-pipe-industries",
-    "garware-hitech-films",
-    "harting",
-    "hobas-pipe-usa",
-    "intertape-polymer",
-    "kumkang-kind",
-    "mapei",
-    "mcwane-ductile",
-    "menasha-packaging",
-    "nova-tube",
-    "phillips-tube-group",
-    "polyplex",
-    "sgd-pharma",
-    "stoelzle-glass",
-    "tc-transcontinental",
-    "timkensteel",
-    "universal-stainless",
-    "us-pipe",
-    "vacmet"
+    {
+      "slug": "amiblu",
+      "reason": "Amiblu branded team/lobby still with Amiblu backdrop — campus/HQ interior, not a plant exterior"
+    },
+    {
+      "slug": "auma",
+      "reason": "branded AUMA campus/office exterior — HQ campus, not production floor"
+    },
+    {
+      "slug": "big-river-steel",
+      "reason": "Osceola mill campus aerial over blue halls and river — campus aerial, not production floor"
+    },
+    {
+      "slug": "brugg-cables",
+      "reason": "BRUGG cable-reel monument at plant campus — monument/campus, not production floor"
+    },
+    {
+      "slug": "cerro-wire",
+      "reason": "branded Cerro Wire campus/HQ entrance with monument sign — campus/HQ, not production floor"
+    },
+    {
+      "slug": "ckd-corporation",
+      "reason": "campus gate/office drive — campus/HQ, not production floor"
+    },
+    {
+      "slug": "ester-industries",
+      "reason": "ESTER plant-gate campus entrance — campus gate, not production floor"
+    },
+    {
+      "slug": "future-pipe-industries",
+      "reason": "GRP pipe yard photo-op / field-install still — field-install/yard, not a plant exterior"
+    },
+    {
+      "slug": "garware-hitech-films",
+      "reason": "GARWARE SUNCONTROL plant-campus lawn exterior — campus, not production floor"
+    },
+    {
+      "slug": "harting",
+      "reason": "automated warehouse tote-rack interior — warehouse, not a plant exterior"
+    },
+    {
+      "slug": "hobas-pipe-usa",
+      "reason": "HOBAS pipe field-install / lift still — field-install, not a plant exterior"
+    },
+    {
+      "slug": "intertape-polymer",
+      "reason": "IPG Intertape Polymer Group office/HQ campus exterior — HQ campus, not production floor"
+    },
+    {
+      "slug": "kumkang-kind",
+      "reason": "Kumkang Kind plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "mapei",
+      "reason": "MAPEI plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "mcwane-ductile",
+      "reason": "McWane Ductile yard tour with people — field/yard, not a plant exterior"
+    },
+    {
+      "slug": "menasha-packaging",
+      "reason": "warehouse/DC dock campus — warehouse campus, not production floor"
+    },
+    {
+      "slug": "nova-tube",
+      "reason": "Nova Steel plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "phillips-tube-group",
+      "reason": "Phillips Tube Group Shelbyville campus/HQ sign — campus/HQ, not production floor"
+    },
+    {
+      "slug": "polyplex",
+      "reason": "POLYPLEX plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "sgd-pharma",
+      "reason": "SGD plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "stoelzle-glass",
+      "reason": "Stoelzle Glass USA warehouse/plant campus exterior — campus, not production floor"
+    },
+    {
+      "slug": "tc-transcontinental",
+      "reason": "riverside plant campus aerial — campus aerial, not production floor"
+    },
+    {
+      "slug": "timkensteel",
+      "reason": "METALLUS HQ rooftop sign — HQ campus, not production floor"
+    },
+    {
+      "slug": "universal-stainless",
+      "reason": "hot-mill interior process still — not a plant exterior"
+    },
+    {
+      "slug": "us-pipe",
+      "reason": "US PIPE Bessemer campus monument with staff — campus/HQ, not production floor"
+    },
+    {
+      "slug": "vacmet",
+      "reason": "plant campus aerial — campus aerial, not production floor"
+    }
   ],
   "hold_out": [
     "anvil-international",

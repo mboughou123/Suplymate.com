@@ -1538,8 +1538,42 @@ describe("daily 2026-09-15 cleared wire", () => {
     "vacmet",
     "zimmer-group",
   ];
+  const hold39Mills = [
+    "amiantit",
+    "bobst",
+    "comau",
+    "nedschroef",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "amiblu",
+    "auma",
+    "big-river-steel",
+    "brugg-cables",
+    "cerro-wire",
+    "ckd-corporation",
+    "ester-industries",
+    "future-pipe-industries",
+    "garware-hitech-films",
+    "harting",
+    "hobas-pipe-usa",
+    "intertape-polymer",
+    "kumkang-kind",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nova-tube",
+    "phillips-tube-group",
+    "polyplex",
+    "sgd-pharma",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "universal-stainless",
+    "us-pipe",
+    "vacmet",
+  ];
   const remainingHosts = [...productsOk, ...productsSoft].filter(
-    (slug) => ![...millsOk, ...millsSoft].includes(slug)
+    (slug) => ![...millsOk, ...millsSoft, ...hold39Mills].includes(slug)
   );
   const softCaptions: Record<string, RegExp> = {
     dayco: /Dayco Birmingham MI HQ|HQ campus|not a manufacturing plant/i,
@@ -1564,6 +1598,7 @@ describe("daily 2026-09-15 cleared wire", () => {
     expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
     expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
   });
 
   it("points cards at local stills, keeps RFQ honesty, and skips invented certs", () => {
@@ -1688,7 +1723,31 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     "universal-stainless",
   ];
   const alreadyMills = ["dayco", "forbo-siegling"];
-  const remainingHosts = productsSoft.filter((slug) => !alreadyMills.includes(slug));
+  const hold39Promoted = [
+    "amiantit",
+    "amiblu",
+    "brugg-cables",
+    "cerro-wire",
+    "ckd-corporation",
+    "comau",
+    "ester-industries",
+    "future-pipe-industries",
+    "harting",
+    "hobas-pipe-usa",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nedschroef",
+    "saha-thai-steel-pipe",
+    "staubli",
+    "stoelzle-glass",
+    "timkensteel",
+    "us-pipe",
+    "vacmet",
+  ];
+  const remainingHosts = productsSoft.filter(
+    (slug) => !alreadyMills.includes(slug) && !hold39Promoted.includes(slug)
+  );
   const hold33 = packProducts.filter((p) => p.pack === "d0915-h33");
   const day0915 = packProducts.filter((p) => p.pack === "d0915");
   const hold33Hosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold33");
@@ -1705,6 +1764,7 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
     expect(packProducts.filter((p) => p.pack === "d0911-h41")).toHaveLength(32);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
   });
 
   it("keeps every HOLD33 SKU as RFQ with a local still and prefers branded files", () => {
@@ -1726,6 +1786,13 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
       expect(mill, slug).toBeDefined();
       expect(listed.has(mill!.id), slug).toBe(true);
     }
+    for (const slug of hold39Promoted) {
+      expect(hold33Hosts.some((s) => s.packSlug === slug), slug).toBe(false);
+      const mill = packSuppliers.find((s) => s.packSlug === slug && s.pack === "daily-2026-09-15-hold39");
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+      expect(listed.has(mill!.id), slug).toBe(true);
+    }
     expect(hold33Hosts.map((s) => s.packSlug).sort()).toEqual([...remainingHosts].sort());
     for (const host of hold33Hosts) {
       expect(host.productHostOnly, host.packSlug).toBe(true);
@@ -1735,9 +1802,6 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
         expect(listed.has(host.id), host.packSlug).toBe(false);
       }
     }
-    const usPipe = hold33Hosts.find((s) => s.packSlug === "us-pipe");
-    expect(usPipe?.overlaysExisting).toBe(true);
-    expect(usPipe?.id).toBe("u-s-pipe-bessemer");
   });
 
   it("soft-credits the SOFT 28 from the HOLD33 seal and keeps HOLD 5 out", () => {
@@ -1758,6 +1822,171 @@ describe("daily 2026-09-15 HOLD33 product catch-up", () => {
     for (const slug of holdOut) {
       expect(hold33.some((p) => p.packSlug === slug), slug).toBe(false);
       expect(packProducts.some((p) => p.packSlug === slug && p.pack.startsWith("d0915")), slug).toBe(false);
+    }
+  });
+});
+
+describe("daily 2026-09-15 HOLD39 mill catch-up", () => {
+  const millsOk = [
+    "amiantit",
+    "bobst",
+    "comau",
+    "nedschroef",
+    "saha-thai-steel-pipe",
+    "staubli",
+  ];
+  const millsSoft = [
+    "amiblu",
+    "auma",
+    "big-river-steel",
+    "brugg-cables",
+    "cerro-wire",
+    "ckd-corporation",
+    "ester-industries",
+    "future-pipe-industries",
+    "garware-hitech-films",
+    "harting",
+    "hobas-pipe-usa",
+    "intertape-polymer",
+    "kumkang-kind",
+    "mapei",
+    "mcwane-ductile",
+    "menasha-packaging",
+    "nova-tube",
+    "phillips-tube-group",
+    "polyplex",
+    "sgd-pharma",
+    "stoelzle-glass",
+    "tc-transcontinental",
+    "timkensteel",
+    "universal-stainless",
+    "us-pipe",
+    "vacmet",
+  ];
+  const holdOut = [
+    "anvil-international",
+    "bulten",
+    "dorner",
+    "haas-automation",
+    "jtl-industries",
+    "koenig-bauer",
+    "zimmer-group",
+  ];
+  const blocked = ["apar-industries", "circor", "olympic-steel"];
+  const promotedHosts = [
+    "auma",
+    "big-river-steel",
+    "bobst",
+    "intertape-polymer",
+    "kumkang-kind",
+    "nova-tube",
+    "phillips-tube-group",
+    "sgd-pharma",
+    "universal-stainless",
+  ];
+  const leftoverHosts = ["anvil-international", "jtl-industries", "koenig-bauer"];
+  const hold39 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39");
+  const locked0915 = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly);
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && s.productHostOnly);
+  const softCaptions: Record<string, RegExp> = {
+    amiblu: /Amiblu|campus\/HQ|not a plant exterior/i,
+    auma: /AUMA|HQ campus|campus\/office|not production floor/i,
+    "big-river-steel": /Osceola|campus aerial|not production floor/i,
+    "brugg-cables": /BRUGG|monument|campus|not production floor/i,
+    "cerro-wire": /Cerro Wire|campus\/HQ|not production floor/i,
+    "ckd-corporation": /campus|gate|not production floor/i,
+    "ester-industries": /ESTER|campus gate|not production floor/i,
+    "future-pipe-industries": /field-install|yard|not a plant exterior/i,
+    "garware-hitech-films": /GARWARE|campus|not production floor/i,
+    harting: /warehouse|not a plant exterior/i,
+    "hobas-pipe-usa": /field-install|not a plant exterior/i,
+    "intertape-polymer": /IPG|HQ campus|not production floor/i,
+    "kumkang-kind": /Kumkang|campus aerial|not production floor/i,
+    mapei: /campus aerial|not production floor/i,
+    "mcwane-ductile": /yard|field|not a plant exterior/i,
+    "menasha-packaging": /warehouse|campus|not production floor/i,
+    "nova-tube": /Nova Steel|campus aerial|not production floor/i,
+    "phillips-tube-group": /Shelbyville|campus\/HQ|not production floor/i,
+    polyplex: /POLYPLEX|campus aerial|not production floor/i,
+    "sgd-pharma": /campus aerial|not production floor/i,
+    "stoelzle-glass": /Stoelzle|campus|not production floor/i,
+    "tc-transcontinental": /campus aerial|not production floor/i,
+    timkensteel: /METALLUS|HQ campus|not production floor/i,
+    "universal-stainless": /hot-mill|interior|not a plant exterior/i,
+    "us-pipe": /US PIPE|Bessemer|campus\/HQ|not production floor/i,
+    vacmet: /campus aerial|not production floor/i,
+  };
+
+  it("appends the 32 cleared mills without rewriting locked #48/#49/#50 cards", () => {
+    expect(hold39.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(locked0915).toHaveLength(8);
+    expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
+    expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly)).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-skip12")).toHaveLength(11);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-rest30")).toHaveLength(30);
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+  });
+
+  it("points cards at the sealed local plant still, keeps RFQ honesty, and promotes product hosts", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const s of hold39) {
+      expect(s.imageUrl, s.packSlug).toBe(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      expect(s.supplierImages, s.packSlug).toContain(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      expect((s.supplierImages ?? []).every((u) => u.startsWith("/images/suppliers/")), s.packSlug).toBe(true);
+      expect(s.moq, s.packSlug).toMatch(/RFQ/i);
+      expect(s.productHostOnly, s.packSlug).toBeFalsy();
+      expect(s.certificationsDetailed ?? [], s.packSlug).toEqual([]);
+      expect(listed.has(s.id), s.packSlug).toBe(true);
+    }
+    for (const slug of [...millsOk, ...millsSoft]) {
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-15" && s.productHostOnly),
+        slug
+      ).toBe(false);
+    }
+    for (const slug of promotedHosts) {
+      const mill = hold39.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.productHostOnly, slug).toBeFalsy();
+    }
+    expect(dayHosts.map((s) => s.packSlug).sort()).toEqual([...leftoverHosts].sort());
+    const usPipe = hold39.find((s) => s.packSlug === "us-pipe");
+    expect(usPipe?.overlaysExisting).toBe(true);
+    expect(usPipe?.id).toBe("u-s-pipe-bessemer");
+  });
+
+  it("soft-captions the SOFT 26 from the HOLD39 seal and keeps HOLD/blocked mills out", () => {
+    for (const slug of millsSoft) {
+      const mill = hold39.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(softCaptions[slug]);
+    }
+    for (const slug of millsOk) {
+      const mill = hold39.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).not.toMatch(
+        /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse/i
+      );
+    }
+    for (const slug of [...holdOut, ...blocked]) {
+      expect(hold39.some((s) => s.packSlug === slug), slug).toBe(false);
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-15" && !s.productHostOnly),
+        slug
+      ).toBe(false);
+      expect(packSuppliers.some((s) => s.packSlug === slug && !s.productHostOnly), slug).toBe(false);
+    }
+    for (const slug of leftoverHosts) {
+      const host = packSuppliers.find((s) => s.packSlug === slug);
+      expect(host, slug).toBeDefined();
+      expect(host!.productHostOnly, slug).toBe(true);
+      expect(host!.pack, slug).toBe("daily-2026-09-15");
     }
   });
 });
