@@ -1,0 +1,348 @@
+{
+  "label": "DAILY-2026-09-14-HOLD33-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-14/_mill_hold34/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD34-MILL-PLANTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "ammeraal-beltech",
+    "ariel-corporation",
+    "ejot",
+    "glenroy",
+    "maruichi-leavitt",
+    "nucor-tubular",
+    "voestalpine-krems"
+  ],
+  "soft": [
+    {
+      "slug": "allied-tube-conduit",
+      "reason": "Harvey IL plant-yard ATCX SW1 switcher with Allied Tube & Conduit Corporation cab lettering \u2014 branded plant rail asset, not production floor."
+    },
+    {
+      "slug": "bando-chemical",
+      "reason": "Kobe Bando Chemical Industries HQ/campus exterior across intersection \u2014 branded campus, not production floor."
+    },
+    {
+      "slug": "burgo-group",
+      "reason": "Cartiera Burgo Avezzano plant gate with BURGO GROUP gatehouse + CARTIERE BURGO roof lettering \u2014 branded gate/campus entrance, not production floor."
+    },
+    {
+      "slug": "dart-container",
+      "reason": "Dart Container Mason MI corporate HQ campus exterior with DART flags \u2014 HQ campus, not foam-cup plant floor."
+    },
+    {
+      "slug": "electrosteel-castings",
+      "reason": "Electrosteel Castings Limited Khardaha plant gate with ELECTROSTEEL CASTINGS LIMITED lettering \u2014 branded gate, not production floor."
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "reason": "Baytown pipe yard forklift loading large-diameter line pipe with coated stacks \u2014 real mill yard ops; Jindal facade branding not crisply in frame (Liugong forklift)."
+    },
+    {
+      "slug": "jindal-poly-films",
+      "reason": "Nashik-area BOPP/PET film plant campus exterior (teal halls + silos) \u2014 real plant campus; Jindal Poly Films facade lettering not crisply verified in frame."
+    },
+    {
+      "slug": "midal-cables",
+      "reason": "Askar plant warehouse rows of aluminum conductor coils with MIDAL wrap branding \u2014 branded logistics warehouse, not production floor."
+    },
+    {
+      "slug": "nord-lock",
+      "reason": "Nord-Lock Mattmar warehouse aisle with NORD-LOCK branded carton stock on racking \u2014 logistics warehouse, not production floor."
+    },
+    {
+      "slug": "optibelt",
+      "reason": "Optibelt H\u00f6xter plant exterior with optibelt Power Transmission facade + flags/gate \u2014 branded plant campus exterior, not production floor."
+    },
+    {
+      "slug": "pennengineering",
+      "reason": "PennEngineering Danboro PA Building 3 exterior with PEM triangle logo \u2014 branded campus/office exterior, not production floor."
+    },
+    {
+      "slug": "pregis",
+      "reason": "Pregis Aurora IL IQ campus exterior with Pregis facade lettering \u2014 HQ/innovation campus, not production floor."
+    },
+    {
+      "slug": "ptc",
+      "reason": "ptc monument entrance sign with industrial substation backdrop \u2014 monument/campus entrance, not production floor."
+    },
+    {
+      "slug": "sun-hydraulics",
+      "reason": "Sun Hydraulics Sarasota Tallevast manufacturing campus aerial over pond \u2014 campus aerial, not production floor."
+    },
+    {
+      "slug": "swiss-steel",
+      "reason": "Swiss Steel Group bar/tube stock warehouse \u2014 stacked round/hex bars on racks; no Swiss Steel branding in frame; sterile stock still."
+    },
+    {
+      "slug": "syntegon",
+      "reason": "Syntegon Weert modern campus exterior \u2014 architectural campus; Syntegon facade branding not visible in frame."
+    },
+    {
+      "slug": "taghleef",
+      "reason": "Taghleef Industries Spain (Derprosa Alcal\u00e1 la Real) entrance with Taghleef Industries + Ti logo + Spanish flag \u2014 branded plant entrance, not production floor."
+    },
+    {
+      "slug": "tcpl-packaging",
+      "reason": "TCPL Packaging Ltd Offset Packaging Unit Main Gate with TCPL packaging limited signage \u2014 branded gate, not production floor."
+    },
+    {
+      "slug": "vega-grieshaber",
+      "reason": "VEGA Schiltach Germany campus aerial with VEGA tower lettering \u2014 branded HQ/manufacturing campus aerial, not production floor."
+    },
+    {
+      "slug": "vest-llc",
+      "reason": "Vest Inc. Vernon CA plant exterior with VEST INC. facade lettering \u2014 branded plant exterior, not production floor."
+    },
+    {
+      "slug": "western-tube-conduit",
+      "reason": "Western Tube Rochelle IL warehouse \u2014 blue cantilever racking with galvanized conduit bundles; Western Tube branding not in frame."
+    },
+    {
+      "slug": "worthington-enterprises",
+      "reason": "Worthington Industries / Worthington Enterprises Columbus OH HQ campus at 200 W Old Wilson Bridge Rd with WORTHINGTON INDUSTRIES signage \u2014 HQ campus, not mill floor."
+    }
+  ],
+  "hold_out": [
+    "calpipe-industries",
+    "dynamic-cables",
+    "gibson-stainless",
+    "hydraforce"
+  ],
+  "blocked_out": [
+    "psl-limited"
+  ],
+  "prior_pr37_locked": true,
+  "stills": [
+    {
+      "slug": "ammeraal-beltech",
+      "path": "/images/suppliers/ammeraal-beltech/ammeraal-beltech_01.jpg",
+      "filename": "ammeraal-beltech_01.jpg",
+      "grade": "ok",
+      "sha256": "ced1947a93e461179f0a28e65dfc8da850d07dcef2389b30375187ab182dfada",
+      "bytes": 747242
+    },
+    {
+      "slug": "ariel-corporation",
+      "path": "/images/suppliers/ariel-corporation/ariel-corporation_01.jpg",
+      "filename": "ariel-corporation_01.jpg",
+      "grade": "ok",
+      "sha256": "d4e32d33869c770ed6de409a8c0d9a83167ef23bd0867f4b5f22d51d045bb511",
+      "bytes": 287786
+    },
+    {
+      "slug": "ejot",
+      "path": "/images/suppliers/ejot/ejot_01.jpg",
+      "filename": "ejot_01.jpg",
+      "grade": "ok",
+      "sha256": "b83d28ed448d623f5f2a894327aa669e62a9825c62993664fd12622949d70b5b",
+      "bytes": 390775
+    },
+    {
+      "slug": "glenroy",
+      "path": "/images/suppliers/glenroy/glenroy_01.jpg",
+      "filename": "glenroy_01.jpg",
+      "grade": "ok",
+      "sha256": "5c0c712f1b2e17fa6188b28e24be92931c0c1ede26fa6d8689ac7f0135044873",
+      "bytes": 921735
+    },
+    {
+      "slug": "maruichi-leavitt",
+      "path": "/images/suppliers/maruichi-leavitt/maruichi-leavitt_01.jpg",
+      "filename": "maruichi-leavitt_01.jpg",
+      "grade": "ok",
+      "sha256": "1b6082865007a3ab55c2938a1400d0b4604569e3ed8431c5014cb44b2260b13b",
+      "bytes": 455600
+    },
+    {
+      "slug": "nucor-tubular",
+      "path": "/images/suppliers/nucor-tubular/nucor-tubular_01.jpg",
+      "filename": "nucor-tubular_01.jpg",
+      "grade": "ok",
+      "sha256": "7d7ef7f72c87fc55869b8bba22594e1066dde7f065434aedb6318d83b1e3b5b0",
+      "bytes": 900288
+    },
+    {
+      "slug": "voestalpine-krems",
+      "path": "/images/suppliers/voestalpine-krems/voestalpine-krems_01.jpg",
+      "filename": "voestalpine-krems_01.jpg",
+      "grade": "ok",
+      "sha256": "a7eecbab0ca9c4592cad7544b4e1b9985fab478189e32a4655f60d9cfd054723",
+      "bytes": 260572
+    },
+    {
+      "slug": "allied-tube-conduit",
+      "path": "/images/suppliers/allied-tube-conduit/allied-tube-conduit_01.jpg",
+      "filename": "allied-tube-conduit_01.jpg",
+      "grade": "soft",
+      "sha256": "ca6bf3043e53e4d68ae61fe25a0475699df49e6ed87f33e23825145372a90880",
+      "bytes": 260769
+    },
+    {
+      "slug": "bando-chemical",
+      "path": "/images/suppliers/bando-chemical/bando-chemical_01.jpg",
+      "filename": "bando-chemical_01.jpg",
+      "grade": "soft",
+      "sha256": "5af7ed0c2d7fce3a3ba5fdd672504704816ba117826ccddeae541be0b0716fe4",
+      "bytes": 371426
+    },
+    {
+      "slug": "burgo-group",
+      "path": "/images/suppliers/burgo-group/burgo-group_01.jpg",
+      "filename": "burgo-group_01.jpg",
+      "grade": "soft",
+      "sha256": "c747ea8f34e3cd90ab3349723ad715a4ea4b1328a16c8d3576c03cd0fa716c00",
+      "bytes": 1319981
+    },
+    {
+      "slug": "dart-container",
+      "path": "/images/suppliers/dart-container/dart-container_01.jpg",
+      "filename": "dart-container_01.jpg",
+      "grade": "soft",
+      "sha256": "7a602e2beceee108db312fb9f92a9aaccff075e8a363258ff53569d3865ecefb",
+      "bytes": 358388
+    },
+    {
+      "slug": "electrosteel-castings",
+      "path": "/images/suppliers/electrosteel-castings/electrosteel-castings_01.jpg",
+      "filename": "electrosteel-castings_01.jpg",
+      "grade": "soft",
+      "sha256": "9d5682f5cdd3e9aca17c65fe9fdea1dd11e598caf0226f3e6aeefb662c95364f",
+      "bytes": 330177
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "path": "/images/suppliers/jindal-pipe-usa/jindal-pipe-usa_01.jpg",
+      "filename": "jindal-pipe-usa_01.jpg",
+      "grade": "soft",
+      "sha256": "7f8e2fa06ef0fa0936a93aaf6f602e0e5da213d968d7443e4f50dcc5e7efda97",
+      "bytes": 548950
+    },
+    {
+      "slug": "jindal-poly-films",
+      "path": "/images/suppliers/jindal-poly-films/jindal-poly-films_01.jpg",
+      "filename": "jindal-poly-films_01.jpg",
+      "grade": "soft",
+      "sha256": "9223dfaf465f82462ab3fc7535a2a1bdff515fbe32718cf24e9196f3a1ed98c1",
+      "bytes": 285510
+    },
+    {
+      "slug": "midal-cables",
+      "path": "/images/suppliers/midal-cables/midal-cables_01.jpg",
+      "filename": "midal-cables_01.jpg",
+      "grade": "soft",
+      "sha256": "1dfd06fa6a0b26f1570d4c11cd326239398de417fb6fe7b389f790bb9bf3bda0",
+      "bytes": 496737
+    },
+    {
+      "slug": "nord-lock",
+      "path": "/images/suppliers/nord-lock/nord-lock_01.jpg",
+      "filename": "nord-lock_01.jpg",
+      "grade": "soft",
+      "sha256": "500b271f41a1419e6659701b6acd13273359d313b7083ece43f8ee6759238614",
+      "bytes": 628477
+    },
+    {
+      "slug": "optibelt",
+      "path": "/images/suppliers/optibelt/optibelt_01.jpg",
+      "filename": "optibelt_01.jpg",
+      "grade": "soft",
+      "sha256": "2c162c871f44de042f494d650997a2c736c5a445b60feba22cb8ef3d79e312f7",
+      "bytes": 366583
+    },
+    {
+      "slug": "pennengineering",
+      "path": "/images/suppliers/pennengineering/pennengineering_01.jpg",
+      "filename": "pennengineering_01.jpg",
+      "grade": "soft",
+      "sha256": "a377ebaab037b56786fb557ef44a8d79be75ad49633755949de3a1a8730d4873",
+      "bytes": 430902
+    },
+    {
+      "slug": "pregis",
+      "path": "/images/suppliers/pregis/pregis_01.jpg",
+      "filename": "pregis_01.jpg",
+      "grade": "soft",
+      "sha256": "557d7a7b5db149539f579728453d6e141e08598a301ad0f9541ee738816a6cba",
+      "bytes": 221886
+    },
+    {
+      "slug": "ptc",
+      "path": "/images/suppliers/ptc/ptc_01.jpg",
+      "filename": "ptc_01.jpg",
+      "grade": "soft",
+      "sha256": "92434c36b1d9fe016d1aaafbad7630d33f6734a2a544c0afe57d7c5102f6f0c9",
+      "bytes": 337123
+    },
+    {
+      "slug": "sun-hydraulics",
+      "path": "/images/suppliers/sun-hydraulics/sun-hydraulics_01.jpg",
+      "filename": "sun-hydraulics_01.jpg",
+      "grade": "soft",
+      "sha256": "3b8c7aef7170c3d4a189b10d52b1cc4ca9e78bec8b2e7c466683cfe251639fce",
+      "bytes": 296171
+    },
+    {
+      "slug": "swiss-steel",
+      "path": "/images/suppliers/swiss-steel/swiss-steel_01.jpg",
+      "filename": "swiss-steel_01.jpg",
+      "grade": "soft",
+      "sha256": "49b723a385eee8a48fd3a343fb201c4b5afe061b7ee11a048c4fed4f52901b82",
+      "bytes": 416064
+    },
+    {
+      "slug": "syntegon",
+      "path": "/images/suppliers/syntegon/syntegon_01.jpg",
+      "filename": "syntegon_01.jpg",
+      "grade": "soft",
+      "sha256": "f2e3777fdc4759df0006029130cc2f6197edc3b26c8eb2c231aafc2d5cd8b905",
+      "bytes": 785750
+    },
+    {
+      "slug": "taghleef",
+      "path": "/images/suppliers/taghleef/taghleef_01.jpg",
+      "filename": "taghleef_01.jpg",
+      "grade": "soft",
+      "sha256": "e8f57741216b74e106986e78233a894dbe16265d04bdfa2f384e3e8141f748ed",
+      "bytes": 379691
+    },
+    {
+      "slug": "tcpl-packaging",
+      "path": "/images/suppliers/tcpl-packaging/tcpl-packaging_01.jpg",
+      "filename": "tcpl-packaging_01.jpg",
+      "grade": "soft",
+      "sha256": "6496bb9d4314222fe62425537e99657902355ea4961f287eb5d6063643f8ad0e",
+      "bytes": 162839
+    },
+    {
+      "slug": "vega-grieshaber",
+      "path": "/images/suppliers/vega-grieshaber/vega-grieshaber_01.jpg",
+      "filename": "vega-grieshaber_01.jpg",
+      "grade": "soft",
+      "sha256": "cec3829b13b5ed0243bb88af0b483a2d2b6238eaec5db4755b8c6ddce743f8d5",
+      "bytes": 333469
+    },
+    {
+      "slug": "vest-llc",
+      "path": "/images/suppliers/vest-llc/vest-llc_01.jpg",
+      "filename": "vest-llc_01.jpg",
+      "grade": "soft",
+      "sha256": "ce26065c9fe96f103dd00a3ba12c3a3a23f470730b781ab9b1a266838465cf92",
+      "bytes": 171530
+    },
+    {
+      "slug": "western-tube-conduit",
+      "path": "/images/suppliers/western-tube-conduit/western-tube-conduit_01.jpg",
+      "filename": "western-tube-conduit_01.jpg",
+      "grade": "soft",
+      "sha256": "732f8b039acc967921a0fc837e225dbd18e272d87a148f021f3bc13a294a44b8",
+      "bytes": 255905
+    },
+    {
+      "slug": "worthington-enterprises",
+      "path": "/images/suppliers/worthington-enterprises/worthington-enterprises_01.jpg",
+      "filename": "worthington-enterprises_01.jpg",
+      "grade": "soft",
+      "sha256": "cbfed49186cf30ddc5456060110882da5086a326a1189b6256f655f283ac992f",
+      "bytes": 1266167
+    }
+  ]
+}

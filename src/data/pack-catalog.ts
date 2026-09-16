@@ -27,7 +27,7 @@ export type PackCertification = {
 export type PackSupplier = Supplier & {
   /** Folder slug used by the media packs (e.g. `hadeed`, `posco`). */
   packSlug: string;
-  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03` | `daily-2026-09-10` | `hold30-2026-09-10`. */
+  /** Source pack: `phase1` | `daily-2026-09-02` | `daily-2026-09-03` | `daily-2026-09-10` | `hold30-2026-09-10` | `daily-2026-09-11` | `daily-2026-09-11-skip12` | `daily-2026-09-11-rest30` | `daily-2026-09-14` | `daily-2026-09-14-hold22` | `daily-2026-09-14-hold33` | `daily-2026-09-14-hold4`. */
   pack: string;
   /** True when the id already exists in the Outscraper directory (overlay, not a new card). */
   overlaysExisting: boolean;
@@ -97,6 +97,21 @@ export function overlayPackProduct(row: ScrapedProduct, pack: PackProduct): Scra
 export function overlayPackProductImages(row: ScrapedProduct): ScrapedProduct {
   const pack = productById.get(row.id);
   return pack ? overlayPackProduct(row, pack) : row;
+}
+
+/**
+ * Overlay pack products onto an existing scraped-product list: matching ids
+ * receive local stills, and approved pack-only RFQ SKUs are appended. Mirrors
+ * `mergePackSuppliers` so a leftover scrape cannot hide the curated catalogue.
+ */
+export function mergePackProducts(existing: ScrapedProduct[]): ScrapedProduct[] {
+  const byId = new Map(existing.map((p) => [p.id, p]));
+  const merged = existing.map((p) => overlayPackProductImages(p));
+  for (const pack of approvedPackProducts()) {
+    if (byId.has(pack.id)) continue;
+    merged.push(pack);
+  }
+  return merged;
 }
 
 /** Publicly visible (approved) pack products. */

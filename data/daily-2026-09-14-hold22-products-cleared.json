@@ -1,0 +1,753 @@
+{
+  "label": "DAILY-2026-09-14-HOLD22-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-14/_qa_hold22_products_pack/_qa/researcher-seal.json",
+  "researcher_label": "QA-HOLD22-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "certainteed",
+    "dart-container",
+    "domtar",
+    "glenroy",
+    "moog",
+    "okonite",
+    "pennengineering",
+    "sun-hydraulics",
+    "syntegon",
+    "taghleef",
+    "usg"
+  ],
+  "soft": [
+    {
+      "slug": "ariel-corporation",
+      "reason": "both stills official Ariel reciprocating-compressor CAD/CGI catalog renders (ARIEL plates) \u2014 brand-correct CGI, not photo product stills"
+    },
+    {
+      "slug": "burgo-group",
+      "reason": "burgo-group = third-party SUN STRONG CP veggie-wrap packaging end-use; mill-fallback-2 = Burgo Special Graphics Papers marketing brochure collage \u2014 soft marketing/end-use"
+    },
+    {
+      "slug": "dynamic-cables",
+      "reason": "both unbranded armored MV/HV power-cable cutaways \u2014 category type-match, no Dynamic brand mark"
+    },
+    {
+      "slug": "electrosteel-castings",
+      "reason": "blue DI pipe truck-load logistics + lined pipe-end stack \u2014 category-correct soft application/type-match, no Electrosteel brand"
+    },
+    {
+      "slug": "holmen",
+      "reason": "holmen-main = unbranded kraft paperboard boxes; mill-fallback-2 = abstract embossed green specialty-board demo \u2014 soft type-match paperboard, not mill-branded stock"
+    },
+    {
+      "slug": "hydraforce",
+      "reason": "hydraforce-millfall = hydraulic manifold/cartridge assortment (no HydraForce wordmark); mill-fallback-2 = cartridge valves with G3 logo \u2014 soft type-match, G3 not HydraForce brand"
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "reason": "jindal-usa = yellow coated pipe yard logistics (M. O'Brien excavator); jindal-product = unbranded galvanized pipe bundles \u2014 soft application/type-match, no Jindal brand"
+    },
+    {
+      "slug": "jindal-poly-films",
+      "reason": "both official Jindal Poly Films website marketing banners (Coated Films + Thermal Lamination Films) with text overlays/product collages \u2014 branded soft marketing collage"
+    },
+    {
+      "slug": "midal-cables",
+      "reason": "midal-cables = unbranded ACSR/AAAC conductor cutaway; midal-product = mill coil-handling process with worker \u2014 soft type-match/process, no Midal brand"
+    },
+    {
+      "slug": "psl-limited",
+      "reason": "single still: spiral-weld SAW line-pipe interior grinding process with worker \u2014 category-correct soft process/application (only 1 still)"
+    },
+    {
+      "slug": "tcpl-packaging",
+      "reason": "folding-carton customer samples (Glucon-D/Patanjali/Taj Mahal) + pharma cartons (Shalina/Alkem/Zydus) \u2014 soft customer packaging showcase, no TCPL brand mark"
+    }
+  ],
+  "soft_27_locked": true,
+  "dmg_mori_locked": true,
+  "rfq_only": true,
+  "stills": [
+    {
+      "slug": "certainteed",
+      "path": "/images/products/certainteed/certainteed-main.jpg",
+      "filename": "certainteed-main.jpg",
+      "grade": "ok",
+      "sha256": "434343603bfd45e4a56eb8e89bad4f863e53369cc91f654451892f7709b58c8e",
+      "bytes": 685981
+    },
+    {
+      "slug": "certainteed",
+      "path": "/images/products/certainteed/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "6ab25b2dde5ac9d2159a8885e7cdaad1fa539b3bfce7bdae8507e004127ee687",
+      "bytes": 932959
+    },
+    {
+      "slug": "dart-container",
+      "path": "/images/products/dart-container/dart-container.jpg",
+      "filename": "dart-container.jpg",
+      "grade": "ok",
+      "sha256": "a9aa476ca741e4ca1ad3a0e4c389eafe29b478dc081d9d208c93d6317cc726ab",
+      "bytes": 18942
+    },
+    {
+      "slug": "dart-container",
+      "path": "/images/products/dart-container/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "c32a14d8059478c9ceab4c56f0d0f31f7631eeaddc104fbe01f217997ff5f64c",
+      "bytes": 157075
+    },
+    {
+      "slug": "domtar",
+      "path": "/images/products/domtar/domtar-main.jpg",
+      "filename": "domtar-main.jpg",
+      "grade": "ok",
+      "sha256": "e7bdf8fb14a59960892e553175ca3f878a87dafb4ef731b972c3ed03f25cb581",
+      "bytes": 182466
+    },
+    {
+      "slug": "domtar",
+      "path": "/images/products/domtar/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "56ec8b109d4707fbfd34cb611c1a424407ec5e8e17f27cd1ff8b8b508398322f",
+      "bytes": 122537
+    },
+    {
+      "slug": "glenroy",
+      "path": "/images/products/glenroy/glenroy-product.jpg",
+      "filename": "glenroy-product.jpg",
+      "grade": "ok",
+      "sha256": "d022a01f7b7f259699821241ef873a3c3e2a3ffc7d23290f7cebb13561696559",
+      "bytes": 455262
+    },
+    {
+      "slug": "glenroy",
+      "path": "/images/products/glenroy/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "c954cee1eae75636ce564fd11ba4b1e8fca508a7e1fb26f303865bbb1a60dc43",
+      "bytes": 204492
+    },
+    {
+      "slug": "moog",
+      "path": "/images/products/moog/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "6cf3dc9b1f31d2f85487eef1001f7e99aff9096be73cbec1eedf0344585358a3",
+      "bytes": 88213
+    },
+    {
+      "slug": "moog",
+      "path": "/images/products/moog/moog-millfall.jpg",
+      "filename": "moog-millfall.jpg",
+      "grade": "ok",
+      "sha256": "2bc36206e5380ebe92afc1eb77de8ec7faedce51246ee49d3cbcd2a2a57054dd",
+      "bytes": 72869
+    },
+    {
+      "slug": "okonite",
+      "path": "/images/products/okonite/okonite-main.jpg",
+      "filename": "okonite-main.jpg",
+      "grade": "ok",
+      "sha256": "3572e46f72d89147c93bb414bedd5b1b8842753c05625e6245f33a094590cee1",
+      "bytes": 114138
+    },
+    {
+      "slug": "okonite",
+      "path": "/images/products/okonite/okonite-product.jpg",
+      "filename": "okonite-product.jpg",
+      "grade": "ok",
+      "sha256": "e754bb3a0a2569d76d94056242af5521d8b383f3b7459fb44fc671fe11547911",
+      "bytes": 54365
+    },
+    {
+      "slug": "pennengineering",
+      "path": "/images/products/pennengineering/pennengineering-millfall.jpg",
+      "filename": "pennengineering-millfall.jpg",
+      "grade": "ok",
+      "sha256": "28cfb7c6361b485eee491d7d8b0bee659c7012efde643097bdd06d3f8a3ada87",
+      "bytes": 69478
+    },
+    {
+      "slug": "pennengineering",
+      "path": "/images/products/pennengineering/pennengineering-millfall__from_png.jpg",
+      "filename": "pennengineering-millfall__from_png.jpg",
+      "grade": "ok",
+      "sha256": "cf05d6d5bd6969688d32929f0b41c72614ca6767a09baa96ac6752861ee1bc8a",
+      "bytes": 75330
+    },
+    {
+      "slug": "sun-hydraulics",
+      "path": "/images/products/sun-hydraulics/sun-hydraulics-millfall.jpg",
+      "filename": "sun-hydraulics-millfall.jpg",
+      "grade": "ok",
+      "sha256": "3332c445f69183909224706b66a6568f5e9a7d2fa67d2fd3e2f292d0f6effde8",
+      "bytes": 48039
+    },
+    {
+      "slug": "sun-hydraulics",
+      "path": "/images/products/sun-hydraulics/sun-hydraulics-millfall__from_png.jpg",
+      "filename": "sun-hydraulics-millfall__from_png.jpg",
+      "grade": "ok",
+      "sha256": "ac4969bf9bc281e10ce9ea2572bfd6ed0d729d2062219645edf2e4c14c1a1673",
+      "bytes": 88628
+    },
+    {
+      "slug": "syntegon",
+      "path": "/images/products/syntegon/syntegon-millfall.jpg",
+      "filename": "syntegon-millfall.jpg",
+      "grade": "ok",
+      "sha256": "a3da37b518413448e26c04f5df9b38f3954665ebbea08a0bd541862abc59d7cb",
+      "bytes": 279047
+    },
+    {
+      "slug": "syntegon",
+      "path": "/images/products/syntegon/syntegon-millfall__from_png.jpg",
+      "filename": "syntegon-millfall__from_png.jpg",
+      "grade": "ok",
+      "sha256": "ae94efeea6447fff1fa1fb40a9b3eb658ee1e2fc68aa0124ce4c82a742fbfa3a",
+      "bytes": 143322
+    },
+    {
+      "slug": "taghleef",
+      "path": "/images/products/taghleef/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "058f2627b5d63eaf9f559c78864761635f38420ee0ed0e46c83e8231963da749",
+      "bytes": 116626
+    },
+    {
+      "slug": "taghleef",
+      "path": "/images/products/taghleef/taghleef-product.jpg",
+      "filename": "taghleef-product.jpg",
+      "grade": "ok",
+      "sha256": "15b8b57ab8dbcc0083bde40a59e5197e4b2b10a893c84bc0354ce8a3e1f7458d",
+      "bytes": 107807
+    },
+    {
+      "slug": "usg",
+      "path": "/images/products/usg/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "ok",
+      "sha256": "658c65fffc5fbb214c50903b61c5e537e6fee2c36891b5e85b0ae76906141542",
+      "bytes": 316021
+    },
+    {
+      "slug": "usg",
+      "path": "/images/products/usg/usg-main.jpg",
+      "filename": "usg-main.jpg",
+      "grade": "ok",
+      "sha256": "40c8899f08aeaf9889660cf94663864e119b6793a36c386463c89d65c90924a8",
+      "bytes": 273723
+    },
+    {
+      "slug": "ariel-corporation",
+      "path": "/images/products/ariel-corporation/ariel-corporation.jpg",
+      "filename": "ariel-corporation.jpg",
+      "grade": "soft",
+      "sha256": "e21696a5f31342105f82fc9962259355258f8738488aea845e0dba7523e06c75",
+      "bytes": 203379
+    },
+    {
+      "slug": "ariel-corporation",
+      "path": "/images/products/ariel-corporation/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "e70a3d5961e4918a039577c728ac77212114accdbfa9d381c02c41dd39f6374c",
+      "bytes": 172914
+    },
+    {
+      "slug": "burgo-group",
+      "path": "/images/products/burgo-group/burgo-group.jpg",
+      "filename": "burgo-group.jpg",
+      "grade": "soft",
+      "sha256": "dc549357caf0ecc9c97a746762b4a3f59c394779c269c8f3390e14af8a3c7ef4",
+      "bytes": 93506
+    },
+    {
+      "slug": "burgo-group",
+      "path": "/images/products/burgo-group/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "27e6e275fba26ccf26103694bdb7fc4910e9c92fb4dab7ea2e0a8d29644e5bd3",
+      "bytes": 188573
+    },
+    {
+      "slug": "dynamic-cables",
+      "path": "/images/products/dynamic-cables/dynamic-cables.jpg",
+      "filename": "dynamic-cables.jpg",
+      "grade": "soft",
+      "sha256": "05ab4c318c2b30f7a147d068020fb219931e7fb10f02d800e0021ecfd0854a6c",
+      "bytes": 53832
+    },
+    {
+      "slug": "dynamic-cables",
+      "path": "/images/products/dynamic-cables/dynamic-product.jpg",
+      "filename": "dynamic-product.jpg",
+      "grade": "soft",
+      "sha256": "80652b8e546a27e9e825fd2ac5c557736c9cc1d10ce089387e1dcb8e3cddc3b9",
+      "bytes": 70918
+    },
+    {
+      "slug": "electrosteel-castings",
+      "path": "/images/products/electrosteel-castings/electrosteel-castings.jpg",
+      "filename": "electrosteel-castings.jpg",
+      "grade": "soft",
+      "sha256": "01efa35369ed85d3e6a42355f1de87022677a5975d48054028b59f9af4572fba",
+      "bytes": 232259
+    },
+    {
+      "slug": "electrosteel-castings",
+      "path": "/images/products/electrosteel-castings/electrosteel-product.jpg",
+      "filename": "electrosteel-product.jpg",
+      "grade": "soft",
+      "sha256": "579cee67439aa1f21696727bcabd745112e51c1ac9039ae5377047ca61f26e63",
+      "bytes": 187701
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/products/holmen/holmen-main.jpg",
+      "filename": "holmen-main.jpg",
+      "grade": "soft",
+      "sha256": "de6daed6a70f1493a5ac4ee62139ff3a5d04a0395c005a6db68fdce7ab036e44",
+      "bytes": 92424
+    },
+    {
+      "slug": "holmen",
+      "path": "/images/products/holmen/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "ea15de5054772b784796818380fc2c5776484df658319301b45158652d98e26a",
+      "bytes": 86837
+    },
+    {
+      "slug": "hydraforce",
+      "path": "/images/products/hydraforce/hydraforce-millfall.jpg",
+      "filename": "hydraforce-millfall.jpg",
+      "grade": "soft",
+      "sha256": "575a877f7eb483e6219191f73a748310ae9e15bce4d44cbc2913941d51ef726e",
+      "bytes": 145584
+    },
+    {
+      "slug": "hydraforce",
+      "path": "/images/products/hydraforce/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "45c47e7b1d3ed8da83079d61f961cbd94730a13886e011197aa841fd2a03b78d",
+      "bytes": 98219
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "path": "/images/products/jindal-pipe-usa/jindal-product.jpg",
+      "filename": "jindal-product.jpg",
+      "grade": "soft",
+      "sha256": "92d31bc221b12bff6ead7655985555e42fa213a503ae95733a560dec83bda457",
+      "bytes": 913586
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "path": "/images/products/jindal-pipe-usa/jindal-usa.jpg",
+      "filename": "jindal-usa.jpg",
+      "grade": "soft",
+      "sha256": "569ebd4682b94ff8dc869ff5e2c6969d2bf7bd52e9d1565af66211a415a10c28",
+      "bytes": 258895
+    },
+    {
+      "slug": "jindal-poly-films",
+      "path": "/images/products/jindal-poly-films/jindal-product.jpg",
+      "filename": "jindal-product.jpg",
+      "grade": "soft",
+      "sha256": "cfe12809b8139af171ba7f40d2215e2e8c6e6fd150a2137c1b3a0cea3602e14c",
+      "bytes": 193297
+    },
+    {
+      "slug": "jindal-poly-films",
+      "path": "/images/products/jindal-poly-films/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "92bbba2447e3df9f63e645bbd3618bac6be3644942789a7ab1d047e66862e16b",
+      "bytes": 190365
+    },
+    {
+      "slug": "midal-cables",
+      "path": "/images/products/midal-cables/midal-cables.jpg",
+      "filename": "midal-cables.jpg",
+      "grade": "soft",
+      "sha256": "95e541478ae270f5d38eabb034468bdd095bffee8d847762e11a7da20899ba06",
+      "bytes": 70559
+    },
+    {
+      "slug": "midal-cables",
+      "path": "/images/products/midal-cables/midal-product.jpg",
+      "filename": "midal-product.jpg",
+      "grade": "soft",
+      "sha256": "9f8a191d16031004e88c739524c00aac82999eb25eb4602750a6c81a60fb5eba",
+      "bytes": 179013
+    },
+    {
+      "slug": "psl-limited",
+      "path": "/images/products/psl-limited/psl-limited.jpg",
+      "filename": "psl-limited.jpg",
+      "grade": "soft",
+      "sha256": "3b3215258f6fb8871c2d024db54ab3c52bcdc0a48041dd4c5b1f372f0046fc4e",
+      "bytes": 483391
+    },
+    {
+      "slug": "psl-limited",
+      "path": "/images/products/psl-limited/psl-product.jpg",
+      "filename": "psl-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "tcpl-packaging",
+      "path": "/images/products/tcpl-packaging/mill-fallback-2.jpg",
+      "filename": "mill-fallback-2.jpg",
+      "grade": "soft",
+      "sha256": "e7ea03ea3767f582adc5dd0913918ac2fa47d35330a8f9eeac96e2c4389ea537",
+      "bytes": 89448
+    },
+    {
+      "slug": "tcpl-packaging",
+      "path": "/images/products/tcpl-packaging/tcpl-packaging.jpg",
+      "filename": "tcpl-packaging.jpg",
+      "grade": "soft",
+      "sha256": "0e90cbcbc731013d67c9e61c0f633e1d8d13449a757d7baf88bb8191c23e1085",
+      "bytes": 115541
+    }
+  ],
+  "products": [
+    {
+      "slug": "certainteed",
+      "product_name": "CertainTeed Roofing Siding Insulation and Gypsum Building Materials",
+      "supplier_name": "CertainTeed LLC",
+      "category": "Construction",
+      "source_url": "https://www.certainteed.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/certainteed/certainteed-main.jpg",
+        "/images/products/certainteed/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "dart-container",
+      "product_name": "Dart Container Foodservice Cups Lids and Foam Containers",
+      "supplier_name": "Dart Container Corporation",
+      "category": "Packaging",
+      "source_url": "https://www.dartcontainer.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dart-container/dart-container.jpg",
+        "/images/products/dart-container/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "domtar",
+      "product_name": "Domtar Uncoated Freesheet Pulp and Specialty Papers",
+      "supplier_name": "Domtar Corporation",
+      "category": "Packaging",
+      "source_url": "https://www.domtar.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/domtar/domtar-main.jpg",
+        "/images/products/domtar/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "glenroy",
+      "product_name": "Glenroy Flexible Film Laminates and High-Barrier Pouches",
+      "supplier_name": "Glenroy Inc.",
+      "category": "Packaging",
+      "source_url": "https://www.glenroy.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/glenroy/glenroy-product.jpg",
+        "/images/products/glenroy/mill-fallback-2.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "moog",
+      "product_name": "Moog Electrohydraulic Servo Valves and Motion Control Systems",
+      "supplier_name": "Moog Inc.",
+      "category": "Industrial Parts",
+      "source_url": "https://www.moog.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/moog/mill-fallback-2.jpg",
+        "/images/products/moog/moog-millfall.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "okonite",
+      "product_name": "Okonite Medium High Voltage Power and Control Cable",
+      "supplier_name": "The Okonite Company",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.okonite.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/okonite/okonite-main.jpg",
+        "/images/products/okonite/okonite-product.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "pennengineering",
+      "product_name": "PennEngineering PEM Self-Clinching Fasteners and Insertion Equipment",
+      "supplier_name": "PennEngineering",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.pemnet.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/pennengineering/pennengineering-millfall.jpg",
+        "/images/products/pennengineering/pennengineering-millfall__from_png.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "sun-hydraulics",
+      "product_name": "Sun Hydraulics Cartridge Valves and Hydraulic Manifold Blocks",
+      "supplier_name": "Sun Hydraulics LLC",
+      "category": "Industrial Parts",
+      "source_url": "https://www.sunhydraulics.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/sun-hydraulics/sun-hydraulics-millfall.jpg",
+        "/images/products/sun-hydraulics/sun-hydraulics-millfall__from_png.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "syntegon",
+      "product_name": "Syntegon Food and Pharma Packaging Machinery",
+      "supplier_name": "Syntegon Technology GmbH",
+      "category": "Industrial Parts",
+      "source_url": "https://www.syntegon.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/syntegon/syntegon-millfall.jpg",
+        "/images/products/syntegon/syntegon-millfall__from_png.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "taghleef",
+      "product_name": "Taghleef BOPP BOPE Label and Specialty Packaging Films",
+      "supplier_name": "Taghleef Industries",
+      "category": "Packaging",
+      "source_url": "https://www.ti-films.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/taghleef/mill-fallback-2.jpg",
+        "/images/products/taghleef/taghleef-product.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "usg",
+      "product_name": "USG Gypsum Wallboard Ceiling Systems and Joint Compounds",
+      "supplier_name": "USG Corporation",
+      "category": "Construction",
+      "source_url": "https://www.usg.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/usg/mill-fallback-2.jpg",
+        "/images/products/usg/usg-main.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "ariel-corporation",
+      "product_name": "Ariel Reciprocating Gas Compressors and Compression Packages",
+      "supplier_name": "Ariel Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.arielcorp.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ariel-corporation/ariel-corporation.jpg",
+        "/images/products/ariel-corporation/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "both stills official Ariel reciprocating-compressor CAD/CGI catalog renders (ARIEL plates) \u2014 brand-correct CGI, not photo product stills"
+    },
+    {
+      "slug": "burgo-group",
+      "product_name": "Burgo Group Coated Papers and Packaging Paper Grades",
+      "supplier_name": "Burgo Group S.p.A.",
+      "category": "Packaging",
+      "source_url": "https://www.burgo.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/burgo-group/burgo-group.jpg",
+        "/images/products/burgo-group/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "burgo-group = third-party SUN STRONG CP veggie-wrap packaging end-use; mill-fallback-2 = Burgo Special Graphics Papers marketing brochure collage \u2014 soft marketing/end-use"
+    },
+    {
+      "slug": "dynamic-cables",
+      "product_name": "Dynamic Cables MV HV Power Cables and Overhead Conductors",
+      "supplier_name": "Dynamic Cables Limited",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.dynamiccables.co.in/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dynamic-cables/dynamic-cables.jpg",
+        "/images/products/dynamic-cables/dynamic-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "both unbranded armored MV/HV power-cable cutaways \u2014 category type-match, no Dynamic brand mark"
+    },
+    {
+      "slug": "electrosteel-castings",
+      "product_name": "Electrosteel Castings Ductile Iron Pipes and Fittings",
+      "supplier_name": "Electrosteel Castings Limited",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.electrosteel.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/electrosteel-castings/electrosteel-castings.jpg",
+        "/images/products/electrosteel-castings/electrosteel-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "blue DI pipe truck-load logistics + lined pipe-end stack \u2014 category-correct soft application/type-match, no Electrosteel brand"
+    },
+    {
+      "slug": "holmen",
+      "product_name": "Holmen Paperboard and Fresh Fiber Packaging Board",
+      "supplier_name": "Holmen AB",
+      "category": "Packaging",
+      "source_url": "https://www.holmen.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/holmen/holmen-main.jpg",
+        "/images/products/holmen/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "holmen-main = unbranded kraft paperboard boxes; mill-fallback-2 = abstract embossed green specialty-board demo \u2014 soft type-match paperboard, not mill-branded stock"
+    },
+    {
+      "slug": "hydraforce",
+      "product_name": "HydraForce Hydraulic Cartridge Valves and Custom Manifolds",
+      "supplier_name": "HydraForce Inc.",
+      "category": "Industrial Parts",
+      "source_url": "https://www.hydraforce.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/hydraforce/hydraforce-millfall.jpg",
+        "/images/products/hydraforce/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "hydraforce-millfall = hydraulic manifold/cartridge assortment (no HydraForce wordmark); mill-fallback-2 = cartridge valves with G3 logo \u2014 soft type-match, G3 not HydraForce brand"
+    },
+    {
+      "slug": "jindal-pipe-usa",
+      "product_name": "Jindal Pipe USA API 5L HFERW Line Pipe and OCTG",
+      "supplier_name": "Jindal Pipe USA Inc.",
+      "category": "Tube & Pipes",
+      "source_url": "https://jindalpipeusa.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/jindal-pipe-usa/jindal-product.jpg",
+        "/images/products/jindal-pipe-usa/jindal-usa.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "jindal-usa = yellow coated pipe yard logistics (M. O'Brien excavator); jindal-product = unbranded galvanized pipe bundles \u2014 soft application/type-match, no Jindal brand"
+    },
+    {
+      "slug": "jindal-poly-films",
+      "product_name": "Jindal Poly Films BOPP PET and Metallized Packaging Films",
+      "supplier_name": "Jindal Poly Films Limited",
+      "category": "Packaging",
+      "source_url": "https://www.jindalpoly.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/jindal-poly-films/jindal-product.jpg",
+        "/images/products/jindal-poly-films/mill-fallback-2.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "both official Jindal Poly Films website marketing banners (Coated Films + Thermal Lamination Films) with text overlays/product collages \u2014 branded soft marketing collage"
+    },
+    {
+      "slug": "midal-cables",
+      "product_name": "Midal Aluminum Overhead Conductors Rod and Wire",
+      "supplier_name": "Midal Cables B.S.C.",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.midalcable.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/midal-cables/midal-cables.jpg",
+        "/images/products/midal-cables/midal-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "midal-cables = unbranded ACSR/AAAC conductor cutaway; midal-product = mill coil-handling process with worker \u2014 soft type-match/process, no Midal brand"
+    },
+    {
+      "slug": "psl-limited",
+      "product_name": "PSL Helical and Longitudinal SAW Line Pipe",
+      "supplier_name": "PSL Limited",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.pslindia.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/psl-limited/psl-limited.jpg",
+        "/images/products/psl-limited/psl-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "single still: spiral-weld SAW line-pipe interior grinding process with worker \u2014 category-correct soft process/application (only 1 still)"
+    },
+    {
+      "slug": "tcpl-packaging",
+      "product_name": "TCPL Folding Cartons Flexible Laminates and Specialty Packaging",
+      "supplier_name": "TCPL Packaging Limited",
+      "category": "Packaging",
+      "source_url": "https://www.tcpl.in/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/tcpl-packaging/mill-fallback-2.jpg",
+        "/images/products/tcpl-packaging/tcpl-packaging.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "folding-carton customer samples (Glucon-D/Patanjali/Taj Mahal) + pharma cartons (Shalina/Alkem/Zydus) \u2014 soft customer packaging showcase, no TCPL brand mark"
+    }
+  ]
+}

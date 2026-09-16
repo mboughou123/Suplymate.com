@@ -1,0 +1,846 @@
+{
+  "label": "DAILY-2026-09-14-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-14/_qa/researcher-products-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-14-PRODUCTS-RESEARCHER-PARTIAL",
+  "wire_ok": [
+    "dmg-mori"
+  ],
+  "soft": [
+    {
+      "slug": "allied-tube-conduit",
+      "reason": "shared galvanized pipe-bundle + glycol HVAC install \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "ammeraal-beltech",
+      "reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not conveyor belts close-up"
+    },
+    {
+      "slug": "aubert-duval",
+      "reason": "shared street rebar staging \u2014 steel category soft (not specialty steels/forgings)"
+    },
+    {
+      "slug": "bando-chemical",
+      "reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not power-transmission belts"
+    },
+    {
+      "slug": "calpipe-industries",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes/conduit type-match only"
+    },
+    {
+      "slug": "ejot",
+      "reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not industrial fasteners"
+    },
+    {
+      "slug": "gibson-stainless",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category stainless conduit type-match only"
+    },
+    {
+      "slug": "haynes-international",
+      "reason": "shared street rebar staging \u2014 steel category soft (not Ni/Co superalloy flat/long)"
+    },
+    {
+      "slug": "keyence",
+      "reason": "shared sensor/conveyor lab \u2014 soft category automation sensors"
+    },
+    {
+      "slug": "kuka",
+      "reason": "shared sensor/conveyor lab \u2014 soft automation category (not industrial robots/cells)"
+    },
+    {
+      "slug": "maruichi-leavitt",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "mazak",
+      "reason": "mazak-millfall = urban skyscraper/intersection campus exterior \u2014 soft campus not CNC machines"
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "reason": "shared sensor/conveyor lab \u2014 soft FA category (not PLC/drive product still)"
+    },
+    {
+      "slug": "nord-lock",
+      "reason": "nord-lock-millfall = generic bolts/nuts on terracotta \u2014 soft fasteners (not wedge-locking washers)"
+    },
+    {
+      "slug": "nucor-tubular",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category HSS/tubes type-match only"
+    },
+    {
+      "slug": "okuma",
+      "reason": "okuma-millfall = OKUMA facility exterior with brand logo \u2014 soft campus (not CNC lathes/centers)"
+    },
+    {
+      "slug": "optibelt",
+      "reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not V/timing belts"
+    },
+    {
+      "slug": "ovako",
+      "reason": "shared street rebar staging \u2014 steel category soft (not engineering steel bars/tubes/rings)"
+    },
+    {
+      "slug": "pregis",
+      "reason": "pregis-millfall = pulp/paper mill aerial in forest \u2014 soft mill campus not protective films/void-fill"
+    },
+    {
+      "slug": "ptc",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category DOM/mechanical tubing type-match only"
+    },
+    {
+      "slug": "schott-ag",
+      "reason": "schott-ag = palletized shrink-wrapped glass bottles \u2014 soft glass packaging category (not pharma tubing/vials brand)"
+    },
+    {
+      "slug": "swiss-steel",
+      "reason": "shared street rebar staging \u2014 steel category soft (not special long/tool steel)"
+    },
+    {
+      "slug": "vega-grieshaber",
+      "reason": "shared sensor/conveyor lab \u2014 soft sensors category (not level/pressure transmitters)"
+    },
+    {
+      "slug": "vest-llc",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category HSS/tubes type-match only"
+    },
+    {
+      "slug": "voestalpine-krems",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category precision welded tubes type-match only"
+    },
+    {
+      "slug": "western-tube-conduit",
+      "reason": "shared pipe-bundle + glycol HVAC \u2014 category EMT/conduit type-match only"
+    },
+    {
+      "slug": "worthington-enterprises",
+      "reason": "worthington millfall = street rebar staging \u2014 steel category soft (not pressure cylinders)"
+    }
+  ],
+  "hold_out_count": 22,
+  "hold_out": [
+    "ariel-corporation",
+    "burgo-group",
+    "certainteed",
+    "dart-container",
+    "domtar",
+    "dynamic-cables",
+    "electrosteel-castings",
+    "glenroy",
+    "holmen",
+    "hydraforce",
+    "jindal-pipe-usa",
+    "jindal-poly-films",
+    "midal-cables",
+    "moog",
+    "okonite",
+    "pennengineering",
+    "psl-limited",
+    "sun-hydraulics",
+    "syntegon",
+    "taghleef",
+    "tcpl-packaging",
+    "usg"
+  ],
+  "prior_wired_locked": true,
+  "rfq_only": true,
+  "stills": [
+    {
+      "slug": "dmg-mori",
+      "path": "/images/products/dmg-mori/dmg-mori-millfall.jpg",
+      "filename": "dmg-mori-millfall.jpg",
+      "grade": "ok",
+      "sha256": "6145d88224734bd9d23b57a2ccb0c2a145d00d9da2982d72f928bfc3cf423b0c",
+      "bytes": 208009
+    },
+    {
+      "slug": "allied-tube-conduit",
+      "path": "/images/products/allied-tube-conduit/allied-conduit.jpg",
+      "filename": "allied-conduit.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "allied-tube-conduit",
+      "path": "/images/products/allied-tube-conduit/allied-product.jpg",
+      "filename": "allied-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "ammeraal-beltech",
+      "path": "/images/products/ammeraal-beltech/ammeraal-beltech-millfall.jpg",
+      "filename": "ammeraal-beltech-millfall.jpg",
+      "grade": "soft",
+      "sha256": "778f47eedd59ff62e9b3b4af8e99f4f45297d02aa94ba675bf68e868d992de1a",
+      "bytes": 128353
+    },
+    {
+      "slug": "aubert-duval",
+      "path": "/images/products/aubert-duval/aubert-product.jpg",
+      "filename": "aubert-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "bando-chemical",
+      "path": "/images/products/bando-chemical/bando-chemical-millfall.jpg",
+      "filename": "bando-chemical-millfall.jpg",
+      "grade": "soft",
+      "sha256": "778f47eedd59ff62e9b3b4af8e99f4f45297d02aa94ba675bf68e868d992de1a",
+      "bytes": 128353
+    },
+    {
+      "slug": "calpipe-industries",
+      "path": "/images/products/calpipe-industries/calpipe-industries.jpg",
+      "filename": "calpipe-industries.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "calpipe-industries",
+      "path": "/images/products/calpipe-industries/calpipe-product.jpg",
+      "filename": "calpipe-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "ejot",
+      "path": "/images/products/ejot/ejot-millfall.jpg",
+      "filename": "ejot-millfall.jpg",
+      "grade": "soft",
+      "sha256": "778f47eedd59ff62e9b3b4af8e99f4f45297d02aa94ba675bf68e868d992de1a",
+      "bytes": 128353
+    },
+    {
+      "slug": "gibson-stainless",
+      "path": "/images/products/gibson-stainless/gibson-product.jpg",
+      "filename": "gibson-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "gibson-stainless",
+      "path": "/images/products/gibson-stainless/gibson-stainless.jpg",
+      "filename": "gibson-stainless.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "haynes-international",
+      "path": "/images/products/haynes-international/haynes-product.jpg",
+      "filename": "haynes-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "keyence",
+      "path": "/images/products/keyence/keyence-main.jpg",
+      "filename": "keyence-main.jpg",
+      "grade": "soft",
+      "sha256": "8b9f6d17c6028ec053de9aec0f4bda58c309dd8f0ffa2418843154674138b42a",
+      "bytes": 255565
+    },
+    {
+      "slug": "kuka",
+      "path": "/images/products/kuka/kuka-product.jpg",
+      "filename": "kuka-product.jpg",
+      "grade": "soft",
+      "sha256": "8b9f6d17c6028ec053de9aec0f4bda58c309dd8f0ffa2418843154674138b42a",
+      "bytes": 255565
+    },
+    {
+      "slug": "maruichi-leavitt",
+      "path": "/images/products/maruichi-leavitt/maruichi-leavitt.jpg",
+      "filename": "maruichi-leavitt.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "maruichi-leavitt",
+      "path": "/images/products/maruichi-leavitt/maruichi-product.jpg",
+      "filename": "maruichi-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "mazak",
+      "path": "/images/products/mazak/mazak-millfall.jpg",
+      "filename": "mazak-millfall.jpg",
+      "grade": "soft",
+      "sha256": "449b86de49c76d28259e1da586bf8957d5c0853931075266df2385a7fd8fc120",
+      "bytes": 244571
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "path": "/images/products/mitsubishi-electric/mitsubishi-electric.jpg",
+      "filename": "mitsubishi-electric.jpg",
+      "grade": "soft",
+      "sha256": "8b9f6d17c6028ec053de9aec0f4bda58c309dd8f0ffa2418843154674138b42a",
+      "bytes": 255565
+    },
+    {
+      "slug": "nord-lock",
+      "path": "/images/products/nord-lock/nord-lock-millfall.jpg",
+      "filename": "nord-lock-millfall.jpg",
+      "grade": "soft",
+      "sha256": "8b99dfc272cc6e01a12003e72bf97043d14ef988690d73e95b66b940a3e1d9d8",
+      "bytes": 233901
+    },
+    {
+      "slug": "nucor-tubular",
+      "path": "/images/products/nucor-tubular/nucor-product.jpg",
+      "filename": "nucor-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "nucor-tubular",
+      "path": "/images/products/nucor-tubular/nucor-tubular.jpg",
+      "filename": "nucor-tubular.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "okuma",
+      "path": "/images/products/okuma/okuma-millfall.jpg",
+      "filename": "okuma-millfall.jpg",
+      "grade": "soft",
+      "sha256": "ef026c47d6adc1170d0e63af3b78ea3196b8d8bf2aec69a7c35c7256090fc527",
+      "bytes": 189430
+    },
+    {
+      "slug": "optibelt",
+      "path": "/images/products/optibelt/optibelt-millfall.jpg",
+      "filename": "optibelt-millfall.jpg",
+      "grade": "soft",
+      "sha256": "778f47eedd59ff62e9b3b4af8e99f4f45297d02aa94ba675bf68e868d992de1a",
+      "bytes": 128353
+    },
+    {
+      "slug": "ovako",
+      "path": "/images/products/ovako/ovako-product.jpg",
+      "filename": "ovako-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "pregis",
+      "path": "/images/products/pregis/pregis-millfall.jpg",
+      "filename": "pregis-millfall.jpg",
+      "grade": "soft",
+      "sha256": "547c5caa710a1bc5b2aeef37c5290a50f52e9a84e7042fbb7548fd51f5e1a038",
+      "bytes": 387436
+    },
+    {
+      "slug": "ptc",
+      "path": "/images/products/ptc/ptc-main.jpg",
+      "filename": "ptc-main.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "ptc",
+      "path": "/images/products/ptc/ptc-product.jpg",
+      "filename": "ptc-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "schott-ag",
+      "path": "/images/products/schott-ag/schott-ag.jpg",
+      "filename": "schott-ag.jpg",
+      "grade": "soft",
+      "sha256": "3251ecf0f9ca8781ce9378de2a0c767155479e83deea722e355c4cb5bd249e6d",
+      "bytes": 291371
+    },
+    {
+      "slug": "swiss-steel",
+      "path": "/images/products/swiss-steel/swiss-product.jpg",
+      "filename": "swiss-product.jpg",
+      "grade": "soft",
+      "sha256": "f62a54e465944b42d69e70e18a0e54078ae7da776c77bbc0fa17a0576ca5cf74",
+      "bytes": 339567
+    },
+    {
+      "slug": "vega-grieshaber",
+      "path": "/images/products/vega-grieshaber/vega-grieshaber.jpg",
+      "filename": "vega-grieshaber.jpg",
+      "grade": "soft",
+      "sha256": "8b9f6d17c6028ec053de9aec0f4bda58c309dd8f0ffa2418843154674138b42a",
+      "bytes": 255565
+    },
+    {
+      "slug": "vest-llc",
+      "path": "/images/products/vest-llc/vest-llc.jpg",
+      "filename": "vest-llc.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "vest-llc",
+      "path": "/images/products/vest-llc/vest-product.jpg",
+      "filename": "vest-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "voestalpine-krems",
+      "path": "/images/products/voestalpine-krems/voestalpine-krems.jpg",
+      "filename": "voestalpine-krems.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "voestalpine-krems",
+      "path": "/images/products/voestalpine-krems/voestalpine-product.jpg",
+      "filename": "voestalpine-product.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "western-tube-conduit",
+      "path": "/images/products/western-tube-conduit/western-conduit.jpg",
+      "filename": "western-conduit.jpg",
+      "grade": "soft",
+      "sha256": "43c468fd61bd5662100f1fe39a618983d6ee23eb026ad5ff33a69d9615e5a19f",
+      "bytes": 557472
+    },
+    {
+      "slug": "western-tube-conduit",
+      "path": "/images/products/western-tube-conduit/western-product.jpg",
+      "filename": "western-product.jpg",
+      "grade": "soft",
+      "sha256": "7850454292d269bbcbabaa84149c3da0b22b95af95ab8d66085cc4a83a4ca371",
+      "bytes": 416359
+    },
+    {
+      "slug": "worthington-enterprises",
+      "path": "/images/products/worthington-enterprises/worthington-enterprises-millfall.jpg",
+      "filename": "worthington-enterprises-millfall.jpg",
+      "grade": "soft",
+      "sha256": "0edae7658218f6f9808f9a5791033a1731c41a934cdf2e31d6fc3dcfe0c27891",
+      "bytes": 333689
+    }
+  ],
+  "products": [
+    {
+      "slug": "dmg-mori",
+      "product_name": "DMG MORI CNC Machining Centers and Turning Machines",
+      "supplier_name": "DMG MORI AG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.dmgmori.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/dmg-mori/dmg-mori-millfall.jpg"
+      ],
+      "grade": "ok",
+      "soft_reason": null
+    },
+    {
+      "slug": "allied-tube-conduit",
+      "product_name": "Allied Tube EMT IMC Rigid Conduit and Galvanized Mechanical Tubing",
+      "supplier_name": "Allied Tube & Conduit",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.atkore.com/about-us/brands/allied-tube-conduit",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/allied-tube-conduit/allied-conduit.jpg",
+        "/images/products/allied-tube-conduit/allied-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared galvanized pipe-bundle + glycol HVAC install \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "ammeraal-beltech",
+      "product_name": "Ammeraal Beltech Conveyor Process and Modular Belting",
+      "supplier_name": "Ammeraal Beltech",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.ammeraalbeltech.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ammeraal-beltech/ammeraal-beltech-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not conveyor belts close-up"
+    },
+    {
+      "slug": "aubert-duval",
+      "product_name": "Aubert & Duval Specialty Steels Superalloys and Forgings",
+      "supplier_name": "Aubert & Duval",
+      "category": "Steel & Metals",
+      "source_url": "https://www.aubertduval.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/aubert-duval/aubert-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared street rebar staging \u2014 steel category soft (not specialty steels/forgings)"
+    },
+    {
+      "slug": "bando-chemical",
+      "product_name": "Bando Power Transmission Conveyor and Automotive Belts",
+      "supplier_name": "Bando Chemical Industries Ltd.",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.bandogrp.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/bando-chemical/bando-chemical-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not power-transmission belts"
+    },
+    {
+      "slug": "calpipe-industries",
+      "product_name": "Calpipe Stainless Steel Conduit Systems and PVC-Coated Conduit",
+      "supplier_name": "Calpipe Industries",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.calpipe.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/calpipe-industries/calpipe-industries.jpg",
+        "/images/products/calpipe-industries/calpipe-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes/conduit type-match only"
+    },
+    {
+      "slug": "ejot",
+      "product_name": "EJOT Industrial Fasteners and Self-Tapping Screws",
+      "supplier_name": "EJOT Holding GmbH & Co. KG",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.ejot.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ejot/ejot-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not industrial fasteners"
+    },
+    {
+      "slug": "gibson-stainless",
+      "product_name": "Gibson Stainless Rigid Conduit Fittings and Strut",
+      "supplier_name": "Gibson Stainless & Specialty Inc.",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.gibsonstainless.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/gibson-stainless/gibson-product.jpg",
+        "/images/products/gibson-stainless/gibson-stainless.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category stainless conduit type-match only"
+    },
+    {
+      "slug": "haynes-international",
+      "product_name": "Haynes Nickel and Cobalt Superalloy Flat and Long Products",
+      "supplier_name": "Haynes International Inc.",
+      "category": "Steel & Metals",
+      "source_url": "https://www.haynesintl.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/haynes-international/haynes-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared street rebar staging \u2014 steel category soft (not Ni/Co superalloy flat/long)"
+    },
+    {
+      "slug": "keyence",
+      "product_name": "KEYENCE Factory Automation Sensors and Machine Vision Systems",
+      "supplier_name": "KEYENCE Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.keyence.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/keyence/keyence-main.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared sensor/conveyor lab \u2014 soft category automation sensors"
+    },
+    {
+      "slug": "kuka",
+      "product_name": "KUKA Industrial Robots and Automation Cells",
+      "supplier_name": "KUKA AG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.kuka.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/kuka/kuka-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared sensor/conveyor lab \u2014 soft automation category (not industrial robots/cells)"
+    },
+    {
+      "slug": "maruichi-leavitt",
+      "product_name": "Maruichi Leavitt ERW Structural and Mechanical Steel Tube",
+      "supplier_name": "Maruichi Leavitt Pipe & Tube",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.leavitt-tube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/maruichi-leavitt/maruichi-leavitt.jpg",
+        "/images/products/maruichi-leavitt/maruichi-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category tubes type-match only"
+    },
+    {
+      "slug": "mazak",
+      "product_name": "Mazak CNC Multi-Tasking Machines and Laser Processing Systems",
+      "supplier_name": "Yamazaki Mazak Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.mazak.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/mazak/mazak-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "mazak-millfall = urban skyscraper/intersection campus exterior \u2014 soft campus not CNC machines"
+    },
+    {
+      "slug": "mitsubishi-electric",
+      "product_name": "Mitsubishi Electric Factory Automation PLCs Drives and Servo Systems",
+      "supplier_name": "Mitsubishi Electric Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.mitsubishielectric.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/mitsubishi-electric/mitsubishi-electric.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared sensor/conveyor lab \u2014 soft FA category (not PLC/drive product still)"
+    },
+    {
+      "slug": "nord-lock",
+      "product_name": "Nord-Lock Wedge-Locking Washers and Bolted Joint Solutions",
+      "supplier_name": "Nord-Lock Group",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.nord-lock.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/nord-lock/nord-lock-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "nord-lock-millfall = generic bolts/nuts on terracotta \u2014 soft fasteners (not wedge-locking washers)"
+    },
+    {
+      "slug": "nucor-tubular",
+      "product_name": "Nucor Tubular HSS Hollow Structural Sections and ERW Pipe",
+      "supplier_name": "Nucor Tubular Products",
+      "category": "Tube & Pipes",
+      "source_url": "https://nucortubular.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/nucor-tubular/nucor-product.jpg",
+        "/images/products/nucor-tubular/nucor-tubular.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category HSS/tubes type-match only"
+    },
+    {
+      "slug": "okuma",
+      "product_name": "OKUMA CNC Lathes Machining Centers and OSP Controls",
+      "supplier_name": "OKUMA Corporation",
+      "category": "Industrial Parts",
+      "source_url": "https://www.okuma.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/okuma/okuma-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "okuma-millfall = OKUMA facility exterior with brand logo \u2014 soft campus (not CNC lathes/centers)"
+    },
+    {
+      "slug": "optibelt",
+      "product_name": "Optibelt V-Belts Timing Belts and Ribbed Drive Belts",
+      "supplier_name": "Optibelt GmbH",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.optibelt.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/optibelt/optibelt-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared blue mill bearing-housing machinery \u2014 soft mill machinery not V/timing belts"
+    },
+    {
+      "slug": "ovako",
+      "product_name": "Ovako Engineering Steel Bars Tubes and Rings",
+      "supplier_name": "Ovako AB",
+      "category": "Steel & Metals",
+      "source_url": "https://www.ovako.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ovako/ovako-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared street rebar staging \u2014 steel category soft (not engineering steel bars/tubes/rings)"
+    },
+    {
+      "slug": "pregis",
+      "product_name": "Pregis Protective Packaging Films and Void-Fill Systems",
+      "supplier_name": "Pregis LLC",
+      "category": "Packaging",
+      "source_url": "https://www.pregis.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/pregis/pregis-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "pregis-millfall = pulp/paper mill aerial in forest \u2014 soft mill campus not protective films/void-fill"
+    },
+    {
+      "slug": "ptc",
+      "product_name": "PTC Drawn-Over-Mandrel Mechanical Tubing and Cold-Drawn Pipe",
+      "supplier_name": "PTC",
+      "category": "Tube & Pipes",
+      "source_url": "https://ptcsteel.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/ptc/ptc-main.jpg",
+        "/images/products/ptc/ptc-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category DOM/mechanical tubing type-match only"
+    },
+    {
+      "slug": "schott-ag",
+      "product_name": "SCHOTT Pharma Glass Tubing Vials and Specialty Glass Packaging",
+      "supplier_name": "SCHOTT AG",
+      "category": "Packaging",
+      "source_url": "https://www.schott.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/schott-ag/schott-ag.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "schott-ag = palletized shrink-wrapped glass bottles \u2014 soft glass packaging category (not pharma tubing/vials brand)"
+    },
+    {
+      "slug": "swiss-steel",
+      "product_name": "Swiss Steel Group Special Long Steel and Tool Steels",
+      "supplier_name": "Swiss Steel Group",
+      "category": "Steel & Metals",
+      "source_url": "https://www.swisssteel-group.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/swiss-steel/swiss-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared street rebar staging \u2014 steel category soft (not special long/tool steel)"
+    },
+    {
+      "slug": "vega-grieshaber",
+      "product_name": "VEGA Level Measurement Sensors and Pressure Transmitters",
+      "supplier_name": "VEGA Grieshaber KG",
+      "category": "Industrial Parts",
+      "source_url": "https://www.vega.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/vega-grieshaber/vega-grieshaber.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared sensor/conveyor lab \u2014 soft sensors category (not level/pressure transmitters)"
+    },
+    {
+      "slug": "vest-llc",
+      "product_name": "Vest Welded HSS Structural and Mechanical Steel Tubing",
+      "supplier_name": "Vest LLC",
+      "category": "Tube & Pipes",
+      "source_url": "https://vesttubellc.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/vest-llc/vest-llc.jpg",
+        "/images/products/vest-llc/vest-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category HSS/tubes type-match only"
+    },
+    {
+      "slug": "voestalpine-krems",
+      "product_name": "Voestalpine Krems Precision Welded Steel Tubes and Cold-Formed Sections",
+      "supplier_name": "Voestalpine Krems GmbH",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.voestalpine.com/krems/en/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/voestalpine-krems/voestalpine-krems.jpg",
+        "/images/products/voestalpine-krems/voestalpine-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category precision welded tubes type-match only"
+    },
+    {
+      "slug": "western-tube-conduit",
+      "product_name": "Western Tube EMT Rigid Conduit and Fence Framework Tubing",
+      "supplier_name": "Western Tube & Conduit",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.westerntube.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/western-tube-conduit/western-conduit.jpg",
+        "/images/products/western-tube-conduit/western-product.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "shared pipe-bundle + glycol HVAC \u2014 category EMT/conduit type-match only"
+    },
+    {
+      "slug": "worthington-enterprises",
+      "product_name": "Worthington Pressure Cylinders and Industrial Steel Products",
+      "supplier_name": "Worthington Enterprises",
+      "category": "Steel & Metals",
+      "source_url": "https://www.worthingtonenterprises.com/",
+      "unit_price": null,
+      "price_source_type": "rfq",
+      "image_paths": [
+        "/images/products/worthington-enterprises/worthington-enterprises-millfall.jpg"
+      ],
+      "grade": "soft",
+      "soft_reason": "worthington millfall = street rebar staging \u2014 steel category soft (not pressure cylinders)"
+    }
+  ]
+}

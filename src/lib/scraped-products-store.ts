@@ -4,7 +4,7 @@ import {
   type ScrapedProduct,
 } from "@/data/scraped-products";
 import type { Product, ProductCategory } from "@/data/products";
-import { overlayPackProductImages, packProducts } from "@/data/pack-catalog";
+import { mergePackProducts, overlayPackProductImages, packProducts } from "@/data/pack-catalog";
 import { persistProductImage } from "@/lib/image-storage";
 
 /* ------------------------------------------------------------------ */
@@ -122,7 +122,7 @@ export async function listScrapedProducts(): Promise<ScrapedProduct[]> {
       orderBy: { scrapedAt: "desc" },
     });
     if (rows.length) {
-      return rows.map((r) => overlayPackProductImages(mapRow(r as ScrapedRow)));
+      return mergePackProducts(rows.map((r) => mapRow(r as ScrapedRow)));
     }
   } catch {
     // table not provisioned — fall back to the in-memory overlay/seed
