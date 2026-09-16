@@ -3,6 +3,7 @@
 // feeds it the same cached `getProductsFromDb()` list the rest of the site uses
 // (no extra DB round-trip).
 import type { Product } from "@/data/products";
+import { isCatalogueJunkTitle } from "@/lib/catalogue-junk";
 import { resolveProductImage } from "@/lib/image-fallback";
 
 export type HomeProductItem = {
@@ -33,8 +34,7 @@ export const HOME_PRODUCT_CATEGORIES = [
   "Industrial Parts",
 ] as const;
 
-const SYNTHETIC_SUPPLIER = /all metal|cables house/i;
-const NEXANS_SECTION = /^(nexans\s+)?(transmission|buildings?|distribution)$/i;
+const SYNTHETIC_SUPPLIER = /all[\s-]*metal|allmetal|cables[\s-]*house/i;
 
 /** i18n key (inside `homeProducts.categories`) for a product category label. */
 export function homeCategoryKey(category: string): string {
@@ -87,10 +87,11 @@ export function pickHomeProducts(
     if (p.status && p.status !== "approved") continue;
     if (seen.has(p.id)) continue;
     const supplierName = p.supplierName ?? "";
-    // Outscraper/ALL METAL synthetic SKUs and Nexans website-section pages
-    // (Transmission / Buildings / Distribution) are not mill product stills.
+    // Outscraper/ALL METAL synthetic SKUs and website-section pages
+    // (Buy Metals / Our Products / Transmission / Buildings / Distribution)
+    // are not mill product stills.
     if (SYNTHETIC_SUPPLIER.test(supplierName)) continue;
-    if (/nexans/i.test(supplierName) && NEXANS_SECTION.test(p.name.trim())) continue;
+    if (isCatalogueJunkTitle(p.name, supplierName)) continue;
     const resolved = resolveProductImage({
       images: p.images,
       id: p.id,

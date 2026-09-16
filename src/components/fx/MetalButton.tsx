@@ -37,9 +37,11 @@ export default function MetalButton({
 
   return (
     <FxBoundary fallback={children}>
-      <MetalFx preset={preset} strength={strength} theme={theme} variant={variant} {...rest}>
-        {children}
-      </MetalFx>
+      <span className="relative isolate inline-flex [&_canvas]:pointer-events-none [&_canvas]:mix-blend-soft-light">
+        <MetalFx preset={preset} strength={strength} theme={theme} variant={variant} {...rest}>
+          {children}
+        </MetalFx>
+      </span>
     </FxBoundary>
   );
 }

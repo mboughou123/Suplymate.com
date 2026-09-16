@@ -132,8 +132,8 @@ export default async function AboutPage({
             <h2 className="font-display text-3xl font-bold tracking-tight">{t("ctaTitle")}</h2>
             <p className="mx-auto mt-3 max-w-xl text-white/65">{t("ctaBody")}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <MetalButton preset="chromatic" strength={0.9}>
-                <Link href="/ai-assistant" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy-deep">
+              <MetalButton preset="chromatic" strength={0.9} theme="light">
+                <Link href="/ai-assistant" className="relative z-10 inline-flex items-center gap-2 rounded-full !bg-white px-6 py-3 text-sm font-semibold !text-navy mix-blend-normal">
                   {t("ctaPrimary")} <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>
               </MetalButton>

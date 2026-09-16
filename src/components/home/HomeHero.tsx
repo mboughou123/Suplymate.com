@@ -75,10 +75,11 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
             className="mt-10 flex flex-col items-center justify-center gap-3 animate-fade-up sm:flex-row lg:justify-start"
             style={{ animationDelay: "180ms" }}
           >
-            <MetalButton preset="chromatic" strength={0.95}>
+            <MetalButton preset="chromatic" strength={0.95} theme="light">
               <Link
                 href="/ai-assistant"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow"
+                className="relative z-10 inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full !bg-white px-7 py-3.5 text-sm font-semibold !text-navy mix-blend-normal transition hover:!bg-cyan-soft"
+                style={{ color: "#0D3349", backgroundColor: "#FFFFFF" }}
               >
                 {t("ctaStart")}
                 <ArrowRight className="h-4 w-4" aria-hidden />

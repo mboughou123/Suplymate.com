@@ -127,7 +127,13 @@ export function imageObjectClass(url?: string | null): ObjectClass {
   const path = value;
 
   if (/aerosol|spray-?can|spraycan/.test(path)) return "aerosol_can";
-  if (/spray-?gun|spraygun|paint-?sprayer|paint-?gun/.test(path)) return "spray_gun";
+  if (
+    /spray-?gun|spraygun|paint-?sprayer|paint-?gun|industrial-?nozzle|atomizer|airbrush|\bhvlp\b/.test(
+      path
+    )
+  ) {
+    return "spray_gun";
+  }
   if (/ball-?valve|trunnion|floating-ball/.test(path)) return "ball_valve";
   if (/\bbearing\b|dgbb|acbb/.test(path)) return "bearing";
   if (/(beverage|drink|soda)-?can|can-tab|aluminum-can/.test(path)) return "beverage_can";
@@ -210,7 +216,16 @@ export function imageFitsProduct(
   ) {
     return false;
   }
-  if (product === "cable" && /spray|aerosol|gun/.test(file)) return false;
+  if (product === "cable" && /spray|aerosol|gun|nozzle|atomizer|airbrush|hvlp/.test(file)) {
+    return false;
+  }
+  if (
+    (product === "cable" || product === "precision_ball") &&
+    /\/industrial\/.+\.(jpe?g|png|webp)/.test(file) &&
+    /spray|gun|nozzle|can|aerosol/.test(file)
+  ) {
+    return false;
+  }
   return true;
 }
 

@@ -17,6 +17,10 @@ import {
 } from "@/lib/image-fallback";
 import { pickHomeProducts } from "@/lib/home-products";
 import {
+  excludeCatalogueJunk,
+  isCatalogueJunkTitle,
+} from "@/lib/catalogue-junk";
+import {
   imageFitsProduct,
   imageObjectClass,
   productObjectClass,
@@ -241,6 +245,19 @@ describe("object-class agreement", () => {
     ).toBe("none");
   });
 
+  it("treats industrial nozzle filenames as spray guns", () => {
+    expect(imageObjectClass("/images/products/industrial/industrial-nozzle.jpg")).toBe(
+      "spray_gun"
+    );
+    expect(
+      imageFitsProduct(
+        "/images/products/industrial/industrial-nozzle.jpg",
+        "Distribution",
+        "Cables & Electrical"
+      )
+    ).toBe(false);
+  });
+
   it("does not let Nexans cable SKUs inherit a spray-gun still", () => {
     expect(productObjectClass("Nexans Transmission", "Cables & Electrical")).toBe("cable");
     expect(imageObjectClass("/images/products/industrial/spray-gun.jpg")).toBe("spray_gun");
@@ -354,6 +371,27 @@ describe("pickHomeProducts", () => {
         supplierName: "ALL METAL INDIA PVT. LTD",
         images: ["/images/products/steel.svg"],
       }),
+      product({
+        id: "buy-metals",
+        name: "Buy Metals",
+        category: "Steel & Metals",
+        supplierName: "Metal Supermarkets",
+        images: ["/images/products/steel/jingye-steel/hero.jpg"],
+      }),
+      product({
+        id: "belden-nav",
+        name: "Our Products",
+        category: "Cables & Electrical",
+        supplierName: "Belden",
+        images: ["/images/products/cables/foliflex-cables/housing-wire-gold.jpg"],
+      }),
+      product({
+        id: "allmetal-ball",
+        name: "Acrylic Ball",
+        category: "Industrial Parts",
+        supplierName: "ALLMETAL INDIA",
+        images: ["/images/products/ball/aerosol-cans.jpg"],
+      }),
     ]);
 
     expect(items.map((i) => i.id)).toEqual(["foliflex"]);
@@ -361,8 +399,77 @@ describe("pickHomeProducts", () => {
   });
 });
 
+describe("catalogue junk titles", () => {
+  it("flags nav-dump labels and supplier-prefixed variants", () => {
+    expect(isCatalogueJunkTitle("Buy Metals", "Metal Supermarkets")).toBe(true);
+    expect(isCatalogueJunkTitle("Our Products", "Belden")).toBe(true);
+    expect(isCatalogueJunkTitle("Buildings", "Nexans")).toBe(true);
+    expect(isCatalogueJunkTitle("Distribution", "Nexans")).toBe(true);
+    expect(isCatalogueJunkTitle("Transmission", "Prysmian")).toBe(true);
+    expect(isCatalogueJunkTitle("Nexans Transmission", "Nexans S.A.")).toBe(true);
+    expect(isCatalogueJunkTitle("Belden Our Products", "Belden Inc.")).toBe(true);
+    expect(isCatalogueJunkTitle("Digital Solutions", "Prysmian")).toBe(true);
+    expect(isCatalogueJunkTitle("Electrification", "Prysmian")).toBe(true);
+    expect(isCatalogueJunkTitle("Power Grid", "Prysmian")).toBe(true);
+    expect(
+      isCatalogueJunkTitle("Power Transmission Belts", "Bando Chemical")
+    ).toBe(false);
+    expect(
+      isCatalogueJunkTitle(
+        "Versatile Heavy Duty Prefab Steel Structure Buildings for Factories",
+        "Hangxiao"
+      )
+    ).toBe(false);
+  });
+
+  it("drops junk titles from a catalogue page even when they have a real photo", () => {
+    const page = excludeCatalogueJunk(
+      [
+        card({
+          id: "buy-metals",
+          name: "Buy Metals",
+          imageKind: "real",
+          supplierName: "Metal Supermarkets",
+        }),
+        card({
+          id: "our-products",
+          name: "Our Products",
+          imageKind: "real",
+          supplierName: "Belden",
+        }),
+        card({
+          id: "buildings",
+          name: "Buildings",
+          imageKind: "real",
+          supplierName: "Nexans",
+        }),
+        card({
+          id: "distribution",
+          name: "Distribution",
+          imageKind: "real",
+          supplierName: "Nexans",
+        }),
+        card({
+          id: "transmission",
+          name: "Transmission",
+          imageKind: "real",
+          supplierName: "Prysmian",
+        }),
+        card({
+          id: "foliflex",
+          name: "Foliflex Housing Wire",
+          imageKind: "real",
+          supplierName: "Foliflex Cables",
+        }),
+      ].sort(comparePublicProductCards)
+    );
+    expect(page.map((i) => i.id)).toEqual(["foliflex"]);
+  });
+});
+
 function card(
-  partial: Pick<PublicProductCard, "id" | "name" | "imageKind">
+  partial: Pick<PublicProductCard, "id" | "name" | "imageKind"> &
+    Partial<Pick<PublicProductCard, "supplierName">>
 ): PublicProductCard {
   return {
     category: "Steel & Metals",

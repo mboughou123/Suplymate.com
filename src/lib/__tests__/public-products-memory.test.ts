@@ -25,6 +25,7 @@ vi.mock("@/lib/prisma", () => ({
   },
 }));
 
+import { isCatalogueJunkTitle } from "@/lib/catalogue-junk";
 import { getPublicProductsPage } from "@/lib/public-products";
 import { packProducts } from "@/data/pack-catalog";
 
@@ -51,5 +52,11 @@ describe("public catalogue (no-DB memory path)", () => {
   it("hasPrice filter drops RFQ-only listings", async () => {
     const page = await getPublicProductsPage({ page: 1, pageSize: 500, hasPrice: true });
     expect(page.items.every((c) => c.priceLabel && !/\$0\.00/.test(c.priceLabel))).toBe(true);
+  });
+
+  it("excludes nav-dump titles from page 1", async () => {
+    const page = await getPublicProductsPage({ page: 1, pageSize: 24 });
+    const junk = page.items.filter((c) => isCatalogueJunkTitle(c.name, c.supplierName));
+    expect(junk.map((c) => c.name)).toEqual([]);
   });
 });
