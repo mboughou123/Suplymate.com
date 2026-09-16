@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRight, Check, Factory, TrendingUp, Atom } from "lucide-react";
 import AiOrb from "@/components/fx/AiOrb";
 import Beam from "@/components/fx/Beam";
-import MetalButton from "@/components/fx/MetalButton";
 
 const STEP_INTERVAL = 1400;
 
@@ -75,16 +74,22 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
             className="mt-10 flex flex-col items-center justify-center gap-3 animate-fade-up sm:flex-row lg:justify-start"
             style={{ animationDelay: "180ms" }}
           >
-            <MetalButton preset="chromatic" strength={0.95} theme="light">
+            <span
+              className="inline-flex rounded-full p-[2px] shadow-[0_10px_28px_-10px_rgba(3,105,161,0.55)]"
+              style={{
+                background:
+                  "linear-gradient(135deg, #38BDF8 0%, #A78BFA 40%, #F472B6 70%, #FDE047 100%)",
+              }}
+            >
               <Link
                 href="/ai-assistant"
-                className="relative z-10 inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full !bg-white px-7 py-3.5 text-sm font-semibold !text-navy mix-blend-normal transition hover:!bg-cyan-soft"
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition hover:bg-cyan-soft"
                 style={{ color: "#0D3349", backgroundColor: "#FFFFFF" }}
               >
                 {t("ctaStart")}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-            </MetalButton>
+            </span>
             <Link
               href="/suppliers"
               className="inline-flex min-w-[12rem] items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"

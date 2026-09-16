@@ -64,7 +64,9 @@ function stableHash(s: string): number {
  */
 function homePhotoPreference(image: string, supplierName: string): number {
   const synthetic = SYNTHETIC_SUPPLIER.test(supplierName) ? -80 : 0;
-  if (/^\/images\/products\//i.test(image) && !/\/ball\/aerosol/i.test(image)) {
+  if (/\/ball\/aerosol/i.test(image)) return -20 + synthetic;
+  if (/aboutus-hero|mill-fallback|millfall/i.test(image)) return 30 + synthetic;
+  if (/^\/images\/products\//i.test(image)) {
     return 100 + synthetic;
   }
   if (/^https?:\/\//i.test(image)) return 10 + synthetic;

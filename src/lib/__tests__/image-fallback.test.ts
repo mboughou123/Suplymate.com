@@ -397,6 +397,26 @@ describe("pickHomeProducts", () => {
     expect(items.map((i) => i.id)).toEqual(["foliflex"]);
     expect(items[0].image).toContain("foliflex-cables");
   });
+
+  it("prefers product pack stills over about-us / mill-fallback heroes", () => {
+    const items = pickHomeProducts([
+      product({
+        id: "tenaris-about",
+        name: "Tenaris Seamless OCTG",
+        category: "Tubes & Pipes",
+        supplierName: "Tenaris S.A.",
+        images: ["/images/products/tenaris/aboutus-hero.jpg"],
+      }),
+      product({
+        id: "youfa-pipe",
+        name: "Youfa Galvanized Pipe",
+        category: "Tubes & Pipes",
+        supplierName: "Youfa",
+        images: ["/images/products/youfa/coated-74.jpg"],
+      }),
+    ]);
+    expect(items[0].id).toBe("youfa-pipe");
+  });
 });
 
 describe("catalogue junk titles", () => {
@@ -411,6 +431,10 @@ describe("catalogue junk titles", () => {
     expect(isCatalogueJunkTitle("Digital Solutions", "Prysmian")).toBe(true);
     expect(isCatalogueJunkTitle("Electrification", "Prysmian")).toBe(true);
     expect(isCatalogueJunkTitle("Power Grid", "Prysmian")).toBe(true);
+    expect(isCatalogueJunkTitle("Allen-Bradley Hardware", "Rockwellautomation")).toBe(
+      true
+    );
+    expect(isCatalogueJunkTitle("All Products", "Swagelok")).toBe(true);
     expect(
       isCatalogueJunkTitle("Power Transmission Belts", "Bando Chemical")
     ).toBe(false);

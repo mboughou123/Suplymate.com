@@ -2,7 +2,7 @@
 // These are not SKUs and must not appear in the public catalogue or homepage grid.
 
 const JUNK_CORE =
-  /^(buy\s+\S.*|our products|transmission|buildings?|distribution|digital solutions|electrification|power grids?|product\s*&\s*cad models)$/i;
+  /^(buy\s+\S.*|our products|all products|product range|transmission|buildings?|distribution|digital solutions|electrification|power grids?|product\s*&\s*cad models|allen[- ]bradley hardware)$/i;
 
 const SUPPLIER_PREFIX =
   /^(nexans|prysmian|belden|metal\s*supermarkets?)\s+/i;
