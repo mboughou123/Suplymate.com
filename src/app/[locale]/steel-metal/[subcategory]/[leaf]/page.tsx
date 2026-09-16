@@ -5,6 +5,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
   getSteelMetalLeaf,
+  isHeldFromMillNav,
   steelMetalLeafParams,
 } from "@/data/taxonomy/steel-metal";
 import { findPackListingsForLeaf } from "@/lib/steel-metal-listings";
@@ -24,7 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, subcategory, leaf } = await params;
   const row = getSteelMetalLeaf(subcategory, leaf);
-  if (!row) return {};
+  if (!row || isHeldFromMillNav(row.subcategory.id)) return {};
   const t = await getTranslations({ locale, namespace: "steelMetal" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
   return {
@@ -45,7 +46,7 @@ function flattenQuery(query: Record<string, string | string[] | undefined>): Rec
 export default async function SteelMetalLeafPage({ params, searchParams }: Props) {
   const { subcategory, leaf } = await params;
   const row = getSteelMetalLeaf(subcategory, leaf);
-  if (!row) notFound();
+  if (!row || isHeldFromMillNav(row.subcategory.id)) notFound();
 
   const t = await getTranslations("steelMetal");
   const query = flattenQuery(await searchParams);

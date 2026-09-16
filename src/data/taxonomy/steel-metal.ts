@@ -28,6 +28,29 @@ export const STEEL_METAL_SUBCATEGORY_IDS = [
 
 export type SteelMetalSubcategoryId = (typeof STEEL_METAL_SUBCATEGORY_IDS)[number];
 
+/** Mill-grade browse v1 (Researcher PARTIAL seal). IDs stay; scrap is held. */
+export const STEEL_METAL_MILL_NAV_IDS = [
+  "carbon-mild-steel",
+  "stainless-steel",
+  "alloy-steel",
+  "tool-steel",
+  "galvanized-coated-steels",
+  "structural-steel",
+  "pipe-tube",
+  "wire-rebar-mesh",
+  "flat-products-specialty",
+  "aluminum",
+  "copper-brass-bronze",
+] as const;
+
+/** Phase-1b sibling — hide behind “More metals”, not primary steel nav. */
+export const STEEL_METAL_MORE_METALS_IDS = ["other-non-ferrous"] as const;
+
+/** Scrap traders / secondary yards — omit from Steel & Metal mill nav. */
+export const STEEL_METAL_HOLD_IDS = ["metal-scrap-secondary"] as const;
+
+export type SteelMetalBrowseLane = "mill" | "more-metals" | "hold";
+
 export type SteelMetalVariants = {
   grades: string[];
   thickness: string[];
@@ -103,7 +126,7 @@ function normalizeLeaf(value: unknown): SteelMetalLeaf | null {
   if (variants.form.length === 0 && forms.length > 0) {
     variants.form = [...forms];
   }
-  return {
+  const normalized: SteelMetalLeaf = {
     id: row.id,
     name: row.name,
     leaf: true,
@@ -113,10 +136,75 @@ function normalizeLeaf(value: unknown): SteelMetalLeaf | null {
     variants,
     buyer_search_examples: asStringArray(row.buyer_search_examples),
   };
+  return applyDisplayOverlay(normalized);
 }
 
 function isSubcategoryId(id: string): id is SteelMetalSubcategoryId {
   return (STEEL_METAL_SUBCATEGORY_IDS as readonly string[]).includes(id);
+}
+
+function uniqueStrings(values: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const value of values) {
+    const key = value.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(value);
+  }
+  return out;
+}
+
+/** Display-only remaps from the Researcher PARTIAL name-gate. IDs never change. */
+function applyDisplayOverlay(leaf: SteelMetalLeaf): SteelMetalLeaf {
+  switch (leaf.id) {
+    case "alloy-steel-plate":
+      return {
+        ...leaf,
+        variants: {
+          ...leaf.variants,
+          grades: leaf.variants.grades.filter((grade) => grade !== "Hardox-equiv"),
+        },
+      };
+    case "zmg-zn-al-mg":
+      return {
+        ...leaf,
+        common_names: uniqueStrings(
+          leaf.common_names.map((name) => (name === "SuperDyma-type" ? "ZM coated" : name)),
+        ),
+      };
+    case "weathering-corten":
+      return {
+        ...leaf,
+        name: "Weathering Steel",
+        common_names: uniqueStrings(["Corten", "COR-TEN", ...leaf.common_names.filter((name) => name.toLowerCase() !== "weathering steel")]),
+      };
+    case "gi-corrugated-roofing":
+      return {
+        ...leaf,
+        common_names: leaf.common_names.map((name) =>
+          name === "Ibrahim/wave profile" ? "wave profile" : name,
+        ),
+      };
+    default:
+      return leaf;
+  }
+}
+
+export function browseLaneFor(id: string): SteelMetalBrowseLane {
+  if ((STEEL_METAL_HOLD_IDS as readonly string[]).includes(id)) return "hold";
+  if ((STEEL_METAL_MORE_METALS_IDS as readonly string[]).includes(id)) return "more-metals";
+  if ((STEEL_METAL_MILL_NAV_IDS as readonly string[]).includes(id)) return "mill";
+  return "hold";
+}
+
+export function isHeldFromMillNav(id: string): boolean {
+  return browseLaneFor(id) === "hold";
+}
+
+export function isPublicSteelMetalBrowse(id: string): boolean {
+  const lane = browseLaneFor(id);
+  return lane === "mill" || lane === "more-metals";
 }
 
 function normalizeTaxonomy(value: unknown): SteelMetalTaxonomy {
@@ -186,6 +274,22 @@ export function listSteelMetalLeaves(): SteelMetalLeafRef[] {
   );
 }
 
+export function listMillNavSubcategories(): SteelMetalSubcategory[] {
+  return STEEL_METAL_MILL_NAV_IDS.map((id) => subcategoryById.get(id)).filter(
+    (cat): cat is SteelMetalSubcategory => Boolean(cat),
+  );
+}
+
+export function listMoreMetalsSubcategories(): SteelMetalSubcategory[] {
+  return STEEL_METAL_MORE_METALS_IDS.map((id) => subcategoryById.get(id)).filter(
+    (cat): cat is SteelMetalSubcategory => Boolean(cat),
+  );
+}
+
+export function listPublicBrowseSubcategories(): SteelMetalSubcategory[] {
+  return [...listMillNavSubcategories(), ...listMoreMetalsSubcategories()];
+}
+
 export function steelMetalHubHref(): string {
   return STEEL_METAL_PATH;
 }
@@ -199,14 +303,16 @@ export function steelMetalLeafHref(subcategoryId: string, leafId: string): strin
 }
 
 export function steelMetalSubcategoryParams(): { subcategory: string }[] {
-  return TAXONOMY.categories.map((c) => ({ subcategory: c.id }));
+  return listPublicBrowseSubcategories().map((c) => ({ subcategory: c.id }));
 }
 
 export function steelMetalLeafParams(): { subcategory: string; leaf: string }[] {
-  return listSteelMetalLeaves().map(({ subcategory, leaf }) => ({
-    subcategory: subcategory.id,
-    leaf: leaf.id,
-  }));
+  return listSteelMetalLeaves()
+    .filter(({ subcategory }) => isPublicSteelMetalBrowse(subcategory.id))
+    .map(({ subcategory, leaf }) => ({
+      subcategory: subcategory.id,
+      leaf: leaf.id,
+    }));
 }
 
 const PRICE_KEY = /^(price|fob|unitPrice|basePrice|usd|cost)$/i;

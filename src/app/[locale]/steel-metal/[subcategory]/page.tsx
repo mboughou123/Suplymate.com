@@ -5,12 +5,12 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import {
   getSteelMetalSubcategory,
-  getSteelMetalTaxonomy,
+  isHeldFromMillNav,
   steelMetalLeafHref,
-  steelMetalSubcategoryHref,
   steelMetalSubcategoryParams,
 } from "@/data/taxonomy/steel-metal";
 import TaxonomyBreadcrumb from "@/components/steel-metal/TaxonomyBreadcrumb";
+import SteelMetalBrowseNav from "@/components/steel-metal/SteelMetalBrowseNav";
 
 type Props = {
   params: Promise<{ locale: string; subcategory: string }>;
@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, subcategory } = await params;
   const category = getSteelMetalSubcategory(subcategory);
-  if (!category) return {};
+  if (!category || isHeldFromMillNav(category.id)) return {};
   const t = await getTranslations({ locale, namespace: "steelMetal" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
   return {
@@ -35,10 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SteelMetalSubcategoryPage({ params }: Props) {
   const { subcategory } = await params;
   const category = getSteelMetalSubcategory(subcategory);
-  if (!category) notFound();
+  if (!category || isHeldFromMillNav(category.id)) notFound();
 
   const t = await getTranslations("steelMetal");
-  const taxonomy = getSteelMetalTaxonomy();
 
   return (
     <div className="min-h-screen bg-white">
@@ -62,28 +61,7 @@ export default async function SteelMetalSubcategoryPage({ params }: Props) {
 
       <div className="container-page grid gap-10 py-10 lg:grid-cols-12">
         <aside className="lg:col-span-3">
-          <p className="text-xs font-semibold uppercase tracking-wider text-ink-dim">
-            {t("allSubcategories")}
-          </p>
-          <nav className="mt-3 space-y-1" aria-label={t("allSubcategories")}>
-            {taxonomy.categories.map((item) => {
-              const current = item.id === category.id;
-              return (
-                <Link
-                  key={item.id}
-                  href={steelMetalSubcategoryHref(item.id)}
-                  aria-current={current ? "page" : undefined}
-                  className={`block cursor-pointer rounded-xl px-3 py-2 text-sm transition-colors duration-200 ${
-                    current
-                      ? "bg-navy text-white"
-                      : "text-ink-muted hover:bg-slate-50 hover:text-ink"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-          </nav>
+          <SteelMetalBrowseNav currentId={category.id} />
         </aside>
 
         <div className="lg:col-span-9">

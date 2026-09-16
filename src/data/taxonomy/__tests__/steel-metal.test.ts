@@ -4,14 +4,22 @@ import { describe, expect, it } from "vitest";
 import {
   STEEL_METAL_PATH,
   STEEL_METAL_SUBCATEGORY_IDS,
+  STEEL_METAL_MILL_NAV_IDS,
+  STEEL_METAL_MORE_METALS_IDS,
+  STEEL_METAL_HOLD_IDS,
+  browseLaneFor,
   getSteelMetalTaxonomy,
   getSteelMetalSubcategory,
   getSteelMetalLeaf,
+  isHeldFromMillNav,
+  listMillNavSubcategories,
+  listMoreMetalsSubcategories,
   listSteelMetalLeaves,
   steelMetalHubHref,
   steelMetalSubcategoryHref,
   steelMetalLeafHref,
   steelMetalLeafParams,
+  steelMetalSubcategoryParams,
   taxonomyHasPricingFields,
 } from "@/data/taxonomy/steel-metal";
 
@@ -78,14 +86,68 @@ describe("Steel & Metal taxonomy", () => {
     );
   });
 
-  it("enumerates static params for every subcategory and leaf route", () => {
+  it("ships mill nav v1 as 11 subcats in steel-first order and holds scrap", () => {
+    expect([...STEEL_METAL_MILL_NAV_IDS]).toEqual([
+      "carbon-mild-steel",
+      "stainless-steel",
+      "alloy-steel",
+      "tool-steel",
+      "galvanized-coated-steels",
+      "structural-steel",
+      "pipe-tube",
+      "wire-rebar-mesh",
+      "flat-products-specialty",
+      "aluminum",
+      "copper-brass-bronze",
+    ]);
+    expect(listMillNavSubcategories().map((c) => c.id)).toEqual([...STEEL_METAL_MILL_NAV_IDS]);
+    expect([...STEEL_METAL_MORE_METALS_IDS]).toEqual(["other-non-ferrous"]);
+    expect(listMoreMetalsSubcategories().map((c) => c.id)).toEqual(["other-non-ferrous"]);
+    expect([...STEEL_METAL_HOLD_IDS]).toEqual(["metal-scrap-secondary"]);
+    expect(browseLaneFor("carbon-mild-steel")).toBe("mill");
+    expect(browseLaneFor("other-non-ferrous")).toBe("more-metals");
+    expect(browseLaneFor("metal-scrap-secondary")).toBe("hold");
+    expect(isHeldFromMillNav("metal-scrap-secondary")).toBe(true);
+    expect(listMillNavSubcategories().some((c) => c.id === "metal-scrap-secondary")).toBe(false);
+  });
+
+  it("applies Researcher display remaps without changing ids", () => {
+    const plate = getSteelMetalLeaf("alloy-steel", "alloy-steel-plate");
+    expect(plate?.leaf.id).toBe("alloy-steel-plate");
+    expect(plate?.leaf.variants.grades).toContain("AR400");
+    expect(plate?.leaf.variants.grades).toContain("AR500");
+    expect(plate?.leaf.variants.grades).toContain("NM400");
+    expect(plate?.leaf.variants.grades).not.toContain("Hardox-equiv");
+
+    const zmg = getSteelMetalLeaf("galvanized-coated-steels", "zmg-zn-al-mg");
+    expect(zmg?.leaf.common_names).toContain("Zn-Al-Mg");
+    expect(zmg?.leaf.common_names).toContain("ZM coated");
+    expect(zmg?.leaf.common_names.join(" ")).not.toMatch(/SuperDyma/i);
+
+    const weathering = getSteelMetalLeaf("flat-products-specialty", "weathering-corten");
+    expect(weathering?.leaf.id).toBe("weathering-corten");
+    expect(weathering?.leaf.name).toBe("Weathering Steel");
+    expect(weathering?.leaf.common_names).toEqual(expect.arrayContaining(["Corten", "COR-TEN"]));
+
+    const roofing = getSteelMetalLeaf("galvanized-coated-steels", "gi-corrugated-roofing");
+    expect(roofing?.leaf.common_names).toEqual(
+      expect.arrayContaining(["corrugated sheet", "trapezoidal sheet", "wave profile"]),
+    );
+    expect(roofing?.leaf.common_names.join(" ")).not.toMatch(/Ibrahim/i);
+  });
+
+  it("enumerates public browse params without the held scrap subtree", () => {
     const params = steelMetalLeafParams();
-    expect(params).toHaveLength(85);
     expect(params).toContainEqual({
       subcategory: "carbon-mild-steel",
       leaf: "carbon-steel-sheet",
     });
-    expect(new Set(params.map((p) => `${p.subcategory}/${p.leaf}`)).size).toBe(85);
+    expect(params.some((p) => p.subcategory === "metal-scrap-secondary")).toBe(false);
+    expect(steelMetalSubcategoryParams().map((p) => p.subcategory)).toEqual([
+      ...STEEL_METAL_MILL_NAV_IDS,
+      ...STEEL_METAL_MORE_METALS_IDS,
+    ]);
+    expect(listSteelMetalLeaves()).toHaveLength(85);
   });
 
   it("is wired to hub, subcategory, and leaf App Router pages", () => {
