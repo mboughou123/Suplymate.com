@@ -51,7 +51,8 @@
     "myProducts": "My products",
     "rfqs": "RFQs",
     "account": "Account",
-    "careers": "Careers"
+    "careers": "Careers",
+    "steelMetal": "Steel & Metal"
   },
   "megaMenu": {
     "menuLabel": "Main",
@@ -81,7 +82,9 @@
       "watch": "Watch",
       "watchDescription": "Track material prices and rate signals to time your purchase.",
       "catalogue": "Product catalogue",
-      "catalogueDescription": "Listed products with supplier photos — steel, cables, pipes, packaging and more."
+      "catalogueDescription": "Listed products with supplier photos — steel, cables, pipes, packaging and more.",
+      "steelMetal": "Steel & Metal",
+      "steelMetalDescription": "Browse 85 metal types by grade, form, thickness and finish — then request a quote."
     },
     "solutions": {
       "byIndustry": "By industry",
@@ -1479,5 +1482,51 @@
     "saving": "Enregistrement…",
     "signingIn": "Inicio de sesión…",
     "creatingAccount": "Création du cuenta…"
+  },
+  "steelMetal": {
+    "eyebrow": "Material directory",
+    "hubTitle": "Steel & Metal",
+    "hubSubtitle": "Browse every metal type buyers actually specify — sheet, plate, coil, tube, bar, and the grades that go with them. Quotes are requested against a spec. Suplymate does not invent FOB prices.",
+    "hubPolicy": "RFQ only — no invented mill prices",
+    "statSubcategories": "{count, plural, one {# subcategory} other {# subcategories}}",
+    "statLeaves": "{count, plural, one {# material type} other {# material types}}",
+    "browseTypes": "Browse {count, plural, one {# type} other {# types}}",
+    "alsoCalled": "Also called",
+    "commonNames": "Common names",
+    "forms": "Forms",
+    "subcategorySubtitle": "{count, plural, one {# material type} other {# material types}} with grades, forms and standards buyers search for.",
+    "allSubcategories": "All Steel & Metal groups",
+    "leafCount": "{count, plural, one {# type} other {# types}}",
+    "viewSpecs": "View specs",
+    "breadcrumbHub": "Steel & Metal",
+    "breadcrumbHome": "Home",
+    "facetForm": "Form",
+    "facetGrade": "Grade",
+    "facetThickness": "Thickness",
+    "facetFinish": "Finish",
+    "facetStandard": "Standard",
+    "otherSpecs": "Other specs",
+    "buyerSearches": "How buyers search this type",
+    "clearFacet": "Clear",
+    "selectedSpec": "Selected specification",
+    "noFacetSelected": "Select grade, form, thickness or finish to tighten the RFQ.",
+    "rfqTitle": "Request a quote",
+    "rfqBody": "Send this specification to suppliers. Quantity is required. Pricing is quoted — never listed as a made-up FOB.",
+    "rfqQuantity": "Quantity",
+    "rfqQuantityPlaceholder": "e.g. 40 tons / 2 containers",
+    "rfqDestination": "Destination",
+    "rfqDestinationPlaceholder": "Port or city",
+    "rfqDetails": "Notes for suppliers",
+    "rfqSubmit": "Request quote",
+    "rfqSubmitting": "Sending request…",
+    "rfqNeedQuantity": "Enter a quantity so suppliers can quote.",
+    "relatedListings": "Matching mill catalogue items",
+    "relatedListingsEmpty": "No pack-catalog stills are tagged to this type yet. Request a quote against the specification above.",
+    "relatedListingsHint": "Local mill stills from the pack catalogue. Request a quote — public unit prices are not shown here.",
+    "browseCatalogue": "Search product catalogue",
+    "askMate": "Ask Mate about this spec",
+    "priceCharts": "Material price context",
+    "emptyFacets": "Specification notes",
+    "leafMeta": "{subcategory} · Steel & Metal"
   }
 }
