@@ -415,7 +415,8 @@ describe("pickHomeProducts", () => {
         images: ["/images/products/youfa/coated-74.jpg"],
       }),
     ]);
-    expect(items[0].id).toBe("youfa-pipe");
+    expect(items.map((i) => i.id)).toEqual(["youfa-pipe"]);
+    expect(items.some((i) => /aboutus-hero/i.test(i.image))).toBe(false);
   });
 });
 

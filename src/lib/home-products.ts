@@ -103,6 +103,9 @@ export function pickHomeProducts(
       category: p.category,
     });
     if (resolved.kind !== "real" || !resolved.url) continue;
+    // About-us / mill-fallback heroes are factory marketing stills, not SKUs
+    // (Tenaris aboutus-hero was still winning the homepage grid).
+    if (/aboutus-hero|mill-fallback|millfall/i.test(resolved.url)) continue;
     seen.add(p.id);
     candidates.push({
       id: p.id,
