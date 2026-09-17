@@ -9,14 +9,52 @@
     "trumpf",
     "ati",
     "kaiser-aluminum",
-    "victaulic"
+    "victaulic",
+    "advanced-drainage-systems",
+    "bormioli-pharma",
+    "bystronic",
+    "camozzi",
+    "carlisle-construction",
+    "ccl-industries",
+    "fuji-seal",
+    "john-crane",
+    "nelipak",
+    "oliver-healthcare",
+    "tekni-plex",
+    "tokyo-steel",
+    "uponor",
+    "wl-plastics",
+    "jm-eagle",
+    "amada",
+    "gf-piping-systems",
+    "mitutoyo",
+    "nipro-pharmapackaging"
   ],
   "ok": [
     "rehau",
     "trumpf",
     "ati",
     "kaiser-aluminum",
-    "victaulic"
+    "victaulic",
+    "advanced-drainage-systems",
+    "bormioli-pharma",
+    "bystronic",
+    "camozzi",
+    "carlisle-construction",
+    "ccl-industries",
+    "fuji-seal",
+    "john-crane",
+    "nelipak",
+    "oliver-healthcare",
+    "tekni-plex",
+    "tokyo-steel",
+    "uponor",
+    "wl-plastics",
+    "jm-eagle",
+    "amada",
+    "gf-piping-systems",
+    "mitutoyo",
+    "nipro-pharmapackaging"
   ],
   "soft": [
     {
@@ -34,46 +72,72 @@
     {
       "slug": "kabelwerk-eupen",
       "reason": "single real Eupen Kabelwerk chimney still — not a confirmed plant-exterior claim"
+    },
+    {
+      "slug": "aquatherm",
+      "reason": "Attendorn aerial campus with silos/yard plausible but unbranded from altitude — not clearly labeled Aquatherm plant"
+    },
+    {
+      "slug": "bonnell-aluminum",
+      "reason": "plausible aluminum extrusion cooling/handling line interior but fully unbranded"
+    },
+    {
+      "slug": "charlotte-pipe",
+      "reason": "Oakboro-style foundry molten casting floor clears HDPE stock cluster but no Charlotte Pipe branding visible"
+    },
+    {
+      "slug": "ipex",
+      "reason": "large-diameter PVC/PVCO extrusion floor clears shared HDPE/PVC stock but unbranded operator/console still"
+    },
+    {
+      "slug": "iscar",
+      "reason": "Tefen-style aerial manufacturing campus plausible but no ISCAR facade/logo readable from altitude"
+    },
+    {
+      "slug": "liqui-box",
+      "reason": "bag-in-box aseptic filling line clears Coke/box stock but unbranded production still (MM watermark)"
+    },
+    {
+      "slug": "novolex",
+      "reason": "packaging converting/blow-mold floor clears kraft-pulp cluster but unbranded plant interior"
+    },
+    {
+      "slug": "special-metals",
+      "reason": "hot-billet forging/manipulator production banner plausible for Special Metals but unbranded"
+    },
+    {
+      "slug": "superior-essex",
+      "reason": "copper magnet-wire bobbin plant-floor still plausible but unbranded close-up"
+    },
+    {
+      "slug": "vitro",
+      "reason": "IS glass mold take-out production still clears kraft-pulp cluster but unbranded (could be any glass former)"
+    },
+    {
+      "slug": "walsin-lihwa",
+      "reason": "wire/cable reel mill interior with East-Asian crane mark clears HDPE stock but no Walsin Lihwa branding"
+    },
+    {
+      "slug": "heidenhain",
+      "reason": "unbranded Traunreut-style campus walkway still — not a confirmed plant-exterior claim"
+    },
+    {
+      "slug": "johns-manville",
+      "reason": "unbranded Colorado campus aerial — HQ/campus from altitude, not a confirmed plant-exterior claim"
+    },
+    {
+      "slug": "makino",
+      "reason": "unbranded Fuji-footprint aerial plant campus — plausible but not a brand-confirmed mill header"
+    },
+    {
+      "slug": "seco-tools",
+      "reason": "shop-floor machining interior with people — mill interior, not a confirmed plant-exterior claim"
     }
   ],
   "hold_out": [
-    "advanced-drainage-systems",
-    "bormioli-pharma",
-    "bystronic",
-    "camozzi",
-    "carlisle-construction",
-    "ccl-industries",
-    "fuji-seal",
-    "john-crane",
-    "nelipak",
-    "oliver-healthcare",
-    "tekni-plex",
-    "tokyo-steel",
-    "uponor",
-    "wl-plastics",
-    "aquatherm",
-    "bonnell-aluminum",
-    "charlotte-pipe",
-    "ipex",
-    "iscar",
-    "liqui-box",
-    "novolex",
-    "special-metals",
-    "superior-essex",
-    "vitro",
-    "walsin-lihwa",
-    "jm-eagle",
-    "amada",
-    "makino",
-    "gf-piping-systems",
-    "nipro-pharmapackaging",
-    "commscope",
-    "mitutoyo",
     "tsubaki",
-    "johns-manville",
-    "heidenhain",
     "miller-electric",
-    "seco-tools"
+    "commscope"
   ],
   "blocked_out": [
     "rathgibson",
@@ -81,37 +145,58 @@
     "tolomatic",
     "clippard"
   ],
-  "soft_hold_out": [
-    "amada",
-    "makino",
-    "gf-piping-systems",
-    "nipro-pharmapackaging",
-    "commscope",
-    "mitutoyo",
-    "tsubaki",
-    "johns-manville",
-    "heidenhain",
-    "miller-electric",
-    "seco-tools"
-  ],
   "locked": "Soft/OK from #48–#64 including 9/15 mills+products and 9/17 stills-only PRs locked",
-  "wire_recommendation": "Wire OK5 + soft4 (include). HOLD30 + soft-hold11 + iscar stay out. RFQ only.",
+  "wire_recommendation": "Wire day OK5+soft4 + HOLD30 OK14+soft11 + jm-eagle + soft-hold11 OK4+soft4 (43 mills). OUT: tsubaki · miller-electric · commscope + hard blocked4. Products: day 9 RFQ only.",
   "altra_note": "relabel as OEM/brand manufacturer group (not a single plant); drop duplicate portrait",
   "prior_wired_locked": true,
   "rfq_only": true,
   "still_index": {
     "root": "public/images/suppliers",
-    "file_count": 23,
+    "file_count": 57,
     "slugs": [
       "rehau",
       "trumpf",
       "ati",
       "kaiser-aluminum",
       "victaulic",
+      "advanced-drainage-systems",
+      "bormioli-pharma",
+      "bystronic",
+      "camozzi",
+      "carlisle-construction",
+      "ccl-industries",
+      "fuji-seal",
+      "john-crane",
+      "nelipak",
+      "oliver-healthcare",
+      "tekni-plex",
+      "tokyo-steel",
+      "uponor",
+      "wl-plastics",
+      "jm-eagle",
+      "amada",
+      "gf-piping-systems",
+      "mitutoyo",
+      "nipro-pharmapackaging",
       "altra-industrial-motion",
       "fronius",
       "renishaw",
-      "kabelwerk-eupen"
+      "kabelwerk-eupen",
+      "aquatherm",
+      "bonnell-aluminum",
+      "charlotte-pipe",
+      "ipex",
+      "iscar",
+      "liqui-box",
+      "novolex",
+      "special-metals",
+      "superior-essex",
+      "vitro",
+      "walsin-lihwa",
+      "heidenhain",
+      "johns-manville",
+      "makino",
+      "seco-tools"
     ],
     "files": [
       "public/images/suppliers/rehau/rehau_01.jpg",
@@ -130,13 +215,47 @@
       "public/images/suppliers/kaiser-aluminum/kaiser-aluminum_04.jpg",
       "public/images/suppliers/victaulic/victaulic_01.jpg",
       "public/images/suppliers/victaulic/victaulic_02.jpg",
+      "public/images/suppliers/advanced-drainage-systems/advanced-drainage-systems_01.jpg",
+      "public/images/suppliers/bormioli-pharma/bormioli-pharma_01.jpg",
+      "public/images/suppliers/bystronic/bystronic_01.jpg",
+      "public/images/suppliers/camozzi/camozzi_01.jpg",
+      "public/images/suppliers/carlisle-construction/carlisle-construction_01.jpg",
+      "public/images/suppliers/ccl-industries/ccl-industries_01.jpg",
+      "public/images/suppliers/fuji-seal/fuji-seal_01.jpg",
+      "public/images/suppliers/john-crane/john-crane_01.jpg",
+      "public/images/suppliers/nelipak/nelipak_01.jpg",
+      "public/images/suppliers/oliver-healthcare/oliver-healthcare_01.jpg",
+      "public/images/suppliers/tekni-plex/tekni-plex_01.jpg",
+      "public/images/suppliers/tokyo-steel/tokyo-steel_01.jpg",
+      "public/images/suppliers/uponor/uponor_01.jpg",
+      "public/images/suppliers/wl-plastics/wl-plastics_01.jpg",
+      "public/images/suppliers/jm-eagle/jm-eagle_01.jpg",
+      "public/images/suppliers/amada/amada_01.jpg",
+      "public/images/suppliers/gf-piping-systems/gf-piping-systems_01.jpg",
+      "public/images/suppliers/mitutoyo/mitutoyo_01.jpg",
+      "public/images/suppliers/nipro-pharmapackaging/nipro-pharmapackaging_01.jpg",
       "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_01.jpg",
       "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg",
       "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_03.jpg",
       "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_04.jpg",
       "public/images/suppliers/fronius/fronius_01.jpg",
       "public/images/suppliers/renishaw/renishaw_01.jpg",
-      "public/images/suppliers/kabelwerk-eupen/kabelwerk-eupen_01.jpg"
+      "public/images/suppliers/kabelwerk-eupen/kabelwerk-eupen_01.jpg",
+      "public/images/suppliers/aquatherm/aquatherm_01.jpg",
+      "public/images/suppliers/bonnell-aluminum/bonnell-aluminum_01.jpg",
+      "public/images/suppliers/charlotte-pipe/charlotte-pipe_01.jpg",
+      "public/images/suppliers/ipex/ipex_01.jpg",
+      "public/images/suppliers/iscar/iscar_01.jpg",
+      "public/images/suppliers/liqui-box/liqui-box_01.jpg",
+      "public/images/suppliers/novolex/novolex_01.jpg",
+      "public/images/suppliers/special-metals/special-metals_01.jpg",
+      "public/images/suppliers/superior-essex/superior-essex_01.jpg",
+      "public/images/suppliers/vitro/vitro_01.jpg",
+      "public/images/suppliers/walsin-lihwa/walsin-lihwa_01.jpg",
+      "public/images/suppliers/heidenhain/heidenhain_01.jpg",
+      "public/images/suppliers/johns-manville/johns-manville_01.jpg",
+      "public/images/suppliers/makino/makino_01.jpg",
+      "public/images/suppliers/seco-tools/seco-tools_01.jpg"
     ]
   },
   "products": [
@@ -298,10 +417,19 @@
     }
   ],
   "rules": [
-    "Wire only day OK5 + soft4 mills and their paired RFQ SKUs",
-    "HOLD30 + soft-hold11 + iscar out — no catalogue rows",
+    "Wire 43 mills: day OK5+soft4 + HOLD30 OK14+soft11 + jm-eagle + soft-hold11 OK4+soft4",
+    "OUT tsubaki · miller-electric · commscope + rathgibson · martin-sprocket · tolomatic · clippard — no catalogue rows",
+    "Products: only the 9 day OK+soft paired RFQ SKUs",
     "RFQ only — every product unit_price null",
     "Prefer local stills; no Google Maps / third-party hotlinks",
-    "Altra: OEM/brand manufacturer group, not a single plant"
-  ]
+    "Altra: OEM/brand manufacturer group, not a single plant",
+    "JM Eagle / Amada / GF Piping: branded HQ/campus stills — caption as HQ, not plant-exterior"
+  ],
+  "source_seals": [
+    "d0917-wire-pack/wire-manifest.json",
+    "data/daily-2026-09-17-mills-cleared.json",
+    "data/daily-2026-09-17-jm-eagle-cleared.json",
+    "data/daily-2026-09-17-soft-hold11-cleared.json"
+  ],
+  "jm_eagle_note": "branded HQ exterior; Maps aerial + creosote HOLD cleared"
 }

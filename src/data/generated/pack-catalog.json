@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 367,
-    "suppliersWithPhotos": 347,
+    "suppliers": 401,
+    "suppliersWithPhotos": 381,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 588,
+    "supplierPhotos": 622,
     "suppliersOverlayingDirectory": 10,
     "distributors": [
       "bossard"
@@ -15012,6 +15012,690 @@
       "overlaysExisting": false
     },
     {
+      "id": "advanced-drainage-systems",
+      "packSlug": "advanced-drainage-systems",
+      "pack": "daily-2026-09-17",
+      "name": "Advanced Drainage Systems, Inc.",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Hilliard, United States",
+      "country": "United States",
+      "city": "Hilliard",
+      "website": "https://www.adspipe.com/",
+      "imageUrl": "/images/suppliers/advanced-drainage-systems/advanced-drainage-systems_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/advanced-drainage-systems/advanced-drainage-systems_01.jpg"
+      ],
+      "description": "Advanced Drainage Systems manufactures HDPE corrugated drainage pipe, stormwater systems and on-site septic and agriculture pipe.",
+      "products": [
+        "HDPE corrugated drainage pipe",
+        "Stormwater management systems",
+        "On-site septic and agriculture pipe"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.adspipe.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "bormioli-pharma",
+      "packSlug": "bormioli-pharma",
+      "pack": "daily-2026-09-17",
+      "name": "Bormioli Pharma",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Milan, Italy",
+      "country": "Italy",
+      "city": "Milan",
+      "website": "https://www.bormiolipharma.com/",
+      "imageUrl": "/images/suppliers/bormioli-pharma/bormioli-pharma_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/bormioli-pharma/bormioli-pharma_01.jpg"
+      ],
+      "description": "Bormioli Pharma manufactures pharmaceutical glass packaging, plastic pharma containers and dosing closures.",
+      "products": [
+        "Pharmaceutical glass packaging",
+        "Plastic pharma containers",
+        "Closures and dosing systems"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.bormiolipharma.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "bystronic",
+      "packSlug": "bystronic",
+      "pack": "daily-2026-09-17",
+      "name": "Bystronic AG",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Niederönz, Switzerland",
+      "country": "Switzerland",
+      "city": "Niederönz",
+      "website": "https://www.bystronic.com/",
+      "imageUrl": "/images/suppliers/bystronic/bystronic_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/bystronic/bystronic_01.jpg"
+      ],
+      "description": "Bystronic AG manufactures laser cutting systems, press brakes and tube processing machines.",
+      "products": [
+        "Laser cutting systems",
+        "Press brakes",
+        "Tube processing machines"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.bystronic.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "camozzi",
+      "packSlug": "camozzi",
+      "pack": "daily-2026-09-17",
+      "name": "Camozzi Automation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Brescia, Italy",
+      "country": "Italy",
+      "city": "Brescia",
+      "website": "https://www.camozzi.com/",
+      "imageUrl": "/images/suppliers/camozzi/camozzi_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/camozzi/camozzi_01.jpg"
+      ],
+      "description": "Camozzi Automation manufactures pneumatic components, valves and cylinders and industrial automation fittings.",
+      "products": [
+        "Pneumatic components",
+        "Valves and cylinders",
+        "Industrial automation fittings"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.camozzi.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "carlisle-construction",
+      "packSlug": "carlisle-construction",
+      "pack": "daily-2026-09-17",
+      "name": "Carlisle Construction Materials",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Carlisle, United States",
+      "country": "United States",
+      "city": "Carlisle",
+      "website": "https://www.carlisleccm.com/",
+      "imageUrl": "/images/suppliers/carlisle-construction/carlisle-construction_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/carlisle-construction/carlisle-construction_01.jpg"
+      ],
+      "description": "Carlisle Construction Materials manufactures commercial roofing systems, waterproofing membranes and building-envelope products.",
+      "products": [
+        "Commercial roofing systems",
+        "Waterproofing membranes",
+        "Building envelope products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.carlisleccm.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "ccl-industries",
+      "packSlug": "ccl-industries",
+      "pack": "daily-2026-09-17",
+      "name": "CCL Industries Inc.",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Toronto, Canada",
+      "country": "Canada",
+      "city": "Toronto",
+      "website": "https://www.cclind.com/",
+      "imageUrl": "/images/suppliers/ccl-industries/ccl-industries_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/ccl-industries/ccl-industries_01.jpg"
+      ],
+      "description": "CCL Industries manufactures pressure-sensitive labels, specialty packaging containers and aerosol and tube packaging.",
+      "products": [
+        "Pressure-sensitive labels",
+        "Specialty packaging containers",
+        "Aerosol and tube packaging"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.cclind.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "fuji-seal",
+      "packSlug": "fuji-seal",
+      "pack": "daily-2026-09-17",
+      "name": "Fuji Seal International",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Osaka, Japan",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.fujiseal.com/",
+      "imageUrl": "/images/suppliers/fuji-seal/fuji-seal_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/fuji-seal/fuji-seal_01.jpg"
+      ],
+      "description": "Fuji Seal International manufactures shrink sleeve labels, self-adhesive labels and packaging machinery.",
+      "products": [
+        "Shrink sleeve labels",
+        "Self-adhesive labels",
+        "Packaging machinery"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.fujiseal.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "john-crane",
+      "packSlug": "john-crane",
+      "pack": "daily-2026-09-17",
+      "name": "John Crane",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Slough, United Kingdom",
+      "country": "United Kingdom",
+      "city": "Slough",
+      "website": "https://www.johncrane.com/",
+      "imageUrl": "/images/suppliers/john-crane/john-crane_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/john-crane/john-crane_01.jpg"
+      ],
+      "description": "John Crane manufactures mechanical seals, filtration systems and couplings for rotating equipment.",
+      "products": [
+        "Mechanical seals",
+        "Filtration systems",
+        "Couplings and packings"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.johncrane.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "nelipak",
+      "packSlug": "nelipak",
+      "pack": "daily-2026-09-17",
+      "name": "Nelipak Healthcare Packaging",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Cranston, United States",
+      "country": "United States",
+      "city": "Cranston",
+      "website": "https://www.nelipak.com/",
+      "imageUrl": "/images/suppliers/nelipak/nelipak_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/nelipak/nelipak_01.jpg"
+      ],
+      "description": "Nelipak Healthcare Packaging manufactures medical-device thermoformed trays, sterile-barrier packaging and custom medical packaging.",
+      "products": [
+        "Medical device thermoformed trays",
+        "Healthcare sterile barrier packaging",
+        "Custom medical packaging"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.nelipak.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "oliver-healthcare",
+      "packSlug": "oliver-healthcare",
+      "pack": "daily-2026-09-17",
+      "name": "Oliver Healthcare Packaging",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Grand Rapids, United States",
+      "country": "United States",
+      "city": "Grand Rapids",
+      "website": "https://www.oliverhcp.com/",
+      "imageUrl": "/images/suppliers/oliver-healthcare/oliver-healthcare_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/oliver-healthcare/oliver-healthcare_01.jpg"
+      ],
+      "description": "Oliver Healthcare Packaging manufactures medical-device packaging, sterile-barrier systems and healthcare flexible packaging.",
+      "products": [
+        "Medical device packaging",
+        "Sterile barrier systems",
+        "Healthcare flexible packaging"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.oliverhcp.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "tekni-plex",
+      "packSlug": "tekni-plex",
+      "pack": "daily-2026-09-17",
+      "name": "Tekni-Plex",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Wayne, United States",
+      "country": "United States",
+      "city": "Wayne",
+      "website": "https://www.tekni-plex.com/",
+      "imageUrl": "/images/suppliers/tekni-plex/tekni-plex_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/tekni-plex/tekni-plex_01.jpg"
+      ],
+      "description": "Tekni-Plex manufactures healthcare packaging, specialty films and compounds and food packaging materials.",
+      "products": [
+        "Healthcare packaging",
+        "Specialty films and compounds",
+        "Food packaging materials"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.tekni-plex.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "tokyo-steel",
+      "packSlug": "tokyo-steel",
+      "pack": "daily-2026-09-17",
+      "name": "Tokyo Steel Manufacturing",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Tokyo, Japan",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.tokyosteel.co.jp/",
+      "imageUrl": "/images/suppliers/tokyo-steel/tokyo-steel_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/tokyo-steel/tokyo-steel_01.jpg"
+      ],
+      "description": "Tokyo Steel Manufacturing produces electric-arc-furnace steel, H-beams and construction steel products.",
+      "products": [
+        "Electric arc furnace steel",
+        "H-beams and steel sheets",
+        "Construction steel products"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.tokyosteel.co.jp/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "uponor",
+      "packSlug": "uponor",
+      "pack": "daily-2026-09-17",
+      "name": "Uponor Corporation",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Helsinki, Finland",
+      "country": "Finland",
+      "city": "Helsinki",
+      "website": "https://www.uponor.com/",
+      "imageUrl": "/images/suppliers/uponor/uponor_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/uponor/uponor_01.jpg"
+      ],
+      "description": "Uponor manufactures PEX plumbing and radiant systems, infrastructure plastic pipe and local heat-distribution pipe.",
+      "products": [
+        "PEX plumbing and radiant systems",
+        "Infrastructure plastic pipe",
+        "Local heat distribution pipe"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.uponor.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "wl-plastics",
+      "packSlug": "wl-plastics",
+      "pack": "daily-2026-09-17",
+      "name": "WL Plastics",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Fort Worth, United States",
+      "country": "United States",
+      "city": "Fort Worth",
+      "website": "https://www.wlplastics.com/",
+      "imageUrl": "/images/suppliers/wl-plastics/wl-plastics_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/wl-plastics/wl-plastics_01.jpg"
+      ],
+      "description": "WL Plastics manufactures HDPE pressure pipe for municipal, industrial and oil-and-gas gathering service.",
+      "products": [
+        "HDPE pressure pipe",
+        "Municipal and industrial PE pipe",
+        "Oil and gas gathering pipe"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.wlplastics.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "jm-eagle",
+      "packSlug": "jm-eagle",
+      "pack": "daily-2026-09-17",
+      "name": "JM Eagle",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Los Angeles, United States",
+      "country": "United States",
+      "city": "Los Angeles",
+      "website": "https://www.jmeagle.com/",
+      "imageUrl": "/images/suppliers/jm-eagle/jm-eagle_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/jm-eagle/jm-eagle_01.jpg"
+      ],
+      "description": "JM Eagle manufactures PVC, PE and corrugated plastic pipe systems for water, sewer and conduit service. Photo is the branded JM Eagle HQ office exterior — HQ campus, not a plant-exterior claim.",
+      "products": [
+        "PVC pipe systems",
+        "PE pipe systems",
+        "Corrugated plastic conduit"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.jmeagle.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "amada",
+      "packSlug": "amada",
+      "pack": "daily-2026-09-17",
+      "name": "Amada Co., Ltd.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Isehara, Japan",
+      "country": "Japan",
+      "city": "Isehara",
+      "website": "https://www.amada.com/",
+      "imageUrl": "/images/suppliers/amada/amada_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/amada/amada_01.jpg"
+      ],
+      "description": "Amada Co., Ltd. manufactures sheet-metal fabrication machines, laser cutting systems and press brakes. Photo is the branded AMADA FORRUM campus/HQ exterior — HQ/campus, not a production mill yard.",
+      "products": [
+        "Sheet metal fabrication machines",
+        "Laser cutting systems",
+        "Press brakes"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.amada.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "gf-piping-systems",
+      "packSlug": "gf-piping-systems",
+      "pack": "daily-2026-09-17",
+      "name": "GF Piping Systems",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Schaffhausen, Switzerland",
+      "country": "Switzerland",
+      "city": "Schaffhausen",
+      "website": "https://www.gfps.com/",
+      "imageUrl": "/images/suppliers/gf-piping-systems/gf-piping-systems_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/gf-piping-systems/gf-piping-systems_01.jpg"
+      ],
+      "description": "GF Piping Systems manufactures plastic and metal piping systems for water, industry and building technology. Photo is the branded +GF+ office/HQ exterior — HQ campus, not a production plant floor.",
+      "products": [
+        "Plastic piping systems",
+        "Metal piping systems",
+        "Building technology piping"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.gfps.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "mitutoyo",
+      "packSlug": "mitutoyo",
+      "pack": "daily-2026-09-17",
+      "name": "Mitutoyo Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Kawasaki, Japan",
+      "country": "Japan",
+      "city": "Kawasaki",
+      "website": "https://www.mitutoyo.com/",
+      "imageUrl": "/images/suppliers/mitutoyo/mitutoyo_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/mitutoyo/mitutoyo_01.jpg"
+      ],
+      "description": "Mitutoyo Corporation manufactures precision measuring instruments, coordinate measuring machines and metrology systems.",
+      "products": [
+        "Precision measuring instruments",
+        "Coordinate measuring machines",
+        "Metrology systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.mitutoyo.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "nipro-pharmapackaging",
+      "packSlug": "nipro-pharmapackaging",
+      "pack": "daily-2026-09-17",
+      "name": "Nipro PharmaPackaging",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Münnerstadt, Germany",
+      "country": "Germany",
+      "city": "Münnerstadt",
+      "website": "https://www.nipro-group.com/",
+      "imageUrl": "/images/suppliers/nipro-pharmapackaging/nipro-pharmapackaging_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/nipro-pharmapackaging/nipro-pharmapackaging_01.jpg"
+      ],
+      "description": "Nipro PharmaPackaging manufactures pharmaceutical glass primary packaging, vials and ampoules.",
+      "products": [
+        "Pharmaceutical glass packaging",
+        "Vials and ampoules",
+        "Primary pharma containers"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.nipro-group.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
       "id": "altra-industrial-motion",
       "packSlug": "altra-industrial-motion",
       "pack": "daily-2026-09-17",
@@ -15148,6 +15832,546 @@
       "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.eupen.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "aquatherm",
+      "packSlug": "aquatherm",
+      "pack": "daily-2026-09-17",
+      "name": "Aquatherm GmbH",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Attendorn, Germany",
+      "country": "Germany",
+      "city": "Attendorn",
+      "website": "https://aquatherm.com/",
+      "imageUrl": "/images/suppliers/aquatherm/aquatherm_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/aquatherm/aquatherm_01.jpg"
+      ],
+      "description": "Aquatherm GmbH manufactures PP-R pressure piping systems, HVAC and industrial plastic pipe and fusible polypropylene pipe. Photo is an Attendorn aerial campus with silos/yard plausible but unbranded from altitude — not a clearly labeled Aquatherm plant.",
+      "products": [
+        "PP-R pressure piping systems",
+        "HVAC and industrial plastic pipe",
+        "Fusible polypropylene pipe"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://aquatherm.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "bonnell-aluminum",
+      "packSlug": "bonnell-aluminum",
+      "pack": "daily-2026-09-17",
+      "name": "Bonnell Aluminum",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "Newnan, United States",
+      "country": "United States",
+      "city": "Newnan",
+      "website": "https://www.bonnellaluminum.com/",
+      "imageUrl": "/images/suppliers/bonnell-aluminum/bonnell-aluminum_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/bonnell-aluminum/bonnell-aluminum_01.jpg"
+      ],
+      "description": "Bonnell Aluminum manufactures aluminum extrusions, custom aluminum profiles and architectural and industrial extrusions. Photo is a plausible aluminum extrusion cooling/handling line interior but fully unbranded — not a confirmed plant-exterior claim.",
+      "products": [
+        "Aluminum extrusions",
+        "Custom aluminum profiles",
+        "Architectural and industrial extrusions"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.bonnellaluminum.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "charlotte-pipe",
+      "packSlug": "charlotte-pipe",
+      "pack": "daily-2026-09-17",
+      "name": "Charlotte Pipe and Foundry Company",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Charlotte, United States",
+      "country": "United States",
+      "city": "Charlotte",
+      "website": "https://www.charlottepipe.com/",
+      "imageUrl": "/images/suppliers/charlotte-pipe/charlotte-pipe_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/charlotte-pipe/charlotte-pipe_01.jpg"
+      ],
+      "description": "Charlotte Pipe and Foundry manufactures cast iron soil pipe and fittings, PVC and CPVC plumbing pipe and ABS DWV systems. Photo is an Oakboro-style foundry molten casting floor — no Charlotte Pipe branding visible.",
+      "products": [
+        "Cast iron soil pipe and fittings",
+        "PVC and CPVC plumbing pipe",
+        "ABS DWV pipe systems"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.charlottepipe.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "ipex",
+      "packSlug": "ipex",
+      "pack": "daily-2026-09-17",
+      "name": "IPEX Inc.",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Mississauga, Canada",
+      "country": "Canada",
+      "city": "Mississauga",
+      "website": "https://www.ipexna.com/",
+      "imageUrl": "/images/suppliers/ipex/ipex_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/ipex/ipex_01.jpg"
+      ],
+      "description": "IPEX Inc. manufactures thermoplastic piping systems for municipal infrastructure and industrial process service. Photo is a large-diameter PVC/PVCO extrusion floor — unbranded operator/console still, not a confirmed plant-exterior claim.",
+      "products": [
+        "Thermoplastic piping systems",
+        "Municipal infrastructure pipe",
+        "Industrial process plastic pipe"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.ipexna.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "iscar",
+      "packSlug": "iscar",
+      "pack": "daily-2026-09-17",
+      "name": "ISCAR Ltd.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tefen, Israel",
+      "country": "Israel",
+      "city": "Tefen",
+      "website": "https://www.iscar.com/",
+      "imageUrl": "/images/suppliers/iscar/iscar_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/iscar/iscar_01.jpg"
+      ],
+      "description": "ISCAR Ltd. manufactures carbide cutting tools, metalworking inserts and tooling systems. Photo is a Tefen-style aerial manufacturing campus plausible but no ISCAR facade/logo readable from altitude — not a confirmed plant-exterior claim.",
+      "products": [
+        "Carbide cutting tools",
+        "Metalworking inserts",
+        "Tooling systems"
+      ],
+      "deliveryRegions": [
+        "MENA"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.iscar.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "liqui-box",
+      "packSlug": "liqui-box",
+      "pack": "daily-2026-09-17",
+      "name": "Liqui-Box",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Richmond, United States",
+      "country": "United States",
+      "city": "Richmond",
+      "website": "https://www.liquibox.com/",
+      "imageUrl": "/images/suppliers/liqui-box/liqui-box_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/liqui-box/liqui-box_01.jpg"
+      ],
+      "description": "Liqui-Box manufactures bag-in-box packaging, fitments and dispensing systems and liquid flexible packaging. Photo is a bag-in-box aseptic filling line — unbranded production still, not a confirmed plant-exterior claim.",
+      "products": [
+        "Bag-in-box packaging",
+        "Fitments and dispensing systems",
+        "Liquid flexible packaging"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.liquibox.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "novolex",
+      "packSlug": "novolex",
+      "pack": "daily-2026-09-17",
+      "name": "Novolex",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Hartsville, United States",
+      "country": "United States",
+      "city": "Hartsville",
+      "website": "https://www.novolex.com/",
+      "imageUrl": "/images/suppliers/novolex/novolex_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/novolex/novolex_01.jpg"
+      ],
+      "description": "Novolex manufactures foodservice packaging, retail bags and wraps and industrial packaging products. Photo is a packaging converting/blow-mold floor — unbranded plant interior, not a confirmed plant-exterior claim.",
+      "products": [
+        "Foodservice packaging",
+        "Retail bags and wraps",
+        "Industrial packaging products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.novolex.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "special-metals",
+      "packSlug": "special-metals",
+      "pack": "daily-2026-09-17",
+      "name": "Special Metals Corporation",
+      "industry": "Metal",
+      "category": "Steel & Metals",
+      "location": "New Hartford, United States",
+      "country": "United States",
+      "city": "New Hartford",
+      "website": "https://www.specialmetals.com/",
+      "imageUrl": "/images/suppliers/special-metals/special-metals_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/special-metals/special-metals_01.jpg"
+      ],
+      "description": "Special Metals Corporation produces nickel-based superalloys, Inconel and Incoloy alloys and high-performance alloy mill products. Photo is a hot-billet forging/manipulator production still plausible for Special Metals but unbranded — not a confirmed plant-exterior claim.",
+      "products": [
+        "Nickel-based superalloys",
+        "Inconel and Incoloy alloys",
+        "High-performance alloy mill products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.specialmetals.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "superior-essex",
+      "packSlug": "superior-essex",
+      "pack": "daily-2026-09-17",
+      "name": "Superior Essex",
+      "industry": "Electrotechnical & Cabling",
+      "category": "Cables & Electrical",
+      "location": "Atlanta, United States",
+      "country": "United States",
+      "city": "Atlanta",
+      "website": "https://www.superioressex.com/",
+      "imageUrl": "/images/suppliers/superior-essex/superior-essex_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/superior-essex/superior-essex_01.jpg"
+      ],
+      "description": "Superior Essex manufactures magnet wire, communications cable and copper and fiber cable products. Photo is a copper magnet-wire bobbin plant-floor still plausible but unbranded — not a confirmed plant-exterior claim.",
+      "products": [
+        "Magnet wire",
+        "Communications cable",
+        "Copper and fiber cable products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.superioressex.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "vitro",
+      "packSlug": "vitro",
+      "pack": "daily-2026-09-17",
+      "name": "Vitro SAB de CV",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "San Pedro Garza García, Mexico",
+      "country": "Mexico",
+      "city": "San Pedro Garza García",
+      "website": "https://www.vitro.com/",
+      "imageUrl": "/images/suppliers/vitro/vitro_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/vitro/vitro_01.jpg"
+      ],
+      "description": "Vitro SAB de CV manufactures glass containers, flat glass and automotive and architectural glass. Photo is an IS glass mold take-out production still — unbranded, not a confirmed Vitro plant-exterior claim.",
+      "products": [
+        "Glass containers",
+        "Flat glass",
+        "Automotive and architectural glass"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.vitro.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "walsin-lihwa",
+      "packSlug": "walsin-lihwa",
+      "pack": "daily-2026-09-17",
+      "name": "Walsin Lihwa Corporation",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Taipei, Taiwan",
+      "country": "Taiwan",
+      "city": "Taipei",
+      "website": "https://www.walsin.com/",
+      "imageUrl": "/images/suppliers/walsin-lihwa/walsin-lihwa_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/walsin-lihwa/walsin-lihwa_01.jpg"
+      ],
+      "description": "Walsin Lihwa Corporation manufactures stainless steel pipe and tube, wire and cable materials and specialty alloy tubular products. Photo is a wire/cable reel mill interior — no Walsin Lihwa branding, not a confirmed plant-exterior claim.",
+      "products": [
+        "Stainless steel pipe and tube",
+        "Wire and cable materials",
+        "Specialty alloy tubular products"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.walsin.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "heidenhain",
+      "packSlug": "heidenhain",
+      "pack": "daily-2026-09-17",
+      "name": "DR. JOHANNES HEIDENHAIN GmbH",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Traunreut, Germany",
+      "country": "Germany",
+      "city": "Traunreut",
+      "website": "https://www.heidenhain.com/",
+      "imageUrl": "/images/suppliers/heidenhain/heidenhain_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/heidenhain/heidenhain_01.jpg"
+      ],
+      "description": "HEIDENHAIN manufactures encoders, digital readouts and CNC controls for machine tools. Photo is an unbranded Traunreut-style campus walkway still — not a confirmed plant-exterior claim.",
+      "products": [
+        "Encoders",
+        "Digital readouts",
+        "CNC controls"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.heidenhain.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "johns-manville",
+      "packSlug": "johns-manville",
+      "pack": "daily-2026-09-17",
+      "name": "Johns Manville",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Denver, United States",
+      "country": "United States",
+      "city": "Denver",
+      "website": "https://www.jm.com/",
+      "imageUrl": "/images/suppliers/johns-manville/johns-manville_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/johns-manville/johns-manville_01.jpg"
+      ],
+      "description": "Johns Manville manufactures building insulation, commercial roofing and engineered products. Photo is an unbranded Colorado campus aerial — HQ/campus from altitude, not a confirmed plant-exterior claim.",
+      "products": [
+        "Building insulation",
+        "Commercial roofing",
+        "Engineered products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.jm.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "makino",
+      "packSlug": "makino",
+      "pack": "daily-2026-09-17",
+      "name": "Makino Milling Machine Co., Ltd.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tokyo, Japan",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.makino.com/",
+      "imageUrl": "/images/suppliers/makino/makino_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/makino/makino_01.jpg"
+      ],
+      "description": "Makino manufactures machining centers, EDM machines and production systems. Photo is an unbranded Fuji-footprint aerial plant campus — plausible but not a brand-confirmed mill header.",
+      "products": [
+        "Machining centers",
+        "EDM machines",
+        "Production systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.makino.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "seco-tools",
+      "packSlug": "seco-tools",
+      "pack": "daily-2026-09-17",
+      "name": "Seco Tools AB",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Fagersta, Sweden",
+      "country": "Sweden",
+      "city": "Fagersta",
+      "website": "https://www.secotools.com/",
+      "imageUrl": "/images/suppliers/seco-tools/seco-tools_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/seco-tools/seco-tools_01.jpg"
+      ],
+      "description": "Seco Tools AB manufactures carbide cutting tools, inserts and tooling systems. Photo is a shop-floor machining interior with people — mill interior, not a confirmed plant-exterior claim.",
+      "products": [
+        "Carbide cutting tools",
+        "Inserts",
+        "Tooling systems"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.secotools.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-17",

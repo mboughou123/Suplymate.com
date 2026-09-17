@@ -22,7 +22,7 @@
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/daily-2026-09-15-hold5-products-cleared.json (OK 3 + soft 2; Soft28 + Soft16+krones + mill packs locked)
- *   data/daily-2026-09-17-mills-products-cleared.json (OK 5 + soft 4; HOLD30 + soft-hold11 + iscar out)
+ *   data/daily-2026-09-17-mills-products-cleared.json (43 mills: day OK5+soft4 + HOLD30 OK14+soft11 + jm-eagle + soft-hold11 OK4+soft4; 9 RFQ products; tsubaki/miller-electric/commscope + blocked4 out)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -225,6 +225,7 @@ const REGION_BY_COUNTRY = {
   taiwan: "Asia", thailand: "Asia", vietnam: "Asia", russia: "Europe", germany: "Europe", france: "Europe",
   spain: "Europe", italy: "Europe", sweden: "Europe", finland: "Europe", austria: "Europe", luxembourg: "Europe",
   netherlands: "Europe", belgium: "Europe", switzerland: "Europe", "united kingdom": "Europe", ireland: "Europe",
+  israel: "MENA",
   denmark: "Europe", poland: "Europe", "czech republic": "Europe", "united states": "North America",
   canada: "North America", mexico: "North America", brazil: "Latin America", australia: "Oceania",
   nigeria: "Africa", "south africa": "Africa",
@@ -805,7 +806,23 @@ function millIdentityFor(slug) {
 
 function millRowsFromStillsPack(pack, millWire) {
   if (pack?.suppliers?.length) {
-    return pack.suppliers.filter((m) => millWire.has(m.slug || slugify(m.company_name)));
+    return pack.suppliers
+      .filter((m) => millWire.has(m.slug || slugify(m.company_name)))
+      .map((m) => {
+        const slug = m.slug || slugify(m.company_name);
+        const curated = config.millIdentityBySlug?.[slug] ?? {};
+        return {
+          ...m,
+          slug,
+          company_name: curated.company_name ?? m.company_name,
+          primary_category: curated.primary_category ?? m.primary_category,
+          country: curated.country ?? m.country,
+          city: curated.city ?? m.city,
+          website: curated.website ?? m.website,
+          description: curated.description ?? m.description,
+          product_lines: curated.product_lines ?? m.product_lines,
+        };
+      });
   }
   const stillsBySlug = new Map();
   for (const still of pack?.stills ?? []) {

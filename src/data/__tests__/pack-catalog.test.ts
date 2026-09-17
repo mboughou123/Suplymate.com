@@ -2353,10 +2353,13 @@ describe("daily 2026-09-15 anvil mill catch-up", () => {
   });
 });
 
-describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
-  const millsOk = ["rehau", "trumpf", "ati", "kaiser-aluminum", "victaulic"];
-  const millsSoft = ["altra-industrial-motion", "fronius", "renishaw", "kabelwerk-eupen"];
-  const hold30 = [
+describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle + soft-hold11)", () => {
+  const millsPlantOk = [
+    "rehau",
+    "trumpf",
+    "ati",
+    "kaiser-aluminum",
+    "victaulic",
     "advanced-drainage-systems",
     "bormioli-pharma",
     "bystronic",
@@ -2371,6 +2374,16 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
     "tokyo-steel",
     "uponor",
     "wl-plastics",
+    "mitutoyo",
+    "nipro-pharmapackaging",
+  ];
+  const millsHqOk = ["jm-eagle", "amada", "gf-piping-systems"];
+  const millsOk = [...millsPlantOk, ...millsHqOk];
+  const millsSoft = [
+    "altra-industrial-motion",
+    "fronius",
+    "renishaw",
+    "kabelwerk-eupen",
     "aquatherm",
     "bonnell-aluminum",
     "charlotte-pipe",
@@ -2382,22 +2395,31 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
     "superior-essex",
     "vitro",
     "walsin-lihwa",
-    "jm-eagle",
-  ];
-  const softHold11 = [
-    "amada",
-    "makino",
-    "gf-piping-systems",
-    "nipro-pharmapackaging",
-    "commscope",
-    "mitutoyo",
-    "tsubaki",
-    "johns-manville",
     "heidenhain",
-    "miller-electric",
+    "johns-manville",
+    "makino",
     "seco-tools",
   ];
-  const blocked = ["rathgibson", "martin-sprocket", "tolomatic", "clippard"];
+  const dayProductSlugs = [
+    "rehau",
+    "trumpf",
+    "ati",
+    "kaiser-aluminum",
+    "victaulic",
+    "altra-industrial-motion",
+    "fronius",
+    "renishaw",
+    "kabelwerk-eupen",
+  ];
+  const holdOut = [
+    "tsubaki",
+    "miller-electric",
+    "commscope",
+    "rathgibson",
+    "martin-sprocket",
+    "tolomatic",
+    "clippard",
+  ];
   const dayMills = packSuppliers.filter((s) => s.pack === "daily-2026-09-17" && !s.productHostOnly);
   const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-17" && s.productHostOnly);
   const dayProducts = packProducts.filter((p) => p.pack === "d0917");
@@ -2406,11 +2428,31 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
     fronius: /Sattledt|not a confirmed plant-exterior/i,
     renishaw: /New Mills|not a confirmed plant-exterior/i,
     "kabelwerk-eupen": /Eupen|chimney|not a confirmed plant-exterior/i,
+    aquatherm: /Attendorn|unbranded|not a (clearly labeled|confirmed) /i,
+    "bonnell-aluminum": /unbranded|not a confirmed plant-exterior/i,
+    "charlotte-pipe": /Oakboro|no Charlotte Pipe branding/i,
+    ipex: /unbranded|not a confirmed plant-exterior/i,
+    iscar: /Tefen|no ISCAR|not a confirmed plant-exterior/i,
+    "liqui-box": /unbranded|not a confirmed plant-exterior/i,
+    novolex: /unbranded|plant interior|not a confirmed plant-exterior/i,
+    "special-metals": /unbranded|not a confirmed plant-exterior/i,
+    "superior-essex": /unbranded|not a confirmed plant-exterior/i,
+    vitro: /unbranded|not a confirmed/i,
+    "walsin-lihwa": /no Walsin Lihwa branding|not a confirmed plant-exterior/i,
+    heidenhain: /unbranded|campus|not a confirmed plant-exterior/i,
+    "johns-manville": /unbranded|campus aerial|HQ\/campus|not a confirmed plant-exterior/i,
+    makino: /unbranded|Fuji|not a brand-confirmed/i,
+    "seco-tools": /shop-floor|mill interior|not a confirmed plant-exterior/i,
+  };
+  const hqCaptions: Record<string, RegExp> = {
+    "jm-eagle": /branded JM Eagle HQ|HQ campus/i,
+    amada: /AMADA FORRUM|HQ\/campus|HQ campus/i,
+    "gf-piping-systems": /\+GF\+|HQ campus/i,
   };
 
-  it("appends the 9 cleared mills and 9 RFQ products without rewriting locked packs", () => {
+  it("appends the 43 cleared mills and 9 RFQ products without rewriting locked packs", () => {
     expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
-    expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...dayProductSlugs].sort());
     expect(dayHosts).toEqual([]);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
     expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
@@ -2463,7 +2505,7 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
     }
   });
 
-  it("soft-captions the SOFT 4, relabels Altra as a manufacturer group, and keeps HOLD/soft-hold out", () => {
+  it("soft-captions the SOFT 19, captions branded HQ OK mills, and keeps OUT slugs absent", () => {
     for (const slug of millsSoft) {
       const mill = dayMills.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();
@@ -2473,17 +2515,22 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
     expect(altra).toBeDefined();
     expect(altra!.description).toMatch(/OEM\/brand manufacturer group|not a single plant/i);
     expect(altra!.description).not.toMatch(/single plant in Braintree/i);
-    for (const slug of millsOk) {
+    for (const slug of millsPlantOk) {
       const mill = dayMills.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();
       expect(mill!.description, slug).not.toMatch(
         /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior/i
       );
     }
+    for (const slug of millsHqOk) {
+      const mill = dayMills.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(hqCaptions[slug]);
+    }
     const rehau = dayMills.find((s) => s.packSlug === "rehau");
     expect(rehau!.description).toMatch(/polymer pipe|building-technology piping/i);
     expect(rehau!.description).not.toMatch(/district of Hof|Fichtel Mountains/i);
-    for (const slug of [...hold30, ...softHold11, ...blocked]) {
+    for (const slug of holdOut) {
       expect(dayMills.some((s) => s.packSlug === slug), slug).toBe(false);
       expect(dayProducts.some((p) => p.packSlug === slug), slug).toBe(false);
       expect(
@@ -2491,8 +2538,8 @@ describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
         slug
       ).toBe(false);
     }
-    expect(packSuppliers.some((s) => s.packSlug === "iscar" && !s.productHostOnly)).toBe(false);
     expect(packProducts.some((p) => p.packSlug === "iscar")).toBe(false);
+    expect(dayMills.some((s) => s.packSlug === "iscar")).toBe(true);
   });
 });
 
