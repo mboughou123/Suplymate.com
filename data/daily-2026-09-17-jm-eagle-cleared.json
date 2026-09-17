@@ -1,0 +1,14 @@
+{
+  "label": "daily-2026-09-17-jm-eagle-cleared",
+  "sealed_wire_ok": [
+    "jm-eagle"
+  ],
+  "note": "Branded HQ exterior; Maps aerial + creosote HOLD cleared. Soft/OK + #62 locked.",
+  "out": [
+    "rathgibson",
+    "martin-sprocket",
+    "tolomatic",
+    "clippard"
+  ],
+  "soft_hold11_pending": true
+}
