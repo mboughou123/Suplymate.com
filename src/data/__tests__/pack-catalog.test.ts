@@ -2353,8 +2353,8 @@ describe("daily 2026-09-15 anvil mill catch-up", () => {
   });
 });
 
-describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle + soft-hold11)", () => {
-  const millsPlantOk = [
+describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
+  const millsOk = [
     "rehau",
     "trumpf",
     "ati",
@@ -2374,11 +2374,7 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     "tokyo-steel",
     "uponor",
     "wl-plastics",
-    "mitutoyo",
-    "nipro-pharmapackaging",
   ];
-  const millsHqOk = ["jm-eagle", "amada", "gf-piping-systems"];
-  const millsOk = [...millsPlantOk, ...millsHqOk];
   const millsSoft = [
     "altra-industrial-motion",
     "fronius",
@@ -2395,10 +2391,6 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     "superior-essex",
     "vitro",
     "walsin-lihwa",
-    "heidenhain",
-    "johns-manville",
-    "makino",
-    "seco-tools",
   ];
   const dayProductSlugs = [
     "rehau",
@@ -2412,9 +2404,18 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     "kabelwerk-eupen",
   ];
   const holdOut = [
-    "tsubaki",
-    "miller-electric",
+    "amada",
+    "makino",
+    "gf-piping-systems",
+    "nipro-pharmapackaging",
     "commscope",
+    "mitutoyo",
+    "tsubaki",
+    "johns-manville",
+    "heidenhain",
+    "miller-electric",
+    "seco-tools",
+    "jm-eagle",
     "rathgibson",
     "martin-sprocket",
     "tolomatic",
@@ -2439,18 +2440,9 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     "superior-essex": /unbranded|not a confirmed plant-exterior/i,
     vitro: /unbranded|not a confirmed/i,
     "walsin-lihwa": /no Walsin Lihwa branding|not a confirmed plant-exterior/i,
-    heidenhain: /unbranded|campus|not a confirmed plant-exterior/i,
-    "johns-manville": /unbranded|campus aerial|HQ\/campus|not a confirmed plant-exterior/i,
-    makino: /unbranded|Fuji|not a brand-confirmed/i,
-    "seco-tools": /shop-floor|mill interior|not a confirmed plant-exterior/i,
-  };
-  const hqCaptions: Record<string, RegExp> = {
-    "jm-eagle": /branded JM Eagle HQ|HQ campus/i,
-    amada: /AMADA FORRUM|HQ\/campus|HQ campus/i,
-    "gf-piping-systems": /\+GF\+|HQ campus/i,
   };
 
-  it("appends the 43 cleared mills and 9 RFQ products without rewriting locked packs", () => {
+  it("appends the 34 cleared mills and 9 RFQ products without rewriting locked packs", () => {
     expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
     expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...dayProductSlugs].sort());
     expect(dayHosts).toEqual([]);
@@ -2505,7 +2497,7 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     }
   });
 
-  it("soft-captions the SOFT 19, captions branded HQ OK mills, and keeps OUT slugs absent", () => {
+  it("soft-captions the SOFT 15, relabels Altra as a manufacturer group, and keeps HOLD/soft-hold out", () => {
     for (const slug of millsSoft) {
       const mill = dayMills.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();
@@ -2515,17 +2507,12 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle
     expect(altra).toBeDefined();
     expect(altra!.description).toMatch(/OEM\/brand manufacturer group|not a single plant/i);
     expect(altra!.description).not.toMatch(/single plant in Braintree/i);
-    for (const slug of millsPlantOk) {
+    for (const slug of millsOk) {
       const mill = dayMills.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();
       expect(mill!.description, slug).not.toMatch(
         /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior/i
       );
-    }
-    for (const slug of millsHqOk) {
-      const mill = dayMills.find((s) => s.packSlug === slug);
-      expect(mill, slug).toBeDefined();
-      expect(mill!.description, slug).toMatch(hqCaptions[slug]);
     }
     const rehau = dayMills.find((s) => s.packSlug === "rehau");
     expect(rehau!.description).toMatch(/polymer pipe|building-technology piping/i);

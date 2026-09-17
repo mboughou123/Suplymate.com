@@ -22,7 +22,8 @@
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/daily-2026-09-15-hold5-products-cleared.json (OK 3 + soft 2; Soft28 + Soft16+krones + mill packs locked)
- *   data/daily-2026-09-17-mills-products-cleared.json (43 mills: day OK5+soft4 + HOLD30 OK14+soft11 + jm-eagle + soft-hold11 OK4+soft4; 9 RFQ products; tsubaki/miller-electric/commscope + blocked4 out)
+ *   data/daily-2026-09-17-mills-cleared.json (34 mills: day OK5+soft4 + HOLD30 OK14+soft11; jm-eagle + soft-hold11 + blocked4 out)
+ *   data/daily-2026-09-17-products-cleared.json (9 day OK+soft RFQ SKUs; HOLD30 mill-cards only)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -277,7 +278,8 @@ function mergeManifestSoftCredits() {
     "daily-2026-09-15-products-cleared.json",
     "daily-2026-09-15-hold33-products-cleared.json",
     "daily-2026-09-15-hold5-products-cleared.json",
-    "daily-2026-09-17-mills-products-cleared.json",
+    "daily-2026-09-17-mills-cleared.json",
+    "daily-2026-09-17-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const entry of pack?.soft ?? []) {
@@ -769,7 +771,7 @@ function skuIdentityBySlug() {
     "daily-2026-09-15-products-cleared.json",
     "daily-2026-09-15-hold33-products-cleared.json",
     "daily-2026-09-15-hold5-products-cleared.json",
-    "daily-2026-09-17-mills-products-cleared.json",
+    "daily-2026-09-17-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const sku of pack?.products ?? []) {
@@ -946,7 +948,9 @@ function loadStillsMillSeals(file) {
   const pack = readJsonIfExists(path.join(DATA_DIR, file));
   if (!pack) return { pack: null, millWire: new Set(), millSoft: new Set(), holdOut: new Set() };
   const holdOut = new Set(
-    [...(pack.hold_out ?? []), ...(pack.blocked_out ?? [])].map(slugOf).filter(Boolean)
+    [...(pack.hold_out ?? []), ...(pack.blocked_out ?? []), ...(pack.soft_hold_out ?? [])]
+      .map(slugOf)
+      .filter(Boolean)
   );
   const millSoft = new Set((pack.soft ?? []).map(slugOf).filter((slug) => slug && !holdOut.has(slug)));
   const millWire = new Set(
@@ -1018,10 +1022,17 @@ function buildDaily0911ProductHosts(wiredSlugs, report) {
 
 function productWireFromPack(pack) {
   const holdOut = new Set(
-    [...(pack?.hold_out ?? []), ...(pack?.blocked_skipped ?? [])].map(slugOf).filter(Boolean)
+    [
+      ...(pack?.hold_out ?? []),
+      ...(pack?.blocked_skipped ?? []),
+      ...(pack?.blocked_out ?? []),
+      ...(pack?.soft_hold_out ?? []),
+    ]
+      .map(slugOf)
+      .filter(Boolean)
   );
   return new Set(
-    [...(pack?.wire_ok ?? []), ...(pack?.soft ?? []).map(slugOf)].filter(
+    [...(pack?.wire_ok ?? []), ...(pack?.wire_ok_slugs ?? []), ...(pack?.soft ?? []).map(slugOf)].filter(
       (slug) => slug && !holdOut.has(slug)
     )
   );
@@ -1163,7 +1174,7 @@ function buildDaily0915Hold5ProductHosts(wiredSlugs, report) {
 }
 
 function loadDaily0917Seals() {
-  const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-mills-products-cleared.json"));
+  const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-products-cleared.json"));
   return { pack, productWire: productWireFromPack(pack) };
 }
 
@@ -1649,7 +1660,7 @@ function loadProductPacks() {
       });
     }
   }
-  const day0917 = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-mills-products-cleared.json"));
+  const day0917 = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-products-cleared.json"));
   if (day0917) {
     const seals = loadDaily0917Seals();
     const skus = (day0917.products ?? []).map(normalizeClearedSku).filter((sku) => {
@@ -2008,7 +2019,7 @@ export function buildCatalog() {
     report,
   });
   const day0917Mills = buildAppendedStillsMills({
-    file: "daily-2026-09-17-mills-products-cleared.json",
+    file: "daily-2026-09-17-mills-cleared.json",
     packTag: "daily-2026-09-17",
     dateTag: "2026-09-17",
     skipSlugs: new Set([
