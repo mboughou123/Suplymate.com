@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 393,
-    "suppliersWithPhotos": 373,
+    "suppliers": 401,
+    "suppliersWithPhotos": 381,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 614,
+    "supplierPhotos": 622,
     "suppliersOverlayingDirectory": 10,
     "distributors": [
       "bossard"
@@ -16111,6 +16111,294 @@
       "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.jmeagle.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "amada",
+      "packSlug": "amada",
+      "pack": "daily-2026-09-17",
+      "name": "Amada Co., Ltd.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Isehara, Japan",
+      "country": "Japan",
+      "city": "Isehara",
+      "website": "https://www.amada.com/",
+      "imageUrl": "/images/suppliers/amada/amada_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/amada/amada_01.jpg"
+      ],
+      "description": "Amada Co., Ltd. manufactures sheet-metal fabrication machines, laser cutting systems and press brakes. Photo is the branded AMADA FORRUM campus/HQ exterior — HQ/campus, not a production mill yard.",
+      "products": [
+        "Sheet metal fabrication machines",
+        "Laser cutting systems",
+        "Press brakes"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.amada.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "gf-piping-systems",
+      "packSlug": "gf-piping-systems",
+      "pack": "daily-2026-09-17",
+      "name": "GF Piping Systems",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Schaffhausen, Switzerland",
+      "country": "Switzerland",
+      "city": "Schaffhausen",
+      "website": "https://www.gfps.com/",
+      "imageUrl": "/images/suppliers/gf-piping-systems/gf-piping-systems_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/gf-piping-systems/gf-piping-systems_01.jpg"
+      ],
+      "description": "GF Piping Systems manufactures plastic and metal piping systems for water, industry and building technology. Photo is the branded +GF+ office/HQ exterior — HQ campus, not a production plant floor.",
+      "products": [
+        "Plastic piping systems",
+        "Metal piping systems",
+        "Building technology piping"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.gfps.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "mitutoyo",
+      "packSlug": "mitutoyo",
+      "pack": "daily-2026-09-17",
+      "name": "Mitutoyo Corporation",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Kawasaki, Japan",
+      "country": "Japan",
+      "city": "Kawasaki",
+      "website": "https://www.mitutoyo.com/",
+      "imageUrl": "/images/suppliers/mitutoyo/mitutoyo_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/mitutoyo/mitutoyo_01.jpg"
+      ],
+      "description": "Mitutoyo Corporation manufactures precision measuring instruments, coordinate measuring machines and metrology systems.",
+      "products": [
+        "Precision measuring instruments",
+        "Coordinate measuring machines",
+        "Metrology systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.mitutoyo.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "nipro-pharmapackaging",
+      "packSlug": "nipro-pharmapackaging",
+      "pack": "daily-2026-09-17",
+      "name": "Nipro PharmaPackaging",
+      "industry": "Plastics & Packaging",
+      "category": "Packaging",
+      "location": "Münnerstadt, Germany",
+      "country": "Germany",
+      "city": "Münnerstadt",
+      "website": "https://www.nipro-group.com/",
+      "imageUrl": "/images/suppliers/nipro-pharmapackaging/nipro-pharmapackaging_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/nipro-pharmapackaging/nipro-pharmapackaging_01.jpg"
+      ],
+      "description": "Nipro PharmaPackaging manufactures pharmaceutical glass primary packaging, vials and ampoules.",
+      "products": [
+        "Pharmaceutical glass packaging",
+        "Vials and ampoules",
+        "Primary pharma containers"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.nipro-group.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "heidenhain",
+      "packSlug": "heidenhain",
+      "pack": "daily-2026-09-17",
+      "name": "DR. JOHANNES HEIDENHAIN GmbH",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Traunreut, Germany",
+      "country": "Germany",
+      "city": "Traunreut",
+      "website": "https://www.heidenhain.com/",
+      "imageUrl": "/images/suppliers/heidenhain/heidenhain_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/heidenhain/heidenhain_01.jpg"
+      ],
+      "description": "HEIDENHAIN manufactures encoders, digital readouts and CNC controls for machine tools. Photo is an unbranded Traunreut-style campus walkway still — not a confirmed plant-exterior claim.",
+      "products": [
+        "Encoders",
+        "Digital readouts",
+        "CNC controls"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.heidenhain.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "johns-manville",
+      "packSlug": "johns-manville",
+      "pack": "daily-2026-09-17",
+      "name": "Johns Manville",
+      "industry": "Construction & BTP",
+      "category": "Construction",
+      "location": "Denver, United States",
+      "country": "United States",
+      "city": "Denver",
+      "website": "https://www.jm.com/",
+      "imageUrl": "/images/suppliers/johns-manville/johns-manville_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/johns-manville/johns-manville_01.jpg"
+      ],
+      "description": "Johns Manville manufactures building insulation, commercial roofing and engineered products. Photo is an unbranded Colorado campus aerial — HQ/campus from altitude, not a confirmed plant-exterior claim.",
+      "products": [
+        "Building insulation",
+        "Commercial roofing",
+        "Engineered products"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.jm.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "makino",
+      "packSlug": "makino",
+      "pack": "daily-2026-09-17",
+      "name": "Makino Milling Machine Co., Ltd.",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Tokyo, Japan",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.makino.com/",
+      "imageUrl": "/images/suppliers/makino/makino_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/makino/makino_01.jpg"
+      ],
+      "description": "Makino manufactures machining centers, EDM machines and production systems. Photo is an unbranded Fuji-footprint aerial plant campus — plausible but not a brand-confirmed mill header.",
+      "products": [
+        "Machining centers",
+        "EDM machines",
+        "Production systems"
+      ],
+      "deliveryRegions": [
+        "Asia"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.makino.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "seco-tools",
+      "packSlug": "seco-tools",
+      "pack": "daily-2026-09-17",
+      "name": "Seco Tools AB",
+      "industry": "Industrial Equipment",
+      "category": "Industrial Parts",
+      "location": "Fagersta, Sweden",
+      "country": "Sweden",
+      "city": "Fagersta",
+      "website": "https://www.secotools.com/",
+      "imageUrl": "/images/suppliers/seco-tools/seco-tools_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/seco-tools/seco-tools_01.jpg"
+      ],
+      "description": "Seco Tools AB manufactures carbide cutting tools, inserts and tooling systems. Photo is a shop-floor machining interior with people — mill interior, not a confirmed plant-exterior claim.",
+      "products": [
+        "Carbide cutting tools",
+        "Inserts",
+        "Tooling systems"
+      ],
+      "deliveryRegions": [
+        "Europe"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.secotools.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-17",
