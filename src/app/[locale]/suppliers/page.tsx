@@ -1,33 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSuppliersFromDb } from "@/lib/data-service";
-import type { Supplier } from "@/data/suppliers";
+import { toListingSupplier } from "@/lib/supplier-listing";
 import SuppliersClient from "./SuppliersClient";
 
 // Static + ISR: the directory is read-mostly (admin approvals land within the
-// revalidation window) and the full list is filtered client-side anyway.
+// revalidation window) and the slim listing is filtered client-side.
 export const revalidate = 300;
-
-// The listing client only needs a subset of each supplier: filters, sorting and
-// the card. Drop the heavy profile-only fields (opening hours, address,
-// certification payloads, full photo galleries) so the RSC payload shipped to
-// the browser stays small. `supplierImages` is reduced to a single entry
-// because the client only checks whether ANY image exists.
-const PROFILE_ONLY_FIELDS: ReadonlyArray<keyof Supplier> = [
-  "openingHours",
-  "address",
-  "lastUpdated",
-  "certificationImages",
-  "certificationsDetailed",
-];
-
-function toListingSupplier(s: Supplier): Supplier {
-  const out: Supplier = { ...s };
-  for (const key of PROFILE_ONLY_FIELDS) delete out[key];
-  if (out.supplierImages && out.supplierImages.length > 1) {
-    out.supplierImages = out.supplierImages.slice(0, 1);
-  }
-  return out;
-}
 
 export default async function SuppliersPage({
   params,

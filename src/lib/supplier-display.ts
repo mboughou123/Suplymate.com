@@ -1,4 +1,5 @@
 import type { Supplier } from "@/data/suppliers";
+import type { ListingSupplier } from "@/lib/supplier-listing";
 import { pickPreferredCardImage } from "@/lib/image-fallback";
 
 export type DisplayProduct = {
@@ -147,7 +148,7 @@ function priceFor(seed: number, industry: string): string {
   return `${fmt(low)} – ${fmt(high)}`;
 }
 
-export function toDisplaySupplier(s: Supplier): DisplaySupplier {
+export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
   const country = s.country ?? countryOf(s.location);
   const city = s.city ?? s.location.split(",")[0].trim();
@@ -195,10 +196,10 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     country,
     city,
     flag: flagFor(country),
-    website: s.website,
-    phone: s.phone,
-    email: s.email,
-    description: s.description,
+    website: "website" in s ? s.website : undefined,
+    phone: "phone" in s ? s.phone : undefined,
+    email: "email" in s ? s.email : undefined,
+    description: "description" in s ? s.description : undefined,
     sourceUrl: s.sourceUrl,
     score: s.score ?? s.reliabilityScore,
     logoText: initials(s.name),
@@ -217,7 +218,7 @@ export function toDisplaySupplier(s: Supplier): DisplaySupplier {
     reorderRate: seeded(seed >> 1, 12, 46),
     products,
     moq: s.moq,
-    deliveryRegions: s.deliveryRegions,
+    deliveryRegions: "deliveryRegions" in s ? s.deliveryRegions : [],
     reliabilityScore: s.reliabilityScore,
   };
 }

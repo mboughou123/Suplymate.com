@@ -18,6 +18,9 @@ import {
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ReportButton from "@/components/ReportButton";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY } from "@/lib/image-sizes";
 import ProfileActionButton from "./ProfileActionButton";
 import { RadialScore } from "./primitives";
 
@@ -43,10 +46,13 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
       {/* Dark glass banner */}
       <div className="relative h-56 sm:h-64" style={{ backgroundImage: base.bannerGradient }}>
         {base.imageUrl && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <ImageWithFallback
             src={base.imageUrl}
+            placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
             alt={`${base.name} facility`}
+            loading="eager"
+            sizes="100vw"
+            quality={CARD_IMAGE_QUALITY}
             className="absolute inset-0 h-full w-full object-cover opacity-60"
           />
         )}

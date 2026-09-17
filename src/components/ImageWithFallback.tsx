@@ -41,6 +41,8 @@ type ImageWithFallbackProps = {
   sizes?: string;
   /** Optional decoding hint. */
   decoding?: "async" | "auto" | "sync";
+  /** next/image quality (1–100). Cards use 70 to shrink phone payloads. */
+  quality?: number;
 };
 
 /**
@@ -60,6 +62,7 @@ export default function ImageWithFallback({
   loading = "lazy",
   sizes,
   decoding = "async",
+  quality,
 }: ImageWithFallbackProps) {
   // Ordered, de-duplicated, non-empty chain of candidate sources.
   const chain = useMemo(() => {
@@ -87,6 +90,7 @@ export default function ImageWithFallback({
         fill
         {...(loading === "eager" ? { priority: true } : { loading })}
         sizes={sizes ?? "100vw"}
+        quality={quality}
         className={className}
         onError={advance}
       />

@@ -9,8 +9,9 @@ import { isGoogleMapsImageUrl } from "@/lib/image-fallback";
 const OPTIMIZED_HOST = /(\.public\.blob\.vercel-storage\.com)$/i;
 
 function canOptimize(src: string): boolean {
+  if (src.startsWith("/") && !src.toLowerCase().endsWith(".svg")) return true;
   try {
-    const url = new URL(src, "http://local");
+    const url = new URL(src);
     return url.protocol === "https:" && OPTIMIZED_HOST.test(url.hostname);
   } catch {
     return false;

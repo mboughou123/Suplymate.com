@@ -8,6 +8,11 @@ import type {
   PublicProductCard as PublicProduct,
   CatalogueFacets,
 } from "@/lib/public-products";
+import {
+  EMPTY_PRODUCT_FILTERS,
+  shouldFetchProductsOnFilterChange,
+  type ProductListFilters,
+} from "@/lib/products-query";
 
 type Props = {
   initialItems: PublicProduct[];
@@ -17,23 +22,9 @@ type Props = {
   facets: CatalogueFacets;
 };
 
-type Filters = {
-  search: string;
-  category: string;
-  supplierId: string;
-  country: string;
-  verifiedOnly: boolean;
-  hasPrice: boolean;
-};
+type Filters = ProductListFilters;
 
-const EMPTY_FILTERS: Filters = {
-  search: "",
-  category: "",
-  supplierId: "",
-  country: "",
-  verifiedOnly: false,
-  hasPrice: false,
-};
+const EMPTY_FILTERS: Filters = EMPTY_PRODUCT_FILTERS;
 
 function buildQuery(f: Filters, page: number, pageSize: number): string {
   const p = new URLSearchParams();
@@ -85,6 +76,7 @@ export default function ProductsClient({
 
   // Track the "active" filter set we're paginating against to avoid races.
   const activeFiltersRef = useRef<Filters>(EMPTY_FILTERS);
+  const previousFiltersRef = useRef<Filters | null>(null);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
 
   const fetchPage = useCallback(
@@ -113,9 +105,15 @@ export default function ProductsClient({
     [pageSize]
   );
 
-  // Debounced reload whenever filters change.
+  // Debounced reload whenever filters change. Skip the mount refetch — page 1
+  // of the default query is already in `initialItems` from the server.
   useEffect(() => {
     const handle = setTimeout(() => {
+      const previous = previousFiltersRef.current;
+      previousFiltersRef.current = filters;
+      if (!shouldFetchProductsOnFilterChange({ previous, next: filters })) {
+        return;
+      }
       activeFiltersRef.current = filters;
       setInitialLoad(true);
       fetchPage(filters, 1, true);
@@ -288,8 +286,8 @@ export default function ProductsClient({
           ) : (
             <>
               <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-                {items.map((item) => (
-                  <PublicProductCard key={item.id} data={item} />
+                {items.map((item, index) => (
+                  <PublicProductCard key={item.id} data={item} priority={index === 0} />
                 ))}
               </div>
 

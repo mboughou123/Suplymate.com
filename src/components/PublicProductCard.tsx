@@ -7,10 +7,11 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import { getProductFallbackImage } from "@/lib/image-fallback";
 import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
-type Props = { data: PublicProduct };
+type Props = { data: PublicProduct; priority?: boolean };
 
-export default function PublicProductCard({ data: d }: Props) {
+export default function PublicProductCard({ data: d, priority = false }: Props) {
   const t = useTranslations("products");
   const tc = useTranslations("common");
 
@@ -22,7 +23,9 @@ export default function PublicProductCard({ data: d }: Props) {
             src={d.imageUrl}
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
             alt={d.name}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes={CARD_IMAGE_SIZES.productCard}
+            quality={CARD_IMAGE_QUALITY}
+            loading={priority ? "eager" : "lazy"}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {d.verified && (

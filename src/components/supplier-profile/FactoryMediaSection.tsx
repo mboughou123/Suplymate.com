@@ -14,6 +14,7 @@ import {
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 import { SectionHeading, reveal } from "./primitives";
 
 export default function FactoryMediaSection({ profile }: { profile: SupplierProfile }) {
@@ -61,6 +62,9 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
               fallbackSrc={m.fallback}
               placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
               alt={m.caption}
+              sizes={i === 0 ? CARD_IMAGE_SIZES.factoryHero : CARD_IMAGE_SIZES.factoryTile}
+              quality={CARD_IMAGE_QUALITY}
+              loading={i === 0 ? "eager" : "lazy"}
               className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 ai-grid-bg opacity-20 transition group-hover:scale-110" />
@@ -133,6 +137,8 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
                 placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
                 alt={media[active].caption}
                 loading="eager"
+                sizes="(max-width: 1024px) 100vw, 896px"
+                quality={CARD_IMAGE_QUALITY}
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 ai-grid-bg opacity-25" />

@@ -14,7 +14,7 @@ import {
   Building2,
   Award,
 } from "lucide-react";
-import type { Supplier } from "@/data/suppliers";
+import type { ListingSupplier } from "@/lib/supplier-listing";
 import { toDisplaySupplier } from "@/lib/supplier-display";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
@@ -24,9 +24,12 @@ import {
   getSupplierFallbackImage,
   GENERIC_SUPPLIER_PLACEHOLDER,
 } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 type SupplierCardProps = {
-  supplier: Supplier;
+  supplier: ListingSupplier;
+  /** First visible card — LCP candidate on phones. */
+  priority?: boolean;
 };
 
 function Metric({
@@ -47,7 +50,7 @@ function Metric({
   );
 }
 
-export default function SupplierCard({ supplier }: SupplierCardProps) {
+export default function SupplierCard({ supplier, priority = false }: SupplierCardProps) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const s = toDisplaySupplier(supplier);
@@ -64,7 +67,9 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
           fallbackSrc={getSupplierFallbackImage(supplier.category ?? supplier.industry, s.name)}
           placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
           alt={`${s.name} facility`}
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes={CARD_IMAGE_SIZES.supplierBanner}
+          quality={CARD_IMAGE_QUALITY}
+          loading={priority ? "eager" : "lazy"}
           className="absolute inset-0 h-full w-full object-cover"
         />
         {s.verified && (
@@ -171,7 +176,8 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
                       <ImageWithFallback
                         src={p.image}
                         alt={p.name}
-                        sizes="120px"
+                        sizes={CARD_IMAGE_SIZES.productThumb}
+                        quality={CARD_IMAGE_QUALITY}
                         className="absolute inset-0 h-full w-full object-cover"
                       />
                     ) : (

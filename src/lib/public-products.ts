@@ -26,6 +26,7 @@ import { approvedPackProducts, getPackProduct, getPackSupplier } from "@/data/pa
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
+import { PRODUCT_LIST_PAGE_SIZE } from "@/lib/products-query";
 
 export type PublicProductCard = {
   id: string;
@@ -74,7 +75,7 @@ export type PublicProductsResult = {
   facets: CatalogueFacets;
 };
 
-const DEFAULT_PAGE_SIZE = 24;
+const DEFAULT_PAGE_SIZE = PRODUCT_LIST_PAGE_SIZE;
 
 function clampPage(n: number | undefined): number {
   const v = Math.floor(Number(n) || 1);

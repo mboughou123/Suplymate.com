@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import type { ComponentProps } from "react";
 import FxBoundary from "@/components/fx/FxBoundary";
+import { useFxEnabled } from "@/components/fx/useFxEnabled";
 
 const BorderBeam = dynamic(
   () => import("border-beam").then((m) => m.BorderBeam),
@@ -25,6 +26,10 @@ export default function Beam({
   className,
   ...rest
 }: BeamProps & { className?: string }) {
+  const enabled = useFxEnabled();
+  if (!enabled) {
+    return <div className={className}>{children}</div>;
+  }
   return (
     <div className={className}>
       <FxBoundary fallback={children}>

@@ -5,6 +5,37 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Heart } from "lucide-react";
 
+let cachedIds: Set<string> | null = null;
+let inflight: Promise<Set<string>> | null = null;
+
+function loadFavoriteIds(): Promise<Set<string>> {
+  if (cachedIds) return Promise.resolve(cachedIds);
+  if (!inflight) {
+    inflight = fetch("/api/favorites")
+      .then((r) => (r.ok ? r.json() : { favorites: [] }))
+      .then((d) => {
+        cachedIds = new Set(
+          (d.favorites ?? []).map((f: { supplierId: string }) => f.supplierId)
+        );
+        return cachedIds;
+      })
+      .catch(() => {
+        cachedIds = new Set();
+        return cachedIds;
+      })
+      .finally(() => {
+        inflight = null;
+      });
+  }
+  return inflight;
+}
+
+function rememberFavorite(id: string, on: boolean) {
+  if (!cachedIds) cachedIds = new Set();
+  if (on) cachedIds.add(id);
+  else cachedIds.delete(id);
+}
+
 type Props = {
   supplierId: string;
   supplierName: string;
@@ -24,15 +55,9 @@ export default function FavoriteButton({
   useEffect(() => {
     if (status !== "authenticated") return;
     let active = true;
-    fetch("/api/favorites")
-      .then((r) => (r.ok ? r.json() : { favorites: [] }))
-      .then((d) => {
-        if (!active) return;
-        setFavorited(
-          (d.favorites ?? []).some(
-            (f: { supplierId: string }) => f.supplierId === supplierId
-          )
-        );
+    loadFavoriteIds()
+      .then((ids) => {
+        if (active) setFavorited(ids.has(supplierId));
       })
       .catch(() => {});
     return () => {
@@ -55,7 +80,9 @@ export default function FavoriteButton({
         body: JSON.stringify({ supplierId, supplierName }),
       });
       const data = await res.json();
-      setFavorited(!!data.favorited);
+      const on = !!data.favorited;
+      rememberFavorite(supplierId, on);
+      setFavorited(on);
     } finally {
       setBusy(false);
     }
