@@ -1,0 +1,21 @@
+{
+  "label": "daily-2026-09-17-soft-hold11-cleared",
+  "sealed_wire_ok": [
+    "amada",
+    "gf-piping-systems",
+    "mitutoyo",
+    "nipro-pharmapackaging"
+  ],
+  "soft_optional": [
+    "heidenhain",
+    "johns-manville",
+    "makino",
+    "seco-tools"
+  ],
+  "blocked_out": [
+    "tsubaki",
+    "miller-electric",
+    "commscope"
+  ],
+  "note": "Soft-hold11 plant headers. Soft/OK + #62 + jm-eagle locked. RFQ only."
+}
