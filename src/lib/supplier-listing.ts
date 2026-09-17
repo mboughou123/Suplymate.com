@@ -25,7 +25,6 @@ export type ListingSupplier = {
   googleReviews?: number;
   rating?: number;
   reviewCount?: number;
-  sourceUrl?: string;
   /** Lowercased description tokens not already present on the card fields. */
   searchExtra?: string;
 };
@@ -90,7 +89,6 @@ export function toListingSupplier(s: Supplier): ListingSupplier {
     googleReviews: s.googleReviews,
     rating: s.rating,
     reviewCount: s.reviewCount,
-    sourceUrl: s.sourceUrl,
   };
   // Banner already has imageUrl; don't ship a second gallery URL for every mill.
   if (!listing.imageUrl) {

@@ -28,6 +28,7 @@ describe("toListingSupplier", () => {
     expect(listing).not.toHaveProperty("certificationsDetailed");
     expect(listing).not.toHaveProperty("phone");
     expect(listing).not.toHaveProperty("email");
+    expect(listing).not.toHaveProperty("sourceUrl");
     expect(listing.supplierImages?.length ?? 0).toBeLessThanOrEqual(1);
     expect(listing.products.length).toBeLessThanOrEqual(3);
     expect((listing.featuredProducts ?? []).length).toBeLessThanOrEqual(3);
