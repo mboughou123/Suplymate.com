@@ -2,10 +2,10 @@
   "$schema": "suplymate/pack-catalog@1",
   "generatedBy": "scripts/build-catalog-from-packs.mjs",
   "stats": {
-    "suppliers": 392,
-    "suppliersWithPhotos": 372,
+    "suppliers": 393,
+    "suppliersWithPhotos": 373,
     "suppliersWithLogo": 58,
-    "supplierPhotos": 613,
+    "supplierPhotos": 614,
     "suppliersOverlayingDirectory": 10,
     "distributors": [
       "bossard"
@@ -16075,6 +16075,42 @@
       "verificationStatus": "verified",
       "businessType": "Manufacturer",
       "sourceUrl": "https://www.wlplastics.com/",
+      "certificationsDetailed": [],
+      "certificationImages": [],
+      "lastUpdated": "2026-09-17",
+      "score": 90,
+      "reliabilityScore": 90,
+      "overlaysExisting": false
+    },
+    {
+      "id": "jm-eagle",
+      "packSlug": "jm-eagle",
+      "pack": "daily-2026-09-17",
+      "name": "JM Eagle",
+      "industry": "Metal",
+      "category": "Tubes & Pipes",
+      "location": "Los Angeles, United States",
+      "country": "United States",
+      "city": "Los Angeles",
+      "website": "https://www.jmeagle.com/",
+      "imageUrl": "/images/suppliers/jm-eagle/jm-eagle_01.jpg",
+      "supplierImages": [
+        "/images/suppliers/jm-eagle/jm-eagle_01.jpg"
+      ],
+      "description": "JM Eagle manufactures PVC, PE and corrugated plastic pipe systems for water, sewer and conduit service. Photo is the branded JM Eagle HQ office exterior — HQ campus, not a plant-exterior claim.",
+      "products": [
+        "PVC pipe systems",
+        "PE pipe systems",
+        "Corrugated plastic conduit"
+      ],
+      "deliveryRegions": [
+        "North America"
+      ],
+      "moq": "Not published — mill RFQ",
+      "verified": true,
+      "verificationStatus": "verified",
+      "businessType": "Manufacturer",
+      "sourceUrl": "https://www.jmeagle.com/",
       "certificationsDetailed": [],
       "certificationImages": [],
       "lastUpdated": "2026-09-17",

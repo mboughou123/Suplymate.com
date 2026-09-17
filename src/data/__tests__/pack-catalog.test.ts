@@ -2353,8 +2353,8 @@ describe("daily 2026-09-15 anvil mill catch-up", () => {
   });
 });
 
-describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
-  const millsOk = [
+describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30 + jm-eagle)", () => {
+  const millsPlantOk = [
     "rehau",
     "trumpf",
     "ati",
@@ -2375,6 +2375,8 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
     "uponor",
     "wl-plastics",
   ];
+  const millsHqOk = ["jm-eagle"];
+  const millsOk = [...millsPlantOk, ...millsHqOk];
   const millsSoft = [
     "altra-industrial-motion",
     "fronius",
@@ -2415,7 +2417,6 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
     "heidenhain",
     "miller-electric",
     "seco-tools",
-    "jm-eagle",
     "rathgibson",
     "martin-sprocket",
     "tolomatic",
@@ -2442,7 +2443,7 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
     "walsin-lihwa": /no Walsin Lihwa branding|not a confirmed plant-exterior/i,
   };
 
-  it("appends the 34 cleared mills and 9 RFQ products without rewriting locked packs", () => {
+  it("appends the 35 cleared mills and 9 RFQ products without rewriting locked packs", () => {
     expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
     expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...dayProductSlugs].sort());
     expect(dayHosts).toEqual([]);
@@ -2507,13 +2508,17 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
     expect(altra).toBeDefined();
     expect(altra!.description).toMatch(/OEM\/brand manufacturer group|not a single plant/i);
     expect(altra!.description).not.toMatch(/single plant in Braintree/i);
-    for (const slug of millsOk) {
+    for (const slug of millsPlantOk) {
       const mill = dayMills.find((s) => s.packSlug === slug);
       expect(mill, slug).toBeDefined();
       expect(mill!.description, slug).not.toMatch(
         /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior/i
       );
     }
+    const jmEagle = dayMills.find((s) => s.packSlug === "jm-eagle");
+    expect(jmEagle).toBeDefined();
+    expect(jmEagle!.description).toMatch(/branded JM Eagle HQ|HQ campus/i);
+    expect(jmEagle!.imageUrl).toBe("/images/suppliers/jm-eagle/jm-eagle_01.jpg");
     const rehau = dayMills.find((s) => s.packSlug === "rehau");
     expect(rehau!.description).toMatch(/polymer pipe|building-technology piping/i);
     expect(rehau!.description).not.toMatch(/district of Hof|Fichtel Mountains/i);
@@ -2526,7 +2531,9 @@ describe("daily 2026-09-17 cleared mills+products (OK5+soft4 + HOLD30)", () => {
       ).toBe(false);
     }
     expect(packProducts.some((p) => p.packSlug === "iscar")).toBe(false);
+    expect(packProducts.some((p) => p.packSlug === "jm-eagle")).toBe(false);
     expect(dayMills.some((s) => s.packSlug === "iscar")).toBe(true);
+    expect(dayMills.some((s) => s.packSlug === "jm-eagle")).toBe(true);
   });
 });
 

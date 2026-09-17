@@ -22,7 +22,8 @@
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/daily-2026-09-15-hold5-products-cleared.json (OK 3 + soft 2; Soft28 + Soft16+krones + mill packs locked)
- *   data/daily-2026-09-17-mills-cleared.json (34 mills: day OK5+soft4 + HOLD30 OK14+soft11; jm-eagle + soft-hold11 + blocked4 out)
+ *   data/daily-2026-09-17-mills-cleared.json (34 mills: day OK5+soft4 + HOLD30 OK14+soft11; soft-hold11 + blocked4 out)
+ *   data/daily-2026-09-17-jm-eagle-cleared.json (OK jm-eagle branded HQ; #62 mill pack locked)
  *   data/daily-2026-09-17-products-cleared.json (9 day OK+soft RFQ SKUs; HOLD30 mill-cards only)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
@@ -954,7 +955,9 @@ function loadStillsMillSeals(file) {
   );
   const millSoft = new Set((pack.soft ?? []).map(slugOf).filter((slug) => slug && !holdOut.has(slug)));
   const millWire = new Set(
-    [...(pack.wire_ok ?? []), ...(pack.ok ?? []), ...millSoft].filter((slug) => slug && !holdOut.has(slug))
+    [...(pack.wire_ok ?? []), ...(pack.ok ?? []), ...(pack.sealed_wire_ok ?? []), ...millSoft].filter(
+      (slug) => slug && !holdOut.has(slug)
+    )
   );
   return { pack, millWire, millSoft, holdOut };
 }
@@ -2036,6 +2039,25 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const jmEagleMills = buildAppendedStillsMills({
+    file: "daily-2026-09-17-jm-eagle-cleared.json",
+    packTag: "daily-2026-09-17",
+    dateTag: "2026-09-17",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+      ...hold4Mills.map((s) => s.packSlug),
+      ...day0915Mills.map((s) => s.packSlug),
+      ...hold39Mills.map((s) => s.packSlug),
+      ...hold7Mills.map((s) => s.packSlug),
+      ...anvilMills.map((s) => s.packSlug),
+      ...day0917Mills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -2062,6 +2084,7 @@ export function buildCatalog() {
   const wired0917Slugs = new Set([
     ...wired0915Slugs,
     ...day0917Mills.map((s) => s.packSlug),
+    ...jmEagleMills.map((s) => s.packSlug),
   ]);
   const raw = [
     ...buildPhase1Suppliers(report),
@@ -2080,6 +2103,7 @@ export function buildCatalog() {
     ...hold7Mills,
     ...anvilMills,
     ...day0917Mills,
+    ...jmEagleMills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),
