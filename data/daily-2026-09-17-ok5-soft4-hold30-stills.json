@@ -1,0 +1,55 @@
+{
+  "label": "daily-2026-09-17-ok5-soft4-hold30-stills",
+  "day_ok": [
+    "rehau",
+    "trumpf",
+    "ati",
+    "kaiser-aluminum",
+    "victaulic"
+  ],
+  "day_soft": [
+    "altra-industrial-motion",
+    "fronius",
+    "renishaw",
+    "kabelwerk-eupen"
+  ],
+  "hold30_ok": [
+    "advanced-drainage-systems",
+    "bormioli-pharma",
+    "bystronic",
+    "camozzi",
+    "carlisle-construction",
+    "ccl-industries",
+    "fuji-seal",
+    "john-crane",
+    "nelipak",
+    "oliver-healthcare",
+    "tekni-plex",
+    "tokyo-steel",
+    "uponor",
+    "wl-plastics"
+  ],
+  "hold30_soft": [
+    "aquatherm",
+    "bonnell-aluminum",
+    "charlotte-pipe",
+    "ipex",
+    "iscar",
+    "liqui-box",
+    "novolex",
+    "special-metals",
+    "superior-essex",
+    "vitro",
+    "walsin-lihwa"
+  ],
+  "hold_out": [
+    "jm-eagle"
+  ],
+  "blocked_out": [
+    "rathgibson",
+    "martin-sprocket",
+    "tolomatic",
+    "clippard"
+  ],
+  "note": "Stills only PR. Catalogue wire separate. Soft/OK day + HOLD30 plant headers. RFQ only."
+}
