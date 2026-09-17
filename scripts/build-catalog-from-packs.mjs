@@ -22,6 +22,7 @@
  *   data/daily-2026-09-15-products-cleared.json (OK 1 + soft 16; HOLD 33 out)
  *   data/daily-2026-09-15-hold33-products-cleared.json (soft 28; HOLD 5 out; Soft16+krones locked)
  *   data/daily-2026-09-15-hold5-products-cleared.json (OK 3 + soft 2; Soft28 + Soft16+krones + mill packs locked)
+ *   data/daily-2026-09-17-mills-products-cleared.json (OK 5 + soft 4; HOLD30 + soft-hold11 + iscar out)
  *   data/hold30-mills-cleared.json (+ docs/researcher-hold30-mills-2026-09-10.json)
  *   data/hold30-refetch3-cleared.json (+ docs/researcher-hold30-refetch3-2026-09-10.json)
  *   data/hold35-products-cleared.json (+ docs/researcher-hold35-products-2026-09-10.json)
@@ -275,6 +276,7 @@ function mergeManifestSoftCredits() {
     "daily-2026-09-15-products-cleared.json",
     "daily-2026-09-15-hold33-products-cleared.json",
     "daily-2026-09-15-hold5-products-cleared.json",
+    "daily-2026-09-17-mills-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const entry of pack?.soft ?? []) {
@@ -299,6 +301,8 @@ const SUPPLIER_IMAGE_ALLOW_ONLY = {
   wienerberger: new Set(["wienerberger_01.jpg"]),
   /** Kuka: Researcher shipped kuka_08 lettering as kuka_01; drop the identical _08 twin. */
   kuka: new Set(["kuka_01.jpg"]),
+  /** Altra: OEM/brand group — keep the Columbia City facility still, drop duplicate portraits. */
+  "altra-industrial-motion": new Set(["altra-industrial-motion_02.jpg"]),
 };
 
 function isHeld(supplierSlug, productSlug) {
@@ -764,6 +768,7 @@ function skuIdentityBySlug() {
     "daily-2026-09-15-products-cleared.json",
     "daily-2026-09-15-hold33-products-cleared.json",
     "daily-2026-09-15-hold5-products-cleared.json",
+    "daily-2026-09-17-mills-products-cleared.json",
   ]) {
     const pack = readJsonIfExists(path.join(DATA_DIR, file));
     for (const sku of pack?.products ?? []) {
@@ -1133,6 +1138,24 @@ function buildDaily0915Hold5ProductHosts(wiredSlugs, report) {
     pack: seals.pack,
     packTag: "daily-2026-09-15-hold5",
     dateTag: "2026-09-15",
+    productWire: seals.productWire,
+    wiredSlugs,
+    report,
+    omitWebsite: true,
+  });
+}
+
+function loadDaily0917Seals() {
+  const pack = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-mills-products-cleared.json"));
+  return { pack, productWire: productWireFromPack(pack) };
+}
+
+function buildDaily0917ProductHosts(wiredSlugs, report) {
+  const seals = loadDaily0917Seals();
+  return buildProductHostsFromPack({
+    pack: seals.pack,
+    packTag: "daily-2026-09-17",
+    dateTag: "2026-09-17",
     productWire: seals.productWire,
     wiredSlugs,
     report,
@@ -1609,6 +1632,21 @@ function loadProductPacks() {
       });
     }
   }
+  const day0917 = readJsonIfExists(path.join(DATA_DIR, "daily-2026-09-17-mills-products-cleared.json"));
+  if (day0917) {
+    const seals = loadDaily0917Seals();
+    const skus = (day0917.products ?? []).map(normalizeClearedSku).filter((sku) => {
+      if (seals.productWire.size && !seals.productWire.has(sku.supplier_slug_guess)) return false;
+      return true;
+    });
+    if (skus.length) {
+      packs.push({
+        packId: "d0917",
+        scrapedAt: "2026-09-17T17:13:16.000Z",
+        skus: skus.map((sku) => ({ raw: sku, bucket: "daily" })),
+      });
+    }
+  }
   return packs;
 }
 
@@ -1952,6 +1990,24 @@ export function buildCatalog() {
     ]),
     report,
   });
+  const day0917Mills = buildAppendedStillsMills({
+    file: "daily-2026-09-17-mills-products-cleared.json",
+    packTag: "daily-2026-09-17",
+    dateTag: "2026-09-17",
+    skipSlugs: new Set([
+      ...locked0911Slugs,
+      ...skip12Mills.map((s) => s.packSlug),
+      ...rest30Mills.map((s) => s.packSlug),
+      ...day0914Mills.map((s) => s.packSlug),
+      ...hold33Mills.map((s) => s.packSlug),
+      ...hold4Mills.map((s) => s.packSlug),
+      ...day0915Mills.map((s) => s.packSlug),
+      ...hold39Mills.map((s) => s.packSlug),
+      ...hold7Mills.map((s) => s.packSlug),
+      ...anvilMills.map((s) => s.packSlug),
+    ]),
+    report,
+  });
   const wiredClearedSlugs = new Set([
     ...clearedMills.map((s) => s.packSlug),
     ...hold30Mills.map((s) => s.packSlug),
@@ -1975,6 +2031,10 @@ export function buildCatalog() {
     ...hold7Mills.map((s) => s.packSlug),
     ...anvilMills.map((s) => s.packSlug),
   ]);
+  const wired0917Slugs = new Set([
+    ...wired0915Slugs,
+    ...day0917Mills.map((s) => s.packSlug),
+  ]);
   const raw = [
     ...buildPhase1Suppliers(report),
     ...buildDailySuppliers("2026-09-02", report),
@@ -1991,6 +2051,7 @@ export function buildCatalog() {
     ...hold39Mills,
     ...hold7Mills,
     ...anvilMills,
+    ...day0917Mills,
     ...buildClearedProductHosts("2026-09-10", wiredClearedSlugs, report),
     ...buildDaily0911ProductHosts(wired0911Slugs, report),
     ...buildDaily0914ProductHosts(wired0914Slugs, report),
@@ -1998,6 +2059,7 @@ export function buildCatalog() {
     ...buildDaily0915ProductHosts(wired0915Slugs, report),
     ...buildDaily0915Hold33ProductHosts(wired0915Slugs, report),
     ...buildDaily0915Hold5ProductHosts(wired0915Slugs, report),
+    ...buildDaily0917ProductHosts(wired0917Slugs, report),
   ];
 
   // Dedupe: by id, then by website domain / normalised name against the pack

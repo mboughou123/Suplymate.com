@@ -466,7 +466,11 @@
     "dayco": "Photo is the branded Dayco Birmingham MI HQ mixed-use office tower — HQ campus, not a manufacturing plant.",
     "gaf": "Photo is a branded GAF commercial-roofing install; Tampa plant exists only as gaf_03 — not a confirmed plant-exterior claim.",
     "intralox": "Photo is the branded Intralox USA Corporate Headquarters street still — HQ campus, not a conveyor plant floor.",
-    "schunk": "Photo is a Hannover Messe robotic-hand product still; SCHUNK Entwicklungszentrum ZEUS is schunk_02 — not a confirmed plant-exterior claim."
+    "schunk": "Photo is a Hannover Messe robotic-hand product still; SCHUNK Entwicklungszentrum ZEUS is schunk_02 — not a confirmed plant-exterior claim.",
+    "altra-industrial-motion": "Listed as an OEM/brand manufacturer group, not a single plant. Photo is the Warner Electric Columbia City facility — not a plant-exterior claim for the whole group.",
+    "fronius": "Photo is a single but real Sattledt Fronius site still — not a confirmed plant-exterior claim.",
+    "renishaw": "Photo is a single New Mills Renishaw site geograph — not a confirmed plant-exterior claim.",
+    "kabelwerk-eupen": "Photo is a single real Eupen Kabelwerk chimney still — not a confirmed plant-exterior claim."
   },
   "softProductImageCredits": {
     "fedrigoni": "Specialty paper/label application still — category-correct, not mill stock.",
@@ -690,11 +694,15 @@
     "yuto/04.jpg",
     "yuto/05.jpg",
     "yuto/b09.jpg",
-    "forbo-siegling/forbo-siegling_02.jpg"
+    "forbo-siegling/forbo-siegling_02.jpg",
+    "altra-industrial-motion/altra-industrial-motion_01.jpg",
+    "altra-industrial-motion/altra-industrial-motion_03.jpg",
+    "altra-industrial-motion/altra-industrial-motion_04.jpg"
   ],
   "supplierHeroById": {
     "$comment": "Curated hero photo per supplier id (must be one of its surviving supplierImages). Overrides the phase-1 manifest hero / first image.",
-    "al-gharbia-pipe-company-llc-ae": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg"
+    "al-gharbia-pipe-company-llc-ae": "/images/suppliers/phase1/tube-pipes/al-gharbia-pipe-factory-3.jpg",
+    "altra-industrial-motion": "/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg"
   },
   "millIdentityBySlug": {
     "$comment": "Field details for Researcher-cleared daily packs whose sealed JSON is stills-only (no suppliers array). Used by scripts/build-catalog-from-packs.mjs.",
@@ -1940,6 +1948,87 @@
       "website": "https://www.anvilintl.com/",
       "description": "Anvil International manufactures malleable and cast iron pipe fittings, pipe hangers and grooved piping systems.",
       "product_lines": ["Malleable and cast iron pipe fittings", "Pipe hangers and supports", "Grooved piping systems"]
+    },
+    "rehau": {
+      "company_name": "REHAU Group",
+      "primary_category": "Tubes & Pipes",
+      "country": "Germany",
+      "city": "Rehau",
+      "website": "https://www.rehau.com/",
+      "description": "REHAU Group manufactures polymer pipe systems, building-technology piping and window and infrastructure profiles.",
+      "product_lines": ["Polymer pipe systems", "Building technology piping", "Window and infrastructure profiles"]
+    },
+    "trumpf": {
+      "company_name": "TRUMPF GmbH + Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Ditzingen",
+      "website": "https://www.trumpf.com/",
+      "description": "TRUMPF manufactures laser cutting machines, sheet-metal fabrication systems and industrial lasers.",
+      "product_lines": ["Laser cutting machines", "Sheet metal fabrication systems", "Industrial lasers and electronics"]
+    },
+    "ati": {
+      "company_name": "ATI Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Dallas",
+      "website": "https://www.atimaterials.com/",
+      "description": "ATI Inc. produces specialty materials including titanium, nickel alloys and precision-rolled specialty steels.",
+      "product_lines": ["Specialty materials", "Titanium and nickel alloys", "Precision rolled specialty steel"]
+    },
+    "kaiser-aluminum": {
+      "company_name": "Kaiser Aluminum Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Franklin",
+      "website": "https://www.kaiseraluminum.com/",
+      "description": "Kaiser Aluminum manufactures fabricated aluminum products, aerospace plate and extruded aluminum.",
+      "product_lines": ["Fabricated aluminum products", "Aerospace aluminum plate", "Extruded aluminum products"]
+    },
+    "victaulic": {
+      "company_name": "Victaulic Company",
+      "primary_category": "Tubes & Pipes",
+      "country": "United States",
+      "city": "Easton",
+      "website": "https://www.victaulic.com/",
+      "description": "Victaulic manufactures mechanical pipe joining systems, grooved couplings and fire-protection and HVAC piping.",
+      "product_lines": ["Mechanical pipe joining systems", "Grooved couplings and fittings", "Fire protection and HVAC piping"]
+    },
+    "altra-industrial-motion": {
+      "company_name": "Altra Industrial Motion Corp. (OEM / manufacturer group)",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Braintree",
+      "website": "https://www.altramotion.com/",
+      "description": "Altra Industrial Motion is an OEM/brand manufacturer group of mechanical power-transmission products (brakes, clutches, couplings), not a single plant.",
+      "product_lines": ["Power transmission products", "Couplings and clutches", "Brakes and gearing"]
+    },
+    "fronius": {
+      "company_name": "Fronius International GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Austria",
+      "city": "Pettenbach",
+      "website": "https://www.fronius.com/",
+      "description": "Fronius International GmbH manufactures welding systems, solar inverters and battery charging equipment.",
+      "product_lines": ["Welding systems", "Solar inverters", "Battery charging systems"]
+    },
+    "renishaw": {
+      "company_name": "Renishaw plc",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Wotton-under-Edge",
+      "website": "https://www.renishaw.com/",
+      "description": "Renishaw plc manufactures metrology probes, additive-manufacturing systems and position encoders.",
+      "product_lines": ["Metrology probes", "Additive manufacturing systems", "Position encoders"]
+    },
+    "kabelwerk-eupen": {
+      "company_name": "Kabelwerk Eupen AG",
+      "primary_category": "Cables & Electrical",
+      "country": "Belgium",
+      "city": "Eupen",
+      "website": "https://www.eupen.com/",
+      "description": "Kabelwerk Eupen AG manufactures power, telecom and specialty cable systems.",
+      "product_lines": ["Power and telecom cables", "Specialty cable systems", "Fire-resistant cables"]
     }
   }
 }

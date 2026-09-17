@@ -2353,6 +2353,149 @@ describe("daily 2026-09-15 anvil mill catch-up", () => {
   });
 });
 
+describe("daily 2026-09-17 OK5+soft4 mill/product wire", () => {
+  const millsOk = ["rehau", "trumpf", "ati", "kaiser-aluminum", "victaulic"];
+  const millsSoft = ["altra-industrial-motion", "fronius", "renishaw", "kabelwerk-eupen"];
+  const hold30 = [
+    "advanced-drainage-systems",
+    "bormioli-pharma",
+    "bystronic",
+    "camozzi",
+    "carlisle-construction",
+    "ccl-industries",
+    "fuji-seal",
+    "john-crane",
+    "nelipak",
+    "oliver-healthcare",
+    "tekni-plex",
+    "tokyo-steel",
+    "uponor",
+    "wl-plastics",
+    "aquatherm",
+    "bonnell-aluminum",
+    "charlotte-pipe",
+    "ipex",
+    "iscar",
+    "liqui-box",
+    "novolex",
+    "special-metals",
+    "superior-essex",
+    "vitro",
+    "walsin-lihwa",
+    "jm-eagle",
+  ];
+  const softHold11 = [
+    "amada",
+    "makino",
+    "gf-piping-systems",
+    "nipro-pharmapackaging",
+    "commscope",
+    "mitutoyo",
+    "tsubaki",
+    "johns-manville",
+    "heidenhain",
+    "miller-electric",
+    "seco-tools",
+  ];
+  const blocked = ["rathgibson", "martin-sprocket", "tolomatic", "clippard"];
+  const dayMills = packSuppliers.filter((s) => s.pack === "daily-2026-09-17" && !s.productHostOnly);
+  const dayHosts = packSuppliers.filter((s) => s.pack === "daily-2026-09-17" && s.productHostOnly);
+  const dayProducts = packProducts.filter((p) => p.pack === "d0917");
+  const softCaptions: Record<string, RegExp> = {
+    "altra-industrial-motion": /OEM\/brand manufacturer group|not a single plant|Columbia City/i,
+    fronius: /Sattledt|not a confirmed plant-exterior/i,
+    renishaw: /New Mills|not a confirmed plant-exterior/i,
+    "kabelwerk-eupen": /Eupen|chimney|not a confirmed plant-exterior/i,
+  };
+
+  it("appends the 9 cleared mills and 9 RFQ products without rewriting locked packs", () => {
+    expect(dayMills.map((s) => s.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(dayProducts.map((p) => p.packSlug).sort()).toEqual([...millsOk, ...millsSoft].sort());
+    expect(dayHosts).toEqual([]);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15" && !s.productHostOnly)).toHaveLength(8);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold39")).toHaveLength(32);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-hold7")).toHaveLength(6);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-15-anvil")).toHaveLength(1);
+    expect(packProducts.filter((p) => p.pack === "d0915")).toHaveLength(17);
+    expect(packProducts.filter((p) => p.pack === "d0915-h33")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0915-h5")).toHaveLength(5);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14" && !s.productHostOnly)).toHaveLength(16);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold33")).toHaveLength(29);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-14-hold4")).toHaveLength(4);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11" && !s.productHostOnly)).toHaveLength(9);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-skip12")).toHaveLength(11);
+    expect(packSuppliers.filter((s) => s.pack === "daily-2026-09-11-rest30")).toHaveLength(30);
+    expect(packProducts.filter((p) => p.pack === "d0914")).toHaveLength(28);
+    expect(packProducts.filter((p) => p.pack === "d0914-h22")).toHaveLength(22);
+    expect(packProducts.filter((p) => p.pack === "d0911")).toHaveLength(9);
+  });
+
+  it("points cards at local stills, keeps RFQ honesty, and skips invented certs", () => {
+    const listed = new Set(mergePackSuppliers(outscraperSuppliers).map((s) => s.id));
+    for (const s of dayMills) {
+      if (s.packSlug === "altra-industrial-motion") {
+        expect(s.imageUrl).toBe("/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg");
+        expect(s.supplierImages).toEqual([
+          "/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg",
+        ]);
+        expect(s.name).toMatch(/OEM|manufacturer group/i);
+      } else {
+        expect(s.imageUrl, s.packSlug).toBe(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+        expect(s.supplierImages?.[0], s.packSlug).toBe(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+        expect(s.supplierImages, s.packSlug).toContain(`/images/suppliers/${s.packSlug}/${s.packSlug}_01.jpg`);
+      }
+      expect((s.supplierImages ?? []).every((u) => u.startsWith("/images/suppliers/")), s.packSlug).toBe(true);
+      expect(s.moq, s.packSlug).toMatch(/RFQ/i);
+      expect(s.productHostOnly, s.packSlug).toBeFalsy();
+      expect(s.certificationsDetailed ?? [], s.packSlug).toEqual([]);
+      expect(listed.has(s.id), s.packSlug).toBe(true);
+      expect(JSON.stringify(s), s.packSlug).not.toMatch(/\$0\.00|maps\.google|googleusercontent/i);
+    }
+    for (const p of dayProducts) {
+      expect(p.basePrice, p.id).toBeNull();
+      expect(p.priceSourceType, p.id).toBe("rfq");
+      expect(p.status, p.id).toBe("approved");
+      expect(p.images.length, p.id).toBeGreaterThan(0);
+      expect(p.images.every((u) => u.startsWith(`/images/products/${p.packSlug}/`)), p.id).toBe(true);
+      expect(JSON.stringify(p), p.id).not.toMatch(/\$0\.00|maps\.google|googleusercontent/i);
+      expect(p.specifications["Image credit"] ?? "", p.id).not.toMatch(/AI-generated/i);
+      expect(p.certifications ?? [], p.id).toEqual([]);
+    }
+  });
+
+  it("soft-captions the SOFT 4, relabels Altra as a manufacturer group, and keeps HOLD/soft-hold out", () => {
+    for (const slug of millsSoft) {
+      const mill = dayMills.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).toMatch(softCaptions[slug]);
+    }
+    const altra = dayMills.find((s) => s.packSlug === "altra-industrial-motion");
+    expect(altra).toBeDefined();
+    expect(altra!.description).toMatch(/OEM\/brand manufacturer group|not a single plant/i);
+    expect(altra!.description).not.toMatch(/single plant in Braintree/i);
+    for (const slug of millsOk) {
+      const mill = dayMills.find((s) => s.packSlug === slug);
+      expect(mill, slug).toBeDefined();
+      expect(mill!.description, slug).not.toMatch(
+        /not a (confirmed )?plant-exterior|HQ campus|campus aerial|field-install|warehouse|mill interior/i
+      );
+    }
+    const rehau = dayMills.find((s) => s.packSlug === "rehau");
+    expect(rehau!.description).toMatch(/polymer pipe|building-technology piping/i);
+    expect(rehau!.description).not.toMatch(/district of Hof|Fichtel Mountains/i);
+    for (const slug of [...hold30, ...softHold11, ...blocked]) {
+      expect(dayMills.some((s) => s.packSlug === slug), slug).toBe(false);
+      expect(dayProducts.some((p) => p.packSlug === slug), slug).toBe(false);
+      expect(
+        packSuppliers.some((s) => s.packSlug === slug && s.pack === "daily-2026-09-17"),
+        slug
+      ).toBe(false);
+    }
+    expect(packSuppliers.some((s) => s.packSlug === "iscar" && !s.productHostOnly)).toBe(false);
+    expect(packProducts.some((p) => p.packSlug === "iscar")).toBe(false);
+  });
+});
+
 describe("homepage products picker", () => {
   it("only picks approved products with their own real photo, spread across categories and suppliers", () => {
     const products = packProducts.map(scrapedToProduct);
