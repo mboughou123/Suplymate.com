@@ -78,6 +78,19 @@ describe("site navigation model", () => {
     }
   });
 
+  it("exposes Steel & Metal browse from Products and Solutions", () => {
+    const products = SITE_NAV.find((i) => i.id === "products");
+    expect(products?.kind).toBe("products");
+    if (products?.kind !== "products") return;
+    expect(products.modules.some((link) => link.href === "/steel-metal")).toBe(true);
+
+    const solutions = SITE_NAV.find((i) => i.id === "solutions");
+    expect(solutions?.kind).toBe("columns");
+    if (solutions?.kind !== "columns") return;
+    const byMaterial = solutions.columns.find((c) => c.titleKey === "solutions.byMaterial");
+    expect(byMaterial?.links.some((link) => link.href === "/steel-metal")).toBe(true);
+  });
+
   it("fills each Solutions column with up to the configured number of entries", () => {
     const solutions = SITE_NAV.find((i) => i.id === "solutions");
     expect(solutions?.kind).toBe("columns");

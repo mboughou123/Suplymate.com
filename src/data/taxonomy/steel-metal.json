@@ -1,0 +1,4202 @@
+{
+  "top_level": "Steel & Metal",
+  "source_notes": [
+    "Alibaba Metals & Alloys (category id 9 / Minerals & Metallurgy grouping) — buyer-facing product names from steel sheet/plate/coil, stainless, GI/PPGI showrooms and ASTM procurement guides on Alibaba Seller Blog",
+    "Made-in-China Metallurgy, Mineral & Energy → Metal & Products → Steel & Products tree (Alloy Steel, Silicon Steel, Special Steel, Stainless, Angle, Billet, Channel, Coil & Strip, H/I Beam, Pipe & Tube, Rebar, Round Bar, Sheet & Plate, Sheet Pile, Wire, Wire Rope) plus Aluminum, Copper, Alloy, Non-ferrous siblings",
+    "Thomasnet Metals & Metal Products browse (Bars & Rods by alloy/aluminum/brass/bronze/copper/steel; Shapes including extruded/rolled steel & stainless) used to cross-check missing leaf forms",
+    "Common buyer grade/spec vocabulary from ASTM/EN/JIS/API listings repeatedly shown on Alibaba and Made-in-China product attributes (no FOB/prices captured)"
+  ],
+  "generated_at_pt": "2026-09-15 8:13 PM PT",
+  "pricing_policy": "no FOB/prices — variants only",
+  "categories": [
+    {
+      "id": "carbon-mild-steel",
+      "name": "Carbon Steel / Mild Steel",
+      "alibaba_aliases": [
+        "Carbon Steel",
+        "Mild Steel",
+        "MS Steel",
+        "Black Steel"
+      ],
+      "children": [
+        {
+          "id": "carbon-steel-sheet",
+          "name": "Carbon Steel Sheet",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "mild steel sheet",
+            "MS sheet",
+            "CRC sheet",
+            "HRC sheet"
+          ],
+          "forms": [
+            "sheet"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "Q235B",
+              "Q345",
+              "Q355",
+              "A36",
+              "SS400",
+              "S235JR",
+              "S275JR",
+              "S355JR",
+              "SPCC",
+              "SPHC",
+              "DC01",
+              "ST37",
+              "ST52"
+            ],
+            "thickness": [
+              "0.3-1.5 mm (CRC/thin)",
+              "1.5-6 mm (sheet)",
+              "gauge 10-28"
+            ],
+            "finish": [
+              "hot rolled",
+              "cold rolled",
+              "pickled & oiled (P&O)",
+              "black",
+              "oiled"
+            ],
+            "form": [
+              "sheet"
+            ],
+            "standards": [
+              "ASTM A36",
+              "ASTM A1011",
+              "EN 10025",
+              "JIS G3101",
+              "GB/T 700"
+            ],
+            "other_specs": [
+              "width 1000/1219/1500 mm",
+              "cut-to-length"
+            ]
+          },
+          "buyer_search_examples": [
+            "Q235 mild steel sheet 2mm",
+            "A36 hot rolled steel sheet",
+            "SPCC cold rolled sheet"
+          ]
+        },
+        {
+          "id": "carbon-steel-plate",
+          "name": "Carbon Steel Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "MS plate",
+            "mild steel plate",
+            "HR plate",
+            "boiler plate (carbon)"
+          ],
+          "forms": [
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q345",
+              "Q355",
+              "A36",
+              "A572 Gr50",
+              "A516 Gr70",
+              "SS400",
+              "S355JR",
+              "ST52",
+              "AH36"
+            ],
+            "thickness": [
+              "6-20 mm",
+              "20-50 mm",
+              "50-100+ mm",
+              "heavy plate"
+            ],
+            "finish": [
+              "hot rolled",
+              "normalized",
+              "shot blasted",
+              "primer coated"
+            ],
+            "form": [
+              "plate"
+            ],
+            "standards": [
+              "ASTM A36",
+              "ASTM A572",
+              "ASTM A516",
+              "EN 10025",
+              "JIS G3106"
+            ],
+            "other_specs": [
+              "flame cut",
+              "plasma cut",
+              "bevel edge"
+            ]
+          },
+          "buyer_search_examples": [
+            "A36 steel plate 10mm",
+            "Q345B plate 20mm",
+            "S355JR structural plate"
+          ]
+        },
+        {
+          "id": "carbon-steel-coil",
+          "name": "Carbon Steel Coil",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "HRC",
+            "CRC",
+            "hot rolled coil",
+            "cold rolled coil",
+            "MS coil"
+          ],
+          "forms": [
+            "coil"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "SPHC",
+              "SPCC",
+              "DC01",
+              "DD11",
+              "A36",
+              "SS400"
+            ],
+            "thickness": [
+              "0.3-3 mm CRC",
+              "1.5-25 mm HRC"
+            ],
+            "finish": [
+              "hot rolled",
+              "cold rolled",
+              "pickled",
+              "oiled",
+              "skin-passed"
+            ],
+            "form": [
+              "coil"
+            ],
+            "standards": [
+              "ASTM A1011",
+              "JIS G3131",
+              "JIS G3141",
+              "EN 10130",
+              "GB/T 5213"
+            ],
+            "other_specs": [
+              "coil ID 508/610 mm",
+              "slit coil",
+              "edge mill/slit"
+            ]
+          },
+          "buyer_search_examples": [
+            "hot rolled coil SPHC",
+            "cold rolled coil SPCC 0.8mm"
+          ]
+        },
+        {
+          "id": "carbon-steel-strip",
+          "name": "Carbon Steel Strip",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "MS strip",
+            "slit strip",
+            "band steel"
+          ],
+          "forms": [
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "SPCC",
+              "C45",
+              "C50",
+              "C60",
+              "C75"
+            ],
+            "thickness": [
+              "0.1-3 mm"
+            ],
+            "finish": [
+              "cold rolled",
+              "annealed",
+              "bright",
+              "blue"
+            ],
+            "form": [
+              "strip"
+            ],
+            "standards": [
+              "ASTM A109",
+              "EN 10132",
+              "JIS G3141"
+            ],
+            "other_specs": [
+              "width slit-to-order",
+              "temper soft/half-hard/full-hard"
+            ]
+          },
+          "buyer_search_examples": [
+            "cold rolled steel strip C75",
+            "MS slit strip 50mm"
+          ]
+        },
+        {
+          "id": "carbon-steel-foil",
+          "name": "Carbon Steel Foil",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "steel foil",
+            "thin gauge steel"
+          ],
+          "forms": [
+            "foil"
+          ],
+          "variants": {
+            "grades": [
+              "low carbon",
+              "SPCC",
+              "DC01"
+            ],
+            "thickness": [
+              "<0.1 mm",
+              "0.02-0.2 mm"
+            ],
+            "finish": [
+              "bright",
+              "annealed",
+              "tempered"
+            ],
+            "form": [
+              "foil"
+            ],
+            "standards": [
+              "ASTM A109"
+            ],
+            "other_specs": [
+              "precision gauge"
+            ]
+          },
+          "buyer_search_examples": [
+            "carbon steel foil 0.05mm"
+          ]
+        },
+        {
+          "id": "carbon-steel-round-bar",
+          "name": "Carbon Steel Round Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "MS round bar",
+            "mild steel rod",
+            "black bar"
+          ],
+          "forms": [
+            "round bar",
+            "rod"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q345",
+              "A36",
+              "C45",
+              "1045",
+              "S20C",
+              "S45C",
+              "1018",
+              "1020"
+            ],
+            "thickness": [],
+            "finish": [
+              "hot rolled",
+              "cold drawn",
+              "peeled",
+              "turned"
+            ],
+            "form": [
+              "round bar",
+              "rod"
+            ],
+            "standards": [
+              "ASTM A36",
+              "ASTM A108",
+              "EN 10083",
+              "JIS G4051"
+            ],
+            "other_specs": [
+              "diameter 6-300+ mm",
+              "cut length"
+            ]
+          },
+          "buyer_search_examples": [
+            "C45 round bar 40mm",
+            "A36 mild steel round bar"
+          ]
+        },
+        {
+          "id": "carbon-steel-flat-bar",
+          "name": "Carbon Steel Flat Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "MS flat",
+            "flat steel",
+            "strap iron"
+          ],
+          "forms": [
+            "flat"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "A36",
+              "SS400",
+              "S235JR"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "flat"
+            ],
+            "standards": [
+              "ASTM A36",
+              "EN 10025"
+            ],
+            "other_specs": [
+              "width x thickness",
+              "sheared/rolled edge"
+            ]
+          },
+          "buyer_search_examples": [
+            "MS flat bar 50x6mm"
+          ]
+        },
+        {
+          "id": "carbon-steel-square-hex-bar",
+          "name": "Carbon Steel Square / Hex Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "MS square bar",
+            "hex bar",
+            "key steel"
+          ],
+          "forms": [
+            "square",
+            "hex"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "C45",
+              "1045",
+              "1214",
+              "1215"
+            ],
+            "thickness": [],
+            "finish": [
+              "hot rolled",
+              "cold drawn"
+            ],
+            "form": [
+              "square",
+              "hex"
+            ],
+            "standards": [
+              "ASTM A108",
+              "EN 10277"
+            ],
+            "other_specs": [
+              "across flats AF"
+            ]
+          },
+          "buyer_search_examples": [
+            "C45 hex bar 20mm",
+            "mild steel square bar 25mm"
+          ]
+        },
+        {
+          "id": "carbon-steel-billet-bloom-slab",
+          "name": "Carbon Steel Billet / Bloom / Slab",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "steel billet",
+            "bloom",
+            "slab",
+            "semi-finished"
+          ],
+          "forms": [
+            "billet",
+            "bloom",
+            "slab"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q345",
+              "3SP",
+              "5SP",
+              "A36"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "billet",
+              "bloom",
+              "slab"
+            ],
+            "standards": [
+              "GB/T 699",
+              "ASTM A29"
+            ],
+            "other_specs": [
+              "square billet 100-200 mm",
+              "continuous cast",
+              "ingot"
+            ]
+          },
+          "buyer_search_examples": [
+            "steel billet 150x150",
+            "hot rolled slab"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stainless-steel",
+      "name": "Stainless Steel",
+      "alibaba_aliases": [
+        "Stainless Steel",
+        "SS",
+        "Inox",
+        "SUS"
+      ],
+      "children": [
+        {
+          "id": "ss-sheet-plate",
+          "name": "Stainless Steel Sheet & Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS sheet",
+            "SS plate",
+            "inox sheet",
+            "stainless plate"
+          ],
+          "forms": [
+            "sheet",
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "201",
+              "202",
+              "301",
+              "304",
+              "304L",
+              "316",
+              "316L",
+              "316Ti",
+              "321",
+              "309S",
+              "310S",
+              "410",
+              "420",
+              "430",
+              "904L",
+              "2205",
+              "2507"
+            ],
+            "thickness": [
+              "0.3-3 mm CR",
+              "3-6 mm",
+              "6-50+ mm plate"
+            ],
+            "finish": [
+              "2B",
+              "BA",
+              "No.1",
+              "No.4",
+              "HL/brushed",
+              "8K mirror",
+              "embossed",
+              "checkered"
+            ],
+            "form": [
+              "sheet",
+              "plate"
+            ],
+            "standards": [
+              "ASTM A240",
+              "EN 10088-2",
+              "JIS G4304/G4305",
+              "GB/T 3280"
+            ],
+            "other_specs": [
+              "austenitic/ferritic/martensitic/duplex",
+              "width 1000/1219/1500 mm"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 2B stainless sheet 1.2mm",
+            "316L plate 10mm ASTM A240",
+            "430 No.4 decorative sheet"
+          ]
+        },
+        {
+          "id": "ss-coil-strip",
+          "name": "Stainless Steel Coil & Strip",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS coil",
+            "SS strip",
+            "precision strip"
+          ],
+          "forms": [
+            "coil",
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "201",
+              "304",
+              "304L",
+              "316L",
+              "430",
+              "301",
+              "321"
+            ],
+            "thickness": [
+              "0.05-3 mm"
+            ],
+            "finish": [
+              "2B",
+              "BA",
+              "bright annealed",
+              "temper rolled"
+            ],
+            "form": [
+              "coil",
+              "strip"
+            ],
+            "standards": [
+              "ASTM A240",
+              "ASTM A666",
+              "EN 10088"
+            ],
+            "other_specs": [
+              "slit width",
+              "temper 1/4H 1/2H FH"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 stainless coil 0.5mm",
+            "301 spring temper strip"
+          ]
+        },
+        {
+          "id": "ss-pipe-tube",
+          "name": "Stainless Steel Pipe & Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS pipe",
+            "SS tube",
+            "inox tube",
+            "sanitary tube"
+          ],
+          "forms": [
+            "pipe",
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "304",
+              "304L",
+              "316",
+              "316L",
+              "321",
+              "310S",
+              "2205",
+              "2507",
+              "409",
+              "439"
+            ],
+            "thickness": [],
+            "finish": [
+              "annealed & pickled",
+              "polished",
+              "bright annealed",
+              "mill finish"
+            ],
+            "form": [
+              "pipe",
+              "tube"
+            ],
+            "standards": [
+              "ASTM A312",
+              "ASTM A213",
+              "ASTM A269",
+              "ASTM A270",
+              "EN 10216-5",
+              "JIS G3459"
+            ],
+            "other_specs": [
+              "seamless",
+              "welded/ERW",
+              "OD x WT",
+              "Sch 5S/10S/40S",
+              "sanitary 3A"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 seamless pipe Sch40",
+            "316L sanitary tube ASTM A270",
+            "duplex 2205 pipe"
+          ]
+        },
+        {
+          "id": "ss-bar-rod",
+          "name": "Stainless Steel Bar & Rod",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS round bar",
+            "SS hex",
+            "SS square bar"
+          ],
+          "forms": [
+            "round",
+            "hex",
+            "square",
+            "rod"
+          ],
+          "variants": {
+            "grades": [
+              "303",
+              "304",
+              "304L",
+              "316",
+              "316L",
+              "410",
+              "420",
+              "17-4PH",
+              "2205"
+            ],
+            "thickness": [],
+            "finish": [
+              "hot rolled",
+              "cold drawn",
+              "peeled",
+              "centerless ground"
+            ],
+            "form": [
+              "round",
+              "hex",
+              "square",
+              "rod"
+            ],
+            "standards": [
+              "ASTM A276",
+              "ASTM A484",
+              "EN 10088-3"
+            ],
+            "other_specs": [
+              "diameter",
+              "condition annealed/H1150"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 round bar 20mm",
+            "316L hex bar",
+            "17-4PH stainless bar"
+          ]
+        },
+        {
+          "id": "ss-wire",
+          "name": "Stainless Steel Wire",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS wire",
+            "spring wire",
+            "welding wire SS"
+          ],
+          "forms": [
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "302",
+              "304",
+              "316",
+              "316L",
+              "430",
+              "17-7PH"
+            ],
+            "thickness": [],
+            "finish": [
+              "bright",
+              "matte",
+              "soap coated"
+            ],
+            "form": [
+              "wire"
+            ],
+            "standards": [
+              "ASTM A580",
+              "ASTM A313",
+              "EN 10270-3"
+            ],
+            "other_specs": [
+              "diameter 0.05-10 mm",
+              "spring temper"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 stainless wire 1mm",
+            "316L spring wire"
+          ]
+        },
+        {
+          "id": "ss-foil",
+          "name": "Stainless Steel Foil",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS foil",
+            "precision foil"
+          ],
+          "forms": [
+            "foil"
+          ],
+          "variants": {
+            "grades": [
+              "304",
+              "316L",
+              "430",
+              "301"
+            ],
+            "thickness": [
+              "0.01-0.1 mm"
+            ],
+            "finish": [
+              "bright",
+              "annealed"
+            ],
+            "form": [
+              "foil"
+            ],
+            "standards": [
+              "ASTM A666"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "304 stainless foil 0.05mm"
+          ]
+        },
+        {
+          "id": "ss-angle-channel",
+          "name": "Stainless Steel Angle & Channel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS angle",
+            "SS channel",
+            "inox profile"
+          ],
+          "forms": [
+            "angle",
+            "channel"
+          ],
+          "variants": {
+            "grades": [
+              "201",
+              "304",
+              "316L"
+            ],
+            "thickness": [],
+            "finish": [
+              "pickled",
+              "polished",
+              "brushed"
+            ],
+            "form": [
+              "angle",
+              "channel"
+            ],
+            "standards": [
+              "ASTM A276",
+              "EN 10088"
+            ],
+            "other_specs": [
+              "equal/unequal angle",
+              "U-channel"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 equal angle 40x40x3",
+            "316L stainless channel"
+          ]
+        },
+        {
+          "id": "ss-mesh",
+          "name": "Stainless Steel Wire Mesh / Perforated",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SS mesh",
+            "woven mesh",
+            "perforated sheet"
+          ],
+          "forms": [
+            "mesh",
+            "perforated sheet"
+          ],
+          "variants": {
+            "grades": [
+              "304",
+              "316",
+              "316L"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "mesh",
+              "perforated sheet"
+            ],
+            "standards": [
+              "ASTM E2016"
+            ],
+            "other_specs": [
+              "mesh count",
+              "wire diameter",
+              "open area"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 woven wire mesh 20 mesh",
+            "316 perforated sheet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alloy-steel",
+      "name": "Alloy Steel",
+      "alibaba_aliases": [
+        "Alloy Steel",
+        "Chrome Moly",
+        "HSLA"
+      ],
+      "children": [
+        {
+          "id": "alloy-structural-bar",
+          "name": "Alloy Structural Steel Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "alloy bar",
+            "chromium steel",
+            "NiCrMo bar"
+          ],
+          "forms": [
+            "round",
+            "square",
+            "hex",
+            "flat"
+          ],
+          "variants": {
+            "grades": [
+              "4140",
+              "4340",
+              "4130",
+              "42CrMo",
+              "42CrMo4",
+              "40Cr",
+              "41Cr4",
+              "20CrMnTi",
+              "8620",
+              "SCM440"
+            ],
+            "thickness": [],
+            "finish": [
+              "hot rolled",
+              "annealed",
+              "QT quenched & tempered",
+              "normalized"
+            ],
+            "form": [
+              "round",
+              "square",
+              "hex",
+              "flat"
+            ],
+            "standards": [
+              "ASTM A29",
+              "ASTM A322",
+              "EN 10083",
+              "JIS G4105",
+              "GB/T 3077"
+            ],
+            "other_specs": [
+              "hardenability",
+              "UT tested"
+            ]
+          },
+          "buyer_search_examples": [
+            "4140 QT round bar",
+            "42CrMo alloy steel bar EN 10083"
+          ]
+        },
+        {
+          "id": "alloy-steel-plate",
+          "name": "Alloy Steel Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "HSLA plate",
+            "QT plate",
+            "wear plate"
+          ],
+          "forms": [
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "A514",
+              "A572",
+              "Q460",
+              "Q550",
+              "Q690",
+              "NM400",
+              "NM450",
+              "NM500",
+              "Hardox-equiv",
+              "AR400",
+              "AR500",
+              "SA387 Gr11/22"
+            ],
+            "thickness": [
+              "6-100+ mm"
+            ],
+            "finish": [
+              "normalized",
+              "QT",
+              "shot blasted"
+            ],
+            "form": [
+              "plate"
+            ],
+            "standards": [
+              "ASTM A514",
+              "ASTM A572",
+              "ASTM A387",
+              "EN 10025-6",
+              "GB/T 24186"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "NM400 wear plate",
+            "A514 QT plate",
+            "Q690 high strength plate"
+          ]
+        },
+        {
+          "id": "alloy-steel-pipe",
+          "name": "Alloy Steel Pipe & Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "chrome moly pipe",
+            "alloy seamless"
+          ],
+          "forms": [
+            "pipe",
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "P11",
+              "P22",
+              "P5",
+              "P9",
+              "P91",
+              "P92",
+              "T11",
+              "T22",
+              "4130",
+              "4140",
+              "15CrMo",
+              "12Cr1MoV"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe",
+              "tube"
+            ],
+            "standards": [
+              "ASTM A335",
+              "ASTM A213",
+              "EN 10216-2",
+              "GB/T 5310"
+            ],
+            "other_specs": [
+              "seamless",
+              "high temp service",
+              "Sch 40/80/160"
+            ]
+          },
+          "buyer_search_examples": [
+            "ASTM A335 P91 pipe",
+            "P22 chrome moly seamless"
+          ]
+        },
+        {
+          "id": "hsla-ahss",
+          "name": "HSLA / AHSS / Dual-Phase Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "HSLA",
+            "AHSS",
+            "dual phase",
+            "DP steel",
+            "advanced high strength"
+          ],
+          "forms": [
+            "sheet",
+            "coil",
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "HSLA 340/420/550",
+              "DP600",
+              "DP800",
+              "DP1000",
+              "TRIP",
+              "CP",
+              "MS martensitic"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "sheet",
+              "coil",
+              "plate"
+            ],
+            "standards": [
+              "EN 10346",
+              "VDA 239",
+              "SAE J2340",
+              "GB/T 20564"
+            ],
+            "other_specs": [
+              "automotive forming",
+              "yield/tensile class"
+            ]
+          },
+          "buyer_search_examples": [
+            "DP600 steel coil",
+            "AHSS dual phase sheet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tool-steel",
+      "name": "Tool Steel",
+      "alibaba_aliases": [
+        "Tool Steel",
+        "Die Steel",
+        "Mould Steel"
+      ],
+      "children": [
+        {
+          "id": "cold-work-tool-steel",
+          "name": "Cold Work Tool Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "D2",
+            "O1",
+            "A2",
+            "SKD11",
+            "Cr12MoV"
+          ],
+          "forms": [
+            "round",
+            "flat",
+            "plate",
+            "block"
+          ],
+          "variants": {
+            "grades": [
+              "D2",
+              "D3",
+              "O1",
+              "A2",
+              "A6",
+              "SKD11",
+              "Cr12MoV",
+              "DC53"
+            ],
+            "thickness": [],
+            "finish": [
+              "annealed",
+              "machined"
+            ],
+            "form": [
+              "round",
+              "flat",
+              "plate",
+              "block"
+            ],
+            "standards": [
+              "ASTM A681",
+              "JIS G4404",
+              "DIN 17350"
+            ],
+            "other_specs": [
+              "hardness HRC after HT"
+            ]
+          },
+          "buyer_search_examples": [
+            "D2 tool steel flat bar",
+            "SKD11 cold work steel"
+          ]
+        },
+        {
+          "id": "hot-work-tool-steel",
+          "name": "Hot Work Tool Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "H13",
+            "H11",
+            "SKD61",
+            "1.2344"
+          ],
+          "forms": [
+            "round",
+            "flat",
+            "plate",
+            "block"
+          ],
+          "variants": {
+            "grades": [
+              "H13",
+              "H11",
+              "H21",
+              "SKD61",
+              "1.2344",
+              "1.2343"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "round",
+              "flat",
+              "plate",
+              "block"
+            ],
+            "standards": [
+              "ASTM A681",
+              "DIN 1.2344"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "H13 tool steel round",
+            "1.2344 hot work die steel"
+          ]
+        },
+        {
+          "id": "high-speed-steel",
+          "name": "High Speed Steel (HSS)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "HSS",
+            "M2",
+            "M35",
+            "T1",
+            "SKH51"
+          ],
+          "forms": [
+            "round",
+            "flat",
+            "sheet",
+            "blank"
+          ],
+          "variants": {
+            "grades": [
+              "M2",
+              "M35",
+              "M42",
+              "T1",
+              "W6Mo5Cr4V2",
+              "SKH51",
+              "1.3343"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "round",
+              "flat",
+              "sheet",
+              "blank"
+            ],
+            "standards": [
+              "ASTM A600",
+              "JIS G4403"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "M2 high speed steel",
+            "M35 cobalt HSS bar"
+          ]
+        },
+        {
+          "id": "plastic-mould-steel",
+          "name": "Plastic Mould Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "P20",
+            "718",
+            "S136",
+            "NAK80"
+          ],
+          "forms": [
+            "plate",
+            "block",
+            "round"
+          ],
+          "variants": {
+            "grades": [
+              "P20",
+              "P20+Ni",
+              "718",
+              "S136",
+              "NAK80",
+              "1.2311",
+              "1.2312"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate",
+              "block",
+              "round"
+            ],
+            "standards": [
+              "ASTM A681",
+              "DIN"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "P20 mould steel plate",
+            "S136 stainless mould steel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "galvanized-coated-steels",
+      "name": "Galvanized & Coated Steels",
+      "alibaba_aliases": [
+        "GI",
+        "GL",
+        "PPGI",
+        "PPGL",
+        "Galvalume",
+        "Aluzinc",
+        "Tinplate",
+        "Color Coated"
+      ],
+      "children": [
+        {
+          "id": "gi-galvanized",
+          "name": "Galvanized Steel (GI)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "GI sheet",
+            "GI coil",
+            "hot dip galvanized",
+            "HDG",
+            "electrogalvanized EG"
+          ],
+          "forms": [
+            "sheet",
+            "coil",
+            "strip",
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D",
+              "DX52D",
+              "DX53D",
+              "SGCC",
+              "SGCH",
+              "CS Type A/B/C",
+              "Q195",
+              "Q235"
+            ],
+            "thickness": [
+              "0.12-3.0 mm"
+            ],
+            "finish": [
+              "regular spangle",
+              "minimized spangle",
+              "zero spangle",
+              "chromated",
+              "oiled",
+              "anti-fingerprint"
+            ],
+            "form": [
+              "sheet",
+              "coil",
+              "strip",
+              "plate"
+            ],
+            "standards": [
+              "ASTM A653",
+              "EN 10346",
+              "JIS G3302",
+              "GB/T 2518"
+            ],
+            "other_specs": [
+              "zinc Z30-Z275 g/m²",
+              "G30/G60/G90",
+              "hot-dip vs electro"
+            ]
+          },
+          "buyer_search_examples": [
+            "DX51D Z275 GI coil",
+            "ASTM A653 G90 galvanized sheet"
+          ]
+        },
+        {
+          "id": "gl-galvalume-aluzinc",
+          "name": "Galvalume / Aluzinc (GL)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "GL",
+            "galvalume",
+            "aluzinc",
+            "55% Al-Zn",
+            "AZ coil"
+          ],
+          "forms": [
+            "sheet",
+            "coil",
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D+AZ",
+              "S250GD+AZ",
+              "S350GD+AZ",
+              "S550GD+AZ",
+              "CS Type B+AZ"
+            ],
+            "thickness": [
+              "0.15-2.0 mm"
+            ],
+            "finish": [
+              "regular",
+              "fingerprint resistant",
+              "passivated"
+            ],
+            "form": [
+              "sheet",
+              "coil",
+              "strip"
+            ],
+            "standards": [
+              "ASTM A792",
+              "EN 10346",
+              "JIS G3321",
+              "AS 1397"
+            ],
+            "other_specs": [
+              "AZ70/AZ100/AZ150/AZ180"
+            ]
+          },
+          "buyer_search_examples": [
+            "galvalume AZ150 coil",
+            "aluzinc DX51D+AZ sheet"
+          ]
+        },
+        {
+          "id": "ppgi-prepainted-gi",
+          "name": "PPGI Prepainted Galvanized",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "PPGI",
+            "color coated GI",
+            "prepainted galvanized",
+            "CGCC"
+          ],
+          "forms": [
+            "coil",
+            "sheet",
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D",
+              "CGCC",
+              "CGCD",
+              "S280GD",
+              "S350GD"
+            ],
+            "thickness": [
+              "0.12-1.5 mm"
+            ],
+            "finish": [
+              "PE",
+              "SMP",
+              "HDP",
+              "PVDF",
+              "matte",
+              "high gloss",
+              "woodgrain"
+            ],
+            "form": [
+              "coil",
+              "sheet",
+              "strip"
+            ],
+            "standards": [
+              "ASTM A755",
+              "EN 10169",
+              "JIS G3312",
+              "GB/T 12754"
+            ],
+            "other_specs": [
+              "RAL color",
+              "topcoat 15-25 μm",
+              "zinc Z40-Z275"
+            ]
+          },
+          "buyer_search_examples": [
+            "PPGI DX51D RAL 5015",
+            "CGCC color coated coil Z100"
+          ]
+        },
+        {
+          "id": "ppgl-prepainted-gl",
+          "name": "PPGL Prepainted Galvalume",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "PPGL",
+            "color coated GL",
+            "prepainted galvalume"
+          ],
+          "forms": [
+            "coil",
+            "sheet"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D+AZ",
+              "S350GD+AZ",
+              "CGCC+AZ"
+            ],
+            "thickness": [
+              "0.15-1.2 mm"
+            ],
+            "finish": [
+              "PE",
+              "PVDF",
+              "SMP"
+            ],
+            "form": [
+              "coil",
+              "sheet"
+            ],
+            "standards": [
+              "ASTM A755",
+              "JIS G3322",
+              "EN 10169"
+            ],
+            "other_specs": [
+              "AZ coating",
+              "RAL colors"
+            ]
+          },
+          "buyer_search_examples": [
+            "PPGL AZ150 RAL 3009 roofing coil"
+          ]
+        },
+        {
+          "id": "tinplate-tin-free",
+          "name": "Tinplate / Tin-Free Steel (TFS)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "tinplate",
+            "ETP",
+            "TFS",
+            "ECCS",
+            "can stock"
+          ],
+          "forms": [
+            "coil",
+            "sheet"
+          ],
+          "variants": {
+            "grades": [
+              "MR",
+              "L",
+              "D",
+              "T1-T5 temper"
+            ],
+            "thickness": [
+              "0.15-0.5 mm"
+            ],
+            "finish": [
+              "bright",
+              "stone",
+              "matte",
+              "lacquered"
+            ],
+            "form": [
+              "coil",
+              "sheet"
+            ],
+            "standards": [
+              "ASTM A623",
+              "JIS G3303",
+              "EN 10202"
+            ],
+            "other_specs": [
+              "tin coating g/m²",
+              "DR double reduced"
+            ]
+          },
+          "buyer_search_examples": [
+            "tinplate T2.5 0.18mm",
+            "ETP coil for cans"
+          ]
+        },
+        {
+          "id": "zmg-zn-al-mg",
+          "name": "Zn-Al-Mg Coated Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "ZAM",
+            "Zn-Al-Mg",
+            "magnesium coated",
+            "SuperDyma-type"
+          ],
+          "forms": [
+            "coil",
+            "sheet"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D+ZM",
+              "S350GD+ZM"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "coil",
+              "sheet"
+            ],
+            "standards": [
+              "EN 10346",
+              "JIS G3323"
+            ],
+            "other_specs": [
+              "ZM coating weight",
+              "high corrosion resistance"
+            ]
+          },
+          "buyer_search_examples": [
+            "Zn-Al-Mg coated coil ZM120"
+          ]
+        },
+        {
+          "id": "gi-corrugated-roofing",
+          "name": "Corrugated / Roofing Sheet (GI/GL/PPGI)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "corrugated sheet",
+            "roofing sheet",
+            "trapezoidal sheet",
+            "Ibrahim/wave profile"
+          ],
+          "forms": [
+            "sheet",
+            "profiled sheet"
+          ],
+          "variants": {
+            "grades": [
+              "DX51D",
+              "CGCC",
+              "AZ150 base"
+            ],
+            "thickness": [
+              "0.12-0.8 mm"
+            ],
+            "finish": [
+              "galvanized",
+              "galvalume",
+              "prepainted"
+            ],
+            "form": [
+              "sheet",
+              "profiled sheet"
+            ],
+            "standards": [
+              "ASTM A653",
+              "ASTM A792"
+            ],
+            "other_specs": [
+              "wave height",
+              "effective width",
+              "length"
+            ]
+          },
+          "buyer_search_examples": [
+            "corrugated GI roofing 0.4mm",
+            "PPGI trapezoidal sheet RAL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structural-steel",
+      "name": "Structural Steel (Beams, Channels, Angles)",
+      "alibaba_aliases": [
+        "Structural Steel",
+        "H Beam",
+        "I Beam",
+        "Steel Channel",
+        "Steel Angle",
+        "Section Steel"
+      ],
+      "children": [
+        {
+          "id": "h-beam",
+          "name": "H-Beam / Wide Flange",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "H-beam",
+            "UB",
+            "UC",
+            "W-beam",
+            "HEA",
+            "HEB",
+            "wide flange"
+          ],
+          "forms": [
+            "H-beam"
+          ],
+          "variants": {
+            "grades": [
+              "Q235B",
+              "Q355B",
+              "A36",
+              "A572 Gr50",
+              "A992",
+              "S235JR",
+              "S355JR",
+              "SS400"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "H-beam"
+            ],
+            "standards": [
+              "ASTM A6",
+              "ASTM A992",
+              "EN 10025",
+              "GB/T 11263",
+              "JIS G3192"
+            ],
+            "other_specs": [
+              "HW/HM/HN",
+              "depth x flange x weight",
+              "length 6/9/12 m"
+            ]
+          },
+          "buyer_search_examples": [
+            "H-beam Q355B 300x300",
+            "W12x58 A992",
+            "HEA 200 S355"
+          ]
+        },
+        {
+          "id": "i-beam",
+          "name": "I-Beam",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "I-beam",
+            "IPE",
+            "IPN",
+            "RSJ",
+            "joist"
+          ],
+          "forms": [
+            "I-beam"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q355",
+              "A36",
+              "S235",
+              "S355",
+              "SS400"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "I-beam"
+            ],
+            "standards": [
+              "EN 10025",
+              "GB/T 706",
+              "ASTM A6"
+            ],
+            "other_specs": [
+              "IPE 80-600",
+              "web/flange dims"
+            ]
+          },
+          "buyer_search_examples": [
+            "IPE 200 S355JR",
+            "I-beam 200mm Q235"
+          ]
+        },
+        {
+          "id": "steel-channel",
+          "name": "Steel Channel (U / C)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "channel",
+            "U-channel",
+            "C-channel",
+            "UPN",
+            "PFC"
+          ],
+          "forms": [
+            "channel"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q355",
+              "A36",
+              "S235",
+              "S355"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "channel"
+            ],
+            "standards": [
+              "GB/T 707",
+              "EN 10279",
+              "ASTM A36"
+            ],
+            "other_specs": [
+              "parallel flange",
+              "tapered flange"
+            ]
+          },
+          "buyer_search_examples": [
+            "UPN 160 channel",
+            "C-channel 100x50 Q235"
+          ]
+        },
+        {
+          "id": "steel-angle",
+          "name": "Steel Angle (L)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "angle",
+            "equal angle",
+            "unequal angle",
+            "L-bar",
+            "RSA"
+          ],
+          "forms": [
+            "angle"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q355",
+              "A36",
+              "S235",
+              "S355",
+              "SS400"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "angle"
+            ],
+            "standards": [
+              "GB/T 706",
+              "EN 10056",
+              "ASTM A36"
+            ],
+            "other_specs": [
+              "equal 20-200 mm",
+              "unequal",
+              "thickness"
+            ]
+          },
+          "buyer_search_examples": [
+            "equal angle 50x50x5",
+            "L75x50x6 mild steel"
+          ]
+        },
+        {
+          "id": "steel-tee",
+          "name": "Steel Tee / T-Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "T-bar",
+            "tee section",
+            "slit tee"
+          ],
+          "forms": [
+            "tee"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "A36",
+              "S235"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tee"
+            ],
+            "standards": [
+              "EN 10055",
+              "ASTM"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "steel tee bar 50x50"
+          ]
+        },
+        {
+          "id": "hollow-section-shs-rhs",
+          "name": "Hollow Structural Section (SHS/RHS/CHS)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SHS",
+            "RHS",
+            "CHS",
+            "box section",
+            "square tube structural",
+            "rectangular tube"
+          ],
+          "forms": [
+            "SHS",
+            "RHS",
+            "CHS"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "Q355",
+              "S235",
+              "S355",
+              "A500 GrB/C",
+              "EN 10219"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "SHS",
+              "RHS",
+              "CHS"
+            ],
+            "standards": [
+              "EN 10210",
+              "EN 10219",
+              "ASTM A500",
+              "GB/T 6728"
+            ],
+            "other_specs": [
+              "OD/side x WT",
+              "hot finished / cold formed"
+            ]
+          },
+          "buyer_search_examples": [
+            "SHS 100x100x4 S355",
+            "RHS 150x100x5 A500"
+          ]
+        },
+        {
+          "id": "steel-sheet-pile",
+          "name": "Steel Sheet Pile",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "sheet pile",
+            "U-pile",
+            "Z-pile",
+            "Larssen"
+          ],
+          "forms": [
+            "sheet pile"
+          ],
+          "variants": {
+            "grades": [
+              "Q235B",
+              "Q345B",
+              "S355GP",
+              "SY295",
+              "SY390"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "sheet pile"
+            ],
+            "standards": [
+              "EN 10248",
+              "JIS A5528",
+              "ASTM A572"
+            ],
+            "other_specs": [
+              "U/Z section",
+              "interlock type"
+            ]
+          },
+          "buyer_search_examples": [
+            "U-type steel sheet pile SY295",
+            "Z sheet pile S355GP"
+          ]
+        },
+        {
+          "id": "rail-section",
+          "name": "Steel Rail / Crane Rail",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "rail",
+            "crane rail",
+            "light rail"
+          ],
+          "forms": [
+            "rail"
+          ],
+          "variants": {
+            "grades": [
+              "U71Mn",
+              "50Mn",
+              "QU70",
+              "QU80",
+              "QU100",
+              "AREMA"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "rail"
+            ],
+            "standards": [
+              "GB",
+              "AREMA",
+              "EN 13674"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "crane rail QU100",
+            "rail R50 R65"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipe-tube",
+      "name": "Steel Pipe & Tube",
+      "alibaba_aliases": [
+        "Steel Pipe",
+        "Steel Tube",
+        "Seamless Pipe",
+        "ERW Pipe",
+        "SSAW",
+        "LSAW"
+      ],
+      "children": [
+        {
+          "id": "seamless-pipe",
+          "name": "Seamless Steel Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "SMLS",
+            "seamless pipe",
+            "hot rolled seamless",
+            "cold drawn seamless"
+          ],
+          "forms": [
+            "pipe"
+          ],
+          "variants": {
+            "grades": [
+              "10#",
+              "20#",
+              "45#",
+              "Q345",
+              "A106 GrB",
+              "A53 GrB",
+              "API 5L X42-X70",
+              "ST52",
+              "P235GH"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe"
+            ],
+            "standards": [
+              "ASTM A106",
+              "ASTM A53",
+              "API 5L",
+              "EN 10216",
+              "JIS G3452",
+              "GB/T 8163"
+            ],
+            "other_specs": [
+              "OD x WT",
+              "Sch 40/80/160",
+              "bevel end",
+              "black/galvanized"
+            ]
+          },
+          "buyer_search_examples": [
+            "ASTM A106 GrB seamless Sch40",
+            "API 5L X52 seamless"
+          ]
+        },
+        {
+          "id": "erw-pipe",
+          "name": "ERW / HFW Welded Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "ERW",
+            "HFW",
+            "welded pipe",
+            "straight seam"
+          ],
+          "forms": [
+            "pipe"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "Q345",
+              "A53",
+              "A500",
+              "API 5L"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe"
+            ],
+            "standards": [
+              "ASTM A53",
+              "ASTM A500",
+              "API 5L",
+              "EN 10217",
+              "GB/T 3091"
+            ],
+            "other_specs": [
+              "round/square/rect",
+              "black/GI"
+            ]
+          },
+          "buyer_search_examples": [
+            "ERW pipe A53 GrB 4 inch",
+            "GI ERW pipe DN50"
+          ]
+        },
+        {
+          "id": "saw-lsaw-ssaw",
+          "name": "SAW / LSAW / SSAW Spiral Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "LSAW",
+            "SSAW",
+            "spiral pipe",
+            "DSAW",
+            "longitudinal SAW"
+          ],
+          "forms": [
+            "pipe"
+          ],
+          "variants": {
+            "grades": [
+              "API 5L X42-X80",
+              "Q235",
+              "Q345",
+              "S355"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe"
+            ],
+            "standards": [
+              "API 5L",
+              "ASTM A252",
+              "GB/T 9711",
+              "EN 10219"
+            ],
+            "other_specs": [
+              "large OD",
+              "pile pipe",
+              "line pipe"
+            ]
+          },
+          "buyer_search_examples": [
+            "SSAW spiral pipe API 5L X60",
+            "LSAW pipe 24 inch"
+          ]
+        },
+        {
+          "id": "precision-tube",
+          "name": "Precision / Cold Drawn Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "precision tube",
+            "DOM",
+            "cold drawn tube",
+            "CDS"
+          ],
+          "forms": [
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "10#",
+              "20#",
+              "ST35",
+              "ST37",
+              "E235",
+              "E355",
+              "1020",
+              "1045"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tube"
+            ],
+            "standards": [
+              "EN 10305",
+              "ASTM A519",
+              "DIN 2391",
+              "JIS G3445"
+            ],
+            "other_specs": [
+              "H8/H9 tolerance",
+              "honed option"
+            ]
+          },
+          "buyer_search_examples": [
+            "EN 10305 precision tube E235",
+            "DOM tube 50x5"
+          ]
+        },
+        {
+          "id": "capillary-tube",
+          "name": "Capillary / Small Bore Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "capillary tube",
+            "needle tube",
+            "micro tube"
+          ],
+          "forms": [
+            "tube",
+            "capillary"
+          ],
+          "variants": {
+            "grades": [
+              "304",
+              "316L",
+              "copper",
+              "carbon"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tube",
+              "capillary"
+            ],
+            "standards": [
+              "ASTM A269",
+              "EN"
+            ],
+            "other_specs": [
+              "OD <6 mm",
+              "ID precision"
+            ]
+          },
+          "buyer_search_examples": [
+            "316L capillary tube 1.6mm",
+            "stainless capillary"
+          ]
+        },
+        {
+          "id": "boiler-heat-exchanger-tube",
+          "name": "Boiler / Heat Exchanger Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "boiler tube",
+            "heat exchanger tube",
+            "superheater tube"
+          ],
+          "forms": [
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "A179",
+              "A192",
+              "A210",
+              "A213 T11/T22",
+              "20G",
+              "15CrMoG",
+              "P235GH"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tube"
+            ],
+            "standards": [
+              "ASTM A179",
+              "ASTM A192",
+              "ASTM A213",
+              "EN 10216-2",
+              "GB/T 5310"
+            ],
+            "other_specs": [
+              "seamless",
+              "NDT"
+            ]
+          },
+          "buyer_search_examples": [
+            "ASTM A179 heat exchanger tube",
+            "A213 T22 boiler tube"
+          ]
+        },
+        {
+          "id": "octg-casing-tubing",
+          "name": "OCTG Casing / Tubing / Drill Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "OCTG",
+            "casing",
+            "tubing",
+            "drill pipe",
+            "oil country"
+          ],
+          "forms": [
+            "pipe",
+            "casing",
+            "tubing"
+          ],
+          "variants": {
+            "grades": [
+              "J55",
+              "K55",
+              "N80",
+              "L80",
+              "P110",
+              "Q125",
+              "13Cr"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe",
+              "casing",
+              "tubing"
+            ],
+            "standards": [
+              "API 5CT",
+              "API 5DP"
+            ],
+            "other_specs": [
+              "BTC/LTC/premium connection",
+              "PSL1/PSL2"
+            ]
+          },
+          "buyer_search_examples": [
+            "API 5CT N80 casing 9-5/8",
+            "L80 tubing"
+          ]
+        },
+        {
+          "id": "pipeline-api5l",
+          "name": "Pipeline Line Pipe (API 5L)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "line pipe",
+            "pipeline steel",
+            "API pipe"
+          ],
+          "forms": [
+            "pipe"
+          ],
+          "variants": {
+            "grades": [
+              "GrB",
+              "X42",
+              "X46",
+              "X52",
+              "X56",
+              "X60",
+              "X65",
+              "X70",
+              "X80"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe"
+            ],
+            "standards": [
+              "API 5L PSL1/PSL2",
+              "ISO 3183"
+            ],
+            "other_specs": [
+              "seamless/ERW/SAW",
+              "sour service NACE"
+            ]
+          },
+          "buyer_search_examples": [
+            "API 5L X65 PSL2 line pipe",
+            "X52 ERW pipeline"
+          ]
+        },
+        {
+          "id": "gi-steel-pipe",
+          "name": "Galvanized Steel Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "GI pipe",
+            "hot dip galvanized pipe",
+            "pre-galvanized tube"
+          ],
+          "forms": [
+            "pipe",
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "A53"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe",
+              "tube"
+            ],
+            "standards": [
+              "ASTM A53",
+              "BS 1387",
+              "EN 10255",
+              "GB/T 3091"
+            ],
+            "other_specs": [
+              "light/medium/heavy",
+              "threaded & coupled"
+            ]
+          },
+          "buyer_search_examples": [
+            "hot dip GI pipe 2 inch BS1387",
+            "pre-galv square tube"
+          ]
+        },
+        {
+          "id": "hydraulic-honed-tube",
+          "name": "Hydraulic / Honed Cylinder Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "honed tube",
+            "cylinder tube",
+            "hydraulic tube"
+          ],
+          "forms": [
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "ST52",
+              "E355",
+              "1020",
+              "CK45"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tube"
+            ],
+            "standards": [
+              "EN 10305-1",
+              "DIN 2391"
+            ],
+            "other_specs": [
+              "ID honed H8",
+              "chrome plated OD option"
+            ]
+          },
+          "buyer_search_examples": [
+            "honed tube ST52 ID 80mm",
+            "hydraulic cylinder tube"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wire-rebar-mesh",
+      "name": "Wire, Wire Rod, Rebar & Mesh",
+      "alibaba_aliases": [
+        "Steel Wire",
+        "Wire Rod",
+        "Rebar",
+        "Wire Mesh",
+        "Wire Rope"
+      ],
+      "children": [
+        {
+          "id": "wire-rod",
+          "name": "Steel Wire Rod",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "wire rod",
+            "coil rod",
+            "drawing rod"
+          ],
+          "forms": [
+            "wire rod"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "SAE1006",
+              "1008",
+              "1010",
+              "1018",
+              "SWRH42B",
+              "72A",
+              "82B"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "wire rod"
+            ],
+            "standards": [
+              "ASTM A510",
+              "EN 10016",
+              "JIS G3505",
+              "GB/T 4354"
+            ],
+            "other_specs": [
+              "diameter 5.5-16 mm",
+              "coil weight"
+            ]
+          },
+          "buyer_search_examples": [
+            "SAE1008 wire rod 5.5mm",
+            "high carbon wire rod 82B"
+          ]
+        },
+        {
+          "id": "steel-wire",
+          "name": "Steel Wire (Black / Bright / Galvanized)",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "black wire",
+            "bright wire",
+            "GI wire",
+            "binding wire",
+            "spring wire"
+          ],
+          "forms": [
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "low carbon",
+              "high carbon",
+              "C60-C80",
+              "304",
+              "316"
+            ],
+            "thickness": [],
+            "finish": [
+              "black annealed",
+              "bright",
+              "galvanized",
+              "PVC coated"
+            ],
+            "form": [
+              "wire"
+            ],
+            "standards": [
+              "ASTM A641",
+              "EN 10244",
+              "JIS G3532"
+            ],
+            "other_specs": [
+              "BWG gauge",
+              "tensile class"
+            ]
+          },
+          "buyer_search_examples": [
+            "galvanized iron wire BWG 18",
+            "black annealed binding wire"
+          ]
+        },
+        {
+          "id": "wire-rope-cable",
+          "name": "Steel Wire Rope / Cable",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "wire rope",
+            "steel cable",
+            "sling rope"
+          ],
+          "forms": [
+            "wire rope"
+          ],
+          "variants": {
+            "grades": [
+              "1770 MPa",
+              "1960 MPa",
+              "2160 MPa"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "wire rope"
+            ],
+            "standards": [
+              "EN 12385",
+              "API 9A",
+              "GB/T 20118"
+            ],
+            "other_specs": [
+              "6x19",
+              "6x36",
+              "IWRC",
+              "FC",
+              "galvanized/ungalv"
+            ]
+          },
+          "buyer_search_examples": [
+            "6x19 IWRC wire rope 12mm",
+            "galvanized steel cable"
+          ]
+        },
+        {
+          "id": "rebar",
+          "name": "Rebar / Reinforcing Bar",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "rebar",
+            "deformed bar",
+            "TMT bar",
+            "reinforcing steel"
+          ],
+          "forms": [
+            "rebar",
+            "coil rebar"
+          ],
+          "variants": {
+            "grades": [
+              "HRB400",
+              "HRB500",
+              "Grade 40",
+              "Grade 60",
+              "B500B",
+              "B500C",
+              "Fe500",
+              "ASTM A615"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "rebar",
+              "coil rebar"
+            ],
+            "standards": [
+              "ASTM A615",
+              "ASTM A706",
+              "BS 4449",
+              "EN 10080",
+              "GB/T 1499",
+              "IS 1786"
+            ],
+            "other_specs": [
+              "#3-#18 / 6-40 mm",
+              "straight/coil",
+              "epoxy coated"
+            ]
+          },
+          "buyer_search_examples": [
+            "HRB400 rebar 12mm",
+            "Grade 60 rebar ASTM A615",
+            "TMT Fe500D"
+          ]
+        },
+        {
+          "id": "welded-wire-mesh",
+          "name": "Welded Wire Mesh / Fabric",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "WWF",
+            "welded mesh",
+            "reinforcing mesh",
+            "A142/A193"
+          ],
+          "forms": [
+            "mesh"
+          ],
+          "variants": {
+            "grades": [
+              "Q195",
+              "Q235",
+              "stainless 304"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "mesh"
+            ],
+            "standards": [
+              "ASTM A185",
+              "ASTM A497",
+              "BS 4483",
+              "EN 10080"
+            ],
+            "other_specs": [
+              "panel/roll",
+              "aperture",
+              "wire dia"
+            ]
+          },
+          "buyer_search_examples": [
+            "welded wire mesh 100x100x6",
+            "A142 reinforcing fabric"
+          ]
+        },
+        {
+          "id": "expanded-metal-mesh",
+          "name": "Expanded Metal / Hex Mesh",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "expanded metal",
+            "hexagonal mesh",
+            "chicken wire"
+          ],
+          "forms": [
+            "mesh",
+            "expanded"
+          ],
+          "variants": {
+            "grades": [
+              "carbon",
+              "GI",
+              "stainless",
+              "aluminum"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "mesh",
+              "expanded"
+            ],
+            "standards": [],
+            "other_specs": [
+              "SWD/LWD",
+              "strand thickness"
+            ]
+          },
+          "buyer_search_examples": [
+            "expanded metal mesh 3mm",
+            "GI hexagonal wire mesh"
+          ]
+        },
+        {
+          "id": "pc-strand-prestress",
+          "name": "PC Strand / Prestressed Wire",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "PC strand",
+            "prestressing strand",
+            "PC wire"
+          ],
+          "forms": [
+            "strand",
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "1860 MPa",
+              "270k",
+              "7-wire"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "strand",
+              "wire"
+            ],
+            "standards": [
+              "ASTM A416",
+              "EN 10138",
+              "GB/T 5224"
+            ],
+            "other_specs": [
+              "1x7",
+              "low relaxation"
+            ]
+          },
+          "buyer_search_examples": [
+            "PC strand 15.2mm 1860MPa",
+            "ASTM A416 7-wire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flat-products-specialty",
+      "name": "Flat Products & Specialty Plates",
+      "alibaba_aliases": [
+        "Steel Sheet & Plate",
+        "Steel Coil & Strip",
+        "Boiler Plate",
+        "Ship Plate"
+      ],
+      "children": [
+        {
+          "id": "checkered-plate",
+          "name": "Checkered / Floor Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "chequer plate",
+            "diamond plate",
+            "floor plate",
+            "teardrop"
+          ],
+          "forms": [
+            "plate",
+            "sheet"
+          ],
+          "variants": {
+            "grades": [
+              "Q235",
+              "A36",
+              "SS400",
+              "304"
+            ],
+            "thickness": [
+              "2-10 mm"
+            ],
+            "finish": [],
+            "form": [
+              "plate",
+              "sheet"
+            ],
+            "standards": [
+              "ASTM A786",
+              "GB/T 3277"
+            ],
+            "other_specs": [
+              "pattern type",
+              "raised height"
+            ]
+          },
+          "buyer_search_examples": [
+            "checkered plate 3mm Q235",
+            "diamond plate stainless 304"
+          ]
+        },
+        {
+          "id": "boiler-pressure-plate",
+          "name": "Boiler / Pressure Vessel Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "boiler plate",
+            "PVQ plate",
+            "pressure vessel steel"
+          ],
+          "forms": [
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "A516 Gr60/70",
+              "A285",
+              "A387",
+              "P265GH",
+              "Q245R",
+              "Q345R",
+              "16Mo3"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate"
+            ],
+            "standards": [
+              "ASTM A516",
+              "ASTM A285",
+              "EN 10028",
+              "GB/T 713"
+            ],
+            "other_specs": [
+              "normalized",
+              "HIC tested",
+              "UT"
+            ]
+          },
+          "buyer_search_examples": [
+            "A516 Gr70 boiler plate",
+            "Q345R pressure vessel plate"
+          ]
+        },
+        {
+          "id": "shipbuilding-plate",
+          "name": "Shipbuilding Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "ship plate",
+            "marine plate",
+            "hull plate"
+          ],
+          "forms": [
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "A/B/D/E",
+              "AH32",
+              "AH36",
+              "DH36",
+              "EH36",
+              "FH36"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate"
+            ],
+            "standards": [
+              "ABS",
+              "LR",
+              "DNV",
+              "BV",
+              "CCS",
+              "ASTM A131"
+            ],
+            "other_specs": [
+              "class society cert",
+              "Z-quality"
+            ]
+          },
+          "buyer_search_examples": [
+            "AH36 ship plate ABS",
+            "DH36 marine steel plate"
+          ]
+        },
+        {
+          "id": "weathering-corten",
+          "name": "Weathering Steel / Corten",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Corten",
+            "weathering steel",
+            "SPA-C",
+            "A588"
+          ],
+          "forms": [
+            "plate",
+            "sheet",
+            "coil",
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "A588",
+              "A242",
+              "SPA-H",
+              "SPA-C",
+              "Q355NH",
+              "S355J0W",
+              "S355J2W",
+              "COR-TEN A/B"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate",
+              "sheet",
+              "coil",
+              "tube"
+            ],
+            "standards": [
+              "ASTM A588",
+              "ASTM A242",
+              "EN 10025-5",
+              "JIS G3125"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "Corten A plate",
+            "A588 weathering steel",
+            "SPA-H coil"
+          ]
+        },
+        {
+          "id": "electrical-silicon-steel",
+          "name": "Electrical / Silicon Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "silicon steel",
+            "electrical steel",
+            "CRGO",
+            "CRNGO",
+            "transformer steel"
+          ],
+          "forms": [
+            "coil",
+            "sheet",
+            "laminations"
+          ],
+          "variants": {
+            "grades": [
+              "M3",
+              "M4",
+              "M5",
+              "35W300",
+              "50W600",
+              "GO/NGO"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "coil",
+              "sheet",
+              "laminations"
+            ],
+            "standards": [
+              "ASTM A677",
+              "IEC 60404",
+              "JIS C2552",
+              "GB/T 2521"
+            ],
+            "other_specs": [
+              "grain oriented / non-oriented",
+              "core loss W/kg",
+              "coating"
+            ]
+          },
+          "buyer_search_examples": [
+            "CRGO M4 silicon steel",
+            "NGO 50W600 electrical steel"
+          ]
+        },
+        {
+          "id": "spring-steel",
+          "name": "Spring Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "spring steel",
+            "SUP9",
+            "65Mn",
+            "5160"
+          ],
+          "forms": [
+            "strip",
+            "sheet",
+            "wire",
+            "bar"
+          ],
+          "variants": {
+            "grades": [
+              "65Mn",
+              "60Si2Mn",
+              "SUP9",
+              "SUP10",
+              "5160",
+              "1075",
+              "1095",
+              "C67S",
+              "C75S"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "strip",
+              "sheet",
+              "wire",
+              "bar"
+            ],
+            "standards": [
+              "ASTM A684",
+              "EN 10132",
+              "JIS G4801"
+            ],
+            "other_specs": [
+              "temper",
+              "hardness"
+            ]
+          },
+          "buyer_search_examples": [
+            "65Mn spring steel strip",
+            "SUP9 spring steel flat"
+          ]
+        },
+        {
+          "id": "bearing-steel",
+          "name": "Bearing Steel",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "bearing steel",
+            "chrome steel",
+            "GCr15",
+            "52100"
+          ],
+          "forms": [
+            "bar",
+            "tube",
+            "wire",
+            "ring blank"
+          ],
+          "variants": {
+            "grades": [
+              "GCr15",
+              "52100",
+              "100Cr6",
+              "SUJ2",
+              "M50"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "bar",
+              "tube",
+              "wire",
+              "ring blank"
+            ],
+            "standards": [
+              "ASTM A295",
+              "EN ISO 683-17",
+              "JIS G4805",
+              "GB/T 18254"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "GCr15 bearing steel bar",
+            "52100 chrome steel"
+          ]
+        },
+        {
+          "id": "clad-plate",
+          "name": "Clad / Explosion Clad Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "clad plate",
+            "stainless clad",
+            "titanium clad"
+          ],
+          "forms": [
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "CS+304",
+              "CS+316L",
+              "CS+Ti",
+              "CS+Ni"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate"
+            ],
+            "standards": [
+              "ASTM A263",
+              "ASTM A264",
+              "ASTM A265"
+            ],
+            "other_specs": [
+              "cladding thickness",
+              "bonding method"
+            ]
+          },
+          "buyer_search_examples": [
+            "304 clad carbon steel plate",
+            "titanium clad plate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aluminum",
+      "name": "Aluminum",
+      "alibaba_aliases": [
+        "Aluminum",
+        "Aluminium",
+        "Aluminum Products"
+      ],
+      "children": [
+        {
+          "id": "aluminum-sheet-plate",
+          "name": "Aluminum Sheet & Plate",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "aluminium sheet",
+            "Al plate",
+            "alloy plate"
+          ],
+          "forms": [
+            "sheet",
+            "plate"
+          ],
+          "variants": {
+            "grades": [
+              "1050",
+              "1060",
+              "1100",
+              "3003",
+              "3004",
+              "3105",
+              "5052",
+              "5083",
+              "5754",
+              "6061",
+              "6082",
+              "7075"
+            ],
+            "thickness": [
+              "0.2-6 mm sheet",
+              "6-150+ mm plate"
+            ],
+            "finish": [
+              "mill",
+              "brushed",
+              "anodized",
+              "mirror",
+              "embossed"
+            ],
+            "form": [
+              "sheet",
+              "plate"
+            ],
+            "standards": [
+              "ASTM B209",
+              "EN 485",
+              "JIS H4000",
+              "GB/T 3880"
+            ],
+            "other_specs": [
+              "temper O/H14/H24/T6"
+            ]
+          },
+          "buyer_search_examples": [
+            "5052 H32 aluminum sheet",
+            "6061 T6 aluminum plate"
+          ]
+        },
+        {
+          "id": "aluminum-coil-foil-strip",
+          "name": "Aluminum Coil / Foil / Strip",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Al coil",
+            "Al foil",
+            "aluminium strip"
+          ],
+          "forms": [
+            "coil",
+            "foil",
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "8011",
+              "1235",
+              "8079",
+              "3003",
+              "8011A"
+            ],
+            "thickness": [
+              "foil 0.006-0.2 mm",
+              "strip/coil 0.2-3 mm"
+            ],
+            "finish": [
+              "mill",
+              "coated",
+              "embossed"
+            ],
+            "form": [
+              "coil",
+              "foil",
+              "strip"
+            ],
+            "standards": [
+              "ASTM B209",
+              "EN 546"
+            ],
+            "other_specs": [
+              "temper",
+              "household/industrial foil"
+            ]
+          },
+          "buyer_search_examples": [
+            "8011 aluminum foil jumbo roll",
+            "3003 aluminum coil"
+          ]
+        },
+        {
+          "id": "aluminum-extrusion-profile",
+          "name": "Aluminum Extrusion / Profile",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "aluminium profile",
+            "extrusion",
+            "6063 profile",
+            "T-slot"
+          ],
+          "forms": [
+            "profile",
+            "extrusion"
+          ],
+          "variants": {
+            "grades": [
+              "6063",
+              "6061",
+              "6005",
+              "6082"
+            ],
+            "thickness": [],
+            "finish": [
+              "mill",
+              "anodized",
+              "powder coated",
+              "woodgrain"
+            ],
+            "form": [
+              "profile",
+              "extrusion"
+            ],
+            "standards": [
+              "ASTM B221",
+              "EN 755",
+              "GB/T 5237"
+            ],
+            "other_specs": [
+              "temper T5/T6",
+              "custom die"
+            ]
+          },
+          "buyer_search_examples": [
+            "6063 T5 aluminum profile",
+            "T-slot 4040 extrusion"
+          ]
+        },
+        {
+          "id": "aluminum-tube-pipe",
+          "name": "Aluminum Tube & Pipe",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Al tube",
+            "aluminium pipe",
+            "drawn tube"
+          ],
+          "forms": [
+            "tube",
+            "pipe"
+          ],
+          "variants": {
+            "grades": [
+              "6061",
+              "6063",
+              "3003",
+              "5052",
+              "5083"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "tube",
+              "pipe"
+            ],
+            "standards": [
+              "ASTM B241",
+              "ASTM B210",
+              "EN 754"
+            ],
+            "other_specs": [
+              "seamless/extruded",
+              "round/square"
+            ]
+          },
+          "buyer_search_examples": [
+            "6061 T6 aluminum tube",
+            "5083 marine aluminum pipe"
+          ]
+        },
+        {
+          "id": "aluminum-bar-rod-wire",
+          "name": "Aluminum Bar / Rod / Wire",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Al round bar",
+            "Al rod",
+            "aluminium wire"
+          ],
+          "forms": [
+            "round",
+            "hex",
+            "square",
+            "rod",
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "6061",
+              "6082",
+              "7075",
+              "2024",
+              "1350"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "round",
+              "hex",
+              "square",
+              "rod",
+              "wire"
+            ],
+            "standards": [
+              "ASTM B211",
+              "ASTM B221"
+            ],
+            "other_specs": [
+              "temper T6/T651"
+            ]
+          },
+          "buyer_search_examples": [
+            "7075 T6 aluminum bar",
+            "6061 round bar"
+          ]
+        },
+        {
+          "id": "aluminum-ingot",
+          "name": "Aluminum Ingot / Billet",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Al ingot",
+            "aluminium billet",
+            "P1020"
+          ],
+          "forms": [
+            "ingot",
+            "billet"
+          ],
+          "variants": {
+            "grades": [
+              "A7",
+              "A00",
+              "P1020",
+              "6063 billet"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "ingot",
+              "billet"
+            ],
+            "standards": [
+              "P1020",
+              "GB/T 1196"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "aluminium ingot A7",
+            "6063 aluminum billet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "copper-brass-bronze",
+      "name": "Copper, Brass & Bronze",
+      "alibaba_aliases": [
+        "Copper",
+        "Brass",
+        "Bronze",
+        "Copper Products"
+      ],
+      "children": [
+        {
+          "id": "copper-cathode-ingot",
+          "name": "Copper Cathode / Ingot",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "copper cathode",
+            "Cu cathode",
+            "electrolytic copper"
+          ],
+          "forms": [
+            "cathode",
+            "ingot"
+          ],
+          "variants": {
+            "grades": [
+              "Cu-CATH-1",
+              "Cu-CATH-2",
+              "99.99%"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "cathode",
+              "ingot"
+            ],
+            "standards": [
+              "ASTM B115",
+              "LME Grade A",
+              "GB/T 467"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "LME Grade A copper cathode",
+            "electrolytic copper cathode"
+          ]
+        },
+        {
+          "id": "copper-sheet-plate-coil",
+          "name": "Copper Sheet / Plate / Coil",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Cu sheet",
+            "copper plate",
+            "copper foil"
+          ],
+          "forms": [
+            "sheet",
+            "plate",
+            "coil",
+            "foil",
+            "strip"
+          ],
+          "variants": {
+            "grades": [
+              "C11000",
+              "C10200",
+              "TU1",
+              "T2",
+              "C12200"
+            ],
+            "thickness": [],
+            "finish": [
+              "soft",
+              "half hard",
+              "hard",
+              "bright"
+            ],
+            "form": [
+              "sheet",
+              "plate",
+              "coil",
+              "foil",
+              "strip"
+            ],
+            "standards": [
+              "ASTM B152",
+              "EN 1652",
+              "JIS H3100"
+            ],
+            "other_specs": [
+              "temper",
+              "thickness"
+            ]
+          },
+          "buyer_search_examples": [
+            "C11000 copper sheet",
+            "T2 copper coil 0.5mm"
+          ]
+        },
+        {
+          "id": "copper-pipe-tube",
+          "name": "Copper Pipe & Tube",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "Cu pipe",
+            "ACR tube",
+            "plumbing copper"
+          ],
+          "forms": [
+            "pipe",
+            "tube"
+          ],
+          "variants": {
+            "grades": [
+              "C12200",
+              "C12000",
+              "TP2"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "pipe",
+              "tube"
+            ],
+            "standards": [
+              "ASTM B88",
+              "ASTM B280",
+              "EN 1057"
+            ],
+            "other_specs": [
+              "Type K/L/M",
+              "soft/hard drawn",
+              "pancake coil"
+            ]
+          },
+          "buyer_search_examples": [
+            "ASTM B88 Type L copper pipe",
+            "ACR copper tube 3/8"
+          ]
+        },
+        {
+          "id": "copper-busbar-rod-wire",
+          "name": "Copper Busbar / Rod / Wire",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "busbar",
+            "copper rod",
+            "Cu wire",
+            "magnet wire stock"
+          ],
+          "forms": [
+            "busbar",
+            "rod",
+            "wire",
+            "bar"
+          ],
+          "variants": {
+            "grades": [
+              "C11000",
+              "C10100",
+              "OFHC"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "busbar",
+              "rod",
+              "wire",
+              "bar"
+            ],
+            "standards": [
+              "ASTM B187",
+              "ASTM B49"
+            ],
+            "other_specs": [
+              "tin plated option",
+              "oxygen-free"
+            ]
+          },
+          "buyer_search_examples": [
+            "copper busbar tinned",
+            "OFHC copper rod"
+          ]
+        },
+        {
+          "id": "brass-products",
+          "name": "Brass Sheet / Bar / Tube / Rod",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "brass",
+            "cartridge brass",
+            "yellow brass",
+            "H62/H65"
+          ],
+          "forms": [
+            "sheet",
+            "plate",
+            "bar",
+            "rod",
+            "tube",
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "C26000",
+              "C27000",
+              "C28000",
+              "H62",
+              "H65",
+              "H68",
+              "CZ108"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "sheet",
+              "plate",
+              "bar",
+              "rod",
+              "tube",
+              "wire"
+            ],
+            "standards": [
+              "ASTM B36",
+              "ASTM B16",
+              "EN 12163"
+            ],
+            "other_specs": [
+              "temper",
+              "lead-free options"
+            ]
+          },
+          "buyer_search_examples": [
+            "C260 cartridge brass sheet",
+            "H62 brass rod"
+          ]
+        },
+        {
+          "id": "bronze-products",
+          "name": "Bronze Bar / Plate / Bushing Stock",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "bronze",
+            "tin bronze",
+            "aluminum bronze",
+            "phosphor bronze"
+          ],
+          "forms": [
+            "bar",
+            "plate",
+            "tube",
+            "bushing"
+          ],
+          "variants": {
+            "grades": [
+              "C51000",
+              "C52100",
+              "C93200",
+              "C95400",
+              "QSn6.5-0.1"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "bar",
+              "plate",
+              "tube",
+              "bushing"
+            ],
+            "standards": [
+              "ASTM B505",
+              "ASTM B271",
+              "EN 1982"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "C932 bearing bronze",
+            "aluminum bronze C95400"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-non-ferrous",
+      "name": "Zinc, Nickel, Titanium, Magnesium & Others",
+      "alibaba_aliases": [
+        "Non-ferrous Metal",
+        "Zinc",
+        "Nickel",
+        "Titanium",
+        "Magnesium",
+        "Tungsten"
+      ],
+      "children": [
+        {
+          "id": "zinc-ingot-sheet",
+          "name": "Zinc Ingot / Sheet / Coil",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "zinc ingot",
+            "Zn sheet",
+            "SHG zinc"
+          ],
+          "forms": [
+            "ingot",
+            "sheet",
+            "coil"
+          ],
+          "variants": {
+            "grades": [
+              "SHG 99.995%",
+              "HG",
+              "Z1"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "ingot",
+              "sheet",
+              "coil"
+            ],
+            "standards": [
+              "ASTM B6",
+              "GB/T 470"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "SHG zinc ingot 99.995",
+            "zinc sheet coil"
+          ]
+        },
+        {
+          "id": "nickel-products",
+          "name": "Nickel & Nickel Alloy",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "nickel",
+            "Inconel",
+            "Monel",
+            "Hastelloy",
+            "Ni plate"
+          ],
+          "forms": [
+            "plate",
+            "sheet",
+            "bar",
+            "pipe",
+            "wire",
+            "ingot"
+          ],
+          "variants": {
+            "grades": [
+              "Ni200",
+              "Ni201",
+              "Inconel 625",
+              "Inconel 718",
+              "Monel 400",
+              "Hastelloy C276",
+              "N06625"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "plate",
+              "sheet",
+              "bar",
+              "pipe",
+              "wire",
+              "ingot"
+            ],
+            "standards": [
+              "ASTM B162",
+              "ASTM B168",
+              "ASTM B443"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "Inconel 625 plate",
+            "Nickel 200 round bar"
+          ]
+        },
+        {
+          "id": "titanium-products",
+          "name": "Titanium & Titanium Alloy",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "titanium",
+            "Ti plate",
+            "Grade 5",
+            "TC4"
+          ],
+          "forms": [
+            "plate",
+            "sheet",
+            "bar",
+            "pipe",
+            "wire",
+            "ingot",
+            "billet"
+          ],
+          "variants": {
+            "grades": [
+              "Gr1",
+              "Gr2",
+              "Gr5 / Ti-6Al-4V",
+              "Gr7",
+              "Gr9",
+              "TA1",
+              "TA2",
+              "TC4"
+            ],
+            "thickness": [],
+            "finish": [
+              "pickled",
+              "polished",
+              "annealed"
+            ],
+            "form": [
+              "plate",
+              "sheet",
+              "bar",
+              "pipe",
+              "wire",
+              "ingot",
+              "billet"
+            ],
+            "standards": [
+              "ASTM B265",
+              "ASTM B348",
+              "ASTM B861",
+              "AMS 4911"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "Grade 2 titanium plate",
+            "Ti-6Al-4V bar ASTM B348"
+          ]
+        },
+        {
+          "id": "magnesium-products",
+          "name": "Magnesium & Mg Alloy",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "magnesium",
+            "Mg alloy",
+            "AZ31",
+            "AZ91"
+          ],
+          "forms": [
+            "ingot",
+            "sheet",
+            "plate",
+            "extrusion",
+            "billet"
+          ],
+          "variants": {
+            "grades": [
+              "AZ31B",
+              "AZ91D",
+              "AM60",
+              "ZK60"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "ingot",
+              "sheet",
+              "plate",
+              "extrusion",
+              "billet"
+            ],
+            "standards": [
+              "ASTM B90",
+              "ASTM B107"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "AZ31B magnesium sheet",
+            "AZ91D magnesium ingot"
+          ]
+        },
+        {
+          "id": "lead-tin-products",
+          "name": "Lead / Tin Products",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "lead ingot",
+            "tin ingot",
+            "solder stock"
+          ],
+          "forms": [
+            "ingot",
+            "sheet",
+            "pipe",
+            "wire"
+          ],
+          "variants": {
+            "grades": [
+              "Pb 99.99",
+              "Sn 99.9",
+              "Sn63Pb37"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "ingot",
+              "sheet",
+              "pipe",
+              "wire"
+            ],
+            "standards": [
+              "ASTM B29",
+              "ASTM B339"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "refined lead ingot",
+            "tin ingot 99.9%"
+          ]
+        },
+        {
+          "id": "tungsten-molybdenum",
+          "name": "Tungsten / Molybdenum / Refractory",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "tungsten",
+            "molybdenum",
+            "W plate",
+            "Mo rod",
+            "carbide scrap"
+          ],
+          "forms": [
+            "rod",
+            "plate",
+            "sheet",
+            "wire",
+            "crucible"
+          ],
+          "variants": {
+            "grades": [
+              "W 99.95%",
+              "Mo 99.95%",
+              "TZM"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "rod",
+              "plate",
+              "sheet",
+              "wire",
+              "crucible"
+            ],
+            "standards": [
+              "ASTM B760",
+              "ASTM B386"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "tungsten rod 99.95",
+            "molybdenum sheet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metal-scrap-secondary",
+      "name": "Metal Scrap & Secondary",
+      "alibaba_aliases": [
+        "Metal Scrap",
+        "Steel Scrap",
+        "HMS",
+        "Copper Scrap"
+      ],
+      "children": [
+        {
+          "id": "steel-iron-scrap",
+          "name": "Steel / Iron Scrap",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "HMS 1/2",
+            "shredded scrap",
+            "used rail",
+            "busheling"
+          ],
+          "forms": [
+            "scrap"
+          ],
+          "variants": {
+            "grades": [
+              "HMS 1",
+              "HMS 2",
+              "80/20",
+              "shredded",
+              "rail scrap"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "scrap"
+            ],
+            "standards": [
+              "ISRI"
+            ],
+            "other_specs": [
+              "ISRI code",
+              "density"
+            ]
+          },
+          "buyer_search_examples": [
+            "HMS 1/2 80:20 scrap",
+            "used rail R50 scrap"
+          ]
+        },
+        {
+          "id": "nonferrous-scrap",
+          "name": "Non-Ferrous Scrap",
+          "leaf": true,
+          "alibaba_aliases": [],
+          "common_names": [
+            "copper scrap",
+            "brass scrap",
+            "aluminum scrap",
+            "UBC"
+          ],
+          "forms": [
+            "scrap"
+          ],
+          "variants": {
+            "grades": [
+              "Millberry",
+              "Birch",
+              "Candy",
+              "Honey",
+              "UBC",
+              "6063 extrusions"
+            ],
+            "thickness": [],
+            "finish": [],
+            "form": [
+              "scrap"
+            ],
+            "standards": [
+              "ISRI"
+            ],
+            "other_specs": []
+          },
+          "buyer_search_examples": [
+            "Millberry copper wire scrap",
+            "UBC aluminum scrap"
+          ]
+        }
+      ]
+    }
+  ]
+}

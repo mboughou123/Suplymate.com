@@ -8,6 +8,7 @@
  */
 import { INDUSTRIES } from "@/data/industries";
 import { MATERIAL_CATALOG } from "@/data/material-catalog";
+import { STEEL_METAL_PATH } from "@/data/taxonomy/steel-metal";
 import { HOME_PRODUCT_MODULE_LINKS } from "@/lib/home-product-module-links";
 
 export type NavIcon =
@@ -92,6 +93,11 @@ export function materialHref(materialId: string): string {
   return `/materials?m=${encodeURIComponent(materialId)}`;
 }
 
+/** Browse href for Solutions → By material. Steel opens the category tree. */
+export function solutionMaterialHref(materialId: string): string {
+  return materialId === "steel" ? STEEL_METAL_PATH : materialHref(materialId);
+}
+
 export const PRODUCTS_MENU: ProductsMenu = {
   kind: "products",
   id: "products",
@@ -112,6 +118,12 @@ export const PRODUCTS_MENU: ProductsMenu = {
     labelKey: "products.readMore",
   },
   modules: [
+    {
+      href: STEEL_METAL_PATH,
+      icon: "factory",
+      labelKey: "products.steelMetal",
+      descriptionKey: "products.steelMetalDescription",
+    },
     {
       href: HOME_PRODUCT_MODULE_LINKS.scout,
       icon: "binoculars",
@@ -157,7 +169,10 @@ export const SOLUTIONS_MENU: ColumnsMenu = {
       links: SOLUTION_MATERIAL_IDS.map((id) => MATERIAL_CATALOG.find((m) => m.id === id))
         .filter((m): m is NonNullable<typeof m> => Boolean(m))
         .slice(0, SOLUTIONS_COLUMN_SIZE)
-        .map((m) => ({ href: materialHref(m.id), label: m.name })),
+        .map((m) => ({
+          href: solutionMaterialHref(m.id),
+          label: m.id === "steel" ? "Steel & Metal" : m.name,
+        })),
     },
     {
       titleKey: "solutions.byGoal",

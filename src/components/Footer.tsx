@@ -30,6 +30,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
               <li><Link href="/suppliers" className={linkClass}>{nav("suppliers")}</Link></li>
               <li><Link href="/products" className={linkClass}>{nav("products")}</Link></li>
+              <li><Link href="/steel-metal" className={linkClass}>{nav("steelMetal")}</Link></li>
               <li><Link href="/materials" className={linkClass}>{nav("materials")}</Link></li>
               <li><Link href="/ai-assistant" className={linkClass}>{nav("aiAssistant")}</Link></li>
             </ul>
