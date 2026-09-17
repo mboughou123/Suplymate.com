@@ -1,0 +1,267 @@
+{
+  "label": "DAILY-2026-09-17-PRODUCTS-CLEARED",
+  "source_seal": "daily/2026-09-17/_qa/researcher-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-17-RESEARCHER",
+  "wire_ok_slugs": [
+    "altra-industrial-motion",
+    "ati",
+    "fronius",
+    "kabelwerk-eupen",
+    "kaiser-aluminum",
+    "rehau",
+    "renishaw",
+    "trumpf",
+    "victaulic"
+  ],
+  "hold_product_skus_out": [
+    "JM Eagle PVC and PE plastic pipe and Municipal water and sewer pipe",
+    "Charlotte Pipe and Foundry Company Cast iron soil pipe and fittings and PVC and CPVC plumbing pipe",
+    "Uponor Corporation PEX plumbing and radiant systems and Infrastructure plastic pipe",
+    "Advanced Drainage Systems HDPE corrugated drainage pipe and Stormwater management systems",
+    "RathGibson Precision welded stainless tubing and Specialty alloy tubular products",
+    "WL Plastics HDPE pressure pipe and Municipal and industrial PE pipe",
+    "Aquatherm GmbH PP-R pressure piping systems and HVAC and industrial plastic pipe",
+    "IPEX Inc. Thermoplastic piping systems and Municipal infrastructure pipe",
+    "Walsin Lihwa Corporation Stainless steel pipe and tube and Wire and cable materials",
+    "CCL Industries Inc. Pressure-sensitive labels and Specialty packaging containers",
+    "Vitro SAB de CV Glass containers and Flat glass",
+    "Bormioli Pharma Pharmaceutical glass packaging and Plastic pharma containers",
+    "Tekni-Plex Healthcare packaging and Specialty films and compounds",
+    "Nelipak Healthcare Packaging Medical device thermoformed trays",
+    "Oliver Healthcare Packaging Medical device packaging and Sterile barrier systems",
+    "Novolex Foodservice packaging and Retail bags and wraps",
+    "Liqui-Box Bag-in-box packaging and Fitments and dispensing systems",
+    "Fuji Seal International Shrink sleeve labels and Self-adhesive labels",
+    "Bystronic AG Laser cutting systems and Press brakes",
+    "ISCAR Ltd. Carbide cutting tools and Metalworking inserts",
+    "John Crane Mechanical seals and Filtration systems",
+    "Martin Sprocket & Gear Sprockets and gears and Conveyor pulleys",
+    "Tolomatic Inc. Electric linear actuators and Pneumatic actuators",
+    "Camozzi Automation Pneumatic components and Valves and cylinders",
+    "Clippard Instrument Laboratory Miniature pneumatic valves and Cylinders and fittings",
+    "Special Metals Corporation Nickel-based superalloys and Inconel and Incoloy alloys",
+    "Tokyo Steel Manufacturing Electric arc furnace steel and H-beams and steel sheets",
+    "Bonnell Aluminum Aluminum extrusions and Custom aluminum profiles",
+    "Superior Essex Magnet wire and Communications cable",
+    "Carlisle Construction Materials Commercial roofing systems and Waterproofing membranes"
+  ],
+  "stills": {
+    "root": "public/images/products",
+    "file_count": 12,
+    "slugs": [
+      "altra-industrial-motion",
+      "ati",
+      "fronius",
+      "kabelwerk-eupen",
+      "kaiser-aluminum",
+      "rehau",
+      "renishaw",
+      "trumpf",
+      "victaulic"
+    ],
+    "files": [
+      "public/images/products/altra-industrial-motion/altra-industrial-motion-millfall.jpg",
+      "public/images/products/ati/ati-product.jpg",
+      "public/images/products/fronius/fronius-product.jpg",
+      "public/images/products/kabelwerk-eupen/kabelwerk-eupen.jpg",
+      "public/images/products/kabelwerk-eupen/kabelwerk-product.jpg",
+      "public/images/products/kaiser-aluminum/kaiser-product.jpg",
+      "public/images/products/rehau/rehau-product.jpg",
+      "public/images/products/rehau/rehau.jpg",
+      "public/images/products/renishaw/renishaw.jpg",
+      "public/images/products/trumpf/trumpf-millfall.jpg",
+      "public/images/products/victaulic/victaulic-product.jpg",
+      "public/images/products/victaulic/victaulic.jpg"
+    ]
+  },
+  "products": [
+    {
+      "product_name": "Victaulic Company Mechanical pipe joining systems and Grooved couplings and fittings",
+      "supplier_name": "Victaulic Company",
+      "supplier_slug_guess": "victaulic",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.victaulic.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Victaulic Company mill/product page for Mechanical pipe joining systems; Grooved couplings and fittings. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/victaulic/victaulic.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/victaulic/victaulic-product.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "REHAU Group Polymer pipe systems and Building technology piping",
+      "supplier_name": "REHAU Group",
+      "supplier_slug_guess": "rehau",
+      "category": "Tube & Pipes",
+      "source_url": "https://www.rehau.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 REHAU Group mill/product page for Polymer pipe systems; Building technology piping. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Steel_pipe.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pipes.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/rehau/rehau.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/rehau/rehau-product.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "TRUMPF GmbH + Co. KG Laser cutting machines and Sheet metal fabrication systems",
+      "supplier_name": "TRUMPF GmbH + Co. KG",
+      "supplier_slug_guess": "trumpf",
+      "category": "Industrial Parts",
+      "source_url": "https://www.trumpf.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 TRUMPF GmbH + Co. KG mill/product page for Laser cutting machines; Sheet metal fabrication systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_robot.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Jaw_crusher.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/trumpf/trumpf-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/trumpf/trumpf-millfall.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Fronius International GmbH Welding systems and Solar inverters",
+      "supplier_name": "Fronius International GmbH",
+      "supplier_slug_guess": "fronius",
+      "category": "Industrial Parts",
+      "source_url": "https://www.fronius.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Fronius International GmbH mill/product page for Welding systems; Solar inverters. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Proximity_sensor.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/fronius/fronius-product.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Renishaw plc Metrology probes and Additive manufacturing systems",
+      "supplier_name": "Renishaw plc",
+      "supplier_slug_guess": "renishaw",
+      "category": "Industrial Parts",
+      "source_url": "https://www.renishaw.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Renishaw plc mill/product page for Metrology probes; Additive manufacturing systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Proximity_sensor.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/renishaw/renishaw.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Altra Industrial Motion Corp. Power transmission products and Couplings and clutches",
+      "supplier_name": "Altra Industrial Motion Corp.",
+      "supplier_slug_guess": "altra-industrial-motion",
+      "category": "Hardware & Motion",
+      "source_url": "https://www.altramotion.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Altra Industrial Motion Corp. mill/product page for Power transmission products; Couplings and clutches. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Kugellager.png?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Tapered_roller_bearing.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/altra-industrial-motion/altra-industrial-motion-millfall.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/altra-industrial-motion/altra-industrial-motion-millfall.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "ATI Inc. Specialty materials and Titanium and nickel alloys",
+      "supplier_name": "ATI Inc.",
+      "supplier_slug_guess": "ati",
+      "category": "Steel & Metals",
+      "source_url": "https://www.atimaterials.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 ATI Inc. mill/product page for Specialty materials; Titanium and nickel alloys. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rebar.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/ati/ati-product.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Kaiser Aluminum Corporation Fabricated aluminum products and Aerospace aluminum plate",
+      "supplier_name": "Kaiser Aluminum Corporation",
+      "supplier_slug_guess": "kaiser-aluminum",
+      "category": "Steel & Metals",
+      "source_url": "https://www.kaiseraluminum.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kaiser Aluminum Corporation mill/product page for Fabricated aluminum products; Aerospace aluminum plate. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rebar.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/kaiser-aluminum/kaiser-product.jpg"
+      ],
+      "needs_ai_generate": false
+    },
+    {
+      "product_name": "Kabelwerk Eupen AG Power and telecom cables and Specialty cable systems",
+      "supplier_name": "Kabelwerk Eupen AG",
+      "supplier_slug_guess": "kabelwerk-eupen",
+      "category": "Cables & Electrical",
+      "source_url": "https://www.eupen.com/",
+      "unit_price": null,
+      "currency": null,
+      "unit": null,
+      "price_note": "RFQ \u2014 Kabelwerk Eupen AG mill/product page for Power and telecom cables; Specialty cable systems. No public mill unit/FOB list captured; do not invent prices.",
+      "price_source_type": "rfq",
+      "image_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Wire.jpg?width=1280",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Kabel.jpg?width=1280"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/kabelwerk-eupen/kabelwerk-eupen.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/products/kabelwerk-eupen/kabelwerk-product.jpg"
+      ],
+      "needs_ai_generate": false
+    }
+  ],
+  "rules": [
+    "Wire only day OK5+soft4 paired products (stills already on main via #62)",
+    "HOLD30 mills are mill-cards only for now \u2014 product stills not in #62",
+    "RFQ only \u2014 unit_price null",
+    "No AI-generated product stills (needs_ai_generate=0)"
+  ],
+  "note": "9 products for day OK+soft. HOLD30 product re-wire after soft-hold11 / product stills append optional."
+}

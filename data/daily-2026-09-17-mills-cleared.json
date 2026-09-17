@@ -1,0 +1,1494 @@
+{
+  "label": "DAILY-2026-09-17-MILLS-CLEARED",
+  "source_seal": "daily/2026-09-17/_qa/researcher-seal.json",
+  "researcher_label": "QA-DAILY-2026-09-17-RESEARCHER",
+  "hold30_seal": "QA-HOLD30-MILL-PLANTS-RESEARCHER",
+  "wire_ok": [
+    "rehau",
+    "trumpf",
+    "ati",
+    "kaiser-aluminum",
+    "victaulic",
+    "advanced-drainage-systems",
+    "bormioli-pharma",
+    "bystronic",
+    "camozzi",
+    "carlisle-construction",
+    "ccl-industries",
+    "fuji-seal",
+    "john-crane",
+    "nelipak",
+    "oliver-healthcare",
+    "tekni-plex",
+    "tokyo-steel",
+    "uponor",
+    "wl-plastics"
+  ],
+  "soft": [
+    {
+      "slug": "altra-industrial-motion",
+      "reason": "has WE Columbia City facility still; brand-house/OEM group \u2014 wire as manufacturer group, drop duplicate portrait"
+    },
+    {
+      "slug": "fronius",
+      "reason": "single but real Sattledt Fronius site still"
+    },
+    {
+      "slug": "renishaw",
+      "reason": "single New Mills Renishaw site geograph"
+    },
+    {
+      "slug": "kabelwerk-eupen",
+      "reason": "single real Eupen Kabelwerk chimney still"
+    },
+    {
+      "slug": "aquatherm",
+      "reason": "Attendorn aerial campus with silos/yard plausible but unbranded from altitude \u2014 not clearly labeled Aquatherm plant"
+    },
+    {
+      "slug": "bonnell-aluminum",
+      "reason": "plausible aluminum extrusion cooling/handling line interior but fully unbranded"
+    },
+    {
+      "slug": "charlotte-pipe",
+      "reason": "Oakboro-style foundry molten casting floor clears HDPE stock cluster but no Charlotte Pipe branding visible"
+    },
+    {
+      "slug": "ipex",
+      "reason": "large-diameter PVC/PVCO extrusion floor clears shared HDPE/PVC stock but unbranded operator/console still"
+    },
+    {
+      "slug": "iscar",
+      "reason": "Tefen-style aerial manufacturing campus plausible but no ISCAR facade/logo readable from altitude"
+    },
+    {
+      "slug": "liqui-box",
+      "reason": "bag-in-box aseptic filling line clears Coke/box stock but unbranded production still (MM watermark)"
+    },
+    {
+      "slug": "novolex",
+      "reason": "packaging converting/blow-mold floor clears kraft-pulp cluster but unbranded plant interior"
+    },
+    {
+      "slug": "special-metals",
+      "reason": "hot-billet forging/manipulator production banner plausible for Special Metals but unbranded"
+    },
+    {
+      "slug": "superior-essex",
+      "reason": "copper magnet-wire bobbin plant-floor still plausible but unbranded close-up"
+    },
+    {
+      "slug": "vitro",
+      "reason": "IS glass mold take-out production still clears kraft-pulp cluster but unbranded (could be any glass former)"
+    },
+    {
+      "slug": "walsin-lihwa",
+      "reason": "wire/cable reel mill interior with East-Asian crane mark clears HDPE stock but no Walsin Lihwa branding"
+    }
+  ],
+  "soft_hold_out": [
+    "amada",
+    "makino",
+    "gf-piping-systems",
+    "nipro-pharmapackaging",
+    "commscope",
+    "mitutoyo",
+    "tsubaki",
+    "johns-manville",
+    "heidenhain",
+    "miller-electric",
+    "seco-tools"
+  ],
+  "hold_out": [
+    "jm-eagle"
+  ],
+  "blocked_out": [
+    "rathgibson",
+    "martin-sprocket",
+    "tolomatic",
+    "clippard"
+  ],
+  "prior_wired_locked": true,
+  "stills": {
+    "root": "public/images/suppliers",
+    "file_count": 48,
+    "slugs": [
+      "advanced-drainage-systems",
+      "altra-industrial-motion",
+      "aquatherm",
+      "ati",
+      "bonnell-aluminum",
+      "bormioli-pharma",
+      "bystronic",
+      "camozzi",
+      "carlisle-construction",
+      "ccl-industries",
+      "charlotte-pipe",
+      "fronius",
+      "fuji-seal",
+      "ipex",
+      "iscar",
+      "john-crane",
+      "kabelwerk-eupen",
+      "kaiser-aluminum",
+      "liqui-box",
+      "nelipak",
+      "novolex",
+      "oliver-healthcare",
+      "rehau",
+      "renishaw",
+      "special-metals",
+      "superior-essex",
+      "tekni-plex",
+      "tokyo-steel",
+      "trumpf",
+      "uponor",
+      "victaulic",
+      "vitro",
+      "walsin-lihwa",
+      "wl-plastics"
+    ],
+    "files": [
+      "public/images/suppliers/advanced-drainage-systems/advanced-drainage-systems_01.jpg",
+      "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_01.jpg",
+      "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg",
+      "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_03.jpg",
+      "public/images/suppliers/altra-industrial-motion/altra-industrial-motion_04.jpg",
+      "public/images/suppliers/aquatherm/aquatherm_01.jpg",
+      "public/images/suppliers/ati/ati_01.jpg",
+      "public/images/suppliers/ati/ati_02.jpg",
+      "public/images/suppliers/bonnell-aluminum/bonnell-aluminum_01.jpg",
+      "public/images/suppliers/bormioli-pharma/bormioli-pharma_01.jpg",
+      "public/images/suppliers/bystronic/bystronic_01.jpg",
+      "public/images/suppliers/camozzi/camozzi_01.jpg",
+      "public/images/suppliers/carlisle-construction/carlisle-construction_01.jpg",
+      "public/images/suppliers/ccl-industries/ccl-industries_01.jpg",
+      "public/images/suppliers/charlotte-pipe/charlotte-pipe_01.jpg",
+      "public/images/suppliers/fronius/fronius_01.jpg",
+      "public/images/suppliers/fuji-seal/fuji-seal_01.jpg",
+      "public/images/suppliers/ipex/ipex_01.jpg",
+      "public/images/suppliers/iscar/iscar_01.jpg",
+      "public/images/suppliers/john-crane/john-crane_01.jpg",
+      "public/images/suppliers/kabelwerk-eupen/kabelwerk-eupen_01.jpg",
+      "public/images/suppliers/kaiser-aluminum/kaiser-aluminum_01.jpg",
+      "public/images/suppliers/kaiser-aluminum/kaiser-aluminum_02.jpg",
+      "public/images/suppliers/kaiser-aluminum/kaiser-aluminum_03.jpg",
+      "public/images/suppliers/kaiser-aluminum/kaiser-aluminum_04.jpg",
+      "public/images/suppliers/liqui-box/liqui-box_01.jpg",
+      "public/images/suppliers/nelipak/nelipak_01.jpg",
+      "public/images/suppliers/novolex/novolex_01.jpg",
+      "public/images/suppliers/oliver-healthcare/oliver-healthcare_01.jpg",
+      "public/images/suppliers/rehau/rehau_01.jpg",
+      "public/images/suppliers/rehau/rehau_02.jpg",
+      "public/images/suppliers/rehau/rehau_03.jpg",
+      "public/images/suppliers/rehau/rehau_04.jpg",
+      "public/images/suppliers/renishaw/renishaw_01.jpg",
+      "public/images/suppliers/special-metals/special-metals_01.jpg",
+      "public/images/suppliers/superior-essex/superior-essex_01.jpg",
+      "public/images/suppliers/tekni-plex/tekni-plex_01.jpg",
+      "public/images/suppliers/tokyo-steel/tokyo-steel_01.jpg",
+      "public/images/suppliers/trumpf/trumpf_01.jpg",
+      "public/images/suppliers/trumpf/trumpf_02.jpg",
+      "public/images/suppliers/trumpf/trumpf_03.jpg",
+      "public/images/suppliers/trumpf/trumpf_04.jpg",
+      "public/images/suppliers/uponor/uponor_01.jpg",
+      "public/images/suppliers/victaulic/victaulic_01.jpg",
+      "public/images/suppliers/victaulic/victaulic_02.jpg",
+      "public/images/suppliers/vitro/vitro_01.jpg",
+      "public/images/suppliers/walsin-lihwa/walsin-lihwa_01.jpg",
+      "public/images/suppliers/wl-plastics/wl-plastics_01.jpg"
+    ]
+  },
+  "suppliers": [
+    {
+      "company_name": "Advanced Drainage Systems",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Hilliard",
+      "website": "https://www.adspipe.com/",
+      "description": "Advanced Drainage Systems, Inc. (ADS) is an American company that designs, manufactures and markets polypropylene and polyethylene pipes, plastic leach field chambers and systems, septic tanks and accessories, storm retention/detention and septic chambers, polyvinyl chloride drainage structures, fittings, and water filters and water separators. It is the largest maker of high-density polyethylene pipe in the United States. It is headquartered in Hilliard, Ohio. In 2020, 93% of the company's sales were in the United States and 6% were in Canada.",
+      "product_lines": [
+        "HDPE corrugated drainage pipe",
+        "Stormwater management systems",
+        "On-site septic and agriculture pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.adspipe.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.adspipe.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.adspipe.com/",
+      "photo_urls": [
+        "https://assets.adspipe.com/m/283b9c0551093cd2/webmedium_JPG-Engineering-and-Technology-Center-August-2024-5.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/advanced-drainage-systems/advanced-drainage-systems_01.jpg"
+      ],
+      "slug": "advanced-drainage-systems",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Altra Industrial Motion Corp.",
+      "primary_category": "Hardware & Motion",
+      "country": "United States",
+      "city": "Braintree",
+      "website": "https://www.altramotion.com/",
+      "description": "Altra Industrial Motion Corp. is an American manufacturer of mechanical power transmission products \u2013 brakes, clutches, couplings, and the like. The company is headquartered in Braintree, Massachusetts.",
+      "product_lines": [
+        "Power transmission products",
+        "Couplings and clutches",
+        "Brakes and gearing"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.altramotion.com/"
+        },
+        {
+          "name": "ISO 14001; fastener / belt / motion product QMS (confirm on product)",
+          "source": "https://www.altramotion.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.altramotion.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/Carl_Christenson_Singapore.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/65/Altra_Industrial_Motion_WE_Columbia_City_Facility.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Marland_Port_Hedland.JPG/1280px-Marland_Port_Hedland.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Warner_Elevator_Brake.jpg/1280px-Warner_Elevator_Brake.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/altra-industrial-motion/altra-industrial-motion_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/altra-industrial-motion/altra-industrial-motion_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/altra-industrial-motion/altra-industrial-motion_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/altra-industrial-motion/altra-industrial-motion_04.jpg"
+      ],
+      "slug": "altra-industrial-motion",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Aquatherm GmbH",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Attendorn",
+      "website": "https://aquatherm.com/",
+      "description": "Aquatherm GmbH is a tube & pipes manufacturer based in Attendorn, Germany. Product lines include PP-R pressure piping systems; HVAC and industrial plastic pipe; Fusible polypropylene pipe.",
+      "product_lines": [
+        "PP-R pressure piping systems",
+        "HVAC and industrial plastic pipe",
+        "Fusible polypropylene pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://aquatherm.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://aquatherm.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://aquatherm.com/",
+      "photo_urls": [
+        "https://www.aquatherm.de/fileadmin/user_upload/Germany/Company/Standorte/Drohne-ATT-Facilities-2024.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/aquatherm/aquatherm_01.jpg"
+      ],
+      "slug": "aquatherm",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "ATI Inc.",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Dallas",
+      "website": "https://www.atimaterials.com/",
+      "description": "ATI Inc. is an American producer of specialty materials headquartered in Dallas, Texas. ATI produces metals including titanium and titanium alloys, nickel-based alloys and superalloys, stainless and specialty steels, zirconium, hafnium, and niobium, tungsten materials, forgings and castings.",
+      "product_lines": [
+        "Specialty materials",
+        "Titanium and nickel alloys",
+        "Precision rolled specialty steel"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.atimaterials.com/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.atimaterials.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.atimaterials.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Allegheny_Technologies_mill_at_Midland.jpg/1280px-Allegheny_Technologies_mill_at_Midland.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/03/Architect_and_engineer_%281933%29_%2814804446763%29.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/ati/ati_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/ati/ati_02.jpg"
+      ],
+      "slug": "ati",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Bonnell Aluminum",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Newnan",
+      "website": "https://www.bonnellaluminum.com/",
+      "description": "Bonnell Aluminum is a steel & metals manufacturer based in Newnan, United States. Product lines include Aluminum extrusions; Custom aluminum profiles; Architectural and industrial extrusions.",
+      "product_lines": [
+        "Aluminum extrusions",
+        "Custom aluminum profiles",
+        "Architectural and industrial extrusions"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bonnellaluminum.com/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.bonnellaluminum.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.bonnellaluminum.com/",
+      "photo_urls": [
+        "https://bonnellaluminum.com/media/gd2ni2ai/aluminum-extrusions-equipment.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/bonnell-aluminum/bonnell-aluminum_01.jpg"
+      ],
+      "slug": "bonnell-aluminum",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Bormioli Pharma",
+      "primary_category": "Packaging",
+      "country": "Italy",
+      "city": "Milan",
+      "website": "https://www.bormiolipharma.com/",
+      "description": "Bormioli Pharma is a packaging manufacturer based in Milan, Italy. Product lines include Pharmaceutical glass packaging; Plastic pharma containers; Closures and dosing systems.",
+      "product_lines": [
+        "Pharmaceutical glass packaging",
+        "Plastic pharma containers",
+        "Closures and dosing systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bormiolipharma.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.bormiolipharma.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.bormiolipharma.com/",
+      "photo_urls": [
+        "https://www.packaging-gateway.com/wp-content/uploads/sites/16/2019/12/Image-2-Bormiolis-San-Vito-al-Tagliamento-Plant-Expansion_Italy.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/bormioli-pharma/bormioli-pharma_01.jpg"
+      ],
+      "slug": "bormioli-pharma",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Bystronic AG",
+      "primary_category": "Industrial Parts",
+      "country": "Switzerland",
+      "city": "Nieder\u00f6nz",
+      "website": "https://www.bystronic.com/",
+      "description": "Bystronic AG is a industrial parts manufacturer based in Nieder\u00f6nz, Switzerland. Product lines include Laser cutting systems; Press brakes; Tube processing machines.",
+      "product_lines": [
+        "Laser cutting systems",
+        "Press brakes",
+        "Tube processing machines"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.bystronic.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.bystronic.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.bystronic.com/",
+      "photo_urls": [
+        "https://www.bystronic.com/"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/bystronic/bystronic_01.jpg"
+      ],
+      "slug": "bystronic",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Camozzi Automation",
+      "primary_category": "Hardware & Motion",
+      "country": "Italy",
+      "city": "Brescia",
+      "website": "https://www.camozzi.com/",
+      "description": "Camozzi Automation is a hardware & motion manufacturer based in Brescia, Italy. Product lines include Pneumatic components; Valves and cylinders; Industrial automation fittings.",
+      "product_lines": [
+        "Pneumatic components",
+        "Valves and cylinders",
+        "Industrial automation fittings"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.camozzi.com/"
+        },
+        {
+          "name": "ISO 14001; fastener / belt / motion product QMS (confirm on product)",
+          "source": "https://www.camozzi.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.camozzi.com/",
+      "photo_urls": [
+        "https://en.camozzigroup.com/imgpub/ig/228/455930/105650.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/camozzi/camozzi_01.jpg"
+      ],
+      "slug": "camozzi",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Carlisle Construction Materials",
+      "primary_category": "Construction",
+      "country": "United States",
+      "city": "Carlisle",
+      "website": "https://www.carlisleccm.com/",
+      "description": "Carlisle Companies Incorporated is a supplier of construction products that make buildings more energy efficient and resilient. The company manufactures and sells single-ply roofing products as well as warranted systems and accessories for the commercial building industry. The company is organized into two segments, including Carlisle Construction Materials and Carlisle Weatherproofing Technologies. The company's product portfolio includes moisture protection products, protective roofing underlayments, integrated air and vapor barriers, spray polyurethane foam and coating systems, and others. The majority of the company's revenue comes from the Carlisle Construction Materials segment, and more than half of the total revenue is earned in the United States.",
+      "product_lines": [
+        "Commercial roofing systems",
+        "Waterproofing membranes",
+        "Building envelope products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.carlisleccm.com/"
+        },
+        {
+          "name": "ISO 14001; construction-product CE / local approvals (confirm)",
+          "source": "https://www.carlisleccm.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.carlisleccm.com/",
+      "photo_urls": [
+        "https://www.carlisleconstructionmaterials.com/wp-content/uploads/2021/08/ccm-exteriors-105-2.png"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/carlisle-construction/carlisle-construction_01.jpg"
+      ],
+      "slug": "carlisle-construction",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "CCL Industries Inc.",
+      "primary_category": "Packaging",
+      "country": "Canada",
+      "city": "Toronto",
+      "website": "https://www.cclind.com/",
+      "description": "CCL Industries, Inc., is an American-Canadian company founded in 1951. It describes itself as the world's largest label maker. It is listed on the Toronto Stock Exchange, and is an S&P/TSX 60 Component. CCL consists of five divisions \u2013 CCL Label, CCL Container, Avery, Checkpoint, and Innovia. It has 154 manufacturing facilities in North America, Latin America, Europe, Asia, Australia and Africa operated by approximately 20,000 employees.",
+      "product_lines": [
+        "Pressure-sensitive labels",
+        "Specialty packaging containers",
+        "Aerosol and tube packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.cclind.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.cclind.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.cclind.com/",
+      "photo_urls": [
+        "https://ccllabel.com/cache-buster-2/CCL/About/350/image-thumb__350__splitHeaderElement/ccl-dornbirn-facility-01@2x.b17dfa4e.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/ccl-industries/ccl-industries_01.jpg"
+      ],
+      "slug": "ccl-industries",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Charlotte Pipe and Foundry Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Charlotte",
+      "website": "https://www.charlottepipe.com/",
+      "description": "Charlotte Pipe and Foundry Company is an American iron casting and pipe manufacturing company.",
+      "product_lines": [
+        "Cast iron soil pipe and fittings",
+        "PVC and CPVC plumbing pipe",
+        "ABS DWV pipe systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.charlottepipe.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.charlottepipe.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.charlottepipe.com/",
+      "photo_urls": [
+        "https://www.charlottepipe.com/uploads/images/oakboro-leading-mid-alt.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/charlotte-pipe/charlotte-pipe_01.jpg"
+      ],
+      "slug": "charlotte-pipe",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Fronius International GmbH",
+      "primary_category": "Industrial Parts",
+      "country": "Austria",
+      "city": "Pettenbach",
+      "website": "https://www.fronius.com/",
+      "description": "Fronius International GmbH is an Austrian company based in Pettenbach, Upper Austria. Fronius is active in the fields of welding technology, photovoltaics and battery charging technology.",
+      "product_lines": [
+        "Welding systems",
+        "Solar inverters",
+        "Battery charging systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.fronius.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.fronius.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.fronius.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Sattledt_-_Fronius_site.jpg/1280px-Sattledt_-_Fronius_site.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/fronius/fronius_01.jpg"
+      ],
+      "slug": "fronius",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Fuji Seal International",
+      "primary_category": "Packaging",
+      "country": "Japan",
+      "city": "Osaka",
+      "website": "https://www.fujiseal.com/",
+      "description": "Fuji Seal International is a packaging manufacturer based in Osaka, Japan. Product lines include Shrink sleeve labels; Self-adhesive labels; Packaging machinery.",
+      "product_lines": [
+        "Shrink sleeve labels",
+        "Self-adhesive labels",
+        "Packaging machinery"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.fujiseal.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.fujiseal.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.fujiseal.com/",
+      "photo_urls": [
+        "https://kbd.group/wp-content/uploads/2023/04/AFS-USA-web-20-of-68-scaled-1.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/fuji-seal/fuji-seal_01.jpg"
+      ],
+      "slug": "fuji-seal",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "IPEX Inc.",
+      "primary_category": "Tube & Pipes",
+      "country": "Canada",
+      "city": "Mississauga",
+      "website": "https://www.ipexna.com/",
+      "description": "IPEX Inc. is a tube & pipes manufacturer based in Mississauga, Canada. Product lines include Thermoplastic piping systems; Municipal infrastructure pipe; Industrial process plastic pipe.",
+      "product_lines": [
+        "Thermoplastic piping systems",
+        "Municipal infrastructure pipe",
+        "Industrial process plastic pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.ipexna.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.ipexna.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.ipexna.com/",
+      "photo_urls": [
+        "https://www.chandos.com/wp-content/uploads/2025/06/ipex.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/ipex/ipex_01.jpg"
+      ],
+      "slug": "ipex",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "ISCAR Ltd.",
+      "primary_category": "Industrial Parts",
+      "country": "Israel",
+      "city": "Tefen",
+      "website": "https://www.iscar.com/",
+      "description": "ISCAR Ltd. is an Israeli manufacturer of metal cutting tools and a subsidiary of the IMC Group.",
+      "product_lines": [
+        "Carbide cutting tools",
+        "Metalworking inserts",
+        "Tooling systems"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.iscar.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.iscar.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.iscar.com/",
+      "photo_urls": [
+        "https://www.imc-companies.com/wp-content/uploads/Backgrounds/ISCARBig-Picture.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/iscar/iscar_01.jpg"
+      ],
+      "slug": "iscar",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "John Crane",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "London",
+      "website": "https://www.johncrane.com/",
+      "description": "John Crane is a company headquartered in Slough, United Kingdom, that provides engineered products and services including mechanical seals, couplings, seal support systems, filtration systems and digital diagnostics technologies. Founded in 1917 in Chicago as Crane Packing Co., and now a subsidiary of Smiths Group, the company services customers in the energy services sector including production, transmission and storage, refining, power generation, petrochemical, pulp and paper, and mining industries.",
+      "product_lines": [
+        "Mechanical seals",
+        "Filtration systems",
+        "Couplings and packings"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.johncrane.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.johncrane.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.johncrane.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8e/John_Crane_Headquarters.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/john-crane/john-crane_01.jpg"
+      ],
+      "slug": "john-crane",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Kabelwerk Eupen AG",
+      "primary_category": "Cables & Electrical",
+      "country": "Belgium",
+      "city": "Eupen",
+      "website": "https://www.eupen.com/",
+      "description": "Kabelwerk Eupen AG is a cables & electrical manufacturer based in Eupen, Belgium. Product lines include Power and telecom cables; Specialty cable systems; Fire-resistant cables.",
+      "product_lines": [
+        "Power and telecom cables",
+        "Specialty cable systems",
+        "Fire-resistant cables"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.eupen.com/"
+        },
+        {
+          "name": "ISO 14001; cable CE / IEC / UL listings (confirm per product)",
+          "source": "https://www.eupen.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.eupen.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Eupen%2C_schoorsteenpijpen_van_Kabelwerk_Eupen_AG_foto8_2017-03-28_13.05.jpg/1280px-Eupen%2C_schoorsteenpijpen_van_Kabelwerk_Eupen_AG_foto8_2017-03-28_13.05.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/kabelwerk-eupen/kabelwerk-eupen_01.jpg"
+      ],
+      "slug": "kabelwerk-eupen",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Kaiser Aluminum Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "Franklin",
+      "website": "https://www.kaiseraluminum.com/",
+      "description": "Kaiser Aluminum Corporation is an American aluminum producer. It is a spinoff from Kaiser Aluminum and Chemicals Corporation, which came to be when common stock was offered in Permanente Metals Corporation and Permanente Metals Corporation's name was changed to Kaiser Aluminum and Chemicals Corporation.",
+      "product_lines": [
+        "Fabricated aluminum products",
+        "Aerospace aluminum plate",
+        "Extruded aluminum products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.kaiseraluminum.com/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.kaiseraluminum.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.kaiseraluminum.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/ChalmetteBattlefieldUSlinesToKaiser.jpg/1280px-ChalmetteBattlefieldUSlinesToKaiser.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/ENTRANCE_TO_THE_KAISER_ALUMINUM_PLANT._BECAUSE_OF_THE_CORROSIVE_FUMES_FROM_THIS_AND_OTHER_PLANTS_IN_THE_AREA%2C_THE..._-_NARA_-_545988.jpg/1280px-ENTRANCE_TO_THE_KAISER_ALUMINUM_PLANT._BECAUSE_OF_THE_CORROSIVE_FUMES_FROM_THIS_AND_OTHER_PLANTS_IN_THE_AREA%2C_THE..._-_NARA_-_545988.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/ENTRANCE_TO_THE_KAISER_ALUMINUM_PLANT._BECAUSE_OF_THE_CORROSIVE_FUMES_FROM_THIS_AND_OTHER_PLANTS_IN_THE_AREA%2C_THE..._-_NARA_-_545996.jpg/1280px-ENTRANCE_TO_THE_KAISER_ALUMINUM_PLANT._BECAUSE_OF_THE_CORROSIVE_FUMES_FROM_THIS_AND_OTHER_PLANTS_IN_THE_AREA%2C_THE..._-_NARA_-_545996.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/INDUSTRIAL_POLLUTION_SHROUDS._KAISER_ALUMINUM_PLANT_-_NARA_-_546069.jpg/1280px-INDUSTRIAL_POLLUTION_SHROUDS._KAISER_ALUMINUM_PLANT_-_NARA_-_546069.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_USED_FOR_DUMPING_INDUSTRIAL_WASTE_-_NARA_-_546080.jpg/1280px-KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_USED_FOR_DUMPING_INDUSTRIAL_WASTE_-_NARA_-_546080.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_USED_FOR_DUMPING_INDUSTRIAL_WASTE_-_NARA_-_546084.jpg/1280px-KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_USED_FOR_DUMPING_INDUSTRIAL_WASTE_-_NARA_-_546084.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_WHERE_INDUSTRIAL_WASTE_IS_DUMPED_-_NARA_-_546055.jpg/1280px-KAISER_ALUMINUM_PLANT_BEHIND_LANDFILL_AREA_WHERE_INDUSTRIAL_WASTE_IS_DUMPED_-_NARA_-_546055.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/KAISER_ALUMINUM_PLANT_EMITS_CORROSIVE_FUMES._INDUSTRIAL_WASTE_IS_DUMPED_IN_LANDFILL_AREA_IN_FOREGROUND_-_NARA_-_545989.jpg/1280px-KAISER_ALUMINUM_PLANT_EMITS_CORROSIVE_FUMES._INDUSTRIAL_WASTE_IS_DUMPED_IN_LANDFILL_AREA_IN_FOREGROUND_-_NARA_-_545989.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/KAISER_ALUMINUM_PLANT_SMOKESTACK_WITH_BUDDING_TREE_IN_FOREGROUND_-_NARA_-_546042.jpg/1280px-KAISER_ALUMINUM_PLANT_SMOKESTACK_WITH_BUDDING_TREE_IN_FOREGROUND_-_NARA_-_546042.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/KAISER_ALUMINUM_PLANT_WITH_INDUSTRIAL_DUMPING_AREA_IN_FOREGROUND_-_NARA_-_545992.jpg/1280px-KAISER_ALUMINUM_PLANT_WITH_INDUSTRIAL_DUMPING_AREA_IN_FOREGROUND_-_NARA_-_545992.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/THE_MISSISSIPPI_RIVER_BRIDGE_%28ON_RIGHT%29_IS_CONSTANTLY_SANDBLASTED_AND_REPAINTED_BECAUSE_OF_THE_CORROSIVE_FUMES_FROM..._-_NARA_-_546076.jpg/1280px-THE_MISSISSIPPI_RIVER_BRIDGE_%28ON_RIGHT%29_IS_CONSTANTLY_SANDBLASTED_AND_REPAINTED_BECAUSE_OF_THE_CORROSIVE_FUMES_FROM..._-_NARA_-_546076.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/kaiser-aluminum/kaiser-aluminum_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/kaiser-aluminum/kaiser-aluminum_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/kaiser-aluminum/kaiser-aluminum_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/kaiser-aluminum/kaiser-aluminum_04.jpg"
+      ],
+      "slug": "kaiser-aluminum",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Liqui-Box",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Richmond",
+      "website": "https://www.liquibox.com/",
+      "description": "Liqui-Box is a packaging manufacturer based in Richmond, United States. Product lines include Bag-in-box packaging; Fitments and dispensing systems; Liquid flexible packaging.",
+      "product_lines": [
+        "Bag-in-box packaging",
+        "Fitments and dispensing systems",
+        "Liquid flexible packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.liquibox.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.liquibox.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.liquibox.com/",
+      "photo_urls": [
+        "https://www.youtube.com/watch?v=SjXjgAmeipo"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/liqui-box/liqui-box_01.jpg"
+      ],
+      "slug": "liqui-box",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Nelipak Healthcare Packaging",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Cranston",
+      "website": "https://www.nelipak.com/",
+      "description": "Nelipak Healthcare Packaging is a packaging manufacturer based in Cranston, United States. Product lines include Medical device thermoformed trays; Healthcare sterile barrier packaging; Custom medical packaging.",
+      "product_lines": [
+        "Medical device thermoformed trays",
+        "Healthcare sterile barrier packaging",
+        "Custom medical packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.nelipak.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.nelipak.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.nelipak.com/",
+      "photo_urls": [
+        "https://www.medicaldesignandoutsourcing.com/wp-content/uploads/2024/11/Nelipak-flexible-packaging-facility-Winston-Salem-NC.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/nelipak/nelipak_01.jpg"
+      ],
+      "slug": "nelipak",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Europe"
+      ]
+    },
+    {
+      "company_name": "Novolex",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Hartsville",
+      "website": "https://www.novolex.com/",
+      "description": "Novolex is a packaging manufacturer based in Hartsville, United States. Product lines include Foodservice packaging; Retail bags and wraps; Industrial packaging products.",
+      "product_lines": [
+        "Foodservice packaging",
+        "Retail bags and wraps",
+        "Industrial packaging products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.novolex.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.novolex.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.novolex.com/",
+      "photo_urls": [
+        "https://www.youtube.com/watch?v=sTPddZC79qE"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/novolex/novolex_01.jpg"
+      ],
+      "slug": "novolex",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Oliver Healthcare Packaging",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Grand Rapids",
+      "website": "https://www.oliverhcp.com/",
+      "description": "Oliver Healthcare Packaging is a packaging manufacturer based in Grand Rapids, United States. Product lines include Medical device packaging; Sterile barrier systems; Healthcare flexible packaging.",
+      "product_lines": [
+        "Medical device packaging",
+        "Sterile barrier systems",
+        "Healthcare flexible packaging"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.oliverhcp.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.oliverhcp.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.oliverhcp.com/",
+      "photo_urls": [
+        "https://www.youtube.com/watch?v=zyP_BtsTJ_8"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/oliver-healthcare/oliver-healthcare_01.jpg"
+      ],
+      "slug": "oliver-healthcare",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "REHAU Group",
+      "primary_category": "Tube & Pipes",
+      "country": "Germany",
+      "city": "Rehau",
+      "website": "https://www.rehau.com/",
+      "description": "Rehau is a town in the district of Hof, in Bavaria, Germany. Rehau is situated in the Fichtel Mountains, 12 km southeast of Hof, and 12 km west of A\u0161.",
+      "product_lines": [
+        "Polymer pipe systems",
+        "Building technology piping",
+        "Window and infrastructure profiles"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.rehau.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.rehau.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.rehau.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/46/Rehau.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/REHAU-Werk_Scandium_20251222_HOF3626_RAW-Export_cens.png/1280px-REHAU-Werk_Scandium_20251222_HOF3626_RAW-Export_cens.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/REHAU-Werk_Scandium_20251222_HOF3631_RAW-Export_cens.png/1280px-REHAU-Werk_Scandium_20251222_HOF3631_RAW-Export_cens.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/REHAU-Werk_Scandium_20251222_HOF3632_RAW-Export_cens.png/1280px-REHAU-Werk_Scandium_20251222_HOF3632_RAW-Export_cens.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/REHAU-Werk_Scandium_20251222_HOF3633_RAW-Export_cens.png/1280px-REHAU-Werk_Scandium_20251222_HOF3633_RAW-Export_cens.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/REHAU-Werk_Scandium_20251222_HOF3637_RAW-Export_cens.png/1280px-REHAU-Werk_Scandium_20251222_HOF3637_RAW-Export_cens.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Rehau.png/1280px-Rehau.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Schild_%22Werk_Scandium%22_%28Rehau%29_20251222_HOF3630_RAW-Export.jpg/1280px-Schild_%22Werk_Scandium%22_%28Rehau%29_20251222_HOF3630_RAW-Export.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Schild_%22Werk_Scandium%22_%28Rehau%29_20251222_HOF3630_RAW-Export.png/1280px-Schild_%22Werk_Scandium%22_%28Rehau%29_20251222_HOF3630_RAW-Export.png",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tanygrisiau_village_-_geograph.org.uk_-_343781.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/e/e3/The_Rehau_Factory%2C_Amlwch_Business_Park_-_geograph.org.uk_-_1112266.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Werk_Scandium_der_REHAU_Group_20251222_HOF3627_RAW-Export_cens.jpg/1280px-Werk_Scandium_der_REHAU_Group_20251222_HOF3627_RAW-Export_cens.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/rehau/rehau_01.png",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/rehau/rehau_02.png",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/rehau/rehau_03.png",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/rehau/rehau_04.png"
+      ],
+      "slug": "rehau",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Renishaw plc",
+      "primary_category": "Industrial Parts",
+      "country": "United Kingdom",
+      "city": "Wotton-under-Edge",
+      "website": "https://www.renishaw.com/",
+      "description": "Renishaw plc is a British engineering company based in Wotton-under-Edge, England. The company's products include coordinate-measuring machines and machine tool products. It is listed on the London Stock Exchange and is a constituent of the FTSE 250 Index.",
+      "product_lines": [
+        "Metrology probes",
+        "Additive manufacturing systems",
+        "Position encoders"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.renishaw.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.renishaw.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.renishaw.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e0/Renishaw_PLC%2C_New_Mills_-_geograph.org.uk_-_367256.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/renishaw/renishaw_01.jpg"
+      ],
+      "slug": "renishaw",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Special Metals Corporation",
+      "primary_category": "Steel & Metals",
+      "country": "United States",
+      "city": "New Hartford",
+      "website": "https://www.specialmetals.com/",
+      "description": "Special Metals Corporation (SMC) is an American supplier of special refractory alloys and is headquartered in New Hartford, New York, United States. The company has operations in Perth, Western Australia; Albury, New South Wales; Huntington, West Virginia; Dunkirk, New York; Burnaugh, Kentucky; Elkhart, Indiana and Hereford, England.",
+      "product_lines": [
+        "Nickel-based superalloys",
+        "Inconel and Incoloy alloys",
+        "High-performance alloy mill products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.specialmetals.com/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.specialmetals.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.specialmetals.com/",
+      "photo_urls": [
+        "https://www.specialmetals.com/assets/local/images/bg/slide1-bg.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/special-metals/special-metals_01.jpg"
+      ],
+      "slug": "special-metals",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Superior Essex",
+      "primary_category": "Cables & Electrical",
+      "country": "United States",
+      "city": "Atlanta",
+      "website": "https://www.superioressex.com/",
+      "description": "Superior Essex is the parent brand of Essex Solutions, Superior Essex Communications, and Essex Brownell. It has over 3,000 employees in 11 countries. Essex is among the leading global manufacturers of magnet wire. It is active in the electrification of the automotive, energy, and industrial sectors.",
+      "product_lines": [
+        "Magnet wire",
+        "Communications cable",
+        "Copper and fiber cable products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.superioressex.com/"
+        },
+        {
+          "name": "ISO 14001; cable CE / IEC / UL listings (confirm per product)",
+          "source": "https://www.superioressex.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.superioressex.com/",
+      "photo_urls": [
+        "https://superioressex.com/wp-content/uploads/2024/08/H8A9115-drk2-e1724075224104.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/superior-essex/superior-essex_01.jpg"
+      ],
+      "slug": "superior-essex",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Tekni-Plex",
+      "primary_category": "Packaging",
+      "country": "United States",
+      "city": "Wayne",
+      "website": "https://www.tekni-plex.com/",
+      "description": "Tekni-Plex is a packaging manufacturer based in Wayne, United States. Product lines include Healthcare packaging; Specialty films and compounds; Food packaging materials.",
+      "product_lines": [
+        "Healthcare packaging",
+        "Specialty films and compounds",
+        "Food packaging materials"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tekni-plex.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.tekni-plex.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tekni-plex.com/",
+      "photo_urls": [
+        "https://www.youtube.com/watch?v=s7W9ceIrhK8"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/tekni-plex/tekni-plex_01.jpg"
+      ],
+      "slug": "tekni-plex",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Tokyo Steel Manufacturing",
+      "primary_category": "Steel & Metals",
+      "country": "Japan",
+      "city": "Tokyo",
+      "website": "https://www.tokyosteel.co.jp/",
+      "description": "Tokyo Steel Manufacturing is a steel & metals manufacturer based in Tokyo, Japan. Product lines include Electric arc furnace steel; H-beams and steel sheets; Construction steel products.",
+      "product_lines": [
+        "Electric arc furnace steel",
+        "H-beams and steel sheets",
+        "Construction steel products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.tokyosteel.co.jp/"
+        },
+        {
+          "name": "ISO 14001; EN / ASTM steel product specs (confirm)",
+          "source": "https://www.tokyosteel.co.jp/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.tokyosteel.co.jp/",
+      "photo_urls": [
+        "https://www.tokyosteel.co.jp/assets/images/company/ph_tahara.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/tokyo-steel/tokyo-steel_01.jpg"
+      ],
+      "slug": "tokyo-steel",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia"
+      ]
+    },
+    {
+      "company_name": "TRUMPF GmbH + Co. KG",
+      "primary_category": "Industrial Parts",
+      "country": "Germany",
+      "city": "Ditzingen",
+      "website": "https://www.trumpf.com/",
+      "description": "TRUMPF SE + Co. KG is a German family-owned company based in Ditzingen near Stuttgart, Baden-W\u00fcrttemberg. It originates from Julius Geiger's mechanical workshop. The Trumpf and Leibinger families transformed the medium-sized company into a globally recognized industrial group. Today, the company is one of the world\u2019s largest suppliers of machine tools and a leader in laser technology. Trumpf is one of the most well-known representatives of the German 'Mittelstand'.",
+      "product_lines": [
+        "Laser cutting machines",
+        "Sheet metal fabrication systems",
+        "Industrial lasers and electronics"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.trumpf.com/"
+        },
+        {
+          "name": "ISO 14001; CE / UL product listings (confirm on product)",
+          "source": "https://www.trumpf.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.trumpf.com/",
+      "photo_urls": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Trumpf_Ditzingen_Verwaltung_2021-07-22.jpg/1280px-Trumpf_Ditzingen_Verwaltung_2021-07-22.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Trumpf_Standort_Weilimdorf_1933-00-00.jpg/1280px-Trumpf_Standort_Weilimdorf_1933-00-00.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Trumpf_TruLaser_Center_5030_2021-07-07.jpg/1280px-Trumpf_TruLaser_Center_5030_2021-07-07.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Trumpf_handschere.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/trumpf/trumpf_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/trumpf/trumpf_02.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/trumpf/trumpf_03.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/trumpf/trumpf_04.jpg"
+      ],
+      "slug": "trumpf",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Uponor Corporation",
+      "primary_category": "Tube & Pipes",
+      "country": "Finland",
+      "city": "Helsinki",
+      "website": "https://www.uponor.com/",
+      "description": "Uponor Oyj is a Finnish company that sells products for drinking water delivery, radiant heating and cooling. With approximately 3,700 employees, its head office is located in Helsinki, Finland.",
+      "product_lines": [
+        "PEX plumbing and radiant systems",
+        "Infrastructure plastic pipe",
+        "Local heat distribution pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.uponor.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.uponor.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.uponor.com/",
+      "photo_urls": [
+        "https://d2csxpduxe849s.cloudfront.net/media/9DBFC9CC-45F9-4819-925E0ED0B614B078/9B63D7C6-0932-42E7-AD1E8EC35543041B/E25B186B-786B-4FE3-B26753ED43ADD5B6/webimage-120D231A-C7DF-444F-B5156437967830E4.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/uponor/uponor_01.jpg"
+      ],
+      "slug": "uponor",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Europe",
+        "North America"
+      ]
+    },
+    {
+      "company_name": "Victaulic Company",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Easton",
+      "website": "https://www.victaulic.com/",
+      "description": "Victaulic is a developer and manufacturer of mechanical pipe joining systems, and the originator of the grooved pipe couplings joining system. The firm is a global company with 15 major manufacturing facilities, 28 branches, and over 3,600 employees worldwide. Currently, its headquarters is located in Easton, Pennsylvania.",
+      "product_lines": [
+        "Mechanical pipe joining systems",
+        "Grooved couplings and fittings",
+        "Fire protection and HVAC piping"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.victaulic.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.victaulic.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.victaulic.com/",
+      "photo_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/07/VictaulicPiping.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/WWII-Field_Installation_With_Victaulic_Couplings.jpg/1280px-WWII-Field_Installation_With_Victaulic_Couplings.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/victaulic/victaulic_01.jpg",
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/victaulic/victaulic_02.jpg"
+      ],
+      "slug": "victaulic",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Global"
+      ]
+    },
+    {
+      "company_name": "Vitro SAB de CV",
+      "primary_category": "Packaging",
+      "country": "Mexico",
+      "city": "San Pedro Garza Garc\u00eda",
+      "website": "https://www.vitro.com/",
+      "description": "Vitro is the largest glass producer in Mexico and one of the world's largest organizations in the glass industry. Founded in 1909 in Monterrey, Mexico, this corporation has 30 subsidiaries in Mexico, United States, Brazil, Colombia, Bolivia, Costa Rica, Guatemala and Panama.",
+      "product_lines": [
+        "Glass containers",
+        "Flat glass",
+        "Automotive and architectural glass"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.vitro.com/"
+        },
+        {
+          "name": "Food-contact / packaging QMS (confirm per plant)",
+          "source": "https://www.vitro.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.vitro.com/",
+      "photo_urls": [
+        "https://www.vitroenvases.com/media/1060/home1.jpg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/vitro/vitro_01.jpg"
+      ],
+      "slug": "vitro",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Americas"
+      ]
+    },
+    {
+      "company_name": "Walsin Lihwa Corporation",
+      "primary_category": "Tube & Pipes",
+      "country": "Taiwan",
+      "city": "Taipei",
+      "website": "https://www.walsin.com/",
+      "description": "Walsin Lihwa Corporation is a tube & pipes manufacturer based in Taipei, Taiwan. Product lines include Stainless steel pipe and tube; Wire and cable materials; Specialty alloy tubular products.",
+      "product_lines": [
+        "Stainless steel pipe and tube",
+        "Wire and cable materials",
+        "Specialty alloy tubular products"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.walsin.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.walsin.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.walsin.com/",
+      "photo_urls": [
+        "https://www.walsin.com/wp-content/uploads/2025/10/Walsin-Lihwa-Brochure_EN_202510.pdf"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/walsin-lihwa/walsin-lihwa_01.jpg"
+      ],
+      "slug": "walsin-lihwa",
+      "source_platform": "Company site",
+      "export_markets": [
+        "Asia",
+        "Global"
+      ]
+    },
+    {
+      "company_name": "WL Plastics",
+      "primary_category": "Tube & Pipes",
+      "country": "United States",
+      "city": "Fort Worth",
+      "website": "https://www.wlplastics.com/",
+      "description": "WL Plastics is a tube & pipes manufacturer based in Fort Worth, United States. Product lines include HDPE pressure pipe; Municipal and industrial PE pipe; Oil and gas gathering pipe.",
+      "product_lines": [
+        "HDPE pressure pipe",
+        "Municipal and industrial PE pipe",
+        "Oil and gas gathering pipe"
+      ],
+      "certifications": [
+        {
+          "name": "ISO 9001 quality management (confirm current certificate on mill quality page)",
+          "source": "https://www.wlplastics.com/"
+        },
+        {
+          "name": "ASTM / EN / ASME / API tubular product specs (confirm on mill site)",
+          "source": "https://www.wlplastics.com/"
+        }
+      ],
+      "moq": "Not published \u2014 mill RFQ / project quote (no public unit MOQ; do not invent)",
+      "source_url": "https://www.wlplastics.com/",
+      "photo_urls": [
+        "https://www.leelewis.com/hubfs/exterior%20-front.jpeg"
+      ],
+      "local_images": [
+        "/workspace/suppliers-phase1/daily/2026-09-17/images/suppliers/wl-plastics/wl-plastics_01.jpg"
+      ],
+      "slug": "wl-plastics",
+      "source_platform": "Company site",
+      "export_markets": [
+        "North America"
+      ]
+    }
+  ],
+  "rules": [
+    "Wire OK + soft mills only",
+    "Prefer _01.jpg as mill hero",
+    "RFQ only \u2014 no invented FOB/prices",
+    "No ISO badges from boilerplate",
+    "Skip soft-hold11 until remediations seal",
+    "jm-eagle + blocked4 stay out",
+    "Altra: relabel as OEM/brand manufacturer group"
+  ],
+  "note": "Day OK5+soft4 + HOLD30 OK14+soft11. Soft-hold11 still remediating. Products for day pack only in companion products file."
+}
