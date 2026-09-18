@@ -152,6 +152,32 @@ describe("getBestProductImage / getRealProductImage", () => {
     expect(existsSync(resolve("public", (rockwool ?? "").replace(/^\//, "")))).toBe(true);
   });
 
+  it("keeps Neway ball-valve pack photos instead of Ball Corporation aerosol stills", () => {
+    const packPhoto = "/images/products/industrial/neway-valve/ball-valves.jpg";
+    expect(
+      getRealProductImage({
+        images: [packPhoto],
+        id: "pack-neway-valve-neway-ball-valves",
+        slug: "neway-ball-valves",
+        supplierId: "neway-valve-suzhou-co-ltd-cn",
+        productName: "Neway Ball Valves",
+        category: "Industrial Parts",
+      }),
+    ).toBe(packPhoto);
+  });
+
+  it("does not invent an aerosol still for a ball-bearing SKU with no pack photo", () => {
+    const resolved = getRealProductImage({
+      images: [],
+      id: "pack-wafangdian-bearing-zwz-deep-groove-ball-bearings",
+      slug: "zwz-deep-groove-ball-bearings",
+      supplierId: "wafangdian-bearing-group-corp-ltd-cn",
+      productName: "ZWZ Deep Groove Ball Bearings",
+      category: "Industrial Parts",
+    });
+    expect(resolved ?? "").not.toContain("/images/products/ball/");
+  });
+
   it("uses a branded category fallback when only a third-party hotlink exists", () => {
     const hotlink = "https://s7d1.scene7.com/is/image/RockwellAutomation/foo";
     const fallback = getProductFallbackImage("Mystery gasket", "Industrial Parts");

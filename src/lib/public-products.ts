@@ -277,7 +277,7 @@ function staticToCard(p: Product): PublicProductCard {
     supplierName: p.supplierName ?? "Suplymate catalogue",
     supplierCountry: p.supplierCountry ?? null,
     supplierVisible: Boolean(p.supplierId) && !getPackSupplier(p.supplierId ?? "")?.productHostOnly,
-    verified: false,
+    verified: getPackSupplier(p.supplierId ?? "")?.verified === true,
     imageUrl: getBestProductImage(imageInput),
     hasRealPhoto: hasRealProductImage(imageInput),
     priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
@@ -304,7 +304,12 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
   // Filters.
   const s = (q.search ?? "").toLowerCase().trim();
   const cards = allCards.filter((c) => {
-    if (s && !c.name.toLowerCase().includes(s) && !c.category.toLowerCase().includes(s)) {
+    if (
+      s &&
+      !c.name.toLowerCase().includes(s) &&
+      !c.category.toLowerCase().includes(s) &&
+      !c.supplierName.toLowerCase().includes(s)
+    ) {
       return false;
     }
     if (q.category && c.category !== q.category) return false;
