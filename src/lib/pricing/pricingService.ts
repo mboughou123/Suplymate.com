@@ -337,13 +337,15 @@ async function refreshIfStale(current: Material[]): Promise<boolean> {
 }
 
 /** Catalog materials with provenance. Refreshes provider prices when stale. */
-export async function getMaterialsWithPricing(): Promise<MaterialWithProvenance[]> {
+export async function getMaterialsWithPricing(opts?: { live?: boolean }): Promise<MaterialWithProvenance[]> {
   const current = await loadFromDb();
   let refreshed = false;
-  try {
-    refreshed = await refreshIfStale(current);
-  } catch {
-    refreshed = false;
+  if (opts?.live !== false) {
+    try {
+      refreshed = await refreshIfStale(current);
+    } catch {
+      refreshed = false;
+    }
   }
   const fresh = (refreshed ? await loadFromDb() : current).filter((m) => isCatalogMaterial(m.id));
   const observed = await loadLatestObservations(fresh);

@@ -12,7 +12,7 @@
     "contactTitle": "Contacto | Suplymate",
     "contactDescription": "Contactoe al equipo de Suplymate en info@suplymate.com.",
     "pricingTitle": "Precios | Suplymate",
-    "pricingDescription": "Free, Basic ($49.95 with a 3-day free trial), Premium ($99.95) and Enterprise ($250) plans for AI-powered industrial sourcing.",
+    "pricingDescription": "Free, Basic ($49.95), Premium ($99.95) and Enterprise ($250) plans for AI-powered industrial sourcing. 3-day free trial on every paid plan.",
     "aiAssistantTitle": "Assistant de abastecimiento IA · Suplymate",
     "aiAssistantDescription": "Sourcez plus intelligemment avec l'intelligence proveedores, l'analyse des precios y les recommandations IA.",
     "adminTitle": "Administración | Suplymate",
@@ -609,7 +609,10 @@
     "testimonial2Role": "Responsable supply chain, BuildPro",
     "testimonial3Quote": "Le suivi des precios de l'acier nous a permis d'économiser 8 %. C'est devenu un rituel d'achat hebdomadaire.",
     "testimonial3Name": "David Okonkwo",
-    "testimonial3Role": "Directeur des opérations, VoltLine"
+    "testimonial3Role": "Directeur des opérations, VoltLine",
+    "freeDirectoryLockTitle": "Free plan shows 10 suppliers",
+    "freeDirectoryLockBody": "You're viewing {visible} mills. {locked} more suppliers unlock on a paid plan.",
+    "freeDirectoryLockCta": "Start 3-day free trial"
   },
   "products": {
     "pageTitle": "Parcourir les produits",
@@ -644,7 +647,10 @@
     "endOfResults": "You've reached the end · {shown} of {total} shown",
     "retry": "Retry",
     "productCount": "{count, plural, one {# product} other {# products}}",
-    "moqLabel": "MOQ"
+    "moqLabel": "MOQ",
+    "freeCatalogueLockTitle": "Free plan shows 10 products",
+    "freeCatalogueLockBody": "You're viewing {visible} of the catalogue. {locked} more products unlock on a paid plan.",
+    "freeCatalogueLockCta": "Start 3-day free trial"
   },
   "priceCharts": {
     "pageEyebrow": "Matières",
@@ -690,7 +696,10 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "trackingLockTitle": "Live materials tracking is on Premium",
+    "trackingLockBody": "Free and Basic show reference series only. Premium adds live materials price tracking after you subscribe.",
+    "trackingLockCta": "See Premium"
   },
   "dashboard": {
     "title": "Panel",
@@ -851,7 +860,7 @@
     "saveChanges": "Save changes",
     "currentPlan": "Current plan",
     "trialActive": "Free trial active",
-    "trialNote": "3-day free trial on Basic",
+    "trialNote": "3-day free trial on every paid plan",
     "renews": "Renews {date}",
     "noRenewal": "No renewal — free plan",
     "billingUnavailable": "Online billing isn't available yet. Your plan won't change until it is.",
@@ -893,9 +902,9 @@
   },
   "pricing": {
     "pageEyebrow": "Precios",
-    "pageTitle": "Simple plans. 3-day free trial on Basic.",
-    "pageSubtitle": "Start free. Basic is $49.95/month after a 3-day free trial. Premium is $99.95/month. Enterprise is $250/month.",
-    "trialBadge": "3-day free trial on Basic",
+    "pageTitle": "Simple plans. 3-day free trial on every paid plan.",
+    "pageSubtitle": "Start free. Basic, Premium and Enterprise each include 3 days free, then $49.95 / $99.95 / $250 per month.",
+    "trialBadge": "3-day free trial on Basic, Premium and Enterprise",
     "mostPopular": "Le plus populaire",
     "perMonth": "/month",
     "forever": "forever",
@@ -904,19 +913,21 @@
     "ctaTrial": "Start 3-day free trial",
     "ctaSales": "Talk to Sales",
     "ctaCurrent": "Your current plan",
-    "billingNote": "Prices in USD. Basic includes a 3-day free trial, then $49.95/month. Premium is $99.95/month. Enterprise is $250/month.",
+    "billingNote": "Prices in USD. Billing is handled securely by Stripe. Every paid plan includes a 3-day free trial, then converts unless you cancel.",
     "billingUnavailable": "Online checkout is being connected. Plans and trials will be available shortly — browse everything on the Free plan meanwhile.",
     "compareTitle": "What's included",
     "faqTitle": "Questions",
     "faq1q": "What happens after the 3-day trial?",
-    "faq1a": "Basic includes 3 days free. After that it is $49.95/month unless you cancel. Premium is $99.95/month and Enterprise is $250/month — talk to sales to activate Enterprise.",
+    "faq1a": "Every paid plan includes 3 days free. After that you are charged $49.95 (Basic), $99.95 (Premium) or $250 (Enterprise) unless you cancel.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse the catalogue, read mill profiles, see material charts and ask Mate 3 questions per day with no card required.",
+    "faq2a": "Yes. You can open 10 products and 10 suppliers with no card. Contacting mills and the rest of the catalogue need a paid plan. Mate on Free is 3 demo questions with no paid API credit.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply when billing is connected; downgrades apply at the end of the billing period.",
-    "faq4q": "What does Enterprise include?",
-    "faq4a": "Enterprise is $250/month and includes everything in Premium plus 100 team seats and team roles. Talk to Sales to activate it.",
-    "ctaUpgrade": "Get Premium"
+    "faq4q": "What does Premium add?",
+    "faq4a": "Premium is 10× Basic Mate usage, live materials price tracking, 10 team seats and export. Real Mate starts after you subscribe (the 3-day trial stays on demo Mate).",
+    "ctaUpgrade": "Get Premium",
+    "ctaSubscribe": "Subscribe",
+    "contactLockedTitle": "Subscribe to contact suppliers"
   },
   "about": {
     "eyebrow": "Acerca de Suplymate",

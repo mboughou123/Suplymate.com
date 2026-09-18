@@ -12,9 +12,13 @@ import SupplierFilters, {
 } from "@/components/SupplierFilters";
 import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
 import { supplierHasUsableCardImage } from "@/lib/image-fallback";
+import PlanLockBanner from "@/components/billing/PlanLockBanner";
 
 type Props = {
   initialSuppliers: Supplier[];
+  visibleLimit?: number | null;
+  lockedCount?: number;
+  canContact?: boolean;
 };
 
 const PAGE_SIZE = 12;
@@ -40,7 +44,12 @@ function reviewsOf(s: Supplier): number {
   return s.googleReviews ?? s.reviewCount ?? 0;
 }
 
-export default function SuppliersClient({ initialSuppliers }: Props) {
+export default function SuppliersClient({
+  initialSuppliers,
+  visibleLimit = null,
+  lockedCount = 0,
+  canContact = true,
+}: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const [filters, setFilters] = useState<SupplierFilterState>(DEFAULT_FILTERS);
@@ -192,6 +201,16 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         resultCount={filtered.length}
       />
 
+      {visibleLimit != null && lockedCount > 0 && (
+        <div className="mt-4">
+          <PlanLockBanner
+            title={t("freeDirectoryLockTitle")}
+            body={t("freeDirectoryLockBody", { visible: visibleLimit, locked: lockedCount })}
+            cta={t("freeDirectoryLockCta")}
+          />
+        </div>
+      )}
+
       {loading ? (
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -220,7 +239,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                     {tCommon("compare")}
                   </label>
                 )}
-                <SupplierCard supplier={supplier} />
+                <SupplierCard supplier={supplier} canContact={canContact} />
               </div>
             ))}
           </div>

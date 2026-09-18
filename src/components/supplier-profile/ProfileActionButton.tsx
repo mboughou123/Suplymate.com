@@ -24,6 +24,7 @@ type Props = {
   icon?: LucideIcon;
   className?: string;
   productName?: string;
+  locked?: boolean;
 };
 
 // Builds a tailored opening message so each CTA lands the buyer in the existing
@@ -55,6 +56,7 @@ export default function ProfileActionButton({
   icon: Icon,
   className = "",
   productName,
+  locked = false,
 }: Props) {
   const t = useTranslations("supplierProfile");
   const errors = useTranslations("errors");
@@ -66,6 +68,10 @@ export default function ProfileActionButton({
   const [error, setError] = useState<string | null>(null);
 
   async function handleClick() {
+    if (locked) {
+      router.push("/pricing");
+      return;
+    }
     if (status !== "authenticated") {
       router.push(`/login?callbackUrl=/supplier/${supplierId}`);
       return;
@@ -80,6 +86,10 @@ export default function ProfileActionButton({
       });
       if (res.status === 401) {
         router.push(`/login?callbackUrl=/supplier/${supplierId}`);
+        return;
+      }
+      if (res.status === 403) {
+        router.push("/pricing");
         return;
       }
       const data = await res.json().catch(() => null);
@@ -120,7 +130,13 @@ export default function ProfileActionButton({
 
   return (
     <>
-      <button type="button" onClick={handleClick} className={className} disabled={loading}>
+      <button
+        type="button"
+        onClick={handleClick}
+        className={className}
+        disabled={loading}
+        data-testid={locked ? "contact-locked" : "profile-action"}
+      >
         {loading ? (
           <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
         ) : (

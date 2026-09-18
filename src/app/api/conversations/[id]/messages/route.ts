@@ -6,6 +6,7 @@ import { autoReply } from "@/lib/auto-reply";
 import { getSupplierMeta } from "@/lib/supplier-meta";
 import { canManageSupplier } from "@/lib/supplier-access";
 import { notify } from "@/lib/notifications";
+import { UPGRADE_REQUIRED, entitlementsForUserId } from "@/lib/plan-access";
 
 type AttachmentInput = {
   fileName: string;
@@ -89,6 +90,18 @@ export async function POST(
   const { convo, role } = await participant(id, session.user.id, session.user.email);
   if (!convo || !role) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+  if (role === "buyer") {
+    const entitlements = await entitlementsForUserId(session.user.id);
+    if (!entitlements.supplierMessaging) {
+      return NextResponse.json(
+        {
+          error: "Contacting suppliers requires a paid plan.",
+          code: UPGRADE_REQUIRED,
+        },
+        { status: 403 },
+      );
+    }
   }
 
   const body = await request.json();

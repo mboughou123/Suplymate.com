@@ -27,6 +27,7 @@ import {
 
 type SupplierCardProps = {
   supplier: Supplier;
+  canContact?: boolean;
 };
 
 function Metric({
@@ -47,7 +48,7 @@ function Metric({
   );
 }
 
-export default function SupplierCard({ supplier }: SupplierCardProps) {
+export default function SupplierCard({ supplier, canContact = true }: SupplierCardProps) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const s = toDisplaySupplier(supplier);
@@ -217,6 +218,7 @@ export default function SupplierCard({ supplier }: SupplierCardProps) {
             supplierId={s.id}
             supplierName={s.name}
             label={t("contactSupplier")}
+            locked={!canContact}
             className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
           />
         </div>

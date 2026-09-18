@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Search, SlidersHorizontal, Loader2, PackageX } from "lucide-react";
 import PublicProductCard from "@/components/PublicProductCard";
+import PlanLockBanner from "@/components/billing/PlanLockBanner";
 import type {
   PublicProductCard as PublicProduct,
   CatalogueFacets,
@@ -21,6 +22,9 @@ type Props = {
   initialHasMore: boolean;
   pageSize: number;
   facets: CatalogueFacets;
+  visibleLimit?: number | null;
+  lockedCount?: number;
+  canContact?: boolean;
 };
 
 type Filters = CatalogueFilters;
@@ -49,6 +53,9 @@ export default function ProductsClient({
   initialHasMore,
   pageSize,
   facets,
+  visibleLimit = null,
+  lockedCount = 0,
+  canContact = true,
 }: Props) {
   const t = useTranslations("products");
   const tErrors = useTranslations("errors");
@@ -242,9 +249,17 @@ export default function ProductsClient({
         {/* Results */}
         <div>
           <p className="mb-6 text-sm text-ink-muted">
-            {t("productCount", { count: total })}
+            {t("productCount", { count: visibleLimit != null ? Math.min(visibleLimit, items.length || visibleLimit) : total })}
             {activeFilterCount > 0 ? ` ${t("matchFilters")}` : ""}
           </p>
+
+          {visibleLimit != null && lockedCount > 0 && (
+            <PlanLockBanner
+              title={t("freeCatalogueLockTitle")}
+              body={t("freeCatalogueLockBody", { visible: visibleLimit, locked: lockedCount })}
+              cta={t("freeCatalogueLockCta")}
+            />
+          )}
 
           {error && (
             <div className="mb-6 flex items-center justify-between rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">
@@ -274,7 +289,7 @@ export default function ProductsClient({
             <>
               <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                 {items.map((item) => (
-                  <PublicProductCard key={item.id} data={item} />
+                  <PublicProductCard key={item.id} data={item} canContact={canContact} />
                 ))}
               </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
@@ -22,6 +22,8 @@ type Props = {
    * conversation + RFQ.
    */
   quote?: boolean;
+  /** When true, the control is a pricing upgrade link instead of opening chat. */
+  locked?: boolean;
 };
 
 export default function ContactSupplierButton({
@@ -32,19 +34,41 @@ export default function ContactSupplierButton({
   productName,
   productId,
   quote,
+  locked,
 }: Props) {
   const { status } = useSession();
   const router = useRouter();
   const tf = useTranslations("forms");
   const tsp = useTranslations("supplierProfile");
   const te = useTranslations("errors");
+  const tPricing = useTranslations("pricing");
   const isQuote = Boolean(quote || label.toLowerCase().includes("quote"));
 
   const [open, setOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string | null>(null);
+  const [fetchedLocked, setFetchedLocked] = useState<boolean>(locked ?? true);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (locked !== undefined) {
+      setFetchedLocked(locked);
+      return;
+    }
+    let cancelled = false;
+    fetch("/api/entitlements")
+      .then((r) => r.json())
+      .then((data) => {
+        if (!cancelled) setFetchedLocked(!Boolean(data?.entitlements?.supplierMessaging));
+      })
+      .catch(() => {
+        if (!cancelled) setFetchedLocked(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [locked]);
 
   const [quantity, setQuantity] = useState("");
   const defaultMessage = productName
@@ -74,6 +98,10 @@ export default function ContactSupplierButton({
         router.push(`/login?callbackUrl=${encodeURIComponent("/products")}`);
         return;
       }
+      if (res.status === 403) {
+        router.push("/pricing");
+        return;
+      }
       const data = await res.json().catch(() => null);
       if (res.ok && data?.conversation?.id) {
         setConversationId(data.conversation.id);
@@ -90,6 +118,10 @@ export default function ContactSupplierButton({
   }
 
   function handleClick() {
+    if (fetchedLocked) {
+      router.push("/pricing");
+      return;
+    }
     if (!requireAuth()) return;
     if (isQuote) {
       setFormOpen(true);
@@ -100,7 +132,14 @@ export default function ContactSupplierButton({
 
   return (
     <>
-      <button type="button" onClick={handleClick} className={className} disabled={loading}>
+      <button
+        type="button"
+        onClick={handleClick}
+        className={className}
+        disabled={loading}
+        data-testid={fetchedLocked ? "contact-locked" : "contact-supplier"}
+        title={fetchedLocked ? tPricing("contactLockedTitle") : undefined}
+      >
         {loading ? (
           <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
         ) : (

@@ -14,6 +14,7 @@
 import { chatCompletion, describeOpenAiError, isOpenAiConfigured, logOpenAiError, openAiModel, type ChatMessage } from "@/lib/openai";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { getMaterialsWithPricing, type MaterialWithProvenance } from "@/lib/pricing/pricingService";
+import { AI_DEMO_OFFERS, AI_DEMO_SUPPLIERS } from "@/lib/ai-demo-walkthrough";
 import { getCatalogMaterial, type MaterialCatalogEntry } from "@/data/material-catalog";
 import { parseRequirement, type ParsedRequirement } from "@/lib/ai/requirement-parser";
 import { matchSuppliers, type SupplierMatch } from "@/lib/ai/supplier-matching";
@@ -160,7 +161,49 @@ function stateFor(req: ParsedRequirement): OrbState {
 export type AssistantInput = {
   message: string;
   history: { role: "user" | "assistant"; content: string }[];
+  /** demo never calls OpenAI; live uses the model when a key is configured. */
+  mode?: "demo" | "live";
 };
+
+/** Demo Mate: sample mills from the homepage walkthrough. Never hits OpenAI or WPI. */
+export function gatherDemoBlocks(req: ParsedRequirement): { blocks: AiBlock[]; matches: SupplierMatch[] } {
+  const matches: SupplierMatch[] = AI_DEMO_SUPPLIERS.map((s, i) => {
+    const offer = AI_DEMO_OFFERS.find((o) => o.supplierId === s.id);
+    return {
+      supplier: {
+        id: s.id,
+        name: s.name,
+        location: s.country,
+        country: s.country,
+        category: "Tubes & Pipes",
+        industry: "Steel & Metals",
+        logoUrl: null,
+        imageUrl: null,
+        verified: s.verified,
+        trustScore: 90 - i * 2,
+        rating: 4.6,
+        reviews: 24,
+        moq: offer?.moq ?? null,
+        products: ["HDPE pipe"],
+        website: null,
+      },
+      relevance: 94 - i * 4,
+      overall: 90 - i * 5,
+      breakdown: { price: 80, delivery: 78, quality: 88, location: 70, trust: 90 },
+      reasons: [`Demo mill in ${s.country}`, "Sample result for Basic Mate"],
+      gaps: ["Live directory matching unlocks on Premium after you subscribe"],
+    };
+  });
+  const blocks: AiBlock[] = [
+    {
+      type: "supplier_matches",
+      requirement: req.text,
+      matches,
+      totalConsidered: matches.length,
+    },
+  ];
+  return { blocks, matches };
+}
 
 /** Gather grounded blocks for a requirement. Never throws. */
 export async function gatherBlocks(req: ParsedRequirement): Promise<{ blocks: AiBlock[]; matches: SupplierMatch[] }> {
@@ -264,7 +307,11 @@ RULES
 - For beginners, be concrete and encouraging: next 2–3 actions.
 - Plain text, short paragraphs or bullets, no markdown headings. Under 220 words.`;
 
-function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
+function composeDemoReply(
+  req: ParsedRequirement,
+  blocks: AiBlock[],
+  opts?: { planDemo?: boolean },
+): string {
   const parts: string[] = [];
   const matches = blocks.find((b) => b.type === "supplier_matches") as Extract<AiBlock, { type: "supplier_matches" }> | undefined;
   const intel = blocks.find((b) => b.type === "material_intel") as Extract<AiBlock, { type: "material_intel" }> | undefined;
@@ -322,13 +369,19 @@ function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
     );
   }
 
-  if (!isOpenAiConfigured()) {
+  if (opts?.planDemo) {
+    parts.push(
+      "This is demo Mate: the mills above are sample results. No OpenAI or paid API credit was used. Subscribe to Premium for live matching on the full directory.",
+    );
+  } else if (!isOpenAiConfigured()) {
     parts.push("(Demo mode: supplier and material data are real Suplymate records; narrative generation is rule-based until an OpenAI key is configured.)");
   }
   return parts.join("\n\n");
 }
 
 export const ENGINE_NOTE_DEMO = "OpenAI key missing — demo narrative, real Suplymate data";
+export const ENGINE_NOTE_PLAN_DEMO =
+  "Demo Mate — sample mills, no OpenAI or paid API credit. Real Mate starts after you subscribe to Premium.";
 
 /** Last OpenAI failure seen by this server instance (diagnostics for GET /api/ai). */
 let lastOpenAiFailure: { note: string; at: Date } | null = null;
@@ -356,7 +409,8 @@ export function engineStatus(): EngineStatus {
 
 export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
   const req = parseRequirement(input.message);
-  const { blocks, matches } = await gatherBlocks(req);
+  const forceDemo = input.mode === "demo";
+  const { blocks, matches } = forceDemo ? gatherDemoBlocks(req) : await gatherBlocks(req);
   const stage = stageForIntent(req, matches.length > 0);
   const requirement: RequirementSummary = {
     intent: req.intent,
@@ -368,8 +422,13 @@ export async function runAssistant(input: AssistantInput): Promise<AiResponse> {
   };
   const base = { state: stateFor(req), stage, requirement, blocks };
 
-  if (!isOpenAiConfigured()) {
-    return { reply: composeDemoReply(req, blocks), source: "demo", engineNote: ENGINE_NOTE_DEMO, ...base };
+  if (forceDemo || !isOpenAiConfigured()) {
+    return {
+      reply: composeDemoReply(req, blocks, { planDemo: forceDemo }),
+      source: "demo",
+      engineNote: forceDemo ? ENGINE_NOTE_PLAN_DEMO : ENGINE_NOTE_DEMO,
+      ...base,
+    };
   }
 
   const messages: ChatMessage[] = [{ role: "system", content: SYSTEM_PROMPT }];

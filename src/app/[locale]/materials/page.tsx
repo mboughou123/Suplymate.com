@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { getMaterialsWithPricing, pricingStatus } from "@/lib/pricing/pricingService";
 import MaterialsClient from "./MaterialsClient";
+import { entitlementsForSession } from "@/lib/plan-access";
+import PlanLockBanner from "@/components/billing/PlanLockBanner";
 
 export async function generateMetadata({
   params,
@@ -22,7 +24,9 @@ export const dynamic = "force-dynamic";
 
 export default async function MaterialsPage() {
   const t = await getTranslations("priceCharts");
-  const materials = await getMaterialsWithPricing();
+  const { entitlements } = await entitlementsForSession();
+  const live = entitlements.materialsPriceTracking;
+  const materials = await getMaterialsWithPricing({ live });
   const pricing = pricingStatus();
 
   return (
@@ -41,6 +45,13 @@ export default async function MaterialsPage() {
       </div>
 
       <div className="container-page py-10">
+        {!live && (
+          <PlanLockBanner
+            title={t("trackingLockTitle")}
+            body={t("trackingLockBody")}
+            cta={t("trackingLockCta")}
+          />
+        )}
         <Suspense fallback={null}>
           <MaterialsClient initialMaterials={materials} pricing={pricing} />
         </Suspense>

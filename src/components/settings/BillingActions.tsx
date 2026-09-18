@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import type { PlanCta } from "@/lib/billing";
 
 // Checkout / manage-billing actions. The browser only *initiates* billing —
 // plan changes are applied by the Stripe webhook (source of truth).
@@ -68,7 +69,7 @@ export function UpgradeButton({
   labels,
 }: {
   plan: string;
-  cta: "free" | "trial" | "upgrade" | "sales";
+  cta: PlanCta;
   current: boolean;
   configured: boolean;
   labels: Labels;
@@ -104,39 +105,48 @@ export function UpgradeButton({
       </button>
     );
   }
-  if (cta === "sales") {
-    return (
-      <Link href="/contact" className="btn-secondary mt-5 w-full">
-        {labels.sales}
-      </Link>
-    );
+
+  switch (cta) {
+    case "sales":
+      return (
+        <Link href="/contact" className="btn-secondary mt-5 w-full">
+          {labels.sales}
+        </Link>
+      );
+    case "free":
+      return (
+        <button type="button" disabled className={disabledClass}>
+          {labels.current}
+        </button>
+      );
+    case "trial":
+    case "subscribe": {
+      const label = cta === "subscribe" ? labels.upgrade : labels.trial;
+      if (!configured) {
+        return (
+          <button
+            type="button"
+            disabled
+            title="Billing not available yet"
+            className={`${disabledClass} cursor-not-allowed`}
+          >
+            {label}
+          </button>
+        );
+      }
+      return (
+        <div className="mt-5">
+          <button type="button" onClick={go} disabled={busy} className="btn-accent w-full disabled:opacity-60">
+            {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
+            {label}
+          </button>
+          {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
+        </div>
+      );
+    }
+    default: {
+      const _never: never = cta;
+      return _never;
+    }
   }
-  if (cta === "free") {
-    return (
-      <button type="button" disabled className={disabledClass}>
-        {labels.current}
-      </button>
-    );
-  }
-  if (cta !== "trial" && cta !== "upgrade") {
-    const _exhaustive: never = cta;
-    return _exhaustive;
-  }
-  const paidLabel = cta === "trial" ? labels.trial : labels.upgrade;
-  if (!configured) {
-    return (
-      <button type="button" disabled title="Billing not available yet" className={`${disabledClass} cursor-not-allowed`}>
-        {paidLabel}
-      </button>
-    );
-  }
-  return (
-    <div className="mt-5">
-      <button type="button" onClick={go} disabled={busy} className="btn-accent w-full disabled:opacity-60">
-        {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
-        {paidLabel}
-      </button>
-      {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
-    </div>
-  );
 }

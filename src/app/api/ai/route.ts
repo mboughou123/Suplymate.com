@@ -4,6 +4,8 @@ import { rateLimit } from "@/lib/rate-limit";
 import { runAssistant, engineStatus, MAX_MESSAGE_LENGTH, MAX_HISTORY_MESSAGES } from "@/lib/ai/aiService";
 import { ensureConversation, loadLatestConversation, persistTurn } from "@/lib/ai/conversation-store";
 import { pricingStatus } from "@/lib/pricing/pricingService";
+import { AI_USAGE_WINDOW_MS, FREE_AI_RUNS, usesLiveAi } from "@/lib/permissions";
+import { AI_QUOTA, entitlementsForUserId } from "@/lib/plan-access";
 
 export const dynamic = "force-dynamic";
 // Vercel function timeout. The OpenAI call itself aborts after 40s (see
@@ -27,21 +29,6 @@ function sanitizeHistory(input: unknown): HistoryItem[] {
     .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_MESSAGE_LENGTH) }));
 }
 
-// GET: workspace bootstrap — engine status + the user's latest conversation.
-export async function GET() {
-  const session = await auth();
-  const base = {
-    ...engineStatus(),
-    pricing: pricingStatus(),
-    authenticated: Boolean(session?.user?.id),
-  };
-  if (!session?.user?.id) return NextResponse.json({ ...base, conversationId: null, messages: [] });
-  const convo = await loadLatestConversation(session.user.id);
-  return NextResponse.json({ ...base, ...convo });
-}
-
-/** Free questions a signed-out visitor may ask per IP per day. */
-const GUEST_QUESTION_LIMIT = 3;
 const GUEST_WINDOW_MS = 24 * 60 * 60_000;
 
 function clientIp(request: Request): string {
@@ -50,36 +37,72 @@ function clientIp(request: Request): string {
   return first || request.headers.get("x-real-ip")?.trim() || "unknown";
 }
 
+// GET: workspace bootstrap — engine status + the user's latest conversation.
+export async function GET() {
+  const session = await auth();
+  const entitlements = await entitlementsForUserId(session?.user?.id);
+  const base = {
+    ...engineStatus(),
+    pricing: pricingStatus(),
+    authenticated: Boolean(session?.user?.id),
+    aiMode: entitlements.aiMode,
+    aiRunsLimit: entitlements.aiRunsLimit,
+  };
+  if (!session?.user?.id) return NextResponse.json({ ...base, conversationId: null, messages: [] });
+  const convo = await loadLatestConversation(session.user.id);
+  return NextResponse.json({ ...base, ...convo });
+}
+
 // POST: one assistant turn. Returns structured JSON (narrative + grounded blocks).
-// Signed-out visitors get a small daily allowance so the public /ai-assistant
-// page actually answers; their turns are not persisted.
+// Demo plans (Free / Basic / paid trial) never spend OpenAI credit.
 export async function POST(request: Request) {
   const session = await auth();
   const userId = session?.user?.id ?? null;
-  let guestRemaining: number | null = null;
+  const entitlements = await entitlementsForUserId(userId);
+  const demo = !usesLiveAi(entitlements);
+  let quotaRemaining: number | null = null;
 
   if (userId) {
-    const limit = rateLimit(`ai:${userId}`, 20, 60_000);
-    if (!limit.ok) {
+    const abuse = rateLimit(`ai:${userId}`, 20, 60_000);
+    if (!abuse.ok) {
       return NextResponse.json(
-        { error: `You're sending messages too quickly. Please wait ${limit.resetInSeconds}s and try again.` },
+        { error: `You're sending messages too quickly. Please wait ${abuse.resetInSeconds}s and try again.` },
         { status: 429 },
       );
     }
+    if (entitlements.aiRunsLimit != null) {
+      const quota = rateLimit(`ai-quota:${userId}`, entitlements.aiRunsLimit, AI_USAGE_WINDOW_MS);
+      if (!quota.ok) {
+        return NextResponse.json(
+          {
+            error:
+              entitlements.plan === "basic"
+                ? "You've used your Basic demo Mate run. Upgrade to Premium for 10 live runs."
+                : `You've used your ${entitlements.aiRunsLimit} Mate questions on this plan. Upgrade to keep asking.`,
+            code: AI_QUOTA,
+            aiMode: entitlements.aiMode,
+            quotaRemaining: 0,
+          },
+          { status: 403 },
+        );
+      }
+      quotaRemaining = quota.remaining;
+    }
   } else {
-    const guest = rateLimit(`ai-guest:${clientIp(request)}`, GUEST_QUESTION_LIMIT, GUEST_WINDOW_MS);
+    const guest = rateLimit(`ai-guest:${clientIp(request)}`, FREE_AI_RUNS, GUEST_WINDOW_MS);
     if (!guest.ok) {
       return NextResponse.json(
         {
-          error: `You've used your ${GUEST_QUESTION_LIMIT} free questions — sign in to keep asking Mate.`,
+          error: `You've used your ${FREE_AI_RUNS} free questions — start a 3-day trial to keep asking Mate.`,
           code: "guest_limit",
           guest: true,
           guestRemaining: 0,
+          aiMode: "demo",
         },
         { status: 401 },
       );
     }
-    guestRemaining = guest.remaining;
+    quotaRemaining = guest.remaining;
   }
 
   let body: { message?: unknown; history?: unknown; conversationId?: unknown };
@@ -103,12 +126,25 @@ export async function POST(request: Request) {
   const threadId = userId ? await ensureConversation(userId, conversationId, message) : null;
 
   try {
-    const result = await runAssistant({ message, history });
+    const result = await runAssistant({ message, history, mode: demo ? "demo" : "live" });
     if (userId) {
       await persistTurn(threadId, message, result.reply);
-      return NextResponse.json({ ...result, conversationId: threadId, guest: false });
+      return NextResponse.json({
+        ...result,
+        conversationId: threadId,
+        guest: false,
+        aiMode: entitlements.aiMode,
+        quotaRemaining,
+      });
     }
-    return NextResponse.json({ ...result, conversationId: null, guest: true, guestRemaining });
+    return NextResponse.json({
+      ...result,
+      conversationId: null,
+      guest: true,
+      guestRemaining: quotaRemaining,
+      aiMode: "demo",
+      quotaRemaining,
+    });
   } catch (err) {
     console.error("[api/ai] assistant turn failed:", err instanceof Error ? err.message : err);
     return NextResponse.json(

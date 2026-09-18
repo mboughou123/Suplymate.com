@@ -20,12 +20,12 @@ export async function generateMetadata({
 }
 
 const COMPARE_ROWS: { label: string; free: string; basic: string; premium: string; enterprise: string }[] = [
-  { label: "Supplier & product catalogue", free: "Browse", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Supplier & product catalogue", free: "10 products, 10 suppliers", basic: "Suppliers unlimited", premium: "Unlimited", enterprise: "Unlimited" },
   { label: "Saved suppliers", free: "3", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
-  { label: "Supplier messaging & RFQs", free: "Included", basic: "Included", premium: "Included", enterprise: "Team workflows" },
-  { label: "Mate (AI sourcing assistant)", free: "3 questions / day signed out", basic: "Signed-in", premium: "Signed-in", enterprise: "Signed-in" },
+  { label: "Supplier messaging & RFQs", free: "Locked", basic: "Included", premium: "Included", enterprise: "Team workflows" },
+  { label: "Mate (AI sourcing assistant)", free: "3 demo questions", basic: "1 demo run (no API credit)", premium: "10 live runs after subscribe", enterprise: "Unlimited after subscribe" },
   { label: "Price alerts", free: "—", basic: "Included", premium: "Included", enterprise: "Included" },
-  { label: "Material price charts", free: "Reference series", basic: "Included", premium: "Included", enterprise: "Included" },
+  { label: "Materials price tracking", free: "Reference series", basic: "Reference series", premium: "Live tracking", enterprise: "Live tracking" },
   { label: "Export reports", free: "—", basic: "—", premium: "Included", enterprise: "Included" },
   { label: "Team seats", free: "1", basic: "1", premium: "10", enterprise: "100" },
   { label: "Support", free: "Help centre", basic: "Email", premium: "Email", enterprise: "Talk to sales" },
@@ -110,8 +110,8 @@ export default async function PricingPage() {
                     labels={{
                       free: t("ctaFree"),
                       trial: t("ctaTrial"),
-                      upgrade: t("ctaUpgrade"),
                       sales: t("ctaSales"),
+                      subscribe: t("ctaSubscribe"),
                     }}
                   />
                 </div>

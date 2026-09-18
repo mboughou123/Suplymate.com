@@ -8,9 +8,9 @@ import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import { getProductFallbackImage } from "@/lib/image-fallback";
 import type { PublicProductCard as PublicProduct } from "@/lib/public-products";
 
-type Props = { data: PublicProduct };
+type Props = { data: PublicProduct; canContact?: boolean };
 
-export default function PublicProductCard({ data: d }: Props) {
+export default function PublicProductCard({ data: d, canContact = true }: Props) {
   const t = useTranslations("products");
   const tc = useTranslations("common");
 
@@ -114,6 +114,7 @@ export default function PublicProductCard({ data: d }: Props) {
               label={t("requestQuote")}
               productName={d.name}
               productId={d.id}
+              locked={!canContact}
               className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-sm"
             />
           </div>

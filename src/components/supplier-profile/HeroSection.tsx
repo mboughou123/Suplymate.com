@@ -19,6 +19,7 @@ import type { SupplierProfile } from "@/lib/supplier-profile";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ReportButton from "@/components/ReportButton";
 import ProfileActionButton from "./ProfileActionButton";
+import { useCanContactSuppliers } from "@/components/billing/useCanContactSuppliers";
 import { RadialScore } from "./primitives";
 
 export default function HeroSection({ profile }: { profile: SupplierProfile }) {
@@ -26,6 +27,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
   const common = useTranslations("common");
   const { base, trust, company, companySummary } = profile;
   const firstProduct = base.products[0]?.name;
+  const canContact = useCanContactSuppliers();
 
   const indicators = [
     { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified },
@@ -166,6 +168,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   label={t("contactSupplier")}
                   icon={undefined}
                   className="btn-primary"
+                  locked={!canContact}
                 />
                 <ProfileActionButton
                   supplierId={base.id}
@@ -175,6 +178,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   icon={FileText}
                   productName={firstProduct}
                   className="btn-secondary"
+                  locked={!canContact}
                 />
                 <ProfileActionButton
                   supplierId={base.id}
@@ -184,6 +188,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   icon={Handshake}
                   productName={firstProduct}
                   className="btn-secondary"
+                  locked={!canContact}
                 />
                 <div className="relative">
                   <FavoriteButton
