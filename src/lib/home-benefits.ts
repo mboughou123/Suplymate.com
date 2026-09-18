@@ -28,7 +28,7 @@ export const GUEST_QUESTION_LIMIT = 3;
 
 /** Same country derivation the supplier directory filters use. */
 export function supplierCountry(s: Pick<Supplier, "country" | "location">): string {
-  return (s.country ?? s.location.split(",").pop() ?? "").trim();
+  return (s.country ?? s.location?.split(",").pop() ?? "").trim();
 }
 
 /** Distinct countries with at least one listed or verified supplier. */

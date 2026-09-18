@@ -68,7 +68,7 @@ export function UpgradeButton({
   labels,
 }: {
   plan: string;
-  cta: "free" | "trial" | "sales";
+  cta: "free" | "trial" | "upgrade" | "sales";
   current: boolean;
   configured: boolean;
   labels: Labels;
@@ -118,10 +118,15 @@ export function UpgradeButton({
       </button>
     );
   }
+  if (cta !== "trial" && cta !== "upgrade") {
+    const _exhaustive: never = cta;
+    return _exhaustive;
+  }
+  const paidLabel = cta === "trial" ? labels.trial : labels.upgrade;
   if (!configured) {
     return (
       <button type="button" disabled title="Billing not available yet" className={`${disabledClass} cursor-not-allowed`}>
-        {labels.trial}
+        {paidLabel}
       </button>
     );
   }
@@ -129,7 +134,7 @@ export function UpgradeButton({
     <div className="mt-5">
       <button type="button" onClick={go} disabled={busy} className="btn-accent w-full disabled:opacity-60">
         {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
-        {labels.trial}
+        {paidLabel}
       </button>
       {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
     </div>

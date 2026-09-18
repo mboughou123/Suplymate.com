@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, MapPin } from "lucide-react";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { GENERIC_SUPPLIER_PLACEHOLDER, getSupplierFallbackImage } from "@/lib/image-fallback";
 import {
   HOME_SUPPLIERS_BAND,
   getSupplierBandHref,
@@ -36,14 +37,15 @@ export default async function HomeSuppliersBand() {
                   href={href}
                   className="group panel-glass panel-glass-hover flex h-full flex-col overflow-hidden"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                    <Image
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                    <ImageWithFallback
                       src={entry.image}
+                      fallbackSrc={getSupplierFallbackImage("Tubes & Pipes", t(`${entry.key}Name`))}
+                      placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
                       alt={t(`${entry.key}Caption`)}
-                      width={entry.imageWidth}
-                      height={entry.imageHeight}
-                      className="h-full w-full object-cover transition duration-500 ease-cinema group-hover:scale-[1.03]"
+                      loading="lazy"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="absolute inset-0 h-full w-full object-cover object-center transition duration-500 ease-cinema group-hover:scale-[1.03]"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">

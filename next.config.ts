@@ -14,7 +14,11 @@ const nextConfig: NextConfig = {
     ],
     // Remote photos change rarely — cache optimized variants for 31 days.
     minimumCacheTTL: 2678400,
-    formats: ["image/avif", "image/webp"],
+    // AVIF encoding of the 1–4 MB mill stills was stalling `/_next/image` for
+    // minutes on mobile. WebP is fast enough and already cached.
+    formats: ["image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [64, 96, 128, 256, 384],
   },
 };
 

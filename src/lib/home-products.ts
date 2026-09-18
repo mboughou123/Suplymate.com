@@ -1,9 +1,20 @@
 // Homepage "Products" section — picks photo-bearing catalogue products for the
-// grid. Pure and framework-free so it can be unit-tested; the section itself
-// feeds it the same cached `getProductsFromDb()` list the rest of the site uses
-// (no extra DB round-trip).
-import type { Product } from "@/data/products";
+// grid. Pure and framework-free so it can be unit-tested. The homepage feeds it
+// curated pack products (see `getHomePageContent`) so first paint never waits
+// on Prisma or the Outscraper dump.
 import { getRealProductImage } from "@/lib/image-fallback";
+
+export type HomeProductSource = {
+  id: string;
+  name: string;
+  category: string;
+  images?: (string | null | undefined)[] | null;
+  slug?: string | null;
+  supplierId?: string | null;
+  supplierName?: string | null;
+  supplierCountry?: string | null;
+  status?: string | null;
+};
 
 export type HomeProductItem = {
   id: string;
@@ -61,7 +72,7 @@ function stableHash(s: string): number {
  * so the ISR'd homepage does not flicker between builds.
  */
 export function pickHomeProducts(
-  products: Product[],
+  products: HomeProductSource[],
   perCategory: number = HOME_PRODUCTS_PER_CATEGORY
 ): HomeProductItem[] {
   const candidates: HomeProductItem[] = [];

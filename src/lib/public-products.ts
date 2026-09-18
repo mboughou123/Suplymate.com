@@ -290,15 +290,20 @@ function staticToCard(p: Product): PublicProductCard {
 
 async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult> {
   const approved = await listApprovedScrapedProducts().catch(() => []);
-  const merged: Product[] = [
-    ...approved.map(scrapedToProduct),
-    ...staticProducts,
-  ];
-  let cards = merged.map(staticToCard);
+  const byId = new Map<string, Product>();
+  for (const p of approved.map(scrapedToProduct)) byId.set(p.id, p);
+  for (const p of approvedPackProducts().map(scrapedToProduct)) {
+    if (!byId.has(p.id)) byId.set(p.id, p);
+  }
+  for (const p of staticProducts) {
+    if (!byId.has(p.id)) byId.set(p.id, p);
+  }
+  const merged = [...byId.values()];
+  const allCards = merged.map(staticToCard);
 
   // Filters.
   const s = (q.search ?? "").toLowerCase().trim();
-  cards = cards.filter((c) => {
+  const cards = allCards.filter((c) => {
     if (s && !c.name.toLowerCase().includes(s) && !c.category.toLowerCase().includes(s)) {
       return false;
     }
@@ -316,11 +321,11 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
   const items = cards.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
 
   const facets: CatalogueFacets = {
-    categories: [...new Set(merged.map((p) => p.category))].sort() as ProductCategory[],
-    countries: [...new Set(cards.map((c) => c.supplierCountry).filter(Boolean))].sort() as string[],
+    categories: [...new Set(allCards.map((c) => c.category))].sort() as ProductCategory[],
+    countries: [...new Set(allCards.map((c) => c.supplierCountry).filter(Boolean))].sort() as string[],
     suppliers: [
       ...new Map(
-        cards.filter((c) => c.supplierId).map((c) => [c.supplierId, { id: c.supplierId, name: c.supplierName }])
+        allCards.filter((c) => c.supplierId).map((c) => [c.supplierId, { id: c.supplierId, name: c.supplierName }])
       ).values(),
     ],
   };
