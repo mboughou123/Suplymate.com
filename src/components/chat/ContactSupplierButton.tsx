@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { useRouter, Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { MessageCircle, X, Loader2, ArrowUpRight, Send } from "lucide-react";
-import ChatThread from "@/components/chat/ChatThread";
+
+const ChatThread = dynamic(() => import("@/components/chat/ChatThread"), {
+  ssr: false,
+});
 
 type Props = {
   supplierId: string;

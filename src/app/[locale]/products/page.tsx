@@ -1,12 +1,15 @@
 import { getTranslations } from "next-intl/server";
 import { getPublicProductsPage } from "@/lib/public-products";
+import { PRODUCT_LIST_PAGE_SIZE } from "@/lib/products-query";
 import ProductsClient from "./ProductsClient";
 
-export const dynamic = "force-dynamic";
+// Same ISR window as /suppliers — the catalogue is read-mostly and the
+// previous force-dynamic setting made TTFB ~1.7s on phones.
+export const revalidate = 300;
 
 export default async function ProductsPage() {
   const t = await getTranslations("products");
-  const initial = await getPublicProductsPage({ page: 1, pageSize: 24 });
+  const initial = await getPublicProductsPage({ page: 1, pageSize: PRODUCT_LIST_PAGE_SIZE });
 
   return (
     <div className="bg-transparent min-h-screen">

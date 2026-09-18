@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getPublicProductsPage } from "@/lib/public-products";
+import { PRODUCT_LIST_PAGE_SIZE } from "@/lib/products-query";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,7 @@ export async function GET(request: Request) {
   try {
     const result = await getPublicProductsPage({
       page: Number(searchParams.get("page")) || 1,
-      pageSize: Number(searchParams.get("pageSize")) || 24,
+      pageSize: Number(searchParams.get("pageSize")) || PRODUCT_LIST_PAGE_SIZE,
       search: searchParams.get("search") ?? undefined,
       category: searchParams.get("category") ?? undefined,
       supplierId: searchParams.get("supplierId") ?? undefined,

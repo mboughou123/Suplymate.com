@@ -1,8 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState, type ComponentProps, type ReactElement } from "react";
-import FxBoundary, { supportsWebGL } from "@/components/fx/FxBoundary";
+import type { ComponentProps, ReactElement } from "react";
+import FxBoundary from "@/components/fx/FxBoundary";
+import { useFxEnabled } from "@/components/fx/useFxEnabled";
 
 const MetalFx = dynamic(() => import("metal-fx").then((m) => m.MetalFx), {
   ssr: false,
@@ -26,12 +27,7 @@ export default function MetalButton({
   variant = "button",
   ...rest
 }: Props) {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setEnabled(!reduced && supportsWebGL());
-  }, []);
+  const enabled = useFxEnabled();
 
   if (!enabled) return children;
 

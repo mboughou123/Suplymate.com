@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, MapPin } from "lucide-react";
 import { HOME_PRODUCTS_VISIBLE, type HomeProductItem } from "@/lib/home-products";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 const ALL = "all";
 
@@ -75,8 +76,10 @@ export default function HomeProductsGrid({
                     src={p.image}
                     alt={`${p.name} — ${p.supplierName}`}
                     fill
-                    loading={i < 4 ? "eager" : "lazy"}
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    loading={i < 2 ? "eager" : "lazy"}
+                    priority={i === 0}
+                    quality={CARD_IMAGE_QUALITY}
+                    sizes={CARD_IMAGE_SIZES.homeProduct}
                     className="object-cover transition duration-500 ease-cinema group-hover:scale-[1.04]"
                   />
                   <span className="absolute left-3 top-3 rounded-md bg-white/90 px-2 py-0.5 text-[10px] font-semibold text-navy shadow-sm backdrop-blur">

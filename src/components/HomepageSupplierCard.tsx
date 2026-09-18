@@ -6,6 +6,7 @@ import { BadgeCheck, MapPin, Star, ArrowRight } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
 import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 export type HomepageSupplierCardProps = {
   id: string;
@@ -60,7 +61,8 @@ export default function HomepageSupplierCard({
           fallbackSrc={coverFallback}
           placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
           alt={`${name} — ${category}`}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes={CARD_IMAGE_SIZES.homeSupplier}
+          quality={CARD_IMAGE_QUALITY}
           className="h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-[1.04] motion-reduce:transform-none"
         />
         <div

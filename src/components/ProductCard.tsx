@@ -8,6 +8,7 @@ import type { ProductCardData } from "@/lib/product-detail";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { getProductFallbackImage } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 type ProductCardProps = {
   /** Precomputed on the server so the supplier dataset stays out of the bundle. */
@@ -35,7 +36,8 @@ export default function ProductCard({ data: d }: ProductCardProps) {
             src={d.imageUrl}
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
             alt={d.name}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes={CARD_IMAGE_SIZES.productCard}
+            quality={CARD_IMAGE_QUALITY}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-105"
           />
           {d.verified && (

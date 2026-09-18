@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 import { SectionHeading, reveal } from "./primitives";
 import ProfileActionButton from "./ProfileActionButton";
 
@@ -134,7 +135,8 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                     src={p.hasRealPhoto ? p.image : undefined}
                     fallbackSrc={p.imageFallback}
                     alt={p.name}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes={CARD_IMAGE_SIZES.productCard}
+                    quality={CARD_IMAGE_QUALITY}
                     className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </Link>
@@ -143,7 +145,8 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                   src={p.hasRealPhoto ? p.image : undefined}
                   fallbackSrc={p.imageFallback}
                   alt={p.name}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes={CARD_IMAGE_SIZES.productCard}
+                  quality={CARD_IMAGE_QUALITY}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               )}

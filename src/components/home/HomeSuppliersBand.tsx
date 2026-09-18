@@ -6,6 +6,7 @@ import {
   HOME_SUPPLIERS_BAND,
   getSupplierBandHref,
 } from "@/lib/home-suppliers-band";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 export default async function HomeSuppliersBand() {
   const t = await getTranslations("homeSuppliers");
@@ -28,7 +29,7 @@ export default async function HomeSuppliersBand() {
         </div>
 
         <ul className="mt-block-lg grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {HOME_SUPPLIERS_BAND.map((entry) => {
+          {HOME_SUPPLIERS_BAND.map((entry, index) => {
             const href = getSupplierBandHref(entry);
             return (
               <li key={entry.key}>
@@ -43,7 +44,9 @@ export default async function HomeSuppliersBand() {
                       width={entry.imageWidth}
                       height={entry.imageHeight}
                       className="h-full w-full object-cover transition duration-500 ease-cinema group-hover:scale-[1.03]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      sizes={CARD_IMAGE_SIZES.homeSupplier}
+                      quality={CARD_IMAGE_QUALITY}
+                      priority={index === 0}
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">

@@ -3,9 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { Supplier } from "@/data/suppliers";
 import { INDUSTRIES } from "@/data/industries";
 import SupplierCard from "@/components/SupplierCard";
+import {
+  listingSupplierMatches,
+  type ListingSupplier,
+} from "@/lib/supplier-listing";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
 import SupplierFilters, {
   type SupplierFilterState,
@@ -14,7 +17,7 @@ import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
 import { supplierHasUsableCardImage } from "@/lib/image-fallback";
 
 type Props = {
-  initialSuppliers: Supplier[];
+  initialSuppliers: ListingSupplier[];
 };
 
 const PAGE_SIZE = 12;
@@ -28,15 +31,15 @@ const DEFAULT_FILTERS: SupplierFilterState = {
   verifiedOnly: false,
 };
 
-function categoryOf(s: Supplier): string {
+function categoryOf(s: ListingSupplier): string {
   return s.category ?? s.industry;
 }
 
-function ratingOf(s: Supplier): number {
+function ratingOf(s: ListingSupplier): number {
   return s.googleRating ?? s.rating ?? 0;
 }
 
-function reviewsOf(s: Supplier): number {
+function reviewsOf(s: ListingSupplier): number {
   return s.googleReviews ?? s.reviewCount ?? 0;
 }
 
@@ -79,19 +82,12 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
         if (reviewsOf(s) < filters.minReviews) return false;
         if (filters.verifiedOnly && !s.verified) return false;
         if (!q) return true;
-        return (
-          s.name.toLowerCase().includes(q) ||
-          categoryOf(s).toLowerCase().includes(q) ||
-          s.location.toLowerCase().includes(q) ||
-          (s.country ?? "").toLowerCase().includes(q) ||
-          (s.description ?? "").toLowerCase().includes(q) ||
-          s.products.some((p) => p.toLowerCase().includes(q))
-        );
+        return listingSupplierMatches(s, q);
       })
       .sort((a, b) => {
         // Image-bearing suppliers first (empty cards look untrustworthy),
         // then by Suplymate score, then alphabetically.
-        const hasImg = (s: Supplier) => (supplierHasUsableCardImage(s) ? 1 : 0);
+        const hasImg = (s: ListingSupplier) => (supplierHasUsableCardImage(s) ? 1 : 0);
         const img = hasImg(b) - hasImg(a);
         if (img) return img;
         const score =
@@ -207,7 +203,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       ) : (
         <>
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {pageItems.map((supplier) => (
+            {pageItems.map((supplier, index) => (
               <div key={supplier.id} id={supplier.id} className="relative">
                 {compareMode && (
                   <label className="absolute right-3 top-3 z-10 flex items-center gap-1 rounded-lg bg-white/95 px-2 py-1 text-xs shadow-sm">
@@ -220,7 +216,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                     {tCommon("compare")}
                   </label>
                 )}
-                <SupplierCard supplier={supplier} />
+                <SupplierCard supplier={supplier} priority={safePage === 1 && index === 0} />
               </div>
             ))}
           </div>

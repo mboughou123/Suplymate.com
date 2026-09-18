@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Truck, Users, GitCompare, BadgeCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_PRODUCT_PLACEHOLDER } from "@/lib/image-fallback";
+import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 export type HomepageProductCardProps = {
   id: string;
@@ -46,7 +47,8 @@ export default function HomepageProductCard({
           fallbackSrc={imageFallback}
           placeholderSrc={GENERIC_PRODUCT_PLACEHOLDER}
           alt={name}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes={CARD_IMAGE_SIZES.homeProduct}
+          quality={CARD_IMAGE_QUALITY}
           className="h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-[1.04] motion-reduce:transform-none"
         />
         {verified && (
