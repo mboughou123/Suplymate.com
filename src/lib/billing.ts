@@ -12,6 +12,21 @@ export type PlanId = "free" | "basic" | "premium" | "enterprise";
 
 export const TRIAL_DAYS = 3;
 
+/** Canonical USD prices honoured by the site and by Stripe Price objects. */
+export const SITE_PLAN_PRICES_USD = {
+  basic: 49.95,
+  premium: 99.95,
+  enterprise: 250,
+} as const;
+
+export const SITE_PLAN_PRICES_CENTS = {
+  basic: 4995,
+  premium: 9995,
+  enterprise: 25000,
+} as const;
+
+export type PlanCta = "free" | "trial" | "sales" | "subscribe";
+
 export type Plan = {
   id: PlanId;
   name: string;
@@ -24,7 +39,7 @@ export type Plan = {
   features: string[];
   /** Paid plans include a free trial (days). */
   trialDays: number;
-  cta: "free" | "trial" | "sales";
+  cta: PlanCta;
   highlighted?: boolean;
 };
 
@@ -36,15 +51,14 @@ export const PLANS: Plan[] = [
     priceLabel: "$0",
     period: "forever",
     audience: "For users exploring Suplymate.",
-    description: "Understand the value of AI-powered sourcing before you pay.",
+    description: "10 products and 10 suppliers. Contacting mills requires a paid plan.",
     features: [
-      "Browse suppliers",
-      "Limited supplier searches",
-      "Basic supplier profiles",
-      "Limited price charts",
-      "Limited AI questions",
-      "Save a few suppliers",
-      "Basic dashboard",
+      "10 products in the catalogue",
+      "10 suppliers in the directory",
+      "Everything else locked",
+      "No supplier messaging",
+      "Demo Mate (3 questions, no paid API credit)",
+      "Save 3 suppliers",
     ],
     trialDays: 0,
     cta: "free",
@@ -52,22 +66,20 @@ export const PLANS: Plan[] = [
   {
     id: "basic",
     name: "Basic",
-    monthlyPrice: 19,
-    priceLabel: "$19",
+    monthlyPrice: SITE_PLAN_PRICES_USD.basic,
+    priceLabel: "$49.95",
     period: "/month",
     audience: "For individual buyers sourcing regularly.",
-    description: "Unlimited browsing, supplier messaging and the AI sourcing assistant.",
+    description:
+      "3 days free, then $49.95/month. Homepage and supplier directory, plus 1 demo Mate run (no paid API credit).",
     features: [
-      "Unlimited supplier browsing",
-      "More supplier comparisons",
-      "More price data",
-      "Supplier messaging",
-      "Saved suppliers",
-      "AI sourcing assistant",
-      "AI material research",
-      "Price comparison",
-      "Supplier matching",
-      "Basic sourcing recommendations",
+      "3-day free trial, then $49.95/month",
+      "Homepage freely visible",
+      "Browse suppliers freely",
+      "1 demo Mate run (sample mills, no OpenAI credit)",
+      "Supplier messaging and RFQs",
+      "Unlimited saved suppliers",
+      "Price alerts",
     ],
     trialDays: TRIAL_DAYS,
     cta: "trial",
@@ -75,23 +87,19 @@ export const PLANS: Plan[] = [
   {
     id: "premium",
     name: "Premium",
-    monthlyPrice: 49,
-    priceLabel: "$49",
+    monthlyPrice: SITE_PLAN_PRICES_USD.premium,
+    priceLabel: "$99.95",
     period: "/month",
     audience: "For teams that source across categories.",
-    description: "Everything in Basic plus advanced AI sourcing, analytics and alerts.",
+    description:
+      "3 days free, then $99.95/month. 10× Basic Mate usage, live materials price tracking, and real Mate after you subscribe.",
     features: [
+      "3-day free trial, then $99.95/month",
       "Everything in Basic",
-      "Advanced AI sourcing",
-      "Unlimited AI conversations",
-      "Advanced supplier matching",
-      "Advanced price analytics",
-      "Historical pricing",
-      "Price alerts",
-      "AI sourcing strategies",
-      "Quote comparison",
-      "Advanced material intelligence",
-      "Priority supplier recommendations",
+      "10× Basic Mate usage (10 runs)",
+      "Real Mate after subscribe (demo during trial)",
+      "Materials price tracking",
+      "10 team seats",
       "Export sourcing reports",
     ],
     trialDays: TRIAL_DAYS,
@@ -101,27 +109,22 @@ export const PLANS: Plan[] = [
   {
     id: "enterprise",
     name: "Enterprise",
-    monthlyPrice: null,
-    priceLabel: "Custom",
-    period: "",
+    monthlyPrice: SITE_PLAN_PRICES_USD.enterprise,
+    priceLabel: "$250",
+    period: "/month",
     audience: "For procurement organisations.",
-    description: "Multi-user procurement workflows, API access and custom AI knowledge.",
+    description: "3 days free, then $250/month. Everything in Premium with 100 seats for procurement teams.",
     features: [
+      "3-day free trial, then $250/month",
       "Everything in Premium",
-      "Multiple users",
-      "Team management",
-      "Procurement workflows",
-      "Advanced analytics",
-      "API access",
-      "Custom AI knowledge",
-      "Dedicated support",
-      "Custom supplier integrations",
-      "Custom industry databases",
-      "Enterprise security",
-      "Custom sourcing workflows",
+      "100 team seats",
+      "Team roles (owner, admin, buyer, viewer)",
+      "Unlimited Mate after subscribe",
+      "Materials price tracking",
+      "RFQ workflows across the team",
     ],
-    trialDays: 0,
-    cta: "sales",
+    trialDays: TRIAL_DAYS,
+    cta: "trial",
   },
 ];
 
@@ -133,14 +136,24 @@ export function isBillingProviderConfigured(): boolean {
   return isStripeConfigured();
 }
 
+const PRICE_ENV: Record<Exclude<PlanId, "free">, readonly string[]> = {
+  basic: ["STRIPE_PRICE_BASIC", "STRIPE_PRICE_STARTER"],
+  premium: ["STRIPE_PRICE_PREMIUM", "STRIPE_PRICE_PRO"],
+  enterprise: ["STRIPE_PRICE_ENTERPRISE"],
+};
+
+function envValue(name: string): string | null {
+  const v = process.env[name];
+  return v && v.trim() ? v.trim() : null;
+}
+
 // Map a plan id to its configured Stripe Price id. Legacy env names
 // (STRIPE_PRICE_STARTER / STRIPE_PRICE_PRO) are accepted as fallbacks.
 export function stripePriceIdFor(plan: PlanId): string | null {
-  if (plan === "basic") {
-    return process.env.STRIPE_PRICE_BASIC || process.env.STRIPE_PRICE_STARTER || null;
-  }
-  if (plan === "premium") {
-    return process.env.STRIPE_PRICE_PREMIUM || process.env.STRIPE_PRICE_PRO || null;
+  if (plan === "free") return null;
+  for (const name of PRICE_ENV[plan]) {
+    const id = envValue(name);
+    if (id) return id;
   }
   return null;
 }
@@ -148,8 +161,10 @@ export function stripePriceIdFor(plan: PlanId): string | null {
 // Reverse lookup: given a Stripe Price id (from a webhook), which plan is it?
 export function planForStripePriceId(priceId: string | null | undefined): PlanId {
   if (!priceId) return "free";
-  if (priceId === stripePriceIdFor("premium")) return "premium";
-  if (priceId === stripePriceIdFor("basic")) return "basic";
+  const paid: Exclude<PlanId, "free">[] = ["premium", "basic", "enterprise"];
+  for (const plan of paid) {
+    if (priceId === stripePriceIdFor(plan)) return plan;
+  }
   return "free";
 }
 

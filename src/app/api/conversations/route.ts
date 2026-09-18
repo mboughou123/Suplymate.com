@@ -3,6 +3,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { firstContactReply } from "@/lib/auto-reply";
 import { getClaimedSupplierIds } from "@/lib/supplier-access";
+import { UPGRADE_REQUIRED, entitlementsForUserId } from "@/lib/plan-access";
 
 export async function GET() {
   const session = await auth();
@@ -52,6 +53,17 @@ export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const entitlements = await entitlementsForUserId(session.user.id);
+  if (!entitlements.supplierMessaging) {
+    return NextResponse.json(
+      {
+        error: "Contacting suppliers requires a paid plan. Start a 3-day trial to message mills.",
+        code: UPGRADE_REQUIRED,
+      },
+      { status: 403 },
+    );
   }
 
   try {

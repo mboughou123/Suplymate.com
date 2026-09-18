@@ -1,4 +1,5 @@
 import { localStillsForProduct } from "@/lib/product-stills";
+import { imageFitsProduct } from "@/lib/product-image-fit";
 
 // Centralized image-fallback system for Suplymate.
 //
@@ -219,17 +220,20 @@ export type ProductImageInput = {
 
 /**
  * Return the first REAL product photo if one exists, walking:
- *   committed local still (by slug) → product image → linked-supplier photo.
- * Third-party hotlinks (mill sites, Scene7, …) are never a card primary —
- * those hosts break as raw `<img>` on `/products`. Returns undefined when only
- * a category tile would be available.
+ *   product's own first-party still → committed stills index → supplier photo.
+ * Stills-index hits are filtered so a "ball valve" SKU cannot inherit Ball
+ * Corporation aerosol cans. Third-party hotlinks are never a card primary.
  */
 export function getRealProductImage(input: ProductImageInput): string | undefined {
-  const preferred = pickPreferredCardImage([
-    ...localStillsForProduct(input),
+  const ordered = [
     ...(input.images ?? []),
+    ...localStillsForProduct(input),
     ...(input.supplierImages ?? []),
-  ]);
+  ];
+  const fitting = ordered.filter((url) =>
+    imageFitsProduct(url, input.productName, input.category),
+  );
+  const preferred = pickPreferredCardImage(fitting);
   if (preferred && isFirstPartyProductImageUrl(preferred)) return preferred;
   return undefined;
 }

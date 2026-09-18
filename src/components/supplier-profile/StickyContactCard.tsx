@@ -15,6 +15,7 @@ import {
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import { getSupplierMeta } from "@/lib/supplier-meta";
 import ProfileActionButton from "./ProfileActionButton";
+import { useCanContactSuppliers } from "@/components/billing/useCanContactSuppliers";
 
 export default function StickyContactCard({
   profile,
@@ -27,6 +28,7 @@ export default function StickyContactCard({
   const { base } = profile;
   const meta = getSupplierMeta(base.id);
   const firstProduct = base.products[0]?.name;
+  const canContact = useCanContactSuppliers();
 
   if (variant === "mobile") {
     return (
@@ -44,6 +46,7 @@ export default function StickyContactCard({
         <ProfileActionButton
           supplierId={base.id}
           supplierName={base.name}
+          locked={!canContact}
           intent="rfq"
           label={t("rfqShort")}
           icon={FileText}
@@ -53,6 +56,7 @@ export default function StickyContactCard({
         <ProfileActionButton
           supplierId={base.id}
           supplierName={base.name}
+          locked={!canContact}
           intent="contact"
           label={t("contactShort")}
           icon={MessageCircle}
@@ -92,6 +96,7 @@ export default function StickyContactCard({
         <ProfileActionButton
           supplierId={base.id}
           supplierName={base.name}
+          locked={!canContact}
           intent="contact"
           label={t("contactSupplier")}
           icon={MessageCircle}
@@ -101,6 +106,7 @@ export default function StickyContactCard({
           <ProfileActionButton
             supplierId={base.id}
             supplierName={base.name}
+            locked={!canContact}
             intent="negotiate"
             label={t("liveChat")}
             icon={Handshake}
@@ -109,6 +115,7 @@ export default function StickyContactCard({
           <ProfileActionButton
             supplierId={base.id}
             supplierName={base.name}
+            locked={!canContact}
             intent="rfq"
             label={t("sendRfq")}
             icon={FileText}
@@ -118,6 +125,7 @@ export default function StickyContactCard({
           <ProfileActionButton
             supplierId={base.id}
             supplierName={base.name}
+            locked={!canContact}
             intent="samples"
             label={t("samples")}
             icon={PackageOpen}
@@ -127,6 +135,7 @@ export default function StickyContactCard({
           <ProfileActionButton
             supplierId={base.id}
             supplierName={base.name}
+            locked={!canContact}
             intent="quote"
             label={t("quotation")}
             icon={Receipt}
@@ -137,6 +146,7 @@ export default function StickyContactCard({
         <ProfileActionButton
           supplierId={base.id}
           supplierName={base.name}
+          locked={!canContact}
           intent="ai-sourcing"
           label={t("aiSourcingAssistant")}
           icon={Sparkles}

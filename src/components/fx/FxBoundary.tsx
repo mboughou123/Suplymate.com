@@ -1,6 +1,6 @@
 "use client";
 
-import { Component, type ReactNode } from "react";
+import { Component, useEffect, useState, type ReactNode } from "react";
 
 type Props = { children: ReactNode; fallback: ReactNode };
 type State = { failed: boolean };
@@ -43,4 +43,24 @@ export function supportsWebGL(): boolean {
     webglSupport = false;
   }
   return webglSupport;
+}
+
+/**
+ * Decorative FX (metal-fx, border-beam, thinking-orbs) stay off until we know
+ * the device can take them. Mobile first-load was paying for WebGL shaders
+ * before the catalogue images had even decoded.
+ */
+export function useFxEnabled(): boolean {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const mobile = window.matchMedia("(max-width: 767px)").matches;
+    const saveData =
+      "connection" in navigator &&
+      Boolean((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData);
+    setEnabled(!reduced && !mobile && !saveData && supportsWebGL());
+  }, []);
+
+  return enabled;
 }

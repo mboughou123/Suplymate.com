@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { UPGRADE_REQUIRED, entitlementsForUserId } from "@/lib/plan-access";
 
 export async function GET() {
   const session = await auth();
@@ -18,6 +19,16 @@ export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  const entitlements = await entitlementsForUserId(session.user.id);
+  if (!entitlements.supplierMessaging || !entitlements.rfqManagement) {
+    return NextResponse.json(
+      {
+        error: "RFQs require a paid plan. Start a 3-day trial to contact suppliers.",
+        code: UPGRADE_REQUIRED,
+      },
+      { status: 403 },
+    );
   }
   const body = await request.json();
   const productName = String(body.productName || "").trim();

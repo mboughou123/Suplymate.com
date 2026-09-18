@@ -1,11 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import type { Supplier } from "@/data/suppliers";
+import { entitlementsForSession } from "@/lib/plan-access";
 import SuppliersClient from "./SuppliersClient";
 
-// Static + ISR: the directory is read-mostly (admin approvals land within the
-// revalidation window) and the full list is filtered client-side anyway.
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 // The listing client only needs a subset of each supplier: filters, sorting and
 // the card. Drop the heavy profile-only fields (opening hours, address,
@@ -36,15 +35,19 @@ export default async function SuppliersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [t, allSuppliers] = await Promise.all([
+  const [t, allSuppliers, { entitlements }] = await Promise.all([
     getTranslations("suppliers"),
     getSuppliersFromDb(),
+    entitlementsForSession(),
   ]);
-  const suppliers = allSuppliers.map(toListingSupplier);
+  const listing = allSuppliers.map(toListingSupplier);
+  const cap = entitlements.catalogueSupplierLimit;
+  const suppliers = cap != null ? listing.slice(0, cap) : listing;
+  const lockedCount = cap != null ? Math.max(0, listing.length - cap) : 0;
 
-  const verifiedCount = suppliers.filter((s) => s.verified).length;
+  const verifiedCount = listing.filter((s) => s.verified).length;
   const countryCount = new Set(
-    suppliers.map((s) => s.country ?? s.location.split(",").pop()!.trim())
+    listing.map((s) => s.country ?? s.location.split(",").pop()!.trim())
   ).size;
 
   return (
@@ -59,11 +62,11 @@ export default async function SuppliersPage({
             {t("pageTitle")}
           </h1>
           <p className="mt-3 max-w-2xl text-white/75">
-            {t("pageSubtitle", { count: suppliers.length, countries: countryCount })}
+            {t("pageSubtitle", { count: listing.length, countries: countryCount })}
           </p>
           <div className="mt-5 flex flex-wrap gap-6 text-sm">
             <div>
-              <p className="text-2xl font-bold text-white">{suppliers.length}</p>
+              <p className="text-2xl font-bold text-white">{listing.length}</p>
               <p className="text-white/60">{t("suppliersCount")}</p>
             </div>
             <div>
@@ -79,7 +82,12 @@ export default async function SuppliersPage({
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SuppliersClient initialSuppliers={suppliers} />
+        <SuppliersClient
+          initialSuppliers={suppliers}
+          visibleLimit={cap}
+          lockedCount={lockedCount}
+          canContact={entitlements.supplierMessaging}
+        />
       </div>
     </div>
   );

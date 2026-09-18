@@ -4,10 +4,17 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Search, SlidersHorizontal, Loader2, PackageX } from "lucide-react";
 import PublicProductCard from "@/components/PublicProductCard";
+import PlanLockBanner from "@/components/billing/PlanLockBanner";
 import type {
   PublicProductCard as PublicProduct,
   CatalogueFacets,
 } from "@/lib/public-products";
+import {
+  EMPTY_CATALOGUE_FILTERS,
+  buildCatalogueQuery,
+  isDefaultCatalogueFilters,
+  type CatalogueFilters,
+} from "@/lib/catalogue-query";
 
 type Props = {
   initialItems: PublicProduct[];
@@ -15,38 +22,13 @@ type Props = {
   initialHasMore: boolean;
   pageSize: number;
   facets: CatalogueFacets;
+  visibleLimit?: number | null;
+  lockedCount?: number;
+  canContact?: boolean;
 };
 
-type Filters = {
-  search: string;
-  category: string;
-  supplierId: string;
-  country: string;
-  verifiedOnly: boolean;
-  hasPrice: boolean;
-};
-
-const EMPTY_FILTERS: Filters = {
-  search: "",
-  category: "",
-  supplierId: "",
-  country: "",
-  verifiedOnly: false,
-  hasPrice: false,
-};
-
-function buildQuery(f: Filters, page: number, pageSize: number): string {
-  const p = new URLSearchParams();
-  p.set("page", String(page));
-  p.set("pageSize", String(pageSize));
-  if (f.search.trim()) p.set("search", f.search.trim());
-  if (f.category) p.set("category", f.category);
-  if (f.supplierId) p.set("supplierId", f.supplierId);
-  if (f.country) p.set("country", f.country);
-  if (f.verifiedOnly) p.set("verifiedOnly", "1");
-  if (f.hasPrice) p.set("hasPrice", "1");
-  return p.toString();
-}
+type Filters = CatalogueFilters;
+const EMPTY_FILTERS = EMPTY_CATALOGUE_FILTERS;
 
 function CardSkeleton() {
   return (
@@ -71,6 +53,9 @@ export default function ProductsClient({
   initialHasMore,
   pageSize,
   facets,
+  visibleLimit = null,
+  lockedCount = 0,
+  canContact = true,
 }: Props) {
   const t = useTranslations("products");
   const tErrors = useTranslations("errors");
@@ -86,13 +71,14 @@ export default function ProductsClient({
   // Track the "active" filter set we're paginating against to avoid races.
   const activeFiltersRef = useRef<Filters>(EMPTY_FILTERS);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const skipInitialFilterFetch = useRef(true);
 
   const fetchPage = useCallback(
     async (f: Filters, nextPage: number, replace: boolean) => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`/api/products?${buildQuery(f, nextPage, pageSize)}`);
+        const res = await fetch(`/api/products?${buildCatalogueQuery(f, nextPage, pageSize)}`);
         if (!res.ok) throw new Error("bad response");
         const data = (await res.json()) as {
           items: PublicProduct[];
@@ -110,11 +96,17 @@ export default function ProductsClient({
         setInitialLoad(false);
       }
     },
-    [pageSize]
+    [pageSize, tErrors],
   );
 
-  // Debounced reload whenever filters change.
+  // Debounced reload when filters change — skip the mount pass so SSR results
+  // stay on screen (the old effect flashed skeletons and re-fetched page 1).
   useEffect(() => {
+    if (skipInitialFilterFetch.current && isDefaultCatalogueFilters(filters)) {
+      skipInitialFilterFetch.current = false;
+      return;
+    }
+    skipInitialFilterFetch.current = false;
     const handle = setTimeout(() => {
       activeFiltersRef.current = filters;
       setInitialLoad(true);
@@ -257,9 +249,17 @@ export default function ProductsClient({
         {/* Results */}
         <div>
           <p className="mb-6 text-sm text-ink-muted">
-            {t("productCount", { count: total })}
+            {t("productCount", { count: visibleLimit != null ? Math.min(visibleLimit, items.length || visibleLimit) : total })}
             {activeFilterCount > 0 ? ` ${t("matchFilters")}` : ""}
           </p>
+
+          {visibleLimit != null && lockedCount > 0 && (
+            <PlanLockBanner
+              title={t("freeCatalogueLockTitle")}
+              body={t("freeCatalogueLockBody", { visible: visibleLimit, locked: lockedCount })}
+              cta={t("freeCatalogueLockCta")}
+            />
+          )}
 
           {error && (
             <div className="mb-6 flex items-center justify-between rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">
@@ -289,7 +289,7 @@ export default function ProductsClient({
             <>
               <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                 {items.map((item) => (
-                  <PublicProductCard key={item.id} data={item} />
+                  <PublicProductCard key={item.id} data={item} canContact={canContact} />
                 ))}
               </div>
 

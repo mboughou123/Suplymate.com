@@ -20,16 +20,15 @@ export async function generateMetadata({
 }
 
 const COMPARE_ROWS: { label: string; free: string; basic: string; premium: string; enterprise: string }[] = [
-  { label: "Supplier browsing", free: "Limited searches", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
-  { label: "Supplier comparisons", free: "Basic", basic: "More", premium: "Advanced", enterprise: "Advanced" },
-  { label: "Supplier messaging & RFQs", free: "—", basic: "Included", premium: "Included", enterprise: "Workflows" },
-  { label: "AI sourcing assistant", free: "Limited questions", basic: "Included", premium: "Unlimited conversations", enterprise: "Custom knowledge" },
-  { label: "Supplier matching", free: "—", basic: "Standard", premium: "Advanced + priority", enterprise: "Advanced + priority" },
-  { label: "Price data", free: "Limited charts", basic: "More data", premium: "Historical + alerts", enterprise: "Historical + alerts" },
-  { label: "Material intelligence", free: "Basic", basic: "Research", premium: "Advanced", enterprise: "Advanced" },
-  { label: "Quote comparison & reports", free: "—", basic: "—", premium: "Included", enterprise: "Included + API" },
-  { label: "Users", free: "1", basic: "1", premium: "1", enterprise: "Multiple + team management" },
-  { label: "Support", free: "Community", basic: "Email", premium: "Priority", enterprise: "Dedicated" },
+  { label: "Supplier & product catalogue", free: "10 products, 10 suppliers", basic: "Suppliers unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Saved suppliers", free: "3", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Supplier messaging & RFQs", free: "Locked", basic: "Included", premium: "Included", enterprise: "Team workflows" },
+  { label: "Mate (AI sourcing assistant)", free: "3 demo questions", basic: "1 demo run (no API credit)", premium: "10 live runs after subscribe", enterprise: "Unlimited after subscribe" },
+  { label: "Price alerts", free: "—", basic: "Included", premium: "Included", enterprise: "Included" },
+  { label: "Materials price tracking", free: "Reference series", basic: "Reference series", premium: "Live tracking", enterprise: "Live tracking" },
+  { label: "Export reports", free: "—", basic: "—", premium: "Included", enterprise: "Included" },
+  { label: "Team seats", free: "1", basic: "1", premium: "10", enterprise: "100" },
+  { label: "Support", free: "Help centre", basic: "Email", premium: "Email", enterprise: "Talk to sales" },
 ];
 
 export default async function PricingPage() {
@@ -108,7 +107,12 @@ export default async function PricingPage() {
                     cta={plan.cta}
                     highlighted={Boolean(plan.highlighted)}
                     signedIn={signedIn}
-                    labels={{ free: t("ctaFree"), trial: t("ctaTrial"), sales: t("ctaSales") }}
+                    labels={{
+                      free: t("ctaFree"),
+                      trial: t("ctaTrial"),
+                      sales: t("ctaSales"),
+                      subscribe: t("ctaSubscribe"),
+                    }}
                   />
                 </div>
               </article>

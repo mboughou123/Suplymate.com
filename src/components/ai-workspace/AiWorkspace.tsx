@@ -146,6 +146,12 @@ export default function AiWorkspace() {
           setInput(trimmed);
           return;
         }
+        if (res.status === 403) {
+          setError(data?.error || "Mate limit reached on this plan.");
+          setMessages((m) => m.filter((x) => x.id !== userTurn.id));
+          setInput(trimmed);
+          return;
+        }
         if (!res.ok || !data) throw new Error(data?.error || "The assistant is unavailable. Please try again.");
         if (data.conversationId) conversationId.current = data.conversationId;
         setGuestRemaining(data.guest && typeof data.guestRemaining === "number" ? data.guestRemaining : null);

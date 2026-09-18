@@ -2,31 +2,34 @@ import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { prisma } from "@/lib/prisma";
 import { getStripe } from "@/lib/stripe";
-import { planForStripePriceId } from "@/lib/billing";
 import { recordAudit } from "@/lib/audit";
+import {
+  checkoutSubscriptionId,
+  invoiceSubscriptionId,
+  isHandledBillingEvent,
+  subscriptionEntitlement,
+  type HandledBillingEvent,
+} from "@/lib/stripe-webhooks";
 
 export const dynamic = "force-dynamic";
 // Stripe needs the raw, unparsed body to verify the signature.
 export const runtime = "nodejs";
 
 async function applySubscription(sub: Stripe.Subscription) {
-  const customerId = typeof sub.customer === "string" ? sub.customer : sub.customer.id;
-  const priceId = sub.items.data[0]?.price?.id ?? null;
-  const plan = planForStripePriceId(priceId);
-  const active = sub.status === "active" || sub.status === "trialing";
-  const periodEnd = (sub as unknown as { current_period_end?: number }).current_period_end;
-
-  const user = await prisma.user.findFirst({ where: { stripeCustomerId: customerId } });
+  const entitlement = subscriptionEntitlement(sub);
+  const user = await prisma.user.findFirst({
+    where: { stripeCustomerId: entitlement.customerId },
+  });
   if (!user) return;
 
   await prisma.user.update({
     where: { id: user.id },
     data: {
-      plan: active ? plan : "free",
-      planStatus: sub.status,
-      stripeSubscriptionId: sub.id,
-      stripePriceId: priceId,
-      currentPeriodEnd: periodEnd ? new Date(periodEnd * 1000) : null,
+      plan: entitlement.plan,
+      planStatus: entitlement.planStatus,
+      stripeSubscriptionId: entitlement.stripeSubscriptionId,
+      stripePriceId: entitlement.stripePriceId,
+      currentPeriodEnd: entitlement.currentPeriodEnd,
     },
   });
   await recordAudit({
@@ -34,8 +37,48 @@ async function applySubscription(sub: Stripe.Subscription) {
     action: "billing.subscription",
     targetType: "USER",
     targetId: user.id,
-    detail: { plan: active ? plan : "free", status: sub.status },
+    detail: { plan: entitlement.plan, status: entitlement.planStatus },
   });
+}
+
+async function applyInvoice(invoice: Stripe.Invoice, stripe: Stripe) {
+  const subId = invoiceSubscriptionId(invoice);
+  if (!subId) return;
+  const sub = await stripe.subscriptions.retrieve(subId);
+  await applySubscription(sub);
+}
+
+async function handleEvent(event: Stripe.Event, stripe: Stripe): Promise<void> {
+  if (!isHandledBillingEvent(event.type)) return;
+  const type: HandledBillingEvent = event.type;
+  switch (type) {
+    case "checkout.session.completed":
+    case "checkout.session.async_payment_succeeded": {
+      const sessionObj = event.data.object as Stripe.Checkout.Session;
+      const subId = checkoutSubscriptionId(sessionObj);
+      if (subId) {
+        const sub = await stripe.subscriptions.retrieve(subId);
+        await applySubscription(sub);
+      }
+      break;
+    }
+    case "customer.subscription.created":
+    case "customer.subscription.updated":
+    case "customer.subscription.deleted": {
+      await applySubscription(event.data.object as Stripe.Subscription);
+      break;
+    }
+    case "invoice.paid":
+    case "invoice.payment_failed": {
+      await applyInvoice(event.data.object as Stripe.Invoice, stripe);
+      break;
+    }
+    default: {
+      const _never: never = type;
+      void _never;
+      break;
+    }
+  }
 }
 
 export async function POST(request: Request) {
@@ -54,37 +97,22 @@ export async function POST(request: Request) {
     event = stripe.webhooks.constructEvent(raw, sig, secret);
   } catch (err) {
     return NextResponse.json(
-      { error: `Webhook signature verification failed: ${err instanceof Error ? err.message : "unknown"}` },
-      { status: 400 }
+      {
+        error: `Webhook signature verification failed: ${err instanceof Error ? err.message : "unknown"}`,
+      },
+      { status: 400 },
     );
   }
 
   try {
-    switch (event.type) {
-      case "checkout.session.completed": {
-        const sessionObj = event.data.object as Stripe.Checkout.Session;
-        if (sessionObj.subscription) {
-          const subId =
-            typeof sessionObj.subscription === "string"
-              ? sessionObj.subscription
-              : sessionObj.subscription.id;
-          const sub = await stripe.subscriptions.retrieve(subId);
-          await applySubscription(sub);
-        }
-        break;
-      }
-      case "customer.subscription.created":
-      case "customer.subscription.updated":
-      case "customer.subscription.deleted": {
-        await applySubscription(event.data.object as Stripe.Subscription);
-        break;
-      }
-      default:
-        break;
-    }
-  } catch {
-    // Acknowledge to avoid ret// storms; failures are logged in audit best-effort.
-    return NextResponse.json({ received: true, handled: false });
+    await handleEvent(event, stripe);
+  } catch (err) {
+    console.error(
+      "[stripe:webhook] handler failed",
+      event.type,
+      err instanceof Error ? err.message : "unknown",
+    );
+    return NextResponse.json({ error: "Handler failed" }, { status: 500 });
   }
 
   return NextResponse.json({ received: true });

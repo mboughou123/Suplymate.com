@@ -125,9 +125,10 @@ function fallback(mode: ComposeMode, p: ComposePayload): string {
 
 export async function compose(
   mode: ComposeMode,
-  payload: ComposePayload
+  payload: ComposePayload,
+  opts?: { forceDemo?: boolean },
 ): Promise<{ text: string; source: "openai" | "demo" }> {
-  if (!isOpenAiConfigured()) {
+  if (opts?.forceDemo || !isOpenAiConfigured()) {
     return { text: fallback(mode, payload), source: "demo" };
   }
 

@@ -5,6 +5,7 @@
  *
  * Framework-free so it can be unit-tested.
  */
+import { FREE_AI_RUNS } from "@/lib/permissions";
 import type { Supplier } from "@/data/suppliers";
 
 export type HomeBenefitKey = "heldFunds" | "countries" | "materials" | "guestQuestions" | "alwaysOn";
@@ -20,15 +21,14 @@ export type HomeBenefit = {
 };
 
 /**
- * Mirrors `GUEST_QUESTION_LIMIT` in `src/app/api/ai/route.ts` (free questions a
- * signed-out visitor can ask Mate per day). Kept as a literal so the homepage
- * never imports a route handler.
+ * Mirrors `FREE_AI_RUNS` in `src/lib/permissions.ts` (demo Mate questions a
+ * signed-out visitor can ask per day). No OpenAI credit is spent on this path.
  */
-export const GUEST_QUESTION_LIMIT = 3;
+export const GUEST_QUESTION_LIMIT = FREE_AI_RUNS;
 
 /** Same country derivation the supplier directory filters use. */
 export function supplierCountry(s: Pick<Supplier, "country" | "location">): string {
-  return (s.country ?? s.location.split(",").pop() ?? "").trim();
+  return (s.country ?? s.location?.split(",").pop() ?? "").trim();
 }
 
 /** Distinct countries with at least one listed or verified supplier. */

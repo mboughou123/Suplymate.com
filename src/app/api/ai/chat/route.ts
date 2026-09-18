@@ -10,6 +10,8 @@ import {
   MAX_MESSAGE_LENGTH,
   MAX_HISTORY_MESSAGES,
 } from "@/lib/ai-assistant";
+import { usesLiveAi } from "@/lib/permissions";
+import { entitlementsForUserId } from "@/lib/plan-access";
 
 export const dynamic = "force-dynamic";
 // Vercel function timeout; the OpenAI client aborts after 40s.
@@ -148,14 +150,16 @@ export async function POST(request: Request) {
   const conversationId =
     typeof body.conversationId === "string" ? body.conversationId : undefined;
   const threadId = await ensureConversation(userId, conversationId, message);
+  const entitlements = await entitlementsForUserId(userId);
+  const demo = !usesLiveAi(entitlements);
 
-  // No OpenAI key → return the honest demo reply as JSON (no streaming).
-  if (!isOpenAiConfigured()) {
+  // Demo plans (and missing keys) never spend OpenAI credit.
+  if (demo || !isOpenAiConfigured()) {
     const reply = demoReply(message);
     await persistMessages(threadId, userId, message, reply);
     return NextResponse.json(
-      { reply, source: "demo", conversationId: threadId },
-      { headers: { "x-ai-source": "demo" } }
+      { reply, source: "demo", conversationId: threadId, aiMode: entitlements.aiMode },
+      { headers: { "x-ai-source": "demo" } },
     );
   }
 

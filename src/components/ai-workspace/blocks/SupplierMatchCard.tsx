@@ -6,9 +6,11 @@ import type { SupplierMatch } from "@/lib/ai/supplier-matching";
 import MatchScoreBars from "@/components/ai-workspace/MatchScoreBars";
 import Beam from "@/components/fx/Beam";
 import { glass } from "@/components/ai-workspace/types";
+import { useCanContactSuppliers } from "@/components/billing/useCanContactSuppliers";
 
 export default function SupplierMatchCard({ match, rank }: { match: SupplierMatch; rank: number }) {
   const s = match.supplier;
+  const canContact = useCanContactSuppliers();
   const card = (
     <article className={`${glass} p-4 sm:p-5`}>
       <div className="flex items-start gap-3">
@@ -79,7 +81,8 @@ export default function SupplierMatchCard({ match, rank }: { match: SupplierMatc
             Profile <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
           <Link
-            href={`/supplier/${s.id}#contact`}
+            href={canContact ? `/supplier/${s.id}#contact` : "/pricing"}
+            data-testid={canContact ? "contact-supplier" : "contact-locked"}
             className="inline-flex items-center gap-1 rounded-lg bg-cyan px-3 py-1.5 font-semibold text-white transition hover:bg-cyan-glow hover:text-navy-deep"
           >
             <MessageCircle className="h-3.5 w-3.5" aria-hidden /> Contact
