@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, MapPin } from "lucide-react";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { getProductFallbackImage } from "@/lib/image-fallback";
 import { HOME_PRODUCTS_VISIBLE, type HomeProductItem } from "@/lib/home-products";
 
 const ALL = "all";
@@ -64,20 +65,20 @@ export default function HomeProductsGrid({
 
       {visible.length > 0 ? (
         <ul className={`${categories.length > 1 ? "mt-8" : "mt-block-lg"} grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4`}>
-          {visible.map((p, i) => (
+          {visible.map((p) => (
             <li key={p.id}>
               <Link
                 href={`/products/${p.id}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-[border-color,box-shadow,transform] duration-300 ease-cinema hover:-translate-y-1 hover:border-cyan/40 hover:shadow-cardHover"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                  <Image
+                  <ImageWithFallback
                     src={p.image}
+                    fallbackSrc={getProductFallbackImage(p.name, p.category)}
                     alt={`${p.name} — ${p.supplierName}`}
-                    fill
-                    loading={i < 4 ? "eager" : "lazy"}
+                    loading="lazy"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover transition duration-500 ease-cinema group-hover:scale-[1.04]"
+                    className="absolute inset-0 h-full w-full object-cover object-center transition duration-500 ease-cinema group-hover:scale-[1.04]"
                   />
                   <span className="absolute left-3 top-3 rounded-md bg-white/90 px-2 py-0.5 text-[10px] font-semibold text-navy shadow-sm backdrop-blur">
                     {labels[p.category] ?? p.category}

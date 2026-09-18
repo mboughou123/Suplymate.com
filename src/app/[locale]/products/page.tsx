@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { getPublicProductsPage } from "@/lib/public-products";
 import ProductsClient from "./ProductsClient";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function ProductsPage() {
   const t = await getTranslations("products");

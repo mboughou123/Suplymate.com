@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import type { ComponentProps } from "react";
-import FxBoundary from "@/components/fx/FxBoundary";
+import FxBoundary, { useFxEnabled } from "@/components/fx/FxBoundary";
 
 const ThinkingOrb = dynamic(
   () => import("thinking-orbs").then((m) => m.ThinkingOrb),
@@ -29,6 +29,7 @@ type Props = Omit<ComponentProps<typeof ThinkingOrb>, "state"> & {
 
 /** Suplymate's AI intelligence indicator — replaces generic spinners. */
 export default function AiOrb({ state = "breathing", size = 64, theme = "dark", ...rest }: Props) {
+  const enabled = useFxEnabled();
   const fallback = (
     <span
       aria-hidden
@@ -36,6 +37,9 @@ export default function AiOrb({ state = "breathing", size = 64, theme = "dark", 
       style={{ width: size, height: size }}
     />
   );
+
+  if (!enabled) return fallback;
+
   return (
     <FxBoundary fallback={fallback}>
       <ThinkingOrb state={state} size={size} theme={theme} {...rest} />

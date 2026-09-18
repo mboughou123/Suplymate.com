@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import type { ComponentProps } from "react";
-import FxBoundary from "@/components/fx/FxBoundary";
+import FxBoundary, { useFxEnabled } from "@/components/fx/FxBoundary";
 
 const BorderBeam = dynamic(
   () => import("border-beam").then((m) => m.BorderBeam),
@@ -14,7 +14,7 @@ type BeamProps = ComponentProps<typeof BorderBeam>;
 /**
  * Animated border beam for the few cards that deserve emphasis (AI container,
  * top supplier match, premium plan). Renders children immediately; the beam
- * overlay attaches after hydration and is dropped silently if it fails.
+ * overlay attaches after hydration on desktop and is skipped on mobile.
  */
 export default function Beam({
   children,
@@ -25,6 +25,12 @@ export default function Beam({
   className,
   ...rest
 }: BeamProps & { className?: string }) {
+  const enabled = useFxEnabled();
+
+  if (!enabled) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <div className={className}>
       <FxBoundary fallback={children}>

@@ -8,14 +8,10 @@ import HomeOrchestratorSection from "@/components/home/HomeOrchestratorSection";
 import HomeBenefitsBand from "@/components/home/HomeBenefitsBand";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 import HomeCloseSection from "@/components/HomeCloseSection";
-import { getProductsFromDb, getSuppliersFromDb } from "@/lib/data-service";
-import { INDUSTRIES } from "@/data/industries";
-import { MATERIAL_CATALOG } from "@/data/material-catalog";
-import { countSupplierCountries } from "@/lib/home-benefits";
+import { getHomePageContent } from "@/lib/home-page-data";
 
-// Static + ISR: the per-request data is the supplier count and the product
-// grid picks, which only need to be fresh to the minute (both come from the
-// memoised catalogue reads). Everything else is translated copy.
+// Static + ISR: homepage stats and product picks come from the curated pack
+// (no per-request Prisma or Outscraper dump).
 export const revalidate = 300;
 
 export default async function HomePage({
@@ -25,29 +21,26 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [t, suppliers, products] = await Promise.all([
-    getTranslations("home"),
-    getSuppliersFromDb().catch(() => []),
-    getProductsFromDb().catch(() => []),
-  ]);
+  const t = await getTranslations("home");
+  const home = getHomePageContent();
 
   return (
     <div className="bg-base">
       <HomeTopNav />
       <HomeHero
-        supplierCount={suppliers.length}
-        industryCount={INDUSTRIES.length}
-        materialCount={MATERIAL_CATALOG.length}
+        supplierCount={home.supplierCount}
+        industryCount={home.industryCount}
+        materialCount={home.materialCount}
       />
       <HomeTrustStrip />
       <HomeSuppliersBand />
       {/* Who is on the network (suppliers) → what they make (products) → how
           Mate helps you buy it (orchestrator). */}
-      <HomeProductsSection products={products} />
+      <HomeProductsSection items={home.products} />
       <HomeOrchestratorSection />
       <HomeBenefitsBand
-        countryCount={countSupplierCountries(suppliers)}
-        materialCount={MATERIAL_CATALOG.length}
+        countryCount={home.countryCount}
+        materialCount={home.materialCount}
       />
       <HomeFaqSection />
       <HomeCloseSection

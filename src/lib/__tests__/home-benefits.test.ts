@@ -13,6 +13,7 @@ describe("countSupplierCountries", () => {
       { country: "India", location: "Pune, India" },
       { country: undefined, location: " Houston,  United States " },
       { country: undefined, location: "" },
+      { country: undefined, location: undefined as unknown as string },
     ]);
     expect(n).toBe(3);
   });

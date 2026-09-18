@@ -52,4 +52,22 @@ describe("public catalogue (no-DB memory path)", () => {
     const page = await getPublicProductsPage({ page: 1, pageSize: 500, hasPrice: true });
     expect(page.items.every((c) => c.priceLabel && !/\$0\.00/.test(c.priceLabel))).toBe(true);
   });
+
+  it("keeps Neway ball valves on the valve still, not an aerosol can", async () => {
+    const page = await getPublicProductsPage({
+      page: 1,
+      pageSize: 20,
+      supplierId: "neway-valve-suzhou-co-ltd-cn",
+    });
+    const card = page.items.find((c) => c.id === "pack-neway-valve-neway-ball-valves");
+    expect(card).toBeDefined();
+    expect(card!.imageUrl).toMatch(/neway-valve/);
+    expect(card!.imageUrl).not.toMatch(/\/images\/products\/ball\//);
+  });
+
+  it("searches by supplier name on the memory path", async () => {
+    const page = await getPublicProductsPage({ page: 1, pageSize: 24, search: "Neway" });
+    expect(page.total).toBeGreaterThan(0);
+    expect(page.items.some((c) => /neway/i.test(c.supplierName) || /neway/i.test(c.name))).toBe(true);
+  });
 });

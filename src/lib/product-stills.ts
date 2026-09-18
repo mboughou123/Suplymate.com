@@ -35,11 +35,11 @@ function candidateKeys(input: ProductStillRef): string[] {
 }
 
 /** Index key matches a product/supplier candidate without loose category hits. */
-function keyMatches(indexKey: string, candidate: string): boolean {
+export function stillKeyMatches(indexKey: string, candidate: string): boolean {
   if (candidate === indexKey) return true;
-  if (candidate.startsWith(`${indexKey}-`)) return true;
-  if (candidate.includes(`-${indexKey}-`)) return true;
-  if (candidate.endsWith(`-${indexKey}`)) return true;
+  // Folder `ball` may prefix `ball-aluminum-aerosol-cans`. It must NOT match
+  // `neway-ball-valves` or `zwz-deep-groove-ball-bearings`.
+  if (indexKey.length >= 4 && candidate.startsWith(`${indexKey}-`)) return true;
   return false;
 }
 
@@ -68,7 +68,7 @@ export function localStillsForProduct(input: ProductStillRef): string[] {
   if (out.length) return out;
 
   for (const [key, urls] of Object.entries(STILLS)) {
-    if (candidates.some((candidate) => keyMatches(key, candidate))) {
+    if (candidates.some((candidate) => stillKeyMatches(key, candidate))) {
       push(urls);
     }
   }
