@@ -21,7 +21,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
-import SiteLogoMark from "@/components/SiteLogoMark";
 
 type Props = {
   children: React.ReactNode;
@@ -58,12 +57,9 @@ export default function SupplierShell({ children, user, profile }: Props) {
   const sidebar = (
     <div className="flex h-full flex-col bg-[#071521] text-white">
       <div className="flex items-center justify-between px-5 py-5">
-        <Link href="/" className="font-display inline-flex items-center gap-2 text-lg font-bold tracking-tight">
-          <SiteLogoMark size={28} className="h-7 w-7 rounded-md bg-white object-contain" />
-          <span>
-            {nav("brandSuply")}
-            <span className="gradient-text-light">{nav("brandMate")}</span>
-          </span>
+        <Link href="/" className="font-display text-lg font-bold tracking-tight">
+          {nav("brandSuply")}
+          <span className="gradient-text-light">{nav("brandMate")}</span>
           <span className="ml-2 rounded-md border border-cyan-glow/30 bg-cyan/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-glow">
             Supplier
           </span>

@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { ArrowLeft, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import AiOrb from "@/components/fx/AiOrb";
-import SiteLogoMark from "@/components/SiteLogoMark";
 
 type AuthFormLayoutProps = {
   title: string;
@@ -72,7 +71,9 @@ export default function AuthFormLayout({
       <div className="flex flex-col">
         <div className="mx-auto flex w-full max-w-lg flex-1 flex-col justify-center px-4 py-10 sm:px-8">
           <Link href="/" className="mb-8 flex items-center gap-2.5 lg:hidden">
-            <SiteLogoMark size={36} className="h-9 w-9 rounded-xl bg-white object-contain" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy text-base font-bold text-white">
+              S
+            </span>
             <span className="font-display text-2xl font-bold text-ink">
               {nav("brandSuply")}
               <span className="gradient-text">{nav("brandMate")}</span>

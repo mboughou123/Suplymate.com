@@ -16,7 +16,6 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import SiteLogoMark from "@/components/SiteLogoMark";
 
 type NavItem = {
   href: string;
@@ -57,11 +56,9 @@ export default function DashboardSidebar({
     <div className="flex h-full flex-col bg-white">
       <div className="flex items-center justify-between border-b border-slate-100 px-4 py-4">
         <Link href="/" className="flex items-center gap-2.5 overflow-hidden">
-          <SiteLogoMark
-            size={32}
-            className="h-8 w-8 shrink-0 rounded-lg bg-white object-contain"
-            alt={collapsed ? "Suplymate" : ""}
-          />
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-sm font-bold text-white">
+            S
+          </span>
           {!collapsed && (
             <span className="font-display text-sm font-bold text-ink">
               {nav("brandSuply")}

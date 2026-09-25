@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
 import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
-import SiteLogoMark from "@/components/SiteLogoMark";
 import { homeForRole } from "@/lib/roles";
 
 export default function HomeTopNav() {
@@ -43,7 +42,6 @@ export default function HomeTopNav() {
         }`}
       >
         <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-lg font-bold tracking-tight">
-          <SiteLogoMark size={32} className="h-8 w-8 rounded-md bg-white object-contain" priority />
           <span>
             {nav("brandSuply")}
             <span className={scrolled ? "gradient-text" : "gradient-text-light"}>{nav("brandMate")}</span>

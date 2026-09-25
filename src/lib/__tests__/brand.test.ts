@@ -24,12 +24,12 @@ describe("site brand assets", () => {
     expect(SITE_ABOUT_BANNER.width).toBeGreaterThan(SITE_ABOUT_BANNER.height);
   });
 
-  it("uses the mascot in header and footer brand marks", () => {
+  it("keeps the header wordmark-only and uses the mascot in the footer", () => {
     const navbar = readFileSync(resolve(process.cwd(), "src/components/Navbar.tsx"), "utf8");
     const homeNav = readFileSync(resolve(process.cwd(), "src/components/home/HomeTopNav.tsx"), "utf8");
     const footer = readFileSync(resolve(process.cwd(), "src/components/Footer.tsx"), "utf8");
-    expect(navbar).toContain("SiteLogoMark");
-    expect(homeNav).toContain("SiteLogoMark");
+    expect(navbar).not.toContain("SiteLogoMark");
+    expect(homeNav).not.toContain("SiteLogoMark");
     expect(footer).toContain("SiteLogoMark");
   });
 

@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
 import MegaMenu, { MegaMenuMobile } from "@/components/nav/MegaMenu";
-import SiteLogoMark from "@/components/SiteLogoMark";
 import { isSupplierRole } from "@/lib/roles";
 
 type MenuItem = { href: string; label: string; icon: LucideIcon };
@@ -108,7 +107,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071521]/95 text-white shadow-sm backdrop-blur-xl">
       <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-display inline-flex shrink-0 items-center gap-2 text-xl font-bold">
-          <SiteLogoMark size={32} className="h-8 w-8 rounded-md bg-white object-contain" priority />
           <span>
             <span className="text-white">{t("brandSuply")}</span>
             <span className="gradient-text-light">{t("brandMate")}</span>
