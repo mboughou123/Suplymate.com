@@ -200,7 +200,7 @@ export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplie
     phone: "phone" in s ? s.phone : undefined,
     email: "email" in s ? s.email : undefined,
     description: "description" in s ? s.description : undefined,
-    sourceUrl: s.sourceUrl,
+    sourceUrl: "sourceUrl" in s ? s.sourceUrl : undefined,
     score: s.score ?? s.reliabilityScore,
     logoText: initials(s.name),
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
