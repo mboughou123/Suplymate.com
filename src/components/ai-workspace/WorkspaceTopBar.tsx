@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { LayoutDashboard, Factory, Atom, LogOut } from "lucide-react";
 import { homeForRole } from "@/lib/roles";
 import type { EngineState } from "@/components/ai-workspace/types";
+import SiteLogoMark from "@/components/SiteLogoMark";
 
 const ENGINE_LABEL: Record<EngineState["source"], string> = {
   openai: "Live AI + Suplymate data",
@@ -23,9 +24,12 @@ export default function WorkspaceTopBar({ engine }: { engine: EngineState | null
     <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#050B12]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-[1400px] items-center justify-between gap-3 px-4 sm:px-6">
         <div className="flex items-center gap-4">
-          <Link href="/" className="font-display text-lg font-bold tracking-tight text-white">
-            {nav("brandSuply")}
-            <span className="gradient-text-light">{nav("brandMate")}</span>
+          <Link href="/" className="font-display inline-flex items-center gap-2 text-lg font-bold tracking-tight text-white">
+            <SiteLogoMark size={28} className="h-7 w-7 rounded-md bg-white object-contain" />
+            <span>
+              {nav("brandSuply")}
+              <span className="gradient-text-light">{nav("brandMate")}</span>
+            </span>
           </Link>
           <span
             className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-white/60 sm:inline-flex"
