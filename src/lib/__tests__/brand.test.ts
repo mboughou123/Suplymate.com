@@ -1,13 +1,17 @@
 import { existsSync } from "node:fs";
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { SITE_ABOUT_BANNER, SITE_MASCOT } from "@/lib/brand";
 
+function sha256(rel: string): string {
+  return createHash("sha256").update(readFileSync(resolve(process.cwd(), rel))).digest("hex");
+}
+
 describe("site brand assets", () => {
-  it("ships the mascot, About banner, and App Router icons", () => {
+  it("ships the About banner and App Router icons without the mascot as favicon", () => {
     const files = [
-      "public/brand/suplymate-mascot.png",
       "public/brand/suplymate-about-banner.png",
       "src/app/icon.png",
       "src/app/apple-icon.png",
@@ -16,6 +20,9 @@ describe("site brand assets", () => {
     for (const file of files) {
       expect(existsSync(resolve(process.cwd(), file)), file).toBe(true);
     }
+    const mascotHash = sha256("public/brand/suplymate-mascot.png");
+    expect(sha256("src/app/icon.png")).not.toBe(mascotHash);
+    expect(sha256("src/app/apple-icon.png")).not.toBe(mascotHash);
   });
 
   it("points public URLs at the committed brand files", () => {
