@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import SiteLogoMark from "@/components/SiteLogoMark";
 
 const linkClass = "transition-colors hover:text-cyan";
 
@@ -16,12 +15,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
-            <p className="font-display flex items-center gap-2 text-lg font-bold text-ink">
-              <SiteLogoMark size={32} className="h-8 w-8 rounded-md object-contain" />
-              <span>
-                {nav("brandSuply")}
-                <span className="gradient-text">{nav("brandMate")}</span>
-              </span>
+            <p className="font-display text-lg font-bold text-ink">
+              {nav("brandSuply")}
+              <span className="gradient-text">{nav("brandMate")}</span>
             </p>
             <p className="mt-3 text-sm text-ink-muted leading-relaxed">
               {t("tagline")}
