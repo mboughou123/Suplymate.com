@@ -41,10 +41,9 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: "always",
-  localeCookie: {
-    name: "NEXT_LOCALE",
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-  },
+  // A NEXT_LOCALE Set-Cookie on every public response makes Vercel treat the
+  // HTML as private/uncacheable (x-vercel-cache MISS, TTFB ~1.8s on /products).
+  localeCookie: false,
 });
 
 /** Strip the leading locale segment from a pathname (e.g. `/fr/suppliers` → `/suppliers`). */

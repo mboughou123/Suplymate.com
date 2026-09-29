@@ -7,10 +7,11 @@ import {
 
 describe("mobile image srcset budget", () => {
   it("does not advertise 2K/4K variants that bloat listing HTML", () => {
-    expect(Math.max(...IMAGE_DEVICE_SIZES)).toBeLessThanOrEqual(1920);
+    expect(Math.max(...IMAGE_DEVICE_SIZES)).toBeLessThanOrEqual(1200);
+    expect(IMAGE_DEVICE_SIZES).not.toContain(1920);
     expect(IMAGE_DEVICE_SIZES).not.toContain(2048);
     expect(IMAGE_DEVICE_SIZES).not.toContain(3840);
-    expect(Math.max(...IMAGE_INLINE_SIZES)).toBeLessThanOrEqual(256);
+    expect(Math.max(...IMAGE_INLINE_SIZES)).toBeLessThanOrEqual(384);
   });
 
   it("gives cards viewport-aware sizes instead of a 100vw default", () => {

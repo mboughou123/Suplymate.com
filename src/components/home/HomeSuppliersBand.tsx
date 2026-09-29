@@ -37,7 +37,7 @@ export default async function HomeSuppliersBand() {
                   href={href}
                   className="group panel-glass panel-glass-hover flex h-full flex-col overflow-hidden"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                     <Image
                       src={entry.image}
                       alt={t(`${entry.key}Caption`)}

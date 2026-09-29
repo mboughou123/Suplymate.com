@@ -1,13 +1,21 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getPublicProductsPage } from "@/lib/public-products";
 import { PRODUCT_LIST_PAGE_SIZE } from "@/lib/products-query";
 import ProductsClient from "./ProductsClient";
 
-// Same ISR window as /suppliers — the catalogue is read-mostly and the
-// previous force-dynamic setting made TTFB ~1.7s on phones.
+// force-static + setRequestLocale: getTranslations() without a locale from
+// params opted this page into dynamic rendering, so Vercel served
+// Cache-Control: private, no-store (TTFB ~1.8s, x-vercel-cache MISS).
+export const dynamic = "force-static";
 export const revalidate = 300;
 
-export default async function ProductsPage() {
+export default async function ProductsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("products");
   const initial = await getPublicProductsPage({ page: 1, pageSize: PRODUCT_LIST_PAGE_SIZE });
 

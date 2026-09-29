@@ -3,6 +3,7 @@ import {
   defaultLocale,
   isRtlLocale,
   locales,
+  routing,
   stripLocalePrefix,
 } from "@/i18n/routing";
 import { resolveBrowserLocale } from "@/i18n/locale-detection";
@@ -87,5 +88,9 @@ describe("locales configuration", () => {
       "hi",
     ];
     expect([...locales]).toEqual(expected);
+  });
+
+  it("does not persist NEXT_LOCALE so public pages can be CDN-cached", () => {
+    expect(routing.localeCookie).toBe(false);
   });
 });

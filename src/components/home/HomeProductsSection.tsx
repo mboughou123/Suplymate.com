@@ -1,11 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
-import type { Product } from "@/data/products";
 import {
   homeCategoryKey,
   homeProductCategories,
-  pickHomeProducts,
+  type HomeProductItem,
 } from "@/lib/home-products";
 import HomeProductsGrid from "./HomeProductsGrid";
 
@@ -14,13 +13,11 @@ import HomeProductsGrid from "./HomeProductsGrid";
  * curated media packs (2 columns on mobile → 4 on desktop), with client-side
  * category chips and a CTA into the full catalogue.
  *
- * Receives the same cached `getProductsFromDb()` list the page already holds
- * — no extra round-trip. Renders nothing when no product has a real photo, so
- * the homepage never shows a grid of category tiles.
+ * Receives picks from `getHomePageContent()` so the homepage never waits on
+ * Prisma. Renders nothing when no product has a real photo.
  */
-export default async function HomeProductsSection({ products }: { products: Product[] }) {
+export default async function HomeProductsSection({ items }: { items: HomeProductItem[] }) {
   const t = await getTranslations("homeProducts");
-  const items = pickHomeProducts(products);
   if (items.length === 0) return null;
 
   const categories = homeProductCategories(items);
