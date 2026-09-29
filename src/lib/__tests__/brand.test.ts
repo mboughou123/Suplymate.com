@@ -72,6 +72,26 @@ describe("site brand assets", () => {
     expect(homeNav).toContain("Beta");
   });
 
+  it("hides the language switcher from headers and shells (English-only UI)", () => {
+    const chrome = [
+      "src/components/Navbar.tsx",
+      "src/components/home/HomeTopNav.tsx",
+      "src/components/Footer.tsx",
+      "src/components/dashboard/DashboardSidebar.tsx",
+      "src/components/dashboard/DashboardTopbar.tsx",
+      "src/components/dashboard/DashboardShell.tsx",
+      "src/components/ai-workspace/WorkspaceTopBar.tsx",
+      "src/components/supplier/SupplierShell.tsx",
+      "src/components/AuthFormLayout.tsx",
+    ];
+    for (const file of chrome) {
+      const src = readFileSync(resolve(ROOT, file), "utf8");
+      expect(src, file).not.toContain("LanguageSelector");
+    }
+    const selector = readFileSync(resolve(ROOT, "src/components/LanguageSelector.tsx"), "utf8");
+    expect(selector).toContain("return null");
+  });
+
   it("does not render the mascot anywhere in app UI", () => {
     const allowed = new Set([
       relative(ROOT, resolve(ROOT, "src/lib/brand.ts")),
