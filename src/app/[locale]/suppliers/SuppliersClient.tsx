@@ -1,101 +1,82 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { INDUSTRIES } from "@/data/industries";
 import SupplierCard from "@/components/SupplierCard";
-import {
-  listingSupplierMatches,
-  type ListingSupplier,
-} from "@/lib/supplier-listing";
+import type { ListingSupplier } from "@/lib/supplier-listing";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
 import SupplierFilters, {
   type SupplierFilterState,
 } from "@/components/SupplierFilters";
-import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
-import { supplierHasUsableCardImage } from "@/lib/image-fallback";
+import { Loader2, SearchX } from "lucide-react";
+import {
+  EMPTY_SUPPLIER_FILTERS,
+  buildDirectoryQuery,
+  shouldFetchDirectoryOnFilterChange,
+  type SupplierDirectoryFacets,
+} from "@/lib/supplier-directory";
 
 type Props = {
-  initialSuppliers: ListingSupplier[];
+  initialItems: ListingSupplier[];
+  initialTotal: number;
+  initialHasMore: boolean;
+  pageSize: number;
+  facets: SupplierDirectoryFacets;
 };
 
-const PAGE_SIZE = 12;
-
-const DEFAULT_FILTERS: SupplierFilterState = {
-  search: "",
-  category: "All",
-  country: "All",
-  minRating: 0,
-  minReviews: 0,
-  verifiedOnly: false,
-};
-
-function categoryOf(s: ListingSupplier): string {
-  return s.category ?? s.industry;
-}
-
-function ratingOf(s: ListingSupplier): number {
-  return s.googleRating ?? s.rating ?? 0;
-}
-
-function reviewsOf(s: ListingSupplier): number {
-  return s.googleReviews ?? s.reviewCount ?? 0;
-}
-
-export default function SuppliersClient({ initialSuppliers }: Props) {
+export default function SuppliersClient({
+  initialItems,
+  initialTotal,
+  initialHasMore,
+  pageSize,
+  facets,
+}: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
-  const [filters, setFilters] = useState<SupplierFilterState>(DEFAULT_FILTERS);
+  const [items, setItems] = useState<ListingSupplier[]>(initialItems);
+  const [total, setTotal] = useState(initialTotal);
+  const [hasMore, setHasMore] = useState(initialHasMore);
   const [page, setPage] = useState(1);
+  const [filters, setFilters] = useState<SupplierFilterState>(EMPTY_SUPPLIER_FILTERS);
   const [loading, setLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [compareMode, setCompareMode] = useState(false);
 
-  const categories = useMemo(
-    () =>
-      Array.from(new Set(initialSuppliers.map(categoryOf))).sort((a, b) =>
-        a.localeCompare(b)
-      ),
-    [initialSuppliers]
-  );
+  const previousFiltersRef = useRef<SupplierFilterState | null>(null);
+  const activeFiltersRef = useRef<SupplierFilterState>(EMPTY_SUPPLIER_FILTERS);
 
-  const countries = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          initialSuppliers.map((s) => s.country ?? s.location.split(",").pop()!.trim())
-        )
-      ).sort((a, b) => a.localeCompare(b)),
-    [initialSuppliers]
+  const fetchPage = useCallback(
+    async (f: SupplierFilterState, nextPage: number, replace: boolean) => {
+      if (replace) setLoading(true);
+      else setLoadingMore(true);
+      try {
+        const res = await fetch(`/api/suppliers/directory?${buildDirectoryQuery(f, nextPage, pageSize)}`);
+        if (!res.ok) throw new Error("bad response");
+        const data = (await res.json()) as {
+          items: ListingSupplier[];
+          total: number;
+          hasMore: boolean;
+        };
+        setItems((prev) => (replace ? data.items : [...prev, ...data.items]));
+        setTotal(data.total);
+        setHasMore(data.hasMore);
+        setPage(nextPage);
+      } catch {
+        if (replace) {
+          setItems([]);
+          setTotal(0);
+          setHasMore(false);
+        }
+      } finally {
+        setLoading(false);
+        setLoadingMore(false);
+      }
+    },
+    [pageSize]
   );
-
-  const filtered = useMemo(() => {
-    const q = filters.search.toLowerCase().trim();
-    return initialSuppliers
-      .filter((s) => {
-        if (filters.category !== "All" && categoryOf(s) !== filters.category)
-          return false;
-        const country = s.country ?? s.location.split(",").pop()!.trim();
-        if (filters.country !== "All" && country !== filters.country) return false;
-        if (ratingOf(s) < filters.minRating) return false;
-        if (reviewsOf(s) < filters.minReviews) return false;
-        if (filters.verifiedOnly && !s.verified) return false;
-        if (!q) return true;
-        return listingSupplierMatches(s, q);
-      })
-      .sort((a, b) => {
-        // Image-bearing suppliers first (empty cards look untrustworthy),
-        // then by Suplymate score, then alphabetically.
-        const hasImg = (s: ListingSupplier) => (supplierHasUsableCardImage(s) ? 1 : 0);
-        const img = hasImg(b) - hasImg(a);
-        if (img) return img;
-        const score =
-          (b.score ?? b.reliabilityScore) - (a.score ?? a.reliabilityScore);
-        if (score) return score;
-        return a.name.localeCompare(b.name);
-      });
-  }, [filters, initialSuppliers]);
 
   // Deep link from the Solutions menu: `/suppliers?industry=<id>` pre-selects
   // the matching directory category (or falls back to a text search). Read from
@@ -105,35 +86,27 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
     if (!industryId) return;
     const industry = INDUSTRIES.find((i) => i.id === industryId);
     if (!industry) return;
-    const category = industry.legacyCategories.find((c) => categories.includes(c));
+    const category = industry.legacyCategories.find((c) => facets.categories.includes(c));
     setFilters((f) => (category ? { ...f, category } : { ...f, search: industry.name }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Reset to page 1 and show a brief loading state whenever filters change.
   useEffect(() => {
-    setPage(1);
-    setLoading(true);
-    const t = setTimeout(() => setLoading(false), 280);
-    return () => clearTimeout(t);
+    const handle = setTimeout(() => {
+      const previous = previousFiltersRef.current;
+      previousFiltersRef.current = filters;
+      if (!shouldFetchDirectoryOnFilterChange({ previous, next: filters })) {
+        return;
+      }
+      activeFiltersRef.current = filters;
+      fetchPage(filters, 1, true);
+    }, 300);
+    return () => clearTimeout(handle);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
-
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-  const safePage = Math.min(page, totalPages);
-  const pageItems = filtered.slice(
-    (safePage - 1) * PAGE_SIZE,
-    safePage * PAGE_SIZE
-  );
 
   function patch(p: Partial<SupplierFilterState>) {
     setFilters((f) => ({ ...f, ...p }));
-  }
-
-  function goToPage(n: number) {
-    setPage(n);
-    setLoading(true);
-    setTimeout(() => setLoading(false), 200);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function toggleCompare(id: string) {
@@ -148,6 +121,8 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
     () => `/suppliers/compare?ids=${compareIds.join(",")}`,
     [compareIds]
   );
+
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (
     <>
@@ -181,11 +156,11 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
 
       <SupplierFilters
         state={filters}
-        categories={categories}
-        countries={countries}
+        categories={facets.categories}
+        countries={facets.countries}
         onChange={patch}
-        onReset={() => setFilters(DEFAULT_FILTERS)}
-        resultCount={filtered.length}
+        onReset={() => setFilters(EMPTY_SUPPLIER_FILTERS)}
+        resultCount={total}
       />
 
       {loading ? (
@@ -194,7 +169,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
             <SupplierCardSkeleton key={i} />
           ))}
         </div>
-      ) : filtered.length === 0 ? (
+      ) : items.length === 0 ? (
         <div className="mt-16 flex flex-col items-center text-center text-ink-dim">
           <SearchX className="mb-3 h-10 w-10 text-slate-300" aria-hidden />
           <p className="font-semibold text-ink">{t("noMatchTitle")}</p>
@@ -203,7 +178,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       ) : (
         <>
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {pageItems.map((supplier, index) => (
+            {items.map((supplier, index) => (
               <div key={supplier.id} id={supplier.id} className="relative">
                 {compareMode && (
                   <label className="absolute right-3 top-3 z-10 flex items-center gap-1 rounded-lg bg-white/95 px-2 py-1 text-xs shadow-sm">
@@ -216,73 +191,31 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
                     {tCommon("compare")}
                   </label>
                 )}
-                <SupplierCard supplier={supplier} priority={safePage === 1 && index === 0} />
+                <SupplierCard supplier={supplier} priority={page === 1 && index === 0} />
               </div>
             ))}
           </div>
 
-          {totalPages > 1 && (
-            <div className="mt-10 flex items-center justify-center gap-2">
+          {hasMore && (
+            <div className="mt-10 flex justify-center">
               <button
                 type="button"
-                disabled={safePage === 1}
-                onClick={() => goToPage(safePage - 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
+                disabled={loadingMore}
+                onClick={() => fetchPage(activeFiltersRef.current, page + 1, false)}
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-50"
               >
-                <ChevronLeft className="h-4 w-4" aria-hidden />
-                {tCommon("prev")}
-              </button>
-
-              {Array.from({ length: totalPages }).map((_, i) => {
-                const n = i + 1;
-                // Compact pagination: show first, last, and neighbors.
-                if (
-                  n !== 1 &&
-                  n !== totalPages &&
-                  Math.abs(n - safePage) > 1
-                ) {
-                  if (n === 2 || n === totalPages - 1)
-                    return (
-                      <span key={n} className="px-1 text-ink-dim">
-                        …
-                      </span>
-                    );
-                  return null;
-                }
-                return (
-                  <button
-                    key={n}
-                    type="button"
-                    onClick={() => goToPage(n)}
-                    className={`h-9 w-9 rounded-lg text-sm font-semibold transition ${
-                      n === safePage
-                        ? "bg-navy text-white"
-                        : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40 hover:text-ink"
-                    }`}
-                  >
-                    {n}
-                  </button>
-                );
-              })}
-
-              <button
-                type="button"
-                disabled={safePage === totalPages}
-                onClick={() => goToPage(safePage + 1)}
-                className="inline-flex h-9 items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-ink-muted transition hover:border-cyan/40 hover:text-ink disabled:opacity-40"
-              >
-                {tCommon("next")}
-                <ChevronRight className="h-4 w-4" aria-hidden />
+                {loadingMore ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : null}
+                {tCommon("showMore")}
               </button>
             </div>
           )}
 
           <p className="mt-4 text-center text-xs text-ink-dim">
             {t("pageInfo", {
-              current: safePage,
+              current: page,
               total: totalPages,
-              shown: pageItems.length,
-              totalResults: filtered.length,
+              shown: items.length,
+              totalResults: total,
             })}
           </p>
         </>

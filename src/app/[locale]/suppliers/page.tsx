@@ -1,10 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getSuppliersFromDb } from "@/lib/data-service";
-import { toListingSupplier } from "@/lib/supplier-listing";
+import { getPublicSupplierDirectoryPage } from "@/lib/supplier-directory-server";
 import SuppliersClient from "./SuppliersClient";
 
-// Static + ISR: the directory is read-mostly (admin approvals land within the
-// revalidation window) and the slim listing is filtered client-side.
+// Static + ISR: first HTML is ~36 cards, not the full 719-row RSC payload.
+export const dynamic = "force-static";
 export const revalidate = 300;
 
 export default async function SuppliersPage({
@@ -14,16 +13,10 @@ export default async function SuppliersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [t, allSuppliers] = await Promise.all([
+  const [t, directory] = await Promise.all([
     getTranslations("suppliers"),
-    getSuppliersFromDb(),
+    getPublicSupplierDirectoryPage({ page: 1 }),
   ]);
-  const suppliers = allSuppliers.map(toListingSupplier);
-
-  const verifiedCount = suppliers.filter((s) => s.verified).length;
-  const countryCount = new Set(
-    suppliers.map((s) => s.country ?? s.location.split(",").pop()!.trim())
-  ).size;
 
   return (
     <div className="bg-transparent min-h-screen">
@@ -37,19 +30,19 @@ export default async function SuppliersPage({
             {t("pageTitle")}
           </h1>
           <p className="mt-3 max-w-2xl text-white/75">
-            {t("pageSubtitle", { count: suppliers.length, countries: countryCount })}
+            {t("pageSubtitle", { count: directory.counts.total, countries: directory.counts.countries })}
           </p>
           <div className="mt-5 flex flex-wrap gap-6 text-sm">
             <div>
-              <p className="text-2xl font-bold text-white">{suppliers.length}</p>
+              <p className="text-2xl font-bold text-white">{directory.counts.total}</p>
               <p className="text-white/60">{t("suppliersCount")}</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white">{verifiedCount}</p>
+              <p className="text-2xl font-bold text-white">{directory.counts.verified}</p>
               <p className="text-white/60">{t("verifiedCount")}</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white">{countryCount}</p>
+              <p className="text-2xl font-bold text-white">{directory.counts.countries}</p>
               <p className="text-white/60">{t("countriesCount")}</p>
             </div>
           </div>
@@ -57,7 +50,13 @@ export default async function SuppliersPage({
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SuppliersClient initialSuppliers={suppliers} />
+        <SuppliersClient
+          initialItems={directory.items}
+          initialTotal={directory.total}
+          initialHasMore={directory.hasMore}
+          pageSize={directory.pageSize}
+          facets={directory.facets}
+        />
       </div>
     </div>
   );

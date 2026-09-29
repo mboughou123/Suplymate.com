@@ -1,8 +1,8 @@
-/** Widths next/image may put in srcset. Cap at 1920 — listing cards never need 4K. */
-export const IMAGE_DEVICE_SIZES = [384, 640, 750, 828, 1080, 1200, 1920] as const;
+/** Widths next/image may put in srcset. Cap at 1200 — listing cards never need 2K/4K. */
+export const IMAGE_DEVICE_SIZES = [640, 750, 828, 1080, 1200] as const;
 
 /** Extra widths for thumbs / logos (used together with deviceSizes). */
-export const IMAGE_INLINE_SIZES = [64, 96, 128, 256] as const;
+export const IMAGE_INLINE_SIZES = [64, 96, 128, 256, 384] as const;
 
 export const CARD_IMAGE_QUALITY = 70;
 
