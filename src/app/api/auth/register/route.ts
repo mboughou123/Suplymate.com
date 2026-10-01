@@ -15,7 +15,13 @@ export const runtime = "nodejs";
 type ErrorBody = {
   error: string;
   /** Machine-readable reason so the UI can translate it. */
-  code: "invalidBody" | "validation" | "emailTaken" | "dbUnavailable" | "registrationFailed";
+  code:
+    | "invalidBody"
+    | "validation"
+    | "emailTaken"
+    | "dbUnavailable"
+    | "schemaOutOfDate"
+    | "registrationFailed";
   /** Human-readable, per-field English messages. */
   fields?: Partial<Record<SignupField, string>>;
   /** Per-field error codes (see SignupErrorCode) for i18n on the client. */
@@ -58,6 +64,16 @@ function isDatabaseUnavailable(err: unknown): boolean {
   if (err instanceof Prisma.PrismaClientRustPanicError) return true;
   const message = err instanceof Error ? err.message : "";
   return /DATABASE_URL|ECONNREFUSED|Can't reach database|connection/i.test(message);
+}
+
+/**
+ * P2021 table missing, P2022 column missing, P2011 a database-only NOT NULL
+ * column: the database does not match prisma/schema.prisma.
+ */
+function isSchemaOutOfDate(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError && ["P2011", "P2021", "P2022"].includes(err.code)
+  );
 }
 
 function isUniqueViolation(err: unknown): boolean {
@@ -121,6 +137,17 @@ export async function POST(request: Request) {
     if (isDatabaseUnavailable(err)) {
       console.error("[register] database unavailable:", err instanceof Error ? err.message : err);
       const res: ErrorBody = { error: DB_UNAVAILABLE_MESSAGE, code: "dbUnavailable" };
+      return NextResponse.json(res, { status: 503 });
+    }
+    if (isSchemaOutOfDate(err)) {
+      console.error(
+        "[register] database schema is out of date — run `npm run db:push` against production:",
+        err instanceof Error ? err.message : err,
+      );
+      const res: ErrorBody = {
+        error: "Sign-up is temporarily unavailable while we update our systems. Please try again shortly.",
+        code: "schemaOutOfDate",
+      };
       return NextResponse.json(res, { status: 503 });
     }
     console.error("[register] failed:", err);

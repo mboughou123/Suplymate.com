@@ -3,13 +3,22 @@ import { getTranslations } from "next-intl/server";
 import { Check, Sparkles } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { prisma } from "@/lib/prisma";
-import { PLANS, getBillingState } from "@/lib/billing";
+import { PLANS, getBillingState, isPaidPlanId } from "@/lib/billing";
 import { ManageBillingButton, UpgradeButton } from "@/components/settings/BillingActions";
 import { formatInvoiceAmount, listCustomerInvoices } from "@/lib/stripe-invoices";
 
-export default async function SubscriptionPage() {
+export default async function SubscriptionPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ plan?: string; checkout?: string }>;
+}) {
+  const query = await searchParams;
+  const requestedPlan = isPaidPlanId(query.plan) ? query.plan : null;
   const { authenticated, user } = await getCurrentAccount();
-  if (!authenticated || !user) return await localeRedirect("/login?callbackUrl=/settings/subscription");
+  if (!authenticated || !user) {
+    const callback = `/settings/subscription${requestedPlan ? `?plan=${requestedPlan}` : ""}`;
+    return await localeRedirect(`/login?callbackUrl=${encodeURIComponent(callback)}`);
+  }
 
   const t = await getTranslations("settings");
   const billing = getBillingState(user);
@@ -30,6 +39,16 @@ export default async function SubscriptionPage() {
 
   return (
     <div className="space-y-6">
+      {query.checkout === "success" && (
+        <p className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+          Payment details received. Your plan updates here as soon as Stripe confirms it — usually within a few seconds.
+        </p>
+      )}
+      {query.checkout === "cancelled" && (
+        <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+          Checkout was cancelled. You have not been charged.
+        </p>
+      )}
       <section className="relative overflow-hidden rounded-2xl border border-slate-200 bg-navy p-6 text-white shadow-card">
         <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-cyan/25 blur-3xl" />
         <div className="relative flex flex-wrap items-start justify-between gap-4">
@@ -106,6 +125,7 @@ export default async function SubscriptionPage() {
                   cta={plan.cta}
                   current={current}
                   configured={billing.providerConfigured}
+                  autoStart={plan.id === requestedPlan && !query.checkout}
                   labels={{
                     current: t("yourPlan"),
                     trial: t("startTrial"),

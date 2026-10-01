@@ -971,10 +971,10 @@
     "intro": "Suplymate est une place de marché B2B de sourcing et d'approvisionnement propulsée par l'IA. Nous aidons les acheteurs à découvrir des fournisseurs, demander des devis, comparer les offres et suivre les prix des matières.",
     "problemEyebrow": "The problem",
     "problemTitle": "Finding a supplier still means a dozen tabs and a spreadsheet",
-    "problemText": "Ask anyone who has sourced steel, packaging or components: the search starts on Google, moves to Alibaba and a few directories, spills into email threads and phone calls, and ends in a spreadsheet that is out of date before it is finished. Prices are opaque, delivery promises are unverified, and trust is guesswork.",
+    "problemText": "Ask anyone who has sourced steel, packaging or components: the search starts on a search engine, moves to B2B marketplaces and a few directories, spills into email threads and phone calls, and ends in a spreadsheet that is out of date before it is finished. Prices are opaque, delivery promises are unverified, and trust is guesswork.",
     "problemList": [
-      "Google",
-      "Alibaba",
+      "Search engines",
+      "B2B marketplaces",
       "Supplier directories",
       "Email threads",
       "Spreadsheets",

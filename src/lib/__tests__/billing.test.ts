@@ -11,37 +11,38 @@ import {
 } from "@/lib/billing";
 
 describe("site plan catalogue", () => {
-  it("prices Basic at $49.95 with a 3-day trial", () => {
+  it("prices Basic at $45 with a 3-day trial", () => {
     const basic = getPlanById("basic");
     expect(basic.monthlyPrice).toBe(SITE_PLAN_PRICES_USD.basic);
-    expect(basic.monthlyPrice).toBe(49.95);
-    expect(basic.priceLabel).toBe("$49.95");
+    expect(basic.monthlyPrice).toBe(45);
+    expect(basic.priceLabel).toBe("$45");
     expect(basic.trialDays).toBe(TRIAL_DAYS);
     expect(TRIAL_DAYS).toBe(3);
     expect(basic.cta).toBe("trial");
   });
 
-  it("prices Premium at $99.95", () => {
+  it("prices Pro (premium id) at $75", () => {
     const premium = getPlanById("premium");
-    expect(premium.monthlyPrice).toBe(99.95);
-    expect(premium.priceLabel).toBe("$99.95");
+    expect(premium.monthlyPrice).toBe(75);
+    expect(premium.priceLabel).toBe("$75");
     expect(premium.trialDays).toBe(3);
     expect(premium.highlighted).toBe(true);
+    expect(premium.name).toBe("Pro");
   });
 
-  it("prices Enterprise at $250 as self-serve", () => {
+  it("prices Enterprise at $200 as self-serve", () => {
     const enterprise = getPlanById("enterprise");
-    expect(enterprise.monthlyPrice).toBe(250);
-    expect(enterprise.priceLabel).toBe("$250");
+    expect(enterprise.monthlyPrice).toBe(200);
+    expect(enterprise.priceLabel).toBe("$200");
     expect(enterprise.trialDays).toBe(0);
     expect(enterprise.cta).toBe("subscribe");
   });
 
   it("uses matching Stripe unit amounts in cents", () => {
     expect(SITE_PLAN_PRICES_CENTS).toEqual({
-      basic: 4995,
-      premium: 9995,
-      enterprise: 25000,
+      basic: 4500,
+      premium: 7500,
+      enterprise: 20000,
     });
   });
 

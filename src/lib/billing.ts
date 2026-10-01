@@ -14,15 +14,15 @@ export const TRIAL_DAYS = 3;
 
 /** Canonical USD prices honoured by the site and by Stripe Price objects. */
 export const SITE_PLAN_PRICES_USD = {
-  basic: 49.95,
-  premium: 99.95,
-  enterprise: 250,
+  basic: 45,
+  premium: 75,
+  enterprise: 200,
 } as const;
 
 export const SITE_PLAN_PRICES_CENTS = {
-  basic: 4995,
-  premium: 9995,
-  enterprise: 25000,
+  basic: 4500,
+  premium: 7500,
+  enterprise: 20000,
 } as const;
 
 export type PlanCta = "free" | "trial" | "sales" | "subscribe";
@@ -68,7 +68,7 @@ export const PLANS: Plan[] = [
     id: "basic",
     name: "Basic",
     monthlyPrice: SITE_PLAN_PRICES_USD.basic,
-    priceLabel: "$49.95",
+    priceLabel: "$45",
     period: "/month",
     audience: "For individual buyers sourcing regularly.",
     description: "Unlimited browsing, supplier messaging and the AI sourcing assistant.",
@@ -89,9 +89,9 @@ export const PLANS: Plan[] = [
   },
   {
     id: "premium",
-    name: "Premium",
+    name: "Pro",
     monthlyPrice: SITE_PLAN_PRICES_USD.premium,
-    priceLabel: "$99.95",
+    priceLabel: "$75",
     period: "/month",
     audience: "For teams that source across categories.",
     description: "Everything in Basic plus advanced AI sourcing, analytics and alerts.",
@@ -117,12 +117,12 @@ export const PLANS: Plan[] = [
     id: "enterprise",
     name: "Enterprise",
     monthlyPrice: SITE_PLAN_PRICES_USD.enterprise,
-    priceLabel: "$250",
+    priceLabel: "$200",
     period: "/month",
     audience: "For procurement organisations.",
     description: "Multi-user procurement workflows, API access and custom AI knowledge.",
     features: [
-      "Everything in Premium",
+      "Everything in Pro",
       "Multiple users",
       "Team management",
       "Procurement workflows",
@@ -191,6 +191,10 @@ export function normalizePlanId(id: string | null | undefined): PlanId {
   if (!id) return "free";
   if (PLANS.some((p) => p.id === id)) return id as PlanId;
   return LEGACY_PLAN_IDS[id] ?? "free";
+}
+
+export function isPaidPlanId(id: unknown): id is Exclude<PlanId, "free"> {
+  return id === "basic" || id === "premium" || id === "enterprise";
 }
 
 export function getPlanById(id: string | null | undefined): Plan {

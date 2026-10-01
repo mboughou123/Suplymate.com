@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { PlanCta } from "@/lib/billing";
@@ -66,12 +66,15 @@ export function UpgradeButton({
   cta,
   current,
   configured,
+  autoStart = false,
   labels,
 }: {
   plan: string;
   cta: PlanCta;
   current: boolean;
   configured: boolean;
+  /** Start checkout on mount (plan picked on /pricing before signing up). */
+  autoStart?: boolean;
   labels: Labels;
 }) {
   const [busy, setBusy] = useState(false);
@@ -95,6 +98,15 @@ export function UpgradeButton({
     }
   };
 
+  const started = useRef(false);
+  const canCheckout = configured && !current && (cta === "trial" || cta === "subscribe");
+  useEffect(() => {
+    if (!autoStart || !canCheckout || started.current) return;
+    started.current = true;
+    void go();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoStart, canCheckout]);
+
   const disabledClass =
     "mt-5 w-full cursor-default rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-ink-dim";
 
@@ -109,7 +121,7 @@ export function UpgradeButton({
   switch (cta) {
     case "sales":
       return (
-        <Link href="/contact" className="btn-secondary mt-5 w-full">
+        <Link href="/contact" className="btn-primary mt-5 w-full">
           {labels.sales}
         </Link>
       );
@@ -136,7 +148,7 @@ export function UpgradeButton({
       }
       return (
         <div className="mt-5">
-          <button type="button" onClick={go} disabled={busy} className="btn-accent w-full disabled:opacity-60">
+          <button type="button" onClick={go} disabled={busy} className="btn-primary w-full disabled:opacity-60">
             {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
             {label}
           </button>

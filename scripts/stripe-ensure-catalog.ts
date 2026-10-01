@@ -31,7 +31,7 @@ const PRODUCTS: Record<
     productLookup: "suplymate_basic",
   },
   premium: {
-    name: "Suplymate Premium",
+    name: "Suplymate Pro",
     description: "Advanced AI sourcing, analytics, alerts and export reports.",
     lookupKey: "suplymate_premium_monthly",
     productLookup: "suplymate_premium",
@@ -115,7 +115,13 @@ async function ensureProduct(stripe: Stripe, plan: PlanKey): Promise<string> {
       query: `metadata['lookup']:'${spec.productLookup}'`,
       limit: 1,
     });
-    if (existing.data[0]) return existing.data[0].id;
+    const found = existing.data[0];
+    if (found) {
+      if (found.name !== spec.name || found.description !== spec.description) {
+        await stripe.products.update(found.id, { name: spec.name, description: spec.description });
+      }
+      return found.id;
+    }
   } catch {
     // Search may be unavailable; fall through to list.
   }
@@ -150,6 +156,9 @@ async function ensurePrice(stripe: Stripe, plan: PlanKey, productId: string): Pr
     transfer_lookup_key: true,
     metadata: { plan },
   });
+  if (current && current.active) {
+    await stripe.prices.update(current.id, { active: false });
+  }
   return created.id;
 }
 

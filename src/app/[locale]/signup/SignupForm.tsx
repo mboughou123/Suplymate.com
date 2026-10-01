@@ -8,6 +8,7 @@ import { AlertCircle, Check, Eye, EyeOff, Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { postAuthAssignHref } from "@/lib/auth-post-login";
 import { homeForRole, normalizeRole } from "@/lib/roles";
+import { isPaidPlanId } from "@/lib/billing";
 import {
   getPasswordChecks,
   getPasswordStrength,
@@ -85,6 +86,8 @@ export default function SignupForm() {
   const searchParams = useSearchParams();
   const locale = typeof params?.locale === "string" ? params.locale : "en";
   const initialRole = normalizeRole(searchParams.get("role"));
+  const planParam = searchParams.get("plan");
+  const selectedPlan = isPaidPlanId(planParam) ? planParam : null;
 
   const [role, setRole] = useState<SignupRole>(
     initialRole === "supplier" ? "supplier" : "buyer",
@@ -214,7 +217,9 @@ export default function SignupForm() {
 
     // The server's stored role is the source of truth for where the user lands.
     const serverRole = (data as RegisterSuccessBody).user?.role;
-    const destination = homeForRole(serverRole ?? role);
+    const home = homeForRole(serverRole ?? role);
+    const destination =
+      selectedPlan && home === "/dashboard" ? `/settings/subscription?plan=${selectedPlan}` : home;
     // Hard navigation so the session cookie is visible to the next server
     // render — soft router.push + refresh races auth() and bounces back to login.
     window.location.assign(postAuthAssignHref(locale, destination));
