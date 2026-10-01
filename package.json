@@ -29,7 +29,8 @@
     "catalog:build": "node scripts/build-catalog-from-packs.mjs",
     "db:seed:packs": "tsx scripts/seed-pack-media.ts",
     "db:seed:packs:dry": "tsx scripts/seed-pack-media.ts --dry",
-    "stripe:catalog": "tsx scripts/stripe-ensure-catalog.ts"
+    "stripe:catalog": "tsx scripts/stripe-ensure-catalog.ts",
+    "supplier:login": "tsx scripts/create-supplier-login.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

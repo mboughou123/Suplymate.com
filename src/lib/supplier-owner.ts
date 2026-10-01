@@ -10,6 +10,7 @@ import { prisma } from "@/lib/prisma";
 import { trustScore } from "@/lib/trust-score";
 import { slugifySupplierId } from "@/lib/supplier-normalize";
 import { INDUSTRIES, getIndustry, type IndustryId } from "@/data/industries";
+import { isUploadedImagePath } from "@/lib/upload-paths";
 
 export type OwnedSupplierProfile = {
   id: string;
@@ -82,6 +83,12 @@ function httpUrl(v: unknown): string {
   const s = str(v, 500);
   if (!s) return "";
   return /^https?:\/\//i.test(s) ? s : `https://${s}`;
+}
+
+/** Image fields also accept photos uploaded to this site (see lib/uploads). */
+function imageUrl(v: unknown): string {
+  const s = str(v, 500);
+  return isUploadedImagePath(s) ? s : httpUrl(s);
 }
 
 type Row = NonNullable<Awaited<ReturnType<typeof prisma.supplier.findFirst>>>;
@@ -171,9 +178,9 @@ export function sanitizeOwnedInput(body: Record<string, unknown>): OwnedSupplier
   return {
     name: str(body.name, 120) || undefined,
     description: str(body.description, 2000),
-    logoUrl: httpUrl(body.logoUrl),
-    imageUrl: httpUrl(body.imageUrl),
-    images: cleanList(body.images, 12, 500).map(httpUrl),
+    logoUrl: imageUrl(body.logoUrl),
+    imageUrl: imageUrl(body.imageUrl),
+    images: cleanList(body.images, 12, 500).map(imageUrl),
     website: httpUrl(body.website),
     email: str(body.email, 120),
     phone: str(body.phone, 40),

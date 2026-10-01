@@ -390,6 +390,20 @@ model PriceAlert {
   createdAt   DateTime  @default(now())
 }
 
+// Images uploaded by account owners (supplier logo, cover, gallery) when no
+// external storage (Vercel Blob) is configured. Served by /api/uploads/[id].
+model UploadedImage {
+  id          String   @id @default(cuid())
+  ownerId     String
+  contentType String
+  bytes       Bytes
+  width       Int?
+  height      Int?
+  createdAt   DateTime @default(now())
+
+  @@index([ownerId])
+}
+
 // Careers form submissions. Stored before the notification email is sent so an
 // application is never lost when email delivery is down or not configured.
 model CareerApplication {

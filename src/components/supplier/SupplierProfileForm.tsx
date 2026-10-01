@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { Check, AlertCircle, Loader2, Building2 } from "lucide-react";
+import { Check, AlertCircle, Loader2, Building2, X } from "lucide-react";
 import { INDUSTRIES, type IndustryId } from "@/data/industries";
 import type { OwnedSupplierProfile } from "@/lib/supplier-owner";
 import TagInput from "@/components/ui/TagInput";
+import PhotoUploadButton from "@/components/supplier/PhotoUploadButton";
+
+const MAX_GALLERY = 12;
 
 type FormState = {
   name: string;
@@ -158,10 +161,21 @@ export default function SupplierProfileForm({
             )}
           </span>
           <div className="flex-1">
-            <label htmlFor="logoUrl" className="text-xs font-medium text-ink-muted">
-              {t("fieldLogo")}
-            </label>
-            <input id="logoUrl" type="url" value={form.logoUrl} onChange={(e) => set("logoUrl", e.target.value)} placeholder="https://…" className={input} />
+            <span className="text-xs font-medium text-ink-muted">{t("fieldLogo")}</span>
+            <div className="mt-1.5 flex flex-wrap items-center gap-2">
+              <PhotoUploadButton
+                kind="logo"
+                label={t("uploadLogo")}
+                uploadingLabel={t("uploading")}
+                onUploaded={(url) => set("logoUrl", url)}
+                onError={setError}
+              />
+              {form.logoUrl && (
+                <button type="button" onClick={() => set("logoUrl", "")} className="text-xs font-medium text-ink-muted hover:text-red-600">
+                  {t("removePhoto")}
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div>
@@ -171,10 +185,25 @@ export default function SupplierProfileForm({
           <input id="name" required value={form.name} onChange={(e) => set("name", e.target.value)} className={input} />
         </div>
         <div>
-          <label htmlFor="imageUrl" className="text-xs font-medium text-ink-muted">
-            {t("fieldCover")}
-          </label>
-          <input id="imageUrl" type="url" value={form.imageUrl} onChange={(e) => set("imageUrl", e.target.value)} placeholder="https://…" className={input} />
+          <span className="text-xs font-medium text-ink-muted">{t("fieldCover")}</span>
+          {form.imageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={form.imageUrl} alt="" className="mt-1.5 aspect-[16/7] w-full rounded-lg border border-slate-200 object-cover" />
+          )}
+          <div className="mt-1.5 flex flex-wrap items-center gap-2">
+            <PhotoUploadButton
+              kind="cover"
+              label={form.imageUrl ? t("replacePhoto") : t("uploadCover")}
+              uploadingLabel={t("uploading")}
+              onUploaded={(url) => set("imageUrl", url)}
+              onError={setError}
+            />
+            {form.imageUrl && (
+              <button type="button" onClick={() => set("imageUrl", "")} className="text-xs font-medium text-ink-muted hover:text-red-600">
+                {t("removePhoto")}
+              </button>
+            )}
+          </div>
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="description" className="text-xs font-medium text-ink-muted">
@@ -277,17 +306,45 @@ export default function SupplierProfileForm({
         </div>
       </Section>
 
-      <Section title={t("sectionPhotos")}>
+      <Section title={t("sectionPhotos")} hint={t("photosHint")}>
         <div className="sm:col-span-2">
-          <label htmlFor="photos" className="text-xs font-medium text-ink-muted">{t("fieldPhotos")}</label>
-          <TagInput id="photos" value={form.images} onChange={(v) => set("images", v)} placeholder="https://…" max={12} />
-          {form.images.length > 0 && (
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="text-xs font-medium text-ink-muted">
+              {t("fieldPhotos")} ({form.images.length}/{MAX_GALLERY})
+            </span>
+            <PhotoUploadButton
+              kind="gallery"
+              multiple
+              disabled={form.images.length >= MAX_GALLERY}
+              label={t("uploadPhotos")}
+              uploadingLabel={t("uploading")}
+              onUploaded={(url) =>
+                setForm((f) => (f.images.length >= MAX_GALLERY ? f : { ...f, images: [...f.images, url] }))
+              }
+              onError={setError}
+            />
+          </div>
+          {form.images.length > 0 ? (
             <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-6">
               {form.images.map((src) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img key={src} src={src} alt="" className="aspect-square w-full rounded-lg border border-slate-200 object-cover" />
+                <div key={src} className="group relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt="" className="aspect-square w-full rounded-lg border border-slate-200 object-cover" />
+                  <button
+                    type="button"
+                    onClick={() => set("images", form.images.filter((x) => x !== src))}
+                    aria-label={t("removePhoto")}
+                    className="absolute right-1 top-1 rounded-full bg-white/90 p-1 text-ink shadow-sm transition hover:bg-red-50 hover:text-red-600"
+                  >
+                    <X className="h-3.5 w-3.5" aria-hidden />
+                  </button>
+                </div>
               ))}
             </div>
+          ) : (
+            <p className="mt-3 rounded-lg border border-dashed border-slate-300 px-3 py-6 text-center text-xs text-ink-dim">
+              {t("noPhotosYet")}
+            </p>
           )}
         </div>
       </Section>
