@@ -1,18 +1,28 @@
 "use client";
 
-import { Suspense, useState, type FormEvent } from "react";
+import { Suspense, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { CheckCircle2, FileText, Loader2, Send, Upload, X } from "lucide-react";
 import {
   APPLICATION_LIMITS,
   CAREER_ROLE_KEYS,
+  CV_ACCEPT_ATTR,
+  CV_MAX_BYTES,
   validateApplication,
+  validateCvFile,
   type ApplicationFieldError,
   type CareerRoleKey,
+  type CvFileError,
 } from "@/lib/careers";
 
 type Status = "idle" | "submitting" | "sent" | "error";
+
+type FormErrors = ApplicationFieldError & { cvFile?: CvFileError };
+
+function formatBytes(bytes: number): string {
+  return bytes < 1024 * 1024 ? `${Math.max(1, Math.round(bytes / 1024))} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
 
 const inputClass =
   "mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-ink shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition placeholder:text-ink-dim/70 focus:border-cyan focus:outline-none focus:ring-2 focus:ring-cyan/20";
@@ -53,23 +63,40 @@ function ApplicationForm({
 }) {
   const t = useTranslations("careers");
   const [status, setStatus] = useState<Status>("idle");
-  const [errors, setErrors] = useState<ApplicationFieldError>({});
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [cvFile, setCvFile] = useState<File | null>(null);
+  const cvInputRef = useRef<HTMLInputElement>(null);
   const [serverError, setServerError] = useState<string | null>(null);
   const [role, setRole] = useState<CareerRoleKey>(defaultRole ?? "general");
 
-  const fieldError = (key: keyof ApplicationFieldError) =>
-    errors[key] ? t(`errors.${errors[key]}`) : null;
+  const fieldError = (key: keyof FormErrors) =>
+    errors[key] ? t(`errors.${errors[key]}`, { max: formatBytes(CV_MAX_BYTES) }) : null;
+
+  function onCvChange(file: File | null) {
+    setCvFile(file);
+    setErrors((prev) => ({ ...prev, cvFile: file ? (validateCvFile(file) ?? undefined) : undefined }));
+  }
+
+  function clearCv() {
+    if (cvInputRef.current) cvInputRef.current.value = "";
+    onCvChange(null);
+  }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    const payload = Object.fromEntries(new FormData(form).entries());
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(
+      [...formData.entries()].filter((entry): entry is [string, string] => typeof entry[1] === "string"),
+    );
 
     const check = validateApplication(payload);
-    if (!check.ok) {
-      setErrors(check.errors);
+    const cvError = cvFile ? validateCvFile(cvFile) : null;
+    if (!check.ok || cvError) {
+      setErrors({ ...(check.ok ? {} : check.errors), ...(cvError ? { cvFile: cvError } : {}) });
       return;
     }
+    if (!cvFile) formData.delete("cvFile");
 
     setErrors({});
     setServerError(null);
@@ -78,17 +105,17 @@ function ApplicationForm({
     try {
       const res = await fetch("/api/careers/apply", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
       const data = (await res.json().catch(() => ({}))) as {
         error?: string;
-        fields?: ApplicationFieldError;
+        fields?: FormErrors;
       };
 
       if (res.ok) {
         setStatus("sent");
         form.reset();
+        setCvFile(null);
         return;
       }
 
@@ -210,6 +237,49 @@ function ApplicationForm({
           />
         </Field>
       </div>
+
+      <Field label={t("form.cv")} error={fieldError("cvFile")} htmlFor="careers-cv-file" hint={t("form.cvFileHint", { max: formatBytes(CV_MAX_BYTES) })}>
+        <input
+          ref={cvInputRef}
+          id="careers-cv-file"
+          name="cvFile"
+          type="file"
+          accept={CV_ACCEPT_ATTR}
+          onChange={(e) => onCvChange(e.target.files?.[0] ?? null)}
+          className="sr-only"
+          aria-invalid={Boolean(errors.cvFile)}
+        />
+        {cvFile ? (
+          <div
+            className={`mt-1.5 flex items-center gap-3 rounded-xl border bg-white px-3.5 py-3 ${
+              errors.cvFile ? "border-red-300" : "border-slate-200"
+            }`}
+          >
+            <FileText className="h-5 w-5 shrink-0 text-cyan" aria-hidden />
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-medium text-ink">{cvFile.name}</p>
+              <p className="text-xs text-ink-dim">{formatBytes(cvFile.size)}</p>
+            </div>
+            <button
+              type="button"
+              onClick={clearCv}
+              className="rounded-lg p-1.5 text-ink-dim transition hover:bg-slate-100 hover:text-ink"
+              aria-label={t("form.cvRemove")}
+            >
+              <X className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => cvInputRef.current?.click()}
+            className="mt-1.5 flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-slate-300 bg-slate-50/60 px-3.5 py-4 text-sm font-medium text-ink-muted transition hover:border-cyan hover:bg-cyan-soft/40 hover:text-ink"
+          >
+            <Upload className="h-4 w-4" aria-hidden />
+            {t("form.cvUpload")}
+          </button>
+        )}
+      </Field>
 
       <Field label={t("form.cvUrl")} error={fieldError("cvUrl")} htmlFor="careers-cv" hint={t("form.cvHint")}>
         <input

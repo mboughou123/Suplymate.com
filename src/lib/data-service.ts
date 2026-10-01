@@ -22,6 +22,19 @@ import {
 // A supplier "has an image" if it carries a primary photo or any gallery image.
 // Image-bearing suppliers are surfaced first so empty/untrustworthy cards never
 // lead the directory.
+export function preferOwnerContent(curated: Supplier, owner: Supplier): Supplier {
+  const ownerImages = owner.supplierImages ?? [];
+  return {
+    ...curated,
+    logoUrl: owner.logoUrl || curated.logoUrl,
+    imageUrl: owner.imageUrl || curated.imageUrl,
+    description: owner.description || curated.description,
+    supplierImages: ownerImages.length
+      ? [...new Set([...ownerImages, ...(curated.supplierImages ?? [])])]
+      : curated.supplierImages,
+  };
+}
+
 function supplierHasImage(s: Supplier): boolean {
   return supplierHasUsableCardImage(s);
 }
@@ -155,7 +168,10 @@ export const getSupplierById = cache(
         // Pending/rejected/needs_info imports must not be reachable by slug.
         if (!isPubliclyVisible(mapped)) return null;
         const pack = getPackSupplier(mapped.id);
-        return pack ? overlayPackSupplier(mapped, pack) : mapped;
+        if (!pack) return mapped;
+        const curated = overlayPackSupplier(mapped, pack);
+        // A claimed profile is managed by its owner: their own photos and copy win.
+        return row.claimedByUserId ? preferOwnerContent(curated, mapped) : curated;
       }
     } catch {
       // ignore — fall through to the deterministic dataset

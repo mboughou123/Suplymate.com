@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getStripe, siteUrl } from "@/lib/stripe";
+import { buildSubscriptionCheckoutParams } from "@/lib/stripe-checkout";
 import { getPlanById, isStripeConfigured, stripePriceIdFor, type PlanId } from "@/lib/billing";
 
 export const dynamic = "force-dynamic";
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
   if (!isStripeConfigured()) {
     return NextResponse.json(
       { error: "Billing is not configured yet. Please check back soon." },
-      { status: 503 }
+      { status: 503 },
     );
   }
   const stripe = getStripe();
@@ -50,19 +51,17 @@ export async function POST(request: Request) {
     });
   }
 
-  const checkout = await stripe.checkout.sessions.create({
-    mode: "subscription",
-    customer: customerId,
-    line_items: [{ price: priceId, quantity: 1 }],
-    allow_promotion_codes: true,
-    subscription_data: {
-      ...(trialDays > 0 ? { trial_period_days: trialDays } : {}),
-      metadata: { userId: session.user.id },
-    },
-    success_url: `${siteUrl()}/settings/subscription?checkout=success`,
-    cancel_url: `${siteUrl()}/settings/subscription?checkout=cancelled`,
-    metadata: { userId: session.user.id, plan },
-  });
+  const checkout = await stripe.checkout.sessions.create(
+    buildSubscriptionCheckoutParams({
+      customerId,
+      priceId,
+      userId: session.user.id,
+      plan,
+      trialDays,
+      successUrl: `${siteUrl()}/settings/subscription?checkout=success`,
+      cancelUrl: `${siteUrl()}/settings/subscription?checkout=cancelled`,
+    }),
+  );
 
   return NextResponse.json({ url: checkout.url });
 }

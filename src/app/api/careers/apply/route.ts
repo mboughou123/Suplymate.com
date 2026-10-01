@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { validateApplication, type CareerApplication } from "@/lib/careers";
+import { validateApplication, validateCvFile, type CareerApplication } from "@/lib/careers";
 import { escapeHtml, isMailerConfigured, sendMail } from "@/lib/mailer";
+import { prisma } from "@/lib/prisma";
 
 export const runtime = "nodejs";
 
@@ -27,7 +28,7 @@ function recipient(): string {
   );
 }
 
-function renderText(app: CareerApplication): string {
+function renderText(app: CareerApplication, cvFileName: string | null): string {
   return [
     `New application via suplymate.com/careers`,
     ``,
@@ -38,13 +39,14 @@ function renderText(app: CareerApplication): string {
     `Location:  ${app.location ?? "—"}`,
     `LinkedIn:  ${app.linkedin ?? "—"}`,
     `CV link:   ${app.cvUrl ?? "—"}`,
+    `CV file:   ${cvFileName ?? "—"}`,
     ``,
     `Message:`,
     app.message,
   ].join("\n");
 }
 
-function renderHtml(app: CareerApplication): string {
+function renderHtml(app: CareerApplication, cvFileName: string | null): string {
   const row = (label: string, value?: string, href?: string) => {
     const safe = value ? escapeHtml(value) : "—";
     const cell = href && value ? `<a href="${escapeHtml(href)}">${safe}</a>` : safe;
@@ -62,22 +64,45 @@ function renderHtml(app: CareerApplication): string {
     ${row("Location", app.location)}
     ${row("LinkedIn", app.linkedin, app.linkedin)}
     ${row("CV link", app.cvUrl, app.cvUrl)}
+    ${row("CV file", cvFileName ? `${cvFileName} (attached)` : undefined)}
   </table>
   <h2 style="font-size:14px;margin:20px 0 6px;color:#475569">Message</h2>
   <p style="white-space:pre-wrap;line-height:1.6;font-size:14px;margin:0">${escapeHtml(app.message)}</p>
 </div>`;
 }
 
-export async function POST(req: Request) {
-  let body: unknown;
+type CvUpload = { name: string; type: string; content: Buffer<ArrayBuffer> };
+
+async function readSubmission(
+  req: Request,
+): Promise<{ fields: Record<string, unknown>; cv: File | null } | null> {
+  const contentType = req.headers.get("content-type") ?? "";
   try {
-    body = await req.json();
+    if (contentType.includes("multipart/form-data")) {
+      const form = await req.formData();
+      const fields: Record<string, unknown> = {};
+      for (const [key, value] of form.entries()) {
+        if (typeof value === "string") fields[key] = value;
+      }
+      const cv = form.get("cvFile");
+      return { fields, cv: cv instanceof File && cv.size > 0 ? cv : null };
+    }
+    const body = await req.json();
+    return { fields: body && typeof body === "object" ? body : {}, cv: null };
   } catch {
-    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+    return null;
   }
+}
+
+export async function POST(req: Request) {
+  const submission = await readSubmission(req);
+  if (!submission) {
+    return NextResponse.json({ error: "invalid_body" }, { status: 400 });
+  }
+  const { fields } = submission;
 
   // Honeypot — bots fill every field; humans never see this one.
-  if (body && typeof body === "object" && (body as Record<string, unknown>).website) {
+  if (fields.website) {
     return NextResponse.json({ ok: true });
   }
 
@@ -86,28 +111,62 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
 
-  const result = validateApplication(body);
+  const result = validateApplication(fields);
   if (!result.ok) {
     return NextResponse.json({ error: "validation", fields: result.errors }, { status: 400 });
   }
 
-  if (!isMailerConfigured()) {
-    console.warn("[careers] RESEND_API_KEY not set — application not delivered:", result.data.email);
-    return NextResponse.json({ error: "mail_not_configured", to: recipient() }, { status: 503 });
+  let cv: CvUpload | null = null;
+  if (submission.cv) {
+    const cvError = validateCvFile(submission.cv);
+    if (cvError) {
+      return NextResponse.json({ error: "validation", fields: { cvFile: cvError } }, { status: 400 });
+    }
+    cv = {
+      name: submission.cv.name.slice(0, 120) || "cv.pdf",
+      type: submission.cv.type || "application/octet-stream",
+      content: Buffer.from(await submission.cv.arrayBuffer()),
+    };
   }
 
   const app = result.data;
-  const sent = await sendMail({
-    to: recipient(),
-    replyTo: app.email,
-    subject: `Careers application — ${app.name} (${app.role})`,
-    text: renderText(app),
-    html: renderHtml(app),
-  });
+  const stored = await prisma.careerApplication
+    .create({
+      data: {
+        ...app,
+        cvFileName: cv?.name ?? null,
+        cvFileType: cv?.type ?? null,
+        cvFile: cv?.content ?? null,
+      },
+      select: { id: true },
+    })
+    .catch((err) => {
+      console.error("[careers] could not store application:", err instanceof Error ? err.message : err);
+      return null;
+    });
 
-  if (!sent.ok) {
-    return NextResponse.json({ error: "send_failed", to: recipient() }, { status: 502 });
+  let emailed = false;
+  if (isMailerConfigured()) {
+    const sent = await sendMail({
+      to: recipient(),
+      replyTo: app.email,
+      subject: `Careers application — ${app.name} (${app.role})`,
+      text: renderText(app, cv?.name ?? null),
+      html: renderHtml(app, cv?.name ?? null),
+      attachments: cv ? [{ filename: cv.name, content: cv.content }] : undefined,
+    });
+    emailed = sent.ok;
+    if (emailed && stored) {
+      await prisma.careerApplication
+        .update({ where: { id: stored.id }, data: { emailedAt: new Date() } })
+        .catch(() => undefined);
+    }
+  } else {
+    console.warn("[careers] RESEND_API_KEY not set — application stored but not emailed:", app.email);
   }
 
+  if (!stored && !emailed) {
+    return NextResponse.json({ error: "send_failed", to: recipient() }, { status: 502 });
+  }
   return NextResponse.json({ ok: true });
 }

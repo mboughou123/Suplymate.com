@@ -12,6 +12,21 @@ export type PlanId = "free" | "basic" | "premium" | "enterprise";
 
 export const TRIAL_DAYS = 3;
 
+/** Canonical USD prices honoured by the site and by Stripe Price objects. */
+export const SITE_PLAN_PRICES_USD = {
+  basic: 45,
+  premium: 75,
+  enterprise: 200,
+} as const;
+
+export const SITE_PLAN_PRICES_CENTS = {
+  basic: 4500,
+  premium: 7500,
+  enterprise: 20000,
+} as const;
+
+export type PlanCta = "free" | "trial" | "sales" | "subscribe";
+
 export type Plan = {
   id: PlanId;
   name: string;
@@ -24,7 +39,7 @@ export type Plan = {
   features: string[];
   /** Paid plans include a free trial (days). */
   trialDays: number;
-  cta: "free" | "trial" | "sales";
+  cta: PlanCta;
   highlighted?: boolean;
 };
 
@@ -52,8 +67,8 @@ export const PLANS: Plan[] = [
   {
     id: "basic",
     name: "Basic",
-    monthlyPrice: 19,
-    priceLabel: "$19",
+    monthlyPrice: SITE_PLAN_PRICES_USD.basic,
+    priceLabel: "$45",
     period: "/month",
     audience: "For individual buyers sourcing regularly.",
     description: "Unlimited browsing, supplier messaging and the AI sourcing assistant.",
@@ -74,9 +89,9 @@ export const PLANS: Plan[] = [
   },
   {
     id: "premium",
-    name: "Premium",
-    monthlyPrice: 49,
-    priceLabel: "$49",
+    name: "Pro",
+    monthlyPrice: SITE_PLAN_PRICES_USD.premium,
+    priceLabel: "$75",
     period: "/month",
     audience: "For teams that source across categories.",
     description: "Everything in Basic plus advanced AI sourcing, analytics and alerts.",
@@ -101,13 +116,13 @@ export const PLANS: Plan[] = [
   {
     id: "enterprise",
     name: "Enterprise",
-    monthlyPrice: null,
-    priceLabel: "Custom",
-    period: "",
+    monthlyPrice: SITE_PLAN_PRICES_USD.enterprise,
+    priceLabel: "$200",
+    period: "/month",
     audience: "For procurement organisations.",
     description: "Multi-user procurement workflows, API access and custom AI knowledge.",
     features: [
-      "Everything in Premium",
+      "Everything in Pro",
       "Multiple users",
       "Team management",
       "Procurement workflows",
@@ -121,7 +136,7 @@ export const PLANS: Plan[] = [
       "Custom sourcing workflows",
     ],
     trialDays: 0,
-    cta: "sales",
+    cta: "subscribe",
   },
 ];
 
@@ -133,14 +148,24 @@ export function isBillingProviderConfigured(): boolean {
   return isStripeConfigured();
 }
 
+const PRICE_ENV: Record<Exclude<PlanId, "free">, readonly string[]> = {
+  basic: ["STRIPE_PRICE_BASIC", "STRIPE_PRICE_STARTER"],
+  premium: ["STRIPE_PRICE_PREMIUM", "STRIPE_PRICE_PRO"],
+  enterprise: ["STRIPE_PRICE_ENTERPRISE"],
+};
+
+function envValue(name: string): string | null {
+  const v = process.env[name];
+  return v && v.trim() ? v.trim() : null;
+}
+
 // Map a plan id to its configured Stripe Price id. Legacy env names
 // (STRIPE_PRICE_STARTER / STRIPE_PRICE_PRO) are accepted as fallbacks.
 export function stripePriceIdFor(plan: PlanId): string | null {
-  if (plan === "basic") {
-    return process.env.STRIPE_PRICE_BASIC || process.env.STRIPE_PRICE_STARTER || null;
-  }
-  if (plan === "premium") {
-    return process.env.STRIPE_PRICE_PREMIUM || process.env.STRIPE_PRICE_PRO || null;
+  if (plan === "free") return null;
+  for (const name of PRICE_ENV[plan]) {
+    const id = envValue(name);
+    if (id) return id;
   }
   return null;
 }
@@ -148,8 +173,10 @@ export function stripePriceIdFor(plan: PlanId): string | null {
 // Reverse lookup: given a Stripe Price id (from a webhook), which plan is it?
 export function planForStripePriceId(priceId: string | null | undefined): PlanId {
   if (!priceId) return "free";
-  if (priceId === stripePriceIdFor("premium")) return "premium";
-  if (priceId === stripePriceIdFor("basic")) return "basic";
+  const paid: Exclude<PlanId, "free">[] = ["premium", "basic", "enterprise"];
+  for (const plan of paid) {
+    if (priceId === stripePriceIdFor(plan)) return plan;
+  }
   return "free";
 }
 
@@ -164,6 +191,10 @@ export function normalizePlanId(id: string | null | undefined): PlanId {
   if (!id) return "free";
   if (PLANS.some((p) => p.id === id)) return id as PlanId;
   return LEGACY_PLAN_IDS[id] ?? "free";
+}
+
+export function isPaidPlanId(id: unknown): id is Exclude<PlanId, "free"> {
+  return id === "basic" || id === "premium" || id === "enterprise";
 }
 
 export function getPlanById(id: string | null | undefined): Plan {

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import type { PlanCta } from "@/lib/billing";
 
 // Checkout / manage-billing actions. The browser only *initiates* billing —
 // plan changes are applied by the Stripe webhook (source of truth).
@@ -65,12 +66,15 @@ export function UpgradeButton({
   cta,
   current,
   configured,
+  autoStart = false,
   labels,
 }: {
   plan: string;
-  cta: "free" | "trial" | "sales";
+  cta: PlanCta;
   current: boolean;
   configured: boolean;
+  /** Start checkout on mount (plan picked on /pricing before signing up). */
+  autoStart?: boolean;
   labels: Labels;
 }) {
   const [busy, setBusy] = useState(false);
@@ -94,6 +98,15 @@ export function UpgradeButton({
     }
   };
 
+  const started = useRef(false);
+  const canCheckout = configured && !current && (cta === "trial" || cta === "subscribe");
+  useEffect(() => {
+    if (!autoStart || !canCheckout || started.current) return;
+    started.current = true;
+    void go();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoStart, canCheckout]);
+
   const disabledClass =
     "mt-5 w-full cursor-default rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-ink-dim";
 
@@ -104,34 +117,48 @@ export function UpgradeButton({
       </button>
     );
   }
-  if (cta === "sales") {
-    return (
-      <Link href="/contact" className="btn-secondary mt-5 w-full">
-        {labels.sales}
-      </Link>
-    );
+
+  switch (cta) {
+    case "sales":
+      return (
+        <Link href="/contact" className="btn-primary mt-5 w-full">
+          {labels.sales}
+        </Link>
+      );
+    case "free":
+      return (
+        <button type="button" disabled className={disabledClass}>
+          {labels.current}
+        </button>
+      );
+    case "trial":
+    case "subscribe": {
+      const label = cta === "subscribe" ? labels.upgrade : labels.trial;
+      if (!configured) {
+        return (
+          <button
+            type="button"
+            disabled
+            title="Billing not available yet"
+            className={`${disabledClass} cursor-not-allowed`}
+          >
+            {label}
+          </button>
+        );
+      }
+      return (
+        <div className="mt-5">
+          <button type="button" onClick={go} disabled={busy} className="btn-primary w-full disabled:opacity-60">
+            {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
+            {label}
+          </button>
+          {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
+        </div>
+      );
+    }
+    default: {
+      const _never: never = cta;
+      return _never;
+    }
   }
-  if (cta === "free") {
-    return (
-      <button type="button" disabled className={disabledClass}>
-        {labels.current}
-      </button>
-    );
-  }
-  if (!configured) {
-    return (
-      <button type="button" disabled title="Billing not available yet" className={`${disabledClass} cursor-not-allowed`}>
-        {labels.trial}
-      </button>
-    );
-  }
-  return (
-    <div className="mt-5">
-      <button type="button" onClick={go} disabled={busy} className="btn-accent w-full disabled:opacity-60">
-        {busy && <Loader2 className="h-4 w-4 animate-spin" aria-hidden />}
-        {labels.trial}
-      </button>
-      {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
-    </div>
-  );
 }
