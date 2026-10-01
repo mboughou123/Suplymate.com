@@ -29,7 +29,7 @@ export default async function HomeSuppliersBand() {
         </div>
 
         <ul className="mt-block-lg grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {HOME_SUPPLIERS_BAND.map((entry, index) => {
+          {HOME_SUPPLIERS_BAND.map((entry) => {
             const href = getSupplierBandHref(entry);
             return (
               <li key={entry.key}>
@@ -46,7 +46,7 @@ export default async function HomeSuppliersBand() {
                       className="h-full w-full object-cover transition duration-500 ease-cinema group-hover:scale-[1.03]"
                       sizes={CARD_IMAGE_SIZES.homeSupplier}
                       quality={CARD_IMAGE_QUALITY}
-                      priority={index === 0}
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">

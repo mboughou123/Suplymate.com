@@ -156,7 +156,7 @@ export default async function HomeOrchestratorSection() {
 
                 <div className="mt-3 flex items-center gap-3 rounded-full border border-slate-200 bg-white py-2 pl-4 pr-2 text-left shadow-card">
                   <p className="flex-1 truncate text-sm text-ink-muted">{t("inputHint")}</p>
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan text-white">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-navy-deep ring-1 ring-slate-200">
                     <ChevronRight className="h-4 w-4" aria-hidden />
                   </span>
                 </div>

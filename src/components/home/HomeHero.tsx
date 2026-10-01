@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRight, Check, Factory, TrendingUp, Atom } from "lucide-react";
 import AiOrb from "@/components/fx/AiOrb";
 import Beam from "@/components/fx/Beam";
-import MetalButton from "@/components/fx/MetalButton";
 
 const STEP_INTERVAL = 1400;
 
@@ -22,7 +21,11 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
 
   // Cycle the console demo: prompt → parse → scan → score → result.
   useEffect(() => {
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const phone = window.matchMedia("(max-width: 767px)").matches;
+    // Phones skip the looping console. Re-rendering the hero every 1.4s
+    // competed with image decode on first load.
+    if (reduced || phone) {
       setStep(4);
       return;
     }
@@ -36,10 +39,9 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
   return (
     <section className="relative overflow-hidden bg-[#050B12] pb-20 pt-32 text-white sm:pt-40 lg:pb-28">
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-[-25%] h-[70vh] w-[90vw] -translate-x-1/2 rounded-full bg-cyan/20 blur-[150px] motion-safe:animate-aurora-drift" />
-        <div className="absolute bottom-[-30%] right-[-10%] h-[50vh] w-[50vw] rounded-full bg-[#0EA5E9]/10 blur-[140px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(14,165,233,0.16),transparent_55%)]" />
         <div
-          className="absolute inset-0 opacity-[0.07]"
+          className="absolute inset-0 hidden opacity-[0.07] md:block"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
@@ -75,15 +77,13 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
             className="mt-10 flex flex-col items-center justify-center gap-3 animate-fade-up sm:flex-row lg:justify-start"
             style={{ animationDelay: "180ms" }}
           >
-            <MetalButton preset="chromatic" strength={0.95}>
-              <Link
-                href="/ai-assistant"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow"
-              >
-                {t("ctaStart")}
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </MetalButton>
+            <Link
+              href="/ai-assistant"
+              className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-[0_10px_30px_-16px_rgba(255,255,255,0.9)] transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              {t("ctaStart")}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
             <Link
               href="/suppliers"
               className="inline-flex min-w-[12rem] items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"

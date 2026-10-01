@@ -18,7 +18,9 @@ const nextConfig: NextConfig = {
     ],
     // Remote photos change rarely — cache optimized variants for 31 days.
     minimumCacheTTL: 2678400,
-    formats: ["image/avif", "image/webp"],
+    // AVIF encodes of the 1–4 MB mill stills stalled `/_next/image` on phones.
+    // WebP is the format those cards actually need.
+    formats: ["image/webp"],
     // Drop 2048/3840 srcset entries — listing cards never need 4K, and those
     // URLs were a large share of the 1.3MB /en/suppliers HTML on phones.
     deviceSizes: [...IMAGE_DEVICE_SIZES],
