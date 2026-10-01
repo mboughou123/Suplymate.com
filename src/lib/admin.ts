@@ -37,6 +37,16 @@ export async function checkAdmin(): Promise<AdminCheck> {
 }
 
 /**
+ * Like checkAdmin, but for personal data (job applications, CVs): requires an
+ * explicit ADMIN_EMAILS allowlist instead of letting any signed-in user in.
+ */
+export async function checkStrictAdmin(): Promise<AdminCheck & { allowlistConfigured: boolean }> {
+  const check = await checkAdmin();
+  const allowlistConfigured = adminEmails().length > 0;
+  return { ...check, ok: check.ok && allowlistConfigured, allowlistConfigured };
+}
+
+/**
  * Route-handler guard. Returns a NextResponse to short-circuit (401/403) when
  * the caller is not an admin, or null when access is granted.
  *

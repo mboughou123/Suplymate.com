@@ -39,6 +39,28 @@ export const APPLICATION_LIMITS = {
   message: { min: 30, max: 3000 },
 } as const;
 
+/** Vercel caps request bodies at 4.5 MB, so the CV must fit well under that. */
+export const CV_MAX_BYTES = 4 * 1024 * 1024;
+
+export const CV_ACCEPT: Record<string, string> = {
+  "application/pdf": "pdf",
+  "application/msword": "doc",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "docx",
+};
+
+export const CV_ACCEPT_ATTR = ".pdf,.doc,.docx," + Object.keys(CV_ACCEPT).join(",");
+
+export type CvFileError = "cvTooLarge" | "cvType";
+
+/** Check an uploaded CV by size and type (MIME, or extension when the browser sends none). */
+export function validateCvFile(file: { name: string; type: string; size: number }): CvFileError | null {
+  if (file.size > CV_MAX_BYTES) return "cvTooLarge";
+  const ext = file.name.split(".").pop()?.toLowerCase() ?? "";
+  if (file.type in CV_ACCEPT) return null;
+  const untyped = !file.type || file.type === "application/octet-stream";
+  return untyped && Object.values(CV_ACCEPT).includes(ext) ? null : "cvType";
+}
+
 function str(value: unknown, max: number): string {
   return typeof value === "string" ? value.trim().slice(0, max) : "";
 }

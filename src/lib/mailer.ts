@@ -20,6 +20,7 @@ export type MailMessage = {
   text: string;
   html?: string;
   replyTo?: string;
+  attachments?: { filename: string; content: Buffer }[];
 };
 
 export type MailResult =
@@ -50,6 +51,10 @@ export async function sendMail(message: MailMessage): Promise<MailResult> {
         text: message.text,
         html: message.html,
         reply_to: message.replyTo,
+        attachments: message.attachments?.map((a) => ({
+          filename: a.filename,
+          content: a.content.toString("base64"),
+        })),
       }),
     });
 

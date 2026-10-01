@@ -1110,7 +1110,11 @@
       "locationPlaceholder": "Austin, TX",
       "role": "Role you're applying for",
       "linkedin": "LinkedIn or portfolio",
-      "cvUrl": "CV / résumé link",
+      "cv": "CV / résumé file",
+      "cvUpload": "Upload your CV (PDF or Word)",
+      "cvFileHint": "Optional · up to {max}",
+      "cvRemove": "Remove file",
+      "cvUrl": "Or a CV / portfolio link",
       "cvHint": "Google Drive, Dropbox, or a public URL",
       "message": "Why Suplymate?",
       "messageHint": "At least {min} characters",
@@ -1129,7 +1133,9 @@
       "tooShort": "Please write a bit more so we can understand your fit.",
       "rateLimited": "Too many submissions — please try again in a few minutes.",
       "deliveryFailed": "We couldn't deliver your application right now. Please email it to {email} instead.",
-      "generic": "Something went wrong. Please try again or email us directly."
+      "generic": "Something went wrong. Please try again or email us directly.",
+      "cvTooLarge": "That file is too large. The limit is {max}.",
+      "cvType": "Upload a PDF or Word document (.pdf, .doc, .docx)."
     }
   },
   "faq": {
