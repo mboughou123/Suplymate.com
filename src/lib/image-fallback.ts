@@ -1,3 +1,4 @@
+import { imageFitsProduct } from "@/lib/product-image-fit";
 import { localStillsForProduct } from "@/lib/product-stills";
 
 // Centralized image-fallback system for Suplymate.
@@ -217,20 +218,41 @@ export type ProductImageInput = {
   category?: string;
 };
 
+/** A mill exterior under `/images/suppliers/` is not a picture of the SKU. */
+function isProductRasterUrl(url: string): boolean {
+  if (!isFirstPartyProductImageUrl(url)) return false;
+  return !/\/images\/suppliers\//i.test(url);
+}
+
+/**
+ * Control-room, aerial, and "about us" frames that share a mill folder with
+ * real product stills. They are not the SKU. Product names such as
+ * `control-cable` stay eligible.
+ */
+function isUnrelatedSceneStill(url: string): boolean {
+  const file = (url.split("/").pop() ?? "").split("?")[0].toLowerCase();
+  if (/^inside[-_.\d]/.test(file)) return true;
+  if (/^(about|aboutus|aerial|campus|office|portrait|team)([-_.]|$)/.test(file)) return true;
+  return /mobile-bg|aboutus-hero|mill-aerial|factory-aerial/.test(file);
+}
+
 /**
  * Return the first REAL product photo if one exists, walking:
- *   committed local still (by slug) → product image → linked-supplier photo.
- * Third-party hotlinks (mill sites, Scene7, …) are never a card primary —
- * those hosts break as raw `<img>` on `/products`. Returns undefined when only
- * a category tile would be available.
+ *   product's own first-party still → committed stills index.
+ * Stills-index hits are filtered so an acrylic ball or ball valve cannot
+ * inherit Ball Corporation aerosol cans (a person with a spray can). Supplier
+ * factory shots and third-party hotlinks are never a card primary.
  */
 export function getRealProductImage(input: ProductImageInput): string | undefined {
-  const preferred = pickPreferredCardImage([
-    ...localStillsForProduct(input),
-    ...(input.images ?? []),
-    ...(input.supplierImages ?? []),
-  ]);
-  if (preferred && isFirstPartyProductImageUrl(preferred)) return preferred;
+  const ordered = [...(input.images ?? []), ...localStillsForProduct(input)];
+  const fitting = ordered.filter(
+    (url): url is string =>
+      typeof url === "string" &&
+      !isUnrelatedSceneStill(url) &&
+      imageFitsProduct(url, input.productName, input.category)
+  );
+  const preferred = pickPreferredCardImage(fitting);
+  if (preferred && isProductRasterUrl(preferred)) return preferred;
   return undefined;
 }
 

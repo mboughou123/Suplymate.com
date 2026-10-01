@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { ArrowUp, Square } from "lucide-react";
 import Beam from "@/components/fx/Beam";
-import MetalButton from "@/components/fx/MetalButton";
 
 type Props = {
   value: string;
@@ -55,18 +54,16 @@ export default function Composer({ value, onChange, onSend, onStop, busy, disabl
           <Square className="h-4 w-4" aria-hidden />
         </button>
       ) : (
-        <MetalButton variant="circle" preset="chromatic" strength={value.trim() ? 0.9 : 0.35}>
-          <button
-            type="button"
-            onClick={onSend}
-            disabled={busy || disabled || !value.trim()}
-            className="flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white text-navy-deep transition disabled:cursor-not-allowed disabled:opacity-40"
-            aria-label="Ask AI"
-            title="Ask AI"
-          >
-            <ArrowUp className="h-4 w-4" aria-hidden />
-          </button>
-        </MetalButton>
+        <button
+          type="button"
+          onClick={onSend}
+          disabled={busy || disabled || !value.trim()}
+          className="flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white text-navy-deep shadow-sm ring-1 ring-white/80 transition disabled:cursor-not-allowed disabled:opacity-40"
+          aria-label="Ask AI"
+          title="Ask AI"
+        >
+          <ArrowUp className="h-4 w-4" aria-hidden />
+        </button>
       )}
     </div>
   );

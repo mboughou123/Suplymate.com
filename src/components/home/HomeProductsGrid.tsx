@@ -65,7 +65,7 @@ export default function HomeProductsGrid({
 
       {visible.length > 0 ? (
         <ul className={`${categories.length > 1 ? "mt-8" : "mt-block-lg"} grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4`}>
-          {visible.map((p, i) => (
+          {visible.map((p) => (
             <li key={p.id}>
               <Link
                 href={`/products/${p.id}`}
@@ -76,8 +76,7 @@ export default function HomeProductsGrid({
                     src={p.image}
                     alt={`${p.name} — ${p.supplierName}`}
                     fill
-                    loading={i < 2 ? "eager" : "lazy"}
-                    priority={i === 0}
+                    loading="lazy"
                     quality={CARD_IMAGE_QUALITY}
                     sizes={CARD_IMAGE_SIZES.homeProduct}
                     className="object-cover transition duration-500 ease-cinema group-hover:scale-[1.04]"

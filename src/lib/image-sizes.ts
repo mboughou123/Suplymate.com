@@ -15,4 +15,5 @@ export const CARD_IMAGE_SIZES = {
   factoryTile: "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw",
   factoryHero: "(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw",
   logo: "64px",
+  aboutBanner: "100vw",
 } as const;

@@ -20,7 +20,6 @@ import {
   Clock,
   type LucideIcon,
 } from "lucide-react";
-import LanguageSelector from "@/components/LanguageSelector";
 
 type Props = {
   children: React.ReactNode;
@@ -170,7 +169,6 @@ export default function SupplierShell({ children, user, profile }: Props) {
             <p className="text-sm font-semibold text-ink">{t("title")}</p>
           </div>
           <div className="flex items-center gap-2">
-            <LanguageSelector variant="inline" />
             <Link href="/suppliers" className="btn-secondary hidden px-3 py-2 text-xs sm:inline-flex">
               {nav("suppliers")}
             </Link>

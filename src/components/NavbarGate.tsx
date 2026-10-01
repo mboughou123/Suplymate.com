@@ -1,7 +1,9 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { usePathname } from "@/i18n/navigation";
-import Navbar from "./Navbar";
+
+const Navbar = dynamic(() => import("./Navbar"));
 
 const HIDE_NAVBAR = ["/", "/ai-assistant", "/dashboard", "/supplier-dashboard", "/login", "/signup"];
 

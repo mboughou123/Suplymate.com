@@ -1,9 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Factory, TrendingUp, Atom, Sparkles, MessageSquare, ArrowRight, X } from "lucide-react";
-import AiOrb from "@/components/fx/AiOrb";
 import MetalButton from "@/components/fx/MetalButton";
+import { SITE_ABOUT_BANNER } from "@/lib/brand";
+import { CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 export async function generateMetadata({
   params,
@@ -39,25 +41,24 @@ export default async function AboutPage({
 
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-[#050B12] py-24 text-white">
-        <div aria-hidden className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-[-30%] h-[60vh] w-[80vw] -translate-x-1/2 rounded-full bg-cyan/20 blur-[140px]" />
-        </div>
-        <div className="container-page relative grid items-center gap-12 lg:grid-cols-[3fr_2fr]">
-          <div>
-            <p className="eyebrow text-cyan-glow">{t("eyebrow")}</p>
-            <h1 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl">
-              {t("title")}
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/65">{t("intro")}</p>
-          </div>
-          <div className="hidden justify-center lg:flex">
-            <div className="flex h-56 w-56 items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_0_100px_rgba(56,189,248,0.25)] backdrop-blur">
-              <AiOrb state="connecting" size={64} theme="dark" />
-            </div>
-          </div>
-        </div>
+      <section className="overflow-hidden bg-[#EAF4FF]">
+        <Image
+          src={SITE_ABOUT_BANNER.src}
+          alt="Suplymate"
+          width={SITE_ABOUT_BANNER.width}
+          height={SITE_ABOUT_BANNER.height}
+          className="h-auto w-full object-cover object-center"
+          sizes={CARD_IMAGE_SIZES.aboutBanner}
+          priority
+        />
+      </section>
+
+      <section className="container-page section-y-tight">
+        <p className="eyebrow text-cyan">{t("eyebrow")}</p>
+        <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl">
+          {t("title")}
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted">{t("intro")}</p>
       </section>
 
       {/* Problem */}
