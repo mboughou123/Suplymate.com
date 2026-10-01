@@ -14,7 +14,9 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
   const [material, setMaterial] = useState(materials[0]?.id ?? "");
   const [targetPrice, setTargetPrice] = useState("");
   const [notifyType, setNotifyType] = useState<"Email" | "SMS">("Email");
-  const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [submitted, setSubmitted] = useState<{ contact: string; reached: boolean } | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,6 +29,8 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
       return;
     }
 
+    const contact = notifyType === "Email" ? email || session.user?.email || "" : phone;
+
     setLoading(true);
     const res = await fetch("/api/price-alerts", {
       method: "POST",
@@ -35,8 +39,10 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
         materialId: material,
         targetPrice: Number(targetPrice),
         notifyType,
+        contact,
       }),
     });
+    const data = (await res.json().catch(() => ({}))) as { error?: string; reached?: boolean };
     setLoading(false);
 
     if (res.status === 401) {
@@ -44,19 +50,23 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
       return;
     }
     if (!res.ok) {
-      setError("Could not create alert. Try again.");
+      setError(data.error ?? "Could not create alert. Try again.");
       return;
     }
 
-    setSubmitted(true);
+    setSubmitted({ contact, reached: Boolean(data.reached) });
   }
 
   if (submitted) {
+    const materialName = materials.find((m) => m.id === material)?.name;
+    const channel = notifyType === "SMS" ? "a text message" : "an email";
     return (
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center">
         <p className="text-lg font-semibold text-emerald-800">Alert saved</p>
         <p className="mt-2 text-sm text-emerald-700">
-          We&apos;ll notify you via {notifyType.toLowerCase()} when {materials.find((m) => m.id === material)?.name} reaches your target (stored in database).
+          {submitted.reached
+            ? `${materialName} is already at your target — we just sent ${channel} to ${submitted.contact}.`
+            : `We sent ${channel} to ${submitted.contact} to confirm. You'll get another when ${materialName} reaches your target.`}
         </p>
         <Link
           href="/dashboard"
@@ -66,7 +76,7 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
         </Link>
         <button
           type="button"
-          onClick={() => setSubmitted(false)}
+          onClick={() => setSubmitted(null)}
           className="mt-2 block w-full text-sm text-emerald-700"
         >
           Create another alert
@@ -158,6 +168,42 @@ export default function PriceAlertForm({ materials }: PriceAlertFormProps) {
             ))}
           </div>
         </div>
+
+        {notifyType === "Email" ? (
+          <div>
+            <label htmlFor="alert-email" className="text-xs font-medium text-ink-muted">
+              Email
+            </label>
+            <input
+              id="alert-email"
+              type="email"
+              autoComplete="email"
+              required={!session?.user?.email}
+              placeholder={session?.user?.email ?? "you@company.com"}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            />
+          </div>
+        ) : (
+          <div>
+            <label htmlFor="alert-phone" className="text-xs font-medium text-ink-muted">
+              Mobile number
+            </label>
+            <input
+              id="alert-phone"
+              type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              required
+              placeholder="+212 6 12 34 56 78"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-mustard focus:outline-none focus:ring-2 focus:ring-mustard/20"
+            />
+            <p className="mt-1 text-xs text-ink-muted">Include the country code.</p>
+          </div>
+        )}
 
         <button
           type="submit"
