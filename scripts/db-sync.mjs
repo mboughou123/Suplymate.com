@@ -20,11 +20,20 @@ if (!process.env.DATABASE_URL) {
 const env = { ...process.env, DIRECT_URL: process.env.DIRECT_URL || process.env.DATABASE_URL };
 const result = spawnSync("npx", ["prisma", "db", "push", "--skip-generate"], { stdio: "inherit", env });
 
-// A refused push (e.g. the database holds columns this schema would drop) must
-// not block the deploy; it is reported loudly instead.
 if (result.status !== 0) {
+  console.error("[db-sync] prisma db push failed — falling back to the additive repair script.");
+}
+
+// Always apply the idempotent repair (see scripts/gen-schema-repair.mjs): it
+// covers what a refused push leaves behind and never drops data.
+const repair = spawnSync(
+  "npx",
+  ["prisma", "db", "execute", "--file", "prisma/schema-repair.sql", "--schema", "prisma/schema.prisma"],
+  { stdio: "inherit", env },
+);
+if (repair.status !== 0) {
   console.error(
-    "[db-sync] WARNING: prisma db push failed. The deployed code may not match the database " +
-      "schema — run `npm run db:push` against production and resolve the error above.",
+    "[db-sync] WARNING: schema repair failed. Production servers will retry it on startup and on " +
+      "the first sign-up that hits a missing column.",
   );
 }

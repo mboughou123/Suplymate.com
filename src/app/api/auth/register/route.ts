@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { hashPassword } from "@/lib/password";
+import { ensureSchema } from "@/lib/schema-repair";
 import {
   SIGNUP_ERROR_MESSAGES,
   splitName,
@@ -101,7 +102,7 @@ export async function POST(request: Request) {
   const { name, email, password, role, company } = validation.data;
   const { firstName, lastName } = splitName(name);
 
-  try {
+  const createAccount = async () => {
     const existing = await prisma.user.findUnique({
       where: { email },
       select: { id: true },
@@ -114,7 +115,7 @@ export async function POST(request: Request) {
 
     // The account type is chosen at signup, so the user is considered onboarded
     // and lands directly on their workspace instead of bouncing through /onboarding.
-    const user = await prisma.user.create({
+    return prisma.user.create({
       data: {
         name,
         firstName,
@@ -127,8 +128,20 @@ export async function POST(request: Request) {
       },
       select: { id: true, email: true, name: true, role: true },
     });
+  };
 
-    return NextResponse.json({ ok: true, user }, { status: 201 });
+  try {
+    let result;
+    try {
+      result = await createAccount();
+    } catch (err) {
+      if (!isSchemaOutOfDate(err)) throw err;
+      console.warn("[register] schema drift detected, repairing:", err instanceof Error ? err.message : err);
+      await ensureSchema(prisma, { force: true });
+      result = await createAccount();
+    }
+    if (result instanceof NextResponse) return result;
+    return NextResponse.json({ ok: true, user: result }, { status: 201 });
   } catch (err) {
     // Race between findUnique and create (two tabs / double submit).
     if (isUniqueViolation(err)) {
