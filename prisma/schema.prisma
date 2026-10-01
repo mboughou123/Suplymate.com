@@ -381,7 +381,13 @@ model PriceAlert {
   materialId  String
   targetPrice Float
   notifyType  String
-  createdAt   DateTime @default(now())
+  // Email address or E.164 phone number the alert is delivered to.
+  contact     String?
+  // "below" fires when price <= target, "above" when price >= target. Fixed at
+  // creation from the price at that moment.
+  direction   String    @default("below")
+  triggeredAt DateTime?
+  createdAt   DateTime  @default(now())
 }
 
 // ----- Supplier communication system -----
