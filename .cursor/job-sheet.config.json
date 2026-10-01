@@ -1,0 +1,25 @@
+{
+  "spreadsheetId": "PASTE_YOUR_SPREADSHEET_ID_HERE",
+  "sheetName": "Jobs",
+  "headerRow": 1,
+  "columns": [
+    "Date Added",
+    "Job Title",
+    "Company",
+    "Location",
+    "Employment Type",
+    "Seniority",
+    "Salary Range",
+    "Required Skills",
+    "Nice-to-Have Skills",
+    "Years Experience",
+    "Education",
+    "Responsibilities",
+    "Qualifications",
+    "Benefits",
+    "Application URL",
+    "Source",
+    "Status",
+    "Notes"
+  ]
+}
