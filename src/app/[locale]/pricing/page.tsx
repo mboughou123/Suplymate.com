@@ -108,7 +108,12 @@ export default async function PricingPage() {
                     cta={plan.cta}
                     highlighted={Boolean(plan.highlighted)}
                     signedIn={signedIn}
-                    labels={{ free: t("ctaFree"), trial: t("ctaTrial"), sales: t("ctaSales") }}
+                    labels={{
+                      free: t("ctaFree"),
+                      trial: t("ctaTrial"),
+                      sales: t("ctaSales"),
+                      subscribe: t("ctaSubscribe"),
+                    }}
                   />
                 </div>
               </article>

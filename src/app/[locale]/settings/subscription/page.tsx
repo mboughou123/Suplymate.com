@@ -2,8 +2,10 @@ import { localeRedirect } from "@/i18n/redirect";
 import { getTranslations } from "next-intl/server";
 import { Check, Sparkles } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
+import { prisma } from "@/lib/prisma";
 import { PLANS, getBillingState } from "@/lib/billing";
 import { ManageBillingButton, UpgradeButton } from "@/components/settings/BillingActions";
+import { formatInvoiceAmount, listCustomerInvoices } from "@/lib/stripe-invoices";
 
 export default async function SubscriptionPage() {
   const { authenticated, user } = await getCurrentAccount();
@@ -12,6 +14,19 @@ export default async function SubscriptionPage() {
   const t = await getTranslations("settings");
   const billing = getBillingState(user);
   const statusLabel = billing.status.charAt(0).toUpperCase() + billing.status.slice(1);
+
+  let invoices: Awaited<ReturnType<typeof listCustomerInvoices>> = [];
+  try {
+    const billingIds = await prisma.user.findUnique({
+      where: { id: user.id },
+      select: { stripeCustomerId: true },
+    });
+    if (billingIds?.stripeCustomerId) {
+      invoices = await listCustomerInvoices(billingIds.stripeCustomerId);
+    }
+  } catch {
+    invoices = [];
+  }
 
   return (
     <div className="space-y-6">
@@ -102,6 +117,39 @@ export default async function SubscriptionPage() {
             );
           })}
         </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+        <h2 className="text-sm font-bold text-ink">{t("invoicesTitle")}</h2>
+        {invoices.length === 0 ? (
+          <p className="mt-2 text-sm text-ink-muted">{t("invoicesEmpty")}</p>
+        ) : (
+          <ul className="mt-3 divide-y divide-slate-100">
+            {invoices.map((invoice) => (
+              <li key={invoice.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-sm">
+                <div>
+                  <p className="font-medium text-ink">
+                    {invoice.number ?? invoice.id} · {formatInvoiceAmount(invoice.amountDue, invoice.currency)}
+                  </p>
+                  <p className="text-xs text-ink-dim">
+                    {new Date(invoice.created * 1000).toISOString().slice(0, 10)} ·{" "}
+                    {invoice.status === "paid" ? t("invoicePaid") : invoice.status ?? t("invoiceOpen")}
+                  </p>
+                </div>
+                {invoice.hostedInvoiceUrl && (
+                  <a
+                    href={invoice.hostedInvoiceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-semibold text-cyan hover:underline"
+                  >
+                    {t("invoiceView")}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </div>
   );
