@@ -125,6 +125,33 @@ describe("supplier matching", () => {
     const matches = matchSuppliers(pool, req);
     expect(matches.find((m) => m.supplier.id === "boxes")).toBeUndefined();
   });
+
+  it("treats a sector-only message as a sourcing request", () => {
+    expect(parseRequirement("give hardware component").intent).toBe("find_suppliers");
+    expect(parseRequirement("biomedical equipment").intent).toBe("find_suppliers");
+  });
+
+  it("ranks real hardware makers above cable mills for hardware requests", () => {
+    const hw = parseRequirement("give hardware component");
+    const matches = matchSuppliers(
+      [
+        supplier({
+          id: "cables",
+          name: "Cables House",
+          category: "Cables & Electrical",
+          products: ["10GXE02 copper cable", "Armoured power cable"],
+        }),
+        supplier({
+          id: "bearings",
+          name: "NTN Bearing",
+          category: "Industrial Parts",
+          products: ["Ball bearings", "Hex bolts and fasteners"],
+        }),
+      ],
+      hw,
+    );
+    expect(matches[0].supplier.id).toBe("bearings");
+  });
 });
 
 describe("sourcing plan", () => {

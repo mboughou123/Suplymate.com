@@ -6,7 +6,7 @@
 // overall score is the weighted mean of the components we could compute.
 
 import type { Supplier } from "@/data/suppliers";
-import { industryForLegacyCategory } from "@/data/industries";
+import { industryForLegacyCategory, textInIndustry } from "@/data/industries";
 import type { ParsedRequirement } from "@/lib/ai/requirement-parser";
 
 export type MatchComponent = "price" | "delivery" | "quality" | "location" | "trust";
@@ -100,13 +100,20 @@ function relevanceScore(s: Supplier, req: ParsedRequirement): { score: number; h
       hits.push(m.name);
     }
   }
+  // What the supplier makes (name + products) outranks its directory category:
+  // "Cables & Electrical" is a legacy category of Hardware Components, but a
+  // cable mill is not a bearing or fastener supplier.
+  const makes = [s.name, ...(s.products ?? [])].join(" | ");
   for (const ind of req.industries) {
     const legacy = industryForLegacyCategory(s.category ?? s.industry);
-    if (legacy?.id === ind.id) {
-      score += 30;
+    if (textInIndustry(makes, ind)) {
+      score += 35;
+      hits.push(ind.name);
+    } else if (legacy?.id === ind.id) {
+      score += 10;
       hits.push(ind.name);
     } else if (ind.keywords.some((k) => hay.includes(k))) {
-      score += 15;
+      score += 8;
       hits.push(ind.name);
     }
   }
