@@ -25,17 +25,27 @@ export function isOpenAiConfigured(): boolean {
   return Boolean(process.env.OPENAI_API_KEY?.trim());
 }
 
+/**
+ * Optional OpenAI-compatible endpoint (Groq, OpenRouter, a self-hosted Ollama…),
+ * e.g. https://api.groq.com/openai/v1. Unset means api.openai.com.
+ */
+export function openAiBaseUrl(): string | undefined {
+  return process.env.OPENAI_BASE_URL?.trim() || undefined;
+}
+
 let client: OpenAI | null = null;
-let clientKey: string | null = null;
+let clientConfig: string | null = null;
 
 /** Lazily construct a singleton OpenAI client. Throws if no key is configured. */
 export function getOpenAiClient(): OpenAI {
   const apiKey = process.env.OPENAI_API_KEY?.trim();
   if (!apiKey) throw new Error("OPENAI_API_KEY not configured");
-  // Rebuild if the key changed (env reload in dev / tests).
-  if (!client || clientKey !== apiKey) {
-    client = new OpenAI({ apiKey, timeout: OPENAI_TIMEOUT_MS, maxRetries: OPENAI_MAX_RETRIES });
-    clientKey = apiKey;
+  const baseURL = openAiBaseUrl();
+  const config = `${apiKey}|${baseURL ?? ""}`;
+  // Rebuild if the key or endpoint changed (env reload in dev / tests).
+  if (!client || clientConfig !== config) {
+    client = new OpenAI({ apiKey, baseURL, timeout: OPENAI_TIMEOUT_MS, maxRetries: OPENAI_MAX_RETRIES });
+    clientConfig = config;
   }
   return client;
 }
