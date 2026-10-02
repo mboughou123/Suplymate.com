@@ -15,6 +15,8 @@ export type SupplierFilterState = {
 type Props = {
   state: SupplierFilterState;
   categories: string[];
+  /** Extra sector chips whose `value` is matched by the parent's filter. */
+  sectorChips?: { value: string; label: string }[];
   countries: string[];
   onChange: (patch: Partial<SupplierFilterState>) => void;
   onReset: () => void;
@@ -27,6 +29,7 @@ const REVIEW_VALUES = [0, 20, 100, 500] as const;
 export default function SupplierFilters({
   state,
   categories,
+  sectorChips = [],
   countries,
   onChange,
   onReset,
@@ -77,18 +80,23 @@ export default function SupplierFilters({
 
       {/* Category chips */}
       <div className="mt-4 flex flex-wrap gap-2">
-        {["All", ...categories].map((cat) => (
+        {[
+          { value: "All", label: tCommon("all") },
+          ...categories.map((c) => ({ value: c, label: c })),
+          ...sectorChips,
+        ].map((chip) => (
           <button
-            key={cat}
+            key={chip.value}
             type="button"
-            onClick={() => onChange({ category: cat })}
+            onClick={() => onChange({ category: chip.value })}
+            aria-pressed={state.category === chip.value}
             className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
-              state.category === cat
+              state.category === chip.value
                 ? "bg-navy text-white shadow-sm"
                 : "border border-slate-200 bg-white text-ink-muted hover:border-navy/30 hover:text-ink"
             }`}
           >
-            {cat === "All" ? tCommon("all") : cat}
+            {chip.label}
           </button>
         ))}
       </div>
