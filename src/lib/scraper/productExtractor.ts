@@ -10,6 +10,7 @@
 import type { CheerioAPI } from "cheerio";
 import { absoluteUrl } from "./http";
 import { extractProductImages } from "./imageExtractor";
+import { isNavigationTitle } from "../catalog-junk";
 import type { ScrapedSupplierProduct } from "./types";
 
 function parsePrice(text: string | undefined | null): {
@@ -72,7 +73,7 @@ function extractJsonLd($: CheerioAPI, pageUrl: string): ScrapedSupplierProduct[]
     for (const node of nodes) {
       const type = node["@type"];
       const isProduct = Array.isArray(type) ? type.includes("Product") : type === "Product";
-      if (!isProduct || typeof node.name !== "string") continue;
+      if (!isProduct || typeof node.name !== "string" || isNavigationTitle(node.name)) continue;
 
       const offers = (Array.isArray(node.offers) ? node.offers[0] : node.offers) as
         | Record<string, unknown>
@@ -140,7 +141,7 @@ function extractCards($: CheerioAPI, pageUrl: string): ScrapedSupplierProduct[] 
           .trim() ||
         $el.find("a[title]").first().attr("title") ||
         "";
-      if (!name || seen.has(name.toLowerCase())) return;
+      if (!name || isNavigationTitle(name) || seen.has(name.toLowerCase())) return;
 
       const priceText =
         $el.find(".price, .product-price, .card-price, [itemprop='price']").first().text().trim() ||
@@ -199,7 +200,7 @@ function extractSingleProduct($: CheerioAPI, pageUrl: string): ScrapedSupplierPr
     $("h1[itemprop='name']").first().text().trim() ||
     $(".product-title, .product_title, .product-name").first().text().trim() ||
     $("h1").first().text().trim();
-  if (!name || name.length > 160) return [];
+  if (!name || name.length > 160 || isNavigationTitle(name)) return [];
 
   const images = extractProductImages($, pageUrl, { productName: name });
   if (!images.length) return [];
