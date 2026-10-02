@@ -11,6 +11,11 @@ vi.mock("@/lib/password", () => ({
   hashPassword: vi.fn(async (p: string) => `hashed:${p}`),
 }));
 
+const ensureSchema = vi.fn(async () => null);
+vi.mock("@/lib/schema-repair", () => ({
+  ensureSchema: (...a: unknown[]) => ensureSchema(...(a as [])),
+}));
+
 import { POST } from "@/app/api/auth/register/route";
 
 function post(body: unknown, raw = false) {
@@ -123,6 +128,35 @@ describe("POST /api/auth/register", () => {
     const body = await res.json();
     expect(body.code).toBe("dbUnavailable");
     expect(body.error).toMatch(/try again/i);
+  });
+
+  it("repairs the schema and retries once when a column is missing", async () => {
+    findUnique.mockResolvedValue(null);
+    create
+      .mockRejectedValueOnce(
+        new Prisma.PrismaClientKnownRequestError("The column `User.onboardedAt` does not exist", {
+          code: "P2022",
+          clientVersion: "test",
+        }),
+      )
+      .mockResolvedValueOnce({ id: "u2", email: "ada@example.com", name: "Ada Lovelace", role: "supplier" });
+    const res = await post(valid);
+    expect(ensureSchema).toHaveBeenCalledWith(expect.anything(), { force: true });
+    expect(res.status).toBe(201);
+    expect(create).toHaveBeenCalledTimes(2);
+  });
+
+  it("reports schemaOutOfDate when the repair could not fix it", async () => {
+    findUnique.mockResolvedValue(null);
+    create.mockRejectedValue(
+      new Prisma.PrismaClientKnownRequestError("The table `User` does not exist", {
+        code: "P2021",
+        clientVersion: "test",
+      }),
+    );
+    const res = await post(valid);
+    expect(res.status).toBe(503);
+    expect(await res.json()).toMatchObject({ code: "schemaOutOfDate" });
   });
 
   it("maps unexpected failures to a generic 500", async () => {
