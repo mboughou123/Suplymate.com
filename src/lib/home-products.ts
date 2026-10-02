@@ -3,6 +3,7 @@
 // curated pack products (see `getHomePageContent`) so first paint never waits
 // on Prisma or the Outscraper dump.
 import { getRealProductImage } from "@/lib/image-fallback";
+import { KEYWORD_SECTORS, textInIndustry } from "@/data/industries";
 
 export type HomeProductSource = {
   id: string;
@@ -24,6 +25,8 @@ export type HomeProductItem = {
   supplierId: string | null;
   supplierName: string;
   supplierCountry: string | null;
+  /** Keyword-sector ids (see KEYWORD_SECTORS) this product belongs to. */
+  sectors: string[];
 };
 
 /** Items shown when no category chip is active. */
@@ -92,6 +95,7 @@ export function pickHomeProducts(
     });
     if (!image) continue;
     seen.add(p.id);
+    const text = `${p.name} | ${p.supplierName ?? ""}`;
     candidates.push({
       id: p.id,
       name: p.name,
@@ -100,6 +104,7 @@ export function pickHomeProducts(
       supplierId: p.supplierId ?? null,
       supplierName: p.supplierName ?? "Suplymate catalogue",
       supplierCountry: p.supplierCountry ?? null,
+      sectors: KEYWORD_SECTORS.filter((sector) => textInIndustry(text, sector)).map((sector) => sector.id),
     });
   }
 
@@ -139,7 +144,29 @@ export function pickHomeProducts(
   for (let i = 0; i < perCategory; i++) {
     for (const b of buckets) if (b[i]) out.push(b[i]);
   }
+
+  // Sector chips filter the same list, so top each sector up to perCategory.
+  // Appended after the interleave: the unfiltered grid is unchanged.
+  const picked = new Set(out.map((i) => i.id));
+  for (const sector of KEYWORD_SECTORS) {
+    let have = out.filter((i) => i.sectors.includes(sector.id)).length;
+    for (const c of candidates) {
+      if (have >= perCategory) break;
+      if (picked.has(c.id) || !c.sectors.includes(sector.id)) continue;
+      picked.add(c.id);
+      out.push(c);
+      have++;
+    }
+  }
   return out;
+}
+
+/** Keyword sectors with at least one picked product, as chip values + labels. */
+export function homeProductSectors(items: HomeProductItem[]): { id: string; name: string }[] {
+  return KEYWORD_SECTORS.filter((sector) => items.some((i) => i.sectors.includes(sector.id))).map((sector) => ({
+    id: sector.id,
+    name: sector.name,
+  }));
 }
 
 /** Categories present in a picked list, in canonical chip order. */

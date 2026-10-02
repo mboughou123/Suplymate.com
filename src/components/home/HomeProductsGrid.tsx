@@ -8,10 +8,13 @@ import { HOME_PRODUCTS_VISIBLE, type HomeProductItem } from "@/lib/home-products
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 const ALL = "all";
+const SECTOR_PREFIX = "sector:";
 
 type Props = {
   items: HomeProductItem[];
   categories: string[];
+  /** Keyword sectors (Machinery, Hardware Components, Biomedical) shown after the categories. */
+  sectors: { id: string; label: string }[];
   /** Translated chip labels keyed by category (plus `all`). */
   labels: Record<string, string>;
   viewLabel: string;
@@ -22,6 +25,7 @@ type Props = {
 export default function HomeProductsGrid({
   items,
   categories,
+  sectors,
   labels,
   viewLabel,
   emptyLabel,
@@ -31,6 +35,10 @@ export default function HomeProductsGrid({
 
   const visible = useMemo(() => {
     if (active === ALL) return items.slice(0, HOME_PRODUCTS_VISIBLE);
+    if (active.startsWith(SECTOR_PREFIX)) {
+      const id = active.slice(SECTOR_PREFIX.length);
+      return items.filter((i) => i.sectors.includes(id)).slice(0, HOME_PRODUCTS_VISIBLE);
+    }
     return items.filter((i) => i.category === active);
   }, [items, active]);
 
@@ -42,13 +50,16 @@ export default function HomeProductsGrid({
           aria-label={filterLabel}
           className="mt-block flex flex-wrap justify-center gap-2"
         >
-          {[ALL, ...categories].map((cat) => {
-            const selected = cat === active;
+          {[
+            ...[ALL, ...categories].map((cat) => ({ value: cat, label: labels[cat] ?? cat })),
+            ...sectors.map((sector) => ({ value: `${SECTOR_PREFIX}${sector.id}`, label: sector.label })),
+          ].map(({ value, label }) => {
+            const selected = value === active;
             return (
               <button
-                key={cat}
+                key={value}
                 type="button"
-                onClick={() => setActive(cat)}
+                onClick={() => setActive(value)}
                 aria-pressed={selected}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
                   selected
@@ -56,7 +67,7 @@ export default function HomeProductsGrid({
                     : "border border-slate-200 bg-white text-ink-muted hover:border-cyan/40 hover:text-cyan"
                 }`}
               >
-                {labels[cat] ?? cat}
+                {label}
               </button>
             );
           })}
