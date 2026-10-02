@@ -257,6 +257,23 @@ export function getRealProductImage(input: ProductImageInput): string | undefine
 }
 
 /**
+ * The product's own third-party photo (scraped from the supplier's site), for
+ * servers that can re-host it first-party. Never a supplier factory shot,
+ * Maps photo, or a still borrowed from another SKU.
+ */
+export function getRemoteProductImage(input: ProductImageInput): string | undefined {
+  return (input.images ?? []).find(
+    (url): url is string =>
+      typeof url === "string" &&
+      /^https?:\/\//i.test(url.trim()) &&
+      !isFirstPartyProductImageUrl(url) &&
+      isRealImageUrl(url) &&
+      !isUnrelatedSceneStill(url) &&
+      imageFitsProduct(url, input.productName, input.category),
+  );
+}
+
+/**
  * Whether a product can be shown with a genuine photograph (its own or its
  * linked supplier's). Drives the homepage real-photo-only rule and ranks
  * photo-bearing products above fallback-only ones in the catalogue.

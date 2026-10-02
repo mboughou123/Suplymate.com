@@ -21,7 +21,15 @@ import {
   listApprovedScrapedProducts,
   scrapedToProduct,
 } from "@/lib/scraped-products-store";
-import { getBestProductImage, hasRealProductImage } from "@/lib/image-fallback";
+import {
+  getProductFallbackImage,
+  getRealProductImage,
+  getRemoteProductImage,
+  GENERIC_PRODUCT_PLACEHOLDER,
+  type ProductImageInput,
+} from "@/lib/image-fallback";
+import { isNavigationTitle, NAVIGATION_TITLES } from "@/lib/catalog-junk";
+import { proxiedProductImageUrl } from "@/lib/remote-product-image";
 import { approvedPackProducts, getPackProduct, getPackSupplier } from "@/data/pack-catalog";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
@@ -97,14 +105,36 @@ function priceLabelFor(
   return unit ? `${label} / ${unit}` : label;
 }
 
+/**
+ * The product's own photo wins over a still borrowed from its supplier's
+ * folder; a scraped remote photo is re-hosted through the signed proxy.
+ */
+export function resolveCardImage(input: ProductImageInput): { imageUrl: string; hasRealPhoto: boolean } {
+  const real = getRealProductImage(input);
+  if (real && (input.images ?? []).includes(real)) return { imageUrl: real, hasRealPhoto: true };
+  const remote = getRemoteProductImage(input);
+  const proxied = remote ? proxiedProductImageUrl(remote) : null;
+  if (proxied) return { imageUrl: proxied, hasRealPhoto: true };
+  if (real) return { imageUrl: real, hasRealPhoto: true };
+  return {
+    imageUrl: getProductFallbackImage(input.productName, input.category) ?? GENERIC_PRODUCT_PLACEHOLDER,
+    hasRealPhoto: false,
+  };
+}
+
 /* ------------------------------------------------------------------ */
 /* DB path (preferred; DB-level pagination)                            */
 /* ------------------------------------------------------------------ */
 
 type Where = Record<string, unknown>;
 
+const PUBLISHED = {
+  status: "approved",
+  NOT: { name: { in: [...NAVIGATION_TITLES], mode: "insensitive" as const } },
+};
+
 function buildWhere(q: PublicProductsQuery): Where {
-  const where: Where = { status: "approved" };
+  const where: Where = { ...PUBLISHED };
   if (q.category) where.category = q.category;
   if (q.supplierId) where.supplierId = q.supplierId;
   if (q.country) where.supplierCountry = q.country;
@@ -158,7 +188,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
     // `images` field; falls back to it when a product has no published media.
     const mediaMap = await getPublishedProductImageMap(rows.map((r) => r.id));
 
-    const items: PublicProductCard[] = rows.map((r) => {
+    const items: PublicProductCard[] = rows.filter((r) => !isNavigationTitle(r.name)).map((r) => {
       const sup = supMap.get(r.supplierId);
       const verified = sup?.verificationStatus === "verified";
       const supplierVisible =
@@ -184,8 +214,7 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         supplierCountry: r.supplierCountry ?? sup?.country ?? null,
         supplierVisible,
         verified,
-        imageUrl: getBestProductImage(imageInput),
-        hasRealPhoto: hasRealProductImage(imageInput),
+        ...resolveCardImage(imageInput),
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
         moq: r.moq ?? null,
@@ -222,17 +251,17 @@ async function dbFacets(): Promise<CatalogueFacets> {
   try {
     const [cats, countries, sups] = await Promise.all([
       prisma.scrapedProduct.findMany({
-        where: { status: "approved" },
+        where: PUBLISHED,
         distinct: ["category"],
         select: { category: true },
       }),
       prisma.scrapedProduct.findMany({
-        where: { status: "approved", supplierCountry: { not: null } },
+        where: { ...PUBLISHED, supplierCountry: { not: null } },
         distinct: ["supplierCountry"],
         select: { supplierCountry: true },
       }),
       prisma.scrapedProduct.findMany({
-        where: { status: "approved" },
+        where: PUBLISHED,
         distinct: ["supplierId"],
         select: { supplierId: true, supplierName: true },
         orderBy: { supplierName: "asc" },
@@ -279,8 +308,7 @@ function staticToCard(p: Product): PublicProductCard {
     supplierCountry: p.supplierCountry ?? null,
     supplierVisible: Boolean(p.supplierId) && !getPackSupplier(p.supplierId ?? "")?.productHostOnly,
     verified: false,
-    imageUrl: getBestProductImage(imageInput),
-    hasRealPhoto: hasRealProductImage(imageInput),
+    ...resolveCardImage(imageInput),
     priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
     moq: p.moq ?? null,
@@ -295,7 +323,7 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     ...approved.map(scrapedToProduct),
     ...staticProducts,
   ];
-  let cards = merged.map(staticToCard);
+  let cards = merged.filter((p) => !isNavigationTitle(p.name)).map(staticToCard);
 
   // Filters.
   const s = (q.search ?? "").toLowerCase().trim();
