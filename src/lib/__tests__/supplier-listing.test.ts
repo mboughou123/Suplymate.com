@@ -3,8 +3,10 @@ import { packSuppliers } from "@/data/pack-catalog";
 import { toDirectorySupplier } from "@/data/pack-catalog";
 import {
   listingSupplierMatches,
+  supplierInIndustry,
   toListingSupplier,
 } from "@/lib/supplier-listing";
+import { getIndustry } from "@/data/industries";
 
 describe("toListingSupplier", () => {
   const packRows = packSuppliers
@@ -63,5 +65,29 @@ describe("toListingSupplier", () => {
     expect(fullBytes).toBeGreaterThan(200_000);
     expect(slimBytes).toBeLessThan(fullBytes * 0.7);
     expect(slimBytes).toBeLessThan(380_000);
+  });
+});
+
+describe("supplierInIndustry", () => {
+  const sector = (id: string) => getIndustry(id)!;
+  const sup = (name: string, products: string[] = []) => ({ name, products });
+
+  it("matches sectors by what the supplier makes", () => {
+    expect(supplierInIndustry(sup("Leo Group Pump (Zhejiang)"), sector("machinery"))).toBe(true);
+    expect(supplierInIndustry(sup("Acme", ["CNC machines"]), sector("machinery"))).toBe(true);
+    expect(supplierInIndustry(sup("Sundram Fasteners Limited"), sector("hardware-components"))).toBe(true);
+    expect(supplierInIndustry(sup("Bormioli Pharma", ["Glass vials"]), sector("biomedical"))).toBe(true);
+  });
+
+  it("uses whole words, so 'label' is not 'lab' and a pipe mill is not machinery", () => {
+    expect(supplierInIndustry(sup("Acme Print", ["Shrink labels"]), sector("biomedical"))).toBe(false);
+    expect(supplierInIndustry(sup("Al Gharbia Pipe Company", ["Steel pipe"]), sector("machinery"))).toBe(false);
+  });
+
+  it("returns machinery, hardware and biomedical suppliers from the pack directory", () => {
+    const listed = packSuppliers.filter((s) => !s.productHostOnly).map((s) => toListingSupplier(toDirectorySupplier(s)));
+    for (const id of ["machinery", "hardware-components", "biomedical"]) {
+      expect(listed.some((s) => supplierInIndustry(s, sector(id)))).toBe(true);
+    }
   });
 });

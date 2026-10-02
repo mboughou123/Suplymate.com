@@ -7,6 +7,7 @@ import { INDUSTRIES } from "@/data/industries";
 import SupplierCard from "@/components/SupplierCard";
 import {
   listingSupplierMatches,
+  supplierInIndustry,
   type ListingSupplier,
 } from "@/lib/supplier-listing";
 import SupplierCardSkeleton from "@/components/SupplierCardSkeleton";
@@ -30,6 +31,20 @@ const DEFAULT_FILTERS: SupplierFilterState = {
   minReviews: 0,
   verifiedOnly: false,
 };
+
+// Sectors with no matching directory category get their own filter chip.
+const SECTOR_CHIP_IDS = ["machinery", "hardware-components", "biomedical"] as const;
+const SECTOR_CHIPS = SECTOR_CHIP_IDS.map((id) => INDUSTRIES.find((i) => i.id === id)!);
+const SECTOR_PREFIX = "industry:";
+
+function matchesCategoryFilter(s: ListingSupplier, value: string): boolean {
+  if (value === "All") return true;
+  if (value.startsWith(SECTOR_PREFIX)) {
+    const sector = SECTOR_CHIPS.find((i) => `${SECTOR_PREFIX}${i.id}` === value);
+    return sector ? supplierInIndustry(s, sector) : true;
+  }
+  return categoryOf(s) === value;
+}
 
 function categoryOf(s: ListingSupplier): string {
   return s.category ?? s.industry;
@@ -74,8 +89,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
     const q = filters.search.toLowerCase().trim();
     return initialSuppliers
       .filter((s) => {
-        if (filters.category !== "All" && categoryOf(s) !== filters.category)
-          return false;
+        if (!matchesCategoryFilter(s, filters.category)) return false;
         const country = s.country ?? s.location.split(",").pop()!.trim();
         if (filters.country !== "All" && country !== filters.country) return false;
         if (ratingOf(s) < filters.minRating) return false;
@@ -105,6 +119,10 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
     if (!industryId) return;
     const industry = INDUSTRIES.find((i) => i.id === industryId);
     if (!industry) return;
+    if (SECTOR_CHIPS.includes(industry)) {
+      setFilters((f) => ({ ...f, category: `${SECTOR_PREFIX}${industry.id}` }));
+      return;
+    }
     const category = industry.legacyCategories.find((c) => categories.includes(c));
     setFilters((f) => (category ? { ...f, category } : { ...f, search: industry.name }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -182,6 +200,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       <SupplierFilters
         state={filters}
         categories={categories}
+        sectorChips={SECTOR_CHIPS.map((i) => ({ value: `${SECTOR_PREFIX}${i.id}`, label: i.name }))}
         countries={countries}
         onChange={patch}
         onReset={() => setFilters(DEFAULT_FILTERS)}

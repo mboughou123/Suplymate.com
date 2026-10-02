@@ -1,4 +1,5 @@
 import type { Supplier, SupplierCategory, Industry } from "@/data/suppliers";
+import type { Industry as Sector } from "@/data/industries";
 
 /** Fields the directory card + client-side filters actually need. */
 export type ListingSupplier = {
@@ -47,6 +48,32 @@ function fieldHaystack(s: Pick<ListingSupplier, "name" | "industry" | "location"
     .filter((part): part is string => Boolean(part && part.trim()))
     .join(" ")
     .toLowerCase();
+}
+
+const industryPatterns = new Map<string, RegExp>();
+
+function industryPattern(industry: Sector): RegExp {
+  let re = industryPatterns.get(industry.id);
+  if (!re) {
+    const words = industry.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    re = new RegExp(`\\b(${words.join("|")})s?\\b`, "i");
+    industryPatterns.set(industry.id, re);
+  }
+  return re;
+}
+
+/**
+ * Sector membership by what the supplier makes (name + product names), not by
+ * its directory category: "Machinery" and "Hardware Components" both live under
+ * Industrial Parts, and no imported category exists for Biomedical. Description
+ * text is excluded — words like "equipment" appear in almost every profile.
+ */
+export function supplierInIndustry(
+  s: Pick<ListingSupplier, "name" | "products" | "featuredProducts">,
+  industry: Sector,
+): boolean {
+  const text = [s.name, ...(s.products ?? []), ...(s.featuredProducts ?? []).map((p) => p.name)].join(" | ");
+  return industryPattern(industry).test(text);
 }
 
 function extraSearchText(s: Supplier, already: string): string {
