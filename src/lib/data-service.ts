@@ -74,6 +74,14 @@ export function getFallbackSupplierIds(): string[] {
   return allFallbackSuppliers().map((s) => s.id);
 }
 
+let fallbackNames: Map<string, string> | null = null;
+
+/** id → display name for every supplier that has a static profile page. */
+export function getFallbackSupplierNames(): Map<string, string> {
+  fallbackNames ??= new Map(allFallbackSuppliers().map((s) => [s.id, s.name]));
+  return fallbackNames;
+}
+
 /**
  * Public visibility gate for the supplier moderation system.
  *

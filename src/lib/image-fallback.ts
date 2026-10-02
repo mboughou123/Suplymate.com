@@ -1,5 +1,6 @@
 import { imageFitsProduct } from "@/lib/product-image-fit";
 import { localStillsForProduct } from "@/lib/product-stills";
+import { isPlaceholderImageUrl } from "@/lib/image-noise";
 
 // Centralized image-fallback system for Suplymate.
 //
@@ -268,6 +269,7 @@ export function getRemoteProductImage(input: ProductImageInput): string | undefi
       /^https?:\/\//i.test(url.trim()) &&
       !isFirstPartyProductImageUrl(url) &&
       isRealImageUrl(url) &&
+      !isPlaceholderImageUrl(url) &&
       !isUnrelatedSceneStill(url) &&
       imageFitsProduct(url, input.productName, input.category),
   );
