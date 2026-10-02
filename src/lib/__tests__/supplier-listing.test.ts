@@ -82,6 +82,7 @@ describe("supplierInIndustry", () => {
   it("uses whole words, so 'label' is not 'lab' and a pipe mill is not machinery", () => {
     expect(supplierInIndustry(sup("Acme Print", ["Shrink labels"]), sector("biomedical"))).toBe(false);
     expect(supplierInIndustry(sup("Al Gharbia Pipe Company", ["Steel pipe"]), sector("machinery"))).toBe(false);
+    expect(supplierInIndustry(sup("Foliflex Cables", ["LV power cables"]), sector("hardware-components"))).toBe(false);
   });
 
   it("returns machinery, hardware and biomedical suppliers from the pack directory", () => {

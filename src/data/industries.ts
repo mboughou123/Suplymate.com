@@ -23,6 +23,11 @@ export type Industry = {
   subcategories: string[];
   /** Keywords used by the AI requirement parser and matcher (lowercase). */
   keywords: string[];
+  /**
+   * Narrower keywords for the keyword-sector filter chips, when `keywords`
+   * would sweep in a sector that already has its own chip (cables).
+   */
+  chipKeywords?: string[];
   /** Existing directory category labels that belong to this sector. */
   legacyCategories: string[];
 };
@@ -86,6 +91,11 @@ export const INDUSTRIES: Industry[] = [
       "relay", "relays", "power supply", "psu", "hydraulic", "cylinder", "valve",
       "gasket", "seal", "component", "components",
     ],
+    chipKeywords: [
+      "fastener", "bolt", "screw", "nut", "washer", "rivet", "anchor", "bearing",
+      "bushing", "connector", "sensor", "switch", "relay", "power supply", "psu",
+      "valve", "gasket", "seal", "hinge", "spring", "coupling", "hardware",
+    ],
     legacyCategories: ["Industrial Parts", "Cables & Electrical"],
   },
   {
@@ -127,11 +137,14 @@ export function industryForLegacyCategory(category: string | null | undefined): 
 
 const keywordPatterns = new Map<IndustryId, RegExp>();
 
-/** Whole-word keyword match (plural-tolerant), so "label" never counts as "lab". */
+/**
+ * Filter-chip membership: whole-word, plural-tolerant match on the sector's
+ * chip keywords, so "label" never counts as "lab".
+ */
 export function textInIndustry(text: string, industry: Industry): boolean {
   let re = keywordPatterns.get(industry.id);
   if (!re) {
-    const words = industry.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const words = (industry.chipKeywords ?? industry.keywords).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
     re = new RegExp(`\\b(${words.join("|")})s?\\b`, "i");
     keywordPatterns.set(industry.id, re);
   }

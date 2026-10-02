@@ -29,7 +29,10 @@ describe("homepage sector chips", () => {
     expect(vials?.sectors).toContain("biomedical");
     const pump = items.find((i) => /centrifugal pump/i.test(i.name));
     expect(pump?.sectors).toContain("machinery");
+    const bearing = items.find((i) => /bearing/i.test(i.name));
+    expect(bearing?.sectors).toContain("hardware-components");
+    // Cables have their own chip; they must not flood Hardware components.
     const cable = items.find((i) => /power cable/i.test(i.name));
-    expect(cable?.sectors).toEqual(["hardware-components"]);
+    expect(cable?.sectors).not.toContain("hardware-components");
   });
 });
