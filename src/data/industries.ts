@@ -125,6 +125,27 @@ export function industryForLegacyCategory(category: string | null | undefined): 
   return INDUSTRIES.find((i) => i.legacyCategories.includes(category));
 }
 
+const keywordPatterns = new Map<IndustryId, RegExp>();
+
+/** Whole-word keyword match (plural-tolerant), so "label" never counts as "lab". */
+export function textInIndustry(text: string, industry: Industry): boolean {
+  let re = keywordPatterns.get(industry.id);
+  if (!re) {
+    const words = industry.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    re = new RegExp(`\\b(${words.join("|")})s?\\b`, "i");
+    keywordPatterns.set(industry.id, re);
+  }
+  return re.test(text);
+}
+
+/**
+ * Sectors that have no directory/catalogue category of their own, so the
+ * supplier and homepage filters add a chip for each, matched by keyword.
+ */
+export const KEYWORD_SECTOR_IDS = ["machinery", "hardware-components", "biomedical"] as const satisfies readonly IndustryId[];
+
+export const KEYWORD_SECTORS: Industry[] = KEYWORD_SECTOR_IDS.map((id) => INDUSTRY_BY_ID.get(id)!);
+
 /** All industries whose keywords appear in free text, most matches first. */
 export function detectIndustries(text: string): Industry[] {
   const lower = text.toLowerCase();

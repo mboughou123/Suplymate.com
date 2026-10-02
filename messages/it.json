@@ -281,7 +281,10 @@
       "tubesAndPipes": "Tubes & pipes",
       "packaging": "Packaging",
       "construction": "Construction",
-      "industrialParts": "Industrial parts"
+      "industrialParts": "Industrial parts",
+      "machinery": "Machinery",
+      "hardwareComponents": "Hardware components",
+      "biomedical": "Biomedical & medical"
     }
   },
   "homeFaq": {
