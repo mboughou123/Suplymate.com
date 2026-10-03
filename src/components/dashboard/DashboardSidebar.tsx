@@ -5,6 +5,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import {
   LayoutDashboard,
   Factory,
+  Layers,
   Package,
   Sparkles,
   MessageSquare,
@@ -45,6 +46,7 @@ export default function DashboardSidebar({
     { href: "/dashboard", label: nav("dashboard"), icon: LayoutDashboard },
     { href: "/suppliers", label: nav("suppliers"), icon: Factory },
     { href: "/products", label: nav("products"), icon: Package },
+    { href: "/steel-metal", label: nav("steelMetal"), icon: Layers },
     { href: "/materials", label: nav("materials"), icon: TrendingUp },
     { href: "/ai-assistant", label: nav("aiAssistant"), icon: Sparkles },
     { href: "/messages", label: nav("messages"), icon: MessageSquare },

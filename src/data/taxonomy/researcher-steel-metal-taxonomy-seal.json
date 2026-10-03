@@ -1,0 +1,62 @@
+{
+  "label": "QA-TAXONOMY-STEEL-METAL-2026-09-15-RESEARCHER-PARTIAL",
+  "sealed_at_pt": "2026-09-15 8:17 PM PT",
+  "sealed_at_utc": "2026-09-16T03:17:09.716482+00:00",
+  "pack": "steel-metal-taxonomy-2026-09-15",
+  "role": "market-researcher",
+  "counts": {
+    "subcats_read": 13,
+    "leaves_read": 85,
+    "ok_subcats": 11,
+    "soft_label_renames": 6,
+    "hold_subcats": 1
+  },
+  "ok_subcats": [
+    "carbon-mild-steel",
+    "stainless-steel",
+    "alloy-steel",
+    "tool-steel",
+    "galvanized-coated-steels",
+    "structural-steel",
+    "pipe-tube",
+    "wire-rebar-mesh",
+    "flat-products-specialty",
+    "aluminum",
+    "copper-brass-bronze"
+  ],
+  "soft_renames": [
+    {
+      "id": "alloy-steel-plate",
+      "action": "drop Hardox-equiv; keep AR400/AR500/NM400+"
+    },
+    {
+      "id": "zmg-zn-al-mg",
+      "action": "drop SuperDyma-type trademark; Zn-Al-Mg / ZM only"
+    },
+    {
+      "id": "weathering-corten",
+      "action": "primary label Weathering Steel; COR-TEN alias only"
+    },
+    {
+      "id": "gi-corrugated-roofing",
+      "action": "drop Ibrahim; keep corrugated/trapezoidal/wave"
+    },
+    {
+      "id": "hsla-ahss",
+      "action": "soft keep under alloy"
+    },
+    {
+      "id": "other-non-ferrous",
+      "action": "soft \u2014 phase-1b or More metals"
+    }
+  ],
+  "hold_do_not_wire": [
+    {
+      "id": "metal-scrap-secondary",
+      "reason": "scrap/traders/secondary yards \u2014 not mill browse v1"
+    }
+  ],
+  "invented_fob_prices": false,
+  "traders_in_leaf_names": false,
+  "wire_recommendation": "PARTIAL \u2014 ship mill-grade subcats with soft renames; exclude metal-scrap-secondary from mill nav; IDs stable for Cursor label renames. Soft/OK day packs locked."
+}
