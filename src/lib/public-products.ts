@@ -30,6 +30,8 @@ import {
 } from "@/lib/image-fallback";
 import { isNavigationTitle, NAVIGATION_TITLES } from "@/lib/catalog-junk";
 import { proxiedProductImageUrl } from "@/lib/remote-product-image";
+import { resolveCatalogSupplier, supplierIdCandidates } from "@/lib/catalog-supplier";
+import { getFallbackSupplierNames } from "@/lib/data-service";
 import { approvedPackProducts, getPackProduct, getPackSupplier } from "@/data/pack-catalog";
 import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
@@ -177,22 +179,26 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
     });
 
     // Resolve live supplier verification + country + visibility in one query.
-    const supplierIds = [...new Set(rows.map((r) => r.supplierId))];
+    const supplierIds = [...new Set(rows.flatMap((r) => supplierIdCandidates(r.supplierId)))];
     const suppliers = await prisma.supplier.findMany({
       where: { id: { in: supplierIds } },
-      select: { id: true, country: true, verificationStatus: true },
+      select: { id: true, name: true, country: true, verificationStatus: true },
     });
     const supMap = new Map(suppliers.map((s) => [s.id, s]));
+    const profiles = publicProfiles();
+    for (const s of suppliers) {
+      if (!s.verificationStatus || s.verificationStatus === "verified") profiles.set(s.id, s.name);
+      else profiles.delete(s.id);
+    }
 
     // Published Media (admin-curated) takes priority over the legacy JSON
     // `images` field; falls back to it when a product has no published media.
     const mediaMap = await getPublishedProductImageMap(rows.map((r) => r.id));
 
     const items: PublicProductCard[] = rows.filter((r) => !isNavigationTitle(r.name)).map((r) => {
-      const sup = supMap.get(r.supplierId);
+      const supplier = resolveCatalogSupplier(r.supplierId, r.supplierName, profiles);
+      const sup = supMap.get(supplier.id);
       const verified = sup?.verificationStatus === "verified";
-      const supplierVisible =
-        !sup || !sup.verificationStatus || sup.verificationStatus === "verified";
       const published = mediaMap.get(r.id) ?? [];
       const pack = getPackProduct(r.id);
       const legacy = published.length ? published : safeArray(r.images);
@@ -209,16 +215,16 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
         id: r.id,
         name: r.name,
         category: r.category,
-        supplierId: r.supplierId,
-        supplierName: r.supplierName,
+        supplierId: supplier.id,
+        supplierName: supplier.name,
         supplierCountry: r.supplierCountry ?? sup?.country ?? null,
-        supplierVisible,
+        supplierVisible: supplier.hasProfile,
         verified,
         ...resolveCardImage(imageInput),
         priceLabel: priceLabelFor(r.basePrice, r.currency, r.priceUnit, r.commissionRate),
         priceUnit: r.priceUnit ?? null,
-        moq: r.moq ?? null,
-        shippingTime: r.shippingTime ?? null,
+        moq: cleanHint(r.moq),
+        shippingTime: cleanHint(r.shippingTime),
         productUrl: r.productUrl ?? r.sourceUrl ?? null,
       };
     });
@@ -235,6 +241,17 @@ async function fromDb(q: PublicProductsQuery): Promise<PublicProductsResult | nu
   } catch {
     return null;
   }
+}
+
+/**
+ * Scraped MOQ / shipping hints are sometimes sentence fragments cut out of the
+ * page ("& Shipping", "ping anywhere in Canada…"). Keep only text that starts
+ * like a value.
+ */
+export function cleanHint(text: string | null | undefined): string | null {
+  const t = (text ?? "").trim();
+  if (t.length < 3 || !/^[A-Z0-9≤<>~]/.test(t)) return null;
+  return t;
 }
 
 function safeArray(value: string | null | undefined): string[] {
@@ -284,7 +301,17 @@ async function dbFacets(): Promise<CatalogueFacets> {
 /* In-memory fallback (DB empty/unavailable)                           */
 /* ------------------------------------------------------------------ */
 
-function staticToCard(p: Product): PublicProductCard {
+/** id → name of suppliers with a public profile page (product-host-only mills excluded). */
+function publicProfiles(): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const [id, name] of getFallbackSupplierNames()) {
+    if (!getPackSupplier(id)?.productHostOnly) out.set(id, name);
+  }
+  return out;
+}
+
+function staticToCard(p: Product, profiles: ReadonlyMap<string, string>): PublicProductCard {
+  const supplier = resolveCatalogSupplier(p.supplierId, p.supplierName, profiles);
   const pack = getPackProduct(p.id);
   const images = [...new Set([...(pack?.images ?? []), ...(p.images ?? [])])];
   const imageInput = {
@@ -303,16 +330,16 @@ function staticToCard(p: Product): PublicProductCard {
     id: p.id,
     name: p.name,
     category: p.category,
-    supplierId: p.supplierId ?? "",
-    supplierName: p.supplierName ?? "Suplymate catalogue",
+    supplierId: supplier.id,
+    supplierName: supplier.name,
     supplierCountry: p.supplierCountry ?? null,
-    supplierVisible: Boolean(p.supplierId) && !getPackSupplier(p.supplierId ?? "")?.productHostOnly,
+    supplierVisible: supplier.hasProfile,
     verified: false,
     ...resolveCardImage(imageInput),
     priceLabel: priceLabelFor(base, p.currency, p.unit, p.commissionRate),
     priceUnit: p.priceUnit ?? p.unit ?? null,
-    moq: p.moq ?? null,
-    shippingTime: p.shippingTime ?? null,
+    moq: cleanHint(p.moq),
+    shippingTime: cleanHint(p.shippingTime),
     productUrl: p.productUrl ?? null,
   };
 }
@@ -323,7 +350,8 @@ async function fromMemory(q: PublicProductsQuery): Promise<PublicProductsResult>
     ...approved.map(scrapedToProduct),
     ...staticProducts,
   ];
-  let cards = merged.filter((p) => !isNavigationTitle(p.name)).map(staticToCard);
+  const profiles = publicProfiles();
+  let cards = merged.filter((p) => !isNavigationTitle(p.name)).map((p) => staticToCard(p, profiles));
 
   // Filters.
   const s = (q.search ?? "").toLowerCase().trim();

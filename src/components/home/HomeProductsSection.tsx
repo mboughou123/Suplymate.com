@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import {
   homeCategoryKey,
   homeProductCategories,
+  homeProductSectors,
   type HomeProductItem,
 } from "@/lib/home-products";
 import HomeProductsGrid from "./HomeProductsGrid";
@@ -26,6 +27,10 @@ export default async function HomeProductsSection({ items }: { items: HomeProduc
     const key = homeCategoryKey(c);
     labels[c] = t.has(`categories.${key}`) ? t(`categories.${key}`) : c;
   }
+  const sectors = homeProductSectors(items).map((sector) => {
+    const key = homeCategoryKey(sector.id);
+    return { id: sector.id, label: t.has(`categories.${key}`) ? t(`categories.${key}`) : sector.name };
+  });
 
   return (
     <section
@@ -48,6 +53,7 @@ export default async function HomeProductsSection({ items }: { items: HomeProduc
         <HomeProductsGrid
           items={items}
           categories={categories}
+          sectors={sectors}
           labels={labels}
           viewLabel={t("viewProduct")}
           emptyLabel={t("empty")}

@@ -1,5 +1,5 @@
 import type { Supplier, SupplierCategory, Industry } from "@/data/suppliers";
-import type { Industry as Sector } from "@/data/industries";
+import { textInIndustry, type Industry as Sector } from "@/data/industries";
 
 /** Fields the directory card + client-side filters actually need. */
 export type ListingSupplier = {
@@ -50,18 +50,6 @@ function fieldHaystack(s: Pick<ListingSupplier, "name" | "industry" | "location"
     .toLowerCase();
 }
 
-const industryPatterns = new Map<string, RegExp>();
-
-function industryPattern(industry: Sector): RegExp {
-  let re = industryPatterns.get(industry.id);
-  if (!re) {
-    const words = industry.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-    re = new RegExp(`\\b(${words.join("|")})s?\\b`, "i");
-    industryPatterns.set(industry.id, re);
-  }
-  return re;
-}
-
 /**
  * Sector membership by what the supplier makes (name + product names), not by
  * its directory category: "Machinery" and "Hardware Components" both live under
@@ -73,7 +61,7 @@ export function supplierInIndustry(
   industry: Sector,
 ): boolean {
   const text = [s.name, ...(s.products ?? []), ...(s.featuredProducts ?? []).map((p) => p.name)].join(" | ");
-  return industryPattern(industry).test(text);
+  return textInIndustry(text, industry);
 }
 
 function extraSearchText(s: Supplier, already: string): string {

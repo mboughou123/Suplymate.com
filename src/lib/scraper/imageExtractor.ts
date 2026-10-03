@@ -27,7 +27,7 @@ const TRUST_HINT =
 // Decorative / navigation / tracking / placeholder imagery that is NOT supplier
 // media. Cert/trust badges are exempt (handled by TRUST_HINT before this runs).
 const ICON_NOISE =
-  /(sprite|spacer|pixel|blank\.gif|1x1|tracking|beacon|analytics|gtm|gif;base64|favicon|loader|loading|placeholder|no[-_]?image|noimage|default[-_]image|avatar|(^|[\/_-])ico[-_.]|[\/_-]icon|icons?[\/_-]|arrow|chevron|caret|hamburger|burger|\bmenu\b|search|magnifier|close|cross|times|exit|play[-_]?(button|btn)?|social|share|twitter|facebook|instagram|linkedin|youtube|whatsapp|pinterest|tiktok|flag[-_]|chat[-_]|cookie|consent|scroll|hero[-_]?bg|banner|carousel[-_]?bg|background|bg[-_]|pattern|dots?\.svg|swatch|spinner|payment|visa|mastercard|paypal|amex)/i;
+  /(sprite|spacer|pixel|dummy|revslider|blank\.gif|1x1|tracking|beacon|analytics|gtm|gif;base64|favicon|loader|loading|placeholder|no[-_]?image|noimage|default[-_]image|avatar|(^|[\/_-])ico[-_.]|[\/_-]icon|icons?[\/_-]|arrow|chevron|caret|hamburger|burger|\bmenu\b|search|magnifier|close|cross|times|exit|play[-_]?(button|btn)?|social|share|twitter|facebook|instagram|linkedin|youtube|whatsapp|pinterest|tiktok|flag[-_]|chat[-_]|cookie|consent|scroll|hero[-_]?bg|banner|carousel[-_]?bg|background|bg[-_]|pattern|dots?\.svg|swatch|spinner|payment|visa|mastercard|paypal|amex)/i;
 // Things that are explicitly the brand logo, never a product photo.
 const LOGO_NOISE = /(logo|brandmark|wordmark|header[-_]?img|site[-_]?icon)/i;
 

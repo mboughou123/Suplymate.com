@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { INDUSTRIES } from "@/data/industries";
+import { INDUSTRIES, KEYWORD_SECTORS } from "@/data/industries";
 import SupplierCard from "@/components/SupplierCard";
 import {
   listingSupplierMatches,
@@ -32,9 +32,7 @@ const DEFAULT_FILTERS: SupplierFilterState = {
   verifiedOnly: false,
 };
 
-// Sectors with no matching directory category get their own filter chip.
-const SECTOR_CHIP_IDS = ["machinery", "hardware-components", "biomedical"] as const;
-const SECTOR_CHIPS = SECTOR_CHIP_IDS.map((id) => INDUSTRIES.find((i) => i.id === id)!);
+const SECTOR_CHIPS = KEYWORD_SECTORS;
 const SECTOR_PREFIX = "industry:";
 
 function matchesCategoryFilter(s: ListingSupplier, value: string): boolean {

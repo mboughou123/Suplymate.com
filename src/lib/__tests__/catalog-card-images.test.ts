@@ -6,7 +6,8 @@ import {
   proxiedProductImageUrl,
   verifyProxiedImage,
 } from "@/lib/remote-product-image";
-import { resolveCardImage } from "@/lib/public-products";
+import { cleanHint, resolveCardImage } from "@/lib/public-products";
+import { resolveCatalogSupplier } from "@/lib/catalog-supplier";
 
 const fetchRemoteImage = vi.fn();
 vi.mock("@/lib/media-fetch", async (orig) => ({
@@ -116,5 +117,56 @@ describe("resolveCardImage", () => {
     ).toBe(local);
     const none = resolveCardImage({ images: [], productName: "Swagelok Fittings", category: "Tubes & Pipes" });
     expect(none).toEqual({ imageUrl: "/images/products/pipes.svg", hasRealPhoto: false });
+  });
+});
+
+describe("catalogue supplier links", () => {
+  const profiles = new Map([
+    ["nexans", "Nexans S.A."],
+    ["smc-corporation", "SMC Corporation"],
+    ["cables-house-wires-and-cables-trading-llc-ae", "CABLES HOUSE WIRES AND CABLES TRADING LLC"],
+  ]);
+
+  it("maps scraped domain ids onto the directory profile", () => {
+    expect(resolveCatalogSupplier("nexans-com", "Nexans", profiles)).toEqual({
+      id: "nexans",
+      name: "Nexans S.A.",
+      hasProfile: true,
+    });
+    expect(resolveCatalogSupplier("smcusa-com", "Smcusa", profiles).id).toBe("smc-corporation");
+  });
+
+  it("hides View supplier when no profile page exists, but fixes the name", () => {
+    expect(resolveCatalogSupplier("siemens-com", "Siemens", profiles)).toEqual({
+      id: "siemens-com",
+      name: "Siemens",
+      hasProfile: false,
+    });
+    expect(resolveCatalogSupplier("products-swagelok-com", "Products", profiles).name).toBe("Swagelok");
+    expect(resolveCatalogSupplier("rockwellautomation-com", "Rockwellautomation", profiles).hasProfile).toBe(false);
+  });
+
+  it("keeps ids that already have a profile", () => {
+    const r = resolveCatalogSupplier("cables-house-wires-and-cables-trading-llc-ae", "CABLES HOUSE", profiles);
+    expect(r.hasProfile).toBe(true);
+    expect(r.id).toBe("cables-house-wires-and-cables-trading-llc-ae");
+  });
+});
+
+describe("scraped placeholders and fragments", () => {
+  it("never uses a slider dummy as the card photo", () => {
+    const r = resolveCardImage({
+      images: ["https://cableshouse-me.com/modules/revsliderprestashop/public/assets/assets/dummy.png"],
+      productName: "10GXE02",
+      category: "Cables & Electrical",
+    });
+    expect(r).toEqual({ imageUrl: "/images/products/electrical.svg", hasRealPhoto: false });
+  });
+
+  it("drops MOQ/shipping text that is a cut-off sentence", () => {
+    expect(cleanHint("& Shipping")).toBeNull();
+    expect(cleanHint("ping anywhere in Canada and the US!")).toBeNull();
+    expect(cleanHint("500 pieces")).toBe("500 pieces");
+    expect(cleanHint("MOQ Not published")).toBe("MOQ Not published");
   });
 });

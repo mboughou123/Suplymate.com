@@ -114,6 +114,8 @@ export function parseRequirement(text: string): ParsedRequirement {
 
   let intent = detectIntent(lower);
   if (intent === "general" && materials.length > 0) intent = "material_info";
+  // "give hardware components", "biomedical equipment": naming a sector is a sourcing request.
+  if (intent === "general" && industries.length > 0) intent = "find_suppliers";
   if (beginner && intent !== "material_info") intent = "sourcing_plan";
 
   return {
