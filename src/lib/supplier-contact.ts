@@ -66,8 +66,12 @@ export function canViewSupplierContact(viewer: ContactViewer): boolean {
   return viewer.signedIn && entitlementsFor(viewer.plan).directSupplierContact;
 }
 
-export function contactViewFor(supplier: SupplierContactFields, viewer: ContactViewer): ContactView {
-  const contact = resolveSupplierContact(supplier);
+export function contactViewFor(
+  supplier: SupplierContactFields,
+  viewer: ContactViewer,
+  file: WebsiteContactFile = bundled,
+): ContactView {
+  const contact = resolveSupplierContact(supplier, file);
   if (canViewSupplierContact(viewer)) return { access: "full", ...contact };
   return {
     access: "locked",

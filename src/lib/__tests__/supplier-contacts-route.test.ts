@@ -64,4 +64,24 @@ describe("GET /api/supplier-contacts", () => {
       emailSource: "listing",
     });
   });
+
+  it("gates Logistics & Insurance provider contact the same way", async () => {
+    const guest = await lookup("falvey-cargo,kuehne-nagel-cargo-insurance");
+    expect(guest.text).not.toMatch(/792-0144|falveyins/);
+    expect(JSON.parse(guest.text).contacts).toEqual({
+      "falvey-cargo": { access: "locked", reason: "guest", hasPhone: true, hasEmail: true },
+      "kuehne-nagel-cargo-insurance": { access: "locked", reason: "guest", hasPhone: false, hasEmail: false },
+    });
+
+    viewer.userId = "u3";
+    viewer.plan = "pro";
+    const paid = await lookup("falvey-cargo");
+    expect(JSON.parse(paid.text).contacts["falvey-cargo"]).toEqual({
+      access: "full",
+      phone: "+1 (401) 792-0144",
+      email: "info@falveyins.com",
+      phoneSource: "website",
+      emailSource: "website",
+    });
+  });
 });

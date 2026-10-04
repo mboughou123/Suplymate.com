@@ -3,6 +3,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getSupplierById, getSuppliersFromDb } from "@/lib/data-service";
 import { contactViewFor, type ContactView, type ContactViewer } from "@/lib/supplier-contact";
+import { logisticsProviderContactView } from "@/lib/logistics-provider-contact";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +39,11 @@ export async function GET(request: Request) {
   const byId = new Map(directory.map((s) => [s.id, s]));
   const contacts: Record<string, ContactView> = {};
   for (const id of ids) {
+    const provider = logisticsProviderContactView(id, viewer);
+    if (provider) {
+      contacts[id] = provider;
+      continue;
+    }
     const supplier = byId.get(id) ?? (await getSupplierById(id));
     if (supplier) contacts[id] = contactViewFor(supplier, viewer);
   }
