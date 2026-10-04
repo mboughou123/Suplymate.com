@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-10-04",
+  "method": "Copied by hand from each provider's own website (contact or cargo page); see the source URL on every entry.",
+  "suppliers": {
+    "chubb-worldwide-ocean-cargo": {
+      "phone": "1-800-682-4822",
+      "phoneSourceUrl": "https://www.chubb.com/us-en/contact.html",
+      "collectedAt": "2026-10-04"
+    },
+    "aig-ocean-cargo": {
+      "phone": "+1 800-225-5244",
+      "phoneSourceUrl": "https://www.aig.com/home/contact",
+      "collectedAt": "2026-10-04"
+    },
+    "zurich-marine-cargo": {
+      "phone": "1-800-382-2150",
+      "phoneSourceUrl": "https://www.zurichna.com/contact",
+      "collectedAt": "2026-10-04"
+    },
+    "tokio-marine-hcc-marine-cargo": {
+      "phone": "+44 (0)20 7929 3223",
+      "phoneSourceUrl": "https://www.tmhcc.com/en/contact-us/underwriting-teams/marine-cargo",
+      "collectedAt": "2026-10-04"
+    },
+    "hdi-global-marine-cargo": {
+      "phone": "+49 511 645-0",
+      "phoneSourceUrl": "https://www.hdi.global/contact/",
+      "email": "info@hdi.global",
+      "emailSourceUrl": "https://www.hdi.global/contact/",
+      "collectedAt": "2026-10-04"
+    },
+    "the-hartford-ocean-cargo": {
+      "email": "marineservice@thehartford.com",
+      "emailSourceUrl": "https://www.thehartford.com/inland-marine-insurance",
+      "collectedAt": "2026-10-04"
+    },
+    "beazley-marine-cargo": {
+      "phone": "+44 (0)20 7667 0623",
+      "phoneSourceUrl": "https://www.beazley.com/en-001/contact-us/",
+      "email": "info@beazley.com",
+      "emailSourceUrl": "https://www.beazley.com/en-001/contact-us/",
+      "collectedAt": "2026-10-04"
+    },
+    "qbe-marine-cargo": {
+      "phone": "+44 (0)20 7105 4000",
+      "phoneSourceUrl": "https://qbeeurope.com/contact-us/",
+      "email": "enquiries@uk.qbe.com",
+      "emailSourceUrl": "https://qbeeurope.com/contact-us/",
+      "collectedAt": "2026-10-04"
+    },
+    "swiss-re-corporate-solutions-brasil-cargo": {
+      "phone": "0800 008 9756",
+      "phoneSourceUrl": "https://corporatesolutions.swissre.com/brasil-seguros/nossas-solucoes/transportes/seguro-de-transporte-de-carga.html",
+      "collectedAt": "2026-10-04"
+    },
+    "markel-international-marine-cargo": {
+      "phone": "+44 (0)20 7953 6000",
+      "phoneSourceUrl": "https://www.markel.com/about-us/contact-us",
+      "collectedAt": "2026-10-04"
+    },
+    "hiscox-marine-cargo": {
+      "phone": "020 7448 6000",
+      "phoneSourceUrl": "https://www.hiscoxlondonmarket.com/business/cargo",
+      "email": "enquiries@hiscox.com",
+      "emailSourceUrl": "https://www.hiscoxlondonmarket.com/business/cargo",
+      "collectedAt": "2026-10-04"
+    },
+    "falvey-cargo": {
+      "phone": "+1 (401) 792-0144",
+      "phoneSourceUrl": "https://falveyinsurancegroup.com/contact/",
+      "email": "info@falveyins.com",
+      "emailSourceUrl": "https://falveyinsurancegroup.com/contact/",
+      "collectedAt": "2026-10-04"
+    },
+    "roanoke-cargo-insurance": {
+      "phone": "1-800-762-6653",
+      "phoneSourceUrl": "https://www.roanokegroup.com/solutions/cargo-insurance/",
+      "email": "infospot@roanokegroup.com",
+      "emailSourceUrl": "https://www.roanokegroup.com/solutions/cargo-insurance/",
+      "collectedAt": "2026-10-04"
+    },
+    "avalon-cargo-insurance": {
+      "phone": "(847) 700-8100",
+      "phoneSourceUrl": "https://www.avalonrisk.com/contact-us",
+      "email": "letsconnect@avalonrisk.com",
+      "emailSourceUrl": "https://www.avalonrisk.com/contact-us",
+      "collectedAt": "2026-10-04"
+    },
+    "loadsure": {
+      "phone": "+44 204 576 9607",
+      "phoneSourceUrl": "https://www.loadsure.net/contact/",
+      "email": "hello@loadsure.net",
+      "emailSourceUrl": "https://www.loadsure.net/contact/",
+      "collectedAt": "2026-10-04"
+    },
+    "dsv-cargo-insurance": {
+      "phone": "+45 43 20 30 40",
+      "phoneSourceUrl": "https://www.dsv.com/en/about-dsv/legal-notice",
+      "collectedAt": "2026-10-04"
+    },
+    "flexport-cargo-insurance": {
+      "phone": "+1 (415) 231-5252",
+      "phoneSourceUrl": "https://www.flexport.com/company/contact/",
+      "email": "hello@flexport.com",
+      "emailSourceUrl": "https://www.flexport.com/company/contact/",
+      "collectedAt": "2026-10-04"
+    },
+    "ch-robinson-marine-cargo-insurance": {
+      "phone": "+1-952-683-2800",
+      "phoneSourceUrl": "https://www.chrobinson.com/en-us/contact/",
+      "collectedAt": "2026-10-04"
+    },
+    "livingston-cargo-insurance": {
+      "phone": "1-800-837-1063",
+      "phoneSourceUrl": "https://www.livingstonintl.com/contact-us/",
+      "email": "solutions@livingstonintl.com",
+      "emailSourceUrl": "https://www.livingstonintl.com/contact-us/",
+      "collectedAt": "2026-10-04"
+    }
+  }
+}

@@ -1,0 +1,943 @@
+[
+  {
+    "id": "allianz-commercial-marine-cargo",
+    "name": "Allianz Commercial Marine Cargo Insurance",
+    "company": "Allianz Commercial",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "Allianz Commercial provides marine cargo insurance for large businesses covering damage, loss or theft of goods in transit. It delivers local marine cargo solutions through a network of cargo specialists, claims experts and risk consultants.",
+    "coverage": [
+      "International transit",
+      "Domestic transit",
+      "Stock throughput",
+      "Project cargo",
+      "Delay in start-up",
+      "Industry-specific tailored wordings"
+    ],
+    "regions": [
+      "More than 200 countries and territories"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://commercial.allianz.com/solutions/marine-insurance/cargo-insurance.html",
+    "homepage": "https://commercial.allianz.com/",
+    "quoteUrl": "https://commercial.allianz.com/contact-us.html",
+    "sourceUrls": [
+      "https://commercial.allianz.com/solutions/marine-insurance/cargo-insurance.html",
+      "https://commercial.allianz.com/contact-us.html",
+      "https://commercial.allianz.com/about-us.html"
+    ]
+  },
+  {
+    "id": "axa-xl-marine-cargo",
+    "name": "AXA XL Marine Cargo and Freight Liability",
+    "company": "AXA XL (AXA Group)",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "AXA XL offers marine cargo insurance covering goods on land, sea, air and in storage, from loss, damage and theft through to war and terrorism in transit. It also offers liability cover for freight forwarders, hauliers and logistics companies.",
+    "coverage": [
+      "General cargo",
+      "Stock throughput",
+      "Project cargo incl. delay in start-up",
+      "War & terrorism in transit",
+      "Contractor's equipment (mobile)",
+      "Freight forwarder & logistics liability"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://axaxl.com/insurance/products/marine-cargo-insurance",
+    "homepage": "https://axaxl.com/",
+    "quoteUrl": "https://axaxl.com/contact-us",
+    "sourceUrls": [
+      "https://axaxl.com/insurance/products/marine-cargo-insurance",
+      "https://axaxl.com/insurance/industries/marine-and-logistics",
+      "https://axaxl.com/contact-us"
+    ]
+  },
+  {
+    "id": "chubb-worldwide-ocean-cargo",
+    "name": "Chubb Worldwide Ocean Cargo Insurance",
+    "company": "Chubb",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "Chubb offers ocean cargo coverage for ocean, air and overland cargo risks, including goods shipped internationally, transit within a country and goods at storage locations. It serves exporters, importers, manufacturers and logistics companies.",
+    "coverage": [
+      "International steamer and air transit",
+      "Domestic transit (U.S. and Canada)",
+      "Foreign inland transit incl. local admitted policies",
+      "Domestic and foreign warehousing",
+      "Barge and connecting conveyances",
+      "War, strikes, riots and civil commotion"
+    ],
+    "regions": [],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.chubb.com/us-en/business-insurance/worldwide-ocean-cargo-insurance.html",
+    "homepage": "https://www.chubb.com/us-en/business-insurance.html",
+    "quoteUrl": "https://www.chubb.com/us-en/businesses/lead-form.html",
+    "sourceUrls": [
+      "https://www.chubb.com/us-en/business-insurance/worldwide-ocean-cargo-insurance.html",
+      "https://www.chubb.com/us-en/business-insurance/ocean-marine.html",
+      "https://www.chubb.com/us-en/businesses/lead-form.html",
+      "https://www.chubb.com/us-en/contact.html"
+    ]
+  },
+  {
+    "id": "aig-ocean-cargo",
+    "name": "AIG Ocean Cargo",
+    "company": "AIG",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "AIG Ocean Cargo insures goods moving across land, sea or international borders for importers, exporters, manufacturers, wholesalers and distributors. Its offering includes multinational master programs, captive fronting, stock throughput and logistics package policies.",
+    "coverage": [
+      "General cargo (containerized)",
+      "Bulk & break bulk cargo",
+      "Project cargo",
+      "Stock throughput",
+      "Multinational controlled master programs",
+      "Logistics package policies (Freight Pak)"
+    ],
+    "regions": [
+      "Approximately 190 countries and jurisdictions"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.aig.com/home/risk-solutions/business/specialty-risks/marine/ocean-cargo",
+    "homepage": "https://www.aig.com/home/risk-solutions/business",
+    "quoteUrl": "https://www.aig.com/home/contact",
+    "sourceUrls": [
+      "https://www.aig.com/home/risk-solutions/business/specialty-risks/marine/ocean-cargo",
+      "https://www.aig.com/home/contact"
+    ]
+  },
+  {
+    "id": "zurich-marine-cargo",
+    "name": "Zurich Marine (Ocean Cargo)",
+    "company": "Zurich North America",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "Zurich offers customized cargo insurance programs protecting goods shipped by air, water and land against physical loss or damage in the normal course of transit. Coverage can be extended with enhancements such as inland transit, warehousing and processing.",
+    "coverage": [
+      "Ocean cargo",
+      "Domestic and foreign inland transit",
+      "Warehousing / stock throughput",
+      "Processing",
+      "Installation",
+      "Delay in start-up"
+    ],
+    "regions": [
+      "More than 210 countries and territories",
+      "Marine underwriters in 24 countries"
+    ],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.zurichna.com/industries/marine",
+    "homepage": "https://www.zurichna.com/",
+    "quoteUrl": "https://www.zurichna.com/contact",
+    "sourceUrls": [
+      "https://www.zurichna.com/industries/marine",
+      "https://www.zurichna.com/contact"
+    ]
+  },
+  {
+    "id": "tokio-marine-hcc-marine-cargo",
+    "name": "Tokio Marine HCC Marine Cargo",
+    "company": "Tokio Marine HCC",
+    "kind": "specialist-cargo-insurer",
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "description": "Tokio Marine HCC's marine cargo team covers goods in storage or in transit by sea, road, rail or air, from factory to final delivery, using its own capacity often supplemented by Lloyd's. It also runs Portia, a dedicated cargo facility for SME business.",
+    "coverage": [
+      "Goods in transit",
+      "Goods in storage",
+      "Road, rail and air transit",
+      "SME cargo facility (Portia)"
+    ],
+    "regions": [
+      "Offices in the United States, Mexico, the United Kingdom and Europe",
+      "Business in approximately 180 countries"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.tmhcc.com/en/products/marine/marine-cargo",
+    "homepage": "https://www.tmhcc.com/en",
+    "quoteUrl": "https://www.tmhcc.com/en/contact-us/underwriting-teams/marine-cargo",
+    "sourceUrls": [
+      "https://www.tmhcc.com/en/products/marine/marine-cargo",
+      "https://www.tmhcc.com/en/contact-us/underwriting-teams/marine-cargo",
+      "https://www.tmhcc.com/en/products/marine"
+    ]
+  },
+  {
+    "id": "hdi-global-marine-cargo",
+    "name": "HDI Global Cargo & Marine Insurance",
+    "company": "HDI Global SE",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "Hannover",
+      "country": "Germany"
+    },
+    "description": "HDI Global provides all-risks marine cargo insurance for goods shipped domestically or internationally, combined with risk consulting and worldwide claims handling. Regular shippers can arrange ongoing cover under a general marine policy.",
+    "coverage": [
+      "All-risks marine cargo",
+      "General marine (open) policy",
+      "General average",
+      "Marine business interruption",
+      "Project cargo",
+      "Multinational insurance programmes"
+    ],
+    "regions": [
+      "Worldwide"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.hdi.global/insurance/goods_supply_chain/marine/",
+    "homepage": "https://www.hdi.global/",
+    "quoteUrl": "https://www.hdi.global/contact/",
+    "sourceUrls": [
+      "https://www.hdi.global/insurance/goods_supply_chain/marine/",
+      "https://www.hdi.global/en-gb/insurance/goods_supply_chain/marine/",
+      "https://www.hdi.global/contact/"
+    ]
+  },
+  {
+    "id": "liberty-specialty-markets-marine-cargo",
+    "name": "Liberty Specialty Markets Marine Cargo",
+    "company": "Liberty Specialty Markets (Liberty Mutual Insurance Group)",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "Liberty Specialty Markets' cargo insurance covers importers, exporters, manufacturers and suppliers for goods carried by vessel, aircraft and truck as well as static risks. War and terrorism cover can be added to cargo risks.",
+    "coverage": [
+      "Cargo in transit",
+      "Stock throughput",
+      "Ocean tow cargo",
+      "Cargo storage risks",
+      "Cargo delay in start-up",
+      "Cargo liability"
+    ],
+    "regions": [
+      "Worldwide"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.libertyspecialtymarkets.com/gb-en/product/marine-cargo-insurance",
+    "homepage": "https://www.libertyspecialtymarkets.com/",
+    "quoteUrl": "https://www.libertyspecialtymarkets.com/gb-en/contact-us",
+    "sourceUrls": [
+      "https://www.libertyspecialtymarkets.com/gb-en/product/marine-cargo-insurance",
+      "https://www.libertyspecialtymarkets.com/gb-en/product/marine",
+      "https://www.libertyspecialtymarkets.com/gb-en/contact-us"
+    ]
+  },
+  {
+    "id": "travelers-ocean-cargo",
+    "name": "Travelers Ocean Cargo",
+    "company": "Travelers",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "Hartford",
+      "country": "United States"
+    },
+    "description": "Travelers provides marine cargo insurance for importers, exporters, manufacturers, commodities traders and freight forwarders buying or selling goods overseas. Policyholders can issue ocean cargo special policies online.",
+    "coverage": [
+      "Cargo Elite all-risk international shipments by sea",
+      "Cargo Elite Express (flat annual premium)",
+      "Custom cargo coverage (chemicals, food, pharmaceuticals)",
+      "Concealed damage and shortage from container",
+      "Ocean cargo special policies"
+    ],
+    "regions": [],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.travelers.com/business-insurance/ocean-marine/cargo",
+    "homepage": "https://www.travelers.com/",
+    "quoteUrl": "https://www.travelers.com/contact-us",
+    "sourceUrls": [
+      "https://www.travelers.com/business-insurance/ocean-marine/cargo",
+      "https://www.travelers.com/contact-us"
+    ]
+  },
+  {
+    "id": "the-hartford-ocean-cargo",
+    "name": "The Hartford Ocean Marine (Ocean Cargo)",
+    "company": "The Hartford",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "The Hartford's Ocean Marine team offers all-risk ocean cargo coverage for manufacturers, importers, exporters and freight forwarders, with enhancements for inland transit, warehouse storage and exhibitions. It also writes freight forwarder and logistics liability coverages.",
+    "coverage": [
+      "All-risk ocean cargo",
+      "Stock throughput",
+      "Domestic and foreign inland transit",
+      "Warehouse and processing",
+      "Shipper's interest (freight forwarders)",
+      "Cargo legal liability"
+    ],
+    "regions": [],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.thehartford.com/commercial-insurance-agents/coverages-ocean-marine",
+    "homepage": "https://www.thehartford.com/",
+    "quoteUrl": "https://www.thehartford.com/commercial-insurance-agents/ocean-marine-contacts",
+    "sourceUrls": [
+      "https://www.thehartford.com/commercial-insurance-agents/coverages-ocean-marine",
+      "https://www.thehartford.com/commercial-insurance-agents/ocean-marine-contacts",
+      "https://www.thehartford.com/inland-marine-insurance"
+    ]
+  },
+  {
+    "id": "beazley-marine-cargo",
+    "name": "Beazley Cargo & Specie",
+    "company": "Beazley",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "description": "Beazley insures general cargoes and specie from London and Singapore, covering goods in transit by land, sea or air and in storage during transit or long-term storage. Its cargo book emphasises oil, general commodities and general machinery, and it also handles project cargo.",
+    "coverage": [
+      "General cargo",
+      "Specie",
+      "Goods in transit (land, sea, air)",
+      "Storage in transit and long-term storage",
+      "Project cargo"
+    ],
+    "regions": [
+      "Written from London and Singapore"
+    ],
+    "markets": [
+      "europe",
+      "asia-pacific"
+    ],
+    "website": "https://www.beazley.com/en-001/products/marine-london-market/cargo/",
+    "homepage": "https://www.beazley.com/",
+    "quoteUrl": "https://www.beazley.com/en-001/contact-us/",
+    "sourceUrls": [
+      "https://www.beazley.com/en-001/products/marine-london-market/cargo/",
+      "https://www.beazley.com/en-001/contact-us/",
+      "https://www.beazley.com/"
+    ]
+  },
+  {
+    "id": "qbe-marine-cargo",
+    "name": "QBE Cargo Insurance (European Operations)",
+    "company": "QBE European Operations plc",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "description": "QBE European Operations provides cargo cover against loss of or damage to goods in storage or in transit, written on a subscription basis at Lloyd's or through its Multinational product. The cargo team focuses on high-tech, pharmaceutical, oil and petrochemical risks as well as excess cargo business.",
+    "coverage": [
+      "Goods in transit and storage",
+      "Multinational cargo cover",
+      "Excess cargo",
+      "High-tech cargo",
+      "Pharmaceutical cargo",
+      "Oil & petrochemical cargo"
+    ],
+    "regions": [
+      "United Kingdom",
+      "Continental Europe"
+    ],
+    "markets": [
+      "europe"
+    ],
+    "website": "https://qbeeurope.com/products/cargo/",
+    "homepage": "https://qbeeurope.com/",
+    "quoteUrl": "https://qbeeurope.com/contact-us/",
+    "sourceUrls": [
+      "https://qbeeurope.com/products/cargo/",
+      "https://qbeeurope.com/contact-us/",
+      "https://qbeeurope.com/"
+    ]
+  },
+  {
+    "id": "swiss-re-corporate-solutions-brasil-cargo",
+    "name": "Swiss Re Corporate Solutions Brasil – Seguro de Transporte de Carga",
+    "company": "Swiss Re Corporate Solutions",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "São Paulo",
+      "country": "Brazil"
+    },
+    "description": "Swiss Re Corporate Solutions Brasil offers cargo transport insurance for shippers and carriers, reimbursing loss or damage to goods during road, rail, air and waterway transport, domestically and internationally. Cover can be extended to goods while held in warehouses.",
+    "coverage": [
+      "Shipper's cargo policy",
+      "Carrier's civil liability policy",
+      "Road, rail, air and sea transit",
+      "Domestic and international shipments",
+      "Warehouse storage extension"
+    ],
+    "regions": [
+      "Brazil"
+    ],
+    "markets": [
+      "latin-america"
+    ],
+    "website": "https://corporatesolutions.swissre.com/brasil-seguros/nossas-solucoes/transportes/seguro-de-transporte-de-carga.html",
+    "homepage": "https://corporatesolutions.swissre.com/",
+    "quoteUrl": "https://corporatesolutions.swissre.com/brasil-seguros/contact-form.html",
+    "sourceUrls": [
+      "https://corporatesolutions.swissre.com/brasil-seguros/nossas-solucoes/transportes/seguro-de-transporte-de-carga.html",
+      "https://corporatesolutions.swissre.com/brasil-seguros/sobre-nos/contato.html",
+      "https://corporatesolutions.swissre.com/brasil-seguros/contact-form.html",
+      "https://corporatesolutions.swissre.com/"
+    ]
+  },
+  {
+    "id": "sompo-ocean-marine-cargo",
+    "name": "Sompo US Ocean Marine – Cargo",
+    "company": "Sompo International",
+    "kind": "cargo-insurer",
+    "headquarters": null,
+    "description": "Sompo's US Ocean Marine team writes cargo insurance for manufacturers, importers, exporters and distributors, protecting shipments by air, land or sea on a warehouse-to-warehouse basis against physical loss or damage. A separate logistics practice covers cargo liability and shipper's interest for freight brokers, forwarders and 3PLs.",
+    "coverage": [
+      "Warehouse-to-warehouse cargo",
+      "Inland transit extension",
+      "Inventory storage",
+      "Project cargo with delay in start-up (DSU)",
+      "Shipper's interest",
+      "Cargo and warehouse liability for logistics providers"
+    ],
+    "regions": [
+      "United States"
+    ],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.sompo.com/en-us/insurance/ocean-marine",
+    "homepage": "https://www.sompo.com/",
+    "quoteUrl": "https://www.sompo.com/contact-us",
+    "sourceUrls": [
+      "https://www.sompo.com/en-us/insurance/ocean-marine",
+      "https://www.sompo.com/insurance/insurance-capabilities/marine",
+      "https://www.sompo.com/contact-us",
+      "https://www.sompo.com/"
+    ]
+  },
+  {
+    "id": "ms-amlin-marine-cargo",
+    "name": "MS Amlin Cargo",
+    "company": "MS Amlin",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "description": "MS Amlin insures goods against loss or damage while transported by land, sea or air, with maximum indemnity of US$125m any one risk. Its cargo specialisms include transit, stock throughput, excess storage, project cargo with delay in start-up and freight logistics business.",
+    "coverage": [
+      "Marine transit",
+      "Stock throughput",
+      "Primary and excess storage",
+      "Project cargo & delay in start-up (DSU)",
+      "Freight logistics providers",
+      "Environmentally controlled foodstuffs"
+    ],
+    "regions": [
+      "Lloyd's / UK",
+      "Middle East",
+      "Asia"
+    ],
+    "markets": [
+      "europe",
+      "middle-east-africa",
+      "asia-pacific"
+    ],
+    "website": "https://www.msamlin.com/insurance/marine/cargo/",
+    "homepage": "https://www.msamlin.com/",
+    "quoteUrl": "https://www.msamlin.com/contact-us/",
+    "sourceUrls": [
+      "https://www.msamlin.com/insurance/marine/cargo/",
+      "https://www.msamlin.com/contact-us/"
+    ]
+  },
+  {
+    "id": "markel-international-marine-cargo",
+    "name": "Markel International Marine Cargo",
+    "company": "Markel Group",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "Glen Allen",
+      "country": "United States"
+    },
+    "description": "Markel International's London cargo team covers goods in transit by land, sea or air, in store during transit and in long-term storage, on a worldwide basis with a focus on the US and Europe. Policies are generally written on an all-risks basis, primary or excess, with line sizes up to $50m on company paper.",
+    "coverage": [
+      "Ocean cargo",
+      "Cargo stock throughput",
+      "Delay in start-up (DSU)",
+      "Excess stock",
+      "Project cargo",
+      "Crude oil and refined products"
+    ],
+    "regions": [
+      "Worldwide (excluding sanctioned territories)",
+      "Focus on US and Europe"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.markel.com/international/london/marine/cargo",
+    "homepage": "https://www.markel.com/",
+    "quoteUrl": "https://www.markel.com/about-us/contact-us",
+    "sourceUrls": [
+      "https://www.markel.com/international/london/marine/cargo",
+      "https://www.markel.com/about-us/contact-us",
+      "https://www.markel.com/"
+    ]
+  },
+  {
+    "id": "hiscox-marine-cargo",
+    "name": "Hiscox Marine Cargo",
+    "company": "Hiscox London Market",
+    "kind": "cargo-insurer",
+    "headquarters": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "description": "Hiscox London Market's marine cargo insurance covers physical loss or damage to cargo at every stage of its journey, for all sizes and types of cargo worldwide. As a lead and following market at Lloyd's it offers US$75m capacity for cargo and for project cargo.",
+    "coverage": [
+      "Physical loss or damage to cargo",
+      "Stock throughput",
+      "Project cargo",
+      "Delay in start-up"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.hiscoxlondonmarket.com/business/cargo",
+    "homepage": "https://www.hiscoxlondonmarket.com/",
+    "quoteUrl": "https://www.hiscoxlondonmarket.com/business/cargo",
+    "sourceUrls": [
+      "https://www.hiscoxlondonmarket.com/business/cargo"
+    ]
+  },
+  {
+    "id": "falvey-cargo",
+    "name": "Falvey Cargo Underwriting",
+    "company": "Falvey Insurance Group",
+    "kind": "specialist-cargo-insurer",
+    "headquarters": {
+      "city": "North Kingstown",
+      "country": "United States"
+    },
+    "description": "Falvey's cargo and stock throughput policies cover goods continuously through the supply chain, from origin through transit and warehousing to final delivery. Coverage classes include general cargo, high tech and life sciences.",
+    "coverage": [
+      "Cargo & stock throughput",
+      "All-risk shipper's interest insurance",
+      "General cargo",
+      "High-tech cargo",
+      "Life sciences / pharmaceutical cargo",
+      "Project cargo"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://falveyinsurancegroup.com/insurance/cargo/",
+    "homepage": "https://falveyinsurancegroup.com/home",
+    "quoteUrl": "https://falveyinsurancegroup.com/contact/",
+    "sourceUrls": [
+      "https://www.falveycargo.com/",
+      "https://falveyinsurancegroup.com/insurance/cargo/",
+      "https://falveyinsurancegroup.com/contact/"
+    ]
+  },
+  {
+    "id": "roanoke-cargo-insurance",
+    "name": "Roanoke Cargo Insurance",
+    "company": "Roanoke Insurance Group Inc.",
+    "kind": "cargo-insurance-broker",
+    "headquarters": {
+      "city": "Schaumburg",
+      "country": "United States"
+    },
+    "description": "Roanoke is a specialty insurance brokerage for transportation and logistics that places marine cargo insurance covering physical loss or damage from an external cause while goods are in route to their final destination. It works with cargo owners and with logistics service providers that offer cargo insurance to their clients.",
+    "coverage": [
+      "Marine cargo insurance",
+      "Shipper's interest",
+      "Cargo legal liability",
+      "Contingent cargo liability",
+      "Warehouse legal liability"
+    ],
+    "regions": [
+      "United States",
+      "Canada"
+    ],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.roanokegroup.com/solutions/cargo-insurance/",
+    "homepage": "https://www.roanokegroup.com/",
+    "quoteUrl": "https://www.roanokegroup.com/contact-us/",
+    "sourceUrls": [
+      "https://www.roanokegroup.com/",
+      "https://www.roanokegroup.com/solutions/cargo-insurance/",
+      "https://www.roanokegroup.com/contact-us/"
+    ]
+  },
+  {
+    "id": "avalon-cargo-insurance",
+    "name": "Avalon Shipper's Interest Cargo Insurance",
+    "company": "Avalon Risk Management",
+    "kind": "cargo-insurance-broker",
+    "headquarters": {
+      "city": "Schaumburg",
+      "country": "United States"
+    },
+    "description": "Avalon Risk Management is an independent insurance broker for the trade and transportation industry whose cargo insurance program lets forwarders offer shipper's interest cover to their customers. Certificates are issued through its Merlin technology, with in-house underwriting and claims handling.",
+    "coverage": [
+      "Freight forwarder open cargo policies",
+      "Direct shipper annual cargo policies",
+      "Project shipments",
+      "All-risk warehouse or bailee coverage"
+    ],
+    "regions": [
+      "United States",
+      "Canada"
+    ],
+    "markets": [
+      "north-america"
+    ],
+    "website": "https://www.avalonrisk.com/shippers-interest-cargo-insurance",
+    "homepage": "https://www.avalonrisk.com/",
+    "quoteUrl": "https://www.avalonrisk.com/contact-us",
+    "sourceUrls": [
+      "https://www.avalonrisk.com/shippers-interest-cargo-insurance",
+      "https://www.avalonrisk.com/contact-us",
+      "https://www.avalonrisk.com/about-us"
+    ]
+  },
+  {
+    "id": "loadsure",
+    "name": "Loadsure",
+    "company": "Loadsure LTD",
+    "kind": "specialist-cargo-insurer",
+    "headquarters": null,
+    "description": "Loadsure is a Lloyd's coverholder offering AI-priced, all-risk cargo insurance for shippers, freight brokers, carriers and insurance agents. Its products range from per-load and shipper's interest cover to ocean cargo, stock throughput and motor truck cargo.",
+    "coverage": [
+      "Per-load cargo insurance",
+      "Shipper's interest",
+      "Ocean cargo",
+      "Stock throughput",
+      "Motor truck cargo",
+      "LTL coverage"
+    ],
+    "regions": [
+      "United States",
+      "Canada",
+      "United Kingdom",
+      "Europe"
+    ],
+    "markets": [
+      "north-america",
+      "europe"
+    ],
+    "website": "https://www.loadsure.net/coverages-overview/",
+    "homepage": "https://www.loadsure.net/",
+    "quoteUrl": "https://www.loadsure.net/get-started/",
+    "sourceUrls": [
+      "https://www.loadsure.net/coverages-overview/",
+      "https://www.loadsure.net/contact/",
+      "https://www.loadsure.net/company/about-us/",
+      "https://www.loadsure.net/get-started/"
+    ]
+  },
+  {
+    "id": "ups-capital-cargo-insurance",
+    "name": "UPS Capital Cargo Insurance (InsureShield)",
+    "company": "UPS Capital",
+    "kind": "specialist-cargo-insurer",
+    "headquarters": null,
+    "description": "UPS Capital provides cargo insurance through InsureShield Shipping Insurance, covering goods in transit beyond carrier liability limits regardless of mode or carrier, in participating countries. InsureShield policies are issued through UPS Capital Insurance Agency, Inc. and cover loss, damage and theft of shipments.",
+    "coverage": [
+      "Cargo insurance",
+      "Multi-carrier shipping insurance",
+      "Perishables / temperature-sensitive goods",
+      "Freight forwarding liability insurance",
+      "Enhanced Carrier Protection"
+    ],
+    "regions": [
+      "United States",
+      "United Kingdom",
+      "Germany",
+      "France",
+      "Italy",
+      "Hong Kong"
+    ],
+    "markets": [
+      "north-america",
+      "europe",
+      "asia-pacific"
+    ],
+    "website": "https://www.upscapital.com/",
+    "homepage": "https://www.upscapital.com/",
+    "quoteUrl": "https://www.insureshield.com/us/en/shipping-insurance/get-a-quote.html",
+    "sourceUrls": [
+      "https://www.upscapital.com/",
+      "https://upscapital.com/assets/UPS_Capital_Solutions_Directory.pdf",
+      "https://www.insureshield.com/us/en/shipping-insurance.html",
+      "https://www.insureshield.com/us/en/shipping-insurance/special-commodities.html",
+      "https://www.insureshield.com/us/en/shipping-insurance/get-a-quote.html",
+      "https://www.upscapital.com/product-terms-and-conditions/"
+    ]
+  },
+  {
+    "id": "kuehne-nagel-cargo-insurance",
+    "name": "Kuehne+Nagel Cargo Insurance",
+    "company": "Kuehne+Nagel",
+    "kind": "freight-forwarder",
+    "headquarters": null,
+    "description": "Kuehne+Nagel arranges cargo insurance alongside freight bookings, working with its subsidiary Nacora International Insurance Brokers, for containerised and bulk shipments across air, sea and road, including storage during transit for up to 60 days. Cover is offered per shipment (Spot), automatically on Kuehne+Nagel shipments (Flex) or annually for all shipments (Fix).",
+    "coverage": [
+      "Single shipment cover (Spot)",
+      "Automatic per-shipment cover (Flex)",
+      "Annual cover for all shipments (Fix)",
+      "General average",
+      "Cyber disruption protection",
+      "Customs clearance"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.kuehne-nagel.com/services/cargo-insurance",
+    "homepage": "https://www.kuehne-nagel.com/",
+    "quoteUrl": "https://www.kuehne-nagel.com/contact/talk-to-an-expert",
+    "sourceUrls": [
+      "https://www.kuehne-nagel.com/services/cargo-insurance",
+      "https://www.kuehne-nagel.com/services/cargo-insurance/general-average-cargo-insurance",
+      "https://www.kuehne-nagel.com/services/cargo-insurance/cyber-disruption-protection",
+      "https://www.kuehne-nagel.com/services/customs-clearance",
+      "https://www.kuehne-nagel.com/company/about/our-values",
+      "https://www.kuehne-nagel.com/contact/talk-to-an-expert"
+    ]
+  },
+  {
+    "id": "dhl-global-forwarding-cargo-insurance",
+    "name": "DHL Global Forwarding Cargo Insurance",
+    "company": "DHL Global Forwarding",
+    "kind": "freight-forwarder",
+    "headquarters": null,
+    "description": "DHL Global Forwarding arranges cargo insurance covering freight against loss or damage from any external cause up to full value, beyond forwarders' limited liability. It is offered as ad-hoc cover for a single air, ocean, road or rail shipment, or as cover for all DHL Global Forwarding shipments over a set period such as one year.",
+    "coverage": [
+      "Ad-hoc single shipment cover",
+      "Period cover for all shipments (e.g. annual)",
+      "High-risk cargo",
+      "No-deductible cover",
+      "Customs brokerage"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.dhl.com/gb-en/home/global-forwarding/products-and-solutions/cargo-insurance.html",
+    "homepage": "https://www.dhl.com/gb-en/home/global-forwarding.html",
+    "quoteUrl": "https://www.dhl.com/gb-en/home/get-a-quote.html",
+    "sourceUrls": [
+      "https://www.dhl.com/gb-en/home/global-forwarding/products-and-solutions/cargo-insurance.html",
+      "https://www.dhl.com/gb-en/home/global-forwarding.html",
+      "https://www.dhl.com/gb-en/home/get-a-quote.html"
+    ]
+  },
+  {
+    "id": "dsv-cargo-insurance",
+    "name": "DSV Cargo Insurance",
+    "company": "DSV A/S",
+    "kind": "freight-forwarder",
+    "headquarters": {
+      "city": "Hedehusene",
+      "country": "Denmark"
+    },
+    "description": "DSV offers all-risk cargo insurance for goods transported by sea, air or road, covering the value of goods and freight plus 10% with no deductible, and including general average at no extra cost. It also offers storage insurance for goods held at DSV or external storage locations.",
+    "coverage": [
+      "All-risk cargo insurance",
+      "General average",
+      "Storage insurance",
+      "Hazardous cargo and fine art (special rates)",
+      "Customs clearance"
+    ],
+    "regions": [
+      "Operations in 90+ countries"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.dsv.com/en/our-solutions/modes-of-transport/value-added-services/insurance/cargo-insurance",
+    "homepage": "https://www.dsv.com/en/",
+    "quoteUrl": "https://www.dsv.com/en/support/quote-request",
+    "sourceUrls": [
+      "https://www.dsv.com/en/our-solutions/modes-of-transport/value-added-services/insurance/cargo-insurance",
+      "https://www.dsv.com/en/our-solutions/modes-of-transport/value-added-services/insurance",
+      "https://www.dsv.com/en/our-solutions/modes-of-transport/value-added-services/insurance/storage-insurance",
+      "https://www.dsv.com/en/our-solutions/modes-of-transport/value-added-services/customs-clearance",
+      "https://www.dsv.com/en/about-dsv",
+      "https://www.dsv.com/en/about-dsv/legal-notice",
+      "https://www.dsv.com/en/support/quote-request"
+    ]
+  },
+  {
+    "id": "expeditors-cargo-insurance",
+    "name": "Expeditors Risk Management & Insurance",
+    "company": "Expeditors International of Washington, Inc.",
+    "kind": "freight-forwarder",
+    "headquarters": {
+      "city": "Bellevue",
+      "country": "United States"
+    },
+    "description": "Expeditors' Risk Management team offers all-risk cargo insurance that clients can buy per transaction or as an annual policy, along with cargo claims support. Its subsidiary Expeditors Cargo Insurance Brokers (ECIB) provides cargo insurance brokerage and claims management.",
+    "coverage": [
+      "All-risk cargo insurance",
+      "Transactional (per-shipment) cover",
+      "Annual policy",
+      "Cargo claims management",
+      "Customs brokerage"
+    ],
+    "regions": [
+      "Offices in 100 countries"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.expeditors.com/services/supply-chain/risk-management-insurance/",
+    "homepage": "https://www.expeditors.com/",
+    "quoteUrl": "https://info.expeditors.com/risk-management-request-a-quote",
+    "sourceUrls": [
+      "https://www.expeditors.com/services/supply-chain/risk-management-insurance/",
+      "https://www.expeditors.com/capabilities/consultancy-managed-services/ecib-cargo-insurance-claims-management/",
+      "https://www.expeditors.com/about-us/company/",
+      "https://www.expeditors.com/contact/",
+      "https://info.expeditors.com/risk-management-request-a-quote"
+    ]
+  },
+  {
+    "id": "flexport-cargo-insurance",
+    "name": "Flexport Cargo Insurance",
+    "company": "Flexport",
+    "kind": "freight-forwarder",
+    "headquarters": {
+      "city": "San Francisco",
+      "country": "United States"
+    },
+    "description": "Flexport provides all-risk cargo insurance on Flexport shipments covering damage, loss or theft across ocean, air and trucking modes, priced on the value of goods plus freight and duty. Cover is available per shipment, as an annual policy, or as package protection for e-commerce last-mile delivery.",
+    "coverage": [
+      "All-risk cargo insurance",
+      "Per shipment cover",
+      "Annual policy",
+      "Package protection (last-mile)",
+      "Customs brokerage"
+    ],
+    "regions": [
+      "Global",
+      "Operations in 135 countries"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.flexport.com/products/cargo-insurance/",
+    "homepage": "https://www.flexport.com/",
+    "quoteUrl": "https://www.flexport.com/products/cargo-insurance/",
+    "sourceUrls": [
+      "https://www.flexport.com/products/cargo-insurance/",
+      "https://www.flexport.com/company/about-us/",
+      "https://www.flexport.com/company/contact/"
+    ]
+  },
+  {
+    "id": "ch-robinson-marine-cargo-insurance",
+    "name": "C.H. Robinson Marine Cargo Insurance",
+    "company": "C.H. Robinson",
+    "kind": "freight-forwarder",
+    "headquarters": {
+      "city": "Eden Prairie",
+      "country": "United States"
+    },
+    "description": "C.H. Robinson arranges all-risk marine cargo insurance through an open cargo policy underwritten by Lloyd's of London, valued at CIF+10% and including Institute Cargo Clauses (A), war, strikes and general average terms. It also offers shipper's interest insurance for LTL shipments in the United States and Canada.",
+    "coverage": [
+      "All-risk marine cargo insurance (open cargo policy)",
+      "Institute Cargo Clauses (A)",
+      "War & strikes",
+      "General average",
+      "Shipper's interest insurance (LTL)",
+      "Customs brokerage"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "markets": [
+      "global"
+    ],
+    "website": "https://www.chrobinson.com/en-us/shippers/freight-services/ocean/marine-cargo-insurance/",
+    "homepage": "https://www.chrobinson.com/en-us/",
+    "quoteUrl": "https://www.chrobinson.com/en-us/contact/connect-with-an-expert/",
+    "sourceUrls": [
+      "https://www.chrobinson.com/en-us/shippers/freight-services/ocean/marine-cargo-insurance/",
+      "https://www.chrobinson.com/en-us/shippers/freight-services/ocean/marine-cargo-insurance/coverage-summary/",
+      "https://www.chrobinson.com/en-us/shippers/freight-services/ltl/shippers-insurance/",
+      "https://www.chrobinson.com/en-us/shippers/supply-chain-and-logistics-services/customs/",
+      "https://www.chrobinson.com/en-us/contact/",
+      "https://www.chrobinson.com/en-us/contact/connect-with-an-expert/"
+    ]
+  },
+  {
+    "id": "livingston-cargo-insurance",
+    "name": "Livingston Cargo Insurance",
+    "company": "Livingston International",
+    "kind": "customs-broker",
+    "headquarters": null,
+    "description": "Livingston offers all-risk cargo insurance that covers shipments at full declared value against damage, loss and theft from departure to final arrival, without needing to prove carrier fault. Livingston handles the insurance paperwork and claims, with a local contact and local-currency options.",
+    "coverage": [
+      "All-risk cargo insurance",
+      "Full declared value cover",
+      "Claims handling",
+      "Customs brokerage",
+      "Freight forwarding"
+    ],
+    "regions": [
+      "United States",
+      "Canada",
+      "Mexico",
+      "Europe",
+      "Asia"
+    ],
+    "markets": [
+      "north-america",
+      "latin-america",
+      "europe",
+      "asia-pacific"
+    ],
+    "website": "https://www.livingstonintl.com/services/global-forwarding/cargo-insurance/",
+    "homepage": "https://www.livingstonintl.com/",
+    "quoteUrl": "https://www.livingstonintl.com/get-a-quote/",
+    "sourceUrls": [
+      "https://www.livingstonintl.com/services/global-forwarding/cargo-insurance/",
+      "https://www.livingstonintl.com/contact-us/",
+      "https://www.livingstonintl.com/get-a-quote/",
+      "https://www.livingstonintl.com/livingston-careers/about-livingston/",
+      "https://www.livingstonintl.com/services/customs-solutions/customs-clearance/"
+    ]
+  }
+]
