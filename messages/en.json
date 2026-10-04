@@ -1502,5 +1502,27 @@
     "saving": "Saving…",
     "signingIn": "Signing in…",
     "creatingAccount": "Creating account…"
+  },
+  "supplierContact": {
+    "title": "Direct contact",
+    "phone": "Phone",
+    "email": "Email",
+    "call": "Call",
+    "sendEmail": "Email",
+    "callAria": "Call {name}",
+    "emailAria": "Email {name}",
+    "sourceListing": "From the supplier's public business listing",
+    "sourceWebsite": "From the supplier's official website",
+    "noneOnFile": "No direct phone or email on file for this supplier yet. Reach them through Suplymate instead.",
+    "contactViaSuplymate": "Contact via Suplymate",
+    "hiddenValue": "Hidden. Available on paid plans",
+    "lockedBody": "Direct phone and email are included in Basic and above, including the 3-day free trial.",
+    "startTrial": "Start free trial to view",
+    "upgrade": "Upgrade to view contact",
+    "signIn": "Already subscribed? Sign in",
+    "loading": "Loading contact details",
+    "cardLockedBoth": "Phone & email · Upgrade",
+    "cardLockedPhone": "Phone · Upgrade to view",
+    "cardLockedEmail": "Email · Upgrade to view"
   }
 }

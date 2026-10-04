@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "로그인…",
     "creatingAccount": "Création du 계정…"
+  },
+  "supplierContact": {
+    "title": "직접 연락",
+    "phone": "전화",
+    "email": "이메일",
+    "call": "전화하기",
+    "sendEmail": "이메일",
+    "callAria": "{name}에 전화",
+    "emailAria": "{name}에 이메일",
+    "sourceListing": "공급업체의 공개 비즈니스 정보 기준",
+    "sourceWebsite": "공급업체 공식 웹사이트 기준",
+    "noneOnFile": "이 공급업체의 직통 전화나 이메일이 아직 없습니다. Suplymate로 연락하세요.",
+    "contactViaSuplymate": "Suplymate로 연락",
+    "hiddenValue": "숨김. 유료 플랜에서 이용 가능",
+    "lockedBody": "직통 전화와 이메일은 3일 무료 체험을 포함한 Basic 이상 플랜에서 제공됩니다.",
+    "startTrial": "무료 체험으로 보기",
+    "upgrade": "업그레이드하여 보기",
+    "signIn": "이미 구독 중이신가요? 로그인",
+    "loading": "연락처 불러오는 중",
+    "cardLockedBoth": "전화 및 이메일 · 업그레이드",
+    "cardLockedPhone": "전화 · 업그레이드하여 보기",
+    "cardLockedEmail": "이메일 · 업그레이드하여 보기"
   }
 }

@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "登录…",
     "creatingAccount": "Création du 账户…"
+  },
+  "supplierContact": {
+    "title": "直接联系",
+    "phone": "电话",
+    "email": "邮箱",
+    "call": "拨打",
+    "sendEmail": "发邮件",
+    "callAria": "致电 {name}",
+    "emailAria": "给 {name} 发邮件",
+    "sourceListing": "来自供应商的公开企业信息",
+    "sourceWebsite": "来自供应商官方网站",
+    "noneOnFile": "暂无该供应商的直接电话或邮箱，请通过 Suplymate 联系。",
+    "contactViaSuplymate": "通过 Suplymate 联系",
+    "hiddenValue": "已隐藏，付费套餐可见",
+    "lockedBody": "Basic 及以上套餐（包括 3 天免费试用）可查看直接电话和邮箱。",
+    "startTrial": "免费试用以查看",
+    "upgrade": "升级以查看联系方式",
+    "signIn": "已订阅？请登录",
+    "loading": "正在加载联系方式",
+    "cardLockedBoth": "电话和邮箱 · 升级",
+    "cardLockedPhone": "电话 · 升级查看",
+    "cardLockedEmail": "邮箱 · 升级查看"
   }
 }

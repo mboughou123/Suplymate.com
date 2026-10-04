@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import type { SupplierProfile } from "@/lib/supplier-profile";
 import { getSupplierMeta } from "@/lib/supplier-meta";
+import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 import ProfileActionButton from "./ProfileActionButton";
 
 export default function StickyContactCard({
@@ -86,6 +87,12 @@ export default function StickyContactCard({
           <Row icon={CalendarClock} label={t("businessHours")} value={t("businessHoursValue")} />
         </dl>
       </div>
+
+      <SupplierContactDetails
+        supplierId={base.id}
+        supplierName={base.name}
+        className="border-b border-slate-100 p-5"
+      />
 
       {/* Actions */}
       <div className="space-y-2 p-5">

@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "Anmeldung…",
     "creatingAccount": "Konto wird erstellt…"
+  },
+  "supplierContact": {
+    "title": "Direktkontakt",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "call": "Anrufen",
+    "sendEmail": "E-Mail",
+    "callAria": "{name} anrufen",
+    "emailAria": "E-Mail an {name}",
+    "sourceListing": "Aus dem öffentlichen Unternehmenseintrag",
+    "sourceWebsite": "Von der offiziellen Website des Lieferanten",
+    "noneOnFile": "Für diesen Lieferanten sind noch keine Telefonnummer oder E-Mail hinterlegt. Kontaktieren Sie ihn über Suplymate.",
+    "contactViaSuplymate": "Über Suplymate kontaktieren",
+    "hiddenValue": "Verborgen. In kostenpflichtigen Tarifen verfügbar",
+    "lockedBody": "Direkte Telefonnummer und E-Mail sind ab Basic enthalten, auch in der 3-tägigen Gratis-Testphase.",
+    "startTrial": "Gratis testen und ansehen",
+    "upgrade": "Upgrade für Kontaktdaten",
+    "signIn": "Bereits abonniert? Anmelden",
+    "loading": "Kontaktdaten werden geladen",
+    "cardLockedBoth": "Telefon & E-Mail · Upgrade",
+    "cardLockedPhone": "Telefon · Upgrade zum Ansehen",
+    "cardLockedEmail": "E-Mail · Upgrade zum Ansehen"
   }
 }

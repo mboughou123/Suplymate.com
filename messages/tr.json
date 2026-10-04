@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "Giriş…",
     "creatingAccount": "Création du hesap…"
+  },
+  "supplierContact": {
+    "title": "Doğrudan iletişim",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "call": "Ara",
+    "sendEmail": "E-posta",
+    "callAria": "{name} firmasını ara",
+    "emailAria": "{name} firmasına e-posta gönder",
+    "sourceListing": "Tedarikçinin herkese açık işletme kaydından",
+    "sourceWebsite": "Tedarikçinin resmi web sitesinden",
+    "noneOnFile": "Bu tedarikçi için henüz doğrudan telefon veya e-posta yok. Suplymate üzerinden ulaşın.",
+    "contactViaSuplymate": "Suplymate ile iletişime geç",
+    "hiddenValue": "Gizli. Ücretli planlarda mevcut",
+    "lockedBody": "Doğrudan telefon ve e-posta, 3 günlük ücretsiz deneme dahil Basic ve üzeri planlarda bulunur.",
+    "startTrial": "Görmek için ücretsiz dene",
+    "upgrade": "Görmek için yükselt",
+    "signIn": "Zaten abone misiniz? Giriş yapın",
+    "loading": "İletişim bilgileri yükleniyor",
+    "cardLockedBoth": "Telefon ve e-posta · Yükselt",
+    "cardLockedPhone": "Telefon · Görmek için yükselt",
+    "cardLockedEmail": "E-posta · Görmek için yükselt"
   }
 }

@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "ログイン…",
     "creatingAccount": "Création du アカウント…"
+  },
+  "supplierContact": {
+    "title": "直接連絡",
+    "phone": "電話",
+    "email": "メール",
+    "call": "電話する",
+    "sendEmail": "メール",
+    "callAria": "{name} に電話",
+    "emailAria": "{name} にメール",
+    "sourceListing": "サプライヤーの公開ビジネス情報より",
+    "sourceWebsite": "サプライヤーの公式サイトより",
+    "noneOnFile": "このサプライヤーの直通電話・メールはまだありません。Suplymate からご連絡ください。",
+    "contactViaSuplymate": "Suplymate で連絡",
+    "hiddenValue": "非表示。有料プランで利用可能",
+    "lockedBody": "直通の電話とメールは Basic 以上（3日間の無料トライアルを含む）でご利用いただけます。",
+    "startTrial": "無料トライアルで表示",
+    "upgrade": "アップグレードして表示",
+    "signIn": "登録済みの方はログイン",
+    "loading": "連絡先を読み込み中",
+    "cardLockedBoth": "電話とメール · アップグレード",
+    "cardLockedPhone": "電話 · アップグレードして表示",
+    "cardLockedEmail": "メール · アップグレードして表示"
   }
 }
