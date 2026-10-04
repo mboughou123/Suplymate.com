@@ -140,7 +140,9 @@ export function normalizePhone(raw: string | null | undefined): string | null {
 export function telHref(phone: string): string {
   const trimmed = phone.trim();
   const plus = trimmed.startsWith("+") ? "+" : "";
-  return `tel:${plus}${trimmed.replace(/\D/g, "")}`;
+  // "+44 (0)20 …": the bracketed trunk zero is not dialled internationally.
+  const dialled = plus ? trimmed.replace(/\(0\)/g, "") : trimmed;
+  return `tel:${plus}${dialled.replace(/\D/g, "")}`;
 }
 
 // Cloudflare "email protection" hex-encodes addresses into data-cfemail.

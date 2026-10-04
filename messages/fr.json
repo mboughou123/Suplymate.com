@@ -95,6 +95,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logistique et assurance",
+      "logistics": {
+        "insurers": "Assureurs marchandises et transport",
+        "forwarders": "Transitaires et commissionnaires en douane",
+        "all": "Tous les prestataires logistique et assurance"
       }
     },
     "company": {
@@ -1591,5 +1597,46 @@
     "cardLockedBoth": "Téléphone et e-mail · Passer à l'offre supérieure",
     "cardLockedPhone": "Téléphone · Passer à l'offre supérieure",
     "cardLockedEmail": "E-mail · Passer à l'offre supérieure"
+  },
+  "logistics": {
+    "chipLabel": "Logistique et assurance",
+    "directoryIntro": "Assureurs de marchandises et de transport maritime, ainsi que transitaires et commissionnaires en douane qui proposent une assurance marchandises. Les informations proviennent du site officiel de chaque entreprise. Suplymate n'est ni assureur ni courtier et n'a aucune relation commerciale avec ces entreprises.",
+    "groupAll": "Tous",
+    "groupInsurance": "Assurance marchandises",
+    "groupLogistics": "Transitaires et commissionnaires en douane",
+    "providersFound": "{count, plural, one {# prestataire} other {# prestataires}}",
+    "kind": {
+      "cargo-insurer": "Assureur marchandises",
+      "specialist-cargo-insurer": "Assureur spécialisé marchandises",
+      "cargo-insurance-broker": "Courtier en assurance marchandises",
+      "freight-forwarder": "Transitaire",
+      "customs-broker": "Commissionnaire en douane"
+    },
+    "viewProfile": "Voir le profil",
+    "officialSite": "Site officiel",
+    "requestQuote": "Demander un devis",
+    "requestQuoteAria": "Demander un devis d'assurance marchandises à {name} (ouvre leur site)",
+    "headquarters": "Siège",
+    "coverage": "Garanties citées sur leur site",
+    "regions": "Régions",
+    "regionsUnstated": "Non précisé sur leur site",
+    "about": "À propos",
+    "links": "Liens officiels",
+    "cargoPage": "Page assurance marchandises",
+    "homepage": "Site de l'entreprise",
+    "sources": "Sources",
+    "sourcesBody": "Repris du site de {company} le {date}. Vérifiez garanties, conditions et disponibilité directement auprès du prestataire.",
+    "breadcrumb": "Logistique et assurance",
+    "metaTitle": "{name} | Logistique et assurance | Suplymate",
+    "metaDescription": "{name} : {description}",
+    "notFound": "Prestataire introuvable",
+    "noContactOnFile": "Aucun téléphone ni e-mail direct enregistré. Utilisez leur site officiel pour les contacter.",
+    "disclaimer": "Suplymate n'est ni assureur ni courtier en assurance. Nous ne vendons pas de polices, ne touchons aucune commission, et le référencement d'une entreprise ne vaut pas recommandation.",
+    "insureTitle": "Assurer cet envoi",
+    "insureBody": "L'assurance marchandises peut couvrir les pertes ou dommages en transit au-delà de la responsabilité du transporteur. Quelques prestataires qui la proposent :",
+    "insureBodyRfq": "Vous expédiez cette commande ? L'assurance marchandises peut couvrir les pertes ou dommages en transit au-delà de la responsabilité du transporteur. Quelques prestataires qui la proposent :",
+    "insureMore": "Voir tous les assureurs marchandises",
+    "dismiss": "Masquer les suggestions d'assurance",
+    "orderNote": "Classés selon leur pertinence pour ce trajet, pas contre paiement."
   }
 }

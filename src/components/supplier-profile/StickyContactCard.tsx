@@ -49,6 +49,7 @@ export default function StickyContactCard({
           label={t("rfqShort")}
           icon={FileText}
           productName={firstProduct}
+          shipmentOrigin={base.country}
           className="btn-secondary !px-3 !py-2 text-xs"
         />
         <ProfileActionButton
@@ -120,6 +121,7 @@ export default function StickyContactCard({
             label={t("sendRfq")}
             icon={FileText}
             productName={firstProduct}
+            shipmentOrigin={base.country}
             className="btn-secondary justify-center !px-3 text-xs"
           />
           <ProfileActionButton

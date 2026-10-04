@@ -33,6 +33,7 @@ describe("contact extractor", () => {
   it("builds dialable tel: hrefs", () => {
     expect(telHref("+91 80828 21432")).toBe("tel:+918082821432");
     expect(telHref("(214) 689-4300")).toBe("tel:2146894300");
+    expect(telHref("+44 (0)20 7929 3223")).toBe("tel:+442079293223");
   });
 
   it("drops placeholder and vendor emails", () => {

@@ -16,6 +16,14 @@ import SupplierFilters, {
 } from "@/components/SupplierFilters";
 import { ChevronLeft, ChevronRight, SearchX } from "lucide-react";
 import { supplierHasUsableCardImage } from "@/lib/image-fallback";
+import {
+  LOGISTICS_CATEGORY_ID,
+  LOGISTICS_PROVIDERS,
+  providerGroup,
+  providerMatches,
+  type ProviderGroup,
+} from "@/data/logistics-providers";
+import LogisticsProviderCard from "@/components/logistics/LogisticsProviderCard";
 
 type Props = {
   initialSuppliers: ListingSupplier[];
@@ -34,6 +42,18 @@ const DEFAULT_FILTERS: SupplierFilterState = {
 
 const SECTOR_CHIPS = KEYWORD_SECTORS;
 const SECTOR_PREFIX = "industry:";
+const LOGISTICS_VALUE = `${SECTOR_PREFIX}${LOGISTICS_CATEGORY_ID}`;
+type ProviderGroupFilter = "all" | ProviderGroup;
+const PROVIDER_GROUP_LABEL_KEYS: Record<ProviderGroupFilter, "groupAll" | "groupInsurance" | "groupLogistics"> = {
+  all: "groupAll",
+  insurance: "groupInsurance",
+  logistics: "groupLogistics",
+};
+const PROVIDER_GROUPS = Object.keys(PROVIDER_GROUP_LABEL_KEYS) as ProviderGroupFilter[];
+
+function isProviderGroupFilter(value: string | null): value is ProviderGroupFilter {
+  return PROVIDER_GROUPS.some((g) => g === value);
+}
 
 function matchesCategoryFilter(s: ListingSupplier, value: string): boolean {
   if (value === "All") return true;
@@ -59,6 +79,8 @@ function reviewsOf(s: ListingSupplier): number {
 export default function SuppliersClient({ initialSuppliers }: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
+  const tLogistics = useTranslations("logistics");
+  const [providerGroupFilter, setProviderGroupFilter] = useState<ProviderGroupFilter>("all");
   const [filters, setFilters] = useState<SupplierFilterState>(DEFAULT_FILTERS);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -109,12 +131,30 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       });
   }, [filters, initialSuppliers]);
 
+  const showingProviders = filters.category === LOGISTICS_VALUE;
+  const filteredProviders = useMemo(
+    () =>
+      LOGISTICS_PROVIDERS.filter(
+        (p) =>
+          (providerGroupFilter === "all" || providerGroup(p.kind) === providerGroupFilter) &&
+          providerMatches(p, filters.search),
+      ),
+    [filters.search, providerGroupFilter],
+  );
+
   // Deep link from the Solutions menu: `/suppliers?industry=<id>` pre-selects
   // the matching directory category (or falls back to a text search). Read from
   // window.location so this statically rendered page needs no Suspense boundary.
   useEffect(() => {
-    const industryId = new URLSearchParams(window.location.search).get("industry");
+    const query = new URLSearchParams(window.location.search);
+    const industryId = query.get("industry");
     if (!industryId) return;
+    if (industryId === LOGISTICS_CATEGORY_ID) {
+      setFilters((f) => ({ ...f, category: LOGISTICS_VALUE }));
+      const type = query.get("type");
+      if (isProviderGroupFilter(type)) setProviderGroupFilter(type);
+      return;
+    }
     const industry = INDUSTRIES.find((i) => i.id === industryId);
     if (!industry) return;
     if (SECTOR_CHIPS.includes(industry)) {
@@ -167,7 +207,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
 
   return (
     <>
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      <div className={`mt-4 flex flex-wrap items-center gap-3 ${showingProviders ? "hidden" : ""}`}>
         <button
           type="button"
           onClick={() => {
@@ -198,14 +238,54 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
       <SupplierFilters
         state={filters}
         categories={categories}
-        sectorChips={SECTOR_CHIPS.map((i) => ({ value: `${SECTOR_PREFIX}${i.id}`, label: i.name }))}
+        sectorChips={[
+          ...SECTOR_CHIPS.map((i) => ({ value: `${SECTOR_PREFIX}${i.id}`, label: i.name })),
+          { value: LOGISTICS_VALUE, label: tLogistics("chipLabel") },
+        ]}
         countries={countries}
         onChange={patch}
-        onReset={() => setFilters(DEFAULT_FILTERS)}
-        resultCount={filtered.length}
+        onReset={() => {
+          setFilters(DEFAULT_FILTERS);
+          setProviderGroupFilter("all");
+        }}
+        resultCount={showingProviders ? filteredProviders.length : filtered.length}
+        resultLabel={showingProviders ? tLogistics("providersFound", { count: filteredProviders.length }) : undefined}
+        hideSupplierFilters={showingProviders}
       />
 
-      {loading ? (
+      {showingProviders ? (
+        <section className="mt-6" aria-label={tLogistics("chipLabel")}>
+          <p className="max-w-3xl text-sm text-ink-muted">{tLogistics("directoryIntro")}</p>
+          <div className="mt-4 inline-flex rounded-xl border border-slate-200 bg-white p-1" role="group">
+            {PROVIDER_GROUPS.map((g) => (
+              <button
+                key={g}
+                type="button"
+                aria-pressed={providerGroupFilter === g}
+                onClick={() => setProviderGroupFilter(g)}
+                className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
+                  providerGroupFilter === g ? "bg-navy text-white" : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                {tLogistics(PROVIDER_GROUP_LABEL_KEYS[g])}
+              </button>
+            ))}
+          </div>
+          {filteredProviders.length === 0 ? (
+            <div className="mt-16 flex flex-col items-center text-center text-ink-dim">
+              <SearchX className="mb-3 h-10 w-10 text-slate-300" aria-hidden />
+              <p className="font-semibold text-ink">{t("noMatchTitle")}</p>
+              <p className="mt-1 text-sm">{t("noMatchSubtitle")}</p>
+            </div>
+          ) : (
+            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {filteredProviders.map((provider) => (
+                <LogisticsProviderCard key={provider.id} provider={provider} />
+              ))}
+            </div>
+          )}
+        </section>
+      ) : loading ? (
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <SupplierCardSkeleton key={i} />

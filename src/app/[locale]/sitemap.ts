@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getFallbackSupplierIds } from "@/lib/data-service";
 import { locales } from "@/i18n/routing";
+import { LOGISTICS_PROVIDERS } from "@/data/logistics-providers";
 import { BLOG_POSTS } from "@/data/blog";
 
 const SITE_URL = (
@@ -57,6 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const logisticsRoutes: MetadataRoute.Sitemap = locales.flatMap((locale) =>
+    LOGISTICS_PROVIDERS.map((p) => ({
+      url: localeUrl(locale, `/logistics/${p.id}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }))
+  );
+
   const blogRoutes: MetadataRoute.Sitemap = locales.flatMap((locale) =>
     BLOG_POSTS.map((post) => ({
       url: localeUrl(locale, `/blog/${post.slug}`),
@@ -66,5 +76,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticRoutes, ...supplierRoutes, ...blogRoutes];
+  return [...staticRoutes, ...supplierRoutes, ...logisticsRoutes, ...blogRoutes];
 }

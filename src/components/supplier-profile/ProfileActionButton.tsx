@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { Loader2, X, ArrowUpRight, type LucideIcon } from "lucide-react";
 import ChatThread from "@/components/chat/ChatThread";
+import InsureShipmentCard from "@/components/logistics/InsureShipmentCard";
 
 export type ProfileIntent =
   | "contact"
@@ -24,6 +25,8 @@ type Props = {
   icon?: LucideIcon;
   className?: string;
   productName?: string;
+  /** Supplier country / location, used to suggest cargo insurers after an RFQ. */
+  shipmentOrigin?: string;
 };
 
 // Builds a tailored opening message so each CTA lands the buyer in the existing
@@ -55,6 +58,7 @@ export default function ProfileActionButton({
   icon: Icon,
   className = "",
   productName,
+  shipmentOrigin,
 }: Props) {
   const t = useTranslations("supplierProfile");
   const errors = useTranslations("errors");
@@ -160,7 +164,10 @@ export default function ProfileActionButton({
                 </button>
               </div>
             </div>
-            <ChatThread conversationId={conversationId} className="flex-1" />
+            <ChatThread conversationId={conversationId} className="min-h-0 flex-1" />
+            {intent === "rfq" && (
+              <InsureShipmentCard origin={shipmentOrigin} seed={supplierId} context="rfq" variant="compact" />
+            )}
           </div>
         </div>
       )}

@@ -82,7 +82,7 @@ describe("site navigation model", () => {
     const solutions = SITE_NAV.find((i) => i.id === "solutions");
     expect(solutions?.kind).toBe("columns");
     if (solutions?.kind !== "columns") return;
-    expect(solutions.columns).toHaveLength(3);
+    expect(solutions.columns).toHaveLength(4);
     for (const column of solutions.columns) {
       expect(column.links.length).toBeGreaterThan(0);
       expect(column.links.length).toBeLessThanOrEqual(SOLUTIONS_COLUMN_SIZE);

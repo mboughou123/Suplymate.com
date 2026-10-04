@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Lojistik ve sigorta",
+      "logistics": {
+        "insurers": "Kargo ve nakliyat sigortacıları",
+        "forwarders": "Nakliye komisyoncuları ve gümrük müşavirleri",
+        "all": "Tüm lojistik ve sigorta sağlayıcıları"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "Telefon ve e-posta · Yükselt",
     "cardLockedPhone": "Telefon · Görmek için yükselt",
     "cardLockedEmail": "E-posta · Görmek için yükselt"
+  },
+  "logistics": {
+    "chipLabel": "Lojistik ve Sigorta",
+    "directoryIntro": "Kargo ve deniz nakliyat sigortacıları ile kargo sigortası sağlayan nakliye komisyoncuları ve gümrük müşavirleri. Bilgiler her şirketin resmi web sitesinden alınmıştır. Suplymate sigortacı veya broker değildir ve bu şirketlerle ticari bir ilişkisi yoktur.",
+    "groupAll": "Tümü",
+    "groupInsurance": "Kargo sigortası",
+    "groupLogistics": "Nakliye komisyoncuları ve gümrük müşavirleri",
+    "providersFound": "{count, plural, one {# hizmet sağlayıcı} other {# hizmet sağlayıcı}}",
+    "kind": {
+      "cargo-insurer": "Kargo sigortacısı",
+      "specialist-cargo-insurer": "Uzman kargo sigortacısı",
+      "cargo-insurance-broker": "Kargo sigortası brokeri",
+      "freight-forwarder": "Nakliye komisyoncusu",
+      "customs-broker": "Gümrük müşaviri"
+    },
+    "viewProfile": "Profili görüntüle",
+    "officialSite": "Resmi site",
+    "requestQuote": "Teklif iste",
+    "requestQuoteAria": "{name} şirketinden kargo sigortası teklifi iste (web sitesini açar)",
+    "headquarters": "Merkez",
+    "coverage": "Sitelerinde belirtilen teminatlar",
+    "regions": "Bölgeler",
+    "regionsUnstated": "Sitelerinde belirtilmemiş",
+    "about": "Hakkında",
+    "links": "Resmi bağlantılar",
+    "cargoPage": "Kargo sigortası sayfası",
+    "homepage": "Şirket sitesi",
+    "sources": "Kaynaklar",
+    "sourcesBody": "{company} web sitesinden alınmıştır (tarih: {date}). Teminat, koşullar ve uygunluğu doğrudan sağlayıcıyla teyit edin.",
+    "breadcrumb": "Lojistik ve Sigorta",
+    "metaTitle": "{name} | Lojistik ve Sigorta | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Sağlayıcı bulunamadı",
+    "noContactOnFile": "Kayıtlı doğrudan telefon veya e-posta yok. İletişim için resmi sitelerini kullanın.",
+    "disclaimer": "Suplymate sigortacı veya sigorta brokeri değildir. Poliçe satmayız, komisyon almayız; bir şirketin listelenmesi tavsiye anlamına gelmez.",
+    "insureTitle": "Bu gönderiyi sigortala",
+    "insureBody": "Kargo sigortası, taşıyıcı sorumluluğunun ötesinde taşıma sırasındaki kayıp veya hasarı karşılayabilir. Bunu sunan bazı sağlayıcılar:",
+    "insureBodyRfq": "Bu siparişi mi gönderiyorsunuz? Kargo sigortası, taşıyıcı sorumluluğunun ötesinde taşıma sırasındaki kayıp veya hasarı karşılayabilir. Bunu sunan bazı sağlayıcılar:",
+    "insureMore": "Tüm kargo sigortacılarını gör",
+    "dismiss": "Sigorta önerilerini gizle",
+    "orderNote": "Ödemeye göre değil, bu güzergaha uygunluğa göre sıralanmıştır."
   }
 }

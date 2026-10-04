@@ -13,13 +13,23 @@ type Props = {
   supplierId: string;
   supplierName: string;
   className?: string;
+  /** Replaces the "message via Suplymate" fallback (e.g. for non-supplier listings). */
+  fallback?: ReactNode;
+  /** Where sign-in returns to; defaults to the supplier profile. */
+  profilePath?: string;
 };
 
-export default function SupplierContactDetails({ supplierId, supplierName, className = "" }: Props) {
+export default function SupplierContactDetails({
+  supplierId,
+  supplierName,
+  className = "",
+  fallback: customFallback,
+  profilePath = `/supplier/${supplierId}`,
+}: Props) {
   const t = useTranslations("supplierContact");
   const contact = useSupplierContact(supplierId);
 
-  const fallback = (
+  const fallback = customFallback ?? (
     <>
       <p className="text-xs text-ink-muted">{t("noneOnFile")}</p>
       <ProfileActionButton
@@ -61,7 +71,7 @@ export default function SupplierContactDetails({ supplierId, supplierName, class
         </Link>
         {contact.reason === "guest" && (
           <Link
-            href={`/login?callbackUrl=/supplier/${supplierId}`}
+            href={`/login?callbackUrl=${profilePath}`}
             className="mt-2 block text-center text-[11px] font-medium text-cyan hover:underline"
           >
             {t("signIn")}

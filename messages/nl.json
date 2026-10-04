@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logistiek & verzekering",
+      "logistics": {
+        "insurers": "Lading- & transportverzekeraars",
+        "forwarders": "Expediteurs & douane-agenten",
+        "all": "Alle logistiek- & verzekeringsaanbieders"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "Telefoon & e-mail · Upgrade",
     "cardLockedPhone": "Telefoon · Upgrade om te zien",
     "cardLockedEmail": "E-mail · Upgrade om te zien"
+  },
+  "logistics": {
+    "chipLabel": "Logistiek & verzekering",
+    "directoryIntro": "Goederen- en transportverzekeraars, plus expediteurs en douane-agenten die ladingverzekering regelen. De gegevens komen van de officiële website van elk bedrijf. Suplymate is geen verzekeraar of makelaar en heeft geen commerciële relatie met deze bedrijven.",
+    "groupAll": "Alle",
+    "groupInsurance": "Ladingverzekering",
+    "groupLogistics": "Expediteurs & douane-agenten",
+    "providersFound": "{count, plural, one {# aanbieder} other {# aanbieders}}",
+    "kind": {
+      "cargo-insurer": "Ladingverzekeraar",
+      "specialist-cargo-insurer": "Gespecialiseerde ladingverzekeraar",
+      "cargo-insurance-broker": "Makelaar in ladingverzekering",
+      "freight-forwarder": "Expediteur",
+      "customs-broker": "Douane-agent"
+    },
+    "viewProfile": "Profiel bekijken",
+    "officialSite": "Officiële website",
+    "requestQuote": "Offerte aanvragen",
+    "requestQuoteAria": "Offerte voor ladingverzekering aanvragen bij {name} (opent hun website)",
+    "headquarters": "Hoofdkantoor",
+    "coverage": "Dekkingen genoemd op hun website",
+    "regions": "Regio's",
+    "regionsUnstated": "Niet vermeld op hun website",
+    "about": "Over",
+    "links": "Officiële links",
+    "cargoPage": "Pagina ladingverzekering",
+    "homepage": "Bedrijfswebsite",
+    "sources": "Bronnen",
+    "sourcesBody": "Overgenomen van de website van {company} op {date}. Controleer dekking, voorwaarden en beschikbaarheid rechtstreeks bij de aanbieder.",
+    "breadcrumb": "Logistiek & verzekering",
+    "metaTitle": "{name} | Logistiek & verzekering | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Aanbieder niet gevonden",
+    "noContactOnFile": "Geen direct telefoonnummer of e-mailadres bekend. Gebruik hun officiële website om contact op te nemen.",
+    "disclaimer": "Suplymate is geen verzekeraar of verzekeringsmakelaar. We verkopen geen polissen, ontvangen geen commissie, en een vermelding is geen aanbeveling.",
+    "insureTitle": "Deze zending verzekeren",
+    "insureBody": "Een ladingverzekering kan verlies of schade onderweg dekken boven de aansprakelijkheid van de vervoerder. Enkele aanbieders:",
+    "insureBodyRfq": "Verstuurt u deze bestelling? Een ladingverzekering kan verlies of schade onderweg dekken boven de aansprakelijkheid van de vervoerder. Enkele aanbieders:",
+    "insureMore": "Alle ladingverzekeraars bekijken",
+    "dismiss": "Verzekeringssuggesties verbergen",
+    "orderNote": "Gesorteerd op geschiktheid voor deze route, niet op betaling."
   }
 }

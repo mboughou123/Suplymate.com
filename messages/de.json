@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logistik & Versicherung",
+      "logistics": {
+        "insurers": "Transport- & Warenversicherer",
+        "forwarders": "Spediteure & Zollagenten",
+        "all": "Alle Logistik- & Versicherungsanbieter"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "Telefon & E-Mail · Upgrade",
     "cardLockedPhone": "Telefon · Upgrade zum Ansehen",
     "cardLockedEmail": "E-Mail · Upgrade zum Ansehen"
+  },
+  "logistics": {
+    "chipLabel": "Logistik & Versicherung",
+    "directoryIntro": "Transport- und Warenversicherer sowie Spediteure und Zollagenten, die Transportversicherungen vermitteln. Die Angaben stammen von der offiziellen Website des jeweiligen Unternehmens. Suplymate ist weder Versicherer noch Makler und hat keine Geschäftsbeziehung zu diesen Unternehmen.",
+    "groupAll": "Alle",
+    "groupInsurance": "Transportversicherung",
+    "groupLogistics": "Spediteure & Zollagenten",
+    "providersFound": "{count, plural, one {# Anbieter} other {# Anbieter}}",
+    "kind": {
+      "cargo-insurer": "Transportversicherer",
+      "specialist-cargo-insurer": "Spezialisierter Transportversicherer",
+      "cargo-insurance-broker": "Transportversicherungsmakler",
+      "freight-forwarder": "Spedition",
+      "customs-broker": "Zollagent"
+    },
+    "viewProfile": "Profil ansehen",
+    "officialSite": "Offizielle Website",
+    "requestQuote": "Angebot anfordern",
+    "requestQuoteAria": "Transportversicherungsangebot bei {name} anfordern (öffnet deren Website)",
+    "headquarters": "Hauptsitz",
+    "coverage": "Auf ihrer Website genannte Deckungen",
+    "regions": "Regionen",
+    "regionsUnstated": "Auf ihrer Website nicht angegeben",
+    "about": "Über",
+    "links": "Offizielle Links",
+    "cargoPage": "Seite zur Transportversicherung",
+    "homepage": "Unternehmenswebsite",
+    "sources": "Quellen",
+    "sourcesBody": "Von der Website von {company} übernommen (Stand: {date}). Deckung, Bedingungen und Verfügbarkeit bitte direkt beim Anbieter prüfen.",
+    "breadcrumb": "Logistik & Versicherung",
+    "metaTitle": "{name} | Logistik & Versicherung | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Anbieter nicht gefunden",
+    "noContactOnFile": "Keine direkte Telefonnummer oder E-Mail hinterlegt. Bitte über die offizielle Website Kontakt aufnehmen.",
+    "disclaimer": "Suplymate ist weder Versicherer noch Versicherungsmakler. Wir verkaufen keine Policen, erhalten keine Provisionen, und eine Listung ist keine Empfehlung.",
+    "insureTitle": "Diese Sendung versichern",
+    "insureBody": "Eine Transportversicherung kann Verlust oder Schäden unterwegs über die Frachtführerhaftung hinaus abdecken. Einige Anbieter:",
+    "insureBodyRfq": "Versenden Sie diese Bestellung? Eine Transportversicherung kann Verlust oder Schäden unterwegs über die Frachtführerhaftung hinaus abdecken. Einige Anbieter:",
+    "insureMore": "Alle Transportversicherer ansehen",
+    "dismiss": "Versicherungsvorschläge ausblenden",
+    "orderNote": "Nach Eignung für diese Route sortiert, nicht gegen Bezahlung."
   }
 }

@@ -26,6 +26,7 @@ import ReviewsSection from "@/components/supplier-profile/ReviewsSection";
 import AiInsightsSection from "@/components/supplier-profile/AiInsightsSection";
 import StickyContactCard from "@/components/supplier-profile/StickyContactCard";
 import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
+import InsureShipmentCard from "@/components/logistics/InsureShipmentCard";
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://suplymate.com"
@@ -364,6 +365,12 @@ export default async function SupplierProfilePage({
 
           <FactoryMediaSection profile={profile} />
           <ProductsSection profile={profile} />
+          <InsureShipmentCard
+            origin={supplier.country ?? supplier.location}
+            seed={supplier.id}
+            variant="wide"
+            className="my-6"
+          />
 
           {/* Source and verification (data provenance) */}
           <section className="py-6">

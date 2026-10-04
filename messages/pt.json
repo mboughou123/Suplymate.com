@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logística e seguros",
+      "logistics": {
+        "insurers": "Seguradoras de carga e trânsito",
+        "forwarders": "Agentes de carga e despachantes aduaneiros",
+        "all": "Todos os fornecedores de logística e seguros"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "Telefone e e-mail · Upgrade",
     "cardLockedPhone": "Telefone · Upgrade para ver",
     "cardLockedEmail": "E-mail · Upgrade para ver"
+  },
+  "logistics": {
+    "chipLabel": "Logística e seguros",
+    "directoryIntro": "Seguradoras de carga e transporte marítimo, além de agentes de carga e despachantes aduaneiros que oferecem seguro de carga. As informações vêm do site oficial de cada empresa. A Suplymate não é seguradora nem corretora e não tem relação comercial com essas empresas.",
+    "groupAll": "Todos",
+    "groupInsurance": "Seguro de carga",
+    "groupLogistics": "Agentes de carga e despachantes aduaneiros",
+    "providersFound": "{count, plural, one {# fornecedor} other {# fornecedores}}",
+    "kind": {
+      "cargo-insurer": "Seguradora de carga",
+      "specialist-cargo-insurer": "Seguradora especializada em carga",
+      "cargo-insurance-broker": "Corretora de seguro de carga",
+      "freight-forwarder": "Agente de carga",
+      "customs-broker": "Despachante aduaneiro"
+    },
+    "viewProfile": "Ver perfil",
+    "officialSite": "Site oficial",
+    "requestQuote": "Solicitar cotação",
+    "requestQuoteAria": "Solicitar cotação de seguro de carga a {name} (abre o site deles)",
+    "headquarters": "Sede",
+    "coverage": "Coberturas citadas no site",
+    "regions": "Regiões",
+    "regionsUnstated": "Não informado no site",
+    "about": "Sobre",
+    "links": "Links oficiais",
+    "cargoPage": "Página de seguro de carga",
+    "homepage": "Site da empresa",
+    "sources": "Fontes",
+    "sourcesBody": "Copiado do site de {company} em {date}. Confirme coberturas, condições e disponibilidade diretamente com o fornecedor.",
+    "breadcrumb": "Logística e seguros",
+    "metaTitle": "{name} | Logística e seguros | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Fornecedor não encontrado",
+    "noContactOnFile": "Nenhum telefone ou e-mail direto registrado. Use o site oficial para entrar em contato.",
+    "disclaimer": "A Suplymate não é seguradora nem corretora de seguros. Não vendemos apólices nem recebemos comissões, e listar uma empresa não é um endosso.",
+    "insureTitle": "Segurar este envio",
+    "insureBody": "O seguro de carga pode cobrir perdas ou danos em trânsito além da responsabilidade do transportador. Alguns fornecedores que o oferecem:",
+    "insureBodyRfq": "Vai enviar este pedido? O seguro de carga pode cobrir perdas ou danos em trânsito além da responsabilidade do transportador. Alguns fornecedores que o oferecem:",
+    "insureMore": "Ver todas as seguradoras de carga",
+    "dismiss": "Ocultar sugestões de seguro de carga",
+    "orderNote": "Listados por adequação a esta rota, não por pagamento."
   }
 }

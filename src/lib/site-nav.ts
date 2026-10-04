@@ -9,6 +9,7 @@
 import { INDUSTRIES } from "@/data/industries";
 import { MATERIAL_CATALOG } from "@/data/material-catalog";
 import { HOME_PRODUCT_MODULE_LINKS } from "@/lib/home-product-module-links";
+import { logisticsDirectoryHref } from "@/data/logistics-providers";
 
 export type NavIcon =
   | "sparkles"
@@ -168,6 +169,14 @@ export const SOLUTIONS_MENU: ColumnsMenu = {
         { href: "/suppliers", labelKey: "solutions.goals.sourceInternationally" },
         { href: "/suppliers", labelKey: "solutions.goals.sourceDomestically" },
         { href: "/ai-assistant", labelKey: "solutions.goals.askMate" },
+      ],
+    },
+    {
+      titleKey: "solutions.byLogistics",
+      links: [
+        { href: logisticsDirectoryHref("insurance"), labelKey: "solutions.logistics.insurers" },
+        { href: logisticsDirectoryHref("logistics"), labelKey: "solutions.logistics.forwarders" },
+        { href: logisticsDirectoryHref(), labelKey: "solutions.logistics.all" },
       ],
     },
   ],
