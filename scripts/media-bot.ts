@@ -10,7 +10,7 @@
 // Env: SUPLYMATE_URL (default https://suplymate.com), CRON_SECRET,
 //      LOCAL_AI_BASE_URL (default http://localhost:11434/v1), LOCAL_AI_VISION_MODEL,
 //      AI_CACHE_DATABASE_URL (separate Postgres; JSON file when unset), MEDIA_BOT_CACHE_FILE,
-//      MEDIA_BOT_INBOX, MEDIA_BOT_NEEDS_DIR, MEDIA_BOT_INDUSTRIES, MEDIA_BOT_EVERY_MINUTES, MEDIA_BOT_AI=off.
+//      MEDIA_BOT_INBOX, MEDIA_BOT_NEEDS_DIR, MEDIA_BOT_INDUSTRIES, MEDIA_BOT_AI=off.
 
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, resolve } from "node:path";
@@ -222,7 +222,7 @@ async function main() {
         await cmdPush(cache, dir);
         break;
       case "run": {
-        const every = Number(arg("every") ?? process.env.MEDIA_BOT_EVERY_MINUTES ?? "");
+        const every = Number(arg("every") ?? "");
         if (!(every > 0)) {
           await cmdRun(cache);
           break;
