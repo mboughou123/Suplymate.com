@@ -25,8 +25,6 @@ export type DisplaySupplier = {
   city: string;
   flag: string;
   website?: string;
-  phone?: string;
-  email?: string;
   description?: string;
   sourceUrl?: string;
   score: number;
@@ -197,8 +195,6 @@ export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplie
     city,
     flag: flagFor(country),
     website: "website" in s ? s.website : undefined,
-    phone: "phone" in s ? s.phone : undefined,
-    email: "email" in s ? s.email : undefined,
     description: "description" in s ? s.description : undefined,
     sourceUrl: "sourceUrl" in s ? s.sourceUrl : undefined,
     score: s.score ?? s.reliabilityScore,
