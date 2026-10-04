@@ -11,7 +11,7 @@ name: suplymate-media-bot
 
 services:
   ollama:
-    image: ollama/ollama:latest
+    image: ollama/ollama:0.35.1
     volumes:
       - ollama:/root/.ollama
     ports:
@@ -24,10 +24,10 @@ services:
     restart: unless-stopped
 
   ollama-pull:
-    image: ollama/ollama:latest
+    image: ollama/ollama:0.35.1
     environment:
       OLLAMA_HOST: http://ollama:11434
-    entrypoint: ["ollama", "pull", "${LOCAL_AI_VISION_MODEL:-qwen2.5vl:3b}"]
+    entrypoint: ["sh", "-c", "ollama show \"$$0\" >/dev/null 2>&1 || ollama pull \"$$0\"", "${LOCAL_AI_VISION_MODEL:-qwen2.5vl:3b}"]
     depends_on:
       ollama:
         condition: service_healthy

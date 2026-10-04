@@ -23,7 +23,8 @@ spec:
             runAsGroup: 1000
             fsGroup: 1000
           initContainers:
-            # Idempotent: returns quickly once the model is on the volume.
+            # Pulls only when the model is missing, so hourly runs neither hit
+            # the registry nor fail when it is unreachable.
             - name: pull-model
               image: curlimages/curl:8.11.1
               env:
@@ -32,18 +33,12 @@ spec:
                     configMapKeyRef:
                       name: media-bot-config
                       key: LOCAL_AI_VISION_MODEL
+              command: ["sh", "-c"]
               args:
-                - -sf
-                - --retry
-                - "30"
-                - --retry-connrefused
-                - --retry-delay
-                - "10"
-                - --max-time
-                - "3600"
-                - http://ollama:11434/api/pull
-                - -d
-                - '{"model":"$(LOCAL_AI_VISION_MODEL)","stream":false}'
+                - >-
+                  body="{\"model\":\"$LOCAL_AI_VISION_MODEL\"}";
+                  curl -sf -o /dev/null --retry 30 --retry-connrefused --retry-delay 10 http://ollama:11434/api/show -d "$body" ||
+                  curl -sf --max-time 3600 http://ollama:11434/api/pull -d "{\"model\":\"$LOCAL_AI_VISION_MODEL\",\"stream\":false}"
           containers:
             - name: media-bot
               image: suplymate/media-bot
