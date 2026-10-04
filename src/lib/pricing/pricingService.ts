@@ -93,7 +93,7 @@ function decorate(m: Material, observedAt: Map<string, Date>): MaterialWithProve
     source,
     sourceLabel: sourceLabelFor(source),
     isLive,
-    cadence: providerById(source)?.cadence ?? "daily",
+    cadence: isLive ? providerById(source)?.cadence ?? "daily" : m.cadence ?? "daily",
     lastUpdatedAt: m.lastUpdatedAt ?? null,
     observedAt: isLive ? observedAt.get(m.id)?.toISOString() ?? m.lastUpdatedAt ?? null : m.observedThrough ?? null,
     category: m.category ?? getCatalogMaterial(m.id)?.industry ?? "metals",
@@ -155,6 +155,7 @@ async function loadFromDb(): Promise<Material[]> {
           source: r.source ?? "seed",
           lastUpdatedAt: r.lastUpdatedAt?.toISOString() ?? null,
           observedThrough: (r.source ?? "seed") === "seed" ? fallback?.observedThrough : undefined,
+          cadence: fallback?.cadence,
         } satisfies Material;
       });
     const missing = seedMaterials.filter((m) => !stored.has(m.id));

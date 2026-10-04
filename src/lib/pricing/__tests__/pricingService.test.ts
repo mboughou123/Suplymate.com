@@ -184,7 +184,10 @@ describe("pricing service", () => {
     db.available = false;
     const all = await getMaterialsWithPricing();
     expect(all.length).toBe(seedMaterials.length);
-    expect(all.every((m) => m.source === "seed" && !m.isLive && m.cadence === "daily")).toBe(true);
+    expect(all.every((m) => m.source === "seed" && !m.isLive)).toBe(true);
+    expect(all.find((m) => m.id === "steel")?.cadence).toBe("daily");
+    // Reference series copied from monthly IMF data keep their monthly cadence.
+    expect(all.find((m) => m.id === "platinum")?.cadence).toBe("monthly");
   });
 
   it("backfills history + price points on the first switch to a provider", async () => {
@@ -281,6 +284,7 @@ describe("pricing service", () => {
     expect(tin.isLive).toBe(false);
     expect(tin.sourceLabel).toMatch(/not live/);
     expect(tin.observedAt).toBe("2026-08-31");
+    expect(tin.cadence).toBe("monthly");
     expect(all.find((m) => m.id === "steel")?.observedAt).toBeNull();
   });
 

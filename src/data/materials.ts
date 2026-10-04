@@ -8,6 +8,7 @@
 // Only materials declared in src/data/material-catalog.ts may appear here.
 
 import { isCatalogMaterial } from "@/data/material-catalog";
+import type { PriceCadence } from "@/lib/pricing/types";
 
 export type AiSignal = "Buy now" | "Wait" | "Monitor";
 
@@ -34,6 +35,8 @@ export type Material = {
    * so chart month labels line up with the real observations.
    */
   observedThrough?: string;
+  /** Publication cadence of a seed series. Defaults to "daily". */
+  cadence?: PriceCadence;
 };
 
 const seed: Material[] = [
@@ -221,6 +224,7 @@ const seed: Material[] = [
     category: "metals",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "lead",
@@ -237,6 +241,7 @@ const seed: Material[] = [
     category: "metals",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "chromium",
@@ -253,6 +258,7 @@ const seed: Material[] = [
     category: "metals",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "molybdenum",
@@ -269,6 +275,7 @@ const seed: Material[] = [
     category: "metals",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "cobalt",
@@ -285,6 +292,7 @@ const seed: Material[] = [
     category: "metals",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "silver",
@@ -301,6 +309,7 @@ const seed: Material[] = [
     category: "biomedical",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "platinum",
@@ -317,6 +326,7 @@ const seed: Material[] = [
     category: "biomedical",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "silicon",
@@ -333,6 +343,7 @@ const seed: Material[] = [
     category: "electrical-industrial",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "energy-transition-metals",
@@ -349,6 +360,7 @@ const seed: Material[] = [
     category: "electrical-industrial",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "base-metals-index",
@@ -365,6 +377,7 @@ const seed: Material[] = [
     category: "machinery",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "rubber",
@@ -381,6 +394,7 @@ const seed: Material[] = [
     category: "hardware-components",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "hardwood",
@@ -397,6 +411,7 @@ const seed: Material[] = [
     category: "construction",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
   {
     id: "coal",
@@ -413,6 +428,7 @@ const seed: Material[] = [
     category: "construction",
     source: "seed",
     observedThrough: "2026-08-31",
+    cadence: "monthly",
   },
 ];
 
