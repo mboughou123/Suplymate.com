@@ -5,14 +5,18 @@
 // `Authorization: Bearer <WPI_API_KEY>`. Observations come newest-first.
 //
 // The data is MONTHLY, so refreshing more than once a day is pointless and
-// would burn the request quota (free tier: 250 requests / month). Each
-// refresh costs one request per mapped material; the same response also
-// supplies the history used to backfill charts.
+// would burn the request quota (free tier: 250 requests / month). Each series
+// costs one request; the same response also supplies the history used to
+// backfill charts. There are more series than the quota allows fetching every
+// day, so each refresh fetches at most `wpiRequestsPerRefresh()` of them —
+// the pricing service picks the stalest — and the full set rotates over a few
+// days, which is plenty for monthly observations.
 //
 // Env:
-//   WPI_API_KEY        bearer key (server-side only)
-//   WPI_API_BASE_URL   optional override (default https://api.worldpriceindex.org)
-//   WPI_REFRESH_HOURS  optional refresh interval (default 24)
+//   WPI_API_KEY                bearer key (server-side only)
+//   WPI_API_BASE_URL           optional override (default https://api.worldpriceindex.org)
+//   WPI_REFRESH_HOURS          optional refresh interval (default 24)
+//   WPI_MONTHLY_REQUEST_CAP    optional plan quota (default 250)
 
 import type { PriceQuote, PricingProvider } from "@/lib/pricing/types";
 
@@ -30,8 +34,11 @@ type SeriesSpec = {
 const METRIC_TON_TO_LB = 1 / 2204.62;
 /** 1,000 board feet of sawn softwood ≈ 2.36 m³. */
 const CUBIC_METER_TO_1000BF = 2.36;
+/** IMF quotes rubber in US cents per pound. */
+const US_CENTS_PER_LB_TO_USD_PER_KG = 2.20462 / 100;
 
-// Catalog material id -> IMF PCPS series on World Price Index.
+// Catalog material id -> IMF PCPS series on World Price Index. Units are the
+// IMF series units unless a multiplier converts them.
 const SERIES: Record<string, SeriesSpec> = {
   aluminum: { series: "aluminum-palum-usd-monthly", unit: "USD/ton" },
   copper: { series: "copper-pcopp-usd-monthly", unit: "USD/lb", multiplier: METRIC_TON_TO_LB },
@@ -39,7 +46,21 @@ const SERIES: Record<string, SeriesSpec> = {
   nickel: { series: "nickel-pnick-usd-monthly", unit: "USD/ton" },
   "iron-ore": { series: "iron-ore-piorecr-usd-monthly", unit: "USD/ton" },
   lumber: { series: "soft-sawnwood-psawore-usd-monthly", unit: "USD/1000 bf", multiplier: CUBIC_METER_TO_1000BF },
+  tin: { series: "tin-ptin-usd-monthly", unit: "USD/ton" },
+  lead: { series: "lead-plead-usd-monthly", unit: "USD/ton" },
+  chromium: { series: "chromium-pchrom-usd-monthly", unit: "USD/ton" },
+  molybdenum: { series: "molybdenum-plmmody-usd-monthly", unit: "USD/ton" },
+  cobalt: { series: "cobalt-pcoba-usd-monthly", unit: "USD/ton" },
+  silver: { series: "silver-psilver-usd-monthly", unit: "USD/oz" },
+  platinum: { series: "platinum-pplat-usd-monthly", unit: "USD/oz" },
+  silicon: { series: "silicon-psillump-usd-monthly", unit: "USD/ton" },
+  rubber: { series: "rubber-prubb-usd-monthly", unit: "USD/kg", multiplier: US_CENTS_PER_LB_TO_USD_PER_KG },
+  hardwood: { series: "hard-sawnwood-dark-red-meranti-psawmal-usd-monthly", unit: "USD/m³" },
+  coal: { series: "coal-australia-pcoalau-usd-monthly", unit: "USD/ton" },
+  "energy-transition-metals": { series: "energy-transition-metal-pentm-index-monthly", unit: "Index pts" },
+  "base-metals-index": { series: "metal-pmeta-index-monthly", unit: "Index pts" },
 };
+
 
 /** Number of monthly observations pulled per refresh (also the chart backfill). */
 const HISTORY_POINTS = 24;
@@ -59,6 +80,20 @@ function baseUrl(): string {
 export function wpiRefreshIntervalMs(): number {
   const hours = Number(process.env.WPI_REFRESH_HOURS);
   return (Number.isFinite(hours) && hours > 0 ? hours : 24) * 3_600_000;
+}
+
+/** Keeps ~10% of the monthly quota free for retries after a failed refresh. */
+const QUOTA_HEADROOM = 0.9;
+
+/**
+ * Series fetched per refresh so that a 31-day month of refreshes stays under
+ * the monthly request cap: 250 requests at one refresh a day → 7 per refresh.
+ */
+export function wpiRequestsPerRefresh(): number {
+  const cap = Number(process.env.WPI_MONTHLY_REQUEST_CAP);
+  const monthlyCap = Number.isFinite(cap) && cap > 0 ? cap : 250;
+  const refreshesPerMonth = Math.ceil((31 * 24 * 3_600_000) / wpiRefreshIntervalMs());
+  return Math.max(1, Math.floor((monthlyCap * QUOTA_HEADROOM) / refreshesPerMonth));
 }
 
 async function fetchSeries(slug: string, key: string): Promise<WpiObservation[]> {
@@ -92,6 +127,9 @@ export const worldPriceIndexProvider: PricingProvider = {
   get refreshIntervalMs() {
     return wpiRefreshIntervalMs();
   },
+  get maxRequestsPerRefresh() {
+    return wpiRequestsPerRefresh();
+  },
   isConfigured() {
     return apiKey() !== null;
   },
@@ -101,7 +139,7 @@ export const worldPriceIndexProvider: PricingProvider = {
   async fetchLatest(materialIds: string[]): Promise<PriceQuote[]> {
     const key = apiKey();
     if (!key) return [];
-    const wanted = materialIds.filter((id) => id in SERIES);
+    const wanted = materialIds.filter((id) => id in SERIES).slice(0, wpiRequestsPerRefresh());
     if (wanted.length === 0) return [];
 
     const fetchedAt = new Date();

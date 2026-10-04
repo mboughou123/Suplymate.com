@@ -33,6 +33,12 @@ export interface PricingProvider {
    * PRICING_CACHE_TTL_MINUTES — e.g. monthly data should refresh daily at most.
    */
   readonly refreshIntervalMs?: number;
+  /**
+   * Request budget of one refresh (one request per material). When a provider
+   * supports more materials than this, the pricing service refreshes the
+   * stalest ones first and rotates through the rest on later refreshes.
+   */
+  readonly maxRequestsPerRefresh?: number;
   isConfigured(): boolean;
   supports(materialId: string): boolean;
   /** Fetch the latest quotes for the requested catalog materials. */

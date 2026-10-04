@@ -1,5 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { worldPriceIndexProvider, WPI_PROVIDER_ID, wpiRefreshIntervalMs } from "@/lib/pricing/providers/worldPriceIndex";
+import {
+  worldPriceIndexProvider,
+  WPI_PROVIDER_ID,
+  wpiRefreshIntervalMs,
+  wpiRequestsPerRefresh,
+} from "@/lib/pricing/providers/worldPriceIndex";
+import { materials } from "@/data/materials";
+import { getCatalogMaterial } from "@/data/material-catalog";
 
 type Obs = { observed_at: string; value: number | null; unit?: string; cadence?: string };
 
@@ -128,5 +135,63 @@ describe("worldPriceIndexProvider", () => {
     installFetch(() => jsonResponse({ data: [] }));
     await expect(worldPriceIndexProvider.fetchLatest(["aluminum"])).resolves.toEqual([]);
     expect(calls).toHaveLength(0);
+  });
+
+  it("sizes each refresh so a 31-day month of refreshes stays under the 250-request cap", () => {
+    expect(wpiRequestsPerRefresh()).toBe(7);
+    expect(wpiRequestsPerRefresh() * 31).toBeLessThanOrEqual(250);
+    expect(worldPriceIndexProvider.maxRequestsPerRefresh).toBe(7);
+
+    vi.stubEnv("WPI_REFRESH_HOURS", "6");
+    expect(wpiRequestsPerRefresh()).toBe(1);
+    expect(wpiRequestsPerRefresh() * 31 * 4).toBeLessThanOrEqual(250);
+
+    vi.stubEnv("WPI_REFRESH_HOURS", "");
+    vi.stubEnv("WPI_MONTHLY_REQUEST_CAP", "1000");
+    expect(wpiRequestsPerRefresh()).toBe(29);
+  });
+
+  it("never sends more requests than the per-refresh budget", async () => {
+    installFetch((slug) => jsonResponse({ data: SERIES[slug] ?? [] }));
+    const supported = materials.map((m) => m.id).filter((id) => worldPriceIndexProvider.supports(id));
+    expect(supported.length).toBeGreaterThan(wpiRequestsPerRefresh());
+    await worldPriceIndexProvider.fetchLatest(supported);
+    expect(calls).toHaveLength(wpiRequestsPerRefresh());
+  });
+
+  it("maps the added benchmarks to IMF series with the right units", async () => {
+    installFetch((slug) =>
+      jsonResponse({
+        data: [
+          { observed_at: "2026-08-31", value: slug.startsWith("rubber") ? 124.8151608894 : 233.75 },
+          { observed_at: "2026-07-31", value: slug.startsWith("rubber") ? 129.5 : 226.17 },
+        ],
+      }),
+    );
+    const [rubber, index, tin] = await worldPriceIndexProvider.fetchLatest(["rubber", "base-metals-index", "tin"]);
+    expect(calls.map((c) => c.url.match(/commodity-series\/([^?]+)/)![1])).toEqual([
+      "rubber-prubb-usd-monthly",
+      "metal-pmeta-index-monthly",
+      "tin-ptin-usd-monthly",
+    ]);
+    // US cents per pound -> USD per kg.
+    expect(rubber.unit).toBe("USD/kg");
+    expect(rubber.price).toBeCloseTo(2.7517, 3);
+    expect(index.unit).toBe("Index pts");
+    expect(index.price).toBe(233.75);
+    expect(tin.unit).toBe("USD/ton");
+  });
+
+  it("quotes every WPI-mapped material in the unit of its reference series", async () => {
+    vi.stubEnv("WPI_MONTHLY_REQUEST_CAP", "100000");
+    installFetch(() => jsonResponse({ data: [{ observed_at: "2026-08-31", value: 100 }] }));
+    const mapped = materials.filter((m) => worldPriceIndexProvider.supports(m.id));
+    const quotes = await worldPriceIndexProvider.fetchLatest(mapped.map((m) => m.id));
+    expect(quotes).toHaveLength(mapped.length);
+    for (const m of mapped) {
+      const q = quotes.find((x) => x.materialId === m.id)!;
+      expect(q.unit, m.id).toBe(m.unit);
+      expect(getCatalogMaterial(m.id)?.unit, m.id).toBe(m.unit);
+    }
   });
 });
