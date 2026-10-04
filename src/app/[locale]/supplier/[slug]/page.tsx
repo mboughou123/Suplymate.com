@@ -365,6 +365,12 @@ export default async function SupplierProfilePage({
 
           <FactoryMediaSection profile={profile} />
           <ProductsSection profile={profile} />
+          <InsureShipmentCard
+            origin={supplier.country ?? supplier.location}
+            seed={supplier.id}
+            variant="wide"
+            className="my-6"
+          />
 
           {/* Source and verification (data provenance) */}
           <section className="py-6">
@@ -403,20 +409,10 @@ export default async function SupplierProfilePage({
           </section>
 
           <ReviewsSection profile={profile} />
-          <InsureShipmentCard
-            origin={supplier.country ?? supplier.location}
-            seed={supplier.id}
-            className="mb-8 lg:hidden"
-          />
         </div>
         <aside className="hidden lg:block">
           <div className="sticky top-6 py-8 sm:py-10">
             <StickyContactCard profile={profile} variant="sidebar" />
-            <InsureShipmentCard
-              origin={supplier.country ?? supplier.location}
-              seed={supplier.id}
-              className="mt-4"
-            />
           </div>
         </aside>
       </div>

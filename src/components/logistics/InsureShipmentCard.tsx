@@ -12,7 +12,8 @@ const DISMISS_KEY = "suplymate:insure-card-dismissed";
 type Props = ShipmentLane & {
   /** "rfq" words the card for a buyer who just sent / is reviewing an RFQ. */
   context?: "supplier" | "rfq";
-  variant?: "card" | "compact";
+  /** "wide" lays the insurers out in a row for full-width page columns. */
+  variant?: "card" | "wide" | "compact";
   className?: string;
 };
 
@@ -103,9 +104,14 @@ export default function InsureShipmentCard({
         </button>
       </div>
       <p className="mt-1 text-xs text-ink-muted">{context === "rfq" ? t("insureBodyRfq") : t("insureBody")}</p>
-      <ul className="mt-3 divide-y divide-slate-100">
+      <ul className={variant === "wide" ? "mt-3 grid gap-2 sm:grid-cols-3" : "mt-3 divide-y divide-slate-100"}>
         {insurers.map((p) => (
-          <li key={p.id} className="flex items-center justify-between gap-2 py-2">
+          <li
+            key={p.id}
+            className={`flex min-w-0 items-center justify-between gap-2 ${
+              variant === "wide" ? "rounded-xl border border-slate-200 px-3 py-2" : "py-2"
+            }`}
+          >
             <div className="min-w-0">
               <Link
                 href={logisticsProviderHref(p.id)}
@@ -133,7 +139,7 @@ export default function InsureShipmentCard({
       </ul>
       <Link
         href={logisticsDirectoryHref("insurance")}
-        className="mt-1 inline-block text-xs font-medium text-cyan hover:underline"
+        className="mt-2 inline-block text-xs font-medium text-cyan hover:underline"
       >
         {t("insureMore")}
       </Link>

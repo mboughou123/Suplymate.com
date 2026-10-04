@@ -34,6 +34,12 @@ describe("InsureShipmentCard", () => {
     expect(html.toLowerCase()).not.toContain("partner");
   });
 
+  it("lays three insurers out in a row in the wide variant", () => {
+    const html = render(<InsureShipmentCard {...lane} variant="wide" />);
+    expect(html).toContain("sm:grid-cols-3");
+    expect(html.match(/href="\/logistics\//g) ?? []).toHaveLength(3);
+  });
+
   it("has a compact variant with two insurers and the disclaimer", () => {
     const html = render(<InsureShipmentCard {...lane} variant="compact" />);
     const links = html.match(/href="\/logistics\//g) ?? [];
