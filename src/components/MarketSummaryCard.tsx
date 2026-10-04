@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 import type { Material } from "@/data/materials";
+import { priceSymbol } from "@/lib/pricing/format";
 import type { PriceCadence } from "@/lib/pricing/types";
 
 type MarketSummaryCardProps = {
@@ -68,7 +69,8 @@ export default function MarketSummaryCard({
         <SignalBadge signal={material.signal} />
       </div>
       <p className="mt-2 text-lg font-bold tabular-nums text-ink">
-        ${material.currentPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
+        {priceSymbol(material)}
+        {material.currentPrice.toLocaleString("en-US", { maximumFractionDigits: 2 })}
         <span className="ml-1 text-xs font-normal text-ink-muted">
           {material.unit.replace("USD/", "")}
         </span>

@@ -9,7 +9,8 @@ import { Star, Sparkles, Factory, Info, Database } from "lucide-react";
 import type { MaterialWithProvenance } from "@/lib/pricing/pricingService";
 import type { PricingStatus } from "@/lib/pricing/types";
 import { getCatalogMaterial } from "@/data/material-catalog";
-import { INDUSTRIES } from "@/data/industries";
+import { priceCategoriesFor } from "@/data/price-categories";
+import { priceSymbol } from "@/lib/pricing/format";
 import MarketSummaryCard from "@/components/MarketSummaryCard";
 import PriceAlertForm from "@/components/PriceAlertForm";
 import { explainSignal } from "@/lib/market-intelligence";
@@ -67,13 +68,17 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
     }
   };
 
-  const categories = useMemo(() => {
-    const present = new Set(initialMaterials.map((m) => m.category));
-    return INDUSTRIES.filter((i) => present.has(i.id));
-  }, [initialMaterials]);
+  const categories = useMemo(() => priceCategoriesFor(initialMaterials.map((m) => m.id)), [initialMaterials]);
+  const activeCategory = categories.find((c) => c.id === category);
+
+  const selectCategory = (id: string) => {
+    setCategory(id);
+    const members = categories.find((c) => c.id === id)?.materials;
+    if (members && !members.includes(selectedId)) setSelectedId(members[0]);
+  };
 
   const filtered = initialMaterials.filter((m) => {
-    if (category !== "all" && m.category !== category) return false;
+    if (activeCategory && !activeCategory.materials.includes(m.id)) return false;
     const q = search.toLowerCase().trim();
     if (!q) return true;
     const cat = getCatalogMaterial(m.id);
@@ -128,7 +133,7 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setCategory("all")}
+            onClick={() => selectCategory("all")}
             className={`cursor-pointer rounded-full border px-3 py-1.5 text-xs font-medium transition ${
               category === "all" ? "border-navy bg-navy text-white" : "border-slate-200 bg-white text-ink-muted hover:border-slate-300"
             }`}
@@ -139,7 +144,7 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
             <button
               key={c.id}
               type="button"
-              onClick={() => setCategory(c.id)}
+              onClick={() => selectCategory(c.id)}
               className={`cursor-pointer rounded-full border px-3 py-1.5 text-xs font-medium transition ${
                 category === c.id ? "border-navy bg-navy text-white" : "border-slate-200 bg-white text-ink-muted hover:border-slate-300"
               }`}
@@ -160,7 +165,7 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
         {selected && ranged && (
           <>
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              <Stat label={t("currentPrice")} value={`${selected.currency === "USD" ? "$" : selected.currency + " "}${selected.currentPrice.toLocaleString(undefined, { maximumFractionDigits: selected.currentPrice < 10 ? 3 : 0 })}`} sub={selected.unit} />
+              <Stat label={t("currentPrice")} value={`${priceSymbol(selected)}${selected.currentPrice.toLocaleString(undefined, { maximumFractionDigits: selected.currentPrice < 10 ? 3 : 0 })}`} sub={selected.unit} />
               {selected.cadence === "monthly" ? (
                 <>
                   {/* Monthly benchmark series: no 24h figure exists, show month-over-month + yearly instead. */}

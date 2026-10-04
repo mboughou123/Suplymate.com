@@ -41,6 +41,12 @@ vi.mock("@/lib/prisma", () => ({
         guard();
         return db.materials.find((m) => m.id === where.id) ?? null;
       },
+      create: async ({ data }: { data: Omit<MaterialRow, "lastUpdatedAt"> }) => {
+        guard();
+        const row: MaterialRow = { ...data, lastUpdatedAt: null };
+        db.materials.push(row);
+        return row;
+      },
       update: async ({ where, data }: { where: { id: string }; data: Partial<MaterialRow> }) => {
         guard();
         const row = db.materials.find((m) => m.id === where.id)!;
@@ -93,7 +99,7 @@ vi.mock("@/lib/prisma", () => ({
 }));
 
 import { materials as seedMaterials } from "@/data/materials";
-import { WPI_PROVIDER_ID } from "@/lib/pricing/providers/worldPriceIndex";
+import { WPI_PROVIDER_ID, worldPriceIndexProvider, wpiRequestsPerRefresh } from "@/lib/pricing/providers/worldPriceIndex";
 import type { PriceQuote } from "@/lib/pricing/types";
 
 // The service keeps `lastRefreshAt` / `lastError` in module scope; import a
@@ -178,7 +184,10 @@ describe("pricing service", () => {
     db.available = false;
     const all = await getMaterialsWithPricing();
     expect(all.length).toBe(seedMaterials.length);
-    expect(all.every((m) => m.source === "seed" && !m.isLive && m.cadence === "daily")).toBe(true);
+    expect(all.every((m) => m.source === "seed" && !m.isLive)).toBe(true);
+    expect(all.find((m) => m.id === "steel")?.cadence).toBe("daily");
+    // Reference series copied from monthly IMF data keep their monthly cadence.
+    expect(all.find((m) => m.id === "platinum")?.cadence).toBe("monthly");
   });
 
   it("backfills history + price points on the first switch to a provider", async () => {
@@ -265,6 +274,78 @@ describe("pricing service", () => {
     expect(pricingStatus().lastError).toMatch(/rejected the API key/);
     warn.mockRestore();
     vi.unstubAllGlobals();
+  });
+
+  it("adds catalog materials that are missing from the DB, with their dated reference series", async () => {
+    const { getMaterialsWithPricing } = await loadService();
+    const all = await getMaterialsWithPricing();
+    expect(all.map((m) => m.id).sort()).toEqual(seedMaterials.map((m) => m.id).sort());
+    const tin = all.find((m) => m.id === "tin")!;
+    expect(tin.isLive).toBe(false);
+    expect(tin.sourceLabel).toMatch(/not live/);
+    expect(tin.observedAt).toBe("2026-08-31");
+    expect(tin.cadence).toBe("monthly");
+    expect(all.find((m) => m.id === "steel")?.observedAt).toBeNull();
+  });
+
+  it("creates the DB row of a newly added material when its first quote arrives", async () => {
+    const { applyQuotes } = await loadService();
+    expect(db.materials.some((m) => m.id === "tin")).toBe(false);
+    await applyQuotes([{ ...wpiQuote([52882, 55385]), materialId: "tin" }]);
+    const tin = db.materials.find((m) => m.id === "tin")!;
+    expect(tin.source).toBe(WPI_PROVIDER_ID);
+    expect(tin.currentPrice).toBe(55385);
+    expect(db.points.filter((p) => p.materialId === "tin")).toHaveLength(2);
+  });
+
+  it("rotates refresh batches so every mapped series is covered within a few days", async () => {
+    const { pickRefreshBatch } = await loadService();
+    vi.stubEnv("WPI_API_KEY", "k");
+    const supported = seedMaterials.filter((m) => worldPriceIndexProvider.supports(m.id)).map((m) => m.id);
+    const budget = wpiRequestsPerRefresh();
+    const days = Math.ceil(supported.length / budget);
+    const seen = new Set<string>();
+    for (let d = 0; d < days; d++) {
+      const batch = pickRefreshBatch(worldPriceIndexProvider, seedMaterials, Date.UTC(2026, 9, 1 + d, 12));
+      expect(batch.length).toBe(budget);
+      batch.forEach((id) => seen.add(id));
+    }
+    expect([...seen].sort()).toEqual([...supported].sort());
+  });
+
+  it("stays within 250 World Price Index requests over a 31-day month, cold starts included", async () => {
+    vi.stubEnv("WPI_API_KEY", "k");
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const requested = new Map<string, number>();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (input: RequestInfo | URL) => {
+        const slug = String(input).match(/commodity-series\/([^?]+)/)![1];
+        requested.set(slug, (requested.get(slug) ?? 0) + 1);
+        const body = { data: [{ observed_at: "2026-08-31", value: 120 }, { observed_at: "2026-07-31", value: 100 }] };
+        return new Response(JSON.stringify(body), { status: 200 });
+      }),
+    );
+    try {
+      for (let day = 0; day < 31; day++) {
+        // Each day: a cold start in the morning, then warm visits.
+        vi.setSystemTime(new Date(Date.UTC(2026, 9, 1 + day, 7)));
+        const { getMaterialsWithPricing } = await loadService();
+        await getMaterialsWithPricing();
+        for (const hour of [12, 18, 23]) {
+          vi.setSystemTime(new Date(Date.UTC(2026, 9, 1 + day, hour)));
+          await getMaterialsWithPricing();
+        }
+      }
+    } finally {
+      vi.useRealTimers();
+      vi.unstubAllGlobals();
+    }
+    const total = [...requested.values()].reduce((a, b) => a + b, 0);
+    expect(total).toBeLessThanOrEqual(250);
+    const mapped = seedMaterials.filter((m) => worldPriceIndexProvider.supports(m.id));
+    expect(requested.size).toBe(mapped.length);
+    expect(mapped.every((m) => db.materials.find((r) => r.id === m.id)?.source === WPI_PROVIDER_ID)).toBe(true);
   });
 
   it("computes daily-cadence changes from the previous price and ~22 points back", async () => {

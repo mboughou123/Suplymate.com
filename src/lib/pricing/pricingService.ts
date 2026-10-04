@@ -11,6 +11,11 @@
 //   - Providers are refreshed at most once per `refreshIntervalMs` (default
 //     PRICING_CACHE_TTL_MINUTES), also across serverless cold starts: the last
 //     refresh time is derived from `Material.lastUpdatedAt` in the DB.
+//   - A refresh requests at most `maxRequestsPerRefresh` materials, rotating
+//     through the rest on later refreshes, so request quotas hold however many
+//     materials are mapped.
+//   - Catalog materials added after the DB was seeded get their row on first
+//     use, so new materials show up without a re-seed.
 
 import { prisma } from "@/lib/prisma";
 import { materials as seedMaterials, type Material } from "@/data/materials";
@@ -88,9 +93,9 @@ function decorate(m: Material, observedAt: Map<string, Date>): MaterialWithProve
     source,
     sourceLabel: sourceLabelFor(source),
     isLive,
-    cadence: providerById(source)?.cadence ?? "daily",
+    cadence: isLive ? providerById(source)?.cadence ?? "daily" : m.cadence ?? "daily",
     lastUpdatedAt: m.lastUpdatedAt ?? null,
-    observedAt: isLive ? observedAt.get(m.id)?.toISOString() ?? m.lastUpdatedAt ?? null : null,
+    observedAt: isLive ? observedAt.get(m.id)?.toISOString() ?? m.lastUpdatedAt ?? null : m.observedThrough ?? null,
     category: m.category ?? getCatalogMaterial(m.id)?.industry ?? "metals",
   };
 }
@@ -122,7 +127,8 @@ async function loadFromDb(): Promise<Material[]> {
     const rows = await prisma.material.findMany({ orderBy: { name: "asc" } });
     if (rows.length === 0) return seedMaterials;
     const byId = new Map(seedMaterials.map((m) => [m.id, m]));
-    return rows
+    const stored = new Set(rows.map((r) => r.id));
+    const fromDb: Material[] = rows
       .filter((r) => isCatalogMaterial(r.id))
       .map((r) => {
         const fallback = byId.get(r.id);
@@ -148,8 +154,12 @@ async function loadFromDb(): Promise<Material[]> {
           category: r.category ?? fallback?.category,
           source: r.source ?? "seed",
           lastUpdatedAt: r.lastUpdatedAt?.toISOString() ?? null,
+          observedThrough: (r.source ?? "seed") === "seed" ? fallback?.observedThrough : undefined,
+          cadence: fallback?.cadence,
         } satisfies Material;
       });
+    const missing = seedMaterials.filter((m) => !stored.has(m.id));
+    return [...fromDb, ...missing].sort((a, b) => a.name.localeCompare(b.name));
   } catch {
     return seedMaterials;
   }
@@ -194,11 +204,35 @@ function parseHistory(raw: string): number[] {
   }
 }
 
+/** Inserts the seed row of a catalog material that is not in the DB yet. */
+async function createSeedRow(materialId: string) {
+  const seed = seedMaterials.find((m) => m.id === materialId);
+  if (!seed) return null;
+  return prisma.material.create({
+    data: {
+      id: seed.id,
+      name: seed.name,
+      symbol: seed.symbol,
+      currentPrice: seed.currentPrice,
+      unit: seed.unit,
+      currency: seed.currency,
+      dailyChange: seed.dailyChange,
+      monthlyChange: seed.monthlyChange,
+      yearlyChange: seed.yearlyChange,
+      signal: seed.signal,
+      history: JSON.stringify(seed.history),
+      category: seed.category ?? null,
+      source: "seed",
+    },
+  });
+}
+
 /** Persist quotes into Material + MaterialPricePoint. Never throws. */
 export async function applyQuotes(quotes: PriceQuote[]): Promise<void> {
   for (const q of quotes) {
     try {
-      const row = await prisma.material.findUnique({ where: { id: q.materialId } });
+      const row =
+        (await prisma.material.findUnique({ where: { id: q.materialId } })) ?? (await createSeedRow(q.materialId));
       if (!row) continue;
 
       const cadence: PriceCadence = q.cadence ?? providerById(q.source)?.cadence ?? "daily";
@@ -302,6 +336,25 @@ function seedLastRefreshFromDb(provider: PricingProvider, current: Material[]): 
   if (newest) lastRefreshAt = new Date(newest);
 }
 
+/**
+ * Materials to request in one refresh, capped at the provider's per-refresh
+ * budget. The window moves by one budget per refresh interval, so every
+ * material is covered within ceil(n / budget) intervals. Rotating by time
+ * rather than by staleness means a series that keeps failing (and so never
+ * looks fresh) cannot crowd the working ones out of every batch.
+ */
+export function pickRefreshBatch(provider: PricingProvider, current: Material[], now = Date.now()): string[] {
+  const ids = current
+    .map((m) => m.id)
+    .filter((id) => provider.supports(id))
+    .sort();
+  const budget = provider.maxRequestsPerRefresh;
+  if (!budget || budget >= ids.length) return ids;
+  const period = Math.floor(now / refreshIntervalFor(provider));
+  const start = (period * budget) % ids.length;
+  return Array.from({ length: budget }, (_, k) => ids[(start + k) % ids.length]);
+}
+
 /** Refreshes provider prices when stale. Resolves `true` if new data was stored. */
 async function refreshIfStale(current: Material[]): Promise<boolean> {
   const provider = activeProvider();
@@ -315,8 +368,7 @@ async function refreshIfStale(current: Material[]): Promise<boolean> {
 
   refreshing = (async () => {
     try {
-      const ids = current.map((m) => m.id).filter((id) => provider.supports(id));
-      const quotes = await provider.fetchLatest(ids);
+      const quotes = await provider.fetchLatest(pickRefreshBatch(provider, current));
       await applyQuotes(quotes);
       lastRefreshAt = new Date();
       lastError = null;
