@@ -19,6 +19,7 @@ import { uploadBuffer } from "@/lib/image-storage";
 import { createMedia, listMedia, logMediaAudit, type Media, type MediaType, type EntityType } from "@/lib/media-store";
 import { enhanceImage, type EnhanceKind, type EnhanceResult } from "./enhance-image";
 import { isPackFileRef, type PackFiles } from "./pack-files";
+import { storagePrefixForEntity } from "@/lib/media-types";
 
 export const IMPORT_ACTOR = "daily-import";
 /** Actor recorded for pushes authenticated with CRON_SECRET (the Grok machine). */
@@ -60,20 +61,7 @@ export function urlHash(url: string): string {
   return createHash("sha1").update(url).digest("hex").slice(0, 16);
 }
 
-export function prefixForEntity(entityType: EntityType): string {
-  switch (entityType) {
-    case "SUPPLIER":
-      return "suppliers";
-    case "PRODUCT":
-      return "products";
-    case "CERTIFICATION":
-      return "certifications";
-    case "USER":
-      return "profiles";
-    default:
-      return "media";
-  }
-}
+export const prefixForEntity = storagePrefixForEntity;
 
 /** url + originalUrl of every Media row already attached to an entity. */
 export async function existingMediaKeys(entityType: EntityType, entityId: string): Promise<Set<string>> {

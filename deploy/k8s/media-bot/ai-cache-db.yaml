@@ -1,0 +1,70 @@
+# The media bot's own database (AI results + push fingerprints). Separate from
+# Suplymate's production database; the worker creates its tables itself.
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ai-cache-db
+  labels:
+    app.kubernetes.io/name: ai-cache-db
+spec:
+  serviceName: ai-cache-db
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ai-cache-db
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ai-cache-db
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          ports:
+            - name: postgres
+              containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              value: media_bot
+            - name: POSTGRES_USER
+              value: media_bot
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: media-bot-secrets
+                  key: AI_CACHE_DB_PASSWORD
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              memory: 1Gi
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "media_bot", "-d", "media_bot"]
+            periodSeconds: 10
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 5Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-cache-db
+spec:
+  selector:
+    app.kubernetes.io/name: ai-cache-db
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: postgres

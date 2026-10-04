@@ -11,11 +11,12 @@ export const MEDIA_TYPES = [
   "PRODUCT_GALLERY",
   "CERTIFICATION",
   "PROFILE_IMAGE",
+  "PROVIDER_LOGO",
   "GENERAL",
 ] as const;
 export type MediaType = (typeof MEDIA_TYPES)[number];
 
-export const ENTITY_TYPES = ["SUPPLIER", "PRODUCT", "CERTIFICATION", "USER", "GENERAL"] as const;
+export const ENTITY_TYPES = ["SUPPLIER", "PRODUCT", "CERTIFICATION", "USER", "LOGISTICS_PROVIDER", "GENERAL"] as const;
 export type EntityType = (typeof ENTITY_TYPES)[number];
 
 export const MEDIA_STATUSES = ["published", "unpublished", "draft"] as const;
@@ -28,6 +29,7 @@ export const MEDIA_TYPES_BY_ENTITY: Record<EntityType, MediaType[]> = {
   PRODUCT: ["PRODUCT_PRIMARY", "PRODUCT_GALLERY"],
   CERTIFICATION: ["CERTIFICATION"],
   USER: ["PROFILE_IMAGE"],
+  LOGISTICS_PROVIDER: ["PROVIDER_LOGO"],
   GENERAL: ["GENERAL"],
 };
 
@@ -40,6 +42,7 @@ export const MEDIA_TYPE_LABELS: Record<MediaType, string> = {
   PRODUCT_GALLERY: "Gallery",
   CERTIFICATION: "Certificate",
   PROFILE_IMAGE: "Profile",
+  PROVIDER_LOGO: "Provider logo",
   GENERAL: "General",
 };
 
@@ -48,8 +51,31 @@ export const ENTITY_TYPE_LABELS: Record<EntityType, string> = {
   PRODUCT: "Product",
   CERTIFICATION: "Certification",
   USER: "User",
+  LOGISTICS_PROVIDER: "Logistics provider",
   GENERAL: "General",
 };
+
+/** Blob folder for an entity's media. */
+export function storagePrefixForEntity(entityType: EntityType): string {
+  switch (entityType) {
+    case "SUPPLIER":
+      return "suppliers";
+    case "PRODUCT":
+      return "products";
+    case "CERTIFICATION":
+      return "certifications";
+    case "USER":
+      return "profiles";
+    case "LOGISTICS_PROVIDER":
+      return "logistics";
+    case "GENERAL":
+      return "media";
+    default: {
+      const unreachable: never = entityType;
+      return String(unreachable);
+    }
+  }
+}
 
 export type Media = {
   id: string;

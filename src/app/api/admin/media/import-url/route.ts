@@ -9,6 +9,7 @@ import {
   type MediaType,
 } from "@/lib/media-store";
 import { storageProviderStatus } from "@/lib/image-storage";
+import { storagePrefixForEntity } from "@/lib/media-types";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -27,10 +28,10 @@ export async function POST(request: Request) {
   const entityType: EntityType = isEntityType(body.entityType) ? body.entityType : "GENERAL";
   const entityId = body.entityId ? String(body.entityId) : null;
   const mediaType: MediaType = isMediaType(body.mediaType) ? body.mediaType : "GENERAL";
-  const allowSvg = mediaType === "SUPPLIER_LOGO";
+  const allowSvg = mediaType === "SUPPLIER_LOGO" || mediaType === "PROVIDER_LOGO";
   const status = body.status === "published" ? "published" : "unpublished";
 
-  const result = await processImportUrl(url, { prefix: prefixFor(entityType), allowSvg });
+  const result = await processImportUrl(url, { prefix: storagePrefixForEntity(entityType), allowSvg });
   if (!result.ok) return NextResponse.json({ error: result.error }, { status: result.status });
 
   const media = await createMedia(
@@ -58,17 +59,3 @@ export async function POST(request: Request) {
   });
 }
 
-function prefixFor(entityType: EntityType): string {
-  switch (entityType) {
-    case "SUPPLIER":
-      return "suppliers";
-    case "PRODUCT":
-      return "products";
-    case "CERTIFICATION":
-      return "certifications";
-    case "USER":
-      return "profiles";
-    default:
-      return "media";
-  }
-}

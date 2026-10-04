@@ -13,8 +13,11 @@ import {
 } from "@/data/logistics-providers";
 import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 import ProviderBadge from "@/components/logistics/ProviderBadge";
+import { getPublishedProviderLogos } from "@/lib/media-store";
 
 export const dynamicParams = false;
+// Logos published from the media library show up without a redeploy.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return LOGISTICS_PROVIDERS.map((p) => ({ slug: p.id }));
@@ -50,6 +53,7 @@ export default async function LogisticsProviderPage({
   const t = await getTranslations("logistics");
   const provider = getLogisticsProvider(slug);
   if (!provider) notFound();
+  const logos = await getPublishedProviderLogos();
 
   const hq = provider.headquarters;
   const checkedOn = new Date(`${PROVIDERS_CHECKED_AT}T00:00:00Z`).toLocaleDateString(locale, {
@@ -73,7 +77,7 @@ export default async function LogisticsProviderPage({
         <div className="min-w-0 space-y-6">
           <header className="glass-card p-6">
             <div className="flex items-start gap-4">
-              <ProviderBadge provider={provider} size="lg" />
+              <ProviderBadge provider={provider} size="lg" logoUrl={logos[provider.id]} />
               <div className="min-w-0">
                 <h1 className="font-display text-2xl font-bold leading-tight text-ink">{provider.name}</h1>
                 <p className="mt-1 text-sm text-ink-muted">{provider.company}</p>

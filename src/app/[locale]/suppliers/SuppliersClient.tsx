@@ -27,6 +27,8 @@ import LogisticsProviderCard from "@/components/logistics/LogisticsProviderCard"
 
 type Props = {
   initialSuppliers: ListingSupplier[];
+  /** Published media-library logo per logistics provider id. */
+  providerLogos?: Record<string, string>;
 };
 
 const PAGE_SIZE = 12;
@@ -76,7 +78,7 @@ function reviewsOf(s: ListingSupplier): number {
   return s.googleReviews ?? s.reviewCount ?? 0;
 }
 
-export default function SuppliersClient({ initialSuppliers }: Props) {
+export default function SuppliersClient({ initialSuppliers, providerLogos }: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const tLogistics = useTranslations("logistics");
@@ -280,7 +282,7 @@ export default function SuppliersClient({ initialSuppliers }: Props) {
           ) : (
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {filteredProviders.map((provider) => (
-                <LogisticsProviderCard key={provider.id} provider={provider} />
+                <LogisticsProviderCard key={provider.id} provider={provider} logoUrl={providerLogos?.[provider.id]} />
               ))}
             </div>
           )}

@@ -9,10 +9,21 @@ const SIZES = {
 export default function ProviderBadge({
   provider,
   size = "md",
+  logoUrl,
 }: {
   provider: Pick<LogisticsProvider, "company">;
   size?: keyof typeof SIZES;
+  /** Admin-published logo from the media library; initials otherwise. */
+  logoUrl?: string | null;
 }) {
+  if (logoUrl) {
+    return (
+      <span aria-hidden className={`flex shrink-0 items-center justify-center overflow-hidden border border-slate-200 bg-white p-1 ${SIZES[size]}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logoUrl} alt="" className="h-full w-full object-contain" loading="lazy" decoding="async" />
+      </span>
+    );
+  }
   return (
     <span
       aria-hidden

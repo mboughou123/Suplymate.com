@@ -1,0 +1,10 @@
+# Inbox the bots drop collected folders into, plus the per-industry needs lists.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: media-bot-data
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 20Gi

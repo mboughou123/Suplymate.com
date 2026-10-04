@@ -7,14 +7,14 @@ import { logisticsProviderHref, type LogisticsProvider } from "@/data/logistics-
 import SupplierCardContact from "@/components/supplier-contact/SupplierCardContact";
 import ProviderBadge from "./ProviderBadge";
 
-export default function LogisticsProviderCard({ provider }: { provider: LogisticsProvider }) {
+export default function LogisticsProviderCard({ provider, logoUrl }: { provider: LogisticsProvider; logoUrl?: string | null }) {
   const t = useTranslations("logistics");
   const hq = provider.headquarters;
 
   return (
     <article className="glass-card glass-hover flex flex-col gap-4 p-5" data-testid="logistics-provider-card">
       <div className="flex items-start gap-3">
-        <ProviderBadge provider={provider} />
+        <ProviderBadge provider={provider} logoUrl={logoUrl} />
         <div className="min-w-0">
           <h3 className="text-base font-bold leading-tight text-ink">
             <Link href={logisticsProviderHref(provider.id)} className="hover:text-cyan">

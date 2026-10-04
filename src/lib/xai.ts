@@ -71,6 +71,16 @@ export function redactXaiSecrets(text: string): string {
   return text.replace(/xai-[A-Za-z0-9_-]{4,}/g, "xai-***").replace(/Bearer\s+[A-Za-z0-9._-]{8,}/g, "Bearer ***");
 }
 
+/** Any OpenAI-compatible `/chat/completions` server (xAI, a local Ollama, …). */
+export type ChatEndpoint = {
+  baseUrl: string;
+  /** Sent as a Bearer token when set; local servers need none. */
+  apiKey?: string | null;
+  /** Name used in error messages ("xAI", "Local AI"). */
+  label: string;
+  timeoutMs?: number;
+};
+
 /**
  * One chat completion against xAI. Never throws: network / HTTP / parse
  * failures are returned as `{ ok: false, error }` with a secret-free message.
@@ -78,8 +88,14 @@ export function redactXaiSecrets(text: string): string {
 export async function xaiChat(opts: XaiChatOptions): Promise<XaiChatResult> {
   const apiKey = process.env.XAI_API_KEY?.trim();
   if (!apiKey) return { ok: false, error: "XAI_API_KEY not configured" };
+  return chatCompletion({ baseUrl: xaiBaseUrl(), apiKey, label: "xAI", timeoutMs: XAI_TIMEOUT_MS }, { ...opts, model: opts.model ?? xaiModel() });
+}
 
-  const model = opts.model ?? xaiModel();
+/** Same contract as xaiChat, against any OpenAI-compatible endpoint. */
+export async function chatCompletion(endpoint: ChatEndpoint, opts: XaiChatOptions & { model: string }): Promise<XaiChatResult> {
+  const { label } = endpoint;
+  const timeoutMs = endpoint.timeoutMs ?? XAI_TIMEOUT_MS;
+  const model = opts.model;
   const body: Record<string, unknown> = {
     model,
     messages: opts.messages,
@@ -88,21 +104,20 @@ export async function xaiChat(opts: XaiChatOptions): Promise<XaiChatResult> {
   if (opts.maxTokens) body.max_tokens = opts.maxTokens;
   if (opts.json) body.response_format = { type: "json_object" };
 
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (endpoint.apiKey) headers.Authorization = `Bearer ${endpoint.apiKey}`;
   const fetchImpl = opts.fetchImpl ?? fetch;
   let res: Response;
   try {
-    res = await fetchImpl(`${xaiBaseUrl()}/chat/completions`, {
+    res = await fetchImpl(`${endpoint.baseUrl.replace(/\/+$/, "")}/chat/completions`, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
+      headers,
       body: JSON.stringify(body),
-      signal: opts.signal ?? AbortSignal.timeout(XAI_TIMEOUT_MS),
+      signal: opts.signal ?? AbortSignal.timeout(timeoutMs),
     });
   } catch (err) {
     const name = (err as Error)?.name ?? "Error";
-    return { ok: false, error: `xAI request failed (${name === "TimeoutError" ? `timeout after ${Math.round(XAI_TIMEOUT_MS / 1000)}s` : "network error"})` };
+    return { ok: false, error: `${label} request failed (${name === "TimeoutError" ? `timeout after ${Math.round(timeoutMs / 1000)}s` : "network error"})` };
   }
 
   if (!res.ok) {
@@ -125,7 +140,7 @@ export async function xaiChat(opts: XaiChatOptions): Promise<XaiChatResult> {
     return {
       ok: false,
       status: res.status,
-      error: redactXaiSecrets(`xAI request failed (${res.status}${hint ? ` ${hint}` : ""}${detail ? `: ${detail}` : ""})`),
+      error: redactXaiSecrets(`${label} request failed (${res.status}${hint ? ` ${hint}` : ""}${detail ? `: ${detail}` : ""})`),
     };
   }
 
@@ -137,7 +152,7 @@ export async function xaiChat(opts: XaiChatOptions): Promise<XaiChatResult> {
   try {
     json = (await res.json()) as typeof json;
   } catch {
-    return { ok: false, error: "xAI returned a non-JSON response" };
+    return { ok: false, error: `${label} returned a non-JSON response` };
   }
   const raw = json.choices?.[0]?.message?.content;
   const content =
@@ -146,7 +161,7 @@ export async function xaiChat(opts: XaiChatOptions): Promise<XaiChatResult> {
       : Array.isArray(raw)
         ? raw.map((p) => (p.type === "text" ? p.text : "")).join("")
         : "";
-  if (!content.trim()) return { ok: false, error: "xAI returned an empty completion" };
+  if (!content.trim()) return { ok: false, error: `${label} returned an empty completion` };
   return { ok: true, content, model: json.model ?? model, usage: json.usage };
 }
 
