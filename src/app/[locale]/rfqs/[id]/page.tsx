@@ -7,6 +7,8 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { ArrowLeft } from "lucide-react";
 import QuoteComparison from "@/components/rfq/QuoteComparison";
+import InsureShipmentCard from "@/components/logistics/InsureShipmentCard";
+import { getSupplierById } from "@/lib/data-service";
 
 export async function generateMetadata({
   params,
@@ -43,6 +45,7 @@ export default async function RfqDetailPage({
     },
   });
   if (!rfq || rfq.buyerId !== session.user.id) notFound();
+  const supplier = rfq.supplierId ? await getSupplierById(rfq.supplierId).catch(() => null) : null;
 
   const serialized = {
     id: rfq.id,
@@ -118,6 +121,14 @@ export default async function RfqDetailPage({
       </div>
 
       <QuoteComparison rfq={serialized} />
+
+      <InsureShipmentCard
+        origin={supplier?.country ?? supplier?.location}
+        destination={rfq.destination}
+        seed={rfq.id}
+        context="rfq"
+        className="mt-6 max-w-md"
+      />
     </div>
   );
 }

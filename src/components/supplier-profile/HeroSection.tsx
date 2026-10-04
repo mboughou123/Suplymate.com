@@ -180,6 +180,7 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   label={t("sendRfq")}
                   icon={FileText}
                   productName={firstProduct}
+                  shipmentOrigin={base.country}
                   className="btn-secondary"
                 />
                 <ProfileActionButton
