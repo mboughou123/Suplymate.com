@@ -4,12 +4,13 @@
 //   npx tsx scripts/media-bot.ts needs   --industry metals --out needs/metals.json
 //   npx tsx scripts/media-bot.ts prepare --dir /data/media/inbox/2026-10-04-metals [--needs needs/metals.json] [--no-ai]
 //   npx tsx scripts/media-bot.ts push    --dir /data/media/inbox/2026-10-04-metals [--dry-run] [--force]
-//   npx tsx scripts/media-bot.ts run     --root /data/media/inbox --needs-dir /data/media/needs [--industries metals,packaging]
+//   npx tsx scripts/media-bot.ts run     --root /data/media/inbox --needs-dir /data/media/needs [--industries metals,packaging] [--every 60]
 //   npx tsx scripts/media-bot.ts status
 //
 // Env: SUPLYMATE_URL (default https://suplymate.com), CRON_SECRET,
 //      LOCAL_AI_BASE_URL (default http://localhost:11434/v1), LOCAL_AI_VISION_MODEL,
-//      AI_CACHE_DATABASE_URL (separate Postgres; JSON file when unset), MEDIA_BOT_CACHE_FILE.
+//      AI_CACHE_DATABASE_URL (separate Postgres; JSON file when unset), MEDIA_BOT_CACHE_FILE,
+//      MEDIA_BOT_INBOX, MEDIA_BOT_NEEDS_DIR, MEDIA_BOT_INDUSTRIES, MEDIA_BOT_EVERY_MINUTES, MEDIA_BOT_AI=off.
 
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, resolve } from "node:path";
@@ -220,9 +221,18 @@ async function main() {
         if (!dir) throw new Error("push needs --dir");
         await cmdPush(cache, dir);
         break;
-      case "run":
-        await cmdRun(cache);
-        break;
+      case "run": {
+        const every = Number(arg("every") ?? process.env.MEDIA_BOT_EVERY_MINUTES ?? "");
+        if (!(every > 0)) {
+          await cmdRun(cache);
+          break;
+        }
+        for (;;) {
+          await cmdRun(cache).catch((err: Error) => log(`run failed: ${err.message}`));
+          log(`next run in ${every} min`);
+          await new Promise((r) => setTimeout(r, every * 60_000));
+        }
+      }
       case "status":
         await cmdStatus(cache);
         break;

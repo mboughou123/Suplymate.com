@@ -10,14 +10,14 @@ import type { MediaQa, MediaRole } from "../manifest";
 import type { AiCache } from "./ai-cache";
 
 export const DEFAULT_LOCAL_AI_BASE_URL = "http://localhost:11434/v1";
-export const DEFAULT_LOCAL_AI_VISION_MODEL = "llama3.2-vision";
+export const DEFAULT_LOCAL_AI_VISION_MODEL = "qwen2.5vl:3b";
 export const QA_PROMPT_VERSION = "media-qa-v1";
 /** CPU inference on a bot machine is slow; the cache makes it a one-time cost. */
 export const LOCAL_AI_TIMEOUT_MS = 180_000;
 
 export type LocalAiConfig = { baseUrl: string; model: string };
 
-export function localAiConfig(env: NodeJS.ProcessEnv): LocalAiConfig {
+export function localAiConfig(env: Record<string, string | undefined>): LocalAiConfig {
   return {
     baseUrl: (env.LOCAL_AI_BASE_URL?.trim() || DEFAULT_LOCAL_AI_BASE_URL).replace(/\/+$/, ""),
     model: env.LOCAL_AI_VISION_MODEL?.trim() || DEFAULT_LOCAL_AI_VISION_MODEL,

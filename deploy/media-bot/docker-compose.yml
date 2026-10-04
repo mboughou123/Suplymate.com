@@ -1,0 +1,77 @@
+# Media bot stack for one bot machine: the worker, a local Ollama (free vision
+# model, nothing leaves the machine) and the bot's own Postgres for AI results
+# and push fingerprints (separate from Suplymate's database).
+#
+#   cd deploy/media-bot && cp .env.example .env   # set CRON_SECRET, AI_CACHE_DB_PASSWORD
+#   docker compose up -d                          # runs every MEDIA_BOT_EVERY_MINUTES
+#   docker compose run --rm media-bot status
+#
+# Drop collected folders into ./data/inbox/<folder>/ (media-manifest.json + originals/).
+name: suplymate-media-bot
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "127.0.0.1:11434:11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  ollama-pull:
+    image: ollama/ollama:latest
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "${LOCAL_AI_VISION_MODEL:-qwen2.5vl:3b}"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: "no"
+
+  ai-cache-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: media_bot
+      POSTGRES_USER: media_bot
+      POSTGRES_PASSWORD: ${AI_CACHE_DB_PASSWORD:?set AI_CACHE_DB_PASSWORD in .env}
+    volumes:
+      - ai-cache-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U media_bot -d media_bot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  media-bot:
+    build:
+      context: ../..
+      dockerfile: deploy/media-bot/Dockerfile
+    image: suplymate/media-bot:local
+    env_file: .env
+    environment:
+      LOCAL_AI_BASE_URL: http://ollama:11434/v1
+      LOCAL_AI_VISION_MODEL: ${LOCAL_AI_VISION_MODEL:-qwen2.5vl:3b}
+      AI_CACHE_DATABASE_URL: postgres://media_bot:${AI_CACHE_DB_PASSWORD}@ai-cache-db:5432/media_bot
+      MEDIA_BOT_INBOX: /data/media/inbox
+      MEDIA_BOT_NEEDS_DIR: /data/media/needs
+    volumes:
+      - ${MEDIA_BOT_DATA_DIR:-./data}:/data/media
+    command: ["run", "--every", "${MEDIA_BOT_EVERY_MINUTES:-60}"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+      ollama-pull:
+        condition: service_completed_successfully
+      ai-cache-db:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  ollama:
+  ai-cache-db:

@@ -9,7 +9,7 @@ const reply = (content: string) =>
 
 describe("localAiConfig", () => {
   it("defaults to a local Ollama", () => {
-    expect(localAiConfig({})).toEqual({ baseUrl: "http://localhost:11434/v1", model: "llama3.2-vision" });
+    expect(localAiConfig({})).toEqual({ baseUrl: "http://localhost:11434/v1", model: "qwen2.5vl:3b" });
     expect(localAiConfig({ LOCAL_AI_BASE_URL: "http://ollama:11434/v1/", LOCAL_AI_VISION_MODEL: "qwen2.5vl:7b" })).toEqual({ baseUrl: "http://ollama:11434/v1", model: "qwen2.5vl:7b" });
   });
 });

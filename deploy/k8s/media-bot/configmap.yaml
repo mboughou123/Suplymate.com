@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: media-bot-config
+data:
+  SUPLYMATE_URL: https://suplymate.com
+  LOCAL_AI_BASE_URL: http://ollama:11434/v1
+  LOCAL_AI_VISION_MODEL: qwen2.5vl:3b
+  MEDIA_BOT_INDUSTRIES: all
+  MEDIA_BOT_INBOX: /data/media/inbox
+  MEDIA_BOT_NEEDS_DIR: /data/media/needs

@@ -156,7 +156,7 @@ export class FileAiCache implements AiCache {
  * AI_CACHE_DATABASE_URL → Postgres; otherwise a JSON file (MEDIA_BOT_CACHE_FILE
  * or `fallbackFile`). Refuses to share Suplymate's own DATABASE_URL.
  */
-export function openAiCache(env: NodeJS.ProcessEnv, fallbackFile: string | null): AiCache {
+export function openAiCache(env: Record<string, string | undefined>, fallbackFile: string | null): AiCache {
   const url = env.AI_CACHE_DATABASE_URL?.trim();
   if (url) {
     if (env.DATABASE_URL?.trim() && url === env.DATABASE_URL.trim()) {

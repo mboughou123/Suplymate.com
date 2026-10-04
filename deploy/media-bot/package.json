@@ -1,0 +1,10 @@
+{
+  "name": "suplymate-media-bot",
+  "private": true,
+  "description": "Runtime dependencies of scripts/media-bot.ts inside the worker image. Versions must match the root package-lock.json (enforced by src/lib/media-bot/__tests__/deploy.test.ts).",
+  "dependencies": {
+    "pg": "8.23.1",
+    "sharp": "0.34.5",
+    "tsx": "4.22.4"
+  }
+}

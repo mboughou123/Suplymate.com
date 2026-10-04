@@ -1,0 +1,26 @@
+# Grok media bot on Kubernetes: local Ollama, the bot's own Postgres and an
+# hourly worker CronJob. The Suplymate website itself stays on Vercel.
+#
+#   kubectl apply -f deploy/k8s/media-bot/namespace.yaml
+#   kubectl -n suplymate-media-bot create secret generic media-bot-secrets \
+#     --from-literal=CRON_SECRET=... --from-literal=AI_CACHE_DB_PASSWORD=...
+#   kubectl apply -k deploy/k8s/media-bot
+#
+# See docs/grok-media-bot.md.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: suplymate-media-bot
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: suplymate-media-bot
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - data-pvc.yaml
+  - ollama.yaml
+  - ai-cache-db.yaml
+  - cronjob.yaml
+  - networkpolicy.yaml
+images:
+  - name: suplymate/media-bot
+    newTag: latest

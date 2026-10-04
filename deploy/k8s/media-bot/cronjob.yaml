@@ -1,0 +1,89 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: media-bot
+spec:
+  schedule: "30 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      activeDeadlineSeconds: 10800
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: media-bot
+        spec:
+          restartPolicy: Never
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+          initContainers:
+            # Idempotent: returns quickly once the model is on the volume.
+            - name: pull-model
+              image: curlimages/curl:8.11.1
+              env:
+                - name: LOCAL_AI_VISION_MODEL
+                  valueFrom:
+                    configMapKeyRef:
+                      name: media-bot-config
+                      key: LOCAL_AI_VISION_MODEL
+              args:
+                - -sf
+                - --retry
+                - "30"
+                - --retry-connrefused
+                - --retry-delay
+                - "10"
+                - --max-time
+                - "3600"
+                - http://ollama:11434/api/pull
+                - -d
+                - '{"model":"$(LOCAL_AI_VISION_MODEL)","stream":false}'
+          containers:
+            - name: media-bot
+              image: suplymate/media-bot
+              imagePullPolicy: IfNotPresent
+              args: ["run"]
+              envFrom:
+                - configMapRef:
+                    name: media-bot-config
+              env:
+                - name: CRON_SECRET
+                  valueFrom:
+                    secretKeyRef:
+                      name: media-bot-secrets
+                      key: CRON_SECRET
+                - name: AI_CACHE_DB_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: media-bot-secrets
+                      key: AI_CACHE_DB_PASSWORD
+                - name: AI_CACHE_DATABASE_URL
+                  value: postgres://media_bot:$(AI_CACHE_DB_PASSWORD)@ai-cache-db:5432/media_bot
+              resources:
+                requests:
+                  cpu: 250m
+                  memory: 512Mi
+                limits:
+                  memory: 2Gi
+              securityContext:
+                allowPrivilegeEscalation: false
+                readOnlyRootFilesystem: true
+                capabilities:
+                  drop: ["ALL"]
+              volumeMounts:
+                - name: data
+                  mountPath: /data/media
+                - name: tmp
+                  mountPath: /tmp
+          volumes:
+            - name: data
+              persistentVolumeClaim:
+                claimName: media-bot-data
+            - name: tmp
+              emptyDir: {}
