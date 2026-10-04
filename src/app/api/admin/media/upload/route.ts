@@ -9,12 +9,13 @@ import {
   type MediaType,
 } from "@/lib/media-store";
 import { storageProviderStatus } from "@/lib/image-storage";
+import { storagePrefixForEntity } from "@/lib/media-types";
 
 export const dynamic = "force-dynamic";
 // Allow larger multipart uploads.
 export const maxDuration = 60;
 
-const LOGO_TYPES = new Set<MediaType>(["SUPPLIER_LOGO"]);
+const LOGO_TYPES = new Set<MediaType>(["SUPPLIER_LOGO", "PROVIDER_LOGO"]);
 
 // POST /api/admin/media/upload — multipart upload of one or more files.
 // Fields: file(s), entityType, entityId, mediaType, altText, caption, status.
@@ -49,7 +50,7 @@ export async function POST(request: Request) {
   const created = [];
   const errors: string[] = [];
   for (const file of files) {
-    const result = await processUploadedFile(file, { prefix: prefixFor(entityType), allowSvg });
+    const result = await processUploadedFile(file, { prefix: storagePrefixForEntity(entityType), allowSvg });
     if (!result.ok) {
       errors.push(`${file.name}: ${result.error}`);
       continue;
@@ -86,17 +87,3 @@ export async function POST(request: Request) {
   });
 }
 
-function prefixFor(entityType: EntityType): string {
-  switch (entityType) {
-    case "SUPPLIER":
-      return "suppliers";
-    case "PRODUCT":
-      return "products";
-    case "CERTIFICATION":
-      return "certifications";
-    case "USER":
-      return "profiles";
-    default:
-      return "media";
-  }
-}

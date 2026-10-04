@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
-import { adminGuard, checkAdmin } from "@/lib/admin";
 import { importLanded, runDailyImport, optionsFromBody, type DailyImportOptions } from "@/lib/import/daily-import";
 import { mergePacks, parseImportPayload, type ImportPack } from "@/lib/import/pack-formats";
-import { isAuthorizedCron } from "@/lib/import/cron-auth";
+import { authenticatePush } from "@/lib/import/push-auth";
 import { hasPackContent, parsePushRequest, pushMaxBytes, type PushPayload } from "@/lib/import/push-request";
 import { dayStatus, recordDayPart, sealRequired, verifySeal } from "@/lib/import/seal";
-import { GROK_BOT_ACTOR } from "@/lib/import/media-ingest";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
@@ -23,15 +21,6 @@ export const maxDuration = 300;
 // 422 { skipped: "unsealed" }. A day already imported at the same seal digest
 // is a no-op → 200 { skipped: "already_imported" }.
 
-type Auth = { actor: string; viaSecret: boolean } | { denied: NextResponse };
-
-async function authenticate(request: Request): Promise<Auth> {
-  if (isAuthorizedCron(request)) return { actor: GROK_BOT_ACTOR, viaSecret: true };
-  const denied = await adminGuard();
-  if (denied) return { denied };
-  return { actor: (await checkAdmin()).email ?? "admin", viaSecret: false };
-}
-
 function buildInlinePack(p: PushPayload): ImportPack | null {
   const packs: ImportPack[] = [];
   const localFiles = true;
@@ -47,7 +36,7 @@ function buildInlinePack(p: PushPayload): ImportPack | null {
 }
 
 export async function POST(request: Request) {
-  const auth = await authenticate(request);
+  const auth = await authenticatePush(request);
   if ("denied" in auth) return auth.denied;
   const { actor } = auth;
 
@@ -161,7 +150,7 @@ export async function POST(request: Request) {
 // GET /api/admin/import/run — current configuration (no secrets) and, with
 // ?day=YYYY-MM-DD&digest=…, the import ledger for that pack revision.
 export async function GET(request: Request) {
-  const auth = await authenticate(request);
+  const auth = await authenticatePush(request);
   if ("denied" in auth) return auth.denied;
 
   const { configuredSources } = await import("@/lib/import/sources");
