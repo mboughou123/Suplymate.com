@@ -21,6 +21,10 @@ type Props = {
   onChange: (patch: Partial<SupplierFilterState>) => void;
   onReset: () => void;
   resultCount: number;
+  /** Overrides the "N suppliers found" footer text. */
+  resultLabel?: string;
+  /** Hide country / rating / review / verified controls (e.g. for non-supplier listings). */
+  hideSupplierFilters?: boolean;
 };
 
 const RATING_VALUES = [0, 4.0, 4.5] as const;
@@ -34,6 +38,8 @@ export default function SupplierFilters({
   onChange,
   onReset,
   resultCount,
+  resultLabel,
+  hideSupplierFilters = false,
 }: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
@@ -102,7 +108,7 @@ export default function SupplierFilters({
       </div>
 
       {/* Dropdowns + toggles */}
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className={`mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 ${hideSupplierFilters ? "hidden" : ""}`}>
         <label className="flex flex-col gap-1 text-xs font-medium text-ink-dim">
           {t("country")}
           <select
@@ -166,7 +172,7 @@ export default function SupplierFilters({
       <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
         <p className="flex items-center gap-1.5 text-xs text-ink-dim">
           <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden />
-          {t("suppliersFound", { count: resultCount })}
+          {resultLabel ?? t("suppliersFound", { count: resultCount })}
           {activeFilters > 0 && ` · ${t("activeFilters", { count: activeFilters })}`}
         </p>
         {activeFilters > 0 && (

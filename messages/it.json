@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logistica e assicurazioni",
+      "logistics": {
+        "insurers": "Assicuratori merci e trasporti",
+        "forwarders": "Spedizionieri e doganalisti",
+        "all": "Tutti i fornitori di logistica e assicurazioni"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "Telefono ed email · Upgrade",
     "cardLockedPhone": "Telefono · Upgrade per vedere",
     "cardLockedEmail": "Email · Upgrade per vedere"
+  },
+  "logistics": {
+    "chipLabel": "Logistica e assicurazioni",
+    "directoryIntro": "Assicuratori merci e trasporti marittimi, oltre a spedizionieri e doganalisti che offrono assicurazioni merci. I dati provengono dal sito ufficiale di ciascuna azienda. Suplymate non è un assicuratore né un broker e non ha rapporti commerciali con queste aziende.",
+    "groupAll": "Tutti",
+    "groupInsurance": "Assicurazione merci",
+    "groupLogistics": "Spedizionieri e doganalisti",
+    "providersFound": "{count, plural, one {# fornitore di servizi} other {# fornitori di servizi}}",
+    "kind": {
+      "cargo-insurer": "Assicuratore merci",
+      "specialist-cargo-insurer": "Assicuratore specializzato merci",
+      "cargo-insurance-broker": "Broker assicurativo merci",
+      "freight-forwarder": "Spedizioniere",
+      "customs-broker": "Doganalista"
+    },
+    "viewProfile": "Vedi profilo",
+    "officialSite": "Sito ufficiale",
+    "requestQuote": "Richiedi un preventivo",
+    "requestQuoteAria": "Richiedi un preventivo di assicurazione merci a {name} (apre il loro sito)",
+    "headquarters": "Sede",
+    "coverage": "Coperture indicate sul loro sito",
+    "regions": "Regioni",
+    "regionsUnstated": "Non indicato sul loro sito",
+    "about": "Informazioni",
+    "links": "Link ufficiali",
+    "cargoPage": "Pagina assicurazione merci",
+    "homepage": "Sito aziendale",
+    "sources": "Fonti",
+    "sourcesBody": "Tratto dal sito di {company} il {date}. Verifica coperture, condizioni e disponibilità direttamente con il fornitore.",
+    "breadcrumb": "Logistica e assicurazioni",
+    "metaTitle": "{name} | Logistica e assicurazioni | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Fornitore non trovato",
+    "noContactOnFile": "Nessun telefono o e-mail diretto registrato. Usa il loro sito ufficiale per contattarli.",
+    "disclaimer": "Suplymate non è un assicuratore né un broker assicurativo. Non vendiamo polizze né riceviamo commissioni, e l'inserimento di un'azienda non è una raccomandazione.",
+    "insureTitle": "Assicura questa spedizione",
+    "insureBody": "L'assicurazione merci può coprire perdite o danni durante il trasporto oltre la responsabilità del vettore. Alcuni fornitori che la offrono:",
+    "insureBodyRfq": "Spedisci questo ordine? L'assicurazione merci può coprire perdite o danni durante il trasporto oltre la responsabilità del vettore. Alcuni fornitori che la offrono:",
+    "insureMore": "Vedi tutti gli assicuratori merci",
+    "dismiss": "Nascondi i suggerimenti assicurativi",
+    "orderNote": "Ordinati per pertinenza con questa tratta, non a pagamento."
   }
 }

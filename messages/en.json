@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "Logistics & insurance",
+      "logistics": {
+        "insurers": "Cargo & transit insurers",
+        "forwarders": "Freight forwarders & customs brokers",
+        "all": "All logistics & insurance providers"
       }
     },
     "company": {
@@ -1512,7 +1518,7 @@
     "callAria": "Call {name}",
     "emailAria": "Email {name}",
     "sourceListing": "From the supplier's public business listing",
-    "sourceWebsite": "From the supplier's official website",
+    "sourceWebsite": "From the company's official website",
     "noneOnFile": "No direct phone or email on file for this supplier yet. Reach them through Suplymate instead.",
     "contactViaSuplymate": "Contact via Suplymate",
     "hiddenValue": "Hidden. Available on paid plans",
@@ -1524,5 +1530,46 @@
     "cardLockedBoth": "Phone & email · Upgrade",
     "cardLockedPhone": "Phone · Upgrade to view",
     "cardLockedEmail": "Email · Upgrade to view"
+  },
+  "logistics": {
+    "chipLabel": "Logistics & Insurance",
+    "directoryIntro": "Cargo and marine transit insurers, plus freight forwarders and customs brokers that arrange cargo insurance. Details come from each company's official website. Suplymate is not an insurer or broker and has no commercial relationship with these companies.",
+    "groupAll": "All",
+    "groupInsurance": "Cargo insurance",
+    "groupLogistics": "Forwarders & customs brokers",
+    "providersFound": "{count, plural, one {# provider} other {# providers}}",
+    "kind": {
+      "cargo-insurer": "Cargo insurer",
+      "specialist-cargo-insurer": "Specialist cargo insurer",
+      "cargo-insurance-broker": "Cargo insurance broker",
+      "freight-forwarder": "Freight forwarder",
+      "customs-broker": "Customs broker"
+    },
+    "viewProfile": "View profile",
+    "officialSite": "Official site",
+    "requestQuote": "Request a quote",
+    "requestQuoteAria": "Request a cargo insurance quote from {name} (opens their website)",
+    "headquarters": "Headquarters",
+    "coverage": "Coverage named on their website",
+    "regions": "Regions",
+    "regionsUnstated": "Not stated on their website",
+    "about": "About",
+    "links": "Official links",
+    "cargoPage": "Cargo insurance page",
+    "homepage": "Company homepage",
+    "sources": "Sources",
+    "sourcesBody": "Copied from {company}'s own website on {date}. Check cover, terms and availability with the provider directly.",
+    "breadcrumb": "Logistics & Insurance",
+    "metaTitle": "{name} | Logistics & Insurance | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "Provider not found",
+    "noContactOnFile": "No direct phone or email on file. Use their official site to get in touch.",
+    "disclaimer": "Suplymate is not an insurer or insurance broker. We don't sell policies or earn commissions, and listing a company is not an endorsement.",
+    "insureTitle": "Insure this shipment",
+    "insureBody": "Cargo insurance can cover loss or damage in transit beyond carrier liability. Some providers that offer it:",
+    "insureBodyRfq": "Shipping this order? Cargo insurance can cover loss or damage in transit beyond carrier liability. Some providers that offer it:",
+    "insureMore": "See all cargo insurers",
+    "dismiss": "Hide cargo insurance suggestions",
+    "orderNote": "Listed by fit for this lane, not by payment."
   }
 }

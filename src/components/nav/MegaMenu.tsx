@@ -182,7 +182,7 @@ function ProductsPanel({ menu, t }: { menu: ProductsMenu; t: Translate }) {
 
 function ColumnsPanel({ menu, t }: { menu: ColumnsMenu; t: Translate }) {
   return (
-    <div className="grid gap-8 p-6 sm:grid-cols-3">
+    <div className={`grid gap-8 p-6 ${menu.columns.length > 3 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3"}`}>
       {menu.columns.map((col) => (
         <div key={col.titleKey}>
           <h3 className="border-b border-slate-200 pb-3 font-display text-heading-sm text-ink">{t(col.titleKey)}</h3>

@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "物流与保险",
+      "logistics": {
+        "insurers": "货物与运输保险公司",
+        "forwarders": "货运代理与报关行",
+        "all": "全部物流与保险服务商"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "电话和邮箱 · 升级",
     "cardLockedPhone": "电话 · 升级查看",
     "cardLockedEmail": "邮箱 · 升级查看"
+  },
+  "logistics": {
+    "chipLabel": "物流与保险",
+    "directoryIntro": "货物与海运运输保险公司，以及可安排货物保险的货运代理和报关行。信息均来自各公司官方网站。Suplymate 不是保险公司或经纪人，与这些公司没有商业关系。",
+    "groupAll": "全部",
+    "groupInsurance": "货物保险",
+    "groupLogistics": "货运代理与报关行",
+    "providersFound": "{count, plural, one {# 家服务商} other {# 家服务商}}",
+    "kind": {
+      "cargo-insurer": "货物保险公司",
+      "specialist-cargo-insurer": "专业货物保险公司",
+      "cargo-insurance-broker": "货物保险经纪人",
+      "freight-forwarder": "货运代理",
+      "customs-broker": "报关行"
+    },
+    "viewProfile": "查看资料",
+    "officialSite": "官方网站",
+    "requestQuote": "申请报价",
+    "requestQuoteAria": "向 {name} 申请货物保险报价（打开其网站）",
+    "headquarters": "总部",
+    "coverage": "其网站列出的保障",
+    "regions": "地区",
+    "regionsUnstated": "其网站未说明",
+    "about": "简介",
+    "links": "官方链接",
+    "cargoPage": "货物保险页面",
+    "homepage": "公司主页",
+    "sources": "来源",
+    "sourcesBody": "摘自 {company} 官方网站（查阅日期：{date}）。请直接向服务商确认保障范围、条款和可用性。",
+    "breadcrumb": "物流与保险",
+    "metaTitle": "{name} | 物流与保险 | Suplymate",
+    "metaDescription": "{name}：{description}",
+    "notFound": "未找到该服务商",
+    "noContactOnFile": "暂无直接电话或电子邮件。请通过其官方网站联系。",
+    "disclaimer": "Suplymate 不是保险公司或保险经纪人。我们不销售保单、不收取佣金，列入名录不代表推荐。",
+    "insureTitle": "为此批货物投保",
+    "insureBody": "货物保险可在承运人责任之外承保运输途中的损失或损坏。提供该保险的部分服务商：",
+    "insureBodyRfq": "要发运这笔订单吗？货物保险可在承运人责任之外承保运输途中的损失或损坏。提供该保险的部分服务商：",
+    "insureMore": "查看所有货物保险公司",
+    "dismiss": "隐藏货物保险建议",
+    "orderNote": "按与此航线的匹配度排序，而非付费排序。"
   }
 }

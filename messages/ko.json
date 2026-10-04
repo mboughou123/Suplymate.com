@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "물류 및 보험",
+      "logistics": {
+        "insurers": "화물 및 운송 보험사",
+        "forwarders": "포워더 및 관세사",
+        "all": "모든 물류 및 보험 업체"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "전화 및 이메일 · 업그레이드",
     "cardLockedPhone": "전화 · 업그레이드하여 보기",
     "cardLockedEmail": "이메일 · 업그레이드하여 보기"
+  },
+  "logistics": {
+    "chipLabel": "물류 및 보험",
+    "directoryIntro": "화물 및 해상 운송 보험사와 화물 보험을 주선하는 포워더 및 관세사를 소개합니다. 정보는 각 회사의 공식 웹사이트에서 가져왔습니다. Suplymate는 보험사나 보험 중개인이 아니며 이들 회사와 상업적 관계가 없습니다.",
+    "groupAll": "전체",
+    "groupInsurance": "화물 보험",
+    "groupLogistics": "포워더 및 관세사",
+    "providersFound": "{count, plural, one {# 곳} other {# 곳}}",
+    "kind": {
+      "cargo-insurer": "화물 보험사",
+      "specialist-cargo-insurer": "화물 전문 보험사",
+      "cargo-insurance-broker": "화물 보험 중개사",
+      "freight-forwarder": "포워더",
+      "customs-broker": "관세사"
+    },
+    "viewProfile": "프로필 보기",
+    "officialSite": "공식 사이트",
+    "requestQuote": "견적 요청",
+    "requestQuoteAria": "{name}에 화물 보험 견적 요청(공식 사이트로 이동)",
+    "headquarters": "본사",
+    "coverage": "공식 사이트에 명시된 보장",
+    "regions": "지역",
+    "regionsUnstated": "공식 사이트에 명시되지 않음",
+    "about": "소개",
+    "links": "공식 링크",
+    "cargoPage": "화물 보험 페이지",
+    "homepage": "회사 홈페이지",
+    "sources": "출처",
+    "sourcesBody": "{company} 공식 웹사이트에서 가져온 정보입니다(확인일: {date}). 보장 내용, 조건 및 가능 여부는 해당 회사에 직접 확인하세요.",
+    "breadcrumb": "물류 및 보험",
+    "metaTitle": "{name} | 물류 및 보험 | Suplymate",
+    "metaDescription": "{name}: {description}",
+    "notFound": "업체를 찾을 수 없습니다",
+    "noContactOnFile": "등록된 직통 전화번호나 이메일이 없습니다. 공식 사이트를 통해 문의하세요.",
+    "disclaimer": "Suplymate는 보험사나 보험 중개인이 아닙니다. 보험을 판매하거나 수수료를 받지 않으며, 등재가 추천을 의미하지 않습니다.",
+    "insureTitle": "이 화물 보험 가입하기",
+    "insureBody": "화물 보험은 운송인 책임 한도를 넘어 운송 중 분실이나 손상을 보장할 수 있습니다. 이를 제공하는 일부 업체:",
+    "insureBodyRfq": "이 주문을 배송하시나요? 화물 보험은 운송인 책임 한도를 넘어 운송 중 분실이나 손상을 보장할 수 있습니다. 이를 제공하는 일부 업체:",
+    "insureMore": "모든 화물 보험사 보기",
+    "dismiss": "보험 제안 숨기기",
+    "orderNote": "결제가 아닌 이 운송 경로와의 적합도에 따라 정렬했습니다."
   }
 }

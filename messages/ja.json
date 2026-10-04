@@ -94,6 +94,12 @@
         "sourceInternationally": "Source internationally",
         "sourceDomestically": "Source in your country",
         "askMate": "Ask Mate"
+      },
+      "byLogistics": "物流・保険",
+      "logistics": {
+        "insurers": "貨物・輸送保険会社",
+        "forwarders": "フォワーダー・通関業者",
+        "all": "物流・保険のすべての企業"
       }
     },
     "company": {
@@ -1518,5 +1524,46 @@
     "cardLockedBoth": "電話とメール · アップグレード",
     "cardLockedPhone": "電話 · アップグレードして表示",
     "cardLockedEmail": "メール · アップグレードして表示"
+  },
+  "logistics": {
+    "chipLabel": "物流・保険",
+    "directoryIntro": "貨物保険・海上輸送保険の保険会社に加え、貨物保険を手配するフォワーダーや通関業者を掲載しています。情報は各社の公式サイトから取得しています。Suplymate は保険会社でも保険仲介業者でもなく、これらの企業と取引関係はありません。",
+    "groupAll": "すべて",
+    "groupInsurance": "貨物保険",
+    "groupLogistics": "フォワーダー・通関業者",
+    "providersFound": "{count, plural, one {# 社} other {# 社}}",
+    "kind": {
+      "cargo-insurer": "貨物保険会社",
+      "specialist-cargo-insurer": "貨物専門保険会社",
+      "cargo-insurance-broker": "貨物保険ブローカー",
+      "freight-forwarder": "フォワーダー",
+      "customs-broker": "通関業者"
+    },
+    "viewProfile": "プロフィールを見る",
+    "officialSite": "公式サイト",
+    "requestQuote": "見積もりを依頼",
+    "requestQuoteAria": "{name} に貨物保険の見積もりを依頼（公式サイトが開きます）",
+    "headquarters": "本社",
+    "coverage": "公式サイトに記載の補償",
+    "regions": "地域",
+    "regionsUnstated": "公式サイトに記載なし",
+    "about": "概要",
+    "links": "公式リンク",
+    "cargoPage": "貨物保険のページ",
+    "homepage": "企業サイト",
+    "sources": "出典",
+    "sourcesBody": "{company} の公式サイトから転載（確認日：{date}）。補償内容・条件・提供状況は各社に直接ご確認ください。",
+    "breadcrumb": "物流・保険",
+    "metaTitle": "{name} | 物流・保険 | Suplymate",
+    "metaDescription": "{name}：{description}",
+    "notFound": "見つかりません",
+    "noContactOnFile": "直通の電話番号・メールは登録されていません。公式サイトからお問い合わせください。",
+    "disclaimer": "Suplymate は保険会社でも保険仲介業者でもありません。保険の販売や手数料の受け取りは行っておらず、掲載は推奨を意味しません。",
+    "insureTitle": "この貨物に保険をかける",
+    "insureBody": "貨物保険は、運送人の責任範囲を超える輸送中の紛失や損傷を補償できます。提供している会社の例：",
+    "insureBodyRfq": "この注文を発送しますか？貨物保険は、運送人の責任範囲を超える輸送中の紛失や損傷を補償できます。提供している会社の例：",
+    "insureMore": "すべての貨物保険会社を見る",
+    "dismiss": "保険の提案を非表示",
+    "orderNote": "掲載順はこの輸送ルートとの適合度によるもので、掲載料によるものではありません。"
   }
 }
