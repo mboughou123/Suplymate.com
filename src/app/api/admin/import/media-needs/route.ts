@@ -26,7 +26,9 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: `Unknown target "${targetRaw}".`, targets: MEDIA_TARGETS }, { status: 400 });
   }
   const num = (k: string) => {
-    const v = Number(url.searchParams.get(k));
+    const raw = url.searchParams.get(k);
+    if (raw === null || raw.trim() === "") return undefined;
+    const v = Number(raw);
     return Number.isFinite(v) && v >= 0 ? Math.floor(v) : undefined;
   };
 

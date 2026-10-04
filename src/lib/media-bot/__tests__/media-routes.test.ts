@@ -108,6 +108,15 @@ describe("GET /api/admin/import/media-needs", () => {
     expect(body.items).toEqual([expect.objectContaining({ entityId: "posco", roles: ["logo", "factory", "gallery"] })]);
   });
 
+  it("pages with the default limit when none is given", async () => {
+    const all = await (await needsGET(new Request("http://localhost/api/admin/import/media-needs", { headers: bearer }))).json();
+    expect(all.limit).toBe(200);
+    expect(all.items.map((i: { entityId: string }) => i.entityId).sort()).toEqual(["falvey-cargo", "posco"]);
+    const one = await (await needsGET(new Request("http://localhost/api/admin/import/media-needs?limit=1&offset=1", { headers: bearer }))).json();
+    expect(one).toMatchObject({ limit: 1, offset: 1, total: 2 });
+    expect(one.items).toHaveLength(1);
+  });
+
   it("validates industry and target", async () => {
     expect((await needsGET(new Request("http://localhost/api/admin/import/media-needs?industry=toys", { headers: bearer }))).status).toBe(400);
     expect((await needsGET(new Request("http://localhost/api/admin/import/media-needs?target=user", { headers: bearer }))).status).toBe(400);
