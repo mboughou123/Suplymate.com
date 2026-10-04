@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "تسجيل الدخول…",
     "creatingAccount": "Création du الحساب…"
+  },
+  "supplierContact": {
+    "title": "اتصال مباشر",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "call": "اتصال",
+    "sendEmail": "بريد",
+    "callAria": "اتصل بـ {name}",
+    "emailAria": "راسل {name}",
+    "sourceListing": "من القائمة التجارية العامة للمورد",
+    "sourceWebsite": "من الموقع الرسمي للمورد",
+    "noneOnFile": "لا يوجد هاتف أو بريد إلكتروني مباشر لهذا المورد بعد. تواصل معه عبر Suplymate.",
+    "contactViaSuplymate": "التواصل عبر Suplymate",
+    "hiddenValue": "مخفي. متاح في الخطط المدفوعة",
+    "lockedBody": "الهاتف والبريد الإلكتروني المباشران متاحان في خطة Basic وما فوق، بما في ذلك التجربة المجانية لمدة 3 أيام.",
+    "startTrial": "ابدأ التجربة المجانية للعرض",
+    "upgrade": "قم بالترقية لعرض جهة الاتصال",
+    "signIn": "مشترك بالفعل؟ سجّل الدخول",
+    "loading": "جارٍ تحميل بيانات الاتصال",
+    "cardLockedBoth": "الهاتف والبريد · ترقية",
+    "cardLockedPhone": "الهاتف · ترقية للعرض",
+    "cardLockedEmail": "البريد · ترقية للعرض"
   }
 }

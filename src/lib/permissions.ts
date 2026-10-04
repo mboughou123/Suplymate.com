@@ -66,6 +66,8 @@ export type Entitlements = {
   rfqManagement: boolean;
   prioritizedAi: boolean;
   exportReporting: boolean;
+  /** Supplier phone / email and call / email actions. Free stays on Suplymate messaging. */
+  directSupplierContact: boolean;
 };
 
 const ENTITLEMENTS: Record<PlanId, Entitlements> = {
@@ -78,6 +80,7 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     rfqManagement: true, // RFQs are core to the marketplace, available to all
     prioritizedAi: false,
     exportReporting: false,
+    directSupplierContact: false,
   },
   basic: {
     plan: "basic",
@@ -88,6 +91,7 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     rfqManagement: true,
     prioritizedAi: true,
     exportReporting: false,
+    directSupplierContact: true,
   },
   premium: {
     plan: "premium",
@@ -98,6 +102,7 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     rfqManagement: true,
     prioritizedAi: true,
     exportReporting: true,
+    directSupplierContact: true,
   },
   enterprise: {
     plan: "enterprise",
@@ -108,6 +113,7 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
     rfqManagement: true,
     prioritizedAi: true,
     exportReporting: true,
+    directSupplierContact: true,
   },
 };
 

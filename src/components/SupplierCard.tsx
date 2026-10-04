@@ -18,6 +18,7 @@ import type { ListingSupplier } from "@/lib/supplier-listing";
 import { toDisplaySupplier } from "@/lib/supplier-display";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import FavoriteButton from "@/components/chat/FavoriteButton";
+import SupplierCardContact from "@/components/supplier-contact/SupplierCardContact";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import SupplierLogo from "@/components/SupplierLogo";
 import {
@@ -226,6 +227,7 @@ export default function SupplierCard({ supplier, priority = false }: SupplierCar
             className="btn-primary inline-flex flex-1 items-center justify-center gap-1.5"
           />
         </div>
+        <SupplierCardContact supplierId={s.id} supplierName={s.name} />
         {s.sourceUrl && (
           <a
             href={s.sourceUrl}

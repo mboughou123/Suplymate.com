@@ -1569,5 +1569,27 @@
     "increaseQuantity": "Augmenter la quantité",
     "reviewAndRequestQuotes": "Vérifier le panier et demander des devis",
     "noPaymentNote": "Aucun paiement n'est effectué. Les fournisseurs répondent avec des devis formels."
+  },
+  "supplierContact": {
+    "title": "Contact direct",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "call": "Appeler",
+    "sendEmail": "E-mail",
+    "callAria": "Appeler {name}",
+    "emailAria": "Envoyer un e-mail à {name}",
+    "sourceListing": "Issu de la fiche publique de l'entreprise",
+    "sourceWebsite": "Issu du site officiel du fournisseur",
+    "noneOnFile": "Aucun téléphone ni e-mail direct pour ce fournisseur pour le moment. Contactez-le via Suplymate.",
+    "contactViaSuplymate": "Contacter via Suplymate",
+    "hiddenValue": "Masqué. Disponible avec les offres payantes",
+    "lockedBody": "Le téléphone et l'e-mail directs sont inclus dès l'offre Basic, y compris pendant l'essai gratuit de 3 jours.",
+    "startTrial": "Essai gratuit pour voir",
+    "upgrade": "Passer à l'offre supérieure",
+    "signIn": "Déjà abonné ? Connectez-vous",
+    "loading": "Chargement des coordonnées",
+    "cardLockedBoth": "Téléphone et e-mail · Passer à l'offre supérieure",
+    "cardLockedPhone": "Téléphone · Passer à l'offre supérieure",
+    "cardLockedEmail": "E-mail · Passer à l'offre supérieure"
   }
 }

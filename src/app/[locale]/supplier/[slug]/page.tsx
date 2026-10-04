@@ -25,6 +25,7 @@ import ProductsSection from "@/components/supplier-profile/ProductsSection";
 import ReviewsSection from "@/components/supplier-profile/ReviewsSection";
 import AiInsightsSection from "@/components/supplier-profile/AiInsightsSection";
 import StickyContactCard from "@/components/supplier-profile/StickyContactCard";
+import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://suplymate.com"
@@ -256,6 +257,12 @@ export default async function SupplierProfilePage({
       </div>
 
       <HeroSection profile={profile} />
+
+      <div className="container-page lg:hidden">
+        <div className="glass-card p-5">
+          <SupplierContactDetails supplierId={base.id} supplierName={base.name} />
+        </div>
+      </div>
 
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-8">
         <div className="min-w-0">

@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "Anmeldung…",
     "creatingAccount": "Création du Konto…"
+  },
+  "supplierContact": {
+    "title": "Direct contact",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "call": "Bellen",
+    "sendEmail": "E-mail",
+    "callAria": "{name} bellen",
+    "emailAria": "{name} e-mailen",
+    "sourceListing": "Uit de openbare bedrijfsvermelding",
+    "sourceWebsite": "Van de officiële website van de leverancier",
+    "noneOnFile": "Nog geen direct telefoonnummer of e-mailadres voor deze leverancier. Neem contact op via Suplymate.",
+    "contactViaSuplymate": "Contact via Suplymate",
+    "hiddenValue": "Verborgen. Beschikbaar in betaalde abonnementen",
+    "lockedBody": "Direct telefoon en e-mail zitten in Basic en hoger, ook tijdens de gratis proefperiode van 3 dagen.",
+    "startTrial": "Gratis proberen om te zien",
+    "upgrade": "Upgrade om te zien",
+    "signIn": "Al abonnee? Log in",
+    "loading": "Contactgegevens laden",
+    "cardLockedBoth": "Telefoon & e-mail · Upgrade",
+    "cardLockedPhone": "Telefoon · Upgrade om te zien",
+    "cardLockedEmail": "E-mail · Upgrade om te zien"
   }
 }

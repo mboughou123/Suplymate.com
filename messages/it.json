@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "Inicio de sesión…",
     "creatingAccount": "Création du cuenta…"
+  },
+  "supplierContact": {
+    "title": "Contatto diretto",
+    "phone": "Telefono",
+    "email": "Email",
+    "call": "Chiama",
+    "sendEmail": "Email",
+    "callAria": "Chiama {name}",
+    "emailAria": "Scrivi a {name}",
+    "sourceListing": "Dalla scheda pubblica dell'azienda",
+    "sourceWebsite": "Dal sito ufficiale del fornitore",
+    "noneOnFile": "Nessun telefono o email diretto per questo fornitore. Contattalo tramite Suplymate.",
+    "contactViaSuplymate": "Contatta tramite Suplymate",
+    "hiddenValue": "Nascosto. Disponibile con i piani a pagamento",
+    "lockedBody": "Telefono ed email diretti sono inclusi dal piano Basic in su, anche durante la prova gratuita di 3 giorni.",
+    "startTrial": "Prova gratis per vedere",
+    "upgrade": "Passa a un piano superiore",
+    "signIn": "Già abbonato? Accedi",
+    "loading": "Caricamento dei contatti",
+    "cardLockedBoth": "Telefono ed email · Upgrade",
+    "cardLockedPhone": "Telefono · Upgrade per vedere",
+    "cardLockedEmail": "Email · Upgrade per vedere"
   }
 }

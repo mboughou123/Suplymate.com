@@ -1496,5 +1496,27 @@
     "saving": "Enregistrement…",
     "signingIn": "लॉग इन…",
     "creatingAccount": "Création du खाता…"
+  },
+  "supplierContact": {
+    "title": "सीधा संपर्क",
+    "phone": "फ़ोन",
+    "email": "ईमेल",
+    "call": "कॉल करें",
+    "sendEmail": "ईमेल",
+    "callAria": "{name} को कॉल करें",
+    "emailAria": "{name} को ईमेल करें",
+    "sourceListing": "आपूर्तिकर्ता की सार्वजनिक व्यावसायिक सूची से",
+    "sourceWebsite": "आपूर्तिकर्ता की आधिकारिक वेबसाइट से",
+    "noneOnFile": "इस आपूर्तिकर्ता का अभी कोई सीधा फ़ोन या ईमेल नहीं है। Suplymate के ज़रिए संपर्क करें।",
+    "contactViaSuplymate": "Suplymate के ज़रिए संपर्क करें",
+    "hiddenValue": "छिपा हुआ। सशुल्क प्लान में उपलब्ध",
+    "lockedBody": "सीधा फ़ोन और ईमेल Basic और उससे ऊपर के प्लान में शामिल हैं, 3 दिन के मुफ़्त ट्रायल सहित।",
+    "startTrial": "देखने के लिए मुफ़्त ट्रायल शुरू करें",
+    "upgrade": "देखने के लिए अपग्रेड करें",
+    "signIn": "पहले से सदस्य हैं? साइन इन करें",
+    "loading": "संपर्क विवरण लोड हो रहा है",
+    "cardLockedBoth": "फ़ोन और ईमेल · अपग्रेड",
+    "cardLockedPhone": "फ़ोन · देखने के लिए अपग्रेड करें",
+    "cardLockedEmail": "ईमेल · देखने के लिए अपग्रेड करें"
   }
 }
