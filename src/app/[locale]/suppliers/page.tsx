@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSuppliersFromDb } from "@/lib/data-service";
+import { getPublishedProviderLogos } from "@/lib/media-store";
 import { toListingSupplier } from "@/lib/supplier-listing";
 import SuppliersClient from "./SuppliersClient";
 
@@ -14,9 +15,10 @@ export default async function SuppliersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const [t, allSuppliers] = await Promise.all([
+  const [t, allSuppliers, providerLogos] = await Promise.all([
     getTranslations("suppliers"),
     getSuppliersFromDb(),
+    getPublishedProviderLogos(),
   ]);
   const suppliers = allSuppliers.map(toListingSupplier);
 
@@ -57,7 +59,7 @@ export default async function SuppliersPage({
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SuppliersClient initialSuppliers={suppliers} />
+        <SuppliersClient initialSuppliers={suppliers} providerLogos={providerLogos} />
       </div>
     </div>
   );
