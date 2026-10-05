@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="29px" viewBox="0 0 72 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>500x200</title>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hp-graphic-01-copy-2" transform="translate(-180.000000, -57.000000)" fill-rule="nonzero">
+            <g id="header/desktop/full" transform="translate(0.000000, -2.000000)">
+                <g id="500x200" transform="translate(180.000000, 59.000000)">
+                    <path d="M41.5651609,20.8893448 L41.5651609,7.87396492 L43.1600274,7.87396492 C47.5337973,7.87396492 50.3540864,9.83433867 50.3540864,14.3365014 L50.3540864,14.4257937 C50.3540864,18.9279564 47.5337973,20.8893448 43.1600274,20.8893448 L41.5651609,20.8893448 Z M32,28.7622951 L42.6280687,28.7622951 C54.1958976,28.7622951 60,22.7238975 60,14.2167684 L60,14.1345788 C60,5.62947904 54.3190454,0 42.9551175,0 L32,0 L32,28.7622951 Z" id="Fill-1" fill="#006B2D"></path>
+                    <polygon id="-g-Fill-8" fill="#E30613" points="6 19.8360656 21 19.8360656 21 9.91803279 6 9.91803279"></polygon>
+                    <polygon id="-g-Fill-4" fill="#006B2D" points="63 28.7622951 72 28.7622951 72 0 63 0"></polygon>
+                    <polygon id="-g-Fill-6" fill="#006B2D" points="0 28.7622951 9 28.7622951 9 0 0 0"></polygon>
+                    <polygon id="-g-Fill-7" fill="#006B2D" points="19 28.7622951 28 28.7622951 28 0 19 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

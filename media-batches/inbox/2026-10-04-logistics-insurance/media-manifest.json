@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "bot": "grok-media-bot",
+  "industry": "logistics-insurance",
+  "generatedAt": "2026-10-05T04:20:00.783Z",
+  "items": [
+    {
+      "target": "logistics-provider",
+      "entityId": "aig-ocean-cargo",
+      "role": "logo",
+      "original": "originals/aig-ocean-cargo-logo.png",
+      "sourceUrl": "https://www.aig.com/home/risk-solutions/business",
+      "imageUrl": "https://www.aig.com/content/experience-fragments/aig/america-canada/us_aig/en/header/master/_jcr_content/root/responsivegrid_1958828262/responsivegrid_copy/container_copy_copy/container_897891850/image_409587976.coreimg.png/1778871201638/icon-aig-logo-white.png",
+      "altText": "AIG logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "axa-xl-marine-cargo",
+      "role": "logo",
+      "original": "originals/axa-xl-marine-cargo-logo.png",
+      "sourceUrl": "https://axaxl.com/",
+      "imageUrl": "https://axaxl.com/-/media/axaxl/images/header/axaxl-ins-reins-transp-logo-610x156.png?rev=c17a8c4a8f864d2390d78a6fbcef5c29&sc_lang=en&la=en&h=156&w=610&hash=1CECDF7F16AAA5ED8AB1585109E2ED5F",
+      "altText": "AXA XL (AXA Group) logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "beazley-marine-cargo",
+      "role": "logo",
+      "original": "originals/beazley-marine-cargo-logo.webp",
+      "sourceUrl": "https://www.beazley.com/",
+      "imageUrl": "https://www.beazley.com/apple-touch-icon.png?v=1",
+      "altText": "Beazley logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "chubb-worldwide-ocean-cargo",
+      "role": "logo",
+      "original": "originals/chubb-worldwide-ocean-cargo-logo.png",
+      "sourceUrl": "https://www.chubb.com/us-en/business-insurance.html",
+      "imageUrl": "https://www.chubb.com/content/dam/chubb-sites/chubb/us-en/home_page/chubb-logo-black.png",
+      "altText": "Chubb logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "hiscox-marine-cargo",
+      "role": "logo",
+      "original": "originals/hiscox-marine-cargo-logo.svg",
+      "sourceUrl": "https://www.hiscoxlondonmarket.com/",
+      "imageUrl": "https://www.hiscoxlondonmarket.com/themes/custom/hiscox_londonmarket/logo.svg",
+      "altText": "Hiscox London Market logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "liberty-specialty-markets-marine-cargo",
+      "role": "logo",
+      "original": "originals/liberty-specialty-markets-marine-cargo-logo.png",
+      "sourceUrl": "https://www.libertyspecialtymarkets.com/gb-en/product/marine-cargo-insurance",
+      "imageUrl": "https://www.libertyspecialtymarkets.com/static/2024-04/liberty-specialty-markets-blue-rgb%402x.png?t=1712583587",
+      "altText": "Liberty Specialty Markets (Liberty Mutual Insurance Group) logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "markel-international-marine-cargo",
+      "role": "logo",
+      "original": "originals/markel-international-marine-cargo-logo.svg",
+      "sourceUrl": "https://www.markel.com/",
+      "imageUrl": "https://mkl-sitecore102-prod-326360-cdn-endpoint.azureedge.net/-/media/markel-shared/logos/logo-rebrand-svg.svg?h=256&iar=0&w=1514&rev=738f175c9c1846b9b63d17f1489dfbc2&extension=webp&hash=271C9D41F3BC26ADFF6DF839FCFC176E",
+      "altText": "Markel Group logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "ms-amlin-marine-cargo",
+      "role": "logo",
+      "original": "originals/ms-amlin-marine-cargo-logo.png",
+      "sourceUrl": "https://www.msamlin.com/",
+      "imageUrl": "https://www.msamlin.com/apple-touch-icon.png",
+      "altText": "MS Amlin logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "qbe-marine-cargo",
+      "role": "logo",
+      "original": "originals/qbe-marine-cargo-logo.svg",
+      "sourceUrl": "https://qbeeurope.com/",
+      "imageUrl": "https://qbeeurope.com/images/QBE_logo_colour-02.svg",
+      "altText": "QBE European Operations plc logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "swiss-re-corporate-solutions-brasil-cargo",
+      "role": "logo",
+      "original": "originals/swiss-re-corporate-solutions-brasil-cargo-logo.png",
+      "sourceUrl": "https://corporatesolutions.swissre.com/",
+      "imageUrl": "https://corporatesolutions.swissre.com/.resources/swissre-web/webresources/img/logos/SR_Logo_CorporateSolutions.png",
+      "altText": "Swiss Re Corporate Solutions logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "the-hartford-ocean-cargo",
+      "role": "logo",
+      "original": "originals/the-hartford-ocean-cargo-logo.jpg",
+      "sourceUrl": "https://www.thehartford.com/",
+      "imageUrl": "https://assets.thehartford.com/image/upload/higcom_image_stag_logo_288.jpg",
+      "altText": "The Hartford logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "travelers-ocean-cargo",
+      "role": "logo",
+      "original": "originals/travelers-ocean-cargo-logo.svg",
+      "sourceUrl": "https://www.travelers.com/",
+      "imageUrl": "https://www.travelers.com/ClientResources/tds-icons/assets/icons/logos/svg/trv-logo-2color-small.svg",
+      "altText": "Travelers logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "loadsure",
+      "role": "logo",
+      "original": "originals/loadsure-logo.webp",
+      "sourceUrl": "https://www.loadsure.net/",
+      "imageUrl": "https://www.loadsure.net/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F294606868077839%2F2700x392%2Fd16cac736e%2Fatg-full-logo-reversed-white-1.png%2Fm%2Ffit-in%2F230x230%2Ffilters%3Afill(0f1114)&w=3840&q=75",
+      "altText": "Loadsure LTD logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "tokio-marine-hcc-marine-cargo",
+      "role": "logo",
+      "original": "originals/tokio-marine-hcc-marine-cargo-logo.jpg",
+      "sourceUrl": "https://www.tmhcc.com/en",
+      "imageUrl": "https://www.tmhcc.com/en/-/media/project/tokio-marine/shared/open-graph/tmhcc-vertical-logo-open-graph.jpg",
+      "altText": "Tokio Marine HCC logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "avalon-cargo-insurance",
+      "role": "logo",
+      "original": "originals/avalon-cargo-insurance-logo.webp",
+      "sourceUrl": "https://www.avalonrisk.com/",
+      "imageUrl": "https://www.avalonrisk.com/hubfs/Avalon%202%20-%20logo%20with%20tagline%20white%20text%20TM.png",
+      "altText": "Avalon Risk Management logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "roanoke-cargo-insurance",
+      "role": "logo",
+      "original": "originals/roanoke-cargo-insurance-logo.png",
+      "sourceUrl": "https://www.roanokegroup.com/",
+      "imageUrl": "https://www.roanokegroup.com/roanoke-logo.png",
+      "altText": "Roanoke Insurance Group Inc. logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "ch-robinson-marine-cargo-insurance",
+      "role": "logo",
+      "original": "originals/ch-robinson-marine-cargo-insurance-logo.png",
+      "sourceUrl": "https://www.chrobinson.com/en-us/",
+      "imageUrl": "https://www.chrobinson.com/en-US/-/media/ChRobinson/Logos/CHR_Logo.png",
+      "altText": "C.H. Robinson logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "flexport-cargo-insurance",
+      "role": "logo",
+      "original": "originals/flexport-cargo-insurance-logo.svg",
+      "sourceUrl": "https://www.flexport.com/",
+      "imageUrl": "https://cdn.sanity.io/images/ynj1yl20/development/64dc308c20659de08b5a91e4e6db38313c1b9563-200x46.svg",
+      "altText": "Flexport logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "kuehne-nagel-cargo-insurance",
+      "role": "logo",
+      "original": "originals/kuehne-nagel-cargo-insurance-logo.webp",
+      "sourceUrl": "https://www.kuehne-nagel.com/",
+      "imageUrl": "https://assets.kuehne-nagel.com/f/311321/595x116/b7d7679a47/kuehne-nagel-logo-blue.png/m/0x0/filters:format(webp):quality(90)",
+      "altText": "Kuehne+Nagel logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "livingston-cargo-insurance",
+      "role": "logo",
+      "original": "originals/livingston-cargo-insurance-logo.png",
+      "sourceUrl": "https://www.livingstonintl.com/",
+      "imageUrl": "https://www.livingstonintl.com/assets/site-icons/apple-touch-icon.png",
+      "altText": "Livingston International logo"
+    },
+    {
+      "target": "logistics-provider",
+      "entityId": "hdi-global-marine-cargo",
+      "role": "logo",
+      "original": "originals/hdi-global-marine-cargo-logo.svg",
+      "sourceUrl": "https://www.hdi.global/",
+      "imageUrl": "https://www.hdi.global/globalassets/global/assets/logos/hdi-global-logo.svg",
+      "altText": "HDI Global SE logo"
+    }
+  ]
+}
