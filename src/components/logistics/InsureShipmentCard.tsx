@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { ExternalLink, ShieldCheck, X } from "lucide-react";
 import { logisticsDirectoryHref, logisticsProviderHref } from "@/data/logistics-providers";
 import { pickShipmentInsurers, type ShipmentLane } from "@/lib/logistics-insurance";
+import ProviderBadge from "./ProviderBadge";
 
 const DISMISS_KEY = "suplymate:insure-card-dismissed";
 
@@ -67,8 +68,9 @@ export default function InsureShipmentCard({
           <p className="text-ink-muted">
             <span className="font-semibold text-ink">{t("insureTitle")}:</span>{" "}
             {insurers.map((p, i) => (
-              <span key={p.id}>
-                {i > 0 && " · "}
+              <span key={p.id} className="inline-flex items-center gap-1 align-middle">
+                {i > 0 && <span aria-hidden>·</span>}
+                <ProviderBadge provider={p} size="sm" />
                 <Link href={logisticsProviderHref(p.id)} className="font-medium text-cyan hover:underline">
                   {p.name}
                 </Link>
@@ -112,15 +114,18 @@ export default function InsureShipmentCard({
               variant === "wide" ? "rounded-xl border border-slate-200 px-3 py-2" : "py-2"
             }`}
           >
-            <div className="min-w-0">
-              <Link
-                href={logisticsProviderHref(p.id)}
-                className="block truncate text-sm font-semibold text-ink hover:text-cyan"
-                title={p.name}
-              >
-                {p.name}
-              </Link>
-              <p className="truncate text-[11px] text-ink-dim">{t(`kind.${p.kind}`)}</p>
+            <div className="flex min-w-0 items-center gap-2">
+              <ProviderBadge provider={p} size="sm" />
+              <div className="min-w-0">
+                <Link
+                  href={logisticsProviderHref(p.id)}
+                  className="block truncate text-sm font-semibold text-ink hover:text-cyan"
+                  title={p.name}
+                >
+                  {p.name}
+                </Link>
+                <p className="truncate text-[11px] text-ink-dim">{t(`kind.${p.kind}`)}</p>
+              </div>
             </div>
             {p.quoteUrl && (
               <a

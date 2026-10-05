@@ -9,6 +9,7 @@
 // `logistics-provider-contacts.json`, never in this client-safe module.
 
 import providers from "./logistics-providers.json";
+import { getProviderLogo } from "./logistics-provider-logos";
 
 export type LogisticsProviderKind =
   | "cargo-insurer"
@@ -44,6 +45,10 @@ export type LogisticsProvider = {
   /** Official quote request / cargo contact page. */
   quoteUrl: string | null;
   sourceUrls: string[];
+  /** Public path of a QA-approved logo. Absent when none was approved. */
+  logo?: string;
+  /** White logo; render it on a dark tile. */
+  logoOnDark?: boolean;
 };
 
 export const PROVIDERS_CHECKED_AT = "2026-10-04";
@@ -51,7 +56,17 @@ export const PROVIDERS_CHECKED_AT = "2026-10-04";
 export const LOGISTICS_CATEGORY_ID = "logistics-insurance";
 export const LOGISTICS_CATEGORY_LABEL = "Logistics & Insurance";
 
-export const LOGISTICS_PROVIDERS = providers as LogisticsProvider[];
+function attachLogo(provider: LogisticsProvider): LogisticsProvider {
+  const asset = getProviderLogo(provider.id);
+  if (!asset) return provider;
+  return {
+    ...provider,
+    logo: asset.src,
+    ...(asset.logoOnDark ? { logoOnDark: true } : {}),
+  };
+}
+
+export const LOGISTICS_PROVIDERS = (providers as LogisticsProvider[]).map(attachLogo);
 
 const BY_ID = new Map(LOGISTICS_PROVIDERS.map((p) => [p.id, p]));
 
@@ -90,7 +105,7 @@ export function logisticsDirectoryHref(group?: ProviderGroup): string {
   return group ? `${base}&type=${group}` : base;
 }
 
-/** Initials for the text badge (no third-party logos are hotlinked). */
+/** Initials for the text badge when the provider has no logo. */
 export function providerInitials(p: Pick<LogisticsProvider, "company">): string {
   const words = p.company
     .replace(/\(.*?\)/g, "")

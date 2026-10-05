@@ -32,6 +32,12 @@ describe("InsureShipmentCard", () => {
     expect(html).toContain("not an insurer or insurance broker");
     expect(html).toContain('rel="noopener noreferrer nofollow"');
     expect(html.toLowerCase()).not.toContain("partner");
+    for (const p of pickShipmentInsurers(lane)) {
+      if (p.logo) {
+        expect(html).toContain(`src="${p.logo}"`);
+        expect(html).toContain(`alt="${p.company} logo"`);
+      }
+    }
   });
 
   it("lays three insurers out in a row in the wide variant", () => {
