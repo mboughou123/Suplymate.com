@@ -1,12 +1,13 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import type { PlanCta } from "@/lib/billing";
+import type { BillingInterval, PlanCta } from "@/lib/billing";
 
 type Props = {
   plan: string;
   cta: PlanCta;
   signedIn: boolean;
+  interval?: BillingInterval;
   labels: { free: string; trial: string; sales: string; subscribe: string };
 };
 
@@ -17,7 +18,7 @@ const BUTTON_CLASS = "btn-primary w-full";
  * query); signed-in users go to Settings → Subscription where Stripe checkout
  * (with the 3-day trial on Basic/Pro) is initiated. No payment is ever faked here.
  */
-export default function PlanCta({ plan, cta, signedIn, labels }: Props) {
+export default function PlanCta({ plan, cta, signedIn, interval = "month", labels }: Props) {
   switch (cta) {
     case "sales":
       return (
@@ -33,7 +34,8 @@ export default function PlanCta({ plan, cta, signedIn, labels }: Props) {
       );
     case "trial":
     case "subscribe": {
-      const href = signedIn ? `/settings/subscription?plan=${plan}` : `/signup?plan=${plan}`;
+      const query = `plan=${plan}${interval === "year" ? "&interval=year" : ""}`;
+      const href = signedIn ? `/settings/subscription?${query}` : `/signup?${query}`;
       return (
         <Link href={href} className={BUTTON_CLASS}>
           {cta === "subscribe" ? labels.subscribe : labels.trial}

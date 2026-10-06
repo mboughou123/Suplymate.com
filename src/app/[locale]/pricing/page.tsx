@@ -1,10 +1,17 @@
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { Check, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { auth } from "@/auth";
-import { PLANS, isBillingProviderConfigured, TRIAL_DAYS } from "@/lib/billing";
-import PlanCta from "@/components/pricing/PlanCta";
-import Beam from "@/components/fx/Beam";
+import {
+  ANNUAL_DISCOUNT_PERCENT,
+  PLANS,
+  PLAN_LIMITS,
+  SITE_PLAN_PRICES_CENTS,
+  TRIAL_DAYS,
+  formatUsdCents,
+  isBillingProviderConfigured,
+} from "@/lib/billing";
+import PricingPlansGrid from "@/components/pricing/PricingPlansGrid";
 
 export async function generateMetadata({
   params,
@@ -19,16 +26,19 @@ export async function generateMetadata({
   };
 }
 
+const FREE = PLAN_LIMITS.free;
+const BASIC = PLAN_LIMITS.basic;
+
 const COMPARE_ROWS: { label: string; free: string; basic: string; premium: string; enterprise: string }[] = [
-  { label: "Supplier browsing", free: "Limited searches", basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
-  { label: "Supplier comparisons", free: "Basic", basic: "More", premium: "Advanced", enterprise: "Advanced" },
-  { label: "Supplier messaging & RFQs", free: "—", basic: "Included", premium: "Included", enterprise: "Workflows" },
-  { label: "AI sourcing assistant", free: "Limited questions", basic: "Included", premium: "Unlimited conversations", enterprise: "Custom knowledge" },
-  { label: "Supplier matching", free: "—", basic: "Standard", premium: "Advanced + priority", enterprise: "Advanced + priority" },
-  { label: "Price data", free: "Limited charts", basic: "More data", premium: "Historical + alerts", enterprise: "Historical + alerts" },
-  { label: "Material intelligence", free: "Basic", basic: "Research", premium: "Advanced", enterprise: "Advanced" },
+  { label: "Supplier & product browsing", free: `${FREE.suppliersPerCategory} per category`, basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Supplier phone, email & website", free: "Locked", basic: "Unlocked", premium: "Unlocked", enterprise: "Unlocked" },
+  { label: "AI questions (Mate)", free: `${FREE.aiQuestionsPerMonth} / month`, basic: `${BASIC.aiQuestionsPerMonth} / month`, premium: "Unlimited", enterprise: "Unlimited + custom knowledge" },
+  { label: "Saved suppliers", free: `Up to ${FREE.savedSuppliers}`, basic: "Unlimited", premium: "Unlimited", enterprise: "Unlimited" },
+  { label: "Price chart history", free: `${FREE.priceHistoryMonths} months`, basic: `${BASIC.priceHistoryMonths} months`, premium: "Full history", enterprise: "Full history" },
+  { label: "Price alerts", free: "—", basic: "Included", premium: "Included", enterprise: "Included" },
+  { label: "Supplier messaging & RFQs", free: "Included", basic: "Included", premium: "Included", enterprise: "Workflows" },
   { label: "Quote comparison & reports", free: "—", basic: "—", premium: "Included", enterprise: "Included + API" },
-  { label: "Users", free: "1", basic: "1", premium: "1", enterprise: "Multiple + team management" },
+  { label: "Users", free: "1", basic: "1", premium: "Team workspaces", enterprise: "Multiple + team management" },
   { label: "Support", free: "Community", basic: "Email", premium: "Priority", enterprise: "Dedicated" },
 ];
 
@@ -58,77 +68,21 @@ export default async function PricingPage() {
         </div>
       </section>
 
-      {/* Plans */}
-      <section className="container-page -mt-16 pb-16">
+      {/* Plans — z-10 keeps the cards above the hero they overlap. */}
+      <section className="container-page relative z-10 -mt-16 pb-16">
         {!configured && (
           <p className="mx-auto mb-6 max-w-2xl rounded-xl border border-amber-200/70 bg-amber-50/90 px-4 py-3 text-center text-sm text-amber-950">
             {t("billingUnavailable")}
           </p>
         )}
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {PLANS.map((plan) => {
-            const card = (
-              <article
-                className={`flex h-full flex-col rounded-2xl border bg-white p-6 shadow-card ${
-                  plan.highlighted ? "border-navy/40" : "border-slate-200"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <h2 className="text-heading-sm text-ink">{plan.name}</h2>
-                  {plan.highlighted && (
-                    <span className="rounded-full bg-navy px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
-                      {t("mostPopular")}
-                    </span>
-                  )}
-                </div>
-                <p className="mt-1 text-sm text-ink-muted">{plan.audience}</p>
-                <p className="mt-5">
-                  <span className="font-display text-4xl font-bold tabular-nums tracking-tight text-ink">
-                    {plan.monthlyPrice === null ? t("custom") : plan.priceLabel}
-                  </span>
-                  {plan.monthlyPrice !== null && (
-                    <span className="text-sm text-ink-dim"> {plan.monthlyPrice === 0 ? t("forever") : t("perMonth")}</span>
-                  )}
-                </p>
-                {plan.trialDays > 0 && (
-                  <p className="mt-1 text-xs font-semibold text-cyan">{TRIAL_DAYS}-day free trial</p>
-                )}
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">{plan.description}</p>
-                <ul className="mt-5 flex-1 space-y-2">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-ink-muted">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan" aria-hidden />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <PlanCta
-                    plan={plan.id}
-                    cta={plan.cta}
-                    signedIn={signedIn}
-                    labels={{
-                      free: t("ctaFree"),
-                      trial: t("ctaTrial"),
-                      sales: t("ctaSales"),
-                      subscribe: t("ctaSubscribe"),
-                    }}
-                  />
-                </div>
-              </article>
-            );
-            return plan.highlighted ? (
-              <Beam key={plan.id} size="md" colorVariant="ocean" strength={0.55} theme="light" className="h-full">
-                {card}
-              </Beam>
-            ) : (
-              <div key={plan.id} className="h-full">
-                {card}
-              </div>
-            );
+        <PricingPlansGrid signedIn={signedIn} />
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-ink-dim">
+          {t("billingNoteV2", {
+            days: TRIAL_DAYS,
+            percent: ANNUAL_DISCOUNT_PERCENT,
+            enterprise: formatUsdCents(SITE_PLAN_PRICES_CENTS.enterprise),
           })}
-        </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-ink-dim">{t("billingNote")}</p>
+        </p>
       </section>
 
       {/* Comparison */}

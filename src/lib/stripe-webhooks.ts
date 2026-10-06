@@ -1,5 +1,5 @@
 import type Stripe from "stripe";
-import { planForStripePriceId, type PlanId } from "@/lib/billing";
+import { isPaidPlanId, normalizePlanId, planForStripePriceId, type PlanId } from "@/lib/billing";
 
 export const HANDLED_BILLING_EVENTS = [
   "checkout.session.completed",
@@ -45,12 +45,26 @@ export function subscriptionCustomerId(sub: Stripe.Subscription): string {
   return typeof sub.customer === "string" ? sub.customer : sub.customer.id;
 }
 
+// Prices replaced in the catalogue are no longer in env, so subscriptions still
+// billed on them fall back to the plan our Checkout stamped on the subscription
+// (or the catalogue script stamped on the price).
+function subscriptionPlan(sub: Stripe.Subscription): PlanId {
+  const price = sub.items.data[0]?.price;
+  const fromEnv = planForStripePriceId(price?.id);
+  if (fromEnv !== "free") return fromEnv;
+  for (const candidate of [sub.metadata?.plan, price?.metadata?.plan]) {
+    const plan = normalizePlanId(candidate);
+    if (isPaidPlanId(plan)) return plan;
+  }
+  return "free";
+}
+
 export function subscriptionEntitlement(sub: Stripe.Subscription): SubscriptionEntitlement {
   const priceId = sub.items.data[0]?.price?.id ?? null;
   const entitled = ENTITLED_STATUSES.has(sub.status);
   return {
     entitled,
-    plan: entitled ? planForStripePriceId(priceId) : "free",
+    plan: entitled ? subscriptionPlan(sub) : "free",
     planStatus: sub.status,
     stripeSubscriptionId: sub.id,
     stripePriceId: priceId,

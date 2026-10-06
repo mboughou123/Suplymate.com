@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import type { PlanCta } from "@/lib/billing";
+import type { BillingInterval, PlanCta } from "@/lib/billing";
 
 // Checkout / manage-billing actions. The browser only *initiates* billing —
 // plan changes are applied by the Stripe webhook (source of truth).
@@ -67,12 +67,17 @@ export function UpgradeButton({
   current,
   configured,
   autoStart = false,
+  interval = "month",
+  coupon = null,
   labels,
 }: {
   plan: string;
   cta: PlanCta;
   current: boolean;
   configured: boolean;
+  interval?: BillingInterval;
+  /** Coupon / promotion code applied at Checkout instead of the early-bird offer. */
+  coupon?: string | null;
   /** Start checkout on mount (plan picked on /pricing before signing up). */
   autoStart?: boolean;
   labels: Labels;
@@ -86,7 +91,7 @@ export function UpgradeButton({
       const res = await fetch("/api/billing/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan, interval, ...(coupon ? { coupon } : {}) }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.url) window.location.href = data.url;

@@ -2,8 +2,15 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { getStripe, siteUrl } from "@/lib/stripe";
-import { buildSubscriptionCheckoutParams } from "@/lib/stripe-checkout";
-import { getPlanById, isStripeConfigured, stripePriceIdFor, type PlanId } from "@/lib/billing";
+import { buildSubscriptionCheckoutParams, type CheckoutDiscount } from "@/lib/stripe-checkout";
+import { earlyBirdDiscount, lookupPromotionCode, normalizePromotionCode } from "@/lib/stripe-discounts";
+import {
+  getPlanById,
+  isStripeConfigured,
+  normalizeBillingInterval,
+  stripePriceIdFor,
+  type PlanId,
+} from "@/lib/billing";
 
 export const dynamic = "force-dynamic";
 
@@ -27,11 +34,36 @@ export async function POST(request: Request) {
 
   const body = await request.json().catch(() => ({}));
   const plan = String(body.plan || "") as PlanId;
-  const priceId = stripePriceIdFor(plan);
+  const interval = normalizeBillingInterval(body.interval);
+  const priceId = stripePriceIdFor(plan, interval);
   if (!priceId) {
-    return NextResponse.json({ error: "Unknown or unconfigured plan." }, { status: 400 });
+    return NextResponse.json(
+      {
+        error:
+          interval === "year"
+            ? "Annual billing is not available for this plan yet."
+            : "Unknown or unconfigured plan.",
+      },
+      { status: 400 },
+    );
   }
   const trialDays = getPlanById(plan).trialDays;
+
+  let discount: CheckoutDiscount | null = null;
+  const rawCode = typeof body.coupon === "string" ? body.coupon.trim() : "";
+  if (rawCode) {
+    const code = normalizePromotionCode(rawCode);
+    const lookup = code ? await lookupPromotionCode(stripe, code) : null;
+    if (!lookup || !lookup.ok) {
+      return NextResponse.json(
+        { error: lookup?.error ?? "That coupon code is not valid or has expired.", code: "invalid_coupon" },
+        { status: 400 },
+      );
+    }
+    discount = lookup.discount;
+  } else {
+    discount = await earlyBirdDiscount(stripe, interval);
+  }
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
@@ -51,17 +83,32 @@ export async function POST(request: Request) {
     });
   }
 
-  const checkout = await stripe.checkout.sessions.create(
-    buildSubscriptionCheckoutParams({
-      customerId,
-      priceId,
-      userId: session.user.id,
-      plan,
-      trialDays,
-      successUrl: `${siteUrl()}/settings/subscription?checkout=success`,
-      cancelUrl: `${siteUrl()}/settings/subscription?checkout=cancelled`,
-    }),
-  );
+  let checkout;
+  try {
+    checkout = await stripe.checkout.sessions.create(
+      buildSubscriptionCheckoutParams({
+        customerId,
+        priceId,
+        userId: session.user.id,
+        plan,
+        trialDays,
+        interval,
+        discount,
+        successUrl: `${siteUrl()}/settings/subscription?checkout=success`,
+        cancelUrl: `${siteUrl()}/settings/subscription?checkout=cancelled`,
+      }),
+    );
+  } catch (err) {
+    console.error("[billing/checkout] session create failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json(
+      {
+        error: discount
+          ? "Stripe could not apply that discount to this plan. Check the code or try without it."
+          : "Could not start checkout. Please try again.",
+      },
+      { status: 502 },
+    );
+  }
 
   return NextResponse.json({ url: checkout.url });
 }
