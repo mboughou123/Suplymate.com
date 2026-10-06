@@ -8,11 +8,14 @@
 export type ProviderLogoAsset = {
   /** Public path, served as the original file (SVG stays SVG). */
   src: string;
-  /** White artwork that needs a dark tile. */
-  logoOnDark?: boolean;
+  /**
+   * White artwork with no coloured file on the company's own site.
+   * Rendered on the white tile with a dark mono filter.
+   */
+  monoOnWhite?: boolean;
   /**
    * Native pixel size of a small raster. The badge must not draw this file
-   * larger than this (AIG's mark is only 89px).
+   * larger than this.
    */
   maxNativePx?: number;
 };
@@ -20,15 +23,12 @@ export type ProviderLogoAsset = {
 export const PROVIDER_LOGOS: Record<string, ProviderLogoAsset> = {
   "axa-xl-marine-cargo": {
     src: "/logistics/logos/axa-xl-marine-cargo.png",
-    logoOnDark: true,
   },
   "chubb-worldwide-ocean-cargo": {
     src: "/logistics/logos/chubb-worldwide-ocean-cargo.png",
   },
   "aig-ocean-cargo": {
     src: "/logistics/logos/aig-ocean-cargo.png",
-    logoOnDark: true,
-    maxNativePx: 89,
   },
   "tokio-marine-hcc-marine-cargo": {
     src: "/logistics/logos/tokio-marine-hcc-marine-cargo.png",
@@ -50,7 +50,7 @@ export const PROVIDER_LOGOS: Record<string, ProviderLogoAsset> = {
   },
   "qbe-marine-cargo": {
     src: "/logistics/logos/qbe-marine-cargo.svg",
-    logoOnDark: true,
+    monoOnWhite: true,
   },
   "swiss-re-corporate-solutions-brasil-cargo": {
     src: "/logistics/logos/swiss-re-corporate-solutions-brasil-cargo.png",
@@ -66,7 +66,6 @@ export const PROVIDER_LOGOS: Record<string, ProviderLogoAsset> = {
   },
   "avalon-cargo-insurance": {
     src: "/logistics/logos/avalon-cargo-insurance.png",
-    logoOnDark: true,
   },
   "kuehne-nagel-cargo-insurance": {
     src: "/logistics/logos/kuehne-nagel-cargo-insurance.png",
@@ -93,14 +92,14 @@ export function getProviderLogo(id: string | null | undefined): ProviderLogoAsse
 
 export type ResolvedProviderLogo = {
   src: string;
-  logoOnDark: boolean;
+  monoOnWhite: boolean;
   maxNativePx?: number;
 };
 
 type LogoCarrier = {
   id?: string;
   logo?: string;
-  logoOnDark?: boolean;
+  monoOnWhite?: boolean;
 };
 
 /**
@@ -118,7 +117,7 @@ export function resolveProviderLogo(
   const src = published || bundledSrc;
   if (!src) return null;
   const usingBundled = !published || published === bundledSrc;
-  const logoOnDark = Boolean(provider.logoOnDark || asset?.logoOnDark);
+  const monoOnWhite = Boolean(provider.monoOnWhite || (usingBundled && asset?.monoOnWhite));
   const maxNativePx = usingBundled ? asset?.maxNativePx : undefined;
-  return { src, logoOnDark, ...(maxNativePx != null ? { maxNativePx } : {}) };
+  return { src, monoOnWhite, ...(maxNativePx != null ? { maxNativePx } : {}) };
 }

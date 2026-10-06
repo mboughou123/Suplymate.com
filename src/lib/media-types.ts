@@ -92,6 +92,10 @@ export type Media = {
   entityId: string | null;
   altText: string | null;
   caption: string | null;
+  /** Present when the file is an AI illustration of a product. */
+  aiGenerated?: boolean;
+  /** Present when the photo comes from the supplier's Alibaba store. */
+  photoSource?: "alibaba-store" | null;
   sortOrder: number;
   isPrimary: boolean;
   status: MediaStatus;

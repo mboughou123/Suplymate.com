@@ -20,22 +20,30 @@ describe("ProviderBadge", () => {
     expect(html).toContain("bg-white");
   });
 
-  it("renders a bundled logo, and a dark tile for white artwork", () => {
+  it("renders every logo on a white tile, and paints a white wordmark dark", () => {
     const chubb = getLogisticsProvider("chubb-worldwide-ocean-cargo")!;
     const chubbHtml = renderToStaticMarkup(<ProviderBadge provider={chubb} />);
     expect(chubbHtml).toContain(`src="${chubb.logo}"`);
     expect(chubbHtml).toContain('alt="Chubb logo"');
+    expect(chubbHtml).toContain('data-logo-tile="white"');
     expect(chubbHtml).toContain("bg-white");
     expect(chubbHtml).toContain("object-contain");
+    expect(chubbHtml).not.toContain("bg-navy");
 
     const aig = getLogisticsProvider("aig-ocean-cargo")!;
     const aigHtml = renderToStaticMarkup(<ProviderBadge provider={aig} size="lg" />);
     expect(aigHtml).toContain('src="/logistics/logos/aig-ocean-cargo.png"');
     expect(aigHtml).toContain('alt="AIG logo"');
-    expect(aigHtml).toContain("bg-navy");
-    expect(aigHtml).toContain("max-width:89px");
-    expect(aigHtml).toContain("max-height:89px");
+    expect(aigHtml).toContain("bg-white");
     expect(aigHtml).toContain("object-contain");
+    expect(aigHtml).not.toContain("bg-navy");
+    expect(aigHtml).not.toContain("max-width:89px");
+
+    const qbe = getLogisticsProvider("qbe-marine-cargo")!;
+    const qbeHtml = renderToStaticMarkup(<ProviderBadge provider={qbe} />);
+    expect(qbeHtml).toContain('data-logo-mono="true"');
+    expect(qbeHtml).toContain("brightness-0");
+    expect(qbeHtml).toContain("bg-white");
   });
 
   it("keeps a dropped provider on the initials fallback", () => {

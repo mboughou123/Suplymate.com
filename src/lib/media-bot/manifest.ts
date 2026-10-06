@@ -19,12 +19,15 @@ export const MEDIA_ROLES = ["logo", "cover", "factory", "gallery", "product", "c
 export type MediaRole = (typeof MEDIA_ROLES)[number];
 
 /**
- * What the bot did to the pixels. Generative edits (inpainting, AI redraws,
- * "improved" logos) are not in this list on purpose: a buyer must see the real
- * factory, product and certificate.
+ * What the bot did to the pixels. Generative edits of logos, factories and
+ * certificates are not accepted. `ai-generated` is only for a product photo
+ * when no real photograph exists, and the UI must label it as an illustration.
  */
-export const ENHANCEMENTS = ["none", "resize", "restore", "upscale", "background-removed"] as const;
+export const ENHANCEMENTS = ["none", "resize", "restore", "upscale", "background-removed", "ai-generated"] as const;
 export type Enhancement = (typeof ENHANCEMENTS)[number];
+
+export const PHOTO_SOURCES = ["alibaba-store"] as const;
+export type PhotoSource = (typeof PHOTO_SOURCES)[number];
 
 export type MediaCertificationMeta = {
   name: string;
@@ -64,6 +67,10 @@ export type MediaItem = {
   caption?: string;
   certification?: MediaCertificationMeta;
   qa?: MediaQa;
+  /** Set when the pixels were drawn by a model. Only valid for product photos. */
+  aiGenerated?: boolean;
+  /** Set when the photo is from the supplier's own Alibaba store. */
+  photoSource?: PhotoSource;
 };
 
 export type MediaManifest = {
@@ -104,6 +111,8 @@ export function rolesForTarget(target: MediaTarget): readonly MediaRole[] {
   }
 }
 
+const PHOTO_ENHANCEMENTS = ["none", "resize", "restore", "upscale", "background-removed"] as const satisfies readonly Enhancement[];
+
 /** Logos and certificates are documents: only lossless-in-meaning edits. */
 export function enhancementsForRole(role: MediaRole): readonly Enhancement[] {
   switch (role) {
@@ -114,6 +123,7 @@ export function enhancementsForRole(role: MediaRole): readonly Enhancement[] {
     case "cover":
     case "factory":
     case "gallery":
+      return PHOTO_ENHANCEMENTS;
     case "product":
       return ENHANCEMENTS;
     default: {
@@ -254,6 +264,21 @@ export function parseMediaItem(raw: unknown, opts: { requireFile: boolean }): { 
   if (!enhancementsForRole(role).includes(enhancementRaw)) {
     return { error: `enhancement "${enhancementRaw}" is not allowed for ${role} images (allowed: ${enhancementsForRole(role).join(", ")})` };
   }
+  const aiGenerated = o.aiGenerated === true;
+  if (aiGenerated && enhancementRaw !== "ai-generated") {
+    return { error: "ai-generated images must use enhancement \"ai-generated\"" };
+  }
+  if (enhancementRaw === "ai-generated" && !aiGenerated) {
+    return { error: "ai-generated product images must set aiGenerated: true" };
+  }
+  if ((aiGenerated || enhancementRaw === "ai-generated") && !(target === "product" && role === "product")) {
+    return { error: "ai-generated images are only accepted for product photos (target=product, role=product)" };
+  }
+  let photoSource: PhotoSource | undefined;
+  if (o.photoSource != null) {
+    if (!includes(PHOTO_SOURCES, o.photoSource)) return { error: `photoSource must be ${PHOTO_SOURCES.join(" or ")}` };
+    photoSource = o.photoSource;
+  }
 
   const sourceUrl = httpUrl(o.sourceUrl);
   if (!sourceUrl) return { error: "sourceUrl must be the http(s) page where the image was found" };
@@ -296,6 +321,8 @@ export function parseMediaItem(raw: unknown, opts: { requireFile: boolean }): { 
   if (cert) item.certification = cert;
   const qa = parseQa(o.qa);
   if (qa) item.qa = qa;
+  if (aiGenerated) item.aiGenerated = true;
+  if (photoSource) item.photoSource = photoSource;
   return { item };
 }
 

@@ -19,6 +19,7 @@ import type { SupplierProfile } from "@/lib/supplier-profile";
 import FavoriteButton from "@/components/chat/FavoriteButton";
 import ReportButton from "@/components/ReportButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import SupplierLogo from "@/components/SupplierLogo";
 import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 import { CARD_IMAGE_QUALITY } from "@/lib/image-sizes";
 import ProfileActionButton from "./ProfileActionButton";
@@ -81,17 +82,12 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
             <div className="flex flex-col gap-5">
               <div className="flex flex-wrap items-start gap-5">
                 {/* Logo */}
-                <div
-                  className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl text-2xl font-extrabold text-white shadow-cardHover ring-4 ring-white"
-                  style={{ backgroundImage: base.logoGradient }}
-                >
-                  {base.logoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={base.logoUrl} alt={base.name} className="h-full w-full object-cover" />
-                  ) : (
-                    base.logoText
-                  )}
-                </div>
+                <SupplierLogo
+                  logoUrl={base.logoUrl}
+                  initials={base.logoText}
+                  name={base.name}
+                  className="h-20 w-20 rounded-2xl text-2xl shadow-cardHover ring-4 ring-white"
+                />
 
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">

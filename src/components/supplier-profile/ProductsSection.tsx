@@ -20,6 +20,8 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 import { SectionHeading, reveal } from "./primitives";
 import ProfileActionButton from "./ProfileActionButton";
+import AiIllustrationBadge from "@/components/AiIllustrationBadge";
+import { aiAltText } from "@/lib/image-attribution";
 
 type SortKey = "recommended" | "price-low" | "rating" | "name";
 
@@ -132,9 +134,9 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
               {p.href ? (
                 <Link href={p.href} className="absolute inset-0" aria-label={p.name}>
                   <ImageWithFallback
-                    src={p.hasRealPhoto ? p.image : undefined}
+                    src={p.hasRealPhoto || p.aiGeneratedImage ? p.image : undefined}
                     fallbackSrc={p.imageFallback}
-                    alt={p.name}
+                    alt={p.aiGeneratedImage ? aiAltText(p.name) : p.name}
                     sizes={CARD_IMAGE_SIZES.productCard}
                     quality={CARD_IMAGE_QUALITY}
                     className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
@@ -142,13 +144,18 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                 </Link>
               ) : (
                 <ImageWithFallback
-                  src={p.hasRealPhoto ? p.image : undefined}
+                  src={p.hasRealPhoto || p.aiGeneratedImage ? p.image : undefined}
                   fallbackSrc={p.imageFallback}
-                  alt={p.name}
+                  alt={p.aiGeneratedImage ? aiAltText(p.name) : p.name}
                   sizes={CARD_IMAGE_SIZES.productCard}
                   quality={CARD_IMAGE_QUALITY}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
+              )}
+              {p.aiGeneratedImage && (
+                <span className="absolute bottom-3 left-3">
+                  <AiIllustrationBadge />
+                </span>
               )}
               {p.aiRecommended && (
                 <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-cyan shadow-sm">

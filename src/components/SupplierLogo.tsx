@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { isGoogleMapsImageUrl } from "@/lib/image-fallback";
+import { LOGO_IMAGE_CLASS, LOGO_INITIALS_CLASS, LOGO_MONO_CLASS, LOGO_TILE_CLASS, logoNeedsMono } from "@/lib/logo-tile";
 
 // Kept in sync with `images.remotePatterns` in next.config.ts.
 // Do not send Google Maps / googleusercontent URLs through next/image.
@@ -23,31 +24,33 @@ type SupplierLogoProps = {
   logoUrl?: string | null;
   /** Initials shown when no logo image / on error. */
   initials: string;
-  /** Inline CSS gradient for the avatar background. */
-  gradient: string;
+  /** Kept so existing call sites compile. Initials sit on the white tile. */
+  gradient?: string;
   name: string;
   className?: string;
 };
 
 /**
- * Square logo avatar that shows the real logo image when available and
- * gracefully falls back to initials on missing/broken images — so a supplier
- * logo is never empty or broken.
+ * Square logo on a white tile. A real logo is contained with padding; a missing
+ * logo falls back to initials on the same white tile.
  */
 export default function SupplierLogo({
   logoUrl,
   initials,
-  gradient,
+  gradient: _gradient,
   name,
   className = "h-16 w-16 rounded-2xl text-base ring-4 ring-white shadow-glow",
 }: SupplierLogoProps) {
+  void _gradient;
   const [failed, setFailed] = useState(false);
   const usableLogo = logoUrl && !isGoogleMapsImageUrl(logoUrl) ? logoUrl : null;
   const showImage = Boolean(usableLogo) && !failed;
+  const paintDark = logoNeedsMono(usableLogo);
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden font-bold tracking-wide text-white ${className}`}
-      style={{ backgroundImage: gradient }}
+      className={`relative ${LOGO_TILE_CLASS} ${LOGO_INITIALS_CLASS} ${className}`}
+      data-logo-tile="white"
+      data-logo-mono={paintDark ? "true" : "false"}
     >
       {showImage ? (
         canOptimize(usableLogo as string) ? (
@@ -56,7 +59,7 @@ export default function SupplierLogo({
             alt={`${name} logo`}
             fill
             sizes="64px"
-            className="object-cover"
+            className={`${LOGO_IMAGE_CLASS} ${paintDark ? LOGO_MONO_CLASS : ""}`}
             onError={() => setFailed(true)}
           />
         ) : (
@@ -66,7 +69,7 @@ export default function SupplierLogo({
             alt={`${name} logo`}
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover"
+            className={`${LOGO_IMAGE_CLASS} ${paintDark ? LOGO_MONO_CLASS : ""}`}
             onError={() => setFailed(true)}
           />
         )

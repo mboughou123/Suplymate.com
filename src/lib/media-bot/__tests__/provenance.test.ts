@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { checkProvenance, isMarketplaceHost, isMarketplaceUrl, officialDomains, registrableDomain } from "../provenance";
+import { allowsAlibabaStorePhoto, checkProvenance, isMarketplaceHost, isMarketplaceUrl, officialDomains, registrableDomain } from "../provenance";
 
 describe("registrableDomain", () => {
   it("strips subdomains and keeps multi-part public suffixes", () => {
@@ -71,5 +71,35 @@ describe("checkProvenance", () => {
 
   it("rejects when the entity has no official website", () => {
     expect(checkProvenance({ sourceUrl: "https://www.posco.com/", officialDomains: [] })).toEqual({ ok: false, reason: expect.stringMatching(/no official website/) });
+  });
+
+  it("allows Alibaba only when the image is from that supplier's own store", () => {
+    const store = "acme.en.alibaba.com";
+    expect(
+      checkProvenance({
+        sourceUrl: "https://acme.en.alibaba.com/product/coil.html",
+        imageUrl: "https://sc04.alicdn.com/kf/coil.jpg",
+        officialDomains: [],
+        alibabaStoreHost: store,
+      }),
+    ).toEqual({ ok: true, photoSource: "alibaba-store" });
+    expect(allowsAlibabaStorePhoto({ sourceUrl: "https://www.alibaba.com/store/acme", imageUrl: "https://sc04.alicdn.com/kf/a.jpg", alibabaStoreHost: "alibaba.com/store/acme" })).toBe(true);
+    expect(
+      checkProvenance({
+        sourceUrl: "https://other.en.alibaba.com/product/1.html",
+        imageUrl: "https://sc04.alicdn.com/kf/x.jpg",
+        officialDomains: [],
+        alibabaStoreHost: store,
+      }).ok,
+    ).toBe(false);
+    expect(
+      checkProvenance({
+        sourceUrl: "https://acme.en.made-in-china.com/product/1.html",
+        officialDomains: ["acme.com"],
+        alibabaStoreHost: store,
+      }).ok,
+    ).toBe(false);
+    expect(checkProvenance({ sourceUrl: "https://www.alibaba.com/", officialDomains: [], alibabaStoreHost: null }).ok).toBe(false);
+    expect(checkProvenance({ sourceUrl: "https://www.indiamart.com/acme/", officialDomains: [], alibabaStoreHost: store }).ok).toBe(false);
   });
 });

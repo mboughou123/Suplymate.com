@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
 import { PackFiles } from "@/lib/import/pack-files";
+import { AI_GENERATED_LABEL, AI_GENERATED_SORT_ORDER, ALIBABA_PHOTO_CAPTION } from "@/lib/image-attribution";
 import { mediaOriginalUrl, runMediaPush, sha256Hex, type MediaPushSummary } from "../push";
 import { fakeDeps, JPEG } from "./fake-deps";
 
@@ -131,6 +132,75 @@ describe("runMediaPush", () => {
     expect(res.items[0].status).toBe("would-import");
     expect(state.media).toHaveLength(0);
     expect(state.stored).toHaveLength(0);
+  });
+
+  it("accepts photos from the supplier's own Alibaba store and still blocks other marketplaces", async () => {
+    const file = "enhanced/supplier/acme-store/coil.jpg";
+    const other = "enhanced/supplier/acme-store/other.jpg";
+    const { res, state } = await push(
+      [
+        item({
+          entityId: "acme-store",
+          role: "gallery",
+          file,
+          sourceUrl: "https://acme.en.alibaba.com/product/coil.html",
+          imageUrl: "https://sc04.alicdn.com/kf/coil.jpg",
+          enhancement: "none",
+          qa: { model: "llama3.2-vision", quality: 4, matchesRole: true, marketplaceWatermark: true, notes: "Alibaba store watermark" },
+        }),
+      ],
+      { [file]: JPEG },
+    );
+    expect(res.counts.imported).toBe(1);
+    expect(state.media[0].photoSource).toBe("alibaba-store");
+    expect(state.media[0].caption).toBe(ALIBABA_PHOTO_CAPTION);
+    expect(state.media[0].originalUrl).toContain("photoSource=alibaba-store");
+
+    const blocked = await push(
+      [
+        item({ entityId: "acme-store", role: "gallery", file, sourceUrl: "https://acme.en.made-in-china.com/product/1.html", enhancement: "none" }),
+        item({ entityId: "acme-store", role: "gallery", file: other, sourceUrl: "https://other.en.alibaba.com/product/1.html", enhancement: "none" }),
+        item({ entityId: "posco", sourceUrl: "https://posco.en.alibaba.com/photo" }),
+      ],
+      { [file]: JPEG, [other]: JPEG, [PLANT]: JPEG },
+    );
+    expect(blocked.res.items.map((row) => row.status)).toEqual(["rejected", "rejected", "rejected"]);
+    expect(blocked.res.items.map((row) => row.reason)).toEqual([
+      expect.stringMatching(/marketplaces/),
+      expect.stringMatching(/marketplaces/),
+      expect.stringMatching(/marketplaces/),
+    ]);
+  });
+
+  it("accepts labelled AI product images and rejects them for other roles", async () => {
+    const file = "enhanced/product/posco-hrc/illus.jpg";
+    const { res, state } = await push(
+      [
+        item({
+          target: "product",
+          entityId: "posco-hrc",
+          role: "product",
+          file,
+          enhancement: "ai-generated",
+          aiGenerated: true,
+          sourceUrl: "https://www.posco.com/products/hrc",
+        }),
+      ],
+      { [file]: JPEG },
+    );
+    expect(res.items[0].status).toBe("imported");
+    expect(state.media[0].aiGenerated).toBe(true);
+    expect(state.media[0].sortOrder).toBe(AI_GENERATED_SORT_ORDER);
+    expect(state.media[0].altText).toContain(AI_GENERATED_LABEL);
+
+    const bad = await push(
+      [
+        item({ role: "logo", file: "enhanced/supplier/posco/logo.png", enhancement: "ai-generated", aiGenerated: true }),
+        item({ role: "factory", enhancement: "ai-generated", aiGenerated: true }),
+      ],
+      { [PLANT]: JPEG, "enhanced/supplier/posco/logo.png": JPEG },
+    );
+    expect(bad.res.items.map((row) => row.status)).toEqual(["rejected", "rejected"]);
   });
 
   it("rejects a malformed manifest as a whole", async () => {

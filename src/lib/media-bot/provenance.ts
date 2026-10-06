@@ -90,6 +90,69 @@ export function isMarketplaceUrl(url: string | null | undefined): boolean {
   return isMarketplaceHost(hostOf(url));
 }
 
+/** Identity of one Alibaba storefront, or null when the URL is not that supplier's store. */
+export function alibabaStoreKey(url: string | null | undefined): string | null {
+  const raw = url?.trim();
+  if (!raw) return null;
+  const host = hostOf(raw) ?? hostOf(!/^[a-z]+:\/\//i.test(raw) ? `https://${raw}` : null);
+  if (!host) return null;
+  const reg = registrableDomain(host);
+  if (reg !== "alibaba.com" && reg !== "alibaba.cn") return null;
+  const bare = host === "alibaba.com" || host === "www.alibaba.com" || host === "m.alibaba.com"
+    || host === "alibaba.cn" || host === "www.alibaba.cn" || host === "m.alibaba.cn";
+  if (!bare) return host.replace(/^www\./, "");
+  try {
+    const u = new URL(/^[a-z]+:\/\//i.test(raw) ? raw : `https://${raw}`);
+    const parts = u.pathname.split("/").filter(Boolean);
+    if ((parts[0] === "store" || parts[0] === "shop") && parts[1]) return `${reg}/store/${decodeURIComponent(parts[1]).toLowerCase()}`;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+/** The supplier's own Alibaba store, from its website / sourceUrl / alibabaUrl. */
+export function alibabaStoreFromRecord(urls: (string | null | undefined)[]): string | null {
+  for (const u of urls) {
+    const key = alibabaStoreKey(u);
+    if (key) return key;
+  }
+  return null;
+}
+
+function isAlibabaListingCdn(host: string): boolean {
+  return registrableDomain(host) === "alicdn.com";
+}
+
+/**
+ * Alibaba is allowed only when the supplier record itself points at that store
+ * and the page is a listing on the same store. Listing files may sit on
+ * Alibaba's own image CDN (`alicdn.com`). Every other marketplace stays blocked.
+ */
+export function allowsAlibabaStorePhoto(input: {
+  sourceUrl: string | null | undefined;
+  imageUrl?: string | null;
+  alibabaStoreHost?: string | null;
+}): boolean {
+  const store = input.alibabaStoreHost;
+  if (!store) return false;
+  if (alibabaStoreKey(input.sourceUrl) !== store) return false;
+  if (!input.imageUrl) return true;
+  const imageHost = hostOf(input.imageUrl);
+  if (!imageHost) return false;
+  if (alibabaStoreKey(input.imageUrl) === store) return true;
+  return isAlibabaListingCdn(imageHost);
+}
+
+/** True when QA flagged Alibaba's own store watermark and no other marketplace. */
+export function isAlibabaOwnWatermark(qa: { marketplaceWatermark?: boolean; notes?: string | null }): boolean {
+  if (!qa.marketplaceWatermark) return false;
+  const notes = (qa.notes ?? "").toLowerCase();
+  if (!/\balibaba\b/.test(notes)) return false;
+  const others = ["aliexpress", "1688", "taobao", "tmall", "made-in-china", "made in china", "indiamart", "amazon", "ebay", "dhgate", "global sources", "globalsources", "walmart", "temu", "etsy", "tradeindia"];
+  return !others.some((name) => notes.includes(name));
+}
+
 /**
  * Registrable domains that count as an entity's own site, from its website /
  * source URLs. Marketplace storefronts (`acme.en.alibaba.com`), maps listings
@@ -107,13 +170,16 @@ export function officialDomains(urls: (string | null | undefined)[]): string[] {
   return [...out].sort();
 }
 
-export type ProvenanceVerdict = { ok: true } | { ok: false; reason: string };
+export type ProvenanceVerdict = { ok: true; photoSource?: "alibaba-store" } | { ok: false; reason: string };
 
 export function checkProvenance(input: {
   sourceUrl: string | null | undefined;
   imageUrl?: string | null;
   officialDomains: string[];
+  /** Set only when the supplier record itself is that Alibaba storefront. */
+  alibabaStoreHost?: string | null;
 }): ProvenanceVerdict {
+  if (allowsAlibabaStorePhoto(input)) return { ok: true, photoSource: "alibaba-store" };
   const sourceHost = hostOf(input.sourceUrl);
   if (!sourceHost) return { ok: false, reason: "sourceUrl must be the http(s) page on the company's own website where the image appears" };
   if (isMarketplaceHost(sourceHost)) return { ok: false, reason: `images from marketplaces or competing directories (${sourceHost}) are not accepted` };

@@ -47,9 +47,18 @@ describe("computeMediaNeeds", () => {
         roles: ["logo", "factory", "gallery", "certificate"],
         certificates: ["ISO 9001"],
       },
+      {
+        target: "supplier",
+        entityId: "storefront",
+        name: "Storefront Steel",
+        industry: "metals",
+        officialDomains: [],
+        roles: ["logo", "factory", "gallery"],
+        alibabaStoreHost: "storefront.en.alibaba.com",
+      },
       { target: "product", entityId: "posco-hrc", name: "Hot-rolled coil", industry: "metals", officialDomains: ["posco.com"], roles: ["product"] },
     ]);
-    expect(res.withoutWebsite).toBe(2);
+    expect(res.withoutWebsite).toBe(1);
   });
 
   it("counts existing media (any status) as collected", () => {
@@ -64,7 +73,7 @@ describe("computeMediaNeeds", () => {
 
   it("filters by target and pages", () => {
     const all = computeMediaNeeds(input, { industry: "all" });
-    expect(all.total).toBe(3);
+    expect(all.total).toBe(4);
     expect(computeMediaNeeds(input, { industry: "all", target: "product" }).items.map((i) => i.entityId)).toEqual(["posco-hrc"]);
     const page = computeMediaNeeds(input, { industry: "all", offset: 1, limit: 1 });
     expect(page.items).toHaveLength(1);

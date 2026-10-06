@@ -7,7 +7,8 @@ import { createHash } from "node:crypto";
 import type { EntityType, Media, MediaType } from "@/lib/media-types";
 import { storagePrefixForEntity } from "@/lib/media-types";
 import { packFileRef, type PackFiles } from "@/lib/import/pack-files";
-import { checkProvenance } from "./provenance";
+import { AI_GENERATED_SORT_ORDER, ALIBABA_PHOTO_CAPTION, aiAltText, decorateImageUrl } from "@/lib/image-attribution";
+import { checkProvenance, isAlibabaOwnWatermark } from "./provenance";
 import { parseMediaManifest, storageTarget, type MediaCertificationMeta, type MediaItem, type MediaTarget } from "./manifest";
 import type { ResolvedEntity } from "./entities";
 
@@ -38,6 +39,9 @@ export type MediaPushDeps = {
     altText: string | null;
     caption: string | null;
     uploadedBy: string;
+    sortOrder?: number;
+    aiGenerated?: boolean;
+    photoSource?: "alibaba-store" | null;
   }): Promise<Media>;
   audit(entry: { action: string; mediaId?: string | null; entityType?: string | null; entityId?: string | null; detail: Record<string, unknown> }): Promise<void>;
 };
@@ -82,14 +86,16 @@ export function mediaOriginalUrl(item: Pick<MediaItem, "sourceUrl" | "imageUrl">
 }
 
 function hasContentHash(keys: Set<string>, sha256: string): boolean {
-  const tag = `#sha256=${sha256.slice(0, 16)}`;
-  for (const k of keys) if (k.endsWith(tag)) return true;
+  const tag = `sha256=${sha256.slice(0, 16)}`;
+  for (const k of keys) if (k.includes(tag)) return true;
   return false;
 }
 
-function qaRejection(item: MediaItem): string | null {
+function qaRejection(item: MediaItem, alibabaStorePhoto: boolean): string | null {
   if (!item.qa) return null;
-  if (item.qa.marketplaceWatermark) return `the bot's QA (${item.qa.model}) saw a marketplace watermark`;
+  if (item.qa.marketplaceWatermark && !(alibabaStorePhoto && isAlibabaOwnWatermark(item.qa))) {
+    return `the bot's QA (${item.qa.model}) saw a marketplace watermark`;
+  }
   if (!item.qa.matchesRole) return `the bot's QA (${item.qa.model}) says the image is not a ${item.role}`;
   if (item.qa.quality < MIN_QA_QUALITY) return `the bot's QA (${item.qa.model}) rated quality ${item.qa.quality}/5`;
   return null;
@@ -149,14 +155,27 @@ export async function runMediaPush(input: {
     const sha = sha256Hex(buffer);
     if (item.sha256 && item.sha256 !== sha) return { status: "rejected", reason: "sha256 does not match the uploaded bytes" };
 
-    const qa = qaRejection(item);
-    if (qa) return { status: "rejected", reason: qa };
-
     const entity = await entityFor(item.target, item.entityId);
     if (!entity) return { status: "rejected", reason: `unknown ${item.target} "${item.entityId}"` };
 
-    const provenance = checkProvenance({ sourceUrl: item.sourceUrl, imageUrl: item.imageUrl, officialDomains: entity.officialDomains });
+    const provenance = checkProvenance({
+      sourceUrl: item.sourceUrl,
+      imageUrl: item.imageUrl,
+      officialDomains: entity.officialDomains,
+      alibabaStoreHost: entity.alibabaStoreHost,
+    });
     if (!provenance.ok) return { status: "rejected", reason: provenance.reason };
+    if (item.photoSource === "alibaba-store" && provenance.photoSource !== "alibaba-store") {
+      return { status: "rejected", reason: "photoSource alibaba-store is only allowed when the image comes from that supplier's own Alibaba store" };
+    }
+    const photoSource = provenance.photoSource === "alibaba-store" ? "alibaba-store" as const : null;
+    const aiGenerated = item.aiGenerated === true || item.enhancement === "ai-generated";
+    if (aiGenerated && !(item.target === "product" && item.role === "product")) {
+      return { status: "rejected", reason: "ai-generated images are only accepted for product photos (target=product, role=product)" };
+    }
+
+    const qa = qaRejection(item, photoSource === "alibaba-store");
+    if (qa) return { status: "rejected", reason: qa };
 
     const { entityType, mediaType } = storageTarget(item.target, item.role);
     let entityId = entity.id;
@@ -174,7 +193,12 @@ export async function runMediaPush(input: {
       }
     }
 
-    const originalUrl = mediaOriginalUrl(item, sha);
+    const attr = { aiGenerated, photoSource };
+    let originalUrl = mediaOriginalUrl(item, sha);
+    if (attr.aiGenerated || attr.photoSource) originalUrl = decorateImageUrl(originalUrl, attr);
+    const caption = photoSource === "alibaba-store" ? (item.caption ?? ALIBABA_PHOTO_CAPTION) : (item.caption ?? null);
+    const altFallback = `${entity.name} ${item.role === "certificate" ? item.certification?.name ?? "certificate" : item.role}`;
+    const altText = aiGenerated ? aiAltText(entity.name, item.altText ?? altFallback) : (item.altText ?? altFallback).slice(0, 300);
     if (!dryRun) {
       const keys = await keysFor(entityType, entityId);
       if (keys.has(originalUrl) || hasContentHash(keys, sha)) return { status: "skipped", reason: "same image already stored", certificationId, certificationCreated };
@@ -202,9 +226,11 @@ export async function runMediaPush(input: {
       mediaType,
       entityType,
       entityId,
-      altText: item.altText ?? `${entity.name} ${item.role === "certificate" ? item.certification?.name ?? "certificate" : item.role}`.slice(0, 300),
-      caption: item.caption ?? null,
+      altText,
+      caption,
       uploadedBy: actor,
+      ...(aiGenerated ? { sortOrder: AI_GENERATED_SORT_ORDER, aiGenerated: true } : {}),
+      ...(photoSource ? { photoSource } : {}),
     });
     const keys = await keysFor(entityType, entityId);
     keys.add(originalUrl);
@@ -219,6 +245,8 @@ export async function runMediaPush(input: {
         enhanced,
         provider: MEDIA_BOT_PROVIDER,
         enhancement: item.enhancement,
+        photoSource,
+        aiGenerated,
         sourceUrl: item.sourceUrl,
         imageUrl: item.imageUrl ?? null,
         sha256: sha,

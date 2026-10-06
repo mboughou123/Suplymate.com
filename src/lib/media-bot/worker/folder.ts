@@ -19,7 +19,8 @@ import {
   type MediaItem,
   type MediaManifest,
 } from "../manifest";
-import { checkProvenance, isMarketplaceUrl } from "../provenance";
+import { ALIBABA_PHOTO_CAPTION, AI_GENERATED_LABEL, aiAltText } from "@/lib/image-attribution";
+import { allowsAlibabaStorePhoto, checkProvenance, isAlibabaOwnWatermark, isMarketplaceUrl } from "../provenance";
 import type { MediaNeed } from "../needs";
 import type { MediaPushItemResult, MediaPushSummary } from "../push";
 import { MIN_QA_QUALITY } from "../push";
@@ -50,9 +51,13 @@ function writeJson(path: string, value: unknown) {
 }
 
 /** Official domains per `target:entityId`, from a media-needs response (or several). */
-export function domainsFromNeeds(needs: { items?: MediaNeed[] }[]): Map<string, { domains: string[]; name: string }> {
-  const out = new Map<string, { domains: string[]; name: string }>();
-  for (const n of needs) for (const i of n.items ?? []) out.set(`${i.target}:${i.entityId}`, { domains: i.officialDomains, name: i.name });
+export function domainsFromNeeds(needs: { items?: MediaNeed[] }[]): Map<string, { domains: string[]; name: string; alibabaStoreHost: string | null }> {
+  const out = new Map<string, { domains: string[]; name: string; alibabaStoreHost: string | null }>();
+  for (const n of needs) {
+    for (const i of n.items ?? []) {
+      out.set(`${i.target}:${i.entityId}`, { domains: i.officialDomains, name: i.name, alibabaStoreHost: i.alibabaStoreHost ?? null });
+    }
+  }
   return out;
 }
 
@@ -61,7 +66,7 @@ export async function prepareFolder(opts: {
   cache: AiCache;
   ai: LocalAiConfig | null;
   /** From media-needs: lets the bot check provenance before uploading. */
-  needs?: Map<string, { domains: string[]; name: string }>;
+  needs?: Map<string, { domains: string[]; name: string; alibabaStoreHost: string | null }>;
   fetchImpl?: typeof fetch;
   log?: (line: string) => void;
 }): Promise<PrepareReport> {
@@ -79,13 +84,20 @@ export async function prepareFolder(opts: {
       continue;
     }
     const hold = (reason: string) => held.push({ index, entityId: item.entityId, role: item.role, reason });
-    if (isMarketplaceUrl(item.sourceUrl) || isMarketplaceUrl(item.imageUrl)) {
+    const known = opts.needs?.get(`${item.target}:${item.entityId}`);
+    const store = known?.alibabaStoreHost ?? null;
+    const alibabaPhoto = allowsAlibabaStorePhoto({ sourceUrl: item.sourceUrl, imageUrl: item.imageUrl, alibabaStoreHost: store });
+    if ((isMarketplaceUrl(item.sourceUrl) || isMarketplaceUrl(item.imageUrl)) && !alibabaPhoto) {
       hold("images from marketplaces or competing directories are not accepted");
       continue;
     }
-    const known = opts.needs?.get(`${item.target}:${item.entityId}`);
     if (known) {
-      const verdict = checkProvenance({ sourceUrl: item.sourceUrl, imageUrl: item.imageUrl, officialDomains: known.domains });
+      const verdict = checkProvenance({
+        sourceUrl: item.sourceUrl,
+        imageUrl: item.imageUrl,
+        officialDomains: known.domains,
+        alibabaStoreHost: store,
+      });
       if (!verdict.ok) {
         hold(verdict.reason);
         continue;
@@ -110,7 +122,9 @@ export async function prepareFolder(opts: {
         const abs = join(opts.dir, rel);
         mkdirSync(dirname(abs), { recursive: true });
         writeFileSync(abs, enhanced.buffer);
-        out = { ...out, file: rel, enhancement: enhanced.enhancement };
+        const keepAi = item.enhancement === "ai-generated" || item.aiGenerated === true;
+        out = { ...out, file: rel, enhancement: keepAi ? "ai-generated" : enhanced.enhancement };
+        if (keepAi) out.aiGenerated = true;
         if (enhanced.width) out.width = enhanced.width;
         if (enhanced.height) out.height = enhanced.height;
         outBuf = enhanced.buffer;
@@ -135,13 +149,23 @@ export async function prepareFolder(opts: {
       });
       if (review.ok) {
         out.qa = review.qa;
-        if (review.qa.marketplaceWatermark || !review.qa.matchesRole || review.qa.quality < MIN_QA_QUALITY) {
-          hold(`local AI: ${review.qa.marketplaceWatermark ? "marketplace watermark" : !review.qa.matchesRole ? `not a ${item.role}` : `quality ${review.qa.quality}/5`}${review.qa.notes ? ` (${review.qa.notes})` : ""}`);
+        const alibabaWatermark = alibabaPhoto && isAlibabaOwnWatermark(review.qa);
+        if ((review.qa.marketplaceWatermark && !alibabaWatermark) || !review.qa.matchesRole || review.qa.quality < MIN_QA_QUALITY) {
+          hold(`local AI: ${review.qa.marketplaceWatermark && !alibabaWatermark ? "marketplace watermark" : !review.qa.matchesRole ? `not a ${item.role}` : `quality ${review.qa.quality}/5`}${review.qa.notes ? ` (${review.qa.notes})` : ""}`);
           continue;
         }
       } else {
         log(`  item ${index}: QA skipped — ${review.error}`);
       }
+    }
+    if (alibabaPhoto) {
+      out.photoSource = "alibaba-store";
+      if (!out.caption) out.caption = ALIBABA_PHOTO_CAPTION;
+    }
+    if (out.aiGenerated || out.enhancement === "ai-generated") {
+      out.aiGenerated = true;
+      out.enhancement = "ai-generated";
+      out.altText = aiAltText(known?.name ?? item.entityId, out.altText ?? AI_GENERATED_LABEL);
     }
     ready.push(out);
   }

@@ -27,6 +27,7 @@ function toCardProps(p: Product): HomepageProductCardProps & { hasRealPhoto: boo
     verified: d.verified,
     href: `/products/${d.id}`,
     hasRealPhoto: d.hasRealPhoto,
+    aiGenerated: d.aiGenerated,
   };
 }
 

@@ -16,6 +16,7 @@ import type { SupplierProfile } from "@/lib/supplier-profile";
 import { getSupplierMeta } from "@/lib/supplier-meta";
 import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 import ProfileActionButton from "./ProfileActionButton";
+import SupplierLogo from "@/components/SupplierLogo";
 
 export default function StickyContactCard({
   profile,
@@ -33,8 +34,8 @@ export default function StickyContactCard({
     return (
       <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-2 border-t border-slate-200 bg-white/95 px-3 py-2.5 shadow-[0_-4px_24px_rgba(15,23,42,0.08)] backdrop-blur lg:hidden">
         <div className="flex min-w-0 flex-1 items-center gap-2">
-          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xs font-bold text-white" style={{ backgroundImage: base.logoGradient }}>
-            {base.logoText}
+          <span className="relative">
+            <SupplierLogo logoUrl={base.logoUrl} initials={base.logoText} name={base.name} className="h-9 w-9 rounded-xl text-xs" />
             <span className={`absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full ring-2 ring-white ${meta.online ? "bg-emerald-500" : "bg-slate-300"}`} />
           </span>
           <div className="min-w-0">
@@ -69,8 +70,8 @@ export default function StickyContactCard({
       {/* Header */}
       <div className="border-b border-slate-100 p-5">
         <div className="flex items-center gap-3">
-          <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-base font-bold text-white" style={{ backgroundImage: base.logoGradient }}>
-            {base.logoText}
+          <span className="relative">
+            <SupplierLogo logoUrl={base.logoUrl} initials={base.logoText} name={base.name} className="h-12 w-12 rounded-xl text-base" />
             <span className={`absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full ring-2 ring-white ${meta.online ? "bg-emerald-500" : "bg-slate-300"}`} />
           </span>
           <div className="min-w-0">

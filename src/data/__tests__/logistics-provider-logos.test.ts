@@ -10,13 +10,6 @@ import {
 } from "@/data/logistics-provider-logos";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
-const DARK_TILE_IDS = [
-  "aig-ocean-cargo",
-  "axa-xl-marine-cargo",
-  "qbe-marine-cargo",
-  "avalon-cargo-insurance",
-];
-
 describe("QA-approved logistics provider logos", () => {
   it("ships a logo for the 18 approved ids and none for the 3 drops", () => {
     expect(Object.keys(PROVIDER_LOGOS)).toHaveLength(18);
@@ -39,7 +32,7 @@ describe("QA-approved logistics provider logos", () => {
       expect(getLogisticsProvider(id), id).toBeDefined();
       expect(getProviderLogo(id), id).toBeUndefined();
       expect(getLogisticsProvider(id)?.logo, id).toBeUndefined();
-      expect(getLogisticsProvider(id)?.logoOnDark, id).toBeUndefined();
+      expect(getLogisticsProvider(id)?.monoOnWhite, id).toBeUndefined();
       expect(resolveProviderLogo({ id })).toBeNull();
       for (const ext of [".png", ".svg", ".webp", ".jpg", ".jpeg"]) {
         expect(fs.existsSync(path.join(PUBLIC_DIR, "logistics", "logos", `${id}${ext}`)), id).toBe(false);
@@ -47,19 +40,16 @@ describe("QA-approved logistics provider logos", () => {
     }
   });
 
-  it("puts only the four white logos on a dark tile and keeps AIG at its native 89px", () => {
-    expect(Object.keys(PROVIDER_LOGOS).filter((id) => PROVIDER_LOGOS[id].logoOnDark).sort()).toEqual(
-      [...DARK_TILE_IDS].sort(),
-    );
-    for (const id of DARK_TILE_IDS) {
-      expect(getLogisticsProvider(id)?.logoOnDark, id).toBe(true);
-    }
-    expect(PROVIDER_LOGOS["aig-ocean-cargo"].maxNativePx).toBe(89);
+  it("keeps only QBE on the dark mono filter; coloured logos sit on white as-is", () => {
+    expect(Object.keys(PROVIDER_LOGOS).filter((id) => PROVIDER_LOGOS[id].monoOnWhite)).toEqual(["qbe-marine-cargo"]);
+    expect(getLogisticsProvider("qbe-marine-cargo")?.monoOnWhite).toBe(true);
+    expect(PROVIDER_LOGOS["aig-ocean-cargo"].maxNativePx).toBeUndefined();
     const aig = getLogisticsProvider("aig-ocean-cargo")!;
-    expect(resolveProviderLogo(aig)?.maxNativePx).toBe(89);
+    expect(resolveProviderLogo(aig)?.monoOnWhite).toBe(false);
+    expect(resolveProviderLogo(getLogisticsProvider("qbe-marine-cargo")!)?.monoOnWhite).toBe(true);
     expect(resolveProviderLogo(aig, "https://blob.example/aig.png")).toEqual({
       src: "https://blob.example/aig.png",
-      logoOnDark: true,
+      monoOnWhite: false,
     });
   });
 

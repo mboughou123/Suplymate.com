@@ -7,6 +7,7 @@ import { ChevronRight } from "lucide-react";
 import { getSupplierById, getFallbackSupplierIds } from "@/lib/data-service";
 import { getSupplierProfile } from "@/lib/supplier-profile";
 import { getPublishedSupplierMedia } from "@/lib/media-store";
+import { decorateImageUrl, readImageAttribution } from "@/lib/image-attribution";
 import { getSupplierCertificationImages } from "@/lib/media-public";
 import { listCertifications } from "@/lib/certifications-store";
 import { prisma } from "@/lib/prisma";
@@ -112,7 +113,7 @@ export default async function SupplierProfilePage({
   ]);
 
   const mediaPhotoUrls = pubMedia
-    ? [pubMedia.cover, ...pubMedia.factory, ...pubMedia.gallery].filter(Boolean).map((m) => m!.url)
+    ? [pubMedia.cover, ...pubMedia.factory, ...pubMedia.gallery].filter(Boolean).map((m) => decorateImageUrl(m!.url, readImageAttribution(m!)))
     : [];
   if (pubMedia) {
     if (pubMedia.logo) supplier.logoUrl = pubMedia.logo.url;

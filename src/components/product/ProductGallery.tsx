@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Play, Maximize2 } from "lucide-react";
 import type { GalleryImage } from "@/lib/product-detail";
 import { PRODUCT_ICONS } from "@/components/product/productIcons";
+import AiIllustrationBadge from "@/components/AiIllustrationBadge";
+import { ALIBABA_PHOTO_CAPTION } from "@/lib/image-attribution";
 
 // Local raster photos (curated packs under /images/**) go through the Next.js
 // image optimizer; SVG tiles and third-party hosts render as plain <img>.
@@ -31,7 +33,7 @@ function GallerySlide({
       {showImage && image.url && isOptimizable(image.url) && (
         <Image
           src={image.url}
-          alt={image.label}
+          alt={image.alt ?? image.label}
           fill
           priority={size === "main"}
           sizes={size === "main" ? "(max-width: 1024px) 100vw, 50vw" : "64px"}
@@ -43,7 +45,7 @@ function GallerySlide({
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={image.url}
-          alt={image.label}
+          alt={image.alt ?? image.label}
           className="absolute inset-0 h-full w-full object-cover"
           onError={() => setImgFailed(true)}
         />
@@ -84,9 +86,17 @@ export default function ProductGallery({ images }: { images: GalleryImage[] }) {
         style={{ backgroundImage: current.gradient }}
       >
         <GallerySlide image={current} size="main" />
-        <span className="absolute left-4 top-4 rounded-md bg-black/35 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
-          {current.label}
+        <span className="absolute left-4 top-4 flex max-w-[70%] flex-col items-start gap-1">
+          {current.aiGenerated ? <AiIllustrationBadge /> : null}
+          <span className="rounded-md bg-black/35 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
+            {current.label}
+          </span>
         </span>
+        {current.photoSource === "alibaba-store" ? (
+          <span className="absolute bottom-4 left-4 rounded-md bg-white/95 px-2 py-1 text-[10px] font-semibold text-navy shadow-sm">
+            {ALIBABA_PHOTO_CAPTION}
+          </span>
+        ) : null}
         <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-md bg-black/35 text-white backdrop-blur">
           <Maximize2 className="h-4 w-4" aria-hidden />
         </span>
