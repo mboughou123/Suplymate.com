@@ -4,13 +4,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { AlertCircle, RotateCcw, Trash2, Sparkles, LogIn } from "lucide-react";
+import { AlertCircle, RotateCcw, Trash2, Sparkles, LogIn, Lock } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import AiOrb from "@/components/fx/AiOrb";
 import WorkspaceTopBar from "@/components/ai-workspace/WorkspaceTopBar";
 import WorkflowStrip from "@/components/ai-workspace/WorkflowStrip";
 import Composer from "@/components/ai-workspace/Composer";
 import IntelligencePanel from "@/components/ai-workspace/IntelligencePanel";
+import { PLAN_LIMITS } from "@/lib/billing";
 import {
   glass,
   type AiBlock,
@@ -21,6 +22,8 @@ import {
   type PanelTab,
   type WorkflowStageId,
 } from "@/components/ai-workspace/types";
+
+type AiQuotaState = { limit: number | null; used: number; remaining: number | null };
 
 const EXAMPLES = [
   "Find aluminum suppliers in California.",
@@ -64,6 +67,8 @@ export default function AiWorkspace() {
   const [needsAuth, setNeedsAuth] = useState(false);
   const [guestLimitHit, setGuestLimitHit] = useState(false);
   const [guestRemaining, setGuestRemaining] = useState<number | null>(null);
+  const [aiQuota, setAiQuota] = useState<AiQuotaState | null>(null);
+  const [quotaHit, setQuotaHit] = useState(false);
   const [tab, setTab] = useState<PanelTab>("matches");
   const conversationId = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -118,6 +123,7 @@ export default function AiWorkspace() {
       setError(null);
       setNeedsAuth(false);
       setGuestLimitHit(false);
+      setQuotaHit(false);
       setInput("");
 
       const history = messages.slice(-12).map((m) => ({ role: m.role, content: m.content }));
@@ -136,7 +142,14 @@ export default function AiWorkspace() {
           signal: controller.signal,
         });
         const data = (await res.json().catch(() => null)) as
-          | (AiResponse & { conversationId?: string | null; error?: string; code?: string; guest?: boolean; guestRemaining?: number | null })
+          | (AiResponse & {
+              conversationId?: string | null;
+              error?: string;
+              code?: string;
+              guest?: boolean;
+              guestRemaining?: number | null;
+              aiQuota?: AiQuotaState | null;
+            })
           | null;
         if (res.status === 401) {
           setNeedsAuth(true);
@@ -146,9 +159,17 @@ export default function AiWorkspace() {
           setInput(trimmed);
           return;
         }
+        if (res.status === 403 && data?.code === "ai_quota") {
+          setQuotaHit(true);
+          if (data.aiQuota) setAiQuota(data.aiQuota);
+          setMessages((m) => m.filter((x) => x.id !== userTurn.id));
+          setInput(trimmed);
+          return;
+        }
         if (!res.ok || !data) throw new Error(data?.error || "The assistant is unavailable. Please try again.");
         if (data.conversationId) conversationId.current = data.conversationId;
         setGuestRemaining(data.guest && typeof data.guestRemaining === "number" ? data.guestRemaining : null);
+        setAiQuota(data.aiQuota ?? null);
         setEngine({ source: data.source, note: data.engineNote ?? null });
         setStage(data.stage);
         setOrb(data.state);
@@ -271,6 +292,7 @@ export default function AiWorkspace() {
               </div>
 
               {needsAuth && <AuthPrompt limitReached={guestLimitHit} />}
+              {quotaHit && <QuotaPrompt limit={aiQuota?.limit ?? null} />}
               {error && <ErrorBanner error={error} onRetry={retry} />}
 
               <div className="mt-14">
@@ -369,6 +391,7 @@ export default function AiWorkspace() {
                       </div>
                     )}
                     {needsAuth && <AuthPrompt limitReached={guestLimitHit} />}
+              {quotaHit && <QuotaPrompt limit={aiQuota?.limit ?? null} />}
                     {error && <ErrorBanner error={error} onRetry={retry} />}
                     <div ref={bottomRef} />
                   </div>
@@ -382,6 +405,14 @@ export default function AiWorkspace() {
                       busy={busy}
                       placeholder="Ask a follow-up — refine location, quantity, certifications…"
                     />
+                    {aiQuota?.limit != null && aiQuota.remaining !== null && status === "authenticated" && (
+                      <p className="mt-2 text-center text-[11px] text-cyan-glow/80">
+                        {aiQuota.remaining} of {aiQuota.limit} AI questions left this month ·{" "}
+                        <Link href="/pricing" className="underline underline-offset-2 hover:text-white">
+                          Upgrade
+                        </Link>
+                      </p>
+                    )}
                     {guestRemaining !== null && status !== "authenticated" && (
                       <p className="mt-2 text-center text-[11px] text-cyan-glow/80">
                         Guest mode · {guestRemaining} free {guestRemaining === 1 ? "question" : "questions"} left ·{" "}
@@ -422,12 +453,33 @@ function AuthPrompt({ limitReached = false }: { limitReached?: boolean }) {
         </p>
         <p className="text-xs text-white/60">
           {limitReached
-            ? "Free accounts include unlimited AI questions, saved conversations, supplier matching and material intelligence."
+            ? `Free accounts include ${PLAN_LIMITS.free.aiQuestionsPerMonth} AI questions a month, saved conversations, supplier matching and material intelligence.`
             : "Free accounts include AI questions, supplier matching and material intelligence."}
         </p>
       </div>
       <Link href="/login?callbackUrl=/ai-assistant" className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow">
         Sign in
+      </Link>
+    </div>
+  );
+}
+
+function QuotaPrompt({ limit }: { limit: number | null }) {
+  return (
+    <div className={`${glass} mx-auto mt-6 flex max-w-xl flex-col items-center gap-3 p-5 text-center sm:flex-row sm:text-left`}>
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan/15 text-cyan-glow">
+        <Lock className="h-5 w-5" aria-hidden />
+      </span>
+      <div className="flex-1">
+        <p className="text-sm font-semibold text-white">
+          {limit !== null ? `You've used your ${limit} AI questions this month` : "You've reached your AI question limit"}
+        </p>
+        <p className="text-xs text-white/60">
+          Basic includes {PLAN_LIMITS.basic.aiQuestionsPerMonth} questions a month; Pro and Enterprise are unlimited.
+        </p>
+      </div>
+      <Link href="/pricing" className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-navy-deep transition hover:bg-cyan-glow">
+        Upgrade
       </Link>
     </div>
   );

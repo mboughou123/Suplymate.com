@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 // GET /api/suppliers — public list. Only VERIFIED suppliers are exposed;
 // pending/rejected/needs_info records stay in the admin review queue.
+// Websites are a paid contact detail (see /api/supplier-contacts).
 export async function GET() {
   const all = await listAdminSuppliers();
   const suppliers = all
@@ -17,7 +18,6 @@ export async function GET() {
       location: s.location,
       country: s.country,
       city: s.city,
-      website: s.website,
       description: s.description,
       logoUrl: s.logoUrl,
       imageUrl: s.imageUrl,

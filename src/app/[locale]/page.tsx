@@ -4,6 +4,7 @@ import HomeHero from "@/components/home/HomeHero";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
 import HomeProductsSection from "@/components/home/HomeProductsSection";
+import HomeInsuranceSection from "@/components/home/HomeInsuranceSection";
 import HomeOrchestratorSection from "@/components/home/HomeOrchestratorSection";
 import HomeBenefitsBand from "@/components/home/HomeBenefitsBand";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
@@ -37,6 +38,7 @@ export default async function HomePage({
       {/* Who is on the network (suppliers) → what they make (products) → how
           Mate helps you buy it (orchestrator). */}
       <HomeProductsSection items={home.products} />
+      <HomeInsuranceSection />
       <HomeOrchestratorSection />
       <HomeBenefitsBand
         countryCount={home.countryCount}

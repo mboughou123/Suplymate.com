@@ -12,7 +12,7 @@
     "contactTitle": "Contact | Suplymate",
     "contactDescription": "Get in touch with the Suplymate team. Email us at info@suplymate.com.",
     "pricingTitle": "Pricing | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "Free, Basic ($49.95), Pro ($74.95) and Enterprise ($199.95) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro, 10% off annual billing.",
     "aiAssistantTitle": "AI Procurement Assistant · Suplymate",
     "aiAssistantDescription": "Source smarter with AI-powered supplier intelligence, pricing analysis, and procurement recommendations.",
     "adminTitle": "Admin | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "Contact"
+    },
+    "openSubmenu": "Open {label} menu",
+    "suppliers": {
+      "all": "All suppliers",
+      "logistics": "Logistics & insurance",
+      "industries": {
+        "metals": "Metals",
+        "construction": "Construction",
+        "packaging": "Packaging",
+        "machinery": "Machinery",
+        "hardwareComponents": "Hardware components",
+        "biomedical": "Biomedical & medical",
+        "electricalIndustrial": "Electrical & industrial"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "Cargo insurance",
+    "title": "Insure your shipments with established cargo insurers",
+    "subtitle": "Marine and transit insurers covering goods by sea, air, road and rail — details taken from each company's own website.",
+    "cta": "See all cargo insurers"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "Longer price history is included in Basic and above"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -893,7 +914,35 @@
     },
     "language": "Language",
     "savePreferences": "Save preferences",
-    "preferencesSaved": "Preferences saved."
+    "preferencesSaved": "Preferences saved.",
+    "avatarLabel": "Profile photo",
+    "avatarHint": "JPG, PNG, WebP or GIF, up to 5 MB. You can also drag and drop an image here.",
+    "avatarUpload": "Upload photo",
+    "avatarChange": "Change photo",
+    "avatarUploading": "Uploading… {percent}%",
+    "avatarRemove": "Remove",
+    "avatarRemoving": "Removing…",
+    "avatarDropHere": "Drop your photo here",
+    "avatarUpdated": "Profile photo updated.",
+    "avatarRemoved": "Profile photo removed.",
+    "avatarEmpty": "Choose a photo to upload.",
+    "avatarTooLarge": "That photo is too large. The maximum size is 5 MB.",
+    "avatarType": "Use a JPG, PNG, WebP or GIF image.",
+    "avatarRateLimited": "Too many uploads. Please wait a few minutes and try again.",
+    "avatarStorageUnavailable": "Image storage is not configured. Please try again later.",
+    "avatarUploadFailed": "Upload failed. Please try again.",
+    "avatarRemoveFailed": "Could not remove your photo. Please try again.",
+    "avatarNetwork": "Network error. Please try again.",
+    "couponLabel": "Coupon code",
+    "couponPlaceholder": "Enter a code",
+    "couponApply": "Apply",
+    "couponRemove": "Remove",
+    "couponInvalid": "That coupon code is not valid or has expired.",
+    "couponFree": "100% off: this subscription is free",
+    "couponPercent": "{percent}% off applied at checkout",
+    "couponApplied": "Discount applied at checkout",
+    "couponHint": "Have a coupon? Apply it here, then choose a plan. Without a code, the early-bird discount is applied to monthly plans automatically.",
+    "ownerAccess": "Owner account: every plan feature is unlocked for you, whatever plan is shown here."
   },
   "rfqs": {
     "title": "Requests for Quote",
@@ -934,11 +983,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "Yes. Browse suppliers (5 per category), read basic supplier intros, see 3 months of price charts, save up to 5 suppliers and ask Mate 5 questions a month, with no card required.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise is $200/month for multiple users, procurement workflows, API access and custom AI knowledge. Subscribe from this page or Settings → Subscription."
+    "faq4a": "Enterprise is $199.95/month (or 10% less billed annually) for multiple users, procurement workflows, API access and custom AI knowledge. Subscribe from this page or Settings → Subscription.",
+    "billingPeriod": "Billing period",
+    "billingMonthly": "Monthly",
+    "billingAnnual": "Annual",
+    "saveBadge": "Save {percent}%",
+    "noCard": "No card required",
+    "billedYearly": "Billed {amount} per year",
+    "earlyBirdPrice": "Early bird: {amount}/month for {months} months",
+    "earlyBirdTitle": "Early bird access:",
+    "earlyBirdBody": "{percent}% off your first {months} months on any monthly plan, for the first {spots} subscribers. Applied automatically at checkout.",
+    "trialLine": "{days}-day free trial",
+    "billingNoteV2": "Prices in USD. Billing is handled securely by Stripe. Basic and Pro start with a {days}-day free trial and convert to a paid subscription unless you cancel. Annual plans save {percent}%. Enterprise is {enterprise}/month."
   },
   "about": {
     "eyebrow": "About Suplymate",
@@ -1522,14 +1582,17 @@
     "noneOnFile": "No direct phone or email on file for this supplier yet. Reach them through Suplymate instead.",
     "contactViaSuplymate": "Contact via Suplymate",
     "hiddenValue": "Hidden. Available on paid plans",
-    "lockedBody": "Direct phone and email are included in Basic and above, including the 3-day free trial.",
+    "lockedBody": "Direct phone, email and website are included in Basic and above, including the 3-day free trial.",
     "startTrial": "Start free trial to view",
     "upgrade": "Upgrade to view contact",
     "signIn": "Already subscribed? Sign in",
     "loading": "Loading contact details",
     "cardLockedBoth": "Phone & email · Upgrade",
     "cardLockedPhone": "Phone · Upgrade to view",
-    "cardLockedEmail": "Email · Upgrade to view"
+    "cardLockedEmail": "Email · Upgrade to view",
+    "website": "Website",
+    "visitWebsite": "Visit",
+    "websiteAria": "Visit {name}'s website"
   },
   "logistics": {
     "chipLabel": "Logistics & Insurance",
@@ -1570,6 +1633,25 @@
     "insureBodyRfq": "Shipping this order? Cargo insurance can cover loss or damage in transit beyond carrier liability. Some providers that offer it:",
     "insureMore": "See all cargo insurers",
     "dismiss": "Hide cargo insurance suggestions",
-    "orderNote": "Listed by fit for this lane, not by payment."
+    "orderNote": "Listed by fit for this lane, not by payment.",
+    "photoAlt": "{name} photo",
+    "photoAltNumbered": "{name} photo {n}",
+    "photos": "Photos",
+    "coverAlt": {
+      "port": "Container ship at a cargo port",
+      "warehouse": "Trucks at a warehouse loading dock",
+      "containers": "Shipping containers at a terminal gate",
+      "sea": "Container ship at sea",
+      "air": "Air cargo being loaded onto a freighter"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {# more supplier is locked} other {# more suppliers are locked}}",
+    "lockedProductsTitle": "{count, plural, one {# more product is locked} other {# more products are locked}}",
+    "lockedSuppliersBody": "The Free plan shows {limit} suppliers per category. Upgrade to Basic for unlimited browsing plus supplier phone, email and website.",
+    "lockedProductsBody": "The Free plan shows {limit} products per category. Upgrade to Basic to browse the full catalogue.",
+    "upgradeCta": "Upgrade to Basic",
+    "trialCta": "Start 3-day free trial",
+    "comparePlans": "Compare plans"
   }
 }

@@ -1,6 +1,11 @@
 /**
- * Idempotently create Stripe Products + monthly Prices for the site catalogue,
- * and a test-mode webhook endpoint for /api/billing/webhook.
+ * Idempotently create Stripe Products + monthly and annual Prices for the site
+ * catalogue, the early-bird coupon, and the webhook endpoint for
+ * /api/billing/webhook. Replaced prices are left active (never archived) so
+ * existing subscriptions keep billing; the lookup key moves to the new price.
+ *
+ * `--test-coupon` also creates a private 100%-off-forever promotion code for
+ * testing each paid plan end to end (limited redemptions, 30-day expiry).
  *
  * Reads keys from (first match):
  *   1. process.env
@@ -9,45 +14,55 @@
  *
  * Writes Price ids + webhook secret into .env.local. Never logs secret values.
  *
- * Usage: STRIPE_KEYS_FILE=/path/to/keys.env npm run stripe:catalog
+ * Usage: STRIPE_KEYS_FILE=/path/to/keys.env npm run stripe:catalog [-- --test-coupon]
  */
+import { randomBytes } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import Stripe from "stripe";
 import { HANDLED_BILLING_EVENTS } from "../src/lib/stripe-webhooks";
-import { SITE_PLAN_PRICES_CENTS } from "../src/lib/billing";
+import {
+  BILLING_INTERVALS,
+  EARLY_BIRD,
+  planPriceCents,
+  SITE_PLAN_PRICES_CENTS,
+  type BillingInterval,
+} from "../src/lib/billing";
 import { STRIPE_API_VERSION } from "../src/lib/stripe";
 
 type PlanKey = keyof typeof SITE_PLAN_PRICES_CENTS;
 
 const PRODUCTS: Record<
   PlanKey,
-  { name: string; description: string; lookupKey: string; productLookup: string }
+  { name: string; description: string; productLookup: string }
 > = {
   basic: {
     name: "Suplymate Basic",
-    description: "Unlimited browsing, supplier messaging and the AI sourcing assistant.",
-    lookupKey: "suplymate_basic_monthly",
+    description: "Unlimited browsing, supplier phone, email and website, and 20 AI questions a month.",
     productLookup: "suplymate_basic",
   },
   premium: {
     name: "Suplymate Pro",
-    description: "Advanced AI sourcing, analytics, alerts and export reports.",
-    lookupKey: "suplymate_premium_monthly",
+    description: "Everything unlocked: unlimited AI, full price history, analytics and export reports.",
     productLookup: "suplymate_premium",
   },
   enterprise: {
     name: "Suplymate Enterprise",
     description: "Multi-user procurement workflows, API access and custom AI knowledge.",
-    lookupKey: "suplymate_enterprise_monthly",
     productLookup: "suplymate_enterprise",
   },
 };
 
-const ENV_PRICE: Record<PlanKey, string> = {
-  basic: "STRIPE_PRICE_BASIC",
-  premium: "STRIPE_PRICE_PREMIUM",
-  enterprise: "STRIPE_PRICE_ENTERPRISE",
+const LOOKUP_SUFFIX: Record<BillingInterval, string> = { month: "monthly", year: "annual" };
+
+function lookupKeyFor(plan: PlanKey, interval: BillingInterval): string {
+  return `suplymate_${plan}_${LOOKUP_SUFFIX[interval]}`;
+}
+
+const ENV_PRICE: Record<PlanKey, Record<BillingInterval, string>> = {
+  basic: { month: "STRIPE_PRICE_BASIC", year: "STRIPE_PRICE_BASIC_ANNUAL" },
+  premium: { month: "STRIPE_PRICE_PREMIUM", year: "STRIPE_PRICE_PREMIUM_ANNUAL" },
+  enterprise: { month: "STRIPE_PRICE_ENTERPRISE", year: "STRIPE_PRICE_ENTERPRISE_ANNUAL" },
 };
 
 function parseEnvFile(contents: string): Record<string, string> {
@@ -139,27 +154,90 @@ async function ensureProduct(stripe: Stripe, plan: PlanKey): Promise<string> {
   return created.id;
 }
 
-async function ensurePrice(stripe: Stripe, plan: PlanKey, productId: string): Promise<string> {
-  const spec = PRODUCTS[plan];
-  const unitAmount = SITE_PLAN_PRICES_CENTS[plan];
-  const found = await stripe.prices.list({ lookup_keys: [spec.lookupKey], limit: 1 });
+async function ensurePrice(
+  stripe: Stripe,
+  plan: PlanKey,
+  interval: BillingInterval,
+  productId: string,
+): Promise<string> {
+  const lookupKey = lookupKeyFor(plan, interval);
+  const unitAmount = planPriceCents(plan, interval);
+  const found = await stripe.prices.list({ lookup_keys: [lookupKey], limit: 1 });
   const current = found.data[0];
-  if (current && current.unit_amount === unitAmount && current.product === productId) {
+  if (current && current.unit_amount === unitAmount && current.product === productId && current.active) {
     return current.id;
+  }
+  // Reuse an existing active price with the same amount and interval (e.g. one
+  // created by hand in the Dashboard) instead of duplicating it.
+  const onProduct = await stripe.prices.list({ product: productId, active: true, limit: 100 });
+  const reusable = onProduct.data.find(
+    (p) =>
+      p.unit_amount === unitAmount &&
+      p.currency === "usd" &&
+      p.recurring?.interval === interval &&
+      (p.recurring?.interval_count ?? 1) === 1,
+  );
+  if (reusable) {
+    await stripe.prices.update(reusable.id, {
+      lookup_key: lookupKey,
+      transfer_lookup_key: true,
+      metadata: { ...reusable.metadata, plan, interval },
+    });
+    return reusable.id;
   }
   const created = await stripe.prices.create({
     product: productId,
     currency: "usd",
     unit_amount: unitAmount,
-    recurring: { interval: "month" },
-    lookup_key: spec.lookupKey,
+    recurring: { interval },
+    lookup_key: lookupKey,
     transfer_lookup_key: true,
-    metadata: { plan },
+    metadata: { plan, interval },
   });
-  if (current && current.active) {
-    await stripe.prices.update(current.id, { active: false });
-  }
   return created.id;
+}
+
+async function ensureEarlyBirdCoupon(stripe: Stripe): Promise<string> {
+  try {
+    const existing = await stripe.coupons.retrieve(EARLY_BIRD.couponId);
+    return existing.id;
+  } catch {
+    const created = await stripe.coupons.create({
+      id: EARLY_BIRD.couponId,
+      name: `Early bird: ${EARLY_BIRD.percentOff}% off ${EARLY_BIRD.durationMonths} months`,
+      percent_off: EARLY_BIRD.percentOff,
+      duration: "repeating",
+      duration_in_months: EARLY_BIRD.durationMonths,
+      max_redemptions: EARLY_BIRD.maxRedemptions,
+      metadata: { purpose: "early_bird" },
+    });
+    return created.id;
+  }
+}
+
+const TEST_COUPON_ID = "suplymate-test-free";
+
+async function createTestPromotionCode(stripe: Stripe): Promise<string> {
+  try {
+    await stripe.coupons.retrieve(TEST_COUPON_ID);
+  } catch {
+    await stripe.coupons.create({
+      id: TEST_COUPON_ID,
+      name: "Internal plan testing (100% off)",
+      percent_off: 100,
+      duration: "forever",
+      metadata: { purpose: "internal_testing" },
+    });
+  }
+  const code = `SUPLYTEST-${randomBytes(3).toString("hex").toUpperCase()}`;
+  await stripe.promotionCodes.create({
+    promotion: { type: "coupon", coupon: TEST_COUPON_ID },
+    code,
+    max_redemptions: 10,
+    expires_at: Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60,
+    metadata: { purpose: "internal_testing" },
+  });
+  return code;
 }
 
 async function ensureWebhook(stripe: Stripe, url: string): Promise<string | null> {
@@ -190,12 +268,28 @@ async function main() {
   const site = (env.NEXT_PUBLIC_SITE_URL || "https://suplymate.com").replace(/\/$/, "");
   const webhookUrl = env.STRIPE_WEBHOOK_URL || `${site}/api/billing/webhook`;
 
-  const priceIds: Partial<Record<PlanKey, string>> = {};
+  const priceEnv: Record<string, string> = {};
   for (const plan of Object.keys(PRODUCTS) as PlanKey[]) {
     const productId = await ensureProduct(stripe, plan);
-    const priceId = await ensurePrice(stripe, plan, productId);
-    priceIds[plan] = priceId;
-    console.info(`stripe:catalog ${plan} product=${productId} price=${priceId}`);
+    for (const interval of BILLING_INTERVALS) {
+      const priceId = await ensurePrice(stripe, plan, interval, productId);
+      priceEnv[ENV_PRICE[plan][interval]] = priceId;
+      console.info(
+        `stripe:catalog ${plan} ${interval} amount=${planPriceCents(plan, interval)} product=${productId} ${ENV_PRICE[plan][interval]}=${priceId}`,
+      );
+    }
+  }
+
+  try {
+    const coupon = await ensureEarlyBirdCoupon(stripe);
+    console.info(`stripe:catalog early-bird coupon=${coupon}`);
+  } catch (err) {
+    console.error("stripe:catalog early-bird coupon skipped:", err instanceof Error ? err.message : "unknown");
+  }
+
+  if (process.argv.includes("--test-coupon")) {
+    const code = await createTestPromotionCode(stripe);
+    console.info(`stripe:catalog test promotion code=${code} (100% off forever, 10 uses, expires in 30 days)`);
   }
 
   let webhookSecret: string | null = null;
@@ -211,9 +305,7 @@ async function main() {
 
   const updates: Record<string, string> = {
     STRIPE_SECRET_KEY: secret,
-    STRIPE_PRICE_BASIC: priceIds.basic ?? "",
-    STRIPE_PRICE_PREMIUM: priceIds.premium ?? "",
-    STRIPE_PRICE_ENTERPRISE: priceIds.enterprise ?? "",
+    ...priceEnv,
     NEXT_PUBLIC_SITE_URL: env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   };
   const publishable = env.STRIPE_PUBLISHABLE_KEY || env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;

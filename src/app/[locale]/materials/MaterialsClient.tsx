@@ -5,7 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { Link } from "@/i18n/navigation";
-import { Star, Sparkles, Factory, Info, Database } from "lucide-react";
+import { Star, Sparkles, Factory, Info, Database, Lock } from "lucide-react";
+import { useViewerEntitlements } from "@/lib/entitlements-client";
+import { upgradeHref } from "@/lib/plan-gating";
 import type { MaterialWithProvenance } from "@/lib/pricing/pricingService";
 import type { PricingStatus } from "@/lib/pricing/types";
 import { getCatalogMaterial } from "@/data/material-catalog";
@@ -41,7 +43,11 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
   const preselect = searchParams.get("m");
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<string>("all");
-  const [range, setRange] = useState<Range>(12);
+  const [requestedRange, setRange] = useState<Range>(12);
+  const entitlements = useViewerEntitlements();
+  const maxMonths = entitlements ? entitlements.priceHistoryMonths : 3;
+  const rangeAllowed = (r: Range) => maxMonths === null || r <= maxMonths;
+  const range: Range = rangeAllowed(requestedRange) ? requestedRange : 3;
   const [selectedId, setSelectedId] = useState(
     preselect && initialMaterials.some((m) => m.id === preselect) ? preselect : initialMaterials[0]?.id ?? "",
   );
@@ -183,16 +189,28 @@ export default function MaterialsClient({ initialMaterials, pricing }: Props) {
 
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="inline-flex rounded-lg border border-slate-200 bg-white p-1 text-xs font-medium">
-                {([3, 6, 12] as Range[]).map((r) => (
-                  <button
-                    key={r}
-                    type="button"
-                    onClick={() => setRange(r)}
-                    className={`cursor-pointer rounded-md px-3 py-1.5 transition ${range === r ? "bg-navy text-white" : "text-ink-muted hover:text-ink"}`}
-                  >
-                    {t(`range${r}m` as "range3m" | "range6m" | "range12m")}
-                  </button>
-                ))}
+                {([3, 6, 12] as Range[]).map((r) =>
+                  rangeAllowed(r) ? (
+                    <button
+                      key={r}
+                      type="button"
+                      onClick={() => setRange(r)}
+                      className={`cursor-pointer rounded-md px-3 py-1.5 transition ${range === r ? "bg-navy text-white" : "text-ink-muted hover:text-ink"}`}
+                    >
+                      {t(`range${r}m` as "range3m" | "range6m" | "range12m")}
+                    </button>
+                  ) : (
+                    <Link
+                      key={r}
+                      href={upgradeHref(entitlements?.signedIn ?? false)}
+                      title={t("rangeLocked")}
+                      className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-ink-dim transition hover:text-ink"
+                    >
+                      <Lock className="h-3 w-3" aria-hidden />
+                      {t(`range${r}m` as "range3m" | "range6m" | "range12m")}
+                    </Link>
+                  ),
+                )}
               </div>
               <div className="flex items-center gap-2 text-xs">
                 <span

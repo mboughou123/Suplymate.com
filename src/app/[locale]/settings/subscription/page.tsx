@@ -1,22 +1,27 @@
 import { localeRedirect } from "@/i18n/redirect";
 import { getTranslations } from "next-intl/server";
-import { Check, Sparkles } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { getCurrentAccount } from "@/lib/account";
 import { prisma } from "@/lib/prisma";
-import { PLANS, getBillingState, isPaidPlanId } from "@/lib/billing";
-import { ManageBillingButton, UpgradeButton } from "@/components/settings/BillingActions";
+import { getBillingState, isPaidPlanId, normalizeBillingInterval } from "@/lib/billing";
+import { hasFullAccessEmail } from "@/lib/full-access";
+import { ManageBillingButton } from "@/components/settings/BillingActions";
+import SubscriptionPlansPicker from "@/components/settings/SubscriptionPlansPicker";
 import { formatInvoiceAmount, listCustomerInvoices } from "@/lib/stripe-invoices";
 
 export default async function SubscriptionPage({
   searchParams,
 }: {
-  searchParams: Promise<{ plan?: string; checkout?: string }>;
+  searchParams: Promise<{ plan?: string; checkout?: string; interval?: string }>;
 }) {
   const query = await searchParams;
   const requestedPlan = isPaidPlanId(query.plan) ? query.plan : null;
+  const requestedInterval = normalizeBillingInterval(query.interval);
   const { authenticated, user } = await getCurrentAccount();
   if (!authenticated || !user) {
-    const callback = `/settings/subscription${requestedPlan ? `?plan=${requestedPlan}` : ""}`;
+    const callback = `/settings/subscription${
+      requestedPlan ? `?plan=${requestedPlan}${requestedInterval === "year" ? "&interval=year" : ""}` : ""
+    }`;
     return await localeRedirect(`/login?callbackUrl=${encodeURIComponent(callback)}`);
   }
 
@@ -37,8 +42,16 @@ export default async function SubscriptionPage({
     invoices = [];
   }
 
+  const ownerAccess = hasFullAccessEmail(user.email);
+
   return (
     <div className="space-y-6">
+      {ownerAccess && (
+        <p className="flex items-start gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
+          <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+          {t("ownerAccess")}
+        </p>
+      )}
       {query.checkout === "success" && (
         <p className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
           Payment details received. Your plan updates here as soon as Stripe confirms it — usually within a few seconds.
@@ -81,63 +94,13 @@ export default async function SubscriptionPage({
         )}
       </section>
 
-      <section>
-        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-sm font-bold text-ink">{t("availablePlans")}</h2>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/20 bg-cyan-soft px-3 py-1 text-xs font-semibold text-cyan">
-            <Sparkles className="h-3.5 w-3.5" aria-hidden />
-            {t("trialNote")}
-          </span>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {PLANS.map((plan) => {
-            const current = plan.id === billing.plan.id;
-            return (
-              <div
-                key={plan.id}
-                className={`flex flex-col rounded-2xl border bg-white p-5 shadow-card ${
-                  current ? "border-cyan ring-1 ring-cyan/30" : plan.highlighted ? "border-navy/30" : "border-slate-200"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-bold text-ink">{plan.name}</h3>
-                  {current && (
-                    <span className="rounded-full bg-cyan-soft px-2 py-0.5 text-[10px] font-semibold text-cyan">
-                      {t("yourPlan")}
-                    </span>
-                  )}
-                </div>
-                <p className="mt-2">
-                  <span className="font-display text-2xl font-bold tabular-nums text-ink">{plan.priceLabel}</span>
-                  <span className="text-xs text-ink-dim"> {plan.period}</span>
-                </p>
-                <p className="mt-1 text-xs text-ink-muted">{plan.audience}</p>
-                <ul className="mt-4 flex-1 space-y-1.5">
-                  {plan.features.slice(0, 7).map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-xs text-ink-muted">
-                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan" aria-hidden />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <UpgradeButton
-                  plan={plan.id}
-                  cta={plan.cta}
-                  current={current}
-                  configured={billing.providerConfigured}
-                  autoStart={plan.id === requestedPlan && !query.checkout}
-                  labels={{
-                    current: t("yourPlan"),
-                    trial: t("startTrial"),
-                    upgrade: t("upgrade"),
-                    sales: t("talkToSales"),
-                  }}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <SubscriptionPlansPicker
+        currentPlan={billing.plan.id}
+        configured={billing.providerConfigured}
+        requestedPlan={requestedPlan}
+        initialInterval={requestedInterval}
+        autoStart={Boolean(requestedPlan) && !query.checkout}
+      />
 
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
         <h2 className="text-sm font-bold text-ink">{t("invoicesTitle")}</h2>

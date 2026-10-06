@@ -1,22 +1,16 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
-import { prisma } from "@/lib/prisma";
 import { getSupplierById, getSuppliersFromDb } from "@/lib/data-service";
 import { contactViewFor, type ContactView, type ContactViewer } from "@/lib/supplier-contact";
 import { logisticsProviderContactView } from "@/lib/logistics-provider-contact";
+import { getViewer } from "@/lib/viewer-entitlements";
 
 export const dynamic = "force-dynamic";
 
 const MAX_IDS = 48;
 
 async function viewerFromSession(): Promise<ContactViewer> {
-  const session = await auth().catch(() => null);
-  const userId = session?.user?.id;
-  if (!userId) return { signedIn: false, plan: null };
-  const user = await prisma.user
-    .findUnique({ where: { id: userId }, select: { plan: true } })
-    .catch(() => null);
-  return { signedIn: true, plan: user?.plan ?? null };
+  const { signedIn, plan, email } = await getViewer();
+  return { signedIn, plan, email };
 }
 
 // GET /api/supplier-contacts?ids=a,b,c

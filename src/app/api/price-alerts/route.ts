@@ -48,10 +48,10 @@ export async function POST(request: Request) {
       where: { id: session.user.id },
       select: { plan: true, email: true, phone: true },
     });
-    const ent = entitlementsFor(user?.plan);
+    const ent = entitlementsFor({ plan: user?.plan, email: user?.email ?? session.user.email });
     if (!ent.priceAlerts) {
       return NextResponse.json(
-        { error: "Price alerts require a Starter or Pro plan." },
+        { error: "Price alerts require a Basic, Pro or Enterprise plan." },
         { status: 403 }
       );
     }

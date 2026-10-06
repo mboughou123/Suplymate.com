@@ -9,7 +9,6 @@ import {
   Clock,
   Truck,
   Building2,
-  Globe,
   ShieldCheck,
   Sparkles,
   FileText,
@@ -196,16 +195,6 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                   />
                 </div>
                 <ReportButton targetType="SUPPLIER" targetId={base.id} />
-                {base.website && (
-                  <a
-                    href={base.website}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="btn-ghost"
-                  >
-                    <Globe className="h-4 w-4" aria-hidden /> {t("website")}
-                  </a>
-                )}
               </div>
             </div>
 

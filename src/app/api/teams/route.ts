@@ -29,9 +29,9 @@ export async function POST(request: Request) {
   }
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { plan: true },
+    select: { plan: true, email: true },
   });
-  const ent = entitlementsFor(user?.plan);
+  const ent = entitlementsFor(user);
   const existing = await getUserTeams(session.user.id);
   if (existing.length >= ent.teamSeats) {
     return NextResponse.json(

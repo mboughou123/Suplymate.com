@@ -12,7 +12,7 @@
     "contactTitle": "اتصل | Suplymate",
     "contactDescription": "اتصلez l'الفريق Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "الأسعار | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "خطط Free وBasic ($49.95) وPro ($74.95) وEnterprise ($199.95) للتوريد الصناعي المدعوم بالذكاء الاصطناعي. تجربة مجانية لمدة 3 أيام على Basic وPro، وخصم 10% على الفوترة السنوية.",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "المصدرz pمقروءs intelligemment avec l'intelligence الموردون, l'analyse des الأسعار وles التوصيات IA.",
     "adminTitle": "الإدارة | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "اتصل"
+    },
+    "openSubmenu": "فتح قائمة {label}",
+    "suppliers": {
+      "all": "جميع الموردين",
+      "logistics": "الخدمات اللوجستية والتأمين",
+      "industries": {
+        "metals": "المعادن",
+        "construction": "البناء",
+        "packaging": "التغليف",
+        "machinery": "الآلات",
+        "hardwareComponents": "مكونات الأجهزة",
+        "biomedical": "الطب الحيوي والطبي",
+        "electricalIndustrial": "الكهرباء والصناعة"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "تأمين البضائع",
+    "title": "أمّن شحناتك لدى شركات تأمين بضائع معروفة",
+    "subtitle": "شركات تأمين بحري وتأمين نقل تغطي البضائع بحراً وجواً وبراً وبالسكك الحديدية — المعلومات مأخوذة من الموقع الرسمي لكل شركة.",
+    "cta": "عرض جميع شركات تأمين البضائع"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "سجل الأسعار الأطول متاح في خطة Basic وما فوق"
   },
   "dashboard": {
     "title": "لوحة التحكم",
@@ -888,7 +909,35 @@
     },
     "language": "اللغة",
     "savePreferences": "حفظ les التفضيلات",
-    "preferencesSaved": "Préférences محفوظة."
+    "preferencesSaved": "Préférences محفوظة.",
+    "avatarLabel": "صورة الملف الشخصي",
+    "avatarHint": "JPG أو PNG أو WebP أو GIF، بحد أقصى 5 ميغابايت. يمكنك أيضًا سحب صورة وإفلاتها هنا.",
+    "avatarUpload": "رفع صورة",
+    "avatarChange": "تغيير الصورة",
+    "avatarUploading": "جارٍ الرفع… {percent}%",
+    "avatarRemove": "إزالة",
+    "avatarRemoving": "جارٍ الإزالة…",
+    "avatarDropHere": "أفلت صورتك هنا",
+    "avatarUpdated": "تم تحديث صورة الملف الشخصي.",
+    "avatarRemoved": "تمت إزالة صورة الملف الشخصي.",
+    "avatarEmpty": "اختر صورة لرفعها.",
+    "avatarTooLarge": "الصورة كبيرة جدًا. الحد الأقصى للحجم 5 ميغابايت.",
+    "avatarType": "استخدم صورة بصيغة JPG أو PNG أو WebP أو GIF.",
+    "avatarRateLimited": "عدد كبير جدًا من عمليات الرفع. يرجى الانتظار بضع دقائق ثم المحاولة مرة أخرى.",
+    "avatarStorageUnavailable": "تخزين الصور غير مُعدّ. يرجى المحاولة لاحقًا.",
+    "avatarUploadFailed": "فشل الرفع. يرجى المحاولة مرة أخرى.",
+    "avatarRemoveFailed": "تعذّرت إزالة صورتك. يرجى المحاولة مرة أخرى.",
+    "avatarNetwork": "خطأ في الشبكة. يرجى المحاولة مرة أخرى.",
+    "couponLabel": "رمز القسيمة",
+    "couponPlaceholder": "أدخل رمزًا",
+    "couponApply": "تطبيق",
+    "couponRemove": "إزالة",
+    "couponInvalid": "رمز القسيمة هذا غير صالح أو منتهي الصلاحية.",
+    "couponFree": "خصم 100%: هذا الاشتراك مجاني",
+    "couponPercent": "خصم {percent}% يُطبّق عند الدفع",
+    "couponApplied": "يُطبّق الخصم عند الدفع",
+    "couponHint": "لديك قسيمة؟ طبّقها هنا ثم اختر خطة. بدون رمز، يُطبّق خصم الاشتراك المبكر تلقائيًا على الخطط الشهرية.",
+    "ownerAccess": "حساب المالك: جميع ميزات الخطط مفتوحة لك، أيًا كانت الخطة المعروضة هنا."
   },
   "rfqs": {
     "title": "Demandes de عروض الأسعار",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "نعم. تصفّح الموردين (5 لكل فئة)، واقرأ نبذات أساسية عنهم، واطّلع على مخططات الأسعار لـ 3 أشهر، واحفظ حتى 5 موردين، واطرح على Mate خمسة أسئلة شهريًا، دون الحاجة لبطاقة.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "سعر Enterprise هو $199.95/شهريًا (أو أقل بنسبة 10% مع الفوترة السنوية) ويشمل مستخدمين متعددين وسير عمل للمشتريات ووصولًا إلى API ومعرفة ذكاء اصطناعي مخصصة. اشترك من هذه الصفحة أو من الإعدادات ← الاشتراك.",
+    "billingPeriod": "فترة الفوترة",
+    "billingMonthly": "شهري",
+    "billingAnnual": "سنوي",
+    "saveBadge": "وفّر {percent}%",
+    "noCard": "لا حاجة لبطاقة",
+    "billedYearly": "يُفوتر {amount} سنويًا",
+    "earlyBirdPrice": "عرض الاشتراك المبكر: {amount}/شهريًا لمدة {months} أشهر",
+    "earlyBirdTitle": "عرض الاشتراك المبكر:",
+    "earlyBirdBody": "خصم {percent}% على أول {months} أشهر في أي خطة شهرية، لأول {spots} مشترك. يُطبّق تلقائيًا عند الدفع.",
+    "trialLine": "تجربة مجانية لمدة {days} أيام",
+    "billingNoteV2": "الأسعار بالدولار الأمريكي. تتم الفوترة بأمان عبر Stripe. تبدأ خطتا Basic وPro بتجربة مجانية لمدة {days} أيام ثم تتحولان إلى اشتراك مدفوع ما لم تُلغِ. توفّر الخطط السنوية {percent}%. سعر Enterprise هو {enterprise}/شهريًا."
   },
   "about": {
     "eyebrow": "حول Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "لا يوجد هاتف أو بريد إلكتروني مباشر لهذا المورد بعد. تواصل معه عبر Suplymate.",
     "contactViaSuplymate": "التواصل عبر Suplymate",
     "hiddenValue": "مخفي. متاح في الخطط المدفوعة",
-    "lockedBody": "الهاتف والبريد الإلكتروني المباشران متاحان في خطة Basic وما فوق، بما في ذلك التجربة المجانية لمدة 3 أيام.",
+    "lockedBody": "الهاتف والبريد الإلكتروني والموقع الإلكتروني المباشرة متاحة في خطة Basic وما فوق، بما في ذلك التجربة المجانية لمدة 3 أيام.",
     "startTrial": "ابدأ التجربة المجانية للعرض",
     "upgrade": "قم بالترقية لعرض جهة الاتصال",
     "signIn": "مشترك بالفعل؟ سجّل الدخول",
     "loading": "جارٍ تحميل بيانات الاتصال",
     "cardLockedBoth": "الهاتف والبريد · ترقية",
     "cardLockedPhone": "الهاتف · ترقية للعرض",
-    "cardLockedEmail": "البريد · ترقية للعرض"
+    "cardLockedEmail": "البريد · ترقية للعرض",
+    "website": "الموقع الإلكتروني",
+    "visitWebsite": "زيارة",
+    "websiteAria": "زيارة الموقع الإلكتروني لـ {name}"
   },
   "logistics": {
     "chipLabel": "الخدمات اللوجستية والتأمين",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "هل ستشحن هذا الطلب؟ يمكن لتأمين البضائع تغطية الفقد أو التلف أثناء النقل بما يتجاوز مسؤولية الناقل. بعض المزوّدين الذين يقدّمونه:",
     "insureMore": "عرض جميع شركات تأمين البضائع",
     "dismiss": "إخفاء اقتراحات التأمين",
-    "orderNote": "مرتّبة حسب الملاءمة لهذا المسار، لا مقابل الدفع."
+    "orderNote": "مرتّبة حسب الملاءمة لهذا المسار، لا مقابل الدفع.",
+    "photoAlt": "صورة {name}",
+    "photoAltNumbered": "صورة {name} رقم {n}",
+    "photos": "الصور",
+    "coverAlt": {
+      "port": "سفينة حاويات في ميناء شحن",
+      "warehouse": "شاحنات عند رصيف تحميل مستودع",
+      "containers": "حاويات شحن عند بوابة محطة",
+      "sea": "سفينة حاويات في البحر",
+      "air": "تحميل شحنة جوية على طائرة شحن"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {مورد واحد إضافي مقفل} other {# موردين إضافيين مقفلون}}",
+    "lockedProductsTitle": "{count, plural, one {منتج واحد إضافي مقفل} other {# منتجات إضافية مقفلة}}",
+    "lockedSuppliersBody": "تعرض خطة Free عدد {limit} موردين لكل فئة. قم بالترقية إلى Basic لتصفّح غير محدود مع هاتف الموردين وبريدهم الإلكتروني وموقعهم.",
+    "lockedProductsBody": "تعرض خطة Free عدد {limit} منتجات لكل فئة. قم بالترقية إلى Basic لتصفّح الكتالوج الكامل.",
+    "upgradeCta": "الترقية إلى Basic",
+    "trialCta": "ابدأ التجربة المجانية لمدة 3 أيام",
+    "comparePlans": "مقارنة الخطط"
   }
 }

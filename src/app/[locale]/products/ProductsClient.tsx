@@ -1,9 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Search, SlidersHorizontal, Loader2, PackageX } from "lucide-react";
 import PublicProductCard from "@/components/PublicProductCard";
+import LockedResultsPanel from "@/components/plan/LockedResultsPanel";
+import { useViewerEntitlements } from "@/lib/entitlements-client";
+import { splitByCategoryAllowance } from "@/lib/plan-gating";
 import type {
   PublicProductCard as PublicProduct,
   CatalogueFacets,
@@ -79,6 +82,15 @@ export default function ProductsClient({
   const previousFiltersRef = useRef<Filters | null>(null);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
 
+  const entitlements = useViewerEntitlements();
+  const productLimit = entitlements?.productsPerCategory ?? null;
+  const { open: visibleItems, locked } = useMemo(
+    () => splitByCategoryAllowance(items, productLimit, (p) => p.category),
+    [items, productLimit],
+  );
+  // Limited plans stop paging once a category runs past its allowance.
+  const canLoadMore = hasMore && locked.length === 0;
+
   const fetchPage = useCallback(
     async (f: Filters, nextPage: number, replace: boolean) => {
       setLoading(true);
@@ -128,7 +140,7 @@ export default function ProductsClient({
     if (!node) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0]?.isIntersecting && hasMore && !loading) {
+        if (entries[0]?.isIntersecting && canLoadMore && !loading) {
           fetchPage(activeFiltersRef.current, page + 1, false);
         }
       },
@@ -136,7 +148,7 @@ export default function ProductsClient({
     );
     observer.observe(node);
     return () => observer.disconnect();
-  }, [hasMore, loading, page, fetchPage]);
+  }, [canLoadMore, loading, page, fetchPage]);
 
   const update = <K extends keyof Filters>(key: K, value: Filters[K]) =>
     setFilters((prev) => ({ ...prev, [key]: value }));
@@ -286,10 +298,19 @@ export default function ProductsClient({
           ) : (
             <>
               <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-                {items.map((item, index) => (
+                {visibleItems.map((item, index) => (
                   <PublicProductCard key={item.id} data={item} priority={index === 0} />
                 ))}
               </div>
+
+              {productLimit !== null && !canLoadMore && (
+                <LockedResultsPanel
+                  kind="products"
+                  lockedCount={Math.max(locked.length, total - visibleItems.length)}
+                  limit={productLimit}
+                  signedIn={entitlements?.signedIn ?? false}
+                />
+              )}
 
               {/* Infinite-scroll sentinel + loader */}
               <div ref={sentinelRef} className="h-10" />
@@ -298,7 +319,7 @@ export default function ProductsClient({
                   <Loader2 className="h-4 w-4 animate-spin" /> {t("loadingMore")}
                 </div>
               )}
-              {!hasMore && items.length > 0 && (
+              {!hasMore && productLimit === null && items.length > 0 && (
                 <p className="mt-8 text-center text-xs text-ink-dim">
                   {t("endOfResults", { shown: items.length, total })}
                 </p>

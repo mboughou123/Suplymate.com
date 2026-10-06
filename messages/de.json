@@ -12,7 +12,7 @@
     "contactTitle": "Kontakt | Suplymate",
     "contactDescription": "Kontaktieren Sie das Suplymate-Team unter info@suplymate.com.",
     "pricingTitle": "Preise | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "Free-, Basic- ($49.95), Pro- ($74.95) und Enterprise-Tarife ($199.95) für KI-gestützte Industriebeschaffung. 3-tägige Gratis-Testphase für Basic und Pro, 10 % Rabatt bei jährlicher Abrechnung.",
     "aiAssistantTitle": "Assistant Beschaffung IA · Suplymate",
     "aiAssistantDescription": "Intelligenter beschaffen mit Lieferantenintelligenz, l'analyse des Preise und les recommandations IA.",
     "adminTitle": "Administration | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "Kontakt"
+    },
+    "openSubmenu": "Menü {label} öffnen",
+    "suppliers": {
+      "all": "Alle Lieferanten",
+      "logistics": "Logistik & Versicherung",
+      "industries": {
+        "metals": "Metalle",
+        "construction": "Bau",
+        "packaging": "Verpackung",
+        "machinery": "Maschinen",
+        "hardwareComponents": "Hardware-Komponenten",
+        "biomedical": "Biomedizin & Medizin",
+        "electricalIndustrial": "Elektro & Industrie"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "Transportversicherung",
+    "title": "Versichern Sie Ihre Sendungen bei etablierten Transportversicherern",
+    "subtitle": "See- und Transportversicherer für Waren per Schiff, Flugzeug, Lkw und Bahn — Angaben stammen von der offiziellen Website des jeweiligen Unternehmens.",
+    "cta": "Alle Transportversicherer ansehen"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "Längerer Preisverlauf ist ab Basic enthalten"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -888,7 +909,35 @@
     },
     "language": "Sprache",
     "savePreferences": "Speichern les préférences",
-    "preferencesSaved": "Préférences enregistrées."
+    "preferencesSaved": "Préférences enregistrées.",
+    "avatarLabel": "Profilbild",
+    "avatarHint": "JPG, PNG, WebP oder GIF, bis zu 5 MB. Du kannst ein Bild auch hierher ziehen.",
+    "avatarUpload": "Foto hochladen",
+    "avatarChange": "Foto ändern",
+    "avatarUploading": "Wird hochgeladen… {percent} %",
+    "avatarRemove": "Entfernen",
+    "avatarRemoving": "Wird entfernt…",
+    "avatarDropHere": "Foto hier ablegen",
+    "avatarUpdated": "Profilbild aktualisiert.",
+    "avatarRemoved": "Profilbild entfernt.",
+    "avatarEmpty": "Wähle ein Foto zum Hochladen.",
+    "avatarTooLarge": "Das Foto ist zu groß. Die maximale Größe beträgt 5 MB.",
+    "avatarType": "Verwende ein JPG-, PNG-, WebP- oder GIF-Bild.",
+    "avatarRateLimited": "Zu viele Uploads. Bitte warte ein paar Minuten und versuche es erneut.",
+    "avatarStorageUnavailable": "Der Bildspeicher ist nicht konfiguriert. Bitte versuche es später erneut.",
+    "avatarUploadFailed": "Upload fehlgeschlagen. Bitte versuche es erneut.",
+    "avatarRemoveFailed": "Dein Foto konnte nicht entfernt werden. Bitte versuche es erneut.",
+    "avatarNetwork": "Netzwerkfehler. Bitte versuche es erneut.",
+    "couponLabel": "Gutscheincode",
+    "couponPlaceholder": "Code eingeben",
+    "couponApply": "Anwenden",
+    "couponRemove": "Entfernen",
+    "couponInvalid": "Dieser Gutscheincode ist ungültig oder abgelaufen.",
+    "couponFree": "100 % Rabatt: Dieses Abo ist kostenlos",
+    "couponPercent": "{percent} % Rabatt beim Bezahlen angewendet",
+    "couponApplied": "Rabatt beim Bezahlen angewendet",
+    "couponHint": "Haben Sie einen Gutschein? Lösen Sie ihn hier ein und wählen Sie dann einen Tarif. Ohne Code wird der Early-Bird-Rabatt automatisch auf Monatstarife angewendet.",
+    "ownerAccess": "Inhaberkonto: Alle Funktionen sind für Sie freigeschaltet, unabhängig vom hier angezeigten Tarif."
   },
   "rfqs": {
     "title": "Angebotsanfragen",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "Ja. Lieferanten durchsuchen (5 pro Kategorie), Basis-Profile lesen, 3 Monate Preisdiagramme ansehen, bis zu 5 Lieferanten speichern und Mate 5 Fragen pro Monat stellen – ganz ohne Karte.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "Enterprise kostet $199.95/Monat (bzw. 10 % weniger bei jährlicher Abrechnung) und bietet mehrere Nutzer, Beschaffungs-Workflows, API-Zugang und individuelles KI-Wissen. Abonnieren Sie auf dieser Seite oder unter Einstellungen → Abonnement.",
+    "billingPeriod": "Abrechnungszeitraum",
+    "billingMonthly": "Monatlich",
+    "billingAnnual": "Jährlich",
+    "saveBadge": "{percent} % sparen",
+    "noCard": "Keine Karte erforderlich",
+    "billedYearly": "{amount} pro Jahr abgerechnet",
+    "earlyBirdPrice": "Early Bird: {amount}/Monat für {months} Monate",
+    "earlyBirdTitle": "Early-Bird-Zugang:",
+    "earlyBirdBody": "{percent} % Rabatt auf Ihre ersten {months} Monate bei jedem Monatstarif, für die ersten {spots} Abonnenten. Wird beim Bezahlen automatisch angewendet.",
+    "trialLine": "{days} Tage gratis testen",
+    "billingNoteV2": "Preise in USD. Die Abrechnung erfolgt sicher über Stripe. Basic und Pro starten mit einer {days}-tägigen Gratis-Testphase und gehen in ein kostenpflichtiges Abo über, sofern Sie nicht kündigen. Jahrestarife sparen {percent} %. Enterprise kostet {enterprise}/Monat."
   },
   "about": {
     "eyebrow": "Über Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "Für diesen Lieferanten sind noch keine Telefonnummer oder E-Mail hinterlegt. Kontaktieren Sie ihn über Suplymate.",
     "contactViaSuplymate": "Über Suplymate kontaktieren",
     "hiddenValue": "Verborgen. In kostenpflichtigen Tarifen verfügbar",
-    "lockedBody": "Direkte Telefonnummer und E-Mail sind ab Basic enthalten, auch in der 3-tägigen Gratis-Testphase.",
+    "lockedBody": "Direkte Telefonnummer, E-Mail und Website sind ab Basic enthalten, auch in der 3-tägigen Gratis-Testphase.",
     "startTrial": "Gratis testen und ansehen",
     "upgrade": "Upgrade für Kontaktdaten",
     "signIn": "Bereits abonniert? Anmelden",
     "loading": "Kontaktdaten werden geladen",
     "cardLockedBoth": "Telefon & E-Mail · Upgrade",
     "cardLockedPhone": "Telefon · Upgrade zum Ansehen",
-    "cardLockedEmail": "E-Mail · Upgrade zum Ansehen"
+    "cardLockedEmail": "E-Mail · Upgrade zum Ansehen",
+    "website": "Website",
+    "visitWebsite": "Besuchen",
+    "websiteAria": "Website von {name} besuchen"
   },
   "logistics": {
     "chipLabel": "Logistik & Versicherung",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "Versenden Sie diese Bestellung? Eine Transportversicherung kann Verlust oder Schäden unterwegs über die Frachtführerhaftung hinaus abdecken. Einige Anbieter:",
     "insureMore": "Alle Transportversicherer ansehen",
     "dismiss": "Versicherungsvorschläge ausblenden",
-    "orderNote": "Nach Eignung für diese Route sortiert, nicht gegen Bezahlung."
+    "orderNote": "Nach Eignung für diese Route sortiert, nicht gegen Bezahlung.",
+    "photoAlt": "Foto von {name}",
+    "photoAltNumbered": "Foto von {name} Nr. {n}",
+    "photos": "Fotos",
+    "coverAlt": {
+      "port": "Containerschiff in einem Frachthafen",
+      "warehouse": "Lkw an einer Lagerhaus-Laderampe",
+      "containers": "Schiffscontainer an einem Terminal-Tor",
+      "sea": "Containerschiff auf See",
+      "air": "Luftfracht wird in ein Frachtflugzeug verladen"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {# weiterer Lieferant ist gesperrt} other {# weitere Lieferanten sind gesperrt}}",
+    "lockedProductsTitle": "{count, plural, one {# weiteres Produkt ist gesperrt} other {# weitere Produkte sind gesperrt}}",
+    "lockedSuppliersBody": "Der Free-Tarif zeigt {limit} Lieferanten pro Kategorie. Mit Basic surfen Sie unbegrenzt und sehen Telefon, E-Mail und Website der Lieferanten.",
+    "lockedProductsBody": "Der Free-Tarif zeigt {limit} Produkte pro Kategorie. Mit Basic durchsuchen Sie den gesamten Katalog.",
+    "upgradeCta": "Upgrade auf Basic",
+    "trialCta": "3 Tage gratis testen",
+    "comparePlans": "Tarife vergleichen"
   }
 }

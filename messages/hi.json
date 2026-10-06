@@ -12,7 +12,7 @@
     "contactTitle": "संपर्क | Suplymate",
     "contactDescription": "संपर्कez l'टीम Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "मूल्य निर्धारण | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "AI-संचालित औद्योगिक सोर्सिंग के लिए Free, Basic ($49.95), Pro ($74.95) और Enterprise ($199.95) प्लान। Basic और Pro पर 3 दिन का मुफ़्त ट्रायल, सालाना बिलिंग पर 10% छूट।",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "स्रोतz pपढ़ाs intelligemment avec l'intelligence आपूर्तिकर्ता, l'analyse des कीमतें औरles सिफ़ारिशें IA.",
     "adminTitle": "प्रशासन | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "संपर्क"
+    },
+    "openSubmenu": "{label} मेनू खोलें",
+    "suppliers": {
+      "all": "सभी आपूर्तिकर्ता",
+      "logistics": "लॉजिस्टिक्स और बीमा",
+      "industries": {
+        "metals": "धातु",
+        "construction": "निर्माण",
+        "packaging": "पैकेजिंग",
+        "machinery": "मशीनरी",
+        "hardwareComponents": "हार्डवेयर कंपोनेंट्स",
+        "biomedical": "बायोमेडिकल और मेडिकल",
+        "electricalIndustrial": "इलेक्ट्रिकल और औद्योगिक"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "कार्गो बीमा",
+    "title": "अपने शिपमेंट का बीमा स्थापित कार्गो बीमाकर्ताओं से कराएँ",
+    "subtitle": "समुद्र, हवाई, सड़क और रेल से जाने वाले माल को कवर करने वाले समुद्री और ट्रांज़िट बीमाकर्ता — जानकारी हर कंपनी की आधिकारिक वेबसाइट से ली गई है।",
+    "cta": "सभी कार्गो बीमाकर्ता देखें"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "लंबा मूल्य इतिहास Basic और उससे ऊपर के प्लान में शामिल है"
   },
   "dashboard": {
     "title": "डैशबोर्ड",
@@ -888,7 +909,35 @@
     },
     "language": "भाषा",
     "savePreferences": "सहेजें les प्राथमिकताएँ",
-    "preferencesSaved": "Préférences सहेजी गई."
+    "preferencesSaved": "Préférences सहेजी गई.",
+    "avatarLabel": "प्रोफ़ाइल फ़ोटो",
+    "avatarHint": "JPG, PNG, WebP या GIF, अधिकतम 5 MB. आप यहाँ कोई इमेज ड्रैग और ड्रॉप भी कर सकते हैं।",
+    "avatarUpload": "फ़ोटो अपलोड करें",
+    "avatarChange": "फ़ोटो बदलें",
+    "avatarUploading": "अपलोड हो रहा है… {percent}%",
+    "avatarRemove": "हटाएँ",
+    "avatarRemoving": "हटाया जा रहा है…",
+    "avatarDropHere": "अपनी फ़ोटो यहाँ छोड़ें",
+    "avatarUpdated": "प्रोफ़ाइल फ़ोटो अपडेट हो गई।",
+    "avatarRemoved": "प्रोफ़ाइल फ़ोटो हटा दी गई।",
+    "avatarEmpty": "अपलोड करने के लिए एक फ़ोटो चुनें।",
+    "avatarTooLarge": "यह फ़ोटो बहुत बड़ी है। अधिकतम आकार 5 MB है।",
+    "avatarType": "JPG, PNG, WebP या GIF इमेज का उपयोग करें।",
+    "avatarRateLimited": "बहुत अधिक अपलोड। कुछ मिनट रुककर फिर से प्रयास करें।",
+    "avatarStorageUnavailable": "इमेज स्टोरेज कॉन्फ़िगर नहीं है। कृपया बाद में फिर से प्रयास करें।",
+    "avatarUploadFailed": "अपलोड विफल रहा। कृपया फिर से प्रयास करें।",
+    "avatarRemoveFailed": "आपकी फ़ोटो हटाई नहीं जा सकी। कृपया फिर से प्रयास करें।",
+    "avatarNetwork": "नेटवर्क त्रुटि। कृपया फिर से प्रयास करें।",
+    "couponLabel": "कूपन कोड",
+    "couponPlaceholder": "कोड दर्ज करें",
+    "couponApply": "लागू करें",
+    "couponRemove": "हटाएँ",
+    "couponInvalid": "यह कूपन कोड अमान्य है या इसकी समय-सीमा समाप्त हो गई है।",
+    "couponFree": "100% छूट: यह सब्सक्रिप्शन मुफ़्त है",
+    "couponPercent": "चेकआउट पर {percent}% छूट लागू",
+    "couponApplied": "चेकआउट पर छूट लागू",
+    "couponHint": "कूपन है? इसे यहाँ लागू करें, फिर प्लान चुनें। कोड के बिना, मासिक प्लान पर अर्ली बर्ड छूट अपने-आप लागू होती है।",
+    "ownerAccess": "ओनर खाता: यहाँ जो भी प्लान दिखे, आपके लिए हर प्लान फ़ीचर अनलॉक है।"
   },
   "rfqs": {
     "title": "Demandes de कोट",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "हाँ। बिना कार्ड के आपूर्तिकर्ता ब्राउज़ करें (प्रति श्रेणी 5), बुनियादी आपूर्तिकर्ता परिचय पढ़ें, 3 महीने के मूल्य चार्ट देखें, 5 तक आपूर्तिकर्ता सहेजें और Mate से हर महीने 5 सवाल पूछें।",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "Enterprise $199.95/माह है (या सालाना बिलिंग पर 10% कम), जिसमें कई उपयोगकर्ता, खरीद वर्कफ़्लो, API एक्सेस और कस्टम AI नॉलेज शामिल हैं। इस पेज से या सेटिंग्स → सब्सक्रिप्शन से सब्सक्राइब करें।",
+    "billingPeriod": "बिलिंग अवधि",
+    "billingMonthly": "मासिक",
+    "billingAnnual": "वार्षिक",
+    "saveBadge": "{percent}% बचाएँ",
+    "noCard": "कार्ड की ज़रूरत नहीं",
+    "billedYearly": "हर साल {amount} बिल किया जाता है",
+    "earlyBirdPrice": "अर्ली बर्ड: {amount}/माह, {months} महीनों के लिए",
+    "earlyBirdTitle": "अर्ली बर्ड एक्सेस:",
+    "earlyBirdBody": "किसी भी मासिक प्लान पर {percent}% छूट, पहले {months} महीनों के लिए, पहले {spots} सब्सक्राइबर्स के लिए। चेकआउट पर अपने-आप लागू।",
+    "trialLine": "{days} दिन का मुफ़्त ट्रायल",
+    "billingNoteV2": "कीमतें USD में हैं। बिलिंग Stripe द्वारा सुरक्षित रूप से की जाती है। Basic और Pro {days} दिन के मुफ़्त ट्रायल से शुरू होते हैं और रद्द न करने पर सशुल्क सब्सक्रिप्शन में बदल जाते हैं। वार्षिक प्लान पर {percent}% की बचत। Enterprise {enterprise}/माह है।"
   },
   "about": {
     "eyebrow": "À propos de Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "इस आपूर्तिकर्ता का अभी कोई सीधा फ़ोन या ईमेल नहीं है। Suplymate के ज़रिए संपर्क करें।",
     "contactViaSuplymate": "Suplymate के ज़रिए संपर्क करें",
     "hiddenValue": "छिपा हुआ। सशुल्क प्लान में उपलब्ध",
-    "lockedBody": "सीधा फ़ोन और ईमेल Basic और उससे ऊपर के प्लान में शामिल हैं, 3 दिन के मुफ़्त ट्रायल सहित।",
+    "lockedBody": "सीधा फ़ोन, ईमेल और वेबसाइट Basic और उससे ऊपर के प्लान में शामिल हैं, 3 दिन के मुफ़्त ट्रायल सहित।",
     "startTrial": "देखने के लिए मुफ़्त ट्रायल शुरू करें",
     "upgrade": "देखने के लिए अपग्रेड करें",
     "signIn": "पहले से सदस्य हैं? साइन इन करें",
     "loading": "संपर्क विवरण लोड हो रहा है",
     "cardLockedBoth": "फ़ोन और ईमेल · अपग्रेड",
     "cardLockedPhone": "फ़ोन · देखने के लिए अपग्रेड करें",
-    "cardLockedEmail": "ईमेल · देखने के लिए अपग्रेड करें"
+    "cardLockedEmail": "ईमेल · देखने के लिए अपग्रेड करें",
+    "website": "वेबसाइट",
+    "visitWebsite": "देखें",
+    "websiteAria": "{name} की वेबसाइट देखें"
   },
   "logistics": {
     "chipLabel": "लॉजिस्टिक्स और बीमा",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "यह ऑर्डर भेज रहे हैं? कार्गो बीमा वाहक की देयता से आगे पारगमन में हानि या क्षति को कवर कर सकता है। इसे देने वाले कुछ प्रदाता:",
     "insureMore": "सभी कार्गो बीमाकर्ता देखें",
     "dismiss": "बीमा सुझाव छिपाएँ",
-    "orderNote": "इस मार्ग के लिए उपयुक्तता के आधार पर क्रमबद्ध, भुगतान के आधार पर नहीं।"
+    "orderNote": "इस मार्ग के लिए उपयुक्तता के आधार पर क्रमबद्ध, भुगतान के आधार पर नहीं।",
+    "photoAlt": "{name} की फ़ोटो",
+    "photoAltNumbered": "{name} की फ़ोटो {n}",
+    "photos": "फ़ोटो",
+    "coverAlt": {
+      "port": "कार्गो बंदरगाह पर कंटेनर जहाज़",
+      "warehouse": "गोदाम की लोडिंग डॉक पर ट्रक",
+      "containers": "टर्मिनल गेट पर शिपिंग कंटेनर",
+      "sea": "समुद्र में कंटेनर जहाज़",
+      "air": "मालवाहक विमान में लोड होता एयर कार्गो"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {# और आपूर्तिकर्ता लॉक है} other {# और आपूर्तिकर्ता लॉक हैं}}",
+    "lockedProductsTitle": "{count, plural, one {# और उत्पाद लॉक है} other {# और उत्पाद लॉक हैं}}",
+    "lockedSuppliersBody": "Free प्लान प्रति श्रेणी {limit} आपूर्तिकर्ता दिखाता है। असीमित ब्राउज़िंग और आपूर्तिकर्ता के फ़ोन, ईमेल व वेबसाइट के लिए Basic में अपग्रेड करें।",
+    "lockedProductsBody": "Free प्लान प्रति श्रेणी {limit} उत्पाद दिखाता है। पूरा कैटलॉग ब्राउज़ करने के लिए Basic में अपग्रेड करें।",
+    "upgradeCta": "Basic में अपग्रेड करें",
+    "trialCta": "3 दिन का मुफ़्त ट्रायल शुरू करें",
+    "comparePlans": "प्लान की तुलना करें"
   }
 }

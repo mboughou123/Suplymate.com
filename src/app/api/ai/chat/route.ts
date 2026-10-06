@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { rateLimit } from "@/lib/rate-limit";
+import { aiQuotaExceededMessage, aiQuotaFor } from "@/lib/ai/ai-quota";
+import { getViewer } from "@/lib/viewer-entitlements";
 import { isOpenAiConfigured, logOpenAiError, type ChatMessage } from "@/lib/openai";
 import {
   demoReply,
@@ -123,6 +125,15 @@ export async function POST(request: Request) {
         error: `You're sending messages too quickly. Please wait ${limit.resetInSeconds}s and try again.`,
       },
       { status: 429 }
+    );
+  }
+
+  const viewer = await getViewer();
+  const quota = await aiQuotaFor(userId, viewer.entitlements);
+  if (quota.limit !== null && quota.remaining === 0) {
+    return NextResponse.json(
+      { error: aiQuotaExceededMessage(quota.limit), code: "ai_quota", aiQuota: quota },
+      { status: 403 }
     );
   }
 

@@ -6,7 +6,7 @@
  * namespace (or literal `label`s for data-driven entries such as industries
  * and materials) and icons are string ids resolved by the MegaMenu component.
  */
-import { INDUSTRIES } from "@/data/industries";
+import { INDUSTRIES, type IndustryId } from "@/data/industries";
 import { MATERIAL_CATALOG } from "@/data/material-catalog";
 import { HOME_PRODUCT_MODULE_LINKS } from "@/lib/home-product-module-links";
 import { logisticsDirectoryHref } from "@/data/logistics-providers";
@@ -22,7 +22,15 @@ export type NavIcon =
   | "building"
   | "newspaper"
   | "briefcase"
-  | "mail";
+  | "mail"
+  | "layers"
+  | "hardHat"
+  | "package"
+  | "cog"
+  | "wrench"
+  | "stethoscope"
+  | "zap"
+  | "ship";
 
 export type NavLink = {
   href: string;
@@ -65,6 +73,8 @@ export type ListMenu = {
   kind: "list";
   id: string;
   labelKey: string;
+  /** When set, the top-level label is itself a link and a separate chevron opens the list. */
+  href?: string;
   links: NavLink[];
 };
 
@@ -182,6 +192,28 @@ export const SOLUTIONS_MENU: ColumnsMenu = {
   ],
 };
 
+const INDUSTRY_NAV: Record<IndustryId, { labelKey: string; icon: NavIcon }> = {
+  metals: { labelKey: "suppliers.industries.metals", icon: "layers" },
+  construction: { labelKey: "suppliers.industries.construction", icon: "hardHat" },
+  packaging: { labelKey: "suppliers.industries.packaging", icon: "package" },
+  machinery: { labelKey: "suppliers.industries.machinery", icon: "cog" },
+  "hardware-components": { labelKey: "suppliers.industries.hardwareComponents", icon: "wrench" },
+  biomedical: { labelKey: "suppliers.industries.biomedical", icon: "stethoscope" },
+  "electrical-industrial": { labelKey: "suppliers.industries.electricalIndustrial", icon: "zap" },
+};
+
+export const SUPPLIERS_MENU: ListMenu = {
+  kind: "list",
+  id: "suppliers",
+  labelKey: "top.suppliers",
+  href: "/suppliers",
+  links: [
+    { href: "/suppliers", labelKey: "suppliers.all", icon: "factory" },
+    ...INDUSTRIES.map((industry) => ({ href: supplierIndustryHref(industry.id), ...INDUSTRY_NAV[industry.id] })),
+    { href: logisticsDirectoryHref(), labelKey: "suppliers.logistics", icon: "ship" },
+  ],
+};
+
 export const COMPANY_MENU: ListMenu = {
   kind: "list",
   id: "company",
@@ -198,7 +230,7 @@ export const COMPANY_MENU: ListMenu = {
 export const SITE_NAV: NavItem[] = [
   PRODUCTS_MENU,
   SOLUTIONS_MENU,
-  { kind: "link", id: "suppliers", labelKey: "top.suppliers", href: "/suppliers" },
+  SUPPLIERS_MENU,
   { kind: "link", id: "materials", labelKey: "top.materials", href: "/materials" },
   { kind: "link", id: "pricing", labelKey: "top.pricing", href: "/pricing" },
   COMPANY_MENU,

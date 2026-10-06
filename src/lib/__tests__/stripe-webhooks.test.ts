@@ -110,3 +110,26 @@ describe("invoice subscription id", () => {
     expect(invoiceSubscriptionId(invoice)).toBe("sub_from_parent");
   });
 });
+
+describe("subscriptions on replaced prices", () => {
+  it("falls back to the plan stamped on the subscription by Checkout", () => {
+    withPrices(() => {
+      const s = { ...sub({ status: "active", priceId: "price_old_basic" }), metadata: { plan: "basic" } };
+      expect(subscriptionEntitlement(s as Stripe.Subscription).plan).toBe<PlanId>("basic");
+    });
+  });
+
+  it("falls back to the plan on the price metadata", () => {
+    withPrices(() => {
+      const s = sub({ status: "trialing", priceId: "price_old_pro" });
+      (s.items.data[0].price as unknown as { metadata: Record<string, string> }).metadata = { plan: "premium" };
+      expect(subscriptionEntitlement(s).plan).toBe<PlanId>("premium");
+    });
+  });
+
+  it("stays free for unknown prices without a plan", () => {
+    withPrices(() => {
+      expect(subscriptionEntitlement(sub({ status: "active", priceId: "price_mystery" })).plan).toBe<PlanId>("free");
+    });
+  });
+});

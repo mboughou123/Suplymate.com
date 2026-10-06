@@ -125,7 +125,10 @@ export default async function SupplierProfilePage({
     }
   }
 
-  const profile = getSupplierProfile(supplier);
+  // The website is a paid contact detail served by /api/supplier-contacts, so it
+  // never ships in this cached page.
+  const fullProfile = getSupplierProfile(supplier);
+  const profile = { ...fullProfile, base: { ...fullProfile.base, website: undefined } };
   const { base, trust } = profile;
   const url = `${SITE_URL}/supplier/${slug}`;
 
@@ -185,7 +188,6 @@ export default async function SupplierProfilePage({
       addressLocality: base.city,
       addressCountry: base.country,
     },
-    ...(base.website ? { sameAs: [base.website] } : {}),
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: base.rating.toFixed(1),

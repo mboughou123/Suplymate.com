@@ -11,13 +11,21 @@ import {
   Building2,
   ChevronDown,
   ChevronRight,
+  Cog,
   Columns3,
   Factory,
+  HardHat,
+  Layers,
   LineChart,
   Mail,
   Newspaper,
+  Package,
+  Ship,
   Sparkles,
+  Stethoscope,
   Target,
+  Wrench,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -43,6 +51,14 @@ const ICONS: Record<NavIcon, LucideIcon> = {
   newspaper: Newspaper,
   briefcase: Briefcase,
   mail: Mail,
+  layers: Layers,
+  hardHat: HardHat,
+  package: Package,
+  cog: Cog,
+  wrench: Wrench,
+  stethoscope: Stethoscope,
+  zap: Zap,
+  ship: Ship,
 };
 
 export type NavTone = "dark" | "light";
@@ -67,6 +83,10 @@ function activeHrefs(item: NavItem): string[] {
       return [item.intro.primary.href, item.featured.href];
     case "columns":
       return [];
+    default: {
+      const unreachable: never = item;
+      return unreachable;
+    }
   }
 }
 
@@ -78,9 +98,8 @@ function isCurrent(pathname: string, hrefs: string[]): boolean {
   });
 }
 
-function triggerClass(tone: NavTone, open: boolean, current: boolean): string {
-  const base =
-    "inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 xl:px-3";
+function triggerClass(tone: NavTone, open: boolean, current: boolean, padding = "px-2 xl:px-3"): string {
+  const base = `inline-flex items-center gap-1 whitespace-nowrap rounded-lg py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 ${padding}`;
   if (tone === "dark") {
     const state = open
       ? "bg-white/10 text-white"
@@ -210,7 +229,7 @@ function ColumnsPanel({ menu, t }: { menu: ColumnsMenu; t: Translate }) {
 
 function ListPanel({ menu, t }: { menu: ListMenu; t: Translate }) {
   return (
-    <ul className="w-60 py-2">
+    <ul className="w-64 py-2">
       {menu.links.map((link) => {
         const Icon = link.icon ? ICONS[link.icon] : null;
         return (
@@ -331,6 +350,27 @@ export default function MegaMenu({
         const open = openId === item.id;
         const panelId = `mega-menu-${item.id}`;
         const anchored = item.kind === "list";
+        const labelHref = item.kind === "list" ? item.href : undefined;
+        const label = t(item.labelKey);
+        const chevron = (
+          <ChevronDown
+            className={`h-3.5 w-3.5 opacity-70 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+            aria-hidden
+          />
+        );
+        const toggleProps = {
+          ref: (el: HTMLButtonElement | null) => {
+            triggerRefs.current[item.id] = el;
+          },
+          type: "button" as const,
+          "aria-expanded": open,
+          "aria-haspopup": true,
+          "aria-controls": panelId,
+          onClick: () => (open ? setOpenId(null) : openMenu(item.id)),
+          onFocus: () => {
+            if (!suppressFocusOpen.current) openMenu(item.id);
+          },
+        };
 
         return (
           <div
@@ -339,26 +379,25 @@ export default function MegaMenu({
             onMouseEnter={() => openMenu(item.id)}
             onMouseLeave={scheduleClose}
           >
-            <button
-              ref={(el) => {
-                triggerRefs.current[item.id] = el;
-              }}
-              type="button"
-              aria-expanded={open}
-              aria-haspopup="true"
-              aria-controls={panelId}
-              onClick={() => (open ? setOpenId(null) : openMenu(item.id))}
-              onFocus={() => {
-                if (!suppressFocusOpen.current) openMenu(item.id);
-              }}
-              className={triggerClass(tone, open, current)}
-            >
-              {t(item.labelKey)}
-              <ChevronDown
-                className={`h-3.5 w-3.5 opacity-70 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-                aria-hidden
-              />
-            </button>
+            {labelHref ? (
+              <span className="inline-flex items-center">
+                <Link href={labelHref} className={triggerClass(tone, open, current, "pl-2 pr-0.5 xl:pl-3")}>
+                  {label}
+                </Link>
+                <button
+                  {...toggleProps}
+                  aria-label={t("openSubmenu", { label })}
+                  className={triggerClass(tone, open, current, "px-1")}
+                >
+                  {chevron}
+                </button>
+              </span>
+            ) : (
+              <button {...toggleProps} className={triggerClass(tone, open, current)}>
+                {label}
+                {chevron}
+              </button>
+            )}
 
             {open && (
               <div
@@ -412,6 +451,10 @@ function mobileGroupLinks(item: Exclude<NavItem, { kind: "link" }>, t: Translate
       return item.columns.map((c) => ({ heading: t(c.titleKey), links: c.links }));
     case "list":
       return [{ links: item.links }];
+    default: {
+      const unreachable: never = item;
+      return unreachable;
+    }
   }
 }
 

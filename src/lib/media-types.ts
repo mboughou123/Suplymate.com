@@ -12,6 +12,7 @@ export const MEDIA_TYPES = [
   "CERTIFICATION",
   "PROFILE_IMAGE",
   "PROVIDER_LOGO",
+  "PROVIDER_PHOTO",
   "GENERAL",
 ] as const;
 export type MediaType = (typeof MEDIA_TYPES)[number];
@@ -29,7 +30,7 @@ export const MEDIA_TYPES_BY_ENTITY: Record<EntityType, MediaType[]> = {
   PRODUCT: ["PRODUCT_PRIMARY", "PRODUCT_GALLERY"],
   CERTIFICATION: ["CERTIFICATION"],
   USER: ["PROFILE_IMAGE"],
-  LOGISTICS_PROVIDER: ["PROVIDER_LOGO"],
+  LOGISTICS_PROVIDER: ["PROVIDER_LOGO", "PROVIDER_PHOTO"],
   GENERAL: ["GENERAL"],
 };
 
@@ -43,6 +44,7 @@ export const MEDIA_TYPE_LABELS: Record<MediaType, string> = {
   CERTIFICATION: "Certificate",
   PROFILE_IMAGE: "Profile",
   PROVIDER_LOGO: "Provider logo",
+  PROVIDER_PHOTO: "Provider photo",
   GENERAL: "General",
 };
 

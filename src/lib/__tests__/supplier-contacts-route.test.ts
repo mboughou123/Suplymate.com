@@ -12,7 +12,13 @@ vi.mock("@/lib/prisma", () => ({
 
 vi.mock("@/lib/data-service", () => ({
   getSuppliersFromDb: async () => [
-    { id: "sarfraz-steel", name: "Sarfraz Steel", phone: "+91 80828 21432", email: "sales@sarfraz.in" },
+    {
+      id: "sarfraz-steel",
+      name: "Sarfraz Steel",
+      phone: "+91 80828 21432",
+      email: "sales@sarfraz.in",
+      website: "sarfraz.in",
+    },
     { id: "quiet-mill", name: "Quiet Mill" },
   ],
   getSupplierById: async () => null,
@@ -40,8 +46,8 @@ describe("GET /api/supplier-contacts", () => {
     expect(res.headers.get("cache-control")).toContain("no-store");
     expect(text).not.toMatch(/80828|sarfraz\.in/);
     expect(JSON.parse(text).contacts).toEqual({
-      "sarfraz-steel": { access: "locked", reason: "guest", hasPhone: true, hasEmail: true },
-      "quiet-mill": { access: "locked", reason: "guest", hasPhone: false, hasEmail: false },
+      "sarfraz-steel": { access: "locked", reason: "guest", hasPhone: true, hasEmail: true, hasWebsite: true },
+      "quiet-mill": { access: "locked", reason: "guest", hasPhone: false, hasEmail: false, hasWebsite: false },
     });
   });
 
@@ -62,6 +68,7 @@ describe("GET /api/supplier-contacts", () => {
       email: "sales@sarfraz.in",
       phoneSource: "listing",
       emailSource: "listing",
+      website: "https://sarfraz.in/",
     });
   });
 
@@ -69,8 +76,8 @@ describe("GET /api/supplier-contacts", () => {
     const guest = await lookup("falvey-cargo,kuehne-nagel-cargo-insurance");
     expect(guest.text).not.toMatch(/792-0144|falveyins/);
     expect(JSON.parse(guest.text).contacts).toEqual({
-      "falvey-cargo": { access: "locked", reason: "guest", hasPhone: true, hasEmail: true },
-      "kuehne-nagel-cargo-insurance": { access: "locked", reason: "guest", hasPhone: false, hasEmail: false },
+      "falvey-cargo": { access: "locked", reason: "guest", hasPhone: true, hasEmail: true, hasWebsite: false },
+      "kuehne-nagel-cargo-insurance": { access: "locked", reason: "guest", hasPhone: false, hasEmail: false, hasWebsite: false },
     });
 
     viewer.userId = "u3";
@@ -82,6 +89,7 @@ describe("GET /api/supplier-contacts", () => {
       email: "info@falveyins.com",
       phoneSource: "website",
       emailSource: "website",
+      website: null,
     });
   });
 });

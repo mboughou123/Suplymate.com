@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Lock, Mail, MessageCircle, Phone } from "lucide-react";
+import { Globe, Lock, Mail, MessageCircle, Phone } from "lucide-react";
 import { useSupplierContact } from "@/lib/supplier-contact-client";
 import { telHref } from "@/lib/scraper/contactExtractor";
 import type { ContactSource } from "@/lib/supplier-contact";
@@ -54,12 +54,13 @@ export default function SupplierContactDetails({
   } else if (contact.access === "none") {
     body = fallback;
   } else if (contact.access === "locked") {
-    const any = contact.hasPhone || contact.hasEmail;
+    const any = contact.hasPhone || contact.hasEmail || contact.hasWebsite;
     body = any ? (
       <div data-testid="supplier-contact-locked">
         <ul className="space-y-2">
           {contact.hasPhone && <LockedRow icon={Phone} label={t("phone")} hidden={t("hiddenValue")} />}
           {contact.hasEmail && <LockedRow icon={Mail} label={t("email")} hidden={t("hiddenValue")} />}
+          {contact.hasWebsite && <LockedRow icon={Globe} label={t("website")} hidden={t("hiddenValue")} />}
         </ul>
         <p className="mt-3 text-xs text-ink-muted">{t("lockedBody")}</p>
         <Link
@@ -81,7 +82,7 @@ export default function SupplierContactDetails({
     ) : (
       fallback
     );
-  } else if (!contact.phone && !contact.email) {
+  } else if (!contact.phone && !contact.email && !contact.website) {
     body = fallback;
   } else {
     body = (
@@ -107,6 +108,18 @@ export default function SupplierContactDetails({
               action={t("sendEmail")}
               actionLabel={t("emailAria", { name: supplierName })}
               source={sourceLabel(t, contact.emailSource)}
+            />
+          )}
+          {contact.website && (
+            <ContactRow
+              icon={Globe}
+              label={t("website")}
+              value={contact.website.replace(/^https?:\/\//i, "").replace(/\/$/, "")}
+              href={contact.website}
+              action={t("visitWebsite")}
+              actionLabel={t("websiteAria", { name: supplierName })}
+              source={null}
+              external
             />
           )}
         </ul>
@@ -147,6 +160,7 @@ function ContactRow({
   action,
   actionLabel,
   source,
+  external = false,
 }: {
   icon: typeof Phone;
   label: string;
@@ -155,6 +169,7 @@ function ContactRow({
   action: string;
   actionLabel: string;
   source: string | null;
+  external?: boolean;
 }) {
   return (
     <li className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2">
@@ -167,6 +182,7 @@ function ContactRow({
       <a
         href={href}
         aria-label={actionLabel}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer nofollow" } : {})}
         className="inline-flex shrink-0 items-center gap-1 rounded-lg bg-cyan px-2.5 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
       >
         <Icon className="h-3.5 w-3.5" aria-hidden />
