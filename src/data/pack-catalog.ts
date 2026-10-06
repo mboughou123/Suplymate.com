@@ -6,6 +6,7 @@
 // image path inside it is a LOCAL `/images/...` asset verified on disk at
 // build time, so nothing here depends on a database or a remote host.
 import catalog from "./generated/pack-catalog.json";
+import { officialSupplierLogo } from "./supplier-official-logos";
 import type { Supplier } from "./suppliers";
 import type { ScrapedProduct } from "./scraped-products";
 
@@ -163,7 +164,12 @@ export function toDirectorySupplier(pack: PackSupplier): Supplier {
   void _pack;
   void _overlay;
   void _host;
-  return { ...supplier, featuredProducts: featuredProductsFor(pack.id) };
+  const official = supplier.logoUrl ? undefined : officialSupplierLogo(pack.id);
+  return {
+    ...supplier,
+    ...(official ? { logoUrl: official.src } : {}),
+    featuredProducts: featuredProductsFor(pack.id),
+  };
 }
 
 export function overlayPackSupplier(row: Supplier, pack: PackSupplier): Supplier {
