@@ -6,7 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { getSupplierById, getProductByIdAsync } from "@/lib/data-service";
 import { getScrapedProduct } from "@/lib/scraped-products-store";
 import { getLogisticsProvider, LOGISTICS_CATEGORY_ID } from "@/data/logistics-providers";
-import { officialDomains } from "./provenance";
+import { alibabaStoreFromRecord, officialDomains } from "./provenance";
 import { productIndustry, supplierIndustry, type MediaIndustryId } from "./industry";
 import type { MediaCertificationMeta, MediaTarget } from "./manifest";
 
@@ -20,23 +20,54 @@ export type ResolvedEntity = {
   supplierId?: string;
   /** Whether a Supplier row exists — certificates need one to attach to. */
   supplierInDatabase: boolean;
+  /**
+   * Set when this supplier's own record (website, sourceUrl or alibabaUrl)
+   * is an Alibaba storefront. Product photos may use the same store.
+   */
+  alibabaStoreHost: string | null;
 };
 
-type SupplierFacts = { id: string; name: string; website: string | null; industry: MediaIndustryId | null; inDatabase: boolean };
+type SupplierFacts = {
+  id: string;
+  name: string;
+  website: string | null;
+  sourceUrl: string | null;
+  alibabaUrl: string | null;
+  industry: MediaIndustryId | null;
+  inDatabase: boolean;
+};
 
 async function supplierFacts(id: string): Promise<SupplierFacts | null> {
   try {
     const row = await prisma.supplier.findUnique({
       where: { id },
-      select: { id: true, name: true, website: true, industry: true, category: true },
+      select: { id: true, name: true, website: true, sourceUrl: true, industry: true, category: true },
     });
-    if (row) return { id: row.id, name: row.name, website: row.website, industry: supplierIndustry(row), inDatabase: true };
+    if (row) {
+      return {
+        id: row.id,
+        name: row.name,
+        website: row.website,
+        sourceUrl: row.sourceUrl,
+        alibabaUrl: null,
+        industry: supplierIndustry(row),
+        inDatabase: true,
+      };
+    }
   } catch {
     // no DB — fall back to the bundled directory
   }
   const s = await getSupplierById(id);
   if (!s) return null;
-  return { id: s.id, name: s.name, website: s.website ?? null, industry: supplierIndustry(s), inDatabase: false };
+  return {
+    id: s.id,
+    name: s.name,
+    website: s.website ?? null,
+    sourceUrl: s.sourceUrl ?? null,
+    alibabaUrl: s.alibabaUrl ?? null,
+    industry: supplierIndustry(s),
+    inDatabase: false,
+  };
 }
 
 export async function resolveMediaEntity(target: MediaTarget, id: string): Promise<ResolvedEntity | null> {
@@ -44,7 +75,16 @@ export async function resolveMediaEntity(target: MediaTarget, id: string): Promi
     case "supplier": {
       const s = await supplierFacts(id);
       if (!s) return null;
-      return { target, id: s.id, name: s.name, officialDomains: officialDomains([s.website]), industry: s.industry, supplierId: s.id, supplierInDatabase: s.inDatabase };
+      return {
+        target,
+        id: s.id,
+        name: s.name,
+        officialDomains: officialDomains([s.website]),
+        industry: s.industry,
+        supplierId: s.id,
+        supplierInDatabase: s.inDatabase,
+        alibabaStoreHost: alibabaStoreFromRecord([s.website, s.sourceUrl, s.alibabaUrl]),
+      };
     }
     case "product": {
       const scraped = await getScrapedProduct(id);
@@ -59,6 +99,7 @@ export async function resolveMediaEntity(target: MediaTarget, id: string): Promi
         industry: productIndustry(product),
         supplierId: product.supplierId,
         supplierInDatabase: supplier?.inDatabase ?? false,
+        alibabaStoreHost: supplier ? alibabaStoreFromRecord([supplier.website, supplier.sourceUrl, supplier.alibabaUrl]) : null,
       };
     }
     case "certification": {
@@ -78,6 +119,7 @@ export async function resolveMediaEntity(target: MediaTarget, id: string): Promi
         industry: supplier?.industry ?? null,
         supplierId: cert.supplierId,
         supplierInDatabase: true,
+        alibabaStoreHost: null,
       };
     }
     case "logistics-provider": {
@@ -90,6 +132,7 @@ export async function resolveMediaEntity(target: MediaTarget, id: string): Promi
         officialDomains: officialDomains([p.website, p.homepage, p.quoteUrl, ...p.sourceUrls]),
         industry: LOGISTICS_CATEGORY_ID,
         supplierInDatabase: false,
+        alibabaStoreHost: null,
       };
     }
     default: {

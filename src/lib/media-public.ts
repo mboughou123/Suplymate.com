@@ -5,6 +5,7 @@
 import { prisma } from "@/lib/prisma";
 import { listMedia } from "@/lib/media-store";
 import { listCertifications } from "@/lib/certifications-store";
+import { decorateImageUrl, rankByAuthenticity, readImageAttribution } from "@/lib/image-attribution";
 
 /** Published certificate image URLs for all of a supplier's certifications. */
 export async function getSupplierCertificationImages(supplierId: string): Promise<string[]> {
@@ -41,13 +42,18 @@ export async function getPublishedProductImageMap(
         mediaType: { in: ["PRODUCT_PRIMARY", "PRODUCT_GALLERY"] },
       },
       orderBy: [{ isPrimary: "desc" }, { sortOrder: "asc" }],
-      select: { entityId: true, url: true },
+      select: { entityId: true, url: true, altText: true, caption: true, originalUrl: true },
     });
+    const grouped = new Map<string, { url: string; aiGenerated: boolean }[]>();
     for (const r of rows) {
-      if (!r.entityId) continue;
-      const arr = out.get(r.entityId) ?? [];
-      arr.push(r.url);
-      out.set(r.entityId, arr);
+      if (!r.entityId || !r.url) continue;
+      const attr = readImageAttribution(r);
+      const arr = grouped.get(r.entityId) ?? [];
+      arr.push({ url: decorateImageUrl(r.url, attr), aiGenerated: attr.aiGenerated });
+      grouped.set(r.entityId, arr);
+    }
+    for (const [id, images] of grouped) {
+      out.set(id, rankByAuthenticity(images).map((image) => image.url));
     }
   } catch {
     // no DB / no table — return empty so callers use legacy fields

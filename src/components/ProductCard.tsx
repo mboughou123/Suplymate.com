@@ -9,6 +9,8 @@ import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { getProductFallbackImage } from "@/lib/image-fallback";
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
+import AiIllustrationBadge from "@/components/AiIllustrationBadge";
+import { aiAltText } from "@/lib/image-attribution";
 
 type ProductCardProps = {
   /** Precomputed on the server so the supplier dataset stays out of the bundle. */
@@ -35,11 +37,16 @@ export default function ProductCard({ data: d }: ProductCardProps) {
           <ImageWithFallback
             src={d.imageUrl}
             fallbackSrc={getProductFallbackImage(d.name, d.category)}
-            alt={d.name}
+            alt={d.aiGenerated ? aiAltText(d.name) : d.name}
             sizes={CARD_IMAGE_SIZES.productCard}
             quality={CARD_IMAGE_QUALITY}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-105"
           />
+          {d.aiGenerated && (
+            <span className="absolute bottom-3 left-3">
+              <AiIllustrationBadge />
+            </span>
+          )}
           {d.verified && (
             <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-emerald-700 shadow-sm">
               <BadgeCheck className="h-3.5 w-3.5" aria-hidden />

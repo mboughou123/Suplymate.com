@@ -9,6 +9,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { deleteFromStorage } from "@/lib/image-storage";
+import { decorateImageUrl, readImageAttribution } from "@/lib/image-attribution";
 import {
   MEDIA_TYPES,
   ENTITY_TYPES,
@@ -54,6 +55,8 @@ export type CreateMediaInput = {
   altText?: string | null;
   caption?: string | null;
   sortOrder?: number;
+  aiGenerated?: boolean;
+  photoSource?: "alibaba-store" | null;
   isPrimary?: boolean;
   status?: MediaStatus;
   uploadedBy?: string | null;
@@ -122,6 +125,14 @@ function mapRow(row: Row): Media {
     entityId: s(row.entityId),
     altText: s(row.altText),
     caption: s(row.caption),
+    ...readImageAttribution({
+      url: s(row.url),
+      originalUrl: s(row.originalUrl),
+      altText: s(row.altText),
+      caption: s(row.caption),
+      aiGenerated: row.aiGenerated === true,
+      photoSource: typeof row.photoSource === "string" ? row.photoSource : null,
+    }),
     sortOrder: n(row.sortOrder) ?? 0,
     isPrimary: Boolean(row.isPrimary),
     status: (isMediaStatus(row.status) ? row.status : "unpublished") as MediaStatus,
@@ -277,11 +288,20 @@ export async function createMedia(
 ): Promise<Media> {
   const now = new Date().toISOString();
   const entityType = input.entityType ?? "GENERAL";
+  const attr = readImageAttribution({
+    url: input.url,
+    originalUrl: input.originalUrl,
+    altText: input.altText,
+    caption: input.caption,
+    aiGenerated: input.aiGenerated,
+    photoSource: input.photoSource,
+  });
+  const originalUrl = input.originalUrl ? decorateImageUrl(input.originalUrl, attr) : null;
   const media: Media = {
     id: cuid(),
     url: input.url,
     storageKey: input.storageKey ?? null,
-    originalUrl: input.originalUrl ?? null,
+    originalUrl,
     originalFilename: input.originalFilename ?? null,
     mimeType: input.mimeType ?? null,
     fileSize: input.fileSize ?? null,
@@ -292,6 +312,8 @@ export async function createMedia(
     entityId: input.entityId ?? null,
     altText: input.altText ?? null,
     caption: input.caption ?? null,
+    aiGenerated: attr.aiGenerated,
+    photoSource: attr.photoSource,
     sortOrder: input.sortOrder ?? Date.now() % 100000,
     isPrimary: input.isPrimary ?? false,
     status: input.status ?? "unpublished",
@@ -302,10 +324,12 @@ export async function createMedia(
 
   let created = media;
   try {
-    const { id: _omit, createdAt: _c, updatedAt: _u, ...data } = media;
+    const { id: _omit, createdAt: _c, updatedAt: _u, aiGenerated: _ai, photoSource: _source, ...data } = media;
     void _omit;
     void _c;
     void _u;
+    void _ai;
+    void _source;
     const row = await prisma.media.create({ data });
     created = mapRow(row as Row);
     dbAvailable = true;

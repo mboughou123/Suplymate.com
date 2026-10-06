@@ -54,6 +54,8 @@ export type Supplier = {
   address?: string;
   openingHours?: string;
   sourceUrl?: string;
+  /** Alibaba storefront this supplier was sourced from, when that is the record's own site. */
+  alibabaUrl?: string;
   score?: number;
   lastUpdated?: string;
   // ----- Supplier import & scraping system (optional, additive) -----

@@ -1,0 +1,145 @@
+[
+  {
+    "id": "pack-bluescope-bluescope-colorbond-pre-painted-steel",
+    "name": "BlueScope COLORBOND Pre-Painted Steel",
+    "supplier": "BlueScope Steel Limited",
+    "supplierId": "bluescope",
+    "category": "Steel & Metals",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "BlueScope Steel Limited",
+      "Category": "Steel & Metals",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-far-east-cable-far-east-cable-lv-mv-power-cables",
+    "name": "Far East Cable LV / MV Power Cables",
+    "supplier": "Far East Cable Co., Ltd.",
+    "supplierId": "far-east-cable",
+    "category": "Cables & Electrical",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Far East Cable Co., Ltd.",
+      "Category": "Cables & Electrical",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-gerdau-gerdau-merchant-bar-and-wire-rod",
+    "name": "Gerdau Merchant Bar and Wire Rod",
+    "supplier": "Gerdau S.A.",
+    "supplierId": "gerdau",
+    "category": "Steel & Metals",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Gerdau S.A.",
+      "Category": "Steel & Metals",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-hengtong-hengtong-optical-fibre-and-power-cable-systems",
+    "name": "Hengtong Optical Fibre and Power Cable Systems",
+    "supplier": "Hengtong Group Co., Ltd.",
+    "supplierId": "hengtong",
+    "category": "Cables & Electrical",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Hengtong Group Co., Ltd.",
+      "Category": "Cables & Electrical",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-jsw-cement-jsw-cement-opc-slag-cement",
+    "name": "JSW Cement OPC / Slag Cement",
+    "supplier": "JSW Cement Limited",
+    "supplierId": "jsw-cement",
+    "category": "Construction",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "JSW Cement Limited",
+      "Category": "Construction",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-lyc-bearing-lyc-deep-groove-ball-bearings",
+    "name": "LYC Deep Groove Ball Bearings",
+    "supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+    "supplierId": "lyc-bearing",
+    "category": "Industrial Parts",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "Category": "Industrial Parts",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-lyc-bearing-lyc-large-industrial-rolling-mill-bearings",
+    "name": "LYC Large Industrial / Rolling-Mill Bearings",
+    "supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+    "supplierId": "lyc-bearing",
+    "category": "Industrial Parts",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "Category": "Industrial Parts",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-lyc-bearing-lyc-spherical-roller-bearings",
+    "name": "LYC Spherical Roller Bearings",
+    "supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+    "supplierId": "lyc-bearing",
+    "category": "Industrial Parts",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "Category": "Industrial Parts",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-prysmian-prysmian-energy-and-power-cables",
+    "name": "Prysmian Energy and Power Cables",
+    "supplier": "Prysmian S.p.A.",
+    "supplierId": "prysmian",
+    "category": "Cables & Electrical",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Prysmian S.p.A.",
+      "Category": "Cables & Electrical",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-prysmian-prysmian-optical-fibre-and-telecom-cables",
+    "name": "Prysmian Optical Fibre and Telecom Cables",
+    "supplier": "Prysmian S.p.A.",
+    "supplierId": "prysmian",
+    "category": "Cables & Electrical",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Prysmian S.p.A.",
+      "Category": "Cables & Electrical",
+      "Price source": "RFQ — no public price"
+    }
+  },
+  {
+    "id": "pack-sail-sail-rails-plates-and-structural-steel",
+    "name": "SAIL Rails, Plates and Structural Steel",
+    "supplier": "Steel Authority of India Limited (SAIL)",
+    "supplierId": "sail",
+    "category": "Steel & Metals",
+    "keySpecs": {
+      "moq": "Not published — mill RFQ",
+      "Supplier": "Steel Authority of India Limited (SAIL)",
+      "Category": "Steel & Metals",
+      "Price source": "RFQ — no public price"
+    }
+  }
+]

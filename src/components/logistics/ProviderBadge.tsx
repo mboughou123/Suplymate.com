@@ -1,5 +1,6 @@
 import { providerInitials, type LogisticsProvider } from "@/data/logistics-providers";
 import { resolveProviderLogo } from "@/data/logistics-provider-logos";
+import { LOGO_IMAGE_CLASS, LOGO_INITIALS_CLASS, LOGO_MONO_CLASS, LOGO_TILE_CLASS } from "@/lib/logo-tile";
 
 const SIZES = {
   sm: "h-9 w-9 rounded-lg text-xs",
@@ -12,7 +13,7 @@ export default function ProviderBadge({
   size = "md",
   logoUrl,
 }: {
-  provider: Pick<LogisticsProvider, "company"> & Partial<Pick<LogisticsProvider, "id" | "logo" | "logoOnDark">>;
+  provider: Pick<LogisticsProvider, "company"> & Partial<Pick<LogisticsProvider, "id" | "logo">>;
   size?: keyof typeof SIZES;
   /** Admin-published logo from the media library; bundled file otherwise. */
   logoUrl?: string | null;
@@ -23,10 +24,10 @@ export default function ProviderBadge({
       logo.maxNativePx != null ? { maxWidth: logo.maxNativePx, maxHeight: logo.maxNativePx } : undefined;
     return (
       <span
-        className={`flex shrink-0 items-center justify-center overflow-hidden border p-1 ${
-          logo.logoOnDark ? "border-navy bg-navy" : "border-slate-200 bg-white"
-        } ${SIZES[size]}`}
+        className={`${LOGO_TILE_CLASS} ${SIZES[size]}`}
         style={cap}
+        data-logo-tile="white"
+        data-logo-mono={logo.monoOnWhite ? "true" : "false"}
       >
         {/* Local and published files, including SVG. Served as-is, not redrawn. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -35,7 +36,7 @@ export default function ProviderBadge({
           alt={`${provider.company} logo`}
           width={logo.maxNativePx}
           height={logo.maxNativePx}
-          className="h-full w-full object-contain"
+          className={`${LOGO_IMAGE_CLASS} ${logo.monoOnWhite ? LOGO_MONO_CLASS : ""}`}
           style={cap}
           loading="lazy"
           decoding="async"
@@ -46,7 +47,8 @@ export default function ProviderBadge({
   return (
     <span
       aria-hidden
-      className={`flex shrink-0 items-center justify-center bg-navy font-extrabold tracking-tight text-white ${SIZES[size]}`}
+      data-logo-tile="white"
+      className={`${LOGO_TILE_CLASS} ${LOGO_INITIALS_CLASS} ${SIZES[size]}`}
     >
       {providerInitials(provider)}
     </span>

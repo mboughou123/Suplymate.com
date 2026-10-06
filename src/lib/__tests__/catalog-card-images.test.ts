@@ -116,7 +116,7 @@ describe("resolveCardImage", () => {
       resolveCardImage({ images: [local], productName: "Folding Gift Box", category: "Packaging" }).imageUrl,
     ).toBe(local);
     const none = resolveCardImage({ images: [], productName: "Swagelok Fittings", category: "Tubes & Pipes" });
-    expect(none).toEqual({ imageUrl: "/images/products/pipes.svg", hasRealPhoto: false });
+    expect(none).toEqual({ imageUrl: "/images/products/pipes.svg", hasRealPhoto: false, aiGenerated: false });
   });
 });
 
@@ -160,7 +160,7 @@ describe("scraped placeholders and fragments", () => {
       productName: "10GXE02",
       category: "Cables & Electrical",
     });
-    expect(r).toEqual({ imageUrl: "/images/products/electrical.svg", hasRealPhoto: false });
+    expect(r).toEqual({ imageUrl: "/images/products/electrical.svg", hasRealPhoto: false, aiGenerated: false });
   });
 
   it("drops MOQ/shipping text that is a cut-off sentence", () => {

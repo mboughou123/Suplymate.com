@@ -37,6 +37,7 @@ import { getPublishedProductImageMap } from "@/lib/media-public";
 import { applyCommission, formatPrice, COMMISSION_RATE } from "@/config/commerce";
 import type { Product, ProductCategory } from "@/data/products";
 import { PRODUCT_LIST_PAGE_SIZE } from "@/lib/products-query";
+import { displayImageUrl, readImageAttribution } from "@/lib/image-attribution";
 
 export type PublicProductCard = {
   id: string;
@@ -51,6 +52,8 @@ export type PublicProductCard = {
   verified: boolean;
   imageUrl: string;
   hasRealPhoto: boolean;
+  /** True when the card is showing an AI illustration because no real photo exists. */
+  aiGenerated: boolean;
   /** Commissioned price label, or null when no public price is available. */
   priceLabel: string | null;
   priceUnit: string | null;
@@ -111,16 +114,22 @@ function priceLabelFor(
  * The product's own photo wins over a still borrowed from its supplier's
  * folder; a scraped remote photo is re-hosted through the signed proxy.
  */
-export function resolveCardImage(input: ProductImageInput): { imageUrl: string; hasRealPhoto: boolean } {
-  const real = getRealProductImage(input);
-  if (real && (input.images ?? []).includes(real)) return { imageUrl: real, hasRealPhoto: true };
-  const remote = getRemoteProductImage(input);
+export function resolveCardImage(input: ProductImageInput): { imageUrl: string; hasRealPhoto: boolean; aiGenerated: boolean } {
+  const listed = (input.images ?? []).filter((url): url is string => typeof url === "string");
+  const realUrls = listed.filter((url) => !readImageAttribution({ url }).aiGenerated).map(displayImageUrl);
+  const aiUrls = listed.filter((url) => readImageAttribution({ url }).aiGenerated);
+  const realInput = { ...input, images: realUrls };
+  const real = getRealProductImage(realInput);
+  if (real && realUrls.includes(real)) return { imageUrl: real, hasRealPhoto: true, aiGenerated: false };
+  const remote = getRemoteProductImage(realInput);
   const proxied = remote ? proxiedProductImageUrl(remote) : null;
-  if (proxied) return { imageUrl: proxied, hasRealPhoto: true };
-  if (real) return { imageUrl: real, hasRealPhoto: true };
+  if (proxied) return { imageUrl: proxied, hasRealPhoto: true, aiGenerated: false };
+  if (real) return { imageUrl: real, hasRealPhoto: true, aiGenerated: false };
+  if (aiUrls[0]) return { imageUrl: displayImageUrl(aiUrls[0]), hasRealPhoto: false, aiGenerated: true };
   return {
     imageUrl: getProductFallbackImage(input.productName, input.category) ?? GENERIC_PRODUCT_PLACEHOLDER,
     hasRealPhoto: false,
+    aiGenerated: false,
   };
 }
 

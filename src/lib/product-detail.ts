@@ -18,6 +18,14 @@ import {
   hasRealProductImage,
   isRealImageUrl,
 } from "@/lib/image-fallback";
+import {
+  AI_GENERATED_LABEL,
+  aiAltText,
+  displayImageUrl,
+  rankByAuthenticity,
+  readImageAttribution,
+  type PhotoSource,
+} from "@/lib/image-attribution";
 import { calculateSupplierCompletenessScore } from "@/lib/supplier-completeness";
 import {
   COMMISSION_RATE,
@@ -71,10 +79,14 @@ export type IconKey =
 export type GalleryImage = {
   id: string;
   label: string;
+  /** Alt text. AI illustrations say so explicitly. */
+  alt?: string;
   gradient: string;
   icon: IconKey;
   isVideo: boolean;
   url?: string;
+  aiGenerated?: boolean;
+  photoSource?: PhotoSource | null;
 };
 
 export type PriceTier = {
@@ -137,6 +149,7 @@ export type ProductSupplierCard = {
   name: string;
   logoText: string;
   logoGradient: string;
+  logoUrl?: string;
   country: string;
   city: string;
   flag: string;
@@ -310,6 +323,8 @@ export type ProductCardData = {
   imageUrl?: string;
   /** True when a genuine photograph is available (not just a category tile). */
   hasRealPhoto: boolean;
+  /** True when the card image is an AI illustration (it ranks below any real photo). */
+  aiGenerated?: boolean;
   supplierId: string;
   supplierName: string;
   supplierLocation: string;
@@ -336,8 +351,14 @@ export function getProductCardData(product: Product): ProductCardData {
   const bulkPrice = applyCommission(base * 0.82, rate);
 
   const photos = supplierPhotos(supplierRecord);
+  const ownImages = (product.images ?? []).map((url) => ({
+    url,
+    ...readImageAttribution({ url }),
+  }));
+  const realOwn = ownImages.filter((image) => !image.aiGenerated).map((image) => displayImageUrl(image.url));
+  const aiOwn = ownImages.filter((image) => image.aiGenerated);
   const imageInput = {
-    images: product.images,
+    images: realOwn,
     supplierImages: photos,
     id: product.id,
     slug: product.slug,
@@ -346,6 +367,7 @@ export function getProductCardData(product: Product): ProductCardData {
     category: product.category,
   };
   const realImage = getRealProductImage(imageInput);
+  const showingAi = !realImage && aiOwn.length > 0;
 
   const completenessScore = calculateSupplierCompletenessScore({
     verified: sd.verified,
@@ -368,8 +390,9 @@ export function getProductCardData(product: Product): ProductCardData {
     category: product.category,
     icon: ICONS_BY_CATEGORY[product.category],
     gradient: GALLERY_GRADIENTS[seed % GALLERY_GRADIENTS.length],
-    imageUrl: realImage,
+    imageUrl: realImage ?? (showingAi ? displayImageUrl(aiOwn[0].url) : undefined),
     hasRealPhoto: hasRealProductImage(imageInput),
+    aiGenerated: showingAi,
     supplierId: sd.id,
     supplierName: sd.name,
     supplierLocation: [sd.city, sd.country].filter(Boolean).join(", "),
@@ -448,25 +471,25 @@ export function getProductDetail(product: Product): ProductDetail {
   let gallery: GalleryImage[];
 
   if (product.images?.length) {
-    gallery = product.images.map((url, i) => ({
-      id: `${product.id}-img-${i}`,
-      // Real photographs are labelled by product, not by an invented "view".
-      label: `${product.name} — photo ${i + 1}`,
-      gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
-      icon,
-      url,
-      isVideo: false,
-    }));
-    while (gallery.length < 2) {
-      const i = gallery.length;
-      gallery.push({
-        id: `${product.id}-placeholder-${i}`,
-        label: galleryLabels[i] ?? `View ${i + 1}`,
+    const ranked = rankByAuthenticity(
+      product.images.map((url) => ({ url, ...readImageAttribution({ url }) }))
+    );
+    gallery = ranked.map((image, i) => {
+      const ai = image.aiGenerated;
+      const label = ai ? `${product.name} — ${AI_GENERATED_LABEL}` : `${product.name} — photo ${i + 1}`;
+      return {
+        id: `${product.id}-img-${i}`,
+        // Real photographs are labelled by product, not by an invented "view".
+        label,
+        alt: ai ? aiAltText(product.name, label) : label,
         gradient: GALLERY_GRADIENTS[(seed + i) % GALLERY_GRADIENTS.length],
         icon,
+        url: displayImageUrl(image.url),
         isVideo: false,
-      });
-    }
+        aiGenerated: ai,
+        photoSource: image.photoSource,
+      };
+    });
     if (hasVideos) {
       gallery.push({
         id: `${product.id}-video-0`,
@@ -651,6 +674,7 @@ export function getProductDetail(product: Product): ProductDetail {
     name: sd.name,
     logoText: sd.logoText,
     logoGradient: sd.logoGradient,
+    logoUrl: sd.logoUrl,
     country: sd.country,
     city: sd.city,
     flag: sd.flag,

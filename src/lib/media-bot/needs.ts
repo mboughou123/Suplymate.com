@@ -5,7 +5,7 @@
 // those sites on their own machines, so Suplymate's servers never scrape.
 
 import type { Media } from "@/lib/media-types";
-import { officialDomains } from "./provenance";
+import { alibabaStoreFromRecord, officialDomains } from "./provenance";
 import { productIndustry, supplierIndustry, type MediaIndustryId } from "./industry";
 import type { MediaRole, MediaTarget } from "./manifest";
 
@@ -15,6 +15,8 @@ export type NeedsSupplier = {
   id: string;
   name: string;
   website: string | null;
+  sourceUrl?: string | null;
+  alibabaUrl?: string | null;
   category?: string | null;
   industry?: string | null;
   products?: string[];
@@ -52,6 +54,8 @@ export type MediaNeed = {
   officialDomains: string[];
   /** Roles the bot should collect; push items use these exact role names. */
   roles: MediaRole[];
+  /** Set when the supplier record itself is an Alibaba storefront. */
+  alibabaStoreHost?: string | null;
   /** Supplier certificates that still need a scan (push with role "certificate"). */
   certificates?: string[];
 };
@@ -88,12 +92,17 @@ export function computeMediaNeeds(
   let withoutWebsite = 0;
   const push = (need: MediaNeed) => {
     if (!need.roles.length) return;
-    if (!need.officialDomains.length) withoutWebsite++;
+    if (!need.officialDomains.length && !need.alibabaStoreHost) withoutWebsite++;
     else all.push(need);
   };
 
   const supplierDomains = new Map<string, string[]>();
-  for (const s of input.suppliers) supplierDomains.set(s.id, officialDomains([s.website]));
+  const supplierStores = new Map<string, string>();
+  for (const s of input.suppliers) {
+    supplierDomains.set(s.id, officialDomains([s.website]));
+    const store = alibabaStoreFromRecord([s.website, s.sourceUrl, s.alibabaUrl]);
+    if (store) supplierStores.set(s.id, store);
+  }
 
   if (wants("supplier")) {
     for (const s of input.suppliers) {
@@ -105,6 +114,7 @@ export function computeMediaNeeds(
       if (photos < MIN_SUPPLIER_PHOTOS) roles.push("factory", "gallery");
       const missingCerts = s.certificates.filter((c) => !c.hasScan).map((c) => c.name);
       if (missingCerts.length) roles.push("certificate");
+      const alibabaStoreHost = supplierStores.get(s.id) ?? null;
       push({
         target: "supplier",
         entityId: s.id,
@@ -112,6 +122,7 @@ export function computeMediaNeeds(
         industry,
         officialDomains: supplierDomains.get(s.id) ?? [],
         roles,
+        ...(alibabaStoreHost ? { alibabaStoreHost } : {}),
         ...(missingCerts.length ? { certificates: missingCerts } : {}),
       });
     }
@@ -123,7 +134,16 @@ export function computeMediaNeeds(
       if (!inIndustry(industry)) continue;
       const images = p.legacyImageCount + n("PRODUCT", p.id, "PRODUCT_PRIMARY") + n("PRODUCT", p.id, "PRODUCT_GALLERY");
       const domains = [...new Set([...officialDomains([p.productUrl, p.sourceUrl]), ...(p.supplierId ? supplierDomains.get(p.supplierId) ?? [] : [])])].sort();
-      push({ target: "product", entityId: p.id, name: p.name, industry, officialDomains: domains, roles: images === 0 ? ["product"] : [] });
+      const alibabaStoreHost = p.supplierId ? supplierStores.get(p.supplierId) ?? null : null;
+      push({
+        target: "product",
+        entityId: p.id,
+        name: p.name,
+        industry,
+        officialDomains: domains,
+        roles: images === 0 ? ["product"] : [],
+        ...(alibabaStoreHost ? { alibabaStoreHost } : {}),
+      });
     }
   }
 

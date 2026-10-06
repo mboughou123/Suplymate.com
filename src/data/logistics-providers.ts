@@ -47,8 +47,8 @@ export type LogisticsProvider = {
   sourceUrls: string[];
   /** Public path of a QA-approved logo. Absent when none was approved. */
   logo?: string;
-  /** White logo; render it on a dark tile. */
-  logoOnDark?: boolean;
+  /** White logo with no coloured file; paint it dark on the white tile. */
+  monoOnWhite?: boolean;
 };
 
 export const PROVIDERS_CHECKED_AT = "2026-10-04";
@@ -62,7 +62,7 @@ function attachLogo(provider: LogisticsProvider): LogisticsProvider {
   return {
     ...provider,
     logo: asset.src,
-    ...(asset.logoOnDark ? { logoOnDark: true } : {}),
+    ...(asset.monoOnWhite ? { monoOnWhite: true } : {}),
   };
 }
 

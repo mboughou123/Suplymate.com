@@ -19,19 +19,56 @@ official website**, the domain of the supplier's or provider's `website` in
 Suplymate. The image file itself (`imageUrl`) may sit on the site's CDN.
 
 Marketplaces and competing directories are refused, both by the bot before
-uploading and again by the server: Alibaba / AliExpress / 1688 / Taobao,
+uploading and again by the server: AliExpress / 1688 / Taobao,
 Made-in-China, Global Sources, IndiaMART, TradeIndia, DHgate, EC21, Amazon,
 eBay, Walmart, Temu, Etsy and similar (`MARKETPLACE_DOMAINS` in
 `src/lib/media-bot/provenance.ts`; `GET /api/admin/import/media` returns the
-live list). Photos on those sites belong to their sellers or to the platform,
-often show another company's goods, and re-hosting them would misrepresent
-where a picture comes from. Images carrying a marketplace watermark are also
-refused, even when found on the official site.
+live list, which still includes `alibaba.com`). Photos on those sites belong
+to their sellers or to the platform, often show another company's goods, and
+re-hosting them would misrepresent where a picture comes from. Images carrying
+a marketplace watermark are also refused, even when found on the official site.
 
-Enhancements are limited to `none`, `resize`, `restore`, `upscale` and
-`background-removed`. Generative edits (inpainting, redrawn or "improved"
-logos) are not accepted: buyers must see the real factory, product and
-certificate. Certificates are only resized, never restored or upscaled.
+### Alibaba store photos (owner decision)
+
+`alibaba.com` is allowed as `sourceUrl` **only** when the supplier record
+itself was sourced from that store: its `website`, `sourceUrl` or `alibabaUrl`
+is that `*.en.alibaba.com` storefront (or an `alibaba.com/store/<slug>` /
+`/shop/<slug>` path). The image must come from **that same store's listings**.
+Listing files may sit on Alibaba's image CDN (`alicdn.com`). A bare
+`www.alibaba.com` page is not a store. A photo from a different Alibaba store,
+or from any other marketplace, is still rejected.
+
+Those items store `photoSource: "alibaba-store"`. The site shows the caption
+`Photo: supplier's Alibaba store` on the image. Alibaba's own store watermark
+is not a rejection for that matching-store photo; any other marketplace
+watermark still is. A supplier and a product may have several gallery images;
+the supplier page and the product page show every real photo.
+
+Needs for a storefront supplier include `alibabaStoreHost` even when
+`officialDomains` is empty. `media-batches/needs/alibaba-suppliers.json` lists
+every catalogue supplier whose record points at an Alibaba store, with the
+store URL and the current image count.
+
+### AI product illustrations
+
+`enhancement: "ai-generated"` is accepted **only** for `target: "product"` and
+`role: "product"`, and the item must also set `aiGenerated: true`. Logos,
+factory and cover photos, galleries and certificates cannot be generated.
+The stored image is flagged `aiGenerated`, its alt text includes
+`Illustration (AI-generated)`, and the card and the product page show that
+badge. Real photographs always rank above an illustration. Products with no
+real photo are listed in `media-batches/needs/products-missing-images.json`
+so another bot can generate the missing stills.
+
+Other enhancements stay `none`, `resize`, `restore`, `upscale` and
+`background-removed`. Generative edits of a real logo, factory or certificate
+(inpainting, redrawn or "improved" artwork) are not accepted. Certificates
+are only resized, never restored or upscaled.
+
+Logos render on a white tile site-wide (`object-contain`, padding, a light
+border). A logo that is white-only and has no coloured file on the company's
+own site is painted dark with `brightness(0)` (`monoOnWhite`; today that is
+QBE Marine Cargo). Missing logos stay an initials badge on the same white tile.
 
 ## Endpoints
 
@@ -100,7 +137,9 @@ inbox/2026-10-04-metals/
 | `logistics-provider` | provider id from `src/data/logistics-providers.ts` | `logo` |
 
 Optional per item: `imageUrl`, `altText`, `caption`, `enhancement` (set by
-`prepare`), `sha256`, `width`, `height`.
+`prepare`), `sha256`, `width`, `height`, `photoSource` (`alibaba-store` only,
+and only when provenance agrees), `aiGenerated` (required with
+`enhancement: "ai-generated"`).
 
 ## The worker (`scripts/media-bot.ts`)
 

@@ -6,20 +6,19 @@ import type { SupplierMatch } from "@/lib/ai/supplier-matching";
 import MatchScoreBars from "@/components/ai-workspace/MatchScoreBars";
 import Beam from "@/components/fx/Beam";
 import { glass } from "@/components/ai-workspace/types";
+import LogoTile from "@/components/LogoTile";
 
 export default function SupplierMatchCard({ match, rank }: { match: SupplierMatch; rank: number }) {
   const s = match.supplier;
   const card = (
     <article className={`${glass} p-4 sm:p-5`}>
       <div className="flex items-start gap-3">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/5 text-sm font-bold text-white/80">
-          {s.logoUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={s.logoUrl} alt="" className="h-full w-full object-contain" />
-          ) : (
-            s.name.slice(0, 2).toUpperCase()
-          )}
-        </span>
+        <LogoTile
+          src={s.logoUrl}
+          alt={`${s.name} logo`}
+          initials={s.name.slice(0, 2).toUpperCase()}
+          className="h-11 w-11 rounded-xl text-sm"
+        />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <h4 className="truncate text-sm font-semibold text-white">{s.name}</h4>

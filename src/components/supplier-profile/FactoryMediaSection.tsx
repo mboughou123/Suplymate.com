@@ -16,6 +16,7 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_SUPPLIER_PLACEHOLDER } from "@/lib/image-fallback";
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 import { SectionHeading, reveal } from "./primitives";
+import { ALIBABA_PHOTO_CAPTION } from "@/lib/image-attribution";
 
 export default function FactoryMediaSection({ profile }: { profile: SupplierProfile }) {
   const t = useTranslations("supplierProfile");
@@ -80,6 +81,9 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
             </span>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-3">
               <p className="text-sm font-semibold text-white">{m.title}</p>
+              {m.photoSource === "alibaba-store" ? (
+                <p className="text-[10px] font-semibold text-white/90">{ALIBABA_PHOTO_CAPTION}</p>
+              ) : null}
             </div>
           </motion.button>
         ))}

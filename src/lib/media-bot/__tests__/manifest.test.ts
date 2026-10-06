@@ -33,6 +33,18 @@ describe("parseMediaItem", () => {
     expect(res).toEqual({ item: { ...base, sha256: "a".repeat(64) } });
   });
 
+  it("accepts a labelled AI product image and rejects it for every other role", () => {
+    expect(error({ ...base, target: "product", role: "product", enhancement: "ai-generated", aiGenerated: true })).toBeNull();
+    expect(error({ ...base, target: "product", role: "product", enhancement: "ai-generated" })).toMatch(/aiGenerated: true/);
+    expect(error({ ...base, role: "logo", enhancement: "ai-generated", aiGenerated: true })).toMatch(/not allowed for logo/);
+    expect(error({ ...base, role: "factory", enhancement: "ai-generated", aiGenerated: true })).toMatch(/not allowed for factory/);
+    expect(error({ ...base, role: "cover", enhancement: "ai-generated", aiGenerated: true })).toMatch(/not allowed for cover/);
+    expect(error({ ...base, role: "gallery", enhancement: "ai-generated", aiGenerated: true })).toMatch(/not allowed for gallery/);
+    expect(
+      error({ ...base, role: "certificate", enhancement: "ai-generated", aiGenerated: true, certification: { name: "ISO 9001" } }),
+    ).toMatch(/not allowed for certificate/);
+  });
+
   it("never accepts generative edits", () => {
     expect(error({ ...base, enhancement: "generative" })).toMatch(/generative edits are never accepted/);
     expect(error({ ...base, enhancement: "ai-redraw" })).toMatch(/not accepted/);

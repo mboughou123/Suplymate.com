@@ -580,7 +580,7 @@ describe("daily 2026-09-11 cleared wire", () => {
     "venus-pipes",
     "wheatland-tube",
   ];
-  const productOnlyHosts = [];
+  const productOnlyHosts: string[] = [];
   const promoted0911Hosts = [
     "atlas-tube",
     "metal-matic",

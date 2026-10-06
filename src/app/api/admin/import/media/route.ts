@@ -15,6 +15,7 @@ import {
   MEDIA_ROLES,
 } from "@/lib/media-bot/manifest";
 import { MARKETPLACE_DOMAINS } from "@/lib/media-bot/provenance";
+import { AI_GENERATED_LABEL, ALIBABA_PHOTO_CAPTION } from "@/lib/image-attribution";
 import { runMediaPush } from "@/lib/media-bot/push";
 import { serverMediaPushDeps } from "@/lib/media-bot/server-deps";
 
@@ -84,6 +85,19 @@ export async function GET(request: Request) {
     enhancements: Object.fromEntries(MEDIA_ROLES.map((r) => [r, enhancementsForRole(r)])),
     allEnhancements: ENHANCEMENTS,
     blockedSources: MARKETPLACE_DOMAINS,
+    alibabaStorePhotos: {
+      allowedWhen:
+        "alibaba.com is allowed as sourceUrl only when the supplier record's website, sourceUrl or alibabaUrl is that same storefront and the image comes from that store's listings (alicdn.com files included). Every other marketplace stays blocked.",
+      photoSource: "alibaba-store",
+      caption: ALIBABA_PHOTO_CAPTION,
+      watermark: "Alibaba's own store watermark is accepted only for that matching-store photo.",
+    },
+    aiGeneratedProductImages: {
+      enhancement: "ai-generated",
+      requiresAiGenerated: true,
+      allowedWhen: "target=product and role=product only. Never logos, factory/cover, gallery or certificates.",
+      label: AI_GENERATED_LABEL,
+    },
     maxBytesPerRequest: pushMaxBytes(),
     storage: storageProviderStatus(),
   });

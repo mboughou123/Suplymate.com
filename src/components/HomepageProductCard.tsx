@@ -6,6 +6,8 @@ import { Truck, Users, GitCompare, BadgeCheck } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { GENERIC_PRODUCT_PLACEHOLDER } from "@/lib/image-fallback";
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
+import AiIllustrationBadge from "@/components/AiIllustrationBadge";
+import { aiAltText } from "@/lib/image-attribution";
 
 export type HomepageProductCardProps = {
   id: string;
@@ -21,6 +23,7 @@ export type HomepageProductCardProps = {
   supplierCount: number;
   verified: boolean;
   href: string;
+  aiGenerated?: boolean;
 };
 
 export default function HomepageProductCard({
@@ -34,6 +37,7 @@ export default function HomepageProductCard({
   supplierCount,
   verified,
   href,
+  aiGenerated = false,
 }: HomepageProductCardProps) {
   const t = useTranslations("products");
   const tCommon = useTranslations("common");
@@ -46,11 +50,16 @@ export default function HomepageProductCard({
           src={image}
           fallbackSrc={imageFallback}
           placeholderSrc={GENERIC_PRODUCT_PLACEHOLDER}
-          alt={name}
+          alt={aiGenerated ? aiAltText(name) : name}
           sizes={CARD_IMAGE_SIZES.homeProduct}
           quality={CARD_IMAGE_QUALITY}
           className="h-full w-full object-cover transition-transform duration-500 ease-cinema group-hover:scale-[1.04] motion-reduce:transform-none"
         />
+        {aiGenerated && (
+          <span className="absolute bottom-3 left-3">
+            <AiIllustrationBadge />
+          </span>
+        )}
         {verified && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 py-1 pl-1.5 pr-2.5 text-caption font-semibold text-up shadow-sm ring-1 ring-black/5 backdrop-blur">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden />

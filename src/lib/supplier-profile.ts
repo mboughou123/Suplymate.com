@@ -16,6 +16,7 @@ import {
   getSupplierFallbackImage,
   getProductFallbackImage,
 } from "@/lib/image-fallback";
+import { AI_GENERATED_LABEL, displayImageUrl, readImageAttribution, type PhotoSource } from "@/lib/image-attribution";
 import {
   calculateSupplierCompleteness,
   mediaQualityFor,
@@ -220,6 +221,8 @@ export type MediaItem = {
   fallback: string;
   /** True when `url` is a genuine supplier photograph (not a category tile). */
   isReal: boolean;
+  photoSource?: PhotoSource | null;
+  aiGenerated?: boolean;
 };
 
 export type ProfileProduct = {
@@ -245,6 +248,8 @@ export type ProfileProduct = {
   href?: string;
   /** True for real catalogue products (no invented rating / AI pick / specs). */
   isReal: boolean;
+  /** True when the card image is an AI illustration. */
+  aiGeneratedImage?: boolean;
 };
 
 export type Review = {
@@ -540,9 +545,9 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   // s.supplierImages) → category-based factory/warehouse fallback → branded
   // placeholder. Never an empty gallery. Suppliers with no website rely on the
   // Google Places photos (collected at import); we never scrape their site.
-  const realSupplierPhotos = [s.imageUrl, ...(s.supplierImages ?? [])].filter(
-    (u): u is string => isRealImageUrl(u)
-  );
+  const realSupplierPhotos = [s.imageUrl, ...(s.supplierImages ?? [])]
+    .filter((u): u is string => typeof u === "string" && isRealImageUrl(displayImageUrl(u)))
+    .map((u) => ({ url: displayImageUrl(u), ...readImageAttribution({ url: u }) }));
   const categoryMediaFallback = getSupplierFallbackImage(
     s.category ?? s.industry,
     s.name
@@ -556,30 +561,35 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     "Factory exterior",
     "Material inspection",
   ];
-  // Always at least 6 tiles; show every real photo when the pack has more
-  // (capped so the gallery stays a gallery, not a dump).
-  const tileCount = Math.min(12, Math.max(mediaTitles.length, realSupplierPhotos.length));
+  // Every real photo is shown, including a full Alibaba store gallery.
+  // Illustrative tiles only fill the grid when the supplier has no photo.
+  const tileCount = realSupplierPhotos.length > 0 ? realSupplierPhotos.length : mediaTitles.length;
   const media: MediaItem[] = Array.from({ length: tileCount }, (_, i) => {
     const real = realSupplierPhotos[i];
     // Real photographs are captioned neutrally — we do not know whether a
     // collected photo shows the warehouse or the QC lab, so we never claim it.
     // The rotating sourcing captions only label the illustrative tiles.
     const title = real
-      ? `Photo ${i + 1}`
+      ? real.aiGenerated
+        ? AI_GENERATED_LABEL
+        : `Photo ${i + 1}`
       : i < mediaTitles.length
         ? mediaTitles[i]
         : `${base.name} — photo ${i + 1}`;
+    const alibabaCaption = real?.photoSource === "alibaba-store" ? "Photo: supplier's Alibaba store" : null;
     return {
       id: `${base.id}-media-${i}`,
       // Only mark a tile as video when we have no real still to show for it
       // (keeps the lightbox honest about which tiles are genuine photos).
       type: i === 3 && realSupplierPhotos.length === 0 ? "video" : "image",
       title,
-      caption: real ? `${base.name} — photo ${i + 1}` : `${base.name} — ${title.toLowerCase()}`,
+      caption: alibabaCaption ?? (real ? `${base.name} — photo ${i + 1}` : `${base.name} — ${title.toLowerCase()}`),
       gradient: MEDIA_GRADIENTS[(seed + i) % MEDIA_GRADIENTS.length],
-      url: real ?? categoryMediaFallback,
+      url: real?.url ?? categoryMediaFallback,
       fallback: categoryMediaFallback,
       isReal: Boolean(real),
+      photoSource: real?.photoSource ?? null,
+      aiGenerated: Boolean(real?.aiGenerated),
     };
   });
 
@@ -597,15 +607,21 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   const products: ProfileProduct[] = realProducts.length
     ? realProducts.map((p) => {
         const imageFallback = getProductFallbackImage(p.name, p.category);
-        const hasPhoto = p.images.length > 0;
+        const ranked = [...p.images]
+          .map((url) => ({ url, ...readImageAttribution({ url }) }))
+          .sort((a, b) => Number(a.aiGenerated) - Number(b.aiGenerated));
+        const real = ranked.find((image) => !image.aiGenerated);
+        const shown = real ?? ranked[0];
+        const hasPhoto = Boolean(shown) && !shown.aiGenerated;
         return {
           id: p.id,
           name: p.name,
           category: p.category,
           gradient: PRODUCT_GRADIENTS[hashString(p.id) % PRODUCT_GRADIENTS.length],
-          image: hasPhoto ? p.images[0] : imageFallback,
+          image: shown ? displayImageUrl(shown.url) : imageFallback,
           imageFallback,
           hasRealPhoto: hasPhoto,
+          aiGeneratedImage: Boolean(shown?.aiGenerated) && !hasPhoto,
           priceRange:
             p.basePrice != null
               ? `${formatPrice(applyCommission(p.basePrice, p.commissionRate ?? COMMISSION_RATE), p.currency)}${
@@ -638,9 +654,10 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
       name,
       category: pick(pr, productCats),
       gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
-      image: realPhoto ?? imageFallback,
+      image: realPhoto?.url ?? imageFallback,
       imageFallback,
-      hasRealPhoto: Boolean(realPhoto),
+      hasRealPhoto: Boolean(realPhoto && !realPhoto.aiGenerated),
+      aiGeneratedImage: Boolean(realPhoto?.aiGenerated),
       priceRange: `$${lo.toLocaleString()} – $${hi.toLocaleString()}`,
       moq: i % 2 === 0 ? base.moq : `${intBetween(pr, 1, 500)} units`,
       leadTime: pick(pr, LEAD_TIMES),
@@ -820,7 +837,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
     imageUrl: s.imageUrl,
     images: s.supplierImages,
     products: s.products,
-    productImages: realSupplierPhotos,
+    productImages: realSupplierPhotos.filter((photo) => !photo.aiGenerated).map((photo) => photo.url),
     description: realDescription,
     rating: base.rating,
     reviewCount: base.reviewCount,
@@ -837,7 +854,7 @@ export function getSupplierProfile(s: Supplier): SupplierProfile {
   const mediaQuality = mediaQualityFor({
     imageUrl: s.imageUrl,
     images: s.supplierImages,
-    productImages: realSupplierPhotos,
+    productImages: realSupplierPhotos.filter((photo) => !photo.aiGenerated).map((photo) => photo.url),
   });
 
   return {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BadgeCheck, Star, MapPin, Clock, Truck, Repeat, ArrowUpRight } from "lucide-react";
 import type { ProductSupplierCard } from "@/lib/product-detail";
 import ContactSupplierButton from "@/components/chat/ContactSupplierButton";
+import SupplierLogo from "@/components/SupplierLogo";
 
 export default function ProductSupplierBox({
   supplier,
@@ -17,12 +18,12 @@ export default function ProductSupplierBox({
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
       <div className="flex items-start gap-4">
-        <div
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl text-xl font-extrabold text-white shadow-card"
-          style={{ backgroundImage: supplier.logoGradient }}
-        >
-          {supplier.logoText}
-        </div>
+        <SupplierLogo
+          logoUrl={supplier.logoUrl}
+          initials={supplier.logoText}
+          name={supplier.name}
+          className="h-16 w-16 rounded-2xl text-xl shadow-card"
+        />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             {supplier.href ? (

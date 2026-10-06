@@ -5,11 +5,12 @@ import type { MediaPushDeps } from "../push";
 export const JPEG = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0x00, 0x10, 0x4a, 0x46, 0x49, 0x46, 0x00, 0x01, 0x01, 0x00, 0x42]);
 
 export const ENTITIES: ResolvedEntity[] = [
-  { target: "supplier", id: "posco", name: "POSCO", officialDomains: ["posco.com"], industry: "metals", supplierId: "posco", supplierInDatabase: true },
-  { target: "supplier", id: "bundled-mill", name: "Bundled Mill", officialDomains: ["bundledmill.com"], industry: "metals", supplierId: "bundled-mill", supplierInDatabase: false },
-  { target: "supplier", id: "no-site", name: "No Site Co", officialDomains: [], industry: "packaging", supplierId: "no-site", supplierInDatabase: true },
-  { target: "product", id: "posco-hrc", name: "POSCO Hot-Rolled Coil", officialDomains: ["posco.com"], industry: "metals", supplierId: "posco", supplierInDatabase: true },
-  { target: "logistics-provider", id: "falvey-cargo", name: "Falvey Cargo", officialDomains: ["falveycargo.com", "falveyinsurancegroup.com"], industry: "logistics-insurance", supplierInDatabase: false },
+  { target: "supplier", id: "posco", name: "POSCO", officialDomains: ["posco.com"], industry: "metals", supplierId: "posco", supplierInDatabase: true, alibabaStoreHost: null },
+  { target: "supplier", id: "acme-store", name: "Acme Store", officialDomains: [], industry: "metals", supplierId: "acme-store", supplierInDatabase: true, alibabaStoreHost: "acme.en.alibaba.com" },
+  { target: "supplier", id: "bundled-mill", name: "Bundled Mill", officialDomains: ["bundledmill.com"], industry: "metals", supplierId: "bundled-mill", supplierInDatabase: false, alibabaStoreHost: null },
+  { target: "supplier", id: "no-site", name: "No Site Co", officialDomains: [], industry: "packaging", supplierId: "no-site", supplierInDatabase: true, alibabaStoreHost: null },
+  { target: "product", id: "posco-hrc", name: "POSCO Hot-Rolled Coil", officialDomains: ["posco.com"], industry: "metals", supplierId: "posco", supplierInDatabase: true, alibabaStoreHost: null },
+  { target: "logistics-provider", id: "falvey-cargo", name: "Falvey Cargo", officialDomains: ["falveycargo.com", "falveyinsurancegroup.com"], industry: "logistics-insurance", supplierInDatabase: false, alibabaStoreHost: null },
 ];
 
 export type FakeState = {
@@ -50,7 +51,17 @@ export function fakeDeps(opts: { storageOk?: boolean } = {}): { deps: MediaPushD
     },
     async createMedia(input) {
       const now = new Date().toISOString();
-      const m: Media = { id: `m_${++n}`, ...input, sortOrder: 0, isPrimary: false, status: "unpublished", createdAt: now, updatedAt: now };
+      const m: Media = {
+        id: `m_${++n}`,
+        ...input,
+        sortOrder: input.sortOrder ?? 0,
+        isPrimary: false,
+        status: "unpublished",
+        aiGenerated: Boolean(input.aiGenerated),
+        photoSource: input.photoSource ?? null,
+        createdAt: now,
+        updatedAt: now,
+      };
       state.media.push(m);
       return m;
     },

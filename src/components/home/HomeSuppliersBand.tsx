@@ -7,6 +7,15 @@ import {
   getSupplierBandHref,
 } from "@/lib/home-suppliers-band";
 import { CARD_IMAGE_QUALITY, CARD_IMAGE_SIZES } from "@/lib/image-sizes";
+import LogoTile from "@/components/LogoTile";
+import type { HomeSupplierBandKey } from "@/lib/home-suppliers-band";
+
+const BAND_LOGOS: Record<HomeSupplierBandKey, string> = {
+  alGharbia: "/images/suppliers/logos/logo-al-gharbia.png",
+  emsteel: "/images/suppliers/logos/logo-emsteel.png",
+  ferrite: "/images/suppliers/logos/logo-ferrite.png",
+  foliflex: "/images/suppliers/logos/logo-foliflex.png",
+};
 
 export default async function HomeSuppliersBand() {
   const t = await getTranslations("homeSuppliers");
@@ -50,9 +59,16 @@ export default async function HomeSuppliersBand() {
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
-                    <h3 className="font-display text-heading-sm text-navy">
-                      {t(`${entry.key}Name`)}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <LogoTile
+                        src={BAND_LOGOS[entry.key]}
+                        alt={`${t(`${entry.key}Name`)} logo`}
+                        className="h-12 w-12 rounded-xl"
+                      />
+                      <h3 className="font-display text-heading-sm text-navy">
+                        {t(`${entry.key}Name`)}
+                      </h3>
+                    </div>
                     <p className="mt-1.5 inline-flex items-start gap-1.5 text-sm text-ink-muted">
                       <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan" aria-hidden />
                       {t(`${entry.key}Location`)}
