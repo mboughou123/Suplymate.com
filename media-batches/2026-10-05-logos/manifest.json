@@ -119,15 +119,6 @@
       "height": 80
     },
     {
-      "entityId": "aubert-duval",
-      "company": "Aubert & Duval",
-      "sourceUrl": "https://www.aubertduval.com/",
-      "imageUrl": "https://www.aubertduval.com/",
-      "file": "public/logos/suppliers/aubert-duval.svg",
-      "width": 129,
-      "height": 64
-    },
-    {
       "entityId": "ball",
       "company": "Ball Corporation",
       "sourceUrl": "https://www.ball.com/",
@@ -144,24 +135,6 @@
       "file": "public/logos/suppliers/bando-chemical.png",
       "width": 250,
       "height": 33
-    },
-    {
-      "entityId": "banner-engineering",
-      "company": "Banner Engineering Corp.",
-      "sourceUrl": "https://www.bannerengineering.com/us/en.html",
-      "imageUrl": "https://www.bannerengineering.com/us/en.html",
-      "file": "public/logos/suppliers/banner-engineering.svg",
-      "width": 220,
-      "height": 50
-    },
-    {
-      "entityId": "beckhoff",
-      "company": "Beckhoff Automation GmbH & Co. KG",
-      "sourceUrl": "https://www.beckhoff.com/en-us/",
-      "imageUrl": "https://www.beckhoff.com/en-us/",
-      "file": "public/logos/suppliers/beckhoff.svg",
-      "width": 112,
-      "height": 22
     },
     {
       "entityId": "benteler-steel-tube",
@@ -209,15 +182,6 @@
       "height": 81
     },
     {
-      "entityId": "bosch-rexroth",
-      "company": "Bosch Rexroth AG",
-      "sourceUrl": "https://www.boschrexroth.com/en/dc/",
-      "imageUrl": "https://dc-mkt-prod.cloud.bosch.tech/xrm/media/tech/img/rexroth_wave.svg",
-      "file": "public/logos/suppliers/bosch-rexroth.svg",
-      "width": 813,
-      "height": 184
-    },
-    {
       "entityId": "bossard",
       "company": "Bossard Group",
       "sourceUrl": "https://www.bossard.com/us-en/",
@@ -263,15 +227,6 @@
       "height": 69
     },
     {
-      "entityId": "burgo-group",
-      "company": "Burgo Group S.p.A.",
-      "sourceUrl": "https://www.burgo.com/en",
-      "imageUrl": "https://www.burgo.com/themes/boorgo/images/logo-120-Anni-negativo-en.png",
-      "file": "public/logos/suppliers/burgo-group.png",
-      "width": 327,
-      "height": 212
-    },
-    {
       "entityId": "bystronic",
       "company": "Bystronic AG",
       "sourceUrl": "https://www.bystronic.com/usa/en-us",
@@ -315,15 +270,6 @@
       "file": "public/logos/suppliers/ccl-industries.png",
       "width": 1043,
       "height": 454
-    },
-    {
-      "entityId": "centravis",
-      "company": "Centravis Production Ukraine PJSC",
-      "sourceUrl": "https://www.centravis.com/",
-      "imageUrl": "https://www.centravis.com/wp-content/uploads/2019/11/logo-w.png",
-      "file": "public/logos/suppliers/centravis.png",
-      "width": 454,
-      "height": 73
     },
     {
       "entityId": "cerro-wire",
@@ -380,15 +326,6 @@
       "height": 59
     },
     {
-      "entityId": "dalmia-bharat",
-      "company": "Dalmia Bharat Limited",
-      "sourceUrl": "https://www.dalmiacement.com/",
-      "imageUrl": "https://www.dalmiacement.com/assets/images/logo/dalmia-bharat-cement.svg",
-      "file": "public/logos/suppliers/dalmia-bharat.svg",
-      "width": 512,
-      "height": 261
-    },
-    {
       "entityId": "danfoss",
       "company": "Danfoss A/S",
       "sourceUrl": "https://www.danfoss.com/en/",
@@ -405,15 +342,6 @@
       "file": "public/logos/suppliers/domtar.png",
       "width": 1152,
       "height": 264
-    },
-    {
-      "entityId": "dorner",
-      "company": "Dorner Mfg. Corp.",
-      "sourceUrl": "https://www.dornerconveyors.com/",
-      "imageUrl": "https://www.dornerconveyors.com/wp-content/themes/dorner/assets/images/cmco-logo-color.png",
-      "file": "public/logos/suppliers/dorner.png",
-      "width": 1200,
-      "height": 304
     },
     {
       "entityId": "ds-smith",
@@ -434,15 +362,6 @@
       "height": 29
     },
     {
-      "entityId": "dynamic-cables",
-      "company": "Dynamic Cables Limited",
-      "sourceUrl": "https://www.dynamiccables.co.in/",
-      "imageUrl": "https://www.dynamiccables.co.in/images/logo-dark.png",
-      "file": "public/logos/suppliers/dynamic-cables.png",
-      "width": 358,
-      "height": 84
-    },
-    {
       "entityId": "electrosteel-castings",
       "company": "Electrosteel Castings Limited",
       "sourceUrl": "https://www.electrosteel.com/",
@@ -450,15 +369,6 @@
       "file": "public/logos/suppliers/electrosteel-castings.png",
       "width": 313,
       "height": 40
-    },
-    {
-      "entityId": "elsewedy-electric",
-      "company": "Elsewedy Electric",
-      "sourceUrl": "https://www.elsewedyelectric.com/",
-      "imageUrl": "https://www.elsewedyelectric.com/logo_mini.gif",
-      "file": "public/logos/suppliers/elsewedy-electric.png",
-      "width": 370,
-      "height": 200
     },
     {
       "entityId": "erdemir",
@@ -477,24 +387,6 @@
       "file": "public/logos/suppliers/ester-industries.svg",
       "width": 87,
       "height": 66
-    },
-    {
-      "entityId": "expeditors-cargo-insurance",
-      "company": "Expeditors International of Washington, Inc.",
-      "sourceUrl": "https://www.expeditors.com/",
-      "imageUrl": "https://www.expeditors.com/images/footer-logo.png",
-      "file": "public/logistics/logos/expeditors-cargo-insurance.png",
-      "width": 296,
-      "height": 87
-    },
-    {
-      "entityId": "far-east-cable",
-      "company": "Far East Cable Co., Ltd.",
-      "sourceUrl": "http://en.fe-cable.com/",
-      "imageUrl": "http://en.fe-cable.com/images/logo.png",
-      "file": "public/logos/suppliers/far-east-cable.png",
-      "width": 485,
-      "height": 82
     },
     {
       "entityId": "fedrigoni",
@@ -686,15 +578,6 @@
       "height": 75
     },
     {
-      "entityId": "holcim",
-      "company": "Holcim Ltd",
-      "sourceUrl": "https://www.holcim.com/",
-      "imageUrl": "https://www.holcim.com/themes/custom/corporate/components/header/images/holcim_logo_color.svg",
-      "file": "public/logos/suppliers/holcim.svg",
-      "width": 284,
-      "height": 67
-    },
-    {
       "entityId": "holmen",
       "company": "Holmen AB",
       "sourceUrl": "https://www.holmen.com/",
@@ -830,15 +713,6 @@
       "height": 16
     },
     {
-      "entityId": "kingspan",
-      "company": "Kingspan Group plc",
-      "sourceUrl": "https://www.kingspangroup.com/",
-      "imageUrl": "https://www.kingspangroup.com/.within.website/x/cmd/anubis/static/img/logo.svg",
-      "file": "public/logos/suppliers/kingspan.svg",
-      "width": 0,
-      "height": 0
-    },
-    {
       "entityId": "kirby-building-systems",
       "company": "Kirby Building Systems",
       "sourceUrl": "https://www.kirbyinternational.com/en",
@@ -875,15 +749,6 @@
       "height": 30
     },
     {
-      "entityId": "lenze",
-      "company": "Lenze SE",
-      "sourceUrl": "https://www.lenze.com/en-us/",
-      "imageUrl": "https://www.lenze.com/en-us/",
-      "file": "public/logos/suppliers/lenze.svg",
-      "width": 340,
-      "height": 106
-    },
-    {
       "entityId": "linmot",
       "company": "LinMot AG",
       "sourceUrl": "https://linmot.com/en/",
@@ -900,15 +765,6 @@
       "file": "public/logos/suppliers/liqui-box.png",
       "width": 1200,
       "height": 327
-    },
-    {
-      "entityId": "loadsure",
-      "company": "Loadsure LTD",
-      "sourceUrl": "https://www.loadsure.net/",
-      "imageUrl": "https://a.storyblok.com/f/294606868077839/2700x392/d16cac736e/atg-full-logo-reversed-white-1.png/m/fit-in/230x230/filters:fill(0f1114)",
-      "file": "public/logistics/logos/loadsure.png",
-      "width": 230,
-      "height": 230
     },
     {
       "entityId": "magicrete-building-solutions-private-limited-in",
@@ -956,15 +812,6 @@
       "height": 138
     },
     {
-      "entityId": "michigan-seamless-tube",
-      "company": "Michigan Seamless Tube, LLC",
-      "sourceUrl": "https://www.mstube.com/",
-      "imageUrl": "https://www.mstube.com/wp-content/uploads/2018/05/MST-Logo-Horizontal-White.png",
-      "file": "public/logos/suppliers/michigan-seamless-tube.png",
-      "width": 322,
-      "height": 116
-    },
-    {
       "entityId": "midal-cables",
       "company": "Midal Cables B.S.C.",
       "sourceUrl": "https://www.midalcable.com/",
@@ -999,15 +846,6 @@
       "file": "public/logos/suppliers/moog.png",
       "width": 1200,
       "height": 160
-    },
-    {
-      "entityId": "mukand",
-      "company": "Mukand Limited",
-      "sourceUrl": "https://www.mukand.com/",
-      "imageUrl": "https://www.mukand.com/wp-content/uploads/2026/05/mukanad-copy.gif",
-      "file": "public/logos/suppliers/mukand.png",
-      "width": 240,
-      "height": 128
     },
     {
       "entityId": "nb-corporation",
@@ -1071,15 +909,6 @@
       "file": "public/logos/suppliers/nucor.png",
       "width": 320,
       "height": 35
-    },
-    {
-      "entityId": "nucor-tubular",
-      "company": "Nucor Tubular Products",
-      "sourceUrl": "https://www.nucortubular.com/",
-      "imageUrl": "https://www.nucortubular.com/wp-content/themes/independence-tube/library/images/Nucor%20Tubular%20Products_White%20and%20Green.png",
-      "file": "public/logos/suppliers/nucor-tubular.png",
-      "width": 220,
-      "height": 41
     },
     {
       "entityId": "okonite",
@@ -1190,33 +1019,6 @@
       "height": 22
     },
     {
-      "entityId": "schunk",
-      "company": "SCHUNK SE & Co. KG",
-      "sourceUrl": "https://schunk.com/us/en",
-      "imageUrl": "https://schunk.com/us/en",
-      "file": "public/logos/suppliers/schunk.svg",
-      "width": 376,
-      "height": 46
-    },
-    {
-      "entityId": "searing-industries",
-      "company": "Searing Industries",
-      "sourceUrl": "https://www.searingindustries.com/",
-      "imageUrl": "https://www.searingindustries.com/",
-      "file": "public/logos/suppliers/searing-industries.svg",
-      "width": 600,
-      "height": 600
-    },
-    {
-      "entityId": "service-wire",
-      "company": "Service Wire Company",
-      "sourceUrl": "https://www.servicewire.com/",
-      "imageUrl": "https://www.servicewire.com/ServiceWire/Imagery/ServiceWire_Logo.png",
-      "file": "public/logos/suppliers/service-wire.png",
-      "width": 293,
-      "height": 69
-    },
-    {
       "entityId": "sgd-pharma",
       "company": "SGD Pharma",
       "sourceUrl": "https://www.sgd-pharma.com/",
@@ -1253,15 +1055,6 @@
       "height": 40
     },
     {
-      "entityId": "southwire",
-      "company": "Southwire Company, LLC",
-      "sourceUrl": "https://www.southwire.com/",
-      "imageUrl": "https://www.southwire.com/medias/2601-SW-Header-Footer-Logo-White-edit-Skewwed.png?context=bWFzdGVyfGltYWdlc3wzNzM1MHxpbWFnZS9wbmd8aDRlL2g3NC85NTM0MDM3ODUyMTkwLzI2MDFfU1dfSGVhZGVyX0Zvb3Rlcl9Mb2dvX1doaXRlX2VkaXRfU2tld3dlZC5wbmd8MzQ1MGExN2UyM2M3MzY1MDc2ODQzNjlhYjhmMjJmMWI3N2VjZjI2ZmQyYmU1ZWQxZDBmMTgxYmVmZTZjYTRlYg",
-      "file": "public/logos/suppliers/southwire.png",
-      "width": 623,
-      "height": 172
-    },
-    {
       "entityId": "ssab",
       "company": "SSAB AB",
       "sourceUrl": "https://www.ssab.com/en",
@@ -1269,15 +1062,6 @@
       "file": "public/logos/suppliers/ssab.svg",
       "width": 155,
       "height": 50
-    },
-    {
-      "entityId": "sterlite-technologies",
-      "company": "Sterlite Technologies Limited",
-      "sourceUrl": "https://stl.tech/",
-      "imageUrl": "https://stl.tech/wp-content/uploads/2022/10/STL-Logo-_White.png.webp",
-      "file": "public/logos/suppliers/sterlite-technologies.png",
-      "width": 289,
-      "height": 113
     },
     {
       "entityId": "stoelzle-glass",
@@ -1314,15 +1098,6 @@
       "file": "public/logos/suppliers/superior-tube.png",
       "width": 1200,
       "height": 139
-    },
-    {
-      "entityId": "suraj",
-      "company": "Suraj Limited",
-      "sourceUrl": "https://www.surajgroup.com/",
-      "imageUrl": "https://www.surajgroup.com/images/Suraj_limited_logo-2025.png",
-      "file": "public/logos/suppliers/suraj.png",
-      "width": 1001,
-      "height": 532
     },
     {
       "entityId": "surya-roshni",
@@ -1424,15 +1199,6 @@
       "height": 88
     },
     {
-      "entityId": "uponor",
-      "company": "Uponor Corporation",
-      "sourceUrl": "https://www.uponor.com/en-us",
-      "imageUrl": "https://www.uponor.com/en-us",
-      "file": "public/logos/suppliers/uponor.svg",
-      "width": 77,
-      "height": 24
-    },
-    {
       "entityId": "usg",
       "company": "USG Corporation",
       "sourceUrl": "https://www.usg.com/en-US",
@@ -1476,15 +1242,6 @@
       "file": "public/logos/suppliers/venus-pipes.png",
       "width": 639,
       "height": 197
-    },
-    {
-      "entityId": "victaulic",
-      "company": "Victaulic Company",
-      "sourceUrl": "https://www.victaulic.com/",
-      "imageUrl": "https://www.victaulic.com/wp-content/themes/victaulic/src/assets/images/logo-victaulic-header@2x.png",
-      "file": "public/logos/suppliers/victaulic.png",
-      "width": 250,
-      "height": 72
     },
     {
       "entityId": "visy",
@@ -2512,6 +2269,141 @@
       "entityId": "zurich-marine-cargo",
       "company": "Zurich North America",
       "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "aubert-duval",
+      "company": "Aubert & Duval",
+      "reason": "QA HOLD: no fill"
+    },
+    {
+      "entityId": "banner-engineering",
+      "company": "Banner Engineering Corp.",
+      "reason": "QA HOLD: solid oval when blacked"
+    },
+    {
+      "entityId": "beckhoff",
+      "company": "Beckhoff Automation GmbH & Co. KG",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "bosch-rexroth",
+      "company": "Bosch Rexroth AG",
+      "reason": "QA HOLD: stripes only"
+    },
+    {
+      "entityId": "burgo-group",
+      "company": "Burgo Group S.p.A.",
+      "reason": "QA HOLD: anniversary lockup"
+    },
+    {
+      "entityId": "centravis",
+      "company": "Centravis Production Ukraine PJSC",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "dalmia-bharat",
+      "company": "Dalmia Bharat Limited",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "dorner",
+      "company": "Dorner Mfg. Corp.",
+      "reason": "QA HOLD: CMCO parent"
+    },
+    {
+      "entityId": "dynamic-cables",
+      "company": "Dynamic Cables Limited",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "elsewedy-electric",
+      "company": "Elsewedy Electric",
+      "reason": "QA HOLD: fully transparent"
+    },
+    {
+      "entityId": "expeditors-cargo-insurance",
+      "company": "Expeditors International of Washington, Inc.",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "far-east-cable",
+      "company": "Far East Cable Co., Ltd.",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "holcim",
+      "company": "Holcim Ltd",
+      "reason": "QA HOLD: white-only; real logo is multi-colour"
+    },
+    {
+      "entityId": "kingspan",
+      "company": "Kingspan Group plc",
+      "reason": "QA HOLD: HYPERNODE product mark"
+    },
+    {
+      "entityId": "lenze",
+      "company": "Lenze SE",
+      "reason": "QA HOLD: external ref, broken"
+    },
+    {
+      "entityId": "loadsure",
+      "company": "Loadsure LTD",
+      "reason": "QA HOLD: Armstrong Transport logo"
+    },
+    {
+      "entityId": "michigan-seamless-tube",
+      "company": "Michigan Seamless Tube, LLC",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "mukand",
+      "company": "Mukand Limited",
+      "reason": "QA HOLD: Bajaj emblem"
+    },
+    {
+      "entityId": "nucor-tubular",
+      "company": "Nucor Tubular Products",
+      "reason": "QA HOLD: NUCOR only"
+    },
+    {
+      "entityId": "schunk",
+      "company": "SCHUNK SE & Co. KG",
+      "reason": "QA HOLD: malformed"
+    },
+    {
+      "entityId": "searing-industries",
+      "company": "Searing Industries",
+      "reason": "QA HOLD: hamburger icon"
+    },
+    {
+      "entityId": "service-wire",
+      "company": "Service Wire Company",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "southwire",
+      "company": "Southwire Company, LLC",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "sterlite-technologies",
+      "company": "Sterlite Technologies Limited",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "suraj",
+      "company": "Suraj Limited",
+      "reason": "QA HOLD: unflagged white wordmark"
+    },
+    {
+      "entityId": "uponor",
+      "company": "Uponor Corporation",
+      "reason": "QA HOLD: GF parent"
+    },
+    {
+      "entityId": "victaulic",
+      "company": "Victaulic Company",
+      "reason": "QA HOLD: unflagged white wordmark"
     }
   ]
 }

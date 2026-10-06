@@ -12,8 +12,12 @@ import {
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 describe("QA-approved logistics provider logos", () => {
   it("ships a logo for every approved id and none for the remaining drop", () => {
-    expect(Object.keys(PROVIDER_LOGOS)).toHaveLength(22);
-    expect(DROPPED_PROVIDER_LOGO_IDS).toEqual(["roanoke-cargo-insurance"]);
+    expect(Object.keys(PROVIDER_LOGOS)).toHaveLength(20);
+    expect(DROPPED_PROVIDER_LOGO_IDS).toEqual([
+      "roanoke-cargo-insurance",
+      "loadsure",
+      "expeditors-cargo-insurance",
+    ]);
 
     for (const [id, asset] of Object.entries(PROVIDER_LOGOS)) {
       const provider = getLogisticsProvider(id);

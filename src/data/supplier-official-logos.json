@@ -39,21 +39,11 @@
   "atlas-copco": {
     "src": "/logos/suppliers/atlas-copco.svg"
   },
-  "aubert-duval": {
-    "src": "/logos/suppliers/aubert-duval.svg"
-  },
   "ball": {
     "src": "/logos/suppliers/ball.svg"
   },
   "bando-chemical": {
     "src": "/logos/suppliers/bando-chemical.png"
-  },
-  "banner-engineering": {
-    "src": "/logos/suppliers/banner-engineering.svg",
-    "monoOnWhite": true
-  },
-  "beckhoff": {
-    "src": "/logos/suppliers/beckhoff.svg"
   },
   "benteler-steel-tube": {
     "src": "/logos/suppliers/benteler-steel-tube.svg"
@@ -69,9 +59,6 @@
   },
   "bonnell-aluminum": {
     "src": "/logos/suppliers/bonnell-aluminum.svg"
-  },
-  "bosch-rexroth": {
-    "src": "/logos/suppliers/bosch-rexroth.svg"
   },
   "bossard": {
     "src": "/logos/suppliers/bossard.svg"
@@ -89,10 +76,6 @@
   "bulten": {
     "src": "/logos/suppliers/bulten.png"
   },
-  "burgo-group": {
-    "src": "/logos/suppliers/burgo-group.png",
-    "monoOnWhite": true
-  },
   "bystronic": {
     "src": "/logos/suppliers/bystronic.svg"
   },
@@ -107,9 +90,6 @@
   },
   "ccl-industries": {
     "src": "/logos/suppliers/ccl-industries.png"
-  },
-  "centravis": {
-    "src": "/logos/suppliers/centravis.png"
   },
   "cerro-wire": {
     "src": "/logos/suppliers/cerro-wire.png"
@@ -129,29 +109,17 @@
   "crown-holdings": {
     "src": "/logos/suppliers/crown-holdings.svg"
   },
-  "dalmia-bharat": {
-    "src": "/logos/suppliers/dalmia-bharat.svg"
-  },
   "danfoss": {
     "src": "/logos/suppliers/danfoss.svg"
   },
   "domtar": {
     "src": "/logos/suppliers/domtar.png"
   },
-  "dorner": {
-    "src": "/logos/suppliers/dorner.png"
-  },
   "ds-smith": {
     "src": "/logos/suppliers/ds-smith.svg"
   },
-  "dynamic-cables": {
-    "src": "/logos/suppliers/dynamic-cables.png"
-  },
   "electrosteel-castings": {
     "src": "/logos/suppliers/electrosteel-castings.png"
-  },
-  "elsewedy-electric": {
-    "src": "/logos/suppliers/elsewedy-electric.png"
   },
   "erdemir": {
     "src": "/logos/suppliers/erdemir.svg",
@@ -159,9 +127,6 @@
   },
   "ester-industries": {
     "src": "/logos/suppliers/ester-industries.svg"
-  },
-  "far-east-cable": {
-    "src": "/logos/suppliers/far-east-cable.png"
   },
   "fedrigoni": {
     "src": "/logos/suppliers/fedrigoni.svg",
@@ -225,10 +190,6 @@
   "hiwin": {
     "src": "/logos/suppliers/hiwin.png"
   },
-  "holcim": {
-    "src": "/logos/suppliers/holcim.svg",
-    "monoOnWhite": true
-  },
   "holmen": {
     "src": "/logos/suppliers/holmen.png"
   },
@@ -274,9 +235,6 @@
   "keyence": {
     "src": "/logos/suppliers/keyence.svg"
   },
-  "kingspan": {
-    "src": "/logos/suppliers/kingspan.svg"
-  },
   "kirby-building-systems": {
     "src": "/logos/suppliers/kirby-building-systems.svg"
   },
@@ -288,9 +246,6 @@
   },
   "kumkang-kind": {
     "src": "/logos/suppliers/kumkang-kind.png"
-  },
-  "lenze": {
-    "src": "/logos/suppliers/lenze.svg"
   },
   "linmot": {
     "src": "/logos/suppliers/linmot.png"
@@ -313,9 +268,6 @@
   "mcwane-ductile": {
     "src": "/logos/suppliers/mcwane-ductile.png"
   },
-  "michigan-seamless-tube": {
-    "src": "/logos/suppliers/michigan-seamless-tube.png"
-  },
   "midal-cables": {
     "src": "/logos/suppliers/midal-cables.png"
   },
@@ -328,9 +280,6 @@
   "moog": {
     "src": "/logos/suppliers/moog.png",
     "monoOnWhite": true
-  },
-  "mukand": {
-    "src": "/logos/suppliers/mukand.png"
   },
   "nb-corporation": {
     "src": "/logos/suppliers/nb-corporation.png"
@@ -353,9 +302,6 @@
   "nucor": {
     "src": "/logos/suppliers/nucor.png",
     "monoOnWhite": true
-  },
-  "nucor-tubular": {
-    "src": "/logos/suppliers/nucor-tubular.png"
   },
   "okonite": {
     "src": "/logos/suppliers/okonite.svg"
@@ -394,15 +340,6 @@
     "src": "/logos/suppliers/schott-ag.svg",
     "monoOnWhite": true
   },
-  "schunk": {
-    "src": "/logos/suppliers/schunk.svg"
-  },
-  "searing-industries": {
-    "src": "/logos/suppliers/searing-industries.svg"
-  },
-  "service-wire": {
-    "src": "/logos/suppliers/service-wire.png"
-  },
   "sgd-pharma": {
     "src": "/logos/suppliers/sgd-pharma.svg"
   },
@@ -415,14 +352,8 @@
   "smurfit-westrock": {
     "src": "/logos/suppliers/smurfit-westrock.svg"
   },
-  "southwire": {
-    "src": "/logos/suppliers/southwire.png"
-  },
   "ssab": {
     "src": "/logos/suppliers/ssab.svg"
-  },
-  "sterlite-technologies": {
-    "src": "/logos/suppliers/sterlite-technologies.png"
   },
   "stoelzle-glass": {
     "src": "/logos/suppliers/stoelzle-glass.svg"
@@ -435,9 +366,6 @@
   },
   "superior-tube": {
     "src": "/logos/suppliers/superior-tube.png"
-  },
-  "suraj": {
-    "src": "/logos/suppliers/suraj.png"
   },
   "surya-roshni": {
     "src": "/logos/suppliers/surya-roshni.svg"
@@ -472,9 +400,6 @@
   "universal-stainless": {
     "src": "/logos/suppliers/universal-stainless.svg"
   },
-  "uponor": {
-    "src": "/logos/suppliers/uponor.svg"
-  },
   "usg": {
     "src": "/logos/suppliers/usg.svg"
   },
@@ -490,9 +415,6 @@
   "venus-pipes": {
     "src": "/logos/suppliers/venus-pipes.png",
     "monoOnWhite": true
-  },
-  "victaulic": {
-    "src": "/logos/suppliers/victaulic.png"
   },
   "visy": {
     "src": "/logos/suppliers/visy.svg"
