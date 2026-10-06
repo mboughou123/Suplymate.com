@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { Check, AlertCircle, User as UserIcon } from "lucide-react";
+import { Check, AlertCircle } from "lucide-react";
+import AvatarUpload from "@/components/settings/AvatarUpload";
 
 type Initial = {
   firstName: string;
@@ -50,7 +51,6 @@ export default function AccountForm({ initial }: { initial: Initial }) {
           company: form.company,
           jobTitle: form.jobTitle,
           phone: form.phone,
-          image: form.image,
         }),
       });
       const data = await res.json().catch(() => null);
@@ -83,33 +83,11 @@ export default function AccountForm({ initial }: { initial: Initial }) {
         be changed here.
       </p>
 
-      <div className="mt-5 flex items-center gap-4">
-        <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-navy text-lg font-bold text-white">
-          {form.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={form.image} alt="" className="h-full w-full object-cover" />
-          ) : (
-            initials
-          )}
-        </span>
-        <div className="flex-1">
-          <label
-            htmlFor="image"
-            className="flex items-center gap-1.5 text-xs font-medium text-ink-muted"
-          >
-            <UserIcon className="h-3.5 w-3.5" aria-hidden />
-            Profile picture URL
-          </label>
-          <input
-            id="image"
-            type="url"
-            value={form.image}
-            onChange={(e) => set("image", e.target.value)}
-            placeholder="https://…"
-            className="mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-cyan/60 focus:outline-none focus:ring-2 focus:ring-cyan/20"
-          />
-        </div>
-      </div>
+      <AvatarUpload
+        image={form.image}
+        initials={initials}
+        onChange={(url) => setForm((f) => ({ ...f, image: url }))}
+      />
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         <Field
