@@ -2,7 +2,9 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import en from "../../../messages/en.json";
-import { SITE_NAV, navHrefPathname, navItemLinks, SOLUTIONS_COLUMN_SIZE } from "@/lib/site-nav";
+import { SITE_NAV, navHrefPathname, navItemLinks, SOLUTIONS_COLUMN_SIZE, supplierIndustryHref } from "@/lib/site-nav";
+import { INDUSTRIES } from "@/data/industries";
+import { logisticsDirectoryHref } from "@/data/logistics-providers";
 
 function lookup(key: string): unknown {
   return key.split(".").reduce<unknown>((cur, part) => {
@@ -76,6 +78,24 @@ describe("site navigation model", () => {
         expect(link.href).not.toMatch(/cart/i);
       }
     }
+  });
+
+  it("lists every industry plus logistics under the Suppliers dropdown", () => {
+    const suppliers = SITE_NAV.find((i) => i.id === "suppliers");
+    expect(suppliers?.kind).toBe("list");
+    if (suppliers?.kind !== "list") return;
+    expect(suppliers.href).toBe("/suppliers");
+    expect(suppliers.links.map((l) => l.href)).toEqual([
+      "/suppliers",
+      ...INDUSTRIES.map((i) => supplierIndustryHref(i.id)),
+      logisticsDirectoryHref(),
+    ]);
+    for (const link of suppliers.links) expect(link.icon, link.href).toBeTruthy();
+  });
+
+  it("puts Products before Solutions", () => {
+    const ids = SITE_NAV.map((i) => i.id);
+    expect(ids.indexOf("products")).toBeLessThan(ids.indexOf("solutions"));
   });
 
   it("fills each Solutions column with up to the configured number of entries", () => {
