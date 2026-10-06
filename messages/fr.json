@@ -12,7 +12,7 @@
     "contactTitle": "Contact | Suplymate",
     "contactDescription": "Contactez l'équipe Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "Tarifs | Suplymate",
-    "pricingDescription": "Des offres pour les équipes d'approvisionnement de toutes tailles.",
+    "pricingDescription": "Offres Free, Basic ($49.95), Pro ($74.95) et Enterprise ($199.95) pour un sourcing industriel propulsé par l'IA. Essai gratuit de 3 jours sur Basic et Pro, 10 % de réduction en facturation annuelle.",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "Sourcez plus intelligemment avec l'intelligence fournisseurs, l'analyse des prix et les recommandations IA.",
     "adminTitle": "Administration | Suplymate",
@@ -108,6 +108,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "Contact"
+    },
+    "openSubmenu": "Ouvrir le menu {label}",
+    "suppliers": {
+      "all": "Tous les fournisseurs",
+      "logistics": "Logistique et assurance",
+      "industries": {
+        "metals": "Métaux",
+        "construction": "Construction",
+        "packaging": "Emballage",
+        "machinery": "Machines",
+        "hardwareComponents": "Composants matériels",
+        "biomedical": "Biomédical et médical",
+        "electricalIndustrial": "Électrique et industriel"
+      }
     }
   },
   "footer": {
@@ -293,6 +307,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "Assurance cargo",
+    "title": "Assurez vos expéditions auprès d'assureurs cargo reconnus",
+    "subtitle": "Des assureurs maritimes et transport qui couvrent les marchandises par mer, air, route et rail — informations reprises du site officiel de chaque entreprise.",
+    "cta": "Voir tous les assureurs cargo"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -730,7 +750,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "L'historique de prix étendu est inclus dès l'offre Basic"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -911,7 +932,35 @@
     },
     "language": "Langue",
     "savePreferences": "Enregistrer les préférences",
-    "preferencesSaved": "Préférences enregistrées."
+    "preferencesSaved": "Préférences enregistrées.",
+    "avatarLabel": "Photo de profil",
+    "avatarHint": "JPG, PNG, WebP ou GIF, 5 Mo maximum. Vous pouvez aussi glisser-déposer une image ici.",
+    "avatarUpload": "Téléverser une photo",
+    "avatarChange": "Changer de photo",
+    "avatarUploading": "Téléversement… {percent} %",
+    "avatarRemove": "Supprimer",
+    "avatarRemoving": "Suppression…",
+    "avatarDropHere": "Déposez votre photo ici",
+    "avatarUpdated": "Photo de profil mise à jour.",
+    "avatarRemoved": "Photo de profil supprimée.",
+    "avatarEmpty": "Choisissez une photo à téléverser.",
+    "avatarTooLarge": "Cette photo est trop volumineuse. La taille maximale est de 5 Mo.",
+    "avatarType": "Utilisez une image JPG, PNG, WebP ou GIF.",
+    "avatarRateLimited": "Trop de téléversements. Patientez quelques minutes puis réessayez.",
+    "avatarStorageUnavailable": "Le stockage d'images n'est pas configuré. Réessayez plus tard.",
+    "avatarUploadFailed": "Échec du téléversement. Veuillez réessayer.",
+    "avatarRemoveFailed": "Impossible de supprimer votre photo. Veuillez réessayer.",
+    "avatarNetwork": "Erreur réseau. Veuillez réessayer.",
+    "couponLabel": "Code promo",
+    "couponPlaceholder": "Saisissez un code",
+    "couponApply": "Appliquer",
+    "couponRemove": "Retirer",
+    "couponInvalid": "Ce code promo n'est pas valide ou a expiré.",
+    "couponFree": "100 % de réduction : cet abonnement est gratuit",
+    "couponPercent": "{percent} % de réduction appliqués au paiement",
+    "couponApplied": "Réduction appliquée au paiement",
+    "couponHint": "Vous avez un code promo ? Appliquez-le ici, puis choisissez une offre. Sans code, la réduction early bird s'applique automatiquement aux offres mensuelles.",
+    "ownerAccess": "Compte propriétaire : toutes les fonctionnalités sont débloquées pour vous, quelle que soit l'offre affichée ici."
   },
   "rfqs": {
     "title": "Demandes de devis",
@@ -951,11 +1000,11 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "Oui. Parcourez les fournisseurs (5 par catégorie), lisez leurs présentations de base, consultez 3 mois d'historique de prix, enregistrez jusqu'à 5 fournisseurs et posez 5 questions par mois à Mate, sans carte bancaire.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote.",
+    "faq4a": "Enterprise coûte $199.95/mois (ou 10 % de moins en facturation annuelle) et inclut plusieurs utilisateurs, des workflows d'achat, l'accès API et une base de connaissances IA personnalisée. Abonnez-vous depuis cette page ou via Paramètres → Abonnement.",
     "starter": "Starter",
     "starterPrice": "Gratuit",
     "starterPeriod": "Essai 14 jours",
@@ -980,7 +1029,18 @@
     "enterpriseFeature3": "Onboarding fournisseurs personnalisé",
     "enterpriseFeature4": "SLA et support prioritaire",
     "enterpriseFeature5": "Analyses avancées",
-    "enterpriseCta": "Contacter les ventes"
+    "enterpriseCta": "Contacter les ventes",
+    "billingPeriod": "Période de facturation",
+    "billingMonthly": "Mensuel",
+    "billingAnnual": "Annuel",
+    "saveBadge": "Économisez {percent} %",
+    "noCard": "Sans carte bancaire",
+    "billedYearly": "Facturé {amount} par an",
+    "earlyBirdPrice": "Early bird : {amount}/mois pendant {months} mois",
+    "earlyBirdTitle": "Accès early bird :",
+    "earlyBirdBody": "{percent} % de réduction sur vos {months} premiers mois sur toute offre mensuelle, pour les {spots} premiers abonnés. Appliqué automatiquement au paiement.",
+    "trialLine": "Essai gratuit de {days} jours",
+    "billingNoteV2": "Prix en USD. La facturation est gérée de manière sécurisée par Stripe. Basic et Pro commencent par un essai gratuit de {days} jours, puis passent en abonnement payant sauf résiliation. Les offres annuelles font économiser {percent} %. Enterprise coûte {enterprise}/mois."
   },
   "about": {
     "eyebrow": "About Suplymate",
@@ -1589,14 +1649,17 @@
     "noneOnFile": "Aucun téléphone ni e-mail direct pour ce fournisseur pour le moment. Contactez-le via Suplymate.",
     "contactViaSuplymate": "Contacter via Suplymate",
     "hiddenValue": "Masqué. Disponible avec les offres payantes",
-    "lockedBody": "Le téléphone et l'e-mail directs sont inclus dès l'offre Basic, y compris pendant l'essai gratuit de 3 jours.",
+    "lockedBody": "Le téléphone, l'e-mail et le site web directs sont inclus dès l'offre Basic, y compris pendant l'essai gratuit de 3 jours.",
     "startTrial": "Essai gratuit pour voir",
     "upgrade": "Passer à l'offre supérieure",
     "signIn": "Déjà abonné ? Connectez-vous",
     "loading": "Chargement des coordonnées",
     "cardLockedBoth": "Téléphone et e-mail · Passer à l'offre supérieure",
     "cardLockedPhone": "Téléphone · Passer à l'offre supérieure",
-    "cardLockedEmail": "E-mail · Passer à l'offre supérieure"
+    "cardLockedEmail": "E-mail · Passer à l'offre supérieure",
+    "website": "Site web",
+    "visitWebsite": "Visiter",
+    "websiteAria": "Visiter le site web de {name}"
   },
   "logistics": {
     "chipLabel": "Logistique et assurance",
@@ -1637,6 +1700,25 @@
     "insureBodyRfq": "Vous expédiez cette commande ? L'assurance marchandises peut couvrir les pertes ou dommages en transit au-delà de la responsabilité du transporteur. Quelques prestataires qui la proposent :",
     "insureMore": "Voir tous les assureurs marchandises",
     "dismiss": "Masquer les suggestions d'assurance",
-    "orderNote": "Classés selon leur pertinence pour ce trajet, pas contre paiement."
+    "orderNote": "Classés selon leur pertinence pour ce trajet, pas contre paiement.",
+    "photoAlt": "Photo de {name}",
+    "photoAltNumbered": "Photo de {name} n° {n}",
+    "photos": "Photos",
+    "coverAlt": {
+      "port": "Porte-conteneurs dans un port de fret",
+      "warehouse": "Camions à un quai de chargement d'entrepôt",
+      "containers": "Conteneurs maritimes à l'entrée d'un terminal",
+      "sea": "Porte-conteneurs en mer",
+      "air": "Fret aérien chargé dans un avion cargo"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {# fournisseur supplémentaire est verrouillé} other {# fournisseurs supplémentaires sont verrouillés}}",
+    "lockedProductsTitle": "{count, plural, one {# produit supplémentaire est verrouillé} other {# produits supplémentaires sont verrouillés}}",
+    "lockedSuppliersBody": "L'offre Free affiche {limit} fournisseurs par catégorie. Passez à Basic pour une navigation illimitée et l'accès au téléphone, à l'e-mail et au site web des fournisseurs.",
+    "lockedProductsBody": "L'offre Free affiche {limit} produits par catégorie. Passez à Basic pour parcourir tout le catalogue.",
+    "upgradeCta": "Passer à Basic",
+    "trialCta": "Commencer l'essai gratuit de 3 jours",
+    "comparePlans": "Comparer les offres"
   }
 }

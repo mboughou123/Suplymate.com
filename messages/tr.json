@@ -12,7 +12,7 @@
     "contactTitle": "İletişim | Suplymate",
     "contactDescription": "İletişimez l'ekip Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "Fiyatlandırma | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "Yapay zekâ destekli endüstriyel tedarik için Free, Basic ($49.95), Pro ($74.95) ve Enterprise ($199.95) planları. Basic ve Pro'da 3 günlük ücretsiz deneme, yıllık faturalandırmada %10 indirim.",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "Kaynakz pokundus intelligemment avec l'intelligence tedarikçiler, l'analyse des fiyatlar veles öneriler IA.",
     "adminTitle": "Yönetim | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "İletişim"
+    },
+    "openSubmenu": "{label} menüsünü aç",
+    "suppliers": {
+      "all": "Tüm tedarikçiler",
+      "logistics": "Lojistik ve sigorta",
+      "industries": {
+        "metals": "Metaller",
+        "construction": "İnşaat",
+        "packaging": "Ambalaj",
+        "machinery": "Makine",
+        "hardwareComponents": "Donanım bileşenleri",
+        "biomedical": "Biyomedikal ve tıbbi",
+        "electricalIndustrial": "Elektrik ve endüstriyel"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "Kargo sigortası",
+    "title": "Gönderilerinizi köklü kargo sigortacılarıyla güvenceye alın",
+    "subtitle": "Deniz, hava, kara ve demiryolu taşımalarındaki malları kapsayan deniz ve nakliyat sigortacıları — bilgiler her şirketin resmi web sitesinden alınmıştır.",
+    "cta": "Tüm kargo sigortacılarını gör"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "Daha uzun fiyat geçmişi Basic ve üzeri planlarda mevcut"
   },
   "dashboard": {
     "title": "Kontrol Paneli",
@@ -888,7 +909,35 @@
     },
     "language": "Dil",
     "savePreferences": "Kaydet les tercihler",
-    "preferencesSaved": "Préférences kaydedildi."
+    "preferencesSaved": "Préférences kaydedildi.",
+    "avatarLabel": "Profil fotoğrafı",
+    "avatarHint": "JPG, PNG, WebP veya GIF, en fazla 5 MB. Bir görseli buraya sürükleyip bırakabilirsiniz.",
+    "avatarUpload": "Fotoğraf yükle",
+    "avatarChange": "Fotoğrafı değiştir",
+    "avatarUploading": "Yükleniyor… %{percent}",
+    "avatarRemove": "Kaldır",
+    "avatarRemoving": "Kaldırılıyor…",
+    "avatarDropHere": "Fotoğrafınızı buraya bırakın",
+    "avatarUpdated": "Profil fotoğrafı güncellendi.",
+    "avatarRemoved": "Profil fotoğrafı kaldırıldı.",
+    "avatarEmpty": "Yüklemek için bir fotoğraf seçin.",
+    "avatarTooLarge": "Fotoğraf çok büyük. En fazla boyut 5 MB.",
+    "avatarType": "JPG, PNG, WebP veya GIF görseli kullanın.",
+    "avatarRateLimited": "Çok fazla yükleme. Lütfen birkaç dakika bekleyip tekrar deneyin.",
+    "avatarStorageUnavailable": "Görsel depolama yapılandırılmamış. Lütfen daha sonra tekrar deneyin.",
+    "avatarUploadFailed": "Yükleme başarısız. Lütfen tekrar deneyin.",
+    "avatarRemoveFailed": "Fotoğrafınız kaldırılamadı. Lütfen tekrar deneyin.",
+    "avatarNetwork": "Ağ hatası. Lütfen tekrar deneyin.",
+    "couponLabel": "Kupon kodu",
+    "couponPlaceholder": "Bir kod girin",
+    "couponApply": "Uygula",
+    "couponRemove": "Kaldır",
+    "couponInvalid": "Bu kupon kodu geçersiz veya süresi dolmuş.",
+    "couponFree": "%100 indirim: bu abonelik ücretsiz",
+    "couponPercent": "Ödemede %{percent} indirim uygulandı",
+    "couponApplied": "İndirim ödemede uygulandı",
+    "couponHint": "Kuponunuz mu var? Burada uygulayın, ardından bir plan seçin. Kod olmadan erken kayıt indirimi aylık planlara otomatik uygulanır.",
+    "ownerAccess": "Sahip hesabı: burada hangi plan gösterilirse gösterilsin tüm özellikler sizin için açık."
   },
   "rfqs": {
     "title": "Demandes de teklifler",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "Evet. Kart gerekmeden tedarikçilere göz atın (kategori başına 5), temel tedarikçi tanıtımlarını okuyun, 3 aylık fiyat grafiklerini görün, en fazla 5 tedarikçi kaydedin ve Mate'e ayda 5 soru sorun.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "Enterprise aylık $199.95'tır (yıllık faturalandırmada %10 daha az); birden fazla kullanıcı, satın alma iş akışları, API erişimi ve özel yapay zekâ bilgisi içerir. Bu sayfadan veya Ayarlar → Abonelik bölümünden abone olun.",
+    "billingPeriod": "Faturalandırma dönemi",
+    "billingMonthly": "Aylık",
+    "billingAnnual": "Yıllık",
+    "saveBadge": "%{percent} tasarruf",
+    "noCard": "Kart gerekmez",
+    "billedYearly": "Yılda {amount} faturalandırılır",
+    "earlyBirdPrice": "Erken kayıt: {amount}/ay, {months} ay boyunca",
+    "earlyBirdTitle": "Erken kayıt erişimi:",
+    "earlyBirdBody": "Tüm aylık planlarda %{percent} indirim, ilk {months} ay için geçerli, ilk {spots} aboneye özel. Ödeme sırasında otomatik uygulanır.",
+    "trialLine": "{days} günlük ücretsiz deneme",
+    "billingNoteV2": "Fiyatlar USD cinsindendir. Faturalandırma Stripe tarafından güvenli şekilde yapılır. Basic ve Pro, {days} günlük ücretsiz denemeyle başlar ve iptal etmezseniz ücretli aboneliğe dönüşür. Yıllık planlarda %{percent} tasarruf edersiniz. Enterprise aylık {enterprise}."
   },
   "about": {
     "eyebrow": "À propos de Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "Bu tedarikçi için henüz doğrudan telefon veya e-posta yok. Suplymate üzerinden ulaşın.",
     "contactViaSuplymate": "Suplymate ile iletişime geç",
     "hiddenValue": "Gizli. Ücretli planlarda mevcut",
-    "lockedBody": "Doğrudan telefon ve e-posta, 3 günlük ücretsiz deneme dahil Basic ve üzeri planlarda bulunur.",
+    "lockedBody": "Doğrudan telefon, e-posta ve web sitesi, 3 günlük ücretsiz deneme dahil Basic ve üzeri planlarda yer alır.",
     "startTrial": "Görmek için ücretsiz dene",
     "upgrade": "Görmek için yükselt",
     "signIn": "Zaten abone misiniz? Giriş yapın",
     "loading": "İletişim bilgileri yükleniyor",
     "cardLockedBoth": "Telefon ve e-posta · Yükselt",
     "cardLockedPhone": "Telefon · Görmek için yükselt",
-    "cardLockedEmail": "E-posta · Görmek için yükselt"
+    "cardLockedEmail": "E-posta · Görmek için yükselt",
+    "website": "Web sitesi",
+    "visitWebsite": "Ziyaret et",
+    "websiteAria": "{name} web sitesini ziyaret et"
   },
   "logistics": {
     "chipLabel": "Lojistik ve Sigorta",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "Bu siparişi mi gönderiyorsunuz? Kargo sigortası, taşıyıcı sorumluluğunun ötesinde taşıma sırasındaki kayıp veya hasarı karşılayabilir. Bunu sunan bazı sağlayıcılar:",
     "insureMore": "Tüm kargo sigortacılarını gör",
     "dismiss": "Sigorta önerilerini gizle",
-    "orderNote": "Ödemeye göre değil, bu güzergaha uygunluğa göre sıralanmıştır."
+    "orderNote": "Ödemeye göre değil, bu güzergaha uygunluğa göre sıralanmıştır.",
+    "photoAlt": "{name} fotoğrafı",
+    "photoAltNumbered": "{name} fotoğrafı {n}",
+    "photos": "Fotoğraflar",
+    "coverAlt": {
+      "port": "Kargo limanında konteyner gemisi",
+      "warehouse": "Depo yükleme rampasında kamyonlar",
+      "containers": "Terminal kapısında nakliye konteynerleri",
+      "sea": "Denizde konteyner gemisi",
+      "air": "Kargo uçağına yüklenen hava kargosu"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {# tedarikçi daha kilitli} other {# tedarikçi daha kilitli}}",
+    "lockedProductsTitle": "{count, plural, one {# ürün daha kilitli} other {# ürün daha kilitli}}",
+    "lockedSuppliersBody": "Free plan kategori başına {limit} tedarikçi gösterir. Sınırsız gezinme ve tedarikçi telefonu, e-postası ile web sitesi için Basic'e yükseltin.",
+    "lockedProductsBody": "Free plan kategori başına {limit} ürün gösterir. Kataloğun tamamına göz atmak için Basic'e yükseltin.",
+    "upgradeCta": "Basic'e yükselt",
+    "trialCta": "3 günlük ücretsiz denemeyi başlat",
+    "comparePlans": "Planları karşılaştır"
   }
 }

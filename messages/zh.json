@@ -12,7 +12,7 @@
     "contactTitle": "联系 | Suplymate",
     "contactDescription": "通过 info@suplymate.com 联系 Suplymate 团队。",
     "pricingTitle": "定价 | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "Free、Basic（$49.95）、Pro（$74.95）和 Enterprise（$199.95）方案，助力 AI 驱动的工业采购。Basic 和 Pro 可免费试用 3 天，按年付费享 9 折优惠。",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "来源z p已读s intelligemment avec l'情报 供应商, l'analyse des 价格和les 推荐 IA.",
     "adminTitle": "管理 | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "联系"
+    },
+    "openSubmenu": "打开{label}菜单",
+    "suppliers": {
+      "all": "所有供应商",
+      "logistics": "物流与保险",
+      "industries": {
+        "metals": "金属",
+        "construction": "建筑",
+        "packaging": "包装",
+        "machinery": "机械",
+        "hardwareComponents": "硬件组件",
+        "biomedical": "生物医学与医疗",
+        "electricalIndustrial": "电气与工业"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "货物保险",
+    "title": "选择知名货物保险公司为您的货运投保",
+    "subtitle": "海运及运输保险公司，承保海运、空运、公路和铁路运输中的货物——信息均摘自各公司官方网站。",
+    "cta": "查看所有货物保险公司"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "Basic 及以上方案可查看更长的价格历史"
   },
   "dashboard": {
     "title": "仪表板",
@@ -888,7 +909,35 @@
     },
     "language": "语言",
     "savePreferences": "保存 les 偏好",
-    "preferencesSaved": "偏好设置 已保存."
+    "preferencesSaved": "偏好设置 已保存.",
+    "avatarLabel": "头像",
+    "avatarHint": "JPG、PNG、WebP 或 GIF，最大 5 MB。也可以将图片拖放到此处。",
+    "avatarUpload": "上传照片",
+    "avatarChange": "更换照片",
+    "avatarUploading": "正在上传… {percent}%",
+    "avatarRemove": "移除",
+    "avatarRemoving": "正在移除…",
+    "avatarDropHere": "将照片拖放到此处",
+    "avatarUpdated": "头像已更新。",
+    "avatarRemoved": "头像已移除。",
+    "avatarEmpty": "请选择要上传的照片。",
+    "avatarTooLarge": "照片过大，最大为 5 MB。",
+    "avatarType": "请使用 JPG、PNG、WebP 或 GIF 图片。",
+    "avatarRateLimited": "上传次数过多，请几分钟后再试。",
+    "avatarStorageUnavailable": "图片存储尚未配置，请稍后再试。",
+    "avatarUploadFailed": "上传失败，请重试。",
+    "avatarRemoveFailed": "无法移除您的照片，请重试。",
+    "avatarNetwork": "网络错误，请重试。",
+    "couponLabel": "优惠码",
+    "couponPlaceholder": "输入优惠码",
+    "couponApply": "应用",
+    "couponRemove": "移除",
+    "couponInvalid": "该优惠码无效或已过期。",
+    "couponFree": "100% 折扣：此订阅免费",
+    "couponPercent": "结账时享 {percent}% 折扣",
+    "couponApplied": "结账时应用折扣",
+    "couponHint": "有优惠码？请在此应用，然后选择方案。若无优惠码，月度方案将自动应用早鸟折扣。",
+    "ownerAccess": "所有者账户：无论此处显示哪个方案，您都可使用全部功能。"
   },
   "rfqs": {
     "title": "Demandes de 报价",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "可以。无需绑卡即可浏览供应商（每个类别 5 家）、阅读供应商基本介绍、查看 3 个月的价格图表、最多收藏 5 家供应商，并每月向 Mate 提问 5 次。",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "Enterprise 为 $199.95/月（按年付费再减 10%），支持多用户、采购工作流、API 访问和定制 AI 知识库。可在本页面或“设置 → 订阅”中订阅。",
+    "billingPeriod": "计费周期",
+    "billingMonthly": "按月",
+    "billingAnnual": "按年",
+    "saveBadge": "节省 {percent}%",
+    "noCard": "无需绑卡",
+    "billedYearly": "按年计费 {amount}",
+    "earlyBirdPrice": "早鸟价：{amount}/月，持续 {months} 个月",
+    "earlyBirdTitle": "早鸟优惠：",
+    "earlyBirdBody": "任意月度方案享 {percent}% 折扣，适用于前 {months} 个月，仅限前 {spots} 位订阅用户。结账时自动应用。",
+    "trialLine": "{days} 天免费试用",
+    "billingNoteV2": "价格以美元计。账单由 Stripe 安全处理。Basic 和 Pro 先享 {days} 天免费试用，除非取消，否则将转为付费订阅。年付方案可节省 {percent}%。Enterprise 为 {enterprise}/月。"
   },
   "about": {
     "eyebrow": "关于 Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "暂无该供应商的直接电话或邮箱，请通过 Suplymate 联系。",
     "contactViaSuplymate": "通过 Suplymate 联系",
     "hiddenValue": "已隐藏，付费套餐可见",
-    "lockedBody": "Basic 及以上套餐（包括 3 天免费试用）可查看直接电话和邮箱。",
+    "lockedBody": "Basic 及以上方案（包括 3 天免费试用）可查看直接电话、邮箱和网站。",
     "startTrial": "免费试用以查看",
     "upgrade": "升级以查看联系方式",
     "signIn": "已订阅？请登录",
     "loading": "正在加载联系方式",
     "cardLockedBoth": "电话和邮箱 · 升级",
     "cardLockedPhone": "电话 · 升级查看",
-    "cardLockedEmail": "邮箱 · 升级查看"
+    "cardLockedEmail": "邮箱 · 升级查看",
+    "website": "网站",
+    "visitWebsite": "访问",
+    "websiteAria": "访问 {name} 的网站"
   },
   "logistics": {
     "chipLabel": "物流与保险",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "要发运这笔订单吗？货物保险可在承运人责任之外承保运输途中的损失或损坏。提供该保险的部分服务商：",
     "insureMore": "查看所有货物保险公司",
     "dismiss": "隐藏货物保险建议",
-    "orderNote": "按与此航线的匹配度排序，而非付费排序。"
+    "orderNote": "按与此航线的匹配度排序，而非付费排序。",
+    "photoAlt": "{name} 照片",
+    "photoAltNumbered": "{name} 照片 {n}",
+    "photos": "照片",
+    "coverAlt": {
+      "port": "货运港口的集装箱船",
+      "warehouse": "仓库装卸平台旁的卡车",
+      "containers": "码头闸口的海运集装箱",
+      "sea": "海上航行的集装箱船",
+      "air": "正在装入货机的航空货物"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {还有 # 家供应商已锁定} other {还有 # 家供应商已锁定}}",
+    "lockedProductsTitle": "{count, plural, one {还有 # 个产品已锁定} other {还有 # 个产品已锁定}}",
+    "lockedSuppliersBody": "Free 方案每个类别显示 {limit} 家供应商。升级到 Basic 即可无限浏览，并查看供应商电话、邮箱和网站。",
+    "lockedProductsBody": "Free 方案每个类别显示 {limit} 个产品。升级到 Basic 即可浏览完整目录。",
+    "upgradeCta": "升级到 Basic",
+    "trialCta": "开始 3 天免费试用",
+    "comparePlans": "比较方案"
   }
 }

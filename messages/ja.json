@@ -12,7 +12,7 @@
     "contactTitle": "お問い合わせ | Suplymate",
     "contactDescription": "お問い合わせez l'团队 Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "料金 | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "AI を活用した産業調達向けの Free、Basic（$49.95）、Pro（$74.95）、Enterprise（$199.95）プラン。Basic と Pro は 3 日間の無料トライアル付き、年払いで 10% オフ。",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "来源z p已读s intelligemment avec l'情报 サプライヤー, l'analyse des 価格とles 推荐 IA.",
     "adminTitle": "管理 | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "お問い合わせ"
+    },
+    "openSubmenu": "{label}メニューを開く",
+    "suppliers": {
+      "all": "すべてのサプライヤー",
+      "logistics": "物流・保険",
+      "industries": {
+        "metals": "金属",
+        "construction": "建設",
+        "packaging": "包装",
+        "machinery": "機械",
+        "hardwareComponents": "ハードウェア部品",
+        "biomedical": "バイオメディカル・医療",
+        "electricalIndustrial": "電気・産業"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "貨物保険",
+    "title": "実績ある貨物保険会社で輸送貨物を守る",
+    "subtitle": "海上・航空・陸上・鉄道輸送中の貨物を補償する海上保険・運送保険会社。情報は各社の公式サイトから引用しています。",
+    "cta": "すべての貨物保険会社を見る"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "より長い価格履歴は Basic 以上でご利用いただけます"
   },
   "dashboard": {
     "title": "ダッシュボード",
@@ -888,7 +909,35 @@
     },
     "language": "言語",
     "savePreferences": "保存 les 偏好",
-    "preferencesSaved": "偏好設定 已保存."
+    "preferencesSaved": "偏好設定 已保存.",
+    "avatarLabel": "プロフィール写真",
+    "avatarHint": "JPG、PNG、WebP、GIF（最大 5 MB）。ここに画像をドラッグ＆ドロップすることもできます。",
+    "avatarUpload": "写真をアップロード",
+    "avatarChange": "写真を変更",
+    "avatarUploading": "アップロード中… {percent}%",
+    "avatarRemove": "削除",
+    "avatarRemoving": "削除中…",
+    "avatarDropHere": "ここに写真をドロップ",
+    "avatarUpdated": "プロフィール写真を更新しました。",
+    "avatarRemoved": "プロフィール写真を削除しました。",
+    "avatarEmpty": "アップロードする写真を選択してください。",
+    "avatarTooLarge": "写真が大きすぎます。最大サイズは 5 MB です。",
+    "avatarType": "JPG、PNG、WebP、GIF の画像を使用してください。",
+    "avatarRateLimited": "アップロードが多すぎます。数分待ってからもう一度お試しください。",
+    "avatarStorageUnavailable": "画像ストレージが設定されていません。後でもう一度お試しください。",
+    "avatarUploadFailed": "アップロードに失敗しました。もう一度お試しください。",
+    "avatarRemoveFailed": "写真を削除できませんでした。もう一度お試しください。",
+    "avatarNetwork": "ネットワークエラーです。もう一度お試しください。",
+    "couponLabel": "クーポンコード",
+    "couponPlaceholder": "コードを入力",
+    "couponApply": "適用",
+    "couponRemove": "削除",
+    "couponInvalid": "このクーポンコードは無効か、有効期限が切れています。",
+    "couponFree": "100% オフ：このサブスクリプションは無料です",
+    "couponPercent": "お支払い時に {percent}% オフを適用",
+    "couponApplied": "お支払い時に割引を適用",
+    "couponHint": "クーポンをお持ちですか？ここで適用してからプランを選択してください。コードがない場合、月額プランには早期割引が自動で適用されます。",
+    "ownerAccess": "オーナーアカウント：ここに表示されているプランにかかわらず、すべての機能をご利用いただけます。"
   },
   "rfqs": {
     "title": "Demandes de 見積もり",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "はい。カード登録なしで、サプライヤーの閲覧（カテゴリごとに 5 社）、基本的なサプライヤー紹介の閲覧、3 か月分の価格チャートの確認、最大 5 社のサプライヤー保存、Mate への月 5 回の質問ができます。",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "Enterprise は $199.95/月（年払いなら 10% オフ）で、複数ユーザー、調達ワークフロー、API アクセス、カスタム AI ナレッジをご利用いただけます。このページまたは「設定 → サブスクリプション」からお申し込みください。",
+    "billingPeriod": "請求期間",
+    "billingMonthly": "月払い",
+    "billingAnnual": "年払い",
+    "saveBadge": "{percent}% お得",
+    "noCard": "カード登録不要",
+    "billedYearly": "年額 {amount} で請求",
+    "earlyBirdPrice": "早期割引：{amount}/月（{months} か月間）",
+    "earlyBirdTitle": "早期割引：",
+    "earlyBirdBody": "すべての月額プランが {percent}% オフ（最初の {months} か月間、先着 {spots} 名の登録者限定）。お支払い時に自動適用されます。",
+    "trialLine": "{days} 日間の無料トライアル",
+    "billingNoteV2": "価格は米ドル表記です。請求は Stripe により安全に処理されます。Basic と Pro は {days} 日間の無料トライアルから始まり、解約しない限り有料サブスクリプションに移行します。年額プランは {percent}% お得。Enterprise は {enterprise}/月です。"
   },
   "about": {
     "eyebrow": "À propos de Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "このサプライヤーの直通電話・メールはまだありません。Suplymate からご連絡ください。",
     "contactViaSuplymate": "Suplymate で連絡",
     "hiddenValue": "非表示。有料プランで利用可能",
-    "lockedBody": "直通の電話とメールは Basic 以上（3日間の無料トライアルを含む）でご利用いただけます。",
+    "lockedBody": "直通の電話、メール、ウェブサイトは Basic 以上（3 日間の無料トライアルを含む）でご利用いただけます。",
     "startTrial": "無料トライアルで表示",
     "upgrade": "アップグレードして表示",
     "signIn": "登録済みの方はログイン",
     "loading": "連絡先を読み込み中",
     "cardLockedBoth": "電話とメール · アップグレード",
     "cardLockedPhone": "電話 · アップグレードして表示",
-    "cardLockedEmail": "メール · アップグレードして表示"
+    "cardLockedEmail": "メール · アップグレードして表示",
+    "website": "ウェブサイト",
+    "visitWebsite": "アクセス",
+    "websiteAria": "{name} のウェブサイトにアクセス"
   },
   "logistics": {
     "chipLabel": "物流・保険",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "この注文を発送しますか？貨物保険は、運送人の責任範囲を超える輸送中の紛失や損傷を補償できます。提供している会社の例：",
     "insureMore": "すべての貨物保険会社を見る",
     "dismiss": "保険の提案を非表示",
-    "orderNote": "掲載順はこの輸送ルートとの適合度によるもので、掲載料によるものではありません。"
+    "orderNote": "掲載順はこの輸送ルートとの適合度によるもので、掲載料によるものではありません。",
+    "photoAlt": "{name} の写真",
+    "photoAltNumbered": "{name} の写真 {n}",
+    "photos": "写真",
+    "coverAlt": {
+      "port": "貨物港に停泊するコンテナ船",
+      "warehouse": "倉庫の荷積みドックに並ぶトラック",
+      "containers": "ターミナルゲートの輸送用コンテナ",
+      "sea": "海上を航行するコンテナ船",
+      "air": "貨物機に積み込まれる航空貨物"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {さらに # 社のサプライヤーがロックされています} other {さらに # 社のサプライヤーがロックされています}}",
+    "lockedProductsTitle": "{count, plural, one {さらに # 件の製品がロックされています} other {さらに # 件の製品がロックされています}}",
+    "lockedSuppliersBody": "Free プランではカテゴリごとに {limit} 社のサプライヤーが表示されます。Basic にアップグレードすると無制限に閲覧でき、サプライヤーの電話、メール、ウェブサイトも確認できます。",
+    "lockedProductsBody": "Free プランではカテゴリごとに {limit} 件の製品が表示されます。Basic にアップグレードしてカタログ全体を閲覧しましょう。",
+    "upgradeCta": "Basic にアップグレード",
+    "trialCta": "3 日間の無料トライアルを開始",
+    "comparePlans": "プランを比較"
   }
 }

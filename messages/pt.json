@@ -12,7 +12,7 @@
     "contactTitle": "Contacto | Suplymate",
     "contactDescription": "Contactoez l'équipe Suplymate. Écrivez-nous à info@suplymate.com.",
     "pricingTitle": "Precios | Suplymate",
-    "pricingDescription": "Free, Basic ($45), Pro ($75) and Enterprise ($200) plans for AI-powered industrial sourcing. 3-day free trial on Basic and Pro.",
+    "pricingDescription": "Planos Free, Basic ($49.95), Pro ($74.95) e Enterprise ($199.95) para sourcing industrial com IA. Teste grátis de 3 dias no Basic e no Pro, 10% de desconto no faturamento anual.",
     "aiAssistantTitle": "Assistant d'approvisionnement IA · Suplymate",
     "aiAssistantDescription": "Sourcez plus intelligemment avec l'intelligence proveedores, l'analyse des precios y les recommandations IA.",
     "adminTitle": "Administração | Suplymate",
@@ -107,6 +107,20 @@
       "blog": "Blog",
       "careers": "Careers",
       "contact": "Contacto"
+    },
+    "openSubmenu": "Abrir menu {label}",
+    "suppliers": {
+      "all": "Todos os fornecedores",
+      "logistics": "Logística e seguros",
+      "industries": {
+        "metals": "Metais",
+        "construction": "Construção",
+        "packaging": "Embalagens",
+        "machinery": "Máquinas",
+        "hardwareComponents": "Componentes de hardware",
+        "biomedical": "Biomédico e médico",
+        "electricalIndustrial": "Elétrico e industrial"
+      }
     }
   },
   "footer": {
@@ -292,6 +306,12 @@
       "hardwareComponents": "Hardware components",
       "biomedical": "Biomedical & medical"
     }
+  },
+  "homeInsurance": {
+    "eyebrow": "Seguro de carga",
+    "title": "Proteja seus embarques com seguradoras de carga consolidadas",
+    "subtitle": "Seguradoras marítimas e de transporte que cobrem mercadorias por mar, ar, rodovia e ferrovia — dados retirados do site oficial de cada empresa.",
+    "cta": "Ver todas as seguradoras de carga"
   },
   "homeFaq": {
     "eyebrow": "FAQ",
@@ -707,7 +727,8 @@
     "manufacturing": "Manufacturing considerations",
     "askAi": "Ask Mate about {name}",
     "findSuppliers": "Find {name} suppliers",
-    "noMatch": "No catalog materials match your search."
+    "noMatch": "No catalog materials match your search.",
+    "rangeLocked": "Histórico de preços mais longo incluído a partir do Basic"
   },
   "dashboard": {
     "title": "Panel",
@@ -888,7 +909,35 @@
     },
     "language": "Idioma",
     "savePreferences": "Guardar les préférences",
-    "preferencesSaved": "Préférences enregistrées."
+    "preferencesSaved": "Préférences enregistrées.",
+    "avatarLabel": "Foto de perfil",
+    "avatarHint": "JPG, PNG, WebP ou GIF, até 5 MB. Você também pode arrastar e soltar uma imagem aqui.",
+    "avatarUpload": "Enviar foto",
+    "avatarChange": "Alterar foto",
+    "avatarUploading": "Enviando… {percent}%",
+    "avatarRemove": "Remover",
+    "avatarRemoving": "Removendo…",
+    "avatarDropHere": "Solte sua foto aqui",
+    "avatarUpdated": "Foto de perfil atualizada.",
+    "avatarRemoved": "Foto de perfil removida.",
+    "avatarEmpty": "Escolha uma foto para enviar.",
+    "avatarTooLarge": "A foto é muito grande. O tamanho máximo é 5 MB.",
+    "avatarType": "Use uma imagem JPG, PNG, WebP ou GIF.",
+    "avatarRateLimited": "Muitos envios. Aguarde alguns minutos e tente novamente.",
+    "avatarStorageUnavailable": "O armazenamento de imagens não está configurado. Tente novamente mais tarde.",
+    "avatarUploadFailed": "Falha no envio. Tente novamente.",
+    "avatarRemoveFailed": "Não foi possível remover sua foto. Tente novamente.",
+    "avatarNetwork": "Erro de rede. Tente novamente.",
+    "couponLabel": "Cupom",
+    "couponPlaceholder": "Digite um código",
+    "couponApply": "Aplicar",
+    "couponRemove": "Remover",
+    "couponInvalid": "Esse cupom é inválido ou expirou.",
+    "couponFree": "100% de desconto: esta assinatura é gratuita",
+    "couponPercent": "{percent}% de desconto aplicado no checkout",
+    "couponApplied": "Desconto aplicado no checkout",
+    "couponHint": "Tem um cupom? Aplique aqui e depois escolha um plano. Sem código, o desconto early bird é aplicado automaticamente aos planos mensais.",
+    "ownerAccess": "Conta de proprietário: todos os recursos estão liberados para você, seja qual for o plano exibido aqui."
   },
   "rfqs": {
     "title": "Demandes de cotizaciones",
@@ -928,11 +977,22 @@
     "faq1q": "What happens after the 3-day trial?",
     "faq1a": "Your card is charged for the plan you chose unless you cancel before the trial ends. You keep everything you saved either way.",
     "faq2q": "Is the Free plan really free?",
-    "faq2a": "Yes. Browse suppliers, read profiles, see price charts and ask the AI a limited number of questions with no card required.",
+    "faq2a": "Sim. Navegue por fornecedores (5 por categoria), leia apresentações básicas, veja 3 meses de gráficos de preços, salve até 5 fornecedores e faça 5 perguntas por mês ao Mate, sem cartão.",
     "faq3q": "Can I switch plans?",
     "faq3a": "Any time from Settings → Subscription. Upgrades apply immediately; downgrades apply at the end of the billing period.",
     "faq4q": "Do you offer team or enterprise pricing?",
-    "faq4a": "Enterprise includes multiple users, procurement workflows, API access and custom AI knowledge. Talk to Sales for a quote."
+    "faq4a": "O Enterprise custa $199.95/mês (ou 10% menos no faturamento anual) e inclui vários usuários, fluxos de compras, acesso à API e conhecimento de IA personalizado. Assine nesta página ou em Configurações → Assinatura.",
+    "billingPeriod": "Período de cobrança",
+    "billingMonthly": "Mensal",
+    "billingAnnual": "Anual",
+    "saveBadge": "Economize {percent}%",
+    "noCard": "Sem cartão",
+    "billedYearly": "Cobrado {amount} por ano",
+    "earlyBirdPrice": "Early bird: {amount}/mês por {months} meses",
+    "earlyBirdTitle": "Acesso early bird:",
+    "earlyBirdBody": "{percent}% de desconto nos primeiros {months} meses de qualquer plano mensal, para os primeiros {spots} assinantes. Aplicado automaticamente no checkout.",
+    "trialLine": "Teste grátis de {days} dias",
+    "billingNoteV2": "Preços em USD. A cobrança é processada com segurança pela Stripe. Basic e Pro começam com um teste grátis de {days} dias e viram uma assinatura paga, a menos que você cancele. Planos anuais economizam {percent}%. Enterprise custa {enterprise}/mês."
   },
   "about": {
     "eyebrow": "À propos de Suplymate",
@@ -1516,14 +1576,17 @@
     "noneOnFile": "Ainda não há telefone ou e-mail direto para este fornecedor. Fale com ele pelo Suplymate.",
     "contactViaSuplymate": "Contatar via Suplymate",
     "hiddenValue": "Oculto. Disponível nos planos pagos",
-    "lockedBody": "Telefone e e-mail diretos estão incluídos a partir do Basic, inclusive no teste grátis de 3 dias.",
+    "lockedBody": "Telefone, e-mail e site diretos estão incluídos a partir do Basic, inclusive no teste grátis de 3 dias.",
     "startTrial": "Teste grátis para ver",
     "upgrade": "Faça upgrade para ver",
     "signIn": "Já é assinante? Entrar",
     "loading": "Carregando contatos",
     "cardLockedBoth": "Telefone e e-mail · Upgrade",
     "cardLockedPhone": "Telefone · Upgrade para ver",
-    "cardLockedEmail": "E-mail · Upgrade para ver"
+    "cardLockedEmail": "E-mail · Upgrade para ver",
+    "website": "Site",
+    "visitWebsite": "Visitar",
+    "websiteAria": "Visitar o site de {name}"
   },
   "logistics": {
     "chipLabel": "Logística e seguros",
@@ -1564,6 +1627,25 @@
     "insureBodyRfq": "Vai enviar este pedido? O seguro de carga pode cobrir perdas ou danos em trânsito além da responsabilidade do transportador. Alguns fornecedores que o oferecem:",
     "insureMore": "Ver todas as seguradoras de carga",
     "dismiss": "Ocultar sugestões de seguro de carga",
-    "orderNote": "Listados por adequação a esta rota, não por pagamento."
+    "orderNote": "Listados por adequação a esta rota, não por pagamento.",
+    "photoAlt": "Foto de {name}",
+    "photoAltNumbered": "Foto de {name} nº {n}",
+    "photos": "Fotos",
+    "coverAlt": {
+      "port": "Navio porta-contêineres em um porto de carga",
+      "warehouse": "Caminhões na doca de carga de um armazém",
+      "containers": "Contêineres marítimos no portão de um terminal",
+      "sea": "Navio porta-contêineres em alto-mar",
+      "air": "Carga aérea sendo embarcada em um cargueiro"
+    }
+  },
+  "planGate": {
+    "lockedSuppliersTitle": "{count, plural, one {Mais # fornecedor está bloqueado} other {Mais # fornecedores estão bloqueados}}",
+    "lockedProductsTitle": "{count, plural, one {Mais # produto está bloqueado} other {Mais # produtos estão bloqueados}}",
+    "lockedSuppliersBody": "O plano Free mostra {limit} fornecedores por categoria. Faça upgrade para o Basic e navegue sem limites, com telefone, e-mail e site dos fornecedores.",
+    "lockedProductsBody": "O plano Free mostra {limit} produtos por categoria. Faça upgrade para o Basic para ver o catálogo completo.",
+    "upgradeCta": "Fazer upgrade para o Basic",
+    "trialCta": "Começar teste grátis de 3 dias",
+    "comparePlans": "Comparar planos"
   }
 }
