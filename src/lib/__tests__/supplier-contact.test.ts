@@ -109,6 +109,7 @@ describe("resolveSupplierContact", () => {
       email: "sales@acme.com",
       phoneSource: "listing",
       emailSource: "website",
+      website: null,
     });
   });
 
@@ -118,6 +119,7 @@ describe("resolveSupplierContact", () => {
       email: null,
       phoneSource: null,
       emailSource: null,
+      website: null,
     });
   });
 });
@@ -141,8 +143,8 @@ describe("plan gating", () => {
     const supplier = { id: "x", phone: "+91 80828 21432", email: "sales@sarfraz.com" };
     const guest = contactViewFor(supplier, { signedIn: false, plan: null });
     const free = contactViewFor(supplier, { signedIn: true, plan: "free" });
-    expect(guest).toEqual({ access: "locked", reason: "guest", hasPhone: true, hasEmail: true });
-    expect(free).toEqual({ access: "locked", reason: "plan", hasPhone: true, hasEmail: true });
+    expect(guest).toEqual({ access: "locked", reason: "guest", hasPhone: true, hasEmail: true, hasWebsite: false });
+    expect(free).toEqual({ access: "locked", reason: "plan", hasPhone: true, hasEmail: true, hasWebsite: false });
     expect(JSON.stringify([guest, free])).not.toMatch(/80828|sarfraz/);
 
     expect(contactViewFor(supplier, { signedIn: true, plan: "basic" })).toMatchObject({

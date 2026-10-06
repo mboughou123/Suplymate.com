@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { rateLimit } from "@/lib/rate-limit";
+import { aiQuotaExceededMessage, aiQuotaFor, quotaFrom, type AiQuota } from "@/lib/ai/ai-quota";
+import { getViewer } from "@/lib/viewer-entitlements";
 import { runAssistant, engineStatus, MAX_MESSAGE_LENGTH, MAX_HISTORY_MESSAGES } from "@/lib/ai/aiService";
 import { ensureConversation, loadLatestConversation, persistTurn } from "@/lib/ai/conversation-store";
 import { pricingStatus } from "@/lib/pricing/pricingService";
@@ -57,6 +59,7 @@ export async function POST(request: Request) {
   const session = await auth();
   const userId = session?.user?.id ?? null;
   let guestRemaining: number | null = null;
+  let aiQuota: AiQuota | null = null;
 
   if (userId) {
     const limit = rateLimit(`ai:${userId}`, 20, 60_000);
@@ -64,6 +67,14 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: `You're sending messages too quickly. Please wait ${limit.resetInSeconds}s and try again.` },
         { status: 429 },
+      );
+    }
+    const viewer = await getViewer();
+    aiQuota = await aiQuotaFor(userId, viewer.entitlements);
+    if (aiQuota.limit !== null && aiQuota.remaining === 0) {
+      return NextResponse.json(
+        { error: aiQuotaExceededMessage(aiQuota.limit), code: "ai_quota", aiQuota },
+        { status: 403 },
       );
     }
   } else {
@@ -106,7 +117,13 @@ export async function POST(request: Request) {
     const result = await runAssistant({ message, history });
     if (userId) {
       await persistTurn(threadId, message, result.reply);
-      return NextResponse.json({ ...result, conversationId: threadId, guest: false });
+      const used = aiQuota ? aiQuota.used + 1 : 0;
+      return NextResponse.json({
+        ...result,
+        conversationId: threadId,
+        guest: false,
+        aiQuota: aiQuota ? quotaFrom(aiQuota.limit, used) : null,
+      });
     }
     return NextResponse.json({ ...result, conversationId: null, guest: true, guestRemaining });
   } catch (err) {

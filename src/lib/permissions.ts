@@ -3,7 +3,8 @@
 // Plan checks and team-role checks live HERE so they are not scattered across
 // routes. Server code calls these helpers; the browser is never trusted.
 
-import { normalizePlanId, type PlanId } from "@/lib/billing";
+import { PLAN_LIMITS, normalizePlanId, type PlanId } from "@/lib/billing";
+import { hasFullAccessEmail } from "@/lib/full-access";
 
 export type TeamRole =
   | "OWNER"
@@ -59,21 +60,41 @@ export function roleCan(role: TeamRole | string | null | undefined, cap: TeamCap
 
 export type Entitlements = {
   plan: PlanId;
+  /** True for the platform owner accounts: every lock and limit is lifted. */
+  fullAccess: boolean;
   savedSuppliersLimit: number | null; // null = unlimited
+  /** Suppliers a viewer can open per directory category; the rest are locked. */
+  suppliersPerCategory: number | null;
+  productsPerCategory: number | null;
+  aiQuestionsPerMonth: number | null;
+  /** Months of price-chart history; null = everything we have. */
+  priceHistoryMonths: number | null;
   priceAlerts: boolean;
   watchlists: boolean;
   teamSeats: number; // 1 = solo
   rfqManagement: boolean;
   prioritizedAi: boolean;
   exportReporting: boolean;
-  /** Supplier phone / email and call / email actions. Free stays on Suplymate messaging. */
+  /** Supplier phone / email / website and call / email actions. Free stays on Suplymate messaging. */
   directSupplierContact: boolean;
 };
+
+function limits(plan: PlanId) {
+  const l = PLAN_LIMITS[plan];
+  return {
+    savedSuppliersLimit: l.savedSuppliers,
+    suppliersPerCategory: l.suppliersPerCategory,
+    productsPerCategory: l.productsPerCategory,
+    aiQuestionsPerMonth: l.aiQuestionsPerMonth,
+    priceHistoryMonths: l.priceHistoryMonths,
+  };
+}
 
 const ENTITLEMENTS: Record<PlanId, Entitlements> = {
   free: {
     plan: "free",
-    savedSuppliersLimit: 3,
+    fullAccess: false,
+    ...limits("free"),
     priceAlerts: false,
     watchlists: true,
     teamSeats: 1,
@@ -84,7 +105,8 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
   },
   basic: {
     plan: "basic",
-    savedSuppliersLimit: null,
+    fullAccess: false,
+    ...limits("basic"),
     priceAlerts: true,
     watchlists: true,
     teamSeats: 1,
@@ -95,7 +117,8 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
   },
   premium: {
     plan: "premium",
-    savedSuppliersLimit: null,
+    fullAccess: false,
+    ...limits("premium"),
     priceAlerts: true,
     watchlists: true,
     teamSeats: 10,
@@ -106,7 +129,8 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
   },
   enterprise: {
     plan: "enterprise",
-    savedSuppliersLimit: null,
+    fullAccess: false,
+    ...limits("enterprise"),
     priceAlerts: true,
     watchlists: true,
     teamSeats: 100,
@@ -117,7 +141,17 @@ const ENTITLEMENTS: Record<PlanId, Entitlements> = {
   },
 };
 
-export function entitlementsFor(plan: string | null | undefined): Entitlements {
-  const p = normalizePlanId(plan);
+const FULL_ACCESS: Entitlements = { ...ENTITLEMENTS.enterprise, fullAccess: true, teamSeats: 1000 };
+
+export type EntitlementSubject = { plan?: string | null; email?: string | null } | null | undefined;
+
+/**
+ * Entitlements for a viewer. Pass the user's email so owner accounts get full
+ * access regardless of the plan stored on their row.
+ */
+export function entitlementsFor(subject: EntitlementSubject | string): Entitlements {
+  const viewer = typeof subject === "string" ? { plan: subject } : subject;
+  if (hasFullAccessEmail(viewer?.email)) return FULL_ACCESS;
+  const p = normalizePlanId(viewer?.plan);
   return ENTITLEMENTS[p] ?? ENTITLEMENTS.free;
 }

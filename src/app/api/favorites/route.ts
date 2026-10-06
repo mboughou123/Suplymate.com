@@ -38,15 +38,16 @@ export async function POST(request: Request) {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { plan: true },
+    select: { plan: true, email: true },
   });
-  const ent = entitlementsFor(user?.plan);
+  const ent = entitlementsFor(user);
   if (ent.savedSuppliersLimit != null) {
     const count = await prisma.favoriteSupplier.count({ where: { userId: session.user.id } });
     if (count >= ent.savedSuppliersLimit) {
       return NextResponse.json(
         {
           error: `Free plan allows ${ent.savedSuppliersLimit} saved suppliers. Upgrade to save more.`,
+          code: "saved_limit",
         },
         { status: 403 }
       );

@@ -31,17 +31,41 @@ export type ContactSource = "listing" | "website";
 export type SupplierContact = {
   phone: string | null;
   email: string | null;
+  website: string | null;
   phoneSource: ContactSource | null;
   emailSource: ContactSource | null;
 };
 
 export type ContactView =
   | ({ access: "full" } & SupplierContact)
-  | { access: "locked"; reason: "guest" | "plan"; hasPhone: boolean; hasEmail: boolean };
+  | {
+      access: "locked";
+      reason: "guest" | "plan";
+      hasPhone: boolean;
+      hasEmail: boolean;
+      hasWebsite: boolean;
+    };
 
-export type ContactViewer = { signedIn: boolean; plan: string | null | undefined };
+export type ContactViewer = { signedIn: boolean; plan: string | null | undefined; email?: string | null };
 
-type SupplierContactFields = { id: string; phone?: string | null; email?: string | null };
+type SupplierContactFields = {
+  id: string;
+  phone?: string | null;
+  email?: string | null;
+  website?: string | null;
+};
+
+export function normalizeWebsite(raw: string | null | undefined): string | null {
+  const value = raw?.trim();
+  if (!value) return null;
+  const withScheme = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+  try {
+    const url = new URL(withScheme);
+    return url.protocol === "http:" || url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
 
 const bundled = websiteContacts as WebsiteContactFile;
 
@@ -57,13 +81,14 @@ export function resolveSupplierContact(
   return {
     phone: listingPhone ?? websitePhone,
     email: listingEmail ?? websiteEmail,
+    website: normalizeWebsite(supplier.website),
     phoneSource: listingPhone ? "listing" : websitePhone ? "website" : null,
     emailSource: listingEmail ? "listing" : websiteEmail ? "website" : null,
   };
 }
 
 export function canViewSupplierContact(viewer: ContactViewer): boolean {
-  return viewer.signedIn && entitlementsFor(viewer.plan).directSupplierContact;
+  return viewer.signedIn && entitlementsFor(viewer).directSupplierContact;
 }
 
 export function contactViewFor(
@@ -78,6 +103,7 @@ export function contactViewFor(
     reason: viewer.signedIn ? "plan" : "guest",
     hasPhone: contact.phone !== null,
     hasEmail: contact.email !== null,
+    hasWebsite: contact.website !== null,
   };
 }
 
