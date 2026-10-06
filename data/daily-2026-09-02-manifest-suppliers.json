@@ -92,8 +92,8 @@
   },
   {
     "slug": "bluescope",
-    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/bluescope_01.jpg",
-    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/bluescope/bluescope_01.jpg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/05.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/bluescope/05.jpg",
     "in_size": [
       590,
       400
@@ -430,8 +430,8 @@
   },
   {
     "slug": "gerdau",
-    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/gerdau_01.jpg",
-    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/gerdau/gerdau_01.jpg",
+    "src": "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/01-prod.jpg",
+    "dst": "/workspace/suppliers-phase1/daily/2026-09-02/enhanced/suppliers/gerdau/01-prod.jpg",
     "in_size": [
       2560,
       860
