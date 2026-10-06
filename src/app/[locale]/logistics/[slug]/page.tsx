@@ -3,17 +3,19 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
-import { ChevronRight, ExternalLink, Globe2, Info, MapPin, ShieldCheck } from "lucide-react";
+import { Camera, ChevronRight, ExternalLink, Globe2, Info, MapPin, ShieldCheck } from "lucide-react";
 import { buildPageAlternates } from "@/lib/locale-metadata";
 import {
   LOGISTICS_PROVIDERS,
   PROVIDERS_CHECKED_AT,
   getLogisticsProvider,
   logisticsDirectoryHref,
+  providerCoverImage,
 } from "@/data/logistics-providers";
 import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 import ProviderBadge from "@/components/logistics/ProviderBadge";
-import { getPublishedProviderLogos } from "@/lib/media-store";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import { getPublishedProviderLogos, getPublishedProviderPhotos } from "@/lib/media-store";
 
 export const dynamicParams = false;
 // Logos published from the media library show up without a redeploy.
@@ -53,7 +55,9 @@ export default async function LogisticsProviderPage({
   const t = await getTranslations("logistics");
   const provider = getLogisticsProvider(slug);
   if (!provider) notFound();
-  const logos = await getPublishedProviderLogos();
+  const [logos, allPhotos] = await Promise.all([getPublishedProviderLogos(), getPublishedProviderPhotos()]);
+  const photos = allPhotos[provider.id] ?? [];
+  const cover = providerCoverImage(provider);
 
   const hq = provider.headquarters;
   const checkedOn = new Date(`${PROVIDERS_CHECKED_AT}T00:00:00Z`).toLocaleDateString(locale, {
@@ -75,27 +79,64 @@ export default async function LogisticsProviderPage({
 
       <div className="mx-auto mt-4 grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-8">
         <div className="min-w-0 space-y-6">
-          <header className="glass-card p-6">
-            <div className="flex items-start gap-4">
-              <ProviderBadge provider={provider} size="lg" logoUrl={logos[provider.id]} />
-              <div className="min-w-0">
-                <h1 className="font-display text-2xl font-bold leading-tight text-ink">{provider.name}</h1>
-                <p className="mt-1 text-sm text-ink-muted">{provider.company}</p>
-                <div className="mt-2 flex flex-wrap gap-1.5 text-xs">
-                  <span className="rounded-md bg-cyan/10 px-2 py-0.5 font-semibold text-cyan">
-                    {t(`kind.${provider.kind}`)}
-                  </span>
-                  {hq && (
-                    <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
-                      <MapPin className="h-3 w-3" aria-hidden />
-                      {hq.city}, {hq.country}
-                    </span>
-                  )}
-                </div>
-              </div>
+          <header className="glass-card overflow-hidden">
+            <div className="relative h-40 overflow-hidden bg-slate-100 sm:h-48">
+              <ImageWithFallback
+                src={photos[0]}
+                fallbackSrc={cover.src}
+                placeholderSrc={cover.src}
+                alt={photos[0] ? t("photoAlt", { name: provider.name }) : t(`coverAlt.${cover.scene}`)}
+                className="absolute inset-0 h-full w-full object-cover"
+                sizes="(min-width: 1024px) 760px, 100vw"
+                loading="eager"
+                quality={75}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/50 via-transparent to-transparent" aria-hidden />
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-ink">{provider.description}</p>
+            <div className="px-6 pb-6">
+              <span className="relative -mt-9 inline-flex rounded-[18px] bg-white p-1 shadow-card">
+                <ProviderBadge provider={provider} size="lg" logoUrl={logos[provider.id]} />
+              </span>
+              <h1 className="mt-3 font-display text-2xl font-bold leading-tight text-ink">{provider.name}</h1>
+              <p className="mt-1 text-sm text-ink-muted">{provider.company}</p>
+              <div className="mt-2 flex flex-wrap gap-1.5 text-xs">
+                <span className="rounded-md bg-cyan/10 px-2 py-0.5 font-semibold text-cyan">
+                  {t(`kind.${provider.kind}`)}
+                </span>
+                {hq && (
+                  <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
+                    <MapPin className="h-3 w-3" aria-hidden />
+                    {hq.city}, {hq.country}
+                  </span>
+                )}
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-ink">{provider.description}</p>
+            </div>
           </header>
+
+          {photos.length > 0 && (
+            <section className="glass-card p-6" aria-labelledby="provider-photos-heading">
+              <h2 id="provider-photos-heading" className="inline-flex items-center gap-2 font-display text-lg font-bold text-ink">
+                <Camera className="h-5 w-5 text-cyan" aria-hidden />
+                {t("photos")}
+              </h2>
+              <ul className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {photos.map((url, i) => (
+                  <li key={url} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+                    <ImageWithFallback
+                      src={url}
+                      fallbackSrc={cover.src}
+                      placeholderSrc={cover.src}
+                      alt={t("photoAltNumbered", { name: provider.name, n: i + 1 })}
+                      className="absolute inset-0 h-full w-full object-cover"
+                      sizes="(min-width: 640px) 240px, 50vw"
+                      quality={70}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className="glass-card p-6">
             <h2 className="inline-flex items-center gap-2 font-display text-lg font-bold text-ink">

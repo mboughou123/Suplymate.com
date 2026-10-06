@@ -21,14 +21,20 @@ import {
   LOGISTICS_PROVIDERS,
   providerGroup,
   providerMatches,
+  sortProvidersLogoFirst,
   type ProviderGroup,
 } from "@/data/logistics-providers";
 import LogisticsProviderCard from "@/components/logistics/LogisticsProviderCard";
+import LockedResultsPanel from "@/components/plan/LockedResultsPanel";
+import { useViewerEntitlements } from "@/lib/entitlements-client";
+import { splitByCategoryAllowance } from "@/lib/plan-gating";
 
 type Props = {
   initialSuppliers: ListingSupplier[];
   /** Published media-library logo per logistics provider id. */
   providerLogos?: Record<string, string>;
+  /** Published media-library photos per logistics provider id. */
+  providerPhotos?: Record<string, string[]>;
 };
 
 const PAGE_SIZE = 12;
@@ -78,7 +84,7 @@ function reviewsOf(s: ListingSupplier): number {
   return s.googleReviews ?? s.reviewCount ?? 0;
 }
 
-export default function SuppliersClient({ initialSuppliers, providerLogos }: Props) {
+export default function SuppliersClient({ initialSuppliers, providerLogos, providerPhotos }: Props) {
   const t = useTranslations("suppliers");
   const tCommon = useTranslations("common");
   const tLogistics = useTranslations("logistics");
@@ -136,12 +142,15 @@ export default function SuppliersClient({ initialSuppliers, providerLogos }: Pro
   const showingProviders = filters.category === LOGISTICS_VALUE;
   const filteredProviders = useMemo(
     () =>
-      LOGISTICS_PROVIDERS.filter(
-        (p) =>
-          (providerGroupFilter === "all" || providerGroup(p.kind) === providerGroupFilter) &&
-          providerMatches(p, filters.search),
+      sortProvidersLogoFirst(
+        LOGISTICS_PROVIDERS.filter(
+          (p) =>
+            (providerGroupFilter === "all" || providerGroup(p.kind) === providerGroupFilter) &&
+            providerMatches(p, filters.search),
+        ),
+        providerLogos,
       ),
-    [filters.search, providerGroupFilter],
+    [filters.search, providerGroupFilter, providerLogos],
   );
 
   // Deep link from the Solutions menu: `/suppliers?industry=<id>` pre-selects
@@ -176,9 +185,16 @@ export default function SuppliersClient({ initialSuppliers, providerLogos }: Pro
     return () => clearTimeout(t);
   }, [filters]);
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const entitlements = useViewerEntitlements();
+  const supplierLimit = entitlements?.suppliersPerCategory ?? null;
+  const { open: visible, locked } = useMemo(
+    () => splitByCategoryAllowance(filtered, supplierLimit, categoryOf),
+    [filtered, supplierLimit],
+  );
+
+  const totalPages = Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
-  const pageItems = filtered.slice(
+  const pageItems = visible.slice(
     (safePage - 1) * PAGE_SIZE,
     safePage * PAGE_SIZE
   );
@@ -282,12 +298,17 @@ export default function SuppliersClient({ initialSuppliers, providerLogos }: Pro
           ) : (
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {filteredProviders.map((provider) => (
-                <LogisticsProviderCard key={provider.id} provider={provider} logoUrl={providerLogos?.[provider.id]} />
+                <LogisticsProviderCard
+                  key={provider.id}
+                  provider={provider}
+                  logoUrl={providerLogos?.[provider.id]}
+                  photoUrl={providerPhotos?.[provider.id]?.[0]}
+                />
               ))}
             </div>
           )}
         </section>
-      ) : loading ? (
+      ) : loading || !entitlements ? (
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <SupplierCardSkeleton key={i} />
@@ -376,12 +397,21 @@ export default function SuppliersClient({ initialSuppliers, providerLogos }: Pro
             </div>
           )}
 
+          {safePage === totalPages && supplierLimit !== null && (
+            <LockedResultsPanel
+              kind="suppliers"
+              lockedCount={locked.length}
+              limit={supplierLimit}
+              signedIn={entitlements?.signedIn ?? false}
+            />
+          )}
+
           <p className="mt-4 text-center text-xs text-ink-dim">
             {t("pageInfo", {
               current: safePage,
               total: totalPages,
               shown: pageItems.length,
-              totalResults: filtered.length,
+              totalResults: visible.length,
             })}
           </p>
         </>

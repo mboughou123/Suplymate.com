@@ -574,6 +574,15 @@ export async function getPublishedProviderLogos(): Promise<Record<string, string
   return out;
 }
 
+/** PUBLISHED photo URLs per logistics provider id (primary first; only providers that have any). */
+export async function getPublishedProviderPhotos(): Promise<Record<string, string[]>> {
+  const rows = (await listMedia({ entityType: "LOGISTICS_PROVIDER", mediaType: "PROVIDER_PHOTO", status: "published" }))
+    .sort((a, b) => Number(b.isPrimary) - Number(a.isPrimary) || a.sortOrder - b.sortOrder);
+  const out: Record<string, string[]> = {};
+  for (const m of rows) if (m.entityId) (out[m.entityId] ??= []).push(m.url);
+  return out;
+}
+
 /** PUBLISHED certification image for a certification entity. */
 export async function getPublishedCertificationMedia(certId: string): Promise<Media | null> {
   const all = await listMedia({ entityType: "CERTIFICATION", entityId: certId, status: "published" });
