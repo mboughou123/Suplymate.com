@@ -288,7 +288,7 @@
       ],
       "local_images": [
         "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/04.jpg",
-        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/05.jpg"
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/bluescope/bluescope_01.jpg"
       ],
       "slug": "bluescope",
       "source_platform": "Company website",
@@ -371,7 +371,7 @@
       "source_url": "https://www2.gerdau.com/products/rebar",
       "photo_urls": [],
       "local_images": [
-        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/01-prod.jpg"
+        "/workspace/suppliers-phase1/daily/2026-09-02/images/suppliers/gerdau/gerdau_01.jpg"
       ],
       "slug": "gerdau",
       "source_platform": "Company website",
