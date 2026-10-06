@@ -116,7 +116,7 @@ export function providerInitials(p: Pick<LogisticsProvider, "company">): string 
 
 /** Whether a provider has a published or bundled logo to show instead of initials. */
 export function providerHasLogo(
-  p: Pick<LogisticsProvider, "id"> & Partial<Pick<LogisticsProvider, "logo" | "logoOnDark">>,
+  p: Pick<LogisticsProvider, "id"> & Partial<Pick<LogisticsProvider, "logo" | "monoOnWhite">>,
   logos?: Record<string, string> | null,
 ): boolean {
   return resolveProviderLogo(p, logos?.[p.id]) !== null;
