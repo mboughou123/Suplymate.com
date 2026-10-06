@@ -1,0 +1,2517 @@
+{
+  "description": "Official logos collected from each company's own website on 2026-10-06. Inline SVG was taken from the site header when that was the published mark.",
+  "logos": [
+    {
+      "entityId": "acipco",
+      "company": "American Cast Iron Pipe Company",
+      "sourceUrl": "https://american-usa.com/",
+      "imageUrl": "https://american-usa.atl1.cdn.digitaloceanspaces.com/american-updated-logo.png",
+      "file": "public/logos/suppliers/acipco.png",
+      "width": 394,
+      "height": 76
+    },
+    {
+      "entityId": "allied-tube-conduit",
+      "company": "Allied Tube & Conduit",
+      "sourceUrl": "https://www.atkore.com/about-us/brands/allied-tube-conduit",
+      "imageUrl": "https://dam.atkore.com/api/public/content/6cab4c8b72c14cb0854126b0f8ae5f7f?v=ec71cb34",
+      "file": "public/logos/suppliers/allied-tube-conduit.png",
+      "width": 1095,
+      "height": 577
+    },
+    {
+      "entityId": "amada",
+      "company": "Amada Co., Ltd.",
+      "sourceUrl": "https://www.amada.com/",
+      "imageUrl": "https://www.amada.com/img/logo.jpg",
+      "file": "public/logos/suppliers/amada.png",
+      "width": 262,
+      "height": 43
+    },
+    {
+      "entityId": "amcor",
+      "company": "Amcor plc",
+      "sourceUrl": "https://www.amcor.com/",
+      "imageUrl": "https://images.ctfassets.net/f7tuyt85vtoa/2wI0s7u2C84sqqSGcq8Iky/bfb518e439a774a48f506d473215cf18/logo-transparent-small-opt.png?fm=webp&q=80&w=3840&fit=fill",
+      "file": "public/logos/suppliers/amcor.png",
+      "width": 1200,
+      "height": 376
+    },
+    {
+      "entityId": "amiantit",
+      "company": "Amiantit",
+      "sourceUrl": "https://amiantit.com/",
+      "imageUrl": "https://amiantit.com/wp-content/uploads/2025/01/Logo_AI-amiantit-3-1__1_-removebg-preview-fotor-20250205154312-1-700x239.png",
+      "file": "public/logos/suppliers/amiantit.png",
+      "width": 667,
+      "height": 220
+    },
+    {
+      "entityId": "amiblu",
+      "company": "Amiblu Holding GmbH",
+      "sourceUrl": "https://www.amiblu.com/",
+      "imageUrl": "https://www.amiblu.com/wp-content/uploads/Amiblu-logo-colour.png",
+      "file": "public/logos/suppliers/amiblu.png",
+      "width": 1200,
+      "height": 220
+    },
+    {
+      "entityId": "ammeraal-beltech",
+      "company": "Ammeraal Beltech",
+      "sourceUrl": "https://ammeraalbeltech.com/en/",
+      "imageUrl": "https://ammeraalbeltech.com/wp-content/uploads/2026/03/cropped-Ammeraal-Beltech-logo-1536x768.png",
+      "file": "public/logos/suppliers/ammeraal-beltech.png",
+      "width": 1200,
+      "height": 462
+    },
+    {
+      "entityId": "anvil-international",
+      "company": "Anvil International",
+      "sourceUrl": "https://www.asc-es.com/",
+      "imageUrl": "https://s3.us-east-1.amazonaws.com/ue1.asc-es.com/images/logos/_brandCategory/546152/asc-anvil.webp",
+      "file": "public/logos/suppliers/anvil-international.png",
+      "width": 293,
+      "height": 95
+    },
+    {
+      "entityId": "aquatherm",
+      "company": "Aquatherm GmbH",
+      "sourceUrl": "https://aquatherm.com/",
+      "imageUrl": "https://aquatherm.com/wp-content/themes/Aquatherm/img/aqt_logo2023.png",
+      "file": "public/logos/suppliers/aquatherm.png",
+      "width": 1200,
+      "height": 182
+    },
+    {
+      "entityId": "ariel-corporation",
+      "company": "Ariel Corporation",
+      "sourceUrl": "https://www.arielcorp.com/",
+      "imageUrl": "https://www.arielcorp.com/_jcr_content/root/header/image.coreimg.png/1777040128603/ariel-logo-full-color.png",
+      "file": "public/logos/suppliers/ariel-corporation.png",
+      "width": 1200,
+      "height": 182
+    },
+    {
+      "entityId": "artrom",
+      "company": "Artrom Steel Tubes S.A.",
+      "sourceUrl": "https://www.artrom.com/",
+      "imageUrl": "https://www.artrom.com/web/wp-content/uploads/2026/01/logo-artrom.avif",
+      "file": "public/logos/suppliers/artrom.png",
+      "width": 720,
+      "height": 979
+    },
+    {
+      "entityId": "ati",
+      "company": "ATI Inc.",
+      "sourceUrl": "https://www.atimaterials.com/",
+      "imageUrl": "https://www.atimaterials.com/PublishingImages/ati_logo.png",
+      "file": "public/logos/suppliers/ati.png",
+      "width": 428,
+      "height": 191
+    },
+    {
+      "entityId": "atlas-copco",
+      "company": "Atlas Copco AB",
+      "sourceUrl": "https://www.atlascopco.com/",
+      "imageUrl": "https://www.atlascopco.com/etc.clientlibs/settings/wcm/designs/accommons/design-system/clientlib-assets/resources/icons/logo.svg",
+      "file": "public/logos/suppliers/atlas-copco.svg",
+      "width": 167,
+      "height": 80
+    },
+    {
+      "entityId": "aubert-duval",
+      "company": "Aubert & Duval",
+      "sourceUrl": "https://www.aubertduval.com/",
+      "imageUrl": "https://www.aubertduval.com/",
+      "file": "public/logos/suppliers/aubert-duval.svg",
+      "width": 129,
+      "height": 64
+    },
+    {
+      "entityId": "ball",
+      "company": "Ball Corporation",
+      "sourceUrl": "https://www.ball.com/",
+      "imageUrl": "https://www.ball.com/",
+      "file": "public/logos/suppliers/ball.svg",
+      "width": 125,
+      "height": 81
+    },
+    {
+      "entityId": "bando-chemical",
+      "company": "Bando Chemical Industries Ltd.",
+      "sourceUrl": "https://www.bandogrp.com/",
+      "imageUrl": "https://www.bandogrp.com/common/img/copyright.gif",
+      "file": "public/logos/suppliers/bando-chemical.png",
+      "width": 250,
+      "height": 33
+    },
+    {
+      "entityId": "banner-engineering",
+      "company": "Banner Engineering Corp.",
+      "sourceUrl": "https://www.bannerengineering.com/us/en.html",
+      "imageUrl": "https://www.bannerengineering.com/us/en.html",
+      "file": "public/logos/suppliers/banner-engineering.svg",
+      "width": 220,
+      "height": 50
+    },
+    {
+      "entityId": "beckhoff",
+      "company": "Beckhoff Automation GmbH & Co. KG",
+      "sourceUrl": "https://www.beckhoff.com/en-us/",
+      "imageUrl": "https://www.beckhoff.com/en-us/",
+      "file": "public/logos/suppliers/beckhoff.svg",
+      "width": 112,
+      "height": 22
+    },
+    {
+      "entityId": "benteler-steel-tube",
+      "company": "Benteler Steel/Tube",
+      "sourceUrl": "https://www.benteler.com/en/",
+      "imageUrl": "https://www.benteler.com/static/app/build/assets/logo-D65Hsyzs.svg",
+      "file": "public/logos/suppliers/benteler-steel-tube.svg",
+      "width": 159,
+      "height": 42
+    },
+    {
+      "entityId": "bishop-wisecarver",
+      "company": "Bishop-Wisecarver Corporation",
+      "sourceUrl": "https://www.bwc.com/",
+      "imageUrl": "https://www.bwc.com/media/logo/stores/1/Page_1.png",
+      "file": "public/logos/suppliers/bishop-wisecarver.png",
+      "width": 808,
+      "height": 157
+    },
+    {
+      "entityId": "bluescope",
+      "company": "BlueScope Steel Limited",
+      "sourceUrl": "https://www.bluescope.com/",
+      "imageUrl": "https://www.bluescope.com/content/dam/bluescope/corporate/bluescope-com/global/assets/Header_Logo.svg",
+      "file": "public/logos/suppliers/bluescope.svg",
+      "width": 144,
+      "height": 89
+    },
+    {
+      "entityId": "bobst",
+      "company": "Bobst SA",
+      "sourceUrl": "https://www.bobst.com/",
+      "imageUrl": "https://www.bobst.com/content/dam/bobstdam/sites/main/bobst_logo_correct.svg",
+      "file": "public/logos/suppliers/bobst.svg",
+      "width": 129,
+      "height": 28
+    },
+    {
+      "entityId": "bonnell-aluminum",
+      "company": "Bonnell Aluminum",
+      "sourceUrl": "https://bonnellaluminum.com/",
+      "imageUrl": "https://bonnellaluminum.com/media/nr2pwcfb/bonnell-aluminum-horz-rgb.svg",
+      "file": "public/logos/suppliers/bonnell-aluminum.svg",
+      "width": 310,
+      "height": 81
+    },
+    {
+      "entityId": "bosch-rexroth",
+      "company": "Bosch Rexroth AG",
+      "sourceUrl": "https://www.boschrexroth.com/en/dc/",
+      "imageUrl": "https://dc-mkt-prod.cloud.bosch.tech/xrm/media/tech/img/rexroth_wave.svg",
+      "file": "public/logos/suppliers/bosch-rexroth.svg",
+      "width": 813,
+      "height": 184
+    },
+    {
+      "entityId": "bossard",
+      "company": "Bossard Group",
+      "sourceUrl": "https://www.bossard.com/us-en/",
+      "imageUrl": "https://www.bossard.com/images/BOSSARD_Logo_Claim_RGB.svg",
+      "file": "public/logos/suppliers/bossard.svg",
+      "width": 1434,
+      "height": 413
+    },
+    {
+      "entityId": "bri-steel",
+      "company": "Bri-Steel Manufacturing",
+      "sourceUrl": "https://www.bri-steel.com/",
+      "imageUrl": "https://static.wixstatic.com/media/13fe72_92e3f6937fe94f4984b658d0fcb2bf74~mv2.jpg",
+      "file": "public/logos/suppliers/bri-steel.png",
+      "width": 1200,
+      "height": 415
+    },
+    {
+      "entityId": "brugg-cables",
+      "company": "Brugg Cables AG",
+      "sourceUrl": "https://www.bruggcables.com/en/",
+      "imageUrl": "https://www.bruggcables.com/app/themes/bruggcables/images/logo.svg",
+      "file": "public/logos/suppliers/brugg-cables.svg",
+      "width": 244,
+      "height": 70
+    },
+    {
+      "entityId": "bucher-hydraulics",
+      "company": "Bucher Hydraulics",
+      "sourceUrl": "https://www.bucherhydraulics.com/en",
+      "imageUrl": "https://www.bucherhydraulics.com/en",
+      "file": "public/logos/suppliers/bucher-hydraulics.svg",
+      "width": 284,
+      "height": 121
+    },
+    {
+      "entityId": "bulten",
+      "company": "Bulten AB",
+      "sourceUrl": "https://www.bulten.com/en/",
+      "imageUrl": "https://www.bulten.com/images/bulten-logo.png?width=346&format=webp",
+      "file": "public/logos/suppliers/bulten.png",
+      "width": 333,
+      "height": 69
+    },
+    {
+      "entityId": "burgo-group",
+      "company": "Burgo Group S.p.A.",
+      "sourceUrl": "https://www.burgo.com/en",
+      "imageUrl": "https://www.burgo.com/themes/boorgo/images/logo-120-Anni-negativo-en.png",
+      "file": "public/logos/suppliers/burgo-group.png",
+      "width": 327,
+      "height": 212
+    },
+    {
+      "entityId": "bystronic",
+      "company": "Bystronic AG",
+      "sourceUrl": "https://www.bystronic.com/usa/en-us",
+      "imageUrl": "https://www.bystronic.com/usa/en-us",
+      "file": "public/logos/suppliers/bystronic.svg",
+      "width": 145,
+      "height": 174
+    },
+    {
+      "entityId": "california-steel-industries",
+      "company": "California Steel Industries, Inc.",
+      "sourceUrl": "https://www.californiasteel.com/",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/632e1df423ab2309da745b31/ccfc370f-2497-47d1-8c56-ac999a242fff/CSI+and+Nucor+Logo.png?format=1500w",
+      "file": "public/logos/suppliers/california-steel-industries.png",
+      "width": 1200,
+      "height": 416
+    },
+    {
+      "entityId": "carlisle-construction",
+      "company": "Carlisle Construction Materials",
+      "sourceUrl": "https://www.carlisleconstructionmaterials.com/",
+      "imageUrl": "https://www.carlisleconstructionmaterials.com/wp-content/uploads/2021/08/CCM-Logo.png",
+      "file": "public/logos/suppliers/carlisle-construction.png",
+      "width": 321,
+      "height": 66
+    },
+    {
+      "entityId": "cascades",
+      "company": "Cascades Inc.",
+      "sourceUrl": "https://www.cascades.com/en",
+      "imageUrl": "https://www.cascades.com/themes/custom/cascades_corpo/dist/assets/cascades-logo.svg",
+      "file": "public/logos/suppliers/cascades.svg",
+      "width": 112,
+      "height": 52
+    },
+    {
+      "entityId": "ccl-industries",
+      "company": "CCL Industries Inc.",
+      "sourceUrl": "https://www.cclind.com/",
+      "imageUrl": "https://www.cclind.com/wp-content/uploads/2022/03/CCL_Logo_OnWhite_Ukraine_RGB-250x109-1.png",
+      "file": "public/logos/suppliers/ccl-industries.png",
+      "width": 1043,
+      "height": 454
+    },
+    {
+      "entityId": "centravis",
+      "company": "Centravis Production Ukraine PJSC",
+      "sourceUrl": "https://www.centravis.com/",
+      "imageUrl": "https://www.centravis.com/wp-content/uploads/2019/11/logo-w.png",
+      "file": "public/logos/suppliers/centravis.png",
+      "width": 454,
+      "height": 73
+    },
+    {
+      "entityId": "cerro-wire",
+      "company": "Cerro Wire LLC",
+      "sourceUrl": "https://www.cerrowire.com/",
+      "imageUrl": "https://www.cerrowire.com/wp-content/uploads/2019/03/logo_cerro.jpg",
+      "file": "public/logos/suppliers/cerro-wire.png",
+      "width": 390,
+      "height": 63
+    },
+    {
+      "entityId": "certainteed",
+      "company": "CertainTeed LLC",
+      "sourceUrl": "https://www.certainteed.com/",
+      "imageUrl": "https://www.certainteed.com/themes/custom/certainteed/images/logo.svg",
+      "file": "public/logos/suppliers/certainteed.svg",
+      "width": 286,
+      "height": 66
+    },
+    {
+      "entityId": "ckd-corporation",
+      "company": "CKD Corporation",
+      "sourceUrl": "https://www.ckd.co.jp/",
+      "imageUrl": "https://www.ckd.co.jp/assets/images/common/logo.svg",
+      "file": "public/logos/suppliers/ckd-corporation.svg",
+      "width": 88,
+      "height": 27
+    },
+    {
+      "entityId": "cleveland-cliffs",
+      "company": "Cleveland-Cliffs Inc.",
+      "sourceUrl": "https://www.clevelandcliffs.com/",
+      "imageUrl": "https://www.clevelandcliffs.com/",
+      "file": "public/logos/suppliers/cleveland-cliffs.svg",
+      "width": 762,
+      "height": 90
+    },
+    {
+      "entityId": "cosmo-films",
+      "company": "Cosmo Films Limited",
+      "sourceUrl": "https://www.cosmofilms.com/",
+      "imageUrl": "https://www.cosmofilms.com/public/images/logo.webp",
+      "file": "public/logos/suppliers/cosmo-films.png",
+      "width": 725,
+      "height": 109
+    },
+    {
+      "entityId": "crown-holdings",
+      "company": "Crown Holdings, Inc.",
+      "sourceUrl": "https://www.crowncork.com/",
+      "imageUrl": "https://www.crowncork.com/themes/_custom/sd/logo.svg",
+      "file": "public/logos/suppliers/crown-holdings.svg",
+      "width": 185,
+      "height": 59
+    },
+    {
+      "entityId": "dalmia-bharat",
+      "company": "Dalmia Bharat Limited",
+      "sourceUrl": "https://www.dalmiacement.com/",
+      "imageUrl": "https://www.dalmiacement.com/assets/images/logo/dalmia-bharat-cement.svg",
+      "file": "public/logos/suppliers/dalmia-bharat.svg",
+      "width": 512,
+      "height": 261
+    },
+    {
+      "entityId": "danfoss",
+      "company": "Danfoss A/S",
+      "sourceUrl": "https://www.danfoss.com/en/",
+      "imageUrl": "https://www.danfoss.com/static/images/new-logo.svg",
+      "file": "public/logos/suppliers/danfoss.svg",
+      "width": 126,
+      "height": 55
+    },
+    {
+      "entityId": "domtar",
+      "company": "Domtar Corporation",
+      "sourceUrl": "https://www.domtar.com/",
+      "imageUrl": "https://www.domtar.com/wp-content/uploads/2024/10/domtar_logo_cmyk_green-min.png",
+      "file": "public/logos/suppliers/domtar.png",
+      "width": 1152,
+      "height": 264
+    },
+    {
+      "entityId": "dorner",
+      "company": "Dorner Mfg. Corp.",
+      "sourceUrl": "https://www.dornerconveyors.com/",
+      "imageUrl": "https://www.dornerconveyors.com/wp-content/themes/dorner/assets/images/cmco-logo-color.png",
+      "file": "public/logos/suppliers/dorner.png",
+      "width": 1200,
+      "height": 304
+    },
+    {
+      "entityId": "ds-smith",
+      "company": "DS Smith plc",
+      "sourceUrl": "https://www.dssmith.com/",
+      "imageUrl": "https://www.dssmith.com/Static/dist/gfx/ds-logo-color.svg",
+      "file": "public/logos/suppliers/ds-smith.svg",
+      "width": 155,
+      "height": 103
+    },
+    {
+      "entityId": "dsv-cargo-insurance",
+      "company": "DSV A/S",
+      "sourceUrl": "https://www.dsv.com/en/",
+      "imageUrl": "https://www.dsv.com/en/",
+      "file": "public/logistics/logos/dsv-cargo-insurance.svg",
+      "width": 100,
+      "height": 29
+    },
+    {
+      "entityId": "dynamic-cables",
+      "company": "Dynamic Cables Limited",
+      "sourceUrl": "https://www.dynamiccables.co.in/",
+      "imageUrl": "https://www.dynamiccables.co.in/images/logo-dark.png",
+      "file": "public/logos/suppliers/dynamic-cables.png",
+      "width": 358,
+      "height": 84
+    },
+    {
+      "entityId": "electrosteel-castings",
+      "company": "Electrosteel Castings Limited",
+      "sourceUrl": "https://www.electrosteel.com/",
+      "imageUrl": "https://www.electrosteel.com/images/logo.png",
+      "file": "public/logos/suppliers/electrosteel-castings.png",
+      "width": 313,
+      "height": 40
+    },
+    {
+      "entityId": "elsewedy-electric",
+      "company": "Elsewedy Electric",
+      "sourceUrl": "https://www.elsewedyelectric.com/",
+      "imageUrl": "https://www.elsewedyelectric.com/logo_mini.gif",
+      "file": "public/logos/suppliers/elsewedy-electric.png",
+      "width": 370,
+      "height": 200
+    },
+    {
+      "entityId": "erdemir",
+      "company": "Ereğli Demir ve Çelik Fabrikaları T.A.Ş. (Erdemir)",
+      "sourceUrl": "https://www.erdemir.com.tr/",
+      "imageUrl": "https://www.erdemir.com.tr/img/erdemir-logo-inv.svg",
+      "file": "public/logos/suppliers/erdemir.svg",
+      "width": 90,
+      "height": 48
+    },
+    {
+      "entityId": "ester-industries",
+      "company": "Ester Industries Limited",
+      "sourceUrl": "https://www.esterindustries.com/",
+      "imageUrl": "https://www.esterindustries.com/wp-content/themes/esterindustries/assets/images/ester-logo.svg",
+      "file": "public/logos/suppliers/ester-industries.svg",
+      "width": 87,
+      "height": 66
+    },
+    {
+      "entityId": "expeditors-cargo-insurance",
+      "company": "Expeditors International of Washington, Inc.",
+      "sourceUrl": "https://www.expeditors.com/",
+      "imageUrl": "https://www.expeditors.com/images/footer-logo.png",
+      "file": "public/logistics/logos/expeditors-cargo-insurance.png",
+      "width": 296,
+      "height": 87
+    },
+    {
+      "entityId": "far-east-cable",
+      "company": "Far East Cable Co., Ltd.",
+      "sourceUrl": "http://en.fe-cable.com/",
+      "imageUrl": "http://en.fe-cable.com/images/logo.png",
+      "file": "public/logos/suppliers/far-east-cable.png",
+      "width": 485,
+      "height": 82
+    },
+    {
+      "entityId": "fedrigoni",
+      "company": "Fedrigoni Group",
+      "sourceUrl": "https://fedrigoni.com/",
+      "imageUrl": "https://fedrigoni.com/wp-content/themes/fedrigoni_theme/library/images/shield-fedrigoni-white.svg",
+      "file": "public/logos/suppliers/fedrigoni.svg",
+      "width": 54,
+      "height": 70
+    },
+    {
+      "entityId": "fine-tubes",
+      "company": "Fine Tubes Limited",
+      "sourceUrl": "https://www.finetubes.co.uk/",
+      "imageUrl": "https://www.finetubes.co.uk/-/media/ametekfinetubes/images/fine-tubes-logo.png?h=359&la=en&w=1649&revision=0d690229-0274-4c99-b571-66c1b0c4ee1d&hash=2458D84C597D9381A10E317792D61189",
+      "file": "public/logos/suppliers/fine-tubes.png",
+      "width": 1200,
+      "height": 261
+    },
+    {
+      "entityId": "finolex-cables",
+      "company": "Finolex Cables Limited",
+      "sourceUrl": "https://www.finolex.com/",
+      "imageUrl": "https://www.finolex.com/images/Finolex_logo_header.svg",
+      "file": "public/logos/suppliers/finolex-cables.svg",
+      "width": 138,
+      "height": 66
+    },
+    {
+      "entityId": "flexport-cargo-insurance",
+      "company": "Flexport",
+      "sourceUrl": "https://www.flexport.com/",
+      "imageUrl": "https://www.flexport.com/",
+      "file": "public/logistics/logos/flexport-cargo-insurance.svg",
+      "width": 238,
+      "height": 55
+    },
+    {
+      "entityId": "forbo-siegling",
+      "company": "Forbo Siegling GmbH",
+      "sourceUrl": "https://www.forbo.com/movement/en-gl/",
+      "imageUrl": "https://www.forbo.com/content/images/forbo_movement_logo.svg",
+      "file": "public/logos/suppliers/forbo-siegling.svg",
+      "width": 192,
+      "height": 80
+    },
+    {
+      "entityId": "future-pipe-industries",
+      "company": "Future Pipe Industries",
+      "sourceUrl": "https://futurepipe.com/",
+      "imageUrl": "https://futurepipe.com/wp-content/themes/fpi/assets/images/logo-blue.svg",
+      "file": "public/logos/suppliers/future-pipe-industries.svg",
+      "width": 135,
+      "height": 38
+    },
+    {
+      "entityId": "gf-piping-systems",
+      "company": "GF Piping Systems",
+      "sourceUrl": "https://www.gfps.com/landing-page.html",
+      "imageUrl": "https://www.gfps.com/content/dam/commonassets/logo/logo-gf.svg",
+      "file": "public/logos/suppliers/gf-piping-systems.svg",
+      "width": 140,
+      "height": 115
+    },
+    {
+      "entityId": "gibson-stainless",
+      "company": "Gibson Stainless & Specialty Inc.",
+      "sourceUrl": "https://www.gibsonstainless.com/",
+      "imageUrl": "https://www.gibsonstainless.com/wp-content/uploads/Gibson-LogoRegistered-e1749736961133.webp",
+      "file": "public/logos/suppliers/gibson-stainless.png",
+      "width": 1200,
+      "height": 222
+    },
+    {
+      "entityId": "goodluck-india",
+      "company": "Goodluck India Limited",
+      "sourceUrl": "https://www.goodluckindia.com/",
+      "imageUrl": "https://www.goodluckindia.com/assets/img/logo/logo-white.png",
+      "file": "public/logos/suppliers/goodluck-india.png",
+      "width": 237,
+      "height": 72
+    },
+    {
+      "entityId": "graco",
+      "company": "Graco Inc.",
+      "sourceUrl": "https://www.graco.com/us/en.html",
+      "imageUrl": "https://www.graco.com/img/graco-logo-blue-vertical.svg",
+      "file": "public/logos/suppliers/graco.svg",
+      "width": 994,
+      "height": 1079
+    },
+    {
+      "entityId": "graham-packaging",
+      "company": "Graham Packaging Company",
+      "sourceUrl": "https://www.grahampackaging.com/",
+      "imageUrl": "https://www.grahampackaging.com/wp-content/themes/base/img/Graham-Logo-Hor-Gradient.png",
+      "file": "public/logos/suppliers/graham-packaging.png",
+      "width": 542,
+      "height": 167
+    },
+    {
+      "entityId": "handytube",
+      "company": "HandyTube Corporation",
+      "sourceUrl": "https://www.handytube.com/",
+      "imageUrl": "https://www.handytube.com/img/HandyTube-logo.png",
+      "file": "public/logos/suppliers/handytube.png",
+      "width": 692,
+      "height": 126
+    },
+    {
+      "entityId": "harting",
+      "company": "HARTING Technology Group",
+      "sourceUrl": "https://www.harting.com/en-US",
+      "imageUrl": "https://www.harting.com/en-US",
+      "file": "public/logos/suppliers/harting.svg",
+      "width": 70,
+      "height": 66
+    },
+    {
+      "entityId": "hawe",
+      "company": "HAWE Hydraulik SE",
+      "sourceUrl": "https://www.hawe.com/en-us/",
+      "imageUrl": "https://www.hawe.com/_assets/1b121444ab4cc029667e2ef95faa8e67/Images/hawe-logo-m-2x.jpg",
+      "file": "public/logos/suppliers/hawe.png",
+      "width": 228,
+      "height": 73
+    },
+    {
+      "entityId": "haynes-international",
+      "company": "Haynes International Inc.",
+      "sourceUrl": "https://haynesintl.com/en/",
+      "imageUrl": "https://i0.wp.com/haynesintl.com/wp-content/uploads/2024/07/logo.webp?fit=484%2C188&ssl=1",
+      "file": "public/logos/suppliers/haynes-international.png",
+      "width": 484,
+      "height": 178
+    },
+    {
+      "entityId": "hbis",
+      "company": "HBIS Group Co., Ltd.",
+      "sourceUrl": "https://www.hbisco.com/",
+      "imageUrl": "https://www.hbisco.com/uploads/2023-09-06/63e7330d-f2d0-4961-87a6-48b038410d121693988775053.png",
+      "file": "public/logos/suppliers/hbis.png",
+      "width": 1200,
+      "height": 201
+    },
+    {
+      "entityId": "hellenic-cables",
+      "company": "Hellenic Cables S.A.",
+      "sourceUrl": "https://www.hellenic-cables.com/",
+      "imageUrl": "https://www.hellenic-cables.com/",
+      "file": "public/logos/suppliers/hellenic-cables.svg",
+      "width": 173,
+      "height": 76
+    },
+    {
+      "entityId": "hengtong",
+      "company": "Hengtong Group Co., Ltd.",
+      "sourceUrl": "https://www.hengtonggroup.com/",
+      "imageUrl": "https://www.hengtonggroup.com/web/bocstatic/web/img/logo1-1.2.gif?v=v20251203.1760443443",
+      "file": "public/logos/suppliers/hengtong.png",
+      "width": 342,
+      "height": 187
+    },
+    {
+      "entityId": "hepcomotion",
+      "company": "HepcoMotion",
+      "sourceUrl": "https://www.hepcomotion.com/",
+      "imageUrl": "https://www.hepcomotion.com/wp-content/themes/hepco/assets/images/hepco-motion-logo.svg?x39639",
+      "file": "public/logos/suppliers/hepcomotion.svg",
+      "width": 322,
+      "height": 73
+    },
+    {
+      "entityId": "hi-tech-pipes",
+      "company": "Hi-Tech Pipes Limited",
+      "sourceUrl": "https://hitechpipes.in/",
+      "imageUrl": "https://hitechpipes.in/wp-content/uploads/2023/07/Logo-2.png",
+      "file": "public/logos/suppliers/hi-tech-pipes.png",
+      "width": 285,
+      "height": 44
+    },
+    {
+      "entityId": "hiwin",
+      "company": "HIWIN Technologies Corp.",
+      "sourceUrl": "https://hiwin.com/",
+      "imageUrl": "https://hiwin.com/wp-content/uploads/Hiwin-Motion-Control-and-System-Technology-Logo.png",
+      "file": "public/logos/suppliers/hiwin.png",
+      "width": 260,
+      "height": 75
+    },
+    {
+      "entityId": "holcim",
+      "company": "Holcim Ltd",
+      "sourceUrl": "https://www.holcim.com/",
+      "imageUrl": "https://www.holcim.com/themes/custom/corporate/components/header/images/holcim_logo_color.svg",
+      "file": "public/logos/suppliers/holcim.svg",
+      "width": 284,
+      "height": 67
+    },
+    {
+      "entityId": "holmen",
+      "company": "Holmen AB",
+      "sourceUrl": "https://www.holmen.com/",
+      "imageUrl": "https://holmen.imagevault.media/publishedmedia/t9c77kz2pn2vc7xkz0ae/Holmen_blue.webp",
+      "file": "public/logos/suppliers/holmen.png",
+      "width": 500,
+      "height": 75
+    },
+    {
+      "entityId": "husteel",
+      "company": "Husteel Co., Ltd.",
+      "sourceUrl": "https://www.husteel.com/eng/main.hu",
+      "imageUrl": "https://www.husteel.com/common/images/logo-eng.png",
+      "file": "public/logos/suppliers/husteel.png",
+      "width": 918,
+      "height": 126
+    },
+    {
+      "entityId": "hydraforce",
+      "company": "HydraForce Inc.",
+      "sourceUrl": "https://www.hydraforce.com/",
+      "imageUrl": "https://www.hydraforce.com/globalassets/hydraforce-logo.svg",
+      "file": "public/logos/suppliers/hydraforce.svg",
+      "width": 180,
+      "height": 94
+    },
+    {
+      "entityId": "igus",
+      "company": "igus GmbH",
+      "sourceUrl": "https://www.igus.com/",
+      "imageUrl": "https://www.igus.com/",
+      "file": "public/logos/suppliers/igus.svg",
+      "width": 125,
+      "height": 41
+    },
+    {
+      "entityId": "iko",
+      "company": "IKO Nippon Thompson Co., Ltd.",
+      "sourceUrl": "https://www.ikont.co.jp/eg/",
+      "imageUrl": "https://www.ikont.co.jp/themes/custom/iko/logo.png",
+      "file": "public/logos/suppliers/iko.png",
+      "width": 212,
+      "height": 72
+    },
+    {
+      "entityId": "international-paper",
+      "company": "International Paper Company",
+      "sourceUrl": "https://www.internationalpaper.com/",
+      "imageUrl": "https://www.internationalpaper.com/themes/custom/themekit/logo.svg",
+      "file": "public/logos/suppliers/international-paper.svg",
+      "width": 182,
+      "height": 38
+    },
+    {
+      "entityId": "intralox",
+      "company": "Intralox LLC",
+      "sourceUrl": "https://www.intralox.com/",
+      "imageUrl": "https://www.intralox.com/static/intralox-logo-box-194a1e40631d2cf9cd7d463fa5afc04b.svg",
+      "file": "public/logos/suppliers/intralox.svg",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "entityId": "jindal-pipe-usa",
+      "company": "Jindal Pipe USA Inc.",
+      "sourceUrl": "https://jindalpipeusa.com/",
+      "imageUrl": "https://jindalpipeusa.com/assets/logo_jpu_text.png",
+      "file": "public/logos/suppliers/jindal-pipe-usa.png",
+      "width": 1037,
+      "height": 160
+    },
+    {
+      "entityId": "jindal-poly-films",
+      "company": "Jindal Poly Films Limited",
+      "sourceUrl": "https://www.jindalpoly.com/",
+      "imageUrl": "https://www.jindalpoly.com/images/logo.png",
+      "file": "public/logos/suppliers/jindal-poly-films.png",
+      "width": 270,
+      "height": 30
+    },
+    {
+      "entityId": "jm-eagle",
+      "company": "JM Eagle",
+      "sourceUrl": "https://www.jmeagle.com/",
+      "imageUrl": "https://www.jmeagle.com/sites/default/files/logo_jm_eagle_modern_infrastructure_made_in_america.png",
+      "file": "public/logos/suppliers/jm-eagle.png",
+      "width": 730,
+      "height": 589
+    },
+    {
+      "entityId": "jsw-cement",
+      "company": "JSW Cement Limited",
+      "sourceUrl": "https://www.jswcement.in/",
+      "imageUrl": "https://www.jswcement.in/images/JSW-logo-blue-logo.png",
+      "file": "public/logos/suppliers/jsw-cement.png",
+      "width": 250,
+      "height": 94
+    },
+    {
+      "entityId": "kaiser-aluminum",
+      "company": "Kaiser Aluminum Corporation",
+      "sourceUrl": "https://www.kaiseraluminum.com/",
+      "imageUrl": "https://www.kaiseraluminum.com/wp-content/themes/worksdesign/img/logo.png",
+      "file": "public/logos/suppliers/kaiser-aluminum.png",
+      "width": 345,
+      "height": 78
+    },
+    {
+      "entityId": "kalyani-steels",
+      "company": "Kalyani Steels Limited",
+      "sourceUrl": "https://www.kalyanisteels.com/",
+      "imageUrl": "https://www.kalyanisteels.com/wp-content/uploads/Logo-e1672199044676-300x78.jpg",
+      "file": "public/logos/suppliers/kalyani-steels.png",
+      "width": 300,
+      "height": 78
+    },
+    {
+      "entityId": "kennametal",
+      "company": "Kennametal Inc.",
+      "sourceUrl": "https://www.kennametal.com/",
+      "imageUrl": "https://www.kennametal.com/assets/kmt-logo.svg",
+      "file": "public/logos/suppliers/kennametal.svg",
+      "width": 130,
+      "height": 25
+    },
+    {
+      "entityId": "keyence",
+      "company": "KEYENCE Corporation",
+      "sourceUrl": "https://www.keyence.com/",
+      "imageUrl": "https://www.keyence.com/img/core/logo_header_01.svg",
+      "file": "public/logos/suppliers/keyence.svg",
+      "width": 91,
+      "height": 16
+    },
+    {
+      "entityId": "kingspan",
+      "company": "Kingspan Group plc",
+      "sourceUrl": "https://www.kingspangroup.com/",
+      "imageUrl": "https://www.kingspangroup.com/.within.website/x/cmd/anubis/static/img/logo.svg",
+      "file": "public/logos/suppliers/kingspan.svg",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "entityId": "kirby-building-systems",
+      "company": "Kirby Building Systems",
+      "sourceUrl": "https://www.kirbyinternational.com/en",
+      "imageUrl": "https://www.kirbyinternational.com/en-us/assets/common/images/logo.svg",
+      "file": "public/logos/suppliers/kirby-building-systems.svg",
+      "width": 118,
+      "height": 37
+    },
+    {
+      "entityId": "kloeckner-pentaplast",
+      "company": "Klöckner Pentaplast",
+      "sourceUrl": "https://www.kpfilms.com/en/",
+      "imageUrl": "https://www.kpfilms.com/_assets/images/Kp-logo.svg",
+      "file": "public/logos/suppliers/kloeckner-pentaplast.svg",
+      "width": 118,
+      "height": 118
+    },
+    {
+      "entityId": "koenig-bauer",
+      "company": "Koenig & Bauer AG",
+      "sourceUrl": "https://www.koenig-bauer.com/en/",
+      "imageUrl": "https://www.koenig-bauer.com/_assets/3d6253b02f7bd6def90fbe956f20225a/images/logo-koenig-bauer.svg",
+      "file": "public/logos/suppliers/koenig-bauer.svg",
+      "width": 198,
+      "height": 17
+    },
+    {
+      "entityId": "kumkang-kind",
+      "company": "Kumkang Kind Co., Ltd.",
+      "sourceUrl": "https://www.kumkangkind.com/",
+      "imageUrl": "https://www.kumkangkind.com/images/common/logo_kumkang_gray.png",
+      "file": "public/logos/suppliers/kumkang-kind.png",
+      "width": 201,
+      "height": 30
+    },
+    {
+      "entityId": "lenze",
+      "company": "Lenze SE",
+      "sourceUrl": "https://www.lenze.com/en-us/",
+      "imageUrl": "https://www.lenze.com/en-us/",
+      "file": "public/logos/suppliers/lenze.svg",
+      "width": 340,
+      "height": 106
+    },
+    {
+      "entityId": "linmot",
+      "company": "LinMot AG",
+      "sourceUrl": "https://linmot.com/en/",
+      "imageUrl": "https://linmot.com/wp-content/uploads/2024/08/LinMot_Logo.png",
+      "file": "public/logos/suppliers/linmot.png",
+      "width": 220,
+      "height": 54
+    },
+    {
+      "entityId": "liqui-box",
+      "company": "Liqui-Box",
+      "sourceUrl": "https://www.liquibox.com/",
+      "imageUrl": "https://www.liquibox.com/wp-content/uploads/2026/06/Liquibox-logos_full-color-1-1536x423.png",
+      "file": "public/logos/suppliers/liqui-box.png",
+      "width": 1200,
+      "height": 327
+    },
+    {
+      "entityId": "loadsure",
+      "company": "Loadsure LTD",
+      "sourceUrl": "https://www.loadsure.net/",
+      "imageUrl": "https://a.storyblok.com/f/294606868077839/2700x392/d16cac736e/atg-full-logo-reversed-white-1.png/m/fit-in/230x230/filters:fill(0f1114)",
+      "file": "public/logistics/logos/loadsure.png",
+      "width": 230,
+      "height": 230
+    },
+    {
+      "entityId": "magicrete-building-solutions-private-limited-in",
+      "company": "Magicrete Building Solutions Private Limited",
+      "sourceUrl": "https://www.magicrete.in/",
+      "imageUrl": "https://www.magicrete.in/assets/uploads/2026/04/logo/logo-1702699187_1775803696.webp",
+      "file": "public/logos/suppliers/magicrete-building-solutions-private-limited-in.png",
+      "width": 214,
+      "height": 57
+    },
+    {
+      "entityId": "mannesmann-line-pipe",
+      "company": "Mannesmann Line Pipe GmbH",
+      "sourceUrl": "https://www.mannesmann.com/de/",
+      "imageUrl": "https://www.mannesmann.com/de/",
+      "file": "public/logos/suppliers/mannesmann-line-pipe.svg",
+      "width": 323,
+      "height": 70
+    },
+    {
+      "entityId": "mapei",
+      "company": "MAPEI S.p.A.",
+      "sourceUrl": "https://www.mapei.com/",
+      "imageUrl": "https://cdnmedia.mapei.com/images/globallandinglibraries/mapei.com/logo_mapei_ita_white-no-payoff.png?sfvrsn=d4336e84_2",
+      "file": "public/logos/suppliers/mapei.png",
+      "width": 393,
+      "height": 95
+    },
+    {
+      "entityId": "mazak",
+      "company": "Yamazaki Mazak Corporation",
+      "sourceUrl": "https://www.mazak.com/us-en/",
+      "imageUrl": "https://www.mazak.com/us-en/",
+      "file": "public/logos/suppliers/mazak.svg",
+      "width": 148,
+      "height": 40
+    },
+    {
+      "entityId": "mcwane-ductile",
+      "company": "McWane Ductile",
+      "sourceUrl": "https://www.mcwaneductile.com/",
+      "imageUrl": "https://www.mcwaneductile.com/images/logos/mcwane-ductile-logo.png?v20260327",
+      "file": "public/logos/suppliers/mcwane-ductile.png",
+      "width": 380,
+      "height": 138
+    },
+    {
+      "entityId": "michigan-seamless-tube",
+      "company": "Michigan Seamless Tube, LLC",
+      "sourceUrl": "https://www.mstube.com/",
+      "imageUrl": "https://www.mstube.com/wp-content/uploads/2018/05/MST-Logo-Horizontal-White.png",
+      "file": "public/logos/suppliers/michigan-seamless-tube.png",
+      "width": 322,
+      "height": 116
+    },
+    {
+      "entityId": "midal-cables",
+      "company": "Midal Cables B.S.C.",
+      "sourceUrl": "https://www.midalcable.com/",
+      "imageUrl": "https://midalcable.s3.eu-central-2.wasabisys.com/storage/mclogo-0.jpg",
+      "file": "public/logos/suppliers/midal-cables.png",
+      "width": 324,
+      "height": 111
+    },
+    {
+      "entityId": "mitsubishi-electric",
+      "company": "Mitsubishi Electric Corporation",
+      "sourceUrl": "https://www.mitsubishielectric.com/en/",
+      "imageUrl": "https://www.mitsubishielectric.com/global/common/img/logo.svg",
+      "file": "public/logos/suppliers/mitsubishi-electric.svg",
+      "width": 109,
+      "height": 46
+    },
+    {
+      "entityId": "mitutoyo",
+      "company": "Mitutoyo Corporation",
+      "sourceUrl": "https://www.mitutoyo.com/",
+      "imageUrl": "https://www.mitutoyo.com/webfoo/wp-content/themes/mitutoyo/assets/images/logo.png",
+      "file": "public/logos/suppliers/mitutoyo.png",
+      "width": 200,
+      "height": 50
+    },
+    {
+      "entityId": "moog",
+      "company": "Moog Inc.",
+      "sourceUrl": "https://www.moog.com/",
+      "imageUrl": "https://www.moog.com/content/dam/sites/moog/images/logos/Moog_logo_white_1450.webp",
+      "file": "public/logos/suppliers/moog.png",
+      "width": 1200,
+      "height": 160
+    },
+    {
+      "entityId": "mukand",
+      "company": "Mukand Limited",
+      "sourceUrl": "https://www.mukand.com/",
+      "imageUrl": "https://www.mukand.com/wp-content/uploads/2026/05/mukanad-copy.gif",
+      "file": "public/logos/suppliers/mukand.png",
+      "width": 240,
+      "height": 128
+    },
+    {
+      "entityId": "nb-corporation",
+      "company": "NB Corporation",
+      "sourceUrl": "https://www.nbcorporation.com/",
+      "imageUrl": "https://www.nbcorporation.com/wp-content/uploads/nippon-bearing-logo.gif",
+      "file": "public/logos/suppliers/nb-corporation.png",
+      "width": 427,
+      "height": 57
+    },
+    {
+      "entityId": "nelipak",
+      "company": "Nelipak Healthcare Packaging",
+      "sourceUrl": "https://www.nelipak.com/",
+      "imageUrl": "https://www.nelipak.com/wp-content/uploads/2024/02/Nelipak-Logo.png",
+      "file": "public/logos/suppliers/nelipak.png",
+      "width": 230,
+      "height": 58
+    },
+    {
+      "entityId": "nexans",
+      "company": "Nexans S.A.",
+      "sourceUrl": "https://www.nexans.com/",
+      "imageUrl": "https://www.nexans.com/",
+      "file": "public/logos/suppliers/nexans.svg",
+      "width": 98,
+      "height": 40
+    },
+    {
+      "entityId": "nippon-steel",
+      "company": "Nippon Steel Corporation",
+      "sourceUrl": "https://www.nipponsteel.com/",
+      "imageUrl": "https://www.nipponsteel.com/app-files/img/cmn_logo01.png",
+      "file": "public/logos/suppliers/nippon-steel.png",
+      "width": 276,
+      "height": 34
+    },
+    {
+      "entityId": "northwest-pipe",
+      "company": "Northwest Pipe Company",
+      "sourceUrl": "https://www.nwpipe.com/",
+      "imageUrl": "https://www.nwpipe.com/app/uploads/2020/09/NWP-Logo-Left-Justified_150dpi-300x58.png",
+      "file": "public/logos/suppliers/northwest-pipe.png",
+      "width": 300,
+      "height": 58
+    },
+    {
+      "entityId": "novolex",
+      "company": "Novolex",
+      "sourceUrl": "https://novolex.com/",
+      "imageUrl": "https://cdn11.bigcommerce.com/s-f94ow24cv1/images/stencil/250x100/website-logo-250x100px_1754310861__41483.original.png",
+      "file": "public/logos/suppliers/novolex.png",
+      "width": 210,
+      "height": 97
+    },
+    {
+      "entityId": "nucor",
+      "company": "Nucor Corporation",
+      "sourceUrl": "https://nucor.com/",
+      "imageUrl": "https://nucor.com/wp-content/uploads/nucor_logo_white_@2x.png",
+      "file": "public/logos/suppliers/nucor.png",
+      "width": 320,
+      "height": 35
+    },
+    {
+      "entityId": "nucor-tubular",
+      "company": "Nucor Tubular Products",
+      "sourceUrl": "https://www.nucortubular.com/",
+      "imageUrl": "https://www.nucortubular.com/wp-content/themes/independence-tube/library/images/Nucor%20Tubular%20Products_White%20and%20Green.png",
+      "file": "public/logos/suppliers/nucor-tubular.png",
+      "width": 220,
+      "height": 41
+    },
+    {
+      "entityId": "okonite",
+      "company": "The Okonite Company",
+      "sourceUrl": "https://www.okonite.com/",
+      "imageUrl": "https://www.okonite.com/media/logo/stores/1/Okonite_Logo.svg",
+      "file": "public/logos/suppliers/okonite.svg",
+      "width": 1791,
+      "height": 381
+    },
+    {
+      "entityId": "oliver-healthcare",
+      "company": "Oliver Healthcare Packaging",
+      "sourceUrl": "https://www.oliverhcp.com/",
+      "imageUrl": "https://www.oliverhcp.com/hubfs/Oliver_Logo_4clr_RGB_NoTag%201.svg",
+      "file": "public/logos/suppliers/oliver-healthcare.svg",
+      "width": 224,
+      "height": 48
+    },
+    {
+      "entityId": "ozkan-steel",
+      "company": "Özkan Steel",
+      "sourceUrl": "https://ozkansteel.com/",
+      "imageUrl": "https://ozkansteel.com/",
+      "file": "public/logos/suppliers/ozkan-steel.svg",
+      "width": 1187,
+      "height": 215
+    },
+    {
+      "entityId": "pbc-linear",
+      "company": "PBC Linear",
+      "sourceUrl": "https://pbclinear.com/",
+      "imageUrl": "https://pbclinear.com/cdn/shop/files/PBC-Linear-Logo-FINAL-RGB.png?v=1698679072&width=1200",
+      "file": "public/logos/suppliers/pbc-linear.png",
+      "width": 1163,
+      "height": 229
+    },
+    {
+      "entityId": "plymouth-tube",
+      "company": "Plymouth Tube Company",
+      "sourceUrl": "https://www.plymouth.com/",
+      "imageUrl": "https://www.plymouth.com/wp-content/uploads/2026/02/plymouth-logo.svg",
+      "file": "public/logos/suppliers/plymouth-tube.svg",
+      "width": 256,
+      "height": 60
+    },
+    {
+      "entityId": "polyplex",
+      "company": "Polyplex Corporation Limited",
+      "sourceUrl": "https://www.polyplex.com/",
+      "imageUrl": "https://www.polyplex.com/themes/custom/polyplex/images/polyplex-logo.jpg",
+      "file": "public/logos/suppliers/polyplex.png",
+      "width": 208,
+      "height": 34
+    },
+    {
+      "entityId": "prysmian",
+      "company": "Prysmian S.p.A.",
+      "sourceUrl": "https://www.prysmian.com/en",
+      "imageUrl": "https://www.prysmian.com/themes/custom/prysmian/static/images/logo_prysmian_2021_black.png",
+      "file": "public/logos/suppliers/prysmian.png",
+      "width": 385,
+      "height": 72
+    },
+    {
+      "entityId": "rbc-bearings",
+      "company": "RBC Bearings Incorporated",
+      "sourceUrl": "https://www.rbcbearings.com/",
+      "imageUrl": "https://www.rbcbearings.com/img/RBC-logo-ext.png",
+      "file": "public/logos/suppliers/rbc-bearings.png",
+      "width": 502,
+      "height": 116
+    },
+    {
+      "entityId": "renishaw",
+      "company": "Renishaw plc",
+      "sourceUrl": "https://www.renishaw.com/en-GB",
+      "imageUrl": "https://eu-images.contentstack.com/v3/assets/blt323e14610da66977/bltd0b602d482f57126/677bdc0c0338483e93a787eb/Resized_svg.svg",
+      "file": "public/logos/suppliers/renishaw.svg",
+      "width": 201,
+      "height": 25
+    },
+    {
+      "entityId": "saha-thai-steel-pipe",
+      "company": "Saha Thai Steel Pipe Public Company Limited",
+      "sourceUrl": "https://www.sahathai.com/EN/home.html",
+      "imageUrl": "https://www.sahathai.com//images/logo.png",
+      "file": "public/logos/suppliers/saha-thai-steel-pipe.png",
+      "width": 937,
+      "height": 220
+    },
+    {
+      "entityId": "sber",
+      "company": "Schoeller-Bleckmann Edelstahlrohr GmbH",
+      "sourceUrl": "https://www.sber.co.at/",
+      "imageUrl": "https://www.sber.co.at/wp-content/uploads/2016/01/SBERlogo.png",
+      "file": "public/logos/suppliers/sber.png",
+      "width": 229,
+      "height": 122
+    },
+    {
+      "entityId": "schott-ag",
+      "company": "SCHOTT AG",
+      "sourceUrl": "https://www.schott.com/en-us",
+      "imageUrl": "https://www.schott.com/en-us",
+      "file": "public/logos/suppliers/schott-ag.svg",
+      "width": 100,
+      "height": 22
+    },
+    {
+      "entityId": "schunk",
+      "company": "SCHUNK SE & Co. KG",
+      "sourceUrl": "https://schunk.com/us/en",
+      "imageUrl": "https://schunk.com/us/en",
+      "file": "public/logos/suppliers/schunk.svg",
+      "width": 376,
+      "height": 46
+    },
+    {
+      "entityId": "searing-industries",
+      "company": "Searing Industries",
+      "sourceUrl": "https://www.searingindustries.com/",
+      "imageUrl": "https://www.searingindustries.com/",
+      "file": "public/logos/suppliers/searing-industries.svg",
+      "width": 600,
+      "height": 600
+    },
+    {
+      "entityId": "service-wire",
+      "company": "Service Wire Company",
+      "sourceUrl": "https://www.servicewire.com/",
+      "imageUrl": "https://www.servicewire.com/ServiceWire/Imagery/ServiceWire_Logo.png",
+      "file": "public/logos/suppliers/service-wire.png",
+      "width": 293,
+      "height": 69
+    },
+    {
+      "entityId": "sgd-pharma",
+      "company": "SGD Pharma",
+      "sourceUrl": "https://www.sgd-pharma.com/",
+      "imageUrl": "https://www.sgd-pharma.com/",
+      "file": "public/logos/suppliers/sgd-pharma.svg",
+      "width": 60,
+      "height": 60
+    },
+    {
+      "entityId": "shandong-molong",
+      "company": "Shandong Molong Petroleum Machinery Company Limited",
+      "sourceUrl": "http://www.molonggroup.com/",
+      "imageUrl": "http://www.molonggroup.com/1910/images/logo.jpg",
+      "file": "public/logos/suppliers/shandong-molong.png",
+      "width": 606,
+      "height": 77
+    },
+    {
+      "entityId": "sharon-tube",
+      "company": "Sharon Tube Company",
+      "sourceUrl": "https://www.sharontube.com/",
+      "imageUrl": "https://www.sharontube.com/wp-content/themes/zekelman-child/assets/images/logos/logo-sharontube.svg",
+      "file": "public/logos/suppliers/sharon-tube.svg",
+      "width": 1920,
+      "height": 349
+    },
+    {
+      "entityId": "smurfit-westrock",
+      "company": "Smurfit Westrock plc",
+      "sourceUrl": "https://www.smurfitwestrock.com/",
+      "imageUrl": "https://www.smurfitwestrock.com/-/m/Images/Shared%20Assets/SW_Logo_169x40.svg",
+      "file": "public/logos/suppliers/smurfit-westrock.svg",
+      "width": 168,
+      "height": 40
+    },
+    {
+      "entityId": "southwire",
+      "company": "Southwire Company, LLC",
+      "sourceUrl": "https://www.southwire.com/",
+      "imageUrl": "https://www.southwire.com/medias/2601-SW-Header-Footer-Logo-White-edit-Skewwed.png?context=bWFzdGVyfGltYWdlc3wzNzM1MHxpbWFnZS9wbmd8aDRlL2g3NC85NTM0MDM3ODUyMTkwLzI2MDFfU1dfSGVhZGVyX0Zvb3Rlcl9Mb2dvX1doaXRlX2VkaXRfU2tld3dlZC5wbmd8MzQ1MGExN2UyM2M3MzY1MDc2ODQzNjlhYjhmMjJmMWI3N2VjZjI2ZmQyYmU1ZWQxZDBmMTgxYmVmZTZjYTRlYg",
+      "file": "public/logos/suppliers/southwire.png",
+      "width": 623,
+      "height": 172
+    },
+    {
+      "entityId": "ssab",
+      "company": "SSAB AB",
+      "sourceUrl": "https://www.ssab.com/en",
+      "imageUrl": "https://www.ssab.com/en",
+      "file": "public/logos/suppliers/ssab.svg",
+      "width": 155,
+      "height": 50
+    },
+    {
+      "entityId": "sterlite-technologies",
+      "company": "Sterlite Technologies Limited",
+      "sourceUrl": "https://stl.tech/",
+      "imageUrl": "https://stl.tech/wp-content/uploads/2022/10/STL-Logo-_White.png.webp",
+      "file": "public/logos/suppliers/sterlite-technologies.png",
+      "width": 289,
+      "height": 113
+    },
+    {
+      "entityId": "stoelzle-glass",
+      "company": "Stoelzle Glass Group",
+      "sourceUrl": "https://www.stoelzle.com/",
+      "imageUrl": "https://www.stoelzle.com/wp-content/uploads/2020/06/Logo.svg",
+      "file": "public/logos/suppliers/stoelzle-glass.svg",
+      "width": 62,
+      "height": 40
+    },
+    {
+      "entityId": "suedpack",
+      "company": "SÜDPACK Verpackungen SE & Co. KG",
+      "sourceUrl": "https://www.suedpack.com/en/suedpack-group",
+      "imageUrl": "https://www.suedpack.com/_assets/b9df004e7f37d8e39e1f5da3327f12bc/Images/logos/suedpack-logo.1790775074.svg",
+      "file": "public/logos/suppliers/suedpack.svg",
+      "width": 176,
+      "height": 25
+    },
+    {
+      "entityId": "sullair",
+      "company": "Sullair LLC",
+      "sourceUrl": "https://www.sullair.com/en",
+      "imageUrl": "https://www.sullair.com/themes/custom/Sullair/images/LOGO_Sullair_Power-Stripe_Black-on-Green_820x250x24.png",
+      "file": "public/logos/suppliers/sullair.png",
+      "width": 820,
+      "height": 141
+    },
+    {
+      "entityId": "superior-tube",
+      "company": "Superior Tube Company",
+      "sourceUrl": "https://www.superiortube.com/",
+      "imageUrl": "https://www.superiortube.com/-/media/ameteksuperiortube/images/a-new-image/desktop-images/stc-ametek2018.png?h=234&la=en&w=2014&revision=a90a65d3-bfd0-4d60-a405-ff8055314136&hash=BBC8CA4A34735AADDE3695CC685E9809",
+      "file": "public/logos/suppliers/superior-tube.png",
+      "width": 1200,
+      "height": 139
+    },
+    {
+      "entityId": "suraj",
+      "company": "Suraj Limited",
+      "sourceUrl": "https://www.surajgroup.com/",
+      "imageUrl": "https://www.surajgroup.com/images/Suraj_limited_logo-2025.png",
+      "file": "public/logos/suppliers/suraj.png",
+      "width": 1001,
+      "height": 532
+    },
+    {
+      "entityId": "surya-roshni",
+      "company": "Surya Roshni Limited",
+      "sourceUrl": "https://www.surya.co.in/",
+      "imageUrl": "https://www.surya.co.in/logo.svg",
+      "file": "public/logos/suppliers/surya-roshni.svg",
+      "width": 193,
+      "height": 41
+    },
+    {
+      "entityId": "taghleef",
+      "company": "Taghleef Industries",
+      "sourceUrl": "https://www.ti-films.com/",
+      "imageUrl": "https://www.ti-films.com/wp-content/themes/tifilms/dist/images/common/logo-ti-films.svg",
+      "file": "public/logos/suppliers/taghleef.svg",
+      "width": 199,
+      "height": 41
+    },
+    {
+      "entityId": "tc-transcontinental",
+      "company": "TC Transcontinental",
+      "sourceUrl": "https://tctranscontinental.com/en-ca",
+      "imageUrl": "https://tctranscontinental.com/sites/default/files/logo-tc_0.png",
+      "file": "public/logos/suppliers/tc-transcontinental.png",
+      "width": 655,
+      "height": 130
+    },
+    {
+      "entityId": "tekni-plex",
+      "company": "Tekni-Plex",
+      "sourceUrl": "https://tekni-plex.com/en",
+      "imageUrl": "https://tekni-plex.com/en",
+      "file": "public/logos/suppliers/tekni-plex.svg",
+      "width": 202,
+      "height": 25
+    },
+    {
+      "entityId": "tfkable",
+      "company": "Tele-Fonika Kable S.A.",
+      "sourceUrl": "https://www.tele-fonika.com/",
+      "imageUrl": "https://www.tele-fonika.com/storage/image/core_files/2025/4/8/050e3126045c56d914fe90a081bce86c/png/TF%20TELE-FONIKA%20w%20krzywych_Obszar%20roboczy%201.png",
+      "file": "public/logos/suppliers/tfkable.png",
+      "width": 1200,
+      "height": 214
+    },
+    {
+      "entityId": "thompson-pipe",
+      "company": "Thompson Pipe Group",
+      "sourceUrl": "https://thompsonpipegroup.com/",
+      "imageUrl": "https://i0.wp.com/thompsonpipegroup.com/wp-content/uploads/2025/11/Logo.jpg?resize=768%2C174&ssl=1",
+      "file": "public/logos/suppliers/thompson-pipe.png",
+      "width": 768,
+      "height": 174
+    },
+    {
+      "entityId": "timken",
+      "company": "The Timken Company",
+      "sourceUrl": "https://www.timken.com/",
+      "imageUrl": "https://www.timken.com/",
+      "file": "public/logos/suppliers/timken.svg",
+      "width": 655,
+      "height": 137
+    },
+    {
+      "entityId": "tokyo-steel",
+      "company": "Tokyo Steel Manufacturing",
+      "sourceUrl": "https://www.tokyosteel.co.jp/",
+      "imageUrl": "https://www.tokyosteel.co.jp/assets/images/common/logo.png",
+      "file": "public/logos/suppliers/tokyo-steel.png",
+      "width": 360,
+      "height": 66
+    },
+    {
+      "entityId": "tratos",
+      "company": "Tratos Cavi S.p.A.",
+      "sourceUrl": "https://tratosgroup.com/",
+      "imageUrl": "https://tratosgroup.com/wp-content/uploads/2020/04/Tratos_Logo.png",
+      "file": "public/logos/suppliers/tratos.png",
+      "width": 290,
+      "height": 47
+    },
+    {
+      "entityId": "trumpf",
+      "company": "TRUMPF GmbH + Co. KG",
+      "sourceUrl": "https://www.trumpf.com/en_US/",
+      "imageUrl": "https://www.trumpf.com/en_US/",
+      "file": "public/logos/suppliers/trumpf.svg",
+      "width": 70,
+      "height": 100
+    },
+    {
+      "entityId": "universal-stainless",
+      "company": "Universal Stainless & Alloy Products Inc.",
+      "sourceUrl": "https://www.univstainless.com/",
+      "imageUrl": "https://www.univstainless.com/images/universal-aperam-logo-h.svg",
+      "file": "public/logos/suppliers/universal-stainless.svg",
+      "width": 369,
+      "height": 88
+    },
+    {
+      "entityId": "uponor",
+      "company": "Uponor Corporation",
+      "sourceUrl": "https://www.uponor.com/en-us",
+      "imageUrl": "https://www.uponor.com/en-us",
+      "file": "public/logos/suppliers/uponor.svg",
+      "width": 77,
+      "height": 24
+    },
+    {
+      "entityId": "usg",
+      "company": "USG Corporation",
+      "sourceUrl": "https://www.usg.com/en-US",
+      "imageUrl": "https://www.usg.com/en-US",
+      "file": "public/logos/suppliers/usg.svg",
+      "width": 70,
+      "height": 37
+    },
+    {
+      "entityId": "vallourec",
+      "company": "Vallourec S.A.",
+      "sourceUrl": "https://www.vallourec.com/",
+      "imageUrl": "https://www.vallourec.com/app/themes/vallourec/public/images/logos/logo-blue-gradient.ebec95.svg",
+      "file": "public/logos/suppliers/vallourec.svg",
+      "width": 176,
+      "height": 40
+    },
+    {
+      "entityId": "valmont-tubing",
+      "company": "Valmont Tubing",
+      "sourceUrl": "https://www.valmonttubing.com/",
+      "imageUrl": "https://webassets.valmont.com/valmontstaging/images/librariesprovider103/default-album/valmonttubinglogo250x62_black.png",
+      "file": "public/logos/suppliers/valmont-tubing.png",
+      "width": 250,
+      "height": 62
+    },
+    {
+      "entityId": "vega-grieshaber",
+      "company": "VEGA Grieshaber KG",
+      "sourceUrl": "https://www.vega.com/",
+      "imageUrl": "https://www.vega.com/img/logo/logo-with-claim.svg",
+      "file": "public/logos/suppliers/vega-grieshaber.svg",
+      "width": 204,
+      "height": 32
+    },
+    {
+      "entityId": "venus-pipes",
+      "company": "Venus Pipes & Tubes Limited",
+      "sourceUrl": "https://www.venuspipes.com/",
+      "imageUrl": "https://www.venuspipes.com/wp-content/uploads/2025/11/venus-logo.png",
+      "file": "public/logos/suppliers/venus-pipes.png",
+      "width": 639,
+      "height": 197
+    },
+    {
+      "entityId": "victaulic",
+      "company": "Victaulic Company",
+      "sourceUrl": "https://www.victaulic.com/",
+      "imageUrl": "https://www.victaulic.com/wp-content/themes/victaulic/src/assets/images/logo-victaulic-header@2x.png",
+      "file": "public/logos/suppliers/victaulic.png",
+      "width": 250,
+      "height": 72
+    },
+    {
+      "entityId": "visy",
+      "company": "Visy Industries",
+      "sourceUrl": "https://www.visy.com/",
+      "imageUrl": "https://www.visy.com/sites/default/files/2023-03/logo.svg",
+      "file": "public/logos/suppliers/visy.svg",
+      "width": 128,
+      "height": 76
+    },
+    {
+      "entityId": "vitro",
+      "company": "Vitro SAB de CV",
+      "sourceUrl": "https://www.vitro.com/",
+      "imageUrl": "https://www.vitro.com/wp-content/uploads/2023/08/logo-vitro-410x137.webp",
+      "file": "public/logos/suppliers/vitro.png",
+      "width": 410,
+      "height": 130
+    },
+    {
+      "entityId": "voith",
+      "company": "Voith GmbH & Co. KGaA",
+      "sourceUrl": "https://www.voith.com/corp-en/index.html",
+      "imageUrl": "https://static.voith.com/3.0.1/resources/img/voith.svg",
+      "file": "public/logos/suppliers/voith.svg",
+      "width": 106,
+      "height": 24
+    },
+    {
+      "entityId": "wago",
+      "company": "WAGO Kontakttechnik GmbH & Co. KG",
+      "sourceUrl": "https://www.wago.com/us/",
+      "imageUrl": "https://www.wago.com/us/",
+      "file": "public/logos/suppliers/wago.svg",
+      "width": 147,
+      "height": 54
+    },
+    {
+      "entityId": "welded-tube-canada",
+      "company": "Welded Tube of Canada",
+      "sourceUrl": "https://www.weldedtube.com/",
+      "imageUrl": "https://www.weldedtube.com/wp-content/themes/weldedtube/images/logo.png",
+      "file": "public/logos/suppliers/welded-tube-canada.png",
+      "width": 345,
+      "height": 74
+    },
+    {
+      "entityId": "western-tube-conduit",
+      "company": "Western Tube & Conduit",
+      "sourceUrl": "https://www.westerntube.com/",
+      "imageUrl": "https://www.westerntube.com/wp-content/themes/westerntube/resources/images/template/logos/logo-westerntube-color.svg",
+      "file": "public/logos/suppliers/western-tube-conduit.svg",
+      "width": 68,
+      "height": 11
+    },
+    {
+      "entityId": "winpak",
+      "company": "Winpak Ltd.",
+      "sourceUrl": "https://www.winpak.com/",
+      "imageUrl": "https://www.winpak.com/Theme/Images/logo.jpg",
+      "file": "public/logos/suppliers/winpak.png",
+      "width": 478,
+      "height": 45
+    },
+    {
+      "entityId": "xylem",
+      "company": "Xylem Inc.",
+      "sourceUrl": "https://www.xylem.com/en-us/",
+      "imageUrl": "https://www.xylem.com/siteassets/brand/_logos/color-lockups-transparent/xylem_tag_7704c.svg",
+      "file": "public/logos/suppliers/xylem.svg",
+      "width": 463,
+      "height": 163
+    },
+    {
+      "entityId": "yuto",
+      "company": "Shenzhen YUTO Packaging Technology Co., Ltd.",
+      "sourceUrl": "https://weben.szyuto.com/",
+      "imageUrl": "https://weben.szyuto.com/file/pic/20241127091546897976.png",
+      "file": "public/logos/suppliers/yuto.png",
+      "width": 1200,
+      "height": 140
+    },
+    {
+      "entityId": "zimmer-group",
+      "company": "Zimmer Group",
+      "sourceUrl": "https://www.zimmer-group.com/en-us/",
+      "imageUrl": "https://www.zimmer-group.com/en-us/",
+      "file": "public/logos/suppliers/zimmer-group.svg",
+      "width": 60,
+      "height": 21
+    }
+  ],
+  "skipped": [
+    {
+      "entityId": "advanced-drainage-systems",
+      "company": "Advanced Drainage Systems, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "agrofresh",
+      "company": "AgroFresh Logistics",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "albea",
+      "company": "Albéa Group",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "allianz-commercial-marine-cargo",
+      "company": "Allianz Commercial",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "altra-industrial-motion",
+      "company": "Altra Industrial Motion Corp. (OEM / manufacturer group)",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "ansteel",
+      "company": "Ansteel Group Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "arcelormittal",
+      "company": "ArcelorMittal",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "atlas-steel",
+      "company": "Atlas Steel Supplier",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "atlas-tube",
+      "company": "Atlas Tube",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "auma",
+      "company": "AUMA Riester GmbH & Co. KG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "balluff",
+      "company": "Balluff GmbH",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "basler",
+      "company": "Basler AG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "berry-global",
+      "company": "Berry Global Group, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "big-river-steel",
+      "company": "Big River Steel LLC",
+      "reason": "page is the U.S. Steel parent header, not a Big River Steel mark"
+    },
+    {
+      "entityId": "bormioli-pharma",
+      "company": "Bormioli Pharma",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "buildpro-materiaux",
+      "company": "BuildPro Matériaux",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "bull-moose-tube",
+      "company": "Bull Moose Tube Company",
+      "reason": "header image was a plant photograph, not a logo"
+    },
+    {
+      "entityId": "calpipe-industries",
+      "company": "Calpipe Industries",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "camozzi",
+      "company": "Camozzi Automation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "charlotte-pipe",
+      "company": "Charlotte Pipe and Foundry Company",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "china-baowu",
+      "company": "China Baowu Steel Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "china-steel",
+      "company": "China Steel Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "clearwater-paper",
+      "company": "Clearwater Paper Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "cognex",
+      "company": "Cognex Corporation",
+      "reason": "official site unreachable (429)"
+    },
+    {
+      "entityId": "columbus-stainless",
+      "company": "Columbus Stainless",
+      "reason": "official site unreachable (This operation was aborted)"
+    },
+    {
+      "entityId": "comau",
+      "company": "Comau S.p.A.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "contitech",
+      "company": "ContiTech (Continental AG)",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "crh",
+      "company": "CRH plc",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "dangote-cement",
+      "company": "Dangote Cement Plc",
+      "reason": "official site unreachable (This operation was aborted)"
+    },
+    {
+      "entityId": "dart-container",
+      "company": "Dart Container Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "dayco",
+      "company": "Dayco Products LLC",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "dhl-global-forwarding-cargo-insurance",
+      "company": "DHL Global Forwarding",
+      "reason": "official site unreachable (This operation was aborted)"
+    },
+    {
+      "entityId": "dillinger",
+      "company": "Aktien-Gesellschaft der Dillinger Hüttenwerke",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "dmg-mori",
+      "company": "DMG MORI AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ducab-dubai-cable-company-pvt-ltd-ae",
+      "company": "Dubai Cable Company (Private) Limited (Ducab)",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "ebara",
+      "company": "Ebara Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "ejot",
+      "company": "EJOT Holding GmbH & Co. KG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "electra-global",
+      "company": "Electra Global Components",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "epiroc",
+      "company": "Epiroc AB",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "epl-limited",
+      "company": "EPL Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "etex",
+      "company": "Etex NV",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "falvey-cargo",
+      "company": "Falvey Insurance Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "festo",
+      "company": "Festo SE & Co. KG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "flowserve",
+      "company": "Flowserve Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "fronius",
+      "company": "Fronius International GmbH",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "fuji-seal",
+      "company": "Fuji Seal International",
+      "reason": "official site returned an empty page"
+    },
+    {
+      "entityId": "gaf",
+      "company": "GAF Materials LLC",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "garware-hitech-films",
+      "company": "Garware Hi-Tech Films Limited",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "gerdau",
+      "company": "Gerdau S.A.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "glenroy",
+      "company": "Glenroy Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "grainline",
+      "company": "GrainLine Commodities",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "graphic-packaging",
+      "company": "Graphic Packaging Holding Company",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "greif",
+      "company": "Greif, Inc.",
+      "reason": "header SVG was a close icon, not the Greif wordmark"
+    },
+    {
+      "entityId": "greiner-packaging",
+      "company": "Greiner Packaging International GmbH",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "grundfos",
+      "company": "Grundfos",
+      "reason": "official site unreachable (This operation was aborted)"
+    },
+    {
+      "entityId": "haas-automation",
+      "company": "Haas Automation, Inc.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "habasit",
+      "company": "Habasit AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "havells",
+      "company": "Havells India Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "heidenhain",
+      "company": "DR. JOHANNES HEIDENHAIN GmbH",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "hobas-pipe-usa",
+      "company": "HOBAS Pipe USA",
+      "reason": "file named logo.png was a product photograph of pipe"
+    },
+    {
+      "entityId": "huhtamaki",
+      "company": "Huhtamäki Oyj",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "hydac",
+      "company": "HYDAC International GmbH",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "hyundai-steel",
+      "company": "Hyundai Steel Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ifm",
+      "company": "ifm electronic gmbh",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "industrial-motion",
+      "company": "Industrial Motion Works",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "interarch",
+      "company": "Interarch Building Solutions Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "intertape-polymer",
+      "company": "Intertape Polymer Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ipex",
+      "company": "IPEX Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "iscar",
+      "company": "ISCAR Ltd.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "ismt",
+      "company": "ISMT Limited",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "jindal-stainless",
+      "company": "Jindal Stainless Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "jiuli",
+      "company": "Zhejiang Jiuli Hi-Tech Metals Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "jk-cement",
+      "company": "J.K. Cement Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "john-crane",
+      "company": "John Crane",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "johns-manville",
+      "company": "Johns Manville",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "jtekt",
+      "company": "JTEKT Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "jtl-industries",
+      "company": "JTL Industries Limited",
+      "reason": "official site returned an empty page"
+    },
+    {
+      "entityId": "kabelwerk-eupen",
+      "company": "Kabelwerk Eupen AG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "krones",
+      "company": "Krones AG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "ksb",
+      "company": "KSB SE & Co. KGaA",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "kuka",
+      "company": "KUKA AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "lee-man-paper",
+      "company": "Lee & Man Paper Manufacturing Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "logoplaste",
+      "company": "Logoplaste",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "ls-cable",
+      "company": "LS Cable & System Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "lyc-bearing",
+      "company": "Luoyang Bearing Group Co., Ltd. (LYC)",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "maharashtra-seamless",
+      "company": "Maharashtra Seamless Limited",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "makino",
+      "company": "Makino Milling Machine Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "martin-marietta",
+      "company": "Martin Marietta Materials, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "maruichi-leavitt",
+      "company": "Maruichi Leavitt Pipe & Tube",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "maruichi-steel-tube",
+      "company": "Maruichi Steel Tube Ltd.",
+      "reason": "official site unreachable (404)"
+    },
+    {
+      "entityId": "mediterranee-acier",
+      "company": "Méditerranée Acier",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "menasha-packaging",
+      "company": "Menasha Packaging Company LLC",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "metal-matic",
+      "company": "Metal-Matic, LLC",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "mondi",
+      "company": "Mondi plc",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "murrelektronik",
+      "company": "Murrelektronik GmbH",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "nedschroef",
+      "company": "Koninklijke Nedschroef Holding B.V.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "nidec",
+      "company": "Nidec Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "nipro-pharmapackaging",
+      "company": "Nipro PharmaPackaging",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "nord-drivesystems",
+      "company": "Getriebebau NORD GmbH & Co. KG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "nord-lock",
+      "company": "Nord-Lock Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "nordic-construct",
+      "company": "Nordic Construct Supply",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "nordson",
+      "company": "Nordson Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "nova-tube",
+      "company": "Nova Tube Inc.",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "nsk",
+      "company": "NSK Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ntn",
+      "company": "NTN Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "okuma",
+      "company": "OKUMA Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "oman-cables",
+      "company": "Oman Cables Industry SAOG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "optibelt",
+      "company": "Optibelt GmbH",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "outokumpu",
+      "company": "Outokumpu Oyj",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ovako",
+      "company": "Ovako AB",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "packsmart",
+      "company": "PackSmart Industries",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "pactiv-evergreen",
+      "company": "Pactiv Evergreen Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "parker-hannifin",
+      "company": "Parker Hannifin Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "pennengineering",
+      "company": "PennEngineering",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "phillips-tube-group",
+      "company": "Phillips Tube Group",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "pilz",
+      "company": "Pilz GmbH & Co. KG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "piramal-glass",
+      "company": "Piramal Glass",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "plastipak",
+      "company": "Plastipak Holdings, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "polymer-hub",
+      "company": "Polymer Hub International",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "posco",
+      "company": "POSCO",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "precision-machinery",
+      "company": "Precision Machinery Co.",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "pregis",
+      "company": "Pregis LLC",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "printpack",
+      "company": "Printpack, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "proampac",
+      "company": "ProAmpac",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ptc",
+      "company": "PTC Alliance",
+      "reason": "header SVG was a search icon, not the PTC Steel mark"
+    },
+    {
+      "entityId": "regal-rexnord",
+      "company": "Regal Rexnord Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "rehau",
+      "company": "REHAU Group",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "retal",
+      "company": "Retal Industries Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "roanoke-cargo-insurance",
+      "company": "Roanoke Insurance Group Inc.",
+      "reason": "roanokegroup.com/roanoke-logo.png is the company mark but only 100px wide, under the 200px minimum. Other files on the page are Lloyd's, BBB, or the Canada lockup."
+    },
+    {
+      "entityId": "rollon",
+      "company": "Rollon S.p.A.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "saica",
+      "company": "SAICA Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "sail",
+      "company": "Steel Authority of India Limited (SAIL)",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "salzgitter",
+      "company": "Salzgitter AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "sanyo-special-steel",
+      "company": "Sanyo Special Steel Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "scg",
+      "company": "The Siam Cement Public Company Limited (SCG)",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "schaeffler",
+      "company": "Schaeffler AG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "schneeberger",
+      "company": "Schneeberger AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "seah-steel",
+      "company": "SeAH Steel Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "seco-tools",
+      "company": "Seco Tools AB",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "shakti-pumps",
+      "company": "Shakti Pumps (India) Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "shree-cement",
+      "company": "Shree Cement Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "silgan",
+      "company": "Silgan Holdings Inc.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "skf",
+      "company": "AB SKF",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "smc-corporation",
+      "company": "SMC Corporation",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "sompo-ocean-marine-cargo",
+      "company": "Sompo International",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "sonoco",
+      "company": "Sonoco Products Company",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "special-metals",
+      "company": "Special Metals Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "spx-flow",
+      "company": "SPX FLOW, Inc.",
+      "reason": "spxflow.com header is the ITT parent mark, not an SPX Flow logo"
+    },
+    {
+      "entityId": "staubli",
+      "company": "Stäubli International AG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "steel-dynamics",
+      "company": "Steel Dynamics, Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "stelco",
+      "company": "Stelco Holdings Inc.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "stora-enso",
+      "company": "Stora Enso Oyj",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "sulzer",
+      "company": "Sulzer Ltd",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "sun-hydraulics",
+      "company": "Sun Hydraulics LLC",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "superior-essex",
+      "company": "Superior Essex",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "swiss-steel",
+      "company": "Swiss Steel Group",
+      "reason": "file was the Green Steel campaign badge, not the company logo"
+    },
+    {
+      "entityId": "syntegon",
+      "company": "Syntegon Technology GmbH",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "tcpl-packaging",
+      "company": "TCPL Packaging Limited",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "tenaris",
+      "company": "Tenaris S.A.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "tetra-pak",
+      "company": "Tetra Pak International S.A.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "thk",
+      "company": "THK Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "thomson-linear",
+      "company": "Thomson Industries, Inc.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "timkensteel",
+      "company": "TimkenSteel Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "tmk",
+      "company": "TMK",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "tubos-reunidos",
+      "company": "Tubos Reunidos Group",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "turck",
+      "company": "Hans Turck GmbH & Co. KG",
+      "reason": "official site unreachable (429)"
+    },
+    {
+      "entityId": "u-s-pipe-bessemer",
+      "company": "U.S. Pipe",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "ups-capital-cargo-insurance",
+      "company": "UPS Capital",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "vacmet",
+      "company": "Vacmet India Limited",
+      "reason": "official site unreachable (fetch failed)"
+    },
+    {
+      "entityId": "vest-llc",
+      "company": "Vest LLC",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "voestalpine",
+      "company": "voestalpine AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "voestalpine-krems",
+      "company": "Voestalpine Krems GmbH",
+      "reason": "No website on the catalogue record, so there is no official domain to take a logo from."
+    },
+    {
+      "entityId": "voltline-cables",
+      "company": "VoltLine Cabling",
+      "reason": "Fabricated sample directory entry with no real website. Skipped."
+    },
+    {
+      "entityId": "walsin-lihwa",
+      "company": "Walsin Lihwa Corporation",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "weg",
+      "company": "WEG S.A.",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "weidmuller",
+      "company": "Weidmüller Interface GmbH & Co. KG",
+      "reason": "official site unreachable (403)"
+    },
+    {
+      "entityId": "weir-group",
+      "company": "The Weir Group PLC",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "wheatland-tube",
+      "company": "Wheatland Tube",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "wienerberger",
+      "company": "Wienerberger AG",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "wilo",
+      "company": "WILO SE",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "wipak",
+      "company": "Wipak Oy",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "wl-plastics",
+      "company": "WL Plastics",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "worthington-enterprises",
+      "company": "Worthington Enterprises",
+      "reason": "file was the Worthington Companies Foundation mark, not the company logo"
+    },
+    {
+      "entityId": "worthington-steel",
+      "company": "Worthington Steel, Inc.",
+      "reason": "file was a marketing card with a coil photograph"
+    },
+    {
+      "entityId": "youfa",
+      "company": "Tianjin Youfa Steel Pipe Group Co., Ltd.",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "zekelman",
+      "company": "Zekelman Industries (Wheatland Tube)",
+      "reason": "no usable official logo on site"
+    },
+    {
+      "entityId": "zurich-marine-cargo",
+      "company": "Zurich North America",
+      "reason": "no usable official logo on site"
+    }
+  ]
+}

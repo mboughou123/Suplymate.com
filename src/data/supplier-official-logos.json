@@ -1,0 +1,528 @@
+{
+  "acipco": {
+    "src": "/logos/suppliers/acipco.png"
+  },
+  "allied-tube-conduit": {
+    "src": "/logos/suppliers/allied-tube-conduit.png"
+  },
+  "amada": {
+    "src": "/logos/suppliers/amada.png"
+  },
+  "amcor": {
+    "src": "/logos/suppliers/amcor.png"
+  },
+  "amiantit": {
+    "src": "/logos/suppliers/amiantit.png",
+    "monoOnWhite": true
+  },
+  "amiblu": {
+    "src": "/logos/suppliers/amiblu.png"
+  },
+  "ammeraal-beltech": {
+    "src": "/logos/suppliers/ammeraal-beltech.png"
+  },
+  "anvil-international": {
+    "src": "/logos/suppliers/anvil-international.png"
+  },
+  "aquatherm": {
+    "src": "/logos/suppliers/aquatherm.png"
+  },
+  "ariel-corporation": {
+    "src": "/logos/suppliers/ariel-corporation.png"
+  },
+  "artrom": {
+    "src": "/logos/suppliers/artrom.png"
+  },
+  "ati": {
+    "src": "/logos/suppliers/ati.png"
+  },
+  "atlas-copco": {
+    "src": "/logos/suppliers/atlas-copco.svg"
+  },
+  "aubert-duval": {
+    "src": "/logos/suppliers/aubert-duval.svg"
+  },
+  "ball": {
+    "src": "/logos/suppliers/ball.svg"
+  },
+  "bando-chemical": {
+    "src": "/logos/suppliers/bando-chemical.png"
+  },
+  "banner-engineering": {
+    "src": "/logos/suppliers/banner-engineering.svg",
+    "monoOnWhite": true
+  },
+  "beckhoff": {
+    "src": "/logos/suppliers/beckhoff.svg"
+  },
+  "benteler-steel-tube": {
+    "src": "/logos/suppliers/benteler-steel-tube.svg"
+  },
+  "bishop-wisecarver": {
+    "src": "/logos/suppliers/bishop-wisecarver.png"
+  },
+  "bluescope": {
+    "src": "/logos/suppliers/bluescope.svg"
+  },
+  "bobst": {
+    "src": "/logos/suppliers/bobst.svg"
+  },
+  "bonnell-aluminum": {
+    "src": "/logos/suppliers/bonnell-aluminum.svg"
+  },
+  "bosch-rexroth": {
+    "src": "/logos/suppliers/bosch-rexroth.svg"
+  },
+  "bossard": {
+    "src": "/logos/suppliers/bossard.svg"
+  },
+  "bri-steel": {
+    "src": "/logos/suppliers/bri-steel.png"
+  },
+  "brugg-cables": {
+    "src": "/logos/suppliers/brugg-cables.svg",
+    "monoOnWhite": true
+  },
+  "bucher-hydraulics": {
+    "src": "/logos/suppliers/bucher-hydraulics.svg"
+  },
+  "bulten": {
+    "src": "/logos/suppliers/bulten.png"
+  },
+  "burgo-group": {
+    "src": "/logos/suppliers/burgo-group.png",
+    "monoOnWhite": true
+  },
+  "bystronic": {
+    "src": "/logos/suppliers/bystronic.svg"
+  },
+  "california-steel-industries": {
+    "src": "/logos/suppliers/california-steel-industries.png"
+  },
+  "carlisle-construction": {
+    "src": "/logos/suppliers/carlisle-construction.png"
+  },
+  "cascades": {
+    "src": "/logos/suppliers/cascades.svg"
+  },
+  "ccl-industries": {
+    "src": "/logos/suppliers/ccl-industries.png"
+  },
+  "centravis": {
+    "src": "/logos/suppliers/centravis.png"
+  },
+  "cerro-wire": {
+    "src": "/logos/suppliers/cerro-wire.png"
+  },
+  "certainteed": {
+    "src": "/logos/suppliers/certainteed.svg"
+  },
+  "ckd-corporation": {
+    "src": "/logos/suppliers/ckd-corporation.svg"
+  },
+  "cleveland-cliffs": {
+    "src": "/logos/suppliers/cleveland-cliffs.svg"
+  },
+  "cosmo-films": {
+    "src": "/logos/suppliers/cosmo-films.png"
+  },
+  "crown-holdings": {
+    "src": "/logos/suppliers/crown-holdings.svg"
+  },
+  "dalmia-bharat": {
+    "src": "/logos/suppliers/dalmia-bharat.svg"
+  },
+  "danfoss": {
+    "src": "/logos/suppliers/danfoss.svg"
+  },
+  "domtar": {
+    "src": "/logos/suppliers/domtar.png"
+  },
+  "dorner": {
+    "src": "/logos/suppliers/dorner.png"
+  },
+  "ds-smith": {
+    "src": "/logos/suppliers/ds-smith.svg"
+  },
+  "dynamic-cables": {
+    "src": "/logos/suppliers/dynamic-cables.png"
+  },
+  "electrosteel-castings": {
+    "src": "/logos/suppliers/electrosteel-castings.png"
+  },
+  "elsewedy-electric": {
+    "src": "/logos/suppliers/elsewedy-electric.png"
+  },
+  "erdemir": {
+    "src": "/logos/suppliers/erdemir.svg",
+    "monoOnWhite": true
+  },
+  "ester-industries": {
+    "src": "/logos/suppliers/ester-industries.svg"
+  },
+  "far-east-cable": {
+    "src": "/logos/suppliers/far-east-cable.png"
+  },
+  "fedrigoni": {
+    "src": "/logos/suppliers/fedrigoni.svg",
+    "monoOnWhite": true
+  },
+  "fine-tubes": {
+    "src": "/logos/suppliers/fine-tubes.png"
+  },
+  "finolex-cables": {
+    "src": "/logos/suppliers/finolex-cables.svg"
+  },
+  "forbo-siegling": {
+    "src": "/logos/suppliers/forbo-siegling.svg"
+  },
+  "future-pipe-industries": {
+    "src": "/logos/suppliers/future-pipe-industries.svg"
+  },
+  "gf-piping-systems": {
+    "src": "/logos/suppliers/gf-piping-systems.svg"
+  },
+  "gibson-stainless": {
+    "src": "/logos/suppliers/gibson-stainless.png"
+  },
+  "goodluck-india": {
+    "src": "/logos/suppliers/goodluck-india.png"
+  },
+  "graco": {
+    "src": "/logos/suppliers/graco.svg"
+  },
+  "graham-packaging": {
+    "src": "/logos/suppliers/graham-packaging.png"
+  },
+  "handytube": {
+    "src": "/logos/suppliers/handytube.png",
+    "monoOnWhite": true
+  },
+  "harting": {
+    "src": "/logos/suppliers/harting.svg"
+  },
+  "hawe": {
+    "src": "/logos/suppliers/hawe.png"
+  },
+  "haynes-international": {
+    "src": "/logos/suppliers/haynes-international.png"
+  },
+  "hbis": {
+    "src": "/logos/suppliers/hbis.png"
+  },
+  "hellenic-cables": {
+    "src": "/logos/suppliers/hellenic-cables.svg"
+  },
+  "hengtong": {
+    "src": "/logos/suppliers/hengtong.png"
+  },
+  "hepcomotion": {
+    "src": "/logos/suppliers/hepcomotion.svg"
+  },
+  "hi-tech-pipes": {
+    "src": "/logos/suppliers/hi-tech-pipes.png"
+  },
+  "hiwin": {
+    "src": "/logos/suppliers/hiwin.png"
+  },
+  "holcim": {
+    "src": "/logos/suppliers/holcim.svg",
+    "monoOnWhite": true
+  },
+  "holmen": {
+    "src": "/logos/suppliers/holmen.png"
+  },
+  "husteel": {
+    "src": "/logos/suppliers/husteel.png"
+  },
+  "hydraforce": {
+    "src": "/logos/suppliers/hydraforce.svg"
+  },
+  "igus": {
+    "src": "/logos/suppliers/igus.svg"
+  },
+  "iko": {
+    "src": "/logos/suppliers/iko.png"
+  },
+  "international-paper": {
+    "src": "/logos/suppliers/international-paper.svg"
+  },
+  "intralox": {
+    "src": "/logos/suppliers/intralox.svg"
+  },
+  "jindal-pipe-usa": {
+    "src": "/logos/suppliers/jindal-pipe-usa.png"
+  },
+  "jindal-poly-films": {
+    "src": "/logos/suppliers/jindal-poly-films.png"
+  },
+  "jm-eagle": {
+    "src": "/logos/suppliers/jm-eagle.png"
+  },
+  "jsw-cement": {
+    "src": "/logos/suppliers/jsw-cement.png"
+  },
+  "kaiser-aluminum": {
+    "src": "/logos/suppliers/kaiser-aluminum.png"
+  },
+  "kalyani-steels": {
+    "src": "/logos/suppliers/kalyani-steels.png"
+  },
+  "kennametal": {
+    "src": "/logos/suppliers/kennametal.svg"
+  },
+  "keyence": {
+    "src": "/logos/suppliers/keyence.svg"
+  },
+  "kingspan": {
+    "src": "/logos/suppliers/kingspan.svg"
+  },
+  "kirby-building-systems": {
+    "src": "/logos/suppliers/kirby-building-systems.svg"
+  },
+  "kloeckner-pentaplast": {
+    "src": "/logos/suppliers/kloeckner-pentaplast.svg"
+  },
+  "koenig-bauer": {
+    "src": "/logos/suppliers/koenig-bauer.svg"
+  },
+  "kumkang-kind": {
+    "src": "/logos/suppliers/kumkang-kind.png"
+  },
+  "lenze": {
+    "src": "/logos/suppliers/lenze.svg"
+  },
+  "linmot": {
+    "src": "/logos/suppliers/linmot.png"
+  },
+  "liqui-box": {
+    "src": "/logos/suppliers/liqui-box.png"
+  },
+  "magicrete-building-solutions-private-limited-in": {
+    "src": "/logos/suppliers/magicrete-building-solutions-private-limited-in.png"
+  },
+  "mannesmann-line-pipe": {
+    "src": "/logos/suppliers/mannesmann-line-pipe.svg"
+  },
+  "mapei": {
+    "src": "/logos/suppliers/mapei.png"
+  },
+  "mazak": {
+    "src": "/logos/suppliers/mazak.svg"
+  },
+  "mcwane-ductile": {
+    "src": "/logos/suppliers/mcwane-ductile.png"
+  },
+  "michigan-seamless-tube": {
+    "src": "/logos/suppliers/michigan-seamless-tube.png"
+  },
+  "midal-cables": {
+    "src": "/logos/suppliers/midal-cables.png"
+  },
+  "mitsubishi-electric": {
+    "src": "/logos/suppliers/mitsubishi-electric.svg"
+  },
+  "mitutoyo": {
+    "src": "/logos/suppliers/mitutoyo.png"
+  },
+  "moog": {
+    "src": "/logos/suppliers/moog.png",
+    "monoOnWhite": true
+  },
+  "mukand": {
+    "src": "/logos/suppliers/mukand.png"
+  },
+  "nb-corporation": {
+    "src": "/logos/suppliers/nb-corporation.png"
+  },
+  "nelipak": {
+    "src": "/logos/suppliers/nelipak.png"
+  },
+  "nexans": {
+    "src": "/logos/suppliers/nexans.svg"
+  },
+  "nippon-steel": {
+    "src": "/logos/suppliers/nippon-steel.png"
+  },
+  "northwest-pipe": {
+    "src": "/logos/suppliers/northwest-pipe.png"
+  },
+  "novolex": {
+    "src": "/logos/suppliers/novolex.png"
+  },
+  "nucor": {
+    "src": "/logos/suppliers/nucor.png",
+    "monoOnWhite": true
+  },
+  "nucor-tubular": {
+    "src": "/logos/suppliers/nucor-tubular.png"
+  },
+  "okonite": {
+    "src": "/logos/suppliers/okonite.svg"
+  },
+  "oliver-healthcare": {
+    "src": "/logos/suppliers/oliver-healthcare.svg"
+  },
+  "ozkan-steel": {
+    "src": "/logos/suppliers/ozkan-steel.svg"
+  },
+  "pbc-linear": {
+    "src": "/logos/suppliers/pbc-linear.png"
+  },
+  "plymouth-tube": {
+    "src": "/logos/suppliers/plymouth-tube.svg"
+  },
+  "polyplex": {
+    "src": "/logos/suppliers/polyplex.png"
+  },
+  "prysmian": {
+    "src": "/logos/suppliers/prysmian.png"
+  },
+  "rbc-bearings": {
+    "src": "/logos/suppliers/rbc-bearings.png"
+  },
+  "renishaw": {
+    "src": "/logos/suppliers/renishaw.svg"
+  },
+  "saha-thai-steel-pipe": {
+    "src": "/logos/suppliers/saha-thai-steel-pipe.png"
+  },
+  "sber": {
+    "src": "/logos/suppliers/sber.png"
+  },
+  "schott-ag": {
+    "src": "/logos/suppliers/schott-ag.svg",
+    "monoOnWhite": true
+  },
+  "schunk": {
+    "src": "/logos/suppliers/schunk.svg"
+  },
+  "searing-industries": {
+    "src": "/logos/suppliers/searing-industries.svg"
+  },
+  "service-wire": {
+    "src": "/logos/suppliers/service-wire.png"
+  },
+  "sgd-pharma": {
+    "src": "/logos/suppliers/sgd-pharma.svg"
+  },
+  "shandong-molong": {
+    "src": "/logos/suppliers/shandong-molong.png"
+  },
+  "sharon-tube": {
+    "src": "/logos/suppliers/sharon-tube.svg"
+  },
+  "smurfit-westrock": {
+    "src": "/logos/suppliers/smurfit-westrock.svg"
+  },
+  "southwire": {
+    "src": "/logos/suppliers/southwire.png"
+  },
+  "ssab": {
+    "src": "/logos/suppliers/ssab.svg"
+  },
+  "sterlite-technologies": {
+    "src": "/logos/suppliers/sterlite-technologies.png"
+  },
+  "stoelzle-glass": {
+    "src": "/logos/suppliers/stoelzle-glass.svg"
+  },
+  "suedpack": {
+    "src": "/logos/suppliers/suedpack.svg"
+  },
+  "sullair": {
+    "src": "/logos/suppliers/sullair.png"
+  },
+  "superior-tube": {
+    "src": "/logos/suppliers/superior-tube.png"
+  },
+  "suraj": {
+    "src": "/logos/suppliers/suraj.png"
+  },
+  "surya-roshni": {
+    "src": "/logos/suppliers/surya-roshni.svg"
+  },
+  "taghleef": {
+    "src": "/logos/suppliers/taghleef.svg"
+  },
+  "tc-transcontinental": {
+    "src": "/logos/suppliers/tc-transcontinental.png"
+  },
+  "tekni-plex": {
+    "src": "/logos/suppliers/tekni-plex.svg"
+  },
+  "tfkable": {
+    "src": "/logos/suppliers/tfkable.png"
+  },
+  "thompson-pipe": {
+    "src": "/logos/suppliers/thompson-pipe.png"
+  },
+  "timken": {
+    "src": "/logos/suppliers/timken.svg"
+  },
+  "tokyo-steel": {
+    "src": "/logos/suppliers/tokyo-steel.png"
+  },
+  "tratos": {
+    "src": "/logos/suppliers/tratos.png"
+  },
+  "trumpf": {
+    "src": "/logos/suppliers/trumpf.svg"
+  },
+  "universal-stainless": {
+    "src": "/logos/suppliers/universal-stainless.svg"
+  },
+  "uponor": {
+    "src": "/logos/suppliers/uponor.svg"
+  },
+  "usg": {
+    "src": "/logos/suppliers/usg.svg"
+  },
+  "vallourec": {
+    "src": "/logos/suppliers/vallourec.svg"
+  },
+  "valmont-tubing": {
+    "src": "/logos/suppliers/valmont-tubing.png"
+  },
+  "vega-grieshaber": {
+    "src": "/logos/suppliers/vega-grieshaber.svg"
+  },
+  "venus-pipes": {
+    "src": "/logos/suppliers/venus-pipes.png",
+    "monoOnWhite": true
+  },
+  "victaulic": {
+    "src": "/logos/suppliers/victaulic.png"
+  },
+  "visy": {
+    "src": "/logos/suppliers/visy.svg"
+  },
+  "vitro": {
+    "src": "/logos/suppliers/vitro.png",
+    "monoOnWhite": true
+  },
+  "voith": {
+    "src": "/logos/suppliers/voith.svg"
+  },
+  "wago": {
+    "src": "/logos/suppliers/wago.svg"
+  },
+  "welded-tube-canada": {
+    "src": "/logos/suppliers/welded-tube-canada.png"
+  },
+  "western-tube-conduit": {
+    "src": "/logos/suppliers/western-tube-conduit.svg"
+  },
+  "winpak": {
+    "src": "/logos/suppliers/winpak.png"
+  },
+  "xylem": {
+    "src": "/logos/suppliers/xylem.svg"
+  },
+  "yuto": {
+    "src": "/logos/suppliers/yuto.png"
+  },
+  "zimmer-group": {
+    "src": "/logos/suppliers/zimmer-group.svg"
+  }
+}

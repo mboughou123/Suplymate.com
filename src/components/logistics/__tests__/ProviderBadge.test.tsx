@@ -46,10 +46,10 @@ describe("ProviderBadge", () => {
     expect(qbeHtml).toContain("bg-white");
   });
 
-  it("keeps a dropped provider on the initials fallback", () => {
-    const loadsure = getLogisticsProvider("loadsure")!;
-    const html = renderToStaticMarkup(<ProviderBadge provider={loadsure} />);
+  it("keeps a provider with no official logo on the initials fallback", () => {
+    const roanoke = getLogisticsProvider("roanoke-cargo-insurance")!;
+    const html = renderToStaticMarkup(<ProviderBadge provider={roanoke} />);
     expect(html).not.toContain("<img");
-    expect(html).toMatch(/>LO</);
+    expect(html).toMatch(/>RI</);
   });
 });

@@ -11,9 +11,9 @@ import {
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 describe("QA-approved logistics provider logos", () => {
-  it("ships a logo for the 18 approved ids and none for the 3 drops", () => {
-    expect(Object.keys(PROVIDER_LOGOS)).toHaveLength(18);
-    expect(DROPPED_PROVIDER_LOGO_IDS).toHaveLength(3);
+  it("ships a logo for every approved id and none for the remaining drop", () => {
+    expect(Object.keys(PROVIDER_LOGOS)).toHaveLength(22);
+    expect(DROPPED_PROVIDER_LOGO_IDS).toEqual(["roanoke-cargo-insurance"]);
 
     for (const [id, asset] of Object.entries(PROVIDER_LOGOS)) {
       const provider = getLogisticsProvider(id);
@@ -57,6 +57,6 @@ describe("QA-approved logistics provider logos", () => {
     const approved = new Set(Object.keys(PROVIDER_LOGOS));
     const withLogo = LOGISTICS_PROVIDERS.filter((p) => p.logo);
     expect(withLogo.map((p) => p.id).sort()).toEqual([...approved].sort());
-    expect(fs.readdirSync(path.join(PUBLIC_DIR, "logistics", "logos"))).toHaveLength(18);
+    expect(fs.readdirSync(path.join(PUBLIC_DIR, "logistics", "logos"))).toHaveLength(Object.keys(PROVIDER_LOGOS).length);
   });
 });

@@ -2,8 +2,8 @@
 // (prepared files on cursor/media-batches-2026-10-04-9a1e). They ship in /public
 // so the directory can show them before the media-bot upload pipeline is configured.
 //
-// Left out on purpose (researcher QA: wrong company):
-// loadsure, flexport-cargo-insurance, roanoke-cargo-insurance.
+// Roanoke is still omitted: the earlier file was another company's mark, and
+// roanokegroup.com did not yield a usable logo from the company site.
 
 export type ProviderLogoAsset = {
   /** Public path, served as the original file (SVG stays SVG). */
@@ -76,14 +76,22 @@ export const PROVIDER_LOGOS: Record<string, ProviderLogoAsset> = {
   "livingston-cargo-insurance": {
     src: "/logistics/logos/livingston-cargo-insurance.png",
   },
+  loadsure: {
+    src: "/logistics/logos/loadsure.png",
+  },
+  "dsv-cargo-insurance": {
+    src: "/logistics/logos/dsv-cargo-insurance.svg",
+  },
+  "flexport-cargo-insurance": {
+    src: "/logistics/logos/flexport-cargo-insurance.svg",
+  },
+  "expeditors-cargo-insurance": {
+    src: "/logistics/logos/expeditors-cargo-insurance.png",
+  },
 };
 
-/** Researcher QA drops. These ids must never gain a bundled logo. */
-export const DROPPED_PROVIDER_LOGO_IDS = [
-  "loadsure",
-  "flexport-cargo-insurance",
-  "roanoke-cargo-insurance",
-] as const;
+/** Still no verified file from the company's own site. */
+export const DROPPED_PROVIDER_LOGO_IDS = ["roanoke-cargo-insurance"] as const;
 
 export function getProviderLogo(id: string | null | undefined): ProviderLogoAsset | undefined {
   if (!id) return undefined;
