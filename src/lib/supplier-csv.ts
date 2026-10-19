@@ -61,6 +61,20 @@ function parseCertifications(value: string): CertificationDetail[] {
   }
   return splitList(value).map((name) => ({ name }));
 }
+const CATEGORY_ALIASES: Record<string, string> = {
+  "Tube & Pipes": "Tubes & Pipes",
+  "Tubes and Pipes": "Tubes & Pipes",
+  "Steel and Metals": "Steel & Metals",
+  "Cables and Electrical": "Cables & Electrical",
+};
+
+function normalizeCategory(value?: string | null): string | undefined {
+  const raw = (value ?? "").trim();
+  if (!raw) return undefined;
+  return CATEGORY_ALIASES[raw] ?? raw;
+}
+
+
 
 export function mapRowsToSupplierInputs(parsed: CsvParseResult): CsvImportResult {
   const valid: SupplierInput[] = [];
@@ -95,7 +109,7 @@ export function mapRowsToSupplierInputs(parsed: CsvParseResult): CsvImportResult
     const input: SupplierInput = {
       name,
       industry: v.industry || null,
-      category: v.category || null,
+      category: normalizeCategory(v.category) || null,
       location: v.location || null,
       country: v.country || null,
       city: v.city || null,
@@ -117,6 +131,10 @@ export function mapRowsToSupplierInputs(parsed: CsvParseResult): CsvImportResult
       // Imported rows are always pending review.
       verificationStatus: "pending",
     };
+
+    if (!input.imageUrl && input.images && input.images.length) {
+      input.imageUrl = input.images[0];
+    }
 
     if (!input.website && !input.email && !input.phone) {
       warnings.push({ line: row.line, message: `Row ${row.line} (${name}) has no website/email/phone` });
