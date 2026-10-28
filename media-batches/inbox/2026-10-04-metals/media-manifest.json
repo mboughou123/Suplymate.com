@@ -1,0 +1,638 @@
+{
+  "version": 1,
+  "bot": "grok-media-bot",
+  "industry": "metals",
+  "generatedAt": "2026-10-05T04:20:00.783Z",
+  "items": [
+    {
+      "target": "supplier",
+      "entityId": "advanced-drainage-systems",
+      "role": "logo",
+      "original": "originals/advanced-drainage-systems-logo.png",
+      "sourceUrl": "https://www.adspipe.com/corp/our-company",
+      "imageUrl": "https://assets.adspipe.com/m/6ac1def8b5217739/webimage-ADS-logo-with-Advanced-Drainage-Systems-Inc-Stacked-Color.png?sf_dm_key=AYcKH1zkksm2RevpvrtnQ4VnjOhFXlwiinNbw0Cgcq81",
+      "altText": "Advanced Drainage Systems, Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "advanced-drainage-systems",
+      "role": "cover",
+      "original": "originals/advanced-drainage-systems-cover.png",
+      "sourceUrl": "https://www.adspipe.com/",
+      "imageUrl": "https://assets.adspipe.com/asset/82af14c1-076c-42c2-8a46-9b61f6e547a7/webmedium-PNG/Water-flowing-in-creek-scene.png?sf_dm_key=16AVKDW1GFA5ceCgvNfWJdDGQ6q-G7f8wAHPBTFxh2Q1",
+      "altText": "Advanced Drainage Systems, Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "dillinger",
+      "role": "logo",
+      "original": "originals/dillinger-logo.svg",
+      "sourceUrl": "https://www.dillinger.de/",
+      "imageUrl": "https://www.dillinger.de/app/uploads/sites/3/2023/11/logo-dillinger.svg",
+      "altText": "Aktien-Gesellschaft der Dillinger H\u00fcttenwerke logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "dillinger",
+      "role": "cover",
+      "original": "originals/dillinger-cover.jpg",
+      "sourceUrl": "https://www.dillinger.de/",
+      "imageUrl": "https://www.dillinger.de/app/uploads/sites/3/2024/03/12_Steel-Service-Center-and-Plate-Processing-1200x800.jpg",
+      "altText": "Aktien-Gesellschaft der Dillinger H\u00fcttenwerke cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "acipco",
+      "role": "logo",
+      "original": "originals/acipco-logo.png",
+      "sourceUrl": "https://american-usa.com/",
+      "imageUrl": "https://american-usa.atl1.cdn.digitaloceanspaces.com/american-updated-logo.png",
+      "altText": "American Cast Iron Pipe Company logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "acipco",
+      "role": "cover",
+      "original": "originals/acipco-cover.webp",
+      "sourceUrl": "https://american-usa.com/about/story",
+      "imageUrl": "https://american-usa.com/img/http/aHR0cHM6Ly9hbWVyaWNhbi11c2EuYXRsMS5jZG4uZGlnaXRhbG9jZWFuc3BhY2VzLmNvbS93ZWJzaXRldHJpby0xLmpwZw/websitetrio-1.jpg?w=500&h=500&fit=crop&fm=webp&q=100&s=01c58b9ec52acbf0805652a4016b91cb",
+      "altText": "American Cast Iron Pipe Company cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "amiantit",
+      "role": "logo",
+      "original": "originals/amiantit-logo.svg",
+      "sourceUrl": "https://amiantit.com/",
+      "imageUrl": "https://amiantit.com/wp-content/uploads/2025/03/Amiantit-Logo.svg",
+      "altText": "Amiantit logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "amiantit",
+      "role": "cover",
+      "original": "originals/amiantit-cover.png",
+      "sourceUrl": "https://amiantit.com/",
+      "imageUrl": "https://amiantit.com/wp-content/uploads/2025/01/about-img.png",
+      "altText": "Amiantit cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "amiblu",
+      "role": "logo",
+      "original": "originals/amiblu-logo.png",
+      "sourceUrl": "https://www.amiblu.com/",
+      "imageUrl": "https://www.amiblu.com/wp-content/uploads/2021/01/Amiblu-logo-website-1.png",
+      "altText": "Amiblu Holding GmbH logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "amiblu",
+      "role": "factory",
+      "original": "originals/amiblu-factory.webp",
+      "sourceUrl": "https://www.amiblu.com/",
+      "imageUrl": "https://www.amiblu.com/wp-content/uploads/Amiblu-Maroc-inauguration-3rd-production-line-2.webp",
+      "altText": "Amiblu Holding GmbH facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "ati",
+      "role": "logo",
+      "original": "originals/ati-logo.png",
+      "sourceUrl": "https://www.atimaterials.com/",
+      "imageUrl": "https://www.atimaterials.com/PublishingImages/ati_logo.png",
+      "altText": "ATI Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "ati",
+      "role": "cover",
+      "original": "originals/ati-cover.jpg",
+      "sourceUrl": "https://www.atimaterials.com/",
+      "imageUrl": "https://www.atimaterials.com/PublishingImages/Hero.jpg",
+      "altText": "ATI Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "atlas-tube",
+      "role": "logo",
+      "original": "originals/atlas-tube-logo.svg",
+      "sourceUrl": "https://www.atlastube.com/",
+      "imageUrl": "https://www.atlastube.com/wp-content/themes/atlastube/resources/images/template/logos/logo-atlastube-color.svg",
+      "altText": "Atlas Tube logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "aubert-duval",
+      "role": "logo",
+      "original": "originals/aubert-duval-logo.png",
+      "sourceUrl": "https://www.aubertduval.com/",
+      "imageUrl": "https://www.aubertduval.com/wp-content/uploads/fbrfg/apple-touch-icon.png",
+      "altText": "Aubert & Duval logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "aubert-duval",
+      "role": "cover",
+      "original": "originals/aubert-duval-cover.png",
+      "sourceUrl": "https://www.aubertduval.com/",
+      "imageUrl": "https://www.aubertduval.com/wp-content/uploads/2024/11/headerinnovation-2048x1365.png",
+      "altText": "Aubert & Duval cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bluescope",
+      "role": "logo",
+      "original": "originals/bluescope-logo.svg",
+      "sourceUrl": "https://www.bluescope.com/",
+      "imageUrl": "https://www.bluescope.com/content/dam/bluescope/corporate/bluescope-com/global/assets/Header_Logo.svg",
+      "altText": "BlueScope Steel Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bluescope",
+      "role": "cover",
+      "original": "originals/bluescope-cover.jpg",
+      "sourceUrl": "https://www.bluescope.com/",
+      "imageUrl": "https://s7ap1.scene7.com/is/image/bluescopesteel/Homepage-carousel-Colourbond-banner-1440x649?ts=1786585418593&dpr=off",
+      "altText": "BlueScope Steel Limited cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bonnell-aluminum",
+      "role": "logo",
+      "original": "originals/bonnell-aluminum-logo.png",
+      "sourceUrl": "https://bonnellaluminum.com/",
+      "imageUrl": "https://bonnellaluminum.com/media/qcbnpnuc/bonnell-aluminum-horz-gray-rev.png",
+      "altText": "Bonnell Aluminum logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bri-steel",
+      "role": "logo",
+      "original": "originals/bri-steel-logo.png",
+      "sourceUrl": "https://www.bri-steel.com/",
+      "imageUrl": "https://static.wixstatic.com/media/13fe72_163ac7c28c05476ba2e717f03dbc09c0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/13fe72_163ac7c28c05476ba2e717f03dbc09c0%7Emv2.png",
+      "altText": "Bri-Steel Manufacturing logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bull-moose-tube",
+      "role": "logo",
+      "original": "originals/bull-moose-tube-logo.png",
+      "sourceUrl": "https://www.bullmoosetube.com/",
+      "imageUrl": "https://www.bullmoosetube.com/wp-content/uploads/2025/10/bullmoose-square.png",
+      "altText": "Bull Moose Tube Company logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "bull-moose-tube",
+      "role": "factory",
+      "original": "originals/bull-moose-tube-factory.jpg",
+      "sourceUrl": "https://www.bullmoosetube.com/",
+      "imageUrl": "https://www.bullmoosetube.com/wp-content/uploads/2022/01/HSS-Page-Trenton_4866-1-scaled-1-2048x1366.jpg",
+      "altText": "Bull Moose Tube Company facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "california-steel-industries",
+      "role": "logo",
+      "original": "originals/california-steel-industries-logo.webp",
+      "sourceUrl": "https://www.californiasteel.com/",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/632e1df423ab2309da745b31/ccfc370f-2497-47d1-8c56-ac999a242fff/CSI+and+Nucor+Logo.png?format=1500w",
+      "altText": "California Steel Industries, Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "california-steel-industries",
+      "role": "cover",
+      "original": "originals/california-steel-industries-cover.webp",
+      "sourceUrl": "https://www.californiasteel.com/",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/632e1df423ab2309da745b31/dc66fad5-42e0-49ee-ba48-bd2d1f95675f/CSI+Website+%287%29.png?format=2500w",
+      "altText": "California Steel Industries, Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "centravis",
+      "role": "logo",
+      "original": "originals/centravis-logo.png",
+      "sourceUrl": "https://www.centravis.com/",
+      "imageUrl": "https://www.centravis.com/wp-content/uploads/2019/11/logo-w.png",
+      "altText": "Centravis Production Ukraine PJSC logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "centravis",
+      "role": "cover",
+      "original": "originals/centravis-cover.jpg",
+      "sourceUrl": "https://www.centravis.com/about-us/",
+      "imageUrl": "https://www.centravis.com/wp-content/uploads/2019/11/v-1.jpg",
+      "altText": "Centravis Production Ukraine PJSC cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "charlotte-pipe",
+      "role": "logo",
+      "original": "originals/charlotte-pipe-logo.svg",
+      "sourceUrl": "https://www.charlottepipe.com/",
+      "imageUrl": "https://www.charlottepipe.com/uploads/images/logo-cpf-light.svg",
+      "altText": "Charlotte Pipe and Foundry Company logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "charlotte-pipe",
+      "role": "factory",
+      "original": "originals/charlotte-pipe-factory.png",
+      "sourceUrl": "https://www.charlottepipe.com/about-us",
+      "imageUrl": "https://www.charlottepipe.com/uploads/images/Plants-Oakboro-default-3.png",
+      "altText": "Charlotte Pipe and Foundry Company facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "cleveland-cliffs",
+      "role": "logo",
+      "original": "originals/cleveland-cliffs-logo.png",
+      "sourceUrl": "https://www.clevelandcliffs.com/",
+      "imageUrl": "https://www.clevelandcliffs.com/_assets/_af66d43b11de87ea61215bf484d8f8bf/clevelandcliffs/logo.png",
+      "altText": "Cleveland-Cliffs Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "cleveland-cliffs",
+      "role": "cover",
+      "original": "originals/cleveland-cliffs-cover.png",
+      "sourceUrl": "https://www.clevelandcliffs.com/",
+      "imageUrl": "https://www.clevelandcliffs.com/_assets/_af66d43b11de87ea61215bf484d8f8bf/clevelandcliffs/db/1245/12100/image.png",
+      "altText": "Cleveland-Cliffs Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "electrosteel-castings",
+      "role": "logo",
+      "original": "originals/electrosteel-castings-logo.png",
+      "sourceUrl": "https://www.electrosteel.com/",
+      "imageUrl": "https://www.electrosteel.com/images/logo.png",
+      "altText": "Electrosteel Castings Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "electrosteel-castings",
+      "role": "cover",
+      "original": "originals/electrosteel-castings-cover.webp",
+      "sourceUrl": "https://www.electrosteel.com/",
+      "imageUrl": "https://www.electrosteel.com/electrosteel-static-assets/1788940019816-sustainability-Banner.webp",
+      "altText": "Electrosteel Castings Limited cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "erdemir",
+      "role": "logo",
+      "original": "originals/erdemir-logo.svg",
+      "sourceUrl": "https://www.erdemir.com.tr/",
+      "imageUrl": "https://www.erdemir.com.tr/img/erdemir-logo-inv.svg",
+      "altText": "Ere\u011fli Demir ve \u00c7elik Fabrikalar\u0131 T.A.\u015e. (Erdemir) logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "erdemir",
+      "role": "cover",
+      "original": "originals/erdemir-cover.png",
+      "sourceUrl": "https://www.erdemir.com.tr/",
+      "imageUrl": "https://www.erdemir.com.tr/cache/image/xlarge/2026/04/b5c27ce9ad6ab0409e477acbf381301e.png",
+      "altText": "Ere\u011fli Demir ve \u00c7elik Fabrikalar\u0131 T.A.\u015e. (Erdemir) cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "fine-tubes",
+      "role": "logo",
+      "original": "originals/fine-tubes-logo.png",
+      "sourceUrl": "https://www.finetubes.co.uk/",
+      "imageUrl": "https://www.finetubes.co.uk/-/media/ametekfinetubes/images/fine-tubes-logo.png?h=359&la=en&w=1649&revision=0d690229-0274-4c99-b571-66c1b0c4ee1d&hash=2458D84C597D9381A10E317792D61189",
+      "altText": "Fine Tubes Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "fine-tubes",
+      "role": "factory",
+      "original": "originals/fine-tubes-factory.jpg",
+      "sourceUrl": "https://www.finetubes.co.uk/",
+      "imageUrl": "https://www.finetubes.co.uk/-/media/ametekfinetubes/newhomebanners/new-banner-image/23-ft-home-delivering.jpg?h=475&la=en&w=1425&revision=f770884f-a710-4102-b865-0c9688400ccf&hash=9566257FA6B6C6295370ABA514A10FF0",
+      "altText": "Fine Tubes Limited facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "future-pipe-industries",
+      "role": "logo",
+      "original": "originals/future-pipe-industries-logo.svg",
+      "sourceUrl": "https://futurepipe.com/",
+      "imageUrl": "https://futurepipe.com/wp-content/uploads/2024/06/logo-white-text.svg",
+      "altText": "Future Pipe Industries logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "future-pipe-industries",
+      "role": "cover",
+      "original": "originals/future-pipe-industries-cover.jpg",
+      "sourceUrl": "https://futurepipe.com/",
+      "imageUrl": "https://futurepipe.com/wp-content/uploads/2024/07/TOP1-Connecting-Life1.jpg",
+      "altText": "Future Pipe Industries cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "gerdau",
+      "role": "logo",
+      "original": "originals/gerdau-logo.png",
+      "sourceUrl": "https://www2.gerdau.com/",
+      "imageUrl": "http://www2.gerdau.com/themes/custom/gerdautema/images/menu/gerdau-eua-white.png",
+      "altText": "Gerdau S.A. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "gerdau",
+      "role": "cover",
+      "original": "originals/gerdau-cover.jpg",
+      "sourceUrl": "https://www2.gerdau.com/about-us",
+      "imageUrl": "https://www2.gerdau.com/sites/gln_gerdau/files/environment.jpg",
+      "altText": "Gerdau S.A. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "gf-piping-systems",
+      "role": "logo",
+      "original": "originals/gf-piping-systems-logo.svg",
+      "sourceUrl": "https://www.gfps.com/landing-page.html",
+      "imageUrl": "https://www.gfps.com/content/dam/commonassets/logo/gf_pipingsystems.svg",
+      "altText": "GF Piping Systems logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "gibson-stainless",
+      "role": "logo",
+      "original": "originals/gibson-stainless-logo.webp",
+      "sourceUrl": "https://www.gibsonstainless.com/",
+      "imageUrl": "https://www.gibsonstainless.com/wp-content/uploads/Gibson-LogoRegistered-e1749736961133.webp",
+      "altText": "Gibson Stainless & Specialty Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "gibson-stainless",
+      "role": "cover",
+      "original": "originals/gibson-stainless-cover.png",
+      "sourceUrl": "https://www.gibsonstainless.com/",
+      "imageUrl": "https://www.gibsonstainless.com/wp-content/uploads/made-in-usa.png",
+      "altText": "Gibson Stainless & Specialty Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "goodluck-india",
+      "role": "logo",
+      "original": "originals/goodluck-india-logo.jpg",
+      "sourceUrl": "https://www.goodluckindia.com/",
+      "imageUrl": "https://www.goodluckindia.com/assets/img/logo/logo-white.png",
+      "altText": "Goodluck India Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "handytube",
+      "role": "logo",
+      "original": "originals/handytube-logo.png",
+      "sourceUrl": "https://www.handytube.com/",
+      "imageUrl": "https://www.handytube.com/img/HandyTube-logo.png",
+      "altText": "HandyTube Corporation logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "handytube",
+      "role": "cover",
+      "original": "originals/handytube-cover.jpg",
+      "sourceUrl": "https://www.handytube.com/",
+      "imageUrl": "https://www.handytube.com/img/product-img.jpg",
+      "altText": "HandyTube Corporation cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "haynes-international",
+      "role": "logo",
+      "original": "originals/haynes-international-logo.webp",
+      "sourceUrl": "https://haynesintl.com/en/",
+      "imageUrl": "https://i0.wp.com/haynesintl.com/wp-content/uploads/2024/07/logo.webp?fit=484%2C188&ssl=1",
+      "altText": "Haynes International Inc. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "haynes-international",
+      "role": "cover",
+      "original": "originals/haynes-international-cover.webp",
+      "sourceUrl": "https://haynesintl.com/en/",
+      "imageUrl": "https://i0.wp.com/haynesintl.com/wp-content/uploads/2026/01/Website-Banners-1-1.png?w=930&ssl=1",
+      "altText": "Haynes International Inc. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "hbis",
+      "role": "logo",
+      "original": "originals/hbis-logo.png",
+      "sourceUrl": "https://www.hbisco.com/",
+      "imageUrl": "https://www.hbisco.com/uploads/2023-09-06/63e7330d-f2d0-4961-87a6-48b038410d121693988775053.png",
+      "altText": "HBIS Group Co., Ltd. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "hi-tech-pipes",
+      "role": "logo",
+      "original": "originals/hi-tech-pipes-logo.png",
+      "sourceUrl": "https://hitechpipes.in/",
+      "imageUrl": "https://hitechpipes.in/wp-content/uploads/2023/07/Logo-2-150x83.png",
+      "altText": "Hi-Tech Pipes Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "husteel",
+      "role": "logo",
+      "original": "originals/husteel-logo.png",
+      "sourceUrl": "https://www.husteel.com/eng/main.hu",
+      "imageUrl": "https://www.husteel.com/common/images/logo-eng.png",
+      "altText": "Husteel Co., Ltd. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "husteel",
+      "role": "factory",
+      "original": "originals/husteel-factory.jpg",
+      "sourceUrl": "https://www.husteel.com/eng/aboutus/ceo.hu",
+      "imageUrl": "https://www.husteel.com/common/images/slide02.jpg",
+      "altText": "Husteel Co., Ltd. facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "hyundai-steel",
+      "role": "logo",
+      "original": "originals/hyundai-steel-logo.png",
+      "sourceUrl": "https://www.hyundai-steel.com/kr",
+      "imageUrl": "https://www.hyundai-steel.com/resources/images/img_logo_ft.png",
+      "altText": "Hyundai Steel Co., Ltd. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "kaiser-aluminum",
+      "role": "logo",
+      "original": "originals/kaiser-aluminum-logo.png",
+      "sourceUrl": "https://www.kaiseraluminum.com/",
+      "imageUrl": "https://www.kaiseraluminum.com/wp-content/themes/worksdesign/img/logo-white.png",
+      "altText": "Kaiser Aluminum Corporation logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "kalyani-steels",
+      "role": "logo",
+      "original": "originals/kalyani-steels-logo.jpg",
+      "sourceUrl": "https://www.kalyanisteels.com/",
+      "imageUrl": "https://www.kalyanisteels.com/wp-content/uploads/Logo-e1672199044676.jpg",
+      "altText": "Kalyani Steels Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "kalyani-steels",
+      "role": "factory",
+      "original": "originals/kalyani-steels-factory.jpg",
+      "sourceUrl": "https://www.kalyanisteels.com/",
+      "imageUrl": "https://www.kalyanisteels.com/wp-content/uploads/hsl1.jpg",
+      "altText": "Kalyani Steels Limited facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "kumkang-kind",
+      "role": "logo",
+      "original": "originals/kumkang-kind-logo.png",
+      "sourceUrl": "https://www.kumkangkind.com/",
+      "imageUrl": "https://www.kumkangkind.com/images/common/logo_kumkang.png",
+      "altText": "Kumkang Kind Co., Ltd. logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "kumkang-kind",
+      "role": "cover",
+      "original": "originals/kumkang-kind-cover.jpg",
+      "sourceUrl": "https://www.kumkangkind.com/",
+      "imageUrl": "https://www.kumkangkind.com/images/main/bnnr_visual11_d.jpg",
+      "altText": "Kumkang Kind Co., Ltd. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "mcwane-ductile",
+      "role": "logo",
+      "original": "originals/mcwane-ductile-logo.png",
+      "sourceUrl": "https://www.mcwaneductile.com/",
+      "imageUrl": "https://www.mcwaneductile.com/images/logos/mcwane-ductile-logo.png?v20260327",
+      "altText": "McWane Ductile logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "michigan-seamless-tube",
+      "role": "logo",
+      "original": "originals/michigan-seamless-tube-logo.png",
+      "sourceUrl": "https://www.mstube.com/",
+      "imageUrl": "http://www.mstube.com/wp-content/uploads/2017/10/MST-Logo-Self-Contained2-1.png",
+      "altText": "Michigan Seamless Tube, LLC logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "mukand",
+      "role": "logo",
+      "original": "originals/mukand-logo.png",
+      "sourceUrl": "https://www.mukand.com/",
+      "imageUrl": "https://www.mukand.com/wp-content/uploads/2022/10/mukand-logo-blue.png",
+      "altText": "Mukand Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "mukand",
+      "role": "factory",
+      "original": "originals/mukand-factory.jpg",
+      "sourceUrl": "https://www.mukand.com/",
+      "imageUrl": "https://www.mukand.com/wp-content/uploads/2022/12/1-banner.jpg",
+      "altText": "Mukand Limited facility"
+    },
+    {
+      "target": "supplier",
+      "entityId": "allied-tube-conduit",
+      "role": "logo",
+      "original": "originals/allied-tube-conduit-logo.png",
+      "sourceUrl": "https://www.atkore.com/about-us/brands/allied-tube-conduit",
+      "imageUrl": "https://dam.atkore.com/api/public/content/c368cdcb2f7643ce84a0f776af214286?v=388f908f",
+      "altText": "Allied Tube & Conduit logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "allied-tube-conduit",
+      "role": "cover",
+      "original": "originals/allied-tube-conduit-cover.jpg",
+      "sourceUrl": "https://www.atkore.com/about-us/brands/allied-tube-conduit",
+      "imageUrl": "https://dam.atkore.com/api/public/content/55a0c4e7438c4554ae5c366d52f53f70?v=37d2ef99",
+      "altText": "Allied Tube & Conduit cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "artrom",
+      "role": "cover",
+      "original": "originals/artrom-cover.webp",
+      "sourceUrl": "https://www.artrom.com/",
+      "imageUrl": "https://www.artrom.com/web/wp-content/uploads/2023/05/artrom-banner.webp",
+      "altText": "Artrom Steel Tubes S.A. cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "columbus-stainless",
+      "role": "logo",
+      "original": "originals/columbus-stainless-logo.png",
+      "sourceUrl": "https://www.columbus.co.za/",
+      "imageUrl": "https://www.columbus.co.za/images/Columbus%20Logo%20White-mobile%202.png#joomlaImage://local-images/Columbus%20Logo%20White-mobile%202.png?width=526&height=190",
+      "altText": "Columbus Stainless logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "columbus-stainless",
+      "role": "cover",
+      "original": "originals/columbus-stainless-cover.png",
+      "sourceUrl": "https://www.columbus.co.za/",
+      "imageUrl": "https://www.columbus.co.za/images/2024/06/10/inoxfil.png",
+      "altText": "Columbus Stainless cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "hobas-pipe-usa",
+      "role": "cover",
+      "original": "originals/hobas-pipe-usa-cover.jpg",
+      "sourceUrl": "https://hobaspipe.com/about/",
+      "imageUrl": "https://hobaspipe.com/wp-content/uploads/2020/10/History_Hero.jpg",
+      "altText": "HOBAS Pipe USA cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "jindal-stainless",
+      "role": "logo",
+      "original": "originals/jindal-stainless-logo.webp",
+      "sourceUrl": "https://www.jindalstainless.com/",
+      "imageUrl": "https://www.jindalstainless.com/wp-content/themes/jsl/assets/images/JSL.png",
+      "altText": "Jindal Stainless Limited logo"
+    },
+    {
+      "target": "supplier",
+      "entityId": "jindal-stainless",
+      "role": "cover",
+      "original": "originals/jindal-stainless-cover.webp",
+      "sourceUrl": "https://www.jindalstainless.com/",
+      "imageUrl": "https://www.jindalstainless.com/wp-content/themes/jsl/assets/images/new-homepage/hero_desktop-1280w.png",
+      "altText": "Jindal Stainless Limited cover"
+    },
+    {
+      "target": "supplier",
+      "entityId": "jm-eagle",
+      "role": "cover",
+      "original": "originals/jm-eagle-cover.jpg",
+      "sourceUrl": "https://www.jmeagle.com/",
+      "imageUrl": "https://www.jmeagle.com/sites/default/files/styles/home_page_thumbnail_image/public/blue_pipes.jpg?itok=lvqeyXYJ",
+      "altText": "JM Eagle cover"
+    }
+  ]
+}
