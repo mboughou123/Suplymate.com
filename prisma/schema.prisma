@@ -830,3 +830,27 @@ model Watchlist {
   @@unique([userId, materialId])
   @@index([userId])
 }
+
+// Pre-launch audience signups. No outbound email is sent from this table.
+// utm* fields are first-touch values captured in the browser (sessionStorage).
+model EarlyAccessSignup {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  company     String?
+  role        String?
+  // JSON string[] of EARLY_ACCESS_CATEGORIES.
+  categories  String   @default("[]")
+  note        String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  utmContent  String?
+  referrer    String?
+  landingPath String?
+  locale      String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([utmSource])
+}

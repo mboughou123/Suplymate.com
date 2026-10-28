@@ -8,6 +8,7 @@ import HomeInsuranceSection from "@/components/home/HomeInsuranceSection";
 import HomeOrchestratorSection from "@/components/home/HomeOrchestratorSection";
 import HomeBenefitsBand from "@/components/home/HomeBenefitsBand";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
+import HomeEarlyAccess from "@/components/home/HomeEarlyAccess";
 import HomeCloseSection from "@/components/HomeCloseSection";
 import { getHomePageContent } from "@/lib/home-page-data";
 
@@ -45,6 +46,7 @@ export default async function HomePage({
         materialCount={home.materialCount}
       />
       <HomeFaqSection />
+      <HomeEarlyAccess locale={locale} />
       <HomeCloseSection
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
