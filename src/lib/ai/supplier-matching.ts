@@ -8,6 +8,12 @@
 import type { Supplier } from "@/data/suppliers";
 import { industryForLegacyCategory, textInIndustry } from "@/data/industries";
 import type { ParsedRequirement } from "@/lib/ai/requirement-parser";
+import {
+  isCatalogueVerified,
+  sourcedGoogleRating,
+  sourcedGoogleReviews,
+  suplymateProfileScore,
+} from "@/lib/sourced-facts";
 
 export type MatchComponent = "price" | "delivery" | "quality" | "location" | "trust";
 
@@ -68,7 +74,7 @@ function clamp(n: number): number {
 }
 
 function isVerified(s: Supplier): boolean {
-  return s.verified === true || s.verificationStatus === "verified";
+  return isCatalogueVerified(s);
 }
 
 function haystack(s: Supplier): string {
@@ -134,8 +140,8 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
 
   // Quality — public rating / reviews.
   let quality: number | null = null;
-  const rating = s.googleRating ?? s.rating ?? null;
-  const reviews = s.googleReviews ?? s.reviewCount ?? null;
+  const rating = sourcedGoogleRating(s);
+  const reviews = sourcedGoogleReviews(s);
   if (rating != null) {
     quality = clamp((rating / 5) * 100 - (reviews != null && reviews < 5 ? 10 : 0));
     reasons.push(`Rated ${rating.toFixed(1)}/5${reviews ? ` from ${reviews} public reviews` : ""}`);
@@ -145,13 +151,11 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
 
   // Trust — data completeness + verification.
   let trust: number | null = null;
-  const base = s.trustScore ?? s.score ?? s.reliabilityScore ?? null;
-  if (base != null) {
-    trust = clamp(base + (isVerified(s) ? 10 : 0));
-    reasons.push(isVerified(s) ? "Verified by Suplymate" : "Listed — not yet independently verified");
-  } else {
-    gaps.push("No trust data");
-  }
+  const profileScore = suplymateProfileScore(s);
+  trust = profileScore;
+  reasons.push(
+    `Suplymate score ${profileScore}/100 (listing completeness${isVerified(s) ? ", catalogue-verified" : ""})`,
+  );
 
   // Location — only when the buyer stated one.
   let location: number | null = null;
@@ -182,24 +186,12 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
   }
 
   // Delivery — regions declared or lead time stated.
-  let delivery: number | null = null;
-  const regions = s.deliveryRegions ?? [];
-  if (regions.length > 0) {
-    const global = regions.some((r) => /world|global|international/i.test(r));
-    delivery = global ? 85 : clamp(55 + regions.length * 8);
-    reasons.push(`Delivers to ${regions.slice(0, 3).join(", ")}${regions.length > 3 ? "…" : ""}`);
-  } else {
-    gaps.push("Lead time not published — ask in an RFQ");
-  }
-
-  // Price — we never invent prices; only signal that pricing basis exists.
-  let price: number | null = null;
-  if (s.moq && s.moq.toLowerCase() !== "contact supplier") {
-    price = 60;
-    reasons.push(`MOQ ${s.moq}`);
-  } else {
-    gaps.push("No public pricing — request a quote");
-  }
+  // Lead time and price are not scored unless a sourced figure exists.
+  // Category-default MOQs and country-derived regions are not performance data.
+  const delivery: number | null = null;
+  gaps.push("Lead time not published — ask in an RFQ");
+  const price: number | null = null;
+  gaps.push("No public pricing — request a quote");
 
   const breakdown: MatchBreakdown = { price, delivery, quality, location, trust };
   let weight = 0;
@@ -228,7 +220,7 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
       logoUrl: s.logoUrl ?? null,
       imageUrl: s.imageUrl ?? null,
       verified: isVerified(s),
-      trustScore: s.trustScore ?? s.score ?? null,
+      trustScore: profileScore,
       rating,
       reviews,
       moq: s.moq ?? null,

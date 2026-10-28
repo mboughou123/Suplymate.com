@@ -6,9 +6,6 @@ import {
   BadgeCheck,
   Star,
   MapPin,
-  Clock,
-  Truck,
-  RotateCcw,
   Package,
   Users,
   Building2,
@@ -32,24 +29,6 @@ type SupplierCardProps = {
   /** First visible card — LCP candidate on phones. */
   priority?: boolean;
 };
-
-function Metric({
-  icon: Icon,
-  value,
-  label,
-}: {
-  icon: typeof Clock;
-  value: string;
-  label: string;
-}) {
-  return (
-    <div className="flex flex-col items-center rounded-lg bg-slate-50 px-2 py-2.5 text-center">
-      <Icon className="mb-1 h-4 w-4 text-cyan" aria-hidden />
-      <span className="text-sm font-bold text-ink">{value}</span>
-      <span className="text-[10px] leading-tight text-ink-dim">{label}</span>
-    </div>
-  );
-}
 
 export default function SupplierCard({ supplier, priority = false }: SupplierCardProps) {
   const t = useTranslations("suppliers");
@@ -108,14 +87,19 @@ export default function SupplierCard({ supplier, priority = false }: SupplierCar
               <span aria-hidden>{s.flag}</span>
               {s.country}
             </span>
-            <span
-              className="inline-flex items-center gap-1 font-semibold text-ink"
-              aria-label={tCommon("starsRating", { rating: s.rating.toFixed(1) })}
-            >
-              <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
-              {s.rating.toFixed(1)}/5
-            </span>
-            <span className="text-ink-dim">({s.reviewCount} reviews)</span>
+            {s.googleRating != null && (
+              <span
+                className="inline-flex items-center gap-1 font-semibold text-ink"
+                aria-label={tCommon("starsRating", { rating: s.googleRating.toFixed(1) })}
+              >
+                <Star className="h-3.5 w-3.5 fill-mustard text-mustard" aria-hidden />
+                {s.googleRating.toFixed(1)}/5
+                <span className="font-normal text-ink-dim">Google</span>
+              </span>
+            )}
+            {s.googleReviews != null && (
+              <span className="text-ink-dim">({s.googleReviews} Google reviews)</span>
+            )}
           </div>
 
           {/* Tags */}
@@ -124,40 +108,29 @@ export default function SupplierCard({ supplier, priority = false }: SupplierCar
               {s.categoryLabel}
             </span>
             <span
-              className="inline-flex items-center gap-1 rounded-md bg-mustard/15 px-2 py-0.5 font-semibold text-cyan"
-              title="Suplymate supplier score"
+              className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 font-semibold text-ink-muted"
+              title="Suplymate score: how complete this public listing is (website, contact, photos, certificates, description, source). Not a delivery or quality rating."
             >
               <Award className="h-3 w-3" aria-hidden />
-              {s.score}/100
+              Completeness {s.profileScore}
             </span>
-            <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
-              <Building2 className="h-3 w-3" aria-hidden />
-              {s.yearsInBusiness} yrs
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
-              <Users className="h-3 w-3" aria-hidden />
-              {s.employees} staff
-            </span>
+            {s.yearsInBusiness != null && (
+              <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
+                <Building2 className="h-3 w-3" aria-hidden />
+                {s.yearsInBusiness} yrs
+              </span>
+            )}
+            {s.employees && (
+              <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
+                <Users className="h-3 w-3" aria-hidden />
+                {s.employees} staff
+              </span>
+            )}
             <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-ink-muted">
               <MapPin className="h-3 w-3" aria-hidden />
               {s.location}
             </span>
           </div>
-        </div>
-
-        {/* Marketplace metrics */}
-        <div className="grid grid-cols-3 gap-2">
-          <Metric
-            icon={Truck}
-            value={`${s.onTimeDelivery}%`}
-            label="On-time delivery"
-          />
-          <Metric icon={Clock} value={s.responseTime} label="Response time" />
-          <Metric
-            icon={RotateCcw}
-            value={`${s.reorderRate}%`}
-            label="Reorder rate"
-          />
         </div>
 
         {/* Featured products */}
@@ -190,12 +163,7 @@ export default function SupplierCard({ supplier, priority = false }: SupplierCar
                   </p>
                   {p.isReal ? (
                     <p className="text-[10px] font-semibold text-cyan">{t("viewProduct")}</p>
-                  ) : (
-                    <>
-                      <p className="text-[11px] font-bold text-cyan">{p.price}</p>
-                      <p className="text-[10px] text-ink-dim">{tCommon("moq", { value: p.moq })}</p>
-                    </>
-                  )}
+                  ) : null}
                 </>
               );
               const cls = "rounded-lg border border-slate-200 p-1.5";

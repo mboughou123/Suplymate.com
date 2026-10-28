@@ -16,7 +16,6 @@ import { buildPageAlternates } from "@/lib/locale-metadata";
 import ClaimProfileButton from "@/components/supplier-profile/ClaimProfileButton";
 
 import HeroSection from "@/components/supplier-profile/HeroSection";
-import TrustPerformanceSection from "@/components/supplier-profile/TrustPerformanceSection";
 import CompanyProfileSection from "@/components/supplier-profile/CompanyProfileSection";
 import CertificationsSection from "@/components/supplier-profile/CertificationsSection";
 import CertificationGallery from "@/components/supplier-profile/CertificationGallery";
@@ -24,7 +23,6 @@ import VerificationBadge from "@/components/VerificationBadge";
 import FactoryMediaSection from "@/components/supplier-profile/FactoryMediaSection";
 import ProductsSection from "@/components/supplier-profile/ProductsSection";
 import ReviewsSection from "@/components/supplier-profile/ReviewsSection";
-import AiInsightsSection from "@/components/supplier-profile/AiInsightsSection";
 import StickyContactCard from "@/components/supplier-profile/StickyContactCard";
 import SupplierContactDetails from "@/components/supplier-contact/SupplierContactDetails";
 import InsureShipmentCard from "@/components/logistics/InsureShipmentCard";
@@ -188,13 +186,17 @@ export default async function SupplierProfilePage({
       addressLocality: base.city,
       addressCountry: base.country,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: base.rating.toFixed(1),
-      reviewCount: base.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
+    ...(base.googleRating != null
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: base.googleRating.toFixed(1),
+            reviewCount: base.googleReviews ?? undefined,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
     makesOffer: profile.products.slice(0, 6).map((p) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Product", name: p.name },
@@ -270,7 +272,6 @@ export default async function SupplierProfilePage({
 
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:px-8">
         <div className="min-w-0">
-          <TrustPerformanceSection profile={profile} />
           <CompanyProfileSection profile={profile} />
           <CertificationsSection profile={profile} />
           {hasRealMedia && (
@@ -420,9 +421,7 @@ export default async function SupplierProfilePage({
         </aside>
       </div>
 
-      <AiInsightsSection profile={profile} />
-
-      {/* Trust score footnote */}
+      {/* Suplymate score footnote */}
       <div className="container-page py-8 text-center text-xs text-ink-dim">
         {t("trustFootnote", { score: trust.trustScore })}
       </div>

@@ -198,6 +198,9 @@ export function overlayPackSupplier(row: Supplier, pack: PackSupplier): Supplier
     // Distributors (soft-hold identities such as Bossard) never carry the mill
     // badge, whatever the directory row said.
     verified: packRow.businessType === "Distributor" ? false : (row.verified ?? packRow.verified),
+    // A directory row without a moderation status inherits the pack's curated
+    // status. An admin status already on the row is left alone.
+    verificationStatus: row.verificationStatus ?? pack.verificationStatus,
     businessType: packRow.businessType ?? row.businessType,
     featuredProducts: packRow.featuredProducts,
     sourceUrl: row.sourceUrl ?? packRow.sourceUrl,

@@ -21,12 +21,14 @@ import { ALIBABA_PHOTO_CAPTION } from "@/lib/image-attribution";
 export default function FactoryMediaSection({ profile }: { profile: SupplierProfile }) {
   const t = useTranslations("supplierProfile");
   const common = useTranslations("common");
-  const { media, mediaIncomplete } = profile;
+  const photos = profile.media.filter((m) => m.isReal);
   const [active, setActive] = useState<number | null>(null);
 
   const close = () => setActive(null);
   const go = (dir: 1 | -1) =>
-    setActive((i) => (i === null ? null : (i + dir + media.length) % media.length));
+    setActive((i) => (i === null ? null : (i + dir + photos.length) % photos.length));
+
+  if (photos.length === 0) return null;
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
@@ -37,14 +39,8 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
         icon={<Images className="h-5 w-5" />}
       />
 
-      {mediaIncomplete && (
-        <p className="mb-4 rounded-lg bg-slate-50 px-3 py-2 text-xs text-ink-muted">
-          {t("representativeImagery")}
-        </p>
-      )}
-
       <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {media.map((m, i) => (
+        {photos.map((m, i) => (
           <motion.button
             key={m.id}
             type="button"
@@ -127,26 +123,26 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
             </button>
 
             <motion.div
-              key={media[active].id}
+              key={photos[active].id}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
               className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl shadow-cardHover"
-              style={{ backgroundImage: media[active].gradient }}
+              style={{ backgroundImage: photos[active].gradient }}
               onClick={(e) => e.stopPropagation()}
             >
               <ImageWithFallback
-                src={media[active].isReal ? media[active].url : undefined}
-                fallbackSrc={media[active].fallback}
+                src={photos[active].isReal ? photos[active].url : undefined}
+                fallbackSrc={photos[active].fallback}
                 placeholderSrc={GENERIC_SUPPLIER_PLACEHOLDER}
-                alt={media[active].caption}
+                alt={photos[active].caption}
                 loading="eager"
                 sizes="(max-width: 1024px) 100vw, 896px"
                 quality={CARD_IMAGE_QUALITY}
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 ai-grid-bg opacity-25" />
-              {media[active].type === "video" && (
+              {photos[active].type === "video" && (
                 <span className="absolute inset-0 flex items-center justify-center">
                   <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-cyan shadow-cardHover">
                     <Play className="ml-1 h-9 w-9 fill-cyan" aria-hidden />
@@ -154,8 +150,8 @@ export default function FactoryMediaSection({ profile }: { profile: SupplierProf
                 </span>
               )}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5">
-                <p className="text-lg font-semibold text-white">{media[active].title}</p>
-                <p className="text-sm text-white/70">{media[active].caption}</p>
+                <p className="text-lg font-semibold text-white">{photos[active].title}</p>
+                <p className="text-sm text-white/70">{photos[active].caption}</p>
               </div>
             </motion.div>
           </motion.div>

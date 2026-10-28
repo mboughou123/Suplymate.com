@@ -184,13 +184,17 @@ export default function ProductsSection({ profile }: { profile: SupplierProfile 
                     p.name
                   )}
                 </p>
-                <p className="mt-0.5 text-base font-extrabold text-cyan">{p.priceRange}</p>
+                {p.priceRange ? (
+                  <p className="mt-0.5 text-base font-extrabold text-cyan">{p.priceRange}</p>
+                ) : (
+                  <p className="mt-0.5 text-sm font-medium text-ink-muted">{t("requestQuote")}</p>
+                )}
               </div>
               <dl className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[11px]">
-                <Spec icon={Layers} label={t("moq")} value={p.moq} />
-                <Spec icon={Clock} label={t("leadTime")} value={p.leadTime} />
-                <Spec icon={Package} label={t("material")} value={p.material} />
-                <Spec icon={Truck} label={t("shipping")} value={p.shipping} />
+                {p.moq ? <Spec icon={Layers} label={t("moq")} value={p.moq} /> : null}
+                {p.leadTime ? <Spec icon={Clock} label={t("leadTime")} value={p.leadTime} /> : null}
+                {p.material ? <Spec icon={Package} label={t("material")} value={p.material} /> : null}
+                {p.shipping ? <Spec icon={Truck} label={t("shipping")} value={p.shipping} /> : null}
               </dl>
               <div className="flex flex-wrap gap-1.5">
                 {p.certifications.map((c) => (

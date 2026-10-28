@@ -11,9 +11,10 @@ import HomeFaqSection from "@/components/home/HomeFaqSection";
 import HomeEarlyAccess from "@/components/home/HomeEarlyAccess";
 import HomeCloseSection from "@/components/HomeCloseSection";
 import { getHomePageContent } from "@/lib/home-page-data";
+import { getSuppliersFromDb } from "@/lib/data-service";
+import { publicSupplierStats } from "@/lib/sourced-facts";
 
-// Static + ISR: homepage stats and product picks come from the curated pack
-// (no per-request Prisma or Outscraper dump).
+// ISR: supplier counts come from the same listed directory as /suppliers.
 export const revalidate = 300;
 
 export default async function HomePage({
@@ -24,13 +25,17 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
-  const home = getHomePageContent();
+  const [home, suppliers] = await Promise.all([
+    Promise.resolve(getHomePageContent()),
+    getSuppliersFromDb(),
+  ]);
+  const network = publicSupplierStats(suppliers);
 
   return (
     <div className="bg-base">
       <HomeTopNav />
       <HomeHero
-        supplierCount={home.supplierCount}
+        supplierCount={network.supplierCount}
         industryCount={home.industryCount}
         materialCount={home.materialCount}
       />
@@ -42,7 +47,7 @@ export default async function HomePage({
       <HomeInsuranceSection />
       <HomeOrchestratorSection />
       <HomeBenefitsBand
-        countryCount={home.countryCount}
+        countryCount={network.countryCount}
         materialCount={home.materialCount}
       />
       <HomeFaqSection />

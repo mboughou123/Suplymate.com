@@ -1,12 +1,17 @@
+// Short labels for mills that exist in the listed catalogue. Not a count.
 const WORDMARKS = [
   "AL GHARBIA PIPE",
-  "ISPAT ALLOYS",
   "AJ STEEL",
-  "CASASTEEL",
-  "ATLAS METALS",
-  "BUILDPRO",
-  "VOLTLINE",
-  "PACKSMART",
+  "EMSTEEL",
+  "FERRITE",
+  "POSCO",
+  "TATA STEEL",
+  "JSW STEEL",
+  "ARCELORMITTAL",
+  "NIPPON STEEL",
+  "QATAR STEEL",
+  "HADEED",
+  "FOLIFLEX",
 ];
 
 export default function HomeTrustStrip() {

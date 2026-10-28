@@ -72,31 +72,46 @@ export default function ProductCard({ data: d }: ProductCardProps) {
             <MapPin className="h-3 w-3 text-cyan" aria-hidden />
             {d.supplierName}
           </span>
+          {d.rating != null && (
           <span className="inline-flex items-center gap-1 font-semibold text-ink">
             <Star className="h-3 w-3 fill-mustard text-mustard" aria-hidden />
             {d.rating.toFixed(1)}
-            <span className="font-normal text-ink-dim">({d.reviewCount})</span>
+            {d.reviewCount != null && (
+              <span className="font-normal text-ink-dim">({d.reviewCount})</span>
+            )}
           </span>
+          )}
         </div>
 
         {/* Bulk price */}
         <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
-          <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
-            {t("bulkPrice")}
-          </p>
-          <p className="text-lg font-bold text-cyan">{d.bulkPriceLabel}</p>
+          {d.bulkPriceLabel ? (
+            <>
+              <p className="text-[11px] font-medium uppercase tracking-wide text-ink-dim">
+                {t("bulkPrice")}
+              </p>
+              <p className="text-lg font-bold text-cyan">{d.bulkPriceLabel}</p>
+            </>
+          ) : (
+            <p className="text-sm font-semibold text-ink-muted">{t("contactForPricing")}</p>
+          )}
         </div>
 
-        {/* MOQ + shipping */}
+        {(d.moq || d.shippingTime) && (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-muted">
+          {d.moq && (
           <span>
             {t("moqLabel")}: <span className="font-semibold text-ink">{d.moq}</span>
           </span>
+          )}
+          {d.shippingTime && (
           <span className="inline-flex items-center gap-1">
             <Truck className="h-3.5 w-3.5 text-teal" aria-hidden />
             {d.shippingTime}
           </span>
+          )}
         </div>
+        )}
 
         {/* Actions */}
         <div className="mt-4 flex gap-2 pt-1">

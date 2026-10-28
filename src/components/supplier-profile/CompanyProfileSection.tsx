@@ -9,8 +9,8 @@ import {
   Users,
   Boxes,
   FlaskConical,
-  Globe2,
-  Languages,
+  MapPin,
+  Clock,
   PackageCheck,
   Gauge,
 } from "lucide-react";
@@ -23,30 +23,54 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
   const { company } = profile;
 
   const metrics: { icon: LucideIcon; label: string; value: string }[] = [
-    { icon: CalendarDays, label: t("registered"), value: company.registrationDate },
-    { icon: Building2, label: t("businessType"), value: company.businessType },
-    { icon: Factory, label: t("factorySize"), value: company.factorySize },
-    { icon: Users, label: t("employees"), value: t("employeesValue", { count: company.employeeCount }) },
-    {
-      icon: Boxes,
-      label: t("productionLines"),
-      value: t("productionLinesValue", { count: company.productionLines }),
-    },
-    { icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` },
-    { icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity },
-    { icon: PackageCheck, label: t("minimumOrder"), value: company.moq },
-  ];
+    company.registrationDate
+      ? { icon: CalendarDays, label: t("registered"), value: company.registrationDate }
+      : null,
+    company.businessType
+      ? { icon: Building2, label: t("businessType"), value: company.businessType }
+      : null,
+    company.factorySize
+      ? { icon: Factory, label: t("factorySize"), value: company.factorySize }
+      : null,
+    company.employeeCount
+      ? { icon: Users, label: t("employees"), value: company.employeeCount }
+      : null,
+    company.productionLines != null
+      ? {
+          icon: Boxes,
+          label: t("productionLines"),
+          value: t("productionLinesValue", { count: company.productionLines }),
+        }
+      : null,
+    company.rdEngineers != null
+      ? { icon: FlaskConical, label: t("rdEngineers"), value: `${company.rdEngineers}` }
+      : null,
+    company.productionCapacity
+      ? { icon: Gauge, label: t("productionCapacity"), value: company.productionCapacity }
+      : null,
+    company.moq
+      ? { icon: PackageCheck, label: t("minimumOrder"), value: company.moq }
+      : null,
+    company.address
+      ? { icon: MapPin, label: t("addressLabel"), value: company.address }
+      : null,
+    company.openingHours
+      ? { icon: Clock, label: t("openingHoursLabel"), value: company.openingHours }
+      : null,
+  ].filter((m): m is { icon: LucideIcon; label: string; value: string } => m !== null);
+
+  if (metrics.length === 0) return null;
 
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <SectionHeading
         eyebrow={t("companyEyebrow")}
         title={t("companyProfileTitle")}
-        description={t("companyProfileDescription")}
+        description={t("companyProfileSourcedDescription")}
         icon={<Building2 className="h-5 w-5" />}
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {metrics.map((m, i) => (
           <motion.div
             key={m.label}
@@ -63,45 +87,12 @@ export default function CompanyProfileSection({ profile }: { profile: SupplierPr
               <p className="text-[11px] font-medium uppercase tracking-wider text-ink-dim">
                 {m.label}
               </p>
-              <p className="truncate text-sm font-bold text-ink" title={m.value}>
+              <p className="text-sm font-bold text-ink" title={m.value}>
                 {m.value}
               </p>
             </div>
           </motion.div>
         ))}
-      </div>
-
-      <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        <div className="glass-card p-5">
-          <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Globe2 className="h-4 w-4 text-cyan" aria-hidden /> {t("exportMarkets")}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {company.exportMarkets.map((m) => (
-              <span
-                key={m}
-                className="rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan"
-              >
-                {m}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="glass-card p-5">
-          <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-ink">
-            <Languages className="h-4 w-4 text-teal" aria-hidden /> {t("languagesSpoken")}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {company.languages.map((l) => (
-              <span
-                key={l}
-                className="rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal"
-              >
-                {l}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </motion.section>
   );

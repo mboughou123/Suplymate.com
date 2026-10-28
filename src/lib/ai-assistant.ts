@@ -8,6 +8,13 @@
 
 import { chatCompletion, chatStream, isOpenAiConfigured, type ChatMessage } from "@/lib/openai";
 import { getSuppliersFromDb, getProductsFromDb } from "@/lib/data-service";
+import {
+  isCatalogueVerified,
+  publicMoq,
+  sourcedGoogleRating,
+  sourcedGoogleReviews,
+  suplymateProfileScore,
+} from "@/lib/sourced-facts";
 
 export const MAX_MESSAGE_LENGTH = 2000;
 export const MAX_HISTORY_MESSAGES = 12;
@@ -63,21 +70,24 @@ export async function buildSupplierContext(message: string): Promise<string> {
     if (scored.length === 0) return "";
 
     const supplierLines = scored.map((s) => {
-      const verified =
-        s.verified === true || s.verificationStatus === "verified"
-          ? "verified"
-          : "not verified";
+      const verified = isCatalogueVerified(s) ? "catalogue-verified" : "listed, not catalogue-verified";
       const certCount =
         (s.certificationsDetailed?.length ?? 0) ||
         (s.certificationImages?.length ?? 0);
+      const googleRating = sourcedGoogleRating(s);
+      const googleReviews = sourcedGoogleReviews(s);
+      const moq = publicMoq(s.moq, s.category);
       const parts = [
         `- ${s.name}`,
         s.category ? `category: ${s.category}` : null,
         s.country || s.location ? `location: ${s.country ?? s.location}` : null,
         `status: ${verified}`,
-        typeof s.trustScore === "number" ? `trust score: ${s.trustScore}/100` : null,
-        certCount ? `certifications claimed: ${certCount}` : null,
-        s.moq ? `MOQ: ${s.moq}` : null,
+        `Suplymate score ${suplymateProfileScore(s)}/100 (listing completeness, not delivery performance)`,
+        googleRating != null
+          ? `Google rating ${googleRating}${googleReviews != null ? ` from ${googleReviews} Google reviews` : ""}`
+          : null,
+        certCount ? `certifications on file: ${certCount}` : null,
+        moq ? `MOQ: ${moq}` : null,
       ].filter(Boolean);
       return parts.join(" | ");
     });

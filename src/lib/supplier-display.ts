@@ -1,6 +1,13 @@
 import type { Supplier } from "@/data/suppliers";
 import type { ListingSupplier } from "@/lib/supplier-listing";
 import { pickPreferredCardImage } from "@/lib/image-fallback";
+import {
+  isCatalogueVerified,
+  sourcedGoogleRating,
+  sourcedGoogleReviews,
+  sourcedProductNames,
+  suplymateProfileScore,
+} from "@/lib/sourced-facts";
 
 export type DisplayProduct = {
   name: string;
@@ -28,20 +35,25 @@ export type DisplaySupplier = {
   description?: string;
   sourceUrl?: string;
   score: number;
+  /** Completeness of public listing fields. Not a delivery or quality score. */
+  profileScore: number;
   logoText: string;
   logoGradient: string;
   bannerGradient: string;
   logoUrl?: string;
   imageUrl?: string;
-  rating: number;
-  reviewCount: number;
+  /** Google Maps rating when the listing has one. Never invented. */
+  rating: number | null;
+  googleRating: number | null;
+  reviewCount: number | null;
+  googleReviews: number | null;
   verified: boolean;
-  yearsInBusiness: number;
-  employees: string;
-  area: string;
-  onTimeDelivery: number;
-  responseTime: string;
-  reorderRate: number;
+  yearsInBusiness: number | null;
+  employees: string | null;
+  area: string | null;
+  onTimeDelivery: number | null;
+  responseTime: string | null;
+  reorderRate: number | null;
   products: DisplayProduct[];
   moq: string;
   deliveryRegions: string[];
@@ -99,18 +111,12 @@ const FLAGS: Record<string, string> = {
   vietnam: "🇻🇳",
 };
 
-const EMPLOYEE_BUCKETS = ["10+", "50+", "100+", "200+", "500+"];
-
 function hashString(str: string): number {
   let h = 0;
   for (let i = 0; i < str.length; i++) {
     h = (h * 31 + str.charCodeAt(i)) | 0;
   }
   return Math.abs(h);
-}
-
-function seeded(seed: number, min: number, max: number): number {
-  return min + (seed % (max - min + 1));
 }
 
 function initials(name: string): string {
@@ -128,40 +134,31 @@ function flagFor(country: string): string {
   return FLAGS[country.toLowerCase()] ?? "🌍";
 }
 
-function priceFor(seed: number, industry: string): string {
-  // Rough per-industry price bands to feel realistic.
-  const bands: Record<string, [number, number]> = {
-    Metal: [12, 980],
-    "Construction & BTP": [8, 140],
-    "Industrial Equipment": [1200, 85000],
-    "Electrotechnical & Cabling": [1, 45],
-    "Plastics & Packaging": [1, 12],
-    "Agriculture & Agrofood": [10, 120],
-  };
-  const [lo, hi] = bands[industry] ?? [5, 200];
-  const low = lo + (seed % Math.max(1, Math.floor((hi - lo) * 0.3)));
-  const high = low + Math.max(1, Math.floor((hi - low) * 0.5));
-  const fmt = (n: number) =>
-    n >= 1 ? `$${n.toLocaleString()}` : `$${n.toFixed(2)}`;
-  return `${fmt(low)} – ${fmt(high)}`;
+function hasProfileFields(
+  s: Supplier | ListingSupplier,
+): s is Supplier {
+  return "description" in s || "email" in s || "address" in s || "certificationImages" in s;
 }
 
 export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplier {
   const seed = hashString(s.id || s.name);
   const country = s.country ?? countryOf(s.location);
   const city = s.city ?? s.location.split(",")[0].trim();
-  const rating =
-    s.googleRating ??
-    s.rating ??
-    Math.min(5, Math.max(3.8, Math.round((s.reliabilityScore / 20) * 10) / 10));
-  const reviewCount = s.googleReviews ?? s.reviewCount ?? seeded(seed, 18, 1240);
-  const verified = s.verified ?? s.reliabilityScore >= 85;
-  const yearsInBusiness = s.yearsInBusiness ?? seeded(seed >> 2, 5, 30);
-  const employees = s.employees ?? EMPLOYEE_BUCKETS[seed % EMPLOYEE_BUCKETS.length];
+  const googleRating = sourcedGoogleRating(s);
+  const googleReviews = sourcedGoogleReviews(s);
+  const verified = isCatalogueVerified(s);
+  const yearsInBusiness = s.yearsInBusiness ?? null;
+  const employees = s.employees ?? null;
+  const listedScore = "profileScore" in s ? s.profileScore : undefined;
+  const profileScore =
+    typeof listedScore === "number"
+      ? listedScore
+      : hasProfileFields(s)
+        ? suplymateProfileScore(s)
+        : 0;
 
-  const moqList = [s.moq];
-  // Real photo-bearing catalogue SKUs (curated packs) take the card slots
-  // first; illustrative product lines only fill what remains.
+  // Real photo-bearing catalogue SKUs take the card slots. Category-template
+  // product names and invented prices are not shown.
   const featured: DisplayProduct[] = (s.featuredProducts ?? [])
     .filter((p) => p.image)
     .slice(0, 3)
@@ -174,16 +171,16 @@ export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplie
       href: `/products/${p.id}`,
       isReal: true,
     }));
-  const illustrative: DisplayProduct[] = s.products
+  const named: DisplayProduct[] = sourcedProductNames(s)
     .filter((name) => !featured.some((f) => f.name.toLowerCase() === name.toLowerCase()))
     .slice(0, Math.max(0, 3 - featured.length))
     .map((name, i) => ({
       name,
-      price: priceFor(seed + i * 7, s.industry),
-      moq: moqList[i] ?? `${seeded(seed + i, 1, 500)} pcs`,
+      price: "",
+      moq: "",
       gradient: PRODUCT_GRADIENTS[(seed + i) % PRODUCT_GRADIENTS.length],
     }));
-  const products: DisplayProduct[] = [...featured, ...illustrative];
+  const products: DisplayProduct[] = [...featured, ...named];
 
   return {
     id: s.id,
@@ -198,20 +195,23 @@ export function toDisplaySupplier(s: Supplier | ListingSupplier): DisplaySupplie
     description: "description" in s ? s.description : undefined,
     sourceUrl: "sourceUrl" in s ? s.sourceUrl : undefined,
     score: s.score ?? s.reliabilityScore,
+    profileScore,
     logoText: initials(s.name),
     logoGradient: LOGO_GRADIENTS[seed % LOGO_GRADIENTS.length],
     bannerGradient: BANNER_GRADIENTS[seed % BANNER_GRADIENTS.length],
     logoUrl: s.logoUrl,
     imageUrl: pickPreferredCardImage([s.imageUrl, ...(s.supplierImages ?? [])]),
-    rating,
-    reviewCount,
+    rating: googleRating,
+    googleRating,
+    reviewCount: googleReviews,
+    googleReviews,
     verified,
     yearsInBusiness,
     employees,
-    area: `${(seeded(seed, 5, 60) * 100).toLocaleString()}+ m²`,
-    onTimeDelivery: seeded(seed, 90, 99),
-    responseTime: `≤${[1, 2, 3, 4, 6][seed % 5]}h`,
-    reorderRate: seeded(seed >> 1, 12, 46),
+    area: null,
+    onTimeDelivery: null,
+    responseTime: null,
+    reorderRate: null,
     products,
     moq: s.moq,
     deliveryRegions: "deliveryRegions" in s ? s.deliveryRegions : [],

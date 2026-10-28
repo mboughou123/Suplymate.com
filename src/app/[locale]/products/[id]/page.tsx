@@ -30,7 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const detail = getProductDetail(product);
   return {
     title: `${product.name} · ${detail.supplier.name} | Suplymate`,
-    description: `${product.name} by ${detail.supplier.name}. ${detail.displayFromLabel} per ${product.unit}, MOQ ${detail.moq}, ships in ${detail.leadTime}. Product description, specs and the supplier to request it from on Suplymate.`,
+    description: [
+      `${product.name} by ${detail.supplier.name}.`,
+      detail.displayFromLabel,
+      detail.moq ? `MOQ ${detail.moq}.` : null,
+      detail.leadTime ? detail.leadTime : null,
+      "Request a quote on Suplymate.",
+    ]
+      .filter(Boolean)
+      .join(" "),
   };
 }
 
@@ -174,7 +182,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <ReportButton targetType="PRODUCT" targetId={product.id} />
             </div>
 
-            {/* Options */}
+            {detail.options.length > 0 && (
             <div className="mt-5 space-y-3">
               {detail.options.map((opt) => (
                 <div key={opt.name}>
@@ -195,8 +203,9 @@ export default async function ProductDetailPage({ params }: Props) {
                 </div>
               ))}
             </div>
+            )}
 
-            {/* Customization */}
+            {detail.customizationOptions.length > 0 && (
             <div className="mt-5 rounded-xl border border-cyan/15 bg-cyan/5 p-4">
               <p className="flex items-center gap-1.5 text-xs font-semibold text-cyan">
                 <Wrench className="h-3.5 w-3.5" aria-hidden />
@@ -214,6 +223,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 ))}
               </div>
             </div>
+            )}
           </div>
 
           {/* Purchase sidebar */}
@@ -235,9 +245,8 @@ export default async function ProductDetailPage({ params }: Props) {
           <div>
             <h2 className="mb-2 text-xl font-bold text-ink">Product details</h2>
             <p className="mb-5 rounded-lg bg-cyan-soft px-3 py-2 text-xs text-cyan">
-              Illustrative specifications based on category norms and supplier-provided
-              information. These are not independently verified — confirm exact specs,
-              certifications, and tolerances with the supplier in your RFQ.
+              Details below come from the product record. Confirm specs, certifications, and
+              tolerances with the supplier in your RFQ.
             </p>
             <ProductDescription
               sections={detail.descriptionSections}
