@@ -29346,7 +29346,9 @@
       "name": "LYC Deep Groove Ball Bearings",
       "slug": "lyc-deep-groove-ball-bearings",
       "category": "Industrial Parts",
-      "images": [],
+      "images": [
+        "/images/products/real11/lyc-bearing-lyc-deep-groove-ball-bearings/01.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -29369,7 +29371,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.lycbearing.com/",
       "productUrl": "https://www.lycbearing.com/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://www.lycbearing.com/news/2025KFPMTpvbPp.shtml",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -29386,7 +29388,9 @@
       "name": "LYC Spherical Roller Bearings",
       "slug": "lyc-spherical-roller-bearings",
       "category": "Industrial Parts",
-      "images": [],
+      "images": [
+        "/images/products/real11/lyc-bearing-lyc-spherical-roller-bearings/01.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -29409,7 +29413,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.lycbearing.com/",
       "productUrl": "https://www.lycbearing.com/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://www.lycbearing.com/news/2025KFPMTpvbPp.shtml",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -29426,7 +29430,10 @@
       "name": "LYC Large Industrial / Rolling-Mill Bearings",
       "slug": "lyc-large-industrial-rolling-mill-bearings",
       "category": "Industrial Parts",
-      "images": [],
+      "images": [
+        "/images/products/real11/lyc-bearing-lyc-large-industrial-rolling-mill-bearings/01.jpg",
+        "/images/products/real11/lyc-bearing-lyc-large-industrial-rolling-mill-bearings/02.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -29449,7 +29456,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.lycbearing.com/",
       "productUrl": "https://www.lycbearing.com/",
-      "imageSourceUrl": "https://res.lycbearing.com/upload/blockBanner/20161018/2016JROtwhpXYR.jpg",
+      "imageSourceUrl": "https://www.lycbearing.com/news/2020ESJuO4hYdz.shtml",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30021,7 +30028,11 @@
       "name": "BlueScope COLORBOND Pre-Painted Steel",
       "slug": "bluescope-colorbond-pre-painted-steel",
       "category": "Steel & Metals",
-      "images": [],
+      "images": [
+        "/images/products/real11/bluescope-bluescope-colorbond-pre-painted-steel/01.jpg",
+        "/images/products/real11/bluescope-bluescope-colorbond-pre-painted-steel/02.jpg",
+        "/images/products/real11/bluescope-bluescope-colorbond-pre-painted-steel/03.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30044,7 +30055,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.bluescope.com/",
       "productUrl": "https://www.bluescope.com/",
-      "imageSourceUrl": "https://www.bluescope.com/adobe/dynamicmedia/deliver/dm-aid--31d8573d-6272-4b2e-bcc0-07758aad5704/how-we-work.jpg",
+      "imageSourceUrl": "https://colorbond.com/products/roofing",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30103,7 +30114,10 @@
       "name": "SAIL Rails, Plates and Structural Steel",
       "slug": "sail-rails-plates-and-structural-steel",
       "category": "Steel & Metals",
-      "images": [],
+      "images": [
+        "/images/products/real11/sail-sail-rails-plates-and-structural-steel/01.jpg",
+        "/images/products/real11/sail-sail-rails-plates-and-structural-steel/02.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30126,7 +30140,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.sail.co.in/",
       "productUrl": "https://www.sail.co.in/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://www.sail.co.in/en/products/sail-rail-products",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30145,7 +30159,10 @@
       "category": "Steel & Metals",
       "images": [
         "/images/products/gerdau/gerdau-bar-rod.jpg",
-        "/images/products/gerdau/gerdau-bar-rod-local.jpg"
+        "/images/products/gerdau/gerdau-bar-rod-local.jpg",
+        "/images/products/real11/gerdau-gerdau-merchant-bar-and-wire-rod/01.jpg",
+        "/images/products/real11/gerdau-gerdau-merchant-bar-and-wire-rod/02.jpg",
+        "/images/products/real11/gerdau-gerdau-merchant-bar-and-wire-rod/03.jpg"
       ],
       "videos": [],
       "basePrice": null,
@@ -30270,7 +30287,11 @@
       "name": "Prysmian Energy and Power Cables",
       "slug": "prysmian-energy-and-power-cables",
       "category": "Cables & Electrical",
-      "images": [],
+      "images": [
+        "/images/products/real11/prysmian-prysmian-energy-and-power-cables/01.jpg",
+        "/images/products/real11/prysmian-prysmian-energy-and-power-cables/02.jpg",
+        "/images/products/real11/prysmian-prysmian-energy-and-power-cables/03.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30293,7 +30314,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.prysmian.com/",
       "productUrl": "https://www.prysmian.com/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://uk.prysmian.com/markets/electrification/industrial-and-construction/power-cables",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30310,7 +30331,11 @@
       "name": "Prysmian Optical Fibre and Telecom Cables",
       "slug": "prysmian-optical-fibre-and-telecom-cables",
       "category": "Cables & Electrical",
-      "images": [],
+      "images": [
+        "/images/products/real11/prysmian-prysmian-optical-fibre-and-telecom-cables/01.jpg",
+        "/images/products/real11/prysmian-prysmian-optical-fibre-and-telecom-cables/02.jpg",
+        "/images/products/real11/prysmian-prysmian-optical-fibre-and-telecom-cables/03.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30333,7 +30358,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.prysmian.com/",
       "productUrl": "https://www.prysmian.com/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://uk.prysmian.com/markets/digital-solutions/optic-fibre-cables",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30350,7 +30375,9 @@
       "name": "Far East Cable LV / MV Power Cables",
       "slug": "far-east-cable-lv-mv-power-cables",
       "category": "Cables & Electrical",
-      "images": [],
+      "images": [
+        "/images/products/real11/far-east-cable-far-east-cable-lv-mv-power-cables/01.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30373,7 +30400,7 @@
       "reviewCount": null,
       "sourceUrl": "http://en.fe-cable.com/",
       "productUrl": "http://en.fe-cable.com/",
-      "imageSourceUrl": "http://en.fe-cable.com/Upload/image/202208/20220824171345_6760.jpeg",
+      "imageSourceUrl": "https://www.fe-cable.com/products_list_45.html",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30390,7 +30417,10 @@
       "name": "Hengtong Optical Fibre and Power Cable Systems",
       "slug": "hengtong-optical-fibre-and-power-cable-systems",
       "category": "Cables & Electrical",
-      "images": [],
+      "images": [
+        "/images/products/real11/hengtong-hengtong-optical-fibre-and-power-cable-systems/01.jpg",
+        "/images/products/real11/hengtong-hengtong-optical-fibre-and-power-cable-systems/02.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30413,7 +30443,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.hengtonggroup.com/",
       "productUrl": "https://www.hengtonggroup.com/",
-      "imageSourceUrl": "https://www.hengtonggroup.com/en/public/upload/file/20230823/8c921366d026f8177fff1c2418787a17.jpg",
+      "imageSourceUrl": "https://www.hengtonggroup.com/en/home/products/detail/id/12.html",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
@@ -30647,7 +30677,10 @@
       "name": "JSW Cement OPC / Slag Cement",
       "slug": "jsw-cement-opc-slag-cement",
       "category": "Construction",
-      "images": [],
+      "images": [
+        "/images/products/real11/jsw-cement-jsw-cement-opc-slag-cement/01.jpg",
+        "/images/products/real11/jsw-cement-jsw-cement-opc-slag-cement/02.jpg"
+      ],
       "videos": [],
       "basePrice": null,
       "priceUnit": null,
@@ -30670,7 +30703,7 @@
       "reviewCount": null,
       "sourceUrl": "https://www.jswcement.in/",
       "productUrl": "https://www.jswcement.in/",
-      "imageSourceUrl": null,
+      "imageSourceUrl": "https://www.jswcement.in/products/cement/ordinary-portland-cement-opc",
       "sku": null,
       "verifiedSupplier": true,
       "status": "approved",
