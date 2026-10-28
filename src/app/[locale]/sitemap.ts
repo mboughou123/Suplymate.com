@@ -18,6 +18,7 @@ const STATIC_PATHS = [
   "/blog",
   "/about",
   "/careers",
+  "/early-access",
   "/contact",
   "/faq",
   "/help",

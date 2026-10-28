@@ -4,9 +4,12 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import NavbarGate from "@/components/NavbarGate";
 import FooterGate from "@/components/FooterGate";
 import Providers from "@/components/Providers";
+import AttributionCapture from "@/components/early-access/AttributionCapture";
 import { routing, isRtlLocale, type Locale } from "@/i18n/routing";
 import { buildPageAlternates } from "@/lib/locale-metadata";
 import "../globals.css";
@@ -61,9 +64,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="min-h-screen flex flex-col font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
+            <AttributionCapture />
             <NavbarGate />
             <main className="flex-1">{children}</main>
             <FooterGate />
+            <Analytics />
+            <SpeedInsights />
           </Providers>
         </NextIntlClientProvider>
       </body>

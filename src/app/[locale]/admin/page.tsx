@@ -18,6 +18,7 @@ import {
   Users,
   ScrollText,
   Briefcase,
+  Mail,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -40,13 +41,14 @@ export default async function AdminHomePage() {
   if (!authenticated) redirect("/login?callbackUrl=/admin");
   if (!ok) redirect("/");
 
-  const [pendingClaims, openRfqs, pendingReviews, openReports, pendingProducts, applications] = await Promise.all([
+  const [pendingClaims, openRfqs, pendingReviews, openReports, pendingProducts, applications, earlyAccess] = await Promise.all([
     safeCount(() => prisma.supplierClaim.count({ where: { status: "SUBMITTED" } })),
     safeCount(() => prisma.rfq.count()),
     safeCount(() => prisma.review.count({ where: { status: "PENDING" } })),
     safeCount(() => prisma.report.count({ where: { status: "OPEN" } })),
     safeCount(() => prisma.scrapedProduct.count({ where: { status: "pending" } })),
     safeCount(() => prisma.careerApplication.count()),
+    safeCount(() => prisma.earlyAccessSignup.count()),
   ]);
 
   const sections: {
@@ -68,6 +70,7 @@ export default async function AdminHomePage() {
     { href: "/admin/import-suppliers", label: "Import suppliers", desc: "Scrape & import", icon: Users },
     { href: "/admin/subscriptions", label: "Subscriptions", desc: "Plans & billing status", icon: CreditCard },
     { href: "/admin/careers", label: "Job applications", desc: "Careers form submissions & CVs", icon: Briefcase, badge: applications },
+    { href: "/admin/early-access", label: "Early access", desc: "Pre-launch signups by source", icon: Mail, badge: earlyAccess },
     { href: "/admin/audit", label: "Audit log", desc: "Privileged action history", icon: ScrollText },
     { href: "/messages", label: "Messages", desc: "Conversations", icon: MessageSquare },
   ];

@@ -17,7 +17,9 @@
     "aiAssistantDescription": "Source smarter with AI-powered supplier intelligence, pricing analysis, and procurement recommendations.",
     "adminTitle": "Admin | Suplymate",
     "careersTitle": "Careers | Suplymate",
-    "careersDescription": "Join the Suplymate team. Help build the AI procurement platform for industrial buyers across the UAE, India, and beyond."
+    "careersDescription": "Join the Suplymate team. Help build the AI procurement platform for industrial buyers across the UAE, India, and beyond.",
+    "earlyAccessTitle": "Early access | Suplymate",
+    "earlyAccessDescription": "Request early access to Suplymate. Verified mills, real plant photos, and a way to request quotes."
   },
   "navigation": {
     "brand": "Suplymate",
@@ -141,7 +143,8 @@
     "imageRemoval": "Image Removal",
     "refundAndProtection": "Refund & Protection",
     "copyright": "© {year} Suplymate. All rights reserved.",
-    "careers": "Careers"
+    "careers": "Careers",
+    "earlyAccess": "Early access"
   },
   "languageSelector": {
     "label": "Language",
@@ -1653,5 +1656,64 @@
     "upgradeCta": "Upgrade to Basic",
     "trialCta": "Start 3-day free trial",
     "comparePlans": "Compare plans"
+  },
+  "earlyAccess": {
+    "eyebrow": "Early access",
+    "title": "Request early access",
+    "intro": "Suplymate is opening to buyers and mills before the public launch. Leave your work email and we will write when you can request quotes from mills on the network.",
+    "compactTitle": "Get early access",
+    "compactBody": "Verified mills, real plant photos, and a way to request quotes. Leave your work email and we will write when access opens.",
+    "fullPage": "Read what early access includes",
+    "formTitle": "Join the list",
+    "formBody": "Work email is enough. Name, company, and what you source help us see who the first access should fit.",
+    "values": {
+      "verified": {
+        "title": "Verified mills",
+        "body": "A mill is marked verified only after Suplymate reviews it. Other listings stay visible and are not labeled verified."
+      },
+      "photos": {
+        "title": "Real plant photos",
+        "body": "When a mill has plant photography, it is shown on the supplier page so you can see the works before you enquire."
+      },
+      "quotes": {
+        "title": "Request quotes",
+        "body": "Early access is how you ask those mills for a quote once your account is open. This form does not create an account."
+      }
+    },
+    "email": "Work email",
+    "name": "Name",
+    "company": "Company",
+    "role": "Role",
+    "rolePlaceholder": "Select a role",
+    "roles": {
+      "procurement": "Procurement / buyer",
+      "engineer": "Engineer",
+      "supplier": "Supplier / mill",
+      "other": "Other"
+    },
+    "categories": "What you source",
+    "categoriesHint": "Choose any that apply.",
+    "note": "Anything else",
+    "notePlaceholder": "Grades, sizes, or regions you buy.",
+    "optional": "optional",
+    "submit": "Request early access",
+    "submitting": "Sending…",
+    "privacy": "We store this so we can email you about early access. We do not sell the list.",
+    "privacyLink": "Privacy policy",
+    "successTitle": "You're on the list",
+    "successBody": "We'll email this address when early access opens. No account has been created.",
+    "duplicateTitle": "This email is already on the list",
+    "duplicateBody": "We'll use the same address when early access opens. You don't need to sign up again.",
+    "errorGeneric": "We couldn't save that. Please try again in a moment.",
+    "rateLimited": "Too many attempts from this network. Please wait a few minutes and try again.",
+    "errors": {
+      "emailRequired": "Please enter your work email.",
+      "emailInvalid": "Please enter a valid work email.",
+      "nameTooLong": "Name must be 80 characters or fewer.",
+      "companyTooLong": "Company must be 120 characters or fewer.",
+      "roleInvalid": "Please choose a role from the list.",
+      "categoriesInvalid": "Choose categories from the list.",
+      "noteTooLong": "Please keep this under 2,000 characters."
+    }
   }
 }
