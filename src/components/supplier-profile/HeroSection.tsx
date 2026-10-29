@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import {
   BadgeCheck,
   Star,
-  MapPin,
-  Clock,
-  Truck,
   Building2,
   ShieldCheck,
   Sparkles,
@@ -31,15 +28,17 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
   const firstProduct = base.products[0]?.name;
 
   const indicators = [
-    { icon: ShieldCheck, label: t("verifiedSupplier"), ok: base.verified },
-    {
-      icon: BadgeCheck,
-      label: t("certificationsCount", { count: profile.certifications.length }),
-      ok: true,
-    },
-    { icon: Truck, label: t("onTimeDelivery", { percent: trust.onTimeDelivery }), ok: true },
-    { icon: Clock, label: t("repliesIn", { time: trust.responseTime }), ok: true },
-  ];
+    base.verified
+      ? { icon: ShieldCheck, label: t("verifiedSupplier"), ok: true }
+      : null,
+    profile.certifications.length > 0
+      ? {
+          icon: BadgeCheck,
+          label: t("certificationsCount", { count: profile.certifications.length }),
+          ok: true,
+        }
+      : null,
+  ].filter((ind): ind is { icon: typeof ShieldCheck; label: string; ok: boolean } => ind !== null);
 
   return (
     <section className="relative overflow-hidden">
@@ -106,29 +105,34 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
                       <span aria-hidden className="text-base">{base.flag}</span>
                       {base.city}, {base.country}
                     </span>
-                    <span className="inline-flex items-center gap-1 font-semibold text-ink">
-                      <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
-                      {base.rating.toFixed(1)}
-                      <span className="font-normal text-ink-dim">
-                        {t("reviewsCount", { count: base.reviewCount.toLocaleString() })}
+                    {base.googleRating != null && (
+                      <span className="inline-flex items-center gap-1 font-semibold text-ink">
+                        <Star className="h-4 w-4 fill-mustard text-mustard" aria-hidden />
+                        {base.googleRating.toFixed(1)}
+                        <span className="font-normal text-ink-dim">
+                          {base.googleReviews != null
+                            ? t("googleReviewsCount", { count: base.googleReviews.toLocaleString() })
+                            : t("googleRatingLabel")}
+                        </span>
                       </span>
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-ink-muted">
-                      <Building2 className="h-4 w-4 text-cyan" aria-hidden />
-                      {t("yearsInBusiness", { years: company.yearsInBusiness })}
-                    </span>
+                    )}
+                    {company.yearsInBusiness != null && (
+                      <span className="inline-flex items-center gap-1 text-ink-muted">
+                        <Building2 className="h-4 w-4 text-cyan" aria-hidden />
+                        {t("yearsInBusiness", { years: company.yearsInBusiness })}
+                      </span>
+                    )}
                   </div>
 
                   <div className="mt-3 flex flex-wrap gap-2 text-xs">
                     <span className="rounded-md bg-cyan/10 px-2.5 py-1 font-semibold text-cyan">
                       {base.categoryLabel}
                     </span>
-                    <span className="rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
-                      {company.businessType}
-                    </span>
-                    <span className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
-                      <MapPin className="h-3 w-3" aria-hidden /> {company.factorySize}
-                    </span>
+                    {company.businessType && (
+                      <span className="rounded-md bg-slate-100 px-2.5 py-1 font-medium text-ink-muted">
+                        {company.businessType}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -203,11 +207,8 @@ export default function HeroSection({ profile }: { profile: SupplierProfile }) {
               <RadialScore value={trust.trustScore} label={t("trustScore")} />
               <div className="text-center">
                 <p className="text-xs font-semibold text-ink">{t("trustIndex")}</p>
-                <p className="mt-0.5 inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">
-                  {t("riskConfidence", {
-                    risk: trust.riskLevel,
-                    confidence: trust.aiConfidence,
-                  })}
+                <p className="mt-1 max-w-[12rem] text-[11px] leading-snug text-ink-dim">
+                  {t("profileScoreHint")}
                 </p>
               </div>
             </div>

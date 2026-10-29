@@ -29,12 +29,7 @@ export type Message = {
 };
 
 export type SupplierMeta = {
-  online: boolean;
-  responseTime: string;
-  responseRate: number;
-  lastActive: string;
-  verified: boolean;
-  deliveryReliability: number;
+  verified: false;
 };
 
 export type ConversationSummary = {

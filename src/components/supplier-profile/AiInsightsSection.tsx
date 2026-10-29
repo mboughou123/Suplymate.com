@@ -23,6 +23,7 @@ const TONE: Record<string, string> = {
 export default function AiInsightsSection({ profile }: { profile: SupplierProfile }) {
   const t = useTranslations("supplierProfile");
   const { ai, base } = profile;
+  if (!ai.analysis && ai.cards.length === 0) return null;
 
   return (
     <section className="relative overflow-hidden bg-navy-dark py-14 text-white">

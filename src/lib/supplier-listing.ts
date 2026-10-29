@@ -1,5 +1,6 @@
 import type { Supplier, SupplierCategory, Industry } from "@/data/suppliers";
 import { textInIndustry, type Industry as Sector } from "@/data/industries";
+import { isCatalogueVerified, suplymateProfileScore } from "@/lib/sourced-facts";
 
 /** Fields the directory card + client-side filters actually need. */
 export type ListingSupplier = {
@@ -26,6 +27,9 @@ export type ListingSupplier = {
   googleReviews?: number;
   rating?: number;
   reviewCount?: number;
+  verificationStatus?: Supplier["verificationStatus"];
+  /** Completeness of public listing fields. Not a delivery or quality score. */
+  profileScore?: number;
   /** Lowercased description tokens not already present on the card fields. */
   searchExtra?: string;
 };
@@ -96,7 +100,9 @@ export function toListingSupplier(s: Supplier): ListingSupplier {
     score: s.score,
     logoUrl: s.logoUrl,
     imageUrl: s.imageUrl,
-    verified: s.verified,
+    verified: isCatalogueVerified(s),
+    verificationStatus: s.verificationStatus,
+    profileScore: suplymateProfileScore(s),
     businessType: s.businessType,
     yearsInBusiness: s.yearsInBusiness,
     employees: s.employees,

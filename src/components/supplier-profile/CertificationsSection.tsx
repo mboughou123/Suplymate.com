@@ -97,6 +97,8 @@ export default function CertificationsSection({ profile }: { profile: SupplierPr
 
   const altFor = (c: Certification) => t("certificateImageAlt", { name: c.name, authority: c.authority });
 
+  if (!isReal) return null;
+
   return (
     <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
       <div className="flex items-end justify-between gap-4">

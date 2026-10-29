@@ -72,7 +72,7 @@ export default async function CompareSuppliersPage({ searchParams }: Props) {
               <td className="px-4 py-3 text-ink-dim">Verification</td>
               {selected.map((s) => (
                 <td key={s!.id} className="px-4 py-3">
-                  {s!.verified ? (
+                  {s!.verificationStatus === "verified" ? (
                     <span className="inline-flex items-center gap-1 text-emerald-700">
                       <BadgeCheck className="h-4 w-4" aria-hidden /> Verified
                     </span>

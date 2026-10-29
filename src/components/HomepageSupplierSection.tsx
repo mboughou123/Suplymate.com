@@ -20,7 +20,7 @@ function toCardProps(s: Supplier): HomepageSupplierCardProps {
   const d = toDisplaySupplier(s);
   const description =
     s.description?.trim() ||
-    `${d.name} is a verified ${d.categoryLabel.toLowerCase()} supplier based in ${d.city}, ${d.country}, vetted for reliability, compliance, and delivery performance on Suplymate.`;
+    `${d.name} is a ${d.categoryLabel.toLowerCase()} supplier based in ${d.city}, ${d.country}.`;
   return {
     id: d.id,
     name: d.name,

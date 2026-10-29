@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSuppliersFromDb } from "@/lib/data-service";
 import { getPublishedProviderLogos, getPublishedProviderPhotos } from "@/lib/media-store";
+import { publicSupplierStats } from "@/lib/sourced-facts";
 import { toListingSupplier } from "@/lib/supplier-listing";
 import SuppliersClient from "./SuppliersClient";
 
@@ -22,11 +23,10 @@ export default async function SuppliersPage({
     getPublishedProviderPhotos(),
   ]);
   const suppliers = allSuppliers.map(toListingSupplier);
-
-  const verifiedCount = suppliers.filter((s) => s.verified).length;
-  const countryCount = new Set(
-    suppliers.map((s) => s.country ?? s.location.split(",").pop()!.trim())
-  ).size;
+  // Same helper the homepage hero uses, over the same listed directory.
+  const network = publicSupplierStats(allSuppliers);
+  const countryCount = network.countryCount;
+  const verifiedCount = network.verifiedCount;
 
   return (
     <div className="bg-transparent min-h-screen">
@@ -40,11 +40,11 @@ export default async function SuppliersPage({
             {t("pageTitle")}
           </h1>
           <p className="mt-3 max-w-2xl text-white/75">
-            {t("pageSubtitle", { count: suppliers.length, countries: countryCount })}
+            {t("pageSubtitle", { count: network.supplierCount, countries: countryCount })}
           </p>
           <div className="mt-5 flex flex-wrap gap-6 text-sm">
             <div>
-              <p className="text-2xl font-bold text-white">{suppliers.length}</p>
+              <p className="text-2xl font-bold text-white">{network.supplierCount}</p>
               <p className="text-white/60">{t("suppliersCount")}</p>
             </div>
             <div>

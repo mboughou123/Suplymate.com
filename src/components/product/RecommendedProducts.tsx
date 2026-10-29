@@ -34,8 +34,12 @@ export default function RecommendedProducts({
               <p className="mt-1 line-clamp-2 text-sm font-semibold text-ink group-hover:text-cyan">
                 {p.name}
               </p>
-              <p className="mt-2 text-sm font-bold text-ink">{p.priceFromLabel}</p>
-              <p className="text-[11px] text-ink-dim">MOQ: {p.moq}</p>
+              {p.priceFromLabel ? (
+                <p className="mt-2 text-sm font-bold text-ink">{p.priceFromLabel}</p>
+              ) : (
+                <p className="mt-2 text-xs font-medium text-ink-muted">Contact supplier for pricing</p>
+              )}
+              {p.moq ? <p className="text-[11px] text-ink-dim">MOQ: {p.moq}</p> : null}
               <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-cyan">
                 View product
                 <ArrowRight

@@ -5,7 +5,6 @@ import {
   Send,
   Paperclip,
   Sparkles,
-  ShieldCheck,
   ShieldAlert,
   FileText,
   ImageIcon,
@@ -17,7 +16,6 @@ import {
 } from "lucide-react";
 import {
   type Message,
-  type SupplierMeta,
   type ConversationStatus,
   STATUS_LABELS,
   STATUS_STYLES,
@@ -65,7 +63,6 @@ export default function ChatThread({
   onStatusChange,
 }: Props) {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [meta, setMeta] = useState<SupplierMeta | null>(null);
   const [supplierName, setSupplierName] = useState("Supplier");
   const [status, setStatus] = useState<ConversationStatus>("inquiry");
   const [input, setInput] = useState("");
@@ -90,7 +87,6 @@ export default function ChatThread({
     if (!res.ok) return;
     const data = await res.json();
     setMessages(data.messages);
-    setMeta(data.supplierMeta);
     setSupplierName(data.conversation.supplierName);
     setStatus(data.conversation.status);
   }, [conversationId]);
@@ -210,25 +206,10 @@ export default function ChatThread({
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan to-teal text-sm font-bold text-white">
               {supplierName.slice(0, 2).toUpperCase()}
             </div>
-            <span
-              className={`absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full ring-2 ring-white ${
-                meta?.online ? "bg-emerald-500" : "bg-slate-300"
-              }`}
-            />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
               <span className="text-sm font-semibold text-ink">{supplierName}</span>
-              {meta?.verified && (
-                <ShieldCheck className="h-4 w-4 text-emerald-600" aria-label="Verified" />
-              )}
-            </div>
-            <div className="flex items-center gap-2 text-[11px] text-ink-dim">
-              <span>{meta?.lastActive ?? "—"}</span>
-              <span>·</span>
-              <span>Replies {meta?.responseTime ?? "—"}</span>
-              <span>·</span>
-              <span>{meta?.responseRate ?? "—"}% response rate</span>
             </div>
           </div>
         </div>

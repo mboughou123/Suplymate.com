@@ -147,26 +147,7 @@ export default function HomeHero({ supplierCount, industryCount, materialCount }
                 }`}
               >
                 <p className="text-xs font-semibold text-white">{t("consoleResult")}</p>
-                <div className="mt-2 space-y-1.5">
-                  {[
-                    { label: "Price", v: 78 },
-                    { label: "Delivery", v: 84 },
-                    { label: "Quality", v: 91 },
-                    { label: "Location", v: 98 },
-                    { label: "Trust", v: 94 },
-                  ].map((row) => (
-                    <div key={row.label} className="grid grid-cols-[4rem_1fr_2rem] items-center gap-2 text-[11px]">
-                      <span className="text-white/55">{row.label}</span>
-                      <span className="h-1.5 overflow-hidden rounded-full bg-white/10">
-                        <span
-                          className="block h-full rounded-full bg-gradient-to-r from-cyan to-cyan-glow transition-[width] duration-700 ease-cinema"
-                          style={{ width: step === 4 ? `${row.v}%` : "0%" }}
-                        />
-                      </span>
-                      <span className="text-right tabular-nums text-white/80">{row.v}</span>
-                    </div>
-                  ))}
-                </div>
+                <p className="mt-1 text-[11px] leading-relaxed text-white/55">{t("consoleResultNote")}</p>
               </div>
 
               <p className="mt-4 text-[11px] leading-relaxed text-white/40">{t("trustNote")}</p>

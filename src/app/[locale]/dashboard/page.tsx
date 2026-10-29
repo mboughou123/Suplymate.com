@@ -143,7 +143,7 @@ export default async function DashboardPage() {
   }
 
   const verifiedSuppliers = suppliers.filter(
-    (s) => s.verified === true || s.verificationStatus === "verified",
+    (s) => s.verificationStatus === "verified",
   ).length;
 
   const recentRfqs: RecentRfq[] = (recentRfqRows ?? []).map((r) => ({

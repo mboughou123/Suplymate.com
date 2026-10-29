@@ -11,12 +11,45 @@ export default function ReviewsSection({ profile }: { profile: SupplierProfile }
   const t = useTranslations("supplierProfile");
   const { reviews, reviewSummary } = profile;
   const [filter, setFilter] = useState<"all" | "verified" | 5 | 4 | 3>("all");
-
   const visible = useMemo(() => {
     if (filter === "all") return reviews;
     if (filter === "verified") return reviews.filter((r) => r.verifiedPurchase);
     return reviews.filter((r) => r.rating === filter);
   }, [reviews, filter]);
+
+  if (reviews.length === 0) {
+    return (
+      <motion.section {...reveal} transition={{ duration: 0.6 }} className="py-8 sm:py-10">
+        <SectionHeading
+          eyebrow={t("reputationEyebrow")}
+          title={t("buyerReviewsTitle")}
+          description={t("noBuyerReviewsDescription")}
+          icon={<MessageSquareQuote className="h-5 w-5" />}
+        />
+        <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+          <p className="text-sm font-medium text-ink">{t("noBuyerReviewsTitle")}</p>
+          {profile.base.googleRating != null && (
+            <p className="mx-auto mt-2 max-w-md text-sm text-ink-muted">
+              {t("googleRatingLine", {
+                rating: profile.base.googleRating.toFixed(1),
+                count: profile.base.googleReviews ?? 0,
+              })}
+            </p>
+          )}
+          {profile.base.sourceUrl && (
+            <a
+              href={profile.base.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="mt-3 inline-flex text-xs font-medium text-cyan hover:underline"
+            >
+              {t("viewOriginalSource")}
+            </a>
+          )}
+        </div>
+      </motion.section>
+    );
+  }
 
   const filters: { key: typeof filter; label: string }[] = [
     { key: "all", label: t("allReviews") },

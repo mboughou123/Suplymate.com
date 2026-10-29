@@ -15,8 +15,8 @@ export type HomepageSupplierCardProps = {
   location: string;
   country: string;
   flag: string;
-  rating: number;
-  reviewCount: number;
+  rating: number | null;
+  reviewCount: number | null;
   verified: boolean;
   description: string;
   /** Real cover/business photo (DB/CDN); may be empty. */
@@ -103,14 +103,18 @@ export default function HomepageSupplierCard({
               aria-hidden
               className="h-0.5 w-0.5 rounded-full bg-slate-300"
             />
+            {rating != null && (
             <span className="inline-flex items-center gap-1 text-caption font-semibold tabular-nums text-ink">
               <Star
                 className="h-3.5 w-3.5 fill-mustard-light text-mustard-light"
                 aria-hidden
               />
               {rating.toFixed(1)}
-              <span className="font-normal text-ink-dim">({reviewCount})</span>
+              {reviewCount != null && (
+                <span className="font-normal text-ink-dim">({reviewCount} Google)</span>
+              )}
             </span>
+            )}
           </div>
           <p className="mt-3 line-clamp-2 text-body-sm text-ink-muted">
             {description}

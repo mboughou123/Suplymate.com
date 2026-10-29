@@ -44,7 +44,9 @@ export default function ProductPurchasePanel({
           <p className="mt-2 text-sm text-ink-muted">No public price listed — the supplier quotes on request.</p>
         )}
 
+        {(moq || shipping.leadTime) && (
         <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-slate-100 pt-4 text-xs">
+          {moq && (
           <div className="rounded-xl bg-slate-50 p-3">
             <dt className="flex items-center gap-1 text-ink-dim">
               <PackageCheck className="h-3.5 w-3.5 text-teal" aria-hidden />
@@ -52,6 +54,8 @@ export default function ProductPurchasePanel({
             </dt>
             <dd className="mt-1 font-semibold text-ink">{moq}</dd>
           </div>
+          )}
+          {shipping.leadTime && (
           <div className="rounded-xl bg-slate-50 p-3">
             <dt className="flex items-center gap-1 text-ink-dim">
               <Clock className="h-3.5 w-3.5 text-teal" aria-hidden />
@@ -59,7 +63,9 @@ export default function ProductPurchasePanel({
             </dt>
             <dd className="mt-1 font-semibold text-ink">{shipping.leadTime}</dd>
           </div>
+          )}
         </dl>
+        )}
 
         <div className="mt-4 space-y-2">
           <ContactSupplierButton
@@ -112,30 +118,40 @@ export default function ProductPurchasePanel({
         </ul>
       </div>
 
+      {(shipping.port || shipping.incoterms.length > 0 || shipping.methods.length > 0 || shipping.packaging) && (
       <div className="rounded-2xl border border-slate-200 bg-white p-5">
         <div className="flex items-center gap-2 text-sm font-bold text-ink">
           <Truck className="h-5 w-5 text-teal" aria-hidden />
           Shipping & logistics
         </div>
         <dl className="mt-3 space-y-2 text-xs">
+          {shipping.port && (
           <div className="flex justify-between">
             <dt className="text-ink-muted">Ships from</dt>
-            <dd className="font-semibold text-ink">Port of {shipping.port}</dd>
+            <dd className="font-semibold text-ink">{shipping.port}</dd>
           </div>
+          )}
+          {shipping.incoterms.length > 0 && (
           <div className="flex justify-between">
             <dt className="text-ink-muted">Incoterms</dt>
             <dd className="font-semibold text-ink">{shipping.incoterms.join(" / ")}</dd>
           </div>
+          )}
+          {shipping.methods.length > 0 && (
           <div className="flex items-start justify-between gap-3">
             <dt className="text-ink-muted">Methods</dt>
             <dd className="text-right font-semibold text-ink">{shipping.methods.join(", ")}</dd>
           </div>
+          )}
         </dl>
+        {shipping.packaging && (
         <p className="mt-3 flex items-center gap-1.5 text-[11px] text-ink-dim">
           <Package className="h-3.5 w-3.5" aria-hidden />
           {shipping.packaging}
         </p>
+        )}
       </div>
+      )}
     </div>
   );
 }
