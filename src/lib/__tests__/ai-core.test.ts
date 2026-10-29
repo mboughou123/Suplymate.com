@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { parseRequirement } from "@/lib/ai/requirement-parser";
+import { composeDemoReply } from "@/lib/ai/aiService";
 import { matchSuppliers } from "@/lib/ai/supplier-matching";
 import { buildSourcingPlan, stageForIntent } from "@/lib/ai/sourcing-plan";
 import { detectMaterials, MATERIAL_CATALOG } from "@/data/material-catalog";
@@ -119,6 +120,44 @@ describe("supplier matching", () => {
     // Relevant via category but no delivery data -> delivery is null, not a number.
     expect(steel?.breakdown.delivery).toBeNull();
     expect(steel?.breakdown.price).toBeNull();
+  });
+
+  it("keeps a supplier's own MOQ and drops a category default", () => {
+    const req = parseRequirement("hot rolled steel coil suppliers");
+    const matches = matchSuppliers(
+      [
+        supplier({
+          id: "template-moq",
+          name: "Sarfraz Steel India",
+          category: "Steel & Metals",
+          country: "India",
+          products: ["Hot rolled steel coil"],
+          moq: "5 tons",
+          googleRating: 5,
+          googleReviews: 220,
+        }),
+        supplier({
+          id: "own-moq",
+          name: "Custom Coil Mill",
+          category: "Steel & Metals",
+          country: "India",
+          products: ["Hot rolled steel coil"],
+          moq: "12 tons",
+          googleRating: 4.2,
+          googleReviews: 30,
+        }),
+      ],
+      req,
+    );
+    expect(matches.find((m) => m.supplier.id === "template-moq")?.supplier.moq).toBeNull();
+    expect(matches.find((m) => m.supplier.id === "own-moq")?.supplier.moq).toBe("12 tons");
+
+    const reply = composeDemoReply(req, [
+      { type: "supplier_matches", requirement: req.text, totalConsidered: 719, matches },
+    ]);
+    expect(reply).toMatch(/ranks first because/);
+    expect(reply).not.toMatch(/ranks first at/);
+    expect(reply).not.toMatch(/%/);
   });
 
   it("drops suppliers with zero relevance to a specific request", () => {

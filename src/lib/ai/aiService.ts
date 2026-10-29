@@ -227,7 +227,7 @@ function describeBlocksForModel(blocks: AiBlock[]): string {
       for (const m of b.matches) {
         const s = m.supplier;
         lines.push(
-          `- ${s.name} | ${s.country ?? s.location} | ${s.verified ? "VERIFIED" : "listed, not verified"} | match ${m.overall}% | ${m.reasons.join("; ")}${m.gaps.length ? ` | gaps: ${m.gaps.join("; ")}` : ""}`,
+          `- ${s.name} | ${s.country ?? s.location} | ${s.verified ? "VERIFIED" : "listed, not verified"} | ${m.reasons.join("; ")}${m.gaps.length ? ` | gaps: ${m.gaps.join("; ")}` : ""}`,
         );
       }
     }
@@ -264,7 +264,7 @@ RULES
 - For beginners, be concrete and encouraging: next 2–3 actions.
 - Plain text, short paragraphs or bullets, no markdown headings. Under 220 words.`;
 
-function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
+export function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
   const parts: string[] = [];
   const matches = blocks.find((b) => b.type === "supplier_matches") as Extract<AiBlock, { type: "supplier_matches" }> | undefined;
   const intel = blocks.find((b) => b.type === "material_intel") as Extract<AiBlock, { type: "material_intel" }> | undefined;
@@ -278,7 +278,7 @@ function composeDemoReply(req: ParsedRequirement, blocks: AiBlock[]): string {
     const top = matches.matches[0];
     const verified = matches.matches.filter((m) => m.supplier.verified).length;
     parts.push(
-      `I checked ${matches.totalConsidered} listed suppliers and shortlisted ${matches.matches.length}${matText ? ` for ${matText}` : ""}${where}. ${top.supplier.name} ranks first at ${top.overall}% because ${top.reasons.slice(0, 2).join(" and ").toLowerCase()}.` +
+      `I checked ${matches.totalConsidered} listed suppliers and shortlisted ${matches.matches.length}${matText ? ` for ${matText}` : ""}${where}. ${top.supplier.name} ranks first because ${top.reasons.slice(0, 2).join(" and ").toLowerCase()}.` +
         (verified ? ` ${verified} of them ${verified === 1 ? "is" : "are"} verified by Suplymate.` : " None of them is independently verified yet, so treat their claims as supplier-provided."),
     );
     const gaps = Array.from(new Set(matches.matches.flatMap((m) => m.gaps))).slice(0, 2);

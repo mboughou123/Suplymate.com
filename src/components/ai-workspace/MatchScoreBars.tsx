@@ -3,11 +3,7 @@
 import type { MatchBreakdown } from "@/lib/ai/supplier-matching";
 
 const ORDER: { key: keyof MatchBreakdown; label: string }[] = [
-  { key: "price", label: "Price" },
-  { key: "delivery", label: "Delivery" },
-  { key: "quality", label: "Quality" },
-  { key: "location", label: "Location" },
-  { key: "trust", label: "Trust" },
+  { key: "trust", label: "Listing completeness" },
 ];
 
 export default function MatchScoreBars({ breakdown, compact = false }: { breakdown: MatchBreakdown; compact?: boolean }) {

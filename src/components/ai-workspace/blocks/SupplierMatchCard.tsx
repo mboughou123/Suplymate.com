@@ -38,13 +38,6 @@ export default function SupplierMatchCard({ match, rank }: { match: SupplierMatc
             {s.category ? ` · ${s.category}` : ""}
           </p>
         </div>
-        <div className="text-right">
-          <p className="font-display text-2xl font-bold tabular-nums leading-none text-white">
-            {match.overall}
-            <span className="text-sm text-white/50">%</span>
-          </p>
-          <p className="mt-1 text-[10px] uppercase tracking-wider text-white/45">#{rank} match</p>
-        </div>
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-[1fr_1fr]">
@@ -69,7 +62,7 @@ export default function SupplierMatchCard({ match, rank }: { match: SupplierMatc
       </div>
 
       <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-white/10 pt-3 text-xs">
-        {s.moq && s.moq !== "Contact supplier" && <span className="text-white/60">MOQ {s.moq}</span>}
+        <span className="text-white/60">{s.moq ? `MOQ ${s.moq}` : "Quote on request"}</span>
         <span className="ml-auto flex gap-2">
           <Link
             href={`/supplier/${s.id}`}

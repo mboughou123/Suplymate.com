@@ -54,7 +54,7 @@ export default function IntelligencePanel({ blocks, tab, onTab }: Props) {
           <div className={`${glass} flex h-48 flex-col items-center justify-center p-6 text-center`}>
             {current && <current.icon className="h-6 w-6 text-white/30" aria-hidden />}
             <p className="mt-3 text-sm text-white/60">
-              {tab === "matches" && "Ask for suppliers — e.g. “Find aluminum suppliers in California” — and matches appear here with scores and reasons."}
+              {tab === "matches" && "Ask for suppliers — e.g. “Find aluminum suppliers in California” — and matches appear here with the reasons Suplymate can support from each listing."}
               {tab === "prices" && "Ask about prices — e.g. “Compare steel and aluminum prices” — to see a comparison table with sources."}
               {tab === "materials" && "Ask about a material — e.g. “6061 vs 7075 aluminum” — for properties, grades and alternatives."}
               {tab === "strategy" && "Ask for a plan — e.g. “I'm starting a manufacturing company” — to get an 8-step sourcing strategy."}
@@ -63,7 +63,7 @@ export default function IntelligencePanel({ blocks, tab, onTab }: Props) {
         ) : block.type === "supplier_matches" ? (
           <>
             <p className="px-1 text-[11px] text-white/45">
-              {block.matches.length} shortlisted from {block.totalConsidered} listed suppliers · scores use only data Suplymate holds
+              {block.matches.length} shortlisted from {block.totalConsidered} listed suppliers
             </p>
             {block.matches.map((m, i) => (
               <SupplierMatchCard key={m.supplier.id} match={m} rank={i + 1} />

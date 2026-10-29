@@ -10,6 +10,7 @@ import { industryForLegacyCategory, textInIndustry } from "@/data/industries";
 import type { ParsedRequirement } from "@/lib/ai/requirement-parser";
 import {
   isCatalogueVerified,
+  publicMoq,
   sourcedGoogleRating,
   sourcedGoogleReviews,
   suplymateProfileScore,
@@ -153,9 +154,7 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
   let trust: number | null = null;
   const profileScore = suplymateProfileScore(s);
   trust = profileScore;
-  reasons.push(
-    `Suplymate score ${profileScore}/100 (listing completeness${isVerified(s) ? ", catalogue-verified" : ""})`,
-  );
+  reasons.push(`Listing completeness ${profileScore}/100`);
 
   // Location — only when the buyer stated one.
   let location: number | null = null;
@@ -223,7 +222,7 @@ export function scoreSupplierMatch(s: Supplier, req: ParsedRequirement): Supplie
       trustScore: profileScore,
       rating,
       reviews,
-      moq: s.moq ?? null,
+      moq: publicMoq(s.moq, s.category),
       products: (s.products ?? []).slice(0, 6),
       website: s.website ?? null,
     },
