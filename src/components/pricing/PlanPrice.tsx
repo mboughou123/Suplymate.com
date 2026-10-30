@@ -58,7 +58,7 @@ export default function PlanPrice({ plan, interval, size = "lg" }: Props) {
         <span className={amountClass}>{formatUsdCents(monthly)}</span>
         <span className="text-sm text-ink-dim"> {t("perMonth")}</span>
       </p>
-      <p className="mt-1 h-4 text-xs font-semibold text-cyan">
+      <p className="mt-1 min-h-4 text-xs leading-snug font-semibold text-cyan">
         {t("earlyBirdPrice", {
           amount: formatUsdCents(Math.round((monthly * (100 - EARLY_BIRD.percentOff)) / 100)),
           months: EARLY_BIRD.durationMonths,
