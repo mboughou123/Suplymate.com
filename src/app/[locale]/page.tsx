@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import HomeTopNav from "@/components/home/HomeTopNav";
 import HomeHero from "@/components/home/HomeHero";
+import HomeDemoVideo from "@/components/home/HomeDemoVideo";
 import HomeTrustStrip from "@/components/home/HomeTrustStrip";
 import HomeSuppliersBand from "@/components/home/HomeSuppliersBand";
 import HomeProductsSection from "@/components/home/HomeProductsSection";
@@ -34,6 +35,7 @@ export default async function HomePage({
         industryCount={home.industryCount}
         materialCount={home.materialCount}
       />
+      <HomeDemoVideo />
       <HomeTrustStrip />
       <HomeSuppliersBand />
       {/* Who is on the network (suppliers) → what they make (products) → how
