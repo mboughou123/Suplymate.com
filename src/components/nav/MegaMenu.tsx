@@ -380,14 +380,17 @@ export default function MegaMenu({
             onMouseLeave={scheduleClose}
           >
             {labelHref ? (
-              <span className="inline-flex items-center">
-                <Link href={labelHref} className={triggerClass(tone, open, current, "pl-2 pr-0.5 xl:pl-3")}>
+              <span className={triggerClass(tone, open, current, "p-0 gap-0")}>
+                <Link
+                  href={labelHref}
+                  className="rounded-l-lg py-2 pl-2 pr-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset xl:pl-3"
+                >
                   {label}
                 </Link>
                 <button
                   {...toggleProps}
                   aria-label={t("openSubmenu", { label })}
-                  className={triggerClass(tone, open, current, "px-1")}
+                  className="rounded-r-lg py-2 pl-0.5 pr-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset xl:pr-3"
                 >
                   {chevron}
                 </button>
