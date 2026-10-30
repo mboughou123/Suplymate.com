@@ -1715,5 +1715,13 @@
       "categoriesInvalid": "Choose categories from the list.",
       "noteTooLong": "Please keep this under 2,000 characters."
     }
+  },
+  "homeDemoVideo": {
+    "eyebrow": "2-minute tour",
+    "title": "See Suplymate in action",
+    "subtitle": "A quick walkthrough of how Suplymate helps you find suppliers and products.",
+    "playWithSound": "Play with sound",
+    "duration": "2:18",
+    "videoLabel": "Suplymate product tour video"
   }
 }

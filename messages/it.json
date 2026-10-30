@@ -1647,5 +1647,13 @@
     "upgradeCta": "Passa a Basic",
     "trialCta": "Inizia la prova gratuita di 3 giorni",
     "comparePlans": "Confronta i piani"
+  },
+  "homeDemoVideo": {
+    "eyebrow": "2-minute tour",
+    "title": "See Suplymate in action",
+    "subtitle": "A quick walkthrough of how Suplymate helps you find suppliers and products.",
+    "playWithSound": "Play with sound",
+    "duration": "2:18",
+    "videoLabel": "Suplymate product tour video"
   }
 }
